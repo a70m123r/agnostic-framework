@@ -1,0 +1,22 @@
+# OS artifacts
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Working notes (private, not part of public framework)
+*.private.md
+.scratch/
+.notes/
+
+# Build artifacts (none yet, future-proofing)
+node_modules/
+dist/
+build/
+.cache/

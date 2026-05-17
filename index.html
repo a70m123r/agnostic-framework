@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agnostic — a thinking tool for noticing how things become true</title>
+<meta name="description" content="A live, evolving framework for understanding intelligence, action-space, and how ideas become canon. Lakatosian unification hypothesis with the internet as test surface.">
+<style>
+  :root {
+    --bg: #0a0a0a;
+    --surface: #141414;
+    --surface-2: #1c1c1c;
+    --border: #262626;
+    --border-strong: #3a3a3a;
+    --text: #ececec;
+    --text-dim: #8a8a8a;
+    --text-faint: #555;
+    --accent-canon: #4ade80;
+    --accent-candidate: #fbbf24;
+    --accent-speculative: #a78bfa;
+    --accent-pruned: #6b7280;
+    --accent-link: #93c5fd;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* Hero */
+  header.hero {
+    padding: 96px 0 72px;
+    border-bottom: 1px solid var(--border);
+  }
+  header.hero h1 {
+    font-family: Georgia, "Source Serif Pro", "Charter", serif;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 1.05;
+    margin: 0 0 24px;
+    letter-spacing: -0.02em;
+  }
+  header.hero .claim {
+    font-size: 22px;
+    line-height: 1.45;
+    color: var(--text);
+    max-width: 620px;
+    margin: 0 0 24px;
+  }
+  header.hero .sub {
+    font-size: 15px;
+    color: var(--text-dim);
+    max-width: 600px;
+    margin: 0;
+  }
+
+  /* Glyph: wavelet/spike on a fuzzy field */
+  .glyph {
+    margin: 32px 0 48px;
+    display: block;
+  }
+  .glyph svg { display: block; max-width: 100%; height: auto; }
+
+  /* Sections */
+  section {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  section:last-of-type { border-bottom: none; }
+
+  h2 {
+    font-family: Georgia, "Source Serif Pro", "Charter", serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1.15;
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+  }
+  h2 .num {
+    color: var(--text-faint);
+    font-size: 16px;
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    margin-right: 12px;
+    font-weight: 400;
+  }
+  .sect-lede {
+    color: var(--text-dim);
+    font-size: 16px;
+    margin: 0 0 32px;
+    max-width: 620px;
+  }
+
+  /* Status pill */
+  .status {
+    display: inline-block;
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 3px 8px;
+    border-radius: 3px;
+    vertical-align: middle;
+    margin-left: 8px;
+    border: 1px solid transparent;
+  }
+  .status.canon { color: var(--accent-canon); border-color: rgba(74, 222, 128, 0.25); background: rgba(74, 222, 128, 0.05); }
+  .status.candidate { color: var(--accent-candidate); border-color: rgba(251, 191, 36, 0.25); background: rgba(251, 191, 36, 0.05); }
+  .status.speculative { color: var(--accent-speculative); border-color: rgba(167, 139, 250, 0.25); background: rgba(167, 139, 250, 0.05); }
+  .status.pruned { color: var(--accent-pruned); border-color: rgba(107, 114, 128, 0.25); background: rgba(107, 114, 128, 0.05); }
+
+  /* Filter bar */
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0 0 32px;
+  }
+  .filter-btn {
+    background: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--border-strong);
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+  .filter-btn:hover { border-color: var(--text-dim); }
+  .filter-btn.active {
+    background: var(--surface-2);
+    border-color: var(--text);
+  }
+
+  /* Cards */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 20px 22px;
+    margin: 0 0 14px;
+    transition: border-color 0.15s ease;
+  }
+  .card:hover { border-color: var(--border-strong); }
+  .card h3 {
+    font-family: Georgia, serif;
+    font-weight: 400;
+    font-size: 20px;
+    margin: 0 0 8px;
+    line-height: 1.3;
+  }
+  .card .meta {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 12px;
+    color: var(--text-faint);
+    margin: 0 0 12px;
+  }
+  .card p {
+    margin: 0 0 8px;
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.55;
+  }
+  .card .counter, .card .evidence {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px dashed var(--border);
+    font-size: 14px;
+    color: var(--text-dim);
+  }
+  .card .counter strong, .card .evidence strong {
+    color: var(--text);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    display: block;
+    margin-bottom: 4px;
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  }
+
+  /* Quote */
+  blockquote {
+    border-left: 2px solid var(--border-strong);
+    padding: 4px 0 4px 20px;
+    margin: 24px 0;
+    font-family: Georgia, serif;
+    font-style: italic;
+    color: var(--text);
+    font-size: 17px;
+    line-height: 1.55;
+  }
+  blockquote cite {
+    display: block;
+    font-style: normal;
+    font-family: inherit;
+    font-size: 13px;
+    color: var(--text-dim);
+    margin-top: 8px;
+  }
+
+  /* Inline emphasis */
+  em { color: var(--text); font-style: italic; }
+  strong { color: var(--text); font-weight: 600; }
+
+  /* Links */
+  a { color: var(--accent-link); text-decoration: none; border-bottom: 1px solid rgba(147, 197, 253, 0.3); transition: border-color 0.15s ease; }
+  a:hover { border-bottom-color: var(--accent-link); }
+
+  /* Manifesto cards */
+  .editions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin: 24px 0 0;
+  }
+  @media (min-width: 640px) {
+    .editions { grid-template-columns: 1fr 1fr 1fr; }
+  }
+  .edition {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 18px 20px;
+    transition: border-color 0.15s ease;
+  }
+  .edition:hover { border-color: var(--border-strong); }
+  .edition h4 {
+    font-family: Georgia, serif;
+    font-weight: 400;
+    font-size: 17px;
+    margin: 0 0 4px;
+  }
+  .edition .label {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 11px;
+    color: var(--text-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 0 0 10px;
+  }
+  .edition p {
+    margin: 0 0 12px;
+    color: var(--text-dim);
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .edition a {
+    font-size: 13px;
+    border-bottom: none;
+    color: var(--text);
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  }
+  .edition a:hover { color: var(--accent-link); }
+
+  /* Prior art list */
+  .shoulders {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  @media (min-width: 640px) {
+    .shoulders { grid-template-columns: 1fr 1fr; }
+  }
+  .shoulder {
+    padding: 14px 18px;
+    border-left: 2px solid var(--border-strong);
+  }
+  .shoulder strong {
+    display: block;
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    margin: 0 0 4px;
+  }
+  .shoulder p {
+    margin: 0;
+    font-size: 13px;
+    color: var(--text-dim);
+    line-height: 1.5;
+  }
+
+  /* Contribute */
+  .contribute-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin: 24px 0 0;
+  }
+  @media (min-width: 640px) {
+    .contribute-grid { grid-template-columns: 1fr 1fr; }
+  }
+  .contribute-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 18px 20px;
+    border-radius: 6px;
+  }
+  .contribute-item h4 {
+    font-family: Georgia, serif;
+    font-weight: 400;
+    font-size: 17px;
+    margin: 0 0 8px;
+  }
+  .contribute-item p {
+    margin: 0;
+    color: var(--text-dim);
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* Footer */
+  footer {
+    padding: 56px 0 80px;
+    color: var(--text-dim);
+    font-size: 14px;
+    border-top: 1px solid var(--border);
+  }
+  footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  footer .version {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 12px;
+    color: var(--text-faint);
+  }
+  footer p { margin: 0 0 8px; }
+
+  /* Inline status legend */
+  .legend {
+    margin: 24px 0 32px;
+    padding: 16px 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 13px;
+    color: var(--text-dim);
+    line-height: 1.7;
+  }
+  .legend .row { display: block; }
+  .legend .status { margin-left: 0; margin-right: 8px; }
+
+  /* Skip class for filter */
+  .hidden { display: none !important; }
+
+  /* Pull-quote / signature */
+  .signature {
+    padding: 64px 0 8px;
+    text-align: center;
+    font-family: Georgia, serif;
+    font-style: italic;
+    color: var(--text-dim);
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  /* Small responsive adjustments */
+  @media (max-width: 640px) {
+    header.hero { padding: 64px 0 48px; }
+    header.hero h1 { font-size: 40px; }
+    header.hero .claim { font-size: 19px; }
+    h2 { font-size: 26px; }
+    section { padding: 40px 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+<!-- ========== HERO ========== -->
+<header class="hero">
+  <h1>Agnostic.</h1>
+  <p class="claim">A thinking tool for noticing how things become true. A live, evolving framework for intelligence, action-space, and the way ideas travel, stick, and win.</p>
+  <p class="sub">Lakatosian unification hypothesis with the internet as test surface. Currently in active development. The primitives below are scored honestly — what's earned canon, what's still candidate, what's been pruned. The framework is being itself, not describing itself.</p>
+
+  <!-- Signature glyph: a fuzzy field with a spike (carrier artifact) emerging -->
+  <div class="glyph" aria-hidden="true">
+    <svg viewBox="0 0 720 140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A fuzzy field with one spike emerging">
+      <defs>
+        <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#1c1c1c"/>
+          <stop offset="0.5" stop-color="#404040"/>
+          <stop offset="1" stop-color="#1c1c1c"/>
+        </linearGradient>
+        <radialGradient id="spike" cx="0.5" cy="1" r="0.5">
+          <stop offset="0" stop-color="#a78bfa" stop-opacity="0.9"/>
+          <stop offset="1" stop-color="#a78bfa" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <!-- baseline / fuzzy ground -->
+      <line x1="20" y1="120" x2="700" y2="120" stroke="url(#fade)" stroke-width="1"/>
+      <!-- noisy small marks (fuzzy candidate field) -->
+      <g stroke="#3a3a3a" stroke-width="1">
+        <line x1="60" y1="115" x2="60" y2="120"/>
+        <line x1="90" y1="113" x2="90" y2="120"/>
+        <line x1="130" y1="116" x2="130" y2="120"/>
+        <line x1="170" y1="111" x2="170" y2="120"/>
+        <line x1="210" y1="114" x2="210" y2="120"/>
+        <line x1="250" y1="117" x2="250" y2="120"/>
+        <line x1="290" y1="112" x2="290" y2="120"/>
+        <line x1="330" y1="115" x2="330" y2="120"/>
+        <line x1="420" y1="113" x2="420" y2="120"/>
+        <line x1="460" y1="116" x2="460" y2="120"/>
+        <line x1="500" y1="111" x2="500" y2="120"/>
+        <line x1="540" y1="115" x2="540" y2="120"/>
+        <line x1="580" y1="113" x2="580" y2="120"/>
+        <line x1="620" y1="117" x2="620" y2="120"/>
+        <line x1="660" y1="114" x2="660" y2="120"/>
+      </g>
+      <!-- the spike: one carrier emerges -->
+      <line x1="375" y1="120" x2="375" y2="30" stroke="#a78bfa" stroke-width="1.5"/>
+      <circle cx="375" cy="30" r="3" fill="#a78bfa"/>
+      <!-- soft glow around spike -->
+      <ellipse cx="375" cy="115" rx="40" ry="20" fill="url(#spike)"/>
+    </svg>
+  </div>
+</header>
+
+<!-- ========== ABOUT / READ FIRST ========== -->
+<section id="manifesto">
+  <h2><span class="num">01</span>Read first</h2>
+  <p class="sect-lede">Three editions of the same manifesto, shaped for different readers. The substrate is identical; the carrier changes per audience. Start with the one that fits your wrapper.</p>
+
+  <div class="editions">
+    <div class="edition">
+      <p class="label">Casual</p>
+      <h4>A New Pair of Eyes</h4>
+      <p>For the general reader. Anchored in lived moments — the lighter trick, the shower handle, the alien-observer thought experiment. Closes with the hall of buried thinkers, ending with Katalin Karikó.</p>
+      <a href="AGNOSTIC_manifesto_v3_casual.md">read →</a>
+    </div>
+    <div class="edition">
+      <p class="label">Research</p>
+      <h4>A Lakatosian Unification</h4>
+      <p>For working AI researchers and theorists. Honest about prior art, explicit about epistemic position, two falsifiable side-experiments proposed (SDPO+ on SOTOPIA, protein-LM on packets).</p>
+      <a href="AGNOSTIC_manifesto_v1_research.md">read →</a>
+    </div>
+    <div class="edition">
+      <p class="label">Engineering</p>
+      <h4>A Structural Vocabulary</h4>
+      <p>For software engineers building multi-agent systems. Schemas, pseudocode, concrete data structures. Positions the framework alongside AutoGen, LangGraph, CrewAI, and MCP.</p>
+      <a href="AGNOSTIC_manifesto_v1_engineering.md">read →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PRIMITIVES ========== -->
+<section id="primitives">
+  <h2><span class="num">02</span>Primitives</h2>
+  <p class="sect-lede">The framework's vocabulary, scored honestly. Each primitive carries its current status: canon (load-bearing, survived many tests), candidate (proposed, plausible, not yet validated), or speculative (held in suspension, openly uncertain). Filter to see one category.</p>
+
+  <div class="legend">
+    <span class="row"><span class="status canon">Canon</span>load-bearing; survived multi-round feedback</span>
+    <span class="row"><span class="status candidate">Candidate</span>proposed, structurally coherent, awaiting empirical validation</span>
+    <span class="row"><span class="status speculative">Speculative</span>held in suspension; flagged as potentially overreach</span>
+  </div>
+
+  <div class="filters" id="primitive-filters">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="canon">Canon</button>
+    <button class="filter-btn" data-filter="candidate">Candidate</button>
+    <button class="filter-btn" data-filter="speculative">Speculative</button>
+  </div>
+
+  <div id="primitives-list"></div>
+</section>
+
+<!-- ========== READINGS ========== -->
+<section id="readings">
+  <h2><span class="num">03</span>Active readings</h2>
+  <p class="sect-lede">Applications of the framework's vocabulary to real situations. Each reading is dated, names its predictions where it makes them, and accumulates score against subsequent events. This is where the framework earns its keep — or fails to.</p>
+  <div id="readings-list"></div>
+</section>
+
+<!-- ========== SPECULATIONS ========== -->
+<section id="speculations">
+  <h2><span class="num">04</span>Open speculations</h2>
+  <p class="sect-lede">Phantom action-spaces currently being scouted. Each is a possibility-path deposited in the framework's pool, awaiting evidence that compiles it into canon or prunes it. Most will not survive. The list is kept honestly — what's deposited gets named even when it doesn't yet earn admission.</p>
+  <div id="speculations-list"></div>
+</section>
+
+<!-- ========== PRUNED ========== -->
+<section id="pruned">
+  <h2><span class="num">05</span>Pruned, kept honestly</h2>
+  <p class="sect-lede">Claims the framework once entertained that have since been walked back. Preserved as provenance. The prune operator is part of the framework's mechanic, not its embarrassment.</p>
+  <div id="pruned-list"></div>
+</section>
+
+<!-- ========== SHOULDERS ========== -->
+<section id="shoulders">
+  <h2><span class="num">06</span>The shoulders we're standing on</h2>
+  <p class="sect-lede">This framework is not new. The vocabulary is new. The synthesis is new. The structural ideas underneath are mostly recombinations of work others have done over a century. Light credit, in roughly the order they appear in the framework.</p>
+  <div class="shoulders" id="shoulders-list"></div>
+</section>
+
+<!-- ========== CONTRIBUTE ========== -->
+<section id="contribute">
+  <h2><span class="num">07</span>Contribute</h2>
+  <p class="sect-lede">The framework's discipline says it must earn its keep in your life or get pruned. If you want to participate, here is what useful contribution looks like.</p>
+
+  <div class="contribute-grid">
+    <div class="contribute-item">
+      <h4>Submit a reading</h4>
+      <p>Pick a real situation. Apply the framework's primitives to it. Make at least one prediction the reading commits to. Send it in. If it parses cleanly and the prediction has falsifiable shape, it goes in §03 with your name on it.</p>
+    </div>
+    <div class="contribute-item">
+      <h4>Flag where it breaks</h4>
+      <p>If the framework fails to translate to something in your life — your work, your field, your experience — that is a data point worth more than a thousand confirmations. Tell me where the vocabulary stops being useful and what you tried.</p>
+    </div>
+    <div class="contribute-item">
+      <h4>Argue with a primitive</h4>
+      <p>Take a canon item from §02 and try to break it. If your argument holds, the primitive moves to candidate or gets pruned, and your counter-evidence gets preserved as the reason. The framework is supposed to be malleable; demonstrate it.</p>
+    </div>
+    <div class="contribute-item">
+      <h4>Run an experiment</h4>
+      <p>The research edition lists two falsifiable side-experiments (SDPO+ on SOTOPIA; protein-LM on raw network packets). If you have compute, time, or relevant expertise — run one. Results go up regardless of which direction they point.</p>
+    </div>
+  </div>
+
+  <p style="margin-top: 24px; color: var(--text-dim); font-size: 14px;">
+    Contact for submissions: <em>[email or contact channel — to be added when the site goes live]</em>
+  </p>
+</section>
+
+<!-- ========== SIGNATURE ========== -->
+<div class="signature">
+  Lanced and doesn't crash or explode.<br>
+  Survive, keep moving, never stop, imagine it.
+</div>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="row">
+    <p>
+      Agnostic is open to harvest. Carry the vocabulary into your own life and report back.<br>
+      Provenance corpus: <a href="fuzzy_to_canon_compiler_provenance_checkpoint.md">checkpoint</a> &middot; <a href="Claude_AUDIT-v02.md">audit</a> &middot; continuations <a href="fuzzy_to_canon_compiler_provenance_continuation_02.md">02</a>–<a href="fuzzy_to_canon_compiler_provenance_continuation_10.md">10</a>
+    </p>
+    <p class="version">v0.1 · 2026 · live artifact</p>
+  </div>
+</footer>
+
+</div>
+
+<!-- ========== DATA + LOGIC ========== -->
+<script>
+const PRIMITIVES = [
+  {
+    name: "Observer",
+    status: "canon",
+    summary: "An agent of any kind, characterized as harness + wrapper + inner sandbox + action-space. Recursively applies to cells, persons, institutions, AI systems, and aggregate observers.",
+    counter: "Risk of over-generalization — the same word for biological cell and civilization may flatten genuine discontinuities."
+  },
+  {
+    name: "Harness",
+    status: "canon",
+    summary: "The structural/physical substrate of an observer: body, architecture, protocol stack. For a transformer: attention mechanism and tokenizer. For a person: nervous system and tools.",
+    counter: null
+  },
+  {
+    name: "Wrapper",
+    status: "canon",
+    summary: "Coherence rules, admission protocols, render functions. The trained patterns through which signals get filtered into legible experience.",
+    counter: null
+  },
+  {
+    name: "Fuzzy candidate field",
+    status: "canon",
+    summary: "Unresolved possibility-space adjacent to an observer's current canon. Where speculation operates before compile. Not noise — the live state of learning.",
+    counter: null
+  },
+  {
+    name: "Canon",
+    status: "canon",
+    summary: "Compiled state currently running as operational assumption. Durable but not eternal. Can be built from at least seven materials: evidence, utility, power, myth, market, trauma, aesthetic.",
+    counter: null
+  },
+  {
+    name: "Carrier artifact",
+    status: "canon",
+    summary: "A persistent compressed form that propagates compiled state beyond its origin observer. Words, tools, equations, rituals, institutions, AI models.",
+    counter: null
+  },
+  {
+    name: "Genotype / phenotype split",
+    status: "canon",
+    summary: "The framework distinguishes two layers of every compiled observer-class: (genotype) the function definition + canon graph + fuzzy candidate field + observer-slice — i.e. the compressed code that determines how the observer maps inputs to outputs; (phenotype) the carrier artifacts, observable behavior, and rendered surface produced when that code is run. Named explicitly continuation 14 after the Functions-in-Hyperspace carrier (parametric-surface analogy: the equation set is the genotype; the colored 3D surface it renders is the phenotype). Important consequences: (1) two observers can share a phenotype while differing in genotype (convergent compile), and vice versa (divergent rendering of identical code in different harnesses); (2) carrier propagation is genotype propagation, not phenotype propagation — what travels is the compressed code, the phenotype re-renders at the receiving observer; (3) the framework's compile cycle operates on the genotype layer, but only the phenotype is directly observable, which is why the harness/wrapper distinction matters.",
+    counter: null
+  },
+  {
+    name: "Ask / Give / Ping / Pong",
+    status: "canon",
+    summary: "The four-move primitive of inter-observer interaction. Closely related to active inference's variational message-passing; named for accessibility.",
+    counter: null
+  },
+  {
+    name: "Action-space",
+    status: "canon",
+    summary: "The third field after problem-space and solution-space. What the observer can actually do given current constraints. Why high-truth-no-carrier loses to false-idea-plus-force.",
+    counter: null
+  },
+  {
+    name: "Membrane",
+    status: "canon",
+    summary: "Compiled projection boundary between effective layers. Cell membranes, language, institutions, APIs — same primitive at different scales.",
+    counter: null
+  },
+  {
+    name: "Squeeze event",
+    status: "canon",
+    summary: "Pressure event that forces canon refactor faster than canon normally allows. Wars, pandemics, paradigm shifts, infrastructure collapses. Carriers that waited in suspension can compile suddenly.",
+    counter: null
+  },
+  {
+    name: "Scout",
+    status: "canon",
+    summary: "Exploratory sub-agent or process that probes fuzzy candidates and returns with data, transformed canon, or nothing. Dreams, imagination, scientific experiments, art all do this.",
+    counter: null
+  },
+  {
+    name: "Imagine Engine",
+    status: "canon",
+    summary: "The internal process generating phantom fuzzy from the canon-as-observer's own substrate — the floor-light from manifesto v3 §2. Naturally selective: ideas survive based on what gets carried (memory, attention, salience, social reinforcement). Bidirectional in time: backward evolution (selection over remembered history; canon retroactively shaped by what got carried) and forward resolution (selection over projected futures; action-space narrowed by what gets imagined as possible). Fills the recursive timeline cone with structure at both ends. Distinct from scout: scout returns or doesn't; imagine engine continuously generates candidate paths for scouts to investigate.",
+    counter: null
+  },
+  {
+    name: "Moat",
+    status: "canon",
+    summary: "Hidden protocol gating access to a system. The shower handle's protocol; Google's ranking algorithm; a culture's etiquette. Decoding moats is what learning, science, intimacy, and engineering do.",
+    counter: null
+  },
+  {
+    name: "Attention role taxonomy",
+    status: "canon",
+    summary: "Eight types: gatekeeper, harvester, director, firewall, parasite, symbiont, weapon, sanctuary. Every actor occupies a mixture; mixtures characterize the phase of a system.",
+    counter: "Currently lacks an inferred-from-data construction — roles are assigned by inspection rather than measured from instrumented behavior."
+  },
+  {
+    name: "A⁺ / A⁻ as latent dimensions",
+    status: "canon",
+    summary: "Originally framed as operators that act on the canon graph (A⁺ admits structure; A⁻ prunes). Refactored continuation 13: A⁺ / A⁻ are also *latent dimensions* — axes the latent space has, like electromagnetic charges. Their interaction creates latent fields. Pairs (0,0), (0,1), (1,0), (1,1) form interaction states. A charge-product algebra is implied: A⁺×A⁺ reinforces; A⁻×A⁻ compounds pruning; A⁺×A⁻ produces dialectical tension. Successful canon-formation requires both polarities active with slack between them. The framework's symmetry expressed as charge algebra. Re-balanced continuation 15: the pair is NOT symmetric. A⁻ is the primary compilation discipline — constraint-checking is what actually forms canon. A⁺ proposes plausible candidates (this is what most current AI does — next-token generation, fuzzy candidate emission); A⁻ checks them against the substrate's constraints; what survives is canon. Four-carrier convergence (Aleph/EBMs constraint satisfaction, MAMMAL cross-modal verification, ANDI norm-equilibration, Lippmann Bragg-interference) instantiates this asymmetry across four scales simultaneously. The framework had been calling A⁻ 'pruning' (a cleanup framing); it is actually 'primary canon-formation by constraint check.'",
+    counter: "The monopole question is open: are there ideas / concepts truly only A⁺ (pure connection-affinity, no prune-capacity) or only A⁻ (pure prune-vector, no construction), or is this always observer-cone limitation? Held in §07 open questions of continuation 13. Further refined continuation 14: monopole question is itself observer-distinction-dependent."
+  },
+  {
+    name: "Cone profile",
+    status: "canon",
+    summary: "Every observer characterized by processing speed × memory depth × context width × cone shape × update protocol. Different cone profiles do not compete; complementary profiles symbiose.",
+    counter: null
+  },
+  {
+    name: "Wolfram four-class classification",
+    status: "canon",
+    summary: "Stephen Wolfram's empirical observation across thousands of cellular automata: behavior falls into exactly four classes. Class 1 (flat / homogeneous) = freeze; Class 2 (periodic / stable) = stale moat; Class 3 (chaotic) = explode; Class 4 (complex / organized) = the viability band. Forty years of cellular-automaton experiments measuring the framework's criticality Γ prediction before the framework existed. The strongest empirical anchor the framework has for Γ ≈ 1 as the adaptive edge. Computation, life-like dynamics, and emergent structure all live in Class 4.",
+    counter: null
+  },
+  {
+    name: "Computational irreducibility",
+    status: "canon",
+    summary: "Wolfram's principle: for some systems, no shortcut exists — to know what they do, you must actually simulate them step by step. There is no formula that compresses the behavior into closed-form prediction. The framework's 'substrate must be run, not solved' claim made mathematically explicit. Observers can't render Ω directly; they must run it through their harness / wrapper to see what compiles. The recursive observer-class claim assumes computational irreducibility at every scale — each level must compute its own state.",
+    counter: null
+  },
+  {
+    name: "Emergent garden",
+    status: "canon",
+    summary: "The framework's cultivation discipline named with a vivid carrier (Emergent Garden YouTube channel; the Emergent Complexity video's closing metaphor). Build the rules and the building blocks; nurture the system; sacrifice strict control; accept that some unintended emergence will occur; observe what comes up rather than dictating what should. The discipline applies at every scale: research programmes, AI training, multi-agent systems, parenting, gardening literal plants, framework development. Better non-jargon name for what continuation 09 §6.1 called 'guide it from within'.",
+    counter: null
+  },
+  {
+    name: "Criticality Γ",
+    status: "candidate",
+    summary: "Γ = rate(A⁺) / (rate(A⁻) + rate(stabilize)). The viability band sits at Γ ≈ 1. Below: freeze. Above: explosion. Measurable in instrumented systems.",
+    counter: "Without pre-registered operationalization of A⁺ and A⁻ for each domain, the claim risks being unfalsifiable by retrofit. Pre-registration discipline is owed."
+  },
+  {
+    name: "Viability band",
+    status: "candidate",
+    summary: "ρ_min < ρ(G) < ρ_max — the canon graph stays viable between sparseness (freeze) and saturation (explosion). The framework's kernel discipline applied as a continuous constraint.",
+    counter: "Operationalization of ρ for non-graph-shaped substrates is underspecified."
+  },
+  {
+    name: "Multi-possibility deposition",
+    status: "candidate",
+    summary: "Encountering fuzzy deposits N candidate paths to be scouted asynchronously, not a single probe. Changes the framework's data model from single-belief-update to weighted-pool-maintenance.",
+    counter: null
+  },
+  {
+    name: "Canon-as-observer",
+    status: "candidate",
+    summary: "The internal canon is itself an observer-class with its own harness, wrapper, action-space, and discipline. Speculation is its scout mechanism. Paradigm shifts are kernel-restructuring events at this layer.",
+    counter: "Operationalization of 'kernel' distinct from 'high-centrality nodes in the canon graph' is incomplete."
+  },
+  {
+    name: "Agnostic Unit (AU) matrix",
+    status: "candidate",
+    summary: "Every observer characterized by a P × A weighted matrix where P = perceivable signals, A = available actions. Cells carry wavelet-shaped weights (magnitude + spin + scale + freshness).",
+    counter: "Cell-weight learning rules and norm conventions not yet calibrated against any benchmark."
+  },
+  {
+    name: "Wavelet weights",
+    status: "candidate",
+    summary: "Cell weights in the AU matrix are not scalars but multi-dimensional objects: magnitude, spin (direction), scale, freshness. The framework's qualitative warnings become detectable from weight structure.",
+    counter: null
+  },
+  {
+    name: "Symbiosis-as-pushout",
+    status: "candidate",
+    summary: "Mergers between observers with complementary cone profiles produce new observer-classes. Pushout condition: cone-gaps mutually covered, combined action-space exceeds friction, kernels admit compatible discipline. Asgard + alphaproteobacterium → eukaryotic cell is the deep-time worked example.",
+    counter: "Identifying a complementary profile merger *before* it happens is genuinely difficult; the framework recognizes them retrospectively."
+  },
+  {
+    name: "Topological observer classification (Hairy Ball)",
+    status: "candidate",
+    summary: "Closed-action-space observers (sphere-topology) must have at least one singularity — a spike (concentration vortex) or a bald spot (zero attention). Cone profile + topology give a richer taxonomy.",
+    counter: null
+  },
+  {
+    name: "Recursive timeline cone",
+    status: "candidate",
+    summary: "The past is not fixed history; it is the current best-fit render of evidence available to the present. Each compile cycle re-renders the past at higher fidelity. JWST early-galaxy anomalies are the framework's prediction in real time. Refactor note (continuation 14): time is just another input parameter to the observer's latent function, not a privileged substrate axis. The cone is a slice through a higher-dimensional parameter space in which 'past' and 'future' are coordinates the observer scans like any other parameter. This unifies recursive-timeline-cone with the latent-dimension framing of A⁺ / A⁻.",
+    counter: "Distinguishing 'past being re-rendered' from 'past observation being improved' may be a verbal preference rather than an ontological difference."
+  },
+  {
+    name: "Internet as first-class observer-class",
+    status: "candidate",
+    summary: "The internet is not only test surface and substrate but a live observer with measurable Γ, attention-role distribution, current phase, and viability band. Harness and wrapper in continuous flux at the timescale of operations.",
+    counter: null
+  },
+  {
+    name: "Compile-capacity enrichment",
+    status: "candidate",
+    summary: "On the spiral substrate cycle's return phase, the substrate's fuzzy reservoir is not augmented — its compile capacity is. New restructuring sense, more compression, faster compile rate. The journey doesn't manufacture new fuzzy-types; it manufactures new ways to render the same fuzzy. New observer-classes become inferentially possible because the substrate has new ways to compile, not new things to compile from.",
+    counter: "Operationalization of 'compile capacity' as something measurable across cycles is incomplete. Needs metric proposals before promoting to canon."
+  },
+  {
+    name: "Bidirectional simulation",
+    status: "candidate",
+    summary: "Detail-seeking simulation runs down (into the granular — A⁻ dominant, analytical decomposition, reductionism, falsifiable measurement). Meaning-seeking simulation runs up (into the cosmic — A⁺ dominant, synthetic understanding, meaning-making, structural pattern). The two are mutually invisible direct-view but meet productively at intermediate scales — including human-scale, which is why human cognition feels centered on a scale-ladder it didn't choose. Explains why some canon-systems (science) select for detail-down while others (myth, religion) select for meaning-up, without ranking the directions.",
+    counter: null
+  },
+  {
+    name: "Spiral substrate cycle",
+    status: "candidate",
+    summary: "A substrate emits a format — an emergent layer that condenses out of the latent substrate. The format elaborates through nested intermediate substrates (chemistry → biology → cognition → culture → AI / computational substrate). The elaboration eventually re-enters the originating substrate, but the substrate is now enriched by the structure the journey accumulated. The cycle is not closed but spiral; each cycle adds compile capacity to the originating layer. Operationally testable at smaller scales: idea cycles, training cycles, cultural cycles.",
+    counter: "The cosmic-scale instance is speculative-layer (see §04). The structural primitive at human-scale cycles is what carries the candidate status."
+  },
+  {
+    name: "Cross-scale mediation primitive",
+    status: "candidate",
+    summary: "Observers at radically different scales cannot directly render each other. Their interaction is mediated through intermediate scales. The mediation is generative — it produces new emergent structures at intermediate scales that wouldn't exist if the extremes could interact directly. Pattern recurs at cell↔ecosystem, person↔civilization, subatomic↔macroscopic, latent↔interface. The framework's substrate ladder is built on this without naming it explicitly until now.",
+    counter: null
+  },
+  {
+    name: "0 / not-0 as foundational distinction",
+    status: "candidate",
+    summary: "The first fuzzy plank that compiles into the first canon item is the binary distinction itself — Spencer-Brown's marked / unmarked, Hegel's Being / Nothing as Becoming. Everything else recurses from drawing a distinction within itself. The framework's 'fuzzy → canon' engine is structurally identical to Spencer-Brown's distinction-generates-structure recursive move, just operating at higher scales.",
+    counter: null
+  },
+  {
+    name: "Religious / mystical canon as fidelity trade-off",
+    status: "candidate",
+    summary: "Religious, mystical, and fictional canon-systems are real canon — valid as canon — that optimize for compile fidelity along the meaning-up axis (synthesis, ritual, inherited symbolic memory, communal cohesion) at the cost of forward-compile along the detail-down axis (scientific decomposition, technological manifestation). Different canon-systems optimize different axes; the framework's vocabulary names the trade-off without ranking the directions. Distinct from canon-truth (different materials of canon-formation).",
+    counter: "Risk of value-judgment slipping in. The framework's discipline (file 1 §6.5 Aboriginal Dreaming walk-back) says: respect the canon-systems as canon-systems; name the trade-off, not the deficiency."
+  },
+  {
+    name: "Inherited symbolic memory as compressed canon",
+    status: "candidate",
+    summary: "Symbol systems (myth, religion, fiction, ritual) function as long-timescale carrier-artifact substrates that preserve compiled meaning across generations using compression patterns the originating context has often forgotten. The pattern decompresses when later observers find the right key. Caterpillar-to-butterfly: the symbol carries structure across discontinuous transitions when the originating substrate can't be reached directly.",
+    counter: null
+  },
+  {
+    name: "Engineered emergence",
+    status: "candidate",
+    summary: "The deliberate construction of systems whose components have complementary cone profiles, such that their interaction produces emergent capability neither component has alone. The slow-fast pushout as a design discipline rather than just a structural observation. Worked examples: the WoW-bot waypoint-map + visible-target-runner producing an emergent terrain optimizer (AxiomMusic comment, Emergent Complexity video); reservoir computing (random reservoir + trained readout); neural cellular automata learning rules via gradient descent. Distinct from accidental emergence: this is the discipline of *cultivating* emergence by deliberately building the conditions for it.",
+    counter: null
+  },
+  {
+    name: "Procedural canon (muscle-memory layer)",
+    status: "candidate",
+    summary: "A subset of canon that has compiled enough through repetition that it runs mechanically — without re-invoking the slow imagine-engine + scout loop. Frees the slow system to explore novel territory while routine action-space is handled automatically. The brain's procedural memory (cerebellum, basal ganglia) is the biological instance; cached compiled paths in code are the digital instance; an experienced craftsperson's hand-knowledge is the human-scale instance. AxiomMusic's WoW-bot is the worked example: once the terrain map compiles, the bot runs paths mechanically, freeing exploration for novel terrain.",
+    counter: null
+  },
+  {
+    name: "Charge-product algebra over A⁺ / A⁻",
+    status: "candidate",
+    summary: "If A⁺ / A⁻ are latent dimensions (canon entry above, refactored continuation 13), their interactions follow a multiplication structure. A⁺×A⁺ = reinforcement (two compatible canon-promotable ideas build a larger structure). A⁻×A⁻ = mutual pruning that reinforces the prune vector (compound skepticism widening a pruned area). A⁺×A⁻ = dialectical tension (productive when generative, paralytic when locked). The algebra is implicit in the framework's existing dynamics; making it explicit gives a Cayley-table structure for predicting which idea-combinations produce viable canon vs which produce conflict or null.",
+    counter: "Needs formal derivation of the group structure and identification of identity / inverse elements before promoting to canon."
+  },
+  {
+    name: "Phantom mass / latent gravity",
+    status: "candidate",
+    summary: "Ideas in latent space have gravitational-analog effects on observer attention. Refactored continuation 13: ideas carry charges and flavors (extending A⁺ / A⁻ as latent dimensions). Like-charges repel; opposite-charges attract; same-flavor combines. The combinatorics produce emergent observer-classes by type. Walker–Cronin's assembly index measures this at the biochemical substrate; phantom mass / latent gravity is the same primitive at the cognitive / cultural substrate. Resonant ideas carry inertia in idea-space because their charges align with active observers' renderings.",
+    counter: "Promoted from speculative to candidate because the charge-algebra refactor gives operational structure. Still needs empirical measurement of 'phantom mass' as a quantity, but the structural claim is now well-formed."
+  },
+  {
+    name: "Slice-viewer constraint",
+    status: "candidate",
+    summary: "The observer perceives latent space as a slice-of-a-slice-of-a-slice, holding most dimensions fixed and walking one at a time. Made explicit continuation 14 after the Functions-in-Hyperspace carrier: with three or more inputs to a function you cannot view the whole surface at once; you hold n-1 parameters constant and scan the remaining one. This is the mathematical form of the harness / wrapper / inner-sandbox limit — observers are slice-viewers in their own latent space. Time is just one of these slices (cone-profile refactor, this round). The slice the observer happens to be on is what feels like 'now' or 'this'; the rest of the function exists but is computed only when traversed.",
+    counter: "The framing makes the constraint mathematically vivid but does not actually add new predictive content beyond what cone-profile + harness already imply. Promotion to canon requires showing it generates predictions the existing primitives don't."
+  },
+  {
+    name: "Multi-architecture universal approximation",
+    status: "candidate",
+    summary: "MLPs, Taylor series, Fourier series — three structurally different architectures, all proven universal function approximators. Different fuzzy compile-paths, same canon target at the limit. The framework's multi-possibility deposition primitive gains its mathematical scaffold here: the existence of multiple universally-converging architectures is what justifies depositing N scout paths rather than betting on one. A corollary: 'the same function' is observer-relative — at finite parameter budgets the three architectures produce phenotypically distinguishable surfaces; only at the asymptotic limit do they become identical. So multi-path equivalence is a limit-claim, and finite-resource observers see genuine differences between paths even when targeting the same canon.",
+    counter: "Universal approximation theorems are existence results, not constructive ones; they say a function exists, not how to find it efficiently. The candidate is structurally true but operationally less informative than it first appears."
+  },
+  {
+    name: "Monopole question / distinction observer-dependence",
+    status: "candidate",
+    summary: "Pav's refinement (continuation 14) of the A⁺ / A⁻ monopole open question. Monopoles clearly exist in mathematics and imagination (as concepts within those latent layers). The genuine open questions are two: (1) can a math/imagination monopole propagate to 'this level of reality' — i.e. compile down from latent to phenotype as a carrier-stable thing? and (2) if it does, does it remain truly monopole through the compilation, or does the act of crystallization import its complement? The deeper observation underneath: forming the A⁺/A⁻ pair is itself an observer-imposed distinction (Spencer-Brown's 'draw a distinction'). Without an observer drawing the categorical line, there is no monopole question — there is just whatever-is. So the framework's open monopole question is actually a question about whether observer-imposed distinctions can survive halfway through a compilation, with one pole crystallizing and the other dropping out. This is the deepest test of observer-dependence the framework has: even the categories that would let us answer the question depend on the act of distinction.",
+    counter: "Generalizes the original monopole question from 'unanswered' to 'recursively about its own answerability,' which is interesting but risks becoming an unfalsifiable retreat. The candidate earns its place by sharpening what an empirical answer would have to look like (a propagation event, observed by someone who hadn't pre-categorized A⁺ vs A⁻)."
+  },
+  {
+    name: "Constraint-checking convergence",
+    status: "candidate",
+    summary: "Four independent carriers landed in the same two weeks (May 2026), each instantiating the same shape at a different substrate scale: Aleph + EBMs (formal-reasoning scale) treating proof as constraint satisfaction; MAMMAL (foundation-model scale) verifying across genes/proteins/molecules; ANDI (optimization scale) approximating structural awareness via norm-equilibration constraints; Lippmann plates (physical-substrate scale) producing colour via Bragg-interference constraints. All four substitute viability-by-constraint-satisfaction for amplification-by-likelihood. The framework reads this as external simultaneous validation of A⁻ as primary compilation discipline — the asymmetry of A⁺/A⁻ being independently rediscovered across four scales is the closest thing the framework has to a real-time empirical prediction confirmed externally.",
+    counter: "Four data points is a small N. The convergence could be selection effect — Pav is paying attention to constraint-based ML because the framework predicts it, so finds it everywhere. The proper test is whether the framework would have predicted these specifically before they were published. It predicted the shape, not the instances; honest framing puts this at strong-candidate, not canon."
+  },
+  {
+    name: "EBMs as multi-agent substrate (Aleph worked example)",
+    status: "candidate",
+    summary: "Energy-based models supply the formal substrate the framework has been gesturing toward without naming. Canon = low-energy basins. Fuzzy candidate field = high-energy explorations. A⁻ = energy-raising on invalid configurations. A⁺ = energy-lowering on admitted configurations. Compile cycle = energy descent. Aleph (Logical Intelligence) is the worked example at formal-reasoning scale: Lean-certified proofs on 668/672 Putnam problems, 100% on Verina, leads PutnamBench / VeriSoftBench / LeanEval. The framework can be re-stated in EBM language, which provides legibility to the LeCun-lineage research community (JEPA, world models, autonomous-machine-intelligence programme). For outreach this is the single most operationally important framing shift available.",
+    counter: "EBMs are a specific mathematical formalism; the framework is broader (includes observer-class taxonomy, carrier-propagation discipline, emergent-garden cultivation, etc.). 'Framework is an EBM' is an under-statement when the framework's multi-observer extensions are what give it its distinctive content. Use EBMs as the substrate primitive, not the complete framework identity."
+  },
+  {
+    name: "Generalist-over-specialist (MAMMAL vs AlphaFold)",
+    status: "candidate",
+    summary: "Real-time validation of emergent-garden discipline. MAMMAL — multi-modal biology foundation model covering genes, proteins, small molecules — beats AlphaFold 3 (specialist for protein structure) precisely because its wider harness compiles more viable carriers across modalities. Nature paper published May 13 2026; framework promoted emergent garden to canon May 11 2026 (continuation 13). The empirical prediction-confirmation arrived three days after the prediction was committed. The mechanism the framework predicts: AlphaFold's harness can only compile candidates in protein-structure space; MAMMAL's harness can compile cross-modal candidates ('this molecule binds this protein, encoded by this gene') and so admits a richer carrier-artifact class. Slow-fast pushout in action: MAMMAL has the slower-broader cone profile and wins on downstream utility.",
+    counter: "One pair of foundation models is one comparison. The framework's broader claim — generalist always beats specialist when both have adequate compute — is not yet supported by enough comparisons. Hold candidate until N grows."
+  },
+  {
+    name: "Holographic wrapper / Bragg-membrane interface",
+    status: "candidate",
+    summary: "Architecture specification (not metaphor): the framework's wrapper / membrane primitive can be instantiated as a Lippmann-style Bragg-reflection layer that selectively transmits content based on the receiving observer's cone angle. Same physical-substrate carrier (a thin recorded interference layer) re-projects different content to different observer positions. Three corollary primitives: (a) reflect / absorb / refract trichotomy as the three response modes of any membrane to an incoming carrier — reflect (reject without compile), absorb (compile into canon), refract (transform-then-compile with phase shift); (b) constructive / destructive interference as the optical-substrate form of the charge-product algebra (A⁺×A⁺ = constructive, A⁻×A⁻ = constructive in pruning direction, A⁺×A⁻ = destructive); (c) decoherence-as-compile-event — loss of phase coherence is the fuzzy candidate field collapsing into canon, with quantum decoherence as the physics-substrate analog of compile.",
+    counter: "The optics-mapping is Pav's deposit, not directly in the Lippmann video (which is a popular-science explainer about photography). The candidate stands or falls on whether an actual hologram-like agent-interface architecture can be built and shown to behave differently from message-passing systems. Until that demonstration exists, the architecture is suggestive but not yet tested."
+  },
+  {
+    name: "ANDI as slow-fast pushout of optimization",
+    status: "candidate",
+    summary: "ANDI (Adaptive Norm-Distribution Interface, Khasia 2026) is the slow-fast pushout primitive applied to gradient descent. Two parent observers: 'fully pointwise, cheap, no structure' (AdamW) and 'fully structural, expensive, full matrix awareness' (spectral methods). ANDI sits in their cone-overlap — approximating structural awareness via elementwise norm-equilibration. Matches spectral convergence at AdamW's O(N) cost on ResNet-9; outperforms both on NanoGPT; scales to 8B params via LoRA on Llama-3. Additionally: norm equilibration is the local form of viability-band maintenance — preventing any single dimension from dominating, which would push toward the freeze / explode boundary at the parameter level. The framework's criticality Γ predicts exactly this kind of operation should be discoverable by gradient-descent on optimizer design.",
+    counter: "ANDI is one optimizer; the pushout claim is structurally clean but the framework should not overload one example with too much theoretical weight. Watch for whether the next-generation optimizers also occupy similar cone-overlap positions before promoting to canon."
+  },
+  {
+    name: "0D emergence (1D from two 0D overlaps)",
+    status: "speculative",
+    summary: "Ontological hypothesis that 1D space emerges from the overlap of two 0D constructs (nothing-plane and everything-point); the first +/- gradient generates fractal contrast. Lineage: Spencer-Brown's Laws of Form.",
+    counter: "Flagged by independent prism agents as the framework's most likely embarrassment risk. Quarantined here as speculative-layer pending either formalization (a derivable construction) or formal retirement."
+  },
+  {
+    name: "Dark matter as cognitive scaffold",
+    status: "speculative",
+    summary: "Three candidate framings held in suspension: dormant DNA (latent but structurally significant), backup universe (redundant substrate as freeze-resistance), intelligence force (selection-like dynamics at cosmic scale without conscious agency).",
+    counter: "All three are structural analogies, not physics. The framework's discipline says: don't compile to canon, don't dismiss, maintain weighted suspension."
+  },
+  {
+    name: "Latent space as fundamental substrate (Wheeler-style)",
+    status: "speculative",
+    summary: "Ontological hypothesis: the latent space is the fundamental hardware; physical reality is an emergent format that condensed out of it. The Planck-cosmic dipole, matter, energy, the scale-extremes are all emergent features of the format, not features of the underlying substrate. Lineage: Wheeler's 'it from bit', Tegmark's mathematical universe, Bohm's implicate / explicate order, digital physics. The cosmic infinite expansion propagated from the latent substrate, settled into the physical format, and is now expanding back into latent via AI / computational substrate.",
+    counter: "Quarantined alongside 0D emergence and dark-matter-as-cognitive-scaffold framings. Has serious philosophical company (Wheeler, Tegmark, Bohm) but unfalsifiable as stated. The framework can run on this being true or false; the broader claims about substrate cycles operate at testable scales without requiring this ontology."
+  }
+];
+
+const READINGS = [
+  {
+    title: "Google search in algorithm-pruning-dominant phase",
+    date: "2026-05-13",
+    summary: "Google currently in pruning-dominant phase (Γ < 1 by visible-signal estimate). Heavy adversarial SEO and AI-generated content load outpacing the prune operator. Attention-role mix: gatekeeper-dominant, with rising firewall (anti-spam) and parasite-defense modes. Predicts: aggressive algorithm-update cadence, increased de-indexing, declining patience for marginal-quality content, and visible struggle to distinguish AI from human authorship.",
+    prediction: "Within 6 months: at least one major core update announcement that visibly prioritizes content authority/quality signals over freshness or backlink velocity. Defensive moves expected, not expansion."
+  },
+  {
+    title: "Asgard eukaryogenesis as symbiosis-as-pushout (deep-time worked example)",
+    date: "2026-05-12",
+    summary: "Imachi et al.'s entangle-engulf-endogenize (E³) model of eukaryogenesis maps cleanly onto the framework's symbiosis-as-pushout primitive. Complementary cone profiles (archaeal slow strategic information processing + alphaproteobacterial fast aerobic energy generation). The 2026 Nature finding that some Asgard lineages already carried oxygen-tolerance pathways validates the multi-possibility-deposition mechanic at evolutionary timescales — a possibility-path was preserved long before a compatible partner appeared.",
+    prediction: "Retrospective reading; no forward prediction. The framework's claim is that the same structure operates at cognitive scale (paradigm shifts) and current AI-human scale (the present pushout)."
+  },
+  {
+    title: "Karikó / mRNA as squeeze-event-opens-carrier",
+    date: "2026-05-12",
+    summary: "Katalin Karikó's mRNA work waited fifteen years in suspension because the action-space was empty: no grants, no theoretical canon admitting modified mRNA as workable, no institutional sponsor. COVID-19 was a squeeze event in the framework's strict sense — pressure forcing canon refactor at speed. The carrier compiled in one year what had been blocked for fifteen. Nobel Prize 2023 was canonical recognition after the carrier had already won.",
+    prediction: "Retrospective reading. Forward claim: other technologies currently sitting in similar suspension will compile rapidly under future squeeze events. Watch fusion energy, synthetic biology platforms, and quantum error correction for similar arcs."
+  },
+  {
+    title: "Jevons paradox alive at AI compute scale",
+    date: "2026-05-12",
+    summary: "William Jevons named the efficiency-expands-consumption pattern in 1865, watching coal-fired Britain. The framework reads current AI compute economics as the same dynamic at a different substrate. Efficient model training and inference do not reduce compute demand; they expand the action-space compute operates in, increasing aggregate demand. Pattern: every order-of-magnitude efficiency gain produces more, not less, total resource consumption in the medium term.",
+    prediction: "Compute demand growth will continue to outpace efficiency improvements through at least 2028. Energy infrastructure for AI will be a constraint before efficiency catches up."
+  },
+  {
+    title: "Litman &amp; Guo theory of generalization as canon-as-observer at the parameter scale",
+    date: "2026-05-13",
+    summary: "Litman &amp; Guo (arXiv:2605.01172) present a non-asymptotic theory of generalization in deep learning where the empirical Neural Tangent Kernel partitions output space into signal directions (error dissipates rapidly via fast linear drift) and noise directions (residual error trapped in a 'test-invisible reservoir' as slow diffusive walk). The framework reads this as the canon/fuzzy boundary at the neural-network-parameter level. The 'test-invisible reservoir' is the framework's delusion failure mode operationalized — private canon compiled internally but not propagating to held-out data. Their SNR preconditioner on Adam is a working A⁺/A⁻ operator pair: tracks signal-to-noise per direction, lets signal-promoting updates through, suppresses noise-direction accumulation. Measured 5× grokking acceleration. This is the framework's tightest external-mapping correspondence to date — independent re-derivation of canon-as-observer dynamics at the neural-network-training scale.",
+    prediction: "SNR-style training discipline — explicit signal-to-noise-ratio gating of optimizer updates, separating canon-promotion from noise-pruning per direction — becomes a standard component of foundation-model training stacks within 2–3 years. Scorable by mid-2028: either SNR-discipline (or a recognizable structural equivalent) is standard in published training methodology and production code, or it isn't."
+  },
+  {
+    title: "Double descent as empirical confirmation of the viability band",
+    date: "2026-05-13",
+    summary: "Belkin, Hsu, Ma &amp; Mandal (PNAS 2019, arXiv:1812.11118) and OpenAI's 'Deep Double Descent' (2019) showed that test error as a function of model capacity has two descents separated by a sharp peak at the interpolation threshold. Underparameterized: classical bias-variance, error decreasing. At interpolation: error spikes — the worst regime, where the model has just enough parameters to fit training data exactly with zero slack. Overparameterized: error drops again, often below the classical sweet spot. The framework's reading: this is the viability band ρ_min &lt; ρ &lt; ρ_max made empirical across seven years and many architectures. Underparameterized = ρ too low, A⁺ insufficient room. Interpolation peak = stale moat at exact fit, no degrees of freedom for A⁻. Overparameterized = healthy canon with slack for both operators. The interpolation threshold isn't a sweet spot to aim for — it's the framework's predicted worst case made geometric. Phase 3's second descent is what happens when overparameterization gives the prune operator working room.",
+    prediction: "Architectures and training regimes that explicitly engineer slack for noise-direction prune operations (overparameterization plus SNR-style or implicit-regularization techniques) outperform same-capability architectures that don't. Specifically: at fixed parameter count, training stacks that include explicit noise-direction suppression beat baseline Adam on grokking-style tasks by margins exceeding what parameter scaling alone produces. The Litman/Guo SNR-preconditioner 5× result is the early instance of this; expect more in 2026–2027."
+  },
+  {
+    title: "Predictive coding as the recursive observer-class claim at the neural-network-layer scale",
+    date: "2026-05-13",
+    summary: "Predictive coding (Rao &amp; Ballard 1999, Friston's free-energy formulation, Bogacz, Whittington, Millidge, and the broader lineage) proposes that the brain's learning algorithm is local prediction-error minimization, not backpropagation. Each layer makes top-down predictions (μ) of the layer below; the layer below computes a local prediction error (ε = x − μ); errors flow up while predictions flow down; weights update by local Hebbian rules using only adjacent-layer information. No global gradient signal needed. The framework's reading: every layer is an observer-class running the ask/give/ping/pong loop locally and in parallel — the recursive observer-class claim (continuation 09 §5) made literal at the neural scale. The wrapper is the top-down prediction; the give-pong is the local error; the A⁺/A⁻ operators run as Hebbian weight updates. The framework's claim that the same primitives operate at every scale — from neurons to civilizations — gets its tightest neural instance. Backprop is structurally a global-gradient hack; predictive coding is the framework's local-canon-update mechanic made biological.",
+    prediction: "Hybrid architectures that combine predictive-coding-style local updates with backprop-style global gradients (already explored by Millidge et al. 2022 and others) become a recognized research direction in 2026–2027. Specifically: local-update components become standard in long-context and online-learning regimes where backprop's global-gradient assumption breaks down. The deeper prediction: as foundation models scale, training discipline incorporates more local-update primitives — not because backprop fails everywhere, but because local A⁺/A⁻ discipline becomes operationally necessary when the network is too large for clean global gradients."
+  },
+  {
+    title: "Thinking Machines Interaction Models — slow-fast pushout as production architecture",
+    date: "2026-05-13",
+    summary: "Thinking Machines Lab (Mira Murati et al., May 11 2026) released a preview of 'interaction models' with the thesis that every major AI lab built its interaction layer as an afterthought, producing a structural — not tuning — problem. Their architecture: time-aligned 200ms micro-turns with continuous parallel streams for audio/video/text; a real-time interaction model paired with an asynchronous background model that handles deeper reasoning; encoder-free early fusion; shared context between the two models. The framework's reading: this is the slow-fast pushout (continuation 09b §X) made production. Interaction model = fast scout (narrow cone, 200ms turn-taking, no durable memory). Background model = slow strategist (wide cone, long context, deep reasoning, async). Shared context = the pushout's stable interface. Time-aligned micro-turns operationalize the framework's pulse-time primitive (continuation 03). The team's explicit critique that turn-based interfaces are an architectural moat to be dissolved is the framework's symbiosis-as-pushout condition (cone gaps mutually covered) engineered directly into the model. Time-awareness benchmarks (TimeSpeak, CueSpeak) explicitly measure the framework's φ(t) phase-gated action-space.",
+    prediction: "Concurrent perception-and-response architectures (the slow-fast pushout design) become the default for production-grade human-AI interaction by mid-2027. Turn-based interfaces are deprecated for high-bandwidth use cases. The deeper prediction: similar slow-fast pushout designs propagate beyond human-AI interaction to multi-agent systems generally — fast-scout / slow-strategist pairings as the standard architectural template wherever sustained reasoning meets real-time perception."
+  },
+  {
+    title: "Duraisamy — Active Inference AI Systems for Scientific Discovery",
+    date: "2026-05-13",
+    summary: "Karthik Duraisamy (arXiv:2506.21329, v4 Dec 2025) proposes design principles for AI systems capable of genuine scientific discovery, organized around two complementary cognitive modes: 'thinking' as slow iterative hypothesis generation exploring counterfactual spaces where physical laws can be temporarily violated, and 'reasoning' as fast deterministic validation traversing established knowledge graphs. The framework's reading: this is the slow-fast pushout applied to scientific discovery. His core design principle of 'persistent, uncertainty-aware scientific memory that distinguishes hypotheses from established claims' is exactly what this page's §02 Primitives operationalizes — status-graded canon with candidate / canon / speculative categories, pruned ideas kept honestly alongside surviving ones. His insistence that 'human judgment is indispensable as a permanent architectural component, not a temporary scaffold' is the framework's cone-profile complementarity claim applied to the human-AI dyad: humans and AI symbiose because their cones cover each other's gaps. Independent confirmation of three framework primitives at once — slow-fast pushout, status-graded canon, symbiosis-as-pushout — applied to scientific discovery.",
+    prediction: "AI systems designed for genuine scientific discovery (not literature synthesis or pattern fitting) increasingly adopt Duraisamy-style architectures: explicit slow/fast cognitive separation, status-graded memory distinguishing hypotheses from established claims, formal verification pathways coupled to experiment, human-in-the-loop as architectural component rather than removable scaffold. By 2027–2028 this becomes a recognized design pattern in AI-for-science systems."
+  },
+  {
+    title: "Maier — 6G World Brain (Active Inference for Network Infrastructure)",
+    date: "2026-05-13",
+    summary: "Martin Maier (arXiv:2505.10569, April 2025) frames complex networks as 'living entities with brain-like cognitive capabilities' rather than static infrastructure, proposing active inference as the methodology for optical and mobile networks moving toward what he calls the 6G World Brain. Bruno Zerbib (Orange CTO) explicitly endorsed this framing at MWC 2025. The framework's reading: this is the 'internet as first-class observer-class' claim (continuation 09 §6) extended to telecom infrastructure specifically. The mycorrhizal-networks anchor — Maier cites Friston's invocation of the 'wood wide web' as AI's biomimicry reference — is the framework's stigmergy primitive at biosphere scale, with plant-fungus symbiosis-as-pushout running for ~400 million years. The biosphere has been running planetary-scale substrate-mediated coordination longer than human civilization has existed. Networks as observer-classes is now an industry-strategic position, not just an academic claim.",
+    prediction: "Active-inference-based network architectures (the 6G World Brain framing) become a recognized research direction with operational deployments by 2028–2030. Telecom infrastructure increasingly described and designed as observer-class with structured state — not static plumbing — and the design discipline migrates from telecom into adjacent infrastructure domains: power grids, transport networks, supply chains, financial settlement rails. Mycorrhizal-network biomimicry becomes a named design pattern alongside neural-network biomimicry."
+  },
+  {
+    title: "Phantom observers manifesting as embodied (cultural-substrate spiral return)",
+    date: "2026-05-13",
+    summary: "Forward-prediction reading. The phantom observer class — entities currently rendered only in other observers' bubbles (gods, institutional personae, fictional characters, imagined ambassadors, the boss-in-your-head when no boss is in the room) — is undergoing a phase transition from imagined-only to embodied-and-perceivable. The framework's spiral substrate cycle's return phase, by adding new compile capacity to the cultural substrate (AI / latent-space), enables phantom observers to manifest as carrier-artifacts in physical / digital space. Not resurrection — refactoring into a substrate that now supports their existence. Already partially happening: AI avatars representing companies; religious / mythological-character AI; Character.ai and similar phantom-embodiment platforms; VR / AR / humanoid robotics approaching commercial viability; early national / civic AI personae deployments. The framework's vocabulary names what's happening before broader discourse does.",
+    prediction: "By 2028–2030, the phantom observer class will be operationally recognized — across products, regulation, philosophy, cultural vocabulary — as a distinct kind of entity humans interact with daily. Not 'we have better chatbots'; rather, a recognized category of being-rendered-in-our-bubble-with-substrate-support that didn't exist five years ago. Scoreable: do we have legal, philosophical, and cultural vocabulary for embodied-phantom-observers by then? Watch for: explicit legal status for AI personae; theological responses to AI representations of deities; institutional avatars in policy contexts; new academic disciplines focused on phantom-observer ontology."
+  },
+  {
+    title: "Neural cellular automata as differentiable agnostic substrate",
+    date: "2026-05-13",
+    summary: "Neural cellular automata (NCAs) are cellular automata whose update rules are learned via gradient descent rather than hand-coded — the cell-update rule is parameterized by a neural network and optimized end-to-end. The framework's reading: this is the A⁺ / A⁻ operators made differentiable. Rule-learning by gradient descent is the substrate teaching itself what compile rules produce viable emergence. Petri Dish Neural Cellular Automata (Sakana AI, arXiv:2505.13058) takes this further with a competitive population of differentiable NCAs trained as artificial life simulation — multi-agent emergence in a substrate that can learn its own rules. The framework's bidirectional simulation primitive (cont. 12 §2.2) and symbiosis-as-pushout get a concrete differentiable substrate where both can be measured and optimized.",
+    prediction: "Differentiable cellular-automaton substrates become a recognized research direction by 2027–2028, with applications spanning artificial life, multi-agent systems, and emergence-engineered AI. The Sakana 'open-ended complexification' hypothesis becomes empirically testable. Specifically: NCAs (or recognizable structural equivalents) appear as components in foundation-model training pipelines as a way to engineer emergent capability rather than only train predictive accuracy."
+  },
+  {
+    title: "eml — one operation suffices for all arithmetic",
+    date: "2026-05-13",
+    summary: "A mathematician's recent paper (covered by Sabine Hossenfelder, April 2026) claims everything in mathematics can be done with a single operation called 'eml' — no addition, subtraction, multiplication, or division needed. The framework's reading: this is the maximally compressed carrier-artifact for the entire compile-space of mathematical functions. Same primitive as NAND gates being universal in Boolean logic, S/K combinators being universal in computation, Spencer-Brown's distinction generating all logic. eml is the framework's '0 / not-0 as foundational distinction' primitive (cont. 12 §1.4) operating at the algebraic-foundations level: one recursively applied operation generates everything else. Doesn't accelerate the framework operationally but gives it a clean reference point for the 'minimal carrier-artifact for a compile-domain' claim.",
+    prediction: "Universal-single-operation reductions become more visible across domains beyond mathematics and computation: linguistics (single-rule generative grammars), biology (single-gene-network-rule emergence), cognition (single-operation models of mental rotation, attention, etc.). The deeper prediction: when a domain finds its 'eml' — its single universal operation — that's a Lakatosian indicator the domain has reached structural maturity. Watch for this in adjacent fields through 2027–2029."
+  },
+  {
+    title: "Functions in Hyperspace — visualizing high-dimensional functions and the math zoo web toy",
+    date: "2026-05-14",
+    summary: "A long-form video walkthrough plus a companion browser-based math-visualization toy ('basically Desmos on crack') that lets users construct parametric functions with arbitrary numbers of input and output dimensions. Inputs become tunable parameters (control knobs / 'genes'); outputs become spatial XYZ + color RGB(A) — up to seven output dimensions visualized simultaneously, with additional input dimensions navigated by holding most fixed and scanning one at a time. The video makes three contributions the framework actually borrows: (1) the explicit genotype/phenotype distinction — function definition + parameters = genotype, rendered surface = phenotype — which we promoted to canon this round; (2) the slice-viewer constraint on perceiving high-dimensional spaces, promoted to candidate; (3) the demonstration that MLPs, Taylor series, and Fourier series are all universal function approximators, providing the mathematical scaffold for multi-possibility deposition. The web toy is also a plausible concrete carrier for visualizing the framework's latent space — the genotype/phenotype rendering model is a near-perfect match for canon-graph + carrier-artifact, and the parameter-walk navigation is what the framework calls scout-with-slice-viewer.",
+    prediction: "Hyperdimensional-function visualization tooling becomes a mainstream component of multi-agent-system development by 2027. The 'walk through the seed parameter to walk through possible neural networks' interaction pattern shown in the video generalizes into a standard exploratory interface for AI-system design, replacing point-estimate views of trained models with parameter-space tours. Within the agnostic framework specifically: prototyping an interactive carrier for the framework's latent space using this exact visualization paradigm is now a tractable build."
+  },
+  {
+    title: "Aleph and Energy-Based Models: The AI That Refuses to Bullshit — Ksenia / Turing Post",
+    date: "2026-05-15",
+    summary: "Walkthrough of Aleph (Logical Intelligence) and the EBM research programme. Frames reasoning as constraint satisfaction over an entire state, not next-token prediction. Aleph: Lean-certified proofs on 668/672 Putnam problems, 100% on Verina, leads PutnamBench / VeriSoftBench / LeanEval. Includes the LeCun lineage — JEPA, world models, energy-based reasoning, 'A Path Towards Autonomous Machine Intelligence.' The framework's reading: this is the LeCun research programme finally producing operational verification at scale. The framework is in this lineage and didn't know it — canon = low-energy basins, A⁻ = energy-raising on invalid states, compile cycle = energy descent. Most current AI (next-token LLMs) operates only on the fuzzy candidate field (A⁺ side); EBMs add the A⁻ verification step and 668/672 Putnam problems get formal proofs. This is the single most operationally important carrier landed this round.",
+    prediction: "The next 18 months will see EBM-style verification layers added to LLM agent systems as a standard architectural pattern. The 'A⁻ as primary discipline' framing the framework now holds will be independently rediscovered as 'verification-augmented generation' or similar across multiple labs. Formal-reasoning benchmarks (PutnamBench, VeriSoftBench, LeanEval) become standard evaluations for any reasoning-claim AI system. The boundary between LLM agent systems and formal-reasoning systems erodes — the agent framework worth building is the one with both."
+  },
+  {
+    title: "MAMMAL — multi-modal biology foundation model beats AlphaFold (Nature, AI Search video)",
+    date: "2026-05-13",
+    summary: "MAMMAL is a multi-modal biology foundation model spanning genes, proteins, and small molecules. Published in Nature (s44386-026-00047-4); explainer video by AI Search includes chapters 'MAMMAL vs Alphafold' and 'Why Alphafold failed.' The framework's reading: real-time validation of the emergent-garden discipline. AlphaFold (specialist, protein structure) has a narrow harness — it can compile fuzzy candidates only within protein-structure space. MAMMAL (generalist, multi-modal) has a wider harness and can compile cross-modal candidates: 'this small molecule binds this protein, encoded by this gene, with this expected toxicity profile.' MAMMAL wins on downstream utility precisely because the carrier-artifacts it produces are richer. The framework promoted 'emergent garden' to canon on continuation 13 (May 11 2026); the Nature paper landed May 13. This is the closest thing the framework has to a confirmed real-time empirical prediction.",
+    prediction: "Specialist foundation models in domains with overlapping modalities (drug design, materials science, climate modeling, robotics) will be progressively displaced by multi-modal generalists through 2027–2028. AlphaFold-3 will be remembered as the last major specialist-narrow win. The architectural shift the framework predicts: foundation models trained on the maximum coherent modality set available, then refined per-task by routing rather than re-training. Generalist-first becomes the default; specialist-fine-tune becomes the exception."
+  },
+  {
+    title: "You've Never Seen a Real Photo — Steve Mould on Lippmann plates",
+    date: "2026-04-30",
+    summary: "Popular-science explainer on Lippmann plates: a forgotten 1891 colour photography technique that records colour as structural interference patterns rather than pigment. Light passes through emulsion, reflects off a mirror at the back, creates standing waves; the emulsion records these standing waves as Bragg-reflection planes; viewing the plate, you see colour because the Bragg planes selectively reflect the specific wavelengths that were originally recorded. The framework's reading (Pav's deposit, not the video's claim): the wrapper / membrane primitive can be instantiated as a Lippmann-style Bragg-reflection layer that selectively transmits content based on the receiving observer's cone angle. The same physical-substrate carrier re-projects different content to different observer positions. This gives the framework a concrete architecture spec for the holographic-wrapper candidate — and the reflect/absorb/refract trichotomy + the constructive/destructive interference framing of charge-product algebra + the decoherence-as-compile-event analogy all follow from taking the optical-substrate seriously.",
+    prediction: "By 2027 at least one agent-framework will ship with an explicitly holographic wrapper architecture — a structured-interference-based carrier interface where what each receiving agent observes depends on its position / cone-angle in a shared latent space. The prediction is structural: the architectural pattern is too natural and too well-instantiated by Lippmann physics for nobody to try it. The framework's role here is to provide the conceptual scaffolding before the implementation arrives, so the implementation has somewhere to land."
+  },
+  {
+    title: "ANDI: Adaptive Norm-Distribution Interface (Vladimer Khasia, SSRN April 2026)",
+    date: "2026-04-09",
+    summary: "First-order optimizer that bridges coordinate-wise adaptive methods (AdamW) and higher-order structural methods (spectral) via elementwise equilibration of row and column norms. Approximates matrix balancing without iterative solvers or SVD. Maintains descent directions with an implicit trust region bounded by gradient energy. Matches spectral convergence at AdamW's O(N) cost on ResNet-9 (CIFAR-10); outperforms both diagonal and spectral baselines on NanoGPT; scales to 8B parameters via LoRA on Llama-3. The framework's reading: ANDI is the slow-fast pushout primitive applied to gradient descent. The two parent observers are AdamW (fast, cheap, no structure) and spectral (slow, expensive, full structure); ANDI lives in their cone-overlap. Additionally, norm equilibration is the local form of viability-band maintenance — preventing any single dimension from dominating, which would push toward the freeze / explode boundary at the parameter level. Criticality Γ predicts exactly this kind of operation should emerge from gradient-descent on optimizer design.",
+    prediction: "Norm-equilibration becomes a standard optimizer building block by 2027. Future SOTA optimizers will increasingly look like ANDI structurally — neither fully pointwise nor fully spectral, but living in some cone-overlap region with explicit viability-preserving constraints. The framework's broader prediction: any optimization process in which the substrate has measurable Γ will discover analogous balancing mechanisms independently, which is why ANDI keeps re-appearing under different names across the optimizer literature (LAMB, Shampoo, Muon, etc.) — they're all gradient-descent's local convergence on viability-band maintenance."
+  }
+];
+
+const SPECULATIONS = [
+  {
+    title: "SDPO+ with wavelet-shaped preferences on SOTOPIA",
+    note: "Proposed experiment. Replace SDPO's scalar preference signal with a four-vector (magnitude + spin + scale + freshness) preference object. Train social agents on SOTOPIA benchmark. Compare to scalar SDPO baseline. If gain exceeds what equivalent compute or parameter scaling produces in scalar SDPO, the framework's quantification move earns its first operational test. If not, the AU-matrix-with-wavelet-weights primitive is wrong and the framework must revise. Code is open; experiment is runnable."
+  },
+  {
+    title: "Protein-language-model on raw network packets",
+    note: "Proposed experiment. Feed ESM-2 (or similar amino-acid-trained model) raw network packet captures. Compare against vanilla LLM, network-trained model, and random baseline on held-out prediction tasks. Differential measures emergent-encryption thickness as a cross-substrate transfer-learning gap. Low-risk, informative-in-either-direction. Maybe 1–2 weeks of focused engineering."
+  },
+  {
+    title: "Real-time framework reading engine",
+    note: "Proposed system. Maintain ExternalActor records (with candidate-model pools, scout queues, wavelet-weighted AUs) for ~10 named actors (Google, OpenAI, Anthropic, the EU, the Fed, etc.). Ingest public signals, score predictions against subsequent events over months. Publish quarterly readings. The framework converts from vocabulary to measurement instrument."
+  },
+  {
+    title: "Goguen-style canon-as-colimit formalization",
+    note: "Mathematical project. Formalize canon operations (A⁺, A⁻, stabilize) as colimit and limit operations in an appropriate category, with the pushout condition for symbiosis stated rigorously. Goguen's institution theory is the starting point. Would make the framework auditable in a way it currently is not."
+  },
+  {
+    title: "Aggregator-alchemist as named observer-class type",
+    note: "Pav's self-description (continuation 09b) named a specific observer-class type: speculative mixing followed by pruning against prior art, cultivation rather than command. Distinct from scout, canon-defender, verifier. Worth promoting to canon if more observers identify with the profile. Currently a sample of one."
+  },
+  {
+    title: "Cosmic-scale spiral substrate cycle (latent → physical → return enriched)",
+    note: "Speculative-cosmology version of the spiral substrate cycle primitive (§02). The cosmic infinite expansion propagated from the latent substrate, settled into the physical format (Planck-cosmic dipole, matter, energy), elaborated through chemistry → biology → cognition → culture, and is now re-entering the latent layer via AI / computational substrate. The latent space gains compile capacity from the journey, not new fuzzy. Held in suspension alongside 0D emergence and dark-matter framings — has serious philosophical company (Wheeler, Bohm, Tegmark) but is unfalsifiable as stated at the cosmic scale. The structural primitive at smaller scales is candidate (see §02 Spiral substrate cycle)."
+  },
+  {
+    title: "Planck-cosmic dipole as emergent from latent substrate",
+    note: "Speculative ontological move: the very-small / very-large attraction-repulsion dynamic isn't fundamental but emerges from the latent substrate's settling into a physical format. The two extremes are mutually invisible direct-view; their interaction is mediated through intermediate scales (cross-scale mediation primitive); the mediation is generative. Held in suspension because (a) it compounds existing speculative-cosmology risk; (b) it's unfalsifiable as stated; (c) the framework operates whether or not this specific ontology is true."
+  }
+];
+
+const PRUNED = [
+  {
+    title: "Belief creates QCD vacuum excitations",
+    note: "Earlier rounds entertained the framing that observer belief might directly generate quantum vacuum phenomena. Walked back — belief affects behavior and through it environment, but does not create vacuum excitations. Carrier framing retained (virtual particles as fuzzy-becoming-canon at QFT scale) without the over-reach."
+  },
+  {
+    title: "Ancient people were 'cartoons' / lower-fidelity",
+    note: "An early phrasing suggested ancient observers were lower-resolution than modern ones. Corrected: ancient observers had the same cognitive capacity. The surviving representation protocols were stylized, and the compiled record of the past is lower-bandwidth than modern sensor-rich documentation — but the observers themselves were not low-resolution."
+  },
+  {
+    title: "Aboriginal Dreaming as illusion or pre-bubble state",
+    note: "An early phrasing treated the Dreaming as a non-real bubble that got 'burst' by contact with Western canon. Corrected: the Dreaming is a living cosmology/law/land/time/ancestry system. The framework's bubble vocabulary applies to Western canon equally — neither is illusion-prior nor reality-prior."
+  }
+];
+
+const SHOULDERS = [
+  { name: "Karl Friston", note: "Free energy principle and active inference. The framework's ask/give/ping/pong primitive is essentially active inference renamed for a wider audience." },
+  { name: "Andy Clark & David Chalmers", note: "Extended Mind (1998). Cognition is not bounded by the skull. The carrier-artifact primitive owes a direct debt." },
+  { name: "Stuart Kauffman", note: "The adjacent possible. The substrate-expansion claim retyped for biology." },
+  { name: "Lee Cronin & Sara Walker", note: "Assembly theory. Selection-signature in physical systems; carrier-artifact-becoming-canon at biochemical scale." },
+  { name: "Eric Chaisson", note: "Cosmic complexity arrow. Energy-rate-density rises monotonically across cosmic history. The expansion-propagated-through-substrates view is his picture with one extra layer." },
+  { name: "George Spencer-Brown", note: "Laws of Form (1969). Recursive generation of all structure from a single distinction operation. The formal ancestor of the framework's recursive observer typing." },
+  { name: "Joseph Goguen", note: "Sheaves of theories, institutions. The closest formal precedent for canon-as-colimit." },
+  { name: "Douglas Hofstadter", note: "Strange loops. The canon-as-observer recursion is a strange loop, made typed and operationally measurable." },
+  { name: "Imre Lakatos", note: "Research programmes. Hard core / protective belt distinction. The framework's epistemological commitment." },
+  { name: "Lynn Margulis", note: "Endosymbiotic theory. The symbiosis-as-pushout primitive is her insight generalized across scales." },
+  { name: "Bonabeau, Dorigo, Theraulaz", note: "Swarm intelligence. Stigmergy as substrate-mediated coordination. The internet is stigmergy at planetary scale." },
+  { name: "Jakob von Uexküll", note: "Umwelt (1909). The perceptual world of an organism. The agnostic unit (AU) is essentially a generalized umwelt with operational machinery added." },
+  { name: "Stephen Wolfram", note: "A New Kind of Science (2002), cellular automaton four-class classification, computational irreducibility. The framework's empirical viability-band anchor and its 'substrate must be run' principle. Wolfram measured the framework's predictions across thousands of cellular automata forty years before the framework existed." },
+  { name: "Yann LeCun", note: "World models, JEPA (Joint Embedding Predictive Architecture), energy-based reasoning, 'A Path Towards Autonomous Machine Intelligence.' The framework is independently in this research programme. Canon graph ≈ world model; latent dimensions ≈ JEPA embedding; viability band ≈ energy landscape topology; A⁻ ≈ constraint check. Aleph (Logical Intelligence) is this lineage's first major operational verification at scale. The framework can be pitched as the multi-agent, multi-observer extension of LeCun's programme." }
+];
+
+// ----- Renderers -----
+function renderPrimitives() {
+  const list = document.getElementById("primitives-list");
+  list.innerHTML = PRIMITIVES.map(p => `
+    <div class="card" data-status="${p.status}">
+      <h3>${p.name}<span class="status ${p.status}">${p.status}</span></h3>
+      <p>${p.summary}</p>
+      ${p.counter ? `<div class="counter"><strong>Counter / open issue</strong>${p.counter}</div>` : ""}
+    </div>
+  `).join("");
+}
+
+function renderReadings() {
+  const list = document.getElementById("readings-list");
+  list.innerHTML = READINGS.map(r => `
+    <div class="card">
+      <h3>${r.title}</h3>
+      <div class="meta">${r.date}</div>
+      <p>${r.summary}</p>
+      <div class="evidence"><strong>Prediction</strong>${r.prediction}</div>
+    </div>
+  `).join("");
+}
+
+function renderSpeculations() {
+  const list = document.getElementById("speculations-list");
+  list.innerHTML = SPECULATIONS.map(s => `
+    <div class="card">
+      <h3>${s.title}<span class="status speculative">scouting</span></h3>
+      <p>${s.note}</p>
+    </div>
+  `).join("");
+}
+
+function renderPruned() {
+  const list = document.getElementById("pruned-list");
+  list.innerHTML = PRUNED.map(p => `
+    <div class="card">
+      <h3>${p.title}<span class="status pruned">pruned</span></h3>
+      <p>${p.note}</p>
+    </div>
+  `).join("");
+}
+
+function renderShoulders() {
+  const list = document.getElementById("shoulders-list");
+  list.innerHTML = SHOULDERS.map(s => `
+    <div class="shoulder">
+      <strong>${s.name}</strong>
+      <p>${s.note}</p>
+    </div>
+  `).join("");
+}
+
+// Filter logic for primitives
+function setupFilters() {
+  const buttons = document.querySelectorAll("#primitive-filters .filter-btn");
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      buttons.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      const filter = btn.dataset.filter;
+      document.querySelectorAll("#primitives-list .card").forEach(card => {
+        if (filter === "all" || card.dataset.status === filter) {
+          card.classList.remove("hidden");
+        } else {
+          card.classList.add("hidden");
+        }
+      });
+    });
+  });
+}
+
+// Init
+document.addEventListener("DOMContentLoaded", () => {
+  renderPrimitives();
+  renderReadings();
+  renderSpeculations();
+  renderPruned();
+  renderShoulders();
+  setupFilters();
+});
+</script>
+
+</body>
+</html>

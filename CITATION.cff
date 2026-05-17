@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+title: "Agnostic Framework: a unification hypothesis for intelligence and how ideas become canon"
+message: "If you use or reference this framework, please cite it as below."
+authors:
+  - alias: "Pav"
+    family-names: "Pav"
+    given-names: "Pav"
+type: software
+repository-code: "https://github.com/a70m123r/agnostic-framework"
+url: "https://a70m123r.github.io/agnostic-framework/"
+abstract: >-
+  A unification hypothesis treating intelligence as a fuzzy-to-canon compiler.
+  Observers (harness + wrapper + inner sandbox + action-space) encounter a fuzzy
+  candidate field, generate plausible interpretations (A⁺), check candidates
+  against constraints (A⁻), and admit what survives as canon. The compilation
+  is asymmetric — A⁻ is the primary discipline. Canon propagates as
+  carrier-artifacts and re-renders at receiving observers. Observers symbiose
+  via slow-fast pushouts. Independently developed in the LeCun research lineage
+  (world models, JEPA, energy-based reasoning) with multi-agent and
+  multi-observer extensions.
+keywords:
+  - intelligence
+  - multi-agent systems
+  - energy-based models
+  - observer-class theory
+  - constraint satisfaction
+  - canon formation
+  - emergent garden
+  - JEPA
+  - world models
+  - Lakatosian research programme
+license: CC-BY-4.0
+date-released: 2026-05-17
+version: "0.2"

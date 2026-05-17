@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agnostic v0.1 (archived) — a thinking tool for noticing how things become true</title>
+<meta name="description" content="A live, evolving framework for understanding intelligence, action-space, and how ideas become canon. Lakatosian unification hypothesis with the internet as test surface. THIS IS THE v0.1 ARCHIVED SNAPSHOT.">
+<style>
+  :root {
+    --bg: #0a0a0a;
+    --surface: #141414;
+    --surface-2: #1c1c1c;
+    --border: #262626;
+    --border-strong: #3a3a3a;
+    --text: #ececec;
+    --text-dim: #8a8a8a;
+    --text-faint: #555;
+    --accent-canon: #4ade80;
+    --accent-candidate: #fbbf24;
+    --accent-speculative: #a78bfa;
+    --accent-pruned: #6b7280;
+    --accent-link: #93c5fd;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* Archive banner */
+  .archive-banner {
+    background: rgba(251, 191, 36, 0.08);
+    border-bottom: 1px solid rgba(251, 191, 36, 0.25);
+    color: var(--accent-candidate);
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 12px;
+    text-align: center;
+    padding: 10px 24px;
+    letter-spacing: 0.04em;
+  }
+  .archive-banner a { color: var(--accent-link); border-bottom: 1px solid rgba(147, 197, 253, 0.3); text-decoration: none; }
+
+  /* Hero */
+  header.hero {
+    padding: 96px 0 72px;
+    border-bottom: 1px solid var(--border);
+  }
+  header.hero h1 {
+    font-family: Georgia, "Source Serif Pro", "Charter", serif;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 1.05;
+    margin: 0 0 24px;
+    letter-spacing: -0.02em;
+  }
+  header.hero .claim {
+    font-size: 22px;
+    line-height: 1.45;
+    color: var(--text);
+    max-width: 620px;
+    margin: 0 0 24px;
+  }
+  header.hero .sub {
+    font-size: 15px;
+    color: var(--text-dim);
+    max-width: 600px;
+    margin: 0;
+  }
+
+  .glyph { margin: 32px 0 48px; display: block; }
+  .glyph svg { display: block; max-width: 100%; height: auto; }
+
+  section { padding: 56px 0; border-bottom: 1px solid var(--border); }
+  section:last-of-type { border-bottom: none; }
+
+  h2 {
+    font-family: Georgia, "Source Serif Pro", "Charter", serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1.15;
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+  }
+  h2 .num {
+    color: var(--text-faint);
+    font-size: 16px;
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    margin-right: 12px;
+    font-weight: 400;
+  }
+  .sect-lede { color: var(--text-dim); font-size: 16px; margin: 0 0 32px; max-width: 620px; }
+
+  .status {
+    display: inline-block;
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 3px 8px;
+    border-radius: 3px;
+    vertical-align: middle;
+    margin-left: 8px;
+    border: 1px solid transparent;
+  }
+  .status.canon { color: var(--accent-canon); border-color: rgba(74, 222, 128, 0.25); background: rgba(74, 222, 128, 0.05); }
+  .status.candidate { color: var(--accent-candidate); border-color: rgba(251, 191, 36, 0.25); background: rgba(251, 191, 36, 0.05); }
+  .status.speculative { color: var(--accent-speculative); border-color: rgba(167, 139, 250, 0.25); background: rgba(167, 139, 250, 0.05); }
+  .status.pruned { color: var(--accent-pruned); border-color: rgba(107, 114, 128, 0.25); background: rgba(107, 114, 128, 0.05); }
+
+  .filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 32px; }
+  .filter-btn {
+    background: var(--surface); color: var(--text);
+    border: 1px solid var(--border-strong);
+    padding: 6px 12px; border-radius: 4px;
+    font-family: inherit; font-size: 13px;
+    cursor: pointer; transition: all 0.15s ease;
+  }
+  .filter-btn:hover { border-color: var(--text-dim); }
+  .filter-btn.active { background: var(--surface-2); border-color: var(--text); }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 20px 22px;
+    margin: 0 0 14px;
+    transition: border-color 0.15s ease;
+  }
+  .card:hover { border-color: var(--border-strong); }
+  .card h3 { font-family: Georgia, serif; font-weight: 400; font-size: 20px; margin: 0 0 8px; line-height: 1.3; }
+  .card .meta { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 12px; color: var(--text-faint); margin: 0 0 12px; }
+  .card p { margin: 0 0 8px; color: var(--text); font-size: 15px; line-height: 1.55; }
+  .card .counter, .card .evidence {
+    margin-top: 12px; padding-top: 12px;
+    border-top: 1px dashed var(--border);
+    font-size: 14px; color: var(--text-dim);
+  }
+  .card .counter strong, .card .evidence strong {
+    color: var(--text); font-weight: 600;
+    text-transform: uppercase; font-size: 11px;
+    letter-spacing: 0.06em; display: block;
+    margin-bottom: 4px;
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  }
+
+  em { color: var(--text); font-style: italic; }
+  strong { color: var(--text); font-weight: 600; }
+  a { color: var(--accent-link); text-decoration: none; border-bottom: 1px solid rgba(147, 197, 253, 0.3); }
+  a:hover { border-bottom-color: var(--accent-link); }
+
+  .editions { display: grid; grid-template-columns: 1fr; gap: 12px; margin: 24px 0 0; }
+  @media (min-width: 640px) { .editions { grid-template-columns: 1fr 1fr 1fr; } }
+  .edition { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 18px 20px; }
+  .edition h4 { font-family: Georgia, serif; font-weight: 400; font-size: 17px; margin: 0 0 4px; }
+  .edition .label {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 11px; color: var(--text-faint);
+    text-transform: uppercase; letter-spacing: 0.08em;
+    margin: 0 0 10px;
+  }
+  .edition p { margin: 0 0 12px; color: var(--text-dim); font-size: 14px; line-height: 1.5; }
+  .edition a { font-size: 13px; border-bottom: none; color: var(--text); font-family: ui-monospace, "SF Mono", Menlo, monospace; }
+
+  .shoulders { display: grid; grid-template-columns: 1fr; gap: 12px; }
+  @media (min-width: 640px) { .shoulders { grid-template-columns: 1fr 1fr; } }
+  .shoulder { padding: 14px 18px; border-left: 2px solid var(--border-strong); }
+  .shoulder strong { display: block; font-family: Georgia, serif; font-style: italic; font-weight: 400; font-size: 16px; margin: 0 0 4px; }
+  .shoulder p { margin: 0; font-size: 13px; color: var(--text-dim); line-height: 1.5; }
+
+  .contribute-grid { display: grid; grid-template-columns: 1fr; gap: 14px; margin: 24px 0 0; }
+  @media (min-width: 640px) { .contribute-grid { grid-template-columns: 1fr 1fr; } }
+  .contribute-item { background: var(--surface); border: 1px solid var(--border); padding: 18px 20px; border-radius: 6px; }
+  .contribute-item h4 { font-family: Georgia, serif; font-weight: 400; font-size: 17px; margin: 0 0 8px; }
+  .contribute-item p { margin: 0; color: var(--text-dim); font-size: 14px; line-height: 1.5; }
+
+  footer { padding: 56px 0 80px; color: var(--text-dim); font-size: 14px; border-top: 1px solid var(--border); }
+  footer .row { display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: baseline; }
+  footer .version { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 12px; color: var(--text-faint); }
+  footer p { margin: 0 0 8px; }
+
+  .legend {
+    margin: 24px 0 32px; padding: 16px 20px;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 6px; font-size: 13px; color: var(--text-dim); line-height: 1.7;
+  }
+  .legend .row { display: block; }
+  .legend .status { margin-left: 0; margin-right: 8px; }
+  .hidden { display: none !important; }
+
+  .signature {
+    padding: 64px 0 8px; text-align: center;
+    font-family: Georgia, serif; font-style: italic;
+    color: var(--text-dim); font-size: 18px; line-height: 1.4;
+  }
+
+  @media (max-width: 640px) {
+    header.hero { padding: 64px 0 48px; }
+    header.hero h1 { font-size: 40px; }
+    header.hero .claim { font-size: 19px; }
+    h2 { font-size: 26px; }
+    section { padding: 40px 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="archive-banner">
+  ⚑ ARCHIVED · v0.1 snapshot · 2026-05-13 · live version → <a href="agnostic.html">agnostic.html</a>
+</div>
+
+<div class="wrap">
+
+<header class="hero">
+  <h1>Agnostic.</h1>
+  <p class="claim">A thinking tool for noticing how things become true. A live, evolving framework for intelligence, action-space, and the way ideas travel, stick, and win.</p>
+  <p class="sub">Lakatosian unification hypothesis with the internet as test surface. Currently in active development. The primitives below are scored honestly — what's earned canon, what's still candidate, what's been pruned. The framework is being itself, not describing itself.</p>
+
+  <div class="glyph" aria-hidden="true">
+    <svg viewBox="0 0 720 140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A fuzzy field with one spike emerging">
+      <defs>
+        <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#1c1c1c"/>
+          <stop offset="0.5" stop-color="#404040"/>
+          <stop offset="1" stop-color="#1c1c1c"/>
+        </linearGradient>
+        <radialGradient id="spike" cx="0.5" cy="1" r="0.5">
+          <stop offset="0" stop-color="#a78bfa" stop-opacity="0.9"/>
+          <stop offset="1" stop-color="#a78bfa" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <line x1="20" y1="120" x2="700" y2="120" stroke="url(#fade)" stroke-width="1"/>
+      <g stroke="#3a3a3a" stroke-width="1">
+        <line x1="60" y1="115" x2="60" y2="120"/><line x1="90" y1="113" x2="90" y2="120"/>
+        <line x1="130" y1="116" x2="130" y2="120"/><line x1="170" y1="111" x2="170" y2="120"/>
+        <line x1="210" y1="114" x2="210" y2="120"/><line x1="250" y1="117" x2="250" y2="120"/>
+        <line x1="290" y1="112" x2="290" y2="120"/><line x1="330" y1="115" x2="330" y2="120"/>
+        <line x1="420" y1="113" x2="420" y2="120"/><line x1="460" y1="116" x2="460" y2="120"/>
+        <line x1="500" y1="111" x2="500" y2="120"/><line x1="540" y1="115" x2="540" y2="120"/>
+        <line x1="580" y1="113" x2="580" y2="120"/><line x1="620" y1="117" x2="620" y2="120"/>
+        <line x1="660" y1="114" x2="660" y2="120"/>
+      </g>
+      <line x1="375" y1="120" x2="375" y2="30" stroke="#a78bfa" stroke-width="1.5"/>
+      <circle cx="375" cy="30" r="3" fill="#a78bfa"/>
+      <ellipse cx="375" cy="115" rx="40" ry="20" fill="url(#spike)"/>
+    </svg>
+  </div>
+</header>
+
+<section id="manifesto">
+  <h2><span class="num">01</span>Read first</h2>
+  <p class="sect-lede">Three editions of the same manifesto, shaped for different readers. The substrate is identical; the carrier changes per audience. Start with the one that fits your wrapper.</p>
+  <div class="editions">
+    <div class="edition">
+      <p class="label">Casual</p>
+      <h4>A New Pair of Eyes</h4>
+      <p>For the general reader. Anchored in lived moments — the lighter trick, the shower handle, the alien-observer thought experiment. Closes with the hall of buried thinkers, ending with Katalin Karikó.</p>
+      <a href="AGNOSTIC_manifesto_v3_casual.md">read →</a>
+    </div>
+    <div class="edition">
+      <p class="label">Research</p>
+      <h4>A Lakatosian Unification</h4>
+      <p>For working AI researchers and theorists. Honest about prior art, explicit about epistemic position, two falsifiable side-experiments proposed (SDPO+ on SOTOPIA, protein-LM on packets).</p>
+      <a href="AGNOSTIC_manifesto_v1_research.md">read →</a>
+    </div>
+    <div class="edition">
+      <p class="label">Engineering</p>
+      <h4>A Structural Vocabulary</h4>
+      <p>For software engineers building multi-agent systems. Schemas, pseudocode, concrete data structures. Positions the framework alongside AutoGen, LangGraph, CrewAI, and MCP.</p>
+      <a href="AGNOSTIC_manifesto_v1_engineering.md">read →</a>
+    </div>
+  </div>
+</section>
+
+<section id="primitives">
+  <h2><span class="num">02</span>Primitives</h2>
+  <p class="sect-lede">The framework's vocabulary, scored honestly. Each primitive carries its current status: canon, candidate, or speculative.</p>
+  <div class="legend">
+    <span class="row"><span class="status canon">Canon</span>load-bearing; survived multi-round feedback</span>
+    <span class="row"><span class="status candidate">Candidate</span>proposed, structurally coherent, awaiting empirical validation</span>
+    <span class="row"><span class="status speculative">Speculative</span>held in suspension; flagged as potentially overreach</span>
+  </div>
+  <p style="color: var(--text-faint); font-size: 13px;"><em>v0.1 snapshot — primitives list preserved in markdown corpus. See live version for filterable rendering.</em></p>
+</section>
+
+<section id="readings">
+  <h2><span class="num">03</span>Active readings — v0.1 snapshot</h2>
+  <p class="sect-lede">Eight readings as of 2026-05-13: Google search in pruning-dominant phase · Asgard eukaryogenesis · Karikó/mRNA · Jevons paradox · Litman &amp; Guo · Double descent · Predictive coding · Thinking Machines · Duraisamy · Maier 6G World Brain. Full text in live version.</p>
+</section>
+
+<section id="speculations">
+  <h2><span class="num">04</span>Open speculations — v0.1 snapshot</h2>
+  <p class="sect-lede">SDPO+ on SOTOPIA · protein-language-model on raw packets · real-time framework reading engine · Goguen canon-as-colimit formalization · aggregator-alchemist as observer-class type.</p>
+</section>
+
+<section id="pruned">
+  <h2><span class="num">05</span>Pruned, kept honestly — v0.1 snapshot</h2>
+  <p class="sect-lede">Belief creates QCD vacuum excitations · ancient people were cartoons · Aboriginal Dreaming as illusion. Each walked back; preserved as provenance.</p>
+</section>
+
+<section id="shoulders">
+  <h2><span class="num">06</span>The shoulders we're standing on — v0.1 snapshot</h2>
+  <p class="sect-lede">Friston · Clark &amp; Chalmers · Kauffman · Cronin &amp; Walker · Chaisson · Spencer-Brown · Goguen · Hofstadter · Lakatos · Margulis · Bonabeau / Dorigo / Theraulaz · Uexküll.</p>
+</section>
+
+<section id="contribute">
+  <h2><span class="num">07</span>Contribute — v0.1 snapshot</h2>
+  <p class="sect-lede">Submit a reading · flag where it breaks · argue with a primitive · run an experiment.</p>
+</section>
+
+<div class="signature">
+  Lanced and doesn't crash or explode.<br>
+  Survive, keep moving, never stop, imagine it.
+</div>
+
+<footer>
+  <div class="row">
+    <p>
+      v0.1 — archived 2026-05-13. The live artifact has moved to <a href="agnostic.html">agnostic.html</a>.<br>
+      This snapshot is preserved to honor the framework's own prune-and-keep discipline:
+      the v0.1 design (single observer-class, "A New Pair of Eyes" as casual manifesto title,
+      no alien-observer visual, no architect/shepherd/steward role) is provenance for what
+      came next, not embarrassment to hide.
+    </p>
+    <p class="version">v0.1 · 2026-05-13 · archived</p>
+  </div>
+</footer>
+
+</div>
+</body>
+</html>
