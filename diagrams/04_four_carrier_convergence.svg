@@ -1,0 +1,56 @@
+<svg viewBox="0 0 720 540" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" font-family="ui-sans-serif, system-ui, sans-serif">
+  <title id="title">Four-carrier convergence — May 2026</title>
+  <desc id="desc">Four systems shown as four substrate scales — Aleph for formal reasoning, MAMMAL for foundation models, ANDI for optimization, and Lippmann plates for physical substrate. All four substitute viability-by-constraint-satisfaction for amplification-by-likelihood.</desc>
+  <rect x="0" y="0" width="720" height="540" fill="#0a0a0a"/>
+  <text x="360" y="32" text-anchor="middle" font-size="18" font-weight="600" fill="#ececec">Four-carrier convergence — May 2026</text>
+  <text x="360" y="54" text-anchor="middle" font-size="13" fill="#8a8a8a">Four scales, two weeks, one architectural commitment</text>
+  <g transform="translate(0, 84)">
+    <rect x="40" y="0" width="180" height="64" rx="6" fill="#141414" stroke="#ececec" stroke-width="1.5"/>
+    <text x="130" y="22" text-anchor="middle" font-size="13" font-weight="700" fill="#ececec">Aleph + EBMs</text>
+    <text x="130" y="40" text-anchor="middle" font-size="10" fill="#8a8a8a">formal-reasoning scale</text>
+    <text x="130" y="55" text-anchor="middle" font-size="10" fill="#8a8a8a">Logical Intelligence · May 15</text>
+    <rect x="240" y="0" width="280" height="64" rx="6" fill="#1c1c1c" stroke="#3a3a3a" stroke-width="1"/>
+    <text x="380" y="22" text-anchor="middle" font-size="12" font-weight="600" fill="#ececec">Lean-certified proofs · 668/672 Putnam</text>
+    <text x="380" y="40" text-anchor="middle" font-size="10" fill="#8a8a8a">candidate proofs generated, then verified</text>
+    <text x="380" y="55" text-anchor="middle" font-size="10" fill="#8a8a8a">100% on Verina; leads PutnamBench</text>
+    <text x="600" y="36" font-size="11" font-weight="600" fill="#4ade80">↑ A⁻ = Lean</text>
+  </g>
+  <g transform="translate(0, 164)">
+    <rect x="40" y="0" width="180" height="64" rx="6" fill="#141414" stroke="#ececec" stroke-width="1.5"/>
+    <text x="130" y="22" text-anchor="middle" font-size="13" font-weight="700" fill="#ececec">MAMMAL</text>
+    <text x="130" y="40" text-anchor="middle" font-size="10" fill="#8a8a8a">foundation-model scale</text>
+    <text x="130" y="55" text-anchor="middle" font-size="10" fill="#8a8a8a">Nature paper · May 13</text>
+    <rect x="240" y="0" width="280" height="64" rx="6" fill="#1c1c1c" stroke="#3a3a3a" stroke-width="1"/>
+    <text x="380" y="22" text-anchor="middle" font-size="12" font-weight="600" fill="#ececec">Multi-modal · genes / proteins / molecules</text>
+    <text x="380" y="40" text-anchor="middle" font-size="10" fill="#8a8a8a">cross-modal verification beats specialist</text>
+    <text x="380" y="55" text-anchor="middle" font-size="10" fill="#8a8a8a">outperforms AlphaFold 3</text>
+    <text x="600" y="36" font-size="11" font-weight="600" fill="#4ade80">↑ A⁻ = cross-modal</text>
+  </g>
+  <g transform="translate(0, 244)">
+    <rect x="40" y="0" width="180" height="64" rx="6" fill="#141414" stroke="#ececec" stroke-width="1.5"/>
+    <text x="130" y="22" text-anchor="middle" font-size="13" font-weight="700" fill="#ececec">ANDI</text>
+    <text x="130" y="40" text-anchor="middle" font-size="10" fill="#8a8a8a">optimization scale</text>
+    <text x="130" y="55" text-anchor="middle" font-size="10" fill="#8a8a8a">Khasia, SSRN · April</text>
+    <rect x="240" y="0" width="280" height="64" rx="6" fill="#1c1c1c" stroke="#3a3a3a" stroke-width="1"/>
+    <text x="380" y="22" text-anchor="middle" font-size="12" font-weight="600" fill="#ececec">Norm-equilibration constraint</text>
+    <text x="380" y="40" text-anchor="middle" font-size="10" fill="#8a8a8a">no dim runs away · viability preserved</text>
+    <text x="380" y="55" text-anchor="middle" font-size="10" fill="#8a8a8a">matches spectral at AdamW O(N) cost</text>
+    <text x="600" y="36" font-size="11" font-weight="600" fill="#4ade80">↑ A⁻ = balance</text>
+  </g>
+  <g transform="translate(0, 324)">
+    <rect x="40" y="0" width="180" height="64" rx="6" fill="#141414" stroke="#ececec" stroke-width="1.5"/>
+    <text x="130" y="22" text-anchor="middle" font-size="13" font-weight="700" fill="#ececec">Lippmann plates</text>
+    <text x="130" y="40" text-anchor="middle" font-size="10" fill="#8a8a8a">physical-substrate scale</text>
+    <text x="130" y="55" text-anchor="middle" font-size="10" fill="#8a8a8a">technique 1891 · video April 30</text>
+    <rect x="240" y="0" width="280" height="64" rx="6" fill="#1c1c1c" stroke="#3a3a3a" stroke-width="1"/>
+    <text x="380" y="22" text-anchor="middle" font-size="12" font-weight="600" fill="#ececec">Bragg-interference constraint</text>
+    <text x="380" y="40" text-anchor="middle" font-size="10" fill="#8a8a8a">only matching wavelengths admitted</text>
+    <text x="380" y="55" text-anchor="middle" font-size="10" fill="#8a8a8a">colour as structural, not pigment</text>
+    <text x="600" y="36" font-size="11" font-weight="600" fill="#4ade80">↑ A⁻ = interference</text>
+  </g>
+  <path d="M 670 116 L 690 116 L 690 348 L 670 348 M 670 232 L 690 232" fill="none" stroke="#4ade80" stroke-width="2"/>
+  <rect x="40" y="424" width="640" height="80" rx="8" fill="#4ade80"/>
+  <text x="360" y="448" text-anchor="middle" font-size="13" font-weight="700" fill="#0a0a0a">All four substitute the same move at four scales</text>
+  <text x="360" y="468" text-anchor="middle" font-size="12" fill="#0a0a0a">viability-by-constraint-satisfaction  ·  over  ·  amplification-by-likelihood</text>
+  <text x="360" y="490" text-anchor="middle" font-size="11" fill="#0a0a0a" opacity="0.85" font-style="italic">A⁻ is the primary compilation discipline · the asymmetry the framework predicted, externally validated</text>
+</svg>

@@ -1,0 +1,53 @@
+<svg viewBox="0 0 720 540" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" font-family="ui-sans-serif, system-ui, sans-serif">
+  <title id="title">Observer architecture</title>
+  <desc id="desc">Concentric layers showing the structure of a single agnostic observer. From outermost to innermost: action-space (dotted outer boundary, the things the observer can do), wrapper (the interface to other observers, where Asks and Gives cross), harness (the inner mechanics — LLM, memory, scout pool), and canon (the load-bearing admitted state, drawn with accent emphasis). External observers reach in through the wrapper.</desc>
+  <defs>
+    <marker id="arr2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#8a8a8a"/></marker>
+  </defs>
+  <rect x="0" y="0" width="720" height="540" fill="#0a0a0a"/>
+  <text x="360" y="32" text-anchor="middle" font-size="18" font-weight="600" fill="#ececec">Observer architecture</text>
+  <text x="360" y="54" text-anchor="middle" font-size="13" fill="#8a8a8a">Concentric layers: action-space → wrapper → harness → canon</text>
+  <rect x="80" y="84" width="560" height="420" rx="14" fill="none" stroke="#8a8a8a" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="100" y="106" font-size="11" font-weight="600" fill="#a1a1aa" letter-spacing="0.6">ACTION-SPACE</text>
+  <text x="100" y="122" font-size="10" fill="#8a8a8a">what the observer can do given current constraints</text>
+  <rect x="120" y="138" width="480" height="346" rx="10" fill="#1c1c1c" stroke="#3a3a3a" stroke-width="1.5"/>
+  <text x="140" y="160" font-size="11" font-weight="600" fill="#ececec" letter-spacing="0.6">WRAPPER</text>
+  <text x="140" y="176" font-size="10" fill="#8a8a8a">the public interface — Asks &amp; Gives cross here</text>
+  <rect x="160" y="192" width="400" height="270" rx="8" fill="#141414" stroke="#ececec" stroke-width="1.5"/>
+  <text x="180" y="214" font-size="11" font-weight="600" fill="#ececec" letter-spacing="0.6">HARNESS</text>
+  <text x="180" y="230" font-size="10" fill="#8a8a8a">LLM client · memory · scout pool · AU matrix</text>
+  <g font-size="10" fill="#ececec">
+    <rect x="180" y="246" width="86" height="22" rx="4" fill="#1c1c1c" stroke="#3a3a3a" stroke-width="1"/>
+    <text x="223" y="261" text-anchor="middle">A⁺ Generator</text>
+    <rect x="276" y="246" width="86" height="22" rx="4" fill="#1c1c1c" stroke="#3a3a3a" stroke-width="1"/>
+    <text x="319" y="261" text-anchor="middle">Fuzzy pool</text>
+    <rect x="372" y="246" width="86" height="22" rx="4" fill="#1c1c1c" stroke="#3a3a3a" stroke-width="1"/>
+    <text x="415" y="261" text-anchor="middle">A⁻ Checker</text>
+    <rect x="468" y="246" width="76" height="22" rx="4" fill="#1c1c1c" stroke="#3a3a3a" stroke-width="1"/>
+    <text x="506" y="261" text-anchor="middle">Scout pool</text>
+  </g>
+  <rect x="220" y="296" width="280" height="148" rx="8" fill="#141414" stroke="#4ade80" stroke-width="2"/>
+  <text x="360" y="320" text-anchor="middle" font-size="13" font-weight="700" fill="#4ade80" letter-spacing="0.4">CANON</text>
+  <text x="360" y="338" text-anchor="middle" font-size="10" fill="#8a8a8a">load-bearing admitted state · graph of beliefs · rules · memory</text>
+  <g stroke="#4ade80" stroke-width="1" fill="#4ade80" opacity="0.6">
+    <circle cx="265" cy="370" r="4"/><circle cx="310" cy="385" r="5"/><circle cx="360" cy="365" r="6"/>
+    <circle cx="410" cy="395" r="4"/><circle cx="455" cy="375" r="5"/><circle cx="295" cy="420" r="4"/>
+    <circle cx="345" cy="425" r="5"/><circle cx="395" cy="425" r="4"/><circle cx="445" cy="420" r="4"/>
+    <line x1="265" y1="370" x2="310" y2="385" stroke-width="0.8"/>
+    <line x1="310" y1="385" x2="360" y2="365" stroke-width="0.8"/>
+    <line x1="360" y1="365" x2="410" y2="395" stroke-width="0.8"/>
+    <line x1="410" y1="395" x2="455" y2="375" stroke-width="0.8"/>
+    <line x1="310" y1="385" x2="345" y2="425" stroke-width="0.8"/>
+    <line x1="360" y1="365" x2="395" y2="425" stroke-width="0.8"/>
+    <line x1="410" y1="395" x2="445" y2="420" stroke-width="0.8"/>
+    <line x1="295" y1="420" x2="345" y2="425" stroke-width="0.8"/>
+    <line x1="345" y1="425" x2="395" y2="425" stroke-width="0.8"/>
+    <line x1="395" y1="425" x2="445" y2="420" stroke-width="0.8"/>
+  </g>
+  <line x1="40" y1="280" x2="115" y2="280" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arr2)"/>
+  <text x="42" y="268" font-size="10" fill="#a1a1aa">Ask in</text>
+  <line x1="605" y1="280" x2="680" y2="280" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arr2)"/>
+  <text x="640" y="268" font-size="10" fill="#a1a1aa">Give out</text>
+  <line x1="360" y1="488" x2="360" y2="520" stroke="#4ade80" stroke-width="1.5" stroke-dasharray="3 2"/>
+  <text x="368" y="510" font-size="10" fill="#4ade80" font-weight="600">carrier artifact emitted</text>
+</svg>

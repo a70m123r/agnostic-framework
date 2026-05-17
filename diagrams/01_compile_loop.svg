@@ -1,0 +1,42 @@
+<svg viewBox="0 0 720 540" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" font-family="ui-sans-serif, system-ui, sans-serif">
+  <title id="title">The Compile Loop — A⁻ as primary discipline</title>
+  <desc id="desc">A vertical flow showing the agnostic compile cycle: input feeds A-plus generator, which deposits candidates into a fuzzy pool. The A-minus checker is emphasized as the primary discipline. Surviving candidates become canon; failed ones feed back as signal to A-plus.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#ececec"/></marker>
+    <marker id="arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#4ade80"/></marker>
+    <marker id="arrow-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#8a8a8a"/></marker>
+  </defs>
+  <rect x="0" y="0" width="720" height="540" fill="#0a0a0a"/>
+  <text x="360" y="32" text-anchor="middle" font-size="18" font-weight="600" fill="#ececec">The Compile Loop</text>
+  <text x="360" y="54" text-anchor="middle" font-size="13" fill="#8a8a8a">Generation is the easy half. Checking is what forms canon.</text>
+  <rect x="280" y="80" width="160" height="44" rx="6" fill="#1c1c1c" stroke="#3a3a3a" stroke-width="1.5"/>
+  <text x="360" y="100" text-anchor="middle" font-size="13" font-weight="500" fill="#ececec">Input / observation</text>
+  <text x="360" y="116" text-anchor="middle" font-size="11" fill="#8a8a8a">Ask · Ping · Pong · external signal</text>
+  <line x1="360" y1="128" x2="360" y2="158" stroke="#ececec" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="240" y="160" width="240" height="56" rx="6" fill="#141414" stroke="#ececec" stroke-width="1.5"/>
+  <text x="360" y="183" text-anchor="middle" font-size="14" font-weight="600" fill="#ececec">A⁺ Generator</text>
+  <text x="360" y="202" text-anchor="middle" font-size="11" fill="#8a8a8a">Speculation · multi-possibility deposition</text>
+  <line x1="360" y1="220" x2="360" y2="250" stroke="#ececec" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="240" y="252" width="240" height="44" rx="22" fill="#1c1c1c" stroke="#3a3a3a" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="360" y="272" text-anchor="middle" font-size="13" font-weight="500" fill="#ececec">Fuzzy candidate pool</text>
+  <text x="360" y="287" text-anchor="middle" font-size="10" fill="#8a8a8a">weighted · in-flight · aging</text>
+  <line x1="360" y1="300" x2="360" y2="330" stroke="#ececec" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="200" y="332" width="320" height="72" rx="8" fill="#4ade80" stroke="#4ade80" stroke-width="2"/>
+  <text x="360" y="357" text-anchor="middle" font-size="16" font-weight="700" fill="#0a0a0a">A⁻ Checker</text>
+  <text x="360" y="378" text-anchor="middle" font-size="11" fill="#0a0a0a" opacity="0.85">formal · canon-consistency · peer-check · self-consistency</text>
+  <text x="360" y="395" text-anchor="middle" font-size="10" font-weight="600" fill="#0a0a0a" opacity="0.92" letter-spacing="0.5">— PRIMARY COMPILATION DISCIPLINE —</text>
+  <path d="M 280 405 Q 230 430 200 450" fill="none" stroke="#4ade80" stroke-width="2" marker-end="url(#arrow-accent)"/>
+  <text x="222" y="425" font-size="10" fill="#4ade80" font-weight="600">passes</text>
+  <path d="M 440 405 Q 510 430 540 450" fill="none" stroke="#8a8a8a" stroke-width="1.5" stroke-dasharray="3 2" marker-end="url(#arrow-muted)"/>
+  <text x="500" y="425" font-size="10" fill="#8a8a8a">fails</text>
+  <rect x="80" y="452" width="240" height="58" rx="6" fill="#141414" stroke="#4ade80" stroke-width="2"/>
+  <text x="200" y="476" text-anchor="middle" font-size="14" font-weight="600" fill="#4ade80">Canon admission</text>
+  <text x="200" y="495" text-anchor="middle" font-size="11" fill="#8a8a8a">carrier emit · graph update</text>
+  <rect x="420" y="452" width="240" height="58" rx="6" fill="#141414" stroke="#8a8a8a" stroke-width="1.5" stroke-dasharray="3 2"/>
+  <text x="540" y="476" text-anchor="middle" font-size="13" font-weight="500" fill="#a1a1aa">Failed → signal</text>
+  <text x="540" y="495" text-anchor="middle" font-size="11" fill="#8a8a8a">A⁻ feedback to A⁺</text>
+  <path d="M 660 481 Q 700 481 700 188 Q 700 188 480 188" fill="none" stroke="#8a8a8a" stroke-width="1.5" stroke-dasharray="3 2" marker-end="url(#arrow-muted)"/>
+  <text x="32" y="180" font-size="11" fill="#8a8a8a" font-style="italic">Most current AI</text>
+  <text x="32" y="195" font-size="11" fill="#8a8a8a" font-style="italic">stops here →</text>
+  <line x1="100" y1="190" x2="200" y2="190" stroke="#8a8a8a" stroke-width="1" stroke-dasharray="2 2"/>
+</svg>
