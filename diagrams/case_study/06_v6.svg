@@ -1,0 +1,74 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" font-family="ui-sans-serif, system-ui, sans-serif">
+  <title id="title">Diagram 06 — version 6</title>
+  <desc id="desc">Sixth version. Body-harness becomes the outer membrane (paradigm shift). Elevation planes become an interconnected node graph (not a stack). Resolution band becomes friction band (freeze to explode, viability between). Unity-from-asymmetry callout: third observer at higher plane sees asymmetric dynamic as unity signal. Note that membrane is partially penetrable.</desc>
+  <defs>
+    <linearGradient id="fric6" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#93c5fd" stop-opacity="0.85"/>
+      <stop offset="50%" stop-color="#4ade80" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#ef4444" stop-opacity="0.85"/>
+    </linearGradient>
+    <marker id="arr6" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#8a8a8a"/></marker>
+  </defs>
+  <rect x="0" y="0" width="800" height="500" fill="#0a0a0a"/>
+  <text x="400" y="28" text-anchor="middle" font-size="16" font-weight="600" fill="#ececec">v6 — Body-as-membrane · planes-as-nodes · friction band · unity-from-asymmetry</text>
+  <text x="400" y="46" text-anchor="middle" font-size="11" fill="#8a8a8a">restructured: body is the outer membrane · planes are a network · friction regulated, not avoided</text>
+
+  <!-- Planes as nodes (top) -->
+  <rect x="40" y="68" width="720" height="80" rx="6" fill="#141414" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="52" y="84" font-size="9" font-weight="700" fill="#fbbf24">PLANES AS NODES · sequence matters · once widespread → patched</text>
+  <g>
+    <circle cx="100" cy="118" r="18" fill="#0a0a0a" stroke="#a78bfa" stroke-width="1.5"/><text x="100" y="121" text-anchor="middle" font-size="8" fill="#a78bfa">latent</text>
+    <circle cx="230" cy="118" r="18" fill="#0a0a0a" stroke="#ececec" stroke-width="1.5"/><text x="230" y="121" text-anchor="middle" font-size="8" fill="#ececec">local</text>
+    <circle cx="360" cy="118" r="18" fill="#0a0a0a" stroke="#ececec" stroke-width="1.5"/><text x="360" y="121" text-anchor="middle" font-size="8" fill="#ececec">personal</text>
+    <circle cx="490" cy="118" r="18" fill="#0a0a0a" stroke="#4ade80" stroke-width="1.5"/><text x="490" y="121" text-anchor="middle" font-size="8" fill="#4ade80">shared</text>
+    <circle cx="620" cy="118" r="18" fill="#0a0a0a" stroke="#ececec" stroke-width="1.5"/><text x="620" y="121" text-anchor="middle" font-size="8" fill="#ececec">cultural</text>
+  </g>
+  <line x1="118" y1="118" x2="212" y2="118" stroke="#8a8a8a" stroke-width="1" marker-end="url(#arr6)"/>
+  <line x1="248" y1="118" x2="342" y2="118" stroke="#8a8a8a" stroke-width="1" marker-end="url(#arr6)"/>
+  <line x1="378" y1="118" x2="472" y2="118" stroke="#8a8a8a" stroke-width="1" marker-end="url(#arr6)"/>
+  <line x1="508" y1="118" x2="602" y2="118" stroke="#8a8a8a" stroke-width="1" marker-end="url(#arr6)"/>
+  <path d="M 100 140 Q 230 145 360 140" fill="none" stroke="#fbbf24" stroke-width="0.8" stroke-dasharray="2 2" opacity="0.6"/>
+  <text x="230" y="142" text-anchor="middle" font-size="7" fill="#a1a1aa" font-style="italic">jailbreak path</text>
+
+  <!-- Person A: body-membrane (NEW: body is outer) -->
+  <text x="180" y="170" font-size="10" font-weight="700" fill="#a1a1aa">PERSON A</text>
+  <rect x="40" y="178" width="320" height="180" rx="10" fill="#141414" stroke="#ef4444" stroke-width="2.5"/>
+  <text x="50" y="196" font-size="9" font-weight="700" fill="#ef4444">BODY-HARNESS · MEMBRANE</text>
+  <text x="50" y="208" font-size="7" fill="#8a8a8a">evolved · memory · instinct  —  anchor to shared reality</text>
+  <rect x="50" y="216" width="300" height="20" rx="3" fill="#0a0a0a" stroke="#3a3a3a" stroke-width="1"/>
+  <text x="60" y="230" font-size="8" font-weight="700" fill="#ececec">WRAPPER · projects out through membrane</text>
+  <rect x="50" y="242" width="300" height="20" rx="3" fill="#0a0a0a" stroke="#fbbf24" stroke-width="1"/>
+  <text x="60" y="256" font-size="8" font-weight="700" fill="#fbbf24">HER DIAL · ↻ moving target</text>
+  <rect x="50" y="268" width="300" height="42" rx="3" fill="#0a0a0a" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="60" y="282" font-size="8" font-weight="700" fill="#a78bfa">IDEA DOMAIN · inside the black hole</text>
+  <text x="60" y="294" font-size="7" fill="#8a8a8a">imagine engine · fuzzy field · personal canon</text>
+  <rect x="50" y="316" width="300" height="20" rx="3" fill="#1c1c1c" stroke="#ef4444" stroke-width="0.8" stroke-dasharray="2 2"/>
+  <text x="60" y="330" font-size="7" fill="#ef4444">MEMBRANE PENETRABILITY · drugs · hypnosis · probes</text>
+
+  <!-- Person B mirror -->
+  <text x="560" y="170" font-size="10" font-weight="700" fill="#a1a1aa">PERSON B</text>
+  <rect x="420" y="178" width="320" height="180" rx="10" fill="#141414" stroke="#ef4444" stroke-width="2.5"/>
+  <text x="430" y="196" font-size="9" font-weight="700" fill="#ef4444">BODY-HARNESS · MEMBRANE</text>
+  <text x="430" y="208" font-size="7" fill="#8a8a8a">evolved · memory · instinct  —  anchor to shared reality</text>
+  <rect x="430" y="216" width="300" height="20" rx="3" fill="#0a0a0a" stroke="#3a3a3a" stroke-width="1"/>
+  <text x="440" y="230" font-size="8" font-weight="700" fill="#ececec">WRAPPER · projects out through membrane</text>
+  <rect x="430" y="242" width="300" height="20" rx="3" fill="#0a0a0a" stroke="#fbbf24" stroke-width="1"/>
+  <text x="440" y="256" font-size="8" font-weight="700" fill="#fbbf24">HIS DIAL · ↻ moving target</text>
+  <rect x="430" y="268" width="300" height="42" rx="3" fill="#0a0a0a" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="440" y="282" font-size="8" font-weight="700" fill="#a78bfa">IDEA DOMAIN · inside the black hole</text>
+  <text x="440" y="294" font-size="7" fill="#8a8a8a">imagine engine · fuzzy field · personal canon</text>
+  <rect x="430" y="316" width="300" height="20" rx="3" fill="#1c1c1c" stroke="#ef4444" stroke-width="0.8" stroke-dasharray="2 2"/>
+  <text x="440" y="330" font-size="7" font-weight="700" fill="#ef4444">MEMBRANE PENETRABILITY · drugs · hypnosis · probes</text>
+
+  <!-- Friction band (NEW: replaces resolution) -->
+  <rect x="40" y="380" width="720" height="100" rx="8" fill="#141414" stroke="#fbbf24" stroke-width="2"/>
+  <text x="52" y="396" font-size="10" font-weight="700" fill="#fbbf24">FRICTION BAND · agnostic regulates the substrate, not the outcome</text>
+  <rect x="60" y="410" width="680" height="14" rx="7" fill="url(#fric6)"/>
+  <text x="60" y="442" font-size="10" font-weight="700" fill="#93c5fd">FREEZE / DIFFUSE</text>
+  <text x="60" y="454" font-size="8" fill="#8a8a8a">too little friction</text>
+  <text x="400" y="442" text-anchor="middle" font-size="10" font-weight="700" fill="#4ade80">VIABILITY</text>
+  <text x="400" y="454" text-anchor="middle" font-size="8" fill="#8a8a8a">generative friction</text>
+  <text x="740" y="442" text-anchor="end" font-size="10" font-weight="700" fill="#ef4444">EXPLODE / BURN</text>
+  <text x="740" y="454" text-anchor="end" font-size="8" fill="#8a8a8a">too much friction</text>
+  <text x="400" y="470" text-anchor="middle" font-size="9" fill="#a1a1aa" font-style="italic">struggle is necessary — it's the latent friction the substrate needs</text>
+</svg>

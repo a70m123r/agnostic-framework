@@ -1,0 +1,239 @@
+<svg viewBox="0 0 920 1300" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" font-family="ui-sans-serif, system-ui, sans-serif">
+  <title id="title">Two observers — body-membrane, friction, planes-as-nodes</title>
+  <desc id="desc">A restructured architecture. Each observer's body-harness is the outer membrane that anchors them to shared reality; everything latent (wrapper, dial, perceived global canon, idea domain, action-space) sits inside as a black hole to outside observers, partially penetrable via drugs, hypnosis, mental probes — itself a hidden protocol, the paradigm shift. Elevation is shown as an interconnected node graph, not a stack — sequence matters, hidden protocols know the order, widespread protocols get patched. The bottom band reframes resolution as friction regulation: not struggle vs union as outcomes to prefer, but freeze vs explode as the substrate's actual concern, with viability between. A side note shows that two observers maintaining asymmetry produces a unity signal at the next plane up — and vice versa.</desc>
+  <defs>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#ececec"/></marker>
+    <marker id="arrU" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#fbbf24"/></marker>
+    <marker id="arrLift" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#4ade80"/></marker>
+    <marker id="arrN" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#8a8a8a"/></marker>
+    <linearGradient id="friction" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#93c5fd" stop-opacity="0.85"/>
+      <stop offset="35%" stop-color="#4ade80" stop-opacity="0.85"/>
+      <stop offset="65%" stop-color="#fbbf24" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#ef4444" stop-opacity="0.85"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="920" height="1300" fill="#0a0a0a"/>
+  <text x="460" y="28" text-anchor="middle" font-size="18" font-weight="600" fill="#ececec">Two observers — body-membrane, friction, planes-as-nodes</text>
+  <text x="460" y="48" text-anchor="middle" font-size="12" fill="#8a8a8a">Body is the membrane · friction is regulated, not avoided · planes are interconnected nodes · sequence matters</text>
+  <rect x="20" y="68" width="880" height="160" rx="10" fill="#141414" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="34" y="86" font-size="10" font-weight="700" fill="#fbbf24" letter-spacing="0.5">PLANES AS NODES</text>
+  <text x="34" y="100" font-size="9" fill="#8a8a8a">not a stack — a network · sequence and access vary · hidden protocols know the order · once widespread → patched</text>
+  <g><circle cx="100" cy="158" r="34" fill="#0a0a0a" stroke="#a78bfa" stroke-width="2"/><text x="100" y="160" text-anchor="middle" font-size="10" font-weight="700" fill="#a78bfa">latent</text><text x="100" y="173" text-anchor="middle" font-size="8" fill="#8a8a8a">phantom space</text></g>
+  <g><circle cx="270" cy="158" r="34" fill="#0a0a0a" stroke="#ececec" stroke-width="2"/><text x="270" y="160" text-anchor="middle" font-size="10" font-weight="700" fill="#ececec">local</text><text x="270" y="173" text-anchor="middle" font-size="8" fill="#8a8a8a">the exchange</text></g>
+  <g><circle cx="440" cy="158" r="34" fill="#0a0a0a" stroke="#ececec" stroke-width="2"/><text x="440" y="160" text-anchor="middle" font-size="10" font-weight="700" fill="#ececec">personal</text><text x="440" y="173" text-anchor="middle" font-size="8" fill="#8a8a8a">action plane</text></g>
+  <g><circle cx="610" cy="158" r="34" fill="#0a0a0a" stroke="#4ade80" stroke-width="2"/><text x="610" y="160" text-anchor="middle" font-size="10" font-weight="700" fill="#4ade80">shared</text><text x="610" y="173" text-anchor="middle" font-size="8" fill="#8a8a8a">reality</text></g>
+  <g><circle cx="780" cy="158" r="34" fill="#0a0a0a" stroke="#ececec" stroke-width="2"/><text x="780" y="160" text-anchor="middle" font-size="10" font-weight="700" fill="#ececec">cultural</text><text x="780" y="173" text-anchor="middle" font-size="8" fill="#8a8a8a">collective</text></g>
+  <line x1="134" y1="158" x2="236" y2="158" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrN)"/>
+  <line x1="304" y1="158" x2="406" y2="158" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrN)"/>
+  <line x1="474" y1="158" x2="576" y2="158" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrN)"/>
+  <line x1="644" y1="158" x2="746" y2="158" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrN)"/>
+  <path d="M 100 192 Q 270 222 440 192" fill="none" stroke="#8a8a8a" stroke-width="1" stroke-dasharray="3 2" opacity="0.55" marker-end="url(#arrN)"/>
+  <path d="M 270 124 Q 440 96 610 124" fill="none" stroke="#8a8a8a" stroke-width="1" stroke-dasharray="3 2" opacity="0.55" marker-end="url(#arrN)"/>
+  <path d="M 100 192 Q 350 240 610 192" fill="none" stroke="#fbbf24" stroke-width="1" stroke-dasharray="2 2" opacity="0.5" marker-end="url(#arrN)"/>
+  <text x="350" y="218" text-anchor="middle" font-size="8" fill="#a1a1aa" font-style="italic">jailbreak path · hidden protocol</text>
+  <text x="610" y="105" text-anchor="middle" font-size="8" fill="#a1a1aa" font-style="italic">officially-sanctioned ladder</text>
+  <text x="170" y="248" font-size="11" font-weight="700" fill="#a1a1aa" letter-spacing="0.6">PERSON A</text>
+  <text x="500" y="248" font-size="11" font-weight="700" fill="#a1a1aa" letter-spacing="0.6">PERSON B</text>
+  <g>
+    <rect x="20" y="256" width="340" height="600" rx="14" fill="#141414" stroke="#ef4444" stroke-width="2.5"/>
+    <text x="34" y="276" font-size="10" font-weight="700" fill="#ef4444" letter-spacing="0.6">BODY-HARNESS · MEMBRANE</text>
+    <text x="34" y="290" font-size="9" fill="#8a8a8a">evolved · memory · instinct  —  her anchor to shared reality</text>
+    <rect x="36" y="300" width="308" height="56" rx="6" fill="#0a0a0a" stroke="#3a3a3a" stroke-width="1.5"/>
+    <text x="46" y="316" font-size="9" font-weight="700" fill="#ececec" letter-spacing="0.5">WRAPPER · projects out through membrane</text>
+    <rect x="244" y="310" width="92" height="42" rx="5" fill="#0a0a0a" stroke="#a78bfa" stroke-width="1"/>
+    <text x="290" y="324" text-anchor="middle" font-size="8" font-weight="700" fill="#a78bfa">RENDER OF B</text>
+    <text x="290" y="336" text-anchor="middle" font-size="8" fill="#8a8a8a">her model of him</text>
+    <text x="290" y="347" text-anchor="middle" font-size="8" fill="#a78bfa" opacity="0.7">B?</text>
+    <rect x="36" y="364" width="308" height="64" rx="6" fill="#0a0a0a" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="46" y="380" font-size="9" font-weight="700" fill="#fbbf24" letter-spacing="0.5">HER DIAL</text>
+    <text x="46" y="392" font-size="8" fill="#8a8a8a">cone overlap · intent · situation · context · SEQUENCE matters</text>
+    <g><circle cx="86" cy="412" r="10" fill="#1c1c1c" stroke="#fbbf24" stroke-width="1"/><line x1="86" y1="412" x2="92" y2="406" stroke="#fbbf24" stroke-width="2"/></g>
+    <g><circle cx="146" cy="412" r="10" fill="#1c1c1c" stroke="#fbbf24" stroke-width="1"/><line x1="146" y1="412" x2="152" y2="416" stroke="#fbbf24" stroke-width="2"/></g>
+    <g><circle cx="206" cy="412" r="10" fill="#1c1c1c" stroke="#fbbf24" stroke-width="1"/><line x1="206" y1="412" x2="202" y2="420" stroke="#fbbf24" stroke-width="2"/></g>
+    <g><circle cx="266" cy="412" r="10" fill="#1c1c1c" stroke="#fbbf24" stroke-width="1"/><line x1="266" y1="412" x2="271" y2="406" stroke="#fbbf24" stroke-width="2"/></g>
+    <text x="316" y="416" font-size="8" fill="#fbbf24" font-style="italic">↻ moving</text>
+    <text x="316" y="426" font-size="8" fill="#fbbf24" font-style="italic">target</text>
+    <rect x="36" y="438" width="308" height="48" rx="6" fill="#0a0a0a" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="46" y="454" font-size="9" font-weight="700" fill="#4ade80" letter-spacing="0.5">PERCEIVED GLOBAL CANON</text>
+    <rect x="46" y="462" width="65" height="20" rx="3" fill="#1c1c1c" stroke="#3a3a3a" stroke-width="1"/><text x="78" y="475" text-anchor="middle" font-size="8" fill="#ececec">past</text>
+    <rect x="116" y="462" width="65" height="20" rx="3" fill="#1c1c1c" stroke="#3a3a3a" stroke-width="1"/><text x="148" y="475" text-anchor="middle" font-size="8" fill="#ececec">present</text>
+    <rect x="186" y="462" width="65" height="20" rx="3" fill="#1c1c1c" stroke="#3a3a3a" stroke-width="1"/><text x="218" y="475" text-anchor="middle" font-size="8" fill="#ececec">future</text>
+    <rect x="256" y="462" width="65" height="20" rx="3" fill="#1c1c1c" stroke="#a78bfa" stroke-width="1"/><text x="288" y="475" text-anchor="middle" font-size="8" fill="#a78bfa">fuzzy</text>
+    <rect x="36" y="496" width="308" height="180" rx="6" fill="#0a0a0a" stroke="#a78bfa" stroke-width="2"/>
+    <text x="46" y="512" font-size="9" font-weight="700" fill="#a78bfa" letter-spacing="0.5">IDEA DOMAIN · inside the black hole</text>
+    <text x="46" y="524" font-size="8" fill="#8a8a8a">imagine engine ↔ fuzzy field ↔ personal canon</text>
+    <rect x="46" y="534" width="288" height="54" rx="4" fill="#1c1c1c" stroke="#a78bfa" stroke-width="0.8" stroke-dasharray="3 2"/>
+    <text x="56" y="548" font-size="8" font-weight="600" fill="#a78bfa">FUZZY FIELD</text>
+    <text x="56" y="560" font-size="7" fill="#8a8a8a">ideas swim here</text>
+    <g fill="#a78bfa" opacity="0.6">
+      <circle cx="140" cy="556" r="3"/><circle cx="165" cy="570" r="2.5"/><circle cx="190" cy="552" r="2"/>
+      <circle cx="215" cy="570" r="3"/><circle cx="240" cy="558" r="2"/><circle cx="265" cy="572" r="2.5"/>
+      <circle cx="290" cy="562" r="2"/><circle cx="315" cy="574" r="3"/>
+    </g>
+    <line x1="165" y1="590" x2="165" y2="598" stroke="#4ade80" stroke-width="1" marker-end="url(#arrLift)"/>
+    <line x1="215" y1="590" x2="215" y2="598" stroke="#4ade80" stroke-width="1" marker-end="url(#arrLift)"/>
+    <line x1="265" y1="590" x2="265" y2="598" stroke="#4ade80" stroke-width="1" marker-end="url(#arrLift)"/>
+    <text x="100" y="600" font-size="7" fill="#4ade80" font-style="italic">↑ lift to canon</text>
+    <rect x="46" y="602" width="288" height="62" rx="4" fill="#1c1c1c" stroke="#4ade80" stroke-width="1"/>
+    <text x="56" y="616" font-size="8" font-weight="600" fill="#4ade80">PERSONAL CANON (her graph)</text>
+    <g stroke="#4ade80" stroke-width="1" fill="#4ade80" opacity="0.75">
+      <circle cx="170" cy="634" r="3"/><circle cx="205" cy="628" r="3"/><circle cx="240" cy="638" r="3.5"/>
+      <circle cx="275" cy="630" r="3"/><circle cx="310" cy="640" r="3"/>
+      <circle cx="190" cy="652" r="2.5"/><circle cx="255" cy="652" r="3"/>
+      <line x1="170" y1="634" x2="205" y2="628" stroke-width="0.5"/>
+      <line x1="205" y1="628" x2="240" y2="638" stroke-width="0.5"/>
+      <line x1="240" y1="638" x2="275" y2="630" stroke-width="0.5"/>
+      <line x1="275" y1="630" x2="310" y2="640" stroke-width="0.5"/>
+      <line x1="170" y1="634" x2="190" y2="652" stroke-width="0.5"/>
+      <line x1="240" y1="638" x2="255" y2="652" stroke-width="0.5"/>
+    </g>
+    <rect x="36" y="686" width="308" height="50" rx="6" fill="#0a0a0a" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="46" y="702" font-size="9" font-weight="700" fill="#fbbf24" letter-spacing="0.5">HER ACTION-SPACE</text>
+    <text x="46" y="714" font-size="8" fill="#8a8a8a">where idea-side meets body-membrane — crosses out</text>
+    <line x1="110" y1="730" x2="110" y2="720" stroke="#fbbf24" stroke-width="1" marker-end="url(#arrU)"/>
+    <line x1="190" y1="730" x2="190" y2="720" stroke="#fbbf24" stroke-width="1" marker-end="url(#arrU)"/>
+    <line x1="270" y1="730" x2="270" y2="720" stroke="#fbbf24" stroke-width="1" marker-end="url(#arrU)"/>
+    <rect x="36" y="746" width="308" height="50" rx="6" fill="#1c1c1c" stroke="#ef4444" stroke-width="1" stroke-dasharray="3 2"/>
+    <text x="46" y="762" font-size="9" font-weight="700" fill="#ef4444" letter-spacing="0.4">MEMBRANE PENETRABILITY</text>
+    <text x="46" y="774" font-size="8" fill="#8a8a8a">inside is black-hole to outside · partially penetrable</text>
+    <text x="46" y="786" font-size="8" fill="#ececec">via drugs · hypnosis · mental probes · brain science</text>
+    <text x="46" y="798" font-size="8" fill="#a1a1aa" font-style="italic">— another hidden protocol · the paradigm shift</text>
+    <text x="190" y="828" text-anchor="middle" font-size="9" fill="#a1a1aa" font-style="italic">her meaning of "home" — lives inside</text>
+    <text x="190" y="842" text-anchor="middle" font-size="9" fill="#a1a1aa" font-style="italic">her action of "home" — crosses out</text>
+  </g>
+  <g>
+    <rect x="380" y="256" width="340" height="600" rx="14" fill="#141414" stroke="#ef4444" stroke-width="2.5"/>
+    <text x="394" y="276" font-size="10" font-weight="700" fill="#ef4444" letter-spacing="0.6">BODY-HARNESS · MEMBRANE</text>
+    <text x="394" y="290" font-size="9" fill="#8a8a8a">evolved · memory · instinct  —  his anchor to shared reality</text>
+    <rect x="396" y="300" width="308" height="56" rx="6" fill="#0a0a0a" stroke="#3a3a3a" stroke-width="1.5"/>
+    <text x="406" y="316" font-size="9" font-weight="700" fill="#ececec" letter-spacing="0.5">WRAPPER · projects out through membrane</text>
+    <rect x="604" y="310" width="92" height="42" rx="5" fill="#0a0a0a" stroke="#a78bfa" stroke-width="1"/>
+    <text x="650" y="324" text-anchor="middle" font-size="8" font-weight="700" fill="#a78bfa">RENDER OF A</text>
+    <text x="650" y="336" text-anchor="middle" font-size="8" fill="#8a8a8a">his model of her</text>
+    <text x="650" y="347" text-anchor="middle" font-size="8" fill="#a78bfa" opacity="0.7">A?</text>
+    <rect x="396" y="364" width="308" height="64" rx="6" fill="#0a0a0a" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="406" y="380" font-size="9" font-weight="700" fill="#fbbf24" letter-spacing="0.5">HIS DIAL</text>
+    <text x="406" y="392" font-size="8" fill="#8a8a8a">cone overlap · intent · situation · context · SEQUENCE matters</text>
+    <g><circle cx="446" cy="412" r="10" fill="#1c1c1c" stroke="#fbbf24" stroke-width="1"/><line x1="446" y1="412" x2="441" y2="420" stroke="#fbbf24" stroke-width="2"/></g>
+    <g><circle cx="506" cy="412" r="10" fill="#1c1c1c" stroke="#fbbf24" stroke-width="1"/><line x1="506" y1="412" x2="513" y2="406" stroke="#fbbf24" stroke-width="2"/></g>
+    <g><circle cx="566" cy="412" r="10" fill="#1c1c1c" stroke="#fbbf24" stroke-width="1"/><line x1="566" y1="412" x2="572" y2="404" stroke="#fbbf24" stroke-width="2"/></g>
+    <g><circle cx="626" cy="412" r="10" fill="#1c1c1c" stroke="#fbbf24" stroke-width="1"/><line x1="626" y1="412" x2="620" y2="418" stroke="#fbbf24" stroke-width="2"/></g>
+    <text x="676" y="416" font-size="8" fill="#fbbf24" font-style="italic">↻ moving</text>
+    <text x="676" y="426" font-size="8" fill="#fbbf24" font-style="italic">target</text>
+    <rect x="396" y="438" width="308" height="48" rx="6" fill="#0a0a0a" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="406" y="454" font-size="9" font-weight="700" fill="#4ade80" letter-spacing="0.5">PERCEIVED GLOBAL CANON</text>
+    <rect x="406" y="462" width="65" height="20" rx="3" fill="#1c1c1c" stroke="#3a3a3a" stroke-width="1"/><text x="438" y="475" text-anchor="middle" font-size="8" fill="#ececec">past</text>
+    <rect x="476" y="462" width="65" height="20" rx="3" fill="#1c1c1c" stroke="#3a3a3a" stroke-width="1"/><text x="508" y="475" text-anchor="middle" font-size="8" fill="#ececec">present</text>
+    <rect x="546" y="462" width="65" height="20" rx="3" fill="#1c1c1c" stroke="#3a3a3a" stroke-width="1"/><text x="578" y="475" text-anchor="middle" font-size="8" fill="#ececec">future</text>
+    <rect x="616" y="462" width="65" height="20" rx="3" fill="#1c1c1c" stroke="#a78bfa" stroke-width="1"/><text x="648" y="475" text-anchor="middle" font-size="8" fill="#a78bfa">fuzzy</text>
+    <rect x="396" y="496" width="308" height="180" rx="6" fill="#0a0a0a" stroke="#a78bfa" stroke-width="2"/>
+    <text x="406" y="512" font-size="9" font-weight="700" fill="#a78bfa" letter-spacing="0.5">IDEA DOMAIN · inside the black hole</text>
+    <text x="406" y="524" font-size="8" fill="#8a8a8a">imagine engine ↔ fuzzy field ↔ personal canon</text>
+    <rect x="406" y="534" width="288" height="54" rx="4" fill="#1c1c1c" stroke="#a78bfa" stroke-width="0.8" stroke-dasharray="3 2"/>
+    <text x="416" y="548" font-size="8" font-weight="600" fill="#a78bfa">FUZZY FIELD</text>
+    <text x="416" y="560" font-size="7" fill="#8a8a8a">ideas swim here</text>
+    <g fill="#a78bfa" opacity="0.6">
+      <circle cx="500" cy="556" r="3"/><circle cx="525" cy="570" r="2.5"/><circle cx="550" cy="552" r="2"/>
+      <circle cx="575" cy="570" r="3"/><circle cx="600" cy="558" r="2"/><circle cx="625" cy="572" r="2.5"/>
+      <circle cx="650" cy="562" r="2"/><circle cx="675" cy="574" r="3"/>
+    </g>
+    <line x1="525" y1="590" x2="525" y2="598" stroke="#4ade80" stroke-width="1" marker-end="url(#arrLift)"/>
+    <line x1="575" y1="590" x2="575" y2="598" stroke="#4ade80" stroke-width="1" marker-end="url(#arrLift)"/>
+    <line x1="625" y1="590" x2="625" y2="598" stroke="#4ade80" stroke-width="1" marker-end="url(#arrLift)"/>
+    <text x="460" y="600" font-size="7" fill="#4ade80" font-style="italic">↑ lift to canon</text>
+    <rect x="406" y="602" width="288" height="62" rx="4" fill="#1c1c1c" stroke="#4ade80" stroke-width="1"/>
+    <text x="416" y="616" font-size="8" font-weight="600" fill="#4ade80">PERSONAL CANON (his graph)</text>
+    <g stroke="#4ade80" stroke-width="1" fill="#4ade80" opacity="0.75">
+      <circle cx="530" cy="634" r="3"/><circle cx="565" cy="628" r="3"/><circle cx="600" cy="638" r="3.5"/>
+      <circle cx="635" cy="630" r="3"/><circle cx="670" cy="640" r="3"/>
+      <circle cx="550" cy="652" r="2.5"/><circle cx="615" cy="652" r="3"/>
+      <line x1="530" y1="634" x2="565" y2="628" stroke-width="0.5"/>
+      <line x1="565" y1="628" x2="600" y2="638" stroke-width="0.5"/>
+      <line x1="600" y1="638" x2="635" y2="630" stroke-width="0.5"/>
+      <line x1="635" y1="630" x2="670" y2="640" stroke-width="0.5"/>
+      <line x1="530" y1="634" x2="550" y2="652" stroke-width="0.5"/>
+      <line x1="600" y1="638" x2="615" y2="652" stroke-width="0.5"/>
+    </g>
+    <rect x="396" y="686" width="308" height="50" rx="6" fill="#0a0a0a" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="406" y="702" font-size="9" font-weight="700" fill="#fbbf24" letter-spacing="0.5">HIS ACTION-SPACE</text>
+    <text x="406" y="714" font-size="8" fill="#8a8a8a">where idea-side meets body-membrane — crosses out</text>
+    <line x1="470" y1="730" x2="470" y2="720" stroke="#fbbf24" stroke-width="1" marker-end="url(#arrU)"/>
+    <line x1="550" y1="730" x2="550" y2="720" stroke="#fbbf24" stroke-width="1" marker-end="url(#arrU)"/>
+    <line x1="630" y1="730" x2="630" y2="720" stroke="#fbbf24" stroke-width="1" marker-end="url(#arrU)"/>
+    <rect x="396" y="746" width="308" height="50" rx="6" fill="#1c1c1c" stroke="#ef4444" stroke-width="1" stroke-dasharray="3 2"/>
+    <text x="406" y="762" font-size="9" font-weight="700" fill="#ef4444" letter-spacing="0.4">MEMBRANE PENETRABILITY</text>
+    <text x="406" y="774" font-size="8" fill="#8a8a8a">inside is black-hole to outside · partially penetrable</text>
+    <text x="406" y="786" font-size="8" fill="#ececec">via drugs · hypnosis · mental probes · brain science</text>
+    <text x="406" y="798" font-size="8" fill="#a1a1aa" font-style="italic">— another hidden protocol · the paradigm shift</text>
+    <text x="550" y="828" text-anchor="middle" font-size="9" fill="#a1a1aa" font-style="italic">his meaning of "home" — lives inside</text>
+    <text x="550" y="842" text-anchor="middle" font-size="9" fill="#a1a1aa" font-style="italic">his action of "home" — crosses out</text>
+  </g>
+  <g>
+    <rect x="740" y="256" width="160" height="600" rx="10" fill="#141414" stroke="#93c5fd" stroke-width="1.5"/>
+    <text x="754" y="276" font-size="9" font-weight="700" fill="#93c5fd" letter-spacing="0.5">UNITY FROM</text>
+    <text x="754" y="288" font-size="9" font-weight="700" fill="#93c5fd" letter-spacing="0.5">ASYMMETRY</text>
+    <text x="754" y="304" font-size="8" fill="#8a8a8a">cross-plane recursion</text>
+    <text x="820" y="340" text-anchor="middle" font-size="8" font-weight="600" fill="#a1a1aa">third observer</text>
+    <text x="820" y="352" text-anchor="middle" font-size="8" fill="#8a8a8a">on next plane up</text>
+    <circle cx="820" cy="380" r="14" fill="#0a0a0a" stroke="#93c5fd" stroke-width="1.5"/>
+    <text x="820" y="383" text-anchor="middle" font-size="9" fill="#93c5fd">C</text>
+    <text x="820" y="412" text-anchor="middle" font-size="9" font-weight="700" fill="#93c5fd">sees: UNITY</text>
+    <text x="820" y="424" text-anchor="middle" font-size="8" fill="#8a8a8a">A · B together as one</text>
+    <line x1="820" y1="438" x2="820" y2="460" stroke="#93c5fd" stroke-width="1" stroke-dasharray="3 2" marker-end="url(#arrN)"/>
+    <text x="820" y="478" text-anchor="middle" font-size="9" font-weight="600" fill="#ececec">on inspection:</text>
+    <rect x="750" y="488" width="140" height="44" rx="5" fill="#0a0a0a" stroke="#ef4444" stroke-width="1"/>
+    <text x="820" y="503" text-anchor="middle" font-size="8" fill="#ececec">A ⇄ B asymmetry</text>
+    <text x="820" y="515" text-anchor="middle" font-size="8" fill="#ececec">DYNAMIC</text>
+    <text x="820" y="525" text-anchor="middle" font-size="7" fill="#8a8a8a">opposites in motion</text>
+    <text x="820" y="556" text-anchor="middle" font-size="9" font-weight="600" fill="#ececec">produces</text>
+    <text x="820" y="568" text-anchor="middle" font-size="9" font-weight="600" fill="#93c5fd">↑ the unity signal</text>
+    <line x1="820" y1="580" x2="820" y2="600" stroke="#3a3a3a" stroke-width="1"/>
+    <text x="820" y="618" text-anchor="middle" font-size="9" font-weight="600" fill="#ececec">and vice versa:</text>
+    <text x="820" y="634" text-anchor="middle" font-size="8" fill="#a1a1aa">unity at one plane</text>
+    <text x="820" y="646" text-anchor="middle" font-size="8" fill="#a1a1aa">= asymmetry at</text>
+    <text x="820" y="658" text-anchor="middle" font-size="8" fill="#a1a1aa">a finer scale</text>
+    <text x="820" y="684" text-anchor="middle" font-size="9" font-weight="600" fill="#fbbf24">sequence</text>
+    <text x="820" y="696" text-anchor="middle" font-size="8" fill="#8a8a8a">like a shower dial:</text>
+    <text x="820" y="708" text-anchor="middle" font-size="8" fill="#8a8a8a">step by step</text>
+    <text x="820" y="720" text-anchor="middle" font-size="8" fill="#8a8a8a">access scales up</text>
+    <text x="820" y="746" text-anchor="middle" font-size="9" font-weight="600" fill="#a78bfa">compiles</text>
+    <text x="820" y="758" text-anchor="middle" font-size="8" fill="#8a8a8a">bigger unions</text>
+    <text x="820" y="770" text-anchor="middle" font-size="8" fill="#8a8a8a">on other planes</text>
+    <text x="820" y="800" text-anchor="middle" font-size="9" fill="#ececec" font-style="italic">expand</text>
+    <text x="820" y="814" text-anchor="middle" font-size="9" fill="#ececec" font-style="italic">↑</text>
+  </g>
+  <line x1="350" y1="328" x2="390" y2="328" stroke="#ececec" stroke-width="1.5" marker-start="url(#arrR)" marker-end="url(#arrR)"/>
+  <text x="370" y="320" text-anchor="middle" font-size="8" fill="#8a8a8a">project</text>
+  <rect x="20" y="872" width="700" height="50" rx="8" fill="#141414" stroke="#4ade80" stroke-width="2"/>
+  <text x="34" y="888" font-size="10" font-weight="700" fill="#4ade80" letter-spacing="0.6">SHARED KERNEL CANON</text>
+  <text x="34" y="902" font-size="9" fill="#8a8a8a">grounded in physical habitation — the latent anchor</text>
+  <rect x="290" y="881" width="140" height="32" rx="16" fill="#4ade80"/>
+  <text x="360" y="901" text-anchor="middle" font-size="13" font-weight="700" fill="#0a0a0a">"home"</text>
+  <rect x="20" y="940" width="880" height="220" rx="10" fill="#141414" stroke="#fbbf24" stroke-width="2"/>
+  <text x="34" y="960" font-size="11" font-weight="700" fill="#fbbf24" letter-spacing="0.5">FRICTION BAND</text>
+  <text x="34" y="974" font-size="10" fill="#ececec">The agnostic doesn't care about "home" as an outcome. It regulates the friction.</text>
+  <text x="34" y="987" font-size="9" fill="#8a8a8a">A⁺ and A⁻ pull and squeeze the fuzzy substrate via probability — release or absorb friction. Not for any observer; for the substrate itself.</text>
+  <rect x="80" y="1004" width="760" height="22" rx="11" fill="url(#friction)"/>
+  <line x1="80" y1="1032" x2="80" y2="1036" stroke="#93c5fd" stroke-width="2"/>
+  <line x1="460" y1="1032" x2="460" y2="1036" stroke="#4ade80" stroke-width="2"/>
+  <line x1="840" y1="1032" x2="840" y2="1036" stroke="#ef4444" stroke-width="2"/>
+  <text x="80" y="1056" font-size="12" font-weight="700" fill="#93c5fd">FREEZE / DIFFUSE</text>
+  <text x="80" y="1070" font-size="10" fill="#a1a1aa">too little friction</text>
+  <text x="80" y="1084" font-size="10" fill="#8a8a8a">everything dissipates</text>
+  <text x="80" y="1098" font-size="10" fill="#8a8a8a">no shape · no inertia</text>
+  <text x="460" y="1056" text-anchor="middle" font-size="12" font-weight="700" fill="#4ade80">VIABILITY</text>
+  <text x="460" y="1070" text-anchor="middle" font-size="10" fill="#a1a1aa">enough friction to hold shape</text>
+  <text x="460" y="1084" text-anchor="middle" font-size="10" fill="#8a8a8a">enough release to evolve</text>
+  <text x="460" y="1098" text-anchor="middle" font-size="10" fill="#8a8a8a">struggle here is generative</text>
+  <text x="840" y="1056" text-anchor="end" font-size="12" font-weight="700" fill="#ef4444">EXPLODE / BURN</text>
+  <text x="840" y="1070" text-anchor="end" font-size="10" fill="#a1a1aa">too much friction</text>
+  <text x="840" y="1084" text-anchor="end" font-size="10" fill="#8a8a8a">wrapper burns down</text>
+  <text x="840" y="1098" text-anchor="end" font-size="10" fill="#8a8a8a">membrane breach</text>
+  <line x1="80" y1="1120" x2="840" y2="1120" stroke="#3a3a3a" stroke-width="1"/>
+  <text x="460" y="1142" text-anchor="middle" font-size="11" fill="#a1a1aa" font-style="italic">struggle is necessary — it's the latent friction the substrate needs to keep its shape and produce its next move</text>
+  <text x="460" y="1200" text-anchor="middle" font-size="11" fill="#a1a1aa">Two observers, each their own body-membrane around their own latent black hole.</text>
+  <text x="460" y="1218" text-anchor="middle" font-size="11" fill="#a1a1aa">Asymmetry between them is the generative friction. Unity at the next plane up rides on it.</text>
+  <text x="460" y="1238" text-anchor="middle" font-size="11" fill="#8a8a8a" font-style="italic">The agnostic doesn't want "home" any particular way. It wants the friction inside the viability band.</text>
+  <text x="460" y="1256" text-anchor="middle" font-size="10" fill="#8a8a8a">Expand to everything; compress to infinite. A⁺ releases; A⁻ absorbs. Sequence matters. Everything's a moving target.</text>
+</svg>

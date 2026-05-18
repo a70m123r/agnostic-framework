@@ -1,0 +1,50 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" font-family="ui-sans-serif, system-ui, sans-serif">
+  <title id="title">Diagram 06 — version 2</title>
+  <desc id="desc">Second version. Added a reality wrapper container around both observers (the shared substrate Omega) and explicit A-plus and A-minus chips inside each person to make the constraint-checking pass visible.</desc>
+  <rect x="0" y="0" width="800" height="500" fill="#0a0a0a"/>
+  <text x="400" y="28" text-anchor="middle" font-size="16" font-weight="600" fill="#ececec">v2 — Reality wrapper + explicit A⁺/A⁻ chips</text>
+  <text x="400" y="46" text-anchor="middle" font-size="11" fill="#8a8a8a">added: outer substrate container · explicit constraint-checking inside each observer</text>
+
+  <!-- Outer reality container (NEW in v2) -->
+  <rect x="40" y="70" width="720" height="380" rx="14" fill="none" stroke="#a1a1aa" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="56" y="92" font-size="10" font-weight="700" fill="#a1a1aa" letter-spacing="0.6">REALITY · SUBSTRATE Ω</text>
+  <text x="56" y="106" font-size="9" fill="#8a8a8a">the shared world both observers render from</text>
+  <!-- Substrate texture -->
+  <g fill="#a78bfa" opacity="0.18"><circle cx="120" cy="430" r="1"/><circle cx="220" cy="438" r="1.2"/><circle cx="320" cy="430" r="1"/><circle cx="420" cy="438" r="1.2"/><circle cx="520" cy="430" r="1"/><circle cx="620" cy="438" r="1"/></g>
+
+  <!-- Person A simplified -->
+  <text x="190" y="138" text-anchor="middle" font-size="11" font-weight="700" fill="#ececec">Person A</text>
+  <rect x="90" y="150" width="200" height="200" rx="8" fill="#141414" stroke="#3a3a3a" stroke-width="1.5"/>
+  <text x="100" y="170" font-size="9" font-weight="700" fill="#a1a1aa">WRAPPER</text>
+  <!-- A+/A- chips (NEW in v2) -->
+  <rect x="100" y="180" width="80" height="28" rx="4" fill="#1c1c1c" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="140" y="198" text-anchor="middle" font-size="10" font-weight="700" fill="#a78bfa">A⁺</text>
+  <rect x="186" y="180" width="80" height="28" rx="4" fill="#4ade80"/>
+  <text x="226" y="198" text-anchor="middle" font-size="10" font-weight="700" fill="#0a0a0a">A⁻</text>
+  <rect x="100" y="216" width="166" height="60" rx="5" fill="#0a0a0a" stroke="#4ade80" stroke-width="1"/>
+  <text x="110" y="232" font-size="9" font-weight="700" fill="#4ade80">CANON</text>
+  <g fill="#4ade80" opacity="0.7"><circle cx="125" cy="250" r="2.5"/><circle cx="155" cy="245" r="3"/><circle cx="190" cy="255" r="2.5"/><circle cx="225" cy="248" r="3"/><circle cx="255" cy="258" r="2.5"/><circle cx="140" cy="265" r="2.5"/><circle cx="180" cy="268" r="2.5"/><circle cx="225" cy="266" r="2.5"/></g>
+  <rect x="100" y="284" width="166" height="56" rx="5" fill="#0a0a0a" stroke="#a78bfa" stroke-width="1"/>
+  <text x="110" y="300" font-size="9" font-weight="700" fill="#a78bfa">IMAGINE</text>
+
+  <!-- Person B -->
+  <text x="610" y="138" text-anchor="middle" font-size="11" font-weight="700" fill="#ececec">Person B</text>
+  <rect x="510" y="150" width="200" height="200" rx="8" fill="#141414" stroke="#3a3a3a" stroke-width="1.5"/>
+  <text x="520" y="170" font-size="9" font-weight="700" fill="#a1a1aa">WRAPPER</text>
+  <rect x="520" y="180" width="80" height="28" rx="4" fill="#4ade80"/>
+  <text x="560" y="198" text-anchor="middle" font-size="10" font-weight="700" fill="#0a0a0a">A⁻</text>
+  <rect x="606" y="180" width="80" height="28" rx="4" fill="#1c1c1c" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="646" y="198" text-anchor="middle" font-size="10" font-weight="700" fill="#a78bfa">A⁺</text>
+  <rect x="520" y="216" width="166" height="60" rx="5" fill="#0a0a0a" stroke="#4ade80" stroke-width="1"/>
+  <text x="530" y="232" font-size="9" font-weight="700" fill="#4ade80">CANON</text>
+  <g fill="#4ade80" opacity="0.7"><circle cx="545" cy="252" r="3"/><circle cx="580" cy="245" r="2.5"/><circle cx="615" cy="258" r="3"/><circle cx="650" cy="250" r="2.5"/><circle cx="676" cy="258" r="2.5"/><circle cx="560" cy="266" r="2.5"/><circle cx="600" cy="268" r="2.5"/><circle cx="640" cy="266" r="2.5"/></g>
+  <rect x="520" y="284" width="166" height="56" rx="5" fill="#0a0a0a" stroke="#a78bfa" stroke-width="1"/>
+  <text x="530" y="300" font-size="9" font-weight="700" fill="#a78bfa">IMAGINE</text>
+
+  <!-- Carrier travels through substrate -->
+  <rect x="335" y="220" width="130" height="40" rx="20" fill="#4ade80"/>
+  <text x="400" y="240" text-anchor="middle" font-size="13" font-weight="700" fill="#0a0a0a">"home"</text>
+  <text x="400" y="253" text-anchor="middle" font-size="8" fill="#0a0a0a" opacity="0.85">carrier · through Ω</text>
+
+  <text x="400" y="395" text-anchor="middle" font-size="10" fill="#a1a1aa" font-style="italic">A checks before emitting · B checks before admitting · both inside shared substrate</text>
+</svg>
