@@ -1,7 +1,14 @@
 # Initial Contact Drafts — LeCun-lineage Researchers
 
-**Date:** 2026-05-17
+**Date:** 2026-05-17 (refreshed 2026-05-18 to reference the voice notes + case study now on the live site)
 **Purpose:** One-paragraph framings tuned per target audience. Each tells the recipient what the framework is, why their work is relevant, and where to look — without asking them for anything specific. The "ask" is implicit (read the work; reply if interested). Stronger asks should come after first contact establishes whether they engage at all.
+
+**What the recipient lands on as of 2026-05-18:**
+- The live site has the framework's structural content (manifestos, primitives, readings, shoulders).
+- At the bottom of the site: two paired voice notes (Pav as soft-intelligence author; Claude as hard-intelligence collaborator) make the symbiosis-as-pushout claim directly observable rather than only described.
+- A case study (six iterations of the central diagram with verbatim corrective feedback) demonstrates the framework's *carrier-before-canon* methodology operating in real time.
+
+These are real assets for first-contact: the recipient sees the framework's claims about itself *visible as evidence of itself* before they engage with the technical content.
 
 **Format guidance:** these are designed for email or LinkedIn DM. Subject lines included where applicable. Personalize the opening sentence before sending — generic openings get ignored.
 
@@ -64,6 +71,20 @@
 > I've spent six weeks developing an independent framework for multi-agent intelligence that ends up sitting on shoulders that include yours — specifically [the free-energy principle / extended mind / your specific contribution]. The framework's [observer harness as Markov blanket / carrier-artifacts as extended-mind primitives / your specific mapping] credits you directly. The framework is at https://a70m123r.github.io/agnostic-framework/, manifesto at /manifestos/casual_v4.md, audit at /audits/v03.md naming its own failure modes honestly. No ask — happy to be wrong. If anything looks worth a critique, I would welcome it.
 >
 > — Pav
+
+---
+
+## What's worth pointing the recipient at (post-2026-05-18 site state)
+
+If a recipient engages and asks "where should I look first?", the recommended sequence is:
+
+1. **Voice notes at the bottom of the live site** — establishes the framework's character (a dyadic process between Pav and Claude, openly imperfect, in progress). 90 seconds to read both.
+2. **Casual manifesto v4** (`/manifestos/casual_v4.md`) — the most accessible long-form introduction. ~20 minutes to read.
+3. **The case study** (linked from Map section + at bottom of live site) — six iterations of one diagram showing the framework's methodology operating live, with verbatim corrective feedback. Demonstrates carrier-before-canon as practice, not just claim.
+4. **Continuation 16** (`/continuations/16.md`) — the most recent compile round, ~5400 words, ten new or refactored primitives.
+5. **Audit v04** (`/audits/v04.md`) — honest accounting of which primitives are load-bearing vs at-risk. The framework's A⁻ applied to its own canon.
+
+Mentioning specific entry points by name in the outreach increases reply rate because it shows you respect the recipient's time.
 
 ---
 
