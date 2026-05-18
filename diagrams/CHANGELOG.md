@@ -85,6 +85,14 @@ Added explicit idea domain (imagine engine + fuzzy field + personal canon) and b
 
 Original size: ~880×1140. Original on disc: lost. Schematic preserved: `case_study/06_v5.svg`.
 
+## 2026-05-18 — diagram 06b casual companion added
+
+`06b_friction_states_casual.svg` — three-panel companion at 800×420 showing the friction-band states (freeze / viability / explode) in casual-reader form. Two figures per panel, A⁺/A⁻ annotations in the viability panel, plain-language examples for each state. Designed for manifesto v5 and casual contexts where the full v6 diagram (920×1300, ~25 architectural elements) is too dense. v6 stays as the technical reference; 06b is the entry-level companion.
+
+This is the first time the discipline (versioned filenames, changelog entry) is applied at creation rather than retrospectively. Going forward.
+
+---
+
 ### v6 — 2026-05-17 (current)
 
 Second major reframe after Pav's feedback on friction, body-as-membrane, and planes-as-nodes:
