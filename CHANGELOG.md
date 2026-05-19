@@ -8,6 +8,13 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-05-19
+
+### Added
+- **`manifestos/casual_v5.md`** — casual edition refactored to integrate the May 18 round (continuations 16, 18, 19). One new section ("The lineage you are standing on") inserted between the symbiosis section and the canon section, walking through physics → chemistry → biology → cognition → society → person as concentric rings each running the canon-formation loop at its own scale, with energy/symbol/artifact as three forms of residual structure under pressure. Renderer section gained the body-as-outer-membrane move and explicit *mutual rendering* framing from cont 16. Hidden-protocols-as-sequence-knowledge added to the opening section. Loop section gained the friction-band frame (freeze ↔ viability ↔ fuse). Canon section renamed "Canon is not truth — and canon is a moving target" with the cont-19 moving-target meta-rule closing paragraph. Where-this-could-be-wrong substantially rewritten to frame the framework explicitly as a Lakatosian research programme — names the four growth tests, recasts the "too inclusive" worry as design intent (aggregation discipline), adds procedural-lineage rendering as a recent claim that might be wrong. What-you-do gained two prescriptions: "ask which ring the friction lives in" and "check the friction band." Lakatos credit elevated in the shoulders section. Length ~7,500 words, up from v4's ~6,400. v4 preserved at `casual_v4.md`.
+
+---
+
 ## 2026-05-18
 
 ### Added
