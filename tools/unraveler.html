@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Subject Unraveler — Agnostic Framework</title>
+<meta name="description" content="Enter a subject. Get the framework's compile template back — squeeze inventory, substrate stack, candidate carriers, speculative bubbles, adjacent fields. A scaffold for construct studies.">
+<script src="https://hypothes.is/embed.js" async></script>
+<style>
+  :root {
+    --bg: #0a0a0a;
+    --surface: #141414;
+    --surface-2: #1c1c1c;
+    --border: #262626;
+    --border-strong: #3a3a3a;
+    --text: #ececec;
+    --text-dim: #8a8a8a;
+    --text-faint: #555;
+    --accent-canon: #4ade80;
+    --accent-candidate: #fbbf24;
+    --accent-speculative: #a78bfa;
+    --accent-link: #93c5fd;
+    --accent-warn: #f87171;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+
+  /* Topbar */
+  .topbar {
+    border-bottom: 1px solid var(--border);
+    padding: 20px 0;
+    font-size: 13px;
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    color: var(--text-dim);
+  }
+  .topbar a {
+    color: var(--text-dim);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--text-faint);
+  }
+  .topbar a:hover { color: var(--accent-link); border-bottom-color: var(--accent-link); }
+  .topbar .sep { color: var(--text-faint); margin: 0 10px; }
+
+  /* Hero */
+  header.hero { padding: 56px 0 24px; }
+  header.hero .kicker {
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--accent-speculative);
+    margin: 0 0 16px;
+  }
+  header.hero h1 {
+    font-family: Georgia, serif;
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    margin: 0 0 20px;
+  }
+  header.hero p.dek {
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--text-dim);
+    margin: 0 0 8px;
+    font-family: Georgia, serif;
+    font-style: italic;
+    max-width: 620px;
+  }
+  header.hero p.status {
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 11px;
+    color: var(--text-faint);
+    margin: 16px 0 0;
+  }
+
+  /* Input row */
+  .input-block {
+    display: flex;
+    gap: 10px;
+    margin: 24px 0 8px;
+    flex-wrap: wrap;
+  }
+  .input-block input[type="text"] {
+    flex: 1;
+    min-width: 240px;
+    background: var(--surface);
+    border: 1px solid var(--border-strong);
+    border-radius: 4px;
+    color: var(--text);
+    font-family: Georgia, serif;
+    font-size: 17px;
+    padding: 12px 16px;
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  .input-block input[type="text"]:focus { border-color: var(--accent-link); }
+  .input-block button {
+    background: var(--accent-speculative);
+    color: #0a0a0a;
+    border: none;
+    border-radius: 4px;
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0 22px;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .input-block button:hover { background: #c4b5fd; }
+  .input-block button.secondary {
+    background: var(--surface);
+    color: var(--text-dim);
+    border: 1px solid var(--border-strong);
+  }
+  .input-block button.secondary:hover { color: var(--text); border-color: var(--text-dim); }
+
+  .examples {
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 12px;
+    color: var(--text-faint);
+    margin: 0 0 32px;
+  }
+  .examples a {
+    color: var(--text-dim);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--text-faint);
+    margin-right: 12px;
+    cursor: pointer;
+  }
+  .examples a:hover { color: var(--accent-link); border-bottom-color: var(--accent-link); }
+
+  /* Results */
+  #subject-name {
+    font-family: Georgia, serif;
+    font-style: italic;
+    color: var(--text);
+  }
+  .scaffold-intro {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent-speculative);
+    border-radius: 4px;
+    padding: 18px 22px;
+    margin: 32px 0 24px;
+    font-size: 14px;
+    color: var(--text-dim);
+  }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 24px 28px;
+    margin: 0 0 18px;
+  }
+  .card .step {
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--text-faint);
+    margin: 0 0 6px;
+  }
+  .card h3 {
+    font-family: Georgia, serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.2;
+    margin: 0 0 8px;
+    color: var(--text);
+  }
+  .card .question {
+    font-size: 15px;
+    color: var(--text);
+    margin: 0 0 14px;
+    line-height: 1.6;
+  }
+  .card .prompts {
+    background: #0d0d0d;
+    border-left: 2px solid var(--border-strong);
+    padding: 12px 18px;
+    margin: 0 0 14px;
+    font-size: 14px;
+    color: var(--text-dim);
+    line-height: 1.6;
+  }
+  .card .prompts ul { margin: 0; padding-left: 20px; }
+  .card .prompts li { margin: 0 0 6px; }
+  .card .example {
+    font-size: 13px;
+    color: var(--text-faint);
+    background: #0d0d0d;
+    border-left: 2px solid var(--accent-canon);
+    padding: 10px 16px;
+    font-family: Georgia, serif;
+    font-style: italic;
+    line-height: 1.6;
+  }
+  .card .example strong {
+    color: var(--accent-canon);
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    display: block;
+    margin: 0 0 4px;
+    font-style: normal;
+  }
+
+  .bubble-template {
+    border: 1px dashed var(--border-strong);
+    border-radius: 4px;
+    padding: 14px 18px;
+    margin: 10px 0;
+    font-size: 13px;
+    color: var(--text-dim);
+    line-height: 1.6;
+  }
+  .bubble-template .row { margin: 0 0 4px; }
+  .bubble-template strong {
+    color: var(--text);
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: inline-block;
+    width: 110px;
+  }
+
+  /* Empty state */
+  .empty-state {
+    text-align: center;
+    padding: 64px 0;
+    color: var(--text-faint);
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 13px;
+  }
+  .empty-state svg { display: block; margin: 0 auto 18px; opacity: 0.5; }
+
+  /* Footer */
+  footer {
+    padding: 36px 0 56px;
+    border-top: 1px solid var(--border);
+    margin-top: 56px;
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 12px;
+    color: var(--text-faint);
+    text-align: center;
+  }
+  footer a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--text-faint); }
+  footer a:hover { color: var(--accent-link); border-bottom-color: var(--accent-link); }
+
+  @media (max-width: 640px) {
+    header.hero h1 { font-size: 32px; }
+    header.hero p.dek { font-size: 16px; }
+    .card { padding: 18px 20px; }
+    .card h3 { font-size: 19px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <a href="../index.html">← agnostic framework</a>
+    <span class="sep">·</span>
+    <span>tools / subject-unraveler</span>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="kicker">Tool · v0.1 · prototype</p>
+    <h1>Subject unraveler</h1>
+    <p class="dek">Enter a subject. Get the framework's compile template back — the questions the framework would ask, the slots a construct study would fill, the example from the marriage case as a worked precedent. A scaffold, not a generator. The thinking is still yours.</p>
+    <p class="status">v0.1 is a static scaffold — the prompts are fixed, the worked example is marriage. Future versions will wire each card to a fresh framework-graded reading of whatever subject you enter. For now: enter your subject, then use the template to think about it (or paste the prompts into an AI chat and let it scout in parallel).</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="input-block">
+    <input type="text" id="subject-input" placeholder="A subject to unravel — e.g., universities, attention, religion, the nation-state…" autocomplete="off" />
+    <button id="unravel-btn">Unravel</button>
+    <button id="example-btn" class="secondary">Load worked example: marriage</button>
+  </div>
+  <p class="examples">
+    Try:
+    <a data-subject="universities">universities</a>
+    <a data-subject="attention">attention as commons</a>
+    <a data-subject="religion">religion</a>
+    <a data-subject="the nation-state">the nation-state</a>
+    <a data-subject="cash money">cash money</a>
+    <a data-subject="employment">employment</a>
+  </p>
+
+  <div id="results">
+    <div class="empty-state">
+      <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#555" stroke-width="1.5">
+        <circle cx="24" cy="24" r="16"/>
+        <line x1="24" y1="14" x2="24" y2="24"/>
+        <line x1="24" y1="24" x2="32" y2="28"/>
+      </svg>
+      Enter a subject above to see the framework's compile template.
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    Agnostic Framework · tools · v0.1 prototype · <a href="../index.html">live site</a> · <a href="https://github.com/a70m123r/agnostic-framework">github</a>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var TEMPLATE = [
+    {
+      step: "Step 01 · the chronic squeeze",
+      title: "What was the original problem?",
+      question: "What is the chronic pressure that produced the canon? A canon worth studying compiled to absorb something — what was that thing? List the squeeze functions, ideally three to seven of them, each one a specific problem the canon solved.",
+      prompts: [
+        "What would happen if this canon had never compiled?",
+        "Which generations / regions ran hardest against this squeeze?",
+        "Is it a chronic squeeze (continuous pressure over many generations) or an acute one (a single event)?",
+        "Were there earlier compiles that this canon refactored on top of?"
+      ],
+      example: "<strong>marriage example</strong> Six squeeze functions: paternity certainty (pre-DNA), inheritance under scarcity, child-rearing infrastructure for obligate-helpless human children, alliance and conflict reduction between families, labor pooling in production households, care of the old."
+    },
+    {
+      step: "Step 02 · the canon",
+      title: "What did the squeeze compile into?",
+      question: "Name the institution, practice, or protocol that became load-bearing. Be specific about what form it took at peak load-bearing — different cultures may have produced different compiles for the same squeeze.",
+      prompts: [
+        "What is the carrier — the artifact that propagates the canon?",
+        "How dense is the canon (how many channels propagate it — religion, law, economy, ritual, art, language)?",
+        "How recognizable is it across cultures?",
+        "When did it last refactor substantially?"
+      ],
+      example: "<strong>marriage example</strong> The institution of marriage as exclusive sexual + economic + child-rearing + alliance + labor + elder-care contract, propagated through religion, law, economy, kin networks, art, ritual, and language itself. One of the densest carrier artifacts in human history."
+    },
+    {
+      step: "Step 03 · the substrate stack",
+      title: "What four substrates wrap the canon?",
+      question: "Every social-substrate-ring canon is wrapped by deeper rings that reinforce or release it. Identify the four (or more) substrates most relevant to this canon. The marriage case used religion / climate / government / ideology — yours might be different.",
+      prompts: [
+        "Which substrate is doing the most reinforcement work?",
+        "Which substrate is most actively releasing the canon today?",
+        "Do the substrates interlock (mutually reinforcing) or are they pulling in opposite directions?",
+        "If one substrate flipped, would the canon survive on the other three?"
+      ],
+      example: "<strong>marriage example</strong> Religion (meaning layer; load-bearing in MENA, releasing in Nordics), climate (coordination cost; relaxed by infrastructure), government (function-absorber; high in welfare states), ideology (individualist vs familist frame)."
+    },
+    {
+      step: "Step 04 · regional variation",
+      title: "How does the canon's load-bearing vary across regions?",
+      question: "Almost no canon is at uniform load-bearing globally. Sketch the regional variation — which regions are still in the squeeze era, which are transitioning, which have crossed into muscle memory, which are in open action-space with multiple successors being scouted.",
+      prompts: [
+        "What signal would you measure to rank regions?",
+        "Where is the canon at maximum load-bearing right now?",
+        "Where is it most clearly dissolving?",
+        "Are there regions where it's dissolving without a successor? (Open action-space.)"
+      ],
+      example: "<strong>marriage example</strong> 14 regions, Canon Dissolution Index 0–10 plus an Open Action-Space marker for East Asia. Nordics CDI 9 (muscle memory), MENA CDI 1 (full load-bearing), East Asia (open action-space scouting 4 carriers in parallel)."
+    },
+    {
+      step: "Step 05 · alternative carriers",
+      title: "What is absorbing the canon's original functions?",
+      question: "For each of the original squeeze functions, which carriers in the modern world are taking over the load? If no carrier is — you're looking at either persistence (squeeze still binding) or open action-space (canon went dormant, successor not yet visible). Note: canon doesn't dissolve, it goes dormant — and dormancy is reversible, with imparted learnings carried into any future return.",
+      prompts: [
+        "For each squeeze function: is there a modern alternative carrier?",
+        "Is the alternative as effective as the original? Better? Worse?",
+        "Is the alternative universally available, or stratified by class / region?",
+        "Is the alternative more or less reversible than the original?",
+        "If the alternative collapsed, would the canon wake from dormancy? In what refactored form?"
+      ],
+      example: "<strong>marriage example</strong> DNA testing → paternity. State pensions → elder care. Daycare, schools, mass goods → production functions. Welfare-state inheritance law → property transfer. Police + civil law → inter-family conflict reduction. Each is a separate carrier; none was designed to replace marriage, but each absorbed one of its functions. If any of these alternative carriers degraded sharply, the marriage canon could wake from dormancy — but refactored, carrying whatever the dormancy period imparted (e.g., gender-equal partnership norms)."
+    },
+    {
+      step: "Step 06 · candidate successor carriers",
+      title: "If the canon is going dormant without a clear successor, what's being scouted?",
+      question: "In open-action-space regions, the function is unmet and the system is reaching. Identify the candidate carriers visibly in motion — even if none has compiled into canon yet. Multiple candidates is normal; the next canon will likely be a coupled mixture.",
+      prompts: [
+        "Which technologies or new institutions are being deployed at scale?",
+        "Which candidates are state-sponsored vs market-emerging?",
+        "Are the candidates independent or coupled?",
+        "What substrate costs does each candidate impose?",
+        "If none of the candidates compile, is there pressure to wake the dormant canon?"
+      ],
+      example: "<strong>marriage example</strong> Four candidates being scouted in East Asia: (1) robotics in workforce and household; (2) active longevity via medicine and genetic intervention; (3) AI symbiosis as companion / co-parent / network-builder; (4) explicit new protocols and institutions (honjok, kazoku-no-katachi, formal solo-and-pet households)."
+    },
+    {
+      step: "Step 07 · three speculative bubbles",
+      title: "Rank three speculative readings that follow from the framework's compile.",
+      question: "Each bubble: a claim, what it predicts, what would break it, and a follow-up plan. Rank them by current confidence. Speculation is the engine; the bubbles are the framework's contribution that has to survive a check before it can compile into canon.",
+      prompts: [
+        "What does the framework's compile predict about this subject that the standard literature doesn't?",
+        "What specific observation would refute each bubble?",
+        "What data would you need to track to corroborate or break it?",
+        "Which adjacent field is best positioned to test each bubble?"
+      ],
+      example: ""
+    },
+    {
+      step: "Step 08 · adjacent fields and leading figures",
+      title: "Who else is studying this? What do they call it?",
+      question: "The framework is not the first reading. Trace the adjacent literatures — what each calls the dynamic, who the leading figures are, where the framework is in debt and where its contribution is novel.",
+      prompts: [
+        "What discipline owns the empirical study of this subject?",
+        "What discipline owns the structural / theoretical study?",
+        "Who are the 3–5 most-cited current scholars per field?",
+        "What does each call the dynamic the framework is naming?",
+        "Where does the framework's vocabulary refactor theirs?"
+      ],
+      example: "<strong>marriage example</strong> Six adjacent fields mapped: family demography (Cherlin), Second Demographic Transition (Lesthaeghe, van de Kaa, Perelli-Harris), dual inheritance theory / cultural evolution (Boyd, Richerson, Henrich, Laland), kinship anthropology (Carsten, Strathern, Franklin), historical sociology of marriage (Therborn, Hajnal), East Asian demography (Brinton, Wang Feng, Raymo, Park)."
+    },
+    {
+      step: "Step 09 · provenance",
+      title: "How will the reader see how this reading was produced?",
+      question: "The framework's discipline says canon-formation is visible only when its provenance is. Document the iteration log — what was the initial prompt, what corrections did the reading go through, what residue does each iteration leave. This is the carrier-before-canon methodology made transparent.",
+      prompts: [
+        "What was the first version of this reading? What did it get wrong?",
+        "Which corrections came from the framework's own A⁻ check?",
+        "Which came from external feedback?",
+        "What is preserved (and what is pruned) from each iteration?"
+      ],
+      example: "<strong>marriage example</strong> Five iterations: (1) Pav's seed prompt with squeeze→pull intuition; (2) v1 draft with 'misfire' frame; (3) data verification pulling 17 sources, Latin America CDI 6→7; (4) §09 adjacent fields with 30+ scholars; (5) Pav's correction retiring misfire frame, installing open-action-space with four candidate carriers. v1.1 published."
+    }
+  ];
+
+  function renderResults(subject) {
+    var displaySubject = subject.trim();
+    if (!displaySubject) return;
+
+    var html = '';
+    html += '<div class="scaffold-intro">';
+    html += '<strong style="color: var(--text);">Unraveling <span id="subject-name">' + escapeHtml(displaySubject) + '</span></strong> · ';
+    html += 'The nine cards below are the framework\'s compile template. Each one is a prompt for a section of a future construct study on this subject. The worked example shown in each card is from the marriage study (the framework\'s first compile artifact). Replace each example with your own reading to draft your own construct study.';
+    html += '</div>';
+
+    TEMPLATE.forEach(function (item, i) {
+      html += '<div class="card">';
+      html += '<p class="step">' + item.step + '</p>';
+      html += '<h3>' + escapeHtml(item.title) + '</h3>';
+      html += '<p class="question">' + escapeHtml(item.question) + '</p>';
+      html += '<div class="prompts"><ul>';
+      item.prompts.forEach(function (p) {
+        html += '<li>' + escapeHtml(p) + '</li>';
+      });
+      html += '</ul></div>';
+
+      if (i === 6) {
+        // bubble templates
+        for (var b = 1; b <= 3; b++) {
+          html += '<div class="bubble-template">';
+          html += '<div class="row"><strong>Bubble ' + b + '</strong> (claim) — _______</div>';
+          html += '<div class="row"><strong>predicts</strong> _______</div>';
+          html += '<div class="row"><strong>breaks if</strong> _______</div>';
+          html += '<div class="row"><strong>follow-up</strong> _______</div>';
+          html += '<div class="row"><strong>rank</strong> _______</div>';
+          html += '</div>';
+        }
+      } else if (item.example) {
+        html += '<div class="example">' + item.example + '</div>';
+      }
+      html += '</div>';
+    });
+
+    html += '<div class="card" style="text-align: center; border-left: 3px solid var(--accent-candidate);">';
+    html += '<p class="step">Output</p>';
+    html += '<h3>Ready to compile your own construct study?</h3>';
+    html += '<p style="color: var(--text-dim); margin: 0 0 12px;">Once you have each card filled, the result is a construct study at roughly the same shape as the marriage piece. Pattern your draft on <a href="../artifacts/marriage_v1.html" style="color: var(--accent-link);">artifacts/marriage_v1.html</a>. The Contribute section of the live site explains how to submit it.</p>';
+    html += '</div>';
+
+    document.getElementById('results').innerHTML = html;
+    document.title = 'Unraveling: ' + displaySubject + ' — Agnostic Framework';
+  }
+
+  function escapeHtml(s) {
+    return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
+  document.getElementById('unravel-btn').addEventListener('click', function () {
+    var v = document.getElementById('subject-input').value.trim();
+    if (v) renderResults(v);
+  });
+
+  document.getElementById('subject-input').addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') {
+      var v = e.target.value.trim();
+      if (v) renderResults(v);
+    }
+  });
+
+  document.getElementById('example-btn').addEventListener('click', function () {
+    document.getElementById('subject-input').value = 'marriage';
+    renderResults('marriage');
+  });
+
+  Array.prototype.forEach.call(document.querySelectorAll('.examples a'), function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      var s = a.getAttribute('data-subject');
+      document.getElementById('subject-input').value = s;
+      renderResults(s);
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
