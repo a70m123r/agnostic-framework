@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>From Squeeze to Pull: marriage as canon dissolving into muscle memory — Agnostic Framework</title>
+<meta name="description" content="A framework reading of marriage as a kernel canon under pressure — what it was solving, how it's mutating, and where its function is being absorbed by other carriers. With regional heat map and three speculative bubbles.">
+<style>
+  :root {
+    --bg: #0a0a0a;
+    --surface: #141414;
+    --surface-2: #1c1c1c;
+    --border: #262626;
+    --border-strong: #3a3a3a;
+    --text: #ececec;
+    --text-dim: #8a8a8a;
+    --text-faint: #555;
+    --accent-canon: #4ade80;
+    --accent-candidate: #fbbf24;
+    --accent-speculative: #a78bfa;
+    --accent-pruned: #6b7280;
+    --accent-link: #93c5fd;
+    --heat-1: #7f1d1d;
+    --heat-2: #b91c1c;
+    --heat-3: #dc2626;
+    --heat-4: #ea580c;
+    --heat-5: #f59e0b;
+    --heat-6: #ca8a04;
+    --heat-7: #65a30d;
+    --heat-8: #16a34a;
+    --heat-9: #15803d;
+    --heat-misfire: #7c3aed;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+  .wrap-wide { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+
+  /* Topbar */
+  .topbar {
+    border-bottom: 1px solid var(--border);
+    padding: 20px 0;
+    font-size: 13px;
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    color: var(--text-dim);
+  }
+  .topbar a {
+    color: var(--text-dim);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--text-faint);
+  }
+  .topbar a:hover { color: var(--accent-link); border-bottom-color: var(--accent-link); }
+  .topbar .sep { color: var(--text-faint); margin: 0 10px; }
+  .topbar .source-link { float: right; }
+
+  /* Hero */
+  header.hero { padding: 72px 0 48px; border-bottom: 1px solid var(--border); }
+  header.hero .kicker {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--accent-candidate);
+    margin: 0 0 18px;
+  }
+  header.hero h1 {
+    font-family: Georgia, "Source Serif Pro", "Charter", serif;
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin: 0 0 22px;
+  }
+  header.hero .dek {
+    font-size: 20px;
+    line-height: 1.45;
+    color: var(--text-dim);
+    max-width: 640px;
+    margin: 0 0 20px;
+    font-family: Georgia, serif;
+    font-style: italic;
+  }
+  header.hero .meta {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 12px;
+    color: var(--text-faint);
+    margin: 0;
+  }
+
+  /* Section */
+  section { padding: 56px 0; border-bottom: 1px solid var(--border); }
+  section:last-of-type { border-bottom: none; }
+  h2 {
+    font-family: Georgia, serif;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1.15;
+    margin: 0 0 24px;
+    letter-spacing: -0.01em;
+  }
+  h2 .num {
+    color: var(--text-faint);
+    font-size: 14px;
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    margin-right: 12px;
+  }
+  h3 {
+    font-family: Georgia, serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.25;
+    margin: 36px 0 14px;
+  }
+
+  p { margin: 0 0 20px; }
+  em { color: var(--text); font-style: italic; }
+  strong { color: var(--text); font-weight: 600; }
+
+  a {
+    color: var(--accent-link);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(147, 197, 253, 0.3);
+  }
+  a:hover { border-bottom-color: var(--accent-link); }
+
+  blockquote {
+    border-left: 2px solid var(--border-strong);
+    padding: 6px 0 6px 22px;
+    margin: 28px 0;
+    font-family: Georgia, serif;
+    font-style: italic;
+    color: var(--text);
+  }
+
+  ul, ol { margin: 0 0 20px; padding-left: 24px; }
+  li { margin: 0 0 10px; }
+
+  hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+  /* Heat map */
+  .heatmap-section {
+    background: linear-gradient(180deg, transparent 0%, var(--surface) 100%);
+  }
+  .map-frame {
+    background: #050505;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 24px 18px 14px;
+    margin: 32px 0 20px;
+  }
+  .map-frame svg { display: block; width: 100%; height: auto; }
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    align-items: center;
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 11px;
+    color: var(--text-dim);
+    padding: 10px 4px 4px;
+  }
+  .legend-item { display: inline-flex; align-items: center; gap: 6px; }
+  .legend-swatch {
+    width: 14px;
+    height: 14px;
+    border-radius: 2px;
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+  .legend-gradient {
+    width: 220px;
+    height: 14px;
+    background: linear-gradient(90deg,
+      var(--heat-1) 0%,
+      var(--heat-3) 20%,
+      var(--heat-5) 50%,
+      var(--heat-7) 75%,
+      var(--heat-9) 100%);
+    border-radius: 2px;
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+  .map-caption {
+    font-size: 13px;
+    color: var(--text-dim);
+    line-height: 1.55;
+    margin: 16px 0 0;
+    font-style: italic;
+  }
+  .region-label {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 9px;
+    fill: #fff;
+    pointer-events: none;
+    text-anchor: middle;
+    paint-order: stroke;
+    stroke: rgba(0,0,0,0.6);
+    stroke-width: 2px;
+  }
+  .region-cdi {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 12px;
+    font-weight: 700;
+    fill: #fff;
+    pointer-events: none;
+    text-anchor: middle;
+    paint-order: stroke;
+    stroke: rgba(0,0,0,0.8);
+    stroke-width: 3px;
+  }
+
+  /* Substrate grid (religion/climate/government/ideology) */
+  .substrates {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin: 28px 0 8px;
+  }
+  @media (min-width: 720px) {
+    .substrates { grid-template-columns: 1fr 1fr; }
+  }
+  .substrate {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--border-strong);
+    border-radius: 4px;
+    padding: 18px 20px;
+  }
+  .substrate h4 {
+    font-family: Georgia, serif;
+    font-weight: 400;
+    font-size: 18px;
+    margin: 0 0 8px;
+    font-style: italic;
+  }
+  .substrate p { margin: 0; font-size: 15px; line-height: 1.6; color: var(--text-dim); }
+
+  /* Speculative bubbles */
+  .bubbles { display: grid; gap: 18px; margin: 28px 0 0; }
+  .bubble {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent-speculative);
+    border-radius: 4px;
+    padding: 22px 24px;
+  }
+  .bubble .bubble-tag {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent-speculative);
+    margin: 0 0 8px;
+  }
+  .bubble h3 {
+    font-family: Georgia, serif;
+    font-weight: 400;
+    font-size: 22px;
+    margin: 0 0 12px;
+    color: var(--text);
+  }
+  .bubble .claim { font-size: 16px; line-height: 1.6; margin: 0 0 14px; }
+  .bubble .row {
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--text-dim);
+    margin: 0 0 8px;
+  }
+  .bubble .row strong {
+    color: var(--text);
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: inline-block;
+    width: 110px;
+    vertical-align: top;
+  }
+  .bubble .rank {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 10px;
+    background: rgba(167, 139, 250, 0.15);
+    color: var(--accent-speculative);
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 11px;
+    margin-left: 8px;
+  }
+
+  /* Biology examples — three columns */
+  .bio-examples {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin: 24px 0 12px;
+  }
+  @media (min-width: 720px) {
+    .bio-examples { grid-template-columns: 1fr 1fr 1fr; }
+  }
+  .bio {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 16px 18px;
+  }
+  .bio h4 {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    margin: 0 0 6px;
+  }
+  .bio p { margin: 0; font-size: 14px; line-height: 1.55; color: var(--text-dim); }
+
+  /* Sources */
+  .sources {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 22px 26px;
+    margin-top: 24px;
+  }
+  .sources h3 {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-dim);
+    margin: 0 0 16px;
+  }
+  .sources h4 {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 15px;
+    margin: 18px 0 8px;
+    color: var(--text);
+  }
+  .sources ul { margin: 0 0 8px; padding-left: 22px; }
+  .sources li { font-size: 14px; line-height: 1.55; margin: 0 0 6px; color: var(--text-dim); }
+  .sources li a { color: var(--text); border-bottom-color: rgba(236,236,236,0.25); }
+  .sources li a:hover { color: var(--accent-link); border-bottom-color: var(--accent-link); }
+
+  /* Footer */
+  footer.page-footer {
+    padding: 36px 0 64px;
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 12px;
+    color: var(--text-faint);
+    text-align: center;
+    border-top: 1px solid var(--border);
+  }
+  footer.page-footer a { color: var(--text-dim); border-bottom-color: var(--text-faint); }
+
+  @media (max-width: 640px) {
+    header.hero h1 { font-size: 36px; }
+    header.hero .dek { font-size: 17px; }
+    h2 { font-size: 24px; }
+    h3 { font-size: 19px; }
+    .bubble { padding: 18px 18px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap-wide">
+    <a href="../index.html">← agnostic framework</a>
+    <span class="sep">·</span>
+    <span>construct studies / marriage_v1</span>
+    <a class="source-link" href="https://github.com/a70m123r/agnostic-framework/blob/main/artifacts/marriage_v1.html" target="_blank" rel="noopener">view source ↗</a>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="kicker">Construct study · v1 · 2026-05-19 · data-verified</p>
+    <h1>From squeeze to pull</h1>
+    <p class="dek">Marriage as a kernel canon under pressure — what it was solving, where it's dissolving, and how its function is being absorbed by other carriers in different regions. With regional heat map and three speculative bubbles.</p>
+    <p class="meta">~5,400 words · reading time ~22 min · status: candidate-grade reading · CDI values cross-checked against OECD, Eurostat, Insee, Istat, KOSIS, China NBS, AEI, PMC, Pew, PRB on 2026-05-19 — see Sources §09</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">01</span>The undercurrent in any union</h2>
+
+    <p>The framework's symbiosis-as-pushout primitive describes what happens when two observers with complementary cone-profiles merge into a new observer that neither was alone. Mitochondria and the ancestral host cell. Printing press and literacy. Internet and human attention. Each of these is told, in retrospect, as a story of successful union. None of them was, while it was happening, free of tension. The framework is precise about this — and v5 of the casual manifesto names it explicitly. A merger that produces a new observer leaves a residue: the friction between what each side was and what the merged thing now needs. The friction does not vanish when the merger compiles. It moves underground and becomes the substrate the merged thing now has to manage.</p>
+
+    <p>This essay is about one merger we usually do not call a merger: the institution of marriage. It is treated as the smallest possible union — two people, one household — and therefore as the cleanest case. The framework's reading is opposite. Marriage is one of the most heavily-engineered carrier artifacts that human canon has ever produced, and the undercurrent tension it manages is enormous. The institution is built specifically to absorb that tension and convert it into structure. When the institution dissolves, the tension does not. It has to be re-absorbed somewhere else, by some other carrier. The interesting question is not whether marriage is fading. In many places, that is empirically settled. The interesting question is: <em>what is absorbing the function that the institution was performing?</em> And that is a question whose answer differs dramatically across the regions of the planet — in ways that map onto religion, climate, government, ideology, and the specific squeeze that produced the institution in each place.</p>
+
+    <p>Before we get to the regional heat map, three biology cases worth holding in mind. They are not analogies. They are the same shape as marriage running at different substrates — and the framework's procedural-lineage view says we should expect that.</p>
+
+    <div class="bio-examples">
+      <div class="bio">
+        <h4>Mitochondrial ROS leak</h4>
+        <p>The endosymbiotic merger that produced eukaryotic cells two billion years ago looks, in retrospect, like the cleanest case of cooperative union in biology. It is also leaky. Mitochondria still produce reactive oxygen species — a byproduct of their energy work that damages the cell that hosts them. The merger compiled. The tension persists. Most cellular aging is downstream of this unresolved residue.</p>
+      </div>
+      <div class="bio">
+        <h4>Lichen contract</h4>
+        <p>A lichen is a fungus and an alga (sometimes a cyanobacterium) running a long-term partnership: the fungus provides structure, the alga provides photosynthate. Recent work shows the fungus aggressively regulates how much sugar the alga can keep. The union is real. The terms are not equal. Under stress, the fungus can starve the alga before the alga can leave.</p>
+      </div>
+      <div class="bio">
+        <h4>Coral bleaching</h4>
+        <p>Coral and its photosynthetic algae (zooxanthellae) run a similarly load-bearing partnership. When the water gets too warm, the coral expels the algae — preserving itself in the short term, condemning itself in the long term. The merger only holds inside a narrow band of conditions. Outside the band, the dissolution looks fast, but the band itself was the canon, and the band has been shifting for millions of years.</p>
+      </div>
+    </div>
+
+    <p>The pattern across the three: union does not abolish tension; it sets a band inside which the tension is productive. When the band shifts — environmentally, energetically, demographically — the union does not gracefully retire. It either refactors or breaks. The framework's claim about marriage is that we are watching exactly this dynamic at the social-substrate ring of the procedural lineage, and the shape it takes in each region is determined by what the band there has been doing.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">02</span>What marriage was actually solving</h2>
+
+    <p>The framework treats canon as a residue of pressure. A long-lived institution is what was left behind when many generations of human observers, running their own A⁺/A⁻ loops at different scales, kept compiling the same answer to a question they could not afford to leave open. To read marriage as canon, we have to ask: <em>what question were people answering, and what would have happened if no answer had been compiled?</em></p>
+
+    <p>The honest answer is: many overlapping questions, with different ones load-bearing in different places. The institution we now collapse into one word was, originally, a stack of solutions to a stack of squeezes.</p>
+
+    <p><strong>Paternity certainty in a pre-genetic-testing world.</strong> Before DNA testing, the only reliable mechanism for a father to know which children were his was to constrain who his partner could be with. Marriage as exclusive sexual contract is the canon that compiled around that constraint. The function looks barbaric from inside a world that has paternity testing. It was load-bearing for the world that did not.</p>
+
+    <p><strong>Property and inheritance under scarcity.</strong> Where surviving the winter or the drought depended on hereditable resources — land, livestock, water rights, tools — the institution that decided whose children inherited what was the institution that decided whether your family line continued. Marriage as the regulator of inheritance is a different canon from marriage as paternity certainty. They overlap but they are not identical. Cultures with weak private property (some hunter-gatherer arrangements, some pastoral commons) had much looser marriage forms because the squeeze was less acute.</p>
+
+    <p><strong>Child-rearing infrastructure.</strong> Human children are obligate-helpless for longer than the children of any other ape. Two committed adults — and usually more, drawn from kin networks the marriage codified — is the minimum viable team for getting a child to reproductive age in most pre-modern environments. The exact configuration varied: extended household, polygyny in some grassland economies, matrilineal kinship in others. The constant was that something had to absorb the cost of childhood, and the institution named whoever was on the hook.</p>
+
+    <p><strong>Alliance and conflict reduction.</strong> Between families, between clans, between dynasties, between trading partners, marriage was the protocol for converting potential conflict into structured exchange. Royal marriages mapped this most visibly. Village-level marriages did the same work at smaller scale: a daughter from family A married into family B became a permanent reason for the two families to refrain from feuding.</p>
+
+    <p><strong>Labor pooling.</strong> Pre-industrial households were production units, not just consumption units. Bread baking, cloth making, brewing, butchering, gardening, animal husbandry, child rearing, elder care — these required different skills and roughly continuous labor. A two-adult household with complementary trained skill-sets was a small firm. Marriage was the contract that constituted the firm.</p>
+
+    <p><strong>Care of the old.</strong> Before state pensions and before nuclear-family geographic mobility, the people who looked after you when you could no longer look after yourself were the ones you had spent a life producing obligations toward. Marriage and the kin network it codified was the elder-care system.</p>
+
+    <p>Read together, these are not romantic descriptions. They are the squeezes that the institution compiled to absorb. The framework's term <em>squeeze event</em> usually refers to acute pressure that forces canon to refactor fast (a pandemic, a war, an asteroid). But there is a slower form — a chronic squeeze where the pressure is continuous and the canon compiles over generations. Marriage is the chronic-squeeze case at the social-substrate ring, and the canon it produced is one of the densest carriers in human history. It has been propagated through every available channel — religion, law, economy, kin, art, ritual, language itself.</p>
+
+    <p>The question this essay is asking — the question the heat map is going to make visible — is what happens to a chronic-squeeze canon when most of the squeezes that produced it have, in some regions, been substantially relieved by other carriers. DNA testing handles paternity. State pensions handle elder care. Day care, schools, and mass-produced goods handle the production functions. Welfare states handle inheritance for households with little to inherit. Police and law handle inter-family conflict reduction. Each of these is a separate carrier that absorbs one of the original load functions. Where many of them have arrived, the institution is no longer doing the work it was designed to do. It is still standing because canon is sticky, but the load-bearing has migrated.</p>
+  </div>
+</section>
+
+<section class="heatmap-section">
+  <div class="wrap-wide">
+    <h2><span class="num">03</span>Regional renderings: a canon-dissolution heat map</h2>
+
+    <div style="max-width: 760px;">
+      <p>The map below assigns each of fourteen world regions a Canon Dissolution Index (CDI) on a 0–10 scale. The index is a rough composite of four observable signals: (a) crude marriage rate relative to its long-run regional baseline, (b) share of first births to cohabiting (unmarried) couples, (c) legal-and-social parity between cohabitation and marriage (does the law treat them equivalently for child-rearing, property, inheritance, taxation), and (d) the median age at first marriage. The CDI does not measure whether people are partnering. It measures whether the institutional carrier is still load-bearing for the function it was compiled to absorb.</p>
+
+      <p>One region — East Asia — gets a different mark. There the institution is dissolving without a successor protocol absorbing the function. Marriage rates have collapsed; cohabitation has not absorbed them; non-marital births remain near-prohibited socially. The framework calls this configuration a <em>misfire</em> — a canon dissolving in advance of any replacement carrier. The demographic numbers in that region are the most extreme on the planet, and the framework's reading is that misfire is what the numbers are tracking.</p>
+    </div>
+
+    <div class="map-frame">
+      <svg viewBox="0 0 1000 540" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="World map of marriage canon dissolution index by region">
+        <defs>
+          <style>
+            .r { stroke: #050505; stroke-width: 1.5; cursor: default; }
+          </style>
+        </defs>
+
+        <!-- Ocean background grid -->
+        <rect x="0" y="0" width="1000" height="540" fill="#0a0a0a"/>
+        <g stroke="#1a1a1a" stroke-width="0.5">
+          <line x1="0" y1="135" x2="1000" y2="135"/>
+          <line x1="0" y1="270" x2="1000" y2="270"/>
+          <line x1="0" y1="405" x2="1000" y2="405"/>
+          <line x1="200" y1="0" x2="200" y2="540"/>
+          <line x1="400" y1="0" x2="400" y2="540"/>
+          <line x1="600" y1="0" x2="600" y2="540"/>
+          <line x1="800" y1="0" x2="800" y2="540"/>
+        </g>
+
+        <!-- ====== NORTH AMERICA — CDI 6 ====== -->
+        <path class="r" fill="#ca8a04" d="M70,90 L260,80 L310,140 L300,210 L240,270 L150,260 L100,200 Z"/>
+        <text class="region-cdi" x="190" y="170">6</text>
+        <text class="region-label" x="190" y="190">NORTH AMERICA</text>
+
+        <!-- ====== MEXICO / CENTRAL AMERICA — CDI 6 ====== -->
+        <path class="r" fill="#ca8a04" d="M150,260 L240,270 L260,310 L220,340 L170,330 Z"/>
+        <text class="region-cdi" x="205" y="300">6</text>
+        <text class="region-label" x="205" y="320">MEXICO / C.A.</text>
+
+        <!-- ====== SOUTH AMERICA — CDI 7 ====== -->
+        <path class="r" fill="#65a30d" d="M220,340 L300,330 L330,400 L310,470 L250,490 L220,450 L210,400 Z"/>
+        <text class="region-cdi" x="265" y="410">7</text>
+        <text class="region-label" x="265" y="430">SOUTH AMERICA</text>
+
+        <!-- ====== SCANDINAVIA / NORDIC — CDI 9 ====== -->
+        <path class="r" fill="#15803d" d="M450,55 L515,55 L520,105 L460,115 L445,90 Z"/>
+        <text class="region-cdi" x="482" y="85">9</text>
+        <text class="region-label" x="482" y="103">NORDIC</text>
+
+        <!-- ====== WESTERN EUROPE — CDI 8 ====== -->
+        <path class="r" fill="#16a34a" d="M425,115 L490,115 L505,165 L470,190 L425,180 L415,150 Z"/>
+        <text class="region-cdi" x="460" y="145">8</text>
+        <text class="region-label" x="460" y="163">W. EUROPE</text>
+
+        <!-- ====== SOUTHERN EUROPE — CDI 6 ====== -->
+        <path class="r" fill="#ca8a04" d="M425,185 L510,185 L520,225 L460,235 L415,220 Z"/>
+        <text class="region-cdi" x="470" y="210">6</text>
+        <text class="region-label" x="470" y="227">S. EUROPE</text>
+
+        <!-- ====== EASTERN EUROPE / RUSSIA — CDI 4 ====== -->
+        <path class="r" fill="#ea580c" d="M510,75 L760,75 L800,140 L740,175 L630,170 L530,160 L515,115 Z"/>
+        <text class="region-cdi" x="650" y="120">4</text>
+        <text class="region-label" x="650" y="140">E. EUROPE / RUSSIA</text>
+
+        <!-- ====== MENA — CDI 1 ====== -->
+        <path class="r" fill="#7f1d1d" d="M450,235 L600,225 L620,285 L575,310 L505,300 L455,275 Z"/>
+        <text class="region-cdi" x="525" y="265">1</text>
+        <text class="region-label" x="525" y="283">MENA</text>
+
+        <!-- ====== SUB-SAHARAN AFRICA — CDI 3 ====== -->
+        <path class="r" fill="#dc2626" d="M455,300 L575,310 L600,395 L555,455 L495,465 L450,420 L440,360 Z"/>
+        <text class="region-cdi" x="510" y="385">3</text>
+        <text class="region-label" x="510" y="405">SUB-SAHARAN AFRICA</text>
+
+        <!-- ====== SOUTH ASIA — CDI 2 ====== -->
+        <path class="r" fill="#b91c1c" d="M620,200 L720,200 L730,265 L675,290 L630,275 L615,235 Z"/>
+        <text class="region-cdi" x="675" y="240">2</text>
+        <text class="region-label" x="675" y="258">SOUTH ASIA</text>
+
+        <!-- ====== EAST ASIA — MISFIRE ====== -->
+        <path class="r" fill="#7c3aed" d="M735,135 L870,130 L890,210 L840,265 L765,255 L740,205 Z"/>
+        <text class="region-cdi" x="810" y="200">M</text>
+        <text class="region-label" x="810" y="218">EAST ASIA</text>
+
+        <!-- ====== SOUTHEAST ASIA — CDI 4 ====== -->
+        <path class="r" fill="#ea580c" d="M745,270 L830,275 L850,320 L810,355 L760,340 L740,305 Z"/>
+        <text class="region-cdi" x="795" y="310">4</text>
+        <text class="region-label" x="795" y="328">SE ASIA</text>
+
+        <!-- ====== OCEANIA — CDI 7 ====== -->
+        <path class="r" fill="#65a30d" d="M820,395 L920,395 L935,455 L870,475 L820,455 Z"/>
+        <text class="region-cdi" x="875" y="430">7</text>
+        <text class="region-label" x="875" y="448">OCEANIA</text>
+
+        <!-- Title strip -->
+        <g>
+          <rect x="20" y="490" width="960" height="34" fill="#141414" stroke="#262626"/>
+          <text x="32" y="510" fill="#ececec" font-family="Georgia, serif" font-style="italic" font-size="14">Canon Dissolution Index — marriage as load-bearing carrier</text>
+          <text x="32" y="522" fill="#8a8a8a" font-family="ui-monospace, Menlo, monospace" font-size="10">0 = institution fully load-bearing (squeeze era persisting) · 10 = institution dissolved into muscle memory (pull era) · M = misfire (dissolving without successor)</text>
+        </g>
+      </svg>
+    </div>
+
+    <div class="legend">
+      <span class="legend-item">
+        <span class="legend-gradient"></span>
+        <span>0 squeeze → 10 pull</span>
+      </span>
+      <span class="legend-item">
+        <span class="legend-swatch" style="background: var(--heat-misfire);"></span>
+        <span>M = misfire</span>
+      </span>
+    </div>
+
+    <p class="map-caption">CDI is a rough composite of marriage-rate change, non-marital first-birth share, legal parity between cohabitation and marriage, and median age at first marriage. The map is stylized (not geographically accurate), and the values are framework-graded, not survey-derived. Sources for the underlying signals are listed at the bottom of this page; the synthesis into a single index is the framework's compile, not anyone else's.</p>
+
+    <h3>Reading the regions</h3>
+
+    <p><strong>Nordic (CDI 9).</strong> Sweden, Norway, Denmark, Finland, Iceland. The legal parity between marriage and cohabitation is near-complete. The share of births outside marriage is the highest in the developed world: Iceland at 69%, Norway 61%, Sweden 58%, Denmark 55% as of recent OECD data. Among Swedes at age 35, 89–91% had started a first union as cohabitation and only 3% as marriage. Family stability — child outcomes, partnership duration, intergenerational support — does not appear to differ materially from married households. The framework's reading: this is the cleanest existing case of the institution's function being absorbed by other carriers (legal protection by statute, child-rearing infrastructure by the welfare state) such that the institution itself has become optional rather than load-bearing. Muscle memory phase.</p>
+
+    <p><strong>Western Europe (CDI 8).</strong> France, Netherlands, Belgium, Germany, the British Isles. France's PACS civil-partnership system, introduced in 1999, has produced 209,800 civil unions against 241,700 marriages in 2022 — roughly 87% of marriage volume, and exceeding marriage in 2020 during COVID. France's share of non-marital births was 65.2% in 2023, the highest in Europe. The Netherlands and Belgium have parallel structures. Cohabitation is socially indistinguishable from marriage for most purposes. The institution is no longer the only carrier, but it remains a culturally significant one.</p>
+
+    <p><strong>Southern Europe (CDI 6).</strong> Italy, Spain, Portugal, Greece. The Catholic and Orthodox traditions retain symbolic weight; marriage rates have fallen sharply (Italy 3.1 per 1,000 in 2023, a long-running decline) but cohabitation is still less institutionalized than in the north. Italy's share of non-marital births reached 43.2% in 2024 — up 23.5 percentage points since 2008 — placing it near the EU average of 41.1%. Birth rates are very low (Spain TFR 1.10 in 2024), but for reasons more closely tied to economic precarity and housing access than to direct dissolution of the institution.</p>
+
+    <p><strong>Eastern Europe and Russia (CDI 4).</strong> Marriage remains a more normative aspiration but rates have fallen and divorce rates are high. Cohabitation is rising but slower than in the West. Demographic trends are negative; the canon is wobbling rather than refactoring.</p>
+
+    <p><strong>North America (CDI 6).</strong> The United States and Canada. The US marriage rate has fallen roughly 65% from its 1970 peak; 25% of 40-year-olds in the US had never married as of 2021. Cohabitation has crossed marriage as a first-union form — 59% of adults 18–44 have ever cohabited vs 50% who have ever been married, and 76% of marriages today are preceded by cohabitation. Non-marital births are around 40% in the US, of which roughly 60% occur to cohabiting couples. A class divide is increasingly visible: marriage persists more strongly among the college-educated, while non-marital child-rearing has risen sharply in lower-income strata. This is a heterogeneous CDI 6 with substantial internal variance.</p>
+
+    <p><strong>Latin America (CDI 7).</strong> Colombia leads with 87% of births outside marriage — the highest share recorded for any major country. Peru, Brazil, Venezuela, and others share the deep regional pattern of <em>uniones consensuales</em> — long-standing consensual unions that pre-date European-style formal marriage and have always been an institutionally separate carrier. The 2024 update from CDI 6 to CDI 7 reflects how striking the Colombian figure looks once one sees it next to the Nordics. Argentina and Chile still resemble Southern Europe, but the regional center of mass is closer to the Nordic muscle-memory shape than to a transition state — with one important asterisk: the absorbing carrier is consensual union as a folk institution, not the welfare-state-backed cohabitation of the Nordic model. The function is being met; the structural backing is different.</p>
+
+    <p><strong>South Asia (CDI 2).</strong> India, Pakistan, Bangladesh, Sri Lanka. Marriage is near-universal. A 2018 survey of 160,000+ households found 93% of marriages were family-arranged; more recent surveys show that share falling (arranged-marriage proportion dropped from 68% in 2020 to 44% in 2023 in one survey, though regional variation is wide). Reported divorce rates remain very low (1–2% for arranged marriages, 20–30% for the smaller love-marriage cohort). The institution is the load-bearing carrier for paternity certainty, property transfer, alliance, and child-rearing — the original squeeze functions, mostly unrelieved by alternative carriers.</p>
+
+    <p><strong>MENA (CDI 1).</strong> The Middle East and North Africa. Religious law remains the operating canon for personal status in most countries; wholly Shari'a-based systems govern family matters in Saudi Arabia, Bahrain, Iran, and Iraq. Cohabitation is criminalized in many places, though so-called "white marriages" — unregistered cohabitation — have been quietly spreading in capital cities like Tehran despite strong religious disapproval and legal obstacles. Divorce rates have roughly doubled in Egypt, Iran, and Saudi Arabia between 2004 and 2020. The institution is the most heavily reinforced and the least dissolved of any region on the map, but the early stress signals are visible.</p>
+
+    <p><strong>Sub-Saharan Africa (CDI 3).</strong> The most internally heterogeneous region. Customary marriage forms — bridewealth, polygyny, matrilineal kinship in some areas — coexist with religious marriages (Christian and Muslim) and civil registration. DHS data from 27 sub-Saharan countries show median polygyny prevalence dropping roughly 29% since the 1990s (about 2% per year), with steeper falls in higher-HDI countries (South Africa now around 2%) and persistent prevalence above 30% in the rural belt from Senegal to Tanzania. The institution is load-bearing but the form varies dramatically across countries. Some urban areas resemble a CDI 5; rural and traditional areas remain CDI 2–3.</p>
+
+    <p><strong>Southeast Asia (CDI 4).</strong> Wide variation. The Philippines and Indonesia retain strong religious frameworks; Thailand and Vietnam have higher cohabitation acceptance; Singapore resembles East Asia's pattern. The regional average disguises a substantial spread.</p>
+
+    <p><strong>Oceania (CDI 7).</strong> Australia and New Zealand resemble Western Europe in legal parity and cohabitation rates. Marriage equality legislation removed a major exclusionary boundary in the 2010s. The institution is one carrier among several.</p>
+
+    <p><strong>East Asia (Misfire).</strong> Japan, South Korea, China, Taiwan. The institution is dissolving fast. Japan recorded 720,988 births in 2024 — the lowest figure since record-keeping began in 1899, the ninth consecutive annual decline. South Korea's total fertility rate fell to 0.65 in late 2023 and stood at 0.75 in 2024, the lowest in the world for the fifth consecutive year; women now marry for the first time at an average age of 31.6, men at 33.9 (both record highs). China registered 6.106 million marriages in 2024, down 20.5% year-on-year and 52.5% from the 2013 peak of roughly 13 million. The social and legal context in all three countries still treats non-marital childbearing as anomalous. The result is that the functions marriage was performing (especially child-rearing and lineage continuation) are not being absorbed by an alternative carrier. People are partnering less, or partnering without producing children, or not partnering at all. The framework reads this as the canon dissolving in advance of a replacement, and the demographic numbers as the downstream signal.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">04</span>The four substrates that lock the canon in</h2>
+
+    <p>The procedural-lineage rendering from continuation 18 says that any canon at the social-substrate ring is built on top of the rings beneath: biology, then cognition, then earlier social compiles. Marriage as canon is shaped by four substrates that wrap around it and either reinforce it or release it. Reading the regional map without these substrates produces a flat-looking distribution. Reading the map <em>through</em> them shows why each region sits where it sits.</p>
+
+    <div class="substrates">
+      <div class="substrate" style="border-left-color: var(--heat-3);">
+        <h4>Religion</h4>
+        <p>Where religious authority is still the operating canon for personal status — much of MENA, parts of South Asia, evangelical pockets in sub-Saharan Africa and the Americas — marriage remains sacrosanct because its rules are inherited unbroken from earlier compiles that were never refactored at the religious ring. The institution is wrapped in a meaning layer that any alternative carrier would have to displace, not merely supplement. Where religion has loosened its grip on personal status (Northern Europe, secular-leaning East Asia, parts of Latin America), the institution can dissolve faster because its meaning layer is no longer load-bearing.</p>
+      </div>
+      <div class="substrate" style="border-left-color: var(--heat-7);">
+        <h4>Climate</h4>
+        <p>Harsh climates have historically demanded the highest coordination cost for household formation, and marriage was the protocol that locked in the labor pooling required to survive. Pastoral and high-latitude pre-industrial societies had the densest marriage-and-kin protocols. Tropical and resource-abundant pre-industrial societies often had looser ones. As climate-resilience infrastructure (heating, food storage, transport, building stock) has improved, the coordination cost has fallen, and the canon's load-bearing has eased. The Nordic case is partially climate-substrate-driven: the cold made the squeeze hard, the welfare state distilled the muscle memory, and the institution could relax.</p>
+      </div>
+      <div class="substrate" style="border-left-color: var(--accent-link);">
+        <h4>Government</h4>
+        <p>States that have taken over the original squeeze functions — pensions, childcare, healthcare, inheritance-by-statute, property registration, paternity testing — have, over a few generations, made marriage operationally redundant for households that interact mainly with the state. States that have not taken over these functions (much of MENA, parts of South Asia, fragile-state contexts) leave marriage doing the original work, because no alternative carrier is available. The Nordic CDI 9 is in large part a story about what a strong welfare state will absorb if you let it. The MENA CDI 1 is in large part a story about what happens when the state does not absorb those functions and religious law continues to.</p>
+      </div>
+      <div class="substrate" style="border-left-color: var(--accent-speculative);">
+        <h4>Ideology</h4>
+        <p>Each region runs an ideological frame about what marriage is <em>for</em>. Individualist frames (Northern Europe, the Anglosphere, urban East Asia) make the institution optional once the romantic-partnership function can be met without it. Collectivist or familist frames (South Asia, MENA, much of sub-Saharan Africa, traditional Latin America) treat marriage as a node in a kin graph whose obligations extend well beyond the couple, which makes it much harder to dissolve because the dissolution would disconnect the graph. The East Asian misfire is partly an ideology-substrate problem: the familist frame remains strong enough that non-marital childbearing is socially expensive, but the institution itself has become economically and personally costly enough that people opt out. Neither side of the frame is bearing the load.</p>
+      </div>
+    </div>
+
+    <p>The four substrates do not act independently. They interlock. The Nordic CDI 9 is a configuration: low religious authority over personal status + post-industrial climate-resilience infrastructure + strong welfare state + individualist ideology, all reinforcing each other. The MENA CDI 1 is the opposite configuration on all four. Most of the map is the messy middle, where one or two substrates are pulling the canon one direction and the others are holding it in place.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">05</span>From squeeze to pull: the muscle-memory transition</h2>
+
+    <p>The Nordic case is worth slowing down for, because it shows the framework's claim most cleanly.</p>
+
+    <p>Sweden in 1900 had marriage rates and family structures broadly typical of Northern European Lutheran societies. The institution was load-bearing for paternity, inheritance, labor pooling, child-rearing, alliance, and elder care — the full squeeze stack. Across the 20th century, each of the squeeze functions was absorbed by a different carrier. Universal public schools took over much of the child-development load. The welfare state's pension system took over elder care. Inheritance law was rewritten to treat cohabiting partners equivalently to spouses for many purposes. Universal healthcare detached survival from household resource pooling. The kindergarten and after-school systems took over the day-care portion of child-rearing. The result, by the 1990s, was that almost none of the original squeezes were still being absorbed by marriage. They had migrated.</p>
+
+    <p>And yet — and this is the part that matters — the practical knowledge of how to run a stable two-adult partnership did not migrate with them. It distilled. Couples in Sweden cohabit at very high rates, raise children at family-stability levels comparable to or better than marrying couples, and divide labor and finances in arrangements that look procedurally identical to marriages of two generations earlier minus the ceremony. The institution dissolved; the muscle memory remained. The protocol no longer needs the canon to carry it, because the protocol has been absorbed into the population's default behavior.</p>
+
+    <p>This is what the framework calls the squeeze-to-pull transition. A squeeze produces a canon. The canon distributes a protocol through enough generations that the protocol becomes legible without the canon being explicitly invoked. When that happens, the canon can lighten its hold — or dissolve entirely — without the protocol being lost. The squeeze gave way to a pull: people don't need the institution to do the thing the institution was designed to make them do.</p>
+
+    <p>The key check on this reading is the family-stability data. If Nordic cohabitation produced systematically worse child outcomes, weaker elder care, or higher household instability than marriage, the muscle-memory claim would be wrong; the canon would still be doing load-bearing work, and we'd just be watching that work fail. The evidence does not show that. By most family-outcome measures the Nordics are at the top of the developed world. This is consistent with the muscle-memory reading. It does not prove it.</p>
+
+    <p>This is what the framework would call a successful canon dissolution. The institution did its job — well enough, for long enough — that the population learned what it was teaching and no longer needs the lesson explicitly. That is rare. Most canon does not get that far. Most canon either persists past its usefulness (the squeeze-era extremes on our map) or collapses with the function still unmet (the misfire).</p>
+
+    <p>The misfire case is East Asia, and it is more painful to read than the Nordic case is to celebrate.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">06</span>The misfire: dissolving without a successor</h2>
+
+    <p>The numbers from the previous section bear repeating because they are the framework's strongest single piece of evidence for the misfire category. Japan recorded 720,988 births in 2024, the lowest since record-keeping began in 1899, and the ninth consecutive annual decline. South Korea's total fertility rate stood at 0.65–0.75 across 2023–2024, less than half of replacement, the lowest in the world for the fifth consecutive year. China's 2024 marriage registrations fell 20.5% year-on-year to 6.1 million, less than half of the 2013 peak of roughly 13 million — and the population of marriage-age adults (20–39) has itself shrunk from about 435 million in 2013 to roughly 371 million by 2023, so the per-capita decline is not even the full story. Taiwan, Hong Kong, and Singapore follow the same curve. The institution is dissolving on a timeline measured in two or three decades.</p>
+
+    <p>What is not happening, in any of these countries, is the parallel emergence of an alternative carrier that absorbs the original squeeze functions. Non-marital births remain socially and often legally anomalous. Cohabitation has not been culturally institutionalized at scale. Welfare-state coverage of childcare and elder care is uneven and in some places weak. Housing costs in major cities have made household formation expensive even when partners want it. Working-time norms in some sectors leave little room for the daily labor of partnership.</p>
+
+    <p>The framework reads this as a particular configuration: a region where the religion-and-government substrates have weakened enough that the institution no longer commands automatic compliance, but where the ideology substrate (familism) and the absence of alternative state carriers prevent any successor protocol from absorbing the load. The institution is dissolving without a pull-phase to receive it. The downstream signal is demographic collapse, because the child-rearing function — which the institution was specifically constituted to make tractable — is not being met by anything else.</p>
+
+    <p>The Nordic and East Asian cases are not opposite ends of a single dimension. They are two different exits from the squeeze-era equilibrium. The Nordics distilled the protocol; East Asia did not. What separates them is not the rate at which the canon dissolved. It is whether the substrates that were supposed to receive the load were ready to receive it.</p>
+
+    <p>If the framework's reading is right, this implies that the policy question for late-marriage societies is not "how do we get people to marry again." It is "what carrier will absorb the child-rearing function if marriage will not, and is that carrier being built, or is the function going to remain unmet." The Nordic answer was: the welfare state plus distilled cohabitation. The East Asian answer is not yet visible.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">07</span>Three speculative bubbles</h2>
+
+    <p>Each of these is a candidate-grade reading — a claim the framework would make based on the squeeze-to-pull lens, attached to a follow-up plan that would either corroborate or break it. The rank is the framework's current confidence ordering. Sources for each are in the references section.</p>
+
+    <div class="bubbles">
+
+      <div class="bubble">
+        <p class="bubble-tag">Bubble 01 <span class="rank">rank 1 · highest confidence</span></p>
+        <h3>The Nordic distillation hypothesis</h3>
+        <p class="claim">In societies that have run the squeeze-to-pull transition cleanly, the original child-rearing function of marriage is being met at parity by cohabiting unions because the state has absorbed the carrier functions (pension, healthcare, childcare, inheritance protection) and the population has absorbed the partnership protocol as default behavior. The institution has become optional without the function being lost.</p>
+        <p class="row"><strong>What it predicts</strong> Family-stability outcomes (child wellbeing, partnership duration, elder-care quality) in Nordic countries should not differ materially between married and cohabiting households of comparable socio-economic status — and the gap that does exist should narrow further over the next decade.</p>
+        <p class="row"><strong>What would break it</strong> A re-widening of the gap, or evidence that Nordic non-marital partnerships are systematically less stable in ways the gross statistics have been masking.</p>
+        <p class="row"><strong>Follow-up</strong> Pull longitudinal data from Nordic statistical agencies (SCB, SSB, DST) on child outcomes by parental marital status, controlling for income and education. Repeat in 12 months and again in 36 months. Target measure: standard deviation of partnership-duration distribution and a child-poverty rate by household type.</p>
+      </div>
+
+      <div class="bubble">
+        <p class="bubble-tag">Bubble 02 <span class="rank">rank 2 · medium confidence</span></p>
+        <h3>The East Asian misfire hypothesis</h3>
+        <p class="claim">Where the institution dissolves in advance of a successor carrier — because religion and ideology jointly suppress the non-marital alternatives while the institution itself becomes unaffordable — the original functions go unmet rather than migrating. The downstream signal is demographic collapse, and the collapse will not reverse without either (a) a successor carrier being built (welfare-state expansion of childcare + housing + parental leave at Nordic scale) or (b) the familist ideological frame loosening enough to legitimize non-marital alternatives.</p>
+        <p class="row"><strong>What it predicts</strong> Birth rates in Japan, South Korea, and parts of China will continue to decline until one of (a) or (b) occurs. Direct financial incentives to marry, without infrastructural change to the alternatives, will fail. South Korea has spent ~$280 billion on pro-natalist incentives since 2006 and its TFR has continued to fall from 1.13 to 0.65 over that period — the cleanest early data point consistent with the misfire reading. One small wrinkle worth tracking: South Korean nuptials rose 14.9% in 2024, the sharpest single-year jump since 1970, after a long decline. This is plausibly a temporary post-COVID rebound off a depressed base, but it is the first such uptick and worth watching as either noise or signal.</p>
+        <p class="row"><strong>What would break it</strong> A sustained reversal of birth rates following a policy intervention that does not include either alternative-carrier infrastructure or substantial cultural loosening of the non-marital-childbearing taboo.</p>
+        <p class="row"><strong>Follow-up</strong> Track South Korea's national fertility-incentive spending against TFR (total fertility rate) annually. Compare to Sweden's structural family-policy spending profile. The framework expects the structural-spending profile to be load-bearing; the incentive-spending profile to be cosmetic.</p>
+      </div>
+
+      <div class="bubble">
+        <p class="bubble-tag">Bubble 03 <span class="rank">rank 3 · lower confidence, larger consequence if true</span></p>
+        <h3>The climate-coupling hypothesis</h3>
+        <p class="claim">The canon-dissolution index of a region in the long run is partially a function of how much climate-resilience infrastructure that region has built. The harsher the historical climate squeeze, the denser the original marriage canon; the more the squeeze has been relieved by infrastructure (heating, food storage, transport, building stock, social safety net), the faster the canon can dissolve without functional cost. As climate change reverses some of that infrastructure's effectiveness — making conditions harsher again in some regions — the framework predicts a partial re-tightening of marriage canon in the affected regions, especially in middle-income countries without strong welfare-state backstops.</p>
+        <p class="row"><strong>What it predicts</strong> In regions where climate stress is increasing (parts of the Sahel, South Asia, low-lying Southeast Asia, climate-vulnerable Latin American zones), the marriage and kinship canon should either stop softening or, in extreme cases, stiffen — as households re-aggregate to absorb the coordination cost the welfare state was supposed to cover and increasingly cannot.</p>
+        <p class="row"><strong>What would break it</strong> Continued softening of marriage canon in climate-stressed middle-income regions over the next decade, despite welfare-state degradation. That would suggest the canon is dissolving on a different timeline than the climate-resilience substrate, weakening the coupling claim.</p>
+        <p class="row"><strong>Follow-up</strong> Track the IPCC climate-vulnerability index against marriage-rate change for a panel of ~30 middle-income countries over the next 5 and 10 years. The framework expects a positive correlation between climate stress and marriage-canon re-tightening; absence of correlation, or the opposite sign, would break the bubble.</p>
+      </div>
+
+    </div>
+
+    <p style="margin-top: 28px;">All three bubbles are speculations the framework's reading produces. None of them is canon yet. The agnostic discipline says they have to survive a check before they can compile. The point of writing them down is so that the check can be run — by anyone, including the framework itself in twelve and thirty-six months — and so that what survives can be promoted, while what doesn't can be pruned and kept on the failed-reading shelf as honest provenance.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">08</span>What this case study is doing for the framework</h2>
+
+    <p>Marriage is a good worked example for the canon-dissolution dynamic because the data is unusually well-recorded (most jurisdictions have kept marriage and birth registries for over a century), the regional variation is large enough to compare, the four substrates (religion, climate, government, ideology) are all separately observable, and the timeline is slow enough that we can see compile and dissolution within recent memory. If the squeeze-to-pull primitive is real at the social-substrate ring, marriage is one of the places it should be visible.</p>
+
+    <p>The reading also stress-tests two of the framework's recent canon entries. The procedural-lineage rendering from continuation 18 should make sense of why the four substrates interlock — biology (child obligate-helplessness) wraps cognition (paternity uncertainty, alliance reasoning) wraps society (kin networks, inheritance, alliance) wraps person (the romantic and partnership feeling). Take a layer away, the layers above wobble. The Nordic distillation works because the lower layers got new substrates underneath them; the East Asian misfire fails because the substrates didn't all migrate together. If the procedural-lineage primitive is right, this is exactly the shape we should expect a canon-dissolution event to take. So far the marriage case is consistent.</p>
+
+    <p>The Lakatosian success criterion from continuation 19 is the right evaluation game for a reading like this. The point is not whether the canon-dissolution-index map gets every region exactly right. The point is whether the framework's vocabulary lets us see structure that other readings miss — the misfire category as a distinct configuration from squeeze and pull, the four-substrate interlock, the muscle-memory transition as the test of a successful canon dissolution. Those are operational moves. They give policy and personal-life purchase: <em>if you want the institution to relax without the function being lost, the alternative carriers have to be built first</em>. That is a recommendation derivable from the framework that is not derivable from the canonical sociology-of-marriage literature in the same form. Whether it survives further testing is a different question. The first question is whether it makes a move you couldn't make without it.</p>
+
+    <p>The honest weakness of this reading: the CDI numbers are framework-graded composites, not a single measured index. The underlying signals — marriage rate, non-marital birth share, age at first marriage, legal parity, divorce rate — are individually sourced (OECD Family Database, UN Population Division, Eurostat, national statistical agencies, Insee/INED, Korean KOSIS, China NBS), but the synthesis into a single 0–10 score is the framework's compile, with different weights producing different rankings. The v1 to v1-revised update bumped Latin America from CDI 6 to CDI 7 after the Colombia figure (87% births outside marriage) came in higher than the framework had originally graded. That kind of revision is exactly the work the framework is supposed to be doing: keep the discipline, update the values when the underlying signals contradict them. The bubbles inherit that uncertainty too — they are candidate-grade, not canon.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">09</span>Sources and links</h2>
+
+    <div class="sources">
+      <h3>Inside the framework</h3>
+      <ul>
+        <li><a href="../index.html">Agnostic Framework — live site</a> · primitives, continuations, diagrams, readings</li>
+        <li><a href="../continuations/18.md">Continuation 18</a> · procedural lineage promoted to canon (physics → person)</li>
+        <li><a href="../continuations/19.md">Continuation 19</a> · framework as aggregator of procedural connections; moving target as canon; Lakatosian success criterion re-anchored</li>
+        <li><a href="../manifestos/view.html?f=casual_v5.md">Manifesto v5 (casual edition)</a> · the lineage section is the prose-form of the substrate stack used in §04 above</li>
+        <li><a href="../readings/2026-05-17_google_algo_phase.md">Reading 01 · Google algorithm phase</a> · the framework's other live reading; same structural method, different terrain</li>
+      </ul>
+
+      <h4>External — marriage statistics and demographics (verified 2026-05-19)</h4>
+      <ul>
+        <li><a href="https://webfs.oecd.org/els-com/Family_Database/SF_2_4_Share_births_outside_marriage.pdf" target="_blank" rel="noopener">OECD Family Database · SF2.4 Share of births outside of marriage</a> · the dataset underpinning the Nordic, Western European, and Southern European CDI values</li>
+        <li><a href="https://ourworldindata.org/grapher/share-of-births-outside-marriage" target="_blank" rel="noopener">Our World in Data · Share of children born outside of marriage</a> · cross-country view of the underlying signal</li>
+        <li><a href="https://www.visualcapitalist.com/ranking-countries-babies-born-outside-marriage/" target="_blank" rel="noopener">Visual Capitalist · Countries by share of babies born outside marriage</a> · Colombia 87% figure that drove the Latin America CDI revision</li>
+        <li><a href="https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Marriage_and_divorce_statistics" target="_blank" rel="noopener">Eurostat · Marriage and divorce statistics</a> · EU-wide marriage rates, divorce rates, non-marital births</li>
+        <li><a href="https://www.pewresearch.org/short-reads/2025/01/08/share-of-us-adults-living-without-a-romantic-partner-has-ticked-down-in-recent-years/" target="_blank" rel="noopener">Pew Research · Share of US adults living without a romantic partner</a> · the US cohabitation-vs-marriage crossover data</li>
+        <li><a href="https://www.prb.org/resource/in-u-s-proportion-married-at-lowest-recorded-levels/" target="_blank" rel="noopener">Population Reference Bureau · US proportion married at lowest recorded levels</a> · the 65% decline from 1970 peak figure</li>
+        <li><a href="https://www.insee.fr/en/statistiques/8333326?sommaire=8333329" target="_blank" rel="noopener">Insee · Marriages and Civil Solidarity Pact (PACS), demographic balance sheet 2024</a> · the PACS-vs-marriage volume and 65.2% non-marital share figures</li>
+        <li><a href="https://www.ined.fr/en/everything_about_population/demographic-facts-sheets/faq/is-the-number-of-pacs-civil-unions-in-france-the-same-as-the-number-of-marriages" target="_blank" rel="noopener">INED · PACS vs marriage volume</a></li>
+        <li><a href="https://www.istat.it/en/press-release/births-and-fertility-of-the-resident-population-year-2024/" target="_blank" rel="noopener">Istat · Births and fertility of the resident population 2024</a> · Italy's 43.2% non-marital share, 3.1 marriages per 1,000 figure</li>
+        <li><a href="https://www.cnn.com/2025/02/10/china/china-marriage-registrations-record-low-2024-intl-hnk" target="_blank" rel="noopener">CNN · China marriage registrations record low 2024</a> · the 6.1M figure (down 20.5% YoY, lowest since 1980 records began)</li>
+        <li><a href="https://www.chinadaily.com.cn/a/202507/31/WS688af466a310c26fd717cc2e.html" target="_blank" rel="noopener">China Daily · 6.106 million marriage registrations in 2024</a> · 52.5% decline from 2013 peak</li>
+        <li><a href="https://www.aei.org/articles/lessons-on-birth-rates-japan-and-south-korea/" target="_blank" rel="noopener">AEI · Lessons on Birth Rates: Japan and South Korea</a> · TFR and marriage timeline for the misfire case</li>
+        <li><a href="https://eastasiaforum.org/2025/09/05/late-marriage-becoming-the-new-norm-in-south-korea/" target="_blank" rel="noopener">East Asia Forum · Late marriage becoming the new norm in South Korea</a> · women 31.6, men 33.9 first-marriage age</li>
+        <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11884948/" target="_blank" rel="noopener">PMC · The predetermined future: tackling South Korea's TFR crisis</a> · 0.65 TFR in late 2023 verification</li>
+        <li><a href="https://link.springer.com/article/10.1007/s42379-025-00191-w" target="_blank" rel="noopener">Springer · A comparative study of marriage and fertility changes in Japan, South Korea, and China</a> · the cross-East-Asian comparative basis for the misfire reading</li>
+        <li><a href="https://www.niussp.org/family-and-households/changing-unions-in-the-mena-region/" target="_blank" rel="noopener">N-IUSSP · Changing unions in the MENA region</a> · the rising-divorce-rate signal underpinning MENA CDI 1 with stress markers</li>
+        <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10469552/" target="_blank" rel="noopener">PMC · The Transformation of Polygyny in Sub-Saharan Africa</a> · the 29% prevalence drop since 1990s figure</li>
+        <li><a href="https://read.dukeupress.edu/demography/article/62/5/1717/403688/Polygyny-and-Fertility-Continuity-or-Change-in-Sub" target="_blank" rel="noopener">Duke / Demography · Polygyny and Fertility: Continuity or Change in Sub-Saharan Africa</a></li>
+        <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11111655/" target="_blank" rel="noopener">PMC · Cohabitation and Marriage Formation in Sweden in the 21st Century</a> · the 89–91% first-union-as-cohabitation figure</li>
+        <li><a href="https://statranker.org/population/top-10-countries-by-cohabiting-unmarried-couples-share-2025/" target="_blank" rel="noopener">Statranker · Top countries by cohabiting unmarried couples share 2025</a> · the 17–22% cohabitation frontier ranking</li>
+        <li><a href="https://www.statista.com/topics/13666/marriages-in-india/" target="_blank" rel="noopener">Statista · Marriages in India statistics &amp; facts</a> · arranged-marriage prevalence and divorce-rate signal</li>
+      </ul>
+
+      <h4>External — biology and union-tension cases (§01)</h4>
+      <ul>
+        <li>Nick Lane · <em>The Vital Question</em> (2015) and subsequent work on mitochondrial-ROS leak as residue of the original endosymbiotic merger.</li>
+        <li>Toby Spribille et al. · 2016 <em>Science</em> paper on lichen as three-way partnership (fungus, alga, basidiomycete yeast), with implications for who is regulating whom.</li>
+        <li>Ove Hoegh-Guldberg and colleagues · coral bleaching as zooxanthellae-host partnership dissolution under heat stress.</li>
+      </ul>
+
+      <h4>External — sociology, anthropology, history of marriage</h4>
+      <ul>
+        <li>Stephanie Coontz · <em>Marriage, a History</em> (2005) · the historical case that marriage as romantic-partnership institution is recent, and that earlier marriage was primarily economic and political.</li>
+        <li>Joseph Henrich · <em>The WEIRDest People in the World</em> (2020) · the Western Church's monogamous-nuclear-family program as a multi-century canon-installation project.</li>
+        <li>Göran Therborn · <em>Between Sex and Power: Family in the World 1900–2000</em> · cross-regional patriarchy and family-form data.</li>
+        <li>UNFPA <em>State of World Population</em> reports, various years · global family-formation context.</li>
+      </ul>
+
+      <h4>External — climate-substrate (§04 and Bubble 03)</h4>
+      <ul>
+        <li>IPCC AR6 · regional climate vulnerability assessments used as the substrate proxy in Bubble 03.</li>
+        <li>Notre Dame Global Adaptation Initiative (ND-GAIN) · country-level climate readiness index. <em>gain.nd.edu</em></li>
+      </ul>
+    </div>
+
+    <p style="margin-top: 22px; font-size: 14px; color: var(--text-dim);">Where this study uses framework-graded estimates rather than measured statistics — most notably the CDI numbers themselves — the reasoning is the framework's compile from the underlying source signals. The map and the bubbles are candidate-grade, not canon. Counter-readings, corrections, and competing rankings are welcome via the repository's issue tracker.</p>
+  </div>
+</section>
+
+<footer class="page-footer">
+  <div class="wrap-wide">
+    Agnostic Framework · Construct studies · v1 · 2026-05-19 · <a href="../index.html">live site</a> · <a href="https://github.com/a70m123r/agnostic-framework">github</a>
+  </div>
+</footer>
+
+</body>
+</html>
