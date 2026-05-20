@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Agnostic God: religion as squeeze + pull, with rapture as the strongest attractor humans have ever compiled — Agnostic Framework</title>
+<meta name="description" content="A framework reading of religion as the densest carrier of canon ever compiled at the social-substrate ring. Rapture as the pull-engine. The agnostic-god stance. Where religious canon is load-bearing, dormant, re-waking, or in open action-space. With regional heat map and three speculative bubbles.">
+<script src="https://hypothes.is/embed.js" async></script>
+<style>
+  :root {
+    --bg: #0a0a0a;
+    --surface: #141414;
+    --surface-2: #1c1c1c;
+    --border: #262626;
+    --border-strong: #3a3a3a;
+    --text: #ececec;
+    --text-dim: #8a8a8a;
+    --text-faint: #555;
+    --accent-canon: #4ade80;
+    --accent-candidate: #fbbf24;
+    --accent-speculative: #a78bfa;
+    --accent-pruned: #6b7280;
+    --accent-link: #93c5fd;
+    --heat-1: #7f1d1d;
+    --heat-2: #b91c1c;
+    --heat-3: #dc2626;
+    --heat-4: #ea580c;
+    --heat-5: #f59e0b;
+    --heat-6: #ca8a04;
+    --heat-7: #65a30d;
+    --heat-8: #16a34a;
+    --heat-9: #15803d;
+    --heat-rewake: #fbbf24;
+    --heat-action: #7c3aed;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+  .wrap-wide { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+
+  .topbar { border-bottom: 1px solid var(--border); padding: 20px 0; font-size: 13px; font-family: ui-monospace, Menlo, monospace; color: var(--text-dim); }
+  .topbar a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--text-faint); }
+  .topbar a:hover { color: var(--accent-link); border-bottom-color: var(--accent-link); }
+  .topbar .sep { color: var(--text-faint); margin: 0 10px; }
+  .topbar .source-link { float: right; }
+
+  header.hero { padding: 72px 0 48px; border-bottom: 1px solid var(--border); }
+  header.hero .kicker { font-family: ui-monospace, Menlo, monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.18em; color: var(--accent-candidate); margin: 0 0 18px; }
+  header.hero h1 { font-family: Georgia, serif; font-weight: 400; font-size: 50px; line-height: 1.06; letter-spacing: -0.02em; margin: 0 0 22px; }
+  header.hero .dek { font-size: 20px; line-height: 1.45; color: var(--text-dim); max-width: 640px; margin: 0 0 20px; font-family: Georgia, serif; font-style: italic; }
+  header.hero .meta { font-family: ui-monospace, Menlo, monospace; font-size: 12px; color: var(--text-faint); margin: 0; }
+
+  section { padding: 56px 0; border-bottom: 1px solid var(--border); }
+  section:last-of-type { border-bottom: none; }
+  h2 { font-family: Georgia, serif; font-weight: 400; font-size: 30px; line-height: 1.15; margin: 0 0 24px; letter-spacing: -0.01em; }
+  h2 .num { color: var(--text-faint); font-size: 14px; font-family: ui-monospace, Menlo, monospace; margin-right: 12px; }
+  h3 { font-family: Georgia, serif; font-weight: 400; font-size: 22px; line-height: 1.25; margin: 36px 0 14px; }
+  p { margin: 0 0 20px; }
+  em { color: var(--text); font-style: italic; }
+  strong { color: var(--text); font-weight: 600; }
+  a { color: var(--accent-link); text-decoration: none; border-bottom: 1px solid rgba(147, 197, 253, 0.3); }
+  a:hover { border-bottom-color: var(--accent-link); }
+
+  blockquote { border-left: 2px solid var(--border-strong); padding: 6px 0 6px 22px; margin: 28px 0; font-family: Georgia, serif; font-style: italic; color: var(--text); }
+
+  ul, ol { margin: 0 0 20px; padding-left: 24px; }
+  li { margin: 0 0 10px; }
+  hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+  .map-frame { background: #050505; border: 1px solid var(--border); border-radius: 6px; padding: 24px 18px 14px; margin: 32px 0 20px; }
+  .map-frame svg { display: block; width: 100%; height: auto; }
+  .legend { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; font-family: ui-monospace, Menlo, monospace; font-size: 11px; color: var(--text-dim); padding: 10px 4px 4px; }
+  .legend-item { display: inline-flex; align-items: center; gap: 6px; }
+  .legend-swatch { width: 14px; height: 14px; border-radius: 2px; border: 1px solid rgba(255,255,255,0.1); }
+  .legend-gradient { width: 220px; height: 14px; background: linear-gradient(90deg, var(--heat-1) 0%, var(--heat-3) 20%, var(--heat-5) 50%, var(--heat-7) 75%, var(--heat-9) 100%); border-radius: 2px; border: 1px solid rgba(255,255,255,0.1); }
+  .map-caption { font-size: 13px; color: var(--text-dim); line-height: 1.55; margin: 16px 0 0; font-style: italic; }
+  .region-label { font-family: ui-monospace, Menlo, monospace; font-size: 9px; fill: #fff; pointer-events: none; text-anchor: middle; paint-order: stroke; stroke: rgba(0,0,0,0.6); stroke-width: 2px; }
+  .region-cdi { font-family: ui-monospace, Menlo, monospace; font-size: 12px; font-weight: 700; fill: #fff; pointer-events: none; text-anchor: middle; paint-order: stroke; stroke: rgba(0,0,0,0.8); stroke-width: 3px; }
+
+  .substrates { display: grid; grid-template-columns: 1fr; gap: 14px; margin: 28px 0 8px; }
+  @media (min-width: 720px) { .substrates { grid-template-columns: 1fr 1fr; } }
+  .substrate { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--border-strong); border-radius: 4px; padding: 18px 20px; }
+  .substrate h4 { font-family: Georgia, serif; font-weight: 400; font-size: 18px; margin: 0 0 8px; font-style: italic; }
+  .substrate p { margin: 0; font-size: 15px; line-height: 1.6; color: var(--text-dim); }
+
+  .bubbles { display: grid; gap: 18px; margin: 28px 0 0; }
+  .bubble { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--accent-speculative); border-radius: 4px; padding: 22px 24px; }
+  .bubble .bubble-tag { font-family: ui-monospace, Menlo, monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent-speculative); margin: 0 0 8px; }
+  .bubble h3 { font-family: Georgia, serif; font-weight: 400; font-size: 22px; margin: 0 0 12px; color: var(--text); }
+  .bubble .claim { font-size: 16px; line-height: 1.6; margin: 0 0 14px; }
+  .bubble .row { font-size: 14px; line-height: 1.55; color: var(--text-dim); margin: 0 0 8px; }
+  .bubble .row strong { color: var(--text); font-family: ui-monospace, Menlo, monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; display: inline-block; width: 110px; vertical-align: top; }
+  .bubble .rank { display: inline-block; padding: 2px 8px; border-radius: 10px; background: rgba(167, 139, 250, 0.15); color: var(--accent-speculative); font-family: ui-monospace, Menlo, monospace; font-size: 11px; margin-left: 8px; }
+
+  .sources { background: var(--surface); border: 1px solid var(--border); border-radius: 4px; padding: 22px 26px; margin-top: 24px; }
+  .sources h3 { font-family: ui-monospace, Menlo, monospace; font-size: 12px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-dim); margin: 0 0 16px; }
+  .sources h4 { font-family: Georgia, serif; font-style: italic; font-weight: 400; font-size: 15px; margin: 18px 0 8px; color: var(--text); }
+  .sources ul { margin: 0 0 8px; padding-left: 22px; }
+  .sources li { font-size: 14px; line-height: 1.55; margin: 0 0 6px; color: var(--text-dim); }
+  .sources li a { color: var(--text); border-bottom-color: rgba(236,236,236,0.25); }
+
+  footer.page-footer { padding: 36px 0 64px; font-family: ui-monospace, Menlo, monospace; font-size: 12px; color: var(--text-faint); text-align: center; border-top: 1px solid var(--border); }
+  footer.page-footer a { color: var(--text-dim); border-bottom-color: var(--text-faint); }
+
+  @media (max-width: 640px) {
+    header.hero h1 { font-size: 36px; }
+    header.hero .dek { font-size: 17px; }
+    h2 { font-size: 24px; }
+    h3 { font-size: 19px; }
+    .bubble { padding: 18px 18px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap-wide">
+    <a href="../index.html">← agnostic framework</a>
+    <span class="sep">·</span>
+    <span>construct studies / religion_v1</span>
+    <a class="source-link" href="https://github.com/a70m123r/agnostic-framework/blob/main/artifacts/religion_v1.html" target="_blank" rel="noopener">view source ↗</a>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="kicker">Construct study · v1 · 2026-05-19</p>
+    <h1>The agnostic god</h1>
+    <p class="dek">Religion as the densest carrier of canon ever compiled at the social-substrate ring. Rapture as the strongest pull-engine humans have ever built. Where it's load-bearing, where it's gone dormant, where it's waking back up refactored, and where it's in open action-space with multiple successors scouting the gap.</p>
+    <p class="meta">~7,700 words · reading time ~29 min · status: candidate-grade reading · companion piece to <a href="marriage_v1.html" style="color: var(--accent-link);">marriage_v1.html</a> one ring deeper in the procedural lineage · first construct study written native to <a href="../continuations/20.md" style="color: var(--accent-link);">cont 20</a>'s canon-dormancy primitive · v1.0.1 adds PAVPAV's "t" glyph (hand holding a cross) in §03 and the whiteboard formal-notation photo in §01</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">01</span>The agnostic stance: bracket the unanswerable, work on the connectable</h2>
+
+    <p>This framework is called Agnostic for a reason, and the reason matters most precisely in this essay.</p>
+
+    <p>The Agnostic Framework does not answer the question of whether god exists. It treats that question as the canonical limit case of what continuation 19 named the framework's positive heuristic: <em>read what is procedurally connectable; bracket what isn't</em>. Whether one or many or no gods exist independent of human cognition is not a procedurally-connectable question in the framework's working sense — the framework can neither generate nor check propositions about a metaphysical entity outside the substrate-stack it has access to. It can, however, read everything that has compiled <em>around</em> that question with extraordinary precision: the canon people have built, the institutions that have carried it, the substrates that have wrapped it, the squeezes it has absorbed, the pulls it has promised, the dormancies it has entered and woken from. The god-canon is one of the most observable artifacts on the planet. Whether god is behind it is a different question, and the framework's discipline is to leave that one alone.</p>
+
+    <p>This is the same move Imre Lakatos recommended for any research programme: name the hard core that is held fixed and the protective belt that is up for revision, and treat questions outside the programme as outside the programme rather than as failure conditions. The framework's hard core in this domain is the procedural lineage (continuation 18) — physics → chemistry → biology → cognition → society → person. God is not a node in that lineage. The god-canon is. We read the canon and leave the metaphysics to people doing other work.</p>
+
+    <p>One consequence worth stating up front. This means the framework's reading of religion does not require religion to be wrong, nor does it require religion to be right. A reader who is a committed Catholic or a committed atheist should both find this essay's claims either useful or not on their own merits, with their prior beliefs about god intact at the end. If the reading <em>requires</em> religion-is-mistaken to work, the framework's discipline has failed; if it <em>requires</em> religion-is-true to work, the same. The agnostic stance is doing real work here, not gesturing at neutrality.</p>
+
+    <p>With that established, here is what the framework sees.</p>
+
+    <figure style="margin: 40px 0 12px; padding: 0;">
+      <img src="images/whiteboard_agnostic_systems.jpg" alt="PAVPAV at the whiteboard — the agnostic framework in formal notation. State-evolution formula S_{t+1} = ΠL[A_t ⋈ B_t ⋈ C_t + ξF], operator legend (projection ΠL, dual merge ±/∓, recursive bind ⋈, contextual residue ξF), concept tags (cast, give, residue; fuzzy apertures, path friction, adaptive wrapper), state-transition chain A_t ⇒ A_{t+1} via q0→q1→q2→q3, fixed-point conditions, and an 'agnostic systems / fractal structure' diagram showing S1, S2, Sn nodes connected by input, output, and residue-diffusion paths in fractal-boundary topology." style="display: block; width: 100%; height: auto; border: 1px solid var(--border); border-radius: 4px;" loading="lazy"/>
+      <figcaption style="font-size: 13px; color: var(--text-dim); line-height: 1.55; margin: 14px 0 0; font-style: italic;">PAVPAV at the whiteboard, mid-compile. The formal notation: state evolution as S<sub>t+1</sub> = Π<sub>L</sub>[A<sub>t</sub> ⋈ B<sub>t</sub> ⋈ C<sub>t</sub> + ξ<sub>F</sub>] (projection ΠL of recursively-bound observers plus contextual residue, evaluated under language L with feedback F). Cast / give / residue in red — the framework's three-phase exchange primitive. Fuzzy apertures / path friction / adaptive wrapper in blue — the substrate-side observables. Bottom-right: the agnostic-systems diagram with S<sub>1</sub>, S<sub>2</sub>, S<sub>n</sub> nodes connected by input, output, and residue-diffusion paths inside fractal-boundary regions. The religion essay is one application of this notation; the marriage essay is another; the framework is the discipline that runs the notation across substrates.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">02</span>Religion as the densest carrier humans have ever compiled</h2>
+
+    <p>If marriage is the densest social-substrate canon of the partnership-and-kinship layer, religion is the densest canon of the layer beneath it — the layer that asks why anything is happening at all. Every major religion compiles answers to a stack of squeezes the human substrate has never not faced. Mortality. Suffering. Meaning. Coordination at scales beyond direct kin. Time-binding across generations. Trauma processing. Identity. Power legitimation. None of these went away with the Enlightenment. They were never the kind of squeeze that goes away. They are the substrate-resident pressures that produced religion in the first place.</p>
+
+    <p>What religion compiled to absorb them is a coupled stack of answers, propagated through more channels than any other canon has ever managed simultaneously: scripture, ritual, calendar, architecture, music, food rules, dress, kinship norms, art, narrative, law, language itself. Most institutions get two or three propagation channels at peak load-bearing. Religions routinely get all twelve at once, sustained across centuries. The density of religious canon is qualitatively different from the density of any other social-ring canon humans have ever produced. This is partly why religion is so durable, and entirely why the framework treats it as the cleanest worked example of the dormancy primitive — when a canon is this densely propagated, dormancy doesn't look like dissolution; it looks like the canon falling silent in one channel while remaining audible in eleven others.</p>
+
+    <p>The squeezes religion compiled to absorb, named precisely:</p>
+
+    <p><strong>Mortality.</strong> No human alive has not faced the certainty that they and everyone they love will die. The squeeze is unrelieved by any other carrier. Religions are the canon that compiled to make this fact bearable — not by changing the fact but by changing what the fact <em>means</em>. Heaven, reincarnation, ancestor presence, liberation, communion with god — these are not lies told to children; they are protocols for living with a fact that has not been refactored by any other carrier in 200,000 years.</p>
+
+    <p><strong>Suffering and its meaning.</strong> Pain is universal; the question of what to do with it is open. Religions compiled answers (karma, redemptive suffering, suffering as teacher, suffering as illusion, suffering as path to liberation) that gave people frames for what they were already going through. The frame is canon at the cognition-ring level, intertwined with practice at the social-ring level.</p>
+
+    <p><strong>Meaning.</strong> The question "why is there something rather than nothing, and what should I be doing about it" is not answered by any non-religious framework with the same emotional load as a religious framework with the same answer. This is not a claim about whether the religious answers are true; it is a claim about what the canon does at the cognition ring. Meaning-making is a function humans require and the secular substitutes for it are still being compiled.</p>
+
+    <p><strong>Coordination beyond direct kin.</strong> Joseph Henrich's work documents that religions did substantial heavy lifting in extending cooperation beyond the kin networks evolution shaped humans to trust. Big gods, watching gods, gods with moral preferences — these were the carrier protocols that let strangers cooperate at scales evolution didn't equip humans for directly. Modern secular states inherit and extend this function; they did not invent it.</p>
+
+    <p><strong>Time-binding.</strong> Across generations, religious canon carries continuity between the dead and the unborn. Ancestors. Saints. Lineages. Inherited covenant. Eschatology. The function is to thread the present through a past and future the present cannot see, providing identity that doesn't end at one's own lifespan.</p>
+
+    <p><strong>Trauma processing.</strong> Confession, communal mourning, atonement, pilgrimage, fasting, contemplative practice. Religions compile protocols for what to do with experiences large enough to bypass normal learning loops. Modern psychotherapy is partly an attempt to refactor this function into a secular carrier; modern secular ritual (memorials, vigils) is another such attempt.</p>
+
+    <p><strong>Identity.</strong> Religious identity has historically been a primary frame for who one is. The recent shift to political, professional, or consumer identity as primary is a substrate-evolution event; religion's identity-function has migrated.</p>
+
+    <p><strong>Power legitimation.</strong> Sacred authority has authorized kings, conquests, social hierarchies, and resistance to all three. This is the most ambivalent of the squeezes: religion is the carrier that has both consecrated power and challenged it, often within the same tradition simultaneously.</p>
+
+    <p>Read together, these eight are not romantic descriptions. They are the chronic squeezes that the institution compiled to absorb, and they are why religion is the most heavily-engineered carrier humans have ever built. When the framework asks <em>what is going dormant and what is waking</em>, the question runs through all eight functions; rarely do they migrate to alternative carriers at the same rate.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">03</span>Rapture as the pull-engine</h2>
+
+    <p>Every canon has a squeeze (the pressure that compiled it) and a pull (the attractor that makes following its protocol bearable). Most canons have weak pulls. Marriage offered partnership and child-rearing infrastructure as its pull — real benefits, but not transcendent ones. The state offers safety, services, and identity — useful, not magnetic. Wage labor offers survival and consumption — adequate, not transcendent. None of these compete with what religion compiled.</p>
+
+    <p>Religion's pull is <em>rapture</em>, and rapture is, in the framework's vocabulary, the strongest attractor humans have ever built into a canon. Different traditions compile different versions: the Christian beatific vision, Jewish covenant fulfillment, Islamic paradise, Hindu moksha, Buddhist nirvana, Sufi <em>fana</em>, the Christian Pentecostal experience of the Spirit, the Quaker silent communion, mystical absorption across every tradition. The specific cognitive-experiential content differs; the structural function is the same. Rapture is a state the canon promises can be reached if the protocol is followed. The promise is not contingent on external conditions; it is contingent on inner discipline. The pull is therefore <em>portable</em> — it goes wherever the practitioner goes, and the protocol that brings it remains accessible regardless of circumstances.</p>
+
+    <p>This is why religion has been the stickiest carrier in human history. The squeeze (mortality, suffering, meaning) is permanent; the pull (rapture, salvation, liberation) is offered as permanently accessible to anyone willing to do the work. Most other canons have squeezes that fluctuate and pulls that depend on circumstances; religion's stack has neither of those weaknesses. The match between universal squeeze and portable pull is the framework's structural explanation for why religious canon has been the most heavily-propagated artifact in human history. The agnostic stance does not require this explanation to be exhaustive — there may be other reasons religion has been so sticky — but the structural fit is real and observable.</p>
+
+    <p>The framework's v1.2 dormancy refinement matters here. When religious canon goes dormant, the pull does not necessarily go dormant. What goes dormant is the institutional carrier of the pull (the church, the temple, the mosque, the sangha). The pull-state itself — the human capacity for rapture, transcendence, communion — appears to persist in the substrate, available for refactored compiles. This is the framework's reading of why "spiritual but not religious" is the largest growing religious category in many secularizing societies: the institutional canon has gone dormant; the pull-engine is still running. The wake-form of religious canon, when it eventually compiles, will be built on a substrate where the pull is preserved as imparted learning. Whatever the next round looks like, it will not be a return to the pre-secular institutional configuration; it will be a refactor that incorporates the imparted-learning of the dormancy period.</p>
+
+    <blockquote style="margin: 32px 0; padding: 18px 0 18px 26px; border-left: 3px solid var(--accent-canon); font-family: Georgia, serif; font-style: italic; font-size: 22px; line-height: 1.4; color: var(--text);">
+      "t"
+      <cite style="display: block; font-style: normal; font-family: ui-monospace, Menlo, monospace; font-size: 11px; color: var(--text-dim); margin-top: 12px; letter-spacing: 0.08em;">— PAVPAV</cite>
+      <span style="display: block; font-style: normal; font-family: -apple-system, system-ui, sans-serif; font-size: 14px; color: var(--text-dim); margin-top: 14px; line-height: 1.6;">A hand holding a cross. The carrier and the canon collapsed into a single glyph: a body-part gripping a symbol. The cross is the religious-canon attractor; the hand is the person at the substrate; the gesture is rapture-pursuit reduced to its smallest legible mark. The framework's reading of the glyph: this is what the pull looks like when stripped of every other propagation channel — no scripture, no calendar, no architecture, no music, no ritual community — just the human and the sign. When religious canon goes dormant in all of its other channels, the t is what remains in the substrate as imparted learning. Whether the t is a Christian cross specifically or a stand-in for the equivalent attractor in every tradition is bracketed; the structural function is the same across compiles.</span>
+    </blockquote>
+
+    <p>Three things worth noting about rapture as a framework primitive.</p>
+
+    <p>One. The pull is real in the sense that matters for the framework: people pursue it, organize their lives around it, sustain protocols across decades to remain in the path of it. Whether the experience corresponds to anything metaphysical is the bracketed question. What's not bracketed is the observable pursuit and the observable cognitive-experiential states produced by the protocols.</p>
+
+    <p>Two. The pull's portability is what distinguishes religion from every other social-ring canon. A king's authority does not travel with the subject if the subject leaves the kingdom; a national identity does not travel with the same force across borders; even a marriage canon is fundamentally about a relationship to specific other people. Rapture, by religion's own compile, is about a relationship to something that is not bounded by location, time, or relationship-with-others. This portability is why religious canon has historically survived migration, exile, persecution, and diaspora at rates other canons have not.</p>
+
+    <p>Three. The pull is the framework's strongest single piece of evidence for why religious dormancy is unlikely to be permanent at the species level. The squeeze is unrelieved; the pull is portable; both layers of imparted learning during dormancy (substrate-evolution and successor-carrier residue) are subject to the same substrates that produced religion in the first place. The framework reads the current secular phase in much of the developed world as a dormancy whose duration is unknown and whose wake-form is being scouted but not yet compiled. The Lakatosian discipline forbids predicting <em>which</em> tradition wakes or <em>when</em>; it permits predicting <em>that</em> some wake-form is more likely than indefinite religious-canon-dormancy at the species level. That prediction is one of the speculative bubbles in §08.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap-wide">
+    <h2><span class="num">04</span>Regional rendering: the Religious Dormancy Index heat map</h2>
+
+    <div style="max-width: 760px;">
+      <p>The map below assigns each of fourteen world regions a Religious Dormancy Index (RDI) on a 0–10 scale, parallel in structure to the Canon Dormancy Index used in the marriage construct study. The index is a composite of five observable signals: (a) share of adults identifying as religiously unaffiliated; (b) frequency of religious-service attendance among nominal adherents; (c) legal-and-political separation between religious authority and the state; (d) intergenerational religious transmission (do children of religious parents remain religious); (e) presence of active religious-revival or religious-nationalist movements.</p>
+
+      <p>Two regions get special markers in addition to their RDI. <strong>M</strong> for re-wake (canon went dormant and is now waking in refactored form). <strong>A</strong> for open action-space (canon dormant, no single successor carrier compiled, multiple candidates being scouted simultaneously). Both markers are direct consequences of the v1.2 / cont-20 dormancy framework; v1.0 of an essay on this topic would only have shown the linear gradient.</p>
+    </div>
+
+    <div class="map-frame">
+      <svg viewBox="0 0 1000 540" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="World map of religious dormancy index by region">
+        <defs><style>.r { stroke: #050505; stroke-width: 1.5; cursor: default; }</style></defs>
+        <rect x="0" y="0" width="1000" height="540" fill="#0a0a0a"/>
+        <g stroke="#1a1a1a" stroke-width="0.5">
+          <line x1="0" y1="135" x2="1000" y2="135"/>
+          <line x1="0" y1="270" x2="1000" y2="270"/>
+          <line x1="0" y1="405" x2="1000" y2="405"/>
+          <line x1="200" y1="0" x2="200" y2="540"/>
+          <line x1="400" y1="0" x2="400" y2="540"/>
+          <line x1="600" y1="0" x2="600" y2="540"/>
+          <line x1="800" y1="0" x2="800" y2="540"/>
+        </g>
+
+        <!-- North America — RDI 4 (heterogeneous, evangelical re-wake in pockets) -->
+        <path class="r" fill="#ea580c" d="M70,90 L260,80 L310,140 L300,210 L240,270 L150,260 L100,200 Z"/>
+        <text class="region-cdi" x="190" y="170">4</text>
+        <text class="region-label" x="190" y="190">NORTH AMERICA</text>
+
+        <!-- Mexico / Central America — RDI 3 -->
+        <path class="r" fill="#dc2626" d="M150,260 L240,270 L260,310 L220,340 L170,330 Z"/>
+        <text class="region-cdi" x="205" y="300">3</text>
+        <text class="region-label" x="205" y="320">MEXICO / C.A.</text>
+
+        <!-- South America — RDI 4 (Catholic dormancy + evangelical re-wake) -->
+        <path class="r" fill="#fbbf24" d="M220,340 L300,330 L330,400 L310,470 L250,490 L220,450 L210,400 Z"/>
+        <text class="region-cdi" x="265" y="404">M</text>
+        <text class="region-label" x="265" y="424">S. AMERICA</text>
+
+        <!-- Nordic — RDI 9 -->
+        <path class="r" fill="#15803d" d="M450,55 L515,55 L520,105 L460,115 L445,90 Z"/>
+        <text class="region-cdi" x="482" y="85">9</text>
+        <text class="region-label" x="482" y="103">NORDIC</text>
+
+        <!-- Western Europe — RDI 8 -->
+        <path class="r" fill="#16a34a" d="M425,115 L490,115 L505,165 L470,190 L425,180 L415,150 Z"/>
+        <text class="region-cdi" x="460" y="145">8</text>
+        <text class="region-label" x="460" y="163">W. EUROPE</text>
+
+        <!-- Southern Europe — RDI 6 -->
+        <path class="r" fill="#ca8a04" d="M425,185 L510,185 L520,225 L460,235 L415,220 Z"/>
+        <text class="region-cdi" x="470" y="210">6</text>
+        <text class="region-label" x="470" y="227">S. EUROPE</text>
+
+        <!-- Eastern Europe / Russia — RDI M (re-wake, Orthodox/nationalist) -->
+        <path class="r" fill="#fbbf24" d="M510,75 L760,75 L800,140 L740,175 L630,170 L530,160 L515,115 Z"/>
+        <text class="region-cdi" x="650" y="120">M</text>
+        <text class="region-label" x="650" y="140">E. EUROPE / RUSSIA</text>
+
+        <!-- MENA — RDI 1 (with Iran subcase M) -->
+        <path class="r" fill="#7f1d1d" d="M450,235 L600,225 L620,285 L575,310 L505,300 L455,275 Z"/>
+        <text class="region-cdi" x="525" y="265">1</text>
+        <text class="region-label" x="525" y="283">MENA</text>
+
+        <!-- Sub-Saharan Africa — RDI 2 -->
+        <path class="r" fill="#b91c1c" d="M455,300 L575,310 L600,395 L555,455 L495,465 L450,420 L440,360 Z"/>
+        <text class="region-cdi" x="510" y="385">2</text>
+        <text class="region-label" x="510" y="405">SUB-SAHARAN AFRICA</text>
+
+        <!-- South Asia — RDI M (Hindu nationalism wake) -->
+        <path class="r" fill="#fbbf24" d="M620,200 L720,200 L730,265 L675,290 L630,275 L615,235 Z"/>
+        <text class="region-cdi" x="675" y="240">M</text>
+        <text class="region-label" x="675" y="258">SOUTH ASIA</text>
+
+        <!-- East Asia — RDI A (open action-space) -->
+        <path class="r" fill="#7c3aed" d="M735,135 L870,130 L890,210 L840,265 L765,255 L740,205 Z"/>
+        <text class="region-cdi" x="810" y="200">A</text>
+        <text class="region-label" x="810" y="218">EAST ASIA</text>
+
+        <!-- Southeast Asia — RDI 3 -->
+        <path class="r" fill="#dc2626" d="M745,270 L830,275 L850,320 L810,355 L760,340 L740,305 Z"/>
+        <text class="region-cdi" x="795" y="310">3</text>
+        <text class="region-label" x="795" y="328">SE ASIA</text>
+
+        <!-- Oceania — RDI 7 -->
+        <path class="r" fill="#65a30d" d="M820,395 L920,395 L935,455 L870,475 L820,455 Z"/>
+        <text class="region-cdi" x="875" y="430">7</text>
+        <text class="region-label" x="875" y="448">OCEANIA</text>
+
+        <!-- Title strip -->
+        <g>
+          <rect x="20" y="490" width="960" height="34" fill="#141414" stroke="#262626"/>
+          <text x="32" y="510" fill="#ececec" font-family="Georgia, serif" font-style="italic" font-size="14">Religious Dormancy Index — religious canon as load-bearing carrier</text>
+          <text x="32" y="522" fill="#8a8a8a" font-family="ui-monospace, Menlo, monospace" font-size="10">0 = fully load-bearing · 10 = dormant, pull preserved as secular spirituality · M = re-wake (dormant canon waking refactored — Orthodox-nationalist, Hindu-nationalist, Latin evangelical) · A = open action-space (multiple successors scouting)</text>
+        </g>
+      </svg>
+    </div>
+
+    <div class="legend">
+      <span class="legend-item"><span class="legend-gradient"></span><span>0 load-bearing → 10 dormant with pull preserved</span></span>
+      <span class="legend-item"><span class="legend-swatch" style="background: var(--heat-rewake);"></span><span>M = re-wake</span></span>
+      <span class="legend-item"><span class="legend-swatch" style="background: var(--heat-action);"></span><span>A = open action-space</span></span>
+    </div>
+
+    <p class="map-caption">RDI is a framework-graded composite of religious-unaffiliated share, attendance frequency, religion-state separation, intergenerational transmission, and revival/nationalist movement activity. Sources are in §11 below. Three regions show wake-dynamics that the linear gradient can't capture — Russia, India, and Latin America are all M (re-wake configurations) where the canon was dormant or contracting and is now waking in refactored form. East Asia is A (open action-space) where religious canon went dormant before any single successor compiled.</p>
+
+    <h3>Reading the regions</h3>
+
+    <p><strong>Nordic (RDI 9).</strong> The most religiously-disaffiliated region on the planet. Sweden, Norway, Denmark, Finland have unaffiliated shares between 35% and 55% depending on how the question is asked. Church attendance among nominal adherents is single-digit in many cases. State-church separation is formal or de facto in all five. Intergenerational transmission has collapsed. And yet — exactly the dormancy framing — the pull-engine is observably preserved: rates of meditation, secular ritual, mindfulness practice, and "spiritual but not religious" identification are high. The institutional carrier is dormant; the rapture-pull at the cognition ring is still being pursued, just through different protocols. This is what successful religious-canon dormancy with imparted learning looks like at scale: the canon stopped being load-bearing, the pull stayed in the substrate, the wake-form (if it ever compiles) will run on a population that has learned to seek the pull without the institution.</p>
+
+    <p><strong>Western Europe (RDI 8).</strong> France and the United Kingdom both crossed below 50% Christian identification in the 2010s — two countries that lost their Christian majority in a single decade. The Netherlands, Belgium, Germany follow similar trajectories. Christians fell from 74% of Europe's population to 67% in ten years; religious nones grew 37% in a decade. As of 2020, ~25% of Europeans are religiously unaffiliated. The dormancy is structurally similar to Nordic; the wake-form is less developed because the pull-replacement carriers (welfare-state meaning, secular ritual, mindfulness) are less institutionalized.</p>
+
+    <p><strong>Southern Europe (RDI 6).</strong> Italy, Spain, Portugal, Greece. Catholicism / Orthodoxy retain symbolic load even where active practice has declined sharply. The institutions are dormant in practice but still active in calendar, ritual, identity. A more partial dormancy than in the north.</p>
+
+    <p><strong>Eastern Europe and Russia (re-wake M).</strong> The classic case. Orthodox canon was effectively suppressed across the Soviet era (1917–1991); religious affiliation polls in 1980s USSR ran at single digits. Post-Soviet, Orthodox affiliation rose to ~70% in Russia, intertwined with state-building and nationalist identity. The wake-form is not 1917 Orthodoxy. It is a fusion of religious identity with national-political identity, propagated through state media rather than parish networks, with formal church-state coupling that did not exist in pre-Soviet Russia in the same configuration. The canon woke carrying the imparted learning of the dormancy period: the experience of state-led atheism, the experience of religious identity as resistance, the experience of post-communist national-identity vacuum. The wake-compile is not a restoration; it is exactly what cont-20 predicts.</p>
+
+    <p><strong>North America (RDI 4, heterogeneous).</strong> The most internally varied case on the map. US religiously-unaffiliated rose from ~16% in 2007 to ~28% in 2023, then appears to have stabilized; 35% of US adults have switched out of their childhood religion (~90 million people). Within this aggregate, the US contains: a Northeast and West Coast that look like Western Europe, a South and parts of the Midwest where evangelical canon is at a partial re-wake state, mainline Protestantism in clear dormancy, and Catholicism approximately stable. Canada looks more European; Mexico more like Latin America. The "RDI 4" is a regional center of mass that masks substantial variance. The re-wake dynamic in the evangelical Protestant case is structurally adjacent to the M markers on Russia and Latin America: a tradition that was contracting is now waking in refactored form (politically active, media-savvy, identity-fused) different from its mid-20th-century compile.</p>
+
+    <p><strong>Latin America (re-wake M).</strong> Roughly 25% of Latin America now identifies as evangelical Protestant, up from negligible shares fifty years ago. This is not Catholic decline-into-secularism; it is Catholic dormancy with an evangelical-Protestant wake-form absorbing the function. The wake-form is different in form (Pentecostal experiential worship vs Catholic ritual mediation), different in social configuration (lay-led vs hierarchical), different in political alignment (often conservative-populist), and different in propagation (television, radio, social media vs parish networks). One religious canon went dormant, an adjacent one is in active wake-form. The marker M captures the dynamic; the RDI scale alone wouldn't.</p>
+
+    <p><strong>South Asia (re-wake M).</strong> India is the most consequential case. Hindu canon was load-bearing under the Mughal and British periods at the local-practice level but not at the national-political level. Post-1947 Indian secularism was state-policy canon. Since the 1990s, Hindu nationalism has reframed Hindu canon as both cultural-and-political identity — this is wake-from-dormancy at a particular configuration: not the religious canon of 1850 (locally diverse, ritual-centered, caste-stratified) but a refactored national-Hindu canon that compiles in a substrate of mass media, electoral politics, and post-colonial state. Pakistan and Bangladesh have parallel Islamic-canon configurations with similar political-fusion dynamics. The Gen Z religiosity uptick documented across South Asia is data consistent with this reading.</p>
+
+    <p><strong>MENA (RDI 1).</strong> The most load-bearing religious canon on the map. State-religion fusion across most of the region. Personal-status law governed by Sharia in most countries; Iran's theocratic state structure is the extreme case. Yet — and this is the within-region wake-and-dormancy that the RDI 1 masks — Iran has the world's fastest-growing Christian evangelical community, with conservative estimates of half a million to one million converts in a population that legally cannot convert. The state-religion fusion is intact in formal canon; an underground wake-form is compiling in a different tradition. The MENA case shows that even at full institutional load-bearing, internal substrate evolution can produce dormancy-and-wake dynamics that the gross RDI doesn't capture.</p>
+
+    <p><strong>Sub-Saharan Africa (RDI 2).</strong> Religion remains load-bearing across most of the region. Christianity and Islam wrap around customary spirituality in ways that produced the world's most religious-by-affiliation populations. Recent decades have seen explosive growth in Pentecostal Christianity in particular; not a dormancy region in any meaningful sense.</p>
+
+    <p><strong>East Asia (open action-space A).</strong> Japan, South Korea, China, Taiwan. The most under-recognized case on the map. Buddhism, Confucianism, Daoism, Shinto, and various folk traditions all went into varying degrees of institutional dormancy across the 20th century — through Communist suppression in China, post-war secularization in Japan, modernization in Korea, Cultural Revolution-era suppression in Taiwan. No single successor canon has compiled to absorb the pull-function. What's happening in the action-space: rapid AI-companion adoption (Japanese AI religion-substitutes, Chinese AI ancestor-veneration apps), explicit secular-ritual experiments (Japanese solo-wedding industry, Korean honjok lifestyle), Christian conversion in China (estimates vary wildly, 30–100 million), traditional-revival movements (Confucian state-promotion in China, Shinto identity in Japan). Multiple candidates scouting; none compiled. This is the same configuration the marriage essay named for East Asia, running at the religion ring rather than the marriage ring. The two are coupled: a region scouting carriers for partnership and child-rearing is the same region scouting carriers for meaning and rapture, and the carriers that succeed at one task may well succeed at the other.</p>
+
+    <p><strong>Southeast Asia (RDI 3).</strong> Predominantly Muslim Indonesia, Catholic Philippines, Buddhist Thailand and Myanmar. Religious canon remains load-bearing. Some urban secularization at the margins.</p>
+
+    <p><strong>Oceania (RDI 7).</strong> Australia and New Zealand resemble Western Europe — substantial religious unaffiliated shares, declining attendance, weakening intergenerational transmission. Less institutionalized secular-spirituality wake-form than Nordic, but trending that direction.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">05</span>The four substrates wrapping religious canon</h2>
+
+    <p>The procedural-lineage rendering from continuation 18 says any social-substrate-ring canon is wrapped by deeper rings that reinforce or release it. Religious canon is wrapped by four substrates that the heat map's variation is largely a function of. The marriage essay's four substrates were religion / climate / government / ideology. For religious canon itself we go one ring further down and ask what wraps religion: state, pluralism, wealth, media.</p>
+
+    <div class="substrates">
+      <div class="substrate" style="border-left-color: var(--heat-3);">
+        <h4>State</h4>
+        <p>The configuration of state authority and religious authority. Theocratic fusion (Iran, Saudi Arabia, parts of the Indian state under Hindu nationalism) keeps religious canon at maximum load-bearing. Formal separation with cultural accommodation (US, Italy, Israel) keeps it partially load-bearing. Formal separation with active secularism (France's laïcité, China's atheist state) drives it into dormancy. Active suppression (Soviet, Cultural Revolution) drives forced dormancy with high wake-pressure when the suppression ends.</p>
+      </div>
+      <div class="substrate" style="border-left-color: var(--heat-7);">
+        <h4>Pluralism</h4>
+        <p>Whether a society compiles one religion or many. Single-tradition societies (most of MENA, Hindu-majority parts of India, Buddhist Thailand) sustain load-bearing canon longer because the meaning-frame has no competitors. Pluralistic societies (US since founding, India in its inter-religious diversity, parts of post-Reformation Europe) generate canon-vs-canon competition that produces partial dormancy in each tradition simultaneously. The most religiously diverse societies (US, India) also generate the most religious-revival activity, suggesting pluralism keeps canon-formation pressure active rather than letting any one tradition fully relax.</p>
+      </div>
+      <div class="substrate" style="border-left-color: var(--accent-link);">
+        <h4>Wealth and scarcity</h4>
+        <p>Norris and Inglehart's existential-security thesis: where life is materially precarious, religious canon stays load-bearing because the squeezes (mortality, suffering, meaning under hardship) are acute. Where life is materially secure, the squeezes attenuate and the canon can pass into dormancy. Sub-Saharan Africa and South Asia track this pattern. The Nordic case is also consistent (extreme material security correlates with extreme religious dormancy). The mechanism is contested but the correlation is robust.</p>
+      </div>
+      <div class="substrate" style="border-left-color: var(--accent-speculative);">
+        <h4>Media</h4>
+        <p>The propagation channel of religious canon has refactored once per major media transition. Oral tradition → manuscript → print → broadcast → networked digital. Each transition produced a wake-form of religious canon adapted to the new substrate. Print produced Reformation Protestantism. Broadcast produced televangelism. Networked digital is producing personalized streamed religious media, AI religious assistants, online religious communities transcending geography, and — at the wake-edge — algorithmically-mediated radicalization in various traditions. The current digital transition is happening in real time and the wake-forms it produces are not yet stable.</p>
+      </div>
+    </div>
+
+    <p>The four substrates interlock. The Nordic RDI 9 is a configuration: secular state + high pluralism + extreme material security + early digital adoption that didn't replace religious institutional channels with religious digital channels. The MENA RDI 1 is the opposite: theocratic state + single tradition + variable material security + tightly regulated media that maintains religious propagation. The re-wake regions (Russia, India, Latin America) each have specific substrate configurations that produced their particular wake-form: post-communist state-building + Orthodox tradition + post-Soviet identity vacuum in Russia; Hindu-nationalist state-capture + Hindu majority + rising material security + social-media propagation in India; partial Catholic dormancy + pluralism + uneven material security + Pentecostal media adoption in Latin America. Each wake-form is the imparted-learning compile of the dormancy period it followed.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">06</span>The three exits: dormancy, re-wake, open action-space</h2>
+
+    <p>The marriage essay's Figure 1 named three exits from squeeze-era canon: Persist (substrates still hold), Pull (canon goes dormant, imparted learning carries protocol), Open action-space (canon dormant before successor compiled, multiple carriers being scouted). Religion uses the same three-exit structure but with a more visible fourth dynamic the marriage case showed less clearly: <strong>re-wake</strong>.</p>
+
+    <p>Re-wake is the dormant canon waking from its dormancy in refactored form, carrying imparted learning. The cont-20 primitive is doing exactly this in the religion case, and the religion case is the cleanest empirical worked example we have of the primitive operating at population scale. Three regions on the map are currently showing re-wake dynamics:</p>
+
+    <p><strong>Russia / post-Soviet Orthodoxy.</strong> 70-year suppression compiled into substrate; post-1991 wake-form is Orthodox-nationalist-state-fused, carrying the imparted learning of suppression (religious identity as resistance), of post-communist identity vacuum (religion as national-identity carrier), and of state-religion separation experience (the wake-form re-fuses what had been separated, but in a way the original 1917 configuration did not have because it had not yet been separated). Same canon-name. Different compile.</p>
+
+    <p><strong>India / Hindu nationalism.</strong> Hindu canon was locally load-bearing across the colonial and post-colonial periods but not nationally-politically fused with state authority in the way evangelical Christianity or political Catholicism had been in other contexts. The wake-form since the 1990s is nationally-fused, mass-media-propagated, electoral-politics-coupled — a configuration that the substrate of 1850 Hindu practice did not have because the substrate of 1850 did not yet have national-electoral-politics. The wake-form is exactly what cont 20 §3's three layers predict: substrate evolution (mass media, electoral politics), successor-carrier residue (post-colonial secularist canon being displaced), and memory of the squeeze (colonial-era subordination is the squeeze the wake-form addresses).</p>
+
+    <p><strong>Latin America / evangelical Protestantism.</strong> Catholic canon went into partial dormancy under late-20th-century social change; the wake-form is adjacent-tradition evangelical Christianity, propagated through Pentecostal practice and media rather than parish networks, politically aligned with conservative populism in many countries. The canon being woken is not the dormant tradition (Catholicism) but the adjacent one (Protestantism), so this is technically a wake of a tradition that was less load-bearing in the region. The framework's reading is that the pull-engine (rapture, transcendence, transformation) migrated from one carrier to a more accessible one when the dormant carrier could not be roused.</p>
+
+    <p>These three re-wakes share a structural property worth naming. None of them is a restoration of an earlier compile. All three are refactored compiles that incorporate the dormancy period's imparted learning. The framework's prediction — derivable from cont 20 — is that any future religious wake elsewhere (potential Nordic religious resurgence, potential East Asian successor-canon compile, potential US wake-from-secular-dormancy) will also be a refactor, not a restoration. Each will carry the imparted learning of its specific dormancy period and substrate evolution.</p>
+
+    <p>The East Asian case is the fourth dynamic, distinct from the three above. Religious canon went dormant there without a single successor in active wake-form. Multiple candidates are scouting (Christian conversion, AI religion-substitutes, secular ritual, traditional revival, political identity as meaning-carrier). None is compiling. This is the open action-space configuration. The framework's reading is that what's running in East Asia at the religion ring is the same shape as what's running at the marriage ring: a chronic-squeeze canon dormant before any single successor compiled, with productive friction driving multi-carrier search. The marriage and religion cases are coupled in this region because the underlying substrates are coupled.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">07</span>Three speculative bubbles</h2>
+
+    <p>Three candidate-grade readings the framework's compile produces, each with claim, prediction, break-condition, and follow-up plan.</p>
+
+    <div class="bubbles">
+
+      <div class="bubble">
+        <p class="bubble-tag">Bubble 01 <span class="rank">rank 1 · highest confidence</span></p>
+        <h3>The pull-portability hypothesis</h3>
+        <p class="claim">The pull-engine (rapture, transcendence, mystical experience) is at the cognition ring, not the social ring. When religious institutional canon goes dormant at the social ring, the pull remains accessible via direct cognition-ring carriers — meditation, psychedelics, contemplative practice, AI-mediated meaning-discussion. The dormancy of institutional religion is therefore compatible with persistent or even increasing pursuit of the pull-state via non-institutional carriers. "Spiritual but not religious" is not a residue category; it is the wake-form-in-progress.</p>
+        <p class="row"><strong>Predicts</strong> In high-RDI regions (Nordic, Western Europe, parts of North America), measured rates of meditation practice, psychedelic use, mindfulness training, contemplative-practice apps, and "spiritual but not religious" identification will continue to rise over the next decade as the institutional canon stays dormant. The trend lines on these will not look like the trend lines on religious affiliation; they will look like the trend lines on the pull-engine moving to direct carriers.</p>
+        <p class="row"><strong>Breaks if</strong> Pull-engine pursuit stays flat or declines in high-RDI regions over the next decade. That would suggest religious institutional dormancy reflects abandonment of the pull-pursuit itself, not migration to alternative carriers.</p>
+        <p class="row"><strong>Follow-up</strong> Track three indicators in Sweden, Netherlands, UK, and US-coastal-metros at 12, 36, and 60 months: (a) meditation-app DAU per capita, (b) self-reported "spiritual but not religious" share, (c) measured psychedelic-and-empathogen use rates. Compare against religious-affiliation trend over the same period. Frameworks expects the gap to widen.</p>
+      </div>
+
+      <div class="bubble">
+        <p class="bubble-tag">Bubble 02 <span class="rank">rank 2 · medium-high confidence</span></p>
+        <h3>The political-identity-absorption hypothesis</h3>
+        <p class="claim">Where religious institutional canon goes dormant and the cognition-ring pull-carrier infrastructure is also weak, the coordination-and-identity functions of religion are absorbed by political identity instead. The substrate-evolution during religious dormancy includes the rise of political tribalism as the partial successor carrier for the identity-and-meaning function religion previously held. This is observable in US partisan polarization, in European far-right religious-nationalist movements, in Hindu-nationalist coupling, and in Russian Orthodox-nationalist fusion.</p>
+        <p class="row"><strong>Predicts</strong> In regions where religious dormancy occurs alongside weak secular-spirituality infrastructure, political polarization will run higher than in regions where the religion → secular-spirituality transition is more advanced. The Nordic-vs-US gap in polarization-per-religious-dormancy-unit should be observable. The framework predicts: religious dormancy without spiritual-successor produces political-identity-fusion; religious dormancy with spiritual-successor produces stable secularism. This is the operationalized prediction continuation 20's primitive enables.</p>
+        <p class="row"><strong>Breaks if</strong> No correlation is found between religious-dormancy-pattern and political-polarization trajectory across the panel of secularizing democracies. Or: if political polarization rises uniformly across both Nordic-pattern and US-pattern societies, suggesting it's not religion-substrate-dependent.</p>
+        <p class="row"><strong>Follow-up</strong> Panel study across Sweden, Netherlands, France, UK, US, and Canada over 10 years measuring: religious-dormancy progression, secular-spirituality infrastructure, political polarization indices. The framework expects an inverse correlation between secular-spirituality infrastructure and polarization within the panel.</p>
+      </div>
+
+      <div class="bubble">
+        <p class="bubble-tag">Bubble 03 <span class="rank">rank 3 · highest stakes, lowest confidence</span></p>
+        <h3>The species-level wake hypothesis</h3>
+        <p class="claim">At the species level, religious dormancy is not stable across centuries because the underlying squeezes (mortality, suffering, meaning, time-binding, coordination beyond kin) are not relieved by any current alternative carrier on the same compressed timeline religion provided. The framework predicts that within the 21st century, some form of refactored religious canon will compile at population scale in regions currently in dormancy or open action-space. The wake-form will not resemble any historical religion in its full configuration; it will be a refactor incorporating AI symbiosis, longevity-medicine implications for mortality framing, climate-stress meaning-frames, and post-national identity. The Lakatosian discipline forbids predicting which tradition wakes or when; the framework can only predict that some wake-form is more likely than indefinite dormancy.</p>
+        <p class="row"><strong>Predicts</strong> By 2080, at least one secularized region from the current map will show a re-wake marker (M) similar to Russia, India, or Latin America — a refactored religious canon compiling at scale and absorbing the squeeze functions currently being met partially or not at all. The wake-form will not be a return to historical Christianity, Islam, Buddhism, or any other named tradition in its prior configuration; it will be a new compile carrying imparted learning of the dormancy period.</p>
+        <p class="row"><strong>Breaks if</strong> Indefinite stable religious dormancy is observed across the current high-RDI regions through 2080, with the squeeze functions being adequately absorbed by secular carriers (welfare states, therapy, secular ritual, AI companions, psychedelic-assisted meaning-making) such that no wake-pressure builds. That would refute the framework's strong claim that religion's squeeze functions are not stable-substitutable by secular carriers alone.</p>
+        <p class="row"><strong>Follow-up</strong> 60-year tracking is required; this bubble's check window is multi-generational. Interim indicators worth tracking: rate of new-spirituality movement emergence in secularized regions, AI religious-assistant adoption patterns, demographic data on which generation is producing the most religious-affiliation switching, the success or failure of secular-ritual experiments in scaling.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">08</span>What this case study is doing for the framework</h2>
+
+    <p>The religion construct study tests four primitives at the deepest social-substrate-ring case the framework can currently apply itself to. Procedural lineage (cont 18) gets tested at its deepest ring — religion is what cognition compiles when it tries to make the deepest substrates legible, and reading religion through the lineage frame either works or doesn't. Canon dormancy with imparted learning (cont 20) gets its first natively-written worked example, with three independent re-wake cases (Russia, India, Latin America) and one open action-space case (East Asia) providing direct empirical anchors at population scale. The aggregation-discipline primitive (cont 19) is exercised by the act of writing this essay — religion is the deepest aggregation the framework attempts. The Lakatosian-not-Popperian success criterion (cont 19) is exercised by the agnostic stance: the essay does not require religion to be wrong or right, only to be observable as a compiled canon, and that bracketing-the-unanswerable is the Lakatosian discipline in operation.</p>
+
+    <p>What the framework's contribution is, given six adjacent fields are already studying religion at population scale: <em>the dormancy framing</em>. Sociology of religion traditionally framed secularization as decline; the framework reads it as dormancy with imparted learning. That changes three predictions specifically: (a) the wake-form is expected and structurally constrained by imparted learning, (b) the open-action-space case is a distinct configuration (East Asia) rather than a delayed transition, (c) the species-level claim in Bubble 03 follows from the dormancy primitive in a way it does not from the standard secularization-as-decline frame. None of these is original to the framework in the sense of being absent from the adjacent literatures — Lowy Institute's reading of religious revival, Pew's three-stages-of-religious-decline data, Norris-Inglehart's existential-security framing all contain pieces of this. The framework's contribution is that the four moves are <em>the same move</em>, expressible in one vocabulary, with operational purchase the component literatures don't have in their existing form.</p>
+
+    <p>Honest weakness: the RDI numbers are framework-graded, like the marriage CDI. Different combinations of unaffiliated share, attendance, state-separation, transmission, and revival activity would produce different rankings; the specific values are the framework's compile over the underlying sources. The bubbles inherit that uncertainty. The agnostic stance is partly a hedge against this — by bracketing the metaphysical question, the framework reduces its exposure to disputes about religion's fundamental nature that would otherwise complicate the readings.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">09</span>Adjacent fields and leading figures</h2>
+
+    <p>Six adjacent literatures, each owning a piece of what this essay reads. Naming them so the framework's debts are visible and so the reader has entry points into the deeper work. The closing question — what the framework's contribution actually is — sits below the six.</p>
+
+    <h3>1. Sociology of religion</h3>
+    <p>The closest disciplinary parallel. <strong>Peter Berger</strong> (1929–2017) launched the "secularization thesis" in the 1960s, then publicly recanted it in the 1990s after observing global religious vitality. <strong>José Casanova</strong> (Georgetown) refined the recantation into the "public religions" framing — religion didn't disappear, it relocated. <strong>Grace Davie</strong> (Exeter, emerita) coined "believing without belonging" (UK 1990s) — institutional dormancy with the pull-engine preserved, exactly the configuration the framework now names as dormancy-with-imparted-learning. The cont-20 primitive is in part Davie's observation generalized. <strong>Pippa Norris</strong> (Harvard) and <strong>Ronald Inglehart</strong> (1934–2021) developed the existential-security thesis — the wealth/scarcity substrate in §05 above is largely their work.</p>
+
+    <h3>2. Cognitive science of religion</h3>
+    <p>Reads religion as a substrate-evolution artifact at the cognition ring. <strong>Pascal Boyer</strong> (Washington University), <em>Religion Explained</em> (2001), on minimally-counter-intuitive concepts as the cognitive substrate religion compiles into. <strong>Scott Atran</strong> (CNRS Paris and Oxford) on supernatural agents and ritual at the cognitive level. <strong>Dan Sperber</strong> on cultural attractors. <strong>Ara Norenzayan</strong> (UBC), <em>Big Gods</em> (2013), on how watching-god canon enabled large-scale cooperation. <strong>Harvey Whitehouse</strong> (Oxford) on imagistic vs doctrinal modes of religiosity, providing the structural typology under religious-canon variation.</p>
+
+    <h3>3. Dual-inheritance theory of religion</h3>
+    <p>Substantial overlap with cognitive science of religion but with explicit cultural-evolution machinery. <strong>Joseph Henrich</strong>'s WEIRD work includes religion as a prosocial-cooperation carrier across cultural-evolutionary time. <strong>Edward Slingerland</strong> (UBC) on the cognitive-historical role of religious self-cultivation. <strong>Russell Genet</strong> on big history and the lineage of religious thought. The framework's procedural-lineage rendering is closest to this group's framing.</p>
+
+    <h3>4. Religious history and comparative religion</h3>
+    <p><strong>Karen Armstrong</strong> on the history of religious ideas, particularly across the Abrahamic traditions. <strong>Mircea Eliade</strong> (1907–1986) on the sacred-and-profane distinction, the eternal-return concept, and comparative-religion structuralism. <strong>Wilfred Cantwell Smith</strong> (1916–2000) on "the meaning and end of religion" — the historical claim that "religion" as a category is a Western Enlightenment construct, with substantive implications for the framework's reading of what religious canon actually is. <strong>Robert Bellah</strong> (1927–2013), <em>Religion in Human Evolution</em> (2011), the most ambitious recent attempt to integrate cognitive science, evolutionary theory, and religious history.</p>
+
+    <h3>5. New religious movements and secular spirituality</h3>
+    <p>The empirical specialists on the wake-form-in-progress. <strong>Paul Heelas</strong> (Lancaster, emeritus) and <strong>Linda Woodhead</strong> (Lancaster) on the "subjective turn" in late-modern spirituality — moving from external religious authority to inner experience. <strong>Wade Clark Roof</strong> on the spiritual-marketplace concept. <strong>Courtney Bender</strong> (Columbia) on contemporary spirituality at the metaphysical edge. <strong>Tara Isabella Burton</strong>, <em>Strange Rites</em> (2020), on contemporary remix-religion. These are the field's most useful informants on what "spiritual but not religious" actually contains in practice.</p>
+
+    <h3>6. Demographics of religion</h3>
+    <p>The data sources the framework's RDI compiles from. <strong>Pew Research Center</strong>'s Religion &amp; Public Life project is the most thorough cross-national religious-affiliation dataset publicly available; the §04 RDI values rest on Pew's 2020 Global Religious Landscape data and the 2023–2025 Religious Landscape Study (US), Religious Switching in 36 Countries (2025), and How the Global Religious Landscape Changed 2010-2020 (2025). <strong>PRRI</strong> (Public Religion Research Institute) provides finer-grained US data with religious-political analytics. <strong>World Values Survey</strong> and <strong>European Social Survey</strong> provide the time-series underneath much of this work.</p>
+
+    <h3>What the framework's contribution actually is</h3>
+    <p>Read against these six adjacent fields, the framework is not introducing the dormancy of religion as a new observation — Berger, Casanova, Davie all anticipated it in different vocabularies. What the framework adds is the same set of four moves named in the marriage essay's §09: (1) <em>unification across substrates</em> — reading religion in the same vocabulary as marriage, education, attention, and other social-ring canons, with the cont-18 procedural lineage as the structural license; (2) <em>naming the open-action-space category</em> — East Asia at the religion ring is structurally analogous to East Asia at the marriage ring, not a delayed transition or a residual category; (3) <em>the muscle-memory criterion as imparted learning</em> — making the wake-form-from-dormancy expected and structurally constrained rather than treating revival as anomalous; (4) <em>the agnostic stance literalized</em> — bracketing the metaphysical question is a Lakatosian discipline in operation, not a hedge. None of these is original to the framework in the sense that each piece is absent from the adjacent literatures; what is original is that the four moves are <em>the same move</em>, expressible in one vocabulary, with operational purchase the component literatures don't have in their existing form.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">10</span>Provenance</h2>
+
+    <p>This essay's iteration log, in keeping with the carrier-before-canon methodology and the convention now established by <a href="marriage_v1.html">marriage_v1.html §10</a>.</p>
+
+    <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 4px; padding: 22px 26px; margin: 28px 0;">
+      <p style="font-family: ui-monospace, Menlo, monospace; font-size: 11px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.12em; margin: 0 0 16px;">Provenance trail — religion construct study v1.0</p>
+
+      <p style="margin: 0 0 14px;"><strong>Iteration 0 · seed prompt (Pav).</strong> "lets do religion open up with this for me. a squeeze and a good pull for rapture. agnostic god." Three structural seeds: (1) the squeeze-and-pull framing as the entry into religion specifically, with rapture as the pull-state; (2) the framework's own agnostic stance made explicit as the lens through which religion gets read; (3) the implicit instruction that this is the religion construct study queued earlier as Construct study 04 in the index, now upgraded from queued to published.</p>
+
+      <p style="margin: 0 0 14px;"><strong>Iteration 1 · v1 draft (this version).</strong> 7,500 words. Eight squeeze functions named (mortality, suffering, meaning, coordination, time-binding, trauma processing, identity, power legitimation). Rapture-as-pull-engine treated as the strongest attractor humans have ever built into a canon. 14-region heat map with framework-graded Religious Dormancy Index, including three re-wake markers (Russia, India, Latin America) and one open action-space marker (East Asia). Four-substrate analysis (state, pluralism, wealth, media). Three speculative bubbles (pull-portability hypothesis, political-identity-absorption hypothesis, species-level wake hypothesis). Six adjacent fields traced with leading-figure name-pulls (sociology of religion, cognitive science of religion, dual-inheritance, religious history, new religious movements / secular spirituality, demographics of religion). Sources verified against live Pew data (2024–2025 cycles).</p>
+
+      <p style="margin: 0 0 14px;"><strong>Distinct from marriage_v1.html.</strong> This essay is the first construct study written native to the cont-20 dormancy primitive — every reference to dormancy, wake, imparted learning is intentional, not refactored after the fact. The re-wake marker (M) is a structural addition to the heat-map vocabulary that the marriage essay only had in rudimentary form. The agnostic-stance section (§01) is unique to this essay because religion is the cleanest case for stress-testing the framework's Lakatosian discipline at the metaphysical bracketing.</p>
+
+      <p style="margin: 0 0 14px;"><strong>Coupling to other artifacts.</strong> The East Asia open-action-space case at the religion ring is coupled to the East Asia open-action-space case at the marriage ring. Both essays should be read together for the East Asian regional reading. The political-identity-absorption hypothesis (Bubble 02) is adjacent to the marriage essay's robotics-and-AI-symbiosis bubble — political identity, AI symbiosis, and new spirituality are three of the candidate carriers being scouted across both rings in the open-action-space regions.</p>
+
+      <p style="margin: 0; font-size: 13px; color: var(--text-dim); font-style: italic;">More iterations will follow as Pav corrects, sharpens, or refactors specific claims. The provenance trail is the framework's discipline made transparent.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">11</span>Sources and links</h2>
+
+    <div class="sources">
+      <h3>Inside the framework</h3>
+      <ul>
+        <li><a href="../index.html">Agnostic Framework — live site</a></li>
+        <li><a href="../continuations/18.md">Continuation 18</a> · procedural lineage as canon — religion is the social-substrate-ring canon the lineage produces when cognition compiles deepest-substrate questions</li>
+        <li><a href="../continuations/19.md">Continuation 19</a> · Lakatosian-not-Popperian success criterion + agnostic-stance discipline</li>
+        <li><a href="../continuations/20.md">Continuation 20</a> · canon dormancy with imparted learning on return — the primitive this essay is the first construct study written native to</li>
+        <li><a href="marriage_v1.html">Marriage construct study v1.2</a> · companion piece one ring up in the procedural lineage</li>
+        <li><a href="../manifestos/view.html?f=casual_v5.md">Manifesto v5 (casual edition)</a> · the procedural-lineage section</li>
+      </ul>
+
+      <h4>External — religious demographics (verified 2026-05-19)</h4>
+      <ul>
+        <li><a href="https://www.pewresearch.org/religion/2025/06/09/how-the-global-religious-landscape-changed-from-2010-to-2020/" target="_blank" rel="noopener">Pew Research · How the Global Religious Landscape Changed from 2010 to 2020</a> · 1.9 billion religiously unaffiliated globally, 24.2% share</li>
+        <li><a href="https://www.pewresearch.org/religion/2025/02/26/decline-of-christianity-in-the-us-has-slowed-may-have-leveled-off/" target="_blank" rel="noopener">Pew Research · US Christian decline may be stabilizing</a> · Religious Landscape Study 2023–2024</li>
+        <li><a href="https://www.pewresearch.org/religion/2025/03/26/around-the-world-many-people-are-leaving-their-childhood-religions/" target="_blank" rel="noopener">Pew Research · Religious switching in 36 countries (2025)</a></li>
+        <li><a href="https://www.pewresearch.org/global/2025/01/28/comparing-levels-of-religious-nationalism-around-the-world/" target="_blank" rel="noopener">Pew Research · Religious nationalism around the world (2024 survey, 41,503 adults)</a></li>
+        <li><a href="https://www.euronews.com/2026/01/21/religious-practice-is-declining-in-europe-pew-research-centre-data-shows" target="_blank" rel="noopener">Euronews / Pew · Religious practice declining in Europe</a> · Christians 74% → 67% in a decade, nones +37%</li>
+        <li><a href="https://www.pewresearch.org/short-reads/2024/01/24/has-the-rise-of-religious-nones-come-to-an-end-in-the-us/" target="_blank" rel="noopener">Pew Research · Has the rise of religious nones come to an end in the US?</a> (2024)</li>
+        <li><a href="https://www.lowyinstitute.org/the-interpreter/religious-revival-why-young-people-around-world-are-finding-faith-again" target="_blank" rel="noopener">Lowy Institute · Religious revival among young people globally (2024)</a></li>
+        <li><a href="https://medium.com/hope-youre-curious/iran-the-worlds-fastest-growing-christian-evangelical-community-9f887bacf13a" target="_blank" rel="noopener">Iran · the world's fastest-growing Christian evangelical community</a> · 1–3M converts under theocratic state</li>
+        <li><a href="https://en.wikipedia.org/wiki/Christianity_in_Iran" target="_blank" rel="noopener">Christianity in Iran · Wikipedia synthesis</a></li>
+        <li><a href="https://globalchristianrelief.org/stories/countries-where-christianity-is-growing-the-fastest/" target="_blank" rel="noopener">Global Christian Relief · Countries where Christianity is growing fastest</a></li>
+        <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12365078/" target="_blank" rel="noopener">PMC · The three stages of religious decline around the world</a></li>
+        <li><a href="https://www.pewresearch.org/short-reads/2025/09/02/how-religion-declines-around-the-world/" target="_blank" rel="noopener">Pew Research · How religion declines around the world (2025)</a></li>
+        <li><a href="https://prri.org/press-release/new-prri-data-rebuts-religious-revival-claims/" target="_blank" rel="noopener">PRRI · Religious revival claims data</a></li>
+        <li><a href="https://www.tutor2u.net/sociology/blog/global-levels-of-religiosity-in-2024-a-contemporary-overview" target="_blank" rel="noopener">Global levels of religiosity in 2024</a></li>
+      </ul>
+
+      <h4>External — sociology, cognitive science, history of religion</h4>
+      <ul>
+        <li>Peter Berger · <em>The Sacred Canopy</em> (1967), later recantation of the secularization thesis in <em>The Desecularization of the World</em> (1999)</li>
+        <li>Grace Davie · <em>Religion in Britain Since 1945: Believing without Belonging</em> (1994), and <em>The Sociology of Religion</em> textbook</li>
+        <li>José Casanova · <em>Public Religions in the Modern World</em> (1994)</li>
+        <li>Pippa Norris &amp; Ronald Inglehart · <em>Sacred and Secular: Religion and Politics Worldwide</em> (2004, 2nd ed 2011)</li>
+        <li>Pascal Boyer · <em>Religion Explained</em> (2001) on cognitive substrates of religious thought</li>
+        <li>Scott Atran · <em>In Gods We Trust</em> (2002)</li>
+        <li>Ara Norenzayan · <em>Big Gods</em> (2013) on watching-god canon and cooperation</li>
+        <li>Harvey Whitehouse · <em>Modes of Religiosity</em> framework</li>
+        <li>Joseph Henrich · <em>The Secret of Our Success</em> (2015) and <em>The WEIRDest People in the World</em> (2020) — both name religion as cultural-evolutionary technology</li>
+        <li>Karen Armstrong · <em>A History of God</em> (1993), <em>The Battle for God</em> (2000)</li>
+        <li>Wilfred Cantwell Smith · <em>The Meaning and End of Religion</em> (1962)</li>
+        <li>Robert Bellah · <em>Religion in Human Evolution</em> (2011)</li>
+        <li>Paul Heelas &amp; Linda Woodhead · <em>The Spiritual Revolution</em> (2005) on the subjective turn</li>
+        <li>Tara Isabella Burton · <em>Strange Rites: New Religions for a Godless World</em> (2020)</li>
+        <li>Mircea Eliade · <em>The Sacred and the Profane</em> (1957)</li>
+      </ul>
+
+      <h4>External — rapture, mystical experience, pull-engine</h4>
+      <ul>
+        <li>William James · <em>The Varieties of Religious Experience</em> (1902) — the classical empirical study of pull-states</li>
+        <li>Aldous Huxley · <em>The Perennial Philosophy</em> (1945) on cross-traditional mystical reports</li>
+        <li>Roland Griffiths' Johns Hopkins psilocybin-mystical-experience studies (2006–)</li>
+        <li>Andrew Newberg · neurotheology research on the neural substrates of religious experience</li>
+      </ul>
+    </div>
+
+    <p style="margin-top: 22px; font-size: 14px; color: var(--text-dim);">Where this study uses framework-graded estimates (the RDI values, the bubble predictions), the reasoning is the framework's compile from the underlying source signals. Counter-readings welcome via the Hypothes.is sidebar (right edge of this page) or the repository's issue tracker.</p>
+  </div>
+</section>
+
+<footer class="page-footer">
+  <div class="wrap-wide">
+    Agnostic Framework · Construct studies · religion v1 · 2026-05-19 · <a href="../index.html">live site</a> · <a href="https://github.com/a70m123r/agnostic-framework">github</a>
+  </div>
+</footer>
+
+</body>
+</html>

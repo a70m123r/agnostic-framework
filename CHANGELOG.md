@@ -8,6 +8,50 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-05-20 (whiteboard JPEG optimized, originals archived)
+
+### Changed
+- **`artifacts/images/whiteboard_agnostic_systems.jpg`** — generated from the PNG via PIL (Pillow 12.1.1) at quality 85 with optimize + progressive flags. Source PNG was 1122×1402 so no resize needed. **Reduction: 2.23 MB → 0.25 MB (88.8% smaller).** This is now what religion_v1.html §01 and notation/index.html embed.
+- **`artifacts/religion_v1.html` and `notation/index.html`** — embed paths updated from `.png` to `.jpg` to match the optimized file.
+- **`artifacts/images/_archive/`** — new subfolder containing the original `Agnostic_Prophet 14_22 AM.png` (as Pav saved it) and the renamed `whiteboard_agnostic_systems.png`. Keeps the unprocessed originals available locally for re-export at higher quality if needed.
+- **`.gitignore`** — added `**/_archive/` rule so the archive folder stays local and doesn't ship to the public repo. The committed image directory now contains only the production-ready JPEG (and the unrelated `polen_A.PNG` Pav has saved there for a future artifact).
+
+---
+
+## 2026-05-20 (image in, embed paths corrected)
+
+### Added
+- **`artifacts/images/whiteboard_agnostic_systems.png`** — the whiteboard photo, in place. Pav saved as `Agnostic_Prophet 14_22 AM.png`; I made a web-safe copy under the clean filename the HTML expects. Original kept in folder.
+
+### Fixed
+- **Embed paths in `artifacts/religion_v1.html` §01 and `notation/index.html`** — extension corrected from `.jpg` to `.png` to match the actual file. Both pages will now render the image once pushed.
+
+---
+
+## 2026-05-20 (notation walkthrough)
+
+### Added
+- **`notation/index.html`** — new reference page walking through PAVPAV's whiteboard photo block-by-block, with formal notation paired column-by-column with the framework's prose vocabulary. ~2,000 words across nine sections: §01 the central dynamics (state evolution, recursive bind, dual merge, projection, contextual residue); §02 the operator legend (Π_L, ±/∓, ⋈, ξ_F); §03 the two concept triplets (cast/give/residue on idea-side; fuzzy apertures/path friction/adaptive wrapper on body-side); §04 the state-transition chain (A⁻ check loop running through α/β/γ); §05 universal-quantifier form + fixed-point question (with the framework's cont-13/19/20 answer that fixed points are local-and-temporary); §06 agnostic systems / fractal structure (the observer-architecture diagram with input / output / residue-diffusion edges); §07 three open edges where the board is ahead of the prose (H/W superscript notation, dual-merge sign discipline, residue diffusion as distinct edge-type); §08 single-paragraph end-to-end traversal; §09 provenance. Hypothes.is wired. Image src path is `../artifacts/images/whiteboard_agnostic_systems.jpg` — same dependency as religion_v1.html. Counter-readings welcome via sidebar.
+- **`index.html` Map section** — lede paragraph extended to link the notation walkthrough alongside the existing /diagrams/ link. The map is now the framework's visual + formal reference cluster.
+
+---
+
+## 2026-05-20 (early — PAVPAV's "t" glyph + whiteboard photo added to religion essay)
+
+### Added
+- **`artifacts/religion_v1.html` §03 — PAVPAV's "t" quote.** Set as canon-green-bordered blockquote. The "t" is the smallest legible religious-canon glyph — a hand holding a cross. The carrier and the canon collapsed into a single mark: a body-part gripping a symbol. The framework's reading of the glyph: this is what the religious-canon pull looks like when stripped of every other propagation channel (no scripture, no calendar, no architecture, no music, no ritual community) — just the human and the sign. When religious canon goes dormant in all of its other channels, the t is what remains in the substrate as imparted learning. Whether the t is a Christian cross specifically or a stand-in for the equivalent attractor in every tradition is bracketed (consistent with the agnostic-stance §01). The structural function is the same across compiles.
+- **`artifacts/religion_v1.html` §01 — whiteboard photo embedded as Figure.** Image of PAVPAV at the whiteboard with the framework in formal notation: state evolution S<sub>t+1</sub> = Π<sub>L</sub>[A<sub>t</sub> ⋈ B<sub>t</sub> ⋈ C<sub>t</sub> + ξ<sub>F</sub>], operator legend (projection / dual merge / recursive bind / contextual residue), concept tags (cast / give / residue in red; fuzzy apertures / path friction / adaptive wrapper in blue), state-transition chain, fixed-point conditions, and an "agnostic systems / fractal structure" diagram with S<sub>1</sub>, S<sub>2</sub>, S<sub>n</sub> nodes connected by input, output, and residue-diffusion paths in fractal-boundary topology. Caption ties the formal notation to the religion essay specifically. Image path is `images/whiteboard_agnostic_systems.jpg` relative to `artifacts/` — directory `artifacts/images/` created. **Note for Pav: save the whiteboard image file to `D:\PlatformOperator\research\pav\artifacts\images\whiteboard_agnostic_systems.jpg` for the embed to render on the live site.**
+
+---
+
+## 2026-05-19 (late night — religion construct study v1 published)
+
+### Added
+- **`artifacts/religion_v1.html`** — second construct study, ~7,500 words. First study written native to cont-20's canon-dormancy primitive. Triggered by Pav's prompt: "lets do religion open up with this for me. a squeeze and a good pull for rapture. agnostic god." Three structural seeds carried throughout: (a) squeeze-and-pull framing with rapture as the canonical pull-state, (b) the framework's agnostic stance made explicit in §01 — bracket whether god exists, read the god-canon as a substrate artifact, the cleanest worked example of the cont-19 Lakatosian discipline in operation, (c) cont-20 dormancy primitive native throughout including new heat-map vocabulary. Sections: §01 the agnostic stance · §02 religion as the densest carrier humans have ever compiled (eight squeeze functions: mortality, suffering, meaning, coordination, time-binding, trauma processing, identity, power legitimation) · §03 rapture as the pull-engine — strongest attractor humans have ever built into a canon, universally pursued, portable across substrate · §04 14-region Religious Dormancy Index heat map with two new markers beyond the linear gradient (M for re-wake: Russia Orthodox-nationalist, India Hindu nationalism, Latin America evangelical from Catholic dormancy; A for open action-space: East Asia coupled to marriage essay's East Asian reading) · §05 four substrates (state, pluralism, wealth, media) · §06 the four exits (persist, dormancy, re-wake, open action-space) · §07 three speculative bubbles (pull-portability hypothesis with measurable indicators, political-identity-absorption hypothesis with panel-study design, species-level wake by 2080) · §08 what the study does for the framework · §09 adjacent fields with 25+ scholars named (sociology of religion: Berger/Casanova/Davie/Norris-Inglehart; cognitive science of religion: Boyer/Atran/Norenzayan/Whitehouse; dual-inheritance: Henrich/Slingerland; religious history: Armstrong/Eliade/Smith/Bellah; new religious movements: Heelas/Woodhead/Burton; demographics: Pew/PRRI/WVS) · §10 provenance trail · §11 sources with 14 verified URLs (Pew 2024–2025 cycles, Lowy Institute, PRRI, PMC, Iran-Christianity sources). Hypothes.is wired. Coupling to marriage essay made explicit: East Asia open-action-space at religion ring is structurally coupled to East Asia at marriage ring; both essays should be read together for the regional reading.
+- **`index.html` Construct studies** — religion card added as second published study (between marriage and the queue). Religion item removed from queue (was item 04, now published). Queue items renumbered: nation-state stays as the only remaining queued study.
+
+---
+
 ## 2026-05-19 (late night — continuation 20 promoting canon dormancy to canon)
 
 ### Added
