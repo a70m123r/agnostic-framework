@@ -8,6 +8,26 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-05-21 (timeline pruned + Explore subagent session-scan)
+
+### Changed
+- **`timeline/index.html` pruned of low-signal entries.** Per Pav's correction "i think things like the jpeg compression should go, any other milestone with my qutes steer, can you get some subagenst to scan over this session" — removed three entries that were infrastructure plumbing rather than steered milestones: (a) JPEG conversion + archive, (b) image-in-place + embed-path correction, (c) "can you host images on git?" discussion-only round. All three remain documented in `CHANGELOG.md` for granular provenance; the timeline now shows only steered milestones with verbatim Pav quotes attached. The remaining entries all carry both a steer-quote block AND a steer tag.
+- **`timeline/index.html` manifesto v5 entry** — added the missing "let's do the manifesto" verbatim Pav quote that had been omitted from v1 of the timeline. Also documented the secondary markdown-viewer steer in the same entry body.
+- **Last-updated stamp** advanced to 2026-05-21.
+
+### Method
+- Spawned an Explore subagent to scan the 25 MB session transcript JSONL at `~/.claude/projects/.../ae0862e1-ebf6-4bfb-a2e6-59641e61cad9.jsonl` and return every substantive Pav steer with the artifact that resulted. Subagent confirmed the prune logic: infrastructure entries lacking steer-quotes are low-signal; all canon + refactor entries with quoted steers document real artifact-driving moves. Cross-checked subagent output against current timeline; one missing steer-quote (manifesto v5) added.
+
+---
+
+## 2026-05-21 (timeline feed page shipped)
+
+### Added
+- **`timeline/index.html`** — new public-facing project log, fresh on top. Each entry: timestamp, color-coded timeline dot (canon move / steer-only / refactor / tool / infrastructure), Pav's steer quoted with PAVPAV attribution where there was one, what shipped in response, links to the resulting artifacts. Vertical timeline with day-separator labels. Currently covers the May 17–21 cluster (pre-repo through this timeline page itself, latest first); structured so adding new entries at the top is a single article block. Hypothes.is wired so any entry can be annotated. The framework's procedural-lineage primitive applied to itself at the project level — the timeline IS the lineage. Topbar full-changelog link points at the granular `CHANGELOG.md` for anyone who wants finer provenance.
+- **`index.html` hero** — small sub-line added under the existing lede pointing readers at the new timeline page. Single link, kept minimal so it doesn't compete with the manifesto cards but is discoverable from every visit.
+
+---
+
 ## 2026-05-20 (whiteboard JPEG optimized, originals archived)
 
 ### Changed

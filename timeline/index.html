@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Timeline — Agnostic Framework</title>
+<meta name="description" content="A reverse-chronological log of the agnostic framework's development. Pav's steers in quotation, what shipped in response, links to the resulting artifacts. The framework's procedural lineage applied to itself.">
+<script src="https://hypothes.is/embed.js" async></script>
+<style>
+  :root {
+    --bg: #0a0a0a;
+    --surface: #141414;
+    --surface-2: #1c1c1c;
+    --border: #262626;
+    --border-strong: #3a3a3a;
+    --text: #ececec;
+    --text-dim: #8a8a8a;
+    --text-faint: #555;
+    --accent-canon: #4ade80;
+    --accent-candidate: #fbbf24;
+    --accent-speculative: #a78bfa;
+    --accent-pruned: #6b7280;
+    --accent-link: #93c5fd;
+    --accent-steer: #fb923c;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, system-ui, sans-serif; font-size: 16px; line-height: 1.65; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 0 24px; }
+
+  .topbar { border-bottom: 1px solid var(--border); padding: 20px 0; font-size: 13px; font-family: ui-monospace, "SF Mono", Menlo, monospace; color: var(--text-dim); }
+  .topbar a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--text-faint); }
+  .topbar a:hover { color: var(--accent-link); border-bottom-color: var(--accent-link); }
+  .topbar .sep { color: var(--text-faint); margin: 0 10px; }
+  .topbar .source-link { float: right; }
+
+  header.hero { padding: 56px 0 36px; border-bottom: 1px solid var(--border); }
+  header.hero .kicker { font-family: ui-monospace, Menlo, monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.18em; color: var(--accent-steer); margin: 0 0 16px; }
+  header.hero h1 { font-family: Georgia, serif; font-weight: 400; font-size: 44px; line-height: 1.1; letter-spacing: -0.02em; margin: 0 0 20px; }
+  header.hero p.dek { font-size: 18px; line-height: 1.5; color: var(--text-dim); max-width: 640px; margin: 0 0 16px; font-family: Georgia, serif; font-style: italic; }
+  header.hero .meta { font-family: ui-monospace, Menlo, monospace; font-size: 11px; color: var(--text-faint); margin: 0; }
+
+  main.feed { padding: 40px 0 80px; }
+
+  /* Day separator */
+  .day-sep {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 40px 0 22px;
+  }
+  .day-sep .label {
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--text-faint);
+    white-space: nowrap;
+  }
+  .day-sep .line {
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+  .day-sep:first-child { margin-top: 0; }
+
+  /* Timeline entry */
+  .entry {
+    position: relative;
+    padding: 0 0 24px 28px;
+    border-left: 1px solid var(--border-strong);
+    margin: 0 0 0 12px;
+  }
+  .entry::before {
+    content: '';
+    position: absolute;
+    left: -7px;
+    top: 14px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: var(--surface);
+    border: 2px solid var(--border-strong);
+  }
+  .entry.fresh::before { border-color: var(--accent-canon); background: var(--accent-canon); }
+  .entry.steer::before { border-color: var(--accent-steer); }
+  .entry.refactor::before { border-color: var(--accent-candidate); }
+  .entry.infra::before { border-color: var(--accent-link); }
+  .entry.canon::before { border-color: var(--accent-canon); }
+  .entry.tool::before { border-color: var(--accent-speculative); }
+
+  .entry .time {
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 11px;
+    color: var(--text-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 0 0 8px;
+  }
+  .entry .tags {
+    display: inline-flex;
+    gap: 6px;
+    margin-left: 10px;
+    vertical-align: middle;
+  }
+  .entry .tag {
+    font-size: 10px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    background: var(--surface-2);
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .entry .tag.steer { background: rgba(251, 146, 60, 0.12); color: var(--accent-steer); }
+  .entry .tag.canon { background: rgba(74, 222, 128, 0.12); color: var(--accent-canon); }
+  .entry .tag.refactor { background: rgba(251, 191, 36, 0.12); color: var(--accent-candidate); }
+  .entry .tag.tool { background: rgba(167, 139, 250, 0.12); color: var(--accent-speculative); }
+  .entry .tag.infra { background: rgba(147, 197, 253, 0.12); color: var(--accent-link); }
+
+  .entry h3 {
+    font-family: Georgia, serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.25;
+    margin: 0 0 12px;
+    color: var(--text);
+  }
+
+  .steer-quote {
+    background: var(--surface);
+    border-left: 3px solid var(--accent-steer);
+    border-radius: 0 4px 4px 0;
+    padding: 14px 20px;
+    margin: 0 0 14px;
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--text);
+  }
+  .steer-quote cite {
+    display: block;
+    font-style: normal;
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 10px;
+    color: var(--text-dim);
+    letter-spacing: 0.1em;
+    margin-top: 8px;
+    text-transform: uppercase;
+  }
+
+  .entry p.what {
+    margin: 0 0 10px;
+    font-size: 15px;
+    color: var(--text);
+  }
+  .entry .links {
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 12px;
+    color: var(--text-dim);
+    margin: 8px 0 0;
+  }
+  .entry .links a {
+    color: var(--accent-link);
+    text-decoration: none;
+    border-bottom: 1px dotted rgba(147, 197, 253, 0.4);
+    margin-right: 12px;
+    white-space: nowrap;
+    line-height: 1.8;
+  }
+  .entry .links a:hover { border-bottom-style: solid; }
+
+  /* Footer */
+  footer.page-footer { padding: 32px 0 60px; font-family: ui-monospace, Menlo, monospace; font-size: 12px; color: var(--text-faint); text-align: center; border-top: 1px solid var(--border); }
+  footer.page-footer a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--text-faint); }
+
+  /* Top note */
+  .note {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 16px 20px;
+    margin: 0 0 32px;
+    font-size: 14px;
+    color: var(--text-dim);
+    line-height: 1.6;
+  }
+  .note strong { color: var(--text); }
+
+  @media (max-width: 640px) {
+    header.hero h1 { font-size: 32px; }
+    header.hero p.dek { font-size: 16px; }
+    .entry h3 { font-size: 19px; }
+    .entry .links a { display: block; margin: 4px 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <a href="../index.html">← agnostic framework</a>
+    <span class="sep">·</span>
+    <span>timeline</span>
+    <a class="source-link" href="https://github.com/a70m123r/agnostic-framework/blob/main/CHANGELOG.md" target="_blank" rel="noopener">full changelog ↗</a>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="kicker">Project log · fresh on top</p>
+    <h1>Timeline</h1>
+    <p class="dek">A reverse-chronological feed of the framework's development. Pav's steers (the corrections, refinements, and prompts that drove each move) shown in quotation. The resulting artifacts linked alongside. The framework's procedural-lineage primitive applied to itself — every entry is one step in the lineage.</p>
+    <p class="meta">Last updated: 2026-05-21 · For the granular change log, see <a href="https://github.com/a70m123r/agnostic-framework/blob/main/CHANGELOG.md" style="color: var(--text-dim);">CHANGELOG.md ↗</a> · Hypothes.is sidebar enabled — annotate any entry.</p>
+  </div>
+</header>
+
+<main class="feed">
+  <div class="wrap">
+
+    <div class="note">
+      <strong>How to read this.</strong> Each entry is a steer (a prompt or correction from Pav) paired with what shipped in response. Top-down for the latest; bottom-up to see the trajectory. Color codes on the timeline dots: <span style="color: var(--accent-canon);">●</span> canon move · <span style="color: var(--accent-steer);">●</span> steer-only · <span style="color: var(--accent-candidate);">●</span> refactor · <span style="color: var(--accent-speculative);">●</span> tool · <span style="color: var(--accent-link);">●</span> infrastructure.
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- 2026-05-20 — TODAY                                              -->
+    <!-- ============================================================ -->
+    <div class="day-sep">
+      <span class="label">2026-05-20</span>
+      <span class="line"></span>
+    </div>
+
+    <article class="entry fresh">
+      <p class="time">~10:30 · <span class="tags"><span class="tag tool">tool</span><span class="tag steer">steer</span></span></p>
+      <h3>The project timeline itself, shipped as a feed</h3>
+      <div class="steer-quote">"you know what we need is a cronological timeline of this project with the latest steers documented and linked, like a log or a feed with fresh on the top"<cite>— PAVPAV</cite></div>
+      <p class="what">A new top-level page at <code>/timeline/</code> rendering each step in the framework's development as a reverse-chronological feed. Steers in italic with attribution; resulting artifacts as inline links; color-coded timeline-dot legend; Hypothes.is sidebar enabled so any entry can be annotated. The framework now documents its own procedural lineage at the project level the same way the continuations document it at the canon level.</p>
+      <p class="links">→ <a href="index.html">this page</a> &nbsp; → <a href="../CHANGELOG.md">CHANGELOG.md ↗</a></p>
+    </article>
+
+    <article class="entry canon">
+      <p class="time">~08:30 · <span class="tags"><span class="tag tool">reference</span><span class="tag steer">steer</span></span></p>
+      <h3>Notation walkthrough — the whiteboard decoded block-by-block</h3>
+      <div class="steer-quote">"analyse the photo, whats on the boards, how does it map?"<cite>— PAVPAV</cite></div>
+      <p class="what">New reference page at <code>/notation/</code>. Nine sections walking through every block of the whiteboard photo with formal notation on one side and framework-prose mapping on the other. Includes three "open edges" — places where the board is ahead of the continuation log (H/W superscript notation, dual-merge sign discipline, <strong>residue diffusion as a distinct edge-type</strong>). Residue diffusion flagged as cleanest candidate for cont 21 promotion.</p>
+      <p class="links">→ <a href="../notation/">notation walkthrough</a></p>
+    </article>
+
+    <article class="entry canon">
+      <p class="time">~02:15 · <span class="tags"><span class="tag canon">artifact</span><span class="tag steer">steer</span></span></p>
+      <h3>PAVPAV's "t" glyph + whiteboard photo embedded in religion essay</h3>
+      <div class="steer-quote">"the t was intended, make it in quote's with --PAVPAV. t is a hand holding a cross, also lets add this picture"<cite>— PAVPAV</cite></div>
+      <p class="what">The "t" from two messages earlier was a deliberate glyph, not a stray keystroke — a hand holding a cross, the smallest legible religious-canon mark, the carrier and the canon collapsed into a single sign. Added to religion essay §03 as a canon-green-bordered quote with framework reading. Whiteboard photo embedded as a figure in §01 (Pav supplied the image; saved to the folder in the next round).</p>
+      <p class="links">→ <a href="../artifacts/religion_v1.html">religion v1</a> · §03 t-glyph and §01 photo</p>
+    </article>
+
+    <!-- ============================================================ -->
+    <!-- 2026-05-19 — YESTERDAY                                          -->
+    <!-- ============================================================ -->
+    <div class="day-sep">
+      <span class="label">2026-05-19</span>
+      <span class="line"></span>
+    </div>
+
+    <article class="entry canon">
+      <p class="time">~23:55 · <span class="tags"><span class="tag canon">construct study</span><span class="tag steer">steer</span></span></p>
+      <h3>Religion construct study v1 — the agnostic god, rapture as pull-engine</h3>
+      <div class="steer-quote">"lets do religion open up with this for me. a squeeze and a good pull for rapture. agnostic god. t"<cite>— PAVPAV</cite></div>
+      <p class="what">Second published construct study, ~7,500 words. The framework's agnostic stance made explicit (bracket whether god exists, read the god-canon as a substrate artifact — cleanest Lakatosian discipline in operation). Rapture treated as the strongest pull-engine humans have ever built into a canon. 14-region Religious Dormancy Index with re-wake markers for Russia, India, Latin America; open-action-space marker for East Asia (coupled to the marriage essay's East Asia reading). Three speculative bubbles (pull-portability, political-identity-absorption, species-level wake by 2080). Six adjacent fields with 25+ scholars named. First study written native to cont 20's canon-dormancy primitive.</p>
+      <p class="links">→ <a href="../artifacts/religion_v1.html">religion v1</a></p>
+    </article>
+
+    <article class="entry canon">
+      <p class="time">~23:00 · <span class="tags"><span class="tag canon">continuation</span><span class="tag steer">steer</span></span></p>
+      <h3>Continuation 20 — canon dormancy with imparted learning on return, promoted to canon</h3>
+      <div class="steer-quote">"ok lets do 20"<cite>— PAVPAV</cite></div>
+      <p class="what">Formal promotion of the dormancy primitive to canon. Ten sections covering: the primitive named with four independent empirical anchors (religious revival, traditional craft revival, vinyl records, bicycle infrastructure); three layers of imparted learning (substrate evolution, successor-carrier residue, memory of the squeeze); recursive application to the framework's own canon graph (cont 17 prune → cont 18 wake → cont 20 names the mechanism); implications for friction band, open action-space, carrier-before-canon methodology; four open edges including the need for a measurable imparted-learning metric (vinyl case identified as the cleanest first target). Index.html PRIMITIVES updated; marriage v1.2 framework note updated from candidate to canon.</p>
+      <p class="links">→ <a href="../continuations/20.md">continuation 20</a> · <a href="../index.html#primitives">canon entry</a></p>
+    </article>
+
+    <article class="entry canon">
+      <p class="time">~22:00 · <span class="tags"><span class="tag refactor">refactor</span><span class="tag infra">infra</span><span class="tag steer">steer</span></span></p>
+      <h3>Dissolution → dormancy refactor + Hypothes.is annotation wired site-wide</h3>
+      <div class="steer-quote">"it canon doesn't dissolve it becomes dormant and can come back but never in the same way with new imparted learnings. can we add some comment annotation to the site for specific aria the visitors can leave feedback on?"<cite>— PAVPAV</cite></div>
+      <p class="what">Two real moves in one round. <strong>Conceptual refactor:</strong> "dissolve" / "dissolution" retired throughout the marriage essay in favor of "dormancy with imparted learning on return." CDI acronym preserved but expanded to Canon Dormancy Index. New v1.2 framework-note callout near Figure 1 flagging the dormancy primitive as a candidate pending promotion. <strong>Annotation infrastructure:</strong> Hypothes.is wired into <code>index.html</code>, <code>marriage_v1.html</code>, <code>manifestos/view.html</code>, <code>tools/unraveler.html</code> with a single async script tag each. Floating sidebar tab on the right edge of every page lets visitors highlight any sentence and leave a comment / counter-reading / source attached to that exact passage. New "Annotate any paragraph" card added to the Contribute section.</p>
+      <p class="links">→ <a href="../artifacts/marriage_v1.html">marriage v1.2</a> · <a href="../index.html#contribute">Contribute §</a></p>
+    </article>
+
+    <article class="entry tool">
+      <p class="time">~20:30 · <span class="tags"><span class="tag tool">tool</span><span class="tag canon">artifact</span><span class="tag steer">steer</span></span></p>
+      <h3>Figure 1 + Provenance §10 + subject-unraveler tool</h3>
+      <div class="steer-quote">"this is the empirical evidence of the squeeze and pull A+ A-, the agnostic fidelity meta angle, the useful tool to hammer the walls around you and see how they resonate and open up into new adjacent domains and fields. idea: can we have a website where you can enter a subject and it unravels it"<cite>— PAVPAV</cite></div>
+      <p class="what">Three things in one round. <strong>Figure 1</strong>: inline SVG cycle diagram (squeeze → canon → substrate stack → friction band → three exits: persist / pull / open action-space) inserted between marriage essay §02 and §03 as the structural roadmap. <strong>§10 Provenance trail</strong> added to marriage essay — five iterations of how the piece was made, with the misfire→action-space correction as the cleanest worked example of the framework's A⁻ check running on a construct study mid-production. <strong>Subject unraveler at <code>/tools/</code></strong> — nine-card scaffold where users enter any subject and get back the framework's compile template, with the marriage piece shown as the worked example in each card.</p>
+      <p class="links">→ <a href="../artifacts/marriage_v1.html">marriage essay</a> · <a href="../tools/unraveler.html">subject unraveler</a></p>
+    </article>
+
+    <article class="entry refactor">
+      <p class="time">~18:45 · <span class="tags"><span class="tag refactor">refactor</span><span class="tag steer">steer</span></span></p>
+      <h3>Marriage v1.1 — misfire frame retired, open action-space + four candidate carriers installed</h3>
+      <div class="steer-quote">"i wouldn't frame it as misfiring, to agnostic its a new action space with a problem and competing solutions that drive the process, the solutions are robots in the workforce, extreme active longevity via drugs and genetic intervention, AI symbiosis, new protocols and institutions. it's a case of productive friction. creating a modern problem is part of the process"<cite>— PAVPAV</cite></div>
+      <p class="what">Largest structural correction of the session. v1.0 had imported a failure-frame from the surrounding low-fertility discourse and called the East Asian configuration a "misfire." Pav's correction installed the framework's actual reading: productive friction driving a four-carrier scout (robotics, active longevity, AI symbiosis, new protocols/institutions). Heat map marker M → A. §06 rewritten as "The open action-space: where the next carrier gets scouted." Bubble 02 reframed with four tracked indicators across 12 / 36 / 60-month windows. §08 framework-contribution and §09 adjacent-fields both updated. The cleanest example we now have of the framework's own A⁻ check correcting a piece mid-production.</p>
+      <p class="links">→ <a href="../artifacts/marriage_v1.html">marriage v1.1</a></p>
+    </article>
+
+    <article class="entry canon">
+      <p class="time">~16:30 · <span class="tags"><span class="tag canon">artifact</span><span class="tag steer">steer</span></span></p>
+      <h3>§09 Adjacent fields — six literatures + 30 scholars traced</h3>
+      <div class="steer-quote">"is it some canon cultural osmosis, what do the anthropologist say, lets define adjacent knowledge domains and people leading the field"<cite>— PAVPAV</cite></div>
+      <p class="what">New §09 in the marriage essay tracing the framework's debts: family demography (Cherlin's "deinstitutionalization of marriage" as closest single-concept parallel), Second Demographic Transition (Lesthaeghe, van de Kaa, Perelli-Harris), dual inheritance theory (Boyd, Richerson, Henrich's WEIRDest People MFP thesis, Laland), kinship anthropology newer wave (Carsten, Strathern, Franklin), historical sociology (Therborn, Glendon, Hajnal), East Asian demography (Brinton, Wang Feng, Raymo, Park). Closes with a four-point statement of what the framework's contribution actually is given the precedents.</p>
+      <p class="links">→ <a href="../artifacts/marriage_v1.html#section09">marriage essay §09</a></p>
+    </article>
+
+    <article class="entry canon">
+      <p class="time">~14:00 · <span class="tags"><span class="tag refactor">data verify</span><span class="tag tool">queue</span><span class="tag steer">steer</span></span></p>
+      <h3>Marriage data-verification pass + construct-studies queue</h3>
+      <div class="steer-quote">"yeah lets do that"<cite>— PAVPAV</cite></div>
+      <p class="what">Cross-checked CDI values against 17 live web sources (OECD SF2.4, Insee, Istat, Pew, PRB, AEI, PMC, KOSIS, China NBS, East Asia Forum). One CDI value moved as a result: Latin America 6 → 7, after Colombia's 87% non-marital birth share came in higher than originally graded. All regional readings tightened with sourced 2023–2024 numbers. Queue subsection added to <code>index.html</code> §04 with four candidate construct studies: university squeeze, attention-as-commons, religion's procedural distillation (since published), nation-state wrapper.</p>
+      <p class="links">→ <a href="../artifacts/marriage_v1.html">marriage data-verified</a> · <a href="../index.html#construct-studies">queue</a></p>
+    </article>
+
+    <article class="entry canon">
+      <p class="time">~12:00 · <span class="tags"><span class="tag canon">construct study</span><span class="tag steer">steer</span></span></p>
+      <h3>Marriage construct study v1 — the first piece in §04 Construct studies</h3>
+      <div class="steer-quote">"expand on the union dynamic, how perceived union carries undercurrent tension. with examples in biology and connecting latent thinking space, how does agnostic compile the symbol of marriage... global heat map and accompanying religion, belief, climate, government and ideology... 3 speculative bubbles with plans to follow up..."<cite>— PAVPAV</cite></div>
+      <p class="what">First published construct study, ~5,200 words at v1.0 (now ~9,000 at v1.2). Eight squeeze functions named. 14-region Canon Dissolution Index heat map. Four-substrate analysis (religion, climate, government, ideology). Nordic distillation as clean exit, East Asian configuration as productive-friction zone, three speculative bubbles with follow-up plans. Established the structural template every future construct study would inherit.</p>
+      <p class="links">→ <a href="../artifacts/marriage_v1.html">marriage v1</a></p>
+    </article>
+
+    <article class="entry canon">
+      <p class="time">~10:00 · <span class="tags"><span class="tag canon">manifesto</span><span class="tag tool">tool</span><span class="tag steer">steer</span></span></p>
+      <h3>Manifesto v5 (casual edition) + markdown viewer for the manifestos</h3>
+      <div class="steer-quote">"let's do the manifesto"<cite>— PAVPAV</cite></div>
+      <p class="what">Casual manifesto refactored to integrate the May 18 round (continuations 16, 18, 19). New section "The lineage you are standing on" walks through physics → chemistry → biology → cognition → society → person as concentric rings, with energy/symbol/artifact as three forms of residual structure under pressure. Renderer section gained body-as-outer-membrane and mutual-rendering framing. Friction-band frame added to the loop section. Where-this-could-be-wrong rewritten to frame the framework as a Lakatosian research programme. Word count ~6,400 → ~7,500. Followed by Pav's separate "yeah lets link it also the website renders them without proper formatting just white text on black, can we fix that so it looks more like this like in your MD previews" — which triggered the markdown viewer at <code>manifestos/view.html</code> fixing the raw-.md plain-text rendering on GitHub Pages.</p>
+      <p class="links">→ <a href="../manifestos/view.html?f=casual_v5.md">manifesto v5</a> · <a href="../manifestos/view.html?f=research_v1.md">research v1</a> · <a href="../manifestos/view.html?f=engineering_v1.md">engineering v1</a></p>
+    </article>
+
+    <!-- ============================================================ -->
+    <!-- 2026-05-18 — DAY BEFORE                                         -->
+    <!-- ============================================================ -->
+    <div class="day-sep">
+      <span class="label">2026-05-18</span>
+      <span class="line"></span>
+    </div>
+
+    <article class="entry canon">
+      <p class="time">evening · <span class="tags"><span class="tag canon">continuation</span></span></p>
+      <h3>Continuation 19 — aggregation discipline + catalyst principle + moving target promoted</h3>
+      <p class="what">Framework's identity named explicitly as <em>aggregator of procedural connections</em>. Three primitives: <strong>Aggregation discipline</strong> (canon — the positive heuristic stated), <strong>Catalyst principle</strong> (candidate — external substrate as the framework's growth metabolism), <strong>Moving target</strong> (canon — promoted from implicit-across-rotating-key + recursive-timeline-cone + computational-irreducibility). Lakatosian success criterion vs Popperian falsifiability re-anchored (cont 05 §3 anchor restored). Triggered by Pav's correction of cont-18 §10 #1: "its a framework that aggregates everything for procedural connection... everything is a moving target."</p>
+      <p class="links">→ <a href="../continuations/19.md">continuation 19</a></p>
+    </article>
+
+    <article class="entry canon">
+      <p class="time">afternoon · <span class="tags"><span class="tag canon">continuation</span></span></p>
+      <h3>Continuation 18 — procedural lineage promoted to canon</h3>
+      <p class="what">Canon is procedural for the most part. Traceable as stacked heritage from physics → chemistry → biology → cognition → society → person, with rings-on-a-tree / overlap-membrane-wrappers visual. Unity-under-pressure with residual tension showing up in three forms: energy, symbol, artifact. Subsumes spiral-substrate-cycle and compile-capacity-enrichment that cont 17 had pruned as separate primitives. Triggered by Pav's correction of cont-17's pruning: "the canon it self is procedural for the most part, you can trace its origins."</p>
+      <p class="links">→ <a href="../continuations/18.md">continuation 18</a></p>
+    </article>
+
+    <article class="entry refactor">
+      <p class="time">morning · <span class="tags"><span class="tag refactor">refactor</span></span></p>
+      <h3>Continuation 17 — housekeeping round on at-risk primitives</h3>
+      <p class="what">Three demotions (Spiral substrate cycle, Compile-capacity enrichment, Monopole question), three folds (Procedural canon → body-domain; Engineered emergence → emergent garden; Mutual render → External Actor Model), two keep-with-sharpening (Slice-viewer + planes-as-nodes; Holographic wrapper + next-test criterion). Established the "fold not delete" pruning practice that cont 20 later named as the dormancy mechanism in retrospect.</p>
+      <p class="links">→ <a href="../continuations/17.md">continuation 17</a></p>
+    </article>
+
+    <!-- ============================================================ -->
+    <!-- 2026-05-17 AND EARLIER                                          -->
+    <!-- ============================================================ -->
+    <div class="day-sep">
+      <span class="label">2026-05-17 · repo launch</span>
+      <span class="line"></span>
+    </div>
+
+    <article class="entry infra">
+      <p class="time">2026-05-17 · <span class="tags"><span class="tag infra">infra</span></span></p>
+      <h3>Initial public release — repo, site, manifestos, first reading, audit v03, diagrams</h3>
+      <p class="what">Five framework diagrams (compile loop, observer architecture, genotype/phenotype split, four-carrier convergence, overview map) saved as standalone SVGs. <code>agnostic-framework</code> repo created on GitHub under CC BY 4.0. GitHub Pages enabled. <code>agnostic-agents</code> repo created separately at MIT license. First operational reading (Google algorithm-update phase) with six predictions and 6mo/12mo checkpoint windows. Audit v03 covering continuations 05–15. Outreach drafts for the LeCun-lineage researchers prepared.</p>
+      <p class="links">→ <a href="../index.html">live site</a> · <a href="https://github.com/a70m123r/agnostic-framework">agnostic-framework repo ↗</a> · <a href="https://github.com/a70m123r/agnostic-agents">agnostic-agents repo ↗</a></p>
+    </article>
+
+    <article class="entry steer">
+      <p class="time">May 7 – May 17 · <span class="tags"><span class="tag steer">pre-repo</span></span></p>
+      <h3>Pre-repo development — continuations 02–15, manifestos v1–v4, audits v01 + v02</h3>
+      <p class="what">Framework primitive development kept privately during the ten-day window before public release. All continuations preserved as provenance. v4 of the casual manifesto incorporated the A⁻-as-primary refactor from cont 15 and added the "easy half / hard half" section using the LLM-vs-EBM contrast as the casual hook.</p>
+      <p class="links">→ <a href="../continuations/">continuations 02–15</a> · <a href="../manifestos/">manifestos v1–v4</a></p>
+    </article>
+
+  </div>
+</main>
+
+<footer class="page-footer">
+  <div class="wrap">
+    Agnostic Framework · timeline · last updated 2026-05-20 · <a href="../index.html">live site</a> · <a href="https://github.com/a70m123r/agnostic-framework">github</a>
+  </div>
+</footer>
+
+</body>
+</html>
