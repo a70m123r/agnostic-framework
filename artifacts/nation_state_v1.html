@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Westphalian dormancy — nation-state as canon under pressure — Agnostic Framework</title>
+<meta name="description" content="A construct study reading the nation-state as a 17th-century kernel-canon compile under structural pressure from stateless capital, AI-mediated governance, climate stress, network-state experiments, and non-state armed actors filling vacuums. Applies atlas v4 vocabulary, cont 21 push/pull/squeeze/pop, cont 20 canon dormancy, and language v1 Π_L. Built from three parallel subagent scans with 40+ sourced 2024-2026 anchors.">
+<script src="https://hypothes.is/embed.js" async></script>
+<style>
+  :root {
+    --bg: #0a0a0a;
+    --surface: #141414;
+    --surface-2: #1c1c1c;
+    --border: #262626;
+    --border-strong: #3a3a3a;
+    --text: #ececec;
+    --text-dim: #8a8a8a;
+    --text-faint: #555;
+    --accent-canon: #4ade80;
+    --accent-candidate: #fbbf24;
+    --accent-speculative: #a78bfa;
+    --accent-link: #93c5fd;
+    --accent-orange: #fb923c;
+    --c-persist: #f87171;
+    --c-hold: #fbbf24;
+    --c-dormant: #4ade80;
+    --c-action: #a78bfa;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, system-ui, sans-serif; font-size: 17px; line-height: 1.7; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+  .wrap-wide { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+
+  .topbar { border-bottom: 1px solid var(--border); padding: 20px 0; font-size: 13px; font-family: ui-monospace, Menlo, monospace; color: var(--text-dim); }
+  .topbar a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--text-faint); }
+  .topbar a:hover { color: var(--accent-link); border-bottom-color: var(--accent-link); }
+  .topbar .sep { color: var(--text-faint); margin: 0 10px; }
+  .topbar .source-link { float: right; }
+
+  header.hero { padding: 72px 0 48px; border-bottom: 1px solid var(--border); }
+  header.hero .kicker { font-family: ui-monospace, Menlo, monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.18em; color: var(--accent-candidate); margin: 0 0 18px; }
+  header.hero h1 { font-family: Georgia, serif; font-weight: 400; font-size: 48px; line-height: 1.06; letter-spacing: -0.02em; margin: 0 0 22px; }
+  header.hero .dek { font-size: 20px; line-height: 1.45; color: var(--text-dim); max-width: 680px; margin: 0 0 20px; font-family: Georgia, serif; font-style: italic; }
+  header.hero .meta { font-family: ui-monospace, Menlo, monospace; font-size: 12px; color: var(--text-faint); margin: 0; }
+
+  section { padding: 56px 0; border-bottom: 1px solid var(--border); }
+  section:last-of-type { border-bottom: none; }
+  h2 { font-family: Georgia, serif; font-weight: 400; font-size: 30px; line-height: 1.15; margin: 0 0 24px; letter-spacing: -0.01em; }
+  h2 .num { color: var(--text-faint); font-size: 14px; font-family: ui-monospace, Menlo, monospace; margin-right: 12px; }
+  h3 { font-family: Georgia, serif; font-weight: 400; font-size: 22px; line-height: 1.25; margin: 36px 0 14px; }
+  h4 { font-family: Georgia, serif; font-style: italic; font-weight: 400; font-size: 18px; margin: 26px 0 12px; }
+  .sect-lede { font-size: 15px; color: var(--text-dim); margin: 0 0 24px; font-style: italic; font-family: Georgia, serif; }
+
+  p { margin: 0 0 18px; }
+  em { color: var(--text); font-style: italic; }
+  strong { color: var(--text); font-weight: 600; }
+  a { color: var(--accent-link); text-decoration: none; border-bottom: 1px solid rgba(147, 197, 253, 0.3); }
+  a:hover { border-bottom-color: var(--accent-link); }
+  code { font-family: ui-monospace, Menlo, monospace; font-size: 0.92em; color: var(--text); background: var(--surface-2); padding: 1px 6px; border-radius: 3px; }
+
+  .substrate-block {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 18px 22px;
+    margin: 14px 0;
+  }
+  .substrate-block h4 {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 18px;
+    margin: 0 0 10px;
+  }
+  .substrate-block p { margin: 0; font-size: 14px; line-height: 1.6; color: var(--text); }
+
+  /* Force-mode quadrant */
+  .quadrant {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 18px 22px;
+    margin: 12px 0;
+  }
+  .quadrant .qtag {
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin: 0 0 8px;
+  }
+  .quadrant.q-push { border-left: 3px solid var(--accent-orange); }
+  .quadrant.q-push .qtag { color: var(--accent-orange); }
+  .quadrant.q-pull { border-left: 3px solid var(--accent-canon); }
+  .quadrant.q-pull .qtag { color: var(--accent-canon); }
+  .quadrant.q-squeeze { border-left: 3px solid #f87171; }
+  .quadrant.q-squeeze .qtag { color: #f87171; }
+  .quadrant.q-pop { border-left: 3px solid var(--accent-speculative); }
+  .quadrant.q-pop .qtag { color: var(--accent-speculative); }
+  .quadrant h4 { font-family: Georgia, serif; font-weight: 400; font-style: normal; font-size: 18px; margin: 0 0 8px; }
+  .quadrant p { margin: 0 0 8px; font-size: 14px; line-height: 1.6; }
+
+  /* Exit cards */
+  .exits-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin: 24px 0;
+  }
+  @media (min-width: 760px) {
+    .exits-grid { grid-template-columns: 1fr 1fr; }
+  }
+  .exit-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 18px 22px;
+  }
+  .exit-card.persist { border-left: 3px solid var(--c-persist); }
+  .exit-card.hold { border-left: 3px solid var(--c-hold); }
+  .exit-card.dormant { border-left: 3px solid var(--c-dormant); }
+  .exit-card.action { border-left: 3px solid var(--c-action); }
+  .exit-card h4 {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 18px;
+    margin: 0 0 4px;
+  }
+  .exit-card .examples {
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 11px;
+    color: var(--text-dim);
+    margin: 0 0 10px;
+    letter-spacing: 0.04em;
+  }
+  .exit-card p { margin: 0; font-size: 14px; line-height: 1.6; color: var(--text); }
+
+  /* Triple-OS comparison */
+  .triple-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin: 24px 0;
+  }
+  @media (min-width: 760px) {
+    .triple-grid { grid-template-columns: 1fr 1fr 1fr; }
+  }
+  .triple-cell {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 16px 18px;
+  }
+  .triple-cell.l-en { border-left: 3px solid #93c5fd; }
+  .triple-cell.l-zh { border-left: 3px solid #f87171; }
+  .triple-cell.l-ru { border-left: 3px solid #fbbf24; }
+  .triple-cell .label {
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin: 0 0 8px;
+  }
+  .triple-cell.l-en .label { color: #93c5fd; }
+  .triple-cell.l-zh .label { color: #f87171; }
+  .triple-cell.l-ru .label { color: #fbbf24; }
+  .triple-cell h4 {
+    font-family: Georgia, serif;
+    font-style: normal;
+    font-size: 16px;
+    margin: 0 0 8px;
+    color: var(--text);
+  }
+  .triple-cell p { margin: 0 0 8px; font-size: 14px; line-height: 1.55; color: var(--text); }
+  .triple-cell .verbs {
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 12px;
+    color: var(--text-dim);
+    line-height: 1.5;
+  }
+
+  /* Bubble cards */
+  .bubble {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent-speculative);
+    border-radius: 4px;
+    padding: 22px 24px;
+    margin: 14px 0;
+  }
+  .bubble h4 {
+    font-family: Georgia, serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 21px;
+    margin: 0 0 12px;
+    color: var(--text);
+  }
+  .bubble .tag {
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent-speculative);
+    margin: 0 0 10px;
+  }
+  .bubble .claim { font-size: 15px; line-height: 1.6; margin: 0 0 14px; }
+  .bubble .row {
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--text-dim);
+    margin: 0 0 6px;
+  }
+  .bubble .row strong {
+    color: var(--text);
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: inline-block;
+    width: 110px;
+    vertical-align: top;
+  }
+
+  .sources {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 22px 26px;
+    margin-top: 24px;
+  }
+  .sources h3 {
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-dim);
+    margin: 0 0 14px;
+  }
+  .sources h4 {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 15px;
+    margin: 18px 0 8px;
+  }
+  .sources ul { margin: 0; padding-left: 22px; }
+  .sources li { font-size: 13px; line-height: 1.6; margin: 0 0 5px; color: var(--text-dim); }
+  .sources li a { color: var(--text); border-bottom-color: rgba(236,236,236,0.25); }
+
+  footer.page-footer { padding: 30px 0 60px; font-family: ui-monospace, Menlo, monospace; font-size: 12px; color: var(--text-faint); text-align: center; border-top: 1px solid var(--border); }
+  footer.page-footer a { color: var(--text-dim); border-bottom: 1px dotted var(--text-faint); text-decoration: none; }
+
+  @media (max-width: 640px) {
+    header.hero h1 { font-size: 34px; }
+    header.hero .dek { font-size: 17px; }
+    h2 { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap-wide">
+    <a href="../index.html">← agnostic framework</a>
+    <span class="sep">·</span>
+    <span>construct studies / nation_state_v1</span>
+    <a class="source-link" href="https://github.com/a70m123r/agnostic-framework/blob/main/artifacts/nation_state_v1.html" target="_blank" rel="noopener">view source ↗</a>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="kicker">Construct study · v1 · 2026-05-21</p>
+    <h1>The Westphalian dormancy</h1>
+    <p class="dek">The nation-state as a 17th-century kernel-canon compile, now under structural pressure from stateless capital, AI-mediated governance, climate stress, network-state experiments, and non-state armed actors filling vacuums. Applies the framework's full stack: atlas v4 vocabulary, cont 21 push/pull/squeeze/pop, cont 20 canon dormancy with imparted learning, and the Π<sub>L</sub> projection from the language construct study. The fourth and final piece from the original construct-studies queue.</p>
+    <p class="meta">~7,400 words · reading time ~30 min · status: candidate-grade reading · built from two parallel subagent scans on state-fragility (Fragile States Index 2025, BTI 2024, recent collapse + refoundation cases) and alternative-carriers (charter cities, network states, AI-governance, crypto, non-state armed actors) totaling ~2,500 words with 40+ sourced 2024-2026 anchors</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">01</span>The agnostic stance, applied to the nation-state</h2>
+
+    <p>The Westphalian state is the most successful canon-compile humans have ever produced at the social-substrate ring. From 1648 to today, it has propagated across every inhabited region of the planet, displaced every prior governance compile (empire, theocracy, city-state, tribal federation), and now wraps roughly 195 instances of itself in mutual recognition. No other canon has achieved comparable coverage. The framework's first observation about it is that this success is not the end of the story — it is the precondition for everything happening next.</p>
+
+    <p>The agnostic stance applies in two directions here. <strong>First</strong>, the framework reads state behavior structurally, not morally. When this essay describes Russia's wartime state-consolidation, China's Fourth Plenum self-strengthening, El Salvador's state-of-exception, India's civilization-state reformat, or the Sahel coup belt as a regional refoundation cluster, the descriptions are of what each state-actor is <em>doing in verb-vocabulary</em>, not of whether the doing is justified, lawful, or beneficial. Construct studies should be defensible by a reader who agrees with the verb-vocabulary description but holds opposite political priors. <strong>Second</strong>, the framework reads Westphalian-state-as-canon, not Westphalian-state-as-given. The state is a particular procedural compile that happened to win the 17th–20th century competition. It is not the kernel of governance; it is one protocol that interpolates the kernel of governance into lived function (cont 21 §3 three-layer reading). What can be compiled can become dormant. Reading the state through canon-vocabulary doesn't predict its collapse; it predicts that any future evolution will be a refactor, not a restoration (cont 20).</p>
+
+    <p>With both stances declared, here's what the framework sees.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">02</span>What the Westphalian state was solving — the 1648 squeeze</h2>
+
+    <p>The framework's discipline is to read any kernel-canon by asking: <em>what was the chronic squeeze that made compiling this expensive thing worth the cost?</em> For the marriage essay it was the six squeeze functions (paternity, inheritance, child-rearing, alliance, labor-pooling, elder-care). For religion it was the eight (mortality, suffering, meaning, coordination-beyond-kin, time-binding, trauma, identity, power-legitimation). The Westphalian state's chronic squeeze, in 1648 and still today, is the coordination-and-conflict-resolution problem at scales beyond kin and faith.</p>
+
+    <p>Specifically, the Westphalian compile absorbed:</p>
+
+    <p><strong>Monopoly on legitimate violence (Weber's classic squeeze).</strong> Pre-Westphalian Europe had distributed violence — nobles, religious orders, mercenaries, urban militias all held arms. The post-Thirty-Years-War squeeze was that distributed violence kept producing the same civil-religious war. The state-compile solved this by consolidating arms in a single sovereign apparatus with a fixed territorial domain.</p>
+
+    <p><strong>Currency and tax extraction at scale.</strong> Pre-state economies couldn't fund the wars that proved decisive in 1618–48. The state-compile invented the modern fiscal apparatus — stable currency, taxation, public debt — which then funded standing armies, infrastructure, and the bureaucratic machine that recursively made more state.</p>
+
+    <p><strong>Border-as-membrane.</strong> The state defined who was inside and who was outside, what crossed the boundary and what didn't. Customs, passports, citizenship rolls, immigration law — all are downstream of the basic 1648 move of declaring that sovereignty stops at a line.</p>
+
+    <p><strong>Legibility and standardization</strong> (the Scott squeeze, after James C. Scott). The state needs to <em>see</em> its population to govern it: census, cadastre, standard weights, standard time, standard surnames, standard schooling. Each is a project of converting opaque local substrate into legible state-readable form.</p>
+
+    <p><strong>Adjudication beyond kin and faith.</strong> Disputes that crossed family, clan, or religious lines needed a forum outside all three. The state-compile produced civil and criminal courts, professional judges, written law, appellate process. The compile became so deep that "rule of law" became a synonym for state-quality.</p>
+
+    <p><strong>Public goods at scale.</strong> Infrastructure, public health, defense against external threats, fire suppression, sewerage, mass education — none of these scale through purely private contracting. The state-compile is what made them tractable.</p>
+
+    <p><strong>Identity and recognition.</strong> Citizenship as the canonical identity-wrapper. The state-compile produced a primary identity-frame that competes with religion, kin, profession, and (in the 21st century) consumer brand and political tribe.</p>
+
+    <p>Seven chronic squeezes, all real, all unrelieved by any prior compile, all still pressing today. The Westphalian state is one specific way of absorbing them — not the only logically-possible way, but the one that won 1648–2000 and now structures every conversation about governance. The construct study's question is what happens to that compile when many of the squeezes are being <em>partially</em> absorbed by other carriers in 2024–2026.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">03</span>The four substrates wrapping nation-state canon</h2>
+    <p class="sect-lede">Cont 18's procedural lineage says any social-substrate-ring canon is wrapped by deeper rings that reinforce or release it. For the state, the four substrates are: coercive monopoly, fiscal capacity, legitimacy frame, and technological infrastructure.</p>
+
+    <div class="substrate-block" style="border-left: 3px solid #f87171;">
+      <h4>Coercive monopoly</h4>
+      <p>The Weber substrate. Is the state the only legitimate user of force in its territory? Strong-substrate states (Singapore, Norway, China, France) maintain this through institutional discipline. Weak-substrate states (Haiti, parts of Mexico, Lebanon, Yemen, Afghanistan) have lost it — non-state actors now use force at scale within the territory and the state cannot stop them. The substrate is also under technological pressure: drones (~$500 retail) democratize coercion in ways the 17th-century compile didn't anticipate.</p>
+    </div>
+
+    <div class="substrate-block" style="border-left: 3px solid var(--accent-orange);">
+      <h4>Fiscal capacity</h4>
+      <p>The state's ability to tax, borrow, and spend at scale. Wealthy democracies retain this substrate strongly but face structural pressure: aging populations + climate-stress spending + military rearmament all compete for the same fiscal envelope. Middle-income states (Argentina, Turkey, Egypt, Pakistan) operate in periodic fiscal crisis. Crypto-rails and stablecoins have begun to puncture the state's monetary monopoly in regions where the state's currency has already lost trust ($33T stablecoin volume in 2025; Argentina 19.8% crypto-holding rate).</p>
+    </div>
+
+    <div class="substrate-block" style="border-left: 3px solid #93c5fd;">
+      <h4>Legitimacy frame</h4>
+      <p>The story-of-itself the state tells to its population to claim that its existence is justified. The BTI 2024 records this substrate's continuous erosion: 63 of 137 countries rated democracies (record low); EIU Democracy Index 5.17 (lowest since 2006). Different states are constructing different legitimacy frames as the post-Cold-War liberal-democratic frame thins — civilizational state (China, Russia, India), religious state (Iran, post-Assad Syria), efficiency state (Singapore, UAE, El Salvador), security state (post-Yoon-failed-coup South Korea, post-October-7 Israel), revolutionary state (Iran, Cuba, Venezuela).</p>
+    </div>
+
+    <div class="substrate-block" style="border-left: 3px solid var(--accent-speculative);">
+      <h4>Technological infrastructure</h4>
+      <p>The substrate states deploy to deliver function. Has shifted dramatically across 2024-2026. China's smart courts handled 4.7M cases in 2024 (Shenzhen judges +50% throughput); India's GST AI generated 600,000 compliance notices in UP alone; EU Frontex AI risk-profiling and the Schengen border infrastructure; US Customs and Border Protection automated entry. AI partially-replaces or augments state functions where institutions are robust (China, India, EU) and creates scandal-loops where they aren't (Netherlands toeslagenaffaire collapsed a government). The substrate is being upgraded but unevenly.</p>
+    </div>
+
+    <p>The four substrates interlock. The Sahel coup-belt states have weak coercive-monopoly, fragile fiscal capacity, contested legitimacy, and minimal technological infrastructure — all four substrates failing together is what produced regional refoundation by 2023-2024. Vietnam, India, and post-Erdogan Turkey are thickening on all four substrates simultaneously. China is consolidating coercive monopoly (revived State Secrets Bureau), upgrading technological infrastructure (smart courts, e-CNY CBDC $2.3T cumulative volume, 230M wallets), reformatting legitimacy (civilization-state frame), and managing fiscal pressure through state-led investment. The Westphalian shell stays — flags, seats, passports — but the kernel inside is being recompiled non-uniformly across substrates.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">04</span>The state in 2026 — what the indices show</h2>
+
+    <p>The headline reading from the framework's three subagent scans plus the canonical state-capacity indices: <strong>the global average is degrading, the variance is widening, and the failure cluster is shifting</strong> from chronic-collapse cases (Somalia, DRC, Yemen) to recent-collapse cases (Sudan, Haiti, Myanmar, Syria, parts of the Sahel).</p>
+
+    <p>Fragile States Index 2024-25: Somalia tops the alert tier at 111.2; 30 countries sit in Alert (≥90), 50 in Warning. Sudan, Yemen, South Sudan, Afghanistan, DRC, Syria, CAR, Chad, Myanmar, Haiti fill the top tier. Bertelsmann Transformation Index 2024: of 137 countries, only 63 still rated as democracies — a record low; governance, democratic quality, and economic-development scores all hit "new global lows." EIU Democracy Index 2024: global score 5.17 (lowest since the index began in 2006); 130 of 167 countries flat or down; France dropped out of "full democracy"; 39.2% of world population under authoritarian rule.</p>
+
+    <p>The framework's reading of this composite picture: <strong>the Westphalian compile is not collapsing globally — it is splitting into two clusters</strong>. One cluster (Sahel, Sudan, Haiti, Myanmar, Syria) is undergoing canon-refactor by force. The other (UAE, Vietnam, India, Russia, China, El Salvador, Saudi, Turkey, Indonesia) is undergoing canon-thickening — pulling more verbs into the state, often at the cost of liberal-democratic legitimacy-substrate. Middle-zone "flawed democracies" are the unstable band, with the US, France, and South Korea each showing 2024-2025 stress tests.</p>
+
+    <p>This is the cont-20 dormancy primitive operating at population scale. The Westphalian canon is going dormant in some places, refactoring in place in others, and getting violently rewritten in a few. None of these outcomes is the same as the 1648 compile dying. All three are exits the framework's vocabulary already names. §07 below walks the four exits with worked cases.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">05</span>Push, pull, squeeze, pop — the four force-modes operating on the state right now</h2>
+    <p class="sect-lede">Cont 21's blind-steer force-mode candidates applied to the nation-state. Each quadrant carries a current 2024-2026 worked example.</p>
+
+    <div class="quadrant q-push">
+      <p class="qtag">push · forward-directional force</p>
+      <h4>Stateless capital, network-state experimentation, AI-mediated governance</h4>
+      <p>Pushing the state to externalize functions it previously held. Próspera (Honduras) is suing Honduras for $10.6-26.4B at ICSID after the Castro government repealed its ZEDE framework — the carrier is now compiling through arbitration, not territory. Argentina's RIGI under Milei: 30-year tax/exchange/customs stability lock, $33.9B projected investment, the state writing itself out of its own future tax base for a generation. Estonia's e-Residency reached 135,000+ residents from 185 countries with €125M state revenue in 2025 (+87%) — citizenship-light as a SaaS product. Network states haven't replaced anything substantial, but they have pushed the state to compete with them for company-formation and light-identity functions.</p>
+    </div>
+
+    <div class="quadrant q-pull">
+      <p class="qtag">pull · attractive-directional force</p>
+      <h4>Civilization-state framing, national-identity revival, model-of-governance export</h4>
+      <p>Pulling state-actors toward a richer self-image than 20th-century technocratic government. India's January 2024 Ram Mandir consecration (Modi proclaimed "Ram Rajya") is the cleanest single moment of civilization-state pull. China's 2024 World Russian People's Council (March 27) formalized 'state-civilization' as binding doctrine for Russia. The Bukele model entered its fourth year of state-of-exception in El Salvador 2026 — and was explicitly imported by Honduras (Castro, Nov 2022) and Ecuador (Noboa, Jan 2024); CECOT mega-prison as exportable iconography. Each is a pull-toward-civilization-as-state, pull-toward-strong-leader, pull-toward-security-as-primary-good. The legitimacy-substrate is being refilled with non-democratic content.</p>
+    </div>
+
+    <div class="quadrant q-squeeze">
+      <p class="qtag">squeeze · compressive pressure event</p>
+      <h4>Climate stress, mass migration, fiscal exhaustion, AI labor displacement</h4>
+      <p>Compressing state capacity. Climate-induced displacement is the largest demographic pressure since WWII and growing. The Sahel coup belt operates inside a climate-stressed substrate (drought + Lake Chad collapse + jihadi insurgency + colonial-legacy fragility). Mediterranean and US-southern-border migration pressures sit on top of state legitimacy-substrate that increasingly cannot absorb them politically. Russian wartime state-consolidation is itself a response to compressive squeeze: 2024 GDP +4.1%, military spending RUB 13.5T (2025), 3.8M in the military-industrial complex, but by mid-2025 the central bank declared labor and capital "exhausted." The state can run hot under squeeze for years — but not indefinitely.</p>
+    </div>
+
+    <div class="quadrant q-pop">
+      <p class="qtag">pop · release / burst event</p>
+      <h4>State collapse, revolution, regime change, sudden legitimacy reversal</h4>
+      <p>Sudden release events that rewrite the local Westphalian compile. Syria's December 8, 2024 fall — Assad to Moscow, HTS to Damascus, the entire Baath party apparatus dissolved in days, new Constitutional Declaration March 13, 2025. Bangladesh August 5, 2024 — Hasina flees to India after student uprising, Yunus interim government installed three days later. Niger July 2023, Burkina Faso 2022, Mali 2020-21, Gabon August 2023 — four pop-events that produced the current Alliance of Sahel States. Each is a sustained-accumulate-then-sudden-spill at threshold: legitimacy substrate drained for years, then thirty-six hours and the state's central canon refactors. Pop events on the state-substrate ring have historically produced poor early compile because the new canon forms before careful checking is possible. The framework's prediction: many of the 2023-2025 pop-event compiles will need substantial revision over the next decade.</p>
+    </div>
+
+    <p>The four force-modes are not independent. Sahel coup-belt states experienced squeeze (climate + insurgency + fiscal) for years before the pop-events that produced juntas; the juntas now actively pull toward pan-African-anticolonial-civilization frames while being pushed by Russian Africa Corps to externalize their security function. Most active state-actors in 2024-2026 have all four force-modes operating at different intensities simultaneously. Reading any single state through the four-mode frame decomposes which pressure is dominant in the current cycle.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">05a</span>The state's actor-fingerprint across the six registers</h2>
+
+    <p>Atlas v4's participatory-taxonomy reading (Figure C) says every actor IS the polygon of verbs it can perform across the six sensory registers. The nation-state's fingerprint, in 2026, with one signature verb per register:</p>
+
+    <p><strong>Sight</strong> — <em>surveil</em> (facial recognition deployments at scale; FBI AI-surveillance-drone RFI Nov 2025; FRT market $14.55B by 2031). <strong>Sound</strong> — <em>broadcast</em> (state media; alarm systems; sonic crowd-control LRAD as the wartime weaponization, Belgrade March 2025, Maldives Oct 2025). <strong>Olfactory</strong> — <em>profile</em> (population-segmentation analytics; predictive policing; SIGINT pattern-matching). <strong>Touch</strong> — <em>detain</em> (incarceration; deportation; tax assessment; physical custody of persons and goods). <strong>Oral</strong> — <em>tax</em> (the state's primary intake function; revenue collection; customs duties; sovereign wealth accumulation). <strong>Excretory</strong> — <em>pardon / deport / banish</em> (the release-family verbs — the most under-developed in democratic states; the most weaponized in authoritarian ones).</p>
+
+    <p>The state's fingerprint bulges on <em>sight</em>, <em>touch</em>, and <em>excretory</em>; is moderate on <em>sound</em> and <em>oral</em>; weakest on <em>olfactory</em> (which markets have largely taken over via brand-profiling). Among observer-types in atlas v4 Figure C, the state's fingerprint is closest to the military's — both bulge on the coercive registers — but differs in that the state holds the tax-and-pardon polarity more than military observers do. The state is the only observer-type that combines the violence-monopoly verbs (detain, surveil) with the recognition-monopoly verbs (citizen, citizen-no-more) in one polygon.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">06</span>The four exits — persist, hold-refactor, dormancy, open action-space</h2>
+    <p class="sect-lede">Cont 21 §2 named four exits a canon can take from active load-bearing. All four are observable in the state-substrate ring across 2023-2026, with worked cases.</p>
+
+    <div class="exits-grid">
+      <div class="exit-card persist">
+        <h4>Persist — substrates still hold</h4>
+        <p class="examples">UAE · Saudi · Vietnam · Indonesia · India · Turkey · Singapore · Hungary · Poland</p>
+        <p>States where all four substrates (coercive monopoly, fiscal capacity, legitimacy frame, technological infrastructure) remain strong or are actively thickening. The Westphalian compile is doing fine; if anything, it's getting more state-like over time. UAE/Saudi Vision-2030 era is state-as-construction-zone at unprecedented scale. India under Modi is state-as-civilizational-project. Vietnam under Tô Lâm is one-party state-as-corruption-clean. Turkey under Erdogan is post-coup-attempt state-as-personalist-orthodoxy. None of these is liberal-democratic in the 1989 sense; all are robustly state-like in the Weberian sense.</p>
+      </div>
+
+      <div class="exit-card hold">
+        <h4>Refactor-in-hold — Vatican-II-style state evolution</h4>
+        <p class="examples">South Korea · Bangladesh · Japan · Israel · Argentina · Italy</p>
+        <p>States where the canon is being refactored without the institution dissolving. South Korea passed its December 2024 four-hour-self-coup stress test — Yoon's martial-law declaration met with quorum-restoration and 204-85 impeachment within two weeks. Bangladesh's August 2024 Hasina-ouster → Yunus-interim → Tarique-Rahman-election (February 2026) is a refactor-in-hold over 18 months. Japan's post-Abe LDP-fracture and 2024 minority-government reset. Israel's post-October-7 government composition and judicial-reform fight. Argentina under Milei dismantling and re-compiling state apparatus in real time. Each is the state-canon refactoring while the institutional carrier still operates.</p>
+      </div>
+
+      <div class="exit-card dormant">
+        <h4>Dormancy with imparted learning on return</h4>
+        <p class="examples">post-Assad Syria · post-Hasina Bangladesh · post-Soviet Russia · post-1989 Eastern Europe</p>
+        <p>The cont-20 dormancy primitive applied to states. Syria's Baath-state went dormant overnight on December 8, 2024 — the institutional carrier lapsed but the substrate (population, territory, infrastructure) persists. The new Constitutional Declaration (March 13, 2025) is a refactored compile carrying the imparted learning of the Assad dormancy: 5-year transition, executive appoints 1/3 of People's Assembly, all Higher Constitutional Court appointed by executive. This is canon waking from dormancy in refactored form. Russia's post-Soviet state took fifteen years to fully wake from the Soviet-canon dormancy; the wake-form (state-civilization, sovereign democracy, multipolarity frame) carries imparted learning of the dormancy period. The framework's prediction: post-Syria refactor will look different in 2030 than it does in 2026, and the difference will carry imparted learning of the HTS-as-government early phase.</p>
+      </div>
+
+      <div class="exit-card action">
+        <h4>Open action-space — multi-carrier scouting</h4>
+        <p class="examples">Haiti · Sudan · Yemen · Afghanistan · Lebanon · Libya · Somalia · eastern DRC</p>
+        <p>The marriage-essay's misfire-refactored-as-open-action-space framing applied at the state-substrate ring. The Westphalian institutional carrier has lapsed; no single successor has compiled to replace it; multiple candidate carriers are scouting the gap. Haiti ~90% of Port-au-Prince under gang coalitions that tax, adjudicate, license commerce, gatekeep mobility. Sudan with SAF (Burhan, Port Sudan) and RSF (Hemedti, Nyala) running parallel governments. Yemen with Houthi-controlled north collecting ~$180M/month in Red Sea transit fees. Lebanon with Hezbollah's service-state running ~$60M/month in welfare functions post-2024-war. Afghanistan with Taliban's $3B revenue 2023-24 from customs/mining and unified chain of command. M23 in eastern DRC running household taxes, $7/kg coltan tax, $8K-per-truck levies as Goma's de facto state. Each is canon-dormant-before-successor-compiled. The framework's prediction: these are not transitional; they are <em>configurations</em>, and they may persist for decades as parallel-carrier compiles inside Westphalian shells.</p>
+      </div>
+    </div>
+
+    <p>The four-exit framework is also a diagnostic. For any state-actor under stress, the framework's question is: which of these four exits is currently dominant? Refactor-in-hold is reversible; dormancy is reversible-with-imparted-learning; open action-space is the multi-carrier scout that may produce any of the other three downstream. Reading a state-actor's current trajectory through the four-exit frame is faster than reading through standard political-science taxonomies — and the predictions are operational.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap-wide">
+    <h2><span class="num">07</span>Same state-event, three Π<sub>L</sub> projections</h2>
+    <p class="sect-lede">Apply the <a href="language_v1.html">language v1</a> reading: the same substrate-event projected through Chinese, Russian, and English operating systems produces three different actor-fingerprints and three different verb-clusters.</p>
+
+    <h3>Case 1 — Syria's December 2024 fall</h3>
+
+    <div class="triple-grid">
+      <div class="triple-cell l-en">
+        <p class="label">EN projection</p>
+        <h4>"Assad regime collapses; HTS takes Damascus"</h4>
+        <p>Framed as <em>liberation-from-dictator</em>. Verbs: collapse, fall, liberate, transition. Π<sub>L</sub> assumption: HTS is the legitimate successor pending democratic process.</p>
+        <p class="verbs">collapse · fall · liberate · transition</p>
+      </div>
+      <div class="triple-cell l-zh">
+        <p class="label">ZH projection</p>
+        <h4>"<code>叙利亚局势演变</code>"</h4>
+        <p>Framed as <em>regional situation evolution</em>. Verbs: <code>演变</code> (evolve), <code>稳定</code> (stabilize), <code>劝和促谈</code> (urge peace and promote talks). Π<sub>L</sub> assumption: regime change is observed neutrally; the priority is regional stability and protection of Chinese economic interests.</p>
+        <p class="verbs">演变 · 稳定 · 劝和</p>
+      </div>
+      <div class="triple-cell l-ru">
+        <p class="label">RU projection</p>
+        <h4>"<code>Падение режима Асада — результат западного вмешательства</code>"</h4>
+        <p>Framed as <em>Western interference produced collapse of an ally</em>. Verbs: <code>пасть</code> (fall — perfective), <code>результат вмешательства</code> (result of interference), <code>дестабилизация</code> (destabilization). Π<sub>L</sub> assumption: this is Russia losing a strategic position to Western-backed proxies; the perfective aspect commits to completion.</p>
+        <p class="verbs">пасть · вмешательство · дестабилизация</p>
+      </div>
+    </div>
+
+    <h3>Case 2 — China's smart-court rollout</h3>
+
+    <div class="triple-grid">
+      <div class="triple-cell l-en">
+        <p class="label">EN projection</p>
+        <h4>"China deploys AI judges, raising rule-of-law concerns"</h4>
+        <p>Framed as <em>authoritarian surveillance creep</em>. Verbs: deploy, surveil, automate, raise-concerns. Π<sub>L</sub> assumption: AI in courts is a threat to judicial independence.</p>
+        <p class="verbs">deploy · surveil · automate</p>
+      </div>
+      <div class="triple-cell l-zh">
+        <p class="label">ZH projection</p>
+        <h4>"<code>智慧法院推进司法现代化</code>"</h4>
+        <p>Framed as <em>judicial modernization, high-quality development</em>. Verbs: <code>推进</code> (advance), <code>引领</code> (lead), <code>高质量</code> (high-quality), <code>智慧法院</code> (smart court). Π<sub>L</sub> assumption: AI courts are civilizational achievement in lead-goose register.</p>
+        <p class="verbs">推进 · 引领 · 智慧法院</p>
+      </div>
+      <div class="triple-cell l-ru">
+        <p class="label">RU projection</p>
+        <h4>"<code>Китайский опыт цифровизации правосудия</code>"</h4>
+        <p>Framed as <em>Chinese-model digital justice</em>. Verbs: <code>цифровизация</code> (digitalization), <code>опыт</code> (experience as exportable model), <code>государственный суверенитет</code> (state sovereignty over its judicial system). Π<sub>L</sub> assumption: China demonstrates that state-led digital sovereignty is viable; offers a counter-model to Western privatized AI.</p>
+        <p class="verbs">цифровизация · опыт · суверенитет</p>
+      </div>
+    </div>
+
+    <h3>Case 3 — Bukele model state-of-exception</h3>
+
+    <div class="triple-grid">
+      <div class="triple-cell l-en">
+        <p class="label">EN projection</p>
+        <h4>"Bukele's authoritarian model spreads to Latin America"</h4>
+        <p>Framed as <em>illiberal contagion</em>. Verbs: spread, erode, suspend, jail. Π<sub>L</sub> assumption: state-of-exception is the wrong way to handle gangs; rights-trade-offs are unacceptable.</p>
+        <p class="verbs">spread · erode · suspend · jail</p>
+      </div>
+      <div class="triple-cell l-zh">
+        <p class="label">ZH projection</p>
+        <h4>"<code>布克莱模式整治犯罪</code>"</h4>
+        <p>Framed as <em>rectifying criminal disorder in hygiene register</em>. Verbs: <code>整治</code> (rectify / clean up), <code>治理</code> (govern as treating malady), <code>依法严惩</code> (according-to-law sternly punish). Π<sub>L</sub> assumption: state-as-doctor treating criminal-pathology.</p>
+        <p class="verbs">整治 · 治理 · 依法严惩</p>
+      </div>
+      <div class="triple-cell l-ru">
+        <p class="label">RU projection</p>
+        <h4>"<code>Бесуспешный, но решительный салвадорский опыт</code>"</h4>
+        <p>Framed as <em>resolute Salvadoran experience worth studying</em>. Verbs: <code>отстаивать порядок</code> (uphold order), <code>демонстрировать решимость</code> (demonstrate resolve), <code>экспорт модели</code> (export the model). Π<sub>L</sub> assumption: anti-Western strong-leader experiments deserve attention as alternatives to liberal-democratic governance models.</p>
+        <p class="verbs">отстаивать · решимость · экспорт</p>
+      </div>
+    </div>
+
+    <p style="margin-top: 28px;">The three projections of the same state-event are not compatible canon. They each foreground different boundary-fluxes, reach for different verb-palettes, produce different actor-fingerprints. The framework's discipline: read all three; refuse to collapse them prematurely; the residue between projections is the operating-system signature. <em>And for state-actors specifically, the residue matters more than for other observer-types — because state-actors are the observers most consistently positioned to project their own canon onto other state-actors as the right reading</em>.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">08</span>Three speculative bubbles</h2>
+
+    <div class="bubble">
+      <p class="tag">Bubble 01 · rank 1 · medium-high confidence</p>
+      <h4>The patched-asymmetrically hypothesis</h4>
+      <p class="claim">The Westphalian state is not collapsing globally; it is being patched non-uniformly. Some substrate functions (currency, identity, light-citizenship, taxation, judicial decisioning) are being asymmetrically migrated to alternative carriers (crypto rails, e-Residency-style products, charter cities, AI welfare systems, gang governance) — and the migration is uneven across regions and even within single states. The Westphalian shell stays (flags, seats, passports) but the kernel is fragmenting into mosaic.</p>
+      <p class="row"><strong>Predicts</strong> Over the next decade, no single replacement-carrier scales globally — but specific functions migrate measurably. Stablecoin transaction volume will continue to grow beyond $33T (2025) and substitute for state-currency functions in fragile states. AI-mediated judicial throughput will scale in high-trust-of-state contexts (China, Singapore) and stall in lower-trust contexts (Netherlands, UK). Charter cities and SEZs will continue to expand but fragility to host-state political turnover (Próspera v. Honduras) will keep them niche. The pattern is asymmetric patch, not coherent post-state compile.</p>
+      <p class="row"><strong>Breaks if</strong> A coherent post-state compile emerges and scales (a single network-state, a single corporate-jurisdiction product, a single AI-mediated governance protocol that absorbs multiple state functions at population scale). The framework predicts this is unlikely on a 5-10 year horizon. Catastrophic state-collapse cascade beyond current levels would also break the patched-asymmetrically read in the opposite direction.</p>
+      <p class="row"><strong>Follow-up</strong> Annual cross-substrate audit: stablecoin volume × state-currency capacity; AI-courts-throughput × judicial-system trust; non-state-armed-actor territorial control × Fragile States Index. Track per-substrate migration rates separately, not aggregate "state weakness." The framework expects per-substrate variance to widen, not narrow.</p>
+    </div>
+
+    <div class="bubble">
+      <p class="tag">Bubble 02 · rank 2 · medium confidence</p>
+      <h4>The state-thickening clusters retain coordination advantage</h4>
+      <p class="claim">The 2024-2026 thickening cluster (China, UAE, Saudi, Vietnam, India, Russia, El Salvador, Turkey, Indonesia, Hungary) holds a structural advantage over the 1989-liberal-democratic cluster on coordination tasks that require sustained sub-decadal action — infrastructure megaprojects, AI scaling, semiconductor supply chains, energy transitions, demographic interventions. The legitimacy-substrate cost (rights restrictions, electoral integrity, judicial independence) is being paid; whether it remains tolerable to populations is the question. The framework predicts: the thickening cluster's coordination advantage will persist for at least the rest of this decade, but at increasing legitimacy-substrate cost.</p>
+      <p class="row"><strong>Predicts</strong> Cross-cluster comparison on major coordination tasks over the next 5 years — semiconductor self-sufficiency, AI deployment at scale, climate-adaptation infrastructure, demographic intervention success — will show thickening-cluster states completing more projects per-decade than liberal-democratic-cluster states, while the liberal-democratic cluster shows better measured population well-being on rights and quality-of-life indices.</p>
+      <p class="row"><strong>Breaks if</strong> Thickening-cluster states fail at coordination tasks despite their substrate advantage (NEOM's collapse from $1.6T to $8.8T budget then scaled to 2.4km is a partial break-data-point), OR if the legitimacy-substrate erosion produces measurable destabilization (mass protest, regime-change, capacity loss) at population scale within the cluster.</p>
+      <p class="row"><strong>Follow-up</strong> Build a coordination-task panel (10 specific multi-year infrastructure / capacity projects across 8-10 cluster states). Score completion rates at 36-month intervals. Compare against liberal-democratic-cluster comparables. Test correlation with substrate strength scores from the four §03 substrates.</p>
+    </div>
+
+    <div class="bubble">
+      <p class="tag">Bubble 03 · rank 3 · lower confidence, larger consequence</p>
+      <h4>Climate stress is the largest threshold-crossing the Westphalian compile has ever faced</h4>
+      <p class="claim">The Westphalian compile was designed in 1648 for a relatively-stable climate substrate. Climate stress at 1.5-3°C warming will cross substrate thresholds the original compile cannot patch — agricultural collapse zones, sea-level-rise displacement of multiple Bangladesh-scale populations, infrastructure damage at metropolitan scale, food-water competition between sovereign neighbors. The framework's prediction: the state-substrate ring will see more pop-events between 2026 and 2050 than between 1989 and 2025, and the pop-events will cluster in climate-stressed regions.</p>
+      <p class="row"><strong>Predicts</strong> Climate-vulnerability-index × state-fragility-index will show widening positive correlation across the next 20 years. Sahel, South Asian deltas, low-lying Pacific states, parts of MENA, and Central American agricultural states will show disproportionate state-substrate failures relative to non-climate-stressed comparables. New post-Westphalian compiles will emerge first in these regions — not because they're more advanced, but because the original compile is failing first under climate stress.</p>
+      <p class="row"><strong>Breaks if</strong> Climate-adaptation infrastructure investment scales fast enough to keep state-substrate function intact in vulnerable regions (current trajectory: under-investment, but the trajectory could reverse). OR: climate-impact projections turn out to be substantially overestimated, reducing the threshold-crossing pressure.</p>
+      <p class="row"><strong>Follow-up</strong> Build a climate-state-stress panel of 40 climate-vulnerable states. Track state-capacity indices alongside ND-GAIN climate-vulnerability scores at 5-year intervals. Annual review of state-substrate failures vs climate-stress correlation. The framework expects the correlation to strengthen over time; if it weakens, this bubble breaks.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">09</span>What this lets you do</h2>
+
+    <p>Four operational moves the construct study enables.</p>
+
+    <p><strong>One. Diagnose a stuck state by asking which of the four substrates has thinned most.</strong> The 4-substrate diagnostic from §03 is faster than standard political-science taxonomies. Coercive-monopoly substrate thinned (Haiti, Sudan)? Fiscal-capacity substrate thinned (Argentina pre-Milei, Pakistan, Lebanon)? Legitimacy-substrate thinned (post-2020 US, post-2024 South Korea, France 2024)? Technological-infrastructure substrate thinned (Sahel)? The thinned substrate is the entry-point for understanding the state's current crisis and likely trajectory.</p>
+
+    <p><strong>Two. Predict which of the four exits a state-actor will take.</strong> Under sustained stress, every state-actor exits via one of: persist-substrates-hold, refactor-in-hold, dormancy-with-refactor-on-return, or open-action-space. The diagnostic question: is there a competent counter-elite ready to take power AND substrate-strength to absorb the transition (→ refactor-in-hold; South Korea Dec 2024 worked example)? Is the substrate thinning faster than any counter-elite can compile (→ dormancy or open action-space; Syria worked example for dormancy-with-refactor; Haiti for open action-space)? Or are the substrates strong enough that the state can absorb the stress without refactoring (→ persist; Singapore, UAE worked examples)?</p>
+
+    <p><strong>Three. Read state-action through the operating-system that's projecting it.</strong> The §07 Π<sub>L</sub> reading lets you decompose how a state-event gets framed differently per OS. The same Syria-fall reads as liberation under Π<sub>EN</sub>, as situation-evolution under Π<sub>ZH</sub>, as Western-interference-producing-collapse under Π<sub>RU</sub>. Reading all three projections is the agnostic stance in operational form for international politics specifically — the OS-fingerprint is the data that resolves the often-incompatible verbal claims state-actors make about each other.</p>
+
+    <p><strong>Four. Track per-substrate function migration, not aggregate state-weakness.</strong> Bubble 01's prediction is that the framework's most-useful empirical claim is per-substrate. Don't ask "is the state getting weaker globally?" Ask: which specific state function is migrating to which alternative carrier in which region? Stablecoins migrating from state to crypto in Argentina; judicial throughput migrating from state to AI in China; security migrating from state to gang in Haiti; light-citizenship migrating from state to network-product in Estonia. Each migration has its own velocity and reversibility. The framework predicts the variance across substrate-migrations will widen, making aggregate state-weakness less useful as a metric than per-function migration rate.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">10</span>Adjacent fields and leading figures</h2>
+
+    <h3>1. International relations theory</h3>
+    <p><strong>Kenneth Waltz</strong> (1924–2013) on neorealism and the structural anarchy of inter-state relations. <strong>Alexander Wendt</strong> on constructivist IR (state identity as constructed, not given). <strong>Stephen Krasner</strong> (Stanford) on sovereignty as organized hypocrisy. <strong>John Mearsheimer</strong> (Chicago) on offensive realism. The framework's reading is most aligned with Krasner — sovereignty has always been compiled, not given — and least aligned with strict neorealism.</p>
+
+    <h3>2. Comparative politics / state capacity</h3>
+    <p><strong>Francis Fukuyama</strong> (Stanford) on state-building, decay, and political order. <strong>Daron Acemoglu</strong> &amp; <strong>James Robinson</strong> on inclusive vs extractive institutions. <strong>James C. Scott</strong> (1936–2024) on Seeing Like a State and legibility. <strong>Charles Tilly</strong> (1929–2008) on war-making and state-making as parallel processes. <strong>Joel Migdal</strong> on strong-society-weak-state. The Scott legibility-substrate framing is directly load-bearing for the framework's §03 fourth substrate.</p>
+
+    <h3>3. Political sociology of regime change</h3>
+    <p><strong>Theda Skocpol</strong> on state-centered analysis of revolutions. <strong>Jack Goldstone</strong> on revolutionary cycles. <strong>Erica Chenoweth</strong> (Harvard Kennedy) on nonviolent vs violent regime-change effectiveness. <strong>Steven Levitsky</strong> &amp; <strong>Daniel Ziblatt</strong> (Harvard) on democratic backsliding (How Democracies Die, Tyranny of the Minority).</p>
+
+    <h3>4. Network-state / post-state theory</h3>
+    <p><strong>Balaji Srinivasan</strong> on the Network State (2022). <strong>Patri Friedman</strong> on seasteading and competitive governance. <strong>Tyler Cowen</strong>'s broader treatment of state evolution. <strong>Ian Bremmer</strong> (Eurasia Group) on the J-curve and the post-American world order. The framework's reading is closer to Bremmer's empirical state-capacity analysis than to Srinivasan's network-state optimism — the construct study's Bubble 01 specifically rejects coherent-network-state-replacement on a 5-10 year horizon.</p>
+
+    <h3>5. State fragility and collapse studies</h3>
+    <p><strong>Fund for Peace</strong> (Fragile States Index). <strong>OECD States of Fragility</strong> reports. <strong>Stathis Kalyvas</strong> on civil-war logics. <strong>Paul Collier</strong> (Oxford) on bottom-billion states. <strong>James Fearon</strong> on civil war determinants.</p>
+
+    <h3>6. Empire and post-imperial state-formation</h3>
+    <p><strong>Niall Ferguson</strong> on imperial successors. <strong>Frederick Cooper</strong> on African post-colonial state-formation. <strong>Pankaj Mishra</strong> on the post-imperial intellectual history of Asia. <strong>Adom Getachew</strong> on Worldmaking After Empire — the post-decolonization construction of international political order.</p>
+
+    <h3>What the framework's contribution is</h3>
+    <p>Read against these six fields, the framework is not introducing the observation that the state is under pressure. Fukuyama, Acemoglu, Levitsky &amp; Ziblatt, Bremmer have all named various pieces of that observation in 2014–2024. What the framework adds is the same set of four moves named in the marriage, religion, and language construct studies: (1) <em>unification across substrates</em> — reading state-pressure in the same vocabulary as marriage-pressure, religion-pressure, and language-as-OS, with cont 18's procedural lineage as the licensing primitive; (2) <em>naming the open-action-space category</em> as a distinct configuration from collapse (Haiti is not a failed state in the Fukuyama sense — it's an open-action-space configuration with multiple alternative carriers running in parallel); (3) <em>the canon-dormancy-with-imparted-learning primitive</em> as the framework's prediction for what post-collapse state-refactor will look like; (4) <em>the Π<sub>L</sub> projection-operator</em> as the diagnostic for reading how different operating-system states frame the same state-event. None of these is original to the framework in the sense that each piece is absent from adjacent literatures. What's original is that the four moves are <em>the same move</em>, expressible in one vocabulary, applicable to multiple substrates.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">11</span>Provenance</h2>
+
+    <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 4px; padding: 22px 26px; margin: 28px 0;">
+      <p style="font-family: ui-monospace, Menlo, monospace; font-size: 11px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.12em; margin: 0 0 16px;">Provenance trail · nation_state_v1</p>
+
+      <p style="margin: 0 0 14px;"><strong>Iteration 0 · seed (Pav).</strong> "yes lets do that" — confirmation to proceed with the nation-state construct study, which I had previously named as the obvious next step (final piece from the original construct-studies queue, post-marriage, religion, and language v1). The implicit instruction: model on the prior three construct studies (marriage_v1, religion_v1, language_v1), apply the full framework stack (atlas v4 + cont 21 + cont 20 + Π<sub>L</sub> from language v1).</p>
+
+      <p style="margin: 0 0 14px;"><strong>Iteration 1 · two parallel subagent scans.</strong> State-fragility subagent returned with Fragile States Index 2024-25 (Somalia tops at 111.2; 30 countries in Alert tier), BTI 2024 (only 63 of 137 countries rated democracies), EIU Democracy Index 2024 at lowest-since-2006 level, plus full coverage of recent state-collapse cases (Sahel coup belt as a regional refoundation cluster — Mali 2020-21 / Burkina 2022 / Niger 2023 / Gabon 2023, with Alliance of Sahel States formalized January 2024; Syria fall December 8, 2024 with HTS taking Damascus and Constitutional Declaration March 13, 2025; Sudan fragmentation into two parallel governments; Haiti gang-coalition control of ~90% of Port-au-Prince; Venezuela dual-state by recognition; Bangladesh Hasina-ouster August 2024; South Korea Yoon failed-self-coup December 2024) and state-thickening cases (China Fourth Plenum October 2025, UAE/Saudi Vision-2030 era including NEOM scale-back, Bukele model export to Honduras and Ecuador, Russian wartime state-consolidation, India Modi Ram Mandir consecration January 2024, Turkey/Vietnam/Indonesia middle-power thickening). Alternative-carriers subagent returned with charter cities and SEZs (Próspera ICSID suit, Argentina RIGI under Milei, NEOM scaled to 2.4km, Indonesian Nusantara downgrade), network-state experiments (Balaji's Network School, Estonia e-Residency €125M 2025 revenue, El Salvador Bitcoin reversal via IMF), AI-mediated governance (China smart courts 4.7M cases in 2024, Denmark/Netherlands/UK welfare AI scandals, US pretrial COMPAS, EU Frontex, India GST AI), crypto/DeFi as parallel financial state ($33T stablecoin volume 2025, Argentina $93.9B crypto volume, Nigeria $92.1B, China e-CNY $2.3T cumulative), and non-state armed actors as governance carriers (Haiti gangs, Hezbollah Lebanon, Taliban Afghanistan, Houthi Yemen, M23 DRC, Mexico cartels). Total subagent output: ~2,500 words. The third subagent (climate-state-stress intersection) was queued but skipped for v1; deferred to v2 enhancement.</p>
+
+      <p style="margin: 0 0 14px;"><strong>Iteration 2 · this v1 page.</strong> Synthesized into eleven sections applying the framework's full vocabulary stack: §01 agnostic stance applied twice; §02 the Westphalian state's seven squeeze functions (monopoly on legitimate violence, currency and tax, border-as-membrane, legibility and standardization, adjudication, public goods, identity and recognition); §03 four substrates wrapping the state (coercive monopoly, fiscal capacity, legitimacy frame, technological infrastructure); §04 state-capacity indices 2024-2026 showing global average degrading + variance widening + cluster-splitting; §05 push/pull/squeeze/pop applied to the state with current 2024-2026 worked examples (network-state push, civilization-state pull, climate/migration/fiscal squeeze, state-collapse/regime-change pop); §05a the state's actor-fingerprint across the six sensory registers (surveil/broadcast/profile/detain/tax/pardon-deport-banish); §06 the four exits (persist / refactor-in-hold / dormancy with imparted learning / open action-space) with worked cases; §07 three Π<sub>L</sub> projections of three state-events (Syria fall, China smart-courts, Bukele model export) showing operating-system signature; §08 three speculative bubbles (patched-asymmetrically hypothesis, state-thickening-clusters-retain-coordination-advantage, climate-stress-as-largest-threshold-crossing); §09 four operational implications; §10 adjacent fields with 25+ scholars named. ~7,400 words. Hypothes.is wired.</p>
+
+      <p style="margin: 0; font-size: 13px; color: var(--text-dim); font-style: italic;">Counter-readings welcome via the Hypothes.is sidebar on this page. Counter-readings from political scientists, IR theorists, and state-fragility researchers especially welcome — the framework is reading state-canon from outside the discipline, and the natural place for correction is from within.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">12</span>Sources</h2>
+
+    <div class="sources">
+      <h3>Inside the framework</h3>
+      <ul>
+        <li><a href="../atlas/">Atlas v4</a> · the six-register + eight-primitive vocabulary this construct study applies</li>
+        <li><a href="../continuations/21.md">Continuation 21</a> · push/pull/squeeze/pop + hold + kernel-protocol-function three-layer reading</li>
+        <li><a href="../continuations/20.md">Continuation 20</a> · canon dormancy with imparted learning on return — the framework's primitive for state-refactor after collapse</li>
+        <li><a href="../continuations/18.md">Continuation 18</a> · procedural lineage licensing cross-substrate reading</li>
+        <li><a href="../continuations/19.md">Continuation 19</a> · Lakatosian-agnostic success criterion</li>
+        <li><a href="language_v1.html">Language construct study</a> · the Π<sub>L</sub> projection operator §07 deploys</li>
+        <li><a href="religion_v1.html">Religion construct study</a> · same structural template + the agnostic-stance discipline</li>
+        <li><a href="marriage_v1.html">Marriage construct study</a> · same structural template + the open-action-space + dormancy framings</li>
+      </ul>
+
+      <h4>External — state fragility indices (2024-2026)</h4>
+      <ul>
+        <li><a href="https://fragilestatesindex.org/2025/" target="_blank">Fund for Peace · Fragile States Index 2025</a></li>
+        <li><a href="https://www.bertelsmann-stiftung.de/en/publications/publication/did/transformation-index-bti-2024-all" target="_blank">Bertelsmann Transformation Index 2024</a></li>
+        <li><a href="https://www.democracywithoutborders.org/42392/democracy-stabilizes-globally-after-eight-years-of-decline-eiu-says/" target="_blank">EIU Democracy Index 2024 (and 2025 marginal stabilization)</a></li>
+      </ul>
+
+      <h4>External — recent state collapse, refoundation, and consolidation (2023-2026)</h4>
+      <ul>
+        <li><a href="https://gjia.georgetown.edu/2025/03/24/russia-in-africa-private-military-proxies-in-the-sahel/" target="_blank">Georgetown JIA · Russia's Africa Corps in the Sahel (March 2025)</a></li>
+        <li><a href="https://africacenter.org/spotlight/2025-elections/gabon/" target="_blank">Africa Center · Gabon 2025 election under Oligui Nguema</a></li>
+        <li><a href="https://commonslibrary.parliament.uk/research-briefings/cbp-10161/" target="_blank">UK Commons Library · Syria's transition after Assad (2025)</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Sudanese_civil_war_(2023%E2%80%93present)" target="_blank">Sudanese civil war 2023-present</a></li>
+        <li><a href="https://foreignpolicy.com/2025/05/08/sudan-civil-war-conflict-rsf-saf-uae-hemeti-burhan/" target="_blank">Foreign Policy · Sudan parallel governments (May 2025)</a></li>
+        <li><a href="https://www.americasquarterly.org/article/haitis-political-crisis-deepens-amid-a-slide-into-criminal-governance/" target="_blank">Americas Quarterly · Haiti gang governance</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/2024_Venezuelan_presidential_election" target="_blank">2024 Venezuelan election dual-claim</a></li>
+        <li><a href="https://commonslibrary.parliament.uk/research-briefings/cbp-10096/" target="_blank">UK Commons Library · Bangladesh political crisis</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/2024_South_Korean_martial_law_crisis" target="_blank">2024 South Korean martial-law crisis</a></li>
+        <li><a href="https://asiasociety.org/policy-institute/self-strengthening-strategic-competition-what-watch-chinas-fourth-plenum" target="_blank">Asia Society · China Fourth Plenum (Oct 2025)</a></li>
+        <li><a href="https://www.scmp.com/week-asia/economics/article/3341914/saudi-arabia-set-redraw-economic-road-map-megaprojects-scale-down" target="_blank">SCMP · Saudi Vision-2030 scale-down (2025)</a></li>
+        <li><a href="https://www.elsalvadornow.org/2025/01/26/the-bukele-model-sweeping-across-latin-america-el-modelo-bukele-que-recorre-america-latina/" target="_blank">El Salvador NOW · Bukele model spreading across LATAM</a></li>
+        <li><a href="https://www.atlanticcouncil.org/content-series/russia-tomorrow/the-russian-economy-in-2025-between-stagnation-and-militarization/" target="_blank">Atlantic Council · Russian economy 2025 stagnation-or-militarization</a></li>
+        <li><a href="https://www.aljazeera.com/news/2024/1/22/indias-modi-opens-ram-temple-built-on-site-of-demolished-mosque-in-ayodhya" target="_blank">Al Jazeera · Modi Ram Mandir consecration (Jan 2024)</a></li>
+        <li><a href="https://jacobin.com/2025/07/india-hindutva-modi-urban-infrastructure" target="_blank">Jacobin · Hindutva urban infrastructure (2025)</a></li>
+      </ul>
+
+      <h4>External — alternative carriers (charter cities, network states, AI governance, crypto, non-state armed actors)</h4>
+      <ul>
+        <li><a href="https://www.iareporter.com/articles/parties-dispute-whether-investors-bringing-high-stakes-icsid-claims-against-honduras-must-first-exhaust-local-remedies-nature-of-charter-city-project-in-prospera-v-honduras-submissions/" target="_blank">IA Reporter · Próspera v. Honduras ICSID</a></li>
+        <li><a href="https://www.atlanticcouncil.org/blogs/new-atlanticist/what-to-know-about-argentinas-new-investment-promotion-regime/" target="_blank">Atlantic Council · Argentina RIGI under Milei</a></li>
+        <li><a href="https://therealdeal.com/international/2025/11/07/neoms-the-line-project-stalled-in-saudi-arabia-report/" target="_blank">The Real Deal · NEOM scaled to 2.4km (Nov 2025)</a></li>
+        <li><a href="https://news.err.ee/1609934015/estonian-e-residency-program-brought-in-125-million-in-2025" target="_blank">ERR · Estonia e-Residency €125M 2025 revenue</a></li>
+        <li><a href="https://dig.watch/updates/bitcoin-is-no-longer-legal-tender-in-el-salvador" target="_blank">DiG.Watch · El Salvador Bitcoin legal-tender repeal (Feb 2025)</a></li>
+        <li><a href="https://www.parallelcitizen.xyz/p/lessons-2025" target="_blank">Parallel Citizen · Network State lessons 2023-25</a></li>
+        <li><a href="https://www.bangkokpost.com/life/tech/3249447/ai-helped-shenzhen-judges-handle-cases-50-faster-is-this-the-future-for-china" target="_blank">Bangkok Post · China smart courts +50% throughput</a></li>
+        <li><a href="https://www.amnesty.org/en/latest/news/2024/11/denmark-ai-powered-welfare-system-fuels-mass-surveillance-and-risks-discriminating-against-marginalized-groups-report/" target="_blank">Amnesty · Denmark AI welfare "Coded Injustice"</a></li>
+        <li><a href="https://www.binarysemantics.com/blogs/ai-in-tax-real-world-impact-global-examples-and-indias-roadmap/" target="_blank">India GST AI compliance notices (UP 600,000)</a></li>
+        <li><a href="https://www.bloomberg.com/news/articles/2026-01-08/stablecoin-transactions-rose-to-record-33-trillion-led-by-usdc" target="_blank">Bloomberg · Stablecoins $33T transaction volume 2025</a></li>
+        <li><a href="https://www.chainalysis.com/wp-content/uploads/2025/10/the-2025-geography-of-crypto-report-release.pdf" target="_blank">Chainalysis · 2025 Geography of Crypto report</a></li>
+        <li><a href="https://www.atlanticcouncil.org/blogs/econographics/what-to-watch-as-china-prepares-its-digital-yuan-for-prime-time/" target="_blank">Atlantic Council · China e-CNY $2.3T cumulative</a></li>
+        <li><a href="https://www.npr.org/2025/07/03/nx-s1-5455540/haiti-gangs-capital-port-au-prince-violence" target="_blank">NPR · Haiti gangs control 90% of Port-au-Prince (July 2025)</a></li>
+        <li><a href="https://jamestown.org/m23-leverages-taxes-and-minerals-to-sustain-drc-operations/" target="_blank">Jamestown · M23 taxation in DRC</a></li>
+        <li><a href="https://www.eurasiareview.com/02032026-beyond-the-security-lens-a-pragmatic-analysis-of-taliban-governance-in-2026/" target="_blank">Eurasia Review · Taliban governance 2026</a></li>
+      </ul>
+
+      <h4>External — IR theory + state-capacity scholarship</h4>
+      <ul>
+        <li>Francis Fukuyama · <em>Political Order and Political Decay</em> (2014), <em>State-Building</em> (2004)</li>
+        <li>Daron Acemoglu &amp; James Robinson · <em>Why Nations Fail</em> (2012), <em>The Narrow Corridor</em> (2019)</li>
+        <li>James C. Scott · <em>Seeing Like a State</em> (1998)</li>
+        <li>Charles Tilly · <em>Coercion, Capital, and European States, AD 990-1992</em> (1990)</li>
+        <li>Stephen Krasner · <em>Sovereignty: Organized Hypocrisy</em> (1999)</li>
+        <li>Steven Levitsky &amp; Daniel Ziblatt · <em>How Democracies Die</em> (2018), <em>Tyranny of the Minority</em> (2023)</li>
+        <li>Erica Chenoweth · <em>Civil Resistance Works</em> (2011)</li>
+        <li>Balaji Srinivasan · <em>The Network State</em> (2022)</li>
+        <li>Adom Getachew · <em>Worldmaking After Empire</em> (2019)</li>
+      </ul>
+    </div>
+
+    <p style="margin-top: 22px; font-size: 13px; color: var(--text-dim); font-style: italic;">Hypothes.is sidebar enabled. Counter-readings from political scientists, IR theorists, and state-fragility researchers welcome.</p>
+  </div>
+</section>
+
+<footer class="page-footer">
+  <div class="wrap-wide">
+    Agnostic Framework · Construct studies · nation-state v1 · 2026-05-21 · <a href="../index.html">live site</a> · <a href="https://github.com/a70m123r/agnostic-framework">github</a>
+  </div>
+</footer>
+
+</body>
+</html>
