@@ -8,6 +8,39 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-05-21 (atlas v4 — synthesis pass; three diagrams; 13,500 → 5,500 words)
+
+### Changed (major synthesis)
+- **`atlas/index.html` rewritten as v4** following Pav's seed: "have another fresh look with subagesnt for v4, find insights to unify this and make it easy to intuitively absorb with some diagrams, spin up some subagents". The atlas had grown to 13,500 words and lost absorbability. v4 is the synthesis pass — same material, single unifying insight, three new diagrams. Word count: ~5,500.
+- **`atlas/v3.html` preserved** as the deep substrate-anchor reference. v4 links to v3 from the topbar and from §08. Anyone needing the full empirical evidence per register goes to v3; anyone needing the synthesis stays at v4.
+
+### The unifying insight (v4's structural claim)
+- "Every blind sense is a **boundary** that something crosses. The eight primitive pairs are the **eight degrees of freedom a boundary has** — how much it opens, how much it loads, whether it couples to a medium, whether it sustains the coupling, whether it can be seen across. **Configurations are recognizable signatures of those fluxes.** Emergent states (hold, neutralize) are flux-patterns that have reached equilibrium." Two universal coordinates: <em>carrier medium × temporal coupling pattern</em>. Six registers are six standing combinations.
+
+### Three buried insights surfaced (the unification subagent's gift)
+- **Insight i — thresholds, not oscillations.** The framework's deepest structural primitive is threshold crossing; oscillation is what happens when a system repeatedly approaches and crosses a threshold. Half of v3's forced-fits resolve when read this way (resonate/damp = Q-factor threshold; exposed/hidden = visibility threshold; contact/separation = presence threshold). Flagged for v5 refactor of §01 around threshold operators.
+- **Insight ii — failure modes as diagnostic entries.** Each register's hidden parameters become visible only when it fails. v4 §04 makes this structural: each of the six register summaries ends with the failure mode in red (numbness / anorexia / anosmia / blindness / deafness / obstruction). The verbs are the catalog; the failures are the diagnosis.
+- **Insight iii — participatory taxonomy.** The atlas isn't a passive classification of nature; it's a map of which boundary-flux moves are available to which kind of system. Every actor IS the set of verbs it can perform across the six registers. v4 §06 (Figure C) makes this visual.
+
+### Three new diagrams shipped
+- **Figure A · The central membrane** (1200×820 SVG). The hero diagram. Vertical permeable boundary in the center; six register-lenses cross it (oral/sight/olfactory/sound/touch/excretory) each carrying a different combination of (medium, temporal pattern); temporal-pattern clock above (4 wedges: pulse / periodic / sustained / threshold); 8-DOF octagonal dial below (permeability / selectivity / curvature / tension / asymmetry / refresh / aperture-count / reversibility). Click insight: same membrane, six lenses; same dial, six shapes.
+- **Figure B · Register periodic table** (1000×540 SVG). 4 columns (matter / force / mech-wave / EM-chemical) × 3 rows (pulse / periodic / sustained). Six canonical registers in solid cells; eight candidate cells dashed. Reduction arrows from sight→olfactory (EM→chemical) and sound→touch (wave→contact). Per-cell failure-mode tag in red. Click insight: six registers are six cells in a 4×3 grid, not a random list; empty cells predict candidate registers.
+- **Figure C · Actor fingerprints** (1200×760 SVG). Six hexagonal radar charts for government / market / organism / AI / religion / military. Each axis is one sensory register with that actor's signature verb on the axis. Each fingerprint is a different asymmetric polygon — government bulges sight/excretory; market bulges olfactory/oral; organism is balanced; AI bulges sight/sound/olfactory/oral but weak on touch; religion bulges olfactory/oral/excretory; military bulges sight/touch/excretory. Click insight: no two actors share a shape — identity is the polygon.
+
+### §07 — operational implications (what v4 lets you do)
+- Diagnose stuck systems by asking which boundary-parameter has shifted (use the 8-DOF dial as checklist)
+- Predict candidate registers from the empty cells in Figure B
+- Identify any new observer-type by drawing its fingerprint over the six registers
+
+### Method
+- Spawned two general-purpose subagents with WebSearch + access to fetch the live v3 atlas. Subagent 1 (unification) evaluated 5 candidate frames (oscillation / coupling / gradient-crossing / attention / combination) against v3's actual content and produced an opinionated verdict — boundary-handling-flux. Subagent 2 (diagrams) took the verdict and produced implementation-ready specs for three SVGs with viewBox dimensions, layout, color codes, and per-element labels. Both subagents under 1500 words; both attribution explicit in §09 provenance.
+
+### Added (downstream)
+- **`index.html` Map section** lede updated to point at v4 with v3 preserved as deep-reference link.
+- **`timeline/index.html`** new top entry for atlas v4 with the Pav steer quoted verbatim and both diagrams + buried insights itemized.
+
+---
+
 ## 2026-05-21 (atlas v3 — sight + sound + music + military)
 
 ### Changed (major expansion)
