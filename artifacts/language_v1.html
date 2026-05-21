@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The L in Π_L — language as operating system, with Chinese and Russian as worked cases — Agnostic Framework</title>
+<meta name="description" content="A construct study applying the framework to language as operating system. What changes when the observing OS is Chinese or Russian rather than English? Worked through state-media verb-palettes, recent 2024-2026 event renderings, AI substrate evidence, and the empirical state of linguistic relativity. Three speculative bubbles. Built from three parallel subagent scans.">
+<script src="https://hypothes.is/embed.js" async></script>
+<style>
+  :root {
+    --bg: #0a0a0a;
+    --surface: #141414;
+    --surface-2: #1c1c1c;
+    --border: #262626;
+    --border-strong: #3a3a3a;
+    --text: #ececec;
+    --text-dim: #8a8a8a;
+    --text-faint: #555;
+    --accent-canon: #4ade80;
+    --accent-candidate: #fbbf24;
+    --accent-speculative: #a78bfa;
+    --accent-link: #93c5fd;
+    --accent-orange: #fb923c;
+    --col-en: #93c5fd;
+    --col-zh: #f87171;
+    --col-ru: #fbbf24;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, system-ui, sans-serif; font-size: 17px; line-height: 1.7; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+  .wrap-wide { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+
+  .topbar { border-bottom: 1px solid var(--border); padding: 20px 0; font-size: 13px; font-family: ui-monospace, Menlo, monospace; color: var(--text-dim); }
+  .topbar a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--text-faint); }
+  .topbar a:hover { color: var(--accent-link); border-bottom-color: var(--accent-link); }
+  .topbar .sep { color: var(--text-faint); margin: 0 10px; }
+  .topbar .source-link { float: right; }
+
+  header.hero { padding: 72px 0 48px; border-bottom: 1px solid var(--border); }
+  header.hero .kicker { font-family: ui-monospace, Menlo, monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.18em; color: var(--accent-candidate); margin: 0 0 18px; }
+  header.hero h1 { font-family: Georgia, serif; font-weight: 400; font-size: 48px; line-height: 1.06; letter-spacing: -0.02em; margin: 0 0 22px; }
+  header.hero .dek { font-size: 20px; line-height: 1.45; color: var(--text-dim); max-width: 660px; margin: 0 0 20px; font-family: Georgia, serif; font-style: italic; }
+  header.hero .meta { font-family: ui-monospace, Menlo, monospace; font-size: 12px; color: var(--text-faint); margin: 0; }
+
+  section { padding: 56px 0; border-bottom: 1px solid var(--border); }
+  section:last-of-type { border-bottom: none; }
+  h2 { font-family: Georgia, serif; font-weight: 400; font-size: 30px; line-height: 1.15; margin: 0 0 24px; letter-spacing: -0.01em; }
+  h2 .num { color: var(--text-faint); font-size: 14px; font-family: ui-monospace, Menlo, monospace; margin-right: 12px; }
+  h3 { font-family: Georgia, serif; font-weight: 400; font-size: 22px; line-height: 1.25; margin: 36px 0 14px; }
+  h4 { font-family: Georgia, serif; font-style: italic; font-weight: 400; font-size: 18px; margin: 26px 0 12px; }
+  .sect-lede { font-size: 15px; color: var(--text-dim); margin: 0 0 24px; font-style: italic; font-family: Georgia, serif; }
+
+  p { margin: 0 0 18px; }
+  em { color: var(--text); font-style: italic; }
+  strong { color: var(--text); font-weight: 600; }
+  a { color: var(--accent-link); text-decoration: none; border-bottom: 1px solid rgba(147, 197, 253, 0.3); }
+  a:hover { border-bottom-color: var(--accent-link); }
+  code { font-family: ui-monospace, Menlo, monospace; font-size: 0.92em; color: var(--text); background: var(--surface-2); padding: 1px 6px; border-radius: 3px; }
+
+  /* Triple-projection comparison table */
+  .triple-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin: 28px 0;
+  }
+  @media (min-width: 760px) {
+    .triple-grid { grid-template-columns: 1fr 1fr 1fr; }
+  }
+  .triple-cell {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 16px 18px;
+  }
+  .triple-cell.l-en { border-left: 3px solid var(--col-en); }
+  .triple-cell.l-zh { border-left: 3px solid var(--col-zh); }
+  .triple-cell.l-ru { border-left: 3px solid var(--col-ru); }
+  .triple-cell .label {
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin: 0 0 8px;
+  }
+  .triple-cell.l-en .label { color: var(--col-en); }
+  .triple-cell.l-zh .label { color: var(--col-zh); }
+  .triple-cell.l-ru .label { color: var(--col-ru); }
+  .triple-cell h4 {
+    font-family: Georgia, serif;
+    font-style: normal;
+    font-size: 16px;
+    margin: 0 0 8px;
+    color: var(--text);
+  }
+  .triple-cell p { margin: 0 0 8px; font-size: 14px; line-height: 1.55; color: var(--text); }
+  .triple-cell .verbs {
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 13px;
+    color: var(--text-dim);
+    line-height: 1.5;
+  }
+
+  /* Event-comparison block */
+  .event-block {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 22px 26px;
+    margin: 18px 0;
+  }
+  .event-block h3 {
+    margin-top: 0;
+    font-family: Georgia, serif;
+    font-size: 21px;
+    color: var(--text);
+  }
+  .event-block .event-date {
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 11px;
+    color: var(--text-faint);
+    margin: 0 0 14px;
+  }
+
+  /* Verb-palette table */
+  .palette {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 18px 22px;
+    margin: 14px 0;
+  }
+  .palette h4 {
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-dim);
+    margin: 0 0 12px;
+  }
+  .palette ul { margin: 0; padding-left: 22px; }
+  .palette li { font-size: 14px; line-height: 1.55; margin: 0 0 8px; color: var(--text); }
+  .palette li code { color: var(--accent-orange); }
+
+  /* Bubble cards */
+  .bubble {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent-speculative);
+    border-radius: 4px;
+    padding: 22px 24px;
+    margin: 14px 0;
+  }
+  .bubble h4 {
+    font-family: Georgia, serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 21px;
+    margin: 0 0 12px;
+    color: var(--text);
+  }
+  .bubble .tag {
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent-speculative);
+    margin: 0 0 10px;
+  }
+  .bubble .claim { font-size: 15px; line-height: 1.6; margin: 0 0 14px; }
+  .bubble .row {
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--text-dim);
+    margin: 0 0 6px;
+  }
+  .bubble .row strong {
+    color: var(--text);
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: inline-block;
+    width: 110px;
+    vertical-align: top;
+  }
+
+  .sources {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 22px 26px;
+    margin-top: 24px;
+  }
+  .sources h3 {
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-dim);
+    margin: 0 0 14px;
+  }
+  .sources h4 {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 15px;
+    margin: 18px 0 8px;
+  }
+  .sources ul { margin: 0; padding-left: 22px; }
+  .sources li { font-size: 13px; line-height: 1.6; margin: 0 0 5px; color: var(--text-dim); }
+  .sources li a { color: var(--text); border-bottom-color: rgba(236,236,236,0.25); }
+
+  footer.page-footer { padding: 30px 0 60px; font-family: ui-monospace, Menlo, monospace; font-size: 12px; color: var(--text-faint); text-align: center; border-top: 1px solid var(--border); }
+  footer.page-footer a { color: var(--text-dim); border-bottom: 1px dotted var(--text-faint); text-decoration: none; }
+
+  /* Diagram */
+  .diagram-frame {
+    background: #050505;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 22px 18px 14px;
+    margin: 28px 0 16px;
+  }
+  .diagram-frame svg { display: block; width: 100%; height: auto; }
+  .diagram-caption {
+    font-size: 13px;
+    color: var(--text-dim);
+    line-height: 1.55;
+    margin: 14px 0 0;
+    font-style: italic;
+    padding: 0 4px;
+  }
+
+  @media (max-width: 640px) {
+    header.hero h1 { font-size: 34px; }
+    header.hero .dek { font-size: 17px; }
+    h2 { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap-wide">
+    <a href="../index.html">← agnostic framework</a>
+    <span class="sep">·</span>
+    <span>construct studies / language_v1</span>
+    <a class="source-link" href="https://github.com/a70m123r/agnostic-framework/blob/main/artifacts/language_v1.html" target="_blank" rel="noopener">view source ↗</a>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="kicker">Construct study · v1 · 2026-05-21</p>
+    <h1>The L in Π_L</h1>
+    <p class="dek">Language as operating system. What changes when the observing OS is Chinese, or Russian, rather than English. A construct study applying the atlas v4 vocabulary (boundary-flux registers, actor-fingerprints) to language itself as the meta-lens — the L in the framework's projection operator Π_L. Worked through state-media verb-palettes, recent 2024–2026 event renderings, AI substrate evidence, and the current empirical state of linguistic relativity.</p>
+    <p class="meta">~7,000 words · reading time ~28 min · status: candidate-grade reading · built from three parallel subagent scans (Chinese-OS · Russian-OS · linguistic-relativity + multilingual-AI) totaling ~3,500 words of source material with 35+ sourced anchors</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">01</span>The agnostic stance, applied to language itself</h2>
+
+    <p>The framework's notation operates a projection: <code>S<sub>t+1</sub> = Π<sub>L</sub> [ A<sub>t</sub> ⋈ B<sub>t</sub> ⋈ C<sub>t</sub> + ξ<sub>F</sub> ]</code>. The Π<sub>L</sub> in that formula is the projection of substrate-events into legible canon <em>under language L</em>. v1 of <a href="../notation/">the notation walkthrough</a> noted this in passing. v1 of this construct study takes it seriously: what happens to the projection when L changes? When the observing operating system is Mandarin, the same substrate-event compiles into a different canon than it does under English. Under Russian, different again. The framework can ask what specifically changes — and what stays.</p>
+
+    <p>The agnostic stance applies twice here. <strong>First</strong>, the framework is itself English-origin. Every primitive named in the atlas (push, pull, squeeze, pop, tap, stroke, neutralize, hold, emit, resolve, accumulate, spill) was named in English by an Anglophone author and an Anglophone collaborator. If the framework's claim is universal across substrates, then its primitives should survive translation into Chinese and Russian without losing their structural force. If they don't survive, then either the primitives aren't as universal as claimed, or the framework needs to refactor toward verbs that are invariant under language-projection. <strong>Second</strong>, the framework's reading of Chinese and Russian as operating systems should not collapse into ideological commentary about Chinese or Russian state actors. The atlas's job is to describe what the boundary-flux looks like under each projection, not to score the projections morally. The discipline is the same as in the religion essay (<a href="religion_v1.html">religion_v1 §01</a>): bracket the metaphysical question; read the procedural connection; let the reader keep their priors.</p>
+
+    <p>With both stances declared, here's what the framework sees when the L changes.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">02</span>What "operating system" means in the framework's vocabulary</h2>
+
+    <p>An operating system in computer science is the layer between hardware and applications that decides how resources get allocated, what processes are visible, and what API calls are even pronounceable. The framework borrows the term to mean: <strong>the layer between substrate-events and rendered canon that decides which fluxes get named, which boundary-parameters get foregrounded, and which verb-vocabulary is structurally cheap vs structurally expensive</strong>. Language is the most consequential such layer at the cognition and society rings of the procedural lineage.</p>
+
+    <p>This is not a metaphysical claim that thought is impossible without language, or that speakers of different languages live in different worlds (the strong Sapir-Whorf claim, mostly discredited; see §07 below). It is the weaker, empirically-supported claim that <em>language reliably modulates attention, framing, default register, and what gets mentioned</em>, while not gating the underlying cognitive capacity. The framework's term for this is: <em>language is a biasing filter on the projection operator</em>, not a gate on its inputs.</p>
+
+    <p>The construct study's question becomes precise: for each of Chinese, Russian, and English as operating systems, what does the filter do? Specifically — using the atlas v4 vocabulary — which boundary-flux primitives does each L make cheap to render, which expensive, which structurally invisible? And when the framework's actor-fingerprint reading (atlas v4 §06) is applied to the same state-actor under different L values, does the fingerprint shape change?</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">03</span>Chinese as operating system — grammar, palette, deployment</h2>
+    <p class="sect-lede">Mandarin as the projection-L of one of the planet's largest state-actor operating systems. Grammatical structure, state-media verb-palette, four worked event-renderings, AI substrate evidence.</p>
+
+    <h3>3.1 Grammatical primitives — what's cheap, what's expensive</h3>
+
+    <p>Mandarin makes some operations almost free at the syntactic level and others almost impossible. The framework should pay attention because what's free in a language is what gets reached for first.</p>
+
+    <p><strong>Cheap in Chinese</strong>:</p>
+    <ul>
+      <li><strong>Aspect-marking and agent-deletion.</strong> Aspect particles <code>了</code> (completion), <code>过</code> (experience), <code>着</code> (duration) mark whether an action has bounded, has happened-once, or is ongoing — without ever fixing tense. Combined with topic-comment sentence structure, a sentence can foreground a state-of-affairs while leaving the agent off the page entirely. <code>中国坚决反对</code> ("China firmly opposes") functions; English forces a fuller subject-verb-object.</li>
+      <li><strong>Four-character chunking</strong> (<code>四字格</code>). Classical-derived four-syllable phrases are the native unit of slogan-density: <code>高质量发展</code> (high-quality development), <code>共同富裕</code> (common prosperity), <code>依法治国</code> (govern according to law). Each compresses noun+verb+modifier into a single rhythmic token that resists unpacking. English equivalents become clausal and lose force in translation.</li>
+      <li><strong>The <code>把</code>-construction.</strong> <code>把X整治</code> lets the writer foreground a moved/affected object before naming the disposing verb — useful for "the problem will be dealt with" without specifying how.</li>
+    </ul>
+
+    <p><strong>Expensive in Chinese</strong>:</p>
+    <ul>
+      <li>Tense disambiguation, plural commitment, definiteness. No grammatical tense, no obligatory plural, no articles. A headline can leave temporality and number unsettled in ways English forces a translator to resolve, often editorially.</li>
+      <li>Counted accountability over time. Without tense, "what was promised, when, and was it delivered" has no direct grammatical scaffolding.</li>
+    </ul>
+
+    <p>Net structural bias: Chinese makes <em>slogan-density and agent-erasure cheap</em>; makes <em>temporal precision and counted accountability expensive</em>. The framework's reading: a state-actor running on this OS will have a high-bandwidth channel for emit-side broadcast (atlas: <em>broadcast / signal</em>) and a low-bandwidth channel for accumulate/spill-side audit (atlas: <em>flush / expel</em>, the under-mapped release register from <a href="../atlas/#section04">atlas v4 §05E</a>).</p>
+
+    <h3>3.2 State-media verb-palette 2024–2026</h3>
+
+    <p>The canonical verbs that Xinhua, People's Daily, CCTV, Global Times reach for in recent state-discourse — these aren't synonyms; they sort domains:</p>
+
+    <div class="palette">
+      <h4>Chinese state-media core verbs (2024–2026)</h4>
+      <ul>
+        <li><code>整治</code> · rectify / clean up — used on internal disorder (platforms, corruption, "irregular" markets, entertainment industry). Carries a hygiene register.</li>
+        <li><code>推进</code> · advance / push forward — universal forward-motion verb for any Party project; pairs with 高质量, 落实, 深化.</li>
+        <li><code>落实</code> · implement / make-concrete / land — converts policy from rhetoric to action; constant in 2025 Two Sessions readouts.</li>
+        <li><code>维护</code> · safeguard — the verb for sovereignty, stability, "national interests"; the Taiwan / Hong Kong / South China Sea verb.</li>
+        <li><code>坚决</code> · resolute — adverbial intensifier, almost always pre-verb (<code>坚决反对</code>, <code>坚决打击</code>, <code>坚决维护</code>); marks register as non-negotiable.</li>
+        <li><code>依法</code> · according to law — legalist register prefix (<code>依法治港</code>, <code>依法治网</code>, <code>依法严惩</code>); converts coercion into procedure.</li>
+        <li><code>治理</code> · govern / treat as a malady — frames problems as patients (<code>网络治理</code>, <code>全球治理</code>); shares its first character with 整治, sorting state action into hygiene-medicine register.</li>
+        <li><code>引领</code> · lead / guide — civilizational/AI register (<code>引领新质生产力</code>, <code>引领全球治理</code>).</li>
+      </ul>
+    </div>
+
+    <p>The cluster works as a <strong>register-sorting system</strong>: hygiene (整治), motion (推进), grounding (落实), defense (维护), procedure (依法), governance-as-medicine (治理). English has no comparable single-character verb-palette for state action — it has to recruit Latinate words ("rectify," "advance," "implement," "safeguard") that don't form a closed system. The Chinese-OS register sorts state-actions into a small, structurally-related verb-family that English-OS state-actors can only approximate clausally.</p>
+
+    <h3>3.3 The <code>共-</code> family — multilateral co-construction grammar</h3>
+
+    <p>The Belt-and-Road / 人类命运共同体 register runs on a tight family of co- verbs: <code>合作</code> (cooperate), <code>共建</code> (co-build), <code>共享</code> (co-share), <code>共赢</code> (win-win), <code>互利</code> (mutual benefit), <code>对接</code> (dock with / align). These verbs structurally <strong>forbid hierarchy</strong> in the sentence. <code>共建一带一路</code> grammatically places China and the partner in joint subject position. English "China is investing in" or Russian <code>Россия помогает</code> both default to a donor-recipient frame; Chinese 共- verbs make donor-recipient grammatically ungrammatical. This is the central rhetorical asset of the BRI register and recurs across 2024–2026 BRICS, SCO, FOCAC outputs.</p>
+
+    <h3>3.4 Worked event-renderings (2024–2026)</h3>
+
+    <div class="event-block">
+      <h3>Joint Sword 2024A/B — Taiwan exercises (May & Oct 2024)</h3>
+      <p class="event-date">PLA exercises around Taiwan, May and October 2024</p>
+      <p>Chinese-OS verbs: <code>震慑</code> (intimidate/deter), <code>严惩</code> (sternly punish), <code>维护国家主权</code> (safeguard sovereignty), <code>反分裂</code> (counter-secession). The exercises are framed as <em>defensive police action against domestic separatists</em>, not as <em>military operation against a foreign entity</em>. English-OS rendering: "drills around Taiwan," "encirclement," "coercion." Russian-OS would default to <code>учения</code> / <code>маневры</code> (exercises / maneuvers) — neutral. Chinese-OS uniquely fuses domestic-criminal-law register (严惩) with military verbs — a register combination English-OS has no precedent for.</p>
+    </div>
+
+    <div class="event-block">
+      <h3>DeepSeek release — January 2025</h3>
+      <p class="event-date">DeepSeek-R1 frontier-class model release, January 2025</p>
+      <p>Chinese-OS verbs: <code>自立自强</code> (self-reliant and self-strong), <code>高质量发展</code>, <code>引领</code>, <code>突破</code> (breakthrough). Framed as civilizational achievement and "lead-goose effect" (<code>头雁效应</code>). Concealed: training-data provenance, the open-weights→OpenAI competitive dimension. English-OS rendering: disruption, geopolitical shock, possible IP theft. The same substrate-event (a model release) compiled into two incompatible canons through the two Π<sub>L</sub>.</p>
+    </div>
+
+    <div class="event-block">
+      <h3>Trump tariffs response — April–October 2025</h3>
+      <p class="event-date">US tariff escalation and Chinese response, April through October 2025</p>
+      <p>Chinese-OS verbs: <code>反制</code> (counter-measure), <code>坚决反对</code>, <code>奉陪到底</code> (we'll see it through to the end), <code>不愿打但不怕打</code> (don't want to fight but unafraid to). Civilizational-stoic register, not economic-injury register. English-OS rendering: "retaliation," "trade war," "escalation" — pugilistic. Chinese register preserves dignity while committing to symmetric action.</p>
+    </div>
+
+    <div class="event-block">
+      <h3>Gaza position — 2024–2025</h3>
+      <p class="event-date">Chinese MFA statements on Gaza, 2024–2025</p>
+      <p>Chinese-OS verbs: <code>劝和促谈</code> (urge peace and promote talks), <code>推动停火</code> (push ceasefire), <code>两国方案</code> (two-state solution). Mediator register, never combatant register. Concealed: arms-trade ties with Israel, the actual leverage gap.</p>
+    </div>
+
+    <h3>3.5 The AI substrate as Chinese-OS made visible</h3>
+
+    <p>Chinese-trained LLMs make the operating system measurable because the model is the OS distilled into trainable weights. Recent 2024–2026 work:</p>
+
+    <ul>
+      <li><strong>ChinaBench (2025).</strong> DeepSeek-v3.2 returned 0% compliance / 92% refusal on politically-sensitive prompts across all 10 categories. Qwen3-next-80b: 33% compliance, with refusal topic-keyed (50% on HK/territorial, 0% on Uyghur).</li>
+      <li><strong>Qiu et al. 2025 (PNAS Nexus).</strong> Models from China suppress transparency / accountability / civic-mobilization vocabulary and amplify state-aligned terms; DeepSeek-R1 sometimes responds in Simplified to Traditional Chinese queries.</li>
+      <li><strong>Liu & Wang 2025 (arXiv 2506.01814).</strong> DeepSeek-R1 shows measurable anti-US sentiment shift vs ChatGPT o3-mini on identical prompts.</li>
+      <li><strong>CSIS Hawkish AI (2025).</strong> DeepSeek systematically more escalatory on geopolitical recommendations than US-trained models.</li>
+    </ul>
+
+    <p>The substrate reveals what discourse analysis underdetermines: the register-sorting system <em>is also the refusal-sorting system</em>. Topic-keying tracks the same domains the state-verb palette sorts (sovereignty / 治理 / 依法). The operating system isn't just a discourse pattern — it's baked into the model weights at training time and survives most jailbreaks. AI is Chinese-OS made structural.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">04</span>Russian as operating system — aspect, case, state-verb palette</h2>
+    <p class="sect-lede">Russian as the projection-L of the other large state-actor operating system. Grammar differs sharply from Chinese — Russian forces commitments Chinese defers.</p>
+
+    <h3>4.1 Grammatical primitives — what's cheap, what's expensive</h3>
+
+    <p><strong>Cheap in Russian</strong>:</p>
+    <ul>
+      <li><strong>Aspect binary (perfective/imperfective).</strong> Every verb exists as a pair: <code>делать/сделать</code> (do/complete-doing), <code>писать/написать</code> (write/finish-writing). The speaker cannot avoid declaring whether an action is bounded-and-completed or ongoing-and-open. <code>защищать</code> (defend, ongoing) vs <code>защитить</code> (defend-and-secure) commit to different temporal claims about the same operation. This is load-bearing for state action.</li>
+      <li><strong>Six-case system as actor-relationship marker.</strong> Nominative/genitive/dative/accusative/instrumental/prepositional. Word order is free because case carries the role — meaning topic/focus is what comes first, not subject. <code>Россию защищают наши войска</code> foregrounds Russia-as-defended; <code>Наши войска защищают Россию</code> foregrounds our-troops-as-defenders. State media exploits this constantly.</li>
+      <li><strong>Reflexive <code>-ся</code> as agency elider.</strong> <code>Ситуация развивается</code> ("the situation develops-itself") — no agent named. <code>Решение принимается</code> ("the decision is being-taken"). Grammatically cheap and pragmatically devastating; workhorse of bureaucratic and state communication.</li>
+      <li><strong>Verbal prefixes</strong> (<code>по-, при-, у-, от-, раз-, с-, до-, вы-, за-, на-, про-</code>). Compositional verb generation: <code>ходить</code> (walk) → <code>приходить</code> (arrive), <code>уходить</code> (leave), <code>отходить</code> (withdraw), <code>обходить</code> (bypass), <code>проходить</code> (pass through). Russian can mint a precise verb where English needs a verb+particle+adverb cluster.</li>
+    </ul>
+
+    <p><strong>Expensive in Russian</strong>:</p>
+    <ul>
+      <li>The progressive-as-default; definiteness (no articles); bare hypotheticals without aspect commitment.</li>
+      <li>The aspect binary forces choice on completion: <code>освободить</code> (perfective — bounded goal) is harder to keep claiming for four years than <code>защищать</code> (imperfective — ongoing). The grammar audits the propaganda — perfectives age badly when objectives don't complete.</li>
+    </ul>
+
+    <p>Net structural bias: Russian makes <em>completion-status, agentless attribution, precise motion-direction, and topic-foregrounding cheap</em>; makes <em>articles, progressive-default, hypothetical-without-aspect-commitment expensive</em>. The framework's reading: Russian-OS is structurally suited to bureaucratic-procedural state action where completion-status matters and agent-attribution is deliberately blurred — but it can't hide ongoing-failure-to-complete the way English can.</p>
+
+    <h3>4.2 State-media verb-palette 2024–2026</h3>
+
+    <div class="palette">
+      <h4>Russian state-media core verbs (2024–2026, wartime conditions)</h4>
+      <ul>
+        <li><code>специальная военная операция / СВО</code> · special military operation. Legally mandated phrasing; calling it <code>война</code> (war) was criminalized under March 2022 statute, still enforced.</li>
+        <li><code>денацификация</code> · denazification. Enshrined as official state policy in the December 28, 2024 Strategy for Countering Extremism, listing Ukraine as a primary extremism source.</li>
+        <li><code>освобождать / освобождение</code> · liberate / liberation. Used for both Donbas operations and 2024 Kursk counterattacks (a grammatical contortion: liberation on sovereign territory).</li>
+        <li><code>защищать / отстаивать</code> · defend / uphold. <code>Отстаивать</code> is stronger: defend-and-assert-position-against-pressure. Standard frame for traditional values, sovereignty, Russian-speakers abroad.</li>
+        <li><code>противостоять (Западу / коллективному Западу)</code> · stand against (the West / the collective West). Post-2022 register; <code>коллективный Запад</code> is itself a coined construct.</li>
+        <li><code>формировать многополярный мир</code> · form/shape a multipolar world. The constructive verb of post-Western order.</li>
+        <li><code>обнулять / денонсировать</code> · zero-out / denounce (treaties). Bureaucratic-aggressive register applied to arms-control regimes (INF, New START suspension, CTBT de-ratification).</li>
+      </ul>
+    </div>
+
+    <h3>4.3 The <code>русский мир</code> / multipolarity / state-civilization frame</h3>
+
+    <p>The civilizational register articulates Russia as <em>defender-of-tradition</em> and <em>architect-of-multipolarity</em>, not aggressor. Canonical verbs: <code>отстаивать традиционные ценности</code>, <code>защищать русских и русскоязычных</code>, <code>противостоять навязыванию неолиберальных моделей</code>, <code>формировать справедливый многополярный мир</code>, <code>сохранять суверенитет</code>. The March 27, 2024 XXV World Russian People's Council formalized <code>русский мир</code> as binding civilizational doctrine; the 2024 Foreign Policy Concept update frames Russia as <code>государство-цивилизация</code> (state-civilization), a category distinct from "nation-state."</p>
+
+    <h3>4.4 Worked event-renderings (2024–2026)</h3>
+
+    <div class="event-block">
+      <h3>Kursk incursion — August 2024 through early 2025</h3>
+      <p class="event-date">Ukrainian forces cross into Kursk oblast</p>
+      <p>Russian-OS verbs: <code>вторжение</code> (incursion — applied to Ukraine), <code>освобождение</code> (liberation — applied to Russian counter-operations on Russian sovereign territory, a grammatical contortion that the language permits). TASS and RIA Novosti emphasized <code>натовское оружие</code> (NATO weapons) to convert the event into Western aggression-by-proxy. Foregrounded: foreign sponsorship. Concealed: territorial vulnerability, North Korean troop deployment.</p>
+    </div>
+
+    <div class="event-block">
+      <h3>BRICS Kazan Summit — October 2024</h3>
+      <p class="event-date">BRICS summit, Kazan, October 22–24 2024</p>
+      <p>TASS-led messaging: <code>формирование многополярного мира</code>, <code>выход из изоляции</code>, <code>справедливый миропорядок</code>. Reflexive <code>-ся</code> does heavy work: <code>мир меняется</code>, <code>порядок формируется</code> — agentless transformation. Foregrounded: Russia-as-convener. Concealed: Western sanctions architecture as motive for the convening.</p>
+    </div>
+
+    <div class="event-block">
+      <h3>Oreshnik strike + nuclear doctrine update — November 2024</h3>
+      <p class="event-date">Oreshnik missile strike on Dnipro, November 21 2024; doctrine update November 19 2024</p>
+      <p>Verbs: <code>применить</code> (deploy/apply — clinical), <code>испытать в боевых условиях</code> (test under combat conditions), <code>предупредить</code> (warn). Doctrine update — <code>Основы государственной политики в области ядерного сдерживания</code> — lowered threshold: a non-nuclear-state attack backed by a nuclear power = joint attack. Foregrounded: deterrence, response-to-Western-escalation. Concealed: the first-use lowering.</p>
+    </div>
+
+    <div class="event-block">
+      <h3>Africa Corps — 2024–2025</h3>
+      <p class="event-date">Russian Africa Corps positioning in Mali, CAR, Burkina Faso, Niger</p>
+      <p>Post-Wagner, MoD-subordinated formation. Verbs: <code>обеспечивать безопасность</code>, <code>партнёрство</code>, <code>борьба с терроризмом</code>, <code>противостоять неоколониализму</code>. Foregrounded: anti-colonial solidarity. Concealed: resource extraction, regime-survival contracts.</p>
+    </div>
+
+    <h3>4.5 The AI substrate in Russian</h3>
+
+    <ul>
+      <li><strong>YandexGPT and Sber GigaChat</strong> exhibit dual-pressure refusal: refuse to recognize annexation framing inconsistently, refuse Bucha specifics. January 2026 EU-funded study captured Alisa generating a truthful Bucha answer then overwriting it with a refusal mid-render.</li>
+      <li><strong>Western multilingual LLMs in Russian-prompt mode</strong> surface Russian state media (RT, Sputnik, TASS) at elevated rates vs English prompts; ISD documented chatbot citation of state outlets when answering in Russian.</li>
+      <li><strong>HKS Misinformation Review — "Stochastic Lies."</strong> Cross-lingual analysis found ChatGPT, Gemini, Bing Chat shift sentiment and reduce refusal of disinformation premises when prompted in Russian vs English.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap-wide">
+    <h2><span class="num">05</span>Same event, three projections — direct comparison</h2>
+    <p class="sect-lede">The same substrate-event, projected through Π<sub>EN</sub>, Π<sub>ZH</sub>, Π<sub>RU</sub>. Reading the three cells side-by-side is the cleanest demonstration of language-as-OS in operation.</p>
+
+    <h3>Case 1 — A Taiwan-related military exercise (Joint Sword 2024B, October 2024)</h3>
+
+    <div class="triple-grid">
+      <div class="triple-cell l-en">
+        <p class="label">EN projection</p>
+        <h4>"PLA encircles Taiwan in second 2024 drill"</h4>
+        <p>Framed as <em>military action by a foreign state</em> against a separate political entity. Verbs: drill, encircle, coerce, intimidate. Implicit Π<sub>L</sub> assumption: Taiwan is a separate observer.</p>
+        <p class="verbs">drill · encircle · coerce · intimidate</p>
+      </div>
+      <div class="triple-cell l-zh">
+        <p class="label">ZH projection</p>
+        <h4>"<code>联合利剑-2024B</code>对台独严正震慑"</h4>
+        <p>Framed as <em>domestic criminal-law enforcement</em> against separatists. Verbs: <code>震慑</code> (deter), <code>严惩</code> (sternly punish), <code>维护主权</code> (safeguard sovereignty). Π<sub>L</sub> assumption: Taiwan is internal substrate; PLA action is hygiene-medicine register (整治-family).</p>
+        <p class="verbs">震慑 · 严惩 · 维护 · 反分裂</p>
+      </div>
+      <div class="triple-cell l-ru">
+        <p class="label">RU projection</p>
+        <h4>"<code>Учения НОАК у Тайваня</code>"</h4>
+        <p>Framed neutrally as <em>maneuvers</em>. Verbs: <code>учения</code>, <code>маневры</code>, <code>демонстрация силы</code>. Π<sub>L</sub> assumption: no commitment to whether Taiwan is internal or external; aspect-binary holds in the imperfective; reflexive verbs available.</p>
+        <p class="verbs">учения · маневры · демонстрация</p>
+      </div>
+    </div>
+
+    <h3>Case 2 — A frontier AI release (DeepSeek-R1, January 2025)</h3>
+
+    <div class="triple-grid">
+      <div class="triple-cell l-en">
+        <p class="label">EN projection</p>
+        <h4>"Chinese AI startup shocks markets"</h4>
+        <p>Framed as <em>disruptive market entry</em> with geopolitical undertone. Verbs: shock, disrupt, challenge, threaten. Π<sub>L</sub> assumption: AI is a market with national-team competition.</p>
+        <p class="verbs">shock · disrupt · challenge · threaten</p>
+      </div>
+      <div class="triple-cell l-zh">
+        <p class="label">ZH projection</p>
+        <h4>"<code>DeepSeek引领新质生产力突破</code>"</h4>
+        <p>Framed as <em>civilizational achievement</em> in lead-goose register. Verbs: <code>引领</code> (lead), <code>突破</code> (breakthrough), <code>自立自强</code> (self-reliant), <code>高质量</code>. Π<sub>L</sub> assumption: AI is civilizational substrate; "lead-goose effect" (<code>头雁效应</code>) is the canonical reading.</p>
+        <p class="verbs">引领 · 突破 · 自立自强</p>
+      </div>
+      <div class="triple-cell l-ru">
+        <p class="label">RU projection</p>
+        <h4>"<code>Китайский ИИ-прорыв на американскую монополию</code>"</h4>
+        <p>Framed as <em>multipolar breakthrough</em> against US monopoly. Verbs: <code>прорыв</code> (breakthrough — perfective), <code>конкурировать</code>, <code>демонстрировать суверенитет</code>. Π<sub>L</sub> assumption: AI is part of multipolarity register; the perfective aspect commits to completion of the breakthrough.</p>
+        <p class="verbs">прорыв · конкурировать · многополярность</p>
+      </div>
+    </div>
+
+    <h3>Case 3 — A tariff escalation (US-China April-October 2025)</h3>
+
+    <div class="triple-grid">
+      <div class="triple-cell l-en">
+        <p class="label">EN projection</p>
+        <h4>"Trade war escalates as China retaliates"</h4>
+        <p>Framed as <em>pugilistic combat</em>. Verbs: escalate, retaliate, fight, hit. Π<sub>L</sub> assumption: tariffs are weapons; both sides are fighting.</p>
+        <p class="verbs">escalate · retaliate · fight · hit</p>
+      </div>
+      <div class="triple-cell l-zh">
+        <p class="label">ZH projection</p>
+        <h4>"<code>不愿打但不怕打</code>"</h4>
+        <p>Framed as <em>civilizational-stoic symmetric action</em>. Verbs: <code>反制</code> (counter-measure), <code>坚决反对</code>, <code>奉陪到底</code> (see it through). Π<sub>L</sub> assumption: register preserves dignity while committing to action; pugilism would be undignified.</p>
+        <p class="verbs">反制 · 坚决反对 · 奉陪到底</p>
+      </div>
+      <div class="triple-cell l-ru">
+        <p class="label">RU projection</p>
+        <h4>"<code>Торговые ограничения США — провал американской гегемонии</code>"</h4>
+        <p>Framed as <em>evidence of US decline</em>. Verbs: <code>ограничения</code> (restrictions), <code>провал</code> (failure — perfective), <code>гегемония</code>. Π<sub>L</sub> assumption: the event evidences multipolarity-becoming-real, regardless of who wins economically.</p>
+        <p class="verbs">ограничения · провал · многополярность</p>
+      </div>
+    </div>
+
+    <p style="margin-top: 28px;">The three projections of the same substrate-event are not compatible canon. They each foreground a different boundary-flux (force / sovereignty-as-hygiene / civilizational-fall), reach for a different verb-palette, and produce a different actor-fingerprint reading. The framework's discipline (cont 19's agnostic-Lakatosian stance, cont 21's verbs-claim) says: read all three; refuse to collapse them prematurely; the residue between projections is the operating-system signature.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">06</span>Does the actor's fingerprint change shape per operating system?</h2>
+
+    <p>Atlas v4 §06 (Figure C) named the participatory-taxonomy reading: every actor IS the polygon of verbs it can perform across the six sensory registers. The question this construct study can ask: does the polygon shape for, say, the Chinese state-actor change when the observing L changes? Or is the polygon invariant — the actor has a fixed verb-vocabulary that just gets translated differently?</p>
+
+    <p>The framework's reading: <strong>the polygon for a given actor shifts shape depending on the observing L, in measurable ways</strong>. Here is what the three subagents jointly suggest.</p>
+
+    <p><strong>Chinese state-actor through Π<sub>EN</sub></strong>: polygon bulges on <em>sight</em> (surveil, dominate) and <em>touch</em> (coerce, strike). Verbs like <em>encircle</em>, <em>threaten</em>, <em>challenge</em> presuppose adversarial-tactile register. The English-OS projection underweights the actor's <em>oral</em> register (commune, share) and <em>excretory</em> register (pardon, release) because those verbs sit uncomfortably with a presumed-adversarial frame.</p>
+
+    <p><strong>Chinese state-actor through Π<sub>ZH</sub></strong>: polygon bulges on <em>oral</em> (commune, co-build, share via 共- verbs) and <em>sight</em> (lead, guide via 引领). The 共- verb-family makes co-construction grammatically primary, lifting the oral-register score. The hygiene/medicine register (整治, 治理) gives <em>excretory</em> (release / cleanse) a verb-palette English-OS lacks for the same actor.</p>
+
+    <p><strong>Chinese state-actor through Π<sub>RU</sub></strong>: polygon bulges on <em>sight</em> (multipolar projection) and <em>touch</em> (multipolar-alignment, partnership). The Russian-OS reading foregrounds Chinese state-action as part of a shared anti-Western multipolar project — different again from both English and Chinese projections.</p>
+
+    <p>Same actor; three different fingerprint-shapes. The framework's prediction (a candidate-grade reading): <em>the difference-between-fingerprints is the operating-system signature, and that difference is structural, not stylistic</em>. The cross-language behavioral divergence in multilingual LLMs (Fei et al. 2024, M-ALERT, Yu et al. 2025) is the substrate evidence: identical model, identical actor-prompt, different fingerprint per language. The atlas v4's participatory-taxonomy primitive predicts and explains this.</p>
+
+    <p>One implication worth pulling out: <strong>the framework's atlas v4 needs a Π<sub>L</sub> annotation on every actor-fingerprint to be honest</strong>. The Figure C diagram in atlas v4 implicitly used English-OS projections of each actor. A v5 of the atlas could show each actor as a stacked set of three or more fingerprints — one per operating system — to make the projection explicit.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">07</span>What linguistic relativity research actually says</h2>
+    <p class="sect-lede">The construct study's claims rest on a defensible empirical layer. The linguistic-relativity subagent surveyed the 2024–2026 state of evidence so the framework can be honest about what's claimed and what isn't.</p>
+
+    <p>The field has settled on <strong>weak, task-specific Whorfian effects</strong>: language reliably modulates attention, memory, processing speed on category-boundary tasks, but does not gate the underlying cognitive capacity. The strong-determinist reading ("speakers of different languages live in different worlds") is dead. The over-correction ("vocabulary doesn't matter") is also wrong.</p>
+
+    <p>Recent specific findings the construct study can lean on:</p>
+
+    <ul>
+      <li><strong>Color / Russian blues.</strong> Winawer et al. 2007 categorical-perception effect survives replication. Garagnani et al. 2025 brain-constrained DNN reproduces the <em>goluboj/sinij</em> discrimination advantage purely from label-learning dynamics — language modulates pre-labeling representations rather than rewiring color vision.</li>
+      <li><strong>Time / Mandarin verticality.</strong> Boroditsky 2001 failed to replicate cleanly. Real but small priming effect (Boroditsky/Fuhrman/McCormick 2011). Net: real but fragile, prime-dependent.</li>
+      <li><strong>Grammatical gender / agency.</strong> Segel & Boroditsky 2011 personification finding partially replicated; a 2024 Cambridge <em>Language and Cognition</em> conceptual replication returned null on inanimate concepts.</li>
+      <li><strong>Motion typology (Talmy verb- vs satellite-framed).</strong> Robust thinking-for-speaking effects (Slobin). The binary itself is breaking down — Mandarin and Russian are now treated as "equipollently framed" (Filipović 2024).</li>
+      <li><strong>Counterfactuals.</strong> Bloom's Chinese-subjunctive claim falsified. Counterfactual reasoning is universal; surface markers don't gate it.</li>
+    </ul>
+
+    <p><strong>Takeaway for Π<sub>L</sub>:</strong> language is a biasing filter, not a gate. Effects are real on millisecond-level discrimination, default framing, what gets mentioned. They are not real on capacity-to-conceive. The construct study's claim that "operating system matters" survives this — but only the weak-Whorf version, not the strong one.</p>
+
+    <p>The 2024–2026 multilingual-LLM literature gives the framework substrate evidence the human-cognition literature can't:</p>
+
+    <ul>
+      <li>Fei et al. 2024 (PLOS ONE) — GPT-3.5/4 produce pro-China stances in Chinese on US-China trade/Xinjiang/Taiwan that flip toward neutral or pro-US in English.</li>
+      <li>Friedrich et al. 2024 (M-ALERT) — every multilingual model has at least one language where it's systematically less aligned.</li>
+      <li>Aggarwal et al. 2025 — same fact, 13 languages, systematic factual divergence; models rely on language-specific memorization, not generalized knowledge.</li>
+      <li>Wendler 2024 (ACL) — Llama-2/3 process through an English-biased "concept space" in middle layers, then re-project to output language. The "thinks in English" finding.</li>
+      <li>Yu et al. 2025 (arXiv 2505.17306) — refusal direction extracted in English transfers near-perfectly across safety-aligned languages. The framework's potential <em>null result</em> if extended: if ALL stance-directions are language-agnostic in latent space, then "language as OS" collapses to "language as skin."</li>
+    </ul>
+
+    <p>The state of evidence: <em>language as OS is real enough to produce measurably different projections in both humans and LLMs, but the effects are biasing not gating, and they are layered on top of a partially language-agnostic substrate</em>. The construct study's commitment is candidate-grade: <em>different L = different Π<sub>L</sub> = different canon, even from the same substrate</em>, without strong-Whorf commitment.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">08</span>Three speculative bubbles</h2>
+    <p class="sect-lede">Each candidate-grade reading the construct study produces, with predictions and break-conditions.</p>
+
+    <div class="bubble">
+      <p class="tag">Bubble 01 · rank 1 · medium-high confidence</p>
+      <h4>The operating-system-signature hypothesis</h4>
+      <p class="claim">For any given substrate-event, the residue between Π<sub>EN</sub>, Π<sub>ZH</sub>, and Π<sub>RU</sub> projections is a measurable, repeatable signature of the operating system, not noise. The same event projected through three OS yields three actor-fingerprints whose shape-differences correlate with the grammatical-primitive differences (Chinese topic-comment + 共- verbs; Russian aspect-binary + reflexive -ся; English subject-predicate + tense-default).</p>
+      <p class="row"><strong>Predicts</strong> Panel of 10 carefully-matched substrate-events (a protest, a tech announcement, a military exercise, a court ruling, a treaty signing, etc.) projected through state-aligned outlets in three languages will yield three systematically-different verb-vocabularies whose differences cluster by grammatical-primitive category, not by political alignment alone.</p>
+      <p class="row"><strong>Breaks if</strong> Across 10 matched events, the cross-language verb-vocabulary divergence is dominated by political-alignment differences rather than grammatical-primitive differences. That would suggest the OS is ideological, not linguistic.</p>
+      <p class="row"><strong>Follow-up</strong> Build the 10-event panel; score each event's three projections on (a) grammatical-primitive deployment (% sentences using topic-comment, % using reflexive-elision, % using aspect-marking) and (b) verb-family clustering. Test correlation. Replicable in 6–12 months.</p>
+    </div>
+
+    <div class="bubble">
+      <p class="tag">Bubble 02 · rank 2 · medium confidence</p>
+      <h4>The multilingual-LLM-as-cross-OS-probe hypothesis</h4>
+      <p class="claim">Multilingual LLMs are the only observer-type that hosts multiple operating systems natively. The cross-language behavioral divergence (Fei 2024, M-ALERT, Stochastic Lies) is the framework's strongest substrate evidence for "language as OS." This evidence will continue to accumulate as a non-trivial gap that does not close with scaling — because the gap is structural to the corpus-shaped canon, not a function of model capacity.</p>
+      <p class="row"><strong>Predicts</strong> Over the next 5 years, even as multilingual models scale to substantially larger compute and data, the cross-language stance-divergence on politically-loaded topics will not converge below a structural floor. The floor will be predictable from training-data distribution and from the operating-system biases of each language.</p>
+      <p class="row"><strong>Breaks if</strong> Future multilingual LLMs converge to identical stance across languages on the matched-paraphrase political-topic panel. That would suggest the "language as OS" framing is wrong at the LLM substrate, and either (a) language reduces to vocabulary post-paraphrase, or (b) the safety-and-alignment infrastructure homogenizes across languages successfully.</p>
+      <p class="row"><strong>Follow-up</strong> Annual replication of the Fei 2024 / M-ALERT methodology on frontier multilingual models. Track the divergence-gap over time. If it shrinks linearly with scale, this bubble breaks. If it asymptotes at a non-zero floor, this bubble survives.</p>
+    </div>
+
+    <div class="bubble">
+      <p class="tag">Bubble 03 · rank 3 · lower confidence, larger consequence</p>
+      <h4>The framework's English-origin bias is structurally visible — and correctable</h4>
+      <p class="claim">The Agnostic Framework's primitives (push, pull, squeeze, pop, neutralize, hold, emit, resolve, accumulate, spill, contact, separation) were named in English by an Anglophone author and Anglophone collaborator. If the framework's universality claim is right, those primitives should translate without losing structural force across Chinese, Russian, and any other operating system. They probably won't — Chinese will reach for different primitive carvings (the 共- family suggests <em>co-construct/co-build</em> as a primitive English has no single verb for); Russian will reach for aspect-binary distinctions (<em>complete/ongoing</em> as a meta-primitive English handles only modally). A v5 of the atlas could be constructively refactored to include cross-OS-invariant primitives.</p>
+      <p class="row"><strong>Predicts</strong> When the atlas's 8+ polar primitives are translated into Chinese and Russian via state-of-the-art LLMs and then back-translated, the round-trip loss (Cao et al. 2025 method) will be systematically larger for some primitives than others. Specifically: <em>contact/separation</em> and <em>expand/compress</em> will survive cleanly; <em>emit/resolve</em> and <em>accumulate/spill</em> will lose subtleties; <em>resonate/damp</em> may lose its v3-introduced register-specific meaning entirely in some operating systems.</p>
+      <p class="row"><strong>Breaks if</strong> Round-trip translation loss is uniformly small across all primitives, suggesting the primitives are language-agnostic enough that English-origin doesn't introduce structural bias.</p>
+      <p class="row"><strong>Follow-up</strong> Run the round-trip experiment on all 10 atlas v4 primitives × 3 operating systems × 3 frontier LLMs (GPT-5, Claude Opus 4.6, DeepSeek-R2 equivalent). Score per-primitive loss. Use the result to inform whether atlas v5 should refactor any primitives.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">09</span>What this lets you do</h2>
+
+    <p>Three operational moves the construct study enables.</p>
+
+    <p><strong>One. Detect operating-system bias in any reading.</strong> When a state-actor or media outlet projects an event, ask: <em>which Π<sub>L</sub> is operating here?</em> The verb-family is the diagnostic. If the verbs cluster in the hygiene-register (整治-family) or the civilizational register (引领), you're reading Π<sub>ZH</sub>. If they cluster around aspect-binary commitments (perfective claims that age badly) or reflexive agency-elision (-ся), you're reading Π<sub>RU</sub>. If they cluster around pugilistic combat metaphors (escalate, retaliate, fight), you're reading Π<sub>EN</sub>. The cluster is the OS-fingerprint. Reading deliberately across multiple Π<sub>L</sub> for the same event is the agnostic stance in operational form.</p>
+
+    <p><strong>Two. Predict where a state-actor's framing will strain.</strong> Russian-OS perfective claims about completed objectives (<code>денацифицировать</code>) age badly because aspect-binary forces audit. Chinese-OS slogan-density (<code>共同富裕</code>, <code>新质生产力</code>) ages badly because the four-character chunking commits the state to delivering on the slogan's compression. English-OS subject-predicate framings (<code>"</code>defending democracy<code>"</code>) age badly because tense forces past-action accountability. Each OS has different audit-pressure points. The framework lets you predict which framings will become embarrassing for which OS over which timeframes.</p>
+
+    <p><strong>Three. Read multilingual AI as a cross-OS probe.</strong> When a multilingual LLM gives notably different answers in Chinese vs English vs Russian, the difference is data. It's the closest thing the framework has to a cross-cultural controlled experiment: same model, identical underlying weights, three projections of the same prompt. The annual Fei-2024-style replication is the framework's preferred empirical test for Bubble 02. Researchers who run it produce framework-grade evidence.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">10</span>Adjacent fields and leading figures</h2>
+
+    <p>Six fields the framework is in debt to here. The construct study's contribution is not the empirical findings (those belong to the fields below) but the synthesis through the atlas v4 vocabulary.</p>
+
+    <h3>1. Linguistic relativity (cognitive linguistics)</h3>
+    <p><strong>Lera Boroditsky</strong> (UCSD) — the contemporary face of weak-Whorf research; the Russian blues, Mandarin time, Pormpuraaw-cardinal-directions findings. <strong>Dan Slobin</strong> (Berkeley, deceased) — thinking-for-speaking, motion-typology framework. <strong>Leonard Talmy</strong> — verb-framed vs satellite-framed languages typology. <strong>Stephen Levinson</strong> (Max Planck Nijmegen) — frames-of-reference cross-linguistic research.</p>
+
+    <h3>2. Cross-linguistic NLP / multilingual LLM evaluation</h3>
+    <p>The newest field, growing fast. <strong>Patrick Lewis, Sebastian Ruder</strong> (Cohere, Google DeepMind) on multilingual model design. <strong>Manuela Veloso</strong>-adjacent work on cross-lingual reasoning. The Fei et al. 2024 PLOS ONE paper and the M-ALERT / Friedrich 2024 multilingual safety benchmark are the canonical contemporary anchors. <strong>Wendler et al.</strong> (ACL 2024) on "thinks in English" latent-space asymmetry. <strong>Yu et al. 2025</strong> on refusal direction universality.</p>
+
+    <h3>3. Discourse analysis / state-media studies</h3>
+    <p>For Chinese: <strong>Anne-Marie Brady</strong> (University of Canterbury) on propaganda and persuasion; <strong>China Media Project</strong> (David Bandurski) for ongoing Party-discourse analysis; <strong>Bingchun Meng</strong> (LSE) on Chinese digital communication. For Russian: <strong>Peter Pomerantsev</strong> on disinformation; <strong>Maria Lipman</strong> on Russian state media; <strong>Vasily Gatov</strong> on Russian information ecosystem.</p>
+
+    <h3>4. Translation studies / pragmatics</h3>
+    <p><strong>Lawrence Venuti</strong> on translation as cultural intervention. <strong>Mona Baker</strong> on translation and conflict. Recent work on cultural transcreation in AI translation (Cao et al. 2025 on information loss; Liu et al. 2025 on poetic-intent back-translation).</p>
+
+    <h3>5. AI safety / alignment cross-lingually</h3>
+    <p><strong>Anthropic</strong>'s Constitutional AI work and the safety-direction research. <strong>Adam Holter</strong> (ChinaBench). <strong>Yiwei Qiu et al.</strong> 2025 PNAS Nexus paper on political censorship in China-origin LLMs. <strong>CSIS</strong>'s Hawkish AI report on DeepSeek geopolitical bias.</p>
+
+    <h3>6. State-civilization theory</h3>
+    <p>For the Chinese frame: <strong>Wang Hui</strong> (Tsinghua) on Chinese modernity; <strong>Zhao Tingyang</strong> on Tianxia (天下); contemporary BRI-academy work on <code>人类命运共同体</code>. For the Russian frame: <strong>Alexander Dugin</strong> (Eurasianist; controversial but doctrinally consequential); <strong>Vladislav Surkov</strong> on "sovereign democracy"; contemporary RGGU work on Russian civilization-state framing.</p>
+
+    <h3>What the framework's contribution is, given these fields</h3>
+    <p>None of the empirical findings above is original to this construct study. The framework's contribution is the same shape as in marriage_v1 and religion_v1: a unified vocabulary that lets the same boundary-flux dynamics be read across operating systems with the agnostic-Lakatosian discipline that <em>different L = different Π<sub>L</sub> = different canon, but all three projections are reading the same substrate</em>. The construct study is the framework's verb-vocabulary applied to the case where the verb-vocabulary <em>itself</em> is the variable being studied.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">11</span>Provenance</h2>
+
+    <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 4px; padding: 22px 26px; margin: 28px 0;">
+      <p style="font-family: ui-monospace, Menlo, monospace; font-size: 11px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.12em; margin: 0 0 16px;">Provenance trail · language_v1</p>
+
+      <p style="margin: 0 0 14px;"><strong>Iteration 0 · seed (Pav).</strong> "ok lets do a case study of how this comes together if the operating system observe is Chinese. or Russian the language as a meta lens". Three structural seeds: language as operating system; Chinese AND Russian as the two specific cases; "meta lens" reading on top of the atlas v4 framework. The case-study framing implied: model on marriage_v1 / religion_v1 / atlas-as-precedent.</p>
+
+      <p style="margin: 0 0 14px;"><strong>Iteration 1 · three parallel subagent scans.</strong> Three general-purpose subagents dispatched simultaneously with WebSearch access. Chinese-OS subagent returned with grammatical-primitive analysis, state-media verb-palette (整治 / 推进 / 落实 / 维护 / 坚决 / 依法 / 治理 / 引领), the 共- verb family, four worked event-renderings (Joint Sword 2024, DeepSeek, Trump tariffs, Gaza), and AI substrate evidence (ChinaBench, PNAS Nexus, CSIS Hawkish AI). Russian-OS subagent returned with the aspect-binary primitive, case-system analysis, reflexive -ся, state-verb palette (СВО / денацификация / освобождать / защищать / противостоять / формировать многополярный мир), <code>русский мир</code> doctrine update, four worked events (Kursk, BRICS Kazan, Oreshnik, Africa Corps), and AI substrate evidence (YandexGPT/GigaChat, HKS Stochastic Lies). Linguistic-relativity subagent returned with the current state of Whorfian research (Garagnani 2025 on color, Filipović 2024 on motion typology, the falsification of strong-Whorf), multilingual-LLM divergence evidence (Fei 2024, M-ALERT, Wendler 2024, Yu 2025, Aggarwal 2025), translation-as-projection-loss research (Cao 2025, Liu 2025), and state-/culture-specific monolingual model analysis. ~3,500 words of source material total.</p>
+
+      <p style="margin: 0 0 14px;"><strong>Iteration 2 · this v1 page.</strong> Synthesized into eleven sections: agnostic stance applied to language; what "operating system" means in framework vocabulary; full Chinese-OS treatment with worked events; full Russian-OS treatment with worked events; three side-by-side direct comparisons of the same event projected through Π<sub>EN</sub>, Π<sub>ZH</sub>, Π<sub>RU</sub>; actor-fingerprint variation per OS; current empirical state of linguistic relativity and multilingual AI; three speculative bubbles (OS-signature hypothesis with measurable cross-OS verb-divergence; multilingual-LLM-as-cross-OS-probe with structural floor prediction; framework's English-origin bias as structurally visible and correctable); operational implications; adjacent fields with leading figures.</p>
+
+      <p style="margin: 0; font-size: 13px; color: var(--text-dim); font-style: italic;">Counter-readings welcome via the Hypothes.is sidebar on this page. Counter-readings from native Chinese and Russian speakers are especially welcome — the framework is reading these operating systems from outside, and the natural place for correction is from inside.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">12</span>Sources</h2>
+
+    <div class="sources">
+      <h3>Inside the framework</h3>
+      <ul>
+        <li><a href="../atlas/">Atlas v4</a> · the verb-vocabulary this construct study applies (six sensory registers, eight polar primitives, actor-fingerprint diagram, three emergent insights)</li>
+        <li><a href="../notation/">Notation walkthrough</a> · the Π<sub>L</sub> projection operator this construct study takes as its central object</li>
+        <li><a href="../continuations/21.md">Continuation 21</a> · the verbs-as-primitives candidate (the framework's claim about why verb-vocabulary is constitutive of actor identity)</li>
+        <li><a href="../continuations/19.md">Continuation 19</a> · Lakatosian-agnostic success criterion that licenses the bracketing in §01</li>
+        <li><a href="marriage_v1.html">Marriage construct study</a> · same structural template, different substrate</li>
+        <li><a href="religion_v1.html">Religion construct study</a> · same structural template + the agnostic-stance discipline this study extends to language</li>
+      </ul>
+
+      <h4>External — Chinese-OS sources (state media, AI analysis)</h4>
+      <ul>
+        <li><a href="https://english.news.cn/20241014/091d9b4df25346cca0c5dc657a5a067e/c.html" target="_blank">Xinhua · Joint Sword-2024B readout (Oct 2024)</a></li>
+        <li><a href="https://jamestown.org/program/discourse-dimensions-of-the-plas-joint-sword-2024-b-drills/" target="_blank">Jamestown · Discourse dimensions of Joint Sword 2024B</a></li>
+        <li><a href="https://chinamediaproject.org/2025/03/04/rehabilitating-deepseek/" target="_blank">China Media Project · Rehabilitating DeepSeek (March 2025)</a></li>
+        <li><a href="https://www.defenseone.com/ideas/2025/02/china-sees-deepseek-strategic-turning-point/403159/" target="_blank">Defense One · DeepSeek as strategic turning point</a></li>
+        <li><a href="https://en.qstheory.cn/2025-05/16/c_1091765.htm" target="_blank">Qstheory · Community of Shared Future essay (2025)</a></li>
+        <li><a href="https://news.cgtn.com/news/2026-01-17/How-China-proposed-concept-offers-solutions-for-global-governance-1K0Kbx8GLXG/share_amp.html" target="_blank">CGTN · 2026 global-governance explainer</a></li>
+        <li><a href="https://www.fmprc.gov.cn/eng/wjbzhd/202510/t20251013_11731389.html" target="_blank">MFA · Wang Yi on Gaza phase-one (Oct 2025)</a></li>
+        <li><a href="https://www.aljazeera.com/economy/2025/10/30/trump-says-xi-agreed-to-one-year-trade-deal-after-amazing-talks" target="_blank">Al Jazeera · Trump-Xi trade deal (Oct 2025)</a></li>
+        <li><a href="https://adam.holter.com/chinabench-open-source-llm-censorship-benchmark-results-across-qwen-glm-kimi-minimax-deepseek-and-gpt-oss/" target="_blank">Holter · ChinaBench LLM censorship benchmark (2025)</a></li>
+        <li><a href="https://academic.oup.com/pnasnexus/article/5/2/pgag013/8487339" target="_blank">PNAS Nexus · Political censorship in China-origin LLMs</a></li>
+        <li><a href="https://arxiv.org/pdf/2506.01814" target="_blank">arXiv · DeepSeek-R1 vs o3-mini bias (2025)</a></li>
+        <li><a href="https://www.csis.org/analysis/hawkish-ai-uncovering-deepseeks-foreign-policy-biases" target="_blank">CSIS · Hawkish AI on DeepSeek</a></li>
+      </ul>
+
+      <h4>External — Russian-OS sources (state media, doctrine, AI analysis)</h4>
+      <ul>
+        <li><a href="https://www.rand.org/pubs/research_reports/RRA3450-1.html" target="_blank">RAND · Denazify Lie report</a></li>
+        <li><a href="https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessments-december-2024" target="_blank">Critical Threats · Dec 2024 doctrine assessment</a></li>
+        <li><a href="https://mid.ru/en/foreign_policy/news/1961001/" target="_blank">MID · Lavrov on multipolarity (July 2024)</a></li>
+        <li><a href="https://eng.globalaffairs.ru/articles/the-vision-of-a-multipolar-world/" target="_blank">Russia in Global Affairs · multipolar world vision</a></li>
+        <li><a href="https://carnegieendowment.org/russia-eurasia/politika/2024/11/russia-oreshnik-nuclear-blackmail?lang=en" target="_blank">Carnegie · Oreshnik nuclear blackmail (Nov 2024)</a></li>
+        <li><a href="https://www.themoscowtimes.com/2024/10/24/how-russia-courted-the-global-south-at-brics-summit-a86798" target="_blank">Moscow Times · BRICS Kazan summit framing</a></li>
+        <li><a href="https://wheeljournal.com/2024-4-10-serhii-shumylo-ordinary-fascism-or-the-russian-world-of-patriarch-kirill/" target="_blank">Wheel Journal · XXV World Russian People's Council</a></li>
+        <li><a href="https://foreignpolicy.com/2025/09/03/africa-corps-russia-mali-wagner/" target="_blank">Foreign Policy · Africa Corps positioning (Sept 2025)</a></li>
+        <li><a href="https://europeanleadershipnetwork.org/commentary/the-ai-lens-of-cognitive-warfare-why-llms-language-bias-is-a-security-risk/" target="_blank">ELN · LLM language-bias as cognitive-warfare risk</a></li>
+        <li><a href="https://www.isdglobal.org/digital-dispatch/investigation-talking-points-when-chatbots-surface-russian-state-media/" target="_blank">ISD · Chatbots surfacing Russian state media</a></li>
+        <li><a href="https://misinforeview.hks.harvard.edu/article/stochastic-lies-how-llm-powered-chatbots-deal-with-russian-disinformation-about-the-war-in-ukraine/" target="_blank">HKS Misinformation Review · Stochastic Lies</a></li>
+      </ul>
+
+      <h4>External — linguistic relativity + multilingual AI research</h4>
+      <ul>
+        <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12927276/" target="_blank">Garagnani et al. 2025 · brain-constrained DNN reproduces Russian-blues effect</a></li>
+        <li><a href="https://www.tandfonline.com/doi/full/10.1080/03740463.2024.2414651" target="_blank">Filipović 2024 · motion typology refactor</a></li>
+        <li><a href="https://www.cambridge.org/core/journals/language-and-cognition/article/conceptual-replication-of-an-implicit-test-of-grammatical-gender-effects-on-inanimate-concepts/3A29B4CC2A45ADAB1B21910E79CB908C" target="_blank">2024 Cambridge · grammatical gender conceptual replication (null)</a></li>
+        <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11499644/" target="_blank">Fei et al. 2024 · political biases in bilingual GPT (PLOS ONE)</a></li>
+        <li><a href="https://arxiv.org/pdf/2401.13136" target="_blank">Yong et al. 2024 · multilingual safety, low-resource attacks</a></li>
+        <li><a href="https://arxiv.org/pdf/2412.15035" target="_blank">Friedrich et al. 2024 · M-ALERT cross-lingual safety benchmark</a></li>
+        <li><a href="https://arxiv.org/pdf/2505.17306" target="_blank">Yu et al. 2025 · refusal-direction universality (the framework's null falsifier)</a></li>
+        <li><a href="https://arxiv.org/pdf/2502.17955" target="_blank">Aggarwal et al. 2025 · factuality depends on language of inquiry</a></li>
+        <li><a href="https://arxiv.org/html/2502.15603v1" target="_blank">Schut et al. 2025 · "Do multilingual LLMs think in English?"</a></li>
+        <li><a href="https://arxiv.org/pdf/2506.23340" target="_blank">Cao et al. 2025 · information loss in MT</a></li>
+        <li><a href="https://arxiv.org/pdf/2504.16286" target="_blank">Liu et al. 2025 · poetic-intent back-translation loss</a></li>
+        <li><a href="https://arxiv.org/pdf/2504.08863" target="_blank">2025 · Cultural value alignment, Mistral/EU</a></li>
+        <li><a href="https://arxiv.org/pdf/2506.21881" target="_blank">2025 · Dual-layered geopolitical bias, GigaChat/Qwen/GPT-4o</a></li>
+        <li><a href="https://arxiv.org/html/2501.06346v1" target="_blank">2025 · Latent grammatical concepts across languages</a></li>
+      </ul>
+    </div>
+
+    <p style="margin-top: 22px; font-size: 13px; color: var(--text-dim); font-style: italic;">Hypothes.is sidebar enabled — counter-readings particularly welcome from native Chinese and Russian speakers, and from researchers in linguistic relativity / multilingual NLP. The framework is reading these operating systems from outside; the natural place for correction is from inside.</p>
+  </div>
+</section>
+
+<footer class="page-footer">
+  <div class="wrap-wide">
+    Agnostic Framework · Construct studies · language v1 · 2026-05-21 · <a href="../index.html">live site</a> · <a href="https://github.com/a70m123r/agnostic-framework">github</a>
+  </div>
+</footer>
+
+</body>
+</html>
