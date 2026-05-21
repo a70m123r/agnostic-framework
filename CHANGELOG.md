@@ -8,6 +8,17 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-05-21 (atlas v4.1 — diagram breathing-room pass)
+
+### Changed
+- **All three atlas v4 SVG diagrams expanded** following Pav's note: "the diagrams also look a bit compacted lets give the elements some room to breath". Pure spacing-and-typography pass; no content changes.
+- **Figure A · Central membrane** viewBox 1200×820 → **1400×1100**. Six register-lenses now spaced ~90px apart (was ~50–60px crammed). Lens circles enlarged from r=40 to r=52. Temporal-clock ring enlarged from r=65 to r=85 with bigger wedge sparklines and labels. 8-DOF octagonal dial enlarged from r=50 to r=70 with labels at 11px (was 9px). Flux-legend strip repositioned with larger swatches and 12px labels.
+- **Figure B · Register periodic table** viewBox 1000×540 → **1200×700**. Cells enlarged from 180×110 to 220×140; gutter increased from 8px to 30px. Cell symbol size 22pt → 26pt; register name 14pt → 17pt; failure-mode tag 9pt → 11pt. Row labels and column headers given more space. Reduction arrows repositioned with clearer curves.
+- **Figure C · Actor fingerprints** viewBox 1200×760 → **1500×1080**. Card centers respaced — now at (250, 280), (750, 280), (1250, 280) and same row 2 at y=780. Hexagons scaled from outer-radius 100 to 130 (30% larger). All actor-fingerprint polygons recalculated with proportional scaling. Axis labels repositioned at 128px from center (was 100) with 11pt font.
+- **Three SVG files now read with proper breathing room** at standard widescreen widths; mobile rendering is unchanged (all three use width: 100% / height: auto). Word count and structure of v4 unchanged.
+
+---
+
 ## 2026-05-21 (atlas v4 — synthesis pass; three diagrams; 13,500 → 5,500 words)
 
 ### Changed (major synthesis)
