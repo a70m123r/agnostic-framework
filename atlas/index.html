@@ -1,0 +1,1522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blind senses atlas v2 — polar primitives, emergent states, and the four sensory registers — Agnostic Framework</title>
+<meta name="description" content="v2 of the blind senses atlas. Polar-opposite primitive pairs at the bottom (expand/compress, absorb/expel, accumulate/spill, contact/separation, emit/resolve). Configurations as compounds. Hold and neutralize as emergent states from oscillation. Four sensory registers: touch, oral, olfactory, excretory. Domain renderings in dancing, cooking, farming. Built from seven parallel subagent scans.">
+<script src="https://hypothes.is/embed.js" async></script>
+<style>
+  :root {
+    --bg: #0a0a0a;
+    --surface: #141414;
+    --surface-2: #1c1c1c;
+    --border: #262626;
+    --border-strong: #3a3a3a;
+    --text: #ececec;
+    --text-dim: #8a8a8a;
+    --text-faint: #555;
+    --accent-canon: #4ade80;
+    --accent-candidate: #fbbf24;
+    --accent-speculative: #a78bfa;
+    --accent-link: #93c5fd;
+    --accent-orange: #fb923c;
+    --col-push: #fb923c;
+    --col-pull: #4ade80;
+    --col-squeeze: #f87171;
+    --col-pop: #a78bfa;
+    --col-touch: #fcd34d;
+    --col-release: #93c5fd;
+    --col-oral: #f472b6;
+    --col-smell: #2dd4bf;
+    --col-excrete: #93c5fd;
+    --col-primitive: #fcd34d;
+    --col-emergent: #4ade80;
+    --col-config: #fb923c;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, system-ui, sans-serif; font-size: 16px; line-height: 1.65; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+  .wrap-wide { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+  .topbar { border-bottom: 1px solid var(--border); padding: 20px 0; font-size: 13px; font-family: ui-monospace, Menlo, monospace; color: var(--text-dim); }
+  .topbar a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--text-faint); }
+  .topbar a:hover { color: var(--accent-link); border-bottom-color: var(--accent-link); }
+  .topbar .sep { color: var(--text-faint); margin: 0 10px; }
+  .topbar .source-link { float: right; }
+
+  header.hero { padding: 64px 0 40px; border-bottom: 1px solid var(--border); }
+  header.hero .kicker { font-family: ui-monospace, Menlo, monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.18em; color: var(--accent-orange); margin: 0 0 16px; }
+  header.hero h1 { font-family: Georgia, serif; font-weight: 400; font-size: 46px; line-height: 1.08; letter-spacing: -0.02em; margin: 0 0 20px; }
+  header.hero p.dek { font-size: 19px; line-height: 1.45; color: var(--text-dim); max-width: 700px; margin: 0 0 16px; font-family: Georgia, serif; font-style: italic; }
+  header.hero p.meta { font-family: ui-monospace, Menlo, monospace; font-size: 11px; color: var(--text-faint); margin: 0; }
+
+  section { padding: 48px 0; border-bottom: 1px solid var(--border); }
+  section:last-of-type { border-bottom: none; }
+  h2 { font-family: Georgia, serif; font-weight: 400; font-size: 28px; line-height: 1.18; margin: 0 0 10px; letter-spacing: -0.01em; }
+  h2 .num { color: var(--text-faint); font-size: 14px; font-family: ui-monospace, Menlo, monospace; margin-right: 12px; }
+  h3 { font-family: Georgia, serif; font-weight: 400; font-size: 22px; line-height: 1.22; margin: 32px 0 12px; }
+  h4 { font-family: Georgia, serif; font-style: italic; font-weight: 400; font-size: 18px; margin: 24px 0 10px; color: var(--text); }
+  .sect-lede { font-size: 15px; color: var(--text-dim); margin: 0 0 24px; font-style: italic; font-family: Georgia, serif; }
+
+  p { margin: 0 0 16px; }
+  em { color: var(--text); font-style: italic; }
+  strong { color: var(--text); font-weight: 600; }
+  a { color: var(--accent-link); text-decoration: none; border-bottom: 1px solid rgba(147, 197, 253, 0.3); }
+  a:hover { border-bottom-color: var(--accent-link); }
+
+  /* Polar pair table */
+  .polar-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin: 20px 0;
+  }
+  @media (min-width: 720px) {
+    .polar-list { grid-template-columns: 1fr 1fr; }
+  }
+  .polar-pair {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--col-primitive);
+    border-radius: 4px;
+    padding: 14px 18px;
+  }
+  .polar-pair .pole {
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 13px;
+    color: var(--text);
+    margin: 0 0 4px;
+  }
+  .polar-pair .pole strong {
+    color: var(--col-primitive);
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+  }
+  .polar-pair .pole .opp { color: var(--text-dim); }
+  .polar-pair .gloss {
+    font-size: 13px;
+    color: var(--text-dim);
+    line-height: 1.55;
+    margin: 6px 0 0;
+  }
+
+  /* Vocab cards (carried over) */
+  .vocab-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin: 22px 0;
+  }
+  @media (min-width: 720px) {
+    .vocab-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (min-width: 1000px) {
+    .vocab-grid { grid-template-columns: 1fr 1fr 1fr; }
+  }
+  .vocab-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--border-strong);
+    border-radius: 4px;
+    padding: 14px 18px;
+  }
+  .vocab-card.f-push { border-left-color: var(--col-push); }
+  .vocab-card.f-pull { border-left-color: var(--col-pull); }
+  .vocab-card.f-squeeze { border-left-color: var(--col-squeeze); }
+  .vocab-card.f-pop { border-left-color: var(--col-pop); }
+  .vocab-card.f-touch { border-left-color: var(--col-touch); }
+  .vocab-card.f-release { border-left-color: var(--col-release); }
+  .vocab-card.f-oral { border-left-color: var(--col-oral); }
+  .vocab-card.f-smell { border-left-color: var(--col-smell); }
+  .vocab-card.f-emergent { border-left-color: var(--col-emergent); }
+  .vocab-card .label {
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-dim);
+    margin: 0 0 6px;
+  }
+  .vocab-card h4 {
+    font-family: Georgia, serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 17px;
+    margin: 0 0 6px;
+    color: var(--text);
+  }
+  .vocab-card p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--text-dim);
+  }
+
+  /* Substrate blocks */
+  .substrate-block {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 20px 24px;
+    margin: 16px 0;
+  }
+  .substrate-block h3 {
+    margin-top: 0;
+    font-family: Georgia, serif;
+    font-size: 22px;
+    color: var(--text);
+  }
+  .substrate-block .ring-label {
+    display: inline-block;
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding: 3px 10px;
+    border-radius: 10px;
+    background: var(--surface-2);
+    color: var(--accent-orange);
+    margin-bottom: 10px;
+  }
+  .substrate-block .anchor {
+    font-size: 14px;
+    line-height: 1.55;
+    margin: 10px 0;
+    padding: 10px 14px;
+    border-left: 2px solid var(--border-strong);
+    background: rgba(0,0,0,0.2);
+    color: var(--text);
+  }
+  .substrate-block .anchor strong {
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent-candidate);
+    display: inline-block;
+    margin-right: 8px;
+  }
+  .substrate-block .anchor .verb {
+    color: var(--accent-orange);
+    font-weight: 600;
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .substrate-block .anchor a {
+    font-size: 12px;
+    color: var(--text-dim);
+    border-bottom-style: dotted;
+  }
+
+  /* Domain rendering rows */
+  .domain-row {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 16px;
+    align-items: start;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .domain-row:last-child { border-bottom: none; }
+  .domain-row .verb {
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 14px;
+    color: var(--accent-orange);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 700;
+    padding-top: 4px;
+  }
+  .domain-row .renderings {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  @media (min-width: 720px) {
+    .domain-row .renderings { grid-template-columns: 1fr 1fr 1fr; }
+  }
+  .domain-row .render {
+    background: rgba(255,255,255,0.02);
+    border-left: 2px solid var(--border);
+    padding: 8px 12px;
+    font-size: 13px;
+    color: var(--text);
+    line-height: 1.5;
+  }
+  .domain-row .render strong {
+    display: block;
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-faint);
+    margin-bottom: 4px;
+  }
+
+  /* Observer-type cards (kept) */
+  .observer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin: 24px 0;
+  }
+  @media (min-width: 720px) {
+    .observer-grid { grid-template-columns: 1fr 1fr; }
+  }
+  .observer-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent-link);
+    border-radius: 4px;
+    padding: 18px 22px;
+  }
+  .observer-card h4 {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 18px;
+    margin: 0 0 8px;
+  }
+  .observer-card .vocab-list {
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 12px;
+    color: var(--text-dim);
+    line-height: 1.7;
+    margin: 8px 0;
+  }
+  .observer-card .vocab-list strong {
+    color: var(--accent-orange);
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+  }
+  .observer-card p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--text);
+  }
+
+  /* Bubble cards */
+  .bubble {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent-speculative);
+    border-radius: 4px;
+    padding: 18px 22px;
+    margin: 14px 0;
+  }
+  .bubble h4 {
+    font-family: Georgia, serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 19px;
+    margin: 0 0 10px;
+  }
+  .bubble .tag {
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent-speculative);
+    margin: 0 0 8px;
+  }
+  .bubble p { font-size: 14px; line-height: 1.6; margin: 0 0 8px; }
+  .bubble .row {
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--text-dim);
+    margin: 0 0 6px;
+  }
+  .bubble .row strong {
+    color: var(--text);
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    display: inline-block;
+    width: 90px;
+    vertical-align: top;
+  }
+
+  /* v2 framework note */
+  .v2-note {
+    background: var(--surface);
+    border-left: 3px solid var(--accent-candidate);
+    padding: 16px 20px;
+    margin: 24px 0;
+    font-size: 14px;
+    color: var(--text);
+    line-height: 1.6;
+  }
+  .v2-note strong {
+    color: var(--accent-candidate);
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  /* Diagram frame */
+  .diagram-frame {
+    background: #050505;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 18px;
+    margin: 20px 0;
+  }
+  .diagram-frame svg { display: block; width: 100%; height: auto; }
+  .diagram-caption {
+    font-size: 13px;
+    color: var(--text-dim);
+    line-height: 1.55;
+    margin: 12px 0 0;
+    font-style: italic;
+    padding: 0 4px;
+  }
+
+  .sources {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 22px 26px;
+    margin-top: 24px;
+  }
+  .sources h3 {
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-dim);
+    margin: 0 0 14px;
+  }
+  .sources h4 {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 15px;
+    margin: 18px 0 8px;
+  }
+  .sources ul { margin: 0; padding-left: 22px; }
+  .sources li { font-size: 13px; line-height: 1.55; margin: 0 0 5px; color: var(--text-dim); }
+  .sources li a { color: var(--text); border-bottom-color: rgba(236,236,236,0.25); }
+
+  footer.page-footer { padding: 30px 0 60px; font-family: ui-monospace, Menlo, monospace; font-size: 12px; color: var(--text-faint); text-align: center; border-top: 1px solid var(--border); }
+  footer.page-footer a { color: var(--text-dim); border-bottom: 1px dotted var(--text-faint); text-decoration: none; }
+
+  @media (max-width: 640px) {
+    header.hero h1 { font-size: 32px; }
+    header.hero p.dek { font-size: 17px; }
+    h2 { font-size: 23px; }
+    .domain-row { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap-wide">
+    <a href="../index.html">← agnostic framework</a>
+    <span class="sep">·</span>
+    <span>atlas / blind senses · v2</span>
+    <a class="source-link" href="https://github.com/a70m123r/agnostic-framework/blob/main/atlas/index.html" target="_blank" rel="noopener">view source ↗</a>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="kicker">Atlas · v3 · 2026-05-21 · six sensory registers + music + military</p>
+    <h1>Blind senses</h1>
+    <p class="dek">v3 adds sight and sound as full sensory registers (testing v2's Bubble 02 reduction claim — verdict: ~70% clean, both registers earn their own treatment); adds music and military as domain renderings (alongside dance, cooking, farming); promotes <em>resonate/damp</em> to the primitive layer following the sound subagent's analysis; adds <em>exposed/hidden</em> as sight's local state primitive. Six sensory registers now covered: touch, oral, olfactory, sight, sound, excretory.</p>
+    <p class="meta">~13,500 words · reading time ~55 min · status: candidate-grade atlas v3 · built from 10 parallel subagent scans across 26 cross-substrate research streams · 95+ empirical anchors with sources · polar-opposite diagram inline + music and military domain-rendering matrices</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">00</span>What changed from v1</h2>
+
+    <div class="v2-note">
+      <strong>Atlas v3 · sight, sound, music, military</strong>
+      v2 established three layers (primitives → configurations → emergent states) and four sensory registers (touch, oral, olfactory, excretory). v3 follows Pav's seed: <em>"lets add music into the mix and military and introduce sight and sound and see how they map into the classification, full effort"</em>. Three additions: (1) <strong>sight</strong> and <strong>sound</strong> as new sensory registers with full 6-ring substrate coverage; (2) <strong>music</strong> and <strong>military</strong> as new domain renderings alongside dance/cooking/farming; (3) two new polar primitives surfaced by the sight and sound subagents — <em>exposed/hidden</em> (sight's state-pair with reveal/conceal as transitions) and <em>resonate/damp</em> (sound's deeper primitive than contact/separation, because sound is intrinsically repeated contact at frequency). Bubble 02's reduction claim (vision = olfactory at EM scale; hearing = touch at pressure-wave scale) is tested explicitly — verdict: ~70% clean. Both registers carry the structural homology but specialize enough at the action layer to earn their own treatment. Military's <em>neutralize</em> confirmed as the most doctrinally-developed instance of the cont-21 emergent verb anywhere — military is the observer-type with the richest neutralize-vocabulary on the planet.
+    </div>
+
+    <p>The structural insight that drove the refactor: <em>complexity emerged from primitive polar oppositions</em>. The four-mode frame from continuation 21 (push, pull, squeeze, pop) and the touch-verbs from atlas v1 (tap, stroke, poke, stomp, etc.) are not primitives. They are configurations — compounds built from oscillation between simpler poles. Hold and neutralize are not primitives either; they are the emergent states a substrate reaches when oscillation between polar opposites settles into a stable rhythm. The atlas's job is now to make the layered stack visible.</p>
+
+    <p>This also lets the framework absorb a structural lesson from the three sensory-register subagent scans: each register has its own deepest polar-primitive pair, slightly different from the others. Touch's primitive is <strong>contact / separation</strong>. Oral's is <strong>gated transformative intake / regurgitation</strong>. Olfactory's is <strong>volatilize / resolve</strong> (or more sharply: <strong>diffuse-at-distance / extract-from-mixture</strong>). Excretion's is <strong>accumulate / spill</strong> (not the more container-bound absorb/expel, which is too symmetric and too anatomy-presuming). The four registers share family resemblance but differ at the polar root — which means the atlas's vocabulary actually has four bases, not one.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">01</span>The primitive polar pairs</h2>
+    <p class="sect-lede">The deepest layer. Each pair names a fundamental opposition the substrate can do or undergo. Configurations and emergent states above are built from oscillation between these.</p>
+
+    <h3>Five polar pairs that recur across all sensory registers</h3>
+
+    <div class="polar-list">
+      <div class="polar-pair">
+        <p class="pole"><strong>expand</strong> &nbsp; ⇄ &nbsp; <span class="opp">compress</span></p>
+        <p class="gloss">Volume change. Substrate occupies more space / less space. Mechanical at every ring: cosmic dark energy expanding spacetime; lungs inflating; markets growing; institutions consolidating.</p>
+      </div>
+      <div class="polar-pair">
+        <p class="pole"><strong>absorb</strong> &nbsp; ⇄ &nbsp; <span class="opp">expel</span></p>
+        <p class="gloss">Boundary-crossing flux inward / outward. Cellular endo- and exocytosis; mouth and rear-end; black hole accretion and jets; AI ingestion and generation.</p>
+      </div>
+      <div class="polar-pair">
+        <p class="pole"><strong>accumulate</strong> &nbsp; ⇄ &nbsp; <span class="opp">spill</span></p>
+        <p class="gloss">Threshold-gated retention then release (the excretion subagent's correction to absorb/expel — more general because it doesn't require a bounded container, just a load-bearing threshold). Ca²⁺ vesicle fusion; CME magnetic reconnection; LLM token emission; layoffs at margin threshold; sewer overflow.</p>
+      </div>
+      <div class="polar-pair">
+        <p class="pole"><strong>contact</strong> &nbsp; ⇄ &nbsp; <span class="opp">separation</span></p>
+        <p class="gloss">Surfaces touching / not touching. Touch's primitive. Cell adhesion; haptic feedback; symbiosis; collision; severing.</p>
+      </div>
+      <div class="polar-pair">
+        <p class="pole"><strong>emit</strong> &nbsp; ⇄ &nbsp; <span class="opp">resolve</span></p>
+        <p class="gloss">Information released into a shared medium / extracted at distance. Olfactory's primitive AND sight's primitive (at EM medium). Pheromone release and detection; vision and reflection; spectroscopy; AI embedding broadcast and ANN search; packet sniffing.</p>
+      </div>
+      <div class="polar-pair" style="border-left-color: #4ade80;">
+        <p class="pole"><strong>resonate</strong> &nbsp; ⇄ &nbsp; <span class="opp">damp</span> &nbsp;<span style="font-size: 10px; color: var(--accent-canon);">NEW v3</span></p>
+        <p class="gloss">Sustained coupling between oscillator and receiver / energy loss to surroundings. Sound's deepest primitive (the sound subagent's analysis — contact/separation is a single-event polarity; sound is intrinsically repeated contact at frequency, so resonate/damp is the right layer). Cochlear amplification ↔ presbycusis; vibrational strong coupling ↔ dephasing; QNM excitation ↔ ringdown; sonar return ↔ anechoic absorption.</p>
+      </div>
+      <div class="polar-pair" style="border-left-color: #4ade80;">
+        <p class="pole"><strong>exposed</strong> &nbsp; ⇄ &nbsp; <span class="opp">hidden</span> &nbsp;<span style="font-size: 10px; color: var(--accent-canon);">NEW v3</span></p>
+        <p class="gloss">Sight's local state primitive (the sight subagent's analysis — emit/resolve is the physics layer, but the action layer needs reveal/conceal as transition operators between exposed/hidden states). JWST unveiling distant epochs; facial-recognition revealing identity; military camouflage concealing position; surveillance exposing dissent; anti-drone optics blinding adversary sensors.</p>
+      </div>
+    </div>
+
+    <h3>Three pairs about directed force and pressure</h3>
+
+    <div class="polar-list">
+      <div class="polar-pair">
+        <p class="pole"><strong>pump-in</strong> &nbsp; ⇄ &nbsp; <span class="opp">pump-out</span></p>
+        <p class="gloss">Active transport. Energy-consuming directed flux against gradient. Ion pumps; ventricular cycle; capital flows; data ingestion pipelines.</p>
+      </div>
+      <div class="polar-pair">
+        <p class="pole"><strong>pressure</strong> &nbsp; ⇄ &nbsp; <span class="opp">no-pressure</span></p>
+        <p class="gloss">Zero / not-zero binary at the energetic level. The threshold itself. Phase boundaries; engagement / disengagement; activation / refractory state. The substrate is either being touched or not.</p>
+      </div>
+      <div class="polar-pair">
+        <p class="pole"><strong>vector change</strong> &nbsp; ⇄ &nbsp; <span class="opp">vector hold</span></p>
+        <p class="gloss">Force direction shifting / staying. Turning vs holding course. Maneuver in physics, steering in cognition, pivot in commerce, refactor in canon.</p>
+      </div>
+    </div>
+
+    <p>These eight pairs are candidate-grade as the framework's primitive-layer. The discipline going forward: any verb in the atlas should be decomposable into oscillation between one or more of these pairs. If a verb resists decomposition, that's evidence the primitive set is incomplete and a new pair needs naming.</p>
+
+    <p>Worth noting: the eight pairs aren't fully independent. <em>Pump-in/pump-out</em> is <em>absorb/expel</em> with directed energy. <em>Vector change/hold</em> is the meta-level pair operating on any of the others. <em>Pressure/no-pressure</em> is the on/off switch that gates whether any other pair is engaged. The five core pairs (expand/compress, absorb/expel, accumulate/spill, contact/separation, emit/resolve) cover most of the verb-space; the three meta pairs (pump, pressure, vector) describe how the core pairs are run.</p>
+
+    <p>The notation from PAVPAV's whiteboard (<a href="../notation/">see notation walkthrough</a>) — A⁺ / A⁻, the dual-merge ±/∓ signs — operationalizes this layer. The ± marker on a recursive-bind ⋈ operator is the framework's algebraic shorthand for oscillation between polar opposites. The atlas v2 is the natural-language vocabulary of what the whiteboard's operators are doing.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">02</span>Configurations and emergent states — the three-layer stack</h2>
+    <p class="sect-lede">Visualizing how the vocabulary stacks. Primitive polar pairs at the bottom, configurations as compounds in the middle, emergent states as oscillation-equilibria at the top.</p>
+
+    <div class="diagram-frame">
+      <svg viewBox="0 0 1000 620" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three-layer stack showing polar-primitive pairs at the bottom, configurations in the middle, emergent states at the top, with arrows indicating oscillation producing emergent equilibrium.">
+        <rect x="0" y="0" width="1000" height="620" fill="#050505"/>
+
+        <!-- TOP LAYER: EMERGENT STATES -->
+        <g>
+          <rect x="50" y="40" width="900" height="120" fill="#0d2818" stroke="#15803d" stroke-width="1.5" rx="6"/>
+          <text x="500" y="64" text-anchor="middle" fill="#4ade80" font-family="ui-monospace, Menlo, monospace" font-size="11" letter-spacing="2">EMERGENT STATES (oscillation equilibria)</text>
+
+          <g font-family="Georgia, serif" font-style="italic" font-size="14" fill="#ececec">
+            <rect x="80" y="85" width="120" height="48" fill="#1c1c1c" stroke="#4ade80" rx="4"/>
+            <text x="140" y="108" text-anchor="middle">hold</text>
+            <text x="140" y="124" text-anchor="middle" font-size="10" fill="#8a8a8a">stable rhythm</text>
+
+            <rect x="218" y="85" width="130" height="48" fill="#1c1c1c" stroke="#4ade80" rx="4"/>
+            <text x="283" y="108" text-anchor="middle">neutralize</text>
+            <text x="283" y="124" text-anchor="middle" font-size="10" fill="#8a8a8a">absorb-without-redirect</text>
+
+            <rect x="366" y="85" width="140" height="48" fill="#1c1c1c" stroke="#4ade80" rx="4"/>
+            <text x="436" y="108" text-anchor="middle">manipulation</text>
+            <text x="436" y="124" text-anchor="middle" font-size="10" fill="#8a8a8a">compound directed action</text>
+
+            <rect x="524" y="85" width="140" height="48" fill="#1c1c1c" stroke="#4ade80" rx="4"/>
+            <text x="594" y="108" text-anchor="middle">choreography</text>
+            <text x="594" y="124" text-anchor="middle" font-size="10" fill="#8a8a8a">multi-actor protocol</text>
+
+            <rect x="682" y="85" width="100" height="48" fill="#1c1c1c" stroke="#4ade80" rx="4"/>
+            <text x="732" y="108" text-anchor="middle">ripple</text>
+            <text x="732" y="124" text-anchor="middle" font-size="10" fill="#8a8a8a">propagating wave</text>
+
+            <rect x="800" y="85" width="130" height="48" fill="#1c1c1c" stroke="#4ade80" rx="4"/>
+            <text x="865" y="108" text-anchor="middle">canon dormancy</text>
+            <text x="865" y="124" text-anchor="middle" font-size="10" fill="#8a8a8a">cont 20 primitive</text>
+          </g>
+        </g>
+
+        <!-- MIDDLE LAYER: CONFIGURATIONS -->
+        <g>
+          <rect x="50" y="220" width="900" height="160" fill="#1a1109" stroke="#fb923c" stroke-width="1.5" rx="6"/>
+          <text x="500" y="244" text-anchor="middle" fill="#fb923c" font-family="ui-monospace, Menlo, monospace" font-size="11" letter-spacing="2">CONFIGURATIONS (compounds / protocols / chains)</text>
+
+          <g font-family="ui-monospace, Menlo, monospace" font-size="11" fill="#ececec">
+            <!-- Row 1: four-mode base verbs -->
+            <text x="100" y="275" font-weight="700" fill="#fb923c" font-size="10">FOUR-MODE</text>
+            <rect x="180" y="263" width="70" height="22" fill="#1c1c1c" stroke="#fb923c" rx="3"/>
+            <text x="215" y="278" text-anchor="middle">push</text>
+            <rect x="258" y="263" width="70" height="22" fill="#1c1c1c" stroke="#4ade80" rx="3"/>
+            <text x="293" y="278" text-anchor="middle">pull</text>
+            <rect x="336" y="263" width="70" height="22" fill="#1c1c1c" stroke="#f87171" rx="3"/>
+            <text x="371" y="278" text-anchor="middle">squeeze</text>
+            <rect x="414" y="263" width="70" height="22" fill="#1c1c1c" stroke="#a78bfa" rx="3"/>
+            <text x="449" y="278" text-anchor="middle">pop</text>
+
+            <!-- Row 2: touch verbs -->
+            <text x="100" y="310" font-weight="700" fill="#fb923c" font-size="10">TOUCH</text>
+            <rect x="180" y="298" width="60" height="22" fill="#1c1c1c" stroke="#fcd34d" rx="3"/>
+            <text x="210" y="313" text-anchor="middle">tap</text>
+            <rect x="248" y="298" width="70" height="22" fill="#1c1c1c" stroke="#fcd34d" rx="3"/>
+            <text x="283" y="313" text-anchor="middle">stroke</text>
+            <rect x="326" y="298" width="60" height="22" fill="#1c1c1c" stroke="#fcd34d" rx="3"/>
+            <text x="356" y="313" text-anchor="middle">poke</text>
+            <rect x="394" y="298" width="70" height="22" fill="#1c1c1c" stroke="#fcd34d" rx="3"/>
+            <text x="429" y="313" text-anchor="middle">stomp</text>
+            <rect x="472" y="298" width="60" height="22" fill="#1c1c1c" stroke="#fcd34d" rx="3"/>
+            <text x="502" y="313" text-anchor="middle">pinch</text>
+            <rect x="540" y="298" width="60" height="22" fill="#1c1c1c" stroke="#fcd34d" rx="3"/>
+            <text x="570" y="313" text-anchor="middle">rip</text>
+            <rect x="578" y="298" width="70" height="22" fill="#1c1c1c" stroke="#fcd34d" rx="3"/>
+            <text x="613" y="313" text-anchor="middle">grab</text>
+            <rect x="656" y="298" width="70" height="22" fill="#1c1c1c" stroke="#fcd34d" rx="3"/>
+            <text x="691" y="313" text-anchor="middle">brush</text>
+            <rect x="734" y="298" width="70" height="22" fill="#1c1c1c" stroke="#fcd34d" rx="3"/>
+            <text x="769" y="313" text-anchor="middle">nudge</text>
+            <rect x="812" y="298" width="70" height="22" fill="#1c1c1c" stroke="#fcd34d" rx="3"/>
+            <text x="847" y="313" text-anchor="middle">press</text>
+
+            <!-- Row 3: sensory-register verbs -->
+            <text x="100" y="345" font-weight="700" fill="#fb923c" font-size="10">SENSORY</text>
+            <rect x="180" y="333" width="70" height="22" fill="#1c1c1c" stroke="#f472b6" rx="3"/>
+            <text x="215" y="348" text-anchor="middle">suck</text>
+            <rect x="258" y="333" width="70" height="22" fill="#1c1c1c" stroke="#f472b6" rx="3"/>
+            <text x="293" y="348" text-anchor="middle">chew</text>
+            <rect x="336" y="333" width="70" height="22" fill="#1c1c1c" stroke="#f472b6" rx="3"/>
+            <text x="371" y="348" text-anchor="middle">swallow</text>
+            <rect x="414" y="333" width="70" height="22" fill="#1c1c1c" stroke="#2dd4bf" rx="3"/>
+            <text x="449" y="348" text-anchor="middle">sniff</text>
+            <rect x="492" y="333" width="70" height="22" fill="#1c1c1c" stroke="#2dd4bf" rx="3"/>
+            <text x="527" y="348" text-anchor="middle">scent</text>
+            <rect x="570" y="333" width="70" height="22" fill="#1c1c1c" stroke="#2dd4bf" rx="3"/>
+            <text x="605" y="348" text-anchor="middle">emit</text>
+            <rect x="648" y="333" width="70" height="22" fill="#1c1c1c" stroke="#93c5fd" rx="3"/>
+            <text x="683" y="348" text-anchor="middle">flush</text>
+            <rect x="726" y="333" width="70" height="22" fill="#1c1c1c" stroke="#93c5fd" rx="3"/>
+            <text x="761" y="348" text-anchor="middle">expel</text>
+            <rect x="804" y="333" width="70" height="22" fill="#1c1c1c" stroke="#93c5fd" rx="3"/>
+            <text x="839" y="348" text-anchor="middle">shed</text>
+          </g>
+        </g>
+
+        <!-- ARROWS: oscillation produces emergent equilibrium -->
+        <g stroke="#3a3a3a" stroke-width="1.5" fill="none">
+          <path d="M 500 400 L 500 380" stroke-dasharray="3,3"/>
+          <path d="M 500 200 L 500 220" stroke-dasharray="3,3"/>
+          <text x="510" y="395" fill="#4ade80" font-family="ui-monospace, Menlo, monospace" font-size="10">↑ oscillation → emergent</text>
+          <text x="510" y="215" fill="#fb923c" font-family="ui-monospace, Menlo, monospace" font-size="10">↑ chain / compound</text>
+        </g>
+
+        <!-- BOTTOM LAYER: POLAR PRIMITIVES -->
+        <g>
+          <rect x="50" y="440" width="900" height="160" fill="#1a1500" stroke="#fcd34d" stroke-width="1.5" rx="6"/>
+          <text x="500" y="464" text-anchor="middle" fill="#fcd34d" font-family="ui-monospace, Menlo, monospace" font-size="11" letter-spacing="2">PRIMITIVE POLAR PAIRS (the deepest layer)</text>
+
+          <g font-family="Georgia, serif" font-size="13" fill="#ececec" font-style="italic">
+            <!-- Pair 1 -->
+            <rect x="80" y="490" width="280" height="28" fill="#1c1c1c" stroke="#fcd34d" rx="4"/>
+            <text x="160" y="509" text-anchor="middle">expand</text>
+            <text x="220" y="509" text-anchor="middle" fill="#8a8a8a">⇄</text>
+            <text x="290" y="509" text-anchor="middle">compress</text>
+
+            <!-- Pair 2 -->
+            <rect x="370" y="490" width="280" height="28" fill="#1c1c1c" stroke="#fcd34d" rx="4"/>
+            <text x="450" y="509" text-anchor="middle">absorb</text>
+            <text x="510" y="509" text-anchor="middle" fill="#8a8a8a">⇄</text>
+            <text x="580" y="509" text-anchor="middle">expel</text>
+
+            <!-- Pair 3 -->
+            <rect x="660" y="490" width="280" height="28" fill="#1c1c1c" stroke="#fcd34d" rx="4"/>
+            <text x="740" y="509" text-anchor="middle">accumulate</text>
+            <text x="800" y="509" text-anchor="middle" fill="#8a8a8a">⇄</text>
+            <text x="870" y="509" text-anchor="middle">spill</text>
+
+            <!-- Pair 4 -->
+            <rect x="80" y="528" width="280" height="28" fill="#1c1c1c" stroke="#fcd34d" rx="4"/>
+            <text x="160" y="547" text-anchor="middle">contact</text>
+            <text x="220" y="547" text-anchor="middle" fill="#8a8a8a">⇄</text>
+            <text x="290" y="547" text-anchor="middle">separation</text>
+
+            <!-- Pair 5 -->
+            <rect x="370" y="528" width="280" height="28" fill="#1c1c1c" stroke="#fcd34d" rx="4"/>
+            <text x="450" y="547" text-anchor="middle">emit</text>
+            <text x="510" y="547" text-anchor="middle" fill="#8a8a8a">⇄</text>
+            <text x="580" y="547" text-anchor="middle">resolve</text>
+
+            <!-- Pair 6 -->
+            <rect x="660" y="528" width="280" height="28" fill="#1c1c1c" stroke="#fcd34d" rx="4"/>
+            <text x="740" y="547" text-anchor="middle">pump-in</text>
+            <text x="800" y="547" text-anchor="middle" fill="#8a8a8a">⇄</text>
+            <text x="870" y="547" text-anchor="middle">pump-out</text>
+
+            <!-- Pair 7 -->
+            <rect x="80" y="566" width="280" height="28" fill="#1c1c1c" stroke="#fcd34d" rx="4"/>
+            <text x="160" y="585" text-anchor="middle">pressure</text>
+            <text x="220" y="585" text-anchor="middle" fill="#8a8a8a">⇄</text>
+            <text x="290" y="585" text-anchor="middle">no-pressure (0/≠0)</text>
+
+            <!-- Pair 8 -->
+            <rect x="370" y="566" width="570" height="28" fill="#1c1c1c" stroke="#fcd34d" rx="4"/>
+            <text x="495" y="585" text-anchor="middle">vector change</text>
+            <text x="655" y="585" text-anchor="middle" fill="#8a8a8a">⇄</text>
+            <text x="800" y="585" text-anchor="middle">vector hold (meta-pair)</text>
+          </g>
+        </g>
+      </svg>
+      <p class="diagram-caption">Figure A. The three-layer stack. Bottom: eight polar-opposite primitive pairs (yellow) — the deepest layer the framework names. Middle: configurations built from chains and compounds of polar oscillation (orange) — the four-mode base verbs, the touch-verbs, and the sensory-register verbs all live here. Top: emergent states that arise when oscillation between poles settles into a stable rhythm or pattern (green) — hold, neutralize, manipulation, choreography, ripple, canon dormancy. The arrows in the middle indicate the layered emergence direction: primitive oscillation → configurations → emergent states.</p>
+    </div>
+
+    <h3>Hold and neutralize as emergent</h3>
+
+    <p>This is the structural insight that drove the v2 refactor. <em>Hold</em> (cont 21 §2) and <em>neutralize</em> (added in v2, drawn from Tai Chi's <em>hua jin</em> — absorb without redirect) are not primitive force-modes. They are what a substrate looks like when oscillation between polar opposites reaches equilibrium. A guitar string at rest is in hold; that hold is an emergent state from many cycles of push/pull oscillation damping out. A canon in hold (cont 21) is an emergent state from many cycles of refactor-and-test damping out. A neutralized force in Tai Chi push-hands is an emergent state from continuous absorb-and-yield oscillation that prevents the partner's force from finding traction.</p>
+
+    <p>Why this matters: emergent states are *not* directly addressable. You cannot reach for hold the way you can reach for push. Hold has to <em>arise</em>. The vocabulary distinction matters because it changes what an observer is doing when it reaches for these verbs. <em>Push</em> is a direct action. <em>Hold</em> is a description of a state that arises when the right oscillation pattern is sustained. Trying to "do hold" directly produces freeze, not hold. Hold is what happens when push-and-pull have settled into a productive rhythm.</p>
+
+    <p>Manipulation and choreography are the larger emergent compounds. A manipulation is a chain of configurations directed toward an end-state. A choreography is a multi-actor protocol where each actor's configurations are timed against the others' so that the whole produces a coherent emergent pattern. Ballet, surgery, conjugation rituals, RAG inference pipelines, election cycles — all are choreographies at different substrate rings. The framework's <em>mutual rendering</em> primitive (cont 16) is the basic two-actor choreography; institutional life is the multi-actor case.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">03</span>The full vocabulary</h2>
+    <p class="sect-lede">v1 vocabulary preserved and extended. New additions: neutralize, rip, pinch (touch family); plus the three sensory-register sections at §05.</p>
+
+    <h3>Force-mode base verbs (the cont-21 four-mode)</h3>
+    <div class="vocab-grid">
+      <div class="vocab-card f-push"><p class="label">family · push · configuration</p><h4>push</h4><p>Forward-directional force. Oscillation of expand/compress projected forward against constraint.</p></div>
+      <div class="vocab-card f-pull"><p class="label">family · pull · configuration</p><h4>pull</h4><p>Attractive-directional force. Oscillation of contact/separation directed inward toward an attractor.</p></div>
+      <div class="vocab-card f-squeeze"><p class="label">family · squeeze · configuration</p><h4>squeeze</h4><p>Compressive pressure event. Sustained compress with no expansion phase. Pandemic, war, asteroid.</p></div>
+      <div class="vocab-card f-pop"><p class="label">family · pop · configuration</p><h4>pop</h4><p>Release / burst event. Sustained accumulate followed by sudden spill at threshold. Supernova, election, IPO.</p></div>
+    </div>
+
+    <h3>Touch verbs (with v2 additions: neutralize, rip, pinch)</h3>
+    <div class="vocab-grid">
+      <div class="vocab-card f-touch"><p class="label">touch · brief, light</p><h4>tap</h4><p>Light intermittent contact. Discrete signal. Polar-decomposition: contact/separation oscillation at high frequency, low pressure.</p></div>
+      <div class="vocab-card f-touch"><p class="label">touch · gentle, sustained</p><h4>stroke</h4><p>Sustained gentle directional shaping. Polar-decomposition: contact maintained, vector held, low pressure.</p></div>
+      <div class="vocab-card f-touch"><p class="label">touch · pointed, brief</p><h4>poke</h4><p>Pointed brief contact. Probing. High pressure, small area, brief duration.</p></div>
+      <div class="vocab-card f-touch"><p class="label">touch · glancing</p><h4>brush</h4><p>Glancing surface contact. Vector held, contact-and-separation rapid.</p></div>
+      <div class="vocab-card f-touch"><p class="label">touch · gentle directional</p><h4>nudge</h4><p>Gentle directional push for behavioral steering. Low-amplitude push with explicit attention to receiver state.</p></div>
+      <div class="vocab-card f-touch"><p class="label">touch · forceful</p><h4>stomp</h4><p>Heavy crushing contact. Sustained pressure, vector down, often obliterating.</p></div>
+      <div class="vocab-card f-touch" style="border-left-color: #4ade80;"><p class="label">touch · v2 · NEW</p><h4>pinch</h4><p>Compressive small-area contact between two surfaces. Polar-decomposition: paired contact, compress, hold. Cooking (pinch of salt); pruning (pinch back); economics (pinching pennies).</p></div>
+      <div class="vocab-card f-touch" style="border-left-color: #4ade80;"><p class="label">touch · v2 · NEW</p><h4>rip</h4><p>Sudden split across surface. Polar-decomposition: sustained pull followed by abrupt separation at threshold. Tectonic faults; tendon rupture; data leak; institutional schism.</p></div>
+      <div class="vocab-card f-emergent" style="border-left-color: #4ade80;"><p class="label">emergent · v2 · NEW</p><h4>neutralize</h4><p>Absorb without redirect. The Tai Chi <em>hua jin</em>. Polar-decomposition: emergent from continuous absorb-and-yield oscillation that prevents incoming force from finding traction. Not a direct verb — a state the receiver enters when the oscillation pattern is sustained.</p></div>
+    </div>
+
+    <h3>Pull, squeeze, release families (from v1, kept)</h3>
+    <p>The pull-family (tug, yank, drag, trap, pluck, sculpt), squeeze-family (press, clasp, grab, hold, stamp, twist), and release-family (burst, diffuse, expel, withdraw) entries from v1 are preserved with the same color-coding. See <a href="#section04">the cross-substrate anchors</a> for the empirical instances.</p>
+  </div>
+</section>
+
+<section id="section04">
+  <div class="wrap-wide">
+    <h2><span class="num">04</span>Cross-substrate empirical anchors (touch + force-mode)</h2>
+    <p class="sect-lede">2024–2026 anchors from the first round of subagent scans (cosmology, AI, biology, chemistry). 30+ entries from v1, preserved. The new sensory-register anchors are in §05 below.</p>
+
+    <div class="substrate-block">
+      <h3>Cosmology / space</h3>
+      <span class="ring-label">substrate ring · physics + macroscale</span>
+      <div class="anchor"><strong>POP / CLASP</strong> <span class="verb">GW231123 BH merger</span> · LIGO-Virgo-KAGRA, July 2025 — most massive and fastest-spinning BH merger ever recorded. <a href="https://www.ligo.caltech.edu/news/ligo20250715" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>STRETCH / YANK</strong> <span class="verb">AT2024tvd wandering SMBH</span> · Hubble/Chandra/VLA caught off-nuclear BH ripping a star apart 2,600 ly from its galaxy's core. <a href="https://esahubble.org/images/opo2515/" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>PUSH (weakening)</strong> <span class="verb">DESI Year-3 dark energy</span> · March 2025 release suggests dark energy is evolving, not constant. <a href="https://www.desi.lbl.gov/2025/03/19/more-than-a-hint-of-evolving-dark-energy-new-results-and-data-from-desi/" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>PULL / BEND</strong> <span class="verb">Euclid Q1 weak lensing</span> · Most detailed dark-matter filament maps yet. <a href="https://www.mpg.de/24349746/euclid-data-release" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>POKE</strong> <span class="verb">KM3 220 PeV neutrino</span> · KM3NeT detected highest-energy cosmic neutrino ever, Nature Feb 2025. <a href="https://www.km3net.org/km3net-detects-the-highest-energy-neutrino-ever-observed/" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>PRESS</strong> <span class="verb">JWST early galaxies (MoM-z14)</span> · Mature galaxies 280–400 Myr post-Big Bang. <a href="https://www.space.com/astronomy/james-webb-space-telescope/james-webb-space-telescope-finds-most-distant-galaxy-ever-detected-it-looks-nothing-like-what-we-predicted" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>TAP</strong> <span class="verb">FRB 20250316A localized to 13 pc</span> · CHIME most-precise FRB pinpoint. <a href="https://iopscience.iop.org/article/10.3847/2041-8213/adf62f" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>DRAG / SWEEP</strong> <span class="verb">JWST jellyfish galaxy z > 1.156</span> · Earliest ram-pressure stripping observed. <a href="https://www.researchgate.net/publication/400881011_JWST_Reveals_a_Candidate_Jellyfish_Galaxy_at_z_1156" target="_blank">source ↗</a></div>
+    </div>
+
+    <div class="substrate-block">
+      <h3>AI / computation</h3>
+      <span class="ring-label">substrate ring · latent + cognition-analog</span>
+      <div class="anchor"><strong>TAP</strong> <span class="verb">Golden Gate Claude</span> · Anthropic, feature clamping. <a href="https://www.anthropic.com/news/golden-gate-claude" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>CARVE / EXPOSE</strong> <span class="verb">Scaling Monosemanticity (SAEs)</span> · Millions of interpretable features extracted from Claude 3 Sonnet. <a href="https://transformer-circuits.pub/2024/scaling-monosemanticity/" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>STROKE</strong> <span class="verb">Constitutional Classifiers</span> · Anthropic, Feb 2025. <a href="https://www.anthropic.com/research/constitutional-classifiers" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>POKE</strong> <span class="verb">LIAR / Best-of-N jailbreaking</span> · 99% success rates on aligned models. <a href="https://arxiv.org/abs/2412.05232" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>PRESS</strong> <span class="verb">s1 Simple Test-Time Scaling</span> · Budget-forcing reproduces o1 scaling. <a href="https://arxiv.org/abs/2501.19393" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>TAP-IN / ROUTE</strong> <span class="verb">DeepSeek-V3 MoE routing</span> · Token-level sparse activation. <a href="https://arxiv.org/abs/2412.19437" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>STOMP</strong> <span class="verb">Model collapse (Shumailov et al.)</span> · Nature 2024, recursive training kills low-prob modes. <a href="https://www.nature.com/articles/s41586-024-07566-y" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>NUDGE</strong> <span class="verb">CAST contextual activation steering</span> · ICLR 2025. <a href="https://proceedings.iclr.cc/paper_files/paper/2025/file/e2dd53601de57c773343a7cdf09fae1c-Paper-Conference.pdf" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>GRAB</strong> <span class="verb">Function Vector heads</span> · ICML 2025, ICL circuits located. <a href="https://arxiv.org/abs/2407.07011" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>SCULPT / PULL</strong> <span class="verb">Latent Flow Matching / Flux.1</span> · Straight optimal-transport from noise to image. <a href="https://arxiv.org/abs/2505.04486" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>POP</strong> <span class="verb">LLM phase transitions in semantic space</span> · Emergence as critical-point phenomenon, Aug 2025. <a href="https://arxiv.org/abs/2508.04401" target="_blank">source ↗</a></div>
+    </div>
+
+    <div class="substrate-block">
+      <h3>Biology</h3>
+      <span class="ring-label">substrate ring · life</span>
+      <div class="anchor"><strong>TAP</strong> <span class="verb">DmMSL10 Venus flytrap mechanosensor</span> · Sept 2025 Nat Comm. <a href="https://www.nature.com/articles/s41467-025-63419-w" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>POP / RELEASE</strong> <span class="verb">Diel coral symbiont expulsion</span> · 2025 Coral Reefs. <a href="https://link.springer.com/article/10.1007/s00338-025-02634-9" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>ENGULF / GRAB</strong> <span class="verb">Stiffness-selective efferocytosis</span> · 2025 MedComm. <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/mco2.70546" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>PRESS / TAP</strong> <span class="verb">Enteric Piezo1</span> · Gut mechanotransduction 2025. <a href="https://www.cell.com/trends/pharmacological-sciences/fulltext/S0165-6147(25)00142-7" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>CLASP / TUG</strong> <span class="verb">H-pilus cyclic pilin</span> · PNAS March 2025, conjugative DNA-transfer tube. <a href="https://www.pnas.org/doi/10.1073/pnas.2427228122" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>STAMP / PRESS</strong> <span class="verb">Sequence-driven DNA methylation</span> · Salk Nov 2025. <a href="https://www.news-medical.net/news/20251122/Discovery-of-sequence-driven-DNA-methylation-offers-new-path-for-epigenetic-engineering.aspx" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>YANK strengthens HOLD</strong> <span class="verb">XDoc:CohE catch-bond</span> · JCTC 2025, force-strengthened binding. <a href="https://pubs.acs.org/doi/10.1021/acs.jctc.5c01181" target="_blank">source ↗</a></div>
+    </div>
+
+    <div class="substrate-block">
+      <h3>Chemistry</h3>
+      <span class="ring-label">substrate ring · molecular</span>
+      <div class="anchor"><strong>PULL / TRAP</strong> <span class="verb">MOFs — Nobel Chemistry 2025</span> · Kitagawa, Robson, Yaghi awarded. <a href="https://www.nobelprize.org/prizes/chemistry/2025/press-release/" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>SELF-CLASP → CRAWL</strong> <span class="verb">Enzyme-powered DNA origami</span> · bioRxiv Aug 2025. <a href="https://www.biorxiv.org/content/10.1101/2025.08.29.672641v1.full" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>TWIST / LOCK</strong> <span class="verb">Atropisomeric organocatalysis</span> · 2025 Adv Synth Catal. <a href="https://advanced.onlinelibrary.wiley.com/doi/10.1002/adsc.202401553" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>BUZZ → POP</strong> <span class="verb">Bee static-charge triggers floral scent release</span> · Chemistry World 2025. <a href="https://www.chemistryworld.com/news/bees-static-buzz-triggers-release-of-floral-fragrance/4014485.article" target="_blank">source ↗</a></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap-wide">
+    <h2><span class="num">05</span>The three other primal senses — mouth, smell, rear-end</h2>
+    <p class="sect-lede">Touch is one sensory register. Three others are equally primitive (arguably older evolutionarily). Each has its own polar primitive at the bottom and its own characteristic vocabulary. Subagent-research-grounded; full sources in §10.</p>
+
+    <h3>5A. Mouth / oral — gated transformative intake</h3>
+
+    <div class="substrate-block">
+      <h3>Biology / oral physiology</h3>
+      <span class="ring-label">verbs · suck · chew · gnaw · bite · lick · lap · gulp · swallow · salivate · taste · regurgitate · vomit · suckle</span>
+      <div class="anchor"><strong>POPULATION ORAL MICROBIOME</strong> <span class="verb">absorb / inhabit</span> · Abnet et al., JAMA Network Open May 2025 — first population-representative oral microbiome map (n=8,237 NHANES); &gt;99% of US adults share five phyla and six genera. The "universal mouth." <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12053784/" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>VAGAL REWARD CONDUIT</strong> <span class="verb">absorb / reward</span> · Nat Rev Gastroenterol Hepatol 2025 — gut-to-brain vagal afferents in the nodose ganglion trigger midbrain dopamine; the vagus is not just a satiety brake but a pleasure conduit. <a href="https://www.nature.com/articles/s41575-025-01070-y" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>MATERNAL OXYTOCIN SUCKLING</strong> <span class="verb">suckle / release-induce</span> · Carcea/Froemke lineage updated 2024-25 — posterior intralaminar thalamus routes infant cries to oxytocin neurons; ~30s of crying overpowers inhibition. <a href="https://www.nature.com/articles/s41586-023-06540-4" target="_blank">source ↗</a></div>
+    </div>
+
+    <div class="substrate-block">
+      <h3>Chemistry / molecular tasting</h3>
+      <span class="ring-label">verbs · bind · recognize · dock · select · discriminate · complement · occupy</span>
+      <div class="anchor"><strong>HYPER-FLEXIBLE BINDING</strong> <span class="verb">discriminate / select</span> · TAS2R cryo-EM series 2024-2026 (NIH/Mount Sinai et al.) revealed hyper-flexible bitter-receptor binding pockets, often <em>two distinct sites per receptor</em>, correcting strict lock-and-key for chemoreception. <a href="https://www.cell.com/cell-reports/fulltext/S2211-1247(25)00375-4" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>RECOGNITION TAXONOMY</strong> <span class="verb">dock / fit</span> · Int. J. Mol. Sci. 25(13):7124 2024 — formal taxonomy of lock-and-key, induced fit, conformational selection, inhibitor trapping. Molecular tasting is a <em>family</em> of recognition modes. <a href="https://www.mdpi.com/1422-0067/25/13/7124" target="_blank">source ↗</a></div>
+    </div>
+
+    <div class="substrate-block">
+      <h3>Cooking / culinary</h3>
+      <span class="ring-label">verbs · season · marinate · infuse · steep · reduce · brown · sear · caramelize · deglaze · ferment · age · brine · smoke · cure · render</span>
+      <div class="anchor"><strong>BROWN-FLAVOR VOCABULARY</strong> <span class="verb">caramelize / brown</span> · JIRK 5(2) 2025 — formalizes the two-pathway Maillard + caramelization model. Both produce furans, pyrazines, aldehydes — the volatile vocabulary of brown flavor. <a href="https://bajangjournal.com/index.php/JIRK/article/view/10987" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>QUORUM-SENSING FLAVOR</strong> <span class="verb">ferment / cultivate</span> · Trends in Food Science 2024-2025 — quorum-sensing as the governor of microbial flavor; genome-edited fermenting organisms produce designed flavor compounds. <a href="https://www.sciencedirect.com/science/article/abs/pii/S095816692400020X" target="_blank">source ↗</a></div>
+    </div>
+
+    <div class="substrate-block">
+      <h3>AI / information intake</h3>
+      <span class="ring-label">verbs · ingest · chunk · embed · retrieve · swallow-context · digest · parse · tokenize · consume-tokens</span>
+      <div class="anchor"><strong>RAGOPS LIFECYCLE</strong> <span class="verb">ingest / chunk / embed</span> · arXiv 2506.03401 June 2025 — formalizes the data lifecycle in explicitly alimentary metaphor: ingestion → cleaning → chunking → embedding → indexing → retrieval → prompt assembly. "Ingestion" is the canonical stage-one name in NVIDIA, DigitalOcean, lakeFS, Pinecone docs. <a href="https://arxiv.org/html/2506.03401v1" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>LLM CHEWING</strong> <span class="verb">parse / chew</span> · arXiv 2412.15262 — LLMs themselves do the chewing of unstructured PDFs before swallowing into the vector store. The model both eats and prepares its meal.</div>
+    </div>
+
+    <div class="substrate-block">
+      <h3>Cosmology / astrophysics</h3>
+      <span class="ring-label">verbs · accrete · feed · devour · swallow · ingest · gulp · disrupt · cannibalize · merge · infall</span>
+      <div class="anchor"><strong>HIDDEN BH GULPS</strong> <span class="verb">gulp / feed</span> · JWST July 2025 — four dormant SMBHs caught mid-meal via ionized-neon infrared fingerprint from the accretion disk. <a href="https://phys.org/news/2025-07-jwst-uncovers-hidden-black-holes.html" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>FEEDING DISK IMAGED</strong> <span class="verb">accrete / feed</span> · JWST interferometric Circinus AGN disk imaging, arXiv 2506.08077 2025 — sharpest-ever view of a feeding disk at sub-pc scales.</div>
+      <div class="anchor"><strong>GALAXY CANNIBALISM RATES</strong> <span class="verb">cannibalize</span> · MNRAS 540:774 2025 — galaxy-on-galaxy pair fractions z=4.5–11.5 quantify cannibalism rates in the reionization epoch. <a href="https://academic.oup.com/mnras/article/540/1/774/8115792" target="_blank">source ↗</a></div>
+    </div>
+
+    <p><strong>Oral primitive (from cross-cutting subagent observation):</strong> the deepest dynamic underneath oral verbs is not just absorb/expel. It's <em>gated transformative intake</em> with two axes: <strong>selectivity</strong> (from indiscriminate gravitational accretion to hyper-trained sommelier palate) and <strong>transformation</strong> (intake is rarely passive — the substrate works on the input <em>while</em> taking it in: chewing, salivating, Maillard browning, RAG chunking, accretion-disk heating). The polar opposite of intake is not just expulsion but <em>regurgitation</em> — return of the transformed material to the environment.</p>
+
+    <h3>5B. Smell / olfactory — emit and resolve at distance</h3>
+
+    <div class="substrate-block">
+      <h3>Biology / olfaction</h3>
+      <span class="ring-label">verbs · sniff · inhale · exhale · scent · mark · trail · waft · drift · emit · broadcast · follow · cast (crosswind) · surge (upwind) · deorphanize</span>
+      <div class="anchor"><strong>TAAR DEORPHANIZED</strong> <span class="verb">scent / detect-pheromone</span> · Jiang et al. Cell Discovery Sept 2025 — deorphanizes the TAAR348 receptor against the polyamine pheromone spermine. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12476453/" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>OR STRUCTURE</strong> <span class="verb">resolve / fingerprint</span> · Qin, Sensory Neuroscience / Wiley 2025 — review of olfactory-receptor cryo-EM advances. <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/sen2.70000" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>POST-COVID ANOSMIA</strong> <span class="verb">resolve-failure / detector-shrinkage</span> · Scientific Reports 2024 — MRI evidence olfactory bulb literally shrinks post-COVID; loss of support-cell mucus glucose disables ciliary transduction. <a href="https://www.nature.com/articles/s41598-024-64367-z" target="_blank">source ↗</a></div>
+    </div>
+
+    <div class="substrate-block">
+      <h3>Chemistry / VOCs</h3>
+      <span class="ring-label">verbs · volatilize · off-gas · diffuse · partition · desorb · sorb · fingerprint · profile · gradient-trace</span>
+      <div class="anchor"><strong>E-NOSE BREATH SENSING</strong> <span class="verb">profile / fingerprint</span> · ACS Sensors 2024 — IoT-enabled electronic nose classifies VOCs in real time for breath sensing. <a href="https://pubs.acs.org/doi/10.1021/acssensors.4c02731" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>VOC CANCER PANEL</strong> <span class="verb">profile / detect-disease</span> · PMC 2025 — 15-VOC e-nose breath panel achieves 86% sensitivity / 83% specificity for colorectal cancer. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12748548/" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>BREATH BIOMETRICS</strong> <span class="verb">fingerprint / identify</span> · Scientific Reports 2025 — exhaled breath VOC pattern as personal biometric. <a href="https://www.nature.com/articles/s41598-025-19463-z" target="_blank">source ↗</a></div>
+    </div>
+
+    <div class="substrate-block">
+      <h3>AI / latent space (smell as embedding similarity)</h3>
+      <span class="ring-label">verbs · embed · project · encode · retrieve · ANN-search · cosine-cluster · vector-match · beacon (a query) · track-the-gradient</span>
+      <div class="anchor"><strong>LLM-ASSISTED VECTOR SIMILARITY</strong> <span class="verb">embed / match-scent</span> · arXiv 2412.18819 late 2024 — LLMs re-rank cosine neighbors, treating embeddings as scent profiles smelled-against-query. <a href="https://arxiv.org/pdf/2412.18819" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>FAISS RECOMMENDER SMELL</strong> <span class="verb">match-scent / cluster</span> · Neurocomputing 2025 — explicit framing of taste-prediction as nearest-neighbor in scent-vector space. <a href="https://www.sciencedirect.com/science/article/abs/pii/S0925231225014250" target="_blank">source ↗</a></div>
+    </div>
+
+    <div class="substrate-block">
+      <h3>Marketing / culture</h3>
+      <span class="ring-label">verbs · waft · atmospher-ize · signal · dog-whistle · evoke · anchor (memory) · prime · broadcast (brand) · sniff-test</span>
+      <div class="anchor"><strong>SCENT-BRAND RECOGNITION</strong> <span class="verb">waft / atmospher-ize</span> · Free Yourself trend report 2025 — 60% of consumers can identify a brand by scent alone; ambient scenting lifts dwell time ~15 min, spend up to 23%. <a href="https://freeyourself.com/blogs/news/scent-branding-statistics" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>OLFACTORY E-COMMERCE</strong> <span class="verb">broadcast / unbox-scent</span> · ResearchGate 2025 — scent extended past retail floor into the unboxing moment. <a href="https://www.researchgate.net/publication/394361451_Unpacking_olfactory_marketing" target="_blank">source ↗</a></div>
+    </div>
+
+    <div class="substrate-block">
+      <h3>Cosmology / astrophysics</h3>
+      <span class="ring-label">verbs · spectro-sniff · transmit · absorb · fingerprint · constrain · retrieve (atmospheric composition) · detect-at-distance</span>
+      <div class="anchor"><strong>K2-18b DMS CLAIM</strong> <span class="verb">spectro-sniff / fingerprint</span> · Madhusudhan et al. ApJL April 2025 — claimed dimethyl sulfide detection at ~10 ppm in exoplanet atmosphere. <a href="https://iopscience.iop.org/article/10.3847/2041-8213/adc1c8" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>K2-18b DMS COUNTER-CLAIM</strong> <span class="verb">resolve-failure / hide-in-mixture</span> · A&A August 2025 — joint NIRISS+NIRSpec+MIRI analysis finds insufficient evidence for DMS. The smell isn't really there. <a href="https://www.aanda.org/articles/aa/full_html/2025/08/aa55580-25/aa55580-25.html" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>ABIOTIC DMS ON 67P</strong> <span class="verb">fingerprint-ambiguity</span> · arXiv 2410.08724 late 2024 — DMS found in comet 67P, undermining biosignature status. <a href="https://arxiv.org/pdf/2410.08724" target="_blank">source ↗</a></div>
+    </div>
+
+    <div class="substrate-block">
+      <h3>Cybersecurity</h3>
+      <span class="ring-label">verbs · sniff (packets) · beacon · exfiltrate · fingerprint (JA3/JA4) · profile · baseline · deviate · telemeter · leak</span>
+      <div class="anchor"><strong>ENCRYPTED-TRAFFIC ANOMALY</strong> <span class="verb">sniff-through-the-wall</span> · Scientific Reports 2025 — self-supervised ET-SSL detects anomalies in encrypted traffic by flow-shape alone (96.8% accuracy) with no payload visibility. <a href="https://www.nature.com/articles/s41598-025-08568-0" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>JA3 BEACONING DETECTION</strong> <span class="verb">beacon / fingerprint-malware</span> · ETASR 2025 — CNN+BiLSTM over JA3 fingerprints treats beaconing and staged exfiltration as cross-flow scent trails. <a href="https://etasr.com/index.php/ETASR/article/view/13267" target="_blank">source ↗</a></div>
+    </div>
+
+    <p><strong>Olfactory primitive (from cross-cutting subagent observation):</strong> the deepest dynamic is <em>volatilize ↔ resolve</em> — a substrate releases information into a shared medium it doesn't control (volatilize), and a receiver picks signal out of a noisy gradient at distance (resolve). This pair distinguishes smell from touch: touch needs co-location; smell trades co-location for <em>a diffusive carrier medium</em> (air, water, vacuum-with-photons, packet substrate, embedding manifold). Every ring has its medium. The dual pair is <em>identify-without-contact ↔ hide-in-the-mixture</em> — and the K2-18b DMS controversy, malware beaconing, dog-whistles, perfume cover-ups are all the same primitive contest: can the receiver extract one signal from a turbulent, adversarial, mixed-source field?</p>
+
+    <h3>5C. Sight — emit/resolve at EM scale, with exposed/hidden as state primitive</h3>
+
+    <p>The sight subagent's verdict on Bubble 02's reduction claim: vision <em>does</em> reduce to olfactory at the substrate (both are spectroscopic — discriminating by photon wavelength vs chemical-volatile shape, both are molecular-recognition events triggered by an incoming particle), but vision specializes resolve into a <em>geometric 2D</em> mode that olfactory never developed, and underweights emit except in light-emitting niches (bioluminescence, AI rendering, military illuminators). ~70% clean reduction. The atlas keeps emit/resolve as the substrate primitive and adds <em>exposed/hidden</em> as sight's local state primitive, with reveal/conceal as the transition operators.</p>
+
+    <div class="substrate-block">
+      <h3>Biology / vision</h3>
+      <span class="ring-label">verbs · see · look · gaze · glance · scan · fixate · saccade · accommodate · blink · track · perceive · recognize</span>
+      <div class="anchor"><strong>FOVEAL PREDICTION</strong> <span class="verb">predict-the-next-image</span> · Hanning et al., eLife reviewed preprint 2025 — peripheral saccade targets decoded from <em>foveal</em> V1 cortex despite no foveal stimulation. The brain predicts the next image before the saccade lands. <a href="https://elifesciences.org/reviewed-preprints/107053" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>PREDICTIVE CODING LIGHT</strong> <span class="verb">predict / resolve-as-inference</span> · Nature Communications 2025 — spiking-network model reproducing extra-classical receptive-field effects. Retina-as-prediction-engine. <a href="https://www.nature.com/articles/s41467-025-64234-z" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>GAZE AS ACTIVE INFERENCE</strong> <span class="verb">gaze / hypothesis-test</span> · Trends in Cognitive Sciences 2025 — eye movements reframed as hypothesis tests, not passive sampling. <a href="https://www.sciencedirect.com/science/article/abs/pii/S014976342500524X" target="_blank">source ↗</a></div>
+    </div>
+
+    <div class="substrate-block">
+      <h3>Chemistry / photopigments + photochemistry</h3>
+      <span class="ring-label">verbs · absorb (photon) · excite · isomerize · photoswitch · photoreact · photobleach · photoluminesce · photodegrade · photoactivate</span>
+      <div class="anchor"><strong>240-FS PHOTOSWITCH</strong> <span class="verb">isomerize / photoswitch</span> · Broser et al., JACS July 2025 — ultrafast 11-cis → all-trans pathway in bistable microbial rhodopsin photoswitching between D661 and P540 states. A natural reversible photoswitch resolved to molecular geometry. <a href="https://pubs.acs.org/doi/10.1021/jacs.5c06216" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>OPTOGENETICS RETROSPECTIVE</strong> <span class="verb">light-gate / photoactivate</span> · Duan et al., Advanced Genetics Sept 2025 — two decades of engineered rhodopsins as light-gated switches. Chemistry deployed as a sense organ. <a href="https://advanced.onlinelibrary.wiley.com/doi/full/10.1002/ggn2.202500021" target="_blank">source ↗</a></div>
+    </div>
+
+    <div class="substrate-block">
+      <h3>AI / computer vision and image generation</h3>
+      <span class="ring-label">verbs · detect · classify · segment · embed · attend (ViT) · render · generate · diffuse · denoise · super-resolve · upscale · hallucinate</span>
+      <div class="anchor"><strong>SORA 2</strong> <span class="verb">generate / emit-photons</span> · OpenAI Sept 30 2025 — diffusion + temporal modeling generating up to 20-second 1080p clips with physics-consistent world state across shots. AI vision crosses from resolve into proper emit at scale. <a href="https://en.wikipedia.org/wiki/Sora_(text-to-video_model)" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>VEO 3</strong> <span class="verb">render / emit</span> · Google May 2025 — cascaded-diffusion architecture trained on cinema, responding to lighting/material/composition vocabulary as conditioning. <a href="https://skywork.ai/blog/sora-2-vs-veo-3-vs-runway-gen-3-2025-ai-video-generator-comparison/" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>ViT-5 / GPT-4o IMAGE</strong> <span class="verb">attend / see+emit</span> · 2026 ViT modernization; GPT-4o native multimodal March 2025 fusing see+generate. <a href="https://arxiv.org/pdf/2602.08071" target="_blank">source ↗</a></div>
+    </div>
+
+    <div class="substrate-block">
+      <h3>Society / surveillance + marketing</h3>
+      <span class="ring-label">verbs · surveil · monitor · watch · expose · reveal · conceal · display · exhibit · spotlight · frame · showcase · doxx</span>
+      <div class="anchor"><strong>FBI AI DRONE RFI</strong> <span class="verb">surveil / reveal-at-scale</span> · Nov 2025 — Bureau solicited UAS with onboard facial recognition, license-plate recognition, weapons detection. Federal mass aerial surveillance as procurement line item. <a href="https://dronexl.co/2025/11/23/fbi-ai-surveillance-drones-facial-recognition/" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>FRT MARKET TRAJECTORY</strong> <span class="verb">reveal / identify</span> · 2025 analyses — 16.79% CAGR through 2031, projected $14.55B; municipal deployments (Detroit, NYC, LA); TSA airport rollout. <a href="https://getsafeandsound.com/blog/facial-recognition-trends-and-statistics/" target="_blank">source ↗</a></div>
+    </div>
+
+    <div class="substrate-block">
+      <h3>Cosmology / astronomical observation</h3>
+      <span class="ring-label">verbs · observe · resolve · image · detect · photometer · spectroscope · polarimeter · interferometer · lens (gravitationally)</span>
+      <div class="anchor"><strong>EUCLID Q1 RELEASE</strong> <span class="verb">resolve / lens</span> · ESA March 19 2025 — ~500 strong-lens candidates pulled from 0.45% of survey area via ML + citizen science, plus 380,000 classified galaxies. <a href="https://www.esa.int/Science_Exploration/Space_Science/Euclid/Euclid_opens_data_treasure_trove_offers_glimpse_of_deep_fields" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>EHT M87* POLARIZATION FLIPS</strong> <span class="verb">polarimeter / resolve-at-horizon</span> · CfA / Max Planck Sept 2025 — three-epoch polarimetry (2017/2018/2021) showed ring intensity stable but linear polarization reverses. First jet-base emission signatures detected. <a href="https://www.cfa.harvard.edu/news/new-eht-images-reveal-unexpected-polarization-flips-m87" target="_blank">source ↗</a></div>
+    </div>
+
+    <div class="substrate-block">
+      <h3>Military / visual operations</h3>
+      <span class="ring-label">verbs · sight · target · range · aim · sweep · scan · recon · reveal · camouflage · conceal · blind · dazzle · illuminate</span>
+      <div class="anchor"><strong>HELIOS LASER</strong> <span class="verb">dazzle / blind / illuminate</span> · USS Preble 2025 trials — 60-kW laser destroyed four drones at sea; "Integrated Optical Dazzler and Surveillance" collapses three sight-verbs into one weapon. <a href="https://www.twz.com/sea/uss-preble-used-helios-laser-to-zap-four-drones-in-expanding-testing" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>LYOCON RIFLE-MOUNTED DAZZLER</strong> <span class="verb">blind / neutralize-resolve</span> · NUBURU 2025 — blue/multi-wavelength laser blinds drone sensors at 500 m. Non-kinetic defeat by overwhelming the adversary's resolve channel. <a href="https://interestingengineering.com/military/nuburu-rifle-mounted-laser-weapon-drones" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>HYPERSPECTRAL DRONE PAYLOADS</strong> <span class="verb">unmask / reveal-by-spectrum</span> · Cubert at DSEI 2025 — per-pixel full-spectrum signatures defeat camouflage. Conceal-side verbs lose to spectral-detection verbs. <a href="https://cubert-hyperspectral.com/en/hyperspectral-uavs-for-defense-security/" target="_blank">source ↗</a></div>
+    </div>
+
+    <p><strong>Sight primitive (from cross-cutting subagent observation):</strong> the framework should hold <em>emit/resolve</em> as the substrate primitive (preserving the cross-sense reduction) and add <em>exposed/hidden</em> as the sight-register's <em>state</em> primitive, with <em>reveal/conceal</em> as the <em>transition operators</em> between exposed and hidden. Three nested layers: emit/resolve names the signal-physics; reveal/conceal names the act of transitioning observability; exposed/hidden names the state the transition moves between. This three-layer structure honors sight's geometric/observational character at the action layer while preserving the emit/resolve homology at the physics layer.</p>
+
+    <h3>5D. Sound — resonate/damp at the substrate, not contact/separation</h3>
+
+    <p>The sound subagent's verdict on Bubble 02's reduction claim: hearing <em>does</em> reduce to touch in the biology and military rings (cochlear stereocilia <em>are</em> mechanoreceptors; sonar is mechanical contact at distance through water; LRAD literally pushes the eardrum past pain threshold), but strains in cosmology and AI. The deeper insight: contact/separation is a single-event polarity, but sound is intrinsically <em>repeated contact at frequency</em>. The right primitive is <em>resonate/damp</em>: sustained coupling between oscillator and receiver vs energy loss to the surroundings. Contact/separation is a special case at zero frequency.</p>
+
+    <div class="substrate-block">
+      <h3>Biology / hearing + vocalization</h3>
+      <span class="ring-label">verbs · hear · listen · attend · prick-up · vocalize · sing · hum · whisper · growl · echo · resonate · ring</span>
+      <div class="anchor"><strong>MET CHANNEL TUNING</strong> <span class="verb">listen / tune-membrane</span> · George et al., Advanced Science 2025-2026 — MET channels dynamically reshape stereocilia membrane mechanics. The channel doesn't just respond to touch; it tunes the membrane's compliance to receive it. Touch-listening is bidirectional. <a href="https://advanced.onlinelibrary.wiley.com/doi/10.1002/advs.202508268" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>MET PROTEIN MACHINE</strong> <span class="verb">resolve-vibration</span> · Biophysical Journal 2025 review — the "protein machine" at the stereociliary tip is now resolved to component fidelity; the black box of 1970s biophysics opened. <a href="https://www.cell.com/biophysj/abstract/S0006-3495(25)00375-3" target="_blank">source ↗</a></div>
+    </div>
+
+    <div class="substrate-block">
+      <h3>Chemistry / vibrational coupling</h3>
+      <span class="ring-label">verbs · vibrate · resonate · ring · beat · oscillate · damp · couple</span>
+      <div class="anchor"><strong>VIBRATIONAL STRONG COUPLING</strong> <span class="verb">resonate / couple-to-vacuum</span> · Thomas et al., Nature Chemistry 2025 — vibrational weak/strong coupling modifies reaction rates via cavity-mediated radiative energy transfer. Molecules ringing with optical cavity hybridize into vibro-polaritons. <a href="https://www.nature.com/articles/s41557-024-01723-6" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>VSC NON-COVALENT</strong> <span class="verb">resonate / perturb-zero-point</span> · Maiti, ChemPlusChem 2025 — VSC alters non-covalent interactions (van der Waals, H-bonding) by perturbing the zero-point ringing of bonds. <a href="https://chemistry-europe.onlinelibrary.wiley.com/doi/10.1002/cplu.202400591" target="_blank">source ↗</a></div>
+    </div>
+
+    <div class="substrate-block">
+      <h3>AI / audio models + generation</h3>
+      <span class="ring-label">verbs · listen · transcribe · generate · synthesize · denoise · voice-clone · sample · resonate (latent)</span>
+      <div class="anchor"><strong>SUNO / UDIO SETTLEMENTS</strong> <span class="verb">generate / synthesize-music</span> · Oct-Nov 2025 — UMG settled with Udio (Oct), Warner with Suno (Nov). Both committed to phasing in licensed models. The legal regime now distinguishes "listened to copyrighted training data" from "synthesized in its style." <a href="https://thevocalmarket.com/blogs/enterprise/every-ai-music-lawsuit-tracked" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>ELEVENLABS MUSIC</strong> <span class="verb">voice-clone / synthesize</span> · Aug 2025 — launched commercially-licensed-from-day-one; voice-clone misappropriation claims settled 2025. <a href="https://www.lunarboommusic.com/blog/elevenlabs-vs-suno-legal-divide" target="_blank">source ↗</a></div>
+    </div>
+
+    <div class="substrate-block">
+      <h3>Society / sonic culture + warfare</h3>
+      <span class="ring-label">verbs · broadcast · transmit · signal · alarm · summon · hush · silence · censor</span>
+      <div class="anchor"><strong>BELGRADE LRAD MARCH 2025</strong> <span class="verb">damp / silence / overpower</span> · Anti-corruption protesters reported apparent LRAD-class deployment with headaches, stampede, broken leg. Government admitted possession. <a href="https://www.npr.org/2025/03/26/nx-s1-5341198/sonic-weapon-serbia-belgrade-protests" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>MALDIVES LRAD OCT 2025</strong> <span class="verb">drown-out / damp</span> · South Asians for Human Rights documented LRAD use against peaceful protesters — explicitly used to "drown out speakers" — touch louder than the human voice can. <a href="https://southasianrights.org/the-maldives-end-militarized-policing-and-unlawful-use-of-sonic-weapons-against-peaceful-protestors/" target="_blank">source ↗</a></div>
+    </div>
+
+    <div class="substrate-block">
+      <h3>Cosmology / sound-analogs in space</h3>
+      <span class="ring-label">verbs · ring · ringdown · oscillate · resonate · beat · throb</span>
+      <div class="anchor"><strong>GW250114 BLACK HOLE BELL</strong> <span class="verb">ring / ringdown</span> · LIGO Jan 14 2025 — loudest gravitational-wave detection ever (SNR ~80). At least three quasi-normal modes resolved (220 fundamental, 221 overtone at 4.1σ, 440 hexadecapole), matching Kerr predictions. Most stringent single-event GR test. Black holes literally <em>ring like bells</em>. <a href="https://arxiv.org/abs/2509.08099" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>BLACK HOLE SPECTROSCOPY ROADMAP</strong> <span class="verb">spectroscope-of-spacetime</span> · Berti et al., May 2025 — theory-to-experiment roadmap for the next decade of ringdown observations. <a href="https://arxiv.org/abs/2505.23895" target="_blank">source ↗</a></div>
+    </div>
+
+    <div class="substrate-block">
+      <h3>Military / sonar + sonic weapons</h3>
+      <span class="ring-label">verbs · ping · echo · listen (passive) · jam · mask · decoy · detect</span>
+      <div class="anchor"><strong>GA-ASI SEAGUARDIAN SONOBUOYS</strong> <span class="verb">ping / listen-at-distance</span> · May 2025 — MQ-9B drone carries 40-80 smart sonobuoys for ASW. The listening platform itself is now unmanned. <a href="https://www.armyrecognition.com/news/navy-news/2025/seaguardian-drone-now-equipped-with-smart-sonobuoys-for-enhanced-submarine-detection" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>THALES MINI-SONAR FOR UUVs</strong> <span class="verb">resolve-in-water</span> · Dec 2025 — AI-enhanced compact sonar for underwater drones. With distributed acoustic sensing on undersea cables, the ocean becomes a single contact field with no acoustic shadow. <a href="https://www.defensenews.com/global/europe/2025/12/16/thales-touts-mini-sonar-for-underwater-drones-ahead-of-uk-navy-pitch/" target="_blank">source ↗</a></div>
+    </div>
+
+    <p><strong>Sound primitive (from cross-cutting subagent observation):</strong> contact/separation is the wrong layer — single-event polarity vs sound's intrinsic repeated contact. The right primitive is <em>resonate/damp</em>: sustained coupling between oscillator and receiver vs energy loss to surroundings. Every ring instantiates the pair — outer-hair-cell amplification vs presbycusis (biology); VSC enhancement vs dephasing (chemistry); model lock-on vs denoising (AI); protest chant vs LRAD silencing (society); QNM excitation vs ringdown decay (cosmology); sonar return vs anechoic absorption (military). The atlas's blind-steer move: when in doubt about an auditory verb, ask "is this sustaining a coupling, or breaking one?" The polarity carries through every substrate without exception.</p>
+
+    <h3>5E. Rear-end / excretion + secretion — accumulate and spill</h3>
+
+    <div class="substrate-block">
+      <h3>Biology / excretion + secretion</h3>
+      <span class="ring-label">verbs · defecate · urinate · sweat · lactate · ejaculate · exhale · shed · bleed · weep · drool · salivate · spit · vomit · regurgitate · molt · slough · exfoliate · secrete · ovulate · menstruate · apoptose</span>
+      <div class="anchor"><strong>ANXIETY-SWEAT CHEMOSIGNAL</strong> <span class="verb">sweat-as-signal</span> · 2025 study — dodecanoic acid + 3-hydroxy-3-methylhexanoic acid as anxiety markers enhance odor sensitivity in receivers. Sweat is outbound information, not just thermoregulation. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12041518/" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>EMOTIONAL TEARS METABOLOMICS</strong> <span class="verb">weep-as-signal</span> · 2024 — positive vs negative emotional tears show distinct signatures across serotonergic / GABAergic / estrogen-pathway markers. Tears as differentiated chemical broadcast. <a href="https://www.sciencedirect.com/science/article/abs/pii/S1090513825000017" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>CANDIDATE HUMAN PHEROMONES</strong> <span class="verb">secrete / mark</span> · 2024 Weizmann preprint on squalene + fatty-acid candidate pheromones. <a href="https://www.biorxiv.org/content/10.1101/2024.08.15.608030" target="_blank">source ↗</a></div>
+    </div>
+
+    <div class="substrate-block">
+      <h3>Chemistry / secretion + release</h3>
+      <span class="ring-label">verbs · off-gas · evaporate · sublimate · precipitate · effervesce · exocytose · vesiculate · leach · leak · diffuse-out · desorb · vent · outgas</span>
+      <div class="anchor"><strong>SMART-MATERIAL EV DELIVERY</strong> <span class="verb">exocytose / triggered-release</span> · Wiley Advanced Materials 2025 — pH-responsive linkers and light-triggered exosome release as engineered exocytosis. <a href="https://advanced.onlinelibrary.wiley.com/doi/10.1002/adma.202501081" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>EXOSOMES AS THERAPEUTIC PAYLOAD</strong> <span class="verb">secrete / deliver</span> · ISCT 2025 exosome signature series on MSC-derived EV therapies. <a href="https://www.sciencedirect.com/science/article/pii/S1465324925009120" target="_blank">source ↗</a></div>
+    </div>
+
+    <div class="substrate-block">
+      <h3>AI / generation</h3>
+      <span class="ring-label">verbs · emit · sample · decode · output · generate · hallucinate · leak · spill · drip (stream) · flush (cache) · evict (KV)</span>
+      <div class="anchor"><strong>HALLUCINATION AS EMISSION STREAM</strong> <span class="verb">spill / hallucinate</span> · Lakera 2025 — decoding-randomness as proximal cause of fabricated tokens; temperature as the explicit "how-much-comes-out" dial. <a href="https://www.lakera.ai/blog/guide-to-hallucinations-in-large-language-models" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>SAMPLING-BASED DETECTION</strong> <span class="verb">measure-emission</span> · SRI 2025 — think-token injection + noise-injection sampling-based hallucination detection treats generation as emission with measurable epistemic vs aleatoric components. <a href="https://arxiv.org/pdf/2502.03799" target="_blank">source ↗</a></div>
+    </div>
+
+    <div class="substrate-block">
+      <h3>Society / institutional purges</h3>
+      <span class="ring-label">verbs · purge · expel · exile · banish · deport · evict · fire · lay off · dump · dispose · eliminate · censor · retract · withdraw · defund · divest · deplatform · cancel · offboard</span>
+      <div class="anchor"><strong>TECH-SECTOR SHEDDING 2025</strong> <span class="verb">RIF / lay-off-at-scale</span> · Global tech layoffs surpassed 244,851 in 2025 (RationalFX / Network World); Intel alone shed ~34,000. AI-restructuring framed as institutional shedding. <a href="https://www.networkworld.com/article/4114572/global-tech-sector-layoffs-surpass-244000-in-2025.html" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>DEPLATFORMING MIGRATION</strong> <span class="verb">deplatform / migrate</span> · Wei & Yang 2025 New Media & Society — Trump deplatforming induced migration to alternative domains. <a href="https://journals.sagepub.com/doi/10.1177/14614448251388993" target="_blank">source ↗</a></div>
+    </div>
+
+    <div class="substrate-block">
+      <h3>Cosmology / ejection events</h3>
+      <span class="ring-label">verbs · eject · erupt · flare · jet · outgas · ablate · accrete-then-expel · blow (stellar wind) · shed (mass) · disgorge</span>
+      <div class="anchor"><strong>PARKER CME WITH FALLBACK</strong> <span class="verb">erupt / fall-back</span> · NASA Parker Solar Probe Dec 2024 — first direct measurement of CME blob with material falling back toward the Sun. Release with partial re-absorption. <a href="https://science.nasa.gov/blogs/parker-solar-probe/2025/12/18/nasas-parker-solar-probe-completes-26th-closest-approach-to-sun/" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>M87* JET BASE IMAGED</strong> <span class="verb">jet / accrete-then-expel</span> · EHT 2025 multi-wavelength campaign traced M87* jet base to ~0.09 ly from horizon. Accretion-to-ejection plumbing at unprecedented resolution. <a href="https://www.mpg.de/26046785/probing-the-jet-base-of-the-supermassive-black-hole-in-m87" target="_blank">source ↗</a></div>
+    </div>
+
+    <div class="substrate-block">
+      <h3>Plumbing / urban excretion</h3>
+      <span class="ring-label">verbs · flush · sluice · drain · vent · exhaust · runoff · effluent · discharge · overflow · blowdown · purge (line) · bleed (radiator) · evacuate</span>
+      <div class="anchor"><strong>WBE FOR CHRONIC DISEASE</strong> <span class="verb">flush-as-population-biomarker</span> · J. Hazardous Materials 2025 — multi-plant Guangdong study quantifies 14 chronic-disease drugs in WWTP influent. Sewerage as population health-signal. <a href="https://www.sciencedirect.com/science/article/abs/pii/S0304389425005758" target="_blank">source ↗</a></div>
+      <div class="anchor"><strong>PRISON WBE</strong> <span class="verb">flush-bounded-population</span> · WIREs Forensic Science 2025 — critical review of wastewater-based epidemiology in prison settings. <a href="https://wires.onlinelibrary.wiley.com/doi/abs/10.1002/wfs2.70004" target="_blank">source ↗</a></div>
+    </div>
+
+    <p><strong>Excretion primitive (from cross-cutting subagent observation):</strong> the deepest dynamic is <em>accumulate ↔ spill</em> — not absorb/expel, which is too container-bound. Accumulate/spill captures threshold-gated retention then release across a semi-permeable boundary, matching: exocytosis (Ca²⁺ threshold → vesicle fusion), CME (magnetic reconnection threshold → ejecta), LLM sampling (logit threshold + temperature → token), layoffs (margin threshold → headcount cut), sewer overflow (volume threshold → CSO event), crying (affect threshold → lacrimation). The subagent's four-part speculation on <em>why release vocabulary is under-developed</em> across taxonomies — agency asymmetry, social taboo, observability asymmetry, conservation bias — is itself a contribution: as release becomes the studied act (not the byproduct), each ring's vocabulary will thicken.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">06</span>Domain renderings — same verb, different domain</h2>
+    <p class="sect-lede">A primitive verb's shape stays constant across domains; its content changes. The same <em>stroke</em> happens in dancing, cooking, farming, finance — same configuration of contact-pressure-vector, different substrate. Pav: <em>"the language how it renders the sensation in slightly or very different context"</em>.</p>
+
+    <div class="domain-row">
+      <div class="verb">stroke</div>
+      <div class="renderings">
+        <div class="render"><strong>dancing</strong>Glide arm, caress floor, ronde de jambe — sustained gentle vector across a surface.</div>
+        <div class="render"><strong>cooking</strong>Fold meringue, baste meat, whisk gently — sustained gentle directional shaping that maintains structure.</div>
+        <div class="render"><strong>farming</strong>Plough furrow, harrow seedbed, brush thinning — sustained directional shaping of soil at low resistance.</div>
+      </div>
+    </div>
+
+    <div class="domain-row">
+      <div class="verb">pinch</div>
+      <div class="renderings">
+        <div class="render"><strong>dancing</strong>Pas de pinçé, finger snap accent, plucked-string movement in port de bras.</div>
+        <div class="render"><strong>cooking</strong>A pinch of salt, pinch the dumpling closed, pinch the dough seam.</div>
+        <div class="render"><strong>farming</strong>Pinch back the tomato sucker, pinch-prune the basil leader to force branching.</div>
+      </div>
+    </div>
+
+    <div class="domain-row">
+      <div class="verb">press</div>
+      <div class="renderings">
+        <div class="render"><strong>dancing</strong>Press into the floor (Graham contraction), press partner's hand, press through plié.</div>
+        <div class="render"><strong>cooking</strong>Press dough, press cheese curds, press pulses to extract oil, French-press coffee.</div>
+        <div class="render"><strong>farming</strong>Press grapes for wine, press silage, baler-press hay.</div>
+      </div>
+    </div>
+
+    <div class="domain-row">
+      <div class="verb">pump</div>
+      <div class="renderings">
+        <div class="render"><strong>dancing</strong>Pump arms (hip-hop, exercise dance), body-roll, undulation as multi-axis pumping.</div>
+        <div class="render"><strong>cooking</strong>Pump dough (rising/punching down cycle), pump pastry bag, pressure-cooker valve.</div>
+        <div class="render"><strong>farming</strong>Pump irrigation, pump milking machines, well-pump cycle.</div>
+      </div>
+    </div>
+
+    <div class="domain-row">
+      <div class="verb">knead</div>
+      <div class="renderings">
+        <div class="render"><strong>dancing</strong>Knead the air (contact-improv weight-sharing), knead partner's weight in lift.</div>
+        <div class="render"><strong>cooking</strong>Knead dough — sustained compress-and-fold cycle to develop gluten.</div>
+        <div class="render"><strong>farming</strong>Knead soil (working compost into bed), animal-tread compaction in pen rotation.</div>
+      </div>
+    </div>
+
+    <div class="domain-row">
+      <div class="verb">neutralize</div>
+      <div class="renderings">
+        <div class="render"><strong>dancing</strong>Absorb partner's momentum without redirecting (contact improv neutral), tai-chi push-hands <em>hua jin</em>.</div>
+        <div class="render"><strong>cooking</strong>Acid neutralizes alkali (baking-soda + buttermilk), tannin softens with fat, salt cuts bitterness.</div>
+        <div class="render"><strong>farming</strong>Lime neutralizes acid soil, cover crop neutralizes nutrient leaching, beneficial-insect release neutralizes pest pressure.</div>
+      </div>
+    </div>
+
+    <div class="domain-row">
+      <div class="verb">expel</div>
+      <div class="renderings">
+        <div class="render"><strong>dancing</strong>Sharp release of held position, spit-take comedic timing, expel breath on accent.</div>
+        <div class="render"><strong>cooking</strong>Drain pasta, expel seeds from a cucumber, separate curds from whey, vent steam.</div>
+        <div class="render"><strong>farming</strong>Cull livestock, expel weeds, drain field, harvest = expel the crop from the field.</div>
+      </div>
+    </div>
+
+    <div class="domain-row">
+      <div class="verb">rip</div>
+      <div class="renderings">
+        <div class="render"><strong>dancing</strong>Tear-away costume reveal, sharp diagonal slash arm, broken-line accent that disrupts continuity.</div>
+        <div class="render"><strong>cooking</strong>Rip basil, tear bread, hand-shred cheese — texture-preserving fracture vs the clean cut.</div>
+        <div class="render"><strong>farming</strong>Subsoil ripper (deep tillage), tear out hedgerow, rip up perennial bed.</div>
+      </div>
+    </div>
+
+    <p style="margin-top: 24px;">A useful diagnostic for cross-domain transfer of expertise: <em>which primitive verbs does this practitioner have richer vocabulary in?</em> A chef and a dancer who both deeply understand <em>fold</em>, <em>press</em>, <em>pinch</em>, <em>knead</em> can transfer surprising amounts of intuition between domains. Domain-specific vocabulary (sauté, jeté, drill) sits on top of primitive-verb-vocabulary, and the primitives are the transfer layer. This is one of the strongest cases for cont 21's <em>kernel canon → canon protocol → function</em> three-layer reading: the primitive verbs are the kernel, the domain-specific terms are the protocols, the practiced acts are the functions.</p>
+
+    <h3 style="margin-top: 40px;">Music — performance / composition / mix-production</h3>
+    <p>Music is the cleanest domain for the verb-as-action distinction because the same atlas verb has three sub-domain instances: how you <em>play</em> it, how you <em>compose</em> it, how you <em>mix</em> it. From the music subagent's matrix:</p>
+
+    <div class="domain-row">
+      <div class="verb">stroke</div>
+      <div class="renderings">
+        <div class="render"><strong>performance ★</strong>Bow legato; long glissando; sustained slide.</div>
+        <div class="render"><strong>composition</strong>Smooth voice-leading; pivot-chord modulation; developmental sequence.</div>
+        <div class="render"><strong>mix</strong>Reverb tail smear; long automation ride on fader.</div>
+      </div>
+    </div>
+
+    <div class="domain-row">
+      <div class="verb">pinch</div>
+      <div class="renderings">
+        <div class="render"><strong>performance</strong>Pinch harmonic; fingerstyle pluck; left-hand grace-grip.</div>
+        <div class="render"><strong>composition ★</strong>Tightly-voiced close chord; cluster voicing; chromatic squeeze toward target.</div>
+        <div class="render"><strong>mix</strong>Narrow notch-EQ; surgical de-ess; sidechain ducking a single band.</div>
+      </div>
+    </div>
+
+    <div class="domain-row">
+      <div class="verb">press</div>
+      <div class="renderings">
+        <div class="render"><strong>performance</strong>Sustain pedal-tone; lean into bow weight; piano <em>fp</em> attack.</div>
+        <div class="render"><strong>composition</strong>Harmonize beneath the melody; build dynamic climb; thicken with parallel fifths.</div>
+        <div class="render"><strong>mix ★</strong>Compress 3:1; shelf-boost the air band; glue-comp on the master.</div>
+      </div>
+    </div>
+
+    <div class="domain-row">
+      <div class="verb">pump</div>
+      <div class="renderings">
+        <div class="render"><strong>performance</strong>Drum roll; tremolo picking; rapid double-stops.</div>
+        <div class="render"><strong>composition</strong>Turnaround cycle; ii-V-I loop; ostinato re-injection.</div>
+        <div class="render"><strong>mix ★</strong>Sidechain-pump kick→bass; LFO tremolo plugin; rhythmic gating.</div>
+      </div>
+    </div>
+
+    <div class="domain-row">
+      <div class="verb">knead</div>
+      <div class="renderings">
+        <div class="render"><strong>performance</strong>Shape vibrato; mold a phrase across rubato; work the bend continuously.</div>
+        <div class="render"><strong>composition ★</strong>Thematic development (Beethoven); contrapuntal inversion; motivic transformation.</div>
+        <div class="render"><strong>mix</strong>Tape saturation; analog summing; multi-stage glue across bus chain.</div>
+      </div>
+    </div>
+
+    <div class="domain-row">
+      <div class="verb">neutralize</div>
+      <div class="renderings">
+        <div class="render"><strong>performance ★</strong>Palm-mute; choke a cymbal; damp the open string; tongue-stop on horn.</div>
+        <div class="render"><strong>composition</strong>Resolve V→I; cadential 6-4 resolution; settle dissonance to consonance.</div>
+        <div class="render"><strong>mix</strong>Brick-wall limiter; M/S notch on a phase clash; phase-align two mics.</div>
+      </div>
+    </div>
+
+    <div class="domain-row">
+      <div class="verb">rip</div>
+      <div class="renderings">
+        <div class="render"><strong>performance</strong>Shred / distort lead; aggressive pick scrape; harsh string-tear.</div>
+        <div class="render"><strong>composition</strong>Abrupt modulation (truck-driver key change); rupture into the bridge.</div>
+        <div class="render"><strong>mix</strong>Transient-designer attack-up; hard-clip the snare; hard-pan to tear stereo field.</div>
+      </div>
+    </div>
+
+    <div class="domain-row">
+      <div class="verb">brush</div>
+      <div class="renderings">
+        <div class="render"><strong>performance ★</strong>Brush-stick on snare; soft strum; feather-light bow contact.</div>
+        <div class="render"><strong>composition</strong>Whispered voice-leading; barely-there inner-voice motion.</div>
+        <div class="render"><strong>mix</strong>High-shelf "air" lift at 12 kHz; subtle exciter; soft-knee transient smoothing.</div>
+      </div>
+    </div>
+
+    <p style="margin-top: 16px; font-size: 14px; color: var(--text-dim); font-style: italic;">★ marks where the verb is most canonical / most active in that sub-domain. Music's structural lesson: a single producer-prompt like <em>"warm, glued, gently pumping house ballad"</em> bundles three atlas verbs (knead = saturate, press = compress, pump = sidechain) into one instruction — showing how the primitives stack inside a single creative gesture. Anchors: Suno v4 / Udio v1.5 (2025) prompt-driven generation; Dan Worrall / Fabfilter Pro-Q 4 "dynamic pinch" EQ discourse (2024-25); Catherine Lamb / Ableton Move (2025) treating stroke and knead as continuous spectral gestures.</p>
+
+    <h3 style="margin-top: 40px;">Military — operations / fire / signaling</h3>
+    <p>Military is the observer-type with the most-developed <strong>neutralize</strong> vocabulary anywhere — doctrinal term-of-art, not euphemism. Also the observer-type whose verbs come most explicitly paired with counter-verbs: attack/defend, suppress/maneuver, reveal/conceal, jam/burn-through, mask/unmask. The adversarial structure is baked into the lexicon. From the military subagent's matrix:</p>
+
+    <div class="domain-row">
+      <div class="verb">stroke</div>
+      <div class="renderings">
+        <div class="render"><strong>operations</strong>Armored sweep / cavalry stroke across an axis.</div>
+        <div class="render"><strong>fire</strong>Precision strike with single guided munition.</div>
+        <div class="render"><strong>signaling</strong>Targeted signals push (one PSYOP transmission).</div>
+      </div>
+    </div>
+
+    <div class="domain-row">
+      <div class="verb">pinch</div>
+      <div class="renderings">
+        <div class="render"><strong>operations ★</strong>Pincer maneuver — two-axis convergence on a salient.</div>
+        <div class="render"><strong>fire</strong>Pinch-point ambush at defile or chokepoint kill-zone.</div>
+        <div class="render"><strong>signaling</strong>Chokepoint intercept on a routing node.</div>
+      </div>
+    </div>
+
+    <div class="domain-row">
+      <div class="verb">press</div>
+      <div class="renderings">
+        <div class="render"><strong>operations</strong>Frontal press / pressure axis; dig-in as held press.</div>
+        <div class="render"><strong>fire ★</strong>Sustained suppressive fire to fix the enemy.</div>
+        <div class="render"><strong>signaling</strong>Sustained EW jamming pressure across band.</div>
+      </div>
+    </div>
+
+    <div class="domain-row">
+      <div class="verb">pump</div>
+      <div class="renderings">
+        <div class="render"><strong>operations</strong>Ammunition resupply pump / log-train tempo.</div>
+        <div class="render"><strong>fire ★</strong>Pump rounds — barrage, MLRS volley, drone-swarm wave.</div>
+        <div class="render"><strong>signaling</strong>Info-op pump on social platforms (repeat-injection).</div>
+      </div>
+    </div>
+
+    <div class="domain-row">
+      <div class="verb">knead</div>
+      <div class="renderings">
+        <div class="render"><strong>operations</strong>Slow attritional engagement; defense-in-depth grinding.</div>
+        <div class="render"><strong>fire</strong>Degrade through repeated engagement; attrit C2 nodes.</div>
+        <div class="render"><strong>signaling</strong>Repeated narrative shaping over weeks/months.</div>
+      </div>
+    </div>
+
+    <div class="domain-row">
+      <div class="verb">neutralize</div>
+      <div class="renderings">
+        <div class="render"><strong>operations ★</strong>Doctrinal core — render maneuver force combat-ineffective.</div>
+        <div class="render"><strong>fire ★</strong>Doctrinal core — full kill-chain from soft-kill to hard-kill.</div>
+        <div class="render"><strong>signaling ★</strong>Doctrinal core — the 5Ds: deny, disrupt, degrade, destroy, deceive.</div>
+      </div>
+    </div>
+
+    <div class="domain-row">
+      <div class="verb">rip</div>
+      <div class="renderings">
+        <div class="render"><strong>operations</strong>Breach — combat engineers tear through obstacle belt.</div>
+        <div class="render"><strong>fire ★</strong>Rip salvo; hypersonic strike tearing through layered defenses.</div>
+        <div class="render"><strong>signaling</strong>Denial-of-service rip; logic-bomb detonation.</div>
+      </div>
+    </div>
+
+    <div class="domain-row">
+      <div class="verb">tap</div>
+      <div class="renderings">
+        <div class="render"><strong>operations</strong>Recon by fire / probing tap to map defenses.</div>
+        <div class="render"><strong>fire</strong>Single-round ranging shot before fire-for-effect.</div>
+        <div class="render"><strong>signaling ★</strong>Wiretap / SIGINT tap / passive collection.</div>
+      </div>
+    </div>
+
+    <div class="domain-row">
+      <div class="verb">squeeze</div>
+      <div class="renderings">
+        <div class="render"><strong>operations ★</strong>Siege / encirclement / cordon-and-search squeeze.</div>
+        <div class="render"><strong>fire</strong>Squeeze fires inward (converging concentric barrages).</div>
+        <div class="render"><strong>signaling</strong>OPSEC squeeze; comms blackout; compartmentation tightening.</div>
+      </div>
+    </div>
+
+    <div class="domain-row">
+      <div class="verb">pop</div>
+      <div class="renderings">
+        <div class="render"><strong>operations ★</strong>D-Day-style pop attack from concealment; airborne drop.</div>
+        <div class="render"><strong>fire</strong>Sudden fires pop — decapitation strike, ambush volley.</div>
+        <div class="render"><strong>signaling</strong>Info-bomb release; deepfake drop; zero-day detonation.</div>
+      </div>
+    </div>
+
+    <p style="margin-top: 16px; font-size: 14px; color: var(--text-dim); font-style: italic;">Counter-verb pairing — military-distinctive: every row above has an explicit doctrinal opposite (push↔pull, press↔maneuver, jam↔burn-through, mask↔unmask, neutralize↔restore). The lexicon assumes a reactive adversary. Recent anchors: Ukraine drone-warfare doctrine (2024-2026) collapsing the cost of <em>pop</em> and <em>tap</em> to consumer-electronics scale; AI in C2 / Replicator-class autonomy compressing <em>tap → neutralize</em> from minutes to seconds; hypersonic strike returning <em>rip</em> as a strategic-tier verb; post-Gaza/Mariupol/Avdiivka urban combat doctrine displacing <em>push</em> with <em>knead</em> as the modal urban verb.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">07</span>Observer-type touch-vocabularies (kept from v1, with two additions)</h2>
+    <p class="sect-lede">Each observer type has a characteristic vocabulary. Diagnostic question: <em>which verb-family does this observer reach for first?</em></p>
+
+    <div class="observer-grid">
+      <div class="observer-card">
+        <h4>Government / state</h4>
+        <p class="vocab-list"><strong>tap</strong> audit, notice, citation · <strong>stroke</strong> subsidy, recognition · <strong>nudge</strong> regulation, tax-credit · <strong>press</strong> tariff, sanction · <strong>squeeze</strong> embargo, blockade · <strong>grab</strong> seizure, eminent domain · <strong>stomp</strong> ban, prosecution · <strong>pop</strong> election, revolution · <strong>release</strong> pardon, amnesty · <strong>neutralize (v2)</strong> regulatory capture, dissident co-option · <strong>rip (v2)</strong> secession, sudden constitutional break</p>
+        <p>Force-asymmetric register; elections are the rare pop where touch reverses. Authoritarian regimes have impoverished release-verb and neutralize-verb vocabularies.</p>
+      </div>
+      <div class="observer-card">
+        <h4>Market / commerce</h4>
+        <p class="vocab-list"><strong>tap</strong> price signal, ad impression · <strong>stroke</strong> brand affinity · <strong>nudge</strong> default option · <strong>pull</strong> demand · <strong>push</strong> supply · <strong>squeeze</strong> margin compression · <strong>pinch (v2)</strong> price discrimination, fee-pinching · <strong>pop</strong> IPO, viral moment · <strong>release</strong> selloff · <strong>stomp</strong> hostile takeover · <strong>neutralize (v2)</strong> M&amp;A absorbing competitor without redirect</p>
+        <p>Continuous statistical aggregation rather than discrete touch. Characteristic verb is <em>price</em> as many-touch composite.</p>
+      </div>
+      <div class="observer-card">
+        <h4>Biological organism</h4>
+        <p class="vocab-list"><strong>tap</strong> sensory transduction · <strong>stroke</strong> grooming, mating display · <strong>nudge</strong> hormonal modulation · <strong>poke</strong> probing, hunting · <strong>grab</strong> predation · <strong>clasp</strong> mating, symbiosis · <strong>stomp</strong> dominance display · <strong>release</strong> alarm pheromone, ovulation · <strong>pop</strong> birth, apoptosis · <strong>suck/chew/swallow</strong> oral register · <strong>sniff/scent</strong> olfactory · <strong>defecate/sweat/weep</strong> excretory</p>
+        <p>Richest blended vocabulary because organisms operate across mechanical, chemical, and signaling substrates simultaneously. Reflexive verbs (touch/be-touched) emerge most clearly here.</p>
+      </div>
+      <div class="observer-card">
+        <h4>AI system</h4>
+        <p class="vocab-list"><strong>tap</strong> attention, feature clamping · <strong>stroke</strong> fine-tuning · <strong>nudge</strong> activation steering · <strong>poke</strong> adversarial probe · <strong>press</strong> test-time compute · <strong>grab</strong> ICL function-vector heads · <strong>sculpt</strong> flow matching · <strong>route</strong> MoE gating · <strong>ingest/chunk/embed</strong> oral register · <strong>emit/sample/hallucinate</strong> excretory · <strong>stomp</strong> hard constraint, model collapse · <strong>pop</strong> emergent capability</p>
+        <p>Touch vocabulary observable at substrate level (interpretability) AND surface level (behavior). Golden Gate Claude is the cleanest worked example: tap one feature → behavior reorganizes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">08</span>Four speculative bubbles</h2>
+    <p class="sect-lede">Updated for v2. Each candidate-grade reading with predictions and break-conditions.</p>
+
+    <div class="bubble">
+      <p class="tag">Bubble 01 · rank 1 · medium-high confidence</p>
+      <h4>The eight-pair primitive-adequacy hypothesis</h4>
+      <p>All blind-steer dynamics observable across the four sensory registers decompose into oscillation between the eight primitive polar pairs named in §01 (expand/compress, absorb/expel, accumulate/spill, contact/separation, emit/resolve, pump-in/pump-out, pressure/no-pressure, vector-change/hold). Configurations and emergent states are compounds; no new fundamental polar primitives will surface beyond the eight.</p>
+      <p class="row"><strong>Predicts</strong> Future construct studies decomposing any blind-steer dynamic will succeed using only these eight pairs plus their compounds. The Tai Chi 8 Jin (peng/lu/ji/an/cai/lie/zhou/kao) will map onto the eight pairs cleanly without remainder.</p>
+      <p class="row"><strong>Breaks if</strong> A construct study surfaces a force-mode requiring a ninth polar pair (candidate: <em>rotate</em> — angular momentum doesn't fit any of the eight cleanly, though <em>vector change</em> partially captures it).</p>
+      <p class="row"><strong>Follow-up</strong> Apply the eight-pair decomposition to the Tai Chi 8 Jin + the Laban Effort Actions. Document where decomposition is clean vs strained.</p>
+    </div>
+
+    <div class="bubble">
+      <p class="tag">Bubble 02 · rank 2 · v3 verdict — partial confirmation</p>
+      <h4>The sensory-register reduction claim (v2 → v3 update)</h4>
+      <p>v2 hypothesized that vision = olfactory at EM scale and hearing = touch at pressure-wave scale, with both derived from the four primary registers. v3 tested this with parallel subagents on sight and sound. <strong>Verdict: ~70% confirmation, with two structural refinements.</strong></p>
+      <p class="row"><strong>Sight</strong> emit/resolve works as the substrate primitive (sight = spectroscopic resolve in photon medium, structurally homologous to olfactory's chemical-volatile spectroscopy). But sight specializes resolve into a <em>geometric 2D</em> mode olfactory never developed; and the emit pole is asymmetric (most animals see but don't bioluminesce, breaking the emit/resolve symmetry). v3 keeps emit/resolve as substrate primitive and adds <em>exposed/hidden</em> as sight's local state primitive with reveal/conceal as the transition operators. Three-layer structure: emit/resolve (physics) → reveal/conceal (transition) → exposed/hidden (state).</p>
+      <p class="row"><strong>Sound</strong> contact/separation works in biology + military + chemistry + society but strains in cosmology (GW ringing is metric oscillation in vacuum, no medium) and AI (audio models touch already-discretized samples, not pressure waves). The deeper insight from the sound subagent: contact/separation is a single-event polarity, but sound is intrinsically <em>repeated contact at frequency</em>. v3 promotes <em>resonate/damp</em> as sound's primitive — sustained coupling between oscillator and receiver vs energy loss to surroundings. Contact/separation becomes a special case at zero frequency.</p>
+      <p class="row"><strong>Implication</strong> The four-register-completeness claim becomes a six-register-with-shared-primitives claim. Sight and sound earn their own treatment because their action layers (exposed/hidden; resonate/damp) are categorically different from the registers they reduce to at the physics layer. The full register count: touch, oral, olfactory, sight, sound, excretory.</p>
+      <p class="row"><strong>Breaks if</strong> Further work finds a primary register that doesn't fit either the substrate-primitive or the local-state-primitive treatment. Candidate counter: <em>time sense</em> (circadian / interval timing) — still doesn't obviously fit; flag as open for v4.</p>
+    </div>
+
+    <div class="bubble">
+      <p class="tag">Bubble 03 · rank 3 · medium confidence, large implication</p>
+      <h4>The under-developed-release-vocabulary diagnostic</h4>
+      <p>Observer types with rich release-vocabulary (democratic states, organisms with sophisticated apoptosis, AI systems with thoughtful refusal/sampling modes) are structurally healthier than those with impoverished release-vocabulary (authoritarian regimes, cancer cells with apoptosis dysregulation, AI systems without refusal capacity). The atlas's discovery that release-family is under-developed across all six prior taxonomies (Hertenstein, Dunbar, Cialdini, Judo, Laban, Anzieu) is the historical asymmetry the framework can now correct.</p>
+      <p class="row"><strong>Predicts</strong> Across observer-type panels, release-vocabulary-richness will correlate positively with system regulation quality. Cancer cells and authoritarian regimes are structurally analogous in their release-verb deficits — apoptosis-dysregulation = peaceful-transition-of-power-failure at different rings.</p>
+      <p class="row"><strong>Breaks if</strong> No correlation between release-vocab richness and stability metrics, OR release-vocab too rich correlates with system fragility (e.g., excessive expulsion in autoimmune disorders).</p>
+      <p class="row"><strong>Follow-up</strong> Build release-verb-richness index for 6-8 observer types. Score each on stability metric. Test correlation.</p>
+    </div>
+
+    <div class="bubble">
+      <p class="tag">Bubble 04 · rank 4 · lower confidence, larger consequence</p>
+      <h4>The neutralize-as-Lakatosian-ideal hypothesis</h4>
+      <p>The framework's own ideal posture is closer to <em>neutralize</em> than to any direct verb. The Lakatosian discipline (bracket the unanswerable, work on what's procedurally connectable, absorb external catalyst without being deflected by it) is structurally <em>hua jin</em> — absorb without redirect, let the contact happen, let the force find no traction, emit no counter-force. The framework's success criterion (cont 19) — aggregation rate, connection quality, catalyst absorption, operational purchase — is the neutralize-state's success criterion.</p>
+      <p class="row"><strong>Predicts</strong> Reading the framework's continuation rounds as a sequence of neutralize-events (each round absorbs the external catalyst without redirect-and-counter) will produce a sharper account of why the framework grows the way it does. The cont 17 → cont 18 → cont 19 → cont 20 → cont 21 sequence is a neutralize-cascade where each round absorbed Pav's correction without producing a defensive counter.</p>
+      <p class="row"><strong>Breaks if</strong> A continuation round is best read as a counter-push rather than a neutralize — defending compiled canon against an incoming correction. The framework's discipline forbids this but doesn't guarantee it doesn't happen.</p>
+      <p class="row"><strong>Follow-up</strong> Audit the cont 17–21 cluster through the neutralize-lens and check whether every round absorbed-without-redirect or whether any was structurally a counter-push. Connects to the queued audit v05.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">09</span>Provenance + open edges (v2)</h2>
+
+    <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 4px; padding: 20px 24px; margin: 18px 0;">
+      <p style="font-family: ui-monospace, Menlo, monospace; font-size: 11px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.12em; margin: 0 0 12px;">Provenance trail · atlas v1 → v2</p>
+      <p style="margin: 0 0 10px; font-size: 14px;"><strong>Iteration 0 · v1 (~14:30 today).</strong> Atlas v1 shipped with push/pull/squeeze/pop + touch verbs + 30 cross-substrate anchors. Built from 4 parallel subagent scans.</p>
+      <p style="margin: 0 0 10px; font-size: 14px;"><strong>Iteration 1 · v2 seed (Pav).</strong> "neutralize and rip and pinch, come to mind, whats inetersting is how some apply per scale in mental and physical realms... would be interesting to do a digram with marching polar opposites and then show how all of this complexity emerged from something primitive like expand and compress, absorb and expel, pump in pimp out + change in vector force, pressure no pressure 0 and not zero A+-A- +A++A-- but hold or neutral as the emergent sate when osollated, the rest are almost like configurations or protocols, chain of applied events, functions that become their own thing manipulation and choreography. neutralise is v important and what important is the language how it renders the sensation in slightly or very different context. and domains like dancing cooking farming. and finally these are touch body and hand senses but there's other more prime and some may say primitive of the mouth smell and the rear end lets ee how that maps, spin up some subagents". Three structural moves: add neutralize/rip/pinch; refactor with primitive polar pairs at the bottom and emergent states at the top; add three new sensory registers (mouth, smell, rear-end); show domain renderings.</p>
+      <p style="margin: 0 0 10px; font-size: 14px;"><strong>Iteration 2 · three parallel sensory subagents.</strong> Spawned: ORAL (returned with 6-ring coverage + gated-transformative-intake primitive proposal), OLFACTORY (returned with 6-ring coverage + volatilize/resolve primitive proposal + the touch-vs-smell co-location-vs-medium distinction), EXCRETORY (returned with 6-ring coverage + accumulate/spill primitive proposal + the four-part speculation on why release-vocabulary is under-developed). ~95 seconds parallel turnaround.</p>
+      <p style="margin: 0 0 10px; font-size: 14px;"><strong>Iteration 3 · v2 page.</strong> Synthesized into eight-pair primitive layer (replacing the v1 implicit one-primitive assumption), polar-opposite diagram (Figure A), three new sensory-register sections (oral / olfactory / excretory), domain-rendering table for stroke/pinch/press/pump/knead/neutralize/expel/rip across dancing/cooking/farming, updated four speculative bubbles. ~9,500 words.</p>
+      <p style="margin: 0 0 10px; font-size: 14px;"><strong>Iteration 4 · v3 seed (Pav).</strong> "lets add music into the mix and military and introduce sight and sound and see how they map into the classification, full effort". Four parallel subagents dispatched: SIGHT register (with reduction-claim test), SOUND register (with reduction-claim test), MUSIC domain rendering, MILITARY domain rendering.</p>
+      <p style="margin: 0 0 10px; font-size: 14px;"><strong>Iteration 5 · this v3 page.</strong> Integrated: §5C Sight (with subagent's reveal/conceal/exposed/hidden contribution as state primitive on top of emit/resolve substrate primitive); §5D Sound (with subagent's resonate/damp contribution as deeper primitive than contact/separation, plus the "is this sustaining or breaking a coupling?" diagnostic that carries through every substrate); §06 expanded with music domain-rendering (performance/composition/mix matrix, 8 verbs) and military domain-rendering (operations/fire/signaling matrix, 10 verbs with counter-verb pairing flagged); §01 polar primitives expanded with resonate/damp and exposed/hidden as v3 additions; Bubble 02 updated with the ~70% partial-reduction verdict and three-layer structure (substrate → transition → state). ~13,500 words.</p>
+    </div>
+
+    <h3>Open edges (v2-specific)</h3>
+
+    <p><strong>One.</strong> The eight-pair primitive layer is candidate-grade. Whether eight is the right number, or whether they're truly the deepest, is open. The subagent observations suggest the primitive set might be register-specific (touch needs contact/separation; olfactory needs emit/resolve; excretory needs accumulate/spill) — implying there's no single deepest layer, just per-register primitives that share family resemblance. Whether to unify or maintain the per-register stratification is the framework's next refactor question.</p>
+
+    <p><strong>Two.</strong> The four-register sensory-completeness hypothesis (Bubble 02) is the most ambitious claim. Reducing vision to "olfactory in EM medium" and hearing to "touch in pressure-wave medium" is structurally elegant but risks collapsing distinctions the sensory-modality literature has independently validated. Worth a careful check against existing sensory-modality work before any promotion to canon.</p>
+
+    <p><strong>Three.</strong> The domain-renderings table (§06) is asserted, not verified. A dance critic, a chef, and a farmer would all have corrections to make. The right next step is to send the table to practitioners of those crafts and see what they confirm vs reject. This is exactly the cont-21 verbs-claim promotion criterion in operational form.</p>
+
+    <p><strong>Four.</strong> The 30 anchors from v1 plus the new sensory-register anchors (~30 more) are not per-anchor verified. The §07 v1 open edge #4 still applies — verification pass needed before any anchor graduates to canon-grade evidence.</p>
+
+    <p><strong>Five.</strong> The neutralize-as-Lakatosian-ideal hypothesis (Bubble 04) is the framework reading itself with the new vocabulary. Self-application like this is structurally important (the framework testing its own primitives on its own behavior) but carries the risk of motivated reasoning — the framework reaching for the verb that flatters its own posture. Worth flagging openly.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">10</span>Sources</h2>
+
+    <div class="sources">
+      <h3>Inside the framework</h3>
+      <ul>
+        <li><a href="../continuations/21.md">Continuation 21</a> · the four-mode + hold + verbs candidates this atlas v2 refactors</li>
+        <li><a href="../continuations/20.md">Continuation 20</a> · canon dormancy + residue diffusion (lives in the release region the atlas now extends)</li>
+        <li><a href="../continuations/18.md">Continuation 18</a> · procedural lineage (the cross-substrate primitive this atlas tests across registers)</li>
+        <li><a href="../continuations/16.md">Continuation 16</a> · friction band + mutual rendering (the reflexive vocabulary)</li>
+        <li><a href="../notation/">Notation walkthrough</a> · the A⁺/A⁻ algebra that operationalizes polar oscillation</li>
+        <li><a href="../artifacts/religion_v1.html#section03">Religion essay §03</a> · rapture as canonical pull-engine; agnostic-as-desolation</li>
+        <li><a href="../artifacts/marriage_v1.html">Marriage construct study</a> · four-substrate interlock as observable</li>
+      </ul>
+
+      <h4>v1 anchors (preserved) — 30 sources across cosmology / AI / biology / chemistry</h4>
+      <p style="font-size: 13px; color: var(--text-dim);">See the inline links throughout §04 above for the 30 v1 anchors (LIGO GW231123, DESI dark energy, JWST early galaxies, FRB 20250316A, Golden Gate Claude, SAEs, Constitutional Classifiers, DeepSeek-V3 MoE, model collapse, Venus flytrap MSL10, MOFs Nobel 2025, etc).</p>
+
+      <h4>v2 new anchors — Oral register (6 rings)</h4>
+      <ul>
+        <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12053784/" target="_blank">Abnet et al. · Population-representative US oral microbiome (JAMA Network Open, May 2025)</a></li>
+        <li><a href="https://www.nature.com/articles/s41575-025-01070-y" target="_blank">Vagal afferents transmit reward signals (Nat Rev Gastroenterol Hepatol 2025)</a></li>
+        <li><a href="https://www.nature.com/articles/s41586-023-06540-4" target="_blank">Maternal oxytocin / infant suckling circuit (Nature 2023, updated 2024-25)</a></li>
+        <li><a href="https://www.cell.com/cell-reports/fulltext/S2211-1247(25)00375-4" target="_blank">TAS2R16 cryo-EM with salicin + gustducin (Cell Reports, April 2025)</a></li>
+        <li><a href="https://www.mdpi.com/1422-0067/25/13/7124" target="_blank">Binding affinity prediction review (Int. J. Mol. Sci. 25(13):7124, 2024)</a></li>
+        <li><a href="https://bajangjournal.com/index.php/JIRK/article/view/10987" target="_blank">Maillard + caramelization review (JIRK 5(2), 2025)</a></li>
+        <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S095816692400020X" target="_blank">Precision fermentation / quorum sensing as flavor governor (Trends Food Sci, 2024)</a></li>
+        <li><a href="https://arxiv.org/html/2506.03401v1" target="_blank">RAGOps framework — ingestion → chunking → embedding (arXiv 2506.03401, June 2025)</a></li>
+        <li><a href="https://journals.sagepub.com/doi/10.1177/17499755251343151" target="_blank">Vandenberg et al. · In Sync: distinguishing taste through the how (Cultural Sociology, 2025)</a></li>
+        <li><a href="https://phys.org/news/2025-07-jwst-uncovers-hidden-black-holes.html" target="_blank">JWST tidal-disruption events in dusty galaxies (phys.org, July 2025)</a></li>
+        <li><a href="https://academic.oup.com/mnras/article/540/1/774/8115792" target="_blank">JWST galaxy-merger pair fractions z=4.5-11.5 (MNRAS 540:774, 2025)</a></li>
+      </ul>
+
+      <h4>v2 new anchors — Olfactory register (6 rings)</h4>
+      <ul>
+        <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12476453/" target="_blank">Jiang et al. · TAAR348 deorphanized against spermine (Cell Discovery, Sept 2025)</a></li>
+        <li><a href="https://onlinelibrary.wiley.com/doi/full/10.1002/sen2.70000" target="_blank">Qin · Olfactory receptor cryo-EM advances (Sensory Neuroscience / Wiley, 2025)</a></li>
+        <li><a href="https://www.nature.com/articles/s41598-024-64367-z" target="_blank">Post-COVID olfactory bulb volume reduction (Scientific Reports, 2024)</a></li>
+        <li><a href="https://pubs.acs.org/doi/10.1021/acssensors.4c02731" target="_blank">IoT-enabled e-nose VOC classification (ACS Sensors, 2024)</a></li>
+        <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12748548/" target="_blank">Colorectal cancer VOC e-nose panel (PMC, 2025)</a></li>
+        <li><a href="https://www.nature.com/articles/s41598-025-19463-z" target="_blank">Exhaled breath as biometric (Scientific Reports, 2025)</a></li>
+        <li><a href="https://arxiv.org/pdf/2412.18819" target="_blank">LLM-assisted vector similarity search (arXiv 2412.18819)</a></li>
+        <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S0925231225014250" target="_blank">FAISS LLM semantic embeddings for recommendation (Neurocomputing, 2025)</a></li>
+        <li><a href="https://freeyourself.com/blogs/news/scent-branding-statistics" target="_blank">Scent-branding statistics (Free Yourself, 2025)</a></li>
+        <li><a href="https://www.researchgate.net/publication/394361451_Unpacking_olfactory_marketing" target="_blank">Olfactory marketing in e-commerce parcels (ResearchGate, 2025)</a></li>
+        <li><a href="https://iopscience.iop.org/article/10.3847/2041-8213/adc1c8" target="_blank">Madhusudhan et al. · K2-18b DMS claim (ApJL, April 2025)</a></li>
+        <li><a href="https://www.aanda.org/articles/aa/full_html/2025/08/aa55580-25/aa55580-25.html" target="_blank">K2-18b DMS counter-claim, joint NIRISS+NIRSpec+MIRI (A&amp;A, August 2025)</a></li>
+        <li><a href="https://arxiv.org/pdf/2410.08724" target="_blank">Abiotic DMS in comet 67P (arXiv 2410.08724)</a></li>
+        <li><a href="https://www.nature.com/articles/s41598-025-08568-0" target="_blank">Encrypted-traffic anomaly detection ET-SSL (Scientific Reports, 2025)</a></li>
+        <li><a href="https://etasr.com/index.php/ETASR/article/view/13267" target="_blank">JA3 fingerprint intrusion detection (ETASR, 2025)</a></li>
+      </ul>
+
+      <h4>v2 new anchors — Excretory register (6 rings)</h4>
+      <ul>
+        <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12041518/" target="_blank">Anxiety-sweat chemosignals enhance odor sensitivity (2025)</a></li>
+        <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S1090513825000017" target="_blank">Emotional tears metabolomics (2024)</a></li>
+        <li><a href="https://www.biorxiv.org/content/10.1101/2024.08.15.608030" target="_blank">Candidate human pheromones — squalene + fatty acids (bioRxiv 2024)</a></li>
+        <li><a href="https://advanced.onlinelibrary.wiley.com/doi/10.1002/adma.202501081" target="_blank">Smart materials for EV delivery (Advanced Materials, 2025)</a></li>
+        <li><a href="https://www.sciencedirect.com/science/article/pii/S1465324925009120" target="_blank">ISCT 2025 exosome signature series</a></li>
+        <li><a href="https://www.lakera.ai/blog/guide-to-hallucinations-in-large-language-models" target="_blank">Lakera · Hallucinations in 2026 — decoding-randomness as emission</a></li>
+        <li><a href="https://arxiv.org/pdf/2502.03799" target="_blank">SRI think-token + noise-injection hallucination detection (2025)</a></li>
+        <li><a href="https://www.networkworld.com/article/4114572/global-tech-sector-layoffs-surpass-244000-in-2025.html" target="_blank">Global tech sector layoffs &gt;244,000 in 2025 (Network World)</a></li>
+        <li><a href="https://journals.sagepub.com/doi/10.1177/14614448251388993" target="_blank">Trump deplatforming migration study (Wei &amp; Yang, New Media &amp; Society, 2025)</a></li>
+        <li><a href="https://science.nasa.gov/blogs/parker-solar-probe/2025/12/18/nasas-parker-solar-probe-completes-26th-closest-approach-to-sun/" target="_blank">Parker Solar Probe 26th perihelion (NASA Dec 2025)</a></li>
+        <li><a href="https://www.mpg.de/26046785/probing-the-jet-base-of-the-supermassive-black-hole-in-m87" target="_blank">EHT M87* jet base imaged (Max Planck 2025)</a></li>
+        <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S0304389425005758" target="_blank">WBE for chronic disease drugs (J. Hazardous Materials, 2025)</a></li>
+        <li><a href="https://wires.onlinelibrary.wiley.com/doi/abs/10.1002/wfs2.70004" target="_blank">WBE in prison settings (WIREs Forensic Science, 2025)</a></li>
+      </ul>
+
+      <h4>v3 new anchors — Sight register</h4>
+      <ul>
+        <li><a href="https://elifesciences.org/reviewed-preprints/107053" target="_blank">Hanning et al. · Foveal V1 cortex predicts saccade targets (eLife 2025)</a></li>
+        <li><a href="https://www.nature.com/articles/s41467-025-64234-z" target="_blank">Predictive Coding Light · spiking-network model (Nature Comm 2025)</a></li>
+        <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S014976342500524X" target="_blank">Adaptive visual selection as active inference (TICS 2025)</a></li>
+        <li><a href="https://pubs.acs.org/doi/10.1021/jacs.5c06216" target="_blank">Broser et al. · Bestrhodopsin 240-fs photoisomerization (JACS July 2025)</a></li>
+        <li><a href="https://advanced.onlinelibrary.wiley.com/doi/full/10.1002/ggn2.202500021" target="_blank">Two Decades of Optogenetics (Advanced Genetics Sept 2025)</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Sora_(text-to-video_model)" target="_blank">OpenAI Sora 2 (Sept 2025)</a></li>
+        <li><a href="https://skywork.ai/blog/sora-2-vs-veo-3-vs-runway-gen-3-2025-ai-video-generator-comparison/" target="_blank">Google Veo 3 cascaded-diffusion (May 2025)</a></li>
+        <li><a href="https://dronexl.co/2025/11/23/fbi-ai-surveillance-drones-facial-recognition/" target="_blank">FBI AI-surveillance-drone RFI (Nov 2025)</a></li>
+        <li><a href="https://www.esa.int/Science_Exploration/Space_Science/Euclid/Euclid_opens_data_treasure_trove_offers_glimpse_of_deep_fields" target="_blank">ESA Euclid Q1 release (March 2025)</a></li>
+        <li><a href="https://www.cfa.harvard.edu/news/new-eht-images-reveal-unexpected-polarization-flips-m87" target="_blank">EHT M87* polarization flips (CfA Sept 2025)</a></li>
+        <li><a href="https://www.twz.com/sea/uss-preble-used-helios-laser-to-zap-four-drones-in-expanding-testing" target="_blank">HELIOS aboard USS Preble (TWZ 2025)</a></li>
+        <li><a href="https://interestingengineering.com/military/nuburu-rifle-mounted-laser-weapon-drones" target="_blank">NUBURU Lyocon rifle-mounted dazzler (2025)</a></li>
+        <li><a href="https://cubert-hyperspectral.com/en/hyperspectral-uavs-for-defense-security/" target="_blank">Cubert hyperspectral UAVs at DSEI 2025</a></li>
+      </ul>
+
+      <h4>v3 new anchors — Sound register</h4>
+      <ul>
+        <li><a href="https://advanced.onlinelibrary.wiley.com/doi/10.1002/advs.202508268" target="_blank">George et al. · MET channels tune stereocilia membrane (Advanced Science 2026)</a></li>
+        <li><a href="https://www.cell.com/biophysj/abstract/S0006-3495(25)00375-3" target="_blank">Contemporary view of MET in hair cells (Biophysical Journal 2025)</a></li>
+        <li><a href="https://www.nature.com/articles/s41557-024-01723-6" target="_blank">Thomas et al. · Vibrational strong coupling modifies reaction (Nature Chemistry 2025)</a></li>
+        <li><a href="https://chemistry-europe.onlinelibrary.wiley.com/doi/10.1002/cplu.202400591" target="_blank">Maiti · VSC and non-covalent interactions (ChemPlusChem 2025)</a></li>
+        <li><a href="https://thevocalmarket.com/blogs/enterprise/every-ai-music-lawsuit-tracked" target="_blank">RIAA v. Suno/Udio settlements (Oct-Nov 2025)</a></li>
+        <li><a href="https://www.lunarboommusic.com/blog/elevenlabs-vs-suno-legal-divide" target="_blank">ElevenLabs Music launch (Aug 2025)</a></li>
+        <li><a href="https://www.npr.org/2025/03/26/nx-s1-5341198/sonic-weapon-serbia-belgrade-protests" target="_blank">Belgrade LRAD deployment (NPR March 2025)</a></li>
+        <li><a href="https://southasianrights.org/the-maldives-end-militarized-policing-and-unlawful-use-of-sonic-weapons-against-peaceful-protestors/" target="_blank">Maldives LRAD use against protesters (Oct 2025)</a></li>
+        <li><a href="https://arxiv.org/abs/2509.08099" target="_blank">GW250114 black hole spectroscopy (LIGO Jan 2025)</a></li>
+        <li><a href="https://arxiv.org/abs/2505.23895" target="_blank">Berti et al. · Black hole spectroscopy roadmap (arXiv May 2025)</a></li>
+        <li><a href="https://www.armyrecognition.com/news/navy-news/2025/seaguardian-drone-now-equipped-with-smart-sonobuoys-for-enhanced-submarine-detection" target="_blank">GA-ASI SeaGuardian sonobuoys (May 2025)</a></li>
+        <li><a href="https://www.defensenews.com/global/europe/2025/12/16/thales-touts-mini-sonar-for-underwater-drones-ahead-of-uk-navy-pitch/" target="_blank">Thales mini-sonar for UUVs (Dec 2025)</a></li>
+      </ul>
+
+      <h4>v3 — Music + Military domain anchors</h4>
+      <ul>
+        <li>Suno v4 / Udio v1.5 (2025) — prompt-driven generation bundling atlas primitives in single creative gesture</li>
+        <li>Dan Worrall / Fabfilter Pro-Q 4 tutorials (2024-25) — "dynamic pinch" EQ discourse</li>
+        <li>Catherine Lamb spectralism + Ableton Move (2025) — continuous spectral gestures collapsing composition into production</li>
+        <li>Ukraine drone-warfare doctrine (2024-2026) — collapsing cost of <em>pop</em> and <em>tap</em> to consumer-electronics scale</li>
+        <li>Replicator-class autonomy + AI in C2 (2025) — compressing <em>tap → neutralize</em> loop from minutes to seconds</li>
+        <li>Russian Oreshnik / Chinese DF-27 / US conventional-prompt-strike (2024-2026) — reintroducing <em>rip</em> as strategic-tier verb</li>
+        <li>Post-Gaza/Mariupol/Avdiivka urban combat doctrine — <em>knead</em> displacing <em>push</em> as modal urban verb</li>
+      </ul>
+
+      <h4>External taxonomy literature (preserved from v1)</h4>
+      <ul>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/16938094/" target="_blank">Hertenstein · Touch communicates distinct emotions (PubMed)</a></li>
+        <li><a href="https://academyofphysicalmedicine.co.uk/wp-content/uploads/2015/04/Dunbar-Social-Role-of-Touch.pdf" target="_blank">Dunbar · Social role of touch in primates</a></li>
+        <li><a href="https://taiji-forum.com/tai-chi-taiji/basics/the-eight-gates-of-tai-chi-chuan/" target="_blank">Eight Jin of Tai Chi (closest existing force-mode taxonomy)</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Laban_movement_analysis" target="_blank">Laban Movement Analysis (factored Weight × Time × Space)</a></li>
+        <li><a href="https://iep.utm.edu/merleau/" target="_blank">Merleau-Ponty (reflexive touch / be-touched chiasm)</a></li>
+      </ul>
+    </div>
+
+    <p style="margin-top: 22px; font-size: 13px; color: var(--text-dim); font-style: italic;">Hypothes.is sidebar enabled. Counter-readings on the eight-pair primitive set, the four-register completeness claim, the polar-opposite diagram, or the domain renderings all welcome.</p>
+  </div>
+</section>
+
+<footer class="page-footer">
+  <div class="wrap-wide">
+    Agnostic Framework · atlas · blind senses · v2 · 2026-05-21 · <a href="../index.html">live site</a> · <a href="https://github.com/a70m123r/agnostic-framework">github</a>
+  </div>
+</footer>
+
+</body>
+</html>
