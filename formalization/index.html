@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The canon-stack equation — observer architecture formalized — Agnostic Framework</title>
+<meta name="description" content="A mathematical expression of the canon stack mapped onto observer architecture. Observer as 4-tuple (harness, sub canon, wrapper, global canon). Wrapper emerges as stable union from sub canon. Global canon as wrapper-render. Inferred kernel as subset of global canon. Recursion across rings from cell to human to earth. Information flow, bandwidth, and named canon protocols / artefacts at each ring.">
+<script src="https://hypothes.is/embed.js" async></script>
+<style>
+  :root {
+    --bg: #0a0a0a;
+    --surface: #141414;
+    --surface-2: #1c1c1c;
+    --border: #262626;
+    --border-strong: #3a3a3a;
+    --text: #ececec;
+    --text-dim: #8a8a8a;
+    --text-faint: #555;
+    --accent-canon: #4ade80;
+    --accent-candidate: #fbbf24;
+    --accent-speculative: #a78bfa;
+    --accent-link: #93c5fd;
+    --accent-formula: #fcd34d;
+    --accent-orange: #fb923c;
+    --accent-substrate: #93c5fd;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, system-ui, sans-serif; font-size: 17px; line-height: 1.7; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+  .wrap-wide { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+  .topbar { border-bottom: 1px solid var(--border); padding: 20px 0; font-size: 13px; font-family: ui-monospace, Menlo, monospace; color: var(--text-dim); }
+  .topbar a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--text-faint); }
+  .topbar a:hover { color: var(--accent-link); border-bottom-color: var(--accent-link); }
+  .topbar .sep { color: var(--text-faint); margin: 0 10px; }
+  .topbar .source-link { float: right; }
+
+  header.hero { padding: 72px 0 48px; border-bottom: 1px solid var(--border); }
+  header.hero .kicker { font-family: ui-monospace, Menlo, monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.18em; color: var(--accent-formula); margin: 0 0 18px; }
+  header.hero h1 { font-family: Georgia, serif; font-weight: 400; font-size: 48px; line-height: 1.08; letter-spacing: -0.02em; margin: 0 0 22px; }
+  header.hero .dek { font-size: 19px; line-height: 1.45; color: var(--text-dim); max-width: 680px; margin: 0 0 20px; font-family: Georgia, serif; font-style: italic; }
+  header.hero .meta { font-family: ui-monospace, Menlo, monospace; font-size: 12px; color: var(--text-faint); margin: 0; }
+
+  section { padding: 52px 0; border-bottom: 1px solid var(--border); }
+  section:last-of-type { border-bottom: none; }
+  h2 { font-family: Georgia, serif; font-weight: 400; font-size: 30px; line-height: 1.18; margin: 0 0 8px; letter-spacing: -0.01em; }
+  h2 .num { color: var(--text-faint); font-size: 14px; font-family: ui-monospace, Menlo, monospace; margin-right: 12px; }
+  h3 { font-family: Georgia, serif; font-weight: 400; font-size: 22px; line-height: 1.25; margin: 32px 0 12px; color: var(--text); }
+  .sect-lede { font-size: 16px; color: var(--text-dim); margin: 0 0 28px; font-style: italic; font-family: Georgia, serif; }
+
+  p { margin: 0 0 18px; }
+  em { color: var(--text); font-style: italic; }
+  strong { color: var(--text); font-weight: 600; }
+  a { color: var(--accent-link); text-decoration: none; border-bottom: 1px solid rgba(147, 197, 253, 0.3); }
+  a:hover { border-bottom-color: var(--accent-link); }
+
+  /* Equation block — standalone math panel */
+  .eq-block {
+    background: #050505;
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent-formula);
+    border-radius: 4px;
+    padding: 22px 26px;
+    margin: 22px 0;
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  }
+  .eq-block .label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--accent-formula);
+    margin: 0 0 14px;
+  }
+  .eq-block .eq {
+    font-size: 17px;
+    line-height: 1.7;
+    margin: 0 0 14px;
+    color: var(--text);
+  }
+  .eq-block .eq:last-child { margin-bottom: 0; }
+  .eq-block .key {
+    color: var(--text-dim);
+    font-size: 13px;
+    line-height: 1.65;
+    margin: 14px 0 0;
+    padding: 14px 0 0;
+    border-top: 1px solid var(--border);
+  }
+  .eq-block .key strong { color: var(--text); font-weight: 500; }
+
+  /* Two-column block: formal | framework prose */
+  .block {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin: 26px 0;
+  }
+  @media (min-width: 800px) {
+    .block { grid-template-columns: 1fr 1fr; }
+  }
+  .block .formal {
+    background: #050505;
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent-formula);
+    border-radius: 4px;
+    padding: 18px 22px;
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--text);
+  }
+  .block .formal .label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--accent-formula);
+    margin: 0 0 12px;
+  }
+  .block .formal .eq {
+    font-size: 15px;
+    line-height: 1.65;
+    margin: 0 0 10px;
+    color: var(--text);
+  }
+  .block .formal .key { color: var(--text-dim); font-size: 12px; margin: 8px 0 0; line-height: 1.55; }
+  .block .prose {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent-canon);
+    border-radius: 4px;
+    padding: 18px 22px;
+    font-size: 15px;
+    line-height: 1.65;
+  }
+  .block .prose .label {
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--accent-canon);
+    margin: 0 0 12px;
+  }
+  .block .prose p { margin: 0 0 10px; }
+  .block .prose p:last-child { margin-bottom: 0; }
+
+  .open-edge {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent-speculative);
+    border-radius: 4px;
+    padding: 18px 22px;
+    margin: 22px 0;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  .open-edge .label {
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--accent-speculative);
+    margin: 0 0 10px;
+  }
+
+  /* Notation glossary table */
+  .glossary {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+    font-size: 14px;
+  }
+  .glossary th, .glossary td {
+    text-align: left;
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  .glossary th {
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--text-faint);
+    border-bottom: 1px solid var(--border-strong);
+  }
+  .glossary .sym {
+    font-family: ui-monospace, Menlo, monospace;
+    color: var(--accent-formula);
+    font-size: 15px;
+    white-space: nowrap;
+    width: 90px;
+  }
+  .glossary .name { color: var(--text); width: 200px; }
+  .glossary .gloss { color: var(--text-dim); line-height: 1.55; }
+
+  /* Recursion table — human → earth */
+  .recursion {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+    font-size: 13px;
+  }
+  .recursion th, .recursion td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  .recursion th {
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-faint);
+    border-bottom: 1px solid var(--border-strong);
+    background: #050505;
+  }
+  .recursion .ring {
+    font-family: ui-monospace, Menlo, monospace;
+    color: var(--accent-formula);
+    font-size: 12px;
+    white-space: nowrap;
+  }
+  .recursion .observer { color: var(--text); font-weight: 500; }
+  .recursion td { color: var(--text-dim); line-height: 1.5; }
+
+  /* Figures */
+  figure { margin: 32px 0; }
+  figure svg { display: block; width: 100%; height: auto; background: #050505; border: 1px solid var(--border); border-radius: 4px; padding: 16px; }
+  figure figcaption { font-size: 13px; color: var(--text-dim); line-height: 1.55; margin: 12px 0 0; font-style: italic; padding: 0 4px; }
+
+  /* Sources */
+  ul.sources { padding-left: 20px; font-size: 14px; color: var(--text-dim); line-height: 1.7; }
+  ul.sources li { margin: 6px 0; }
+  ul.sources a { font-size: 13px; }
+
+  footer { padding: 60px 0 80px; font-size: 13px; color: var(--text-faint); }
+  footer a { color: var(--text-dim); border-bottom: 1px dotted var(--text-faint); }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="topbar">
+    <a href="../index.html">← Agnostic framework</a>
+    <span class="sep">·</span>
+    <a href="../continuations/22.md">cont 22</a>
+    <span class="sep">·</span>
+    <a href="../continuations/23.md">cont 23</a>
+    <span class="sep">·</span>
+    <a href="../notation/">notation walkthrough</a>
+    <span class="source-link"><a href="https://github.com/a70m123r/agnostic-framework">source ↗</a></span>
+  </div>
+</div>
+
+<div class="wrap">
+  <header class="hero">
+    <p class="kicker">Formalization · 2026-05-22 · v1</p>
+    <h1>The canon-stack equation</h1>
+    <p class="dek">Observer as 4-tuple. Wrapper as stable union emerging from sub canon. Global canon as wrapper-render. Inferred kernel as subset of global canon. Recursion across rings from cell to human to earth. Information flow, bandwidth, and named canon protocols at each ring.</p>
+    <p class="meta">Sources: Pav's sketch (verbatim quote in §01) · cont 22 canon-stack vocabulary · framework's existing primitives (observer architecture, compile loop, A⁺/A⁻, procedural lineage). Hypothes.is wired — counter-readings invited inline.</p>
+  </header>
+
+<section>
+  <h2><span class="num">§01</span>The sketch</h2>
+  <p class="sect-lede">What we are formalizing — Pav's verbal mapping of the canon classes onto observer architecture, in his own words, then read back in tightened form.</p>
+
+  <div style="background: var(--surface); border-left: 3px solid var(--accent-orange); padding: 20px 24px; margin: 0 0 28px; border-radius: 0 4px 4px 0;">
+    <p style="font-family: ui-monospace, Menlo, monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.18em; color: var(--accent-orange); margin: 0 0 14px;">Pav's sketch · 2026-05-22</p>
+    <p style="font-style: italic; margin: 0 0 12px; color: var(--text); line-height: 1.65;">"real canon for the observers mind bubble is harness kernel canon for people its: breathing, food, pumping, sensing, acting, water, working memory and bandwidth... then secondary config based on observer auxiliary senses speciality's and harness tools."</p>
+    <p style="font-style: italic; margin: 0 0 12px; color: var(--text); line-height: 1.65;">"Sub canon is what the bubble sits on, the subconscious channel the fuzzy compiled to the mirror bubble reality, that sub kernel canon is for ability to process harness input and ouput sence of action space, the mind is result of stable union that is the observer wrapper (there are multiple configurations and other observers that are legacy older lower bandwidth bridges or evolved aux backups working in compiled stable (not perfect) union)."</p>
+    <p style="font-style: italic; margin: 0; color: var(--text); line-height: 1.65;">"then theres the global canon, it's the wrappers prism like refraction of the whole, the state of compiled substrate in the observers vantage plane and harness, what it can observe and what it can process for action. the stuff that we assume critical to making it work is the kernel canon but still only in the mind bubble inferred by harness experience of the world and what its been imprinted + fuzzy interpertation of it scafolded to coherency of understanding."</p>
+  </div>
+
+  <h3>Read back in tightened form</h3>
+
+  <p>For a human observer, the canon-stack vocabulary from cont 22 maps onto the observer's architectural layers as follows.</p>
+
+  <p><strong>Real canon at the harness layer.</strong> The harness's operational kernel — breathing, food, circulation, sensing, acting, water, working memory, bandwidth — plus a secondary configuration determined by the observer's auxiliary senses, specialties, and harness tools. This is what is real to the observer at the lowest layer it can directly access. Everything above this layer infers or composes from this.</p>
+
+  <p><strong>Sub canon as the subconscious processing layer.</strong> The fuzzy-compiled-to-mirror layer that the mind bubble sits on. Its job is to process harness input/output and produce the sense of action-space the wrapper experiences. It is itself a compiled-stable-but-not-perfect union of multiple processing systems — legacy older-lower-bandwidth bridges, evolved auxiliary backups, active paths — operating in parallel and compiled into coherence.</p>
+
+  <p><strong>Wrapper as stable union.</strong> The mind is the result of the sub canon settling into a stable union. The wrapper is not a separate thing added on top; it is the attractor that sub canon falls into when its processing stabilizes across time. Multiple wrapper configurations are possible for the same harness and sub canon — different stable unions are possible attractor basins.</p>
+
+  <p><strong>Global canon as wrapper-render.</strong> The wrapper's prism-like refraction of the whole. Whatever the observer can observe and process for action shows up here. It is the rendered world. Crucially, what the observer marks as <em>kernel canon</em> — the substrate "critical to making it work" — is still inside global canon. It is the wrapper's inference, scaffolded from harness experience plus imprints plus fuzzy interpretation pulled into coherency. The observer never sees kernel canon directly; it sees a wrapper-rendered model of kernel canon and treats that model as kernel.</p>
+
+  <p>The formalization below makes each of these statements an equation, then expresses the recursion — wrappers within wrappers — that produces observer-classes at every ring from cell to earth.</p>
+</section>
+
+<section>
+  <h2><span class="num">§02</span>Notation</h2>
+  <p class="sect-lede">Symbols used throughout. The formalization stays at the level of operators and tuples; concrete realization for any specific observer-class is a separate construction.</p>
+
+  <table class="glossary">
+    <thead>
+      <tr><th>Symbol</th><th>Name</th><th>Reading</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="sym">𝒪<sub>r</sub></td><td class="name">Observer at ring r</td><td class="gloss">A 4-tuple: harness, sub canon, wrapper, global canon. The framework's unit of analysis at any scale. Ring r names the level of the procedural-lineage hierarchy the observer sits on (r = 0 physics, r = 1 cell, r = 3 human, r = 8 earth, etc.).</td></tr>
+      <tr><td class="sym">H<sub>r</sub></td><td class="name">Harness at ring r</td><td class="gloss">The physical/operational layer — the real canon the observer directly accesses. For humans: breathing, food, circulation, sensing, acting, water, working memory, bandwidth, plus aux/tools.</td></tr>
+      <tr><td class="sym">S<sub>r</sub></td><td class="name">Sub canon at ring r</td><td class="gloss">Subconscious processing layer the wrapper sits on. A union of legacy bridges + aux backups + active paths, compiled into stable coherence.</td></tr>
+      <tr><td class="sym">W<sub>r</sub></td><td class="name">Wrapper at ring r</td><td class="gloss">The stable attractor of S<sub>r</sub>'s long-time dynamics. The mind for a human observer; the institutional pattern for a state observer; the autopoietic identity for a cell observer.</td></tr>
+      <tr><td class="sym">G<sub>r</sub></td><td class="name">Global canon at ring r</td><td class="gloss">The wrapper's render of the whole. The observer's experienced/processed world. Everything the observer can read or act on.</td></tr>
+      <tr><td class="sym">K̂<sub>r</sub></td><td class="name">Inferred kernel at ring r</td><td class="gloss">What the wrapper has marked as kernel canon. A subset of G<sub>r</sub>. The hat over K signals "inferred" — the wrapper never sees the real kernel directly; it sees its model of kernel.</td></tr>
+      <tr><td class="sym">I<sub>r</sub></td><td class="name">Imprints at ring r</td><td class="gloss">History of past harness experience the wrapper has stored. The observer's memory.</td></tr>
+      <tr><td class="sym">F<sub>r</sub></td><td class="name">Fuzzy field at ring r</td><td class="gloss">The current pre-compile candidate field — possibilities scaffolded into coherence by sub canon but not yet stabilized in the wrapper.</td></tr>
+      <tr><td class="sym">E<sub>r</sub></td><td class="name">Environment at ring r</td><td class="gloss">Everything outside the observer at ring r. From ring r+1's perspective, E<sub>r</sub> includes the observer 𝒪<sub>r</sub> as one of many sub-observers composing H<sub>r+1</sub>.</td></tr>
+      <tr><td class="sym">⊕</td><td class="name">Compile-into-union</td><td class="gloss">Operator that combines multiple inputs into a stable compiled output. The framework's existing compile loop (A⁺ / A⁻) is what runs the operator.</td></tr>
+      <tr><td class="sym">⊗</td><td class="name">Coupling</td><td class="gloss">Tensor-style binding of two things into a relational structure. Used for harness-environment coupling and observer-observer coupling.</td></tr>
+      <tr><td class="sym">R<sub>W<sub>r</sub></sub></td><td class="name">Render operator</td><td class="gloss">The wrapper's projection function. Takes inputs (harness signals, imprints, fuzzy field) and produces the observer's experienced global canon. Lossy — the prism's refraction.</td></tr>
+      <tr><td class="sym">Π<sub>L,r</sub></td><td class="name">Language projection at ring r</td><td class="gloss">The language/symbol-system specific to observer-class at ring r. From the language v1 construct study, generalized to non-human observer-classes.</td></tr>
+      <tr><td class="sym">bw(·)</td><td class="name">Bandwidth function</td><td class="gloss">The information-flow rate a given layer supports per unit time. Caps how fast the layer above can update.</td></tr>
+      <tr><td class="sym">stable<sub>t→∞</sub></td><td class="name">Stable-attractor limit</td><td class="gloss">The long-time stable union a dynamical system settles into. For the wrapper-emerges-from-sub-canon equation: the wrapper is what sub canon stabilizes into when run long enough.</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2><span class="num">§·</span>Mapping to the whiteboard</h2>
+  <p class="sect-lede">Before the new equations: where this formalization meets the formal notation already on the table. PAVPAV's whiteboard — decoded block by block at <a href="../notation/">the notation walkthrough</a> — supplied the operator vocabulary the canon-stack now extends. Each whiteboard block maps cleanly to a canon-stack equation. Two things the canon-stack adds; two things the whiteboard has that the canon-stack should still integrate more fully.</p>
+
+  <h3>Block-by-block correspondence</h3>
+
+  <div class="block">
+    <div class="formal">
+      <p class="label">Whiteboard · central dynamics</p>
+      <p class="eq"><strong>S<sub>t+1</sub> = Π<sub>L</sub> [ A<sub>t</sub> ⋈<sup>±</sup><sub>∓</sub> B<sub>t</sub> ⋈<sup>±</sup><sub>∓</sub> C<sub>t</sub> + ξ<sub>F</sub> ]</strong></p>
+      <p class="key">Three observers recursively bound with reciprocal asymmetry, projected through language L, plus contextual residue under feedback F.</p>
+    </div>
+    <div class="prose">
+      <p class="label">Canon-stack equivalent</p>
+      <p><strong>S<sub>t+1</sub> on the whiteboard is G<sub>r</sub>(t+1) in the canon-stack.</strong> Π<sub>L</sub> = R<sub>W<sub>r</sub></sub> (the wrapper's render operator, equation 4). A<sub>t</sub> ⋈ B<sub>t</sub> ⋈ C<sub>t</sub> is the composition of sub-observers in equation 7: H<sub>r</sub> = (⊕<sub>i</sub> 𝒪<sub>r−1</sub><sup>(i)</sup>) ⊗ E<sub>r</sub>. ξ<sub>F</sub> is the imprints + fuzzy field (I<sub>r</sub> + F<sub>r</sub>) — what persists across time as feedback. So the whiteboard equation reads:</p>
+      <p style="font-family: ui-monospace, Menlo, monospace; font-size: 14px; color: var(--accent-formula); margin: 8px 0;">G<sub>r</sub>(t+1) = R<sub>W<sub>r</sub></sub>[ (⊕<sub>i</sub> 𝒪<sub>r−1</sub><sup>(i)</sup>)(t) ⊗ E<sub>r</sub>(t) + ξ<sub>F</sub>(t) ]</p>
+      <p>The canon-stack reads global canon at time t+1 as the wrapper's render of harness-composed-of-sub-observers plus residue. Same equation, decomposed.</p>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="formal">
+      <p class="label">Whiteboard · H, W superscript notation</p>
+      <p class="eq"><strong>a<sup>H<sub>a</sub>, W<sub>a</sub></sup>(abc), &nbsp; b<sup>H<sub>b</sub>, W<sub>b</sub></sup>(a()b()c()), &nbsp; c<sup>H<sub>c</sub>, W<sub>c</sub></sup>(abc)</strong></p>
+      <p class="key">Each observer carries harness and wrapper as part of its type signature. Observer b reads peers with empty parens at its own slot.</p>
+    </div>
+    <div class="prose">
+      <p class="label">Canon-stack equivalent</p>
+      <p>The whiteboard's H, W superscripts are <em>two of the four slots</em> of the canon-stack 4-tuple. Canon-stack equation 1 promotes this to:</p>
+      <p style="font-family: ui-monospace, Menlo, monospace; font-size: 14px; color: var(--accent-formula); margin: 8px 0;">𝒪<sub>r</sub> := (H<sub>r</sub>, S<sub>r</sub>, W<sub>r</sub>, G<sub>r</sub>)</p>
+      <p>The whiteboard had (H, W); the canon-stack adds (S, G) to complete the 4-tuple. The whiteboard's "observer reads itself with empty parens" (b reads a()b()c() with empty at b's slot) is the framework's mutual rendering primitive made structural: each observer can read its peers but only sees itself through projection — never directly. This is the same insight as equation 5's K̂<sub>r</sub> ⊂ G<sub>r</sub> at a smaller scale.</p>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="formal">
+      <p class="label">Whiteboard · operator legend</p>
+      <p class="eq">Π<sub>L</sub> &nbsp;= projection</p>
+      <p class="eq">±/∓ = dual merge</p>
+      <p class="eq">⋈ &nbsp;&nbsp;= recursive bind</p>
+      <p class="eq">ξ<sub>F</sub> &nbsp;= contextual residue</p>
+    </div>
+    <div class="prose">
+      <p class="label">Canon-stack equivalent</p>
+      <p><strong>Π<sub>L</sub> ↔ R<sub>W<sub>r</sub></sub></strong> — render operator (equation 4). The wrapper IS the projection; the language L is one parameterization of which render the wrapper applies. Cross-observer-class Π<sub>L</sub> (cont 22 candidate) is this operator parameterized by ring and species.</p>
+      <p><strong>±/∓ ↔ inverse-coherence operator (open edge 03)</strong> — the dual-merge sign discipline is the formal expression of cont 22's inverse-coherence between real-canon-face and latent-canon-face. Canon-stack §09 names this as open edge 03 — the whiteboard already had the notation; canon-stack should lift it explicitly into the equations.</p>
+      <p><strong>⋈ ↔ ⊕</strong> — recursive bind is the framework's compile-into-union operator. Used in equations 3 (sub canon as compiled union), 7 (harness as composition of sub-observers), and implicitly in equation 6 (the life-cycle's compile transition).</p>
+      <p><strong>ξ<sub>F</sub> ↔ I<sub>r</sub> + residue-diffusion</strong> — contextual residue under feedback decomposes into imprints (history stored in the observer) and the cross-observer residue diffusion that the whiteboard's bottom-right diagram shows as a distinct edge-type. Canon-stack still leaves residue diffusion as an open edge (matches notation walkthrough §07 open edge 03 — same gap, both diagrams have it).</p>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="formal">
+      <p class="label">Whiteboard · concept triplets</p>
+      <p class="eq" style="color: var(--accent-cast);">cast · give · residue</p>
+      <p class="eq" style="color: var(--accent-substrate);">fuzzy apertures · path friction · adaptive wrapper</p>
+      <p class="key">Idea-side and body-side observables of the same loop.</p>
+    </div>
+    <div class="prose">
+      <p class="label">Canon-stack equivalent</p>
+      <p><strong>Cast / give / residue ↔ the canon life-cycle (equation 6)</strong>:</p>
+      <ul style="margin: 0 0 10px 22px; color: var(--text); font-size: 14px; line-height: 1.6;">
+        <li>Cast = compile (kernel → compiled, the A⁺ generate gated by A⁻)</li>
+        <li>Give = embody (compiled → artefact placed in shared substrate)</li>
+        <li>Residue = run + feedback (function canon's output that persists in the substrate after the round completes)</li>
+      </ul>
+      <p><strong>Fuzzy apertures / path friction / adaptive wrapper ↔ the body-side of the canon-stack</strong>:</p>
+      <ul style="margin: 0; padding-left: 22px; color: var(--text); font-size: 14px; line-height: 1.6;">
+        <li>Fuzzy apertures = F<sub>r</sub> (fuzzy field) — equation 4's third input to the render</li>
+        <li>Path friction = bandwidth cascade (equation 10) — friction band IS where bw(H<sub>r</sub>) and bw(W<sub>r</sub>) match</li>
+        <li>Adaptive wrapper = W<sub>r</sub> with wrapper-jumps — equation 2's stable<sub>t→∞</sub> hides the configuration-space mobility (open edge 02)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="formal">
+      <p class="label">Whiteboard · state-transition chain</p>
+      <p class="eq"><strong>A<sub>t</sub> ⇒ A<sub>t+1</sub></strong></p>
+      <p class="eq" style="color: var(--text-dim); margin: 6px 0;">via</p>
+      <p class="eq"><strong>q<sub>0</sub> →<sup>α</sup> q<sub>1</sub> →<sup>β</sup> q<sub>2</sub> →<sup>γ</sup> q<sub>3</sub> ⇒ q<sub>t+1</sub></strong></p>
+      <p class="key">Macro-transition decomposed into labeled micro-checks.</p>
+    </div>
+    <div class="prose">
+      <p class="label">Canon-stack equivalent</p>
+      <p>This is the canon life-cycle (equation 6) — the macro-transition kernel(r) ⇒ kernel(r) at the next round, decomposed into the named intermediate steps:</p>
+      <p style="font-family: ui-monospace, Menlo, monospace; font-size: 14px; color: var(--accent-formula); margin: 8px 0;">kernel ⟶<sup>compile</sup> compiled ⟶<sup>embody</sup> artefact ⟶<sup>run</sup> function ⟶<sup>feedback</sup> kernel</p>
+      <p>The whiteboard's α, β, γ ARE the canon-stack's named transitions (compile, embody, run). The fourth transition in the canon-stack (feedback) closes the loop the whiteboard left implicit. Each transition is gated by A⁺ ∘ A⁻ — equation 6's gating discipline is the whiteboard's "each labeled step is a check operation" claim made structural.</p>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="formal">
+      <p class="label">Whiteboard · universal form + fixed-point question</p>
+      <p class="eq"><strong>∀ x ∈ X, A(x, t+1) = Π<sub>L</sub> [[ (A ⋈ B ⋈ C)(x, t) + ξ<sub>F</sub>(x, t) ]]</strong></p>
+      <p class="eq" style="margin-top: 12px;"><strong>fixed point? &nbsp; A* ≈ A** &nbsp;&nbsp; ‖ A<sub>t+1</sub> − A<sub>t</sub> ‖ → 0 &nbsp; as &nbsp; t → ∞</strong></p>
+    </div>
+    <div class="prose">
+      <p class="label">Canon-stack equivalent</p>
+      <p><strong>Universal form ↔ the same equations apply at every observer at every ring.</strong> Equation 6 (life-cycle) runs at every observer-class — the universality is the framework's claim that the canon stack is substrate-agnostic; only the specific content per ring varies. Procedural lineage (cont 18) read sequentially is the universal form parameterized by ring.</p>
+      <p><strong>Fixed-point question ↔ partial yes via equation 2.</strong> The wrapper stabilises: W<sub>r</sub> = stable<sub>t→∞</sub>(S<sub>r</sub>(t)). But global canon does NOT stabilise — it keeps updating because harness signals keep arriving, imprints accumulate, the fuzzy field shifts, and the environment couples back. So:</p>
+      <p style="font-family: ui-monospace, Menlo, monospace; font-size: 13px; color: var(--accent-formula); margin: 8px 0;">‖ W<sub>r</sub>(t+1) − W<sub>r</sub>(t) ‖ → 0 &nbsp; (yes, at the wrapper)<br>‖ G<sub>r</sub>(t+1) − G<sub>r</sub>(t) ‖ ↛ 0 &nbsp; (no, at global canon)</p>
+      <p>The whiteboard asked the right question; canon-stack equation 2 + cont 19's moving-target answer it precisely: <em>stable locally at the wrapper, never stable globally at the rendered world</em>.</p>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="formal">
+      <p class="label">Whiteboard · agnostic systems / fractal structure</p>
+      <p class="eq"><strong>S<sub>i</sub> = (I<sub>i</sub>, O<sub>i</sub>, Σ<sub>i</sub>, φ<sub>i</sub>)</strong></p>
+      <p class="key" style="margin: 12px 0 8px;">operations: compose · project · residue</p>
+      <p class="key" style="margin: 0 0 8px;">edges: input (red) · output (blue) · residue diffusion (black)</p>
+      <p class="key">fractal boundaries around each S<sub>i</sub></p>
+    </div>
+    <div class="prose">
+      <p class="label">Canon-stack equivalent</p>
+      <p><strong>The whiteboard's automaton 4-tuple and the canon-stack 4-tuple are two decompositions of the same observer-class:</strong></p>
+      <p style="font-family: ui-monospace, Menlo, monospace; font-size: 13px; color: var(--accent-formula); margin: 10px 0;">I<sub>i</sub> (input) &nbsp;&nbsp;↔ &nbsp;sensing arm of H<sub>r</sub><br>O<sub>i</sub> (output) &nbsp;↔ &nbsp;acting arm of H<sub>r</sub><br>Σ<sub>i</sub> (state alphabet) ↔ &nbsp;W<sub>r</sub> ⊕ G<sub>r</sub><br>φ<sub>i</sub> (transition fn) &nbsp;↔ &nbsp;R<sub>W<sub>r</sub></sub> + equation 6 (life-cycle)</p>
+      <p><strong>Three operations ↔ canon-stack verbs:</strong> compose ↔ ⊕ (compile-into-union); project ↔ R<sub>W</sub> (render); residue ↔ the feedback arrow + the residue-diffusion still-open-edge.</p>
+      <p><strong>Three edge-types ↔ information flows in Figure A:</strong> input/output are the up/down arrows through the layers; residue diffusion is the cross-time, cross-observer carry that neither diagram fully formalizes.</p>
+      <p><strong>Fractal boundaries around each S<sub>i</sub> ↔ canon-stack equation 9:</strong> 𝒪<sub>r</sub> = (H<sub>r</sub>(𝒪<sub>r−1</sub>), S<sub>r</sub>, W<sub>r</sub>, G<sub>r</sub>(𝒪<sub>r+1</sub>: as env)). The fractal boundary is the same observer-class recurring at every scale — what Figure C shows as concentric rings, the whiteboard shows as nested fractal regions.</p>
+    </div>
+  </div>
+
+  <h3>Summary mapping table</h3>
+
+  <div style="overflow-x: auto; margin: 16px 0 32px;">
+    <table class="glossary" style="font-size: 13px;">
+      <thead>
+        <tr>
+          <th style="width: 38%;">Whiteboard primitive</th>
+          <th style="width: 38%;">Canon-stack equivalent</th>
+          <th style="width: 24%;">Equation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="font-family: ui-monospace, Menlo, monospace; color: var(--accent-formula);">S<sub>t+1</sub></td>
+          <td>Global canon at next time step G<sub>r</sub>(t+1)</td>
+          <td style="color: var(--text-dim);">Eq 4</td>
+        </tr>
+        <tr>
+          <td style="font-family: ui-monospace, Menlo, monospace; color: var(--accent-formula);">Π<sub>L</sub></td>
+          <td>Render operator R<sub>W<sub>r</sub></sub></td>
+          <td style="color: var(--text-dim);">Eq 4</td>
+        </tr>
+        <tr>
+          <td style="font-family: ui-monospace, Menlo, monospace; color: var(--accent-formula);">⋈ (recursive bind)</td>
+          <td>⊕ compile-into-union</td>
+          <td style="color: var(--text-dim);">Eq 3, 7</td>
+        </tr>
+        <tr>
+          <td style="font-family: ui-monospace, Menlo, monospace; color: var(--accent-formula);">±/∓ (dual merge)</td>
+          <td>Inverse-coherence operator (still open edge)</td>
+          <td style="color: var(--text-dim);">§09 OE3</td>
+        </tr>
+        <tr>
+          <td style="font-family: ui-monospace, Menlo, monospace; color: var(--accent-formula);">ξ<sub>F</sub> (contextual residue)</td>
+          <td>I<sub>r</sub> (imprints) + residue diffusion (still open)</td>
+          <td style="color: var(--text-dim);">Eq 4</td>
+        </tr>
+        <tr>
+          <td style="font-family: ui-monospace, Menlo, monospace; color: var(--accent-formula);">a<sup>H<sub>a</sub>, W<sub>a</sub></sup></td>
+          <td>(H<sub>r</sub>, W<sub>r</sub>) slots of the observer 4-tuple</td>
+          <td style="color: var(--text-dim);">Eq 1</td>
+        </tr>
+        <tr>
+          <td style="font-family: ui-monospace, Menlo, monospace; color: var(--accent-formula);">cast · give · residue</td>
+          <td>compile · embody · run+feedback</td>
+          <td style="color: var(--text-dim);">Eq 6</td>
+        </tr>
+        <tr>
+          <td style="font-family: ui-monospace, Menlo, monospace; color: var(--accent-formula);">fuzzy apertures</td>
+          <td>Fuzzy field F<sub>r</sub></td>
+          <td style="color: var(--text-dim);">Eq 4</td>
+        </tr>
+        <tr>
+          <td style="font-family: ui-monospace, Menlo, monospace; color: var(--accent-formula);">path friction</td>
+          <td>Bandwidth cascade bw(W) ≤ bw(S) ≤ bw(H)</td>
+          <td style="color: var(--text-dim);">Eq 10</td>
+        </tr>
+        <tr>
+          <td style="font-family: ui-monospace, Menlo, monospace; color: var(--accent-formula);">adaptive wrapper</td>
+          <td>W<sub>r</sub> with wrapper-jumps (open edge)</td>
+          <td style="color: var(--text-dim);">Eq 2 / §09 OE2</td>
+        </tr>
+        <tr>
+          <td style="font-family: ui-monospace, Menlo, monospace; color: var(--accent-formula);">q<sub>0</sub> →<sup>α</sup> q<sub>1</sub> →<sup>β</sup> q<sub>2</sub> →<sup>γ</sup> q<sub>3</sub></td>
+          <td>kernel → compile → compiled → embody → artefact → run → function → feedback</td>
+          <td style="color: var(--text-dim);">Eq 6</td>
+        </tr>
+        <tr>
+          <td style="font-family: ui-monospace, Menlo, monospace; color: var(--accent-formula);">A* ≈ A** , &nbsp;‖A<sub>t+1</sub> − A<sub>t</sub>‖ → 0</td>
+          <td>Stable at wrapper W<sub>r</sub>; never stable at global canon G<sub>r</sub></td>
+          <td style="color: var(--text-dim);">Eq 2</td>
+        </tr>
+        <tr>
+          <td style="font-family: ui-monospace, Menlo, monospace; color: var(--accent-formula);">∀ x ∈ X, A(x, t+1) = …</td>
+          <td>Same equations at every observer at every ring (procedural lineage)</td>
+          <td style="color: var(--text-dim);">Eq 6, 9</td>
+        </tr>
+        <tr>
+          <td style="font-family: ui-monospace, Menlo, monospace; color: var(--accent-formula);">S<sub>i</sub> = (I, O, Σ, φ) automaton</td>
+          <td>𝒪<sub>r</sub> = (H<sub>r</sub>, S<sub>r</sub>, W<sub>r</sub>, G<sub>r</sub>) — different decomposition of the same object</td>
+          <td style="color: var(--text-dim);">Eq 1</td>
+        </tr>
+        <tr>
+          <td style="font-family: ui-monospace, Menlo, monospace; color: var(--accent-formula);">fractal boundaries around S<sub>i</sub></td>
+          <td>Recursion across rings: 𝒪<sub>r</sub> = (H<sub>r</sub>(𝒪<sub>r−1</sub>), …, G<sub>r</sub>(𝒪<sub>r+1</sub>: as env))</td>
+          <td style="color: var(--text-dim);">Eq 9</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>What the canon-stack adds</h3>
+
+  <div class="open-edge">
+    <p class="label">Addition 01 — K̂<sub>r</sub> ⊂ G<sub>r</sub> (inferred kernel as labeled subset)</p>
+    <p>The whiteboard treats observers symmetrically — A reads B, B reads A, C reads both. The canon-stack adds: <em>what each observer marks as kernel is always a labeled subset of its own rendered world.</em> Equation 5 makes the observer-relativity of kernel-canon claims structural. The whiteboard supplied the multi-observer compile-loop; the canon-stack supplied the discipline that no observer accesses kernel canon directly.</p>
+  </div>
+
+  <div class="open-edge">
+    <p class="label">Addition 02 — bandwidth cascade unifying four prior primitives</p>
+    <p>The whiteboard had path friction as one of the three body-side observables. The canon-stack reads path friction as bandwidth cascade bw(W) ≤ bw(S) ≤ bw(H), which unifies four primitives at once: slow-fast pushout (cont 16), friction band (cont 16), A⁻ check crisis (cont 15 + internet v1 §10), slice-viewer constraint (cont 14). The whiteboard had one of them; the canon-stack reveals all four as bandwidth-cap propagation through the observer's layers.</p>
+  </div>
+
+  <h3>What the whiteboard had that the canon-stack should still integrate</h3>
+
+  <div class="open-edge">
+    <p class="label">Carry-forward 01 — ±/∓ sign discipline → formalize inverse-coherence (open edge 03)</p>
+    <p>The whiteboard's dual-merge sign discipline (when A binds with B as +, B binds with A as − automatically) is the formal expression of cont 22's inverse-coherence between real-canon-face and latent-canon-face. The canon-stack §09 open edge 03 calls for an equation; the whiteboard already has the operator. Lifting ±/∓ explicitly into the canon-stack equations is the natural next move — coherence(real_face) ⊕ coherence(latent_face) ≤ const(W<sub>r</sub>) with the trade-off algebra given by ±/∓.</p>
+  </div>
+
+  <div class="open-edge">
+    <p class="label">Carry-forward 02 — residue diffusion as third edge-type (still open in both diagrams)</p>
+    <p>The whiteboard's bottom-right diagram separates three edge-types: input (red), output (blue), residue diffusion (black). The notation walkthrough §07 named residue diffusion as the cleanest open edge for promotion. The canon-stack's information flow (Figure A) shows up/down arrows for input/output but does not yet have an explicit residue-diffusion arrow — it is implicit in I<sub>r</sub> (imprints) and the feedback term of equation 6, but not separated as its own structural channel. Same open edge in both diagrams; promoting it to canon would close the gap in one move.</p>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">§03</span>Observer as 4-tuple — the core equation</h2>
+  <p class="sect-lede">An observer at ring r is the structured combination of its four canon-class layers: harness, sub canon, wrapper, global canon. The inferred kernel is a derived quantity, not a fifth member of the tuple.</p>
+
+  <div class="eq-block">
+    <p class="label">Equation 1 — observer as 4-tuple</p>
+    <p class="eq"><strong>𝒪<sub>r</sub> := (H<sub>r</sub>, S<sub>r</sub>, W<sub>r</sub>, G<sub>r</sub>)</strong></p>
+    <p class="eq">with derived quantity:</p>
+    <p class="eq"><strong>K̂<sub>r</sub> ⊂ G<sub>r</sub></strong> &nbsp;&nbsp; (the inferred kernel is a marked subset of global canon)</p>
+    <p class="key"><strong>Read:</strong> An observer at ring r is defined by its harness, its sub canon, its wrapper, and its global canon. The inferred kernel — what the observer treats as "the substrate critical to making things work" — is a labeled region inside global canon. It is not given from outside; it is the wrapper's own projection back through global canon onto the parts it judges most load-bearing.</p>
+  </div>
+
+  <div class="block">
+    <div class="formal">
+      <p class="label">Equation 2 — wrapper emergence</p>
+      <p class="eq"><strong>W<sub>r</sub> = stable<sub>t→∞</sub>( S<sub>r</sub>(t) )</strong></p>
+      <p class="key">Where S<sub>r</sub>(t) is sub canon's instantaneous compiled state at time t, and stable<sub>t→∞</sub> is the long-time attractor of the dynamical system.</p>
+    </div>
+    <div class="prose">
+      <p class="label">Reading</p>
+      <p>The wrapper is not added on top of sub canon. It is what sub canon settles into when its processing stabilizes across time. The mind is the stable union of subconscious processing; institutional pattern is the stable union of member-level coordination; cellular identity is the stable union of molecular dynamics. Different wrapper configurations exist as different stable attractors of the same sub canon — the configuration the observer happens to live in is one specific basin.</p>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="formal">
+      <p class="label">Equation 3 — sub canon as compiled union</p>
+      <p class="eq"><strong>S<sub>r</sub> = ⊕<sub>i</sub> ( legacy<sub>i</sub> ⊕ aux<sub>i</sub> ⊕ active<sub>i</sub> ) ⊕ H<sub>r</sub><sup>signals</sup></strong></p>
+      <p class="key">Sub canon at ring r is the compiled union of three classes of processing path — legacy older-lower-bandwidth bridges, evolved auxiliary backups, currently-active processing — coupled with harness signals at the bottom.</p>
+    </div>
+    <div class="prose">
+      <p class="label">Reading</p>
+      <p>Sub canon is not one channel but many, compiled together into a stable-but-not-perfect union. The legacy bridges (brainstem-ish, evolutionary older) keep running even when the active paths fail; the aux backups carry redundant computation; the active paths do the main work. Their compiled union is what the wrapper experiences as "the layer beneath consciousness." Imperfect union → leakage, slip, the things the conscious mind can't quite explain.</p>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="formal">
+      <p class="label">Equation 4 — global canon as wrapper-render</p>
+      <p class="eq"><strong>G<sub>r</sub> = R<sub>W<sub>r</sub></sub>( H<sub>r</sub><sup>signals</sup> ⊕ I<sub>r</sub> ⊕ F<sub>r</sub> )</strong></p>
+      <p class="key">Global canon is the wrapper's render operator applied to harness signals (real-time), imprints (history), and fuzzy field (current candidate possibilities). The render is lossy — that's the prism.</p>
+    </div>
+    <div class="prose">
+      <p class="label">Reading</p>
+      <p>Global canon is everything the observer experiences/processes as its world. The render is the wrapper doing its work: pulling real-time harness signals together with stored imprints and the current fuzzy field, refracting them through the wrapper's coherence rules, and producing the rendered whole. Two different wrappers running on the same harness signals produce different global canons. Two different harnesses feeding the same wrapper produce different global canons. Both contribute.</p>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="formal">
+      <p class="label">Equation 5 — inferred kernel as labeled subset</p>
+      <p class="eq"><strong>K̂<sub>r</sub> := { g ∈ G<sub>r</sub> : load_bearing(g) }</strong></p>
+      <p class="key">The inferred kernel is the subset of global canon that the wrapper marks as "load-bearing" — the things the observer judges critical to its operation. A subset relation, not an external reference.</p>
+    </div>
+    <div class="prose">
+      <p class="label">Reading</p>
+      <p>This is the key move: what the observer calls kernel canon is a projection INSIDE its own rendered world. It is not the substrate; it is the wrapper's model of the substrate. The framework's discipline becomes: never confuse K̂<sub>r</sub> with the actual kernel canon of any deeper ring. The actual kernel canon at ring r is what the observer cannot directly access — it shows up only as wrapper-rendered patterns the observer has labeled "kernel."</p>
+    </div>
+  </div>
+
+  <figure>
+    <svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+          <path d="M 0 0 L 10 5 L 0 10 z" fill="#8a8a8a"/>
+        </marker>
+        <marker id="arr-up" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+          <path d="M 0 0 L 10 5 L 0 10 z" fill="#4ade80"/>
+        </marker>
+        <marker id="arr-down" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+          <path d="M 0 0 L 10 5 L 0 10 z" fill="#fb923c"/>
+        </marker>
+      </defs>
+
+      <!-- Environment -->
+      <rect x="20" y="20" width="860" height="460" fill="none" stroke="#3a3a3a" stroke-dasharray="4 4" rx="8"/>
+      <text x="40" y="45" font-family="ui-monospace, Menlo, monospace" font-size="11" fill="#555" text-transform="uppercase" letter-spacing="2">Environment E_r — everything outside the observer at ring r</text>
+
+      <!-- Harness layer -->
+      <rect x="60" y="380" width="780" height="70" fill="#1c1c1c" stroke="#fcd34d" stroke-width="1.5" rx="6"/>
+      <text x="80" y="410" font-family="Georgia, serif" font-size="16" fill="#fcd34d">H_r — Harness (real canon)</text>
+      <text x="80" y="432" font-family="ui-monospace, Menlo, monospace" font-size="11" fill="#8a8a8a">breathing · food · pumping · sensing · acting · water · working memory · bandwidth · aux · tools</text>
+
+      <!-- Sub canon layer -->
+      <rect x="100" y="280" width="700" height="80" fill="#1c1c1c" stroke="#93c5fd" stroke-width="1.5" rx="6"/>
+      <text x="120" y="310" font-family="Georgia, serif" font-size="16" fill="#93c5fd">S_r — Sub canon (subconscious processing)</text>
+      <text x="120" y="332" font-family="ui-monospace, Menlo, monospace" font-size="11" fill="#8a8a8a">⊕ legacy bridges ⊕ aux backups ⊕ active paths</text>
+      <text x="120" y="350" font-family="ui-monospace, Menlo, monospace" font-size="11" fill="#8a8a8a">compiled stable (not perfect) union</text>
+
+      <!-- Wrapper layer -->
+      <rect x="160" y="180" width="580" height="80" fill="#1c1c1c" stroke="#4ade80" stroke-width="1.5" rx="6"/>
+      <text x="180" y="210" font-family="Georgia, serif" font-size="16" fill="#4ade80">W_r — Wrapper (stable union)</text>
+      <text x="180" y="232" font-family="ui-monospace, Menlo, monospace" font-size="11" fill="#8a8a8a">stable_t→∞( S_r(t) ) — the mind, the institutional pattern, the autopoietic identity</text>
+      <text x="180" y="250" font-family="ui-monospace, Menlo, monospace" font-size="11" fill="#8a8a8a">multiple attractor basins available; observer lives in one</text>
+
+      <!-- Global canon layer -->
+      <rect x="220" y="80" width="460" height="80" fill="#1c1c1c" stroke="#fb923c" stroke-width="1.5" rx="6"/>
+      <text x="240" y="110" font-family="Georgia, serif" font-size="16" fill="#fb923c">G_r — Global canon (wrapper-render of the whole)</text>
+      <text x="240" y="132" font-family="ui-monospace, Menlo, monospace" font-size="11" fill="#8a8a8a">R_W( H_signals ⊕ I_r ⊕ F_r ) — the experienced/processed world</text>
+      <text x="240" y="150" font-family="ui-monospace, Menlo, monospace" font-size="11" fill="#8a8a8a">contains K̂_r — the labeled subset the wrapper marks as "kernel"</text>
+
+      <!-- Inferred kernel inside G_r -->
+      <ellipse cx="540" cy="120" rx="80" ry="22" fill="none" stroke="#fcd34d" stroke-dasharray="3 3" stroke-width="1"/>
+      <text x="540" y="125" font-family="ui-monospace, Menlo, monospace" font-size="11" fill="#fcd34d" text-anchor="middle">K̂_r (inferred kernel)</text>
+
+      <!-- Arrows up -->
+      <line x1="450" y1="380" x2="450" y2="362" stroke="#4ade80" stroke-width="2" marker-end="url(#arr-up)"/>
+      <line x1="450" y1="280" x2="450" y2="262" stroke="#4ade80" stroke-width="2" marker-end="url(#arr-up)"/>
+      <line x1="450" y1="180" x2="450" y2="162" stroke="#4ade80" stroke-width="2" marker-end="url(#arr-up)"/>
+      <text x="465" y="375" font-family="ui-monospace, Menlo, monospace" font-size="10" fill="#4ade80">sense</text>
+      <text x="465" y="275" font-family="ui-monospace, Menlo, monospace" font-size="10" fill="#4ade80">stabilize</text>
+      <text x="465" y="175" font-family="ui-monospace, Menlo, monospace" font-size="10" fill="#4ade80">render</text>
+
+      <!-- Arrows down -->
+      <line x1="370" y1="160" x2="370" y2="180" stroke="#fb923c" stroke-width="2" marker-end="url(#arr-down)"/>
+      <line x1="370" y1="260" x2="370" y2="280" stroke="#fb923c" stroke-width="2" marker-end="url(#arr-down)"/>
+      <line x1="370" y1="360" x2="370" y2="380" stroke="#fb923c" stroke-width="2" marker-end="url(#arr-down)"/>
+      <text x="305" y="175" font-family="ui-monospace, Menlo, monospace" font-size="10" fill="#fb923c">intend</text>
+      <text x="305" y="275" font-family="ui-monospace, Menlo, monospace" font-size="10" fill="#fb923c">decompose</text>
+      <text x="305" y="375" font-family="ui-monospace, Menlo, monospace" font-size="10" fill="#fb923c">act</text>
+
+      <!-- Environment coupling -->
+      <line x1="60" y1="415" x2="20" y2="415" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arr)"/>
+      <line x1="840" y1="415" x2="880" y2="415" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arr)"/>
+
+    </svg>
+    <figcaption>Figure A — the observer at ring r as 4-tuple. Information flows up through sensing/stabilization/rendering and down through intending/decomposing/acting. The inferred kernel K̂<sub>r</sub> sits inside global canon as a labeled subset — the wrapper's model of "what's load-bearing in the substrate." The harness couples bidirectionally with the environment, which from the next ring's perspective is composed of other observers.</figcaption>
+  </figure>
+</section>
+
+<section>
+  <h2><span class="num">§04</span>The compile loop and the four-layer canon stack</h2>
+  <p class="sect-lede">Cont 22's four canon classes — kernel, compiled, artefact, function — describe the life-cycle every piece of canon goes through within a given observer. Each transition is a verb gated by the framework's A⁺ / A⁻ check.</p>
+
+  <div class="eq-block">
+    <p class="label">Equation 6 — the canon life-cycle</p>
+    <p class="eq"><strong>kernel(r) &nbsp;⟶<sup>compile</sup>&nbsp; compiled(r) &nbsp;⟶<sup>embody</sup>&nbsp; artefact(r) &nbsp;⟶<sup>run</sup>&nbsp; function(r) &nbsp;⟶<sup>feedback</sup>&nbsp; kernel(r)</strong></p>
+    <p class="eq">where each transition is gated:</p>
+    <p class="eq"><strong>transition_{n → n+1} := A⁺ ∘ A⁻</strong> &nbsp;&nbsp; (generate then check)</p>
+    <p class="key"><strong>Read:</strong> Kernel canon at ring r is compiled by the observer's compile loop into compiled canon — the institutional/protocol patterns. Compiled canon is embodied in specific carriers, producing canon artefacts. Artefacts are run, producing function canon — the lived operation. Function canon feeds back into kernel canon by changing the substrate the next compile round runs on. The cycle is continuous, not single-pass.</p>
+  </div>
+
+  <p>This life-cycle runs for any piece of canon at any ring, parameterized by the two cross-cutting dimensions:</p>
+
+  <ul style="margin: 0 0 22px 24px; color: var(--text-dim); line-height: 1.7;">
+    <li><strong style="color: var(--text);">real / latent</strong> — every layer has a real face and a latent face. Real kernel canon at the harness ring; latent kernel canon at the embedding ring. Both faces compile, embody, run.</li>
+    <li><strong style="color: var(--text);">global / sub</strong> — every layer holds either across observer-classes (global canon) or only within a sub-class (sub canon). The reading of "sub" is observer-parameterized: it can mean architectural (subconscious-layer, sitting beneath the wrapper) or scope (subordinate to an adjacent global-class). Which reading applies depends on the observer's wrapper config and its adjacent neighbours in the sequence/hierarchy.</li>
+  </ul>
+
+  <figure>
+    <svg viewBox="0 0 900 360" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <marker id="arr2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+          <path d="M 0 0 L 10 5 L 0 10 z" fill="#fcd34d"/>
+        </marker>
+        <marker id="arr-fb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+          <path d="M 0 0 L 10 5 L 0 10 z" fill="#a78bfa"/>
+        </marker>
+      </defs>
+
+      <!-- Four boxes -->
+      <rect x="40" y="120" width="170" height="100" fill="#1c1c1c" stroke="#4ade80" stroke-width="1.5" rx="6"/>
+      <text x="125" y="160" font-family="Georgia, serif" font-size="16" fill="#4ade80" text-anchor="middle">Kernel canon</text>
+      <text x="125" y="185" font-family="ui-monospace, Menlo, monospace" font-size="10" fill="#8a8a8a" text-anchor="middle">raw substrate</text>
+      <text x="125" y="200" font-family="ui-monospace, Menlo, monospace" font-size="10" fill="#8a8a8a" text-anchor="middle">found, not made</text>
+
+      <rect x="260" y="120" width="170" height="100" fill="#1c1c1c" stroke="#4ade80" stroke-width="1.5" rx="6"/>
+      <text x="345" y="160" font-family="Georgia, serif" font-size="16" fill="#4ade80" text-anchor="middle">Compiled canon</text>
+      <text x="345" y="185" font-family="ui-monospace, Menlo, monospace" font-size="10" fill="#8a8a8a" text-anchor="middle">institutional</text>
+      <text x="345" y="200" font-family="ui-monospace, Menlo, monospace" font-size="10" fill="#8a8a8a" text-anchor="middle">pattern level</text>
+
+      <rect x="480" y="120" width="170" height="100" fill="#1c1c1c" stroke="#4ade80" stroke-width="1.5" rx="6"/>
+      <text x="565" y="160" font-family="Georgia, serif" font-size="16" fill="#4ade80" text-anchor="middle">Canon artefact</text>
+      <text x="565" y="185" font-family="ui-monospace, Menlo, monospace" font-size="10" fill="#8a8a8a" text-anchor="middle">embodied</text>
+      <text x="565" y="200" font-family="ui-monospace, Menlo, monospace" font-size="10" fill="#8a8a8a" text-anchor="middle">specific carrier</text>
+
+      <rect x="700" y="120" width="170" height="100" fill="#1c1c1c" stroke="#4ade80" stroke-width="1.5" rx="6"/>
+      <text x="785" y="160" font-family="Georgia, serif" font-size="16" fill="#4ade80" text-anchor="middle">Function canon</text>
+      <text x="785" y="185" font-family="ui-monospace, Menlo, monospace" font-size="10" fill="#8a8a8a" text-anchor="middle">lived operation</text>
+      <text x="785" y="200" font-family="ui-monospace, Menlo, monospace" font-size="10" fill="#8a8a8a" text-anchor="middle">currently running</text>
+
+      <!-- Forward arrows -->
+      <line x1="210" y1="170" x2="260" y2="170" stroke="#fcd34d" stroke-width="2" marker-end="url(#arr2)"/>
+      <line x1="430" y1="170" x2="480" y2="170" stroke="#fcd34d" stroke-width="2" marker-end="url(#arr2)"/>
+      <line x1="650" y1="170" x2="700" y2="170" stroke="#fcd34d" stroke-width="2" marker-end="url(#arr2)"/>
+
+      <text x="235" y="160" font-family="ui-monospace, Menlo, monospace" font-size="11" fill="#fcd34d" text-anchor="middle">compile</text>
+      <text x="455" y="160" font-family="ui-monospace, Menlo, monospace" font-size="11" fill="#fcd34d" text-anchor="middle">embody</text>
+      <text x="675" y="160" font-family="ui-monospace, Menlo, monospace" font-size="11" fill="#fcd34d" text-anchor="middle">run</text>
+
+      <!-- A+/A- gates -->
+      <text x="235" y="195" font-family="ui-monospace, Menlo, monospace" font-size="9" fill="#a78bfa" text-anchor="middle">A⁺ · A⁻</text>
+      <text x="455" y="195" font-family="ui-monospace, Menlo, monospace" font-size="9" fill="#a78bfa" text-anchor="middle">A⁺ · A⁻</text>
+      <text x="675" y="195" font-family="ui-monospace, Menlo, monospace" font-size="9" fill="#a78bfa" text-anchor="middle">A⁺ · A⁻</text>
+
+      <!-- Feedback arrow -->
+      <path d="M 785 220 Q 785 290 450 290 Q 125 290 125 220" fill="none" stroke="#a78bfa" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#arr-fb)"/>
+      <text x="455" y="285" font-family="ui-monospace, Menlo, monospace" font-size="11" fill="#a78bfa" text-anchor="middle">feedback — function canon reshapes kernel canon for the next round</text>
+
+      <!-- Parameterization labels -->
+      <text x="450" y="40" font-family="ui-monospace, Menlo, monospace" font-size="10" fill="#555" text-anchor="middle" letter-spacing="2">CROSS-CUTTING DIMENSIONS (apply at every layer)</text>
+      <text x="450" y="70" font-family="ui-monospace, Menlo, monospace" font-size="11" fill="#93c5fd" text-anchor="middle">real ⟷ latent &nbsp;&nbsp;·&nbsp;&nbsp; global ⟷ sub</text>
+      <text x="450" y="92" font-family="ui-monospace, Menlo, monospace" font-size="10" fill="#555" text-anchor="middle">(sub-reading parameterized by wrapper config + adjacent neighbours)</text>
+
+      <!-- Bottom row: ring r context -->
+      <text x="450" y="335" font-family="Georgia, serif" font-size="13" fill="#8a8a8a" text-anchor="middle" font-style="italic">All four layers exist for every piece of canon at every ring r.</text>
+    </svg>
+    <figcaption>Figure B — the four-layer canon life-cycle. Each transition (compile, embody, run, feedback) is gated by the framework's A⁺ / A⁻ check. Real/latent and global/sub are cross-cutting dimensions that apply at every layer. The sub-reading is parameterized: subconscious-as-architectural-layer for some observer configurations, sub-class-as-scope for others, depending on wrapper config and adjacent-neighbour structure in the hierarchy.</figcaption>
+  </figure>
+</section>
+
+<section>
+  <h2><span class="num">§05</span>Recursion — wrappers within wrappers</h2>
+  <p class="sect-lede">The observer at ring r is not free-standing. Its harness is composed of observers at ring r−1, and itself participates in the harness of ring r+1. The recursion produces the procedural lineage from physical kernel up to earth-level observer.</p>
+
+  <div class="eq-block">
+    <p class="label">Equation 7 — harness as composition of sub-observers</p>
+    <p class="eq"><strong>H<sub>r</sub> = ( ⊕<sub>i ∈ I<sub>r</sub></sub> 𝒪<sub>r−1</sub><sup>(i)</sup> ) ⊗ E<sub>r</sub></strong></p>
+    <p class="key">The harness at ring r is the compiled union of many sub-observers at ring r−1, coupled with the environment at ring r. Cells compose tissue; tissue composes organ; organs compose body; bodies compose family; families compose society; societies compose species; species compose biosphere; biosphere couples with geology to compose earth.</p>
+  </div>
+
+  <div class="eq-block">
+    <p class="label">Equation 8 — kernel-canon recursion across rings</p>
+    <p class="eq"><strong>K̂<sub>r</sub> &nbsp;≈&nbsp; aggregate( G<sub>r−1</sub><sup>(i)</sup> : i ∈ I<sub>r</sub> )</strong></p>
+    <p class="key">The inferred kernel canon at ring r is approximately the aggregation of the global canons of the ring-r−1 observers that compose ring r's harness. From the perspective of ring r, the rendered worlds of its sub-observers <em>look like substrate</em>. They are kernel, because ring r cannot drill into the sub-observers' wrappers directly; it only sees their compiled outputs.</p>
+  </div>
+
+  <div class="eq-block">
+    <p class="label">Equation 9 — the full recursive observer</p>
+    <p class="eq"><strong>𝒪<sub>r</sub> = ( H<sub>r</sub>( 𝒪<sub>r−1</sub> ), &nbsp;S<sub>r</sub>, &nbsp;W<sub>r</sub>, &nbsp;G<sub>r</sub>( 𝒪<sub>r+1</sub>: as environment ) )</strong></p>
+    <p class="key">The observer at ring r is constituted by ring r−1 observers (as its harness) and constrained by ring r+1 observers (as the environment its harness couples with). The recursion is bidirectional: lower rings supply substrate; higher rings supply boundary conditions. The framework's procedural lineage (cont 18) is this recursion read sequentially.</p>
+  </div>
+
+  <div class="open-edge">
+    <p class="label">Open edge — aggregation as the unsolved operator</p>
+    <p>The "aggregate" function in equation 8 is the most under-specified part of the formalization. Different aggregation rules at different rings produce different observer-class behaviors: simple summation at the physics ring; selective majority-rule at the social ring; weighted attention at the cognitive ring; market-clearing at the economic ring. The framework currently treats aggregate as a placeholder operator. A v2 pass should name the aggregation rule per ring and check whether the rules themselves obey a cross-ring pattern. This is connected to the framework's existing carrier-propagation and friction-band primitives but has not yet been formalized.</p>
+  </div>
+
+  <figure>
+    <svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <marker id="arr3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M 0 0 L 10 5 L 0 10 z" fill="#8a8a8a"/>
+        </marker>
+      </defs>
+
+      <!-- Concentric rings — outer to inner: earth, biosphere, species, society, family, human, organ, cell, molecule -->
+
+      <!-- Earth (outermost) -->
+      <circle cx="450" cy="300" r="285" fill="none" stroke="#fcd34d" stroke-width="1.5"/>
+      <text x="450" y="40" font-family="Georgia, serif" font-size="14" fill="#fcd34d" text-anchor="middle">r=8 · earth observer</text>
+
+      <!-- Biosphere -->
+      <circle cx="450" cy="300" r="245" fill="none" stroke="#fb923c" stroke-width="1.3"/>
+      <text x="450" y="80" font-family="Georgia, serif" font-size="13" fill="#fb923c" text-anchor="middle">r=7 · biosphere</text>
+
+      <!-- Species -->
+      <circle cx="450" cy="300" r="205" fill="none" stroke="#a78bfa" stroke-width="1.3"/>
+      <text x="450" y="118" font-family="Georgia, serif" font-size="13" fill="#a78bfa" text-anchor="middle">r=6 · species</text>
+
+      <!-- Society -->
+      <circle cx="450" cy="300" r="165" fill="none" stroke="#93c5fd" stroke-width="1.3"/>
+      <text x="450" y="156" font-family="Georgia, serif" font-size="13" fill="#93c5fd" text-anchor="middle">r=5 · society</text>
+
+      <!-- Family/group -->
+      <circle cx="450" cy="300" r="125" fill="none" stroke="#4ade80" stroke-width="1.3"/>
+      <text x="450" y="194" font-family="Georgia, serif" font-size="13" fill="#4ade80" text-anchor="middle">r=4 · family / group</text>
+
+      <!-- Human -->
+      <circle cx="450" cy="300" r="85" fill="none" stroke="#fcd34d" stroke-width="1.5"/>
+      <text x="450" y="232" font-family="Georgia, serif" font-size="13" fill="#fcd34d" text-anchor="middle">r=3 · human</text>
+
+      <!-- Organ -->
+      <circle cx="450" cy="300" r="55" fill="none" stroke="#fb923c" stroke-width="1.3"/>
+      <text x="450" y="262" font-family="Georgia, serif" font-size="11" fill="#fb923c" text-anchor="middle">r=2 · organ</text>
+
+      <!-- Cell -->
+      <circle cx="450" cy="300" r="30" fill="none" stroke="#a78bfa" stroke-width="1.3"/>
+      <text x="450" y="298" font-family="Georgia, serif" font-size="11" fill="#a78bfa" text-anchor="middle">r=1 · cell</text>
+
+      <!-- Molecule kernel -->
+      <circle cx="450" cy="305" r="12" fill="#93c5fd" stroke="#93c5fd" stroke-width="1"/>
+      <text x="450" y="335" font-family="ui-monospace, Menlo, monospace" font-size="10" fill="#93c5fd" text-anchor="middle">r=0 · physical kernel</text>
+
+      <!-- Annotations on the right side -->
+      <line x1="735" y1="300" x2="780" y2="300" stroke="#8a8a8a" stroke-width="1"/>
+      <text x="785" y="295" font-family="ui-monospace, Menlo, monospace" font-size="11" fill="#ececec">𝒪_r ⊃ 𝒪_{r-1}</text>
+      <text x="785" y="312" font-family="ui-monospace, Menlo, monospace" font-size="10" fill="#8a8a8a">harness composition</text>
+
+      <line x1="165" y1="300" x2="120" y2="300" stroke="#8a8a8a" stroke-width="1"/>
+      <text x="115" y="295" font-family="ui-monospace, Menlo, monospace" font-size="11" fill="#ececec" text-anchor="end">K̂_r ≈ ag(G_{r-1})</text>
+      <text x="115" y="312" font-family="ui-monospace, Menlo, monospace" font-size="10" fill="#8a8a8a" text-anchor="end">kernel recursion</text>
+
+      <!-- Bottom legend -->
+      <text x="450" y="560" font-family="Georgia, serif" font-size="13" fill="#8a8a8a" text-anchor="middle" font-style="italic">Each ring's harness is composed of inner-ring observers; each ring's environment</text>
+      <text x="450" y="580" font-family="Georgia, serif" font-size="13" fill="#8a8a8a" text-anchor="middle" font-style="italic">is the outer-ring observer's "interior." Observer-classes nest all the way down.</text>
+    </svg>
+    <figcaption>Figure C — wrappers within wrappers, the procedural lineage rendered as concentric observer-classes from physical kernel up to earth. Each ring's harness (real canon) is composed of the previous ring's observers; each ring's inferred kernel canon is the aggregated global canon of those sub-observers. The recursion bottoms at the physical kernel — the deepest real canon the framework treats as unreduced.</figcaption>
+  </figure>
+</section>
+
+<section>
+  <h2><span class="num">§06</span>Worked recursion — human to earth, with named canon protocols</h2>
+  <p class="sect-lede">The recursion read concretely. Each ring gets its 4-tuple, plus a named compiled canon protocol and a named canon artefact carrying that protocol. This is the framework's vocabulary applied vertically up the procedural lineage.</p>
+
+  <div style="overflow-x: auto; margin: 24px 0;">
+    <table class="recursion">
+      <thead>
+        <tr>
+          <th>Ring</th>
+          <th>Observer</th>
+          <th>Sub canon (below)</th>
+          <th>Wrapper (centre)</th>
+          <th>Centre canon (rendered world)</th>
+          <th>Top canon (above, not fully rendered)</th>
+          <th>Compiled canon (instance)</th>
+          <th>Canon artefact (specific)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ring">r=0</td>
+          <td class="observer">physical kernel</td>
+          <td>—</td>
+          <td>—</td>
+          <td>—</td>
+          <td>the math substrate the framework cannot drill through</td>
+          <td>conservation laws</td>
+          <td>the standard model · CODATA constants</td>
+        </tr>
+        <tr>
+          <td class="ring">r=1</td>
+          <td class="observer">cell</td>
+          <td>molecular dynamics · biochemical gradients · electromagnetic forces</td>
+          <td>autopoietic identity — stable union of metabolic loops maintaining the membrane</td>
+          <td>the cell's chemical world — gradient sensing, signal reception, energy availability</td>
+          <td>the organ / tissue context · multicellular signalling fields</td>
+          <td>cellular membrane regulation</td>
+          <td>a specific Na/K pump · a specific gene expression event</td>
+        </tr>
+        <tr>
+          <td class="ring">r=2</td>
+          <td class="observer">organ / tissue</td>
+          <td>composed cells · extracellular matrix · vascular supply · innervation</td>
+          <td>stable organ-function pattern — union of cell behaviors producing organ-level output</td>
+          <td>the organ's physiological environment — substrate availability, hormonal signals, load</td>
+          <td>the body's homeostatic envelope · cross-organ coupling the organ does not see</td>
+          <td>homeostatic regulation</td>
+          <td>cardiac sinus rhythm in a specific heart at time t</td>
+        </tr>
+        <tr>
+          <td class="ring">r=3</td>
+          <td class="observer">human</td>
+          <td>subconscious processing · legacy bridges · aux backups · active paths · harness (breathing, food, pumping, sensing, acting, water, working memory, bandwidth)</td>
+          <td>conscious mind — stable attractor of subconscious processing across time</td>
+          <td>the experienced world — what the human can observe and process for action</td>
+          <td>the family / group · society · species · biosphere · planetary context the human is part of but does not fully render</td>
+          <td>language</td>
+          <td>a specific utterance ("watch out") at moment t</td>
+        </tr>
+        <tr>
+          <td class="ring">r=4</td>
+          <td class="observer">family / small group</td>
+          <td>composed humans · shared physical space · joint resources · embodied micro-coordination</td>
+          <td>group identity / role structure — stable coordination pattern</td>
+          <td>the group's shared reality — what the group treats as relevant, what counts as decision-able</td>
+          <td>the cultural / institutional layer · economic systems · legal framework the group operates within</td>
+          <td>marriage</td>
+          <td>a specific marriage contract between two named individuals on date d</td>
+        </tr>
+        <tr>
+          <td class="ring">r=5</td>
+          <td class="observer">society / culture</td>
+          <td>composed groups · institutions · markets · media · infrastructure</td>
+          <td>institutional pattern — stable coordination across groups</td>
+          <td>the cultural reality — the shared interpretive frame the society lives in</td>
+          <td>the species-level civilization · cross-society dynamics · planetary biophysical limits the society does not fully see</td>
+          <td>religion</td>
+          <td>the liturgy celebrated in a specific parish on a specific Sunday</td>
+        </tr>
+        <tr>
+          <td class="ring">r=6</td>
+          <td class="observer">species / civilization</td>
+          <td>composed societies · cross-society trade · conflict · shared knowledge</td>
+          <td>species-level coordination capacity — stable pattern letting the species function as a unit</td>
+          <td>the species' niche — what humans collectively occupy and shape on the planet</td>
+          <td>the biosphere's homeostatic state · climate stability · cross-species relations the species can read partially but not control</td>
+          <td>Westphalian state system</td>
+          <td>the UN Charter (1945) · the Treaty of Westphalia (1648)</td>
+        </tr>
+        <tr>
+          <td class="ring">r=7</td>
+          <td class="observer">biosphere</td>
+          <td>composed species · ecosystems · biogeochemical cycles · atmospheric gases</td>
+          <td>homeostatic balance — stable ecological pattern</td>
+          <td>the biosphere's state — net primary productivity, biodiversity, atmospheric composition</td>
+          <td>the earth-system geophysical envelope · solar input variability · long-period cycles the biosphere doesn't independently set</td>
+          <td>carbon cycle regulation</td>
+          <td>the IPCC AR6 cycle · the Montreal Protocol's ozone-layer artefact</td>
+        </tr>
+        <tr>
+          <td class="ring">r=8</td>
+          <td class="observer">earth</td>
+          <td>biosphere + lithosphere + hydrosphere + atmosphere · planetary mass · orbital position</td>
+          <td>planetary dynamics — stable pattern of geo-bio-atmospheric coupling</td>
+          <td>earth's place in the solar system — its capacity to support continued complexity</td>
+          <td>the solar-system context · galactic environment the framework hasn't yet structurally engaged</td>
+          <td>Holocene climate stability</td>
+          <td>the specific climate configuration of 2026 · the Anthropocene as the running break</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="open-edge" style="margin: 16px 0 28px;">
+    <p class="label">Reading discipline — the three-position vertical scope</p>
+    <p>Each row now shows the three-pole vertical scope (sub canon below, centre canon as the wrapper's render, top canon above) <em>plus</em> a specific compiled-canon instance and a canon artefact. The earlier table version that did not separate top from centre was reading as 'all sub' because the centre column was the only one visible and the named instances were all specific. Adding top canon makes the wrapper's mediation legible: <strong>centre canon = sub canon ⋈<sup>±</sup><sub>∓</sub> top canon</strong> (read: the wrapper renders by polar-merging what's below with what's above). The named compiled-canon instances per ring are still specific — global compiled canons at each ring (the cross-cutting patterns held by all observers at that ring — autopoiesis at r=1, language capacity at r=3, pair-bonding at r=4, ritualization at r=5, territorial coordination at r=6, carbon-cycling at r=7) deserve a separate enumeration in a future v2 pass.</p>
+  </div>
+
+  <p>Three properties of this recursion worth naming:</p>
+
+  <p><strong>The wrapper at ring r is invisible to ring r−1.</strong> A cell's autopoietic identity is not directly observable by its constituent molecules; a human's conscious mind is not directly observable by its constituent organs; the Westphalian state is not directly observable by its constituent citizens. Each wrapper is an emergent attractor visible only at its own ring and above. The framework's existing primitive of "renderable only at the right ring" sits here.</p>
+
+  <p><strong>Compiled canon at ring r becomes kernel canon at ring r+1.</strong> Language as compiled canon at ring 3 (the human ring) becomes kernel canon at ring 4 (the family/group ring) — the family's coordination runs on language as raw substrate. Religion as compiled canon at ring 5 (society) becomes kernel canon at ring 6 (species/civilization) — civilizational coordination treats religious infrastructure as substrate. This is what makes the four-layer life-cycle and the cross-ring recursion the same thing read at different scales.</p>
+
+  <p><strong>The "framework as observer" question.</strong> The framework itself is a wrapper running on Pav-and-Claude's collaboration as harness. Its global canon is the current state of the framework's vocabulary and primitives. Its inferred kernel canon — what it marks as substrate — is what cont 22 has been tightening. The recursive equations apply to the framework as one ring-3 observer-class instance among many. This is the reflexive read of the formalization.</p>
+</section>
+
+<section>
+  <h2><span class="num">§07</span>Information flow and bandwidth</h2>
+  <p class="sect-lede">The compile loop is rate-limited at each layer. Harness bandwidth caps sub-canon update rate; sub-canon bandwidth caps wrapper stability rate; wrapper bandwidth caps global-canon refresh rate. The framework's existing slow-fast pushout primitive sits here.</p>
+
+  <div class="eq-block">
+    <p class="label">Equation 10 — bandwidth cascade</p>
+    <p class="eq"><strong>bw(W<sub>r</sub>) ≤ bw(S<sub>r</sub>) ≤ bw(H<sub>r</sub>)</strong></p>
+    <p class="key">The wrapper cannot update faster than sub canon can compile updates; sub canon cannot update faster than the harness can deliver signals. Each layer is rate-limited by the layer beneath. Conversely, intentions flowing down (G<sub>r</sub> → W<sub>r</sub> → S<sub>r</sub> → H<sub>r</sub>) are similarly capped.</p>
+  </div>
+
+  <p>This bandwidth cascade explains four already-named framework primitives at once:</p>
+
+  <ul style="margin: 0 0 22px 24px; color: var(--text-dim); line-height: 1.7;">
+    <li><strong style="color: var(--text);">Slow-fast pushout.</strong> When ring-r+1 demands updates faster than ring-r can supply, the system experiences squeeze (cont 21). The slow-fast pushout is the resolution mechanism — the slower layer pushes back against the faster one.</li>
+    <li><strong style="color: var(--text);">Friction band.</strong> The narrow operating range where bw(H) and bw(W) are matched. Outside the band: either the harness is producing more than the wrapper can render (overload), or the wrapper is demanding more than the harness can deliver (starvation).</li>
+    <li><strong style="color: var(--text);">A⁻ check crisis.</strong> When generate (A⁺) outpaces check (A⁻), bandwidth at the check layer is the bottleneck. The internet construct study v1 §10 names this as the 2024–2026 worked example.</li>
+    <li><strong style="color: var(--text);">Slice-viewer constraint.</strong> The observer perceives latent space as slice-of-a-slice. Bandwidth limits force serial traversal of high-dimensional structure — you can only update along one dimension per time-window.</li>
+  </ul>
+</section>
+
+<section>
+  <h2><span class="num">§·</span>Multi-observer dynamics — wrapper overlap, multi-containment, 5W+H, contrast</h2>
+  <p class="sect-lede">Cont 24 horizontal extension. Same-ring observers interact; observers are in many wrappers, not one; the render decomposes into named inquiries; shape is inferred from contrast. Equations 11–15.</p>
+
+  <div class="eq-block">
+    <p class="label">Equation 11 — wrapper overlap dynamics</p>
+    <p class="eq">Given two wrappers W<sub>A</sub>, W<sub>B</sub> at same ring r with overlap ε := W<sub>A</sub> ∩ W<sub>B</sub>:</p>
+    <p class="eq"><strong>W<sub>AB</sub> = W<sub>A</sub> ⋈<sup>±</sup><sub>∓</sub> W<sub>B</sub></strong></p>
+    <p class="eq" style="color: var(--text-dim); margin: 8px 0;">three outcomes based on overlap stability:</p>
+    <p class="eq">stable(ε) &nbsp;→&nbsp; W<sub>A</sub> ⋈<sup>+</sup> W<sub>B</sub> &nbsp; (union — compound wrapper)</p>
+    <p class="eq">unstable(ε) → W<sub>A</sub> ⋈<sup>−</sup> W<sub>B</sub> &nbsp; (repulsion — mutual displacement)</p>
+    <p class="eq">indeterminate(ε) → W<sub>A</sub> ↔ W<sub>B</sub> &nbsp; (interface — contested zone)</p>
+    <p class="key"><strong>Read:</strong> When two same-ring observer wrappers overlap, the overlap region's stability determines whether the wrappers form a compound (union), destabilize each other (repulsion), or persist as an interface. The dual-merge sign discipline from the whiteboard applies horizontally between same-ring observers, parallel to its vertical use in equation 6's polar-merge of sub and top canon.</p>
+  </div>
+
+  <div class="eq-block">
+    <p class="label">Equation 12 — multi-containment</p>
+    <p class="eq"><strong>𝒪<sub>r</sub> ∈ ⋂<sub>i</sub> W<sup>(i)</sup><sub>r+k<sub>i</sub></sub></strong> &nbsp;&nbsp; (with k<sub>i</sub> ≥ 1)</p>
+    <p class="eq">and the top canon of 𝒪<sub>r</sub> becomes:</p>
+    <p class="eq"><strong>top_canon(𝒪<sub>r</sub>) = ⊕<sub>i</sub> W<sup>(i)</sup><sub>r+k<sub>i</sub></sub></strong> &nbsp; such that &nbsp; 𝒪<sub>r</sub> ∈ W<sup>(i)</sup><sub>r+k<sub>i</sub></sub></p>
+    <p class="key"><strong>Read:</strong> An observer at ring r is simultaneously contained in many wrappers at potentially different higher rings — a human is in family + religion + profession + nation + species + biosphere + earth + language-community + professional-community + etc. The observer's top canon is the compiled union of all containers, not a single ring r+1 environment. The procedural lineage from cont 18 is a branching graph at every upward step, not a linear ladder.</p>
+  </div>
+
+  <div class="eq-block">
+    <p class="label">Equation 13 — 5W+H as wrapper aggregation operators</p>
+    <p class="eq">Decompose R<sub>W<sub>r</sub></sub> from equation 4 into five inquiry operators:</p>
+    <p class="eq">φ<sub>where</sub> · φ<sub>what</sub> · φ<sub>when</sub> · φ<sub>why</sub> · φ<sub>how</sub></p>
+    <p class="eq" style="margin: 8px 0;">centre canon (= G<sub>r</sub>) is the compiled union of their projections:</p>
+    <p class="eq"><strong>G<sub>r</sub> = ⊕<sub>w</sub> φ<sub>w</sub>( H<sub>r</sub><sup>signals</sup> ⊕ I<sub>r</sub> ⊕ F<sub>r</sub> )</strong> &nbsp; for w ∈ {where, what, when, why, how}</p>
+    <p class="key"><strong>Read:</strong> The wrapper's render is not a single monolithic projection; it is the compiled union of five parallel inquiries running on the same inputs. What + when + where together localize an event in space-time. Why + how supply the causal/mechanistic story. The five together aggregate "the wrapper of reality or a slice of, depending on the observing vantage point." φ<sub>who</sub> as a sixth operator is candidate (see §09 open edges) — currently treated as implicit in φ<sub>what</sub>'s observer-class identification.</p>
+  </div>
+
+  <div class="eq-block">
+    <p class="label">Equation 14 — wrapper shape inferred from contrast</p>
+    <p class="eq"><strong>shape(W<sub>A</sub>) ≈ ∂(W<sub>A</sub>, {W<sub>B</sub>, W<sub>C</sub>, ...}) = ⊕<sub>i</sub> (W<sub>A</sub> △ W<sub>i</sub>)</strong></p>
+    <p class="eq" style="color: var(--text-dim);">where △ is symmetric difference and {W<sub>B</sub>, W<sub>C</sub>, ...} are neighbouring wrappers</p>
+    <p class="key"><strong>Read:</strong> A wrapper's shape is not directly observable; it is inferred from contrast with neighbouring wrappers. The membrane primitive (cont 16) describes the same channel from the other side — the membrane IS the contrast region. More neighbours, more contrast surfaces, sharper inferred shape. This is the epistemic grounding for cross-Π<sub>L</sub> diagnostic readings (language v1), cross-observer-class Π<sub>L</sub> (cont 22), and the framework's agnostic-stance discipline.</p>
+  </div>
+
+  <div class="eq-block">
+    <p class="label">Equation 15 — collective vs individual centre</p>
+    <p class="eq" style="margin: 0 0 6px;">Two constructions of collective centre from individual centres:</p>
+    <p class="eq"><strong>centre<sub>collective</sub><sup>strict</sup> := ⋂<sub>i</sub> centre<sub>individual_i</sub></strong> &nbsp; (intersection — only what's strictly shared)</p>
+    <p class="eq"><strong>centre<sub>collective</sub><sup>emergent</sup> := compile( ⊕<sub>i</sub> centre<sub>individual_i</sub> )</strong> &nbsp; (compiled union — may have novel content)</p>
+    <p class="key"><strong>Read:</strong> "Our" reading and "my" reading are distinct. Collective centre constructs from individual centres in one of two modes: strict-collective (conservative intersection, shrinks with diversity) or emergent-collective (generative compiled union, can grow with diversity through wrapper-overlap §11). All framework claims ground in an individual centre — there is no view-from-nowhere. The agnostic discipline is the discipline of holding this grounding explicit.</p>
+  </div>
+
+  <h3>Polar-merge on three axes — the unifying read</h3>
+
+  <p>The polar-merge operator ⋈<sup>±</sup><sub>∓</sub> now runs on three orthogonal axes:</p>
+
+  <div style="overflow-x: auto; margin: 16px 0;">
+    <table class="glossary" style="font-size: 14px;">
+      <thead>
+        <tr><th style="width: 25%;">Axis</th><th style="width: 35%;">Equation</th><th style="width: 40%;">Reading</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Vertical (scope)</strong></td>
+          <td style="font-family: ui-monospace, Menlo, monospace; color: var(--accent-formula);">centre = sub ⋈<sup>±</sup><sub>∓</sub> top</td>
+          <td>Cont 23 §12. The wrapper renders by polar-merging what's below with what's above.</td>
+        </tr>
+        <tr>
+          <td><strong>Horizontal (overlap)</strong></td>
+          <td style="font-family: ui-monospace, Menlo, monospace; color: var(--accent-formula);">W<sub>AB</sub> = W<sub>A</sub> ⋈<sup>±</sup><sub>∓</sub> W<sub>B</sub></td>
+          <td>Cont 24 §2 (equation 11). Same-ring wrapper overlap produces union, repulsion, or interface.</td>
+        </tr>
+        <tr>
+          <td><strong>Form (real/latent)</strong></td>
+          <td style="font-family: ui-monospace, Menlo, monospace; color: var(--accent-formula);">real ⋈<sup>±</sup><sub>∓</sub> latent</td>
+          <td>Cont 22 + §09 OE3. The inverse-coherence between the two co-primary forms is the same operator on the form axis.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="open-edge">
+    <p class="label">Candidate · triple-merge equation</p>
+    <p>The three axes may themselves be related — a wrapper's centre canon may be a TRIPLE polar-merge across all three:</p>
+    <p style="font-family: ui-monospace, Menlo, monospace; font-size: 14px; color: var(--accent-formula); margin: 10px 0;">G<sub>r</sub> ≈ (sub ⋈<sup>±</sup><sub>∓</sub> top) &nbsp;⋈<sup>±</sup><sub>∓</sub>&nbsp; (⊕<sub>i</sub> W<sub>i</sub>) &nbsp;⋈<sup>±</sup><sub>∓</sub>&nbsp; (real ⋈<sup>±</sup><sub>∓</sub> latent)</p>
+    <p>Candidate, not canon. Needs at least one worked construct study where the triple-merge produces a sharper prediction than any single-axis merge alone (cont 24 §7).</p>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">§08</span>What this formalization lets us read</h2>
+  <p class="sect-lede">Four readings the canon-stack equation gives us that prose alone did not.</p>
+
+  <p><strong>1. Observer-confusion of K̂ vs actual kernel becomes diagnosable.</strong> Equation 5 says: the inferred kernel is a subset of global canon, not an external reference. When two observers disagree about "what is real" or "what is critical," equation 5 says they are disagreeing about their respective K̂'s — labeled subsets of their respective rendered worlds. The framework's discipline of bracketing god, bracketing consciousness, bracketing political ideology is the discipline of refusing to collapse K̂ into an unmarked claim about ring-r+1's actual kernel.</p>
+
+  <p><strong>2. Cross-ring readings stop being category errors.</strong> Equation 8 says the inferred kernel at ring r is approximately the aggregated global canons of ring r−1. So reading the Westphalian state (ring r=5/6) as "running on" social cohesion (ring r=4 compiled canon aggregated up) is not metaphor — it is the recursion equation read once. Reading institutional change as "shifts in citizen-level wrapper distributions" is the same equation read across time.</p>
+
+  <p><strong>3. The dormancy-vs-deletion distinction (cont 20) gets sharp.</strong> Function canon at ring r can stop running while compiled canon and canon artefact remain intact, preserved as procedural memory. In equation terms: function(r) → 0 while compiled(r), artefact(r) ≠ 0. The vinyl-records / bicycle-infrastructure / traditional-craft cases from cont 20 are dormancy events readable as zero-function with intact embodiment. The artefact persists as a re-runnable trace.</p>
+
+  <p><strong>4. The "language as operating system" reading (language v1) is one cell in a larger grid.</strong> Π<sub>L</sub> in the language construct study was the projection operator for a specific human language. The formalization places Π<sub>L</sub> as one specific render operator R<sub>W<sub>r</sub></sub> at the human ring r=3. Cross-observer-class Π<sub>L</sub> (the cont 22 candidate) is the same operator parameterized by ring — bird Π<sub>L,bird</sub>, whale Π<sub>L,whale</sub>, internet Π<sub>L,internet</sub>, multilingual-LLM Π<sub>L,LLM</sub>. Each is a render operator at a different ring or with a different wrapper config.</p>
+</section>
+
+<section>
+  <h2><span class="num">§09</span>Open edges</h2>
+  <p class="sect-lede">Four places the formalization is currently underspecified or load-bearing-without-proof.</p>
+
+  <div class="open-edge">
+    <p class="label">Open edge 01 — aggregation rule per ring</p>
+    <p>Equation 8 leaves "aggregate" as a placeholder. The function that combines many ring-r−1 global canons into a ring-r kernel canon is not the same function at every ring. Specifying it ring-by-ring is the next pass. Candidates: simple weighted sum at the physics ring; selection-pressure at the biology ring; market-clearing at the economic ring; attention-weighting at the cognitive ring; institutional-voting at the social ring. Whether the rules themselves obey a cross-ring meta-pattern is open.</p>
+  </div>
+
+  <div class="open-edge">
+    <p class="label">Open edge 02 — wrapper configuration space</p>
+    <p>Equation 2 says the wrapper is a stable attractor of sub canon. But multiple attractors exist for the same sub canon. The framework currently has no way to predict which attractor a given observer lives in or under what conditions wrapper-jumping happens. Empirically: psychedelics, meditation, group dynamics, institutional reorganization, training-run hyperparameters all appear to be wrapper-jump events. A v2 pass should specify the wrapper-configuration space and the transition operator between configurations.</p>
+  </div>
+
+  <div class="open-edge">
+    <p class="label">Open edge 03 — inverse-coherence between real and latent</p>
+    <p>The cross-cutting dimension says real canon and latent canon are joined by inverse-coherence (cont 22). The formalization does not yet contain an equation for inverse-coherence. Provisional candidate: <span style="font-family: ui-monospace, Menlo, monospace; color: var(--accent-formula);">coherence(real_face) + coherence(latent_face) ≤ const(W<sub>r</sub>)</span> — total coherence is wrapper-capped, and the two faces trade off against each other. This is testable in principle for human observers under known cognitive load conditions; not yet operationalized.</p>
+  </div>
+
+  <div class="open-edge">
+    <p class="label">Open edge 04 — what counts as "stable" in stable<sub>t→∞</sub></p>
+    <p>The wrapper-emerges-from-sub-canon equation (equation 2) hides the most controversial step under the stable-attractor limit operator. Stability over what timescale? Stability robust to what perturbations? Stability of which order parameters? The framework treats "stable union" as descriptive — it points at what an outside observer would name as the wrapper. A v2 pass should specify what stability means per ring (cell stability ≠ institutional stability ≠ planetary stability).</p>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">§10</span>Provenance &amp; sources</h2>
+  <p class="sect-lede">What this formalization is built from. The sketch is Pav's; the formalization is the framework's existing vocabulary turned into operators and made recursive.</p>
+
+  <h3>Trigger</h3>
+  <p>Pav's verbal sketch on 2026-05-22 mapping real canon, sub canon, wrapper, global canon, and inferred kernel canon onto the human observer's architectural layers (verbatim in §01), followed by the explicit ask: "this is the sketch, we want to express this mathematically as an equation with recursive loop and information flow and the wrappers within wrappers from human to earth level kernel for ech observer and few canon protocols or canon artefacts."</p>
+
+  <h3>Framework primitives this formalization composes</h3>
+  <p>Observer architecture (file 1, refined cont 16): observer as harness + wrapper + inner sandbox + action-space. The 4-tuple in equation 1 is this primitive made structural. Compile loop with A⁺/A⁻ asymmetry (file 1, sharpened cont 13, promoted A⁻ as primary cont 15): the gating operator at every transition in equation 6. Procedural lineage (cont 18): the recursion across rings in equations 7–9. Canon-stack vocabulary (cont 22): the four-layer life-cycle in equation 6 plus the real/latent and global/sub cross-cutting dimensions. Cross-observer-class Π<sub>L</sub> candidate (cont 22 from language v1): the render operator parameterized by ring in §08. Bandwidth and slow-fast pushout (cont 16, cont 21): the cascade in equation 10.</p>
+
+  <h3>Adjacent fields</h3>
+  <p>The formalization does not name external references inline to keep the math tight, but the equations are in conversation with several existing research programs that have done substantial mathematical work on related problems. <em>Predictive processing / free energy principle</em> (Karl Friston, Jakob Hohwy, Andy Clark) — equation 4's wrapper-as-render-of-inputs is closely related to the brain-as-prediction-machine framing, with the framework adding the explicit four-canon-class life-cycle as the compile mechanism the FEP leaves under-specified. <em>Autopoiesis</em> (Humberto Maturana, Francisco Varela) — equation 2's wrapper-as-stable-attractor is the autopoietic identity move at the cell ring, generalized to all rings. <em>Cybernetics / good regulator theorem</em> (W. Ross Ashby, Roger Conant) — equation 4 plus equation 10 says every good regulator must contain a model of the system it regulates, which is exactly the wrapper's render function operating under bandwidth constraints. <em>Hierarchical Bayesian models</em> — equation 9's bidirectional recursion (lower rings as priors, higher rings as boundary conditions) maps to multi-level Bayesian inference. <em>Scale-free cognition / extended mind</em> (Andy Clark, Michael Levin) — equations 7–9 say cognition-like dynamics recur at every observer-class, which is the substantive claim Levin's group has been building empirical support for at the bioelectric-substrate ring.</p>
+
+  <h3>Open invitation</h3>
+  <p>This is v1. The equations are operator-level, not yet implemented at the level any specific observer-class could be simulated. The next pass needs: a worked specification of the aggregation rule for at least three rings (open edge 01); a wrapper-configuration-space model for at least one observer-class (open edge 02); an operationalization of inverse-coherence between real and latent (open edge 03); a ring-by-ring stability criterion (open edge 04). Hypothes.is annotations welcome inline. Counter-formalizations from researchers in the adjacent fields above particularly invited.</p>
+
+  <h3>Related framework outputs</h3>
+  <ul class="sources">
+    <li><a href="../continuations/22.md">continuation 22</a> — canon-stack vocabulary (the four classes named, real/latent and global/sub as cross-cutting dimensions, observer-dependence)</li>
+    <li><a href="../continuations/23.md">continuation 23</a> — this formalization promoted to canon, with the open edges marked as candidate work</li>
+    <li><a href="../notation/">notation walkthrough</a> — Pav's whiteboard photo decoded block-by-block with formal notation; the typographic precursor to this page</li>
+    <li><a href="../artifacts/internet_v1.html">internet construct study v1</a> — first non-human observer-class construct study, applying cont 22's vocabulary. The formalization gives the math underneath that prose.</li>
+    <li><a href="../artifacts/language_v1.html">language v1</a> — Π<sub>L</sub> as render operator at the human ring; the formalization generalizes Π<sub>L</sub> across observer-classes per §08 reading 4.</li>
+    <li><a href="../atlas/">atlas v4</a> — the verb-vocabulary that the wrapper's render operator R<sub>W</sub> uses internally to label what crosses the boundary</li>
+  </ul>
+</section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <p>Agnostic Framework · canon-stack formalization v1 · 2026-05-22 · <a href="../index.html">↑ home</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
