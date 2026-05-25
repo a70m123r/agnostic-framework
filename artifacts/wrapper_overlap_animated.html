@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wrapper overlap — animated · one system with phases — Agnostic Framework</title>
+<meta name="description" content="Interactive animated diagram of wrapper-overlap dynamics. Two parent observer wrappers expand from fixed centres; their Venn-lens overlap becomes the nesting space where a third emergent wrapper W_C is conceived; W_C then grows, forming a hairy sphere over its parents which persist as procedural-root stubs. Latent-space math is non-additive. Mapping toggle switches labels live between Framework / LCAO molecular-orbital theory / model merging vocabularies.">
+<script src="https://hypothes.is/embed.js" async></script>
+<style>
+  :root {
+    --bg: #0a0a0a;
+    --surface: #141414;
+    --surface-2: #1c1c1c;
+    --border: #262626;
+    --border-strong: #3a3a3a;
+    --text: #ececec;
+    --text-dim: #8a8a8a;
+    --text-faint: #555;
+    --accent-canon: #4ade80;
+    --accent-candidate: #fbbf24;
+    --accent-speculative: #a78bfa;
+    --accent-link: #93c5fd;
+    --accent-orange: #fb923c;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, system-ui, sans-serif; font-size: 16px; line-height: 1.65; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 1280px; margin: 0 auto; padding: 0 20px; }
+  .topbar { border-bottom: 1px solid var(--border); padding: 20px 0; font-size: 13px; font-family: ui-monospace, "SF Mono", Menlo, monospace; color: var(--text-dim); }
+  .topbar a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--text-faint); }
+  .topbar a:hover { color: var(--accent-link); border-bottom-color: var(--accent-link); }
+  .topbar .sep { color: var(--text-faint); margin: 0 10px; }
+  .topbar .source-link { float: right; }
+
+  header.hero { padding: 56px 0 32px; border-bottom: 1px solid var(--border); }
+  header.hero .kicker { font-family: ui-monospace, Menlo, monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.18em; color: var(--accent-candidate); margin: 0 0 16px; }
+  header.hero h1 { font-family: Georgia, serif; font-weight: 400; font-size: 40px; line-height: 1.12; letter-spacing: -0.02em; margin: 0 0 18px; }
+  header.hero .dek { font-size: 17px; line-height: 1.55; color: var(--text-dim); max-width: 760px; margin: 0 0 16px; font-family: Georgia, serif; font-style: italic; }
+  header.hero .meta { font-family: ui-monospace, Menlo, monospace; font-size: 11px; color: var(--text-faint); margin: 0; }
+
+  .widget-mount { padding: 36px 0; }
+
+  section.context { padding: 40px 0; border-top: 1px solid var(--border); }
+  section.context h2 { font-family: Georgia, serif; font-weight: 400; font-size: 24px; margin: 0 0 14px; }
+  section.context p { font-size: 15px; line-height: 1.7; color: var(--text); margin: 0 0 14px; max-width: 880px; }
+  section.context p.dim { color: var(--text-dim); font-size: 14px; }
+  section.context a { color: var(--accent-link); text-decoration: none; border-bottom: 1px solid rgba(147, 197, 253, 0.3); }
+
+  footer { padding: 36px 0 64px; font-family: ui-monospace, Menlo, monospace; font-size: 12px; color: var(--text-faint); text-align: center; border-top: 1px solid var(--border); }
+  footer a { color: var(--text-dim); border-bottom: 1px dotted var(--text-faint); }
+
+  /* === Widget styles (inlined from v9) === */
+  .wos9-root { background: #050505; color: #ececec; font-family: ui-sans-serif, system-ui, sans-serif; padding: 18px; border-radius: 8px; border: 1px solid var(--border); }
+  .wos9-title { text-align: center; font-size: 18px; font-weight: 600; color: #ececec; margin: 0 0 4px; }
+  .wos9-math { text-align: center; font-size: 14px; color: #fbbf24; font-family: ui-monospace, Menlo, monospace; margin: 0 0 4px; min-height: 18px; font-weight: 600; }
+  .wos9-mathnote { text-align: center; font-size: 10px; color: #555; font-family: ui-monospace, Menlo, monospace; margin: 0 0 12px; }
+  .wos9-controls { display: flex; align-items: center; justify-content: center; gap: 14px; margin: 8px 0 10px; flex-wrap: wrap; }
+  .wos9-controls button { background: #141414; color: #ececec; border: 1px solid #3a3a3a; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-family: ui-monospace, Menlo, monospace; font-size: 11px; letter-spacing: 1px; transition: all 0.15s; }
+  .wos9-controls button:hover, .wos9-controls button.active { background: #1c1c1c; border-color: #fbbf24; color: #fbbf24; }
+  .wos9-controls button.active { background: #2a2107; }
+  .wos9-controls label { display: flex; align-items: center; gap: 8px; color: #8a8a8a; font-size: 11px; font-family: ui-monospace, Menlo, monospace; }
+  .wos9-controls input[type=range] { accent-color: #fbbf24; width: 100px; }
+  .wos9-controls select { background: #141414; color: #fbbf24; border: 1px solid #3a3a3a; padding: 5px 8px; border-radius: 4px; font-family: ui-monospace, Menlo, monospace; font-size: 11px; cursor: pointer; }
+  .wos9-phase { text-align: center; font-family: ui-monospace, Menlo, monospace; font-size: 11px; color: #fbbf24; margin: 0 0 4px; letter-spacing: 2px; min-height: 14px; font-weight: 600; }
+  .wos9-detail { text-align: center; font-family: Georgia, serif; font-size: 12px; font-style: italic; color: #8a8a8a; margin: 0 0 10px; min-height: 16px; }
+  .wos9-svg { width: 100%; height: auto; display: block; }
+  .wos9-jumps { display: flex; justify-content: center; gap: 6px; margin: 10px 0 0; flex-wrap: wrap; }
+  .wos9-jumps button { font-size: 10px; padding: 4px 8px; letter-spacing: 0.5px; }
+  .wos9-footer { text-align: center; font-size: 10px; color: #555; font-family: ui-monospace, Menlo, monospace; margin-top: 10px; }
+  .wos9-stateread { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; margin: 8px auto 0; max-width: 900px; padding: 8px 12px; background: #050505; border: 1px solid #262626; border-radius: 4px; }
+  .wos9-stateread div { font-family: ui-monospace, Menlo, monospace; font-size: 10px; color: #8a8a8a; text-align: center; }
+  .wos9-stateread div span { color: #fbbf24; display: block; font-size: 13px; font-weight: 600; }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="topbar">
+    <a href="../index.html">← agnostic framework</a>
+    <span class="sep">·</span>
+    <span>wrapper overlap · animated</span>
+    <span class="sep">·</span>
+    <a href="../continuations/25.md">cont 25</a>
+    <span class="sep">·</span>
+    <a href="../continuations/24.md">cont 24</a>
+    <a class="source-link" href="https://github.com/a70m123r/agnostic-framework/blob/main/artifacts/wrapper_overlap_animated.html" target="_blank" rel="noopener">view source ↗</a>
+  </div>
+
+  <header class="hero">
+    <p class="kicker">Animated diagram · 2026-05-22 · v9</p>
+    <h1>Wrapper overlap — one system with phases</h1>
+    <p class="dek">Two parent observer wrappers (W_A and W_B) expand from fixed centres. Their boundaries meet, negotiate, and form a Venn-lens nesting space. Inside the lens, a third wrapper W_C is conceived. W_C grows, becomes its own observer, then expands beyond the lens — forming a hairy sphere over both parents while they persist as procedural-root stubs. Latent-space math is non-additive: (1+1) = 3 when emergent; 1⁺ when W_C supersedes; 1⁻ when the bridge breaks apart.</p>
+    <p class="meta">Toggle the mapping dropdown to switch all labels live between Framework / LCAO molecular-orbital theory / Model Merging vocabularies. Mapping table at the bottom shows all three side by side. Compatibility slider modulates bridge viability — set low and the cycle stalls at wake.</p>
+  </header>
+
+  <div class="widget-mount">
+    <div class="wos9-root">
+      <p class="wos9-title">Wrapper overlap — v9 · quantised layout · mapping toggle</p>
+      <p class="wos9-math" id="wos9-math">1 + 1 = 2</p>
+      <p class="wos9-mathnote">layout in %, state from formula cascade, dynamic spans full width, phases below, mappings panel at bottom</p>
+
+      <div class="wos9-controls">
+        <button id="wos9-play">⏸ PAUSE</button>
+        <button id="wos9-reset">↻ RESET</button>
+        <label>Speed <input type="range" id="wos9-speed" min="0.25" max="2" step="0.25" value="1"/><span id="wos9-speedval">1x</span></label>
+        <label>Compatibility <input type="range" id="wos9-compat" min="0" max="1" step="0.05" value="0.9"/><span id="wos9-compatval">0.90</span></label>
+        <label>Mapping <select id="wos9-mapping">
+          <option value="framework">Framework</option>
+          <option value="lcao">LCAO / MO theory</option>
+          <option value="merging">Model Merging</option>
+        </select></label>
+      </div>
+      <p class="wos9-phase" id="wos9-phase">PHASE: PRE-OVERLAP</p>
+      <p class="wos9-detail" id="wos9-detail">two small )( arcs · fronts already facing each other · backs fading into unobservable</p>
+
+      <svg viewBox="0 0 1200 900" class="wos9-svg" id="wos9-svg" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker id="v9sq" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#f87171"/></marker>
+          <marker id="v9pu" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#4ade80"/></marker>
+          <marker id="v9hook" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#8a8a8a"/></marker>
+          <marker id="v9nest" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#fbbf24"/></marker>
+          <radialGradient id="v9wcGlow" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#fbbf24" stop-opacity="0.45"/><stop offset="100%" stop-color="#fbbf24" stop-opacity="0.08"/></radialGradient>
+          <radialGradient id="v9nestGlow" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#fbbf24" stop-opacity="0.18"/><stop offset="100%" stop-color="#fbbf24" stop-opacity="0"/></radialGradient>
+          <radialGradient id="v9wake" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#93c5fd" stop-opacity="0.55"/><stop offset="100%" stop-color="#93c5fd" stop-opacity="0"/></radialGradient>
+          <pattern id="v9fuz" patternUnits="userSpaceOnUse" width="6" height="6"><circle cx="3" cy="3" r="0.7" fill="#fbbf24" fill-opacity="0.65"/></pattern>
+        </defs>
+
+        <g id="g-main">
+          <rect x="20" y="20" width="1160" height="520" rx="10" fill="#141414" stroke="#262626" stroke-width="1"/>
+          <text x="40" y="42" font-size="11" font-weight="700" fill="#8a8a8a" letter-spacing="2">THE DYNAMIC · quantised + formula-driven</text>
+          <circle id="v9-wa-centre" r="2.5" fill="#4ade80"/>
+          <circle id="v9-wb-centre" r="2.5" fill="#a78bfa"/>
+          <text id="v9-wa-centre-label" y="525" text-anchor="middle" font-size="9" fill="#555">W_A · 32% width</text>
+          <text id="v9-wb-centre-label" y="525" text-anchor="middle" font-size="9" fill="#555">W_B · 68% width</text>
+          <g id="v9-squeeze" opacity="0">
+            <line id="v9-sq-top" stroke="#f87171" stroke-width="2" marker-end="url(#v9sq)"/>
+            <line id="v9-sq-bot" stroke="#f87171" stroke-width="2" marker-end="url(#v9sq)"/>
+            <text id="v9-sq-label" text-anchor="middle" font-size="9" fill="#f87171" letter-spacing="1">SQUEEZE</text>
+          </g>
+          <g id="v9-pull" opacity="0">
+            <line id="v9-pu-left" stroke="#4ade80" stroke-width="2" marker-end="url(#v9pu)"/>
+            <line id="v9-pu-right" stroke="#4ade80" stroke-width="2" marker-end="url(#v9pu)"/>
+            <text id="v9-pu-left-label" text-anchor="start" font-size="9" fill="#4ade80" letter-spacing="1">PULL</text>
+            <text id="v9-pu-right-label" text-anchor="end" font-size="9" fill="#4ade80" letter-spacing="1">PULL</text>
+          </g>
+          <g id="v9-wake" opacity="0">
+            <ellipse id="v9-wake-inner" rx="40" ry="55" fill="url(#v9wake)"/>
+            <ellipse id="v9-wake-outer" fill="none" stroke="#93c5fd" stroke-width="0.8" stroke-opacity="0.4"/>
+          </g>
+          <g id="v9-negotiate" opacity="0"><text id="v9-neg-label" text-anchor="middle" font-size="10" fill="#93c5fd" font-style="italic" letter-spacing="0.5">membranes pushing · negotiating</text></g>
+          <g id="v9-nesting-label" opacity="0">
+            <ellipse id="v9-nest-glow" fill="url(#v9nestGlow)"/>
+            <text id="v9-nest-text" font-size="11" fill="#fbbf24" font-style="italic">nesting space</text>
+            <line id="v9-nest-line" stroke="#fbbf24" stroke-width="0.8" stroke-dasharray="2 2" marker-end="url(#v9nest)" opacity="0.7"/>
+          </g>
+          <ellipse id="v9-fuzzy" rx="55" ry="75" fill="url(#v9fuz)" opacity="0"/>
+          <g id="v9-wa">
+            <path id="v9-wa-front" d="" fill="none" stroke="#4ade80" stroke-width="4" stroke-linecap="round"/>
+            <path id="v9-wa-midt" d="" fill="none" stroke="#4ade80" stroke-width="2.2" stroke-linecap="round"/>
+            <path id="v9-wa-midb" d="" fill="none" stroke="#4ade80" stroke-width="2.2" stroke-linecap="round"/>
+            <path id="v9-wa-backt" d="" fill="none" stroke="#4ade80" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+            <path id="v9-wa-backb" d="" fill="none" stroke="#4ade80" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+          </g>
+          <g id="v9-wb">
+            <path id="v9-wb-front" d="" fill="none" stroke="#a78bfa" stroke-width="4" stroke-linecap="round"/>
+            <path id="v9-wb-midt" d="" fill="none" stroke="#a78bfa" stroke-width="2.2" stroke-linecap="round"/>
+            <path id="v9-wb-midb" d="" fill="none" stroke="#a78bfa" stroke-width="2.2" stroke-linecap="round"/>
+            <path id="v9-wb-backt" d="" fill="none" stroke="#a78bfa" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+            <path id="v9-wb-backb" d="" fill="none" stroke="#a78bfa" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+          </g>
+          <ellipse id="v9-wc" rx="0" ry="0" fill="url(#v9wcGlow)" stroke="#fbbf24" stroke-width="2.5" opacity="0"/>
+          <g id="v9-dormant" opacity="0">
+            <circle id="v9-dorm-a" r="22" fill="none" stroke="#4ade80" stroke-width="1" stroke-dasharray="2 3" opacity="0.75"/>
+            <text id="v9-dorm-a-label" text-anchor="middle" font-size="10" fill="#4ade80" opacity="0.75" font-style="italic">W_A°</text>
+            <circle id="v9-dorm-b" r="22" fill="none" stroke="#a78bfa" stroke-width="1" stroke-dasharray="2 3" opacity="0.75"/>
+            <text id="v9-dorm-b-label" text-anchor="middle" font-size="10" fill="#a78bfa" opacity="0.75" font-style="italic">W_B°</text>
+            <text id="v9-dorm-note" text-anchor="middle" font-size="10" fill="#8a8a8a" font-style="italic">dormant originals inside stubs · ready to recompile</text>
+          </g>
+          <text id="v9-wa-label" text-anchor="middle" font-size="20" font-weight="600" fill="#ececec" font-family="Georgia, serif">W_A</text>
+          <text id="v9-wb-label" text-anchor="middle" font-size="20" font-weight="600" fill="#ececec" font-family="Georgia, serif">W_B</text>
+          <text id="v9-wc-label" text-anchor="middle" font-size="22" font-weight="600" fill="#fbbf24" font-family="Georgia, serif" opacity="0">W_C</text>
+          <text id="v9-wc-sub" text-anchor="middle" font-size="10" font-style="italic" fill="#fbbf24" opacity="0">emergent</text>
+        </g>
+
+        <g transform="translate(0, 560)">
+          <rect x="20" y="0" width="1160" height="140" rx="10" fill="#141414" stroke="#262626" stroke-width="1"/>
+          <text x="40" y="22" font-size="10" font-weight="700" fill="#8a8a8a" letter-spacing="2">PHASES DERIVED FROM STATE · horizontal lifecycle</text>
+          <g id="phn9-preoverlap"><rect x="30" y="42" width="140" height="26" rx="13" fill="#1c1c1c" stroke="#3a3a3a" stroke-width="1.5"/><text x="100" y="59" text-anchor="middle" font-size="10" fill="#8a8a8a">pre-overlap</text></g>
+          <line x1="170" y1="55" x2="184" y2="55" stroke="#3a3a3a" stroke-width="1.5" marker-end="url(#v9hook)"/>
+          <g id="phn9-expansion"><rect x="190" y="42" width="140" height="26" rx="13" fill="#1c1c1c" stroke="#3a3a3a" stroke-width="1.5"/><text x="260" y="59" text-anchor="middle" font-size="10" fill="#8a8a8a">expansion</text></g>
+          <line x1="330" y1="55" x2="344" y2="55" stroke="#3a3a3a" stroke-width="1.5" marker-end="url(#v9hook)"/>
+          <g id="phn9-wake"><rect x="350" y="42" width="140" height="26" rx="13" fill="#1c1c1c" stroke="#3a3a3a" stroke-width="1.5"/><text x="420" y="59" text-anchor="middle" font-size="10" fill="#8a8a8a">wake · negotiate</text></g>
+          <line x1="490" y1="55" x2="504" y2="55" stroke="#3a3a3a" stroke-width="1.5" marker-end="url(#v9hook)"/>
+          <g id="phn9-fuzzy"><rect x="510" y="42" width="140" height="26" rx="13" fill="#1c1c1c" stroke="#3a3a3a" stroke-width="1.5"/><text x="580" y="59" text-anchor="middle" font-size="10" fill="#8a8a8a">fuzzy · lens</text></g>
+          <line x1="650" y1="55" x2="664" y2="55" stroke="#3a3a3a" stroke-width="1.5" marker-end="url(#v9hook)"/>
+          <g id="phn9-consolidating"><rect x="670" y="42" width="140" height="26" rx="13" fill="#1c1c1c" stroke="#3a3a3a" stroke-width="1.5"/><text x="740" y="59" text-anchor="middle" font-size="10" fill="#8a8a8a">W_C conceived</text></g>
+          <line x1="810" y1="55" x2="824" y2="55" stroke="#3a3a3a" stroke-width="1.5" marker-end="url(#v9hook)"/>
+          <g id="phn9-emerged"><rect x="830" y="42" width="140" height="26" rx="13" fill="#1c1c1c" stroke="#3a3a3a" stroke-width="1.5"/><text x="900" y="59" text-anchor="middle" font-size="10" fill="#8a8a8a">emerged canon</text></g>
+          <line x1="970" y1="55" x2="984" y2="55" stroke="#3a3a3a" stroke-width="1.5" marker-end="url(#v9hook)"/>
+          <g id="phn9-active"><rect x="990" y="42" width="140" height="26" rx="13" fill="#1c1c1c" stroke="#3a3a3a" stroke-width="1.5"/><text x="1060" y="59" text-anchor="middle" font-size="10" fill="#8a8a8a">active · hairy</text></g>
+          <line x1="1020" y1="68" x2="800" y2="98" stroke="#3a3a3a" stroke-width="1.2" marker-end="url(#v9hook)"/>
+          <line x1="1060" y1="68" x2="900" y2="98" stroke="#3a3a3a" stroke-width="1.2" marker-end="url(#v9hook)"/>
+          <line x1="1080" y1="68" x2="1000" y2="98" stroke="#3a3a3a" stroke-width="1.2" marker-end="url(#v9hook)"/>
+          <line x1="1100" y1="68" x2="1100" y2="98" stroke="#3a3a3a" stroke-width="1.2" marker-end="url(#v9hook)"/>
+          <g id="phn9-passive"><rect x="730" y="100" width="120" height="26" rx="13" fill="#1c1c1c" stroke="#3a3a3a" stroke-width="1.5"/><text x="790" y="117" text-anchor="middle" font-size="9" fill="#8a8a8a">passive · neutral</text></g>
+          <g id="phn9-dormant"><rect x="860" y="100" width="120" height="26" rx="13" fill="#1c1c1c" stroke="#3a3a3a" stroke-width="1.5"/><text x="920" y="117" text-anchor="middle" font-size="9" fill="#8a8a8a">retired · dormant</text></g>
+          <g id="phn9-supersede"><rect x="990" y="100" width="120" height="26" rx="13" fill="#1c1c1c" stroke="#3a3a3a" stroke-width="1.5"/><text x="1050" y="117" text-anchor="middle" font-size="9" fill="#8a8a8a">supersession</text></g>
+          <g id="phn9-break"><rect x="1120" y="100" width="50" height="26" rx="13" fill="#1c1c1c" stroke="#3a3a3a" stroke-width="1.5"/><text x="1145" y="117" text-anchor="middle" font-size="8" fill="#8a8a8a">break</text></g>
+          <path d="M 1145 126 Q 1145 132 30 132 Q 30 132 30 80 Q 30 78 42 78" fill="none" stroke="#3a3a3a" stroke-width="1" stroke-dasharray="2 3" marker-end="url(#v9hook)"/>
+          <text x="600" y="130" text-anchor="middle" font-size="8" fill="#555" letter-spacing="1">↺ recurrent · loop back to wake (cycle restarts)</text>
+        </g>
+
+        <g transform="translate(0, 720)">
+          <rect x="20" y="0" width="1160" height="170" rx="10" fill="#141414" stroke="#262626" stroke-width="1"/>
+          <text x="40" y="22" font-size="10" font-weight="700" fill="#8a8a8a" letter-spacing="2">MAPPINGS · framework · LCAO · model merging</text>
+          <text x="100" y="46" text-anchor="middle" font-size="11" fill="#ececec" font-weight="600">ELEMENT</text>
+          <text x="400" y="46" text-anchor="middle" font-size="11" fill="#fbbf24" font-weight="600">FRAMEWORK</text>
+          <text x="700" y="46" text-anchor="middle" font-size="11" fill="#93c5fd" font-weight="600">LCAO / MO THEORY</text>
+          <text x="1020" y="46" text-anchor="middle" font-size="11" fill="#fb923c" font-weight="600">MODEL MERGING</text>
+          <line x1="40" y1="52" x2="1160" y2="52" stroke="#3a3a3a" stroke-width="1"/>
+          <text x="50" y="70" font-size="10" fill="#8a8a8a">parent observers</text>
+          <text x="400" y="70" text-anchor="middle" font-size="11" fill="#ececec" font-family="ui-monospace, Menlo, monospace">W_A, W_B</text>
+          <text x="700" y="70" text-anchor="middle" font-size="11" fill="#ececec" font-family="ui-monospace, Menlo, monospace">ψ_A, ψ_B (atomic orbitals)</text>
+          <text x="1020" y="70" text-anchor="middle" font-size="11" fill="#ececec" font-family="ui-monospace, Menlo, monospace">θ_A, θ_B (task vectors τ_i = θ_i − θ_base)</text>
+          <text x="50" y="88" font-size="10" fill="#8a8a8a">emergent third</text>
+          <text x="400" y="88" text-anchor="middle" font-size="11" fill="#ececec" font-family="ui-monospace, Menlo, monospace">W_C</text>
+          <text x="700" y="88" text-anchor="middle" font-size="11" fill="#ececec" font-family="ui-monospace, Menlo, monospace">ψ_bond = N(ψ_A + ψ_B) (bonding MO)</text>
+          <text x="1020" y="88" text-anchor="middle" font-size="11" fill="#ececec" font-family="ui-monospace, Menlo, monospace">θ_M = θ_base + Σ λ_i τ_i (merged model)</text>
+          <text x="50" y="106" font-size="10" fill="#8a8a8a">nesting space</text>
+          <text x="400" y="106" text-anchor="middle" font-size="11" fill="#ececec" font-family="ui-monospace, Menlo, monospace">Venn lens · the overlap</text>
+          <text x="700" y="106" text-anchor="middle" font-size="11" fill="#ececec" font-family="ui-monospace, Menlo, monospace">overlap integral S_ij = ⟨ψ_A|ψ_B⟩</text>
+          <text x="1020" y="106" text-anchor="middle" font-size="11" fill="#ececec" font-family="ui-monospace, Menlo, monospace">sign-agreement mask (TIES) · surviving deltas</text>
+          <text x="50" y="124" font-size="10" fill="#8a8a8a">parent stubs</text>
+          <text x="400" y="124" text-anchor="middle" font-size="11" fill="#ececec" font-family="ui-monospace, Menlo, monospace">procedural roots · receptors</text>
+          <text x="700" y="124" text-anchor="middle" font-size="11" fill="#ececec" font-family="ui-monospace, Menlo, monospace">atomic basis set persists in MO expansion</text>
+          <text x="1020" y="124" text-anchor="middle" font-size="11" fill="#ececec" font-family="ui-monospace, Menlo, monospace">trimmed deltas · parent .ckpt on disk</text>
+          <text x="50" y="142" font-size="10" fill="#8a8a8a">non-additive math</text>
+          <text x="400" y="142" text-anchor="middle" font-size="11" fill="#fbbf24" font-family="ui-monospace, Menlo, monospace">(1+1) = 3 · 1⁺ supersede · 1⁻ break</text>
+          <text x="700" y="142" text-anchor="middle" font-size="11" fill="#fbbf24" font-family="ui-monospace, Menlo, monospace">bonding + antibonding (constr/destr interf)</text>
+          <text x="1020" y="142" text-anchor="middle" font-size="11" fill="#fbbf24" font-family="ui-monospace, Menlo, monospace">constr/destr param interference per coord</text>
+          <text x="50" y="160" font-size="10" fill="#8a8a8a">viability</text>
+          <text x="400" y="160" text-anchor="middle" font-size="11" fill="#ececec" font-family="ui-monospace, Menlo, monospace">compatibility · right time/place/freq</text>
+          <text x="700" y="160" text-anchor="middle" font-size="11" fill="#ececec" font-family="ui-monospace, Menlo, monospace">orbital symmetry match · energy ΔE small</text>
+          <text x="1020" y="160" text-anchor="middle" font-size="11" fill="#ececec" font-family="ui-monospace, Menlo, monospace">sign-agreement ratio · cosine(τ_A, τ_B)</text>
+        </g>
+      </svg>
+
+      <div class="wos9-stateread">
+        <div>growth<span id="sr9-growth">0.00</span></div>
+        <div>contact<span id="sr9-contact">0.00</span></div>
+        <div>negotiation<span id="sr9-negotiate">0.00</span></div>
+        <div>emergence<span id="sr9-emergence">0.00</span></div>
+        <div>maturity<span id="sr9-maturity">0.00</span></div>
+        <div>r (% W)<span id="sr9-r">2.5</span></div>
+      </div>
+      <div class="wos9-jumps">
+        <button class="wos9-jump" data-jump="passive">→ PASSIVE</button>
+        <button class="wos9-jump" data-jump="dormant">→ DORMANT</button>
+        <button class="wos9-jump" data-jump="supersede">→ SUPERSEDE</button>
+        <button class="wos9-jump" data-jump="break">→ BREAK</button>
+      </div>
+      <p class="wos9-footer">v9 — full-width dynamic · phases below · mapping toggle re-labels everything · convergence: same dynamic across 4+ substrate scales</p>
+    </div>
+  </div>
+
+  <section class="context">
+    <h2>How to read this</h2>
+    <p>The animation runs an 18-second cycle through seven phases. Pre-overlap shows two small )( arcs at fixed left and right positions, fronts already facing each other, backs fading into the unobservable. They expand. Their boundaries meet — first contact triggers the wake disturbance and the membrane negotiation pulse (pushing against each other, trying to render each other's full shape, which they never can per the K̂ ⊂ G constraint from <a href="../continuations/23.md">cont 23</a>). The overlap forms a Venn lens — the nesting space. Inside the nesting space, fuzzy bridge action begins. W_C is conceived inside the lens, consolidates into a proto function-wrapper, emerges as a canon, then expands beyond the lens into the parents themselves — the hairy-sphere phase. The parents persist throughout as stubs: the parts of W_A and W_B not covered by W_C are visible as procedural roots that adjacent wrappers can connect to and that contain dormant compiled originals.</p>
+    <p>From the active phase, the system branches: passive (held neutral, internal activity quieted), dormant (preserved as procedural memory, wakeable per <a href="../continuations/20.md">cont 20</a>), supersession (W_C dominates and retires parents — the creole case), or break-apart (W_C disintegrates, cycle restarts at wake — recurrent bridge formation). Use the buttons below the dynamic to jump to each branch state.</p>
+    <p class="dim">All coordinates are percentages of the viewBox. State variables are computed by a cascade of sigmoid and bell-curve formulas; the phase label is derived from the state, not driving it. The compatibility slider sets the bridge-viability multiplier — set low and the cycle stalls at wake without W_C consolidating.</p>
+  </section>
+
+  <section class="context">
+    <h2>Three mappings, one dynamic</h2>
+    <p>The mappings table at the bottom of the diagram shows the same dynamic interpreted through three independently-formalized research traditions. Toggle the dropdown to switch all labels live between them.</p>
+    <p><strong>Framework</strong> — the agnostic framework's native vocabulary: W_A, W_B, W_C, nesting space, stubs, procedural roots, compatibility, non-additive latent math (1+1) = 3.</p>
+    <p><strong>LCAO / MO theory</strong> — quantum chemistry's linear-combination-of-atomic-orbitals formalism. Parents are atomic orbitals ψ_A, ψ_B; the emergent W_C is the bonding molecular orbital ψ_bond = N(ψ_A + ψ_B); the nesting space is the overlap integral S_ij = ⟨ψ_A | ψ_B⟩; supersession maps to sp/sp²/sp³ hybridization (parents reshape and bond); break-apart maps to the antibonding orbital ψ_anti = N(ψ_A − ψ_B). LCAO supplies the cleanest closed-form math; the framework supplies the lifecycle vocabulary LCAO lacks.</p>
+    <p><strong>Model Merging</strong> — the 2024–2026 ML research front (TIES, DARE, mergekit, task arithmetic). Parents are task vectors τ_i = θ_i − θ_base; the merged model is θ_M = θ_base + Σ λ_i τ_i; the nesting space is the sign-agreement mask (TIES); supersession is the published merge superseding parents in downstream usage; break-apart is sign-conflict veto deleting the merge. Model merging supplies the lifecycle observability with git-like timestamps and a thriving live research community; the framework supplies the structural vocabulary the merging literature lacks.</p>
+    <p>Four further independent mappings exist in the research scout reports: cell fusion (cellular biology), symbiogenesis (organismal biology), creole genesis (linguistics), conceptual blending (cognitive science). See <a href="../continuations/25.md">cont 25 §7</a> for the cross-substrate convergence reading.</p>
+  </section>
+
+  <section class="context">
+    <h2>Provenance — nine iterations to get here</h2>
+    <p>Diagram 07 went through nine iterations on 2026-05-22, each one a Pav steer that collapsed a wrong assumption:</p>
+    <ul style="color: var(--text-dim); font-size: 14px; line-height: 1.7; padding-left: 24px;">
+      <li><strong>v1</strong> — static three-panel SVG (union / repulsion / interface) — the trichotomy v0 of the thinking</li>
+      <li><strong>v2</strong> — animated three-panel widget with synchronized branching</li>
+      <li><strong>v3</strong> — collapsed to one system with phases · added lifecycle graph · branched outcomes via jump buttons</li>
+      <li><strong>v4</strong> — hairy-sphere topology · W_C overlaps parents · dormant markers in stubs · non-additive math notation</li>
+      <li><strong>v5</strong> — parents stop translating, they expand in place from fixed centres · phase 2 renamed APPROACH → EXPANSION</li>
+      <li><strong>v6</strong> — parents positioned close together · their overlap creates the Venn-lens nesting space · W_C conceived inside the lens</li>
+      <li><strong>v7</strong> — wrappers rendered as )( open arcs · fat at contact, thin at unobservable back · circles never close · membrane negotiation pulse at first contact</li>
+      <li><strong>v8</strong> — quantised canvas with percentage-based coordinates · state from sigmoid/bell formula cascade · phases derived from state (not driving it) · compatibility slider · live state readout · scouts dispatched for existing well-mapped domains</li>
+      <li><strong>v9 (current)</strong> — alignment fixed (W_C properly midpoint-positioned) · lifecycle moved below for full-width dynamic · mapping toggle (Framework / LCAO / Model Merging) · mapping comparison table at the bottom</li>
+    </ul>
+    <p style="margin-top: 18px;">Promoted to canon at <a href="../continuations/25.md">cont 25</a> as the one-system-with-phases model, replacing the cont-24-§2 three-discrete-outcomes trichotomy. The cross-substrate convergence finding (six independent research traditions mapping the same dynamic) is also promoted in cont 25 §7.</p>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    Agnostic Framework · wrapper overlap · animated v9 · 2026-05-22 · <a href="../index.html">live site</a> · <a href="https://github.com/a70m123r/agnostic-framework">github</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const VB_W = 1200, VB_H = 900;
+  const LAYOUT = {
+    WA_cx: 0.32, WB_cx: 0.68,
+    cy_frac: 280 / VB_H,
+    r_init: 0.025, r_max: 0.21,
+    rC_max_x: 0.18, rC_max_y: 0.14,
+  };
+
+  const MAPPINGS = {
+    framework: {
+      wa: 'W_A', wb: 'W_B', wc: 'W_C', wcSub: 'emergent',
+      wcConsolidating: 'consolidating', wcEmerged: 'emerged canon', wcActive: 'active · hairy sphere',
+      wcDormant: 'W_C°', wcDormSub: 'dormant · recoverable',
+      wcSupersede: 'supersedes — parents → stubs°',
+      wcHeld: 'held · neutral', wcBreak: 'fragmenting',
+      dormA: 'W_A°', dormB: 'W_B°',
+      nest: 'nesting space',
+      negotiate: 'membranes pushing · negotiating',
+      dormNote: 'dormant originals inside stubs · ready to recompile',
+    },
+    lcao: {
+      wa: 'ψ_A', wb: 'ψ_B', wc: 'ψ_AB', wcSub: 'bonding orbital',
+      wcConsolidating: 'wavefunction interfering', wcEmerged: 'bonding orbital formed', wcActive: 'bond + antibonding',
+      wcDormant: 'ψ°', wcDormSub: 'unexcited basis',
+      wcSupersede: 'hybridised (sp/sp²/sp³)',
+      wcHeld: 'equilibrium bond', wcBreak: 'antibonding · ψ_A−ψ_B',
+      dormA: 'ψ_A°', dormB: 'ψ_B°',
+      nest: 'overlap integral S_ij',
+      negotiate: 'orbital phases reconciling · symmetry check',
+      dormNote: 'atomic basis persists in MO expansion',
+    },
+    merging: {
+      wa: 'θ_A', wb: 'θ_B', wc: 'θ_M', wcSub: 'merged model',
+      wcConsolidating: 'TIES trimming · DARE drop', wcEmerged: 'merge published', wcActive: 'deployed · serving',
+      wcDormant: 'θ_M°', wcDormSub: 'quantised · shelved',
+      wcSupersede: 'merge supersedes parents · NeuralHermes case',
+      wcHeld: 'published but unused', wcBreak: 'sign-conflict veto · merge discarded',
+      dormA: 'θ_A° (ckpt)', dormB: 'θ_B° (ckpt)',
+      nest: 'sign-agreement mask',
+      negotiate: 'computing τ_i · estimating sign-conflict',
+      dormNote: 'parent checkpoints on HF Hub · revivable',
+    },
+  };
+
+  const sigmoid = x => 1 / (1 + Math.exp(-x));
+  const bell = (x, sigma) => Math.exp(-(x*x) / (2*sigma*sigma));
+
+  const playBtn = document.getElementById('wos9-play');
+  const resetBtn = document.getElementById('wos9-reset');
+  const speedSlider = document.getElementById('wos9-speed');
+  const speedVal = document.getElementById('wos9-speedval');
+  const compatSlider = document.getElementById('wos9-compat');
+  const compatVal = document.getElementById('wos9-compatval');
+  const mappingSelect = document.getElementById('wos9-mapping');
+  const phaseLbl = document.getElementById('wos9-phase');
+  const detailLbl = document.getElementById('wos9-detail');
+  const mathLbl = document.getElementById('wos9-math');
+  const jumpBtns = document.querySelectorAll('.wos9-jump');
+  const sr = {
+    growth: document.getElementById('sr9-growth'),
+    contact: document.getElementById('sr9-contact'),
+    negotiate: document.getElementById('sr9-negotiate'),
+    emergence: document.getElementById('sr9-emergence'),
+    maturity: document.getElementById('sr9-maturity'),
+    r: document.getElementById('sr9-r'),
+  };
+  const wa = {
+    front: document.getElementById('v9-wa-front'), midt: document.getElementById('v9-wa-midt'),
+    midb: document.getElementById('v9-wa-midb'), backt: document.getElementById('v9-wa-backt'),
+    backb: document.getElementById('v9-wa-backb'), label: document.getElementById('v9-wa-label'),
+    centre: document.getElementById('v9-wa-centre'), centreLabel: document.getElementById('v9-wa-centre-label'),
+  };
+  const wb = {
+    front: document.getElementById('v9-wb-front'), midt: document.getElementById('v9-wb-midt'),
+    midb: document.getElementById('v9-wb-midb'), backt: document.getElementById('v9-wb-backt'),
+    backb: document.getElementById('v9-wb-backb'), label: document.getElementById('v9-wb-label'),
+    centre: document.getElementById('v9-wb-centre'), centreLabel: document.getElementById('v9-wb-centre-label'),
+  };
+  const wc = document.getElementById('v9-wc');
+  const wcLab = document.getElementById('v9-wc-label');
+  const wcSub = document.getElementById('v9-wc-sub');
+  const wakeG = document.getElementById('v9-wake');
+  const wakeInner = document.getElementById('v9-wake-inner');
+  const wakeOuter = document.getElementById('v9-wake-outer');
+  const negotiateG = document.getElementById('v9-negotiate');
+  const negLabel = document.getElementById('v9-neg-label');
+  const fuzzy = document.getElementById('v9-fuzzy');
+  const squeeze = document.getElementById('v9-squeeze');
+  const sqTop = document.getElementById('v9-sq-top');
+  const sqBot = document.getElementById('v9-sq-bot');
+  const sqLabel = document.getElementById('v9-sq-label');
+  const pull = document.getElementById('v9-pull');
+  const puLeft = document.getElementById('v9-pu-left');
+  const puRight = document.getElementById('v9-pu-right');
+  const puLeftLabel = document.getElementById('v9-pu-left-label');
+  const puRightLabel = document.getElementById('v9-pu-right-label');
+  const dormant = document.getElementById('v9-dormant');
+  const dormA = document.getElementById('v9-dorm-a');
+  const dormALabel = document.getElementById('v9-dorm-a-label');
+  const dormB = document.getElementById('v9-dorm-b');
+  const dormBLabel = document.getElementById('v9-dorm-b-label');
+  const dormNote = document.getElementById('v9-dorm-note');
+  const nestingLabel = document.getElementById('v9-nesting-label');
+  const nestGlow = document.getElementById('v9-nest-glow');
+  const nestText = document.getElementById('v9-nest-text');
+  const nestLine = document.getElementById('v9-nest-line');
+  const phaseNodes = {
+    preoverlap: { rect: document.querySelector('#phn9-preoverlap rect'), text: document.querySelector('#phn9-preoverlap text') },
+    expansion: { rect: document.querySelector('#phn9-expansion rect'), text: document.querySelector('#phn9-expansion text') },
+    wake: { rect: document.querySelector('#phn9-wake rect'), text: document.querySelector('#phn9-wake text') },
+    fuzzy: { rect: document.querySelector('#phn9-fuzzy rect'), text: document.querySelector('#phn9-fuzzy text') },
+    consolidating: { rect: document.querySelector('#phn9-consolidating rect'), text: document.querySelector('#phn9-consolidating text') },
+    emerged: { rect: document.querySelector('#phn9-emerged rect'), text: document.querySelector('#phn9-emerged text') },
+    active: { rect: document.querySelector('#phn9-active rect'), text: document.querySelector('#phn9-active text') },
+    passive: { rect: document.querySelector('#phn9-passive rect'), text: document.querySelector('#phn9-passive text') },
+    dormant: { rect: document.querySelector('#phn9-dormant rect'), text: document.querySelector('#phn9-dormant text') },
+    supersede: { rect: document.querySelector('#phn9-supersede rect'), text: document.querySelector('#phn9-supersede text') },
+    break: { rect: document.querySelector('#phn9-break rect'), text: document.querySelector('#phn9-break text') },
+  };
+  let lastTime = performance.now(), cycleT = 0, isPaused = false, speed = 1.0, compatibility = 0.9, manualPhase = null, currentMapping = 'framework';
+  const CYCLE_MS = 18000;
+  function computeState(t) {
+    const T = t / CYCLE_MS;
+    const growth = sigmoid((T - 0.20) * 8);
+    const r = LAYOUT.r_init + (LAYOUT.r_max - LAYOUT.r_init) * growth;
+    const distance = LAYOUT.WB_cx - LAYOUT.WA_cx;
+    const overlap = Math.max(0, 2 * r - distance);
+    const contact = sigmoid(overlap * 50 - 1);
+    const negotiation = bell(contact - 0.4, 0.18) * sigmoid((T - 0.30) * 30);
+    const emergence = sigmoid((contact - 0.5) * 12) * sigmoid((T - 0.40) * 8) * compatibility;
+    const maturity = sigmoid((T - 0.58) * 7) * emergence;
+    const rC_x = LAYOUT.rC_max_x * maturity, rC_y = LAYOUT.rC_max_y * maturity;
+    const wakeVis = sigmoid((contact - 0.15) * 12) * (1 - sigmoid((T - 0.45) * 12));
+    const fuzzyVis = sigmoid((contact - 0.4) * 10) * (1 - maturity);
+    const nestingVis = fuzzyVis * 0.95;
+    const dormantVis = sigmoid((maturity - 0.7) * 20);
+    const pressureAmt = sigmoid((maturity - 0.5) * 8);
+    const rhythm = T * 30;
+    const squeezeI = pressureAmt * (0.4 + 0.3 * Math.sin(rhythm));
+    const pullI = pressureAmt * (0.4 + 0.3 * Math.cos(rhythm * 0.8));
+    let phase;
+    if (growth < 0.08) phase = { id: 'preoverlap', label: 'PHASE 1 · PRE-OVERLAP', detail: 'two small )( arcs · fronts already facing each other', math: '1 + 1 = 2 &nbsp; (two open arcs, never closed)' };
+    else if (contact < 0.05) phase = { id: 'expansion', label: 'PHASE 2 · EXPANSION IN PLACE', detail: 'cones expand from fixed centres, arcs stretch outward', math: '1 + 1 → expanding )( arcs' };
+    else if (negotiation > 0.35) phase = { id: 'wake', label: 'PHASE 3 · MEMBRANES TOUCH · NEGOTIATION', detail: 'membranes push, try to render each other\'s full shape', math: '1 + 1 = 2 + ε &nbsp; (negotiating contact)' };
+    else if (emergence < 0.1) phase = { id: 'fuzzy', label: 'PHASE 4 · LENS · FUZZY BRIDGE', detail: 'overlap creates nesting space, fuzzy action begins inside', math: '(1 + 1) → ⌒ &nbsp; (nesting space)' };
+    else if (maturity < 0.3) phase = { id: 'consolidating', label: 'PHASE 5 · W_C CONCEIVED', detail: 'fuzzy stabilizes into W_C proto inside the nesting space', math: '(1 + 1) → ⌊3⌋ &nbsp; (W_C proto)' };
+    else if (maturity < 0.85) phase = { id: 'emerged', label: 'PHASE 6 · W_C EMERGED CANON', detail: 'W_C fills the nesting space, becomes renderable by other observers', math: '(1 + 1) = 3 &nbsp; (W_C emerged)' };
+    else phase = { id: 'active', label: 'PHASE 7 · ACTIVE · HAIRY SPHERE', detail: 'W_C expands beyond lens; parent arcs persist with stubs as procedural roots', math: '(W_A + W_B) ⋈±∓ W_C = 3 &nbsp; with stubs°' };
+    return { T, growth, r, distance, overlap, contact, negotiation, emergence, maturity, rC_x, rC_y, wakeVis, fuzzyVis, nestingVis, dormantVis, squeezeI, pullI, phase };
+  }
+  function setArc(elem, cx, cy, r, startDeg, endDeg) {
+    if (r <= 0.5) { elem.setAttribute('d', ''); return; }
+    const start = startDeg * Math.PI / 180, end = endDeg * Math.PI / 180;
+    const x1 = cx + r * Math.cos(start), y1 = cy + r * Math.sin(start);
+    const x2 = cx + r * Math.cos(end), y2 = cy + r * Math.sin(end);
+    const sweep = endDeg > startDeg ? 1 : 0;
+    const span = Math.abs(endDeg - startDeg);
+    const largeArc = span > 180 ? 1 : 0;
+    elem.setAttribute('d', `M ${x1.toFixed(1)} ${y1.toFixed(1)} A ${r.toFixed(1)} ${r.toFixed(1)} 0 ${largeArc} ${sweep} ${x2.toFixed(1)} ${y2.toFixed(1)}`);
+  }
+  function drawWrapper(parts, cx, cy, r, contactAngleDeg) {
+    setArc(parts.front, cx, cy, r, contactAngleDeg - 30, contactAngleDeg + 30);
+    setArc(parts.midt, cx, cy, r, contactAngleDeg - 90, contactAngleDeg - 30);
+    setArc(parts.midb, cx, cy, r, contactAngleDeg + 30, contactAngleDeg + 90);
+    setArc(parts.backt, cx, cy, r, contactAngleDeg - 150, contactAngleDeg - 90);
+    setArc(parts.backb, cx, cy, r, contactAngleDeg + 90, contactAngleDeg + 150);
+  }
+  function highlight(id) {
+    for (const k in phaseNodes) {
+      if (k === id) {
+        phaseNodes[k].rect.setAttribute('stroke', '#fbbf24');
+        phaseNodes[k].rect.setAttribute('fill', '#3a2e0c');
+        phaseNodes[k].text.setAttribute('fill', '#fbbf24');
+        phaseNodes[k].text.setAttribute('font-weight', '600');
+      } else {
+        phaseNodes[k].rect.setAttribute('stroke', '#3a3a3a');
+        phaseNodes[k].rect.setAttribute('fill', '#1c1c1c');
+        phaseNodes[k].text.setAttribute('fill', '#8a8a8a');
+        phaseNodes[k].text.setAttribute('font-weight', '400');
+      }
+    }
+  }
+  function resetVisualState() {
+    wa.label.setAttribute('opacity', 1); wb.label.setAttribute('opacity', 1);
+    for (const p of ['front','midt','midb','backt','backb']) {
+      wa[p].setAttribute('opacity', p.startsWith('back') ? 0.5 : 1);
+      wb[p].setAttribute('opacity', p.startsWith('back') ? 0.5 : 1);
+    }
+    wc.setAttribute('stroke-dasharray', '');
+  }
+  function positionAmbientElements(cxA, cxB, cy, midX) {
+    sqTop.setAttribute('x1', midX); sqTop.setAttribute('y1', cy - 160); sqTop.setAttribute('x2', midX); sqTop.setAttribute('y2', cy - 80);
+    sqBot.setAttribute('x1', midX); sqBot.setAttribute('y1', cy + 160); sqBot.setAttribute('x2', midX); sqBot.setAttribute('y2', cy + 80);
+    sqLabel.setAttribute('x', midX); sqLabel.setAttribute('y', cy - 170);
+    puLeft.setAttribute('x1', cxA - 200); puLeft.setAttribute('y1', cy); puLeft.setAttribute('x2', cxA - 260); puLeft.setAttribute('y2', cy);
+    puRight.setAttribute('x1', cxB + 200); puRight.setAttribute('y1', cy); puRight.setAttribute('x2', cxB + 260); puRight.setAttribute('y2', cy);
+    puLeftLabel.setAttribute('x', cxA - 250); puLeftLabel.setAttribute('y', cy - 10);
+    puRightLabel.setAttribute('x', cxB + 250); puRightLabel.setAttribute('y', cy - 10);
+    wakeInner.setAttribute('cx', midX); wakeInner.setAttribute('cy', cy);
+    wakeOuter.setAttribute('cx', midX); wakeOuter.setAttribute('cy', cy);
+    wakeOuter.setAttribute('rx', 60); wakeOuter.setAttribute('ry', 78);
+    negLabel.setAttribute('x', midX); negLabel.setAttribute('y', cy - 200);
+    fuzzy.setAttribute('cx', midX); fuzzy.setAttribute('cy', cy);
+    nestGlow.setAttribute('cx', midX); nestGlow.setAttribute('cy', cy);
+    nestGlow.setAttribute('rx', 90); nestGlow.setAttribute('ry', 115);
+    nestText.setAttribute('x', midX + 220); nestText.setAttribute('y', cy - 100);
+    nestLine.setAttribute('x1', midX + 215); nestLine.setAttribute('y1', cy - 93);
+    nestLine.setAttribute('x2', midX + 75); nestLine.setAttribute('y2', cy - 50);
+    wc.setAttribute('cx', midX); wc.setAttribute('cy', cy);
+    const stubLeftX = cxA - LAYOUT.r_max * VB_W * 0.55, stubRightX = cxB + LAYOUT.r_max * VB_W * 0.55;
+    dormA.setAttribute('cx', stubLeftX); dormA.setAttribute('cy', cy);
+    dormALabel.setAttribute('x', stubLeftX); dormALabel.setAttribute('y', cy + 4);
+    dormB.setAttribute('cx', stubRightX); dormB.setAttribute('cy', cy);
+    dormBLabel.setAttribute('x', stubRightX); dormBLabel.setAttribute('y', cy + 4);
+    dormNote.setAttribute('x', midX); dormNote.setAttribute('y', cy + 230);
+    wa.label.setAttribute('x', cxA); wa.label.setAttribute('y', cy + 7);
+    wb.label.setAttribute('x', cxB); wb.label.setAttribute('y', cy + 7);
+    wcLab.setAttribute('x', midX); wcLab.setAttribute('y', cy + 7);
+    wcSub.setAttribute('x', midX); wcSub.setAttribute('y', cy + 25);
+    wa.centre.setAttribute('cx', cxA); wa.centre.setAttribute('cy', cy);
+    wb.centre.setAttribute('cx', cxB); wb.centre.setAttribute('cy', cy);
+    wa.centreLabel.setAttribute('x', cxA); wb.centreLabel.setAttribute('x', cxB);
+  }
+  function applyMappingLabels() {
+    const m = MAPPINGS[currentMapping];
+    wa.label.textContent = m.wa; wb.label.textContent = m.wb; wcLab.textContent = m.wc;
+    dormALabel.textContent = m.dormA; dormBLabel.textContent = m.dormB;
+    negLabel.textContent = m.negotiate; nestText.textContent = m.nest; dormNote.textContent = m.dormNote;
+  }
+  function renderState(state) {
+    resetVisualState(); applyMappingLabels();
+    const cxA = LAYOUT.WA_cx * VB_W, cxB = LAYOUT.WB_cx * VB_W, cy = LAYOUT.cy_frac * VB_H;
+    const midX = (cxA + cxB) / 2, r = state.r * VB_W;
+    positionAmbientElements(cxA, cxB, cy, midX);
+    drawWrapper(wa, cxA, cy, r, 0); drawWrapper(wb, cxB, cy, r, 180);
+    const negFront = 4 + state.negotiation * 2;
+    wa.front.setAttribute('stroke-width', negFront); wb.front.setAttribute('stroke-width', negFront);
+    wc.setAttribute('rx', state.rC_x * VB_W); wc.setAttribute('ry', state.rC_y * VB_W);
+    wc.setAttribute('opacity', state.maturity);
+    wcLab.setAttribute('opacity', state.maturity); wcSub.setAttribute('opacity', state.maturity);
+    const m = MAPPINGS[currentMapping];
+    wcSub.textContent = state.phase.id === 'consolidating' ? m.wcConsolidating : state.phase.id === 'emerged' ? m.wcEmerged : state.phase.id === 'active' ? m.wcActive : m.wcSub;
+    wakeG.setAttribute('opacity', state.wakeVis); negotiateG.setAttribute('opacity', state.negotiation);
+    fuzzy.setAttribute('opacity', state.fuzzyVis); nestingLabel.setAttribute('opacity', state.nestingVis);
+    dormant.setAttribute('opacity', state.dormantVis);
+    squeeze.setAttribute('opacity', state.squeezeI); pull.setAttribute('opacity', state.pullI);
+    highlight(state.phase.id);
+    phaseLbl.textContent = state.phase.label; detailLbl.textContent = state.phase.detail; mathLbl.innerHTML = state.phase.math;
+    sr.growth.textContent = state.growth.toFixed(2); sr.contact.textContent = state.contact.toFixed(2);
+    sr.negotiate.textContent = state.negotiation.toFixed(2); sr.emergence.textContent = state.emergence.toFixed(2);
+    sr.maturity.textContent = state.maturity.toFixed(2); sr.r.textContent = (state.r * 100).toFixed(1);
+  }
+  function renderBranch(branch) {
+    resetVisualState(); applyMappingLabels();
+    const cxA = LAYOUT.WA_cx * VB_W, cxB = LAYOUT.WB_cx * VB_W, cy = LAYOUT.cy_frac * VB_H;
+    const midX = (cxA + cxB) / 2;
+    positionAmbientElements(cxA, cxB, cy, midX);
+    const m = MAPPINGS[currentMapping];
+    const fullR = LAYOUT.r_max * VB_W, fullRcX = LAYOUT.rC_max_x * VB_W, fullRcY = LAYOUT.rC_max_y * VB_W;
+    if (branch === 'passive') {
+      drawWrapper(wa, cxA, cy, fullR, 0); drawWrapper(wb, cxB, cy, fullR, 180);
+      wc.setAttribute('rx', fullRcX); wc.setAttribute('ry', fullRcY); wc.setAttribute('opacity', 0.9);
+      wcLab.setAttribute('opacity', 0.9); wcSub.setAttribute('opacity', 0.9); wcSub.textContent = m.wcHeld;
+      wakeG.setAttribute('opacity', 0); fuzzy.setAttribute('opacity', 0); negotiateG.setAttribute('opacity', 0);
+      squeeze.setAttribute('opacity', 0.25); pull.setAttribute('opacity', 0.25);
+      dormant.setAttribute('opacity', 0); nestingLabel.setAttribute('opacity', 0);
+      highlight('passive');
+      phaseLbl.textContent = 'BRANCHED · PASSIVE / NEUTRAL';
+      detailLbl.textContent = 'W_C exists, internal activity quieted · cont 21 hold / hua jin';
+      mathLbl.innerHTML = '(W_A + W_B + W_C) held &nbsp; (rhythmic)';
+    } else if (branch === 'dormant') {
+      drawWrapper(wa, cxA, cy, fullR, 0); drawWrapper(wb, cxB, cy, fullR, 180);
+      for (const p of ['front','midt','midb','backt','backb']) {
+        wa[p].setAttribute('opacity', 0.35); wb[p].setAttribute('opacity', 0.35);
+      }
+      wa.label.setAttribute('opacity', 0.45); wb.label.setAttribute('opacity', 0.45);
+      wc.setAttribute('stroke-dasharray', '4 4');
+      wc.setAttribute('rx', fullRcX); wc.setAttribute('ry', fullRcY); wc.setAttribute('opacity', 0.4);
+      wcLab.setAttribute('opacity', 0.4); wcLab.textContent = m.wcDormant;
+      wcSub.setAttribute('opacity', 0.4); wcSub.textContent = m.wcDormSub;
+      wakeG.setAttribute('opacity', 0); fuzzy.setAttribute('opacity', 0); negotiateG.setAttribute('opacity', 0);
+      squeeze.setAttribute('opacity', 0); pull.setAttribute('opacity', 0);
+      dormant.setAttribute('opacity', 1); nestingLabel.setAttribute('opacity', 0);
+      highlight('dormant');
+      phaseLbl.textContent = 'BRANCHED · RETIRED / DORMANT';
+      detailLbl.textContent = 'W_C ghosted · cont 20 dormancy · wakeable with imparted learning';
+      mathLbl.innerHTML = '(W_A° + W_B° + W_C°) &nbsp; ghost-3';
+    } else if (branch === 'supersede') {
+      drawWrapper(wa, cxA, cy, 0.05 * VB_W, 0); drawWrapper(wb, cxB, cy, 0.05 * VB_W, 180);
+      for (const p of ['front','midt','midb','backt','backb']) {
+        wa[p].setAttribute('opacity', 0.7); wb[p].setAttribute('opacity', 0.7);
+      }
+      wa.label.setAttribute('opacity', 0.6); wb.label.setAttribute('opacity', 0.6);
+      wc.setAttribute('rx', 0.22 * VB_W); wc.setAttribute('ry', 0.18 * VB_W); wc.setAttribute('opacity', 1);
+      wcLab.setAttribute('opacity', 1); wcSub.setAttribute('opacity', 1); wcSub.textContent = m.wcSupersede;
+      wakeG.setAttribute('opacity', 0); fuzzy.setAttribute('opacity', 0); negotiateG.setAttribute('opacity', 0);
+      squeeze.setAttribute('opacity', 0); pull.setAttribute('opacity', 0.6);
+      dormant.setAttribute('opacity', 1); nestingLabel.setAttribute('opacity', 0);
+      highlight('supersede');
+      phaseLbl.textContent = 'BRANCHED · SUPERSESSION';
+      detailLbl.textContent = 'W_C dominates — higher compiled compression and viable fertile action-space (creole case)';
+      mathLbl.innerHTML = '1⁺ &nbsp; W_C dominant, parents → stubs°';
+    } else if (branch === 'break') {
+      drawWrapper(wa, cxA, cy, fullR, 0); drawWrapper(wb, cxB, cy, fullR, 180);
+      wc.setAttribute('stroke-dasharray', '2 4');
+      wc.setAttribute('rx', 0.035 * VB_W); wc.setAttribute('ry', 0.04 * VB_W); wc.setAttribute('opacity', 0.35);
+      wcLab.setAttribute('opacity', 0.4);
+      wcSub.setAttribute('opacity', 0.4); wcSub.textContent = m.wcBreak;
+      wakeG.setAttribute('opacity', 0.5); fuzzy.setAttribute('opacity', 0); negotiateG.setAttribute('opacity', 0);
+      squeeze.setAttribute('opacity', 1); pull.setAttribute('opacity', 0);
+      dormant.setAttribute('opacity', 0); nestingLabel.setAttribute('opacity', 0);
+      highlight('break');
+      phaseLbl.textContent = 'BRANCHED · BREAK APART → RECURRENT';
+      detailLbl.textContent = 'W_C disintegrates · cycle restarts with new bridge attempt';
+      mathLbl.innerHTML = '1⁻ &nbsp; (1 + 1) + wake &nbsp; (recurrent)';
+    }
+  }
+  function frame(now) {
+    if (!isPaused && !manualPhase) {
+      const dt = now - lastTime;
+      cycleT = (cycleT + dt * speed) % CYCLE_MS;
+    }
+    lastTime = now;
+    if (manualPhase) renderBranch(manualPhase);
+    else renderState(computeState(cycleT));
+    requestAnimationFrame(frame);
+  }
+  playBtn.addEventListener('click', () => { isPaused = !isPaused; playBtn.textContent = isPaused ? '▶ PLAY' : '⏸ PAUSE'; });
+  resetBtn.addEventListener('click', () => { cycleT = 0; manualPhase = null; jumpBtns.forEach(b => b.classList.remove('active')); });
+  speedSlider.addEventListener('input', e => { speed = parseFloat(e.target.value); speedVal.textContent = speed.toFixed(2).replace(/\.?0+$/, '') + 'x'; });
+  compatSlider.addEventListener('input', e => { compatibility = parseFloat(e.target.value); compatVal.textContent = compatibility.toFixed(2); });
+  mappingSelect.addEventListener('change', e => { currentMapping = e.target.value; });
+  jumpBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const id = btn.getAttribute('data-jump');
+      if (manualPhase === id) { manualPhase = null; btn.classList.remove('active'); }
+      else { manualPhase = id; jumpBtns.forEach(b => b.classList.remove('active')); btn.classList.add('active'); }
+    });
+  });
+  requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>
