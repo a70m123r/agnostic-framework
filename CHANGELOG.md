@@ -8,6 +8,33 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-05-22 (cont 25 §12 addendum — L0 / global kernel canon as user-facing recursive substrate + cached-protocol-as-canon-artefact + multi-parent as general + asymmetric default + dual-track vocabulary candidate)
+
+### Added (canon-level)
+- **`continuations/25.md` §12 addendum** (~3,800 words) — four refinements + one meta-move surfacing from Pav's responses to cont 25 §11 tensions. (A) L0 / Global Kernel Canon as the user-facing name for cont 23 equation 8's recursive substrate-stack — recursive across observer-classes: L0 of human conversation = embodied capacity + symbolic communication; L0 of AI / latent-heavy entity = carriers + reasoning function; L0 of simulation = code; L0 of code = language + framework; L0 of framework = hardware; recursion bottoms at physical kernel canon. The wrapper-overlap dynamic operates WITHIN L0; the field IS L0. (B) Cached protocol = canon artefact at cont 22 four-layer stack — protocol caching is canon-artefact embodiment; vibecoding maturation = canon-artefact compilation pathway. (C) Multi-parent overlap as the general case; binary case is visualization simplification; cont 18 procedural lineage handles the recursion; N-parent math deferred. (D) Asymmetric overlap is default; symmetric exists as transient hold-phase of balanced flux per cont 21; integrates cont 21 hold + cont 19 moving target + cont 25 active-as-dynamic-equilibrium into one observation.
+- **L0 framing as accessibility win** — collapses cont 22-23's substantial vocabulary into a recursive name newcomers can engage with: 'what's the L0 of this observer? what's the L0 of that L0?' Recursion legible without 13,000 words of prior continuations.
+- **Worked example: Spanglish through all four §12 moves** plus cont 25's seven-phase lifecycle. L0 stack walked top-to-bottom; cached protocols in US Latino communities as canon artefacts; multi-parent acknowledgment (Cuban Spanglish in Miami vs Mexican Spanglish in El Paso vs Caribbean Spanglish in NYC); asymmetric weight producing Spanglish-with-English-grammatical-skeleton-and-Spanish-lexical-insertions. All four moves cohere through the test case.
+
+### Added (candidate-level)
+- **Dual-track vocabulary** — meta-framework move adopting two parallel registers that refer to the same underlying objects: user-facing accessible (L0 / fields / hairy spheres / vibecoding-maturation / cached protocols / wake/contact / conception) and rigorous formal (kernel canon / aggregate of lower-ring G's / wrapper-overlap phase 3 / W_C shape selected during phantom action-space / K̂ ⊂ G / R_W). Translation table maintained as framework artifact. Like physics's energy vs Hamiltonian distinction. Held as candidate pending construct-study application, outreach testing, and explicit translation-table maintenance.
+
+### Changed
+- **`index.html` PRIMITIVES §02** — added L0 / Global Kernel Canon as new canon entry; added Dual-track vocabulary as candidate entry. Existing wrapper-overlap-dynamics entry references §12 implicitly.
+- **`continuations/25.md`** — §12 addendum appended after main body's closing line. Preserves cont 25 main body intact; addendum extends with the four refinements + meta-move + Spanglish worked example.
+
+### Method
+- Pav's pragmatic question framed the canonization: 'what do we need to show to get the gist with room to research and refine the fidelity?' Answer: MVP each of A/B/C/D moves + dual-track as candidate + worked example to ground; defer N-parent math, L0 cross-observer comparison, power-dynamics math, vibecoding maturation operationalization to future fidelity passes. Same-session continuation of cont 25 — Pav's 'yeah' confirmed both shipping the MVP and the L0-as-user-facing-equivalent framing.
+
+### Carry-forward (queued for next round)
+- Update artifacts/wrapper_overlap_animated.html with v10 layer: caption field with 'L0 / global kernel canon'; add recursive co-construction arrows during active phase; add ghost-W_C conception during wake phase (multiple ghost shapes before consolidation); add multi-parent caption; show asymmetric flux indicator.
+- Refactor construct studies (marriage, religion, language, nation-state, internet) to walk their L0 stacks explicitly per §12.1 worked example pattern.
+- Test the dual-track vocabulary by applying user-facing track to outreach drafts.
+- Build explicit translation table as a framework artifact (could live in /notation/ or /formalization/).
+- Test cross-substrate predictive transfer (per cont 25 §9 OE4): does cell-fusion's topological-defect localization (Nov 2024) predict model-merging at sign-conflict hot-spots produces stronger consolidation?
+- N-parent overlap math (Singlish, EU statehood, Japanese religious syncretism) when fidelity work catches up.
+
+---
+
 ## 2026-05-22 (cont 25 — wrapper-overlap one-system-with-phases + hairy-sphere + non-additive math + cross-substrate convergence; diagram 07 v1→v9 with full provenance)
 
 ### Added (canon-level)
