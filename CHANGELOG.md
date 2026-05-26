@@ -8,6 +8,26 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-05-22 (dialogues — new top-level mode-page; first entry: AI transition deliberation in three voices)
+
+### Added (new section)
+- **`dialogues/ai_transition.html`** — first entry in a new top-level mode-page series. Three voices (historian, AI scientist, philosopher) deliberate on whether we are at an observer-class transition of the scale of writing, printing, the scientific revolution. The agnostic framework is used as a bridge across the three disciplines rather than as the topic. ~2,500 words of dialogue + Framework-moves-used appendix listing the eight framework primitives that show up as bridge points + About-this-format note + provenance section. Hypothes.is wired. Linked prominently from index.html Map section alongside /atlas/, /notation/, /formalization/, and /artifacts/wrapper_overlap_animated.html as a new mode of expressing the framework.
+- **`/dialogues/` as new top-level architecture slot** — same prominence tier as /atlas/, /notation/, /formalization/. The format is distinct enough to deserve its own slot: it is the framework as ideation-simulation across observer-classes, not a construct study, not a primitive, not a reading. Classical resonance with Plato's dialogues; usable for both academic and lay audiences.
+
+### Method
+- Pav's request 2026-05-22: 'Compose a back and forth conversation of an AI scientist, a philosopher and a historian deliberating about something profound using the agnostic framework as a bridge.' First draft shared inline in chat. Pav's correction: 'broze age, black plague didn't destroy the parent wrappers but changed them / refactored them / recompiled... the learnings carried on and resurrected later down the road. its even true for the dinosours, so far removed but their trace survived and we are bulding on it and their world is recompiled into a power source oil gas.' Historian's catastrophic-transition line revised accordingly — Bronze Age collapse, Black Death, K-Pg extinction reframed as deep dormancy with imparted learning rather than destruction events. Correction strengthens the framework's case: cont 20's canon dormancy primitive scales to geological timescales (200 million years for K-Pg → hydrocarbons), not just human-cultural ones. Pav: 'want it to be prominent' → top-level /dialogues/ section.
+
+### Changed
+- **`index.html` Map section** — added link to /dialogues/ai_transition.html alongside other top-level framework modes (atlas, notation, formalization, wrapper_overlap_animated).
+
+### Carry-forward
+- Build /dialogues/index.html as catalog page when there are 2-3 dialogues
+- Future dialogues exploring other profound questions named in the About-this-format section: what consciousness is, what makes a civilization recognise itself as different from prior ones, what the role of meaning is across substrate transitions, how knowledge stabilises, how cultures die and what replaces them
+- Open contribute-a-dialogue pathway (link from Contribute section once the format has 2-3 worked examples)
+- The Bronze Age / K-Pg dormancy-at-geological-timescales insight may warrant its own primitive entry or cont 20 addendum — the framework's dormancy primitive scales further than previously named (currently the primitive is described at the social-substrate ring)
+
+---
+
 ## 2026-05-22 (cont 25 §12 addendum — L0 / global kernel canon as user-facing recursive substrate + cached-protocol-as-canon-artefact + multi-parent as general + asymmetric default + dual-track vocabulary candidate)
 
 ### Added (canon-level)
