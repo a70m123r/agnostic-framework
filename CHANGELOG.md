@@ -8,6 +8,16 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-05-22 (dialogue promoted to section 01 "Read first" with hook extract above manifestos)
+
+### Changed
+- **`index.html` section 01 "Read first"** — restructured. Featured dialogue panel now the primary entry-point: kicker label "Dialogue · entry 01 · the framework in conversation"; brief italic intro ("A historian, an AI scientist, and a philosopher in one room. The framework is not the topic — it is the bridge."); four-turn extract (HISTORIAN sets up the question → SCIENTIST pushes back → PHILOSOPHER introduces framework as bridge → HISTORIAN's "Go on" cliffhanger); continue-reading CTA linking to the full dialogue. Speaker labels color-coded matching dialogue page (historian green, scientist blue, philosopher purple). Manifestos preserved below as secondary "Or — the manifesto, three editions —" option. Per Pav's "promote this to 1 ... with a small extract of back and forth that feels engaging and i want to know more feel."
+
+### Method
+- Cliffhanger structure chosen for the hook — "Go on." ends the extract on maximum pull. Visual hierarchy: dialogue panel takes the eye with yellow left border + surface background; manifestos section flows naturally below as the deeper read for those who want the framework's full setup. Speaker styling matches dialogue page for visual continuity when reader clicks through.
+
+---
+
 ## 2026-05-22 (dialogues — new top-level mode-page; first entry: AI transition deliberation in three voices)
 
 ### Added (new section)
