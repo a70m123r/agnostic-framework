@@ -8,6 +8,17 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-05-22 (construct studies promoted to §02 above primitives + cards refactored — bigger titles, shorter punchier summaries)
+
+### Changed
+- **`index.html` section order** — Construct studies promoted from §04 to §02, now sitting directly below the Map and above Primitives. Renumbering: §02 Construct studies (was §04) · §03 Primitives (was §02) · §04 Active readings (was §03). §05–§08 unchanged. Section IDs preserved (`construct-studies`, `primitives`, `readings`) so external anchor links still work.
+- **`index.html` §02 Construct studies cards** — titles bumped from default h4 size to 28px Georgia for published cards (22px for queued/tool cards). Summaries trimmed from ~150–200 words each down to ~30–60 words. Removed metadata noise (CDI source-check dates, exhaustive event lists, verb-palette enumerations, primitive lists per queued study) — the construct studies themselves still have the full depth; the card summaries now act as hooks. Section lede also tightened. Result: the section reads as five compelling invitations rather than five academic abstracts.
+
+### Method
+- Per Pav's request: 'lets move 04 construct study's section up to be the above the primitives and make titles bigger with shorted and more engaging summerys.' Construct studies are the strongest concrete artifacts the framework has produced; promoting them to §02 directly under the Map means new visitors see real worked examples (marriage, religion, nation-state, language, internet-as-observer) before they hit the more abstract Primitives glossary. Bigger titles + shorter copy make each card feel like an invitation; full depth still preserved in the linked construct studies themselves.
+
+---
+
 ## 2026-05-22 (dialogue promoted to section 01 "Read first" with hook extract above manifestos)
 
 ### Changed
