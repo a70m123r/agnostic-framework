@@ -224,15 +224,31 @@
     </div>
 
     <!-- ============================================================ -->
-    <!-- 2026-05-22 — TODAY                                              -->
+    <!-- 2026-05-27 — TODAY                                              -->
     <!-- ============================================================ -->
     <div class="day-sep">
-      <span class="label">2026-05-22</span>
+      <span class="label">2026-05-27</span>
       <span class="line"></span>
     </div>
 
     <article class="entry fresh">
-      <p class="time">~latest · <span class="tags"><span class="tag tool">dialogues</span><span class="tag tool">new section</span><span class="tag steer">steer</span></span></p>
+      <p class="time">~latest · <span class="tags"><span class="tag canon">diagram 07 v14</span><span class="tag refactor">fluid sim</span><span class="tag steer">steer</span></span></p>
+      <h3>Diagram 07 v14 — fluid-sim pairwise interactions (intra-wrapper repulsion + inter-wrapper membrane friction · particles still anchored by spring but now push and drag on each other)</h3>
+      <div class="steer-quote">"the points i the cloud field should interact with one another bound to their centre, so that theres friction as they slide past each others membranes, think fluid sim"<cite>— PAVPAV</cite></div>
+      <p class="what">Pairwise particle interactions added on top of v13's spring-anchored point cloud. Each particle still feels its anchor spring (v13 behaviour preserved), but now two additional forces act on close neighbours: <strong>short-range repulsion</strong> (push apart along the separation vector, soft falloff inside a 14px interaction radius) + <strong>viscosity</strong> (couple velocities so nearby particles drag each other — the friction term). Three interaction passes per frame: <strong>intra-A</strong> (W_A particles push/drag each other — prevents clustering, lets the cloud bulge under squeeze, gives a fluid-fill quality), <strong>intra-B</strong> (same for W_B), and <strong>inter-A×B</strong> (only when centre distance is small enough to matter — early-out for perf). The inter-wrapper pass is the headline: when W_A and W_B clouds overlap during wake/active phases, the two point fields slide past each other with <em>actual</em> friction rather than passing through transparently. <strong>updateCloud refactored</strong> to a three-phase loop: (1) spring force accumulates velocity, (2) pairwise interactions modify velocities, (3) damping + integration + render. <strong>Friction slider</strong> (0–1, default 0.50) scales both repulsion and viscosity strength. At 0 each particle only feels its anchor spring (v13 mode); at 1 the system behaves strongly fluid. <strong>Performance</strong> stays comfortable at worst-case density=140 (~40k pair-checks/frame) and is trivial at default density=60 (~5.5k checks/frame). Hero dek + title bar updated. <strong>Queued for v15:</strong> W_C particle spawning (when A and B particles reach sustained overlap in the contact zone, seed a third cloud — currently W_C is still arc-only), and a velocity-field/streamline overlay over the contact zone (the fluid sim provides this data for free).</p>
+      <p class="links">→ <a href="../artifacts/wrapper_overlap_animated.html">animated diagram v14</a> · <a href="https://github.com/a70m123r/agnostic-framework/blob/main/CHANGELOG.md">CHANGELOG entry</a></p>
+    </article>
+
+    <article class="entry fresh">
+      <p class="time">~earlier · <span class="tags"><span class="tag canon">diagram 07 v13</span><span class="tag refactor">render methodology</span><span class="tag steer">steer</span></span></p>
+      <h3>Diagram 07 v13 — asymmetric wobble (W_A imposes, W_B responds) + point-cloud render with spring physics (2D slice of 3D wavelet substrate for the canon's math)</h3>
+      <div class="steer-quote">"its interesting, what we need to see is the asymmetry of A and B. the could wobble in different ways, one can impose on another. the second is the wraper lines... we need a new render methodology for this, like a field of points with adjustable density slider and they scale to form the wrapper membrane with collision dynamics and their own centre points like springs that we adjust so a 3d wavelet point cloud that were looking at a slice of for the 2d top view, this aproach with let us develop the canon further and the math"<cite>— PAVPAV</cite></div>
+      <p class="what">Two refinements layered onto <code>artifacts/wrapper_overlap_animated.html</code>. <strong>(1) Asymmetric wobble.</strong> v12's symmetric anti-phase oscillation replaced. W_A wobbles faster (period ~75 frames) and larger (±7 amplitude) — the <em>imposing</em> parent. W_B wobbles slower (period ~115 frames), smaller (±3.5 amplitude), and phase-shifted (+0.8 rad) — the <em>responding</em> parent. Both still scale by <code>state.negotiation</code> so wobble peaks during wake-phase pressure. Symmetry can hold briefly when the two sinusoids align, but the default is asymmetric flux. <strong>(2) New render methodology — point-cloud field with spring physics.</strong> Wrappers can now be rendered as a field of N particles (default 60, range 20–140) instead of (or alongside) the )( arcs. Each point holds <code>{angle, pos, vel}</code> and is governed by a spring (k=0.18) pulling it toward its rest position on the level-set circle, with damping (0.86) to prevent runaway. Point size scales by angle — denser/larger at the contact-facing front, thinner at the back, preserving the )( visual convention. <strong>The membrane is what emerges when you turn the density up</strong>, not a line drawn over the top. Conceptually a 2D slice of a 3D wavelet point cloud; per Pav, "this approach will let us develop the canon further and the math." <strong>New controls:</strong> View dropdown (arcs / point cloud / both layered) + Cloud density slider. <strong>SVG implementation:</strong> two new groups <code>v13-cloud-a</code> / <code>v13-cloud-b</code> populated via <code>document.createElementNS</code>; <code>updateCloud()</code> applies spring physics each frame; monkey-patched <code>renderState</code> and <code>renderBranch</code> keep the cloud in sync with the wobbling centres across all phases. <strong>Hero dek + title bar updated</strong> to introduce both refinements. <strong>Deferred to v14:</strong> collision dynamics for the point cloud (points repel within wrapper, attract/exchange at contact zone) — scope-capped here so the substrate stabilises before we build collision on top of it.</p>
+      <p class="links">→ <a href="../artifacts/wrapper_overlap_animated.html">animated diagram v13</a> · <a href="https://github.com/a70m123r/agnostic-framework/blob/main/CHANGELOG.md">CHANGELOG entry</a></p>
+    </article>
+
+    <article class="entry fresh">
+      <p class="time">~earlier · <span class="tags"><span class="tag tool">dialogues</span><span class="tag tool">new section</span><span class="tag steer">steer</span></span></p>
       <h3>Dialogues — new top-level section · first entry: AI transition deliberation in three voices</h3>
       <div class="steer-quote">"Compose a back and forth conversation of an AI scientist, a philosopher and a historian deliberating about something profound using the agnostic framework as a bridge."<cite>— PAVPAV</cite></div>
       <div class="steer-quote">"Like it as a format of ideation simulation, what's a good place for it on the site, want it to be prominent. one note the broze age, black plague didn't destroy the parent wrappers but changed them / refactored them / recompiled... the learnings carried on and resurrected later down the road. its even true for the dinosours, so far removed but their trace survived and we are bulding on it and their world is recompiled into a power source oil gas."<cite>— PAVPAV</cite></div>
@@ -543,7 +559,7 @@
 
 <footer class="page-footer">
   <div class="wrap">
-    Agnostic Framework · timeline · last updated 2026-05-22 · <a href="../index.html">live site</a> · <a href="https://github.com/a70m123r/agnostic-framework">github</a>
+    Agnostic Framework · timeline · last updated 2026-05-27 · <a href="../index.html">live site</a> · <a href="https://github.com/a70m123r/agnostic-framework">github</a>
   </div>
 </footer>
 

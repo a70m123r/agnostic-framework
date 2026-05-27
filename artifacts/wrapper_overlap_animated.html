@@ -86,15 +86,15 @@
   </div>
 
   <header class="hero">
-    <p class="kicker">Animated diagram · 2026-05-22 · v9</p>
+    <p class="kicker">Animated diagram · 2026-05-27 · v14</p>
     <h1>Wrapper overlap — one system with phases</h1>
-    <p class="dek">Two parent observer wrappers (W_A and W_B) expand from <em>anchored-but-not-fixed</em> centres in <strong>L0 — global compiled canon</strong>, the medium everything in the frame needs (including the observer reading this). Wrappers are <em>fields, not sharp edges</em> — the visible )( arcs are level-sets of the underlying field; the soft halo around each shows the field extends beyond. Centres oscillate under wake-phase pressure (parents push each other); the dashed ghost markers show where centres would sit without contact. The frame has three canon levels: <strong>top canon</strong> above, <strong>centre canon</strong> in the middle (where the overlap dynamic plays out), <strong>sub canon</strong> below. The wrapper renders centre from polar-merging sub with top. Two parents meet, negotiate, form a Venn-lens nesting space; a third wrapper W_C is conceived in the lens, grows into a hairy sphere over both parents while they persist as procedural-root stubs. Non-additive latent math: (1+1) = 3 when emergent; 1⁺ when W_C supersedes; 1⁻ when the bridge breaks apart.</p>
-    <p class="meta">Toggle the mapping dropdown to switch all labels live between Framework / LCAO molecular-orbital theory / Model Merging vocabularies. Mapping table at the bottom shows all three side by side. Compatibility slider modulates bridge viability — set low and the cycle stalls at wake.</p>
+    <p class="dek">Two parent observer wrappers (W_A and W_B) expand from <em>anchored-but-not-fixed</em> centres in <strong>L0 — global compiled canon</strong>, the medium everything in the frame needs (including the observer reading this). Wrappers are <em>fields, not sharp edges</em> — the visible )( arcs are level-sets of the underlying field; the soft halo around each shows the field extends beyond. <strong>v13:</strong> the wobble is now <em>asymmetric</em> — W_A oscillates faster and larger (the imposing parent), W_B slower and phase-shifted (the responding parent); symmetry holds in stretches, but the system is always in flux. The <strong>point-cloud view</strong> renders each wrapper as a field of particles with spring physics — the membrane is what emerges when you tune the density, not a line drawn over the top. Conceptually it's a 2D slice of a 3D wavelet point cloud; the math we develop next sits on this substrate. <strong>v14:</strong> point clouds now behave as a <em>fluid sim</em> — each particle is still bound to its centre by a spring, but particles also push on each other (short-range repulsion) and exchange velocity with their neighbours (viscosity). Intra-wrapper: prevents clustering, lets the cloud bulge when squeezed. Inter-wrapper: when W_A and W_B membranes overlap, the two clouds slide past each other with real friction. Centres oscillate under wake-phase pressure; the dashed ghost markers show where centres would sit without contact. The frame has three canon levels: <strong>top canon</strong> above, <strong>centre canon</strong> in the middle (where the overlap dynamic plays out), <strong>sub canon</strong> below. The wrapper renders centre from polar-merging sub with top. Two parents meet, negotiate, form a Venn-lens nesting space; a third wrapper W_C is conceived in the lens, grows into a hairy sphere over both parents while they persist as procedural-root stubs. Non-additive latent math: (1+1) = 3 when emergent; 1⁺ when W_C supersedes; 1⁻ when the bridge breaks apart.</p>
+    <p class="meta">Toggle Mapping to switch labels between Framework / LCAO / Model Merging. View switches between arcs (level-sets), point cloud (field), or both layered. Cloud density slider tunes particle count — sparse shows the field, dense renders the membrane. <strong>Friction</strong> tunes the pairwise interaction strength — at 0 each particle only feels its anchor spring; at 1 particles strongly repel and drag each other through viscosity. Compatibility slider modulates bridge viability — set low and the cycle stalls at wake.</p>
   </header>
 
   <div class="widget-mount">
     <div class="wos9-root">
-      <p class="wos9-title">Wrapper overlap — v9 · quantised layout · mapping toggle</p>
+      <p class="wos9-title">Wrapper overlap — v14 · fluid sim · membrane friction</p>
       <p class="wos9-math" id="wos9-math">1 + 1 = 2</p>
       <p class="wos9-mathnote">layout in %, state from formula cascade, dynamic spans full width, phases below, mappings panel at bottom</p>
 
@@ -108,6 +108,13 @@
           <option value="lcao">LCAO / MO theory</option>
           <option value="merging">Model Merging</option>
         </select></label>
+        <label>View <select id="v13-viewmode">
+          <option value="arcs">arcs (level-sets)</option>
+          <option value="cloud">point cloud (field)</option>
+          <option value="both">both layered</option>
+        </select></label>
+        <label>Cloud density <input type="range" id="v13-density" min="20" max="140" step="10" value="60"/><span id="v13-densityval">60</span></label>
+        <label>Friction <input type="range" id="v14-friction" min="0" max="1" step="0.05" value="0.5"/><span id="v14-frictionval">0.50</span></label>
       </div>
       <p class="wos9-phase" id="wos9-phase">PHASE: PRE-OVERLAP</p>
       <p class="wos9-detail" id="wos9-detail">two small )( arcs · fronts already facing each other · backs fading into unobservable</p>
@@ -212,6 +219,11 @@
             <text id="v9-dorm-b-label" text-anchor="middle" font-size="10" fill="#a78bfa" opacity="0.75" font-style="italic">W_B°</text>
             <text id="v9-dorm-note" text-anchor="middle" font-size="10" fill="#8a8a8a" font-style="italic">dormant originals inside stubs · ready to recompile</text>
           </g>
+
+          <!-- v13: point cloud render — field of points with spring physics, 2D slice of conceptual 3D wavelet -->
+          <g id="v13-cloud-a" style="display:none;"></g>
+          <g id="v13-cloud-b" style="display:none;"></g>
+
           <text id="v9-wa-label" text-anchor="middle" font-size="20" font-weight="600" fill="#ececec" font-family="Georgia, serif">W_A</text>
           <text id="v9-wb-label" text-anchor="middle" font-size="20" font-weight="600" fill="#ececec" font-family="Georgia, serif">W_B</text>
           <text id="v9-wc-label" text-anchor="middle" font-size="22" font-weight="600" fill="#fbbf24" font-family="Georgia, serif" opacity="0">W_C</text>
@@ -579,10 +591,13 @@
   function renderState(state) {
     resetVisualState(); applyMappingLabels();
     const baseCxA = LAYOUT.WA_cx * VB_W, baseCxB = LAYOUT.WB_cx * VB_W, cy = LAYOUT.cy_frac * VB_H;
-    // v12: centre displacement under wake-phase pressure (anti-phase oscillation, parents push each other)
-    const wobble = Math.sin(cycleT / 90) * 5 * state.negotiation;
-    const cxA = baseCxA - wobble;
-    const cxB = baseCxB + wobble;
+    // v13: asymmetric wobble — W_A and W_B oscillate differently; one can impose on the other
+    // W_A: faster period (75) + larger amplitude (7) → imposing
+    // W_B: slower period (115) + smaller amplitude (3.5) + phase offset (0.8 rad) → responding/lagging
+    const wobbleA = Math.sin(cycleT / 75) * 7 * state.negotiation;
+    const wobbleB = Math.sin(cycleT / 115 + 0.8) * 3.5 * state.negotiation;
+    const cxA = baseCxA - wobbleA;
+    const cxB = baseCxB + wobbleB;
     const midX = (cxA + cxB) / 2, r = state.r * VB_W;
     positionAmbientElements(cxA, cxB, cy, midX);
     drawWrapper(wa, cxA, cy, r, 0); drawWrapper(wb, cxB, cy, r, 180);
@@ -698,6 +713,204 @@
   speedSlider.addEventListener('input', e => { speed = parseFloat(e.target.value); speedVal.textContent = speed.toFixed(2).replace(/\.?0+$/, '') + 'x'; });
   compatSlider.addEventListener('input', e => { compatibility = parseFloat(e.target.value); compatVal.textContent = compatibility.toFixed(2); });
   mappingSelect.addEventListener('change', e => { currentMapping = e.target.value; });
+
+  // ============================================================
+  // v13: point cloud render — field of points with spring physics
+  // Conceptually a 3D wavelet point cloud; we see a 2D slice (top view).
+  // Each point has an angular anchor on the wrapper circumference; spring
+  // physics pulls each point toward its current anchor as the wrapper grows.
+  // ============================================================
+  const cloudGroupA = document.getElementById('v13-cloud-a');
+  const cloudGroupB = document.getElementById('v13-cloud-b');
+  const densitySlider = document.getElementById('v13-density');
+  const densityVal = document.getElementById('v13-densityval');
+  const viewModeSelect = document.getElementById('v13-viewmode');
+  const frictionSlider = document.getElementById('v14-friction');
+  const frictionVal = document.getElementById('v14-frictionval');
+  let particleCount = 60;
+  let viewMode = 'arcs';
+  let friction = 0.5;          // v14 — pairwise interaction strength (fluid-sim)
+  const pointsA = [];
+  const pointsB = [];
+
+  function angularPointSize(angle, contactAngle) {
+    // Denser/larger at front (near contact direction), sparser at back — matches )( open-arc semantics
+    let diff = Math.abs(angle - contactAngle);
+    if (diff > Math.PI) diff = 2 * Math.PI - diff;
+    if (diff <= Math.PI / 6) return 2.2;          // front
+    if (diff <= Math.PI / 2) return 1.4;          // mid-sides
+    if (diff <= 5 * Math.PI / 6) return 0.7;      // back-sides
+    return 0.3;                                    // far back (level-set fades)
+  }
+
+  function initCloud() {
+    pointsA.length = 0;
+    pointsB.length = 0;
+    cloudGroupA.innerHTML = '';
+    cloudGroupB.innerHTML = '';
+    const svgNS = 'http://www.w3.org/2000/svg';
+    for (let i = 0; i < particleCount; i++) {
+      const angle = (i / particleCount) * 2 * Math.PI;
+      pointsA.push({ angle, pos: null, vel: { x: 0, y: 0 } });
+      pointsB.push({ angle, pos: null, vel: { x: 0, y: 0 } });
+      const cA = document.createElementNS(svgNS, 'circle');
+      cA.setAttribute('fill', '#4ade80');
+      cA.setAttribute('opacity', '0.78');
+      cloudGroupA.appendChild(cA);
+      const cB = document.createElementNS(svgNS, 'circle');
+      cB.setAttribute('fill', '#a78bfa');
+      cB.setAttribute('opacity', '0.78');
+      cloudGroupB.appendChild(cB);
+    }
+  }
+
+  // v14: pairwise fluid-sim interactions — short-range repulsion + viscosity coupling
+  // Applied AFTER spring force, BEFORE damping/integration. Both intra-wrapper
+  // (prevents clustering, gives fluid fill) and inter-wrapper (membrane friction
+  // when W_A and W_B point clouds slide past each other in the contact zone).
+  function interactPair(p1, p2, interactionR, interactionR2, repulsionK, viscosityK) {
+    const dx = p2.pos.x - p1.pos.x;
+    const dy = p2.pos.y - p1.pos.y;
+    const d2 = dx * dx + dy * dy;
+    if (d2 >= interactionR2 || d2 < 0.0001) return;
+    const d = Math.sqrt(d2);
+    const overlap = (interactionR - d) / interactionR;        // 0..1, soft falloff
+    const nx = dx / d, ny = dy / d;
+    // Repulsion (push apart along separation vector — short-range only)
+    const fr = overlap * repulsionK;
+    p1.vel.x -= nx * fr; p1.vel.y -= ny * fr;
+    p2.vel.x += nx * fr; p2.vel.y += ny * fr;
+    // Viscosity (couple velocities — friction-like; nearby particles drag each other)
+    const dvx = (p2.vel.x - p1.vel.x) * viscosityK * overlap;
+    const dvy = (p2.vel.y - p1.vel.y) * viscosityK * overlap;
+    p1.vel.x += dvx; p1.vel.y += dvy;
+    p2.vel.x -= dvx; p2.vel.y -= dvy;
+  }
+
+  function updateCloud(cxA, cxB, cy, r) {
+    if (viewMode === 'arcs') return;
+    const k = 0.18;          // spring stiffness (anchor pull)
+    const damping = 0.86;    // velocity damping
+    // v14: interaction params scale with friction slider (0..1)
+    const interactionR = 14;                       // px — neighbourhood radius
+    const interactionR2 = interactionR * interactionR;
+    const repulsionK = 0.6 * friction;
+    const viscosityK = 0.12 * friction;
+
+    // Phase 1: spring force toward angular anchor (centre pulls each point)
+    for (let i = 0; i < particleCount; i++) {
+      const pA = pointsA[i];
+      const pB = pointsB[i];
+      // Anchor positions (A's contact is at angle 0; B's contact is at angle π)
+      const axA = cxA + r * Math.cos(pA.angle);
+      const ayA = cy + r * Math.sin(pA.angle);
+      const axB = cxB + r * Math.cos(pB.angle);
+      const ayB = cy + r * Math.sin(pB.angle);
+      // Init on first frame
+      if (pA.pos === null) pA.pos = { x: axA, y: ayA };
+      if (pB.pos === null) pB.pos = { x: axB, y: ayB };
+      pA.vel.x += (axA - pA.pos.x) * k;
+      pA.vel.y += (ayA - pA.pos.y) * k;
+      pB.vel.x += (axB - pB.pos.x) * k;
+      pB.vel.y += (ayB - pB.pos.y) * k;
+    }
+
+    // Phase 2: pairwise fluid-sim interactions (skip if friction near zero)
+    if (friction > 0.01) {
+      // Intra-wrapper A (fluid fill — prevents clustering, lets cloud bulge under squeeze)
+      for (let i = 0; i < particleCount; i++) {
+        for (let j = i + 1; j < particleCount; j++) {
+          interactPair(pointsA[i], pointsA[j], interactionR, interactionR2, repulsionK, viscosityK);
+        }
+      }
+      // Intra-wrapper B
+      for (let i = 0; i < particleCount; i++) {
+        for (let j = i + 1; j < particleCount; j++) {
+          interactPair(pointsB[i], pointsB[j], interactionR, interactionR2, repulsionK, viscosityK);
+        }
+      }
+      // Inter-wrapper A × B (membrane friction — only active when contact zones overlap)
+      const cxDist = Math.abs(cxA - cxB);
+      if (cxDist < 2 * r + interactionR) {        // early-out: skip when far apart
+        for (let i = 0; i < particleCount; i++) {
+          for (let j = 0; j < particleCount; j++) {
+            interactPair(pointsA[i], pointsB[j], interactionR, interactionR2, repulsionK, viscosityK);
+          }
+        }
+      }
+    }
+
+    // Phase 3: damping + position integration + render
+    for (let i = 0; i < particleCount; i++) {
+      const pA = pointsA[i];
+      const pB = pointsB[i];
+      pA.vel.x *= damping; pA.vel.y *= damping;
+      pB.vel.x *= damping; pB.vel.y *= damping;
+      pA.pos.x += pA.vel.x; pA.pos.y += pA.vel.y;
+      pB.pos.x += pB.vel.x; pB.pos.y += pB.vel.y;
+      // Render
+      const sizeA = angularPointSize(pA.angle, 0);
+      const sizeB = angularPointSize(pB.angle, Math.PI);
+      const elA = cloudGroupA.children[i];
+      const elB = cloudGroupB.children[i];
+      elA.setAttribute('cx', pA.pos.x.toFixed(1));
+      elA.setAttribute('cy', pA.pos.y.toFixed(1));
+      elA.setAttribute('r', sizeA);
+      elB.setAttribute('cx', pB.pos.x.toFixed(1));
+      elB.setAttribute('cy', pB.pos.y.toFixed(1));
+      elB.setAttribute('r', sizeB);
+    }
+  }
+
+  function applyViewMode() {
+    const showArcs = viewMode === 'arcs' || viewMode === 'both';
+    const showCloud = viewMode === 'cloud' || viewMode === 'both';
+    document.getElementById('v9-wa').style.display = showArcs ? '' : 'none';
+    document.getElementById('v9-wb').style.display = showArcs ? '' : 'none';
+    cloudGroupA.style.display = showCloud ? '' : 'none';
+    cloudGroupB.style.display = showCloud ? '' : 'none';
+  }
+
+  densitySlider.addEventListener('input', e => {
+    particleCount = parseInt(e.target.value);
+    densityVal.textContent = particleCount;
+    // Reset positions on count change
+    initCloud();
+  });
+  viewModeSelect.addEventListener('change', e => {
+    viewMode = e.target.value;
+    applyViewMode();
+  });
+  frictionSlider.addEventListener('input', e => {
+    friction = parseFloat(e.target.value);
+    frictionVal.textContent = friction.toFixed(2);
+  });
+
+  // Hook cloud update into the frame loop by patching renderState & renderBranch
+  // (simpler: just call updateCloud at the end of each, but cleanest is to wrap)
+  const _origRenderState = renderState;
+  renderState = function(state) {
+    _origRenderState(state);
+    if (viewMode !== 'arcs') {
+      const baseCxA = LAYOUT.WA_cx * VB_W, baseCxB = LAYOUT.WB_cx * VB_W, cy = LAYOUT.cy_frac * VB_H;
+      const wobbleA = Math.sin(cycleT / 75) * 7 * state.negotiation;
+      const wobbleB = Math.sin(cycleT / 115 + 0.8) * 3.5 * state.negotiation;
+      updateCloud(baseCxA - wobbleA, baseCxB + wobbleB, cy, state.r * VB_W);
+    }
+  };
+  const _origRenderBranch = renderBranch;
+  renderBranch = function(branch) {
+    _origRenderBranch(branch);
+    if (viewMode !== 'arcs') {
+      const cxA = LAYOUT.WA_cx * VB_W, cxB = LAYOUT.WB_cx * VB_W, cy = LAYOUT.cy_frac * VB_H;
+      const r = (branch === 'supersede' ? 0.05 : LAYOUT.r_max) * VB_W;
+      updateCloud(cxA, cxB, cy, r);
+    }
+  };
+
+  initCloud();
+  applyViewMode();
+
   jumpBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       const id = btn.getAttribute('data-jump');

@@ -8,6 +8,57 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-05-27 (diagram v14 — fluid-sim pairwise interactions · intra-wrapper repulsion + inter-wrapper membrane friction)
+
+### Updated (v14 layer added to artifacts/wrapper_overlap_animated.html)
+- **Pairwise particle interactions added to point cloud** — each particle still anchored to its centre by the v13 spring, but now also interacts with neighbours. Two forces per close pair: **repulsion** (short-range push along separation vector, soft falloff inside `interactionR=14px`) + **viscosity** (couples velocities, so nearby particles drag each other along — friction-like). Closes Pav's v14 steer: "the points i the cloud field should interact with one another bound to their centre, so that theres friction as they slide past each others membranes, think fluid sim."
+- **Three interaction passes per frame:**
+  1. **Intra-wrapper A** — points in W_A push/drag each other. Prevents clustering at the anchor circle; lets the cloud bulge inward/outward under squeeze; gives the wrapper a fluid-fill quality rather than a static ring of dots.
+  2. **Intra-wrapper B** — same for W_B.
+  3. **Inter-wrapper A × B** — only runs when centre distance < `2r + interactionR` (early-out for performance). This is the membrane-friction zone: when W_A and W_B point clouds overlap during the wake/active phases, the A-particles and B-particles repel and drag each other → the two clouds visibly slide past each other with friction rather than passing through transparently.
+- **Three-phase update loop** — `updateCloud` refactored from single-pass to: (1) spring force accumulates velocity from anchor pull, (2) pairwise interactions modify velocities, (3) damping + position integration + render. This ordering matters — interactions act on velocities BEFORE damping, so the system stays stable.
+- **Friction slider added** — 0..1 range, default 0.50. Scales both `repulsionK` (0.6 × friction) and `viscosityK` (0.12 × friction). At 0 each particle only feels its anchor spring (v13 behaviour). At 1 strong fluid coupling — particles strongly push each other and drag velocity through neighbourhoods.
+- **Performance** — worst case at density=140 is ~40k pair-checks per frame (2 intra × ~9.7k + 1 inter × ~19.6k); cheap mults + early-out on cross-wrapper when far apart keeps this comfortable. At default density=60, ~5.5k checks per frame — trivial.
+- **Hero dek + title bar updated** to introduce fluid-sim framing; title bar now reads 'v14 · fluid sim · membrane friction.'
+
+### Carry-forward (queued for v15+)
+- **W_C particle spawning** — when A-particles and B-particles in the contact zone reach sustained overlap, spawn a third cloud (W_C) seeded from the mixing zone. Currently W_C is still arc-only; v15 should bring it into the fluid sim.
+- **Velocity-field visualization** — optional overlay showing flow vectors / streamlines at the contact zone (the fluid sim provides this data for free; just needs rendering)
+- Ghost-W_C during wake phase (cont 25 §1 move 7)
+- Recursive co-construction arrows in active phase
+- Asymmetric flux indicator per cont 25 §12.4
+- Vibecoding maturation cycle counter
+- Static SVG fallback at /diagrams/07_wrapper_overlap_dynamics.svg
+- Diagram 07 case study showing all v1→v14 iterations
+- Refactor existing construct studies (marriage, religion, language, nation-state, internet) to use cont 25 vocabulary
+- 3D wavelet renderer (move beyond the 2D slice — full point cloud with z-axis exposing canon-level structure)
+- Spatial hashing if density >> 140 ever becomes a need
+
+---
+
+## 2026-05-27 (diagram v13 — asymmetric wobble · point-cloud render with spring physics)
+
+### Updated (v13 layer added to artifacts/wrapper_overlap_animated.html)
+- **Asymmetric wobble** — v12's symmetric anti-phase oscillation replaced with two independent sinusoidal terms. W_A wobbles faster (period ~75 frames) and larger (±7 amplitude) — the imposing parent. W_B wobbles slower (period ~115 frames), smaller (±3.5 amplitude), and phase-shifted (+0.8 rad) — the responding parent. Both still scale by `state.negotiation` so wobble peaks during wake-phase pressure. Captures Pav's correction: 'its asymmetric, there could be phases of hold symmetry but its always in flux.' One can impose on the other; the system is never truly balanced.
+- **New render methodology — point-cloud field with spring physics** — wrappers can now be rendered as a field of particles instead of (or alongside) the )( arcs. Each wrapper is N points distributed angularly around its centre; each point has `{angle, pos, vel}` and is governed by a spring (k=0.18) pulling it toward its rest position on the level-set circle, with damping (0.86) to prevent runaway. Point size scales by angle — denser/larger at the contact-facing front, thinner at the back (per the )( convention). The membrane is what emerges when you tune the density up, not a line drawn over the top. Conceptually a 2D slice of a 3D wavelet point cloud — the substrate for developing the canon's math.
+- **New controls** — `View` dropdown (arcs / point cloud / both layered) and `Cloud density` slider (20-140 points per wrapper, default 60). Density slider live-resamples the cloud; view dropdown toggles SVG group visibility. Both persist across animation cycle.
+- **SVG point cloud groups** — `<g id="v13-cloud-a">` and `<g id="v13-cloud-b">` added to main canvas, populated dynamically via `document.createElementNS`. `initCloud()` rebuilds on density change; `updateCloud()` applies spring physics each frame and writes back to `cx`/`cy`/`r` attributes.
+- **Monkey-patched render hooks** — `renderState` and `renderBranch` wrapped to call `updateCloud(cxA, cxB, cy, baseR)` after originals execute, keeping the cloud in sync with the wobbling centres across all phases.
+- **Hero dek + title updated** — v13 framing introduced in dek: asymmetric wobble (W_A imposing, W_B responding), point-cloud view as new render methodology, 2D slice of 3D wavelet conceptual frame for future math work. Title bar now reads 'v13 · asymmetric wobble · point-cloud field.'
+
+### Carry-forward (queued for v14+)
+- **Collision dynamics for point cloud** — points should repel within wrapper, attract/exchange at contact zone (deferred from v13 per scope cap)
+- Ghost-W_C during wake phase (cont 25 §1 move 7)
+- Recursive co-construction arrows in active phase
+- Asymmetric flux indicator per cont 25 §12.4 (partially addressed by v13 asymmetric wobble; flux indicator still pending)
+- Vibecoding maturation cycle counter
+- Static SVG fallback at /diagrams/07_wrapper_overlap_dynamics.svg
+- Diagram 07 case study showing all v1→v13 iterations
+- Refactor existing construct studies (marriage, religion, language, nation-state, internet) to use cont 25 vocabulary
+- 3D wavelet renderer (move beyond the 2D slice — full point cloud with z-axis exposing canon-level structure)
+
+---
+
 ## 2026-05-22 (diagram v12 — wrappers as fields with soft halo · centres not fixed with ghost markers)
 
 ### Updated (v12 layer added to artifacts/wrapper_overlap_animated.html)
