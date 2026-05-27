@@ -8,6 +8,71 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-05-22 (diagram v12 — wrappers as fields with soft halo · centres not fixed with ghost markers)
+
+### Updated (v12 layer added to artifacts/wrapper_overlap_animated.html)
+- **Wrappers as fields (not sharp edges)** — added soft radial-gradient halo around each wrapper. Two new gradient defs (v12wafield green / v12wbfield purple), two new ellipse elements rendered BEHIND the )( arcs. Halo radius scales to 1.5x the visible arc radius and fades from 20% opacity at centre to 0% at edge. The visible )( arcs are now read as level-sets of the underlying field; the soft halo shows the field extends beyond the level-set into the surrounding L0. Closes a structural gap from the earlier 'fields not arcs' conversation.
+- **Centres not fixed (displacement under pressure)** — centres now oscillate under wake-phase pressure. Added two ghost markers (dashed circles in parent colours) pinned at the original layout-fixed positions (cxA=384, cxB=816). The active centre dots are now displaced by `±5 * state.negotiation * sin(t/90)` — anti-phase oscillation simulating parents pushing each other away during membrane negotiation. Ghost opacity scales with negotiation (0.3 baseline + 0.4 * negotiation peak) so they only become prominent when the displacement is visible. During branch states (passive/dormant/supersede/break), centres return to base positions with ghost markers superimposed at base opacity.
+- **Hero dek updated** to introduce both refinements upfront: 'anchored-but-not-fixed centres' replaces 'fixed centres' framing; 'fields, not sharp edges' explicitly noted; visual elements (halo, ghost markers) explained in the dek so readers know what they're looking at.
+- **Both renderState and renderBranch updated** to maintain field halos and ghost markers across all animation states. In branch states, no displacement is applied (centres return to base) but halos and ghosts remain visible for visual continuity.
+
+### Carry-forward (queued for v13+)
+- Ghost-W_C during wake phase (cont 25 §1 move 7)
+- Recursive co-construction arrows in active phase
+- Asymmetric flux indicator per cont 25 §12.4
+- Wobble + frequency + friction at wake (centre oscillation now in v12; could add visible friction patterns at the contact zone)
+- Vibecoding maturation cycle counter
+- Static SVG fallback at /diagrams/07_wrapper_overlap_dynamics.svg
+- Diagram 07 case study showing all v1→v12 iterations
+
+---
+
+## 2026-05-22 (diagram v11 — three levels of canon as bands in L0)
+
+### Updated (v11 layer added to artifacts/wrapper_overlap_animated.html)
+- **Three canon levels visualised as horizontal bands within the L0 field** (cont 23 §12 top/centre/sub three-position vertical scope made visible in the diagram). Top band (y=20-120): the broader context the wrappers are in but can't fully render. Centre band (y=120-440): the wrappers' own renders, where the overlap dynamic happens. Sub band (y=440-540): substrate processing below the wrappers. Subtle dashed dividers between bands (stroke 0.6, dasharray 4-6, opacity 0.6). Band labels left-aligned in monospace caps with italic sub-captions per band.
+- **Polar-merge equation displayed in centre-band header**: 'centre = sub ⋈±∓ top · wrapper renders by polar-merging.' Positioned at y=156, monospace canon-yellow. Anchors the three-band layout in the framework equation that produces centre canon from sub and top.
+- **CENTRE CANON label in yellow** (vs gray for top/sub) — marks the centre as the prominent band where the dynamic happens; top and sub are contextual.
+- **Hero dek updated** to introduce the three levels explicitly: 'The frame has three canon levels: top canon above (broader context the wrappers are in but can't fully render), centre canon in the middle (where the wrappers' own renders happen, where the overlap dynamic plays out), sub canon below (substrate processing). The wrapper renders centre from polar-merging sub with top.'
+- **Wrappers continue to operate at cy=280 in the centre band**, no positional changes. Their arc extensions into top and sub bands now have semantic meaning: the wrapper's reach into top canon (its participation in broader context) and into sub canon (its substrate roots) become legible.
+
+### Carry-forward (queued for v12+)
+- Ghost-W_C during wake phase (cont 25 §1 move 7)
+- Recursive co-construction arrows in active phase
+- Asymmetric flux indicator per cont 25 §12.4
+- Wrappers-as-fields gradient (back-arc halo suggesting field-not-boundary at close range)
+- Wobble + frequency + friction at wake (centre oscillation)
+- Vibecoding maturation cycle counter
+- Static SVG fallback at /diagrams/07_wrapper_overlap_dynamics.svg
+- Diagram 07 case study showing all v1→v11 iterations
+
+---
+
+## 2026-05-22 (L0 vocabulary correction + diagram v10 — observer in L0; field made visible)
+
+### Changed
+- **L0 renamed** "global kernel canon" → "global compiled canon" across primitive entry + cont 25 §12. Per Pav's correction: 'L0 global compiled canon, everything shown needs it including the observer.' The cont 23 equation 8 recursion (K̂_r ≈ aggregate(G_{r-1}^(i))) is the precise version — the aggregated G's are global compiled canons of lower-ring observers (their wrappers, which are compiled patterns), not their kernel canons. L0 is what an observer compiles FROM, which is already-compiled at the lower ring. The 'kernel' framing was a misnomer.
+- **Reflexive corollary canonized** — everything in a frame needs L0, including the observer reading the frame. The framework cannot describe a wrapper-overlap from outside L0; there is no outside-L0 perspective.
+
+### Updated (v10 layer added to wrapper_overlap_animated.html)
+- **L0 caption** added prominently at the top of the main canvas in canon-yellow (#fbbf24): "L0 · GLOBAL COMPILED CANON · supports all" + italic sub-caption "the field shown · W_A, W_B, W_C all in it · the observer reading this is also in L0"
+- **Field pattern** added as a subtle dot pattern across the main canvas background — makes L0 visible as the medium everything sits in (not just empty space)
+- **Observer marker** added at bottom-right corner of canvas — small concentric circles with "OBSERVER" label and italic "in L0 · reading this" — reflexively shows the reader is positioned in the same canon stack as the dynamic
+- **Multi-parent caption** added at bottom of canvas: "binary case shown for clarity · wrappers in general have multi-parent procedural heritage (cont 18)" — addresses cont 25 §12.3
+- **Hero dek updated** to lead with L0: "Two parent observer wrappers (W_A and W_B) expand from fixed centres in L0 — global compiled canon, the medium everything in the frame needs (including the observer reading this)."
+
+### Carry-forward (queued for v11)
+- Ghost-W_C during wake phase (cont 25 §1 move 7 — W_C shape conceived in wake, not consolidating; visible as multiple phantom candidates before consolidation)
+- Recursive co-construction arrows in active (W_C ↔ W_A and W_C ↔ W_B bidirectional)
+- Asymmetric flux indicator per cont 25 §12.4
+- Wrappers-as-fields (gradient/halo on back arcs to suggest field-not-boundary at close range)
+- Wobble + frequency + friction at wake (centre oscillation visible)
+- Vibecoding maturation pattern (cycle counter showing cached protocol forming)
+- Static SVG fallback at /diagrams/07_wrapper_overlap_dynamics.svg
+- Diagram 07 case study showing all v1→v10 iterations (mirror of diagram 06 case study)
+
+---
+
 ## 2026-05-22 (construct studies promoted to §02 above primitives + cards refactored — bigger titles, shorter punchier summaries)
 
 ### Changed
