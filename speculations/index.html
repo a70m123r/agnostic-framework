@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Speculations — held with discipline — Agnostic Framework</title>
+<meta name="description" content="The framework's speculative tier. Claims with structural coherence to existing primitives but no current empirical purchase. Held openly with named promotion bars and pruning rules — not endorsed, not dismissed. Procedure formalized in continuation 27.">
+<script src="https://hypothes.is/embed.js" async></script>
+<style>
+  :root {
+    --bg: #0a0a0a;
+    --surface: #141414;
+    --surface-2: #1c1c1c;
+    --border: #262626;
+    --border-strong: #3a3a3a;
+    --text: #ececec;
+    --text-dim: #8a8a8a;
+    --text-faint: #555;
+    --accent-canon: #4ade80;
+    --accent-candidate: #fbbf24;
+    --accent-speculative: #a78bfa;
+    --accent-link: #93c5fd;
+    --accent-orange: #fb923c;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, system-ui, sans-serif; font-size: 17px; line-height: 1.7; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+
+  .topbar { border-bottom: 1px solid var(--border); padding: 20px 0; font-size: 13px; font-family: ui-monospace, "SF Mono", Menlo, monospace; color: var(--text-dim); }
+  .topbar a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--text-faint); }
+  .topbar a:hover { color: var(--accent-link); border-bottom-color: var(--accent-link); }
+  .topbar .sep { color: var(--text-faint); margin: 0 10px; }
+  .topbar .source-link { float: right; }
+
+  header.hero { padding: 72px 0 48px; border-bottom: 1px solid var(--border); }
+  header.hero .kicker { font-family: ui-monospace, Menlo, monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.18em; color: var(--accent-speculative); margin: 0 0 18px; }
+  header.hero h1 { font-family: Georgia, serif; font-weight: 400; font-size: 44px; line-height: 1.1; letter-spacing: -0.02em; margin: 0 0 22px; }
+  header.hero .dek { font-size: 18px; line-height: 1.55; color: var(--text-dim); max-width: 680px; margin: 0 0 18px; font-family: Georgia, serif; font-style: italic; }
+  header.hero .meta { font-family: ui-monospace, Menlo, monospace; font-size: 11px; color: var(--text-faint); margin: 0; }
+
+  section { padding: 48px 0; border-bottom: 1px solid var(--border); }
+  section:last-of-type { border-bottom: none; }
+  h2 { font-family: Georgia, serif; font-weight: 400; font-size: 28px; line-height: 1.2; margin: 0 0 14px; letter-spacing: -0.01em; }
+  h2 .num { color: var(--text-faint); font-size: 13px; font-family: ui-monospace, Menlo, monospace; margin-right: 12px; }
+  h3 { font-family: Georgia, serif; font-weight: 400; font-size: 20px; line-height: 1.3; margin: 30px 0 10px; color: var(--text); }
+  p { margin: 0 0 18px; }
+  em { color: var(--text); font-style: italic; }
+  strong { color: var(--text); font-weight: 600; }
+  a { color: var(--accent-link); text-decoration: none; border-bottom: 1px solid rgba(147, 197, 253, 0.3); }
+  a:hover { border-bottom-color: var(--accent-link); }
+
+  /* Tier marker chips */
+  .tier {
+    display: inline-block;
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding: 3px 9px;
+    border-radius: 3px;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+  .tier-canon { background: rgba(74, 222, 128, 0.13); color: var(--accent-canon); border: 1px solid rgba(74, 222, 128, 0.3); }
+  .tier-candidate { background: rgba(251, 191, 36, 0.13); color: var(--accent-candidate); border: 1px solid rgba(251, 191, 36, 0.3); }
+  .tier-speculative { background: rgba(167, 139, 250, 0.13); color: var(--accent-speculative); border: 1px solid rgba(167, 139, 250, 0.3); }
+
+  /* Speculation card */
+  .spec {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent-speculative);
+    border-radius: 4px;
+    padding: 26px 28px;
+    margin: 22px 0;
+  }
+  .spec .spec-meta {
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 11px;
+    color: var(--text-faint);
+    margin: 0 0 10px;
+  }
+  .spec h3 { margin-top: 0; }
+  .spec .bars {
+    font-size: 14px;
+    color: var(--text-dim);
+    margin: 14px 0 0;
+    padding: 12px 16px;
+    background: var(--surface-2);
+    border-left: 2px solid var(--accent-orange);
+    border-radius: 2px;
+  }
+  .spec .bars strong { color: var(--accent-orange); }
+  .spec .links {
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 12px;
+    color: var(--text-faint);
+    margin: 14px 0 0;
+  }
+
+  /* Tier explanation table */
+  .tier-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 15px; }
+  .tier-table th, .tier-table td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  .tier-table th { color: var(--text); font-weight: 600; background: var(--surface); }
+  .tier-table td { color: var(--text-dim); }
+
+  /* Procedural callout */
+  .procedure {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 22px 26px;
+    margin: 22px 0;
+  }
+  .procedure .label {
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--accent-link);
+    margin: 0 0 12px;
+  }
+
+  footer { padding: 40px 0; border-top: 1px solid var(--border); margin-top: 60px; font-family: ui-monospace, Menlo, monospace; font-size: 12px; color: var(--text-faint); }
+  footer a { color: var(--text-dim); border-bottom: 1px dotted var(--text-faint); }
+  footer a:hover { color: var(--accent-link); border-bottom-color: var(--accent-link); }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <a href="../index.html">← Agnostic Framework</a>
+    <span class="sep">·</span>
+    <span>Speculations</span>
+    <span class="sep">·</span>
+    <span style="color: var(--accent-speculative);">held with discipline</span>
+    <a href="https://github.com/a70m123r/agnostic-framework" class="source-link">github ↗</a>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="kicker">Speculations · Mode page · Procedure formalized in cont 27</p>
+    <h1>Speculations — held with discipline</h1>
+    <p class="dek">The framework's speculative tier. Claims with structural coherence to existing primitives but no current empirical purchase. Held openly with named promotion bars and pruning rules. Not endorsed, not dismissed.</p>
+    <p class="meta">Holding speculation rigorously IS part of what the framework does. The procedure is in <a href="../continuations/27.md" style="color: var(--text-faint); border-bottom-color: var(--text-faint);">cont 27 §2–3</a>.</p>
+  </div>
+</header>
+
+<div class="wrap">
+
+<section>
+  <h2><span class="num">§01</span>Why a speculations section at all</h2>
+
+  <p>Most research frameworks handle their uncertain edges by either suppressing them (only publish what's safe) or proliferating them (anything goes). Both fail differently. Suppression makes the framework appear more certain than it is and forecloses the speculation-to-canon pipeline that produces real progress. Proliferation makes the framework's commitments illegible and lets speculation accumulate without ever being tested.</p>
+
+  <p>This framework holds a third path, derived from Imre Lakatos's distinction between progressive and degenerate research programmes: speculations are held openly with explicit epistemic-tier tags, named promotion bars, and pruning rules. Speculations earn their way to canon by meeting their predictions; they get pruned when they don't. The framework's commitments stay legible because every claim is tagged with what kind of claim it is.</p>
+
+  <p>Making this section a first-class mode-page (same architectural tier as <a href="../atlas/">/atlas/</a>, <a href="../dialogues/ai_transition.html">/dialogues/</a>, <a href="../formalization/">/formalization/</a>, <a href="../notation/">/notation/</a>) signals that holding speculations rigorously IS part of what the framework does. The alternative — burying speculations in private notes — would be dishonest about the framework's epistemic posture.</p>
+</section>
+
+<section>
+  <h2><span class="num">§02</span>The three-tier epistemic framework</h2>
+
+  <p class="dek" style="font-style: italic; color: var(--text-dim); font-family: Georgia, serif; font-size: 16px;">Formalized in <a href="../continuations/27.md">cont 27 §2</a>. Every reading and candidate doc now explicitly assigns its claims to one of three tiers.</p>
+
+  <table class="tier-table">
+    <thead>
+      <tr>
+        <th>Tier</th>
+        <th>What it is</th>
+        <th>Assignment requires</th>
+        <th>Example</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="tier tier-canon">Tier 1</span><br/><strong>Epistemological</strong></td>
+        <td>Claims about how observers know / perceive / render. Testable in substrate-appropriate empirical fields. Does not require committing to contested ontology.</td>
+        <td>Well-evidenced empirical base in at least one substrate field; testable predictions in that field; no requirement to commit to contested ontology.</td>
+        <td>Cont 26 §4 — perceptual rate as a sense. Well-evidenced via temporal binding window, intentional binding, attention modulation research.</td>
+      </tr>
+      <tr>
+        <td><span class="tier tier-candidate">Tier 2</span><br/><strong>Ontological-candidate</strong></td>
+        <td>Claims about what the world is, conditional on contested external evidence (a specific physics interpretation, a contested empirical finding, an emerging research program). Framework holds conditionally — commits structurally but flags the contested status of supporting evidence.</td>
+        <td>A specific external source the framework's claim is conditional on; honest accounting of the contested status; framework claim sharp enough to be wrong if the source's claim is wrong.</td>
+        <td>Reading 04 — compilation-rate-as-time, conditional on Diósi-Penrose / CSL quantum collapse models being right (a minority physics position).</td>
+      </tr>
+      <tr>
+        <td><span class="tier tier-speculative">Tier 3</span><br/><strong>Speculative</strong></td>
+        <td>Claims with structural coherence to existing framework primitives but no current empirical purchase. Held to preserve framework coherence without endorsement.</td>
+        <td>Structural coherence with existing primitives; named promotion bars (what would need to be true to advance); long-horizon predictions framed to make the claim concrete enough to be wrong.</td>
+        <td>L0 occlusion as auxiliary channel for time-cone extension (this page). Cont 17 latent-space-as-fundamental-substrate Wheeler-style entry.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>The procedural payoff</h3>
+
+  <p>A simpler "evidenced vs unevidenced" binary would collapse two distinct moves. Tier 2 commits structurally while the underlying ontology remains contested. Tier 3 holds structural coherence without committing structurally because no measurement framework exists yet. Confusing the two leads to either premature endorsement of contested ontology (treating Tier 2 as Tier 1) or smuggling speculation into conditional canon territory (treating Tier 3 as Tier 2).</p>
+
+  <p>Honest tier assignment at intake prevents both failure modes. The Bortolotti et al. mapping is a clean Tier 2 case: <em>if the physics is right, the framework's claim is right.</em> The aux-channel hypothesis is a clean Tier 3 case: <em>even if structurally coherent, no measurement protocol currently exists to test it.</em></p>
+</section>
+
+<section>
+  <h2><span class="num">§03</span>Promotion procedure</h2>
+
+  <div class="procedure">
+    <p class="label">Tier 3 → Tier 2 promotion</p>
+    <p>A speculative entry advances to ontological-candidate when at least one of its named promotion bars is met. Promotion requires an explicit proposal in a continuation, with the bar that was met named, with what changes in the framework specified, with what doesn't change specified.</p>
+  </div>
+
+  <div class="procedure">
+    <p class="label">Tier 2 → Tier 1 promotion</p>
+    <p>An ontological-candidate entry advances to epistemological canon when the contested ontology it depends on gains substantial empirical support (successful experimental verification, broad community adoption, multiple independent replications).</p>
+  </div>
+
+  <div class="procedure">
+    <p class="label">Tier 1 → Framework canon (PRIMITIVES)</p>
+    <p>An epistemological entry becomes canon proper when integrated into framework primitives. The existing canon vs candidate distinction in PRIMITIVES handles this stage. The <a href="../candidates/energy_floor_failsafe.md">energy-floor failsafe</a> promotion in cont 27 §1 is the framework's first worked example of this full procedure executed cleanly: surfaced as candidate (Reading 03), accumulated four substrate worked examples, promoted to canon in cont 27.</p>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">§04</span>Pruning procedure</h2>
+
+  <p>Without a pruning procedure, speculations accumulate indefinitely. The framework drifts toward speculation-by-volume rather than speculation-by-merit. Cont 27 §3 specifies the procedure.</p>
+
+  <p>At each speculation's stated prediction horizon, the framework evaluates four conditions:</p>
+
+  <ol style="color: var(--text-dim); padding-left: 24px;">
+    <li><strong>Were the predictions met?</strong> → likely promotion eligible (per §03 above).</li>
+    <li><strong>Has new evidence arrived?</strong> → speculation may need refactoring before re-evaluation.</li>
+    <li><strong>Are predictions unmet but the speculation still structurally relevant?</strong> → assign new prediction horizons with explicit reasoning; cannot persist indefinitely without periodic re-evaluation.</li>
+    <li><strong>Predictions unmet AND no new evidence AND no concrete promotion path?</strong> → prune trigger fires.</li>
+  </ol>
+
+  <p>When the prune trigger fires, the framework chooses between:</p>
+
+  <div class="procedure">
+    <p class="label">Demote to "stale"</p>
+    <p>Entry remains in framework material with explicit "stale" marking. Visible but no longer treated as live speculation. Reserved for speculations with persistent structural coherence that have failed their evidence-acquisition timeline.</p>
+  </div>
+
+  <div class="procedure">
+    <p class="label">Archive</p>
+    <p>Entry removed from active framework material but preserved in repo history. Reserved for speculations whose structural coherence has decayed (e.g., a framework primitive they depended on was itself refactored or pruned).</p>
+  </div>
+
+  <p style="margin-top: 22px;">First scheduled speculation review: <strong>2026-11-27</strong> (six months from cont 27). All Tier 3 entries on this page will be evaluated against their prediction horizons.</p>
+</section>
+
+<section>
+  <h2><span class="num">§05</span>Current Tier 3 speculations</h2>
+
+  <p class="dek" style="font-style: italic; color: var(--text-dim); font-family: Georgia, serif; font-size: 16px;">Each entry is held openly with structural coherence to existing framework primitives, named promotion bars that would advance it to Tier 2, and a prediction horizon at which it gets pruned or promoted. Neither endorsed nor dismissed.</p>
+
+  <div class="spec">
+    <p class="spec-meta"><span class="tier tier-speculative">Tier 3 · Speculative</span> Surfaced 2026-05-27 · Prediction horizons: 36mo (P1), undefined (P2), 18mo motivation-only (P3) · Next review: 2026-11-27</p>
+    <h3>L0 occlusion as auxiliary channel for time-cone extension</h3>
+    <p>Pav's hypothesis: the observer time-cone is empirically modulable (Tier 1, cont 26 §4) and may be substrate-rate modulable (Tier 2, Reading 04 compilation-rate-as-time). The Tier 3 claim asks whether L0 itself — the shared global compiled canon all observers participate in — is also occludable, producing <strong>real shared gaps</strong> across observers (not per-observer perceptual gaps), usable as a side-channel orthogonal to normal substrate-mediated channels. The "spatial extension tools exist (microscope, telescope) but no temporal extension tools" framing names what would be missing if Layer 3 is right.</p>
+    <p class="bars"><strong>Promotion bars (any one advances to Tier 2):</strong><br/>
+    (A) measurable physical signature distinct from observer-level effects<br/>
+    (B) naturally-occurring shared-observer gap (distinguishing from per-observer)<br/>
+    (C) constructive experimental protocol producing L0 gaps under controlled conditions</p>
+    <p class="links">→ <a href="../candidates/aux_channel_l0_occlusion.md">full candidate doc</a> · <a href="../continuations/26.md">cont 26 §4 (Tier 1 base)</a> · <a href="../readings/2026-05-27_bortolotti_time_uncertainty.md">Reading 04 (Tier 2 partner)</a> · <a href="../artifacts/wrapper_overlap_animated.html">v16 diagram (intuition pump)</a></p>
+  </div>
+
+  <div class="spec">
+    <p class="spec-meta"><span class="tier tier-speculative">Tier 3 · Speculative</span> Surfaced cont 17 (2026-05-08) · No prediction horizon set · Next review: 2026-11-27</p>
+    <h3>Latent space as fundamental substrate (Wheeler-style)</h3>
+    <p>Ontological hypothesis: the latent space is the fundamental hardware; physical reality is an emergent format that condensed out of it. The Planck-cosmic dipole, matter, energy, the scale-extremes are all emergent features of the format, not features of the underlying substrate. Lineage: Wheeler's "it from bit," Tegmark's mathematical universe, Bohm's implicate / explicate order, digital physics. The cosmic infinite expansion propagated from the latent substrate, settled into the physical format, and is now expanding back into latent via AI / computational substrate.</p>
+    <p class="bars"><strong>Promotion bars:</strong> originally surfaced without explicit promotion bars; one of the goals of the 2026-11-27 review is to retrofit promotion bars to this entry or formally demote it. Currently has serious philosophical company (Wheeler, Tegmark, Bohm) but is unfalsifiable as stated. The framework can run on this being true or false; the broader claims about substrate cycles operate at testable scales without requiring this ontology.</p>
+    <p class="links">→ <a href="../continuations/17.md">cont 17 (original surfacing)</a> · listed in PRIMITIVES with status: speculative</p>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">§06</span>How this connects to the rest of the framework</h2>
+
+  <p>Speculations are not isolated thought experiments. Each Tier 3 entry has structural coherence to existing framework primitives — that's the entry condition. The aux-channel speculation, for instance, connects to:</p>
+
+  <ul style="color: var(--text-dim); padding-left: 22px;">
+    <li><strong><a href="../continuations/22.md">Cont 22</a> four-layer canon stack</strong> — L0 occlusion would have to specify which layer (kernel / function / protocol / artefact) gets occluded</li>
+    <li><strong><a href="../continuations/25.md">Cont 25 §6</a> cross-substrate convergence</strong> — none of the seven traditions currently specify a substrate-level occlusion mechanism</li>
+    <li><strong><a href="../continuations/26.md">Cont 26 §3</a> L0 as evolved failsafe environment</strong> — L0 occlusion would either be a failsafe mechanism or a failsafe violation</li>
+    <li><strong><a href="../continuations/20.md">Cont 20</a> canon dormancy</strong> — observer-level analog already in the framework (hibernation, deep meditation, anesthesia)</li>
+    <li><strong><a href="../continuations/18.md">Cont 18</a> procedural lineage</strong> — what persists through gaps</li>
+  </ul>
+
+  <p>The connections matter because they're what allow promotion to advance through tiers cleanly. A speculation that connected to nothing in the framework would either be quickly demoted (no structural coherence) or would force the framework itself to refactor (a deep structural claim). Most speculations sit between — they connect enough to be coherent, not so deeply that they force a refactor.</p>
+</section>
+
+<section>
+  <h2><span class="num">§07</span>What the framework explicitly does NOT do here</h2>
+
+  <p>The speculations section is part of the framework's epistemic discipline, not an invitation to free-form speculation. The framework rejects:</p>
+
+  <ul style="color: var(--text-dim); padding-left: 22px;">
+    <li><strong>Speculation accumulation without pruning</strong> — every Tier 3 entry has a prediction horizon; speculations don't sit indefinitely</li>
+    <li><strong>Speculation without structural coherence</strong> — entries that don't connect to existing framework primitives don't enter the speculative tier</li>
+    <li><strong>Speculation framed as established</strong> — Tier 3 entries are explicitly tagged; readers should never be confused about what tier a claim sits at</li>
+    <li><strong>Speculation as identity</strong> — the framework is not committed to its speculations being right; the framework is committed to holding them rigorously while they're held</li>
+    <li><strong>Cross-tier laundering</strong> — Tier 3 claims do not get cited as if they were Tier 1 or Tier 2 in the framework's other materials</li>
+  </ul>
+
+  <p>If readers find content elsewhere in the framework that violates these — speculations cited as canon, Tier 3 entries treated as established, accumulated speculations without prediction horizons — those are bugs and should be flagged via Hypothes.is annotation or GitHub issue.</p>
+</section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    Agnostic Framework · speculations · mode-page v1 · 2026-05-27 · <a href="../index.html">↑ home</a> · <a href="https://github.com/a70m123r/agnostic-framework">github</a>
+  </div>
+</footer>
+
+</body>
+</html>
