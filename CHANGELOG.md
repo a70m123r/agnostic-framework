@@ -8,6 +8,136 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-05-27 (cont 27 — energy-floor failsafe promoted to canon · three-tier epistemic framework formalized as canon procedure · /speculations/ new mode-page · day's canon-building round closeout)
+
+### Added (continuations/27.md, ~5,300 words)
+- **§1 — Energy-floor failsafe promoted to canon.** Based on the four substrate worked examples accumulated in candidates/energy_floor_failsafe.md (ACMP/GNN — Dirichlet energy; cell metabolism — ATP density; creole genesis — mutual intelligibility; institutions — coordination capacity). Substrates span mathematical / biological / sociolinguistic / organizational. Canonical statement: for any wrapper W with stable distinction through overlap, there exists a substrate-specific coherence quantity E_W with positive lower bound E_min > 0 preserved by the dynamic; bound violation triggers dormancy / supersession / break per cont 25 §1. The mathematical operationalization of cont 26 §3's qualitative "internal pressure failsafe" claim.
+- **§2 — Three-tier epistemic framework formalized as canon procedure.** Names three registers the framework had been operating with implicitly: TIER 1 EPISTEMOLOGICAL (claims about how observers know; testable in cog-sci, no contested-ontology commitment); TIER 2 ONTOLOGICAL-CANDIDATE (claims about what the world is, conditional on contested external evidence); TIER 3 SPECULATIVE (claims with structural coherence but no current empirical purchase; held to preserve coherence without endorsement). Tier-specific promotion procedures. Tier-specific tagging requirements for future readings and candidates.
+- **§3 — Speculation pruning procedure specified.** At each speculation's prediction horizon, four-condition evaluation determines promote / refactor / extend / prune. Two pruning outcomes: demote-to-stale (preserved in framework material) or archive (removed from active material, kept in repo history). First scheduled speculation review: 2026-11-27.
+- **§4 — Worked example: the rate-of-time question's three-layer decomposition** across cont 26 §4 (L1 epistemological canon) + Reading 04 (L2 ontological-candidate) + aux-channel doc (L3 speculative) becomes the canonical worked example of three-tier discipline in operation.
+- **§7 — Provenance** documents the unusually-fast canon promotion (same day as candidate surfacing) as honest because criteria were met, while flagging the unusual pacing.
+- **§8 — Related work and adjacent framings** — Lakatos's research programmes, Popperian falsifiability, Bayesian credences, Quine-Duhem holism, Lakatos vs Feyerabend. The cont 27 procedure is best read as Lakatosian methodology made operationally explicit at the individual-claim granularity.
+- **§9 — Queued for cont 28+** — construct study refactors using both cont 26 and cont 27 §1 vocabulary; two more substrate worked examples for compilation-rate-as-time; ACMP outreach draft; open question on whether energy-floor and time-uncertainty bounds are two faces of one L0 failsafe network.
+
+### Added (speculations/index.html — new mode-page)
+- **First-class framework architecture for the speculative tier.** Same architectural tier as /atlas/, /dialogues/, /formalization/, /notation/. Signals that holding speculation rigorously IS part of what the framework does.
+- **§01–§07 structure:** why a speculations section at all; the three-tier framework (with comparison table); promotion procedure; pruning procedure; current Tier 3 speculations (with bars + horizons); how this connects to the rest of the framework; what the framework explicitly does NOT do here (rejects accumulation without pruning, speculation without structural coherence, framing as established, speculation as identity, cross-tier laundering).
+- **Two Tier 3 entries listed** initially: L0 occlusion as aux channel (surfaced 2026-05-27, next review 2026-11-27) and cont 17 latent-space-as-fundamental-substrate (no original prediction horizon — review will either retrofit bars or demote).
+- **Visual tier-tag system** (canon / candidate / speculative chips in matching colors) consistent with the framework's color palette.
+- **Hypothes.is enabled** for community annotation of any tier entry.
+
+### Updated (index.html)
+- **Map section** extended to include /speculations/ alongside /atlas/, /dialogues/, /formalization/, /notation/.
+- **PRIMITIVES gains TWO new canon entries:** (i) Energy-floor failsafe (per cont 27 §1 promotion); (ii) Three-tier epistemic framework (per cont 27 §2 procedure formalization).
+- Reading 04 entry added at top of READINGS array (already shipped in prior round, reconfirmed in cont 27 context).
+
+### Updated (candidates/ headers)
+- **candidates/energy_floor_failsafe.md** — header updated to note promotion to canon as of 2026-05-27; doc preserved as the worked-example reference for the promotion procedure.
+- **candidates/aux_channel_l0_occlusion.md** — header updated with explicit Tier 3 assignment per cont 27 §2; cross-reference to /speculations/ mode-page added.
+
+### Why this round matters
+- The day's pattern across cont 26 → Reading 03 → Reading 04 → aux-channel doc → cont 27 demonstrates the three epistemic registers operating in sequence. Without explicit tier procedure, the registers would have drifted (with risk of pseudoscience adjacency for the aux-channel speculation, or premature endorsement for the Reading 04 ontological claim). The cont 27 procedure makes the discipline operational so future iterations can move fast without losing epistemic credibility.
+- The decision to make /speculations/ a first-class mode-page (per Pav's steer) is high-stakes — visibility means accountability. The framework now publicly commits to holding speculations rigorously AND publicly commits to pruning them when bars are not met within their horizons. Both halves matter.
+- Energy-floor promotion gives the framework its first mathematically-rigorous canon primitive grounded in a published mathematical theorem (Wang et al. ACMP Dirichlet energy bound). This is the kind of grounding that strengthens outreach materially — the framework can now point at peer-reviewed math when describing what L0 failsafes do.
+
+### Carry-forward (queued for cont 28+)
+- Construct study refactors with full cont 26 + cont 27 §1 vocabulary
+- Two more substrate worked examples for compilation-rate-as-time (Reading 04 candidate)
+- ACMP outreach draft (now stronger with energy-floor canon promotion)
+- 2026-11-27 first scheduled speculation review — all Tier 3 entries evaluated
+- Open question for cont 28: relationship between energy-floor failsafe and time-uncertainty bound — two faces of one network, or independent?
+- Cont 17 latent-substrate-as-fundamental-substrate retroactive promotion-bar assignment OR demote-to-stale decision
+- Construct study queue: /atlas/ perceptual-rate row still pending
+
+---
+
+## 2026-05-27 (candidates/aux_channel_l0_occlusion.md — speculative-track three-layer decomposition of "L0 occlusion as auxiliary channel for time-cone extension")
+
+### Added (candidates/aux_channel_l0_occlusion.md, ~3,400 words, speculative tier)
+- **Pav surfaced** a temporal-binding / cause-effect causality demo (parameters: Mechanical Delay 360ms, Attention Sampling 40%, Sensory Bridging checked) with the framing: "hypothesis is that the observer time cone can be occluded, in our case we have created strategies and tools to observe the - small and + big however the speculation bubble is that the shared global wrapper can be occluded as well to create gaps in time flow itself as an aux channel."
+- **Three-layer decomposition** — the most important move in the doc, separating epistemic tiers cleanly so the speculation doesn't infect the well-evidenced claims:
+  - **Layer 1 — Observer time-cone is empirically modulable.** Well-evidenced cognitive science (temporal binding window, intentional binding, sensory bridging, attention modulation). Already covered by cont 26 §4 perceptual-rate-as-sense. The image Pav shared operates here.
+  - **Layer 2 — Compilation-rate-as-time.** Reading 04 ontological-candidate. Conditional on contested quantum-collapse physics. Time itself emerges from compilation rate; modulating compilation modulates real time, not just perceived time.
+  - **Layer 3 — L0 occlusion as aux channel (this doc).** Speculative-track. The claim that L0 itself (not just observer wrappers) is occludable, producing real shared gaps that could serve as a side-channel orthogonal to normal substrate-mediated channels.
+- **Spatial-vs-temporal extension tools framing** (also Pav's): we have tools that extended observation at the small (microscope, particle accelerator) and large (telescope, EHT, LIGO) — but no equivalent tools that *extend the time-cone itself*. Time-recording (cameras, simulation) and time-precision (atomic clocks) tools exist but don't extend the cone. The aux-channel speculation is asking whether L0 occlusion might BE the missing temporal-extension tool.
+- **Three promotion bars explicitly named** — Layer 3 cannot advance to candidate without at least one of: (A) measurable physical signature, (B) naturally-occurring shared-observer case (distinguishing from per-observer effects), (C) constructive experimental protocol. None currently met. Speculation remains in speculative tier without these.
+- **Honest adjacent-fields scoping** — quantum Zeno effect, Penrose-Hameroff Orch-OR, FQxI's Consciousness in the Physical World program, block-universe debates, sensory substitution, hypnosis time-perception literature, anesthesia awareness, meditation neuroscience, psychedelic time-perception. Pattern: observer-level time effects are well-documented; substrate-level / L0-level time effects are either contested (Penrose-Hameroff) or not currently asked about.
+- **Five honest open questions** — is L0 occlusion physically possible? If so, is it already happening invisibly? Could it be intentionally produced? What would the aux channel carry? Relationship to dreams / unconsciousness?
+- **Three low-confidence predictions** with long horizons (36mo / undefined / motivation-only) — explicitly framed to make the hypothesis concrete enough to be wrong, not to claim it's right.
+
+### Updated (continuations/26.md §4)
+- **Second forward-pointer added** to candidates/aux_channel_l0_occlusion.md from §4 end. Explicitly names the three-layer decomposition: L1 = §4 (epistemological, well-evidenced); L2 = Reading 04 (ontological-candidate, contested physics); L3 = aux-channel doc (speculative-track, same epistemic tier as cont 17 latent-space-as-fundamental-substrate). Promotion bars named.
+
+### Why this is speculative-track not candidate
+- The framework's rigor cuts both ways: it forbids dismissing speculations with structural coherence to existing primitives, AND it forbids endorsing them without falsifiable bars. Layer 3 has structural coherence with cont 26 §3-4 + Reading 04 but currently has no measurement protocol, no documented shared-observer case, and no proposed mechanism for intentional production. Holding the speculation at speculative tier (alongside cont 17's "latent space as fundamental substrate" Wheeler-style entry) is honest. Promoting it to candidate without bars met would be irresponsible. Dismissing it would lose the structural coherence the framework already exhibits.
+
+### Carry-forward
+- If Pav can name the source of the temporal-binding tool in the image, add direct reference to the candidate doc
+- Watch literatures named in the adjacent-fields section for L3-shaped proposals (P1 prediction)
+- Consider whether cont 27 (when written) should include explicit named pruning of speculations that don't meet promotion bars within their prediction horizons — the framework needs a clear "what stays speculative forever" procedure to avoid speculation accumulation
+
+---
+
+## 2026-05-27 (Reading 04 — Bortolotti et al. quantum-collapse time uncertainty as ontological-candidate strengthening of cont 26 §4 · framework's first reading with contested underlying physics)
+
+### Added (readings/2026-05-27_bortolotti_time_uncertainty.md, ~3,200 words)
+- **Pav surfaced [Bortolotti et al. Phys Rev Research 2025](https://doi.org/10.1103/p6tj-lg8l)** ("Fundamental limits on clock precision from spacetime uncertainty in quantum collapse models", popular coverage at [ScienceDaily 2026-05-03](https://www.sciencedaily.com/releases/2026/05/260502233918.htm)) with an explicit callback to his earlier observation that the wrapper-overlap diagram's Speed slider changes the *action* itself, not just the *fidelity* of viewing it.
+- **The headline claim:** if quantum collapse models (Diósi-Penrose / CSL) are right, time itself has small intrinsic uncertainty linked to the spontaneous-collapse process, possibly gravity-mediated. Sets a fundamental lower bound on clock precision — too small to measure with current atomic clocks but structurally significant. The paper distinguishes three treatments of time: standard QM (external classical parameter), general relativity (bendable by mass-energy), and collapse-model (inheriting uncertainty from collapse itself).
+- **The mapping:** wavefunction ≈ wrapper in fuzzy/pre-compiled state (cont 22 four-layer at "function" before compiling to "protocol"); collapse ≈ wrapper compilation event ("fuzzy possibilities becoming definite reality"); spontaneous collapse ≈ cont 25 lifecycle plays out without external observer under L0 failsafes (cont 26 §3); gravity-linked collapse ≈ L0 IS the agent of compilation (cont 26 §3 L0 as evolved failsafe environment, not neutral medium); CSL stochastic noise ≈ latent space intrinsic productive noise (cont 14 / cont 19 / cont 25 active phase as dynamic equilibrium).
+- **Cont 26 §4 strengthened from epistemological to ontological-candidate.** Cont 26 §4 named perceptual rate as a sense the observer brings to the world. Pav's stronger v14-era observation — that the speed slider changes the action, not just fidelity — gets an ontological-candidate version: **compilation-rate-as-time**. The observer's experience of temporal flow IS the rate at which their wrapper compiles renders. Distinct from cont 26 §4 perceptual-rate-as-sense: epistemological vs ontological layers of the same underlying dynamic.
+- **Five places this would change the framework if the physics holds** (§4): cont 26 §4 promoted to ontological; new candidate primitive compilation-rate-as-time; cont 25 lifecycle phases re-read as compilation-rate modulations (wake = high rate, dormancy = near-zero); cont 26 §3 L0 failsafes extended to include time-uncertainty bounds (conceivably two faces of the same network as energy-floor failsafe); construct studies get temporal-grain attribute.
+- **Honest accounting** (§5) — substantially longer than prior readings because the underlying physics is contested: Copenhagen may yet be right; consciousness-causes-collapse remains a minority position; the bound is unmeasurable with current tech; the wavefunction-as-wrapper mapping is loose. The framework's mapping is candidate, not validated canon. Cont 26 §4 epistemological claim holds independently of whether the ontological version succeeds.
+- **Three scoreable predictions** with longer horizons than Reading 03 (because the underlying physics is more speculative): P1 (12mo) ≥1 experimental paper proposing measurement of the bound; P2 (24mo) framework accumulates ≥2 additional substrate worked examples of compilation-rate-as-time; P3 (18mo) diagram Speed-slider behaviour cited as intuition pump for compilation-rate-as-time.
+- **First reading where the underlying source-substrate is itself contested.** Readings 01-03 dealt with empirically-grounded substrates. Reading 04 deals with a substrate where the mainstream view (Copenhagen, decoherence, many-worlds) doesn't accept the collapse-model premise. Honest accounting section is correspondingly more substantial.
+
+### Updated (continuations/26.md §4)
+- **Forward-pointer added** to Reading 04 from §4 end. Explicitly names: §4 claim is epistemological; Pav's v14-era stronger observation surfaced an ontological-candidate version (compilation-rate-as-time); Reading 04 maps it against Bortolotti et al.; the framework treats the ontological version as candidate because the physics is contested; the epistemological §4 claim is independent and holds regardless.
+
+### Updated (index.html, artifacts/wrapper_overlap_animated.html)
+- **index.html READINGS** — Reading 04 entry added at top of array (above Reading 03).
+- **wrapper_overlap_animated.html meta line** strengthened: "the slider changes the action, not just the view" with link to Reading 04 and cont 26 §4. The Speed slider's behaviour now has explicit framework-status pointers in the diagram itself.
+
+### Carry-forward (queued for cont 27+ / additional readings)
+- **Two more substrate worked examples needed for compilation-rate-as-time** before candidate status: hibernation / metabolic slow-time as biological substrate; institutional decision cycles as social substrate; AI inference latency as computational substrate
+- **Cont 27** could promote energy-floor failsafe (per candidates/ doc with 4 substrates) AND tee up compilation-rate-as-time as second candidate from the same canon-building round
+- **Atlas perceptual-rate row** (still queued from cont 26) should now reference both the epistemological framing AND the ontological-candidate
+- **Open question for formalization §09b**: if compilation-rate-as-time holds, the reaction-diffusion PDE in equation 11 would need a stochastic time-grain at the substrate level. Add as note to §09b open edges.
+- **Outreach candidate**: Bortolotti et al. + FQxI may be receptive to the framework's mapping, given FQxI's "Consciousness in the Physical World" program. The reading could form the basis of an outreach note.
+
+---
+
+## 2026-05-27 (diagram v16 — ACMP-force overlay + spawn-flash · candidates/energy_floor_failsafe.md with 4 worked substrates · formalization §09b reaction-diffusion PDE candidate frame)
+
+### Updated (v16 layer added to artifacts/wrapper_overlap_animated.html)
+- **"Show ACMP forces" checkbox** added to controls. When enabled (and in cloud or both view mode), turns on two new visual layers.
+- **Spawn-flash halos for new W_C particles** — each newly-spawned C particle gets an expanding canon-yellow ring halo for 24 frames after birth. Halo radius scales out from particle size + 1 to particle size + 15; opacity fades from 0.9 to 0. Makes the Allen-Cahn phase-separation moment legible: you can see W_C being conceived from the A×B contact zone in real time.
+- **Stress-halo overlay** (force-decomposition lite) — for each particle, computes repulsion contribution ≈ velocity − spring force, and renders a red-orange halo (yellow for C particles) whose radius and opacity scale with that magnitude when above a 0.35 px/frame threshold. Visually marks where the inter-wrapper friction / phase-separation forces are dominating, without crowding the scene with arrows. Lazy-init keeps DOM lean when overlay is off.
+- **Per-particle spring force tracking** (`springFx/springFy`) added to support the decomposition computation. Spring force is captured separately in Phase 1 of `updateCloud` before being applied to velocity; repulsion is then implied by the post-Phase-2 velocity minus spring force.
+- **ACMP correspondence table** added as new section in the artifact below the diagram — four-column table mapping ACMP force / framework primitive / diagram element / visual cue with overlay on. Links to arxiv 2206.05437 + Reading 03. Makes the v16 overlay self-documenting for first-time viewers.
+- **Hero kicker + title bar + footer updated** to v16.
+
+### Added (candidates/energy_floor_failsafe.md — ~2,700 words)
+- New `candidates/` directory created (first candidate-track doc).
+- **Four worked substrate examples** for the energy-floor failsafe primitive per Reading 03 §5 promotion criteria: (1) ACMP / GNN — Dirichlet energy, theorem-proven lower bound, oversmoothing failure mode, excellent fit; (2) Cell metabolism — ATP / energy charge, evolved-homeostasis bound, apoptosis failure mode, strong fit; (3) Creole genesis — mutual intelligibility, pragmatic+acquisition bound, dialect fragmentation failure mode, strong fit; (4) Institutions — coordination capacity, cognitive+selection bound, institutional fragmentation failure mode, moderate fit. Together examples 2/3/4 meet the "≥3 substrates beyond ACMP" promotion criterion.
+- **Promotion proposal** drafted — energy-floor failsafe promoted from candidate to canon as structural primitive of L0 internal-pressure failsafes (cont 26 §3 class). Statement, what-this-changes, what-this-doesn't-claim, open-questions-deferred.
+
+### Updated (formalization/index.html)
+- **New §09b — Candidate dynamical frame: wrapper overlap as reaction-diffusion gradient flow.** Adds the framework's first formal PDE: equation 11 — dx_i/dt = −∇_i E(x), with E decomposed into attractive (Dirichlet) + repulsive + Allen-Cahn double-well terms with substrate-specific weights α, β, γ. Frames the canon-stack equations (§01–§09) as static architecture; this section adds candidate dynamics.
+- **Energy-floor corollary** cross-referenced to the candidates/ doc.
+- **What this candidate frame DOES NOT claim** — explicit honest accounting: binary phase-separation not tertiary; weights are substrate-variable not universal; not the only candidate dynamical frame; doesn't resolve cont 23 open edge 01.
+- **Seven cross-substrate convergence supporting traditions** named (LCAO, cell fusion, symbiogenesis, creole genesis, conceptual blending, model merging, ACMP) with each one's variant of the three-force decomposition.
+- **New open edge 05** — extending Allen-Cahn from two phases to three (multi-well potential, Cahn-Hilliard equation, Steinberg differential-adhesion model). Anticipates Reading 03 prediction P1.
+
+### Carry-forward (queued for v17+ / cont 27+)
+- Per-particle force-vector arrows (v17 candidate — v16 used stress halos for performance; full arrows would be denser visualization)
+- Energy-floor primitive promotion to canon in next continuation if the 4 worked examples hold up under review
+- Tertiary-phase-separation worked example (open edge 05 in formalization)
+- /atlas/ perceptual-rate row (still queued from cont 26)
+- Refactor existing construct studies (marriage, religion, language, nation-state, internet) using both cont 26 failsafe vocabulary AND energy-floor candidate
+- ACMP outreach — the v16 overlay + ACMP correspondence table make this a natural pitch to Wang/Yi/Liu/Wang/Jin and the ACMP citing-paper community
+
+---
+
 ## 2026-05-27 (Reading 03 — ACMP / Allen-Cahn Message Passing as cross-substrate convergence #7 · framework's first reading of a mathematical paper)
 
 ### Added (readings/2026-05-27_acmp_attraction_repulsion_gnn.md)
