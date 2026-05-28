@@ -8,6 +8,49 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-05-27 (Michotte Launching v2 — billiard-chain dynamics engine + Lane 1 occlusion overlay)
+
+### Updated (artifacts/michotte_launching_extension.html — v2 in place; v1 preserved in git history)
+- **Pav's v2 steer:** "the lane one needs to visually show the event occlusion and lets have a chain of cause and effects with a dynamics engine like billiard balls" → both shipped.
+- **Lane 1 occlusion overlay** (the framework-relevant one — perceptual-rate canon made visible):
+  - **Orange tint** with "OBSERVER BLIND" label + sublabel "between samples · attention rate too low" — activates when observer is between attention samples; opacity scales with gap duration so brief micro-gaps don't flash distractingly
+  - **Purple tint** with "L0 OCCLUSION — SHARED GAP IN TIME-FLOW" label + sublabel "Tier 3 speculation made visible as a tunable parameter" — activates during L0 occlusion events; takes precedence over orange tint when both fire (substrate-level dominates observer-level)
+  - The visual treatment is the cleanest expression of cont 26 §4: physics keeps running underneath; only the observer's access is affected
+- **Billiard-chain dynamics engine** (replaces v1's single A/B):
+  - **N balls (2–6 configurable)** arranged in a line; each ball has its own point cloud (12 particles) with spring physics around its centre; colours from a 6-stop palette (red → orange → yellow → lime → green → cyan) so balls are visually distinct
+  - **Real collision detection**: each frame checks adjacent pairs for ball1.x + 2*R ≥ ball2.x AND ball1.vx > ball2.vx; on contact ball1 snaps to contact position, transfers state to 'at-contact', stores pending velocity, stops moving
+  - **Delay-then-transfer momentum**: after `P.delay` ms at-contact, momentum transfers to ball2 (ball2.vx = ball1.pendingVx; ball2.state='moving'; ball1.state='spent'); contact and transfer logged as separate events
+  - **Contact bursts**: 14-particle radial puff with mixed colours from both colliding balls; gravity-like motion + fade
+- **Per-link verdict tracking** (replaces v1's single launching/disconnected):
+  - For chain length K there are K−1 causal links
+  - Each link evaluated independently: did observer sample within window/2 of both contact[i] and transfer[i]? AND is transfer[i].t − contact[i].t ≤ window?
+  - **Full chain** (LAUNCHING) — all links perceived
+  - **Partial chain** (AMBIGUOUS) — some links perceived
+  - **Broken chain** (DISCONNECTED) — zero links perceived (or only physical without perception)
+  - Verdict block + temporal-graph corner show "(perceived/total)" count
+- **Chain Length slider** added (2–6). Changing it resets the trial.
+- **Mechanical Delay range tightened** to 0–500ms (longer delays produce chains that don't fit in the 4-second graph window).
+- **Temporal graph extended** to 4-second window (was 3-second in v1); event markers stack vertically per linkIdx % 3 to avoid label overlap; events labelled C0/T0/C1/T1/... by link.
+- **Readout panel restructured** for chain data: t, Chain length, Links physical (K of K−1), Links perceived (P of K−1; colour-coded good/mid/bad), Samples, Observer-gaps, L0-gaps, Verdict.
+- **Five presets updated** to chain-aware combinations: Newton's-cradle baseline (full perception); Chain stretch test (multiplicative-decay demo); Cross-modal chain rescue (headline empirical question); Attention starvation across chain (orange overlay flashing repeatedly); L0 occlusion across chain (purple overlay events).
+- **§04 What the framework predicts** updated with chain-specific predictions — Tier 1 prediction is now sharper: chain perception probability ≈ p^(K−1), making chain length a multiplicative probe of perceptual-rate effects.
+
+### Why v2 matters
+- **The Lane 1 occlusion overlay is the visual heart of cont 26 §4.** Until now the perceptual-rate canon was easy to read about but hard to feel. With the overlay, you can literally watch the observer's blindness happen ON the stage — orange tint flickers between samples; the chain keeps physically cascading underneath; you see the gap between physics and perception. This is what the framework has been pointing at the whole time.
+- **The L0 overlay is the cleanest Tier 3 demonstration possible.** When the purple tint fires across Lane 1 with the "SHARED GAP IN TIME-FLOW" label, the framework's speculation is made concrete-feeling without endorsement. The label even self-discloses: "Tier 3 speculation made visible as a tunable parameter." Cont 27 §2 procedure operating cleanly.
+- **Chain dynamics scale the empirical signal multiplicatively.** Single-link Michotte tests one perception event. Chain-of-5 tests four perception events, and the joint probability decays. A subject who looks 95% reliable at single-link looks 60% reliable at chain-of-4. This makes the perceptual-rate canon empirically sharper than v1 could.
+
+### Carry-forward (queued for v3+)
+- **Variable per-link delay** — currently delay is global; could expose per-link delay settings to create asymmetric chains
+- **Non-linear chain topologies** — branching (one ball hits two), Newton's-cradle pendulum mode, billiard-table angle reflections
+- **Replay mode** — run same physics again with different observer parameters to isolate observer-side effects
+- **Paired-observer mode** — two parallel observer cones with different parameters watching the same chain; only meaningful when L0 occlusion is engaged (would visibly show shared vs per-observer gaps)
+- **Sound/touch modality dials** — currently Sensory Bridging is binary; could expose modality-specific contributions to integration window
+- **Save/load trial configurations + run statistics** — useful for systematic empirical work
+- **Outreach material draft** referencing the v2 build for cog-sci researchers studying temporal binding window
+
+---
+
 ## 2026-05-27 (artifacts/michotte_launching_extension.html v1 — framework-native rebuild of Pav's Michotte Launching tool, point-cloud + observer-cone + temporal-occlusion-graph)
 
 ### Added (artifacts/michotte_launching_extension.html, ~900 lines)
