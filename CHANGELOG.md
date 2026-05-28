@@ -8,6 +8,41 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-05-28 (Reading 05 — time-step-with-gaps as candidate reframing across ~40 open problems · six parallel subagents · ~30,000 words of synthesized research)
+
+### Added (readings/2026-05-28_time_step_with_gaps_across_open_problems.md, ~5,500 words synthesis)
+- **Pav's steer:** "lets look at the latest unexplained / fuzzy / theoretical / phenomena in physics and adjacent dominions and see how the time step with gaps can be a possible hypothetical explanation to fill the gaps, spein up some subagents and compile a list"
+- **Six parallel subagents** researched in parallel across: (1) quantum foundations + measurement, (2) cosmology, (3) quantum gravity + black holes, (4) time / thermodynamics / arrow of time, (5) particle physics anomalies, (6) consciousness science. Each returned 5-7 specific open phenomena with descriptions, status (mainstream / minority / fringe), candidate explanations, recent 2024-2026 papers with arxiv IDs/DOIs. Total raw research: ~30,000 words with ~80+ cited sources.
+- **Synthesis applied the framework's time-step-with-gaps lens** (cont 26 §4 Tier 1 perceptual-rate canon + Reading 04 Tier 2 compilation-rate-as-time + candidates/aux_channel_l0_occlusion.md Tier 3 speculation) to each open problem with cont 27 §2 three-tier discipline.
+- **Honest yield: ~8-10 phenomena where the lens lands cleanly:**
+  - Problem of time / arrival-time / tunneling-time (Tier 2 candidate)
+  - Diósi-Penrose / CSL clock-precision limits (Tier 2 anchor, by construction)
+  - Cosmological constant problem (Tier 2 candidate, structurally adjacent to existing minimal-length cutoff arguments)
+  - BMV experiment / proper-time interference (Tier 2 anchor — Christodoulou-Rovelli already on this terrain)
+  - Black hole singularity problem (Tier 2 candidate — "last well-defined step before the gap")
+  - Past hypothesis / low-entropy boundary condition (Tier 2 candidate)
+  - Boltzmann brain problem (Tier 2 candidate — gap-structured time may render long-run fluctuation count ill-defined)
+  - Hierarchy / naturalness problem (Tier 2 candidate, structural — substrate granularity in scale space sets fine-tuning floor)
+  - JWST early massive galaxies (Tier 2 candidate, suggestive)
+  - Plus 3 Tier 1 cog-sci entries already at canon (TBW individual variability, binding problem, psychedelic/meditation time perception) where cont 26 §4 already covers
+- **Honest accounting of failures:** ~15 problems where the lens can be made consistent but adds nothing (S8 tension, dark matter composition, most particle anomalies, etc.); and explicit rejection list — problems where the framework should NOT be invoked (muon g-2 effectively resolved against the anomaly by WP25 lattice QCD; W boson mass effectively resolved against CDF; B-meson ratios mostly resolved; Bem-style presentiment empirically too weak; hard problem of consciousness gestural only).
+- **Pattern observed:** the lens lands hardest where existing physics literature is already gesturing toward time-as-structured-quantity (Bortolotti, Christodoulou-Rovelli, problem of time in QG, past hypothesis, cosmological-constant cutoff arguments). Where the lens lands at Tier 2 candidate, it sits structurally adjacent to existing minority-but-respectable positions, not replacing them.
+- **Explicit risk accounting** (Reading §9) for kitchen-sink syndrome (~30% hit rate across surveyed problems — defended by clustering selectivity around time-substrate questions) and cross-tier laundering (Reading operates at Tier 1 and Tier 2 only; no Tier 3 claim invoked except by cross-reference).
+- **Three scoreable predictions** with 12mo / 24mo / 36mo horizons covering external literature uptake, BMV-style experimental constraints, and published critiques enabling cont 27 §3 pruning.
+- **Critically:** the Reading does NOT validate the framework's core claims. Cont 26 §4, cont 27 §1, Reading 04 all stand on their own evidence. Reading 05 is exploration of where existing positions might find external traction. If all 13 candidate reframings fail external uptake, framework canon and candidates are unaffected.
+
+### Updated (index.html)
+- Reading 05 entry added at top of READINGS array.
+
+### Carry-forward
+- **Counterfactual research pass** — survey open problems WITHOUT flagging time-uncertainty relevance, to test selection bias in the subagent briefs (queued)
+- **Specific worked example: Λ from gap-structured cutoff** — the cosmological-constant entry is the most technically tractable; an actual derivation would promote it from Tier 2 candidate to Tier 1 epistemological canon
+- **2027-05-28 first prediction checkpoint** for P3 (specific published critique enabling cont 27 §3 pruning procedure demonstration)
+- **2028-05-28 second prediction checkpoint** for P1 (external literature uptake)
+- Outreach: subset of the Reading targeted to specific physicist communities (Christodoulou-Rovelli group; collapse-models / FQxI community; cog-sci temporal-binding researchers) — different versions of the same Reading framed for each audience
+
+---
+
 ## 2026-05-27 (Michotte v2 fix — preset menu UI added; presets were documented but not selectable)
 
 ### Fixed (artifacts/michotte_launching_extension.html)
