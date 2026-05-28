@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Michotte Launching — extended · framework-native point-based simulation · Agnostic Framework</title>
+<meta name="description" content="Pav-built extension of Michotte's 1946/63 Launching paradigm. Two point-cloud objects, A and B; A moves and contacts B; after Mechanical Delay, B starts (or doesn't). The observer's time-cone is visualized as a first-class element — modulated by Attention Sampling (perceptual rate, cont 26 §4) and Sensory Bridging (cross-modal integration, cont 14/16). A temporal graph below shows perception windows, occlusion gaps, and (per Tier 3 speculation in /speculations/) the optional shared L0-level gap zones. Causality verdict (launching / disconnected / ambiguous) computed live. Same programmatic procedural format as the wrapper-overlap animated diagram.">
+<script src="https://hypothes.is/embed.js" async></script>
+<style>
+  :root {
+    --bg: #0a0a0a;
+    --surface: #141414;
+    --surface-2: #1c1c1c;
+    --border: #262626;
+    --text: #ececec;
+    --text-dim: #8a8a8a;
+    --text-faint: #555;
+    --accent-canon: #4ade80;
+    --accent-candidate: #fbbf24;
+    --accent-speculative: #a78bfa;
+    --accent-link: #93c5fd;
+    --accent-a: #f87171;
+    --accent-b: #4ade80;
+    --accent-cone: #93c5fd;
+    --accent-bridge: #fbbf24;
+    --accent-gap: #fb923c;
+    --accent-l0gap: #a78bfa;
+    --accent-launching: #4ade80;
+    --accent-disconnected: #f87171;
+    --accent-ambiguous: #fbbf24;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, system-ui, sans-serif; font-size: 17px; line-height: 1.7; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+  .wrap-wide { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+  .topbar { border-bottom: 1px solid var(--border); padding: 20px 0; font-size: 13px; font-family: ui-monospace, "SF Mono", Menlo, monospace; color: var(--text-dim); }
+  .topbar a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--text-faint); }
+  .topbar a:hover { color: var(--accent-link); border-bottom-color: var(--accent-link); }
+  .topbar .sep { color: var(--text-faint); margin: 0 10px; }
+  .topbar .source-link { float: right; }
+
+  header.hero { padding: 56px 0 32px; border-bottom: 1px solid var(--border); }
+  header.hero .kicker { font-family: ui-monospace, Menlo, monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.18em; color: var(--accent-candidate); margin: 0 0 16px; }
+  header.hero h1 { font-family: Georgia, serif; font-weight: 400; font-size: 40px; line-height: 1.12; letter-spacing: -0.02em; margin: 0 0 18px; }
+  header.hero .dek { font-size: 17px; line-height: 1.55; color: var(--text-dim); max-width: 800px; margin: 0 0 16px; font-family: Georgia, serif; font-style: italic; }
+  header.hero .meta { font-family: ui-monospace, Menlo, monospace; font-size: 11px; color: var(--text-faint); margin: 0; }
+
+  /* Widget */
+  .widget-mount { margin: 40px 0; }
+  .ml-root { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 28px; }
+  .ml-title { text-align: center; font-size: 18px; font-weight: 600; color: #ececec; margin: 0 0 4px; }
+  .ml-mathnote { text-align: center; font-size: 12px; color: var(--text-faint); margin: 0 0 18px; font-family: ui-monospace, Menlo, monospace; }
+  .ml-verdict { text-align: center; font-family: Georgia, serif; font-size: 22px; margin: 0 0 18px; padding: 8px; border-radius: 4px; transition: all 0.2s; }
+  .ml-verdict.launching { color: var(--accent-launching); background: rgba(74,222,128,0.08); border: 1px solid rgba(74,222,128,0.3); }
+  .ml-verdict.disconnected { color: var(--accent-disconnected); background: rgba(248,113,113,0.08); border: 1px solid rgba(248,113,113,0.3); }
+  .ml-verdict.ambiguous { color: var(--accent-ambiguous); background: rgba(251,191,36,0.08); border: 1px solid rgba(251,191,36,0.3); }
+  .ml-verdict.pending { color: var(--text-dim); background: rgba(138,138,138,0.05); border: 1px solid var(--border); }
+
+  .ml-controls { display: flex; flex-wrap: wrap; gap: 18px 28px; padding: 14px 18px; background: var(--surface-2); border: 1px solid var(--border); border-radius: 6px; margin: 0 0 18px; font-size: 13px; color: var(--text-dim); align-items: center; }
+  .ml-controls label { display: flex; align-items: center; gap: 8px; }
+  .ml-controls input[type=range] { width: 120px; accent-color: var(--accent-link); }
+  .ml-controls button { padding: 6px 14px; background: var(--accent-link); color: #0a0a0a; border: none; border-radius: 4px; font-family: ui-monospace, Menlo, monospace; font-size: 12px; font-weight: 600; cursor: pointer; }
+  .ml-controls button.secondary { background: var(--surface); color: var(--text-dim); border: 1px solid var(--border); }
+  .ml-controls button:hover { filter: brightness(1.15); }
+  .ml-controls span.val { color: #ececec; font-family: ui-monospace, Menlo, monospace; min-width: 36px; display: inline-block; }
+  .ml-controls .ctrl-group { display: flex; align-items: center; gap: 6px; }
+
+  .ml-svg { width: 100%; height: auto; max-height: 700px; background: #050505; border: 1px solid var(--border); border-radius: 6px; }
+
+  .ml-readout { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; padding: 14px 18px; background: var(--surface-2); border: 1px solid var(--border); border-radius: 6px; margin: 18px 0 0; font-size: 12px; font-family: ui-monospace, Menlo, monospace; color: var(--text-dim); }
+  .ml-readout .stat { display: flex; flex-direction: column; }
+  .ml-readout .stat .lbl { color: var(--text-faint); font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 4px; }
+  .ml-readout .stat .val { color: #ececec; font-size: 14px; font-weight: 600; }
+
+  /* Context sections */
+  section { padding: 48px 0; border-bottom: 1px solid var(--border); }
+  section:last-of-type { border-bottom: none; }
+  h2 { font-family: Georgia, serif; font-weight: 400; font-size: 26px; line-height: 1.2; margin: 0 0 14px; letter-spacing: -0.01em; }
+  h2 .num { color: var(--text-faint); font-size: 13px; font-family: ui-monospace, Menlo, monospace; margin-right: 12px; }
+  h3 { font-family: Georgia, serif; font-weight: 400; font-size: 20px; line-height: 1.3; margin: 28px 0 10px; }
+  p { margin: 0 0 18px; }
+  strong { color: var(--text); font-weight: 600; }
+  em { color: var(--text); font-style: italic; }
+  a { color: var(--accent-link); text-decoration: none; border-bottom: 1px solid rgba(147, 197, 253, 0.3); }
+  a:hover { border-bottom-color: var(--accent-link); }
+
+  .mapping-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14px; }
+  .mapping-table th, .mapping-table td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  .mapping-table th { color: var(--text); font-weight: 600; background: var(--surface); }
+  .mapping-table td { color: var(--text-dim); }
+  .mapping-table .pcolor { display: inline-block; width: 12px; height: 12px; border-radius: 2px; vertical-align: middle; margin-right: 6px; }
+
+  .try-card { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--accent-link); border-radius: 4px; padding: 18px 22px; margin: 14px 0; font-size: 14px; }
+  .try-card .preset { font-family: ui-monospace, Menlo, monospace; font-size: 11px; color: var(--accent-link); text-transform: uppercase; letter-spacing: 0.1em; margin: 0 0 8px; }
+  .try-card .params { font-family: ui-monospace, Menlo, monospace; font-size: 13px; color: var(--text-dim); margin: 0 0 8px; }
+  .try-card .expected { color: var(--text-dim); margin: 0; }
+
+  footer { padding: 40px 0; border-top: 1px solid var(--border); margin-top: 60px; font-family: ui-monospace, Menlo, monospace; font-size: 12px; color: var(--text-faint); }
+  footer a { color: var(--text-dim); border-bottom: 1px dotted var(--text-faint); }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap-wide">
+    <a href="../index.html">← Agnostic Framework</a>
+    <span class="sep">·</span>
+    <a href="../artifacts/wrapper_overlap_animated.html">wrapper overlap</a>
+    <span class="sep">·</span>
+    <span>Michotte Launching extended</span>
+    <span class="sep">·</span>
+    <span style="color: var(--accent-candidate);">framework-native v1</span>
+    <a href="https://github.com/a70m123r/agnostic-framework" class="source-link">github ↗</a>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap-wide">
+    <p class="kicker">Animated diagram · 2026-05-27 · Michotte Launching v1 · framework-native rebuild</p>
+    <h1>Michotte Launching, extended — does cross-modal binding preserve causality across the gap?</h1>
+    <p class="dek">Pav-built rebuild of <a href="https://en.wikipedia.org/wiki/Causality_perception#Michotte's_launching_effect">Michotte's 1946/63 Launching paradigm</a> with the framework's latest learnings layered on. Two point-cloud objects, A and B; A moves and contacts B; after <em>Mechanical Delay</em>, B starts moving (or doesn't). Classical Michotte: delays beyond ~100ms destroy the causal-launching impression — observers see two events rather than one cause. <strong>This extension adds two parameters that map directly to framework primitives:</strong> Attention Sampling (the observer's perceptual rate, <a href="../continuations/26.md">cont 26 §4</a> canon) and Sensory Bridging (cross-modal integration, <a href="../continuations/16.md">cont 16</a> membrane-as-perceptual-surface). The headline empirical question: can attention modulation and cross-modal binding preserve causality perception at delays where pure visual binding fails? The observer's <strong>time-cone</strong> is rendered as a first-class element. The <strong>temporal graph</strong> below shows where perception happens and where occlusion gaps fall. The optional <strong>L0 Occlusion</strong> slider exposes the Tier 3 speculation from <a href="../speculations/">/speculations/</a> — at zero it's classical Michotte; above zero it injects shared substrate-level gaps that all observers would experience the same way.</p>
+    <p class="meta">Same programmatic/procedural/point-based format as <a href="../artifacts/wrapper_overlap_animated.html">wrapper_overlap_animated.html</a> — single self-contained HTML, all state cascades from parameters, no fed-in data. Point clouds with spring physics. State readout updates live. Causality verdict (launching / disconnected / ambiguous) computed each frame from observer-perception window + threshold logic. Press <strong>Launch Test</strong> to run a trial. Adjust parameters mid-run or between runs.</p>
+  </div>
+</header>
+
+<div class="widget-mount">
+  <div class="wrap-wide">
+    <div class="ml-root">
+      <p class="ml-title">Michotte Launching v1 · point-cloud · observer-cone · temporal-occlusion-graph · framework-mapped</p>
+      <p class="ml-mathnote">A → contact(t_c) → [delay] → B starts(t_b). Verdict = launching if observer perceives BOTH events within integration window AND gap &lt; threshold; disconnected if either event missed or gap exceeds threshold; ambiguous if borderline.</p>
+      <p class="ml-verdict pending" id="ml-verdict">VERDICT: PENDING — press Launch Test</p>
+
+      <div class="ml-controls">
+        <label>Mechanical Delay <input type="range" id="ml-delay" min="0" max="800" step="10" value="120"/><span class="val" id="ml-delay-val">120ms</span></label>
+        <label>Attention Sampling <input type="range" id="ml-attention" min="10" max="100" step="5" value="60"/><span class="val" id="ml-attention-val">60%</span></label>
+        <label><input type="checkbox" id="ml-bridging" checked/> Sensory Bridging</label>
+        <label>L0 Occlusion <input type="range" id="ml-l0" min="0" max="50" step="1" value="0"/><span class="val" id="ml-l0-val">0%</span></label>
+        <label>Speed <input type="range" id="ml-speed" min="0.25" max="2" step="0.25" value="1"/><span class="val" id="ml-speed-val">1.0x</span></label>
+        <div class="ctrl-group">
+          <button id="ml-launch">▶ Launch Test</button>
+          <button id="ml-reset" class="secondary">↻ Reset</button>
+          <button id="ml-loop" class="secondary">⟲ Loop: off</button>
+        </div>
+      </div>
+
+      <svg viewBox="0 0 1200 900" class="ml-svg" id="ml-svg" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="ml-a-glow" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#f87171" stop-opacity="0.55"/><stop offset="100%" stop-color="#f87171" stop-opacity="0"/></radialGradient>
+          <radialGradient id="ml-b-glow" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#4ade80" stop-opacity="0.55"/><stop offset="100%" stop-color="#4ade80" stop-opacity="0"/></radialGradient>
+          <linearGradient id="ml-cone-grad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#93c5fd" stop-opacity="0"/><stop offset="50%" stop-color="#93c5fd" stop-opacity="0.18"/><stop offset="100%" stop-color="#93c5fd" stop-opacity="0"/></linearGradient>
+        </defs>
+
+        <!-- ====== LANE 1 — MICHOTTE STAGE (y 0–290) ====== -->
+        <g id="lane-michotte">
+          <rect x="0" y="0" width="1200" height="290" fill="#080808"/>
+          <text x="30" y="32" font-family="ui-monospace,Menlo,monospace" font-size="11" fill="#666" letter-spacing="0.15em">LANE 1 · MICHOTTE STAGE · point-cloud A and B</text>
+          <text x="30" y="50" font-family="Georgia,serif" font-style="italic" font-size="13" fill="#555">A moves rightward; contacts B; after delay, B starts (or doesn't)</text>
+
+          <!-- Track guide line -->
+          <line x1="120" y1="180" x2="1080" y2="180" stroke="#1f1f1f" stroke-width="1" stroke-dasharray="2 4"/>
+
+          <!-- Object glows (rendered behind clouds) -->
+          <circle id="ml-a-halo" cx="180" cy="180" r="38" fill="url(#ml-a-glow)" pointer-events="none"/>
+          <circle id="ml-b-halo" cx="900" cy="180" r="38" fill="url(#ml-b-glow)" pointer-events="none"/>
+
+          <!-- Point clouds populated dynamically -->
+          <g id="ml-cloud-a"></g>
+          <g id="ml-cloud-b"></g>
+
+          <!-- Contact-zone burst (shown briefly on contact) -->
+          <g id="ml-contact-burst"></g>
+
+          <!-- Labels -->
+          <text id="ml-label-a" x="180" y="240" text-anchor="middle" font-family="Georgia,serif" font-size="14" fill="#f87171" font-weight="600">CAUSE A</text>
+          <text id="ml-label-b" x="900" y="240" text-anchor="middle" font-family="Georgia,serif" font-size="14" fill="#4ade80" font-weight="600">EFFECT B</text>
+
+          <!-- Phase indicator -->
+          <text id="ml-phase" x="600" y="270" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="11" fill="#666" letter-spacing="0.15em">IDLE</text>
+        </g>
+
+        <!-- ====== LANE 2 — OBSERVER TIME-CONE (y 300–580) ====== -->
+        <g id="lane-cone" transform="translate(0,300)">
+          <rect x="0" y="0" width="1200" height="280" fill="#0a0a0a"/>
+          <text x="30" y="32" font-family="ui-monospace,Menlo,monospace" font-size="11" fill="#666" letter-spacing="0.15em">LANE 2 · OBSERVER TIME-CONE · attention rate + sensory bridging modulate the cone</text>
+          <text x="30" y="50" font-family="Georgia,serif" font-style="italic" font-size="13" fill="#555">cone width = temporal integration window · vertical bars = sample times · brighter when bridging active</text>
+
+          <!-- Cone outline (trapezoid in time × resolution space) -->
+          <path id="ml-cone-shape" d="" fill="url(#ml-cone-grad)" stroke="#93c5fd" stroke-width="1.2" stroke-opacity="0.65"/>
+
+          <!-- Sample-rate bars (rendered dynamically) -->
+          <g id="ml-cone-samples"></g>
+
+          <!-- Bridging indicator -->
+          <g id="ml-bridge-indicator" opacity="1">
+            <text id="ml-bridge-label" x="1140" y="100" text-anchor="end" font-family="ui-monospace,Menlo,monospace" font-size="11" fill="#fbbf24" letter-spacing="0.1em">SENSORY BRIDGING: ON</text>
+            <text id="ml-bridge-detail" x="1140" y="118" text-anchor="end" font-family="Georgia,serif" font-style="italic" font-size="11" fill="#a87f0e">integration window ~300ms (vs ~100ms visual-only)</text>
+          </g>
+
+          <!-- Cone caption -->
+          <text id="ml-cone-window-label" x="600" y="220" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="11" fill="#93c5fd" letter-spacing="0.1em">temporal integration window: 300ms</text>
+          <text id="ml-cone-rate-label" x="600" y="240" text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="11" fill="#666" letter-spacing="0.1em">sample rate: 36 Hz · 60% attention</text>
+        </g>
+
+        <!-- ====== LANE 3 — TEMPORAL GRAPH (y 600–890) ====== -->
+        <g id="lane-temporal" transform="translate(0,600)">
+          <rect x="0" y="0" width="1200" height="290" fill="#080808"/>
+          <text x="30" y="32" font-family="ui-monospace,Menlo,monospace" font-size="11" fill="#666" letter-spacing="0.15em">LANE 3 · TEMPORAL GRAPH · events · perception · occlusion · L0 gaps</text>
+          <text x="30" y="50" font-family="Georgia,serif" font-style="italic" font-size="13" fill="#555">events plotted on time axis; perception windows shaded; occlusion gaps marked; verdict logic visualized</text>
+
+          <!-- Time axis -->
+          <line x1="120" y1="200" x2="1080" y2="200" stroke="#333" stroke-width="1"/>
+          <g id="ml-time-ticks"></g>
+
+          <!-- Threshold zones (classical ~100ms, extended ~300ms with bridging) -->
+          <g id="ml-thresholds"></g>
+
+          <!-- Perception windows (rendered dynamically) -->
+          <g id="ml-perception-windows"></g>
+
+          <!-- Occlusion gaps (observer-level) -->
+          <g id="ml-occlusion-gaps"></g>
+
+          <!-- L0 occlusion zones (substrate-level shared gaps; Tier 3 speculation) -->
+          <g id="ml-l0-gaps"></g>
+
+          <!-- Event markers -->
+          <g id="ml-event-markers"></g>
+
+          <!-- Verdict cue near right edge -->
+          <text id="ml-temporal-verdict" x="1140" y="232" text-anchor="end" font-family="ui-monospace,Menlo,monospace" font-size="11" fill="#666" letter-spacing="0.1em">VERDICT ZONE</text>
+
+          <!-- Legend (right side) -->
+          <g transform="translate(900,90)" font-family="ui-monospace,Menlo,monospace" font-size="10">
+            <rect x="0" y="0" width="10" height="10" fill="#4ade80" opacity="0.55"/><text x="16" y="9" fill="#888">observer perceives</text>
+            <rect x="0" y="18" width="10" height="10" fill="#fb923c" opacity="0.55"/><text x="16" y="27" fill="#888">attention-rate gap (observer-level)</text>
+            <rect x="0" y="36" width="10" height="10" fill="#a78bfa" opacity="0.55"/><text x="16" y="45" fill="#888">L0 occlusion gap (Tier 3 speculation)</text>
+            <line x1="0" y1="55" x2="10" y2="55" stroke="#f87171" stroke-width="2"/><text x="16" y="58" fill="#888">A contact event</text>
+            <line x1="0" y1="68" x2="10" y2="68" stroke="#4ade80" stroke-width="2"/><text x="16" y="71" fill="#888">B start event</text>
+          </g>
+        </g>
+      </svg>
+
+      <div class="ml-readout" id="ml-readout">
+        <div class="stat"><span class="lbl">t (ms)</span><span class="val" id="rd-t">0</span></div>
+        <div class="stat"><span class="lbl">A position</span><span class="val" id="rd-a">180</span></div>
+        <div class="stat"><span class="lbl">B position</span><span class="val" id="rd-b">900</span></div>
+        <div class="stat"><span class="lbl">Contact t</span><span class="val" id="rd-contact">—</span></div>
+        <div class="stat"><span class="lbl">B start t</span><span class="val" id="rd-bstart">—</span></div>
+        <div class="stat"><span class="lbl">Samples taken</span><span class="val" id="rd-samples">0</span></div>
+        <div class="stat"><span class="lbl">Observer-gaps</span><span class="val" id="rd-gaps">0</span></div>
+        <div class="stat"><span class="lbl">L0-gaps</span><span class="val" id="rd-l0gaps">0</span></div>
+        <div class="stat"><span class="lbl">Saw contact?</span><span class="val" id="rd-sawc">—</span></div>
+        <div class="stat"><span class="lbl">Saw B-start?</span><span class="val" id="rd-sawb">—</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap-wide">
+
+<section>
+  <h2><span class="num">§01</span>What is Michotte's Launching paradigm</h2>
+  <p>Belgian psychologist Albert Michotte's <em>The Perception of Causality</em> (1946/63) opened the modern empirical study of causality perception. In his paradigm, a square moves toward a stationary square. The moving square reaches the stationary one. Under specific spatiotemporal conditions — chiefly <strong>spatial contact</strong> and a <strong>temporal gap below ~100ms</strong> between contact and the second square's motion onset — observers do not just see two motions. They perceive direct CAUSATION. One event launches another. Violate the conditions (large gap, no contact, B moves in the wrong direction) and the unity dissolves into two perceptually distinct events.</p>
+  <p>Michotte's threshold is robust across replications. The temporal binding window has been refined since (Wallace &amp; Stevenson 2014, Eagleman and successors) but the basic finding is canonical cognitive science: <em>causality is partly a perceptual category</em>, with measurable thresholds, not a pure cognitive inference.</p>
+</section>
+
+<section>
+  <h2><span class="num">§02</span>What this extension adds beyond classical Michotte</h2>
+  <p>Classical Michotte varies only the physical parameters: gap timing, spatial contact, direction. The observer is treated as a passive registrar. This extension treats the observer as a <em>parameterizable observer-class</em> per the agnostic framework. Two new parameters change what gets perceived even when physical parameters are held fixed:</p>
+  <table class="mapping-table">
+    <thead>
+      <tr><th>Parameter</th><th>What it does</th><th>Framework primitive it maps to</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Mechanical Delay</strong><br/>0–800ms slider</td>
+        <td>The classical Michotte parameter. Sets the actual time between A's contact with B and B's onset of motion. Below ~100ms → classical launching territory. Above → classical disconnection territory.</td>
+        <td>Substrate-level temporal parameter. The thing the framework's claims about the observer are claims <em>about</em>.</td>
+      </tr>
+      <tr>
+        <td><strong>Attention Sampling</strong><br/>10–100% slider</td>
+        <td>Determines how frequently the observer samples events. At 100% → continuous sampling (effectively no gaps in attention). At 10% → infrequent samples; events between samples are not perceived.</td>
+        <td><a href="../continuations/26.md">Cont 26 §4</a> — <strong>perceptual rate as a sense</strong>. Promoted to Tier 1 canon. Different observers (different attention rates) get different fidelity reads of the same physical event.</td>
+      </tr>
+      <tr>
+        <td><strong>Sensory Bridging</strong><br/>checkbox</td>
+        <td>Toggles cross-modal integration. When on, the observer's temporal integration window widens (~300ms vs ~100ms visual-only). The empirical claim being tested: cross-modal binding can preserve causality perception at delays where pure visual binding fails.</td>
+        <td><a href="../continuations/14.md">Cont 14</a> holographic-wrapper + <a href="../continuations/16.md">cont 16</a> membrane-as-perceptual-surface. The membrane samples across modalities; bridging composes the samples into a unified percept.</td>
+      </tr>
+      <tr>
+        <td><strong>Speed</strong><br/>0.25–2x slider</td>
+        <td>Controls the simulation's compilation rate. At slow speeds you see fine-grained dynamics; at fast speeds you see only the gross outcome.</td>
+        <td>The same diagnostic move as the wrapper-overlap diagram's Speed slider. Per <a href="../readings/2026-05-27_bortolotti_time_uncertainty.md">Reading 04</a> (Tier 2 ontological-candidate), speed of perception is itself the compilation rate; per <a href="../continuations/26.md">cont 26 §4</a> Tier 1, it modulates legibility.</td>
+      </tr>
+      <tr>
+        <td><strong>L0 Occlusion</strong><br/>0–50% slider</td>
+        <td>Probability per frame of triggering a shared substrate-level gap that all observers would experience. At 0% → classical Michotte plus framework Tier 1/Tier 2 effects. Above 0% → injects the <em>Tier 3 speculation</em> from <a href="../candidates/aux_channel_l0_occlusion.md">candidates/aux_channel_l0_occlusion.md</a>.</td>
+        <td><a href="../speculations/">Tier 3 speculative</a> — L0 occlusion as auxiliary channel. Exposed as a parameter so users can <em>see what the speculation would look like if it were real</em>. The framework does not endorse this; exposing it as a parameter is the honest way to make a speculation visible without claiming it's happening.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>The two new parameters (Attention Sampling, Sensory Bridging) are the heart of the framework-native extension. They turn Michotte's paradigm from an experiment about <em>physical setups</em> into an experiment about <em>observer parameters</em> — which is exactly the move the agnostic framework makes everywhere.</p>
+</section>
+
+<section>
+  <h2><span class="num">§03</span>What to try — parameter combinations</h2>
+
+  <div class="try-card">
+    <p class="preset">PRESET 1 · Classical Michotte (baseline)</p>
+    <p class="params">Mechanical Delay: 50ms · Attention Sampling: 80% · Sensory Bridging: OFF · L0 Occlusion: 0%</p>
+    <p class="expected">Expected: launching. Short delay, high attention, no bridging needed, no shared gaps. This is the original Michotte 1946/63 finding. The verdict panel should read LAUNCHING.</p>
+  </div>
+
+  <div class="try-card">
+    <p class="preset">PRESET 2 · Broken Michotte (the gap is too long)</p>
+    <p class="params">Mechanical Delay: 360ms · Attention Sampling: 80% · Sensory Bridging: OFF · L0 Occlusion: 0%</p>
+    <p class="expected">Expected: disconnected. The delay exceeds the classical visual-only threshold (~100ms). Even with high attention, the observer perceives two separate events. This is the boundary condition that classical Michotte established.</p>
+  </div>
+
+  <div class="try-card">
+    <p class="preset">PRESET 3 · Cross-modal rescue (the headline test)</p>
+    <p class="params">Mechanical Delay: 360ms · Attention Sampling: 80% · Sensory Bridging: ON · L0 Occlusion: 0%</p>
+    <p class="expected">Expected (framework prediction): launching, OR ambiguous. The bridging widens the integration window beyond visual-only threshold. <strong>This is the framework-relevant empirical question</strong>: does cross-modal integration preserve causality perception at delays where pure visual fails? If YES, the framework's cont 14/16 mapping is empirically grounded at the Michotte paradigm.</p>
+  </div>
+
+  <div class="try-card">
+    <p class="preset">PRESET 4 · Attention starvation</p>
+    <p class="params">Mechanical Delay: 50ms · Attention Sampling: 15% · Sensory Bridging: OFF · L0 Occlusion: 0%</p>
+    <p class="expected">Expected: disconnected or ambiguous. Even classical-Michotte delay fails when attention is too sparse — the observer's samples may miss either contact or B-start. This isolates the perceptual-rate effect (cont 26 §4 Tier 1 canon) from physical timing.</p>
+  </div>
+
+  <div class="try-card">
+    <p class="preset">PRESET 5 · L0 occlusion exposed (Tier 3 speculation as visible parameter)</p>
+    <p class="params">Mechanical Delay: 50ms · Attention Sampling: 80% · Sensory Bridging: OFF · L0 Occlusion: 20%</p>
+    <p class="expected">Expected: variable across runs. Classical Michotte launching when no L0 gap falls in the critical window; disconnected when a shared substrate gap occludes contact or B-start regardless of attention. Run multiple trials — the same parameters produce different outcomes because L0 occlusion is stochastic. This is what the speculation would predict IF the Tier 3 hypothesis were true. The framework does not claim L0 occlusion is happening; the parameter exists to make the speculation legible.</p>
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">§04</span>What the framework predicts</h2>
+  <p>The simulation embodies framework claims at three tiers. They can be evaluated independently.</p>
+
+  <h3>Tier 1 (epistemological, canon) — attention sampling modulates causality perception</h3>
+  <p>The cont 26 §4 perceptual-rate-as-sense canon predicts that lowering Attention Sampling should degrade causality perception EVEN AT CLASSICAL-MICHOTTE delays. The simulation embodies this directly: at 10% attention, the observer simply doesn't sample often enough to register both contact and B-start within the integration window. This is empirically testable in classical experimental psychology; the framework's contribution is naming it as a structural feature rather than a perceptual artifact.</p>
+
+  <h3>Tier 1 (epistemological, candidate-leaning) — sensory bridging extends the launching window</h3>
+  <p>The framework predicts that turning Sensory Bridging ON should preserve causality perception at delays roughly up to ~300ms where pure visual would fail at ~100ms. This is a non-trivial extension of classical Michotte — Michotte's original paradigm is visual-only. Whether the prediction holds empirically in human participants is a real research question; the simulation makes it precise.</p>
+
+  <h3>Tier 2 (ontological-candidate) — the Speed slider changes compilation rate, not just visualization</h3>
+  <p><a href="../readings/2026-05-27_bortolotti_time_uncertainty.md">Reading 04</a> maps the diagram's Speed slider against quantum-collapse time-uncertainty physics (Bortolotti et al. 2025). If compilation-rate-as-time holds, then watching the simulation at different Speed settings doesn't just change what you see — it changes the dynamic itself, because time is the compilation rate. The Speed slider exposes this; whether the ontological reading is right depends on the contested physics.</p>
+
+  <h3>Tier 3 (speculative) — L0 occlusion as auxiliary channel</h3>
+  <p>The L0 Occlusion slider exposes the speculation from <a href="../candidates/aux_channel_l0_occlusion.md">candidates/aux_channel_l0_occlusion.md</a>. The speculation predicts that if L0 occlusion is real, paired observers under the same conditions would report SAME-MOMENT gaps (not per-observer gaps). The simulation cannot test this with a single observer; it can only make the speculation's <em>shape</em> visible. Promoting this to Tier 2 requires the bars in <a href="../speculations/">/speculations/</a>: physical signature, shared-observer case, or constructive experimental protocol.</p>
+</section>
+
+<section>
+  <h2><span class="num">§05</span>How to interpret findings</h2>
+  <p>Three reading disciplines, per <a href="../continuations/27.md">cont 27 §2</a> three-tier epistemic procedure:</p>
+  <ul style="color: var(--text-dim); padding-left: 22px;">
+    <li><strong>Layer 1 findings stay at Layer 1.</strong> If lowering Attention Sampling destroys launching even at short delays, that confirms cont 26 §4 canon at the Michotte paradigm. It does NOT confirm cont 26 §4 at substrate level (that's Layer 2 / Reading 04).</li>
+    <li><strong>Layer 2 findings require external evidence.</strong> The Speed slider changing the simulation's behavior is not evidence for compilation-rate-as-time. It's evidence that <em>if</em> the ontological reading is right, you'd see this kind of thing. The contested physics determines whether the reading is right.</li>
+    <li><strong>Layer 3 findings are intuition pumps, not evidence.</strong> The L0 Occlusion slider lets you see what L0 occlusion would look like if it existed. That's not the same as evidence it does exist. The bars in /speculations/ specify what would be.</li>
+  </ul>
+  <p>The discipline is cont 27 §2's bright line: don't let Layer 1 evidence get used to claim Layer 3 conclusions. The simulation makes the layers visually distinct precisely because the temptation to laundering is high — three sliders, all producing visible effects, look interchangeable. They are not.</p>
+</section>
+
+<section>
+  <h2><span class="num">§06</span>Provenance &amp; cross-references</h2>
+  <p>Pav built an earlier version of this tool independently. The version on this page is a framework-native rebuild — same paradigm, same headline empirical question, but rendered programmatically/procedurally/point-based in the format the wrapper-overlap diagram established. The rebuild is the framework's attempt to integrate the empirical work into the framework's architecture rather than keeping it as a separate Pav project.</p>
+  <p>Cross-references:</p>
+  <ul style="color: var(--text-dim); padding-left: 22px;">
+    <li><a href="../artifacts/wrapper_overlap_animated.html">wrapper_overlap_animated.html</a> — the format precedent (v9–v16). Same point-cloud + spring physics + framework-mapped controls pattern.</li>
+    <li><a href="../continuations/26.md">cont 26 §4</a> — perceptual rate as a sense (Tier 1 canon). The Attention Sampling slider operationalizes this directly.</li>
+    <li><a href="../continuations/27.md">cont 27 §2</a> — three-tier epistemic framework procedure. The five parameters of this tool are tier-tagged honestly.</li>
+    <li><a href="../readings/2026-05-27_acmp_attraction_repulsion_gnn.md">Reading 03</a> (ACMP cross-substrate convergence #7) — the three-force attractor pattern; Michotte's perceived causation can be read as a stable launching attractor in cause-effect parameter space.</li>
+    <li><a href="../readings/2026-05-27_bortolotti_time_uncertainty.md">Reading 04</a> (Bortolotti et al. quantum-collapse time uncertainty) — Tier 2 ontological-candidate for the Speed slider's deeper meaning.</li>
+    <li><a href="../candidates/aux_channel_l0_occlusion.md">candidates/aux_channel_l0_occlusion.md</a> — Tier 3 speculative; the L0 Occlusion slider exposes this.</li>
+    <li><a href="../speculations/">speculations/</a> — the speculative-tier mode-page anchoring Tier 3 entries.</li>
+    <li>Albert Michotte, <em>La perception de la causalité</em> (1946; English translation <em>The Perception of Causality</em>, Basic Books 1963) — the foundational paradigm.</li>
+    <li>Wallace M.T. &amp; Stevenson R.A. (2014). The construct of the multisensory temporal binding window and its dysregulation in developmental disabilities. <em>Neuropsychologia</em> 64, 105–123 — extended treatment of cross-modal temporal binding (the empirical literature behind the Sensory Bridging parameter).</li>
+    <li>Haggard P., Clark S., &amp; Kalogeras J. (2002). Voluntary action and conscious awareness. <em>Nature Neuroscience</em> 5(4), 382–385 — intentional binding (the canonical empirical demonstration that observer state modulates perceived causality).</li>
+  </ul>
+</section>
+
+</div>
+
+<footer>
+  <div class="wrap-wide">
+    Agnostic Framework · Michotte Launching extended · framework-native v1 · 2026-05-27 · <a href="../index.html">↑ home</a> · <a href="../artifacts/wrapper_overlap_animated.html">→ wrapper overlap diagram</a> · <a href="https://github.com/a70m123r/agnostic-framework">github</a>
+  </div>
+</footer>
+
+<script>
+// ============================================================
+// MICHOTTE LAUNCHING — EXTENDED — v1
+// ------------------------------------------------------------
+// Programmatic / procedural / point-based — same discipline as
+// wrapper_overlap_animated.html. All state cascades from
+// parameters; no fed-in data; spring physics for point clouds.
+// ============================================================
+
+(function () {
+  const SVG_NS = 'http://www.w3.org/2000/svg';
+  const VB_W = 1200, VB_H = 900;
+
+  // ============================================================
+  // CONFIG
+  // ============================================================
+  const STAGE = {
+    yA: 180,                    // y-position of A and B in Lane 1
+    aStartX: 180,               // A starts here
+    bX: 900,                    // B's position (stationary)
+    contactX: 870,              // x at which A is considered to have contacted B
+    aDuration: 1200,            // ms for A to travel from start to contact
+    bDuration: 800,             // ms for B to travel from rest to end (if launched)
+    bEndX: 1080,                // B's final position after motion
+    cloudN: 24,                 // particles per object
+    cloudR: 18,                 // base cluster radius
+  };
+  const CONE = {
+    yMid: 130,                  // vertical centre of cone in Lane 2
+    xStart: 120,
+    xEnd: 1080,
+    maxHalfH: 70,               // max half-height of cone
+  };
+  const GRAPH = {
+    yAxis: 200,                 // y of time axis in Lane 3
+    xStart: 120,
+    xEnd: 1080,
+    totalMs: 3000,              // 3-second window
+  };
+  const THRESH = {
+    visualMs: 100,              // classical Michotte threshold
+    bridgedMs: 300,             // extended threshold with sensory bridging
+  };
+
+  // ============================================================
+  // PARAMETERS (UI-bound)
+  // ============================================================
+  const P = {
+    delay: 120,        // ms — Mechanical Delay
+    attention: 60,     // % — Attention Sampling
+    bridging: true,    // bool — Sensory Bridging
+    l0: 0,             // % — L0 Occlusion probability per frame
+    speed: 1.0,        // x — Speed multiplier
+    loop: false,
+  };
+
+  // ============================================================
+  // STATE (per-trial)
+  // ============================================================
+  let S = freshState();
+  function freshState() {
+    return {
+      running: false,
+      t: 0,                            // ms since trial start
+      aX: STAGE.aStartX,
+      bX: STAGE.bX,
+      contactT: null,                  // ms at which A contacted B
+      bStartT: null,                   // ms at which B started moving
+      samples: [],                     // array of {t, x} where observer sampled
+      occGaps: [],                     // observer-level gaps: [{startT, endT}]
+      l0Gaps: [],                      // L0 substrate-level gaps: [{startT, endT}]
+      l0CurrentGap: null,              // active L0 gap being built
+      occCurrentGap: null,             // active observer gap being built
+      lastSampleT: -9999,
+      sawContact: null,                // null | true | false (resolved on B-start or end)
+      sawBStart: null,
+      verdict: 'pending',              // 'pending'|'launching'|'disconnected'|'ambiguous'
+      contactBurst: null,              // {t, particles:[{x,y,vx,vy,life}]}
+      points: { a: null, b: null },    // point cloud arrays (lazy-init)
+    };
+  }
+
+  // ============================================================
+  // POINT CLOUDS — spring physics around cluster centres
+  // ============================================================
+  function initClouds() {
+    S.points.a = [];
+    S.points.b = [];
+    for (let i = 0; i < STAGE.cloudN; i++) {
+      const ang = (i / STAGE.cloudN) * 2 * Math.PI;
+      const r = STAGE.cloudR * (0.6 + 0.4 * Math.random());
+      S.points.a.push({
+        ox: r * Math.cos(ang), oy: r * Math.sin(ang),  // offsets from cluster centre
+        x: STAGE.aStartX + r * Math.cos(ang),
+        y: STAGE.yA + r * Math.sin(ang),
+        vx: 0, vy: 0,
+      });
+      S.points.b.push({
+        ox: r * Math.cos(ang), oy: r * Math.sin(ang),
+        x: STAGE.bX + r * Math.cos(ang),
+        y: STAGE.yA + r * Math.sin(ang),
+        vx: 0, vy: 0,
+      });
+    }
+  }
+  initClouds();
+
+  // ============================================================
+  // DOM REFS
+  // ============================================================
+  const $ = id => document.getElementById(id);
+  const cloudA = $('ml-cloud-a');
+  const cloudB = $('ml-cloud-b');
+  const burstG = $('ml-contact-burst');
+  const haloA = $('ml-a-halo');
+  const haloB = $('ml-b-halo');
+  const labelA = $('ml-label-a');
+  const labelB = $('ml-label-b');
+  const phaseLabel = $('ml-phase');
+  const verdictEl = $('ml-verdict');
+  const tempVerdictEl = $('ml-temporal-verdict');
+  const coneShape = $('ml-cone-shape');
+  const coneSamples = $('ml-cone-samples');
+  const coneWindowLabel = $('ml-cone-window-label');
+  const coneRateLabel = $('ml-cone-rate-label');
+  const bridgeLabel = $('ml-bridge-label');
+  const bridgeDetail = $('ml-bridge-detail');
+  const bridgeIndicator = $('ml-bridge-indicator');
+  const tickG = $('ml-time-ticks');
+  const threshG = $('ml-thresholds');
+  const percG = $('ml-perception-windows');
+  const occG = $('ml-occlusion-gaps');
+  const l0G = $('ml-l0-gaps');
+  const evtG = $('ml-event-markers');
+
+  // Build SVG circles for clouds once
+  function buildCloudElements() {
+    cloudA.innerHTML = '';
+    cloudB.innerHTML = '';
+    for (let i = 0; i < STAGE.cloudN; i++) {
+      const cA = document.createElementNS(SVG_NS, 'circle');
+      cA.setAttribute('r', '3'); cA.setAttribute('fill', '#f87171'); cA.setAttribute('opacity', '0.8');
+      cloudA.appendChild(cA);
+      const cB = document.createElementNS(SVG_NS, 'circle');
+      cB.setAttribute('r', '3'); cB.setAttribute('fill', '#4ade80'); cB.setAttribute('opacity', '0.8');
+      cloudB.appendChild(cB);
+    }
+  }
+  buildCloudElements();
+
+  // ============================================================
+  // CORE UPDATE — per frame
+  // ============================================================
+  function tick(dtMs) {
+    if (!S.running) return;
+    S.t += dtMs;
+
+    // A motion: linear from start to contactX over aDuration
+    if (S.t < STAGE.aDuration && S.contactT === null) {
+      const f = S.t / STAGE.aDuration;
+      S.aX = STAGE.aStartX + (STAGE.contactX - STAGE.aStartX) * f;
+    } else if (S.contactT === null) {
+      // Reached contact
+      S.aX = STAGE.contactX;
+      S.contactT = S.t;
+      // Spawn contact burst (small radial particle puff)
+      S.contactBurst = { t: S.t, particles: [] };
+      for (let i = 0; i < 16; i++) {
+        const ang = (i / 16) * 2 * Math.PI;
+        S.contactBurst.particles.push({
+          x: STAGE.contactX, y: STAGE.yA,
+          vx: Math.cos(ang) * 1.5, vy: Math.sin(ang) * 1.5,
+          life: 1.0,
+        });
+      }
+    }
+
+    // B motion: starts (delay) ms after contact, if launching is allowed by physics
+    if (S.contactT !== null && S.bStartT === null) {
+      if (S.t - S.contactT >= P.delay) {
+        S.bStartT = S.t;
+      }
+    }
+    if (S.bStartT !== null) {
+      const dt = S.t - S.bStartT;
+      const f = Math.min(1, dt / STAGE.bDuration);
+      S.bX = STAGE.bX + (STAGE.bEndX - STAGE.bX) * f;
+    }
+
+    // Update point clouds — spring toward cluster anchor
+    const k = 0.18, damp = 0.86;
+    for (const p of S.points.a) {
+      const tx = S.aX + p.ox, ty = STAGE.yA + p.oy;
+      p.vx = (p.vx + (tx - p.x) * k) * damp;
+      p.vy = (p.vy + (ty - p.y) * k) * damp;
+      p.x += p.vx; p.y += p.vy;
+    }
+    for (const p of S.points.b) {
+      const tx = S.bX + p.ox, ty = STAGE.yA + p.oy;
+      p.vx = (p.vx + (tx - p.x) * k) * damp;
+      p.vy = (p.vy + (ty - p.y) * k) * damp;
+      p.x += p.vx; p.y += p.vy;
+    }
+
+    // Contact burst lifetime
+    if (S.contactBurst) {
+      for (const q of S.contactBurst.particles) {
+        q.x += q.vx; q.y += q.vy;
+        q.vy += 0.05;     // gravity-ish
+        q.life -= 0.025;
+      }
+      S.contactBurst.particles = S.contactBurst.particles.filter(q => q.life > 0);
+      if (S.contactBurst.particles.length === 0) S.contactBurst = null;
+    }
+
+    // Observer sampling — fires at attention-rate
+    // Sample period (ms) = 1000 / (attention% * 0.6 Hz max)  → at 100% ≈ 16.7ms (60Hz); at 10% ≈ 167ms (6Hz)
+    const samplePeriodMs = 1000 / (P.attention * 0.6);
+    // Check if we should sample this frame
+    if (S.t - S.lastSampleT >= samplePeriodMs) {
+      // Are we currently inside an L0 occlusion? If yes, sample fails for everyone
+      let inL0Gap = S.l0CurrentGap !== null;
+      if (!inL0Gap) {
+        S.samples.push({ t: S.t, x: timeToGraphX(S.t) });
+        S.lastSampleT = S.t;
+        // Close any observer-gap that was open
+        if (S.occCurrentGap !== null) {
+          S.occCurrentGap.endT = S.t;
+          S.occGaps.push(S.occCurrentGap);
+          S.occCurrentGap = null;
+        }
+      } else {
+        // sample blocked by L0 gap; don't update lastSampleT (so it tries again next frame)
+      }
+    } else {
+      // Between samples — observer-level gap
+      if (S.occCurrentGap === null) {
+        S.occCurrentGap = { startT: S.lastSampleT >= 0 ? S.lastSampleT : 0, endT: S.t };
+      } else {
+        S.occCurrentGap.endT = S.t;
+      }
+    }
+
+    // L0 occlusion stochastic trigger
+    if (P.l0 > 0) {
+      if (S.l0CurrentGap === null) {
+        // probability per frame of starting an L0 gap
+        const probPerFrame = (P.l0 / 100) * (dtMs / 1000) * 1.5; // ~tunable
+        if (Math.random() < probPerFrame) {
+          S.l0CurrentGap = { startT: S.t, endT: S.t + 50 + Math.random() * 150 };
+        }
+      } else {
+        if (S.t >= S.l0CurrentGap.endT) {
+          S.l0Gaps.push(S.l0CurrentGap);
+          S.l0CurrentGap = null;
+        }
+      }
+    }
+
+    // Verdict logic — evaluated continuously
+    evaluateVerdict();
+
+    // Phase label
+    if (S.t < STAGE.aDuration && S.contactT === null) {
+      phaseLabel.textContent = 'PHASE: A APPROACHING';
+    } else if (S.bStartT === null) {
+      phaseLabel.textContent = 'PHASE: CONTACT · WAITING (delay)';
+    } else if (S.bX < STAGE.bEndX) {
+      phaseLabel.textContent = 'PHASE: B LAUNCHED';
+    } else {
+      phaseLabel.textContent = 'PHASE: TRIAL COMPLETE';
+      if (P.loop && S.t > GRAPH.totalMs) {
+        resetTrial(true);
+      }
+    }
+  }
+
+  function evaluateVerdict() {
+    // Did the observer sample within ±(window/2) of contact?
+    const window = P.bridging ? THRESH.bridgedMs : THRESH.visualMs;
+    let sawC = false, sawB = false;
+    if (S.contactT !== null) {
+      for (const s of S.samples) {
+        if (Math.abs(s.t - S.contactT) < window / 2) { sawC = true; break; }
+      }
+    }
+    if (S.bStartT !== null) {
+      for (const s of S.samples) {
+        if (Math.abs(s.t - S.bStartT) < window / 2) { sawB = true; break; }
+      }
+    }
+    S.sawContact = S.contactT === null ? null : sawC;
+    S.sawBStart = S.bStartT === null ? null : sawB;
+
+    // Verdict
+    if (S.contactT === null || S.bStartT === null) {
+      S.verdict = 'pending';
+    } else {
+      const gap = S.bStartT - S.contactT;
+      const withinThresh = gap <= window;
+      if (sawC && sawB && withinThresh) {
+        S.verdict = 'launching';
+      } else if (!sawC || !sawB) {
+        S.verdict = 'disconnected';
+      } else if (gap > window && gap < window * 1.4) {
+        S.verdict = 'ambiguous';
+      } else {
+        S.verdict = 'disconnected';
+      }
+    }
+  }
+
+  // ============================================================
+  // RENDER
+  // ============================================================
+  function render() {
+    // Halos follow object centres
+    haloA.setAttribute('cx', S.aX.toFixed(1));
+    haloB.setAttribute('cx', S.bX.toFixed(1));
+
+    // Point clouds
+    for (let i = 0; i < STAGE.cloudN; i++) {
+      const pA = S.points.a[i], pB = S.points.b[i];
+      const eA = cloudA.children[i], eB = cloudB.children[i];
+      eA.setAttribute('cx', pA.x.toFixed(1));
+      eA.setAttribute('cy', pA.y.toFixed(1));
+      eB.setAttribute('cx', pB.x.toFixed(1));
+      eB.setAttribute('cy', pB.y.toFixed(1));
+    }
+
+    // Labels follow centres
+    labelA.setAttribute('x', S.aX.toFixed(1));
+    labelB.setAttribute('x', S.bX.toFixed(1));
+
+    // Contact burst
+    burstG.innerHTML = '';
+    if (S.contactBurst) {
+      for (const q of S.contactBurst.particles) {
+        const c = document.createElementNS(SVG_NS, 'circle');
+        c.setAttribute('cx', q.x.toFixed(1));
+        c.setAttribute('cy', q.y.toFixed(1));
+        c.setAttribute('r', (2 * q.life).toFixed(1));
+        c.setAttribute('fill', '#fcd34d');
+        c.setAttribute('opacity', q.life.toFixed(2));
+        burstG.appendChild(c);
+      }
+    }
+
+    // Observer cone — trapezoid: wider for bridging, narrower for visual-only
+    const halfH = (P.bridging ? CONE.maxHalfH : CONE.maxHalfH * 0.4) * (P.attention / 100);
+    const yT = CONE.yMid - halfH, yB = CONE.yMid + halfH;
+    const path = `M ${CONE.xStart} ${CONE.yMid} L ${CONE.xEnd} ${yT} L ${CONE.xEnd} ${yB} Z`;
+    coneShape.setAttribute('d', path);
+
+    // Sample tick marks on cone
+    coneSamples.innerHTML = '';
+    for (const s of S.samples) {
+      const cx = timeToConeX(s.t);
+      const ln = document.createElementNS(SVG_NS, 'line');
+      ln.setAttribute('x1', cx); ln.setAttribute('x2', cx);
+      ln.setAttribute('y1', CONE.yMid - halfH * 0.7); ln.setAttribute('y2', CONE.yMid + halfH * 0.7);
+      ln.setAttribute('stroke', '#93c5fd'); ln.setAttribute('stroke-width', '1.2'); ln.setAttribute('opacity', '0.7');
+      coneSamples.appendChild(ln);
+    }
+
+    // Bridge indicator
+    bridgeLabel.textContent = P.bridging ? 'SENSORY BRIDGING: ON' : 'SENSORY BRIDGING: OFF';
+    bridgeLabel.setAttribute('fill', P.bridging ? '#fbbf24' : '#666');
+    bridgeDetail.textContent = P.bridging ? 'integration window ~300ms (vs ~100ms visual-only)' : 'visual-only integration ~100ms';
+    bridgeDetail.setAttribute('fill', P.bridging ? '#a87f0e' : '#444');
+
+    // Cone labels
+    const windowMs = P.bridging ? THRESH.bridgedMs : THRESH.visualMs;
+    const sampleHz = (P.attention * 0.6).toFixed(0);
+    coneWindowLabel.textContent = `temporal integration window: ${windowMs}ms`;
+    coneRateLabel.textContent = `sample rate: ${sampleHz} Hz · ${P.attention}% attention`;
+
+    // Temporal graph
+    renderTemporalGraph();
+
+    // Readout
+    $('rd-t').textContent = S.t.toFixed(0);
+    $('rd-a').textContent = S.aX.toFixed(0);
+    $('rd-b').textContent = S.bX.toFixed(0);
+    $('rd-contact').textContent = S.contactT !== null ? S.contactT.toFixed(0) + 'ms' : '—';
+    $('rd-bstart').textContent = S.bStartT !== null ? S.bStartT.toFixed(0) + 'ms' : '—';
+    $('rd-samples').textContent = S.samples.length;
+    $('rd-gaps').textContent = S.occGaps.length + (S.occCurrentGap ? 1 : 0);
+    $('rd-l0gaps').textContent = S.l0Gaps.length + (S.l0CurrentGap ? 1 : 0);
+    $('rd-sawc').textContent = S.sawContact === null ? '—' : (S.sawContact ? 'yes' : 'no');
+    $('rd-sawb').textContent = S.sawBStart === null ? '—' : (S.sawBStart ? 'yes' : 'no');
+
+    // Verdict
+    verdictEl.className = 'ml-verdict ' + S.verdict;
+    let vt = '';
+    if (S.verdict === 'launching') vt = 'VERDICT: LAUNCHING — observer perceives causation';
+    else if (S.verdict === 'disconnected') vt = 'VERDICT: DISCONNECTED — observer sees two separate events';
+    else if (S.verdict === 'ambiguous') vt = 'VERDICT: AMBIGUOUS — borderline causal impression';
+    else vt = 'VERDICT: PENDING — trial in progress';
+    verdictEl.textContent = vt;
+    tempVerdictEl.textContent = 'VERDICT: ' + S.verdict.toUpperCase();
+    tempVerdictEl.setAttribute('fill', verdictColor(S.verdict));
+  }
+
+  function verdictColor(v) {
+    if (v === 'launching') return '#4ade80';
+    if (v === 'disconnected') return '#f87171';
+    if (v === 'ambiguous') return '#fbbf24';
+    return '#666';
+  }
+
+  function timeToGraphX(t) {
+    return GRAPH.xStart + (t / GRAPH.totalMs) * (GRAPH.xEnd - GRAPH.xStart);
+  }
+  function timeToConeX(t) {
+    // Cone uses the same time-x mapping as graph for synchronization
+    return timeToGraphX(t);
+  }
+
+  function renderTemporalGraph() {
+    // Ticks (every 500ms)
+    if (tickG.childElementCount === 0) {
+      for (let ms = 0; ms <= GRAPH.totalMs; ms += 500) {
+        const x = timeToGraphX(ms);
+        const ln = document.createElementNS(SVG_NS, 'line');
+        ln.setAttribute('x1', x); ln.setAttribute('x2', x);
+        ln.setAttribute('y1', GRAPH.yAxis); ln.setAttribute('y2', GRAPH.yAxis + 5);
+        ln.setAttribute('stroke', '#444'); ln.setAttribute('stroke-width', '1');
+        tickG.appendChild(ln);
+        const txt = document.createElementNS(SVG_NS, 'text');
+        txt.setAttribute('x', x); txt.setAttribute('y', GRAPH.yAxis + 18);
+        txt.setAttribute('text-anchor', 'middle');
+        txt.setAttribute('font-family', 'ui-monospace,Menlo,monospace');
+        txt.setAttribute('font-size', '10'); txt.setAttribute('fill', '#666');
+        txt.textContent = ms + 'ms';
+        tickG.appendChild(txt);
+      }
+    }
+
+    // Threshold zones around contact event (only render if contact has happened)
+    threshG.innerHTML = '';
+    if (S.contactT !== null) {
+      const xC = timeToGraphX(S.contactT);
+      const window = P.bridging ? THRESH.bridgedMs : THRESH.visualMs;
+      const halfW = (window / GRAPH.totalMs) * (GRAPH.xEnd - GRAPH.xStart) / 2;
+      // Threshold band centred on contact
+      const r = document.createElementNS(SVG_NS, 'rect');
+      r.setAttribute('x', xC - halfW); r.setAttribute('y', GRAPH.yAxis - 60);
+      r.setAttribute('width', halfW * 2); r.setAttribute('height', 60);
+      r.setAttribute('fill', P.bridging ? '#fbbf24' : '#93c5fd');
+      r.setAttribute('opacity', '0.06');
+      threshG.appendChild(r);
+      const lbl = document.createElementNS(SVG_NS, 'text');
+      lbl.setAttribute('x', xC); lbl.setAttribute('y', GRAPH.yAxis - 64);
+      lbl.setAttribute('text-anchor', 'middle');
+      lbl.setAttribute('font-family', 'ui-monospace,Menlo,monospace');
+      lbl.setAttribute('font-size', '10'); lbl.setAttribute('fill', P.bridging ? '#a87f0e' : '#5a7a9c');
+      lbl.textContent = `launching window ±${window/2}ms`;
+      threshG.appendChild(lbl);
+    }
+
+    // Perception windows — for each sample, draw a small green tick
+    percG.innerHTML = '';
+    for (const s of S.samples) {
+      const r = document.createElementNS(SVG_NS, 'rect');
+      r.setAttribute('x', s.x - 1); r.setAttribute('y', GRAPH.yAxis - 28);
+      r.setAttribute('width', 2); r.setAttribute('height', 28);
+      r.setAttribute('fill', '#4ade80'); r.setAttribute('opacity', '0.65');
+      percG.appendChild(r);
+    }
+
+    // Observer-level gaps
+    occG.innerHTML = '';
+    const gaps = [...S.occGaps];
+    if (S.occCurrentGap) gaps.push(S.occCurrentGap);
+    for (const g of gaps) {
+      const x1 = timeToGraphX(Math.max(0, g.startT));
+      const x2 = timeToGraphX(g.endT);
+      if (x2 - x1 < 1) continue;
+      const r = document.createElementNS(SVG_NS, 'rect');
+      r.setAttribute('x', x1); r.setAttribute('y', GRAPH.yAxis - 14);
+      r.setAttribute('width', x2 - x1); r.setAttribute('height', 14);
+      r.setAttribute('fill', '#fb923c'); r.setAttribute('opacity', '0.35');
+      occG.appendChild(r);
+    }
+
+    // L0 occlusion zones
+    l0G.innerHTML = '';
+    const l0all = [...S.l0Gaps];
+    if (S.l0CurrentGap) l0all.push(S.l0CurrentGap);
+    for (const g of l0all) {
+      const x1 = timeToGraphX(g.startT);
+      const x2 = timeToGraphX(Math.min(GRAPH.totalMs, g.endT));
+      if (x2 - x1 < 1) continue;
+      const r = document.createElementNS(SVG_NS, 'rect');
+      r.setAttribute('x', x1); r.setAttribute('y', GRAPH.yAxis - 50);
+      r.setAttribute('width', x2 - x1); r.setAttribute('height', 50);
+      r.setAttribute('fill', '#a78bfa'); r.setAttribute('opacity', '0.30');
+      r.setAttribute('stroke', '#a78bfa'); r.setAttribute('stroke-width', '0.6');
+      r.setAttribute('stroke-dasharray', '2 3');
+      l0G.appendChild(r);
+    }
+
+    // Event markers (A contact, B start)
+    evtG.innerHTML = '';
+    if (S.contactT !== null) addEventMarker(timeToGraphX(S.contactT), '#f87171', 'CONTACT');
+    if (S.bStartT !== null) addEventMarker(timeToGraphX(S.bStartT), '#4ade80', 'B-START');
+  }
+
+  function addEventMarker(x, color, label) {
+    const ln = document.createElementNS(SVG_NS, 'line');
+    ln.setAttribute('x1', x); ln.setAttribute('x2', x);
+    ln.setAttribute('y1', GRAPH.yAxis - 80); ln.setAttribute('y2', GRAPH.yAxis + 6);
+    ln.setAttribute('stroke', color); ln.setAttribute('stroke-width', '1.4');
+    evtG.appendChild(ln);
+    const txt = document.createElementNS(SVG_NS, 'text');
+    txt.setAttribute('x', x); txt.setAttribute('y', GRAPH.yAxis - 86);
+    txt.setAttribute('text-anchor', 'middle');
+    txt.setAttribute('font-family', 'ui-monospace,Menlo,monospace');
+    txt.setAttribute('font-size', '10'); txt.setAttribute('fill', color);
+    txt.textContent = label;
+    evtG.appendChild(txt);
+  }
+
+  // ============================================================
+  // TRIAL LIFECYCLE
+  // ============================================================
+  function startTrial() {
+    S = freshState();
+    initClouds();
+    S.running = true;
+    render();
+  }
+  function resetTrial(autostart) {
+    S = freshState();
+    initClouds();
+    S.running = !!autostart;
+    tickG.innerHTML = '';   // force re-render of axis ticks
+    render();
+  }
+
+  // ============================================================
+  // UI WIRING
+  // ============================================================
+  $('ml-delay').addEventListener('input', e => { P.delay = +e.target.value; $('ml-delay-val').textContent = P.delay + 'ms'; render(); });
+  $('ml-attention').addEventListener('input', e => { P.attention = +e.target.value; $('ml-attention-val').textContent = P.attention + '%'; render(); });
+  $('ml-bridging').addEventListener('change', e => { P.bridging = e.target.checked; render(); });
+  $('ml-l0').addEventListener('input', e => { P.l0 = +e.target.value; $('ml-l0-val').textContent = P.l0 + '%'; });
+  $('ml-speed').addEventListener('input', e => { P.speed = +e.target.value; $('ml-speed-val').textContent = P.speed.toFixed(2) + 'x'; });
+  $('ml-launch').addEventListener('click', () => startTrial());
+  $('ml-reset').addEventListener('click', () => resetTrial(false));
+  $('ml-loop').addEventListener('click', e => {
+    P.loop = !P.loop;
+    e.target.textContent = '⟲ Loop: ' + (P.loop ? 'on' : 'off');
+  });
+
+  // ============================================================
+  // ANIMATION LOOP
+  // ============================================================
+  let lastFrame = performance.now();
+  function frame(now) {
+    const dt = (now - lastFrame) * P.speed;
+    lastFrame = now;
+    tick(dt);
+    if (S.running) render();
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+
+  // Initial render
+  render();
+})();
+</script>
+
+</body>
+</html>

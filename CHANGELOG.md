@@ -8,6 +8,69 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-05-27 (artifacts/michotte_launching_extension.html v1 — framework-native rebuild of Pav's Michotte Launching tool, point-cloud + observer-cone + temporal-occlusion-graph)
+
+### Added (artifacts/michotte_launching_extension.html, ~900 lines)
+- **Framework-native v1 rebuild** of Pav's Michotte Launching extension tool. Same single-self-contained-HTML format as wrapper_overlap_animated.html. All state cascades programmatically from parameters; no fed-in data; point-cloud rendering with spring physics throughout.
+- **Three-lane SVG canvas (viewBox 1200x900):**
+  - **Lane 1 — Michotte Stage** (y 0–290) — A and B as point clouds (~24 particles each with spring physics toward cluster centre). A moves rightward toward B; on contact, a yellow burst spawns at the contact point; after Mechanical Delay, B launches (or stays still depending on parameters). Halos behind clouds for visual weight. Phase indicator showing current trial state.
+  - **Lane 2 — Observer Time-Cone** (y 300–580) — the observer's cone rendered as a first-class trapezoid in time × resolution space. Cone width scales with Attention Sampling (10–100%); cone height scales with whether Sensory Bridging is on (~300ms integration) or off (~100ms visual-only). Vertical tick marks within cone = sample moments. Sensory Bridging indicator with mode label. Cone window + sample rate labels.
+  - **Lane 3 — Temporal Graph** (y 600–890) — time axis with 500ms ticks across 3-second window. Event markers (A contact in red, B start in green) as vertical lines with labels. Threshold zone (launching window ±visualMs/2 or ±bridgedMs/2) shaded around contact event. Observer perception windows as green ticks per sample. Observer-level occlusion gaps as orange bands. **L0 occlusion zones as visually distinct purple dashed bands** (per Tier 3 speculation in /speculations/). Legend on right side identifying all visual elements.
+- **Five framework-mapped controls:**
+  - **Mechanical Delay** (0–800ms) — the classical Michotte parameter
+  - **Attention Sampling** (10–100%) — cont 26 §4 perceptual rate as sense (Tier 1 canon)
+  - **Sensory Bridging** (checkbox) — cont 14 holographic-wrapper + cont 16 membrane-as-perceptual-surface
+  - **L0 Occlusion** (0–50%) — Tier 3 speculation exposed as parameter (per cont 27 §2 honest move: make speculations legible without claiming them)
+  - **Speed** (0.25–2x) — same role as wrapper-overlap Speed slider; per Reading 04 maps to compilation-rate-as-time (Tier 2)
+  - Launch / Reset / Loop buttons
+- **Live causality verdict** — launching / disconnected / ambiguous / pending — computed each frame from observer perception window + integration threshold + event timing. Verdict block color-coded (green / red / yellow / gray). Mirrored in temporal-graph corner.
+- **Live readout panel** — 10 stat fields updating each frame: t (ms), A position, B position, contact t, B start t, samples taken, observer-gaps, L0-gaps, saw contact? (yes/no), saw B-start? (yes/no).
+- **Six explanatory context sections** below the widget:
+  - §01 What is Michotte's Launching paradigm — historical grounding (Michotte 1946/63)
+  - §02 What this extension adds beyond classical Michotte — five-parameter mapping table to framework primitives
+  - §03 What to try — five preset parameter combinations with expected outcomes (classical Michotte baseline; broken Michotte; cross-modal rescue [the headline test]; attention starvation; L0 occlusion exposed)
+  - §04 What the framework predicts — explicit tier-tagged predictions (Tier 1 for attention; Tier 1-candidate for bridging; Tier 2 for Speed; Tier 3 for L0 occlusion)
+  - §05 How to interpret findings — three-tier discipline reminder (don't let Layer 1 evidence get used to claim Layer 3 conclusions; cont 27 §2 bright line)
+  - §06 Provenance + cross-references — explicit attribution to Pav's earlier independent build + Michotte 1946/63 + Wallace & Stevenson 2014 + Haggard et al. 2002 + all framework cross-refs
+- **Hypothes.is annotation enabled** for community commentary on any part of the tool.
+
+### Updated (index.html, candidates/aux_channel_l0_occlusion.md, speculations/index.html)
+- **Map section** extended to link the Michotte tool alongside wrapper-overlap, dialogues, atlas, formalization, notation, speculations
+- **candidates/aux_channel_l0_occlusion.md** — Provenance section now includes direct link to the v1 framework-native rebuild + brief description of what was built
+- **/speculations/** — Layer 1 instrument callout updated to point at the live tool with description of the L0 Occlusion slider as a parameter that makes the speculation visible per cont 27 §2
+
+### Why this round matters
+- The framework's first **experimental artifact** — produces observations rather than only describing them. Different output category from explanatory artifacts (diagrams, dialogues, formalization).
+- **L0 Occlusion as exposed parameter** demonstrates the cont 27 §2 procedure cleanly: a Tier 3 speculation can be made visible without being endorsed, by treating it as a parameter users can toggle to see what its effects would look like IF it were real. This is the honest middle path between hiding speculation and claiming it.
+- **Same format discipline** as wrapper_overlap_animated.html means the two artifacts compose into a coherent framework-tool aesthetic. Future framework instruments can follow the same template: point clouds + spring physics + first-class observer visualization + temporal/state graph + five-or-so framework-mapped parameters + tier-tagged predictions + worked example presets.
+- **Pav's Michotte extension** now sits inside the framework's architecture rather than being a separate Pav project — and the framework benefits from having an experimental anchor for its perceptual-rate canon and aux-channel speculation.
+
+### Carry-forward (queued for v2+)
+- **Layer 1 findings collection** — running the tool with framework-relevant parameter combinations to generate observations; potential Reading 05 documenting empirical findings (especially the cross-modal-rescue question at 360ms+ delays)
+- **Paired-observer mode** — if/when L0 occlusion testing becomes feasible, the tool would need a two-observer comparison view to distinguish per-observer gaps from shared L0 gaps
+- **Touch / sound modality** — current Sensory Bridging is binary; could expose modality-specific sliders if it would generate sharper predictions
+- **Save/load trial configurations** — useful for systematic empirical work; not in v1 scope
+- **Replay-with-different-observer mode** — same physical trial played back with different Attention/Bridging settings to isolate observer-side effects
+- **Outreach material** — the tool is presentable enough to share with cog-sci researchers interested in temporal binding window work
+
+---
+
+## 2026-05-27 (provenance fix — Michotte Launching tool is Pav-built, not third-party; aux-channel doc + /speculations/ updated)
+
+### Corrected (candidates/aux_channel_l0_occlusion.md, speculations/index.html)
+- **The temporal-binding tool screenshot Pav shared earlier in the session** (Mechanical Delay 360ms, Attention Sampling 40%, Sensory Bridging checkbox) is a **Pav-built extension of Michotte's Launching paradigm** (Albert Michotte, *The Perception of Causality*, 1946/63 — the foundational ~80-year cog-sci paradigm in causality perception). Not a third-party research demo as the earlier note implied.
+- **The Pav extensions map directly to framework primitives** beyond classical Michotte: Attention Sampling → cont 26 §4 perceptual-rate-as-sense; Sensory Bridging → cont 14 holographic-wrapper + cont 16 membrane-as-perceptual-surface. The 360ms delay setting is well past Michotte's ~100ms classical threshold, so the tool specifically tests whether attention modulation and cross-modal binding can preserve causality perception at delays where visual-only Michotte fails.
+- **The Pav-built tool is itself a Layer 1 instrument** — the framework now has its own purpose-built device for demonstrating that the observer time-cone is empirically modulable. This changes the framework's empirical-engagement profile from purely explanatory artifacts (diagrams, dialogues, formalization) to including experimental artifacts that produce observations.
+- **aux-channel doc provenance section** rewritten to reflect this; new paragraph notes the tool's status as the framework's first community-runnable experimental instrument (if packaged for the repo).
+- **/speculations/ index** updated with a callout box under the aux-channel entry noting the Pav-built Layer 1 instrument that grounds the speculation.
+
+### Open (awaiting Pav)
+- Whether to package the Michotte-extension tool itself for the repo's `/artifacts/` directory alongside subject-unraveler and squeeze-pull diagram
+- If packaged: documentation should specify the Pav extensions beyond classical Michotte, the framework primitives they map to, and the parameter combinations that produce the most interesting findings
+- Possible: a Layer 1 mini-reading (Reading 05?) documenting empirical findings from running the tool — e.g., does Sensory Bridging preserve causality perception at 360ms? At 500ms? What's the new threshold?
+
+---
+
 ## 2026-05-27 (cont 27 — energy-floor failsafe promoted to canon · three-tier epistemic framework formalized as canon procedure · /speculations/ new mode-page · day's canon-building round closeout)
 
 ### Added (continuations/27.md, ~5,300 words)
