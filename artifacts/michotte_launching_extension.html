@@ -129,6 +129,14 @@
       <p class="ml-verdict pending" id="ml-verdict">VERDICT: PENDING — press Launch Test</p>
 
       <div class="ml-controls">
+        <label>Preset <select id="ml-preset" style="background: var(--surface); color: var(--text); border: 1px solid var(--border); padding: 4px 8px; border-radius: 3px; font-family: inherit; font-size: 12px;">
+          <option value="custom">— custom —</option>
+          <option value="newton">1 · Newton's-cradle baseline</option>
+          <option value="stretch">2 · Chain stretch test (decay)</option>
+          <option value="rescue">3 · Cross-modal chain rescue ★</option>
+          <option value="starve">4 · Attention starvation</option>
+          <option value="l0">5 · L0 occlusion across chain</option>
+        </select></label>
         <label>Chain Length <input type="range" id="ml-chain" min="2" max="6" step="1" value="4"/><span class="val" id="ml-chain-val">4</span></label>
         <label>Mechanical Delay <input type="range" id="ml-delay" min="0" max="500" step="10" value="80"/><span class="val" id="ml-delay-val">80ms</span></label>
         <label>Attention Sampling <input type="range" id="ml-attention" min="10" max="100" step="5" value="60"/><span class="val" id="ml-attention-val">60%</span></label>
@@ -293,6 +301,7 @@
 
 <section>
   <h2><span class="num">§03</span>What to try — chain-aware presets</h2>
+  <p style="color: var(--text-dim);">All five presets are available in the <strong>Preset dropdown</strong> at the top of the control bar. Selecting a preset applies its parameters and auto-launches the trial. Changing any parameter manually reverts the dropdown to "— custom —" so you can iterate from a preset baseline.</p>
 
   <div class="try-card">
     <p class="preset">PRESET 1 · Newton's-cradle baseline (chain of 4, short delay)</p>
@@ -982,18 +991,57 @@
   }
 
   // ============================================================
+  // PRESETS
+  // ============================================================
+  const PRESETS = {
+    newton:  { chainLength: 4, delay:  30, attention: 80, bridging: false, l0: 0 },   // Newton's-cradle baseline
+    stretch: { chainLength: 6, delay:  80, attention: 60, bridging: false, l0: 0 },   // Chain stretch test
+    rescue:  { chainLength: 5, delay: 200, attention: 60, bridging: true,  l0: 0 },   // Cross-modal chain rescue
+    starve:  { chainLength: 5, delay:  30, attention: 15, bridging: false, l0: 0 },   // Attention starvation
+    l0:      { chainLength: 4, delay:  50, attention: 80, bridging: false, l0: 30 },  // L0 occlusion across chain
+  };
+  function applyPreset(key) {
+    const preset = PRESETS[key];
+    if (!preset) return;
+    // Apply to P
+    P.chainLength = preset.chainLength;
+    P.delay       = preset.delay;
+    P.attention   = preset.attention;
+    P.bridging    = preset.bridging;
+    P.l0          = preset.l0;
+    // Reflect in UI sliders/labels
+    $('ml-chain').value = preset.chainLength;       $('ml-chain-val').textContent = preset.chainLength;
+    $('ml-delay').value = preset.delay;             $('ml-delay-val').textContent = preset.delay + 'ms';
+    $('ml-attention').value = preset.attention;     $('ml-attention-val').textContent = preset.attention + '%';
+    $('ml-bridging').checked = preset.bridging;
+    $('ml-l0').value = preset.l0;                   $('ml-l0-val').textContent = preset.l0 + '%';
+    // Reset + auto-launch so the result of the preset is visible immediately
+    startTrial();
+  }
+  function markCustom() {
+    // If user manually tweaks any parameter, revert preset selector to "— custom —"
+    if ($('ml-preset').value !== 'custom') $('ml-preset').value = 'custom';
+  }
+
+  // ============================================================
   // UI WIRING
   // ============================================================
+  $('ml-preset').addEventListener('change', e => {
+    const key = e.target.value;
+    if (key === 'custom') return;
+    applyPreset(key);
+  });
   $('ml-chain').addEventListener('input', e => {
     P.chainLength = +e.target.value;
     $('ml-chain-val').textContent = P.chainLength;
+    markCustom();
     resetTrial(false);
   });
-  $('ml-delay').addEventListener('input', e => { P.delay = +e.target.value; $('ml-delay-val').textContent = P.delay + 'ms'; });
-  $('ml-attention').addEventListener('input', e => { P.attention = +e.target.value; $('ml-attention-val').textContent = P.attention + '%'; render(); });
-  $('ml-bridging').addEventListener('change', e => { P.bridging = e.target.checked; render(); });
-  $('ml-l0').addEventListener('input', e => { P.l0 = +e.target.value; $('ml-l0-val').textContent = P.l0 + '%'; });
-  $('ml-speed').addEventListener('input', e => { P.speed = +e.target.value; $('ml-speed-val').textContent = P.speed.toFixed(2) + 'x'; });
+  $('ml-delay').addEventListener('input', e => { P.delay = +e.target.value; $('ml-delay-val').textContent = P.delay + 'ms'; markCustom(); });
+  $('ml-attention').addEventListener('input', e => { P.attention = +e.target.value; $('ml-attention-val').textContent = P.attention + '%'; markCustom(); render(); });
+  $('ml-bridging').addEventListener('change', e => { P.bridging = e.target.checked; markCustom(); render(); });
+  $('ml-l0').addEventListener('input', e => { P.l0 = +e.target.value; $('ml-l0-val').textContent = P.l0 + '%'; markCustom(); });
+  $('ml-speed').addEventListener('input', e => { P.speed = +e.target.value; $('ml-speed-val').textContent = P.speed.toFixed(2) + 'x'; /* speed doesn't break a preset */ });
   $('ml-launch').addEventListener('click', () => startTrial());
   $('ml-reset').addEventListener('click', () => resetTrial(false));
   $('ml-loop').addEventListener('click', e => {

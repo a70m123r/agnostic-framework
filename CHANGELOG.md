@@ -8,6 +8,17 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-05-27 (Michotte v2 fix — preset menu UI added; presets were documented but not selectable)
+
+### Fixed (artifacts/michotte_launching_extension.html)
+- **Bug:** v2 documented five presets in §03 but never built a UI to actually apply them. Sliders had to be set manually.
+- **Fix:** added a **Preset dropdown** at the start of the control bar with five options (Newton's-cradle baseline, Chain stretch test, Cross-modal chain rescue, Attention starvation, L0 occlusion across chain). Selecting a preset applies its parameter values to all sliders + checkbox + state, then auto-launches the trial so the result is visible immediately.
+- **"— custom —" marker** added as default option; any manual slider/checkbox change reverts the dropdown to "— custom —" so the user can iterate from a preset baseline without the dropdown lying about the current state. Speed is treated as orthogonal — adjusting Speed does not flip to custom (Speed is a viewing parameter, not part of the experimental setup).
+- **§03 explanatory text updated** with a leading paragraph naming the dropdown so readers know how to use it.
+- Surfaced by Pav: "preset?, cant see a options for menus in the UI" — straight gap between documentation and implementation; fixed in place.
+
+---
+
 ## 2026-05-27 (Michotte Launching v2 — billiard-chain dynamics engine + Lane 1 occlusion overlay)
 
 ### Updated (artifacts/michotte_launching_extension.html — v2 in place; v1 preserved in git history)
