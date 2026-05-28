@@ -8,6 +8,66 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-05-27 (Reading 03 — ACMP / Allen-Cahn Message Passing as cross-substrate convergence #7 · framework's first reading of a mathematical paper)
+
+### Added (readings/2026-05-27_acmp_attraction_repulsion_gnn.md)
+- **Reading 03 (~3,800 words)** — maps Wang/Yi/Liu/Wang/Jin "ACMP: Allen-Cahn Message Passing with Attractive and Repulsive Forces for Graph Neural Networks" ([arXiv:2206.05437v4](https://arxiv.org/abs/2206.05437v4), ICLR 2023 Spotlight) onto the wrapper-overlap dynamic.
+- **The headline finding:** the ML community has independently derived the three-force ecosystem the framework describes (attraction + repulsion + Allen-Cahn phase-separation stabilizer) and **proven a Dirichlet-energy lower bound** that prevents oversmoothing — structurally equivalent to the framework's claim that wrappers persist as procedural-root stubs through the overlap dynamic. The convergence is independent in both directions: the framework reached the three-force decomposition via cell fusion, creole genesis, and conceptual blending; ACMP reached it via reaction-diffusion PDE theory.
+- **1:1 mapping onto v14/v15 diagram:** attractive force = spring anchor toward wrapper centre; repulsive force = v14 pairwise repulsion at contact zone; Allen-Cahn = v15 W_C as phase-separated third wrapper.
+- **Validates four framework claims with external mathematical evidence:** (a) wrapper-repulsion is canon not pathology (cont 24 §2) — proven by ACMP's SOTA on heterophilic datasets; (b) three-force ecosystem is necessary, not optional (cont 25 §6) — proven by oversmoothing failure mode; (c) reaction-diffusion is the right mathematical frame; (d) continuous time / neural-ODE formulation matches cont 26 perceptual-rate-as-sense.
+- **ACMP added as the seventh convergence** in cont 25 §6, joining LCAO, cell fusion, symbiogenesis, creole genesis, conceptual blending, and model merging. Most mathematically rigorous of the seven.
+- **One new candidate primitive surfaced:** **Energy-floor failsafe** — mathematical instantiation of cont 26 internal-pressure failsafe class; any wrapper-overlap dynamic that produces stable distinction does so because the system's internal coherence quantity has a provable positive lower bound. ACMP provides the GNN-substrate worked example. Three more substrate worked-examples needed before promotion to canon.
+- **What the paper does NOT validate:** ACMP is binary phase-separation, framework needs tertiary; ACMP is single-ring, framework spans rings; ACMP assumes symmetry the framework rejects (cont 25 §12D / v13 asymmetric wobble). Honest accounting in §6 of the reading.
+- **Three scoreable predictions** with 2027-05-27 / 2027-11-27 checkpoints: (P1) tertiary-phase-separation extension of ACMP; (P2) ACMP cited outside GNN literature; (P3) energy-floor primitive accumulates 3+ worked examples (canon promotion) OR clean falsification.
+
+### Updated (index.html)
+- Reading 03 entry added at top of READINGS array (above Reading 02). Links to full reading file. Predictions summarized inline.
+
+### Carry-forward
+- **/formalization/ page update** — add reaction-diffusion PDE (gradient flow on three-term energy with phase-separation stabilizer) as candidate formal frame for the wrapper-overlap dynamic
+- **Cont 25 §6 convergence list** in index.html (if rendered as a card) should list ACMP as seventh
+- **Cont 26 forward-pointers** to ACMP as GNN-substrate worked example for internal pressures (§3) and energy-floor candidate (§5)
+- **Energy-floor primitive worked examples** in 3+ additional substrates before canon promotion
+- **Diagram 07 v16 candidate:** render the three forces as separate visual layers (attractive arrows inward, repulsive outward, phase-separation toward W_C)
+
+---
+
+## 2026-05-27 (diagram v15 — point size scales with wrapper radius · W_C as third spawned point cloud · three-way fluid sim + cont 26 — L0 evolved failsafes + perceptual rate as sense)
+
+### Updated (v15 layer added to artifacts/wrapper_overlap_animated.html)
+- **Point size now scales with wrapper radius (latent expansion, not balloon).** Wrapper expansion is the same material becoming more legible at scale, not new material being added. `angularPointSize` refactored to accept a `sizeMul` parameter; updateCloud computes `sizeMulAB = sqrt(r / R_BASELINE)` (R_BASELINE = 80 px). At small initial radius mul ≈ 1; at full expansion mul ≈ 2.1. Sparse becomes denser-looking dots as the wrapper grows. Closes Pav's v15 steer: "the distribution of the dots is too sparse as the wrappers expand out, the expansion it self is latent not nlike a balloon, thinking they should get bigger as the wrapper expands with corresponding dynamics on the radius of each one."
+- **W_C is now its own point cloud, spawned from the A×B contact zone.** New `<g id="v15-cloud-c">` group + `pointsC` array. Each C-particle starts inactive (`active: false`). Spawning logic in `updateCloud`: targetActive = `round(particleCount × state.maturity)`; when current < target, spawn up to 3 per frame by picking an inactive C slot and positioning it at the midpoint of a randomly-sampled close A-B pair (best of 6 samples). Birth velocity is a blend of the parent particles' velocities — inherited momentum. Particles then drift outward under spring physics to their angular anchor on the W_C circle. Despawn is gradual (up to 2 per frame) when maturity drops. C-particles in canon-yellow (#fbbf24) at 0.85 opacity, slightly larger than A/B (× 1.15) — emergent wrapper gets visual prominence.
+- **Three-way fluid sim.** v14's two intra + one inter passes extended with three new passes for W_C:
+  1. **Intra-C** — active C-particles push/drag each other (intra-W_C cohesion, only run when ≥ 2 active)
+  2. **Inter-A×C** — green and yellow clouds interact at the contact zone; early-out when `distAC > r + rC + interactionR`
+  3. **Inter-B×C** — purple and yellow clouds interact symmetrically
+- All three clouds now occupy the same space, push on each other, and connect — while each remains anchored to its own centre by its own spring.
+- **View mode now hides W_C arc when in cloud-only.** `applyViewMode` extended to toggle `v9-wc` visibility alongside `v9-wa` and `v9-wb`.
+- **Branch states extended.** `renderBranch` now also computes W_C centre/radius/alpha per branch (supersede: rC = 0.22 × VB_W, wcAlpha = 1; break: rC = 0, wcAlpha = 0; default: rC = 0.16 × VB_W, wcAlpha = 0.9).
+- **Hero dek + title bar updated** to introduce v15's three refinements, plus a callout about L0's evolved failsafes (cont 26) and Speed as a fidelity quantifier (cont 26).
+
+### Added (cont 26)
+- **continuations/26.md (~3,300 words)** — two canon moves promoted: (A) infinite-expansion inertia as wrapper primitive — every wrapper would expand without bound across all available dimensions if unconstrained; L0 has evolved failsafes (internal coherence pressure + external wrapper-field pressure) that bound it; the negotiation phase is the visible expression of failsafe engagement; (B) speed / rate of perception as a sense and fidelity quantifier — different observers sampling the same wrapper at different perceptual rates get different fidelity reads; tools (the Speed slider, cameras, telescopes, sim) extend the selectable range; the atlas should add a perceptual-rate row alongside touch/sight/sound/etc.
+- **Lifecycle phases reread as L0-failsafe activations** — pre-overlap = inertia unconstrained; wake = detection; negotiation = engagement; active = compromise (W_C spawned); consolidating = stabilized; supersede = absorbed; break = enforced. Augments cont 25 phase sequence with the deeper *why*.
+- **Construct study queue** — marriage, religion, nation-state need brief refactors to surface inertia + failsafes explicitly.
+
+### Carry-forward (queued for v16+ / cont 27+)
+- **v16 candidate — visualize L0 failsafe field** explicitly as inward-pointing pressure arrows or coloured back-pressure gradient during high-negotiation phases (the fluid sim already computes the velocity vectors at the contact zone — this is the failsafe-in-action — just needs a render layer)
+- **Atlas perceptual-rate row** alongside existing senses (cont 21, atlas v1-v4)
+- **Primitives section update** — wrapper gets inertia + failsafe-coupling attributes; L0 extended to "global compiled canon + evolved failsafe environment"
+- **Velocity-field / streamline overlay** for the contact zone (carry-over from v14)
+- **Refactor construct studies** with cont 26 vocabulary (failsafes per construct)
+- Ghost-W_C during wake phase (cont 25 §1 move 7) — partially addressed by v15 spawning behaviour but explicit pre-spawn ghost still pending
+- Recursive co-construction arrows in active phase
+- Asymmetric flux indicator
+- Vibecoding maturation cycle counter
+- Static SVG fallback at /diagrams/07_wrapper_overlap_dynamics.svg
+- Diagram 07 case study showing all v1→v15 iterations
+- 3D wavelet renderer (move beyond the 2D slice — full point cloud with z-axis exposing canon-level structure)
+- Spatial hashing if density >> 140 ever becomes a need
+
+---
+
 ## 2026-05-27 (diagram v14 — fluid-sim pairwise interactions · intra-wrapper repulsion + inter-wrapper membrane friction)
 
 ### Updated (v14 layer added to artifacts/wrapper_overlap_animated.html)
