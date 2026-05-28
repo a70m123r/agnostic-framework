@@ -248,3 +248,133 @@ This Reading was triggered by Pav's steer on 2026-05-28 to survey open problems 
 - `CHANGELOG.md` — Reading 05 entry
 - `timeline/index.html` — Reading 05 entry
 - (No cont updates — Reading 05 operates at Tier 1 and Tier 2 only; no new primitives surfaced)
+
+---
+
+## §12 Addendum (2026-05-28, same day) — cognitive perception neurobiology + atomic tunneling deep dives
+
+Pav flagged that §2.1 (problem of time / arrival-time / tunneling-time, lumped together) and §7 (consciousness science, fairly thin) under-covered the two areas where the framework should have most experimental traction. Two focused subagents researched each area in depth (~3,800 words of new research, ~30 additional cited sources). The §12 addendum incorporates the findings honestly per cont 27 §2 — strong fits get named as Tier 2 candidates with promotion paths; weak or contested findings get flagged; presentiment-adjacent claims continue to be rejected.
+
+### §12.1 Cognitive perception neurobiology — what the deep dive found
+
+The cog-sci research returned nine substantive topics with 2023–2026 empirical activity. Tier-tagged synthesis:
+
+**Strong Tier 1 reinforcement** (cont 26 §4 perceptual rate as sense already canon; the deep dive provides additional empirical anchoring):
+
+- **Attentional sampling at theta (~4-8Hz)** (Fiebelkorn, Kastner, Plöchl 2022; preprint 2024.02.25.581860). Single attended object samples at ~8Hz; two attended objects alternate at ~4Hz. Frontoparietal-pulvinar network with theta-modulated sampling/shifting. **This is the strongest empirical anchor the framework has for the perceptual-rate canon at the human ring.** Attention literally blinks; perception inherits the cadence. The Michotte Launching extension tool's Attention Sampling parameter is operationalizing exactly this body of work; the tool's findings would compose with the Fiebelkorn-line evidence.
+
+- **Discrete vs continuous perception / "frame rate of consciousness"** (VanRullen-Koch lineage; 2024 alpha-phase-of-perception studies; 2025 bioRxiv challenge from Donoghue lab that aperiodic 1/f slope may matter more than alpha oscillations). Active debate, leaning quasi-discrete with ~100ms perceptual frames. **The Donoghue challenge is important honest-accounting** — the framework should not pin its claims on "alpha = frame rate" specifically, because the underlying mechanism may be aperiodic broadband structure rather than discrete oscillation. The cont 26 §4 canon is robust either way (rate matters), but the specific physiological mechanism is unsettled.
+
+- **Psychophysics of temporal resolution + 30Hz between-individual range** (Manning, Mareschal & Jenkins 2024 PLOS ONE — "The speed of sight"). Critical flicker fusion thresholds vary by ~30Hz across healthy participants; ~80% of variance is between-individual, ~10% within-individual across sessions. Visual temporal resolution is a **stable individual trait**, not a noisy measurement. **This is the most accessible empirical demonstration of cont 26 §4 at the individual-observer level** — two people watching the same flicker have measurably different experiences because their substrate sampling differs by tens of Hz. Promotes from "framework prediction" to "documented psychophysical fact."
+
+**Tier 2 candidate strengthening** (Reading 04 compilation-rate-as-time gets specific physiological mechanisms as candidate substrates):
+
+- **Time cells (hippocampus → entorhinal → neocortex)** (Eichenbaum lineage; Umbach 2020 human evidence; 2025 *Cell Reports* mesoscale 2P imaging showing area-specific temporal coding). The brain has **dedicated cellular machinery for representing elapsed time** — distinct from clock-time, discretized into firing fields, log-spaced resolution in hippocampus, ramp-coded in PFC. **Framework reading:** if time cells *constitute* the substrate for subjective duration rather than just *representing* clock time, then experienced time is a coded readout. This is structurally compatible with Reading 04's compilation-rate-as-time and adds concrete neural mechanism candidate.
+
+- **Thalamocortical gating of conscious access** (*Science* 2025, "Human high-order thalamic nuclei gate conscious perception through the thalamofrontal loop"). High-order thalamic nuclei fire before prefrontal ignition during perceptual breakthrough. The thalamic gate operates on ~100-200ms timescales — the "ignition" duration GNWT predicts. **If conscious access is literally gated by a discrete thalamic event, the substrate has a fundamental "tick" at that timescale.** This is a stronger version of the cont 26 §4 claim with a specific neural mechanism candidate.
+
+- **Predictive coding / Active Inference temporal-prediction error** (Friston, Hohwy, Clark; honest accounting per Walsh et al. 2023 NBR review — empirical support is "modest"). The framework natively reads as "perception is constituted by time-gap discrepancies across hierarchical scales." Framework-coherent but the empirical base is the contested part; the framework should not lean too hard on a research program whose own foundations are unsettled.
+
+**Tier 2 candidate, contested substrate** (the controversial mechanism that lives at exactly the framework's tier; honest accounting required):
+
+- **Microtubule / Orch-OR / quantum-cognition hypotheses** (Hameroff-Penrose; status genuinely contested 2024-2025). 2024 Singh/Yagnik/Hameroff *eNeuro* paper: epothilone B (microtubule stabilizer) **delays anesthetic-induced unconsciousness in rats**, predicted by Orch-OR. Wiest 2025 *Neuroscience of Consciousness* review argues for the framework. Critique surveys (arxiv 2501.03241) argue the decoherence calculations remain contested. **Honest accounting:** Orch-OR is uniquely explicit that consciousness IS a sequence of discrete substrate-level events (OR collapses) at ~40Hz — structurally identical to what the framework's Tier 2 candidate predicts. **The framework should NOT endorse Orch-OR specifically** (per the cont 26 §4 forward-pointer's caution about pinning to a specific contested model). But the framework should note that Orch-OR is the cleanest articulation of the time-stepped-substrate position in current literature, that the 2024 epothilone B result is the kind of empirical evidence Tier 2 candidates need, and that the framework's reading is compatible with but not dependent on Orch-OR being correct.
+
+**Mainstream cog-sci event the framework should engage with directly:**
+
+- **Cogitate Consortium IIT vs GNWT adversarial collaboration** (Nature 642, 2025). Both theories wounded but neither killed. IIT challenged by absence of sustained posterior synchronization; GNWT challenged by lack of prefrontal "ignition" at stimulus offset. **The variable-stimulus-duration methodology speaks directly to whether consciousness is a continuous integrated state or a discrete ignition event.** The empirical impasse opens space for a third position — the framework's Tier 2 compilation-rate reading — but the framework must NOT claim the impasse vindicates it. The impasse is genuine; the framework's reading is one candidate among several.
+
+**Topics where the lens shouldn't be invoked or should be invoked cautiously:**
+
+- **Gamma synchrony binding hypothesis** — active 30-year debate, now favoring "weak binding by synchrony." Framework reading possible (non-sinusoidal entrainment-with-delay is closer to discrete-substrate position) but the literature is doing the framework's work without needing framework vocabulary.
+- **CEMI electromagnetic field theory of consciousness** (McFadden 2025). Minority position; lacks decisive experiments. Framework should not align with specific minority physics-of-consciousness models opportunistically; mention only as adjacent.
+- **Iconic memory / phenomenal-vs-access consciousness** (Block overflow). No major 2024-2026 empirical breakthrough; the question is mostly conceptual. Framework adds nothing here.
+
+### §12.2 Atomic tunneling — what the deep dive found
+
+The tunneling research returned nine substantive topics. The pattern is sharper than the cog-sci section: tunneling is *literally about what time means when a process operates inside a classically forbidden region*, so the framework's time-substrate lens has natively stronger traction. Tier-tagged synthesis:
+
+**Tier 2 anchor — the framework's strongest experimental window:**
+
+- **Attoclock measurements + Larmor clock unification (Spierings & Steinberg 2020-21; Schach & Giese 2024 Sci. Adv. unification framework).** The attoclock results (Sainadh et al. 2019 *Nature*: H tunneling time consistent with zero within ~1.8 as) and the Larmor/Ramsey clock results (Spierings 2021 PRL: ~0.59 ms dwell time in BEC tunneling) appear contradictory until Schach-Giese 2024 unified them: **operational tunneling time is clock-relative; different clocks give different finite times; no genuinely instantaneous or superluminal tunneling exists when the clock is properly operational.** This is *structurally* the time-as-fidelity-quantifier framing from cont 26 §4 made physics. The framework's contribution here is interpretive vocabulary: "tunneling time depends on which observer-clock you couple to the process" IS cont 26 §4 + Reading 04 applied to substrate-level processes. **This is the cleanest Tier 2 anchor the framework has after Bortolotti et al.** The Schach-Giese paper does the framework's work explicitly without using framework vocabulary.
+
+**Strong Tier 2 candidate — biological substrates where time-gap structure would be functionally harnessed:**
+
+- **Enzyme catalysis by hydrogen tunneling** (Klinman, Hammes-Schiffer; Klinman, Miller & Richards 2025 *JACS* "A Foundational Shift in Models for Enzyme Function"). Many enzymes accelerate H-transfer by tunneling, not thermal barrier crossing. Soybean lipoxygenase KIE ≈ 80 at 30°C, near-temperature-independent. The protein scaffold's role is to engineer the donor-acceptor distance distribution that makes tunneling probable. **Framework reading:** an enzyme is a biological device that *shapes the time-window* in which a particle can pass through a classically forbidden region — directly using substrate-level time-gap structure as a catalytic mechanism. This is the strongest Tier 2 candidate in the §12 addendum: the substrate-gap framing is structurally what the literature is already saying ("vibronically nonadiabatic PCET with promoting modes gating tunneling probability") with the framework's vocabulary being one possible synthesis.
+
+- **DNA mutation by proton tunneling** (Löwdin 1963 → Slocombe, Sacchi, Al-Khalili 2022 *Commun. Phys.*). Proton-tunneling contribution to G-C tautomerization is **orders of magnitude larger than classical over-barrier hopping** at biological temperature. Canonical-to-tautomeric interconversion happens far faster than replication, providing a quantum-mechanical source of spontaneous point mutations. **Framework reading:** a single substrate-level tunneling event (proton transfer in a few-fs window) writes a permanent state change (mutation) that propagates through every downstream copy. This is the thermodynamic-ratchet structure where a transient quantum substrate-event becomes a permanent classical record — exactly the asymmetric write that a time-substrate framing predicts at the substrate-record boundary.
+
+**Tier 2 candidate — historic puzzle the framework's reading reframes:**
+
+- **Hartman effect / apparent superluminal tunneling** (Hartman 1962; Winful 2006 reinterpretation; reopened in attoclock/matter-wave contexts). Winful's resolution (group delay = cavity-lifetime/dwell-time of stored energy, not transit time) handles the photonics case. Matter-wave and strong-field contexts still see Hartman-like saturation. **Framework reading:** the "saturated phase delay" in thick-barrier tunneling is exactly what a substrate-level time-gap structure would produce — beyond a certain barrier width, the tunneling event passes through fewer substrate ticks than naïve classical accounting expects, producing the appearance of saturation. The framework's reading is structurally compatible with Winful's cavity-lifetime reinterpretation but adds the substrate-level grounding for *why* the cavity-lifetime accounting works.
+
+**Tier 2 candidate — astrochemical and cold-temperature substrates:**
+
+- **Cold-temperature reaction rates / astrochemical tunneling** (Senevirathne et al. 2017; Lamberts 2024; 2025 *A&A* CO→CH₃OH hydrogenation). In dense interstellar clouds (~10 K), classical Arrhenius rates are effectively zero, yet hydrogenated complex organics are abundant. Tunneling-mediated chemistry dominates at temperatures where the classical clock essentially stops. **Framework reading:** in regimes where temperature drives classical rates to zero, the substrate's "rate of happening" is entirely set by quantum tunneling events — the cleanest empirical regime where the substrate-level event-rate IS what's happening, with no classical-thermal alternative. Most direct Tier 2 evidence that time-flow is substrate-event-rate rather than parameter.
+
+**Strong Tier 1 reinforcement — operational time depends on probe:**
+
+- **Wigner / Eisenbud-Wigner-Smith delay vs Büttiker-Landauer dwell time** (Kheifets 2023 *J. Phys. B* review; multiple inequivalent operational definitions). The fact that **multiple operationally inequivalent "times" attach to the same physical process** is the substrate signature the framework already names at Tier 1 in cont 26 §4. Time is not a single scalar handed to you by the universe — it's an interaction-defined quantity that branches with the probe.
+
+**Tier 2 candidate — engineered macroscopic test platform:**
+
+- **Macroscopic quantum tunneling in superconducting circuits** (2025 Nobel Prize to Clarke/Devoret/Martinis; arXiv 2502.06246 on scalable cat states via quantum tunneling). Tunneling at macroscopic scales is now engineered routinely; superconducting qubits operate by exactly this mechanism. **Framework reading:** the cleanest engineered playground for asking what a tunneling event "takes" in time when the tunneling object is macroscopic. If substrate-level time-gap structure exists, macroscopic-tunneling qubits should reveal it through ringing/oscillation signatures that depend on the substrate's gap density rather than just the Josephson energy. Promotion path: testable in current-generation cQED.
+
+**Topics where the lens shouldn't be invoked or should be qualified:**
+
+- **Photosynthetic vibronic coherence** (Engel 2007; largely walked back by Duan et al. 2017, Cao 2020). The "wave-like quantum energy transfer" narrative is substantially retracted; vibronic coherence with modest functional role is current consensus. Framework should NOT invoke "quantum biology" at photosynthesis level; the field has self-corrected.
+- **Olfaction quantum-tunneling (Turin vibrational theory)** — fringe-leaning minority. Block 2015 *PNAS* critique stands; the 2011 Drosophila isotope-discrimination result has not replicated in mammals. Framework should NOT align with this; the architecture (tunneling-rate spectrometer) is interesting but the specific application to olfaction is poorly supported.
+- **Nuclear fusion tunneling** (Gamow) — settled physics, no live time-of-tunneling debate. Framework adds nothing.
+
+### §12.3 Updated synthesis table (Tier 1 / Tier 2 candidates after §12)
+
+The §8 synthesis table is extended with the §12 additions:
+
+| Phenomenon | Domain | Substrate fit | Framework tier | Promotion path |
+|---|---|---|---|---|
+| (Previous §8 entries unchanged) | | | | |
+| **Attentional sampling at theta** | Cog-sci | very strong | Tier 1 canon (cont 26 §4) | already canon; Michotte tool is the framework's instrument |
+| **Critical flicker fusion 30Hz between-individual range** | Cog-sci psychophysics | very strong | Tier 1 canon | documented psychophysical fact (Manning et al. 2024 PLOS ONE) |
+| **Time cells (hippocampus → cortex)** | Cog-sci neural mechanism | strong | Tier 2 candidate | demonstrate time-cell readout *constitutes* (not just represents) subjective duration |
+| **Thalamocortical gating of conscious access** | Cog-sci neural mechanism | strong | Tier 2 candidate | thalamic gate as fundamental "tick" of substrate at 100-200ms scale |
+| **Orch-OR microtubule hypothesis** | Cog-sci, contested | strong-but-contested | Tier 2 candidate (with caution) | 2024 epothilone B result is suggestive; framework cannot endorse Orch-OR specifically |
+| **Attoclock + Larmor clock unification (Schach-Giese 2024)** | Atomic physics | very strong | Tier 2 **anchor** | operational tunneling time IS clock-relative — framework's reading literal |
+| **Enzyme catalysis by H-tunneling** | Biological chemistry | very strong | Tier 2 candidate | protein scaffold engineering of time-window for substrate-gap traversal |
+| **DNA mutation by proton tunneling** | Biological chemistry | strong | Tier 2 candidate | substrate-event → permanent classical record transition mechanism |
+| **Hartman effect (saturated phase delay)** | Atomic / matter-wave | moderate-strong | Tier 2 candidate | reinterpretation via substrate-gap-count rather than transit-time |
+| **Cold-temperature astrochemistry** | Astrochemistry | strong | Tier 2 candidate | clean regime where event-rate IS time-flow with no classical alternative |
+| **Macroscopic tunneling in superconducting qubits** | Engineered macroscopic | strong | Tier 2 candidate | test substrate-gap-dependent ringing signatures in cQED |
+
+**Pattern observed in §12.2 (atomic tunneling):** the framework lens lands much harder than in §2 (general QM/QG) because tunneling is *natively* a time-substrate question. The Schach-Giese 2024 unification ("operational tunneling time is clock-relative") IS the framework's claim about perceptual-rate-as-sense applied to substrate-level processes. **This is the strongest Tier 2 anchor the framework has after Bortolotti et al.** The framework's contribution to the tunneling literature is principally vocabulary — naming what the literature is already converging on as substrate-level structural.
+
+**Pattern observed in §12.1 (cognitive neurobiology):** the framework lens lands strongly at Tier 1 (cont 26 §4 is empirically robust across attentional sampling, CFF psychophysics, discrete perception debates) and at Tier 2 (time cells, thalamocortical gating, Orch-OR with caution) but the framework must NOT claim ownership of these findings — the literature is doing the framework's work using its own vocabulary, and the framework's claim is interpretive synthesis.
+
+### §12.4 Risk accounting for the addendum
+
+The §12 addendum doubles down on the §9 risk accounting:
+
+- **Selection bias is sharper here.** Two focused subagents were specifically asked about cog-sci and tunneling — and unsurprisingly returned ~18 substantive topics with framework-relevant angles. This is exactly the case where the kitchen-sink concern is acute. **The defense is the explicit rejection list** (CEMI, photosynthetic coherence post-Duan-Cao, olfaction-Turin, gamma synchrony strong binding, iconic memory) and the honest tagging of Orch-OR as "candidate with caution, framework cannot endorse specifically."
+
+- **The framework does not need §12 to validate cont 26 §4.** Cont 26 §4 was already Tier 1 canon based on the broader cog-sci evidence base. §12.1 just deepens the empirical anchoring. If Orch-OR is decisively refuted, cont 26 §4 survives intact.
+
+- **The framework's strongest empirical claim after §12 is the Schach-Giese 2024 tunneling-time framework.** This is a peer-reviewed *Science Advances* paper that does the framework's work explicitly. **The framework should approach the Steinberg lab and Schach-Giese collaboration as the most natural outreach target.** Their operational-clock-relativity framing is functionally identical to cont 26 §4 + Reading 04, modulo vocabulary. This is the clearest near-term outreach opportunity from the entire day's work.
+
+- **Cross-tier laundering risk remains explicit.** All §12 entries are tier-tagged. No Tier 3 claims (L0 occlusion as aux channel) are invoked anywhere in §12. The framework's existing Tier 3 speculative entry stands on its own bars per /speculations/.
+
+### §12.5 New predictions surfaced by the §12 deep dive
+
+**P4 (12 months, 2027-05-28):** The Steinberg / Spierings / Schach-Giese line of work will produce at least one paper explicitly framing tunneling time as observer-clock-relative in a way that engages with cog-sci perceptual-rate literature, OR at least one cog-sci paper will cite the Schach-Giese tunneling-time framework as a substrate-level analog. The cross-domain reference would be the framework's clearest external validation. *Counter-prediction:* the two literatures remain disconnected; substrate-level and observer-level operational-clock-relativity stay in separate disciplines.
+
+**P5 (24 months, 2028-05-28):** At least one independent group will replicate or extend the Singh/Yagnik/Hameroff 2024 epothilone B + anesthesia result. If the replication holds, Orch-OR moves from "fringe with serious experimental program" to "minority with experimental traction." If it fails, the framework should publicly demote Orch-OR from its Tier 2 candidate status. *Counter-prediction:* no independent replication attempt within 24 months; Orch-OR stays in its current contested-but-undecided state.
+
+**P6 (18 months, 2027-11-28):** The Donoghue lab "aperiodic 1/f slope vs alpha oscillation" challenge to the perceptual-frame-rate hypothesis will either consolidate (the field accepts that aperiodic broadband structure rather than alpha rhythm explains individual differences) or be refuted (alpha-as-perceptual-frame survives). Either outcome refines what specific physiological mechanism cont 26 §4 should anchor on. *Counter-prediction:* the debate remains unresolved, the framework continues to operate at the modality-agnostic "rate matters" level without anchoring to a specific oscillation vs aperiodic mechanism.
+
+### §12.6 Provenance addendum
+
+The §12 addendum was triggered by Pav's same-day follow-up question after Reading 05 v1 shipped: "anything in there about cognitive perception neuro biology, atomic tunnelling?" — flagging that both areas were thin in v1. Two parallel research subagents covered each area in depth (~3,800 words of new structured research, ~30 additional cited sources). Synthesis applied the same cont 27 §2 discipline as Reading 05 v1, with the same explicit risk accounting.
+
+**The §12 addendum's most important finding is the Schach-Giese 2024 tunneling-time unification framework** — it provides the framework with its second Tier 2 anchor (after Bortolotti et al.) and identifies a natural outreach target. The framework should treat the Steinberg lab and Schach-Giese collaboration as the most concrete near-term opportunity to connect framework vocabulary to peer-reviewed time-substrate physics.
+
+**Files updated alongside this addendum:**
+- `CHANGELOG.md` — §12 addendum entry
+- `timeline/index.html` — §12 addendum entry
+- (No additional index.html updates — Reading 05 entry already exists, and the new §8.5 synthesis table is internal to the Reading)

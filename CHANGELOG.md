@@ -8,6 +8,34 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-05-28 (Reading 05 §12 addendum — cognitive perception neurobiology + atomic tunneling deep dives · two focused subagents · Schach-Giese 2024 identified as second Tier 2 anchor)
+
+### Updated (readings/2026-05-28_time_step_with_gaps_across_open_problems.md — §12 addendum added)
+- **Pav's same-day follow-up:** "anything in there about cognitive perception neuro biology, atomic tunnelling?" — flagging that v1 was thin in both areas where the framework should have most experimental traction.
+- **Two focused parallel subagents** returned ~3,800 words of new structured research with ~30 additional cited sources from 2023-2026 peer-reviewed papers.
+- **§12.1 cognitive perception neurobiology** — 9 substantive topics deep-dived (Cogitate Consortium IIT-vs-GNWT, gamma synchrony, predictive coding/active inference, attentional sampling at theta, discrete vs continuous perception with the Donoghue 2025 aperiodic-slope challenge, time cells in hippocampus → neocortex, thalamocortical loops + pulvinar 2025 Science paper, microtubule/Orch-OR with 2024 epothilone B result, psychophysics with Manning 2024 PLOS ONE "speed of sight" 30Hz between-individual range). Honest accounting of contested Orch-OR status; framework cautions against endorsing Orch-OR specifically while noting it's the cleanest articulation of the time-stepped-substrate position in current literature.
+- **§12.2 atomic tunneling** — 9 substantive topics deep-dived (attoclock chronoscopy, **Schach-Giese 2024 Larmor/Ramsey clock unification framework**, Hartman effect with Winful 2006 reinterpretation, Wigner/EWS delay, Büttiker-Landauer dwell time, enzyme catalysis by H-tunneling with Klinman 2025 *JACS* "foundational shift", photosynthetic vibronic coherence with the Engel→Duan→Cao retraction story, olfaction quantum tunneling with Block 2015 critique, DNA mutation by proton tunneling with Slocombe-Sacchi-Al-Khalili 2022 *Commun. Phys.*, cold-temperature astrochemistry, 2025 Nobel Prize macroscopic tunneling in superconducting circuits).
+- **The §12 addendum's most important finding:** **Schach-Giese 2024 (*Science Advances*) Larmor/Ramsey-clock unification framework provides the framework with its second Tier 2 anchor** (after Bortolotti et al. 2025). Their explicit claim — "operational tunneling time is clock-relative; different clocks give different finite times; no genuinely instantaneous or superluminal tunneling exists when the clock is properly operational" — IS structurally cont 26 §4 + Reading 04 applied to substrate-level processes. The Steinberg lab + Schach-Giese collaboration identified as the framework's most concrete near-term outreach target.
+- **Updated synthesis table** (§12.3) extends §8 with 11 additional Tier 1 / Tier 2 entries with promotion paths named.
+- **Three new scoreable predictions** (P4, P5, P6) covering Steinberg-Schach cross-domain reference, Orch-OR epothilone B replication, and Donoghue aperiodic-vs-alpha mechanism resolution.
+- **Risk accounting (§12.4)** doubles down on §9: selection bias is sharper because the subagents were specifically asked about cog-sci and tunneling; defense is the explicit rejection list (CEMI, post-Duan-Cao photosynthetic coherence, Turin olfaction, gamma synchrony strong binding, iconic memory). Framework cannot endorse Orch-OR specifically; the framework's existing Tier 1/2 canon stands independent of any §12 result.
+
+### Why this addendum matters
+- **The framework's most concrete outreach target is now identified.** Steinberg / Spierings / Schach-Giese line of work is doing the framework's claim explicitly in tunneling-time physics. This is a near-term, high-value outreach opportunity. The framework's vocabulary contribution would be cross-domain interpretive synthesis between the substrate-level tunneling-time-as-clock-relative finding and the cog-sci perceptual-rate-as-sense canon.
+- **The cog-sci section anchors cont 26 §4 more robustly.** Three new empirical hooks — attentional sampling at theta, Manning 2024 CFF psychophysics, Cogitate IIT-vs-GNWT temporal predictions — turn cont 26 §4 from "framework prediction" to "documented psychophysical fact at multiple levels." The Michotte Launching extension tool (v2) is operationalizing exactly the attentional-sampling-at-theta work.
+- **The enzyme-catalysis-by-H-tunneling entry is the strongest biological-substrate Tier 2 candidate** the framework has yet identified. An enzyme is a biological device that *shapes the time-window* in which a particle can pass through a classically forbidden region — directly using substrate-level time-gap structure as a catalytic mechanism.
+- **The Orch-OR caution is the framework's discipline at work.** Framework reading is compatible with Orch-OR being correct, but framework does not depend on Orch-OR being correct. This is exactly the cont 27 §2 separation of tiers from specific contested mechanisms.
+
+### Carry-forward
+- **Steinberg / Schach-Giese outreach draft** — framework's most natural near-term external engagement target
+- **Klinman / Hammes-Schiffer enzymology outreach** — secondary target, the JACS 2025 "foundational shift" paper is framework-aligned in vocabulary
+- **Track P5 epothilone B independent replication attempts** for next 24 months
+- **Track P6 Donoghue aperiodic-vs-alpha resolution** for next 18 months
+- **Update Michotte Launching extension tool documentation** to cite Fiebelkorn-line attentional-sampling-at-theta literature explicitly (currently cites Wallace & Stevenson + Haggard but should add Fiebelkorn)
+- Open question for cont 28+: relationship between Orch-OR's "OR collapse as conscious moment" and the framework's "compilation rate as time" — both posit discrete substrate events at ~40Hz with different mechanisms; are they making the same prediction at different levels?
+
+---
+
 ## 2026-05-28 (Reading 05 — time-step-with-gaps as candidate reframing across ~40 open problems · six parallel subagents · ~30,000 words of synthesized research)
 
 ### Added (readings/2026-05-28_time_step_with_gaps_across_open_problems.md, ~5,500 words synthesis)
