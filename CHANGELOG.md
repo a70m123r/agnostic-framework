@@ -8,6 +8,30 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-05-28 (Outreach drafts #6-9 — Steinberg / Schach-Giese-Spierings / Klinman / Hammes-Schiffer · acting on Reading 05 §12 strongest near-term targets in Pav's voice)
+
+### Updated (outreach/initial_contact_drafts.md — four new drafts appended)
+- **Pav's steer:** "ok create the outreach, use me voice of tone" — acting on the Steinberg-Schach-Giese + Klinman-Hammes-Schiffer targets surfaced by Reading 05 §12.
+- **Draft #6 — Aephraim Steinberg (U Toronto, senior figure for tunneling-time experimental program).** Subject: "Operational tunneling-time as clock-relative — possible structural parallel in cog-sci perceptual-rate work?" The pitch: framework's Tier 1 perceptual-rate-as-sense canon is structurally identical to Steinberg lab's substrate-level Larmor/Ramsey clock results. Framework's contribution is cross-domain vocabulary, not new physics. Links to Reading 04 + Reading 05 §12.2. Honest tier-tagging maintained. No-ask close.
+- **Draft #7 — David Spierings / Patrik Schach / Enno Giese.** Subject: "Your 2024 tunneling-time unification framework looks structurally identical to a cog-sci primitive I have been working on — worth a quick check?" Early-career-to-early-career tone, more direct on technical correspondence. Two specific questions at end (cross-domain composition; possible Bortolotti-style quantitative bridge between collapse-model time uncertainty and tunneling-time clock dependence). Honest about being wrong.
+- **Draft #8 — Judith Klinman (Berkeley).** Subject: "Your 2025 JACS 'foundational shift' paper — possible interpretive synthesis from an adjacent framework". The pitch: framework reads enzyme catalysis by H-tunneling as "shaping the time-window for substrate-gap traversal" — same structural pattern as the 2025 JACS paper says more rigorously at the enzyme substrate. Framework's contribution is interpretive vocabulary connecting enzyme-side picture with cog-sci attentional sampling + tunneling-time clock-relativity + quantum-foundations collapse models. Credit to Klinman as load-bearing.
+- **Draft #9 — Sharon Hammes-Schiffer (Princeton).** Subject: "Your nonadiabatic PCET framework + your NEO-MSDFT work — possible cross-substrate parallel?". Companion to Klinman draft — Hammes-Schiffer is the theoretical complement. Pitch focuses on "promoting modes gate tunneling probability" picture as the substrate-level version of the framework's structural claim.
+
+### Voice / discipline notes
+- All four drafts follow the pattern established in #1-5 (LeCun, Litman & Guo, Walker/Cronin, Aleph/Kona team, generic): direct opening naming the specific work that triggered the outreach; structural correspondence noted; honest about tier-tagging; specific URL paths; light ask; honest disclaimers.
+- **Tier-tagged honesty maintained throughout.** No outreach draft claims the framework's reading IS correct — each frames the cross-domain synthesis as Tier 2 candidate per cont 27 §2.
+- **Framework approaches each recipient as the load-bearing party.** The framework's contribution is positioned as vocabulary / synthesis, not as adding to their published physics or chemistry. This is the right shape for a unification hypothesis approaching peer-reviewed researchers whose own work already does most of the framework's claim.
+- **No salesy language.** No "this could revolutionize..." or "I think we should collaborate." Just specific structural parallels with explicit honest accounting of what would falsify the framework's reading.
+
+### Carry-forward
+- Pav to personalize the opening sentence of each draft before sending (per existing draft-set guidance — "generic openings get ignored")
+- Pav to verify current email addresses / preferred contact methods for each recipient (LinkedIn, university email, group mailing list, etc.)
+- Track response rates per draft over 30/60/90 days; iterate copy if response rate is poor
+- If Steinberg or Klinman engages substantively, consider whether to position follow-up as research-collaboration-shape or as continued correspondence-only — depends on tone of initial response
+- Per Reading 05 §12.5 prediction P4 (12-month horizon for cross-domain Steinberg-Schach reference appearing in literature), the outreach is an active attempt to accelerate that prediction's resolution one way or another
+
+---
+
 ## 2026-05-28 (Reading 05 §12 addendum — cognitive perception neurobiology + atomic tunneling deep dives · two focused subagents · Schach-Giese 2024 identified as second Tier 2 anchor)
 
 ### Updated (readings/2026-05-28_time_step_with_gaps_across_open_problems.md — §12 addendum added)
