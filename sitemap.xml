@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Top-level live HTML pages -->
+  <url>
+    <loc>https://a70m123r.github.io/agnostic-framework/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://a70m123r.github.io/agnostic-framework/timeline/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Mode-page sections (same architectural tier) -->
+  <url>
+    <loc>https://a70m123r.github.io/agnostic-framework/atlas/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://a70m123r.github.io/agnostic-framework/atlas/v3.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://a70m123r.github.io/agnostic-framework/formalization/</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://a70m123r.github.io/agnostic-framework/notation/</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://a70m123r.github.io/agnostic-framework/speculations/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://a70m123r.github.io/agnostic-framework/dialogues/ai_transition.html</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Animated framework artifacts (interactive HTML) -->
+  <url>
+    <loc>https://a70m123r.github.io/agnostic-framework/artifacts/wrapper_overlap_animated.html</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://a70m123r.github.io/agnostic-framework/artifacts/michotte_launching_extension.html</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Construct studies -->
+  <url>
+    <loc>https://a70m123r.github.io/agnostic-framework/artifacts/marriage_v1.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://a70m123r.github.io/agnostic-framework/artifacts/religion_v1.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://a70m123r.github.io/agnostic-framework/artifacts/language_v1.html</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://a70m123r.github.io/agnostic-framework/artifacts/nation_state_v1.html</loc>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://a70m123r.github.io/agnostic-framework/artifacts/internet_v1.html</loc>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Manifestos (via viewer) -->
+  <url>
+    <loc>https://a70m123r.github.io/agnostic-framework/manifestos/view.html?f=casual_v5.md</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://a70m123r.github.io/agnostic-framework/manifestos/view.html?f=research_v1.md</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://a70m123r.github.io/agnostic-framework/manifestos/view.html?f=engineering_v1.md</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Tools -->
+  <url>
+    <loc>https://a70m123r.github.io/agnostic-framework/tools/unraveler.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Continuations (provenance records) -->
+  <url><loc>https://a70m123r.github.io/agnostic-framework/continuations/02.md</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://a70m123r.github.io/agnostic-framework/continuations/05.md</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://a70m123r.github.io/agnostic-framework/continuations/06.md</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://a70m123r.github.io/agnostic-framework/continuations/07.md</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://a70m123r.github.io/agnostic-framework/continuations/08.md</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://a70m123r.github.io/agnostic-framework/continuations/09.md</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://a70m123r.github.io/agnostic-framework/continuations/10.md</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://a70m123r.github.io/agnostic-framework/continuations/11.md</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://a70m123r.github.io/agnostic-framework/continuations/12.md</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://a70m123r.github.io/agnostic-framework/continuations/13.md</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://a70m123r.github.io/agnostic-framework/continuations/14.md</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://a70m123r.github.io/agnostic-framework/continuations/15.md</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://a70m123r.github.io/agnostic-framework/continuations/16.md</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://a70m123r.github.io/agnostic-framework/continuations/17.md</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://a70m123r.github.io/agnostic-framework/continuations/18.md</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://a70m123r.github.io/agnostic-framework/continuations/19.md</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://a70m123r.github.io/agnostic-framework/continuations/20.md</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://a70m123r.github.io/agnostic-framework/continuations/21.md</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://a70m123r.github.io/agnostic-framework/continuations/22.md</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://a70m123r.github.io/agnostic-framework/continuations/23.md</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://a70m123r.github.io/agnostic-framework/continuations/24.md</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://a70m123r.github.io/agnostic-framework/continuations/25.md</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://a70m123r.github.io/agnostic-framework/continuations/26.md</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://a70m123r.github.io/agnostic-framework/continuations/27.md</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Readings (operational predictions; high SEO value) -->
+  <url><loc>https://a70m123r.github.io/agnostic-framework/readings/2026-05-17_google_algo_phase.md</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://a70m123r.github.io/agnostic-framework/readings/2026-05-18_openai_anthropic_dynamic.md</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://a70m123r.github.io/agnostic-framework/readings/2026-05-27_acmp_attraction_repulsion_gnn.md</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://a70m123r.github.io/agnostic-framework/readings/2026-05-27_bortolotti_time_uncertainty.md</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://a70m123r.github.io/agnostic-framework/readings/2026-05-28_time_step_with_gaps_across_open_problems.md</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Candidates -->
+  <url><loc>https://a70m123r.github.io/agnostic-framework/candidates/energy_floor_failsafe.md</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://a70m123r.github.io/agnostic-framework/candidates/aux_channel_l0_occlusion.md</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+
+  <!-- Audits + provenance -->
+  <url><loc>https://a70m123r.github.io/agnostic-framework/audits/v02.md</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://a70m123r.github.io/agnostic-framework/audits/v03.md</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://a70m123r.github.io/agnostic-framework/audits/v04.md</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://a70m123r.github.io/agnostic-framework/continuations/00_checkpoint.md</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://a70m123r.github.io/agnostic-framework/CHANGELOG.md</loc><changefreq>weekly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://a70m123r.github.io/agnostic-framework/README.md</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>
+
+  <!-- Diagrams (SVG, individually citable) -->
+  <url><loc>https://a70m123r.github.io/agnostic-framework/diagrams/01_compile_loop.svg</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://a70m123r.github.io/agnostic-framework/diagrams/02_observer_architecture.svg</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://a70m123r.github.io/agnostic-framework/diagrams/03_genotype_phenotype.svg</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://a70m123r.github.io/agnostic-framework/diagrams/04_four_carrier_convergence.svg</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://a70m123r.github.io/agnostic-framework/diagrams/05_framework_overview.svg</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://a70m123r.github.io/agnostic-framework/diagrams/06_two_observers_conversation.svg</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
+
+</urlset>

@@ -5,6 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The canon-stack equation — observer architecture formalized — Agnostic Framework</title>
 <meta name="description" content="A mathematical expression of the canon stack mapped onto observer architecture. Observer as 4-tuple (harness, sub canon, wrapper, global canon). Wrapper emerges as stable union from sub canon. Global canon as wrapper-render. Inferred kernel as subset of global canon. Recursion across rings from cell to human to earth. Information flow, bandwidth, and named canon protocols / artefacts at each ring.">
+<meta name="author" content="PAVPAV">
+<link rel="canonical" href="https://a70m123r.github.io/agnostic-framework/formalization/">
+<meta property="og:title" content="The canon-stack equation · observer architecture formalized · Agnostic Framework">
+<meta property="og:description" content="Mathematical expression of the canon stack with §09b reaction-diffusion gradient flow PDE (the framework's first candidate dynamical frame). Equation 11: dx_i/dt = −∇_i E(x) with three-term energy (attractive + repulsive + Allen-Cahn). Energy-floor corollary now canon per cont 27 §1.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://a70m123r.github.io/agnostic-framework/formalization/">
+<meta property="og:image" content="https://a70m123r.github.io/agnostic-framework/artifacts/images/whiteboard_agnostic_systems.jpg">
+<meta property="og:site_name" content="Agnostic Framework">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The canon-stack equation · observer architecture formalized">
+<meta name="twitter:description" content="Recursive equation across rings + §09b reaction-diffusion PDE candidate dynamical frame. Structurally aligned with ACMP (Wang et al. ICLR 2023).">
+<meta name="twitter:image" content="https://a70m123r.github.io/agnostic-framework/artifacts/images/whiteboard_agnostic_systems.jpg">
 <script src="https://hypothes.is/embed.js" async></script>
 <style>
   :root {
@@ -1124,6 +1136,47 @@
     <p class="label">Open edge 04 — what counts as "stable" in stable<sub>t→∞</sub></p>
     <p>The wrapper-emerges-from-sub-canon equation (equation 2) hides the most controversial step under the stable-attractor limit operator. Stability over what timescale? Stability robust to what perturbations? Stability of which order parameters? The framework treats "stable union" as descriptive — it points at what an outside observer would name as the wrapper. A v2 pass should specify what stability means per ring (cell stability ≠ institutional stability ≠ planetary stability).</p>
   </div>
+</section>
+
+<section>
+  <h2><span class="num">§09b</span>Candidate dynamical frame — wrapper overlap as reaction-diffusion gradient flow</h2>
+  <p class="sect-lede">Added 2026-05-27 alongside <a href="../readings/2026-05-27_acmp_attraction_repulsion_gnn.md">Reading 03</a>. The canon-stack equations above (§01–§09) describe wrapper architecture statically. This section adds a candidate dynamical frame for what the wrappers <em>do</em> over time when they overlap — derived from the cross-substrate convergence with ACMP / Allen-Cahn Message Passing.</p>
+
+  <p>The wrapper-overlap dynamic visualized in <a href="../artifacts/wrapper_overlap_animated.html">artifacts/wrapper_overlap_animated.html</a> (v13 spring physics → v14 fluid sim → v15 three-cloud spawn → v16 ACMP-force overlay) can be cast as gradient flow on a three-term energy. This is not the only candidate dynamical frame, and it almost certainly will not fit every substrate the framework spans. But the <em>form</em> (gradient flow on a three-term energy with phase-separation stabilizer) is portable enough to be worth naming as the framework's first formal PDE candidate.</p>
+
+  <div class="eq-block">
+    <p class="label">Equation 11 — Candidate wrapper-overlap PDE (gradient flow on three-term energy)</p>
+    <p class="eq">d x<sub>i</sub>/dt = −∇<sub>i</sub> E(x) = −α · ∇<sub>i</sub> E<sub>attract</sub>(x) − β · ∇<sub>i</sub> E<sub>repel</sub>(x) − γ · ∇<sub>i</sub> E<sub>AllenCahn</sub>(x)</p>
+    <p class="eq">where x<sub>i</sub> is the state vector of particle / node / sub-observer i within wrapper W,<br/>
+    E<sub>attract</sub> = Σ<sub>(i,j)∈neighbours</sub> ½‖x<sub>i</sub> − x<sub>j</sub>‖² — Dirichlet energy, pulls neighbours together (the standard message-passing diffusion term)<br/>
+    E<sub>repel</sub> = Σ<sub>(i,j)∈contact</sub> φ(‖x<sub>i</sub> − x<sub>j</sub>‖) — short-range repulsion potential, pushes neighbours apart when they should differ<br/>
+    E<sub>AllenCahn</sub> = Σ<sub>i</sub> (x<sub>i</sub>² − 1)² — double-well potential, stabilizes phase separation (W_C as distinct from both parents)<br/>
+    α, β, γ — substrate-specific weights tuning the three forces (in the diagram: spring stiffness, friction slider, and W_C maturity respectively)</p>
+  </div>
+
+  <p>The framework's claim is structural, not numerical: any wrapper-overlap dynamic that produces stable distinction (parents persist as procedural-root stubs through and after the overlap; W_C emerges as a genuinely new wrapper rather than absorbing the parents into uniformity) can be expressed in this form, with substrate-specific instantiations of the three energy terms. ACMP proves this for graph neural networks. Cont 26 §3 frames this for L0 internal-pressure failsafes generally.</p>
+
+  <h3>Energy-floor corollary (candidate primitive)</h3>
+  <p>The gradient-flow form admits a key corollary: there exists a strictly positive lower bound E<sub>min</sub> > 0 such that E(x(t)) ≥ E<sub>min</sub> for all t. This is the <strong>energy-floor failsafe</strong> primitive (see <a href="../candidates/energy_floor_failsafe.md">candidate doc</a> with four worked substrate examples). The bound is what prevents oversmoothing (in the GNN substrate) or over-union (in the framework's general substrate). When the bound is violated, the dynamic crosses into one of cont 25 §1's branches — break, dormancy, or supersede.</p>
+
+  <h3>What this candidate frame DOES NOT claim</h3>
+  <ul style="color: var(--text-dim); padding-left: 22px;">
+    <li>That every substrate's wrapper dynamic fits this exact PDE — the double-well Allen-Cahn term is binary phase-separation; the framework's W_C-emergence is tertiary; mapping is partial</li>
+    <li>That α, β, γ are universal constants — they vary by substrate, by ring, and by lifecycle phase (cont 25 §1)</li>
+    <li>That gradient flow is the only candidate dynamical frame — energy-based models, Hamiltonian formulations, and stochastic differential equations are all plausible alternative templates that may fit some substrates better</li>
+    <li>That this resolves cont 23 open edge 01 (aggregation rule across rings) — the gradient flow operates within one ring; the multi-ring composition is still open</li>
+  </ul>
+
+  <h3>Cross-substrate convergence supporting this frame</h3>
+  <p>Seven independent research traditions have arrived at variants of the three-force decomposition (cont 25 §6 + Reading 03 update): <em>LCAO molecular orbital theory</em> (bonding/antibonding/non-bonding orbitals — attractive/repulsive/stabilizer), <em>cell fusion</em> (membrane mixing / surface tension / cytoplasmic phase separation), <em>symbiogenesis</em> (endosymbiont uptake / immune rejection / co-evolutionary stabilization), <em>creole genesis</em> (lexical absorption / grammatical resistance / community-norm stabilization), <em>conceptual blending</em> (input-space projection / vital-relation contrast / blended-space stabilization), <em>model merging</em> (parameter averaging / interference resolution / task-vector stabilization), and now <em>ACMP / reaction-diffusion GNNs</em> (Dirichlet attraction / pairwise repulsion / Allen-Cahn phase separation). The convergence is independent across substrates; each tradition derived its variant without reference to the others. The PDE form above is the most explicit mathematical articulation; the others can be read as substrate-specific instantiations of the same structural template.</p>
+
+  <h3>Open edge 05 — tertiary phase separation</h3>
+  <div class="open-edge">
+    <p class="label">Open edge 05 — extending Allen-Cahn to three phases</p>
+    <p>The classical Allen-Cahn double-well potential separates two phases. The framework's wrapper-overlap dynamic produces three (W_A persists, W_B persists, W_C emerges as the third). The mathematical generalization (multi-well potential with three local minima, or the Cahn-Hilliard equation, or Steinberg's differential-adhesion model from cell biology) is well-studied in PDE theory but has not yet been explicitly applied to GNN message passing. Reading 03 prediction P1 anticipates a paper extending ACMP in this direction within 12 months.</p>
+  </div>
+
+  <p style="margin-top: 22px;">Related: <a href="../readings/2026-05-27_acmp_attraction_repulsion_gnn.md">Reading 03</a> for the full ACMP mapping. <a href="../candidates/energy_floor_failsafe.md">candidates/energy_floor_failsafe.md</a> for the four worked substrate examples. <a href="../continuations/26.md">cont 26</a> for the L0 evolved-failsafe framing this dynamical frame operationalizes.</p>
 </section>
 
 <section>

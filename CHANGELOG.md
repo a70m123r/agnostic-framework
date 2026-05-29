@@ -8,6 +8,44 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-05-28 (SEO discoverability pass — Open Graph + Twitter cards + JSON-LD + Google Scholar tags · sitemap.xml + robots.txt)
+
+### Added
+- **sitemap.xml** at repo root listing every live HTML page + all continuations / readings / candidates / audits / diagrams. ~60 URLs with appropriate `lastmod` / `changefreq` / `priority`. Top-level pages and the two animated artifacts (wrapper_overlap_animated.html, michotte_launching_extension.html) get priority 0.9-1.0; manifestos 0.8; construct studies 0.7; continuations 0.3-0.7 by recency; diagrams 0.4.
+- **robots.txt** at repo root with explicit allow for Googlebot, Bingbot, Google-Scholar, DuckDuckBot, YandexBot, Baiduspider, and AI training crawlers (GPTBot, ClaudeBot, anthropic-ai, PerplexityBot, CCBot). Sitemap location declared.
+
+### Updated (meta tags added to)
+- **index.html** — full SEO pass: Open Graph (og:title, og:description, og:type, og:url, og:image, og:image:alt, og:site_name); Twitter cards (twitter:card summary_large_image, title, description, image); Google Scholar citation_* tags (citation_title, citation_author, citation_publication_date, citation_online_date, citation_abstract_html_url, citation_pdf_url, citation_keywords); canonical URL; author + keywords meta; JSON-LD structured data (ResearchProject schema with creator, contributor, keywords, sameAs to GitHub repo).
+- **artifacts/wrapper_overlap_animated.html** — Open Graph + Twitter cards + canonical URL + author meta.
+- **artifacts/michotte_launching_extension.html** — Open Graph + Twitter cards + canonical URL + author meta.
+- **speculations/index.html** — Open Graph + Twitter cards + canonical URL + author meta.
+- **formalization/index.html** — Open Graph + Twitter cards + canonical URL + author meta.
+- **atlas/index.html** — Open Graph + Twitter cards + canonical URL + author meta.
+- **dialogues/ai_transition.html** — Open Graph + Twitter cards + canonical URL + author meta.
+
+### Why this matters
+- **Open Graph + Twitter cards** are the single highest-leverage fix — every shared link (Twitter/X, LinkedIn, Slack, Discord, email previews) now shows a rich preview card with title + description + the whiteboard image. Before this pass, shared links rendered as bland text-only previews.
+- **sitemap.xml** accelerates Google's discovery of the framework's many subpages. Without it, deep pages (continuations/26.md, readings/2026-05-28_*.md) take much longer to index, especially because most are linked only from index.html.
+- **Google Scholar citation tags** on index.html let the framework surface in Scholar searches for relevant terms (Lakatosian unification, multi-observer dynamics, compilation-rate-as-time, etc.). Directly supports the academic outreach drafted in #6-9 — recipients searching for the framework's claims will find it through Scholar in addition to direct URL.
+- **JSON-LD ResearchProject schema** helps Google understand what the content IS, not just what it says. Schema.org markup increases the chance of rich-result placement (e.g., Knowledge Panel side cards) in SERPs.
+- **robots.txt** with explicit allow for AI training crawlers is deliberate — the framework's claim is that ideas become canon through carrier transmission; being in the training corpus of GPT/Claude/Perplexity is one form of carrier transmission. Honesty about the choice.
+
+### What's NOT in this pass (queued)
+- **Custom domain (CNAME)** — github.io project paths get less SEO authority than custom domains. A custom domain (`agnostic-framework.org` or similar) would meaningfully strengthen ranking, especially for academic searches where serious researchers may discount github.io paths. Costs $10-15/year + DNS config.
+- **Google Search Console verification** — needs manual interaction with Google account. After verification, Pav can submit the sitemap directly to accelerate indexing and see what queries the framework is currently surfacing for.
+- **Bing Webmaster Tools** — same idea for Bing/Yahoo/DuckDuckGo.
+- **Per-page Google Scholar citation tags** — currently only on index.html. Each manifesto / reading / continuation could get its own scholar citation_* tags for granular Scholar discoverability. Heavier lift; worth doing if Scholar indexing becomes a priority.
+- **Additional OG image variants** — currently using whiteboard image for all pages. Per-page custom OG images (e.g., a static export of the wrapper-overlap diagram frame for the artifact pages) would improve preview-card distinctiveness.
+- **arXiv preprint of the research manifesto** — would be the single highest-impact academic discoverability move, gating on Pav's willingness to publish.
+
+### Practical next steps for Pav
+1. **Verify in Google Search Console** at https://search.google.com/search-console — add `https://a70m123r.github.io/agnostic-framework/` as a property; verify ownership via HTML file or DNS; submit sitemap.xml.
+2. **Check the OG preview cards** by pasting the framework URL into Twitter/X, LinkedIn, or Slack message composer — the rich card should now show title + description + whiteboard image.
+3. **Consider the CNAME / custom domain** — biggest medium-term lever. Pav decides whether the framework is staying on github.io long-term or graduating to its own domain.
+4. **Resend the outreach drafts** (#6-9 to Steinberg / Schach-Giese / Klinman / Hammes-Schiffer) — recipients will now see rich preview cards when they share or save the URL.
+
+---
+
 ## 2026-05-28 (Outreach drafts #6-9 — Steinberg / Schach-Giese-Spierings / Klinman / Hammes-Schiffer · acting on Reading 05 §12 strongest near-term targets in Pav's voice)
 
 ### Updated (outreach/initial_contact_drafts.md — four new drafts appended)
