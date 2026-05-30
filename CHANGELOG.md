@@ -8,6 +8,24 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-05-28 (Sitemap.xml fix — stripped query-string URLs + .md files; minimal canonical-HTML-only version for Google parser)
+
+### Fixed
+- Google Search Console returned **"Sitemap could not be read"** (note: different from prior "Couldn't fetch" — Google DID retrieve the file but couldn't parse it).
+- **Diagnosed three likely culprits** in the v1 sitemap:
+  1. **Query-string URLs** like `manifestos/view.html?f=casual_v5.md` — the `?` and `=` are technically valid in XML element content but Google's sitemap parser is finicky with them
+  2. **Raw `.md` markdown URLs** — Google often refuses to treat raw markdown as indexable content; including ~30 .md URLs likely tripped the validator
+  3. **Inconsistent `<lastmod>`** — most continuation entries lacked the field; spec allows omission but Google's stricter validator prefers consistency
+- **Rewrote as minimal canonical-HTML-only sitemap** — 22 URLs total: index, timeline, atlas (+ v3), formalization, notation, speculations, ai_transition dialogue, both animated artifacts, all 5 construct studies, unraveler tool, all 6 SVG diagrams. Every entry has `lastmod`. No query strings. No `.md` files.
+- **Continuations, readings, candidates, audits still discoverable** via internal links from index.html and timeline. Sitemap accelerates canonical pages; deep .md content gets discovered through normal crawl.
+
+### Next step for Pav
+- After push, in Search Console → Sitemaps → click three-dot menu next to `/sitemap.xml` → **Remove sitemap**
+- Re-submit as `sitemap.xml` (or full URL `https://a70m123r.github.io/agnostic-framework/sitemap.xml`)
+- Status should flip to "Success" within a minute; "Discovered pages" should show 22
+
+---
+
 ## 2026-05-28 (Google Search Console — HTML tag verification added to index.html as backup)
 
 ### Added
