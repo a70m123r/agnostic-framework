@@ -1,0 +1,36 @@
+# Default — auto-detect text files and normalize line endings on commit
+* text=auto
+
+# Markdown + text content — let git normalize on commit, deliver native on checkout
+*.md          text
+*.txt         text
+*.html        text
+*.css         text
+*.js          text
+*.json        text
+*.xml         text
+*.svg         text
+*.yml         text
+*.yaml        text
+*.cff         text
+
+# Shell scripts MUST use LF (otherwise they fail on Mac/Linux with "bad interpreter: \r")
+*.sh          text eol=lf
+
+# PowerShell scripts use CRLF on Windows (the native expectation)
+*.ps1         text eol=crlf
+
+# IndexNow key file — must be raw text with no BOM, single line + newline
+568fa5e82cc4459dabbfa57d220d26d8.txt    text eol=lf
+
+# Google verification file — same
+googleeade1f9209fbbd26.html             text eol=lf
+
+# Binary file types — never touch
+*.png         binary
+*.jpg         binary
+*.jpeg        binary
+*.gif         binary
+*.webp        binary
+*.pdf         binary
+*.zip         binary

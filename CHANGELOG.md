@@ -8,6 +8,24 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-05-28 (IndexNow Windows fixes — PowerShell version + .gitattributes hygiene)
+
+### Added
+- **scripts/ping-indexnow.ps1** — PowerShell equivalent of the bash script for Windows users who don't want to go through Git Bash. Same default URL set, same error handling, same JSON body structure. Uses `Invoke-WebRequest` for the POST.
+- **.gitattributes** at repo root — silences the LF/CRLF warnings going forward and enforces correct line endings per file type. Shell scripts forced to LF (otherwise `bash: bad interpreter: \r` on Mac/Linux); PowerShell scripts to CRLF (Windows native); IndexNow key + Google verification file forced to LF.
+
+### Notes for Pav
+- The `chmod` command failure during the previous push was harmless — the push had already completed before chmod tried to run. The +x bit isn't needed on Windows but matters for Mac/Linux contributors who would want to invoke the bash script directly without `bash` prefix.
+- To set the +x bit in git's metadata from PowerShell (no chmod needed):
+  ```powershell
+  git update-index --chmod=+x scripts/ping-indexnow.sh
+  git commit -m "Set executable bit on ping-indexnow.sh"
+  ```
+- On Windows, prefer the PowerShell version: `.\scripts\ping-indexnow.ps1`
+- If PowerShell blocks execution, run once: `Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned`
+
+---
+
 ## 2026-05-28 (IndexNow enabled — single ping notifies Bing + Yandex + Seznam + Naver instantly of framework updates)
 
 ### Added
