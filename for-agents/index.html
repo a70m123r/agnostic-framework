@@ -134,6 +134,8 @@
     <div class="desc">Every shipped artifact dated. Useful for "what's new" or "what's been refactored" queries.</div>
   </div>
 
+  <p style="margin-top: 22px; padding: 14px 18px; background: var(--surface-2); border-left: 3px solid var(--accent-candidate); border-radius: 4px; font-size: 14px; color: var(--text-dim);"><strong style="color: var(--accent-candidate);">Note on sitemap.xml:</strong> the file is present and valid (Bing Webmaster Tools fetches and indexes it cleanly), but Google Search Console's sitemap fetcher consistently fails on GitHub Pages project subpaths (`*.github.io/repo/sitemap.xml`) — a documented, 16-month-old issue affecting many users (see <a href="https://github.com/orgs/community/discussions/149884">GitHub community discussion #149884</a>). The framework deliberately operates via the agent-substrate channels above rather than depending on the gatekeeper sitemap path. This is itself a worked example of <a href="../continuations/28.md#21-worked-example-surfaced-during-cont-28s-own-production">cont 28 §2.1</a> — gatekeeper substrate showing friction; agent substrate routing around it. AI agents reading from <code>/llms.txt</code>, <code>/llms-full.txt</code>, the JSON endpoints, and the RSS/Atom feeds don't go through Google's sitemap fetcher at all.</p>
+
   <h3>Machine-readable structured endpoints</h3>
 
   <div class="endpoint">

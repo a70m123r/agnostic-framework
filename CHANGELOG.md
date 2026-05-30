@@ -8,6 +8,35 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-05-28 (Sitemap loop closed — accepted Google's structural failure with GitHub Pages project subpaths; framework leans into agent-substrate paths per cont 28 §2.1)
+
+### Decision
+- Stop trying to fix Google Search Console sitemap submission. After three rounds (initial submission "Couldn't fetch" → cleaned XML "could not be read" → confirmed structural per GitHub community thread #149884), confirmed the issue is **not fixable at the framework's layer**.
+- The failure is **Google-specific** (Bing Webmaster Tools fetches and indexes the same sitemap cleanly) and **GitHub-Pages-project-subpath-specific** (root `*.github.io/sitemap.xml` works; `*.github.io/repo/sitemap.xml` consistently fails). 17+ participants in [GitHub discussion #149884](https://github.com/orgs/community/discussions/149884) report the same failure mode over 16 months (Jan 2025 – Apr 2026). Confirmed fixes: custom domain (CNAME), Netlify, Vercel, Cloudflare Pages. Confirmed non-fixes: XML cleanup, robots.txt, framework changes.
+- **Pav's steer:** *"close the loop, focus on agent-substrate which already routes around this."*
+
+### Why this is framework-coherent
+- This is a small but real instance of cont 28 §2's supersede dynamic at the discovery substrate. Gatekeeper substrate (Google Search Console) is showing friction with an adjacent substrate (GitHub Pages) — a friction that wasn't there when the gatekeeper substrate was the primary discovery path. Bing handles the case cleanly because it's less strict / has less market share.
+- The framework's agent-substrate optimization (shipped earlier today) routes around this entirely. AI agents read /llms.txt + /llms-full.txt + JSON endpoints + RSS/Atom feeds — none of which depend on Google's sitemap fetcher.
+- The framework is **producing observational data about its own claim**: the gatekeeper substrate is showing friction; the framework's agent-substrate optimization absorbs the cost; the strategic decision is to lean further into the new substrate rather than restore the old. Under the cont 28 §2 supersede dynamic, this is low-cost; under a non-supersede world it would be high-cost. The decision itself confirms the framing.
+
+### Updated
+- **continuations/28.md** — new §2.1 added: "Worked example surfaced during cont 28's own production" documenting the sitemap failure with thread evidence and the explicit framework-coherent decision to accept the failure rather than work around it.
+- **/for-agents/ §02** — added an explicit note explaining the sitemap status: file is present and valid (Bing fetches cleanly); Google fails for documented structural reasons; framework operates via the agent-substrate channels above rather than depending on the gatekeeper sitemap. Links to GitHub discussion #149884 + cont 28 §2.1.
+
+### What stays / what changes
+- **sitemap.xml file STAYS in the repo.** It's still useful: Bing uses it (Bing/DuckDuckGo/Yahoo/Ecosia market), Yandex/Baidu may use it, AI crawlers reference it via robots.txt, internal Google link-crawling still benefits from its presence.
+- **robots.txt STAYS unchanged** (already correct, references sitemap.xml).
+- **Google Search Console verification STAYS active** (both HTML file and meta-tag methods). Verification gives Search Console access for monitoring Coverage / Performance even without working sitemap submission.
+- **Manual action queued for Pav** (UI-only, not in repo): in Search Console → Sitemaps, remove the failing `/sitemap.xml` entry so the dashboard isn't perpetually showing a red error.
+
+### Practical optional next steps (Pav's call, not load-bearing)
+- **Bing Webmaster Tools setup** (~15 min) — gives access to ~10% of global search market that DOES work with github.io paths. Backup discovery channel that the agent-substrate optimization doesn't replace.
+- **Custom domain (CNAME)** — buy something like `agnostic-framework.org`, point DNS at github.io. ~$10-15/year + 30 min setup. Would fix the Google sitemap issue AND strengthen general SEO authority. Worth considering when the framework graduates from "github.io artifact" to "long-term framework with its own identity."
+- **Manual URL Inspection submission** in Search Console — 1 page/day rate limit; could prioritize the ~22 canonical URLs over ~22 days. Slow but works around Google's sitemap-fetcher refusal. Mostly cosmetic given that link-crawl from the verified homepage will discover the same URLs eventually.
+
+---
+
 ## 2026-05-28 (Cont 28 + JSON endpoints + RSS/Atom feeds · agent-substrate optimization full stack · day-closing round)
 
 ### Added (continuations/28.md, ~5,500 words)
