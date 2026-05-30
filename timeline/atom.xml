@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Agnostic Framework &#8212; Timeline</title>
+  <subtitle>Fresh-on-top stream of what's shipping in the Agnostic Framework, with verbatim Pav steers and one-paragraph summaries per entry.</subtitle>
+  <link href="https://a70m123r.github.io/agnostic-framework/timeline/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://a70m123r.github.io/agnostic-framework/timeline/" rel="alternate" type="text/html"/>
+  <id>https://a70m123r.github.io/agnostic-framework/timeline/</id>
+  <updated>2026-05-28T12:00:00Z</updated>
+  <author>
+    <name>PAVPAV</name>
+    <uri>https://a70m123r.github.io/agnostic-framework/</uri>
+  </author>
+  <generator>Agnostic Framework &#8212; hand-curated timeline</generator>
+  <icon>https://a70m123r.github.io/agnostic-framework/artifacts/images/whiteboard_agnostic_systems.jpg</icon>
+  <rights>Permissive &#8212; see LICENSE at https://github.com/a70m123r/agnostic-framework/blob/main/LICENSE</rights>
+
+  <entry>
+    <title>Agent-substrate optimization &#8212; /llms.txt + /llms-full.txt + /for-agents/ &#183; framework as flower for the AI agents of researchers in adjacent lineages &#183; cont 25 &#167;1 supersede dynamic applied to discovery infrastructure</title>
+    <link href="https://a70m123r.github.io/agnostic-framework/timeline/#agent-substrate-optimization-llms-txt-llms-full-txt-for-agents" rel="alternate" type="text/html"/>
+    <id>tag:a70m123r.github.io,2026:timeline/2026-05-27-agent-substrate-optimization-llms-txt-llms-full-txt-for-agents</id>
+    <updated>2026-05-27T12:00:00Z</updated>
+    <published>2026-05-27T12:00:00Z</published>
+    <author><name>PAVPAV</name></author>
+    <category term="agent-substrate optimization"/>
+    <category term="llms.txt + llms-full.txt"/>
+    <category term="/for-agents/ landing page"/>
+    <category term="steer · supersede dynamic at discovery substrate"/>
+    <summary type="html"><![CDATA[
+      <p><em>Steer:</em> "intent here is for agnostic to be like a flower for the people we want to outreach to, or more precisely the ai agent searches that they are running on the web, a flower for their agents to come and have a look at and escalate to the users attention. this is the future of networking, the traditinal gatekeeper rankings and algorithms and being folded in as a tool for personal multi agent searcher's aggregators and attention bandwidth managers"</p>
+      <p>Pav's reframe is structurally a supersede dynamic (cont 25 §1) at the discovery substrate: centralized gatekeeper algorithms (Google, Bing) being folded in as tools for distributed personal-agent attention managers. The framework's own canon describes the dynamic it's now optimizing to participate in. The four-target outreach (#6-9 to Steinberg / Schach-Giese / Klinman / Hammes-Schiffer) shipped earlier today makes the move concrete. Shipped: (1) /llms.txt at repo root (~600 words) per the emerging llmstxt.org standard. (2) /llms-full.txt (~6,000 words) — expanded with substantive content embedded inline. (3) /for-agents/index.html landing page doubling as strategic-insight statement. (4) robots.txt extended with explicit allows for ChatGPT-User, OAI-SearchBot, Claude-Web, Perplexity-User, Google-Extended, and others. (5) sitemap.xml + index.html Map section updated. The framework's main ask of agents reading its material is tier-tagging discipline downstream — preserving canon/candidate/speculative distinctions in agent summaries to users.</p>
+      <p><strong>Links:</strong> <a href="https://a70m123r.github.io/agnostic-framework/llms.txt">/llms.txt</a>, <a href="https://a70m123r.github.io/agnostic-framework/llms-full.txt">/llms-full.txt</a>, <a href="https://a70m123r.github.io/agnostic-framework/for-agents/">/for-agents/ landing page</a>, <a href="https://a70m123r.github.io/agnostic-framework/robots.txt">/robots.txt (extended)</a>, <a href="https://llmstxt.org/">llmstxt.org standard</a>, <a href="https://a70m123r.github.io/agnostic-framework/continuations/25.md">cont 25 §1 (supersede dynamic)</a>, <a href="https://github.com/a70m123r/agnostic-framework/blob/main/CHANGELOG.md">CHANGELOG</a></p>
+    ]]></summary>
+  </entry>
+
+  <entry>
+    <title>SEO discoverability pass &#8212; Open Graph + Twitter cards + JSON-LD ResearchProject schema + Google Scholar citation tags + sitemap.xml + robots.txt</title>
+    <link href="https://a70m123r.github.io/agnostic-framework/timeline/#seo-discoverability-pass-open-graph-twitter-cards-json-ld-r" rel="alternate" type="text/html"/>
+    <id>tag:a70m123r.github.io,2026:timeline/2026-05-27-seo-discoverability-pass</id>
+    <updated>2026-05-27T12:00:00Z</updated>
+    <published>2026-05-27T12:00:00Z</published>
+    <author><name>PAVPAV</name></author>
+    <category term="SEO pass"/>
+    <category term="OG + Twitter + JSON-LD + Scholar"/>
+    <category term="sitemap.xml + robots.txt"/>
+    <category term="steer"/>
+    <summary type="html"><![CDATA[
+      <p><em>Steer:</em> "ok is this git crawlable and searchable by google ect?" → "All three"</p>
+      <p>Honest baseline: the framework site IS crawlable, but discovery was suboptimal — shared links rendered as bland text-only previews; deep pages took longer to index; the academic outreach drafts pointed to a site that wouldn't appear in Scholar searches. This pass fixed all of that. Open Graph + Twitter cards on 7 key pages. JSON-LD ResearchProject schema on index.html. Google Scholar citation_* meta tags. sitemap.xml at repo root listing ~60 URLs. robots.txt with explicit allow for Googlebot, Bingbot, Google-Scholar, DuckDuckBot, YandexBot, Baiduspider, AND AI training crawlers (GPTBot, ClaudeBot, anthropic-ai, PerplexityBot, CCBot) — deliberate honesty that being in AI training corpora is one form of carrier transmission. What's queued: custom domain CNAME, Google Search Console verification, per-page Scholar citation tags, arxiv preprint of the research manifesto.</p>
+      <p><strong>Links:</strong> <a href="https://a70m123r.github.io/agnostic-framework/sitemap.xml">sitemap.xml</a>, <a href="https://a70m123r.github.io/agnostic-framework/robots.txt">robots.txt</a>, <a href="https://search.google.com/search-console">Google Search Console (for Pav to verify)</a>, <a href="https://a70m123r.github.io/agnostic-framework/outreach/initial_contact_drafts.md">outreach drafts (now with rich preview cards)</a>, <a href="https://github.com/a70m123r/agnostic-framework/blob/main/CHANGELOG.md">CHANGELOG</a></p>
+    ]]></summary>
+  </entry>
+
+  <entry>
+    <title>Outreach drafts #6-9 &#8212; Steinberg (tunneling-time program) + Spierings/Schach/Giese (2024 unification authors) + Klinman (enzyme H-tunneling) + Hammes-Schiffer (theoretical PCET) &#183; in Pav's voice &#183; acting on Reading 05 &#167;12 strongest near-term targets</title>
+    <link href="https://a70m123r.github.io/agnostic-framework/timeline/#outreach-drafts-6-9-steinberg-spierings-schach-giese-klinman" rel="alternate" type="text/html"/>
+    <id>tag:a70m123r.github.io,2026:timeline/2026-05-27-outreach-drafts-6-9</id>
+    <updated>2026-05-27T12:00:00Z</updated>
+    <published>2026-05-27T12:00:00Z</published>
+    <author><name>PAVPAV</name></author>
+    <category term="outreach drafts #6-9"/>
+    <category term="Steinberg / Schach-Giese / Klinman / Hammes-Schiffer"/>
+    <category term="steer"/>
+    <summary type="html"><![CDATA[
+      <p><em>Steer:</em> "ok create the outreach, use me voice of tone"</p>
+      <p>Four new outreach drafts appended to outreach/initial_contact_drafts.md, all in Pav's established voice. Draft #6 — Steinberg (U Toronto): framework's Tier 1 perceptual-rate-as-sense canon is structurally identical to Steinberg lab's substrate-level Larmor/Ramsey clock results. Draft #7 — Spierings/Schach/Giese (2024 Sci. Adv. unification authors): early-career-to-early-career tone with two specific questions on cross-domain composition. Draft #8 — Klinman (Berkeley): framework reads enzyme catalysis by H-tunneling as "shaping the time-window for substrate-gap traversal". Draft #9 — Hammes-Schiffer (Princeton): companion to #8, focuses on "promoting modes gate tunneling probability" picture. Discipline maintained throughout: no outreach draft claims the framework's reading IS correct. The drafts are an active attempt to accelerate Reading 05 §12.5 prediction P4.</p>
+      <p><strong>Links:</strong> <a href="https://a70m123r.github.io/agnostic-framework/outreach/initial_contact_drafts.md">outreach/initial_contact_drafts.md (drafts #6-9 appended)</a>, <a href="https://a70m123r.github.io/agnostic-framework/readings/2026-05-28_time_step_with_gaps_across_open_problems.md">Reading 05 §12 (the targets came from here)</a>, <a href="https://a70m123r.github.io/agnostic-framework/continuations/27.md">cont 27 §2 (tier discipline in drafts)</a>, <a href="https://github.com/a70m123r/agnostic-framework/blob/main/CHANGELOG.md">CHANGELOG</a></p>
+    ]]></summary>
+  </entry>
+
+  <entry>
+    <title>Reading 05 &#167;12 addendum &#8212; cognitive perception neurobiology + atomic tunneling deep dives &#183; Schach-Giese 2024 identified as the framework's second Tier 2 anchor after Bortolotti et al. &#183; enzyme catalysis by H-tunneling as strongest biological-substrate candidate</title>
+    <link href="https://a70m123r.github.io/agnostic-framework/timeline/#reading-05-12-addendum-cognitive-perception-neurobiology-atom" rel="alternate" type="text/html"/>
+    <id>tag:a70m123r.github.io,2026:timeline/2026-05-27-reading-05-12-addendum</id>
+    <updated>2026-05-27T12:00:00Z</updated>
+    <published>2026-05-27T12:00:00Z</published>
+    <author><name>PAVPAV</name></author>
+    <category term="Reading 05 §12 addendum"/>
+    <category term="Schach-Giese 2024 = 2nd Tier 2 anchor"/>
+    <category term="2 focused subagents"/>
+    <category term="steer"/>
+    <summary type="html"><![CDATA[
+      <p><em>Steer:</em> "anything in there about cognitive perception neuro biology, atomic tunnelling?"</p>
+      <p>Same-day follow-up to Reading 05 v1. Two focused parallel subagents returned ~3,800 words of new structured research with ~30 additional cited 2023-2026 sources. §12.1 cognitive neurobiology covered 9 substantive topics including Cogitate Consortium IIT-vs-GNWT adversarial collaboration, gamma synchrony binding, predictive coding/active inference, attentional sampling at theta ~4-8Hz (Fiebelkorn, Kastner), discrete-vs-continuous perception with Donoghue 2025 challenge, time cells in hippocampus, thalamocortical gating, Orch-OR microtubule hypothesis with 2024 epothilone B result, and Manning 2024 "speed of sight" psychophysics. §12.2 atomic tunneling covered 9 substantive topics including attoclock chronoscopy, Schach-Giese 2024 Larmor/Ramsey clock unification framework, Hartman effect, enzyme catalysis by H-tunneling (Klinman 2025 JACS), photosynthetic vibronic coherence retraction story, olfaction quantum tunneling, DNA mutation by proton tunneling, and 2025 Nobel Prize on macroscopic tunneling. The addendum's most important finding: Schach-Giese 2024 provides the framework with its second Tier 2 anchor after Bortolotti et al.</p>
+      <p><strong>Links:</strong> <a href="https://a70m123r.github.io/agnostic-framework/readings/2026-05-28_time_step_with_gaps_across_open_problems.md#§12-addendum">Reading 05 §12 addendum</a>, <a href="https://a70m123r.github.io/agnostic-framework/readings/2026-05-27_bortolotti_time_uncertainty.md">Reading 04 (first Tier 2 anchor)</a>, <a href="https://a70m123r.github.io/agnostic-framework/continuations/27.md">cont 27 §2 (discipline applied)</a>, <a href="https://a70m123r.github.io/agnostic-framework/artifacts/michotte_launching_extension.html">Michotte v2 (operationalizes Fiebelkorn attentional sampling)</a>, <a href="https://github.com/a70m123r/agnostic-framework/blob/main/CHANGELOG.md">CHANGELOG</a></p>
+    ]]></summary>
+  </entry>
+
+  <entry>
+    <title>Reading 05 &#8212; time-step-with-gaps as candidate reframing across ~40 open problems in physics + adjacent domains &#183; six parallel subagents &#183; ~30,000 words of structured research synthesized with three-tier discipline</title>
+    <link href="https://a70m123r.github.io/agnostic-framework/timeline/#reading-05-time-step-with-gaps-as-candidate-reframing-across" rel="alternate" type="text/html"/>
+    <id>tag:a70m123r.github.io,2026:timeline/2026-05-27-reading-05</id>
+    <updated>2026-05-27T12:00:00Z</updated>
+    <published>2026-05-27T12:00:00Z</published>
+    <author><name>PAVPAV</name></author>
+    <category term="Reading 05"/>
+    <category term="cross-domain survey"/>
+    <category term="6 parallel subagents"/>
+    <category term="cont 27 §2 discipline applied"/>
+    <category term="steer"/>
+    <summary type="html"><![CDATA[
+      <p><em>Steer:</em> "ok lets look at the latest unexplained / fuzzy / theoretical / phenomena in physics and adjacent dominions and see how the time step with gaps can be a possible hypothetical explanation to fill the gaps, spein up some subagents and compile a list"</p>
+      <p>Largest synthesis round of the framework so far. Six parallel research subagents covered quantum foundations + measurement, cosmology, quantum gravity + black holes, time/thermodynamics/arrow-of-time, particle physics anomalies, consciousness science. ~30,000 words of raw research with ~80+ cited sources. Honest yield: ~8-10 phenomena where the lens lands cleanly — problem of time in QG, Diósi-Penrose clock-precision, cosmological constant problem, BMV proper-time interference, black hole singularity, past hypothesis, Boltzmann brain, hierarchy/naturalness, JWST early massive galaxies. ~15 problems where the lens can be made consistent but adds nothing. Explicit rejection list. Pattern observed: the lens lands hardest where the existing physics literature is already gesturing toward time-as-structured-quantity. Three scoreable predictions with 12/24/36mo horizons. Critically: the Reading does NOT validate framework core claims. This is the discipline cont 27 §2 demands.</p>
+      <p><strong>Links:</strong> <a href="https://a70m123r.github.io/agnostic-framework/readings/2026-05-28_time_step_with_gaps_across_open_problems.md">Reading 05 — full synthesis</a>, <a href="https://a70m123r.github.io/agnostic-framework/continuations/27.md">cont 27 §2 (the discipline applied)</a>, <a href="https://a70m123r.github.io/agnostic-framework/readings/2026-05-27_bortolotti_time_uncertainty.md">Reading 04 (Tier 2 anchor)</a>, <a href="https://a70m123r.github.io/agnostic-framework/candidates/aux_channel_l0_occlusion.md">aux-channel doc (Tier 3 — NOT invoked here)</a>, <a href="https://github.com/a70m123r/agnostic-framework/blob/main/CHANGELOG.md">CHANGELOG</a></p>
+    ]]></summary>
+  </entry>
+
+  <entry>
+    <title>Michotte Launching v2 &#8212; billiard-chain dynamics engine (N balls 2-6, real collision physics, per-link delay) + Lane 1 occlusion overlay (orange = observer-level / purple = L0 substrate-level, visible on stage itself)</title>
+    <link href="https://a70m123r.github.io/agnostic-framework/timeline/#michotte-launching-v2-billiard-chain-dynamics-engine-n-balls" rel="alternate" type="text/html"/>
+    <id>tag:a70m123r.github.io,2026:timeline/2026-05-27-michotte-launching-v2</id>
+    <updated>2026-05-27T12:00:00Z</updated>
+    <published>2026-05-27T12:00:00Z</published>
+    <author><name>PAVPAV</name></author>
+    <category term="Michotte v2"/>
+    <category term="billiard chain"/>
+    <category term="Lane 1 occlusion overlay"/>
+    <category term="steer"/>
+    <summary type="html"><![CDATA[
+      <p><em>Steer:</em> "the lane one needs to visually show the event occlusion and lets have a chain of cause and effects with a dynamics engine like billiard balls"</p>
+      <p>v2 rebuild of artifacts/michotte_launching_extension.html shipped same day as v1. Two substantial upgrades. (1) Lane 1 occlusion overlay — the framework-relevant addition. When observer is between attention samples, an orange tint with "OBSERVER BLIND" label activates over Lane 1. When L0 occlusion fires, a purple tint with "L0 OCCLUSION — SHARED GAP IN TIME-FLOW" label takes precedence. The Lane 1 overlay is the visual heart of cont 26 §4 — physics keeps running underneath the overlay; only the observer's access is affected. (2) Billiard-chain dynamics engine — replaces v1's single A/B with N balls (2-6 configurable) in a line with real collision detection + delay-then-transfer momentum logic. Each ball has its own point cloud (12 particles, spring physics, distinct colour from 6-stop palette). Per-link verdict tracking: chain length K has K−1 causal links; verdict becomes FULL CHAIN / PARTIAL CHAIN / BROKEN CHAIN. Chain perception scales multiplicatively with chain length — Tier 1 prediction sharper than single-link Michotte.</p>
+      <p><strong>Links:</strong> <a href="https://a70m123r.github.io/agnostic-framework/artifacts/michotte_launching_extension.html">Michotte Launching v2 — try the chain</a>, <a href="https://a70m123r.github.io/agnostic-framework/continuations/26.md">cont 26 §4 (the canon made visible)</a>, <a href="https://a70m123r.github.io/agnostic-framework/continuations/27.md">cont 27 §2 (the L0 overlay is the procedure in action)</a>, <a href="https://github.com/a70m123r/agnostic-framework/blob/main/CHANGELOG.md">CHANGELOG</a></p>
+    ]]></summary>
+  </entry>
+
+  <entry>
+    <title>Michotte Launching extended &#8212; v1 framework-native rebuild &#183; point clouds + observer time-cone + temporal occlusion graph &#183; L0 Occlusion as exposed parameter (cont 27 &#167;2 honest move)</title>
+    <link href="https://a70m123r.github.io/agnostic-framework/timeline/#michotte-launching-extended-v1-framework-native-rebuild-poin" rel="alternate" type="text/html"/>
+    <id>tag:a70m123r.github.io,2026:timeline/2026-05-27-michotte-launching-extended-v1</id>
+    <updated>2026-05-27T12:00:00Z</updated>
+    <published>2026-05-27T12:00:00Z</published>
+    <author><name>PAVPAV</name></author>
+    <category term="Michotte v1"/>
+    <category term="experimental artifact"/>
+    <category term="framework-native rebuild"/>
+    <category term="steer"/>
+    <summary type="html"><![CDATA[
+      <p><em>Steer:</em> "ove bult it a whole ago, lets rebult it withe all the latest agnostic lernings and in tha same format as the simulated dirgram programatic procidual and point based with observers cone afected and a temoral graph showing the occulsion gaps and of the observer"</p>
+      <p>Framework's first experimental artifact — produces observations rather than only describing them. Shipped as artifacts/michotte_launching_extension.html (~900 lines, single self-contained HTML). Three-lane SVG canvas (viewBox 1200x900): Lane 1 Michotte stage with A and B as point clouds with spring physics + contact burst on collision; Lane 2 observer time-cone as first-class trapezoid; Lane 3 temporal graph with event markers, threshold zones, observer perception windows, observer-level occlusion gaps (orange bands), L0-level occlusion zones (purple dashed bands). Five framework-mapped controls: Mechanical Delay; Attention Sampling (cont 26 §4 Tier 1 canon); Sensory Bridging (cont 14/16); L0 Occlusion slider (Tier 3 speculation exposed as parameter — cont 27 §2 honest move); Speed (Reading 04 Tier 2 candidate). The L0 Occlusion slider is the cleanest demonstration of cont 27 §2 procedure.</p>
+      <p><strong>Links:</strong> <a href="https://a70m123r.github.io/agnostic-framework/artifacts/michotte_launching_extension.html">Michotte Launching v1 — try it</a>, <a href="https://a70m123r.github.io/agnostic-framework/candidates/aux_channel_l0_occlusion.md">aux-channel candidate (Layer 1 instrument)</a>, <a href="https://a70m123r.github.io/agnostic-framework/speculations/">/speculations/ (Tier 3 home)</a>, <a href="https://a70m123r.github.io/agnostic-framework/artifacts/wrapper_overlap_animated.html">wrapper-overlap diagram (format precedent)</a>, <a href="https://github.com/a70m123r/agnostic-framework/blob/main/CHANGELOG.md">CHANGELOG</a></p>
+    ]]></summary>
+  </entry>
+
+  <entry>
+    <title>Cont 27 &#8212; energy-floor failsafe promoted to canon &#183; three-tier epistemic framework (Tier 1 epistemological / Tier 2 ontological-candidate / Tier 3 speculative) formalized as canon procedure with promotion + pruning rules &#183; /speculations/ as new first-class mode-page</title>
+    <link href="https://a70m123r.github.io/agnostic-framework/timeline/#cont-27-energy-floor-failsafe-promoted-to-canon-three-tier-e" rel="alternate" type="text/html"/>
+    <id>tag:a70m123r.github.io,2026:timeline/2026-05-27-cont-27-energy-floor-failsafe</id>
+    <updated>2026-05-27T12:00:00Z</updated>
+    <published>2026-05-27T12:00:00Z</published>
+    <author><name>PAVPAV</name></author>
+    <category term="cont 27"/>
+    <category term="energy-floor promoted to canon"/>
+    <category term="three-tier epistemic framework"/>
+    <category term="/speculations/ new mode-page"/>
+    <category term="steer"/>
+    <summary type="html"><![CDATA[
+      <p><em>Steer:</em> "Featured — give it its own Map section as 'open speculations' alongside the existing mode-pages" + "Cont 27 — promote energy-floor failsafe to canon AND formalize the three-layer epistemic-tier framework as canon procedure"</p>
+      <p>Day-closing canon-building round. Three major shipments: (1) Energy-floor failsafe promoted from candidate to canon (cont 27 §1) based on four substrate worked examples — ACMP/GNN, cell metabolism, creole genesis, institutions. The mathematical operationalization of cont 26 §3's qualitative "internal pressure failsafe" claim. (2) Three-tier epistemic framework formalized as canon procedure (cont 27 §2-3) — names the three registers: Tier 1 EPISTEMOLOGICAL (cog-sci testable); Tier 2 ONTOLOGICAL-CANDIDATE (claims about what the world is); Tier 3 SPECULATIVE (structural coherence without empirical purchase). Tier-specific promotion + pruning procedures. (3) /speculations/ as new first-class mode-page — same architectural tier as /atlas/, /dialogues/, /formalization/, /notation/. Two Tier 3 entries listed initially. First scheduled speculation review: 2026-11-27. Energy-floor promotion gives the framework its first mathematically-rigorous canon primitive.</p>
+      <p><strong>Links:</strong> <a href="https://a70m123r.github.io/agnostic-framework/continuations/27.md">cont 27 — full canon-building round</a>, <a href="https://a70m123r.github.io/agnostic-framework/speculations/">/speculations/ — new mode-page</a>, <a href="https://a70m123r.github.io/agnostic-framework/candidates/energy_floor_failsafe.md">energy-floor failsafe (promoted)</a>, <a href="https://a70m123r.github.io/agnostic-framework/candidates/aux_channel_l0_occlusion.md">aux-channel doc (Tier 3 assigned)</a>, <a href="https://a70m123r.github.io/agnostic-framework/index.html#primitives">PRIMITIVES (two new canon entries)</a>, <a href="https://github.com/a70m123r/agnostic-framework/blob/main/CHANGELOG.md">CHANGELOG</a></p>
+    ]]></summary>
+  </entry>
+
+  <entry>
+    <title>Speculative-track candidate &#8212; L0 occlusion as auxiliary channel for time-cone extension &#183; three-layer decomposition (epistemological / ontological-candidate / speculative-tier) clean separation</title>
+    <link href="https://a70m123r.github.io/agnostic-framework/timeline/#speculative-track-candidate-l0-occlusion-as-auxiliary-channe" rel="alternate" type="text/html"/>
+    <id>tag:a70m123r.github.io,2026:timeline/2026-05-27-speculative-track-l0-occlusion</id>
+    <updated>2026-05-27T12:00:00Z</updated>
+    <published>2026-05-27T12:00:00Z</published>
+    <author><name>PAVPAV</name></author>
+    <category term="speculative tier"/>
+    <category term="aux channel"/>
+    <category term="L0 occlusion"/>
+    <category term="steer"/>
+    <summary type="html"><![CDATA[
+      <p><em>Steer:</em> "ok have you heard of this, hypothesis is that the observer time cone can be occluded, in our case we have created strategies and tools to observe the - small and + big however the speculation bubble is that the shared global wrapper can be occluded as well to create gaps in time flow itself as an aux channel."</p>
+      <p>A bold speculation that the framework can hold without endorsing. The most important move in the doc is the three-layer decomposition: Layer 1 — observer time-cone is empirically modulable (well-evidenced); Layer 2 — compilation-rate-as-time (Reading 04 ontological-candidate; conditional on contested quantum-collapse physics); Layer 3 — L0 occlusion as aux channel (this doc; speculative-track). Layer 3's specific claim: not just observer wrappers but L0 itself is occludable; resulting gaps would be REAL shared gaps across observers. Pav's "spatial extension tools exist; temporal extension tools don't" framing deserves its own naming. Three promotion bars explicitly named for Layer 3 → candidate movement: (A) measurable physical signature; (B) naturally-occurring shared-observer case; (C) constructive experimental protocol. None met. Holding at speculation tier is honest; promoting without bars met would be irresponsible.</p>
+      <p><strong>Links:</strong> <a href="https://a70m123r.github.io/agnostic-framework/candidates/aux_channel_l0_occlusion.md">candidate: L0 occlusion aux channel</a>, <a href="https://a70m123r.github.io/agnostic-framework/continuations/26.md#§4-time--speed-of-perception-as-a-sense">cont 26 §4 (now with two forward-pointers)</a>, <a href="https://a70m123r.github.io/agnostic-framework/readings/2026-05-27_bortolotti_time_uncertainty.md">Reading 04 (Layer 2 partner)</a></p>
+    ]]></summary>
+  </entry>
+
+  <entry>
+    <title>Reading 04 &#8212; Bortolotti et al. quantum-collapse time uncertainty as ontological-candidate strengthening of cont 26 &#167;4 &#183; framework's first reading with contested underlying physics &#183; new candidate primitive: compilation-rate-as-time</title>
+    <link href="https://a70m123r.github.io/agnostic-framework/timeline/#reading-04-bortolotti-et-al-quantum-collapse-time-uncertaint" rel="alternate" type="text/html"/>
+    <id>tag:a70m123r.github.io,2026:timeline/2026-05-27-reading-04-bortolotti</id>
+    <updated>2026-05-27T12:00:00Z</updated>
+    <published>2026-05-27T12:00:00Z</published>
+    <author><name>PAVPAV</name></author>
+    <category term="Reading 04"/>
+    <category term="compilation-rate-as-time"/>
+    <category term="cont 26 §4 strengthened"/>
+    <category term="contested physics"/>
+    <category term="steer"/>
+    <summary type="html"><![CDATA[
+      <p><em>Steer:</em> "ok this is something that caught my scan, remembers when i said its interesting that the wrapper point sim speed slider change the interaction not just fidelity but action."</p>
+      <p>Pav's earlier observation that the wrapper-overlap diagram's Speed slider changes the action itself, not just fidelity, was captured partially in cont 26 §4 as the epistemological "perceptual rate is a sense" claim. The stronger ontological version was implied but not committed to. Bortolotti et al. (Phys Rev Research 2025) provides physical-substrate evidence for the ontological version: if quantum collapse models (Diósi-Penrose / CSL) are right, time itself has small intrinsic uncertainty linked to the spontaneous-collapse process. The mapping: wavefunction ≈ wrapper in fuzzy/pre-compiled state; collapse ≈ wrapper compilation event; gravity-linked collapse ≈ L0 IS the agent of compilation. New candidate primitive surfaced: compilation-rate-as-time — distinct from cont 26 §4 perceptual-rate-as-sense; sits at the ontological substrate layer. Honest accounting (§5) is substantially longer than prior readings because the underlying physics is contested. Three scoreable predictions with longer horizons (12mo / 24mo / 18mo).</p>
+      <p><strong>Links:</strong> <a href="https://a70m123r.github.io/agnostic-framework/readings/2026-05-27_bortolotti_time_uncertainty.md">Reading 04 — full mapping</a>, <a href="https://www.sciencedaily.com/releases/2026/05/260502233918.htm">ScienceDaily article</a>, <a href="https://doi.org/10.1103/p6tj-lg8l">Phys Rev Research paper</a>, <a href="https://a70m123r.github.io/agnostic-framework/continuations/26.md#§4-time--speed-of-perception-as-a-sense">cont 26 §4 (now with forward-pointer)</a>, <a href="https://a70m123r.github.io/agnostic-framework/artifacts/wrapper_overlap_animated.html">v16 diagram (Speed-slider note updated)</a></p>
+    ]]></summary>
+  </entry>
+
+  <entry>
+    <title>v16 ACMP-force overlay + spawn-flash &#183; energy-floor failsafe candidate doc with 4 worked substrates &#183; formalization page &#167;09b reaction-diffusion PDE as first formal dynamical frame</title>
+    <link href="https://a70m123r.github.io/agnostic-framework/timeline/#v16-acmp-force-overlay-spawn-flash-energy-floor-failsafe-can" rel="alternate" type="text/html"/>
+    <id>tag:a70m123r.github.io,2026:timeline/2026-05-27-v16-acmp-force-overlay</id>
+    <updated>2026-05-27T12:00:00Z</updated>
+    <published>2026-05-27T12:00:00Z</published>
+    <author><name>PAVPAV</name></author>
+    <category term="diagram 07 v16"/>
+    <category term="energy-floor 4 substrates"/>
+    <category term="formalization §09b"/>
+    <category term="PDE candidate frame"/>
+    <category term="steer"/>
+    <summary type="html"><![CDATA[
+      <p><em>Steer:</em> "lets go"</p>
+      <p>Three deliverables shipped from a single steer. (1) Diagram v16 — ACMP-force overlay + spawn-flash. New "Show ACMP forces" checkbox in controls. When enabled in cloud view: each newly-spawned W_C particle gets an expanding canon-yellow ring halo for 24 frames after birth. Stress halos render on any particle whose velocity diverges from its spring direction by more than 0.35 px/frame. ACMP correspondence table added. (2) candidates/energy_floor_failsafe.md (~2,700 words). First doc in a new candidates/ directory. Four worked substrate examples: ACMP/GNN, cell metabolism, creole genesis, institutions. Substrates span mathematical / biological / sociolinguistic / organizational. (3) formalization §09b — reaction-diffusion gradient flow PDE candidate frame. The framework's first formal PDE: dx_i/dt = −∇_i E(x) with E = α·E_attract + β·E_repel + γ·E_AllenCahn. The framework now has its first formal PDE candidate AND a multi-substrate primitive promotion-ready, both anchored by independent mathematical validation from a SOTA GNN paper.</p>
+      <p><strong>Links:</strong> <a href="https://a70m123r.github.io/agnostic-framework/artifacts/wrapper_overlap_animated.html">v16 diagram (try Show ACMP forces with cloud view)</a>, <a href="https://a70m123r.github.io/agnostic-framework/candidates/energy_floor_failsafe.md">candidate primitive: energy-floor failsafe (4 substrates)</a>, <a href="https://a70m123r.github.io/agnostic-framework/formalization/#§09b">formalization §09b — PDE candidate frame</a>, <a href="https://github.com/a70m123r/agnostic-framework/blob/main/CHANGELOG.md">CHANGELOG entry</a></p>
+    ]]></summary>
+  </entry>
+
+  <entry>
+    <title>Reading 03 &#8212; ACMP / Allen-Cahn Message Passing (Wang et al., ICLR 2023) as cross-substrate convergence #7 &#183; GNN community independently derived the three-force ecosystem with provable energy-floor lower bound</title>
+    <link href="https://a70m123r.github.io/agnostic-framework/timeline/#reading-03-acmp-allen-cahn-message-passing-wang-et-al-iclr-2" rel="alternate" type="text/html"/>
+    <id>tag:a70m123r.github.io,2026:timeline/2026-05-27-reading-03-acmp</id>
+    <updated>2026-05-27T12:00:00Z</updated>
+    <published>2026-05-27T12:00:00Z</published>
+    <author><name>PAVPAV</name></author>
+    <category term="Reading 03"/>
+    <category term="ACMP"/>
+    <category term="convergence #7"/>
+    <category term="energy-floor failsafe"/>
+    <category term="steer"/>
+    <summary type="html"><![CDATA[
+      <p><em>Steer:</em> "this came up on my radar, lets map it"</p>
+      <p>First reading of a mathematical paper as cross-substrate convergence. The GNN/ML community has independently arrived at the three-force ecosystem the framework describes — attraction (standard message passing diffusion), repulsion (heterophilic neighbours that should differ), and Allen-Cahn phase-separation stabilizer. The paper provides what the framework didn't yet have: a rigorous mathematical theorem (Dirichlet energy lower bound) proving the three-force system can run for 100+ effective layers without collapse. 1:1 mapping onto v14/v15 of the wrapper-overlap diagram: attractive force = spring anchor; repulsive force = pairwise repulsion at contact zone; Allen-Cahn = W_C as phase-separated third wrapper. Validates four framework claims with external mathematical evidence. Added as the seventh convergence in cont 25 §6. Most mathematically rigorous of the seven. One new candidate primitive: energy-floor failsafe — mathematical instantiation of cont 26 §3 internal-pressure failsafe class. Three scoreable predictions with 2027-05-27 / 2027-11-27 checkpoints.</p>
+      <p><strong>Links:</strong> <a href="https://a70m123r.github.io/agnostic-framework/readings/2026-05-27_acmp_attraction_repulsion_gnn.md">Reading 03 — ACMP mapping</a>, <a href="https://arxiv.org/abs/2206.05437v4">arxiv 2206.05437v4</a>, <a href="https://a70m123r.github.io/agnostic-framework/index.html#readings">listed on /index.html</a>, <a href="https://a70m123r.github.io/agnostic-framework/artifacts/wrapper_overlap_animated.html">v15 diagram (which made the mapping legible)</a></p>
+    ]]></summary>
+  </entry>
+
+  <entry>
+    <title>Cont 26 + Diagram 07 v15 &#8212; L0 evolved failsafes (infinite-expansion inertia) + perceptual rate as sense &#183; point size scales with wrapper expansion &#183; W_C as third spawned point cloud &#183; three-way fluid sim</title>
+    <link href="https://a70m123r.github.io/agnostic-framework/timeline/#cont-26-diagram-07-v15-l0-evolved-failsafes-infinite-expansi" rel="alternate" type="text/html"/>
+    <id>tag:a70m123r.github.io,2026:timeline/2026-05-27-cont-26-diagram-07-v15</id>
+    <updated>2026-05-27T12:00:00Z</updated>
+    <published>2026-05-27T12:00:00Z</published>
+    <author><name>PAVPAV</name></author>
+    <category term="cont 26"/>
+    <category term="diagram 07 v15"/>
+    <category term="L0 failsafes"/>
+    <category term="perceptual rate"/>
+    <category term="steer"/>
+    <summary type="html"><![CDATA[
+      <p><em>Steer:</em> "its interesting that the interaction changes depending on the speed slider, you get some nice interaction between the membranes, time or perception of it plays big role as a sense and fidelity quantifier." + "very wrapper would expand into infinity if not for L0 agnostic evolved failsaves via internal and external pressures. its the infites expansion inertia into other dimensions." + "few things to refine, the distribution of the dots is too sparse as the wrappers expand out... when the interact hapens thats where W c in conceived..."</p>
+      <p>Two canon moves promoted (cont 26, ~3,300 words): (A) Infinite-expansion inertia as wrapper primitive — every wrapper would expand without bound across all available dimensions if unconstrained; bounded only by L0's evolved failsafes (internal coherence pressure + external wrapper-field pressure). (B) Speed / rate of perception as a sense and fidelity quantifier — different observers sampling the same wrapper at different perceptual rates get different fidelity reads. Three v15 diagram refinements shipped: (1) Point size scales with wrapper radius. (2) W_C is now its own point cloud (canon-yellow) spawned from the A×B contact zone. (3) Three-way fluid sim — added intra-C, inter-A×C, inter-B×C interaction passes. Queued v16: visualize L0's failsafe pressures explicitly.</p>
+      <p><strong>Links:</strong> <a href="https://a70m123r.github.io/agnostic-framework/continuations/26.md">cont 26 — L0 failsafes + perceptual rate</a>, <a href="https://a70m123r.github.io/agnostic-framework/artifacts/wrapper_overlap_animated.html">animated diagram v15</a>, <a href="https://github.com/a70m123r/agnostic-framework/blob/main/CHANGELOG.md">CHANGELOG entry</a></p>
+    ]]></summary>
+  </entry>
+
+  <entry>
+    <title>Diagram 07 v14 &#8212; fluid-sim pairwise interactions (intra-wrapper repulsion + inter-wrapper membrane friction &#183; particles still anchored by spring but now push and drag on each other)</title>
+    <link href="https://a70m123r.github.io/agnostic-framework/timeline/#diagram-07-v14-fluid-sim-pairwise-interactions-intra-wrapper" rel="alternate" type="text/html"/>
+    <id>tag:a70m123r.github.io,2026:timeline/2026-05-27-diagram-07-v14-fluid-sim</id>
+    <updated>2026-05-27T12:00:00Z</updated>
+    <published>2026-05-27T12:00:00Z</published>
+    <author><name>PAVPAV</name></author>
+    <category term="diagram 07 v14"/>
+    <category term="fluid sim"/>
+    <category term="steer"/>
+    <summary type="html"><![CDATA[
+      <p><em>Steer:</em> "the points i the cloud field should interact with one another bound to their centre, so that theres friction as they slide past each others membranes, think fluid sim"</p>
+      <p>Pairwise particle interactions added on top of v13's spring-anchored point cloud. Each particle still feels its anchor spring (v13 behaviour preserved), but now two additional forces act on close neighbours: short-range repulsion (push apart along the separation vector, soft falloff inside a 14px interaction radius) + viscosity (couple velocities so nearby particles drag each other). Three interaction passes per frame: intra-A, intra-B, and inter-A×B. The inter-wrapper pass is the headline: when W_A and W_B clouds overlap during wake/active phases, the two point fields slide past each other with actual friction rather than passing through transparently. Friction slider (0–1, default 0.50) scales both repulsion and viscosity strength. Performance stays comfortable at worst-case density=140 (~40k pair-checks/frame). Queued for v15: W_C particle spawning, and a velocity-field/streamline overlay.</p>
+      <p><strong>Links:</strong> <a href="https://a70m123r.github.io/agnostic-framework/artifacts/wrapper_overlap_animated.html">animated diagram v14</a>, <a href="https://github.com/a70m123r/agnostic-framework/blob/main/CHANGELOG.md">CHANGELOG entry</a></p>
+    ]]></summary>
+  </entry>
+
+  <entry>
+    <title>Diagram 07 v13 &#8212; asymmetric wobble (W_A imposes, W_B responds) + point-cloud render with spring physics (2D slice of 3D wavelet substrate for the canon's math)</title>
+    <link href="https://a70m123r.github.io/agnostic-framework/timeline/#diagram-07-v13-asymmetric-wobble-w-a-imposes-w-b-responds-po" rel="alternate" type="text/html"/>
+    <id>tag:a70m123r.github.io,2026:timeline/2026-05-27-diagram-07-v13</id>
+    <updated>2026-05-27T12:00:00Z</updated>
+    <published>2026-05-27T12:00:00Z</published>
+    <author><name>PAVPAV</name></author>
+    <category term="diagram 07 v13"/>
+    <category term="render methodology"/>
+    <category term="steer"/>
+    <summary type="html"><![CDATA[
+      <p><em>Steer:</em> "its interesting, what we need to see is the asymmetry of A and B. the could wobble in different ways, one can impose on another. the second is the wraper lines... we need a new render methodology for this, like a field of points with adjustable density slider and they scale to form the wrapper membrane with collision dynamics and their own centre points like springs that we adjust so a 3d wavelet point cloud that were looking at a slice of for the 2d top view, this aproach with let us develop the canon further and the math"</p>
+      <p>Two refinements layered onto artifacts/wrapper_overlap_animated.html. (1) Asymmetric wobble. v12's symmetric anti-phase oscillation replaced. W_A wobbles faster (period ~75 frames) and larger (±7 amplitude) — the imposing parent. W_B wobbles slower (period ~115 frames), smaller (±3.5 amplitude), and phase-shifted (+0.8 rad) — the responding parent. (2) New render methodology — point-cloud field with spring physics. Wrappers can now be rendered as a field of N particles (default 60, range 20–140) instead of (or alongside) the )( arcs. Each point holds {angle, pos, vel} and is governed by a spring (k=0.18) pulling it toward its rest position. The membrane is what emerges when you turn the density up, not a line drawn over the top. Conceptually a 2D slice of a 3D wavelet point cloud. Deferred to v14: collision dynamics for the point cloud.</p>
+      <p><strong>Links:</strong> <a href="https://a70m123r.github.io/agnostic-framework/artifacts/wrapper_overlap_animated.html">animated diagram v13</a>, <a href="https://github.com/a70m123r/agnostic-framework/blob/main/CHANGELOG.md">CHANGELOG entry</a></p>
+    ]]></summary>
+  </entry>
+
+  <entry>
+    <title>Dialogues &#8212; new top-level section &#183; first entry: AI transition deliberation in three voices</title>
+    <link href="https://a70m123r.github.io/agnostic-framework/timeline/#dialogues-new-top-level-section-first-entry-ai-transition-de" rel="alternate" type="text/html"/>
+    <id>tag:a70m123r.github.io,2026:timeline/2026-05-27-dialogues-new-section</id>
+    <updated>2026-05-27T12:00:00Z</updated>
+    <published>2026-05-27T12:00:00Z</published>
+    <author><name>PAVPAV</name></author>
+    <category term="dialogues"/>
+    <category term="new section"/>
+    <category term="steer"/>
+    <summary type="html"><![CDATA[
+      <p><em>Steer:</em> "Compose a back and forth conversation of an AI scientist, a philosopher and a historian deliberating about something profound using the agnostic framework as a bridge." + "Like it as a format of ideation simulation, what's a good place for it on the site, want it to be prominent. one note the broze age, black plague didn't destroy the parent wrappers but changed them / refactored them / recompiled..."</p>
+      <p>New top-level /dialogues/ mode-page architecture — same prominence tier as /atlas/, /notation/, /formalization/. The format is the framework as ideation simulation across observer-classes. Classical resonance with Plato's dialogues. First entry at dialogues/ai_transition.html (~2,500 words of dialogue): a historian, an AI scientist, and a philosopher deliberate on whether what we are watching with AI in 2024–2026 is a civilizational transition of the scale of writing, printing, the scientific revolution. The framework is used as a bridge across their disciplines rather than as the topic. Pav's correction surfaced a framework refinement: even what we casually call 'catastrophic' transitions (Bronze Age collapse, Black Death, K-Pg extinction) are not destruction events at the canon level — they are deep dormancy with imparted learning. This strengthens the framework's case: cont 20's canon dormancy primitive scales further than previously named.</p>
+      <p><strong>Links:</strong> <a href="https://a70m123r.github.io/agnostic-framework/dialogues/ai_transition.html">dialogues — AI transition</a>, <a href="https://a70m123r.github.io/agnostic-framework/index.html#map">linked from Map</a>, <a href="https://a70m123r.github.io/agnostic-framework/continuations/20.md">cont 20 dormancy primitive (extension surfaced)</a></p>
+    ]]></summary>
+  </entry>
+
+  <entry>
+    <title>Cont 25 &#167;12 addendum &#8212; L0 / global kernel canon as recursive substrate &#183; cached protocol = canon artefact &#183; multi-parent general case &#183; asymmetric default &#183; dual-track vocabulary</title>
+    <link href="https://a70m123r.github.io/agnostic-framework/timeline/#cont-25-12-addendum-l0-global-kernel-canon-as-recursive-subs" rel="alternate" type="text/html"/>
+    <id>tag:a70m123r.github.io,2026:timeline/2026-05-27-cont-25-12-addendum</id>
+    <updated>2026-05-27T12:00:00Z</updated>
+    <published>2026-05-27T12:00:00Z</published>
+    <author><name>PAVPAV</name></author>
+    <category term="cont 25 §12"/>
+    <category term="L0"/>
+    <category term="dual-track"/>
+    <category term="steer"/>
+    <summary type="html"><![CDATA[
+      <p><em>Steer:</em> "Global Kernal canon is L0 of the observer. you and me. for a latent heavy entity it would be what makes it be, people and its function to reason. for the simulation it self it would be the code that runs it and for the code it would be the language and frame work and for the framework it would be the hardware and for that it woudbe.... maybe good to think of it as the frame of where the action takes place in the latent." + "yes the protocol is the output artefact" + "yes its asymmetric, there could be phases of hold symmetry but its always in flux."</p>
+      <p>Four refinements + one meta-move surfaced from Pav's responses to cont 25 §11 tensions. Promoted to canon (§12): (A) L0 / Global Kernel Canon as the user-facing name for cont 23 equation 8's recursive substrate-stack — recursive across observer-classes. (B) Cached protocol = canon artefact at cont 22 four-layer stack; vibecoding maturation = canon-artefact compilation pathway. (C) Multi-parent overlap as the general case; binary is visualization simplification. (D) Asymmetric overlap is default; symmetric exists as transient hold-phase. Promoted to candidate: Dual-track vocabulary — user-facing accessible track and rigorous formal track co-existing with explicit translation. The L0 framing is the round's biggest accessibility win — collapses cont 22-23's substantial vocabulary into a recursive name newcomers can engage with. Worked example: Spanglish through all four §12 moves.</p>
+      <p><strong>Links:</strong> <a href="https://a70m123r.github.io/agnostic-framework/continuations/25.md#§12-addendum--l0-as-user-facing-recursive-substrate--cached-protocol-as-canon-artefact--multi-parent-as-general-case--asymmetric-default--dual-track-vocabulary-same-day-after-worked-example">cont 25 §12 addendum</a>, <a href="https://a70m123r.github.io/agnostic-framework/index.html#primitives">2 new primitive entries</a>, <a href="https://a70m123r.github.io/agnostic-framework/artifacts/wrapper_overlap_animated.html">animated diagram (v10 layer queued)</a></p>
+    ]]></summary>
+  </entry>
+
+  <entry>
+    <title>Continuation 25 + diagram 07 v1&#8594;v9 + wrapper_overlap_animated.html &#8212; one-system-with-phases + hairy sphere + non-additive math + cross-substrate convergence</title>
+    <link href="https://a70m123r.github.io/agnostic-framework/timeline/#continuation-25-diagram-07-v1-v9-wrapper-overlap-animated-ht" rel="alternate" type="text/html"/>
+    <id>tag:a70m123r.github.io,2026:timeline/2026-05-27-continuation-25-diagram-07</id>
+    <updated>2026-05-27T12:00:00Z</updated>
+    <published>2026-05-27T12:00:00Z</published>
+    <author><name>PAVPAV</name></author>
+    <category term="cont 25"/>
+    <category term="diagram 07"/>
+    <category term="convergence"/>
+    <category term="steer"/>
+    <summary type="html"><![CDATA[
+      <p><em>Steer:</em> "lets work a diagram" → "can we have it programmatically animating to show the phases?" → "when two things cones overlap there's always a 3rd new wrapper emergance... so its not three things we want to show but one system in various states of play" + "the latent space math is not 1+1 = 2 ist more like (1+1) = 3 or 1^+- depending on the phase"</p>
+      <p>Eleven steers across a single day produced nine iterations of diagram 07 and one major continuation. Cont 25 (~6,500 words across §0–§11) promotes seven canon moves: (1) one-system-with-phases model replacing cont 24 §2's three-discrete-outcomes trichotomy — seven lifecycle phases; (2) hairy-sphere topology — W_C expands beyond the lens into both parents; parents persist as stubs / procedural roots / receptor-hooks; (3) )( open-arc wrapper representation; (4) membrane negotiation at first contact; (5) non-additive latent math — phase-dependent; (6) cross-substrate convergence — wrapper-overlap independently formalized in SIX research traditions in 2024–2026 (LCAO/MO theory, cell fusion, symbiogenesis, creole genesis, conceptual blending, model merging); (7) wrapper-overlap as canonical operator for procedural-lineage hierarchy. Diagram 07 v1→v9 iteration trail shipped as standalone HTML.</p>
+      <p><strong>Links:</strong> <a href="https://a70m123r.github.io/agnostic-framework/continuations/25.md">continuation 25</a>, <a href="https://a70m123r.github.io/agnostic-framework/artifacts/wrapper_overlap_animated.html">wrapper overlap animated v9</a>, <a href="https://a70m123r.github.io/agnostic-framework/index.html#map">linked from Map</a>, <a href="https://a70m123r.github.io/agnostic-framework/index.html#primitives">2 updated canon entries</a></p>
+    ]]></summary>
+  </entry>
+
+  <entry>
+    <title>Continuation 24 &#8212; multi-observer dynamics: wrapper overlap &#183; multi-containment &#183; 5W+H &#183; contrast-as-diagnostic &#183; individual/collective centre</title>
+    <link href="https://a70m123r.github.io/agnostic-framework/timeline/#continuation-24-multi-observer-dynamics-wrapper-overlap-mult" rel="alternate" type="text/html"/>
+    <id>tag:a70m123r.github.io,2026:timeline/2026-05-27-continuation-24</id>
+    <updated>2026-05-27T12:00:00Z</updated>
+    <published>2026-05-27T12:00:00Z</published>
+    <author><name>PAVPAV</name></author>
+    <category term="cont 24"/>
+    <category term="multi-observer"/>
+    <category term="steer"/>
+    <summary type="html"><![CDATA[
+      <p><em>Steer:</em> "two observer wrappers overlapping creates a wrapper that can become union or repultion, the same observer wrapper is aloo contained in multiple wrappers or religion... where, what , when, why and how. that aggregates the wrapper of reality or a slice of depending on the observing vantage point. in this mediums the rings or layers of difference / contrast is where the shape and scope of the wrappers can be inferd from our or in the very true sense my reading of the compiled from my collctive centre point"</p>
+      <p>Horizontal extension to the framework. Cont 22-23 built the framework vertically. Cont 24 (~4,000 words across §0–§10) adds horizontal multi-observer dynamics + epistemological discipline + collective/individual scale. Six canon-level promotions: (1) Wrapper overlap dynamics — two same-ring wrappers overlapping produce union, repulsion, or interface. (2) Multi-containment — an observer at ring r is in MANY wrappers at potentially different higher rings simultaneously. (3) 5W+H as wrapper aggregation operators. (4) Wrapper shape from contrast — wrappers inferred from contrast with neighbours, not directly observed. (5) Individual vs collective centre — strict-collective and emergent-collective as two construction modes. (6) Polar-merge operator on three orthogonal axes — vertical, horizontal, form. Candidate: triple-merge equation.</p>
+      <p><strong>Links:</strong> <a href="https://a70m123r.github.io/agnostic-framework/continuations/24.md">continuation 24</a>, <a href="https://a70m123r.github.io/agnostic-framework/formalization/">formalization equations 11–15</a>, <a href="https://a70m123r.github.io/agnostic-framework/index.html#primitives">six new canon entries</a></p>
+    ]]></summary>
+  </entry>
+
+  <entry>
+    <title>Top / centre / sub &#8212; three-position vertical scope axis replaces two-pole global/sub framing</title>
+    <link href="https://a70m123r.github.io/agnostic-framework/timeline/#top-centre-sub-three-position-vertical-scope-axis-replaces-t" rel="alternate" type="text/html"/>
+    <id>tag:a70m123r.github.io,2026:timeline/2026-05-27-top-centre-sub-three-position</id>
+    <updated>2026-05-27T12:00:00Z</updated>
+    <published>2026-05-27T12:00:00Z</published>
+    <author><name>PAVPAV</name></author>
+    <category term="three-position scope"/>
+    <category term="steer"/>
+    <summary type="html"><![CDATA[
+      <p><em>Steer:</em> "why is it all sub?" + "sub -+ top = centre"</p>
+      <p>Five-word steer surfaces a structural revision. The earlier two-pole 'global vs sub' framing had been collapsing two distinct things under 'global canon': the wrapper's own render of the whole (Pav's original sketch definition, now CENTRE canon) and what's above the observer's reach (now TOP canon). Fix: three-position vertical scope axis — sub canon (below the wrapper) and top canon (above the wrapper) as polar opposites; centre canon (wrapper's prism refraction) as the mediating centre between them. Provisional equation: centre canon = sub canon ⋈±∓ top canon. Two structural readings this enables: (1) wrapper as polar-merge mediator rather than filter; (2) K̂ ⊂ centre canon (not ⊂ top canon) — sharpens the framework's agnostic-stance discipline. Shipped: cont 23 §12 addendum; index.html primer block reworked; two new primitive entries; formalization §06 worked recursion table now shows sub + centre + top per ring across r=0 to r=8.</p>
+      <p><strong>Links:</strong> <a href="https://a70m123r.github.io/agnostic-framework/continuations/23.md#§12-addendum--top--centre--sub-three-position-vertical-scope-later-same-day">cont 23 §12 addendum</a>, <a href="https://a70m123r.github.io/agnostic-framework/formalization/">canon-stack equation §06 updated table</a>, <a href="https://a70m123r.github.io/agnostic-framework/index.html#primitives">two new canon entries</a></p>
+    ]]></summary>
+  </entry>
+
+</feed>

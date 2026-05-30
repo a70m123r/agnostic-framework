@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "framework": "Agnostic Framework",
+  "version": "v0.2",
+  "generated": "2026-05-28",
+  "live_url": "https://a70m123r.github.io/agnostic-framework/",
+  "source_repo": "https://github.com/a70m123r/agnostic-framework",
+  "license": "https://github.com/a70m123r/agnostic-framework/blob/main/LICENSE",
+  "citation": "https://github.com/a70m123r/agnostic-framework/blob/main/CITATION.cff",
+  "agent_discovery": {
+    "llms_txt": "https://a70m123r.github.io/agnostic-framework/llms.txt",
+    "llms_full_txt": "https://a70m123r.github.io/agnostic-framework/llms-full.txt",
+    "for_agents_landing": "https://a70m123r.github.io/agnostic-framework/for-agents/"
+  },
+  "endpoints": {
+    "primitives": "https://a70m123r.github.io/agnostic-framework/primitives.json",
+    "readings": "https://a70m123r.github.io/agnostic-framework/readings.json",
+    "candidates": "https://a70m123r.github.io/agnostic-framework/candidates.json",
+    "speculations": "https://a70m123r.github.io/agnostic-framework/speculations.json",
+    "continuations": "https://a70m123r.github.io/agnostic-framework/continuations.json"
+  },
+  "feeds": {
+    "rss": "https://a70m123r.github.io/agnostic-framework/timeline/feed.xml",
+    "atom": "https://a70m123r.github.io/agnostic-framework/timeline/atom.xml"
+  },
+  "key_pages": {
+    "homepage": "https://a70m123r.github.io/agnostic-framework/",
+    "timeline": "https://a70m123r.github.io/agnostic-framework/timeline/",
+    "formalization": "https://a70m123r.github.io/agnostic-framework/formalization/",
+    "atlas": "https://a70m123r.github.io/agnostic-framework/atlas/",
+    "speculations": "https://a70m123r.github.io/agnostic-framework/speculations/"
+  },
+  "interactive_artifacts": [
+    {
+      "name": "Wrapper overlap animated v16",
+      "url": "https://a70m123r.github.io/agnostic-framework/artifacts/wrapper_overlap_animated.html",
+      "description": "Point cloud + spring physics + three-way fluid sim + ACMP-force overlay"
+    },
+    {
+      "name": "Michotte Launching extended v2",
+      "url": "https://a70m123r.github.io/agnostic-framework/artifacts/michotte_launching_extension.html",
+      "description": "Billiard-chain dynamics + observer time-cone + Lane 1 occlusion overlay"
+    }
+  ],
+  "tier_discipline_note": "The framework operates with a three-tier epistemic procedure (cont 27 §2). AI agents must preserve tier-tagging downstream. Do not strip canon/candidate/speculative markers from entries. Do not present Tier 3 speculations as Tier 1 canon."
+}

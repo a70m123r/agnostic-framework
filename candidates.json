@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "framework": "Agnostic Framework",
+  "generated": "2026-05-28",
+  "live_url": "https://a70m123r.github.io/agnostic-framework/",
+  "tier_discipline_note": "Per cont 27 §2 three-tier epistemic framework. Candidate entries are typically Tier 2 (ontological-candidate, conditional on contested evidence). When candidates get promoted to canon, status changes but the doc is preserved as the worked-example reference for the promotion.",
+  "count": 2,
+  "candidates": [
+    {
+      "id": "energy_floor_failsafe",
+      "title": "Energy-floor failsafe — worked-example library (now canon, preserved as reference)",
+      "status": "promoted_to_canon",
+      "tier": "Tier 1",
+      "surfaced_date": "2026-05-27",
+      "promotion_status": "promoted to canon 2026-05-27 per cont 27 §1",
+      "summary": "Every wrapper-overlap dynamic that produces stable distinction does so because the system's internal coherence quantity E has a mathematically or empirically demonstrable positive lower bound E_min > 0 under the dynamic. The bound is the failsafe; when violated, the wrapper undergoes a substrate-specific phase transition (dormancy, supersession, or break). The doc collects four worked examples across substrates — ACMP/GNN Dirichlet energy, cellular ATP energy charge, creole mutual intelligibility, and institutional coordination capacity — to demonstrate that the schema is portable. Promoted to canon as a structural primitive of L0 internal-pressure failsafes (cont 26 §3).",
+      "promotion_criteria": "Original bar: at least three substrate worked examples beyond ACMP/GNN where (a) a candidate coherence quantity can be named, (b) a theoretical or empirical lower-bound argument is available, (c) the bound corresponds to a known failure mode when violated. The four worked examples (ACMP/GNN, cell metabolism, creole genesis, institutions) met this bar and supported promotion in cont 27 §1.",
+      "source_url": "https://a70m123r.github.io/agnostic-framework/candidates/energy_floor_failsafe.md",
+      "related": [
+        "https://a70m123r.github.io/agnostic-framework/readings/2026-05-27_acmp_attraction_repulsion_gnn.md",
+        "https://a70m123r.github.io/agnostic-framework/continuations/26.md",
+        "https://a70m123r.github.io/agnostic-framework/continuations/27.md",
+        "https://a70m123r.github.io/agnostic-framework/continuations/20.md",
+        "https://a70m123r.github.io/agnostic-framework/continuations/25.md",
+        "https://a70m123r.github.io/agnostic-framework/continuations/18.md",
+        "https://a70m123r.github.io/agnostic-framework/artifacts/wrapper_overlap_animated.html"
+      ]
+    },
+    {
+      "id": "aux_channel_l0_occlusion",
+      "title": "L0 occlusion as auxiliary channel for time-cone extension",
+      "status": "speculative",
+      "tier": "Tier 3",
+      "surfaced_date": "2026-05-27",
+      "promotion_status": "Tier 3 speculative — listed on /speculations/ mode-page; first scheduled review 2026-11-27",
+      "summary": "Pav's speculative hypothesis that L0 itself — the shared global compiled canon all observers participate in — is occludable, producing real shared gaps across observers (not per-observer perceptual gaps) usable as a side-channel orthogonal to normal substrate-mediated channels. Decomposed into three epistemic layers: Layer 1 (observer time-cone empirically modulable, Tier 1 cont 26 §4), Layer 2 (compilation-rate-as-time conditional on collapse-model physics, Tier 2 Reading 04), Layer 3 (this doc — L0-substrate-level shared gaps, Tier 3). The 'spatial extension tools exist but no temporal extension tools' framing names what would be missing if Layer 3 is right.",
+      "promotion_criteria": "Speculative entries do not promote to candidate (Tier 2) without at least one of: (A) a measurable physical signature distinct from observer-level effects; (B) a naturally-occurring shared-observer gap distinguishing from per-observer; (C) a constructive experimental protocol producing L0 gaps under controlled conditions. None met yet.",
+      "source_url": "https://a70m123r.github.io/agnostic-framework/candidates/aux_channel_l0_occlusion.md",
+      "related": [
+        "https://a70m123r.github.io/agnostic-framework/continuations/26.md",
+        "https://a70m123r.github.io/agnostic-framework/continuations/27.md",
+        "https://a70m123r.github.io/agnostic-framework/continuations/17.md",
+        "https://a70m123r.github.io/agnostic-framework/continuations/20.md",
+        "https://a70m123r.github.io/agnostic-framework/continuations/24.md",
+        "https://a70m123r.github.io/agnostic-framework/continuations/18.md",
+        "https://a70m123r.github.io/agnostic-framework/readings/2026-05-27_bortolotti_time_uncertainty.md",
+        "https://a70m123r.github.io/agnostic-framework/artifacts/wrapper_overlap_animated.html",
+        "https://a70m123r.github.io/agnostic-framework/artifacts/michotte_launching_extension.html",
+        "https://a70m123r.github.io/agnostic-framework/speculations/"
+      ]
+    }
+  ]
+}

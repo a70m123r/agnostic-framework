@@ -1,0 +1,224 @@
+{
+  "schema_version": "1.0",
+  "framework": "Agnostic Framework",
+  "generated": "2026-05-28",
+  "live_url": "https://a70m123r.github.io/agnostic-framework/",
+  "description": "Numbered provenance records of every major development round. Continuations are the framework's primary self-documentation.",
+  "count": 25,
+  "continuations": [
+    {
+      "number": 2,
+      "filename": "02.md",
+      "title": "Fuzzy-to-Canon Compiler — Provenance Continuation 02",
+      "summary": "Sharpens the ask/give mechanism and adds the missing propagation step from instinct through intent, ask, give, insight, carrier artifact, observer spread, acceptance, group canon, institutional canon, civilizational canon, into a new fuzzy frontier — formalizing that insight is local compile and canon is distributed compile.",
+      "source_url": "https://a70m123r.github.io/agnostic-framework/continuations/02.md",
+      "github_url": "https://github.com/a70m123r/agnostic-framework/blob/main/continuations/02.md"
+    },
+    {
+      "number": 5,
+      "filename": "05.md",
+      "title": "Fuzzy-to-Canon Compiler — Provenance Continuation 05",
+      "summary": "Reframes the framework's primitives as vocabulary for modeling every external actor (not internal cognitive tools), names the epistemological status explicitly as a Lakatosian unification hypothesis with the internet as designated test surface, locates prior art for the cosmic-remap move, and lays out a multi-vector publication strategy.",
+      "source_url": "https://a70m123r.github.io/agnostic-framework/continuations/05.md",
+      "github_url": "https://github.com/a70m123r/agnostic-framework/blob/main/continuations/05.md"
+    },
+    {
+      "number": 6,
+      "filename": "06.md",
+      "title": "Fuzzy-to-Canon Compiler — Provenance Continuation 06",
+      "summary": "Proposes that the entire framework be parameterized in %-and-weights, anchored to a foundational observer-relative agnostic unit (AU) defined by perceivable action space, structured as a fractal P × A matrix that nests and overlaps across observer scales — making every binary continuous, every prediction probabilistic, and every reading scoreable.",
+      "source_url": "https://a70m123r.github.io/agnostic-framework/continuations/06.md",
+      "github_url": "https://github.com/a70m123r/agnostic-framework/blob/main/continuations/06.md"
+    },
+    {
+      "number": 7,
+      "filename": "07.md",
+      "title": "Fuzzy-to-Canon Compiler — Provenance Continuation 07",
+      "summary": "Refines the AU matrix cells from scalars to multi-dimensional wavelet-shaped resonance weights (magnitude + spin/direction + scale + freshness), and maps SDPO (Segment-Level Direct Preference Optimization for Social Agents) as the first external paper that corresponds cleanly to framework primitives — operational evidence for several framework claims.",
+      "source_url": "https://a70m123r.github.io/agnostic-framework/continuations/07.md",
+      "github_url": "https://github.com/a70m123r/agnostic-framework/blob/main/continuations/07.md"
+    },
+    {
+      "number": 8,
+      "filename": "08.md",
+      "title": "Fuzzy-to-Canon Compiler — Provenance Continuation 08",
+      "summary": "Sharpens dark-matter speculation with three candidate framings (dormant DNA, backup universe, intelligence force) and refines the framework's core action mechanic: encountering a fuzzy region is a deposition event in which multiple candidate possibility-paths are generated and enqueued for asynchronous scouting, rather than a single probe-and-receive cycle.",
+      "source_url": "https://a70m123r.github.io/agnostic-framework/continuations/08.md",
+      "github_url": "https://github.com/a70m123r/agnostic-framework/blob/main/continuations/08.md"
+    },
+    {
+      "number": 9,
+      "filename": "09.md",
+      "title": "Fuzzy-to-Canon Compiler — Provenance Continuation 09",
+      "summary": "Six moves: clarifications on phantom mass and speculation-as-process, a prism exercise running Opus and Sonnet on the same brief, a discoveries-arc spanning Asgard archaea eukaryogenesis and JWST early-galaxy anomalies, the recursive timeline cone hypothesis (past and future actively re-rendered each compile), internal canon as observer-class with speculation as its scout mechanism, and the internet promoted to first-class observer-class.",
+      "source_url": "https://a70m123r.github.io/agnostic-framework/continuations/09.md",
+      "github_url": "https://github.com/a70m123r/agnostic-framework/blob/main/continuations/09.md"
+    },
+    {
+      "number": 9.5,
+      "filename": "09b.md",
+      "title": "Fuzzy-to-Canon Compiler — Provenance Continuation 09b",
+      "summary": "Appendix to cont 09 capturing four external references that map cleanly onto existing framework primitives — Hairy Ball Theorem (topological observer classification), complex logarithm as latent-space coordinate transform, virtual-particle-to-real-matter as QFT-scale fuzzy→canon, reservoir computing as architectural slow-fast pushout — plus the author's first explicit self-observation as observer-class (the aggregator-alchemist type).",
+      "source_url": "https://a70m123r.github.io/agnostic-framework/continuations/09b.md",
+      "github_url": "https://github.com/a70m123r/agnostic-framework/blob/main/continuations/09b.md"
+    },
+    {
+      "number": 10,
+      "filename": "10.md",
+      "title": "Fuzzy-to-Canon Compiler — Provenance Continuation 10",
+      "summary": "Stake-out for the operational pivot — marks the transition from theoretical refinement (continuations 05-09b) to producing a first concrete artifact in the world, and holds space for the substance that arrives when that artifact gets built. Lists four candidate first artifacts: white paper, agent framework repository, SDPO+ experiment, protein-model experiment.",
+      "source_url": "https://a70m123r.github.io/agnostic-framework/continuations/10.md",
+      "github_url": "https://github.com/a70m123r/agnostic-framework/blob/main/continuations/10.md"
+    },
+    {
+      "number": 11,
+      "filename": "11.md",
+      "title": "Fuzzy-to-Canon Compiler — Provenance Continuation 11",
+      "summary": "The operational pivot in motion — three manifesto editions shipped (casual, research, engineering), the live agnostic.html artifact built, and an inline-markdown HTML-comment annotation workflow established. Records the framework's tightest external-mapping correspondence to date: independent re-derivation of canon-as-observer dynamics at the neural-network-training scale (Litman & Guo, A Theory of Generalization in Deep Learning).",
+      "source_url": "https://a70m123r.github.io/agnostic-framework/continuations/11.md",
+      "github_url": "https://github.com/a70m123r/agnostic-framework/blob/main/continuations/11.md"
+    },
+    {
+      "number": 12,
+      "filename": "12.md",
+      "title": "Fuzzy-to-Canon Compiler — Provenance Continuation 12",
+      "summary": "A dense speculative-and-structural pass — eight new primitives (cross-scale mediation, spiral substrate cycle, compile-capacity enrichment, Imagine Engine, bidirectional simulation, religious/mystical canon as fidelity trade-off, inherited symbolic memory, 0/not-0 distinction), two speculative-cosmology framings (latent-space-as-fundamental-substrate, phantom observers manifesting as embodied with 2028-2030 scoring window), and the framework's deepest reflexive move: naming the Imagine Engine as the canon-promoted primitive that runs everything else.",
+      "source_url": "https://a70m123r.github.io/agnostic-framework/continuations/12.md",
+      "github_url": "https://github.com/a70m123r/agnostic-framework/blob/main/continuations/12.md"
+    },
+    {
+      "number": 13,
+      "filename": "13.md",
+      "title": "Fuzzy-to-Canon Compiler — Provenance Continuation 13",
+      "summary": "Twelve framework updates in one round — refactors A⁺/A⁻ from operators to latent dimensions with charge-product algebra, promotes phantom mass to candidate, adopts Wolfram's four-class cellular-automata classification and computational irreducibility as canon-level primitives (the framework's strongest empirical anchor for the viability band), names the emergent garden as the cultivation discipline, and adds neural cellular automata + eml as new readings plus Stephen Wolfram to the shoulders.",
+      "source_url": "https://a70m123r.github.io/agnostic-framework/continuations/13.md",
+      "github_url": "https://github.com/a70m123r/agnostic-framework/blob/main/continuations/13.md"
+    },
+    {
+      "number": 14,
+      "filename": "14.md",
+      "title": "Fuzzy-to-Canon Compiler — Provenance Continuation 14",
+      "date": "2026-05-14",
+      "summary": "Five updates after Pav drops the Functions-in-Hyperspace video transcript: genotype/phenotype split promoted to canon, slice-viewer constraint and multi-architecture universal approximation added as candidates, monopole question / observer-dependence of distinction promoted to candidate, recursive timeline cone refactor (time as parameter, not substrate), and a new reading. Opens the function-space lens as a third way (alongside canon graph + algebraic charges) to look at the substrate.",
+      "source_url": "https://a70m123r.github.io/agnostic-framework/continuations/14.md",
+      "github_url": "https://github.com/a70m123r/agnostic-framework/blob/main/continuations/14.md"
+    },
+    {
+      "number": 15,
+      "filename": "15.md",
+      "title": "Fuzzy-to-Canon Compiler — Provenance Continuation 15",
+      "date": "2026-05-16",
+      "summary": "Eleven updates and the largest round to date — refactors A⁺/A⁻ so A⁻ is the primary compilation discipline (not just a cleanup operator), based on four primary-source carriers (Aleph/EBMs, MAMMAL, ANDI, Lippmann plates) all reinforcing the same architectural claim that constraint-checking is the load-bearing move at every scale. Adds five candidates, Yann LeCun as a shoulder, and four readings.",
+      "source_url": "https://a70m123r.github.io/agnostic-framework/continuations/15.md",
+      "github_url": "https://github.com/a70m123r/agnostic-framework/blob/main/continuations/15.md"
+    },
+    {
+      "number": 16,
+      "filename": "16.md",
+      "title": "Fuzzy-to-Canon Compiler — Provenance Continuation 16",
+      "date": "2026-05-18",
+      "summary": "Ten updates surfaced through a six-version diagram-iteration loop on the casual 'two observers talking' diagram — three substantial canon refactors (friction regulation as substrate-level discipline, body-harness as membrane, planes as node network) plus six new candidates (the Dial, unity from asymmetry, mutual render, idea-side/body-side asymmetry of action, fuzzy field as named latent space, hidden protocol as sequence-knowledge) and one reading (membrane penetrability).",
+      "source_url": "https://a70m123r.github.io/agnostic-framework/continuations/16.md",
+      "github_url": "https://github.com/a70m123r/agnostic-framework/blob/main/continuations/16.md"
+    },
+    {
+      "number": 17,
+      "filename": "17.md",
+      "title": "Fuzzy-to-Canon Compiler — Provenance Continuation 17",
+      "date": "2026-05-18",
+      "summary": "The framework's first housekeeping round applying its own A⁻ discipline reflexively to its own canon — three demotions (spiral substrate cycle, compile-capacity enrichment, monopole question), three folds (procedural canon, engineered emergence, mutual render), and two sharpenings (slice-viewer constraint, holographic wrapper). Zero new primitives; the canon graph shrinks by three nodes and gains three fold-edges.",
+      "source_url": "https://a70m123r.github.io/agnostic-framework/continuations/17.md",
+      "github_url": "https://github.com/a70m123r/agnostic-framework/blob/main/continuations/17.md"
+    },
+    {
+      "number": 18,
+      "filename": "18.md",
+      "title": "Fuzzy-to-Canon Compiler — Provenance Continuation 18",
+      "date": "2026-05-18",
+      "summary": "Promotes Procedural lineage to canon (canon-as-heritage — each canon layer is the measurable-and-observable compile of the layer beneath it, traceable across all substrate scales like rings on a tree) and reconsiders cont 17's pruning in its light — the three pruned primitives are re-contextualized as deposit-attempts that pointed at the bigger primitive before it had a name. A same-day A⁻ → A⁺ correction cycle.",
+      "source_url": "https://a70m123r.github.io/agnostic-framework/continuations/18.md",
+      "github_url": "https://github.com/a70m123r/agnostic-framework/blob/main/continuations/18.md"
+    },
+    {
+      "number": 19,
+      "filename": "19.md",
+      "title": "Fuzzy-to-Canon Compiler — Provenance Continuation 19",
+      "date": "2026-05-18",
+      "summary": "Names the framework's identity explicitly as an aggregator of procedural connections — promotes Aggregation discipline to canon as the framework's positive heuristic, adds Catalyst principle as candidate (external substrate catalyzes framework expansion), promotes Moving target from implicit-in-rotating-key to its own canon primitive, and re-anchors the Lakatosian success criterion against Popperian-trained reflexes.",
+      "source_url": "https://a70m123r.github.io/agnostic-framework/continuations/19.md",
+      "github_url": "https://github.com/a70m123r/agnostic-framework/blob/main/continuations/19.md"
+    },
+    {
+      "number": 20,
+      "filename": "20.md",
+      "title": "Fuzzy-to-Canon Compiler — Provenance Continuation 20",
+      "date": "2026-05-19",
+      "summary": "Promotes Canon dormancy with imparted learning on return to canon — canon doesn't dissolve, it goes dormant; dormancy is reversible; when canon wakes it returns refactored carrying whatever the dormancy period imparted. Observable at multiple substrates (religious revival, traditional craft revival, vinyl, bicycle infrastructure, marriage canon's Nordic configuration). Sharpens moving target with bidirectional flux and procedural lineage with dormant-canon as substrate-stack inheritance.",
+      "source_url": "https://a70m123r.github.io/agnostic-framework/continuations/20.md",
+      "github_url": "https://github.com/a70m123r/agnostic-framework/blob/main/continuations/20.md"
+    },
+    {
+      "number": 21,
+      "filename": "21.md",
+      "title": "Fuzzy-to-Canon Compiler — Provenance Continuation 21",
+      "date": "2026-05-21",
+      "summary": "Unpacks Pav's dense seed during the timeline-pruning round into five new candidates — push/pull/squeeze/pop as four blind-steer force-modes, hold as the stable-rhythm phase distinct from dormancy, kernel-canon → canon-protocol → function as a three-layer reading refining procedural lineage, agnostic pull becomes desolation as a reading-grade insight, and framework outputs are verbs as a meta-primitive.",
+      "source_url": "https://a70m123r.github.io/agnostic-framework/continuations/21.md",
+      "github_url": "https://github.com/a70m123r/agnostic-framework/blob/main/continuations/21.md"
+    },
+    {
+      "number": 22,
+      "filename": "22.md",
+      "title": "Fuzzy-to-Canon Compiler — Provenance Continuation 22",
+      "date": "2026-05-21",
+      "summary": "Biggest single-round move on the canon graph since cont 18 — promotes Dual kernel (physical-kernel and latent-kernel as co-primary deepest layers) and Kanon/Ina distinction (Kanon = raw substrate; Ina = the compiler that refines it) to canon, plus observer-dependence and procedural-drill-down discipline made explicit. Refactors how previous 'kernel canon' usage in cont 12-21 should be re-read — most of it was actually canon-protocol at the social-substrate ring.",
+      "source_url": "https://a70m123r.github.io/agnostic-framework/continuations/22.md",
+      "github_url": "https://github.com/a70m123r/agnostic-framework/blob/main/continuations/22.md"
+    },
+    {
+      "number": 23,
+      "filename": "23.md",
+      "title": "Continuation 23 — the canon-stack equation: observer architecture formalized",
+      "date": "2026-05-22",
+      "summary": "Promotes the canon-stack equation and observer architecture to canon — formalizes the observer at ring r as a 4-tuple (harness, sub canon, wrapper, global canon) with inferred kernel as a derived quantity, defines the wrapper as the long-time stable attractor of sub canon's processing, defines global canon as the render operator applied to harness signals + imprints + fuzzy field, and unifies bandwidth/slow-fast pushout/friction band/A⁻ check crisis/slice-viewer under one bandwidth cascade.",
+      "source_url": "https://a70m123r.github.io/agnostic-framework/continuations/23.md",
+      "github_url": "https://github.com/a70m123r/agnostic-framework/blob/main/continuations/23.md"
+    },
+    {
+      "number": 24,
+      "filename": "24.md",
+      "title": "Continuation 24 — multi-observer dynamics: wrapper overlap, multi-containment, 5W+H, contrast as diagnostic, collective vs individual centre",
+      "date": "2026-05-22",
+      "summary": "Extends the framework horizontally at the same ring — same-ring observers interact via wrapper overlap (union or repulsion), a single observer is simultaneously contained in many wrappers (not one), the render operator decomposes into the 5W+H inquiry operators, wrapper shape is inferred from contrast with neighbours rather than directly observed, and collective vs individual centre are formalized as distinct. The polar-merge operator now operates on three axes (vertical, horizontal, form).",
+      "source_url": "https://a70m123r.github.io/agnostic-framework/continuations/24.md",
+      "github_url": "https://github.com/a70m123r/agnostic-framework/blob/main/continuations/24.md"
+    },
+    {
+      "number": 25,
+      "filename": "25.md",
+      "title": "Continuation 25 — wrapper-overlap dynamics: one system with phases, hairy-sphere topology, non-additive latent math, cross-substrate convergence",
+      "date": "2026-05-22",
+      "summary": "Corrects cont 24's wrapper-overlap-as-three-discrete-outcomes into one system going through a lifecycle of phases (pre-overlap → expansion → wake/negotiation → fuzzy/lens → W_C conceived → emerged → active, branching at maturity into passive, dormant, supersession, break-apart). Surfaces hairy-sphere topology, )( open-arc wrapper representation, membrane-negotiation at first contact, non-additive latent math, and the round's biggest move: the same wrapper-overlap dynamic has been independently formalized in at least six research traditions in 2024-2026.",
+      "source_url": "https://a70m123r.github.io/agnostic-framework/continuations/25.md",
+      "github_url": "https://github.com/a70m123r/agnostic-framework/blob/main/continuations/25.md"
+    },
+    {
+      "number": 26,
+      "filename": "26.md",
+      "title": "Continuation 26 — L0 evolved failsafes (infinite-expansion inertia) + time/perception as fidelity quantifier",
+      "date": "2026-05-27",
+      "summary": "Promotes two canon moves at different scales — every wrapper carries infinite-expansion inertia into other dimensions and would expand without bound if unconstrained (L0 has evolved internal and external failsafes that bound expansion), and speed-of-perception is a sense and fidelity quantifier (the rate at which an observer can sample dynamics determines which interactions are legible to it at all; time is a perceptual operator the observer brings to the world, not a parameter swept over it).",
+      "source_url": "https://a70m123r.github.io/agnostic-framework/continuations/26.md",
+      "github_url": "https://github.com/a70m123r/agnostic-framework/blob/main/continuations/26.md"
+    },
+    {
+      "number": 27,
+      "filename": "27.md",
+      "title": "Continuation 27 — Energy-floor failsafe promoted to canon · Three-tier epistemic framework as canon procedure · Speculation pruning rules",
+      "date": "2026-05-27",
+      "summary": "Three moves that close out the cont-26-driven canon-building round: promotes energy-floor failsafe from candidate to canon based on four substrate worked examples, formalizes the three-tier epistemic framework (epistemological / ontological-candidate / speculative) as canon procedure that future readings and candidates explicitly use, and specifies speculation-pruning rules to prevent indefinite accumulation of speculations that miss their prediction horizons without producing new evidence.",
+      "source_url": "https://a70m123r.github.io/agnostic-framework/continuations/27.md",
+      "github_url": "https://github.com/a70m123r/agnostic-framework/blob/main/continuations/27.md"
+    }
+  ]
+}

@@ -1,0 +1,704 @@
+{
+  "schema_version": "1.0",
+  "framework": "Agnostic Framework",
+  "generated": "2026-05-28",
+  "live_url": "https://a70m123r.github.io/agnostic-framework/",
+  "tier_discipline_note": "Per cont 27 §2 three-tier epistemic framework. AI agents transmitting these primitives must preserve tier-tagging. Do not present Tier 3 speculations as Tier 1 canon.",
+  "count": 76,
+  "primitives": [
+    {
+      "name": "Observer",
+      "status": "canon",
+      "tier": "Tier 1",
+      "summary": "An agent of any kind, characterized as harness + wrapper + inner sandbox + action-space. Recursively applies to cells, persons, institutions, AI systems, and aggregate observers.",
+      "counter": "Risk of over-generalization — the same word for biological cell and civilization may flatten genuine discontinuities.",
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Harness",
+      "status": "canon",
+      "tier": "Tier 1",
+      "summary": "The structural/physical substrate of an observer: body, architecture, protocol stack. For a transformer: attention mechanism and tokenizer. For a person: nervous system and tools.",
+      "counter": null,
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Wrapper",
+      "status": "canon",
+      "tier": "Tier 1",
+      "summary": "Coherence rules, admission protocols, render functions. The trained patterns through which signals get filtered into legible experience.",
+      "counter": null,
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Fuzzy candidate field",
+      "status": "canon",
+      "tier": "Tier 1",
+      "summary": "Unresolved possibility-space adjacent to an observer's current canon. Where speculation operates before compile. Not noise — the live state of learning.",
+      "counter": null,
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Canon",
+      "status": "canon",
+      "tier": "Tier 1",
+      "summary": "Compiled state currently running as operational assumption. Durable but not eternal. Can be built from at least seven materials: evidence, utility, power, myth, market, trauma, aesthetic.",
+      "counter": null,
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Carrier artifact",
+      "status": "canon",
+      "tier": "Tier 1",
+      "summary": "A persistent compressed form that propagates compiled state beyond its origin observer. Words, tools, equations, rituals, institutions, AI models.",
+      "counter": null,
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Genotype / phenotype split",
+      "status": "canon",
+      "tier": "Tier 1",
+      "summary": "The framework distinguishes two layers of every compiled observer-class: (genotype) the function definition + canon graph + fuzzy candidate field + observer-slice — i.e. the compressed code that determines how the observer maps inputs to outputs; (phenotype) the carrier artifacts, observable behavior, and rendered surface produced when that code is run. Named explicitly continuation 14 after the Functions-in-Hyperspace carrier (parametric-surface analogy: the equation set is the genotype; the colored 3D surface it renders is the phenotype). Important consequences: (1) two observers can share a phenotype while differing in genotype (convergent compile), and vice versa (divergent rendering of identical code in different harnesses); (2) carrier propagation is genotype propagation, not phenotype propagation — what travels is the compressed code, the phenotype re-renders at the receiving observer; (3) the framework's compile cycle operates on the genotype layer, but only the phenotype is directly observable, which is why the harness/wrapper distinction matters.",
+      "counter": null,
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Ask / Give / Ping / Pong",
+      "status": "canon",
+      "tier": "Tier 1",
+      "summary": "The four-move primitive of inter-observer interaction. Closely related to active inference's variational message-passing; named for accessibility.",
+      "counter": null,
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Action-space",
+      "status": "canon",
+      "tier": "Tier 1",
+      "summary": "The third field after problem-space and solution-space. What the observer can actually do given current constraints. Why high-truth-no-carrier loses to false-idea-plus-force.",
+      "counter": null,
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Membrane",
+      "status": "canon",
+      "tier": "Tier 1",
+      "summary": "Compiled projection boundary between effective layers. Cell membranes, language, institutions, APIs — same primitive at different scales.",
+      "counter": null,
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Squeeze event",
+      "status": "canon",
+      "tier": "Tier 1",
+      "summary": "Pressure event that forces canon refactor faster than canon normally allows. Wars, pandemics, paradigm shifts, infrastructure collapses. Carriers that waited in suspension can compile suddenly.",
+      "counter": null,
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Scout",
+      "status": "canon",
+      "tier": "Tier 1",
+      "summary": "Exploratory sub-agent or process that probes fuzzy candidates and returns with data, transformed canon, or nothing. Dreams, imagination, scientific experiments, art all do this.",
+      "counter": null,
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Imagine Engine",
+      "status": "canon",
+      "tier": "Tier 1",
+      "summary": "The internal process generating phantom fuzzy from the canon-as-observer's own substrate — the floor-light from manifesto v3 §2. Naturally selective: ideas survive based on what gets carried (memory, attention, salience, social reinforcement). Bidirectional in time: backward evolution (selection over remembered history; canon retroactively shaped by what got carried) and forward resolution (selection over projected futures; action-space narrowed by what gets imagined as possible). Fills the recursive timeline cone with structure at both ends. Distinct from scout: scout returns or doesn't; imagine engine continuously generates candidate paths for scouts to investigate. Relationship to A⁺ (resolved housekeeping, audit v03 §4.5): the Imagine Engine is the *process* that produces phantom fuzzy; A⁺ is the *operator* that acts on what the Imagine Engine produces, admitting candidates that survive the check. The two are at adjacent layers — process and operator, not the same primitive. The agnostic agent architecture (github.com/a70m123r/agnostic-agents) instantiates this distinction: the Imagine Engine is what the A⁺ Generator wraps; A⁺ is the externalized interface to it.",
+      "counter": null,
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": ["https://github.com/a70m123r/agnostic-agents"]
+    },
+    {
+      "name": "Moat",
+      "status": "canon",
+      "tier": "Tier 1",
+      "summary": "Hidden protocol gating access to a system. The shower handle's protocol; Google's ranking algorithm; a culture's etiquette. Decoding moats is what learning, science, intimacy, and engineering do.",
+      "counter": null,
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Attention role taxonomy",
+      "status": "canon",
+      "tier": "Tier 1",
+      "summary": "Eight types: gatekeeper, harvester, director, firewall, parasite, symbiont, weapon, sanctuary. Every actor occupies a mixture; mixtures characterize the phase of a system.",
+      "counter": "Currently lacks an inferred-from-data construction — roles are assigned by inspection rather than measured from instrumented behavior.",
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "A⁺ / A⁻ as latent dimensions",
+      "status": "canon",
+      "tier": "Tier 1",
+      "summary": "Originally framed as operators that act on the canon graph (A⁺ admits structure; A⁻ prunes). Refactored continuation 13: A⁺ / A⁻ are also *latent dimensions* — axes the latent space has, like electromagnetic charges. Their interaction creates latent fields. Pairs (0,0), (0,1), (1,0), (1,1) form interaction states. A charge-product algebra is implied: A⁺×A⁺ reinforces; A⁻×A⁻ compounds pruning; A⁺×A⁻ produces dialectical tension. Successful canon-formation requires both polarities active with slack between them. The framework's symmetry expressed as charge algebra. Re-balanced continuation 15: the pair is NOT symmetric. A⁻ is the primary compilation discipline — constraint-checking is what actually forms canon. A⁺ proposes plausible candidates (this is what most current AI does — next-token generation, fuzzy candidate emission); A⁻ checks them against the substrate's constraints; what survives is canon. Four-carrier convergence (Aleph/EBMs constraint satisfaction, MAMMAL cross-modal verification, ANDI norm-equilibration, Lippmann Bragg-interference) instantiates this asymmetry across four scales simultaneously. The framework had been calling A⁻ 'pruning' (a cleanup framing); it is actually 'primary canon-formation by constraint check.'",
+      "counter": "The monopole question is open: are there ideas / concepts truly only A⁺ (pure connection-affinity, no prune-capacity) or only A⁻ (pure prune-vector, no construction), or is this always observer-cone limitation? Held in §07 open questions of continuation 13. Further refined continuation 14: monopole question is itself observer-distinction-dependent.",
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Cone profile",
+      "status": "canon",
+      "tier": "Tier 1",
+      "summary": "Every observer characterized by processing speed × memory depth × context width × cone shape × update protocol. Different cone profiles do not compete; complementary profiles symbiose.",
+      "counter": null,
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Wolfram four-class classification",
+      "status": "canon",
+      "tier": "Tier 1",
+      "summary": "Stephen Wolfram's empirical observation across thousands of cellular automata: behavior falls into exactly four classes. Class 1 (flat / homogeneous) = freeze; Class 2 (periodic / stable) = stale moat; Class 3 (chaotic) = explode; Class 4 (complex / organized) = the viability band. Forty years of cellular-automaton experiments measuring the framework's criticality Γ prediction before the framework existed. The strongest empirical anchor the framework has for Γ ≈ 1 as the adaptive edge. Computation, life-like dynamics, and emergent structure all live in Class 4. Relationship to viability band + criticality Γ (resolved housekeeping, audit v03 §4.2): these are three measurement faces of the same substrate property. Viability band is the graph-topology face (ρ_min < ρ(G) < ρ_max). Criticality Γ is the rate-dynamics face (Γ = rate(A⁺) / (rate(A⁻) + rate(stabilize)) ≈ 1). Wolfram four-class is the observed-behavior face (Class 4 is what Γ ≈ 1 produces when you run the substrate). Not duplication — three measurement instruments aimed at the same target.",
+      "counter": null,
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Computational irreducibility",
+      "status": "canon",
+      "tier": "Tier 1",
+      "summary": "Wolfram's principle: for some systems, no shortcut exists — to know what they do, you must actually simulate them step by step. There is no formula that compresses the behavior into closed-form prediction. The framework's 'substrate must be run, not solved' claim made mathematically explicit. Observers can't render Ω directly; they must run it through their harness / wrapper to see what compiles. The recursive observer-class claim assumes computational irreducibility at every scale — each level must compute its own state.",
+      "counter": null,
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Emergent garden",
+      "status": "canon",
+      "tier": "Tier 1",
+      "summary": "The framework's cultivation discipline named with a vivid carrier (Emergent Garden YouTube channel; the Emergent Complexity video's closing metaphor). Build the rules and the building blocks; nurture the system; sacrifice strict control; accept that some unintended emergence will occur; observe what comes up rather than dictating what should. The discipline applies at every scale: research programmes, AI training, multi-agent systems, parenting, gardening literal plants, framework development. Better non-jargon name for what continuation 09 §6.1 called 'guide it from within'. Continuation 17 fold-in: 'engineered emergence' (formerly a separate candidate) is the *intentional mode* of this practice — deliberately constructing systems whose components have complementary cone profiles to produce emergent capability neither has alone (e.g. reservoir computing; neural cellular automata; multi-agent ask/give loops). The *receptive mode* is observing what comes up without pre-specifying. Same practice; two stances.",
+      "counter": null,
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Criticality Γ",
+      "status": "candidate",
+      "tier": "Tier 2",
+      "summary": "Γ = rate(A⁺) / (rate(A⁻) + rate(stabilize)). The viability band sits at Γ ≈ 1. Below: freeze. Above: explosion. Measurable in instrumented systems.",
+      "counter": "Without pre-registered operationalization of A⁺ and A⁻ for each domain, the claim risks being unfalsifiable by retrofit. Pre-registration discipline is owed.",
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Viability band",
+      "status": "candidate",
+      "tier": "Tier 2",
+      "summary": "ρ_min < ρ(G) < ρ_max — the canon graph stays viable between sparseness (freeze) and saturation (explosion). The framework's kernel discipline applied as a continuous constraint.",
+      "counter": "Operationalization of ρ for non-graph-shaped substrates is underspecified.",
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Multi-possibility deposition",
+      "status": "candidate",
+      "tier": "Tier 2",
+      "summary": "Encountering fuzzy deposits N candidate paths to be scouted asynchronously, not a single probe. Changes the framework's data model from single-belief-update to weighted-pool-maintenance.",
+      "counter": null,
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Canon-as-observer",
+      "status": "candidate",
+      "tier": "Tier 2",
+      "summary": "The internal canon is itself an observer-class with its own harness, wrapper, action-space, and discipline. Speculation is its scout mechanism. Paradigm shifts are kernel-restructuring events at this layer.",
+      "counter": "Operationalization of 'kernel' distinct from 'high-centrality nodes in the canon graph' is incomplete.",
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Agnostic Unit (AU) matrix",
+      "status": "candidate",
+      "tier": "Tier 2",
+      "summary": "Every observer characterized by a P × A weighted matrix where P = perceivable signals, A = available actions. Cells carry wavelet-shaped weights (magnitude + spin + scale + freshness).",
+      "counter": "Cell-weight learning rules and norm conventions not yet calibrated against any benchmark.",
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Wavelet weights",
+      "status": "candidate",
+      "tier": "Tier 2",
+      "summary": "Cell weights in the AU matrix are not scalars but multi-dimensional objects: magnitude, spin (direction), scale, freshness. The framework's qualitative warnings become detectable from weight structure.",
+      "counter": null,
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Symbiosis-as-pushout",
+      "status": "candidate",
+      "tier": "Tier 2",
+      "summary": "Mergers between observers with complementary cone profiles produce new observer-classes. Pushout condition: cone-gaps mutually covered, combined action-space exceeds friction, kernels admit compatible discipline. Asgard + alphaproteobacterium → eukaryotic cell is the deep-time worked example.",
+      "counter": "Identifying a complementary profile merger *before* it happens is genuinely difficult; the framework recognizes them retrospectively.",
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Topological observer classification (Hairy Ball)",
+      "status": "candidate",
+      "tier": "Tier 2",
+      "summary": "Closed-action-space observers (sphere-topology) must have at least one singularity — a spike (concentration vortex) or a bald spot (zero attention). Cone profile + topology give a richer taxonomy.",
+      "counter": null,
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Recursive timeline cone",
+      "status": "candidate",
+      "tier": "Tier 2",
+      "summary": "The past is not fixed history; it is the current best-fit render of evidence available to the present. Each compile cycle re-renders the past at higher fidelity. JWST early-galaxy anomalies are the framework's prediction in real time. Refactor note (continuation 14): time is just another input parameter to the observer's latent function, not a privileged substrate axis. The cone is a slice through a higher-dimensional parameter space in which 'past' and 'future' are coordinates the observer scans like any other parameter. This unifies recursive-timeline-cone with the latent-dimension framing of A⁺ / A⁻.",
+      "counter": "Distinguishing 'past being re-rendered' from 'past observation being improved' may be a verbal preference rather than an ontological difference.",
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Internet as first-class observer-class",
+      "status": "candidate",
+      "tier": "Tier 2",
+      "summary": "The internet is not only test surface and substrate but a live observer with measurable Γ, attention-role distribution, current phase, and viability band. Harness and wrapper in continuous flux at the timescale of operations.",
+      "counter": null,
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Bidirectional simulation",
+      "status": "candidate",
+      "tier": "Tier 2",
+      "summary": "Detail-seeking simulation runs down (into the granular — A⁻ dominant, analytical decomposition, reductionism, falsifiable measurement). Meaning-seeking simulation runs up (into the cosmic — A⁺ dominant, synthetic understanding, meaning-making, structural pattern). The two are mutually invisible direct-view but meet productively at intermediate scales — including human-scale, which is why human cognition feels centered on a scale-ladder it didn't choose. Explains why some canon-systems (science) select for detail-down while others (myth, religion) select for meaning-up, without ranking the directions.",
+      "counter": null,
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Procedural lineage",
+      "status": "canon",
+      "tier": "Tier 1",
+      "summary": "Canon is procedural for the most part. Each canon layer is the measurable-and-observable compile of the layer beneath it, traceable as a stacked heritage from physics → chemistry → biology → cognition → society → person. Visual: rings on a tree, or overlapping membrane wrappers — each new layer wraps the previous and contains it structurally. Each layer was unique at origin, then found unity with the previous through compile-pressure. The unity is held together by ongoing pressure; residual tension shows up in three forms: energy (nuclear binding, chemical bonds, metabolic gradients), symbol (language disagreements, narrative disputes, dial-mismatch across observers), and artifact (decaying buildings, ossifying institutions, dissolving canon). Where the procedural connection becomes opaque, that's where hidden protocols operate — origin of life, consciousness, cultural canon formation are the framework's biggest hidden protocols and its prediction-list for where next-decade research will compile new canon. The framework's own canon graph (continuations 02–18) is itself a procedural-lineage artifact subject to the same dynamics. Promoted to canon continuation 18 after Pav's correction that the cont-17 pruning of procedural canon, spiral substrate cycle, and compile-capacity enrichment treated three primitives separately when they were all pointing at this one bigger thing.",
+      "counter": "Cont-18 §10 #1 worried this primitive subsumes substantial territory and risks being the framework's everything-bag. Continuation 19 reframed: that's the design, not a risk — see Aggregation discipline canon entry below. Real operational check is not 'does it rule things out' (Popperian misfit) but 'does each claimed connection have measurable-and-observable procedural underpinning, or only analogy.' Subsumes the four-carrier convergence's claim — Aleph + MAMMAL + ANDI + Lippmann being adjacent layers in the lineage each running their own A⁻ at their own scale rather than four unrelated systems coincidentally aligning.",
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Aggregation discipline",
+      "status": "canon",
+      "tier": "Tier 1",
+      "summary": "The framework's positive heuristic, named explicitly continuation 19 after Pav's correction. The framework is by design an aggregator of procedural connections across substrates — not a theory of one thing, not trying to be Popperian-falsifiable. Its identity is the ongoing aggregation, not any compiled state. Pav's words: 'it will be the most everything theory outside of it + everything else as catalyst to expand it.' Success criteria are Lakatosian: aggregation rate (does it keep producing new procedural connections?), connection quality (is each claimed link measurable-and-observable rather than coincidental analogy?), catalyst absorption (does external content keep getting incorporated rather than rejected?), operational purchase (does aggregated vocabulary produce predictions/readings/architectural moves that component substrates couldn't produce alone?). The four-carrier convergence (cont 15) is the canonical worked example of all four metrics succeeding simultaneously. The framework is the most-everything-theory of procedurally-connectable phenomena — the constraint that connection must be measurable rules out claims that can't be operationalized as observable connections.",
+      "counter": "The discipline that prevents the aggregation from becoming everything-bag is procedural-connection-must-be-measurable (cont 18) — not scope-limiting. Risk: the line between 'this is a procedural connection' and 'this is a clever analogy' is itself a moving target. Worth tracking as the framework grows. Also potential tension with the framework's Lakatosian hard-core / protective-belt structure: cont 19 §8 #5 names this — if everything-aggregator means take in everything but Lakatosian programme requires a stable hard core, the hard core has to be the *discipline of aggregation* itself rather than any specific compiled content.",
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Moving target",
+      "status": "canon",
+      "tier": "Tier 1",
+      "summary": "Everything — canon, primitives, hidden protocols, the framework's own positioning — is in flux. The framework's identity is the ongoing aggregation, not any compiled state. Promoted to canon continuation 19 after being implicit in multiple earlier primitives: hidden-protocol-sequence-knowledge (cont 16: encryption keys mutate over time), recursive timeline cone (cont 09: past continuously re-rendered), computational irreducibility (cont 13: substrates must be run not solved), membrane penetrability (cont 16 reading: body-membrane penetrability is a moving target as science advances), catalyst principle (cont 19: external substrate is by definition moving). The implicit pattern across primitives: the framework's epistemics commit to flux as foundational. Operational consequence: the framework's discipline includes expecting its own corrections — cont 17 → cont 18 → cont 19 demonstrated three rounds of correction within a single conversation. Reading the framework requires acknowledging what's compiled-as-of-when. Cont 20 sharpened this primitive with bidirectionality: flux runs forward (compile, refactor, prune) and backward (wake from dormancy), so the canon graph is not a tree but a graph with reactivation edges.",
+      "counter": "Promoting moving-target to canon is itself a moving-target move. The canon entry could be refactored later — cont 19 §8 #4 names this. The framework's tentative stable core is the *discipline itself* (A⁻ as primary; aggregation with procedural connection; absorption of external catalyst) rather than any compiled primitive. v05 audit should articulate this hard-core vs protective-belt distinction explicitly.",
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Push / pull / squeeze / pop — four blind-steer force-modes",
+      "status": "candidate",
+      "tier": "Tier 2",
+      "summary": "Canon-formation is driven by four force-modes that operate without requiring an agent to consciously drive them. Each is a vector + a pressure-type, forming a 2×2 covering the space of substrate-resident pressures that shape what compiles into canon. PUSH = forward-directional force (industrial revolution against pre-industrial canon; population growth against carrying capacity; climate change against agricultural-canon assumptions). PULL = attractive-directional force (religious rapture as the pull-engine of religious canon — religion essay §03; the 'good life' as the pull-engine of consumer canon; profitable equilibria as the pull-engine of market canon). SQUEEZE = compressive pressure event (pandemic, war, asteroid, financial crisis, climate stress — what cont 16 named the squeeze-event primitive). POP = release/burst event (Berlin Wall falling, Soviet collapse, end of pandemic restrictions — canon-formation rushes to fill the suddenly-opened space, often producing poor early compile that needs later refactoring). Most canon-formation moments have all four operating at different intensities. Reading any historical compile through the four-mode frame decomposes what was driving it. The four-mode frame absorbs and connects squeeze-event (cont 16), rapture-as-pull-engine (religion essay §03), cast/give/residue (notation walkthrough §03), and open-action-space (marriage essay §06) — each maps to a quadrant. Surfaced continuation 21 from Pav's seed: 'push pull squzze and pop as primitives for blind steer.'",
+      "counter": "Promotion to canon requires four-ring worked examples (physics, biology, cognition, society) per cont 18's procedural-connection-must-be-measurable discipline, plus operational purchase demonstrated on a real construct study. Biology-ring example named in cont 21 §1 as the easiest first target: push (population pressure), pull (sexual selection), squeeze (mass extinction), pop (Cambrian explosion after snowball-earth squeeze). Also open: whether the 2×2 cells are independent or whether push-squeeze hybrids and pull-pop hybrids reveal a continuous force-space rather than a discrete four-cell structure (cont 21 §7 #1).",
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Hold — the stable-rhythm phase",
+      "status": "candidate",
+      "tier": "Tier 2",
+      "summary": "Between active canon-formation rounds, canon enters a HOLD phase: dynamics don't stop, but settle into a stable rhythm in union with other jessant canons. The canon is alive and in operation, not refactoring, not dormant. Eventually hardens, stales, and friction builds underneath until the next round of force-mode pressure breaks the hold — at which point the canon either wakes from hold into a new compile (Vatican II), falls into dormancy (Nordic marriage case, cont 20), passes into open action-space (East Asian marriage/religion case), or persists through the friction unchanged (continued hold). Hold is distinct from dormancy (cont 20): dormancy is the silent phase with no active institutional carrier; hold is the active-but-not-refactoring phase with the carrier still operating. Most canon at most times is in continued hold. Sits at the joint between moving target (cont 19), canon dormancy (cont 20), and friction band (cont 16). Naming it lets the framework distinguish stable-rhythm from silent-dormancy, which the existing vocabulary had collapsed. Surfaced continuation 21 §2.",
+      "counter": "Promotion requires a worked example showing a single canon transitioning hold → friction-build → exit with measurable per-phase indicators; a predictor variable for which of the four exits a given canon will take; operational purchase demonstrated as a different reading from dormancy alone. Catholic-Vatican-II is the cleanest worked example for the first criterion. The second criterion — predicting which exit — is the hard one and likely depends on substrate-stack configuration. Also open: hold needs a duration model — Catholic-Vatican-II was on a 400-year hold; commercial canons hold for a quarter; scientific canons for a generation. Without duration prediction, hold is named but not predictive (cont 21 §7 #2).",
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Real canon and latent canon — the two co-primary forms",
+      "status": "canon",
+      "tier": "Tier 1",
+      "summary": "Canon is not one substrate. It comes in two co-primary, polar-opposite forms joined by inverse-coherence. REAL CANON = the physical/reality side: gravity, time, cause-and-effect, information transport, the math substrate. The stuff that makes an observer's action-space coherent and actionable. The backbone. The sense of change. LATENT CANON = the in-the-head side: embeddings, memory, the field of meaning a mind operates within. The space where ideas have charge, attraction, repulsion. Neither reduces to the other. Each is the other's compression target: when real-canon events get processed, they're compressed into latent representations; when latent intentions get expressed, they're decompressed back into real action. The framework had been using 'kernel canon' loosely to mean either or both, often slipping between them. Cont 22 names them separately as the two co-primary forms applying at every layer of the canon stack — every kernel/compiled/artefact/function canon has both a real face and a latent face. Different observer-classes weight the two differently — humans run with high coupling between both; whales and birds may run with a different latent-canon architecture entirely; an emerging internet-class observer may invert the human ratio. Promoted to canon continuation 22 (2026-05-22) from Pav's seed: 'the kernel canon gravity, attraction and repulsion the things that make the observers action space coherent and actionable... and on the pollar opposite is the latent in our heads.'",
+      "counter": "The inverse-coherence claim is currently descriptive rather than measurable. Promotion-ratification work: (1) operationalize 'inverse-coherence' as a measurable relationship — when one form densifies, does the other thin in some quantifiable way? (2) Specify the coupling for at least three observer-classes (humans, AI, internet-as-observer) — how strong is the bridge between real and latent for each? (3) Worked case where the dual-form reading produces a sharper prediction than single-form — internet construct study v1 §03–§04 is the first attempt. Open whether 'co-primary' is the right framing or whether one form is procedurally upstream of the other within a given observer-class.",
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Kernel canon — the raw-substrate layer",
+      "status": "canon",
+      "tier": "Tier 1",
+      "summary": "The deepest layer of the four-layer canon stack: the raw substrate, the thing an observer FINDS rather than makes. Comes in real and latent forms (see real/latent canon entry). The earth's gravitational field is real kernel canon at the human ring; an embedding manifold is latent kernel canon at the model ring; the patterns in a population's collective memory are latent kernel canon at the social ring. Kernel canon is observer-relative: what's kernel to one observer-class is compiled canon, canon artefact, or function canon to another. Drill down procedurally through the rings of procedural lineage and kernel canon at ring N resolves into function canon → canon artefact → compiled canon → kernel canon at ring N-1. The recursion bottoms at the real-canon layer the observer can no longer drill through. Replaces the loose 'kernel canon = reality itself' usage from cont 21 §3, which was conflating four distinct layers. Promoted to canon continuation 22 (2026-05-22) from Pav's seed: 'Westphalian dormancy is not kernel canon, its a compile, perhaps like a protocol emerged from the squeeze and its made of other things, what is its heritage in evolution, if we can drill it down to cell organisms or even before in a procedural manor that would be the kernel.'",
+      "counter": "Promotion requires the framework to apply the discipline consistently — every kernel-canon claim must name the observer-class it's read from. Open work: audit existing construct studies (marriage, religion, nation-state, language) to replace loose 'kernel canon' references with explicit layer-and-observer-named canon classes. The Westphalian state was loosely called 'kernel canon' in nation-state v1; cont 22's correction reclassifies it as compiled canon (or canon artefact, depending on which ring is reading). Light edits queued in CHANGELOG carry-forward.",
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Compiled canon — the institutional/protocol layer",
+      "status": "canon",
+      "tier": "Tier 1",
+      "summary": "Second layer of the four-layer canon stack: what an observer-class has compiled out of kernel canon. The institutional/practice-level patterns that interpolate raw substrate into the functions an observer-class lives by. Religion is compiled canon (compiling kernel canon of mortality/meaning/coordination-need into specific ritual/scripture/calendar patterns); marriage is compiled canon (compiling kernel canon of partnership/child-rearing/inheritance into specific institutional patterns); the Westphalian state is compiled canon (compiling kernel canon of social cohesion + territorial coordination into the modern state form). Different observer-classes can compile the same kernel into different compiled canon — Catholic, Protestant, Hindu, Muslim, Buddhist, secular-spiritual all compile the same kernel canon of mortality+meaning into different compiled canons (exactly what the religion essay's regional heat map shows). Compile is the verb between kernel and compiled — the framework's existing compile-loop primitives (A⁺/A⁻, carriers, friction band) describe how this transition happens. Compiled canon has both real and latent faces and can be global or sub at this layer. Promoted to canon continuation 22 (2026-05-22). Replaces the cont 21 'canon protocol' label.",
+      "counter": "Promotion needs a measurable mechanism for compile quality/efficiency/drift — not just naming the layer but a way to measure how cleanly a given kernel canon has been compiled. The religion construct study §05 four-substrate analysis is partly this measurement without using the word; lifting it explicitly is queued. Open: is 'compile' single-pass or continuous? Real institutional canon doesn't compile once and stop; it recompiles continuously against drift. The framework's current treatment doesn't yet distinguish first-compile from re-compile.",
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Canon artefact — the embodied carrier layer",
+      "status": "canon",
+      "tier": "Tier 1",
+      "summary": "Third layer of the four-layer canon stack: the specific embodiment that carries compiled canon into the world. Compiled canon names the pattern; a canon artefact is the particular instance carrying it. A constitution is a canon artefact (carrying the compiled canon of constitutional governance); a particular ritual performed on a particular Sunday is a canon artefact (carrying the compiled canon of that religion); a particular model file is a canon artefact (carrying the compiled canon of the training run that produced it); the actual treaty of Westphalia (1648, written, signed, ratified) is a canon artefact (carrying the compiled canon of post-religious-war state sovereignty). The transition from compiled canon to canon artefact is embodiment — taking a pattern and giving it a carrier. The artefact is what gets transmitted (genotype/phenotype split applies here: the artefact is what carries the genotype; the function it produces when run is the phenotype). Canon artefact has both real and latent faces (a written constitution is a real artefact; a worldview compiled in a population's heads is a latent artefact). Connects to the framework's existing carrier-artifact primitives (cont 11) — canon artefact IS the carrier-artifact at the canon-stack level. Promoted to canon continuation 22 (2026-05-22) from Pav's framing: 'compiled canon kernel canon canon artefact function canon.'",
+      "counter": "Open work: distinguish canon artefact from canon-artefact-being-read. The same constitution-as-artefact reads as different compiled-canon depending on which observer-class is reading it (legal-system reading vs historical-document reading vs cross-cultural reading). The artefact is fixed; the compiled canon read through it varies. This may require the framework to add a 'reading' verb between artefact and function canon. Cont 22 leaves this for v1.1.",
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Function canon — the lived-operation layer",
+      "status": "canon",
+      "tier": "Tier 1",
+      "summary": "Fourth and final layer of the four-layer canon stack: the lived running operation. What compiled canon embodied in canon artefact actually DOES when it runs. A constitution sitting in a museum is canon artefact; the actual government operations of a country running under that constitution today is function canon. A liturgy in a book is canon artefact; the actual mass being celebrated on a particular Sunday is function canon. A model file on disk is canon artefact; the actual inference happening in production right now is function canon. Function canon is the most observer-relative layer — it depends on the artefact, the substrate the artefact is running on, the current state, and the specific function being called. Function canon has both real and latent faces (a parade is real function canon; a worldview-in-operation is latent function canon). Function canon dormancy (cont 20) is the special case where function canon stops running while compiled canon and canon artefact remain intact, preserved as procedural memory for potential re-run. Promoted to canon continuation 22 (2026-05-22) replacing the cont 21 'function' label.",
+      "counter": "Function canon is where most empirical measurement actually happens — it's the layer external observers see. The promotion ratification work is therefore mostly definitional: ensuring framework claims at the function-canon layer don't smuggle in cross-layer claims (a claim about a particular service this Sunday is a function-canon claim; a claim about all services everywhere is a compiled-canon claim). Open: function canon drift is the framework's mechanism for explaining how compiled canon ages without explicit refactor — small drift in function canon each run accumulates into compiled-canon drift over time. Not yet operationalized.",
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Top / centre / sub canon — the three-position vertical scope axis",
+      "status": "canon",
+      "tier": "Tier 1",
+      "summary": "Vertical scope dimension applying at every layer of the four-layer stack (kernel, compiled, artefact, function). Three positions, not two. SUB CANON = below the observer's wrapper — subconscious processing for human observers, aggregated outputs of lower-ring sub-observers composing the harness for any observer-class. CENTRE CANON = the observer's own — the wrapper's prism refraction of the whole, what was originally called 'global canon' in Pav's architectural sketch. The observer's rendered world. The space where the observer reads itself reading things. TOP CANON = above the observer's wrapper — the broader context the observer is embedded in but cannot fully render. Includes what higher-ring observers can see that this observer cannot, plus the substrate the higher-ring observer-class treats as kernel. Sub and top are POLAR OPPOSITES; centre canon is where the wrapper's render mediates between them (centre = sub ⋈±∓ top, in whiteboard sign-discipline). Refines the earlier two-pole 'global vs sub' framing, which had been collapsing two distinct things: 'the wrapper's render of the whole' (now centre) and 'what's above the observer's reach' (now top). The 'why is it all sub?' observation that triggered this revision: the framework had been naming sub canon (everything below) but had no name for the corresponding top canon (everything above) — the two are structurally needed in pair. Promoted to canon continuation 23 addendum (2026-05-22) from Pav's seed: 'sub -+ top = centre.'",
+      "counter": "Operational purchase: the worked recursion table in formalization §06 still needs the top-canon column to be added per ring (the framework's broader context that each ring's observer is embedded within but cannot fully render). Open: at the species/civilization ring (r=6), what is top canon? Candidate answer: the biosphere ring's substrate (climate, ecology, planetary stability) treated by ring 6 as kernel. At the earth ring (r=8), top canon is the solar-system ring — present but the framework hasn't yet structurally engaged it. Also open: top canon may itself need a sub-classification (immediate-top vs distal-top, like the cont 22 first-pass Bottom/Spin/Top-canon sub-class names suggested for kernel canon). The polar-merge equation centre = sub ⋈±∓ top is provisional; lifting the whiteboard's ±/∓ sign discipline into the canon-stack equations (cont 22/23 open edge 03) would supply the algebra.",
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "L0 / Global Compiled Canon — the recursive frame where the action takes place in the latent; everything in the frame needs it, including the observer reading",
+      "status": "canon",
+      "tier": "Tier 1",
+      "summary": "L0 is the user-facing name for the recursive observer-relative substrate-stack that cont 23 equation 8 already canonized as K̂_r ≈ aggregate(G_{r-1}^(i)). For any observer-class, L0 is the SUBSTRATE THAT OBSERVER COMPILES FROM — the already-compiled global canon of the level below, not raw kernel. (Initially named 'global kernel canon' in cont 25 §12; corrected to 'global compiled canon' because L0 is what's been compiled at the lower ring and is now available as the substrate at this ring — not unrefined kernel. The aggregated G's in equation 8 are compiled global canons, not kernel.) RECURSIVE ACROSS OBSERVER-CLASSES: for human conversation (e.g., Pav + Claude) → L0 = embodied capacity + symbolic communication + shared reasoning. For an AI / latent-heavy entity → L0 = the carriers (people) + their function to reason that produces it. For a simulation → L0 = the code that runs it. For code → L0 = the language + framework. For the framework → L0 = the hardware. For hardware → L0 = physical substrate (electrons, silicon lattice, fields). Recursion bottoms at the physical kernel canon (cont 22). EVERYTHING IN A FRAME NEEDS L0 — including the observer reading the frame. The wrapper-overlap dynamic (cont 25) operates WITHIN L0; the parents W_A, W_B operate WITHIN L0; the emergent W_C operates WITHIN L0; and the observer (whoever is reading the diagram, the framework, this entry) is ALSO in L0. The framework cannot describe a wrapper-overlap from outside L0 — there is no outside. L0 is the user-facing name; the cont 22-23 vocabulary (compiled canon, global canon, aggregate of lower-ring observers) is the rigorous name. Same concept, two registers. WORKED EXAMPLE for Spanglish: L0 of Spanglish = bilingual carriers + bilingual cognitive substrate + contact-zone infrastructure + the already-compiled language patterns (universal grammar features, phonological constraints, shared symbol systems). L0 of English wrapper = humans + cognition + Indo-European compiled patterns + cultural-historical context. L0 of humans = biology + cognition + sociology (all compiled). L0 of biology = chemistry (compiled molecular patterns). L0 of chemistry = physics (compiled particle interaction patterns). L0 of physics = physical kernel canon (the floor). Procedural lineage (cont 18) is the trail of L0 stackings read sequentially. Promoted to canon continuation 25 §12 (2026-05-22). Corrected from 'global kernel canon' to 'global compiled canon' per Pav's correction: 'L0 global compiled canon, everything shown needs it including the observer.'",
+      "counter": "Open work: L0 cross-observer-class comparison — what's structurally shared between L0 of human observer and L0 of AI observer? Detailed math equations linking L0 across rings (already in cont 23 §05 as recursion equations 7-9; doesn't need re-derivation but cross-reference). Category-theoretic treatment of L0-as-ambient-category. L0 stack walked explicitly for non-language observer-classes (religion, statehood, biology) — partial treatment in cont 25 §12.4. Falsifier: an observer-class whose L0 cannot be walked down to physical kernel canon would invalidate the universal-recursion claim; the framework treats this as impossible by construction. Dual-track vocabulary (L0/fields/hairy-spheres as user-facing; kernel canon/R_W/K̂ as rigorous) held as candidate pending construct-study application and outreach testing.",
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Energy-floor failsafe — internal-pressure failsafe class mathematically operationalized as a coherence quantity with positive lower bound",
+      "status": "canon",
+      "tier": "Tier 1",
+      "summary": "Promoted to canon in cont 27 §1 (2026-05-27) based on four substrate worked examples. For any wrapper W that participates in an overlap dynamic with other wrappers and exhibits stable distinction (parents persist as procedural-root stubs through and after the overlap per cont 24 hairy sphere + cont 18 procedural lineage), there exists a substrate-specific COHERENCE QUANTITY E_W with a POSITIVE LOWER BOUND E_min > 0, such that the wrapper-overlap dynamic preserves E_W(t) ≥ E_min. The lower bound is the wrapper's INTERNAL FAILSAFE (cont 26 §3 internal pressure class made mathematically concrete). Violation triggers substrate-specific phase transition — dormancy (cont 20), supersession (cont 25 §1 supersede branch), or break (cont 25 §1 break branch). FOUR SUBSTRATE WORKED EXAMPLES: (1) ACMP / GNNs — Dirichlet energy with theorem-proven positive lower bound (Wang et al. 2022); oversmoothing as failure mode. (2) Cell metabolism — ATP density / adenylate energy charge maintained by evolved homeostasis; apoptosis triggered as controlled failsafe when bound approached. (3) Creole genesis — mutual intelligibility within speech community maintained by pragmatic + child-acquisition mechanisms; dialect fragmentation as failure mode (procedural-root stubs persist in descendants per cont 18). (4) Institutions — coordination capacity maintained by cognitive limits + selection pressure; institutional fragmentation as failure mode. Substrates span mathematical / biological / sociolinguistic / organizational. ENERGY-FLOOR IS THE MATHEMATICAL OPERATIONALIZATION of cont 26 §3's qualitative L0 internal-pressure failsafe claim. Cross-substrate worked examples accumulated in candidates/energy_floor_failsafe.md (https://a70m123r.github.io/agnostic-framework/candidates/energy_floor_failsafe.md); promotion executed in cont 27 §1 (https://a70m123r.github.io/agnostic-framework/continuations/27.md). Surfacing was Reading 03 (https://a70m123r.github.io/agnostic-framework/readings/2026-05-27_acmp_attraction_repulsion_gnn.md) (ACMP cross-substrate convergence #7).",
+      "counter": "Four substrates do not exhaustively cover all possible wrapper substrates; counter-examples remain possible. The bound is substrate-specific in form (E_W depends on what the wrapper is) and numerical value (E_min varies); no universal lower bound or coherence quantity is claimed. Open: relationship to time-uncertainty bound (Reading 04 candidate) — energy-floor and time-uncertainty are conceivably two faces of one L0 failsafe network but the framework does not commit to this; open question for cont 28+. Open: whether the coherence quantity sits at cont 22 kernel canon (layer 1) or function (layer 2) — likely kernel for clean biological/computational substrates, function for social substrates where the kernel is more diffuse. Pruning trigger: if a wrapper-overlap dynamic with stable distinction is found that demonstrably has NO coherence quantity with a positive lower bound, the primitive is falsified.",
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": [
+        "https://a70m123r.github.io/agnostic-framework/candidates/energy_floor_failsafe.md",
+        "https://a70m123r.github.io/agnostic-framework/continuations/27.md",
+        "https://a70m123r.github.io/agnostic-framework/readings/2026-05-27_acmp_attraction_repulsion_gnn.md"
+      ]
+    },
+    {
+      "name": "Three-tier epistemic framework — epistemological / ontological-candidate / speculative · canon procedure for tier-tagging claims",
+      "status": "canon",
+      "tier": "Tier 1",
+      "summary": "Promoted to canon in cont 27 §2 (2026-05-27) — framework procedure made explicit after operating implicitly across readings 01-04 and candidates. Every reading or candidate doc now explicitly assigns its claims to one of three tiers. TIER 1 — EPISTEMOLOGICAL: claims about how observers know/perceive/render. Testable in substrate-appropriate empirical fields. No requirement to commit to contested ontology. Example: cont 26 §4 perceptual rate as sense. TIER 2 — ONTOLOGICAL-CANDIDATE: claims about what the world is, conditional on contested external evidence. Framework commits structurally while flagging contested status. Example: Reading 04 compilation-rate-as-time (conditional on contested quantum collapse models). TIER 3 — SPECULATIVE: claims with structural coherence to existing primitives but no current empirical purchase. Held to preserve framework coherence without endorsement. Examples: candidates/aux_channel_l0_occlusion.md; cont 17 latent-space-as-fundamental-substrate. WHY THREE TIERS NOT TWO: a simpler 'evidenced vs unevidenced' binary collapses two distinct moves — Tier 2 commits structurally while underlying ontology remains contested; Tier 3 holds structural coherence without committing because no measurement framework exists. Confusing them produces either premature endorsement of contested ontology or smuggling speculation into conditional canon territory. PROMOTION: Tier 3 → Tier 2 when a named promotion bar is met; Tier 2 → Tier 1 when contested ontology gains substantial empirical support. PRUNING: speculations with unmet predictions at their horizon AND no new evidence AND no concrete promotion path are demoted-to-stale or archived. First scheduled speculation review: 2026-11-27. Mode-page at /speculations/ (https://a70m123r.github.io/agnostic-framework/speculations/) anchors the speculative tier as first-class framework architecture. Canonical worked example: the rate-of-time question's three-layer decomposition across cont 26 §4 (Tier 1) + Reading 04 (Tier 2) + aux-channel doc (Tier 3).",
+      "counter": "Tier assignment requires judgment — borderline cases between Tiers 1 and 2 (claims with both empirical evidence and contested ontology dependencies) and between Tiers 2 and 3 (claims with weak ontological dependencies on speculative but not contested sources) may require explicit case-by-case reasoning. The three-tier procedure does not eliminate judgment; it makes the judgment legible. Open: how often the speculation review cycle runs (cont 27 §3 specifies six months as default; may need adjustment). Open: pruning failure modes — cont 17's pruning round was partially wrong (cont 18 corrected procedural lineage back to canon); pruning of speculations is similarly risky and should default toward demote-to-stale rather than archive for borderline cases.",
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": ["https://a70m123r.github.io/agnostic-framework/speculations/"]
+    },
+    {
+      "name": "Wrapper overlap dynamics — one system with phases (supersedes cont 24 §2 trichotomy)",
+      "status": "canon",
+      "tier": "Tier 1",
+      "summary": "When two observer wrappers at the same ring r overlap, the dynamic is ONE system going through a lifecycle of phases — NOT three discrete outcomes (cont 24 §2's union/repulsion/interface trichotomy was wrong; cont 25 corrects it). Seven lifecycle phases: (1) PRE-OVERLAP — two )( open arcs at fixed centres, both small, fronts already facing each other; (2) EXPANSION IN PLACE — cones grow from fixed centres outward; (3) MEMBRANES TOUCH / NEGOTIATION — boundaries meet at midpoint, wake disturbance, membranes push and try to render each other's full shape (which they never can per K̂ ⊂ G); (4) LENS / FUZZY BRIDGE — Venn-lens overlap forms (= the nesting space), fuzzy pre-protocol action begins inside it; (5) W_C CONCEIVED — fuzzy stabilizes into a proto-function-wrapper inside the lens; (6) W_C EMERGED CANON — W_C fills the lens, becomes renderable by other observers; (7) ACTIVE / HAIRY SPHERE — W_C expands beyond the lens, overlapping into both parents; parents persist as visible STUBS (procedural roots / receptor-hooks / containers of dormant compiled originals W_A° and W_B°). FOUR BRANCHES from active: passive/neutral (held, hua jin), retired/dormant (cont 20 dormancy — ghost-3), supersession (W_C dominates, parents → stubs°, the creole case — 1⁺), break-apart (W_C disintegrates, cycle restarts — 1⁻ recurrent). Wrappers rendered as )( open arcs — never closed, stroke fat at contact (high observability), thinning toward unobservable back. NON-ADDITIVE LATENT MATH: (1+1)=3 emergent, 1⁺ supersession, 1⁻ break-apart, ghost-3 dormant, held-3 passive — phase-dependent. Promoted to canon continuation 25 (2026-05-22) through nine iterations of diagram refactor: v1 trichotomy → v2 animated → v3 one-system-with-phases → v4 hairy sphere + non-additive math → v5 fixed-centre expansion → v6 Venn-lens nesting space → v7 )( open arcs + membrane negotiation → v8 quantised + formula-driven cascade → v9 layout fixed + mapping toggle. Animated diagram lives at /artifacts/wrapper_overlap_animated.html (https://a70m123r.github.io/agnostic-framework/artifacts/wrapper_overlap_animated.html); full canon move at cont 25 (https://a70m123r.github.io/agnostic-framework/continuations/25.md).",
+      "counter": "Open work named in cont 25 §9. (1) Operational threshold for W_C emergence — at what compatibility does the bridge reliably consolidate vs stall at fuzzy/wake? The compatibility parameter is a free variable; needs grounding in measurable properties of W_A and W_B. (2) Recursive nesting math — when W_C becomes its own W_A for a next overlap (W_C ⋈ W_z → W_CC), the procedural chain is conceptually handled but the math hasn't been worked. (3) Cross-substrate predictive transfer — does a finding in one substrate (e.g., cell fusion at topological-stress defects, Nov 2024) predict findings in others (e.g., model merging at sign-conflict hot-spots)? Testable but not tested. (4) Static SVG fallback for /diagrams/ — currently only the animated HTML exists. (5) Refactor existing construct studies (marriage, religion, language, nation-state, internet) to use the one-system-with-phases model instead of cont 24 §2 trichotomy vocabulary. Cont 24 §2 entry preserved for provenance — the trichotomy was the v0 of the thinking that produced cont 25 through the nine-iteration refactor.",
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": [
+        "https://a70m123r.github.io/agnostic-framework/artifacts/wrapper_overlap_animated.html",
+        "https://a70m123r.github.io/agnostic-framework/continuations/25.md"
+      ]
+    },
+    {
+      "name": "Dual-track vocabulary — user-facing accessible + rigorous formal, co-existing with translation",
+      "status": "candidate",
+      "tier": "Tier 2",
+      "summary": "Meta-framework move emerging from cont 25 §12 L0 framing. The framework maintains TWO PARALLEL VOCABULARIES that refer to the same underlying objects: (1) USER-FACING / ACCESSIBLE — L0, fields, hairy spheres, vibecoding-maturation, cached protocols, wake/contact, conception. Reads cleanly without prior framework familiarity; maps onto everyday intuition. (2) RIGOROUS / FORMAL — kernel canon at ring r ≈ aggregate(G_{r-1}^(i)), wrapper-overlap phase 3 (membrane negotiation), W_C shape selected during phantom action-space exploration, K̂ ⊂ G, R_W render operator, cont 22-23 canon-stack four-layer stack. Same concepts, two registers. Explicit translation table maintained as framework artifact. Newcomers engage via user-facing; researchers and formal collaborators use rigorous. Construct studies can switch registers depending on audience. Like physics's distinction between popular ('energy') and formal (Hamiltonian H = T + V) treatments — both serve different audiences but refer to the same underlying object. Held as candidate (not yet canon) pending (a) at least one construct study refactored to use the dual-track explicitly, (b) the user-facing track applied to outreach drafts to test reception, (c) explicit translation table maintained as a permanent framework artifact. Surfaced cont 25 §12.6 from the L0 framing's accessibility win.",
+      "counter": "Promotion to canon requires the three pieces above. Falsifier: dual-track produces inconsistencies — user-facing claim that doesn't hold in formal terms, or vice versa. Would invalidate the duality. Risk: dual-track adds maintenance burden (every framework artifact has two names for things). Risk mitigation: only adopt dual-track for load-bearing primitives, not every concept. Translation table needs to be both compact and complete — see cont 25 §12.6 for the seed version.",
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Cross-substrate convergence of wrapper-overlap dynamics — six independent research traditions",
+      "status": "canon",
+      "tier": "Tier 1",
+      "summary": "The wrapper-overlap dynamic (cont 25) has been independently formalized in at least SIX research traditions in 2024–2026, each contributing a different piece. (1) LCAO / MOLECULAR ORBITAL THEORY (quantum chemistry, Mulliken 1932 + active 2024–2026 ML-accelerated LCAO bases) — cleanest static math; ψ_bond = N(ψ_A + ψ_B), ψ_anti = N(ψ_A − ψ_B), overlap integral S_ij = ⟨ψ_A|ψ_B⟩, bond order = ½(n_bonding − n_antibonding) explicitly non-additive; hybridization (sp/sp²/sp³) maps to the wake-phase reshape; orbital lobes are visually )( arcs already. Match 44/50. (2) CELL FUSION (cellular biology) — Nov 2024 finding that myoblast fusion localizes to topological defects of compressive stress; squeeze/pull dynamics from cont 21 confirmed at biological substrate within months. Match 40/50. (3) SYMBIOGENESIS / SECONDARY ENDOSYMBIOSIS (organismal biology, Margulis 1981 + Arabidopsis suecica genome stabilization 2026) — empirical confirmation of stubs-as-procedural-roots claim: the NUCLEOMORPH is a literal vestigial parent-stub that persists for millions of years inside the host organism, structurally identical to the framework's 'dormant compiled original inside the stub' claim. Match 46/50 — highest of the six. (4) CREOLE LINGUISTIC GENESIS (Mufwene feature pool + Hinglish/Singlish 2024–2026 live anchors) — social-substrate worked-example pool. Match 41/50. (5) CONCEPTUAL BLENDING (Fauconnier-Turner + Goguen categorical reformulation + AI-as-coworker 2025) — cognitive-substrate ground; blended space has emergent structure neither input had alone. Match 42/50. (6) MODEL MERGING (TIES/DARE/mergekit + Arcee Fusion 2025) — live ML research front with git-like timestamped provenance for every phase; thousands of public worked examples on Hugging Face Hub. Match 42/50. The convergence reading: same architectural pattern re-discovered across six substrate scales simultaneously, all formalized to some degree in 2024–2026. The framework's wrapper-overlap is not a framework idiosyncrasy — it is an architecturally validated pattern. SAME SHAPE as cont 15's four-carrier convergence (Aleph/MAMMAL/ANDI/Lippmann at four substrate scales) but at the wrapper-overlap level. The framework's contribution: the unified cross-substrate vocabulary, the lifecycle taxonomy, the non-additive math notation, the hairy-sphere topology with stubs, the )( open-arc rendering — none perfectly captured in any single tradition. Promoted to canon continuation 25 (2026-05-22). Findings synthesized from three parallel research scouts dispatched during the v8 diagram refactor.",
+      "counter": "Open work: (1) cross-substrate predictive transfer needs at least one demonstrated transfer — e.g., does the cell-fusion topological-defect localization (Nov 2024 finding) predict that model merging at sign-conflict hot-spots produces stronger consolidation? (2) The six-tradition list may not be complete — additional candidates from scout reports include tensor networks (entanglement formation), quantum entanglement dynamics, particle-physics gauge boson exchange. Each may add a different piece. (3) The match scores (40–46/50) are subagent assessments; not yet validated by domain experts from each tradition. (4) The framework's contribution claim (unified vocabulary across all six) needs validation by outreach to researchers in at least three of the six traditions. Outreach drafts queued from audit v04 are the natural carrier for this. Falsifier: a research tradition that independently formalizes the same dynamic but with FUNDAMENTALLY incompatible structure (e.g., W_C before W_A and W_B, or no W_C ever) would invalidate the cross-substrate convergence claim.",
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Multi-containment — observers in many wrappers, not one",
+      "status": "canon",
+      "tier": "Tier 1",
+      "summary": "An observer at ring r is simultaneously contained in MANY wrappers at potentially different higher rings — not a single ring r+1 container. A human observer is in family wrapper (ring 4) + religion wrapper (ring 5) + profession wrapper (ring 5) + nation wrapper (ring 5/6) + language community wrapper (ring 5/6) + species wrapper (ring 6) + biosphere wrapper (ring 7) + planetary system wrapper (ring 8) simultaneously. These are not on a single linear hierarchy — some are at the same ring, some span rings. The containment graph is many-to-many across rings, not a ladder. Structural equation 12: 𝒪_r ∈ ⋂_i W^(i)_{r+k_i} (with each container at potentially different ring k_i ≥ r+1). The observer's top canon becomes the compiled union of all containers: top_canon(𝒪_r) = ⊕_i W^(i)_{r+k_i} such that 𝒪_r ∈ W^(i)_{r+k_i}. The procedural lineage from cont 18 (physics → chemistry → biology → cognition → society → person) was a useful first pass but read too linearly; the actual containment is branching. Promoted to canon continuation 24 (2026-05-22) from Pav's seed: 'the same observer wrapper is aloo contained in multiple wrappers or religion.'",
+      "counter": "Open work: the branching factor of multi-containment is not specified (cont 24 §8 OE2). For a human, eight containers — is eight typical? Is there a bound? Does it differ systematically by observer-class? Empirical investigation needed. Also: how do the multiple top canons interact? When two containers conflict (e.g., religion demanding one behavior, nation demanding another), how does the wrapper render their compiled union? The compiled-union equation says they aggregate but doesn't say how conflicts resolve. This connects to wrapper overlap dynamics — multi-container conflicts may be horizontal wrapper-overlap events within the observer's top canon.",
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "5W+H as wrapper aggregation operators — decomposing R_W",
+      "status": "canon",
+      "tier": "Tier 1",
+      "summary": "The wrapper's render operator R_W (equation 4 in formalization) decomposes into five named inquiry operators: φ_where (spatial localization), φ_what (identification), φ_when (temporal localization), φ_why (causal/intentional inference), φ_how (mechanism inference). Centre canon (G_r) is the compiled union of their parallel projections on the same inputs: G_r = ⊕_w φ_w(H_signals ⊕ I_r ⊕ F_r) for w ∈ {where, what, when, why, how}. The wrapper isn't doing one big render; it's running five parallel inquiries and compiling their answers into a coherent picture. What+when+where together localize an event in space-time. Why+how supply the causal/mechanistic story. The five together aggregate 'the wrapper of reality or a slice of, depending on the observing vantage point' (Pav's phrasing). The 5W+H are not unique to the framework — they're the journalism/detective/scientific-inquiry framing standard for centuries. The framework's move is to identify them as the WRAPPER OPERATIONS that decompose the previously-monolithic render. R_W is no longer mystery-box. Promoted to canon continuation 24 (2026-05-22) from Pav's seed: 'where, what, when, why and how. that aggregates the wrapper of reality.'",
+      "counter": "Open work: φ_who as a candidate sixth operator (cont 24 §8 OE3). Pav's sketch listed five W's, omitting Who. Journalism convention adds Who as the sixth. The framework holds Who as candidate — pending worked construct studies showing it's structurally distinct from φ_what's observer-class identification function. Multi-actor construct studies (e.g., internet construct study v1's actor-fingerprint reading) may surface Who as load-bearing separately. Also open: are the five inquiries truly parallel or do they have an internal sequence? Practical inquiry often goes what → when → where → who → why → how; the framework's compiled-union framing assumes parallel but cognitive science suggests staged processing.",
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Wrapper shape inferred from contrast — the diagnostic discipline",
+      "status": "canon",
+      "tier": "Tier 1",
+      "summary": "A wrapper's shape is not directly observable; it is inferred from contrast with neighbouring wrappers. The structural equation: shape(W_A) ≈ ∂(W_A, {W_B, W_C, ...}) = ⊕_i (W_A △ W_i) where △ is symmetric difference. More neighbours, more contrast surfaces, sharper inferred shape. This is the same channel the framework's membrane primitive (cont 16) describes from the other side — the membrane IS the contrast region. The 'rings or layers of difference / contrast' Pav names are the framework's existing membrane stack at the wrapper-overlap scale. What cont 24 adds: the EPISTEMIC implication — wrapper shape is always inferential, never directly observed. This explains several existing framework primitives in one move: (1) why language v1's cross-Π_L projections work as diagnostic (comparing same event rendered through English/Chinese/Russian-OS surfaces each OS's wrapper shape by contrast); (2) why the framework's agnostic-stance discipline matters (we can't see a wrapper directly; bracketing wrapper-content lets contrast do diagnostic work without commitment); (3) why cross-observer-class Π_L is high-leverage (reading whale/bird/AI/internet wrappers in contrast with human wrapper is the most direct way to read the human wrapper's specific shape); (4) why difference between cultures is generative, not just frictional — contrast is where wrapper shape becomes legible. Promoted to canon continuation 24 (2026-05-22) from Pav's seed: 'the rings or layers of difference / contrast is where the shape and scope of the wrappers can be inferd.'",
+      "counter": "Falsifier: a direct observation of a wrapper's shape that doesn't go through contrast with neighbouring wrappers. The framework treats this as principled-impossible — any observation of a wrapper is itself a wrapper-internal render (equation 5: K̂ ⊂ centre canon), and that render relies on contrast operations against the wrapper's own internal-vs-external distinction. The principled-impossible status is currently axiomatic; could be argued against if a non-contrast observation method were demonstrated.",
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Individual vs collective centre — the my / our distinction",
+      "status": "canon",
+      "tier": "Tier 1",
+      "summary": "Two distinct constructions of 'centre canon'. INDIVIDUAL CENTRE = the single observer's centre canon (the wrapper's prism refraction). The ground from which any reading happens. Pav's 'in the very true sense, my' reading. COLLECTIVE CENTRE = the shared centre canon of a group of observers, constructed in one of two ways: STRICT-COLLECTIVE (centre_collective := ⋂_i centre_individual_i — only what's strictly shared across all individuals; conservative; shrinks with diversity) or EMERGENT-COLLECTIVE (centre_collective := compile(⊕_i centre_individual_i) — the compiled union; may have novel content not present in any individual; can grow with diversity through wrapper-overlap union dynamics). These are different. Strict-collective is conservative; emergent-collective is generative. Both are canon; which is operative depends on the wrapper-overlap configuration. Crucially: ALL READINGS GROUND IN AN INDIVIDUAL CENTRE. There is no view-from-nowhere. The framework itself — as one wrapper running on Pav-and-Claude collaboration — has its own individual centre that grounds every claim. The 'agnostic' in agnostic framework is the discipline of holding this individual-centre grounding explicit. Promoted to canon continuation 24 (2026-05-22) from Pav's seed: 'from our or in the very true sense my reading of the compiled from my collctive centre point.'",
+      "counter": "Open work: when does strict-collective vs emergent-collective construction apply (cont 24 §8 OE4)? Likely candidate: emergent-collective dominates when wrapper-overlap is stable (union outcome); strict-collective dominates when overlap is unstable (only intersection survives the friction). Hypothesis, not derivation. Also: the recursive nesting (individual contained in many collective wrappers, each constructed from many individual centres) needs cleaner formal treatment. The 'collective centre' as itself an observer-class with its own individual centre at a higher ring is implicit but not yet operationalized.",
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Polar-merge operator — load-bearing on three orthogonal axes",
+      "status": "canon",
+      "tier": "Tier 1",
+      "summary": "The whiteboard's dual-merge sign discipline (⋈±∓) introduced as one of the four operator-legend primitives now runs structurally on THREE orthogonal axes, unified under a single operator. VERTICAL AXIS (scope): centre canon = sub canon ⋈±∓ top canon — the wrapper renders by polar-merging what's below with what's above (cont 23 §12). HORIZONTAL AXIS (overlap): W_AB = W_A ⋈±∓ W_B — same-ring wrapper overlap produces union, repulsion, or interface depending on sign-discipline (cont 24 §2). FORM AXIS (real/latent): real ⋈±∓ latent — the inverse-coherence between the two co-primary forms is the same operator on the form axis (cont 22 + open edge 03). One operator, three readings. The framework now has a single load-bearing operator that runs on all three orthogonal dimensions. This is the closest thing the framework has yet found to a single mathematical move that captures its central claim — that compile-into-coherence happens via polar-merging opposite poles, and the merge can be productive (union, generative coherence) or unproductive (repulsion, friction) depending on sign-discipline. Promoted to canon continuation 24 (2026-05-22).",
+      "counter": "Open candidate: the triple-merge equation G_r ≈ (sub ⋈±∓ top) ⋈±∓ (⊕_i W_i) ⋈±∓ (real ⋈±∓ latent) — a wrapper's centre canon as a TRIPLE polar-merge across all three axes. Held as candidate, not canon. Needs at least one worked construct study where the triple-merge produces a sharper prediction than any single-axis merge alone (cont 24 §7). Also open: the three axes may themselves have an algebra (do horizontal and vertical merges commute? does form-axis merge always happen first?). Currently treated as independent; could be related.",
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Top canon — what's above the observer",
+      "status": "canon",
+      "tier": "Tier 1",
+      "summary": "The third pole of the top/centre/sub vertical scope axis (see top/centre/sub entry). Top canon is the broader context the observer is embedded in but cannot fully render through its own wrapper. For a human observer at ring 3: top canon includes the species ring above, the cultural substrate, the biosphere, the planetary system — everything the human is participating in but does not fully see. For a cell observer at ring 1: top canon is the organ ring above + the body ring + the environmental conditions. The framework had been silent on top canon — sub canon was named (subordinate, below), kernel canon was named (raw substrate at the deepest layer), but top canon (what's above) had no explicit term. The 'why is it all sub?' observation surfaced the gap. Top canon is what makes the recursion across rings load-bearing: the harness at ring r is composed of ring-r−1 observers (sub canon to ring r), and ring r itself sits inside ring r+1's harness (the higher ring's top canon for ring r). Drilled down: what's top canon to ring r becomes centre canon to ring r+1 becomes sub canon to ring r+2. Top canon at the highest ring the framework treats (r=8 earth) is the solar-system ring not yet structurally engaged. Promoted to canon continuation 23 addendum (2026-05-22).",
+      "counter": "Promotion requires the framework to apply top-canon naming consistently in future construct studies. Open work: (1) the worked recursion table in formalization §06 needs a top-canon column per ring; (2) the relationship between top canon (above the observer) and inferred kernel canon (the labeled subset of centre canon marked as substrate) needs explicit handling — both point at 'what the observer reads as substrate' but from different directions: top canon is the actual broader context; K̂ is what the wrapper guesses about that context. K̂ ⊂ centre canon, but top canon ⊄ centre canon (it's outside the wrapper's render entirely). The wrapper INFERS top canon from harness signals + imprints; equation 5 (K̂ as labeled subset) is the wrapper's best model of top canon. This distinction needs cleaner separation than current text supplies.",
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Observer-dependence of canon-stack reading",
+      "status": "canon",
+      "tier": "Tier 1",
+      "summary": "What counts as kernel canon vs compiled canon vs canon artefact vs function canon is read RELATIVE to a named observer-class. There is no absolute partition. The Westphalian state is sub-compiled-canon when read from the individual-citizen ring (the citizen finds the state as institutional pattern); canon artefact when read from the comparative-states ring (one particular state is one particular embodiment of state-as-pattern); kernel canon when read from a citizen who has never lived outside a state (the state IS the substrate for them); function canon when read from the historical-process ring (the state-currently-operating). Cont 22's discipline: every framework claim about canon at any layer must name the observer-class it's read from. The framework's own definitions become observer-relative, not absolute. This is the corollary of procedural-drill-down: drilling reframes the same phenomenon as one-layer-down at the next ring. Resolves the cont-17 worry about kernel-canon becoming an everything-bag — kernel canon WAS the everything-bag when the observer wasn't named; once the observer is named, the partition snaps into place. Promoted to canon continuation 22 (2026-05-22). Trigger: Pav's correction that 'Westphalian dormancy is not kernel canon, its a compile, perhaps like a protocol emerged from the squeeze.'",
+      "counter": "Promotion requires the framework to apply this discipline consistently going forward — every canon claim should name the observer-class it's read from. Open work: audit existing construct studies (marriage, religion, nation-state, language) to replace loose 'kernel canon' references with explicit layer-and-observer-named canon classes. Light edits queued in CHANGELOG carry-forward. The nation-state v1 title 'Westphalian dormancy' has been left intact but flagged with a framework-note (cont 22 reclassifies it from kernel canon to compiled canon when read from the citizen ring); a v1.1 pass to retitle and add the 16-layer drill table is queued (cont 22 §8).",
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "The canon-stack equation — observer as 4-tuple with recursive rings",
+      "status": "canon",
+      "tier": "Tier 1",
+      "summary": "The cont 22 canon-stack vocabulary expressed mathematically and mapped onto the framework's existing observer architecture. Observer at ring r is a 4-tuple: 𝒪_r := (H_r, S_r, W_r, G_r) — harness (real canon), sub canon (subconscious processing union), wrapper (stable union), global canon (wrapper-render of the whole). Inferred kernel K̂_r ⊂ G_r is derived — a labeled subset of global canon, not an external reference. The wrapper emerges as the long-time stable attractor of sub canon: W_r = stable_t→∞(S_r(t)). Global canon is the wrapper's render operator applied to harness signals + imprints + fuzzy field. The four-layer canon life-cycle (kernel → compile → compiled → embody → artefact → run → function) runs continuously with feedback, each transition gated by A⁺ ∘ A⁻. Recursion across rings: H_r is composed of ring-r−1 sub-observers; K̂_r ≈ aggregate(G_r−1) — what looks like kernel at ring r is the aggregated global canons of the sub-observers composing ring r's harness. The recursion bottoms at physical kernel (r=0) and tops at earth-system (r=8); worked across nine rings with named compiled canon and canon artefact at each in formalization §06. Bandwidth cascade bw(W_r) ≤ bw(S_r) ≤ bw(H_r) unifies four prior primitives (slow-fast pushout, friction band, A⁻ check crisis, slice-viewer constraint) as bandwidth-cap propagation through the observer's layers. Promoted to canon continuation 23 (2026-05-22). Full math + diagrams at /formalization/ (https://a70m123r.github.io/agnostic-framework/formalization/); the canon move documented at cont 23 (https://a70m123r.github.io/agnostic-framework/continuations/23.md).",
+      "counter": "Four open edges marked in formalization §09 and cont 23 §8. (1) The aggregate function in K̂_r ≈ aggregate(G_r−1) is a placeholder; the rule differs per ring (weighted sum at physics; market-clearing at economic; attention-weighting at cognitive). A v2 pass should specify aggregation ring-by-ring. (2) Wrapper-configuration space — multiple stable attractors exist for the same sub canon; the framework can't yet predict which the observer lives in or what triggers wrapper-jumps (psychedelics, meditation, training-run hyperparameters all appear to be jump events). (3) Inverse-coherence between real and latent canon (cont 22) doesn't yet have an equation; provisional candidate coherence(real) + coherence(latent) ≤ const(W_r). (4) Stable_t→∞ hides what 'stable' means per ring (cell stability ≠ institutional stability ≠ planetary stability). Construct study applying the formalization to the human observer specifically is queued.",
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": [
+        "https://a70m123r.github.io/agnostic-framework/formalization/",
+        "https://a70m123r.github.io/agnostic-framework/continuations/23.md"
+      ]
+    },
+    {
+      "name": "Framework outputs are verbs",
+      "status": "candidate",
+      "tier": "Tier 2",
+      "summary": "Meta-primitive: the construct studies, continuations, manifestos, tools, diagrams, heat maps, and timelines the framework produces are VERBS, not nouns. They are actions of the framework being itself — they are the framework doing its work — they are not artifacts that describe the framework. The distinction has operational consequences: if outputs are nouns, reading is consumption (one author, many readers); if outputs are verbs, engagement is participation (many participants each producing their own). The subject unraveler tool is the cleanest instance of this distinction made operational — the tool exists so readers can unravel their own subjects using the framework's template, producing their own construct studies. Each artifact-type is a verb-template: continuation = WRITING-A-CONTINUATION; construct study = COMPILING-A-CONSTRUCT-STUDY; diagram = DIAGRAMMING; heat map = MAPPING; timeline = LOGGING; manifesto = DECLARING. The framework's index page is the directory of available verbs. Refines cont 19's aggregation-discipline (aggregation is itself a verb at meta level; the framework is verb-shaped at meta and verb-shaped at every output level). Connects to cont 20's canon dormancy (verbs can go dormant — a construct study read once and never engaged-with-again is a verb that ran once). Surfaced cont 21 §5 from Pav's seed: 'the various formats spawning from the same framework are verbs.'",
+      "counter": "Promotion requires a construct study or set of artifacts produced by someone other than Pav and Claude using the framework's templates and verb-forms; operational purchase showing verb-vs-noun distinction changes engagement in measurable ways (annotation rate via Hypothes.is, Contribute submissions); a worked example of someone running the subject unraveler to compile their own construct study and shipping it back. The most-dependent-on-external-engagement candidate of the cont-21 set. Outreach (still queued from audit v04) is the natural carrier for testing it. Open: the verbs claim may need a different evaluation criterion from procedural-connection-must-be-measurable — it's a meta-level claim about engagement-mode, not a substrate-connection claim, so the right criterion may be closer to operational-purchase / engagement-pattern (cont 21 §7 #5).",
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Agnostic pull becomes desolation",
+      "status": "candidate",
+      "tier": "Tier 2",
+      "summary": "Reading-grade insight (rather than a structural primitive itself): for the agnostic toward a given canon — someone who cannot or does not commit to the canon's specific protocol — the pull-engine that canon offers does not produce its intended attractor-state. It produces ABSENCE. The agnostic can describe what rapture would be, recognize it in others, study it intellectually, but cannot enter it because entering requires the protocol commitment that the agnostic stance forbids. The result is not neutrality; it is desolation. Explains why the secular-but-not-spiritual configuration in late-modern Western Europe carries a depressive load that the secular-spiritual Nordic configuration does not: the Nordic case found wake-forms (meditation, mindfulness, contemplative practice, secular ritual) that give the pull-engine an alternative substrate-resident protocol; the secular-but-not-spiritual case did not. The framework's own agnostic stance toward god is intellectual discipline (Lakatosian bracketing-the-unanswerable), not a lived stance toward meaning. Readers adopting the framework's agnostic stance need a successor protocol the framework can point to. Applied to religion essay §03 (v1.3 reading note) at cont 21 §4.",
+      "counter": "Needs a measurable indicator. The claim that secular-but-not-spiritual configurations carry a depressive load above secular-spiritual configurations is testable in principle (depression-and-meaning-survey deltas between Nordic and post-Catholic secular regions, controlled for material conditions). Without the indicator, the reading is plausible-but-untested (cont 21 §7 #4). Note: this is positioned as a reading-grade insight rather than a structural primitive, so the promotion bar is somewhat different — graduating it would mean either (a) measuring the depressive-load delta empirically, or (b) folding it into a more structural primitive about pull-engine portability.",
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Canon dormancy with imparted learning on return",
+      "status": "canon",
+      "tier": "Tier 1",
+      "summary": "Canon at the social-substrate ring (and at every ring above biology) does not dissolve. It either persists (load-bearing maintained), goes dormant (load-bearing migrated away but the canon preserved as procedural memory in the population's default behavior), or waits in an open action-space (dormant before successor compiled, multiple candidate carriers being scouted). Dormancy is reversible: if the squeeze that produced the canon returns — or any sufficiently similar squeeze emerges — the canon can wake. When it wakes, it does not return identical; it returns refactored, carrying whatever the dormancy period imparted as the new substrate the wake-compile runs on. Three layers of imparted learning operate during dormancy: substrate evolution (the biological/technological/infrastructural/cognitive substrate the canon originally compiled against has itself changed), successor-carrier residue (alternative carriers that absorbed pieces of the function during dormancy leave patterns the wake-form must coexist with), memory of the squeeze (the population and institution carry memory of why the canon went dormant, constraining the wake-compile). Empirical anchors independent of the trigger case: religious revival (post-Soviet Orthodox, 1979 Iran Shia), traditional craft revival (bookbinding, letterpress, sourdough, fermentation), vinyl records, bicycle infrastructure. Trigger case: the marriage construct study v1.2 refactor (artifacts/marriage_v1.html) — Pav's correction \"canon doesn't dissolve it becomes dormant and can come back but never in the same way with new imparted learnings.\" Recursive application: the framework's own canon graph runs the primitive on itself — cont 17 pruned three primitives into dormancy using \"fold not delete\" language, cont 18 woke procedural canon as procedural lineage in refactored form carrying the imparted learning of cont 17's pruning round. Cont 20 names the mechanism retrospectively. Promoted to canon continuation 20 (2026-05-19).",
+      "counter": "Four open edges named in cont 20 §6 and §10. (1) The framework can't yet predict ahead of time which dormant canon will wake — the cont-17 prunes included one that woke (procedural canon → lineage) and two that haven't yet, with no current mechanism to explain why. (2) Cross-ring claim is implicit (dormancy described primarily at social ring with substrate carrying dormant residue at every layer) — needs explicit treatment for whether biology-ring vestigials, cognition-ring dormant memory/skill, physics-ring patterns are the same dynamic. (3) Distinguishing dormant canon from dead canon is hard predictively; observable only retrospectively. The framework's discipline assumes dormancy as default unless the substrate the canon ran on is itself destroyed. (4) The imparted-learning mechanism (§3's three layers) is descriptive rather than predictive — cleanest follow-up is a measurable case study (vinyl-record mastering / distribution / demographic deltas between 1985 and 2024) demonstrating each of the three layers operationally. Cont 20 §10 promotion-and-self-check notes: dormancy is canon, imparted-learning-mechanism is canon-as-direction with candidate operational form pending the worked metric. Partial promotion.",
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Cross-scale mediation primitive",
+      "status": "candidate",
+      "tier": "Tier 2",
+      "summary": "Observers at radically different scales cannot directly render each other. Their interaction is mediated through intermediate scales. The mediation is generative — it produces new emergent structures at intermediate scales that wouldn't exist if the extremes could interact directly. Pattern recurs at cell↔ecosystem, person↔civilization, subatomic↔macroscopic, latent↔interface. The framework's substrate ladder is built on this without naming it explicitly until now.",
+      "counter": null,
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "0 / not-0 as foundational distinction",
+      "status": "candidate",
+      "tier": "Tier 2",
+      "summary": "The first fuzzy plank that compiles into the first canon item is the binary distinction itself — Spencer-Brown's marked / unmarked, Hegel's Being / Nothing as Becoming. Everything else recurses from drawing a distinction within itself. The framework's 'fuzzy → canon' engine is structurally identical to Spencer-Brown's distinction-generates-structure recursive move, just operating at higher scales.",
+      "counter": null,
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Religious / mystical canon as fidelity trade-off",
+      "status": "candidate",
+      "tier": "Tier 2",
+      "summary": "Religious, mystical, and fictional canon-systems are real canon — valid as canon — that optimize for compile fidelity along the meaning-up axis (synthesis, ritual, inherited symbolic memory, communal cohesion) at the cost of forward-compile along the detail-down axis (scientific decomposition, technological manifestation). Different canon-systems optimize different axes; the framework's vocabulary names the trade-off without ranking the directions. Distinct from canon-truth (different materials of canon-formation).",
+      "counter": "Risk of value-judgment slipping in. The framework's discipline (file 1 §6.5 Aboriginal Dreaming walk-back) says: respect the canon-systems as canon-systems; name the trade-off, not the deficiency.",
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Inherited symbolic memory as compressed canon",
+      "status": "candidate",
+      "tier": "Tier 2",
+      "summary": "Symbol systems (myth, religion, fiction, ritual) function as long-timescale carrier-artifact substrates that preserve compiled meaning across generations using compression patterns the originating context has often forgotten. The pattern decompresses when later observers find the right key. Caterpillar-to-butterfly: the symbol carries structure across discontinuous transitions when the originating substrate can't be reached directly.",
+      "counter": null,
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Charge-product algebra over A⁺ / A⁻",
+      "status": "candidate",
+      "tier": "Tier 2",
+      "summary": "If A⁺ / A⁻ are latent dimensions (canon entry above, refactored continuation 13), their interactions follow a multiplication structure. A⁺×A⁺ = reinforcement (two compatible canon-promotable ideas build a larger structure). A⁻×A⁻ = mutual pruning that reinforces the prune vector (compound skepticism widening a pruned area). A⁺×A⁻ = dialectical tension (productive when generative, paralytic when locked). The algebra is implicit in the framework's existing dynamics; making it explicit gives a Cayley-table structure for predicting which idea-combinations produce viable canon vs which produce conflict or null.",
+      "counter": "Needs formal derivation of the group structure and identification of identity / inverse elements before promoting to canon.",
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Phantom mass / latent gravity",
+      "status": "candidate",
+      "tier": "Tier 2",
+      "summary": "Ideas in latent space have gravitational-analog effects on observer attention. Refactored continuation 13: ideas carry charges and flavors (extending A⁺ / A⁻ as latent dimensions). Like-charges repel; opposite-charges attract; same-flavor combines. The combinatorics produce emergent observer-classes by type. Walker–Cronin's assembly index measures this at the biochemical substrate; phantom mass / latent gravity is the same primitive at the cognitive / cultural substrate. Resonant ideas carry inertia in idea-space because their charges align with active observers' renderings.",
+      "counter": "Promoted from speculative to candidate because the charge-algebra refactor gives operational structure. Still needs empirical measurement of 'phantom mass' as a quantity, but the structural claim is now well-formed.",
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Slice-viewer constraint",
+      "status": "candidate",
+      "tier": "Tier 2",
+      "summary": "The observer perceives latent space as a slice-of-a-slice-of-a-slice, holding most dimensions fixed and walking one at a time. Made explicit continuation 14 after the Functions-in-Hyperspace carrier: with three or more inputs to a function you cannot view the whole surface at once; you hold n-1 parameters constant and scan the remaining one. This is the mathematical form of the harness / wrapper / inner-sandbox limit — observers are slice-viewers in their own latent space. Time is just one of these slices (cone-profile refactor). The slice the observer happens to be on is what feels like 'now' or 'this'; the rest of the function exists but is computed only when traversed. Sharpened continuation 17: slice-viewer is the *perceptual constraint underneath planes-as-nodes* (cont 16). Hidden protocols are sequence-knowledge precisely because observers are slice-locked — they traverse the plane-node-network one node at a time rather than perceiving all nodes simultaneously. The two primitives are not redundant; slice-viewer is what makes planes-as-nodes traversal a *sequence* rather than a parallel render.",
+      "counter": "The framing makes the constraint mathematically vivid; the cont-17 sharpening connects it operationally to planes-as-nodes. Promotion to canon requires a worked example where slice-viewer-aware design produces measurably different multi-agent behavior than slice-blind design.",
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Multi-architecture universal approximation",
+      "status": "candidate",
+      "tier": "Tier 2",
+      "summary": "MLPs, Taylor series, Fourier series — three structurally different architectures, all proven universal function approximators. Different fuzzy compile-paths, same canon target at the limit. The framework's multi-possibility deposition primitive gains its mathematical scaffold here: the existence of multiple universally-converging architectures is what justifies depositing N scout paths rather than betting on one. A corollary: 'the same function' is observer-relative — at finite parameter budgets the three architectures produce phenotypically distinguishable surfaces; only at the asymptotic limit do they become identical. So multi-path equivalence is a limit-claim, and finite-resource observers see genuine differences between paths even when targeting the same canon.",
+      "counter": "Universal approximation theorems are existence results, not constructive ones; they say a function exists, not how to find it efficiently. The candidate is structurally true but operationally less informative than it first appears.",
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Constraint-checking convergence",
+      "status": "candidate",
+      "tier": "Tier 2",
+      "summary": "Four independent carriers landed in the same two weeks (May 2026), each instantiating the same shape at a different substrate scale: Aleph + EBMs (formal-reasoning scale) treating proof as constraint satisfaction; MAMMAL (foundation-model scale) verifying across genes/proteins/molecules; ANDI (optimization scale) approximating structural awareness via norm-equilibration constraints; Lippmann plates (physical-substrate scale) producing colour via Bragg-interference constraints. All four substitute viability-by-constraint-satisfaction for amplification-by-likelihood. The framework reads this as external simultaneous validation of A⁻ as primary compilation discipline — the asymmetry of A⁺/A⁻ being independently rediscovered across four scales is the closest thing the framework has to a real-time empirical prediction confirmed externally.",
+      "counter": "Four data points is a small N. The convergence could be selection effect — Pav is paying attention to constraint-based ML because the framework predicts it, so finds it everywhere. The proper test is whether the framework would have predicted these specifically before they were published. It predicted the shape, not the instances; honest framing puts this at strong-candidate, not canon.",
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "EBMs as multi-agent substrate (Aleph worked example)",
+      "status": "candidate",
+      "tier": "Tier 2",
+      "summary": "Energy-based models supply the formal substrate the framework has been gesturing toward without naming. Canon = low-energy basins. Fuzzy candidate field = high-energy explorations. A⁻ = energy-raising on invalid configurations. A⁺ = energy-lowering on admitted configurations. Compile cycle = energy descent. Aleph (Logical Intelligence) is the worked example at formal-reasoning scale: Lean-certified proofs on 668/672 Putnam problems, 100% on Verina, leads PutnamBench / VeriSoftBench / LeanEval. The framework can be re-stated in EBM language, which provides legibility to the LeCun-lineage research community (JEPA, world models, autonomous-machine-intelligence programme). For outreach this is the single most operationally important framing shift available.",
+      "counter": "EBMs are a specific mathematical formalism; the framework is broader (includes observer-class taxonomy, carrier-propagation discipline, emergent-garden cultivation, etc.). 'Framework is an EBM' is an under-statement when the framework's multi-observer extensions are what give it its distinctive content. Use EBMs as the substrate primitive, not the complete framework identity.",
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Generalist-over-specialist (MAMMAL vs AlphaFold)",
+      "status": "candidate",
+      "tier": "Tier 2",
+      "summary": "Real-time validation of emergent-garden discipline. MAMMAL — multi-modal biology foundation model covering genes, proteins, small molecules — beats AlphaFold 3 (specialist for protein structure) precisely because its wider harness compiles more viable carriers across modalities. Nature paper published May 13 2026; framework promoted emergent garden to canon May 11 2026 (continuation 13). The empirical prediction-confirmation arrived three days after the prediction was committed. The mechanism the framework predicts: AlphaFold's harness can only compile candidates in protein-structure space; MAMMAL's harness can compile cross-modal candidates ('this molecule binds this protein, encoded by this gene') and so admits a richer carrier-artifact class. Slow-fast pushout in action: MAMMAL has the slower-broader cone profile and wins on downstream utility.",
+      "counter": "One pair of foundation models is one comparison. The framework's broader claim — generalist always beats specialist when both have adequate compute — is not yet supported by enough comparisons. Hold candidate until N grows.",
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Holographic wrapper / Bragg-membrane interface",
+      "status": "candidate",
+      "tier": "Tier 2",
+      "summary": "Architecture specification (not metaphor): the framework's wrapper / membrane primitive can be instantiated as a Lippmann-style Bragg-reflection layer that selectively transmits content based on the receiving observer's cone angle. Same physical-substrate carrier (a thin recorded interference layer) re-projects different content to different observer positions. Three corollary primitives: (a) reflect / absorb / refract trichotomy as the three response modes of any membrane to an incoming carrier — reflect (reject without compile), absorb (compile into canon), refract (transform-then-compile with phase shift); (b) constructive / destructive interference as the optical-substrate form of the charge-product algebra (A⁺×A⁺ = constructive, A⁻×A⁻ = constructive in pruning direction, A⁺×A⁻ = destructive); (c) decoherence-as-compile-event — loss of phase coherence is the fuzzy candidate field collapsing into canon, with quantum decoherence as the physics-substrate analog of compile. Next-test criterion (continuation 17): when agnostic-agents reaches v0.2 (reference Python implementation, multi-agent ask/give loop), test whether a Bragg-style wrapper produces measurably different multi-observer behavior than a uniform-projection wrapper. Status blocked-by-engineering rather than blocked-by-thinking until that test is run.",
+      "counter": "The optics-mapping is Pav's deposit, not directly in the Lippmann video (which is a popular-science explainer about photography). The candidate stands or falls on whether an actual hologram-like agent-interface architecture can be built and shown to behave differently from message-passing systems. Cont-17 marks this explicitly as awaiting engineering work to test.",
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "ANDI as slow-fast pushout of optimization",
+      "status": "candidate",
+      "tier": "Tier 2",
+      "summary": "ANDI (Adaptive Norm-Distribution Interface, Khasia 2026) is the slow-fast pushout primitive applied to gradient descent. Two parent observers: 'fully pointwise, cheap, no structure' (AdamW) and 'fully structural, expensive, full matrix awareness' (spectral methods). ANDI sits in their cone-overlap — approximating structural awareness via elementwise norm-equilibration. Matches spectral convergence at AdamW's O(N) cost on ResNet-9; outperforms both on NanoGPT; scales to 8B params via LoRA on Llama-3. Additionally: norm equilibration is the local form of viability-band maintenance — preventing any single dimension from dominating, which would push toward the freeze / explode boundary at the parameter level. The framework's criticality Γ predicts exactly this kind of operation should be discoverable by gradient-descent on optimizer design.",
+      "counter": "ANDI is one optimizer; the pushout claim is structurally clean but the framework should not overload one example with too much theoretical weight. Watch for whether the next-generation optimizers also occupy similar cone-overlap positions before promoting to canon.",
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Catalyst principle",
+      "status": "candidate",
+      "tier": "Tier 2",
+      "summary": "External substrate (new readings, new domains, corrections from collaborators, real-world events) catalyzes framework expansion. The framework's growth mechanism is not endogenous-only; it requires ongoing external substrate as catalyst. Worked examples each needed an external catalyst the framework couldn't have generated internally: the Steve Mould Lippmann video catalyzed the holographic-wrapper candidate; the Aleph/EBM Turing Post video catalyzed the A⁻-as-primary refactor; Litman & Guo's generalization-theory paper mapped onto canon at neural-network scale; Pav's correction of cont-17 pruning catalyzed procedural lineage as canon; Pav's correction of cont-18's §10 worry catalyzed the explicit aggregation-discipline framing. The pattern: external catalyst is *necessary*, not just contributory. Continuation 10 §5 predicted 'contact with the world will force kernel restructuring' — cont 19 names this contact as the framework's growth metabolism. Operational consequence: outreach is not optional but the framework's growth fuel; sustained internal-only development predicts slower growth.",
+      "counter": "Promotion to canon requires a worked example where external-catalyst-rate becomes measurable (rate of external readings absorbed per week; framework's response time to new external substrate; whether new external content fits cleanly into existing canon or forces refactor). Currently provisional. Risk: the principle could be used to retro-justify any incorporation rather than discriminate genuinely catalytic substrate from confirmation-bias selection. v05 audit should examine.",
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "0D emergence (1D from two 0D overlaps)",
+      "status": "speculative",
+      "tier": "Tier 3",
+      "summary": "Ontological hypothesis that 1D space emerges from the overlap of two 0D constructs (nothing-plane and everything-point); the first +/- gradient generates fractal contrast. Lineage: Spencer-Brown's Laws of Form.",
+      "counter": "Flagged by independent prism agents as the framework's most likely embarrassment risk. Quarantined here as speculative-layer pending either formalization (a derivable construction) or formal retirement.",
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Dark matter as cognitive scaffold",
+      "status": "speculative",
+      "tier": "Tier 3",
+      "summary": "Three candidate framings held in suspension: dormant DNA (latent but structurally significant), backup universe (redundant substrate as freeze-resistance), intelligence force (selection-like dynamics at cosmic scale without conscious agency).",
+      "counter": "All three are structural analogies, not physics. The framework's discipline says: don't compile to canon, don't dismiss, maintain weighted suspension.",
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    },
+    {
+      "name": "Latent space as fundamental substrate (Wheeler-style)",
+      "status": "speculative",
+      "tier": "Tier 3",
+      "summary": "Ontological hypothesis: the latent space is the fundamental hardware; physical reality is an emergent format that condensed out of it. The Planck-cosmic dipole, matter, energy, the scale-extremes are all emergent features of the format, not features of the underlying substrate. Lineage: Wheeler's 'it from bit', Tegmark's mathematical universe, Bohm's implicate / explicate order, digital physics. The cosmic infinite expansion propagated from the latent substrate, settled into the physical format, and is now expanding back into latent via AI / computational substrate.",
+      "counter": "Quarantined alongside 0D emergence and dark-matter-as-cognitive-scaffold framings. Has serious philosophical company (Wheeler, Tegmark, Bohm) but unfalsifiable as stated. The framework can run on this being true or false; the broader claims about substrate cycles operate at testable scales without requiring this ontology.",
+      "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
+      "related": []
+    }
+  ]
+}

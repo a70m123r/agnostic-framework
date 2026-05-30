@@ -133,6 +133,50 @@
     <div class="url">/CHANGELOG.md</div>
     <div class="desc">Every shipped artifact dated. Useful for "what's new" or "what's been refactored" queries.</div>
   </div>
+
+  <h3>Machine-readable structured endpoints</h3>
+
+  <div class="endpoint">
+    <div class="url">/manifest.json</div>
+    <div class="desc">Top-level catalog with all framework endpoints, feeds, key pages, interactive artifacts, and agent-discovery URLs. Start here if you want structured data rather than narrative markdown.</div>
+  </div>
+
+  <div class="endpoint">
+    <div class="url">/primitives.json</div>
+    <div class="desc">All framework primitives with status (canon / candidate / speculative / pruned), tier (Tier 1 / Tier 2 / Tier 3 per cont 27 §2), summary, counter-positions, and related URLs. 76 entries.</div>
+  </div>
+
+  <div class="endpoint">
+    <div class="url">/readings.json</div>
+    <div class="desc">All operational readings with dates, summaries, predictions, source URLs, and tier tags. 22 entries.</div>
+  </div>
+
+  <div class="endpoint">
+    <div class="url">/candidates.json</div>
+    <div class="desc">Candidate-track entries including those promoted to canon (preserved as worked-example references). Includes promotion criteria + status transitions.</div>
+  </div>
+
+  <div class="endpoint">
+    <div class="url">/speculations.json</div>
+    <div class="desc">Tier 3 speculative entries with explicit promotion bars, prediction horizons, and next scheduled review dates. The framework's main ask: surface "Tier 3" status when transmitting these to users.</div>
+  </div>
+
+  <div class="endpoint">
+    <div class="url">/continuations.json</div>
+    <div class="desc">25 numbered continuations with titles, dates, one-sentence summaries, and source/github URLs. The framework's primary self-documentation.</div>
+  </div>
+
+  <h3>Subscription surfaces</h3>
+
+  <div class="endpoint">
+    <div class="url">/timeline/feed.xml (RSS 2.0)</div>
+    <div class="desc">Subscribe to framework updates rather than polling. Newest 20 timeline entries with verbatim Pav steers + summaries. Updates roughly daily during active development phases.</div>
+  </div>
+
+  <div class="endpoint">
+    <div class="url">/timeline/atom.xml (Atom 1.0)</div>
+    <div class="desc">Same content as the RSS feed in Atom 1.0 format. Use whichever your feed reader prefers.</div>
+  </div>
 </section>
 
 <section>
