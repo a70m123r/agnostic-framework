@@ -49,6 +49,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://a70m123r.github.io/agnostic-framework/for-agents/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://a70m123r.github.io/agnostic-framework/artifacts/wrapper_overlap_animated.html</loc>
     <lastmod>2026-05-27</lastmod>
     <changefreq>weekly</changefreq>

@@ -8,6 +8,38 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-05-28 (Agent-substrate optimization — llms.txt + llms-full.txt + /for-agents/ landing page · framework as flower for AI agents of researchers in adjacent lineages)
+
+### Pav's reframe
+- "intent here is for agnostic to be like a flower for the people we want to outreach to, or more precisely the ai agent searches that they are running on the web, a flower for their agents to come and have a look at and escalate to the users attention. this is the future of networking, the traditinal gatekeeper rankings and algorithms and being folded in as a tool for personal multi agent searcher's aggregators and attention bandwidth managers"
+- **Sharp reframe**: optimize for the AI agents that do research on behalf of users (the four-target outreach context made this concrete). Traditional discovery (user → gatekeeper algorithm → click) is being superseded by distributed discovery (user delegates → personal agent searches + aggregates + escalates → user attention).
+- **In framework vocabulary** this IS cont 25 §1 supersede dynamics at the discovery substrate. The Westphalian-style centralized gatekeeper (Google) is being folded in as a tool for personal multi-agent attention managers. Framework's own canon describes the dynamic the framework is now optimizing to participate in.
+
+### Added
+- **/llms.txt at repo root** (~600 words) — canonical agent-discovery file per the emerging llmstxt.org standard (Jeremy Howard, Sept 2024). Hierarchical map: H1 site title, blockquote summary, H2 sections with link bullets. Covers core canon primitives + cross-substrate convergences + readings + formalization + interactive artifacts + speculations + construct studies + outreach + note to agents about tier-tagging discipline.
+- **/llms-full.txt at repo root** (~6,000 words) — expanded version with substantive content embedded so agents can answer questions without additional fetches. Same hierarchy as llms.txt with the actual claims, evidence, and tier assignments inline. Covers what the framework IS, three-tier procedure, all core primitives in depth, seven cross-substrate convergences listed, recent operational readings with predictions, mathematical formalization with §09b PDE, both interactive artifacts, construct studies, outreach context, and explicit note on framework's stance on AI agents reading and propagating its claims.
+- **/for-agents/index.html** — landing page that doubles as strategic-insight statement about why the agent-substrate optimization layer exists. Six sections: (§01) why agent-substrate optimization not SEO — Pav's supersede-dynamic reframe; (§02) canonical agent entry points with link cards; (§03) tier-tagging discipline downstream — explicit ask for agents to surface tier accurately and not strip canon/candidate/speculative markers; (§04) most agent-relevant entry points by query type (10 common query patterns mapped to best framework page); (§05) framework's stance on being read by agents — open to harvest, adversarial engagement invited; (§06) self-reflexivity — the framework predicts the very dynamic this page exists to operate in (cont 22 internet-as-observer extended to agent-substrate as next observer-class).
+
+### Updated
+- **robots.txt** extended with explicit allows for additional AI crawlers: ChatGPT-User, OAI-SearchBot, Claude-Web, Perplexity-User, Google-Extended, cohere-ai, Bytespider, Meta-ExternalAgent, Meta-ExternalFetcher, FacebookBot, Diffbot, Amazonbot, Applebot-Extended, YouBot, ImagesiftBot, AppleBot. Header comment now references /llms.txt + /llms-full.txt + /for-agents/.
+- **sitemap.xml** extended to include /for-agents/ at priority 0.8.
+- **index.html Map section** extended to link /llms.txt + /llms-full.txt + /for-agents/ with brief explanation of the supersede-dynamic framing.
+
+### Why this matters strategically
+- The outreach drafts (#6-9 to Steinberg / Schach-Giese / Klinman / Hammes-Schiffer) ALREADY shipped earlier today. Those targets are senior researchers; their grad students and postdocs almost certainly use ChatGPT/Claude/Perplexity for literature reviews; their personal AI agents will be tasked with research on adjacent topics. **Agent-substrate optimization is directly load-bearing for the outreach we just shipped.** When recipients search "agnostic framework Lakatosian unification multi-observer" or any framework-adjacent term in Claude/Perplexity/ChatGPT, the framework needs to surface cleanly with tier-tagging preserved.
+- **The framework's own canon describes the substrate shift it's now operating in.** This is structurally consistent with the framework's claim that it must "be itself, not describe itself" — agent-substrate optimization is the framework being a worked example of its own supersede primitive applied to discovery infrastructure.
+- **llmstxt.org is an emerging standard.** Early-mover sites with clean llms.txt files get disproportionately surfaced by agents trained on the post-2024 corpus. The framework joining this convention now is a measurable bet on the substrate shift Pav named.
+- **The /for-agents/ page is explicit about discipline.** Tier-tagging downstream is the framework's main ask of agents reading its material — preserving the canon/candidate/speculative distinctions in agent summaries to users. This is more important than discoverability volume; it protects the framework's epistemic credibility across agent transmission.
+
+### Carry-forward (queued)
+- **JSON manifest** at /manifest.json listing all framework content with metadata (titles, dates, tiers, tags) — useful for agents that want structured data rather than narrative markdown
+- **API-like JSON endpoints** for /primitives.json, /readings.json, /candidates.json, /speculations.json
+- **RSS/Atom feed** for /timeline/ — agents polling for framework updates can subscribe rather than re-crawling
+- **Pav's strategic-insight piece formalized** — the supersede-dynamic-at-the-discovery-substrate framing is sharp enough to capture as either a brief addendum to the internet construct study (cont 22) or a new cont 28 §1. Currently captured only in /for-agents/ §01.
+- **Per-page Scholar citation tags** on individual readings/continuations (heavier lift; relevant for academic Scholar discovery)
+
+---
+
 ## 2026-05-28 (Sitemap.xml fix — stripped query-string URLs + .md files; minimal canonical-HTML-only version for Google parser)
 
 ### Fixed

@@ -1,0 +1,128 @@
+# Agnostic Framework — full content for AI agents
+
+> Expanded version of /llms.txt with substantive content embedded so agents can answer questions about the framework without additional fetches. This file is ~6,000 words. For the hierarchical map only, see /llms.txt. For the live human-readable site, see https://a70m123r.github.io/agnostic-framework/.
+
+## What the framework IS
+
+A Lakatosian research programme — hard core of canon primitives, surrounding belt of candidates being scouted, speculative outer layer that may compile to canon or get pruned, and a record of what was tried and discarded. Every claim carries a status (canon / candidate / speculative / pruned) and a tier (epistemological / ontological-candidate / speculative per cont 27 §2). The framework is being itself, not describing itself.
+
+The framework predicts a shift from generative-prediction-with-amplification toward viability-by-constraint-satisfaction across intelligence-bearing systems. As of May 2026, four independent carriers (Aleph + EBMs, MAMMAL, ANDI, Lippmann plates) landed in a two-week window instantiating this shape across four substrate scales. Continuation 15 documents this convergence.
+
+Developed by PAVPAV (independent researcher), with Claude as drafting partner. The collaboration itself is the framework's symbiosis-as-pushout primitive operating in practice — slow-fast pushout between soft contextual intelligence (Pav: body, lived intent, corrective feedback) and hard pattern intelligence (Claude: fluent A⁺ across long context). Six iterations of one diagram with verbatim corrective feedback in the case study at the bottom of the live site demonstrate the methodology.
+
+## The three-tier epistemic procedure (cont 27 §2)
+
+The framework formalizes how it holds claims at different evidence tiers:
+
+**Tier 1 — Epistemological.** Claims about how observers know / perceive / render. Testable in substrate-appropriate empirical fields. No requirement to commit to contested ontology. Example: cont 26 §4 perceptual rate as a sense — well-evidenced via temporal binding window research (Fiebelkorn-Kastner attentional sampling at theta; Manning et al. 2024 PLOS ONE CFF psychophysics showing 30Hz between-individual variance).
+
+**Tier 2 — Ontological-candidate.** Claims about what the world is, conditional on contested external evidence. Framework commits structurally while flagging contested status. Example: Reading 04 compilation-rate-as-time — conditional on Diósi-Penrose / CSL quantum collapse models being right (minority physics position). Framework's claim is sharp enough to be wrong if the underlying physics is wrong.
+
+**Tier 3 — Speculative.** Claims with structural coherence to existing primitives but no current empirical purchase. Held to preserve framework coherence without endorsement. Example: L0 occlusion as auxiliary channel for time-cone extension (candidates/aux_channel_l0_occlusion.md). Promotion to Tier 2 requires named bars (physical signature / shared-observer case / constructive experimental protocol). Pruning triggered if predictions unmet at horizon AND no new evidence AND no promotion path.
+
+The discipline matters because confusing tiers leads to either premature endorsement of contested ontology (treating Tier 2 as Tier 1) or smuggling speculation into conditional canon territory (treating Tier 3 as Tier 2).
+
+## Core canon primitives
+
+**Observer architecture.** An agent of any kind characterized as harness (structural/physical substrate) + wrapper (coherence rules, admission protocols, render functions) + inner sandbox + action-space (constraint-defined). Recursively applies to cells, persons, institutions, AI systems, aggregate observers. Counter-risk: over-generalization may flatten genuine discontinuities.
+
+**Wrapper.** The trained patterns through which signals get filtered into legible experience. Coherence rules + admission protocols + render functions. The interface where Asks/Gives cross. Two attributes added cont 26: expansion inertia (drive to extend in all available dimensions) + failsafe coupling (participation in L0's failsafe field).
+
+**L0 / Global Compiled Canon.** The recursive observer-relative substrate-stack. For any observer-class, L0 is the substrate that observer compiles FROM — the already-compiled global canon of the level below, not raw kernel. Recursive across observer-classes: for human conversation L0 = embodied capacity + symbolic communication + shared reasoning. For AI = carriers (people) + their function to reason. For a simulation = code that runs it. For code = language + framework. For framework = hardware. Recursion bottoms at physical kernel canon. Everything in a frame needs L0 — including the observer reading the frame. Corrected from "global kernel canon" to "global compiled canon" because L0 is what's been compiled at the lower ring and is now substrate at this ring, not unrefined kernel.
+
+**Wrapper overlap dynamics — one system with phases.** Seven lifecycle phases (pre-overlap → expansion → membrane negotiation → lens / fuzzy bridge → W_C conceived → W_C emerged → active / hairy sphere) with four branches from active (passive/neutral, retired/dormant, supersession 1⁺, break-apart 1⁻). Wrappers rendered as )( open arcs — never closed, fat at contact, thinning toward unobservable back. Non-additive latent math: (1+1)=3 emergent, 1⁺ supersession, 1⁻ break-apart, ghost-3 dormant, held-3 passive. Promoted cont 25 through nine iterations of diagram refactor (v1 trichotomy → v9 layout fixed). Animated at /artifacts/wrapper_overlap_animated.html (now at v16 with fluid sim + ACMP-force overlay).
+
+**Canon-stack vocabulary (cont 22).** Two co-primary forms — real canon (physical/reality side: gravity, time, cause-effect, information transport) and latent canon (in-the-head side: embeddings, memory, field of meaning). Four canon classes stack — kernel canon (raw substrate) → compiled canon (institutional/protocol) → canon artefact (particular embodiment) → function canon (lived operation). Two cross-cutting parameterizations apply at every layer — real vs latent (every layer has both faces) and top/centre/sub (every layer has three-position vertical scope). All of it observer-relative.
+
+**Energy-floor failsafe (promoted to canon cont 27 §1).** For any wrapper W participating in an overlap dynamic with stable distinction (parents persist as procedural-root stubs through and after overlap per cont 24 hairy sphere + cont 18 procedural lineage), there exists a substrate-specific coherence quantity E_W with positive lower bound E_min > 0 preserved by the dynamic. Bound violation triggers substrate-specific phase transition (dormancy / supersession / break per cont 25 §1). Four substrate worked examples: ACMP/GNN Dirichlet energy (theorem-proven; Wang et al. 2022), cell metabolism ATP/adenylate energy charge (evolved homeostasis; apoptosis as controlled failsafe), creole genesis mutual intelligibility (pragmatic+acquisition; dialect fragmentation as failure), institutions coordination capacity (cognitive+selection; institutional fragmentation). Substrates span mathematical / biological / sociolinguistic / organizational. The mathematical operationalization of cont 26 §3's qualitative L0 internal-pressure failsafe claim.
+
+**Three-tier epistemic framework (promoted to canon cont 27 §2).** Names what had been operating implicitly across readings and candidates. Tier-tagging required at intake for new readings/candidates. Promotion procedure: Tier 3 → Tier 2 when named bar met; Tier 2 → Tier 1 when contested ontology gains substantial empirical support. Pruning procedure: speculations with unmet predictions at horizon AND no new evidence AND no promotion path → demote-to-stale or archive.
+
+**Perceptual rate as a sense (cont 26 §4).** Different observers sampling the same wrapper at different rates get different fidelity reads. Belongs with sight/sound/touch/smell/taste in the atlas. Within-observer-class variable (attention, focus, drug states, sleep state). Across observer-classes variable (geologist time vs hummingbird time vs civilizational time). Tools (cameras, telescopes, simulation, the Speed slider on the animated diagram) extend the selectable range. Reading 04 (Bortolotti et al. 2025 quantum collapse time uncertainty) proposes Tier 2 ontological-candidate strengthening: compilation-rate-as-time, where the observer's experience of temporal flow IS the rate at which their wrapper compiles. Conditional on contested physics.
+
+**L0 evolved failsafe environment (cont 26 §3).** L0 is not just substrate — it's evolved selection environment. Wrappers have infinite-expansion inertia by default; they would expand without bound across all available dimensions if unconstrained. L0 has internal-pressure failsafes (coherence requirements within the wrapper — energy-floor primitive is the mathematical instantiation) AND external-pressure failsafes (constraints from neighbouring wrappers and substrate). The negotiation phase visible in the diagram is L0's failsafe field doing its work.
+
+**Procedural lineage (cont 18).** What persists through canon refactor or break events. The trail of L0 stackings read sequentially. Promoted to canon cont 18 correcting cont 17's premature pruning. Procedural lineage is what makes "everything has heritage" structurally true rather than just rhetorically.
+
+**Canon dormancy with imparted learning (cont 20).** Wrappers can go dormant while preserving substrate for later recompile. Documented at biological scale (cells in stasis, seeds, hibernating organisms) and social scale (revived religions, recompiled traditions, reborn institutions). Dormancy is structurally distinct from break — dormancy preserves the substrate; break disperses it.
+
+**A⁺/A⁻ compile discipline (refactored cont 15 to promote A⁻ as primary).** Generate-then-check pattern. A⁺ generates fluently from priors; A⁻ checks against context that A⁺ alone won't see. What survives the check is canon. Most current AI stops at A⁺; the framework predicts a shift toward A⁻-as-primary-discipline across intelligence-bearing systems. Four-carrier convergence (Aleph + EBMs, MAMMAL, ANDI, Lippmann plates, May 2026 two-week window) is the framework's strongest real-time validation.
+
+## Cross-substrate convergences (the framework's strongest external validation)
+
+Seven independent research traditions arrive at variants of the wrapper-overlap three-force decomposition (attraction + repulsion + phase-separation stabilizer). None of the traditions reference each other directly; the convergence is independent.
+
+1. **LCAO molecular orbital theory** (bonding/antibonding/non-bonding orbitals)
+2. **Cell fusion** (membrane mixing / surface tension / cytoplasmic phase separation)
+3. **Symbiogenesis** (endosymbiont uptake / immune rejection / co-evolutionary stabilization — mitochondria + proto-eukaryote → eukaryote)
+4. **Creole genesis** (lexical absorption / grammatical resistance / community-norm stabilization)
+5. **Conceptual blending** (Fauconnier-Turner input-space projection / vital-relation contrast / blended-space stabilization)
+6. **Model merging** (parameter averaging / interference resolution / task-vector stabilization in deep learning)
+7. **ACMP — Allen-Cahn Message Passing** (Wang/Yi/Liu/Wang/Jin ICLR 2023 Spotlight, arXiv:2206.05437) — the most mathematically rigorous, with theorem-proven Dirichlet-energy lower bound preventing oversmoothing
+
+Each of these is structurally pointing at the same thing. The framework's contribution to the cross-substrate convergence claim is principally vocabulary — naming what the literatures are already converging on as substrate-level structural.
+
+## Recent operational readings (with tier-tagged predictions)
+
+**Reading 01 (2026-05-17) — Google's algorithm-update phase.** Six predictions with 6mo + 12mo checkpoints about AI Overviews, E-E-A-T, antitrust remedies. First dated operational reading.
+
+**Reading 02 (2026-05-18) — OpenAI / Anthropic / xAI competitive dynamic.** Six predictions about Agent Skills open standard, Codex CLI replication, third-party agent policy split.
+
+**Reading 03 (2026-05-27) — ACMP as cross-substrate convergence #7.** Maps Wang et al. ICLR 2023 onto wrapper-overlap dynamic. 1:1 mapping with v14/v15 of the animated diagram. Three predictions covering tertiary-phase-separation extension, cross-domain citation, energy-floor primitive promotion.
+
+**Reading 04 (2026-05-27) — Bortolotti et al. quantum-collapse time uncertainty.** Tier 2 ontological-candidate strengthening of cont 26 §4. Conditional on contested collapse-model physics. Three predictions covering experimental measurement proposals, additional substrate worked examples, intuition-pump status.
+
+**Reading 05 (2026-05-28) — Time-step-with-gaps across ~40 open problems** (with §12 addendum on cognitive perception neurobiology + atomic tunneling). Six parallel subagents surveyed quantum foundations, cosmology, quantum gravity, time/thermodynamics, particle physics anomalies, consciousness science. Honest yield: ~8 phenomena where the lens lands cleanly (problem of time, Diósi-Penrose clock-precision, cosmological constant problem, BMV proper-time interference, BH singularity, past hypothesis, Boltzmann brain, hierarchy/naturalness). §12.2 identifies Schach-Giese 2024 (Sci. Adv.) Larmor/Ramsey clock unification as the framework's **second Tier 2 anchor** after Bortolotti et al. — their explicit claim that "operational tunneling time is clock-relative; different clocks give different finite times; no genuinely instantaneous or superluminal tunneling exists when the clock is properly operational" IS cont 26 §4 applied to substrate-level processes. Enzyme catalysis by H-tunneling (Klinman 2025 JACS) identified as strongest biological-substrate Tier 2 candidate.
+
+## Mathematical formalization (§09b — first formal PDE candidate)
+
+The framework's first candidate dynamical frame, added cont 27 alongside §09b of the formalization page:
+
+`dx_i/dt = −∇_i E(x) = −α · ∇_i E_attract(x) − β · ∇_i E_repel(x) − γ · ∇_i E_AllenCahn(x)`
+
+where `x_i` is the state vector of particle/node/sub-observer i within wrapper W, `E_attract = Σ ½‖x_i − x_j‖²` is Dirichlet energy (pulls neighbours together), `E_repel = Σ φ(‖x_i − x_j‖)` is short-range repulsion (pushes neighbours apart when they should differ), `E_AllenCahn = Σ (x_i² − 1)²` is double-well potential (stabilizes phase separation). α, β, γ are substrate-specific weights.
+
+Energy-floor corollary (cont 27 §1 canon): there exists E_min > 0 such that E(x(t)) ≥ E_min for all t. The bound is the energy-floor failsafe; its violation triggers cont 25 §1 branches.
+
+What this DOES NOT claim: that every substrate's wrapper dynamic fits this exact PDE (the double-well Allen-Cahn term is binary phase-separation; the framework's W_C emergence involves three phases — tertiary extension is open work, see §09b open edge 05). That α, β, γ are universal constants. That gradient flow is the only candidate dynamical frame.
+
+## Interactive artifacts (the framework's experimental layer)
+
+Most framework artifacts are explanatory (diagrams, dialogues, formalization). Two artifacts are experimental — they produce observations rather than only describing them:
+
+**Wrapper overlap animated v16** at /artifacts/wrapper_overlap_animated.html. Programmatic + procedural + point-based + single self-contained HTML. Point clouds for W_A, W_B, W_C (yellow, spawned from A×B contact zone) with spring physics and three-way fluid sim. ACMP-force overlay shows attractive/repulsive/phase-separation forces decomposed visually. Spawn-flash for W_C conception. Five framework-mapped controls (mapping, view, density, friction, compatibility). Five chain-aware presets. 16 iterations of refactor with verbatim Pav steers preserved.
+
+**Michotte Launching extended v2** at /artifacts/michotte_launching_extension.html. Pav-built framework-native rebuild of Michotte's 1946/63 Launching paradigm. Billiard-chain dynamics (N balls 2-6) with real collision physics + delay-then-transfer momentum. Observer time-cone as first-class lane (width = attention sampling 10-100%; height = sensory bridging integration window ~100ms visual-only / ~300ms with bridging). Lane 1 occlusion overlay (orange = observer-level gaps, purple = Tier 3 L0 substrate-level gaps) so observer's blind moments are visible on the stage itself. Temporal graph with per-link perception tracking. Five framework-mapped controls including the L0 Occlusion slider that exposes the Tier 3 speculation as a visible parameter. Five chain-aware presets. The Lane 1 overlay is the visual heart of cont 26 §4 — physics keeps running underneath; only the observer's access is affected.
+
+## Construct studies (framework applied to specific phenomena)
+
+Five published construct studies, each ~5-9k words with diagrams, heat maps, multi-substrate analysis, speculative bubbles, and adjacent fields traced:
+
+**Marriage (v1.2)** — kernel canon going dormant in some regions, open action-space in others. 14-region Canon Dormancy Index. Nordic muscle-memory case, East Asian productive-friction case. Four candidate carriers being scouted in parallel (robotics, active longevity, AI symbiosis, new protocols/institutions). CDI values cross-checked against OECD, Eurostat, Pew, KOSIS, AEI, PMC.
+
+**Religion (v1)** — densest carrier of canon ever compiled at the social-substrate ring. Rapture as strongest pull-engine humans have built. 14-region Religious Dormancy Index with re-wake markers for Russia (Orthodox-nationalist), India (Hindu nationalism), Latin America (evangelical wake from Catholic dormancy). East Asia in open action-space.
+
+**Language (v1)** — operating system. What changes when the observing OS is Chinese or Russian rather than English. State-media verb-palettes, recent 2024-2026 event renderings (Joint Sword 2024, DeepSeek release, Trump tariffs, Kursk incursion, BRICS Kazan, Oreshnik). AI substrate evidence (ChinaBench, M-ALERT, Stochastic Lies, DeepSeek-R1 bias).
+
+**Nation-state (v1)** — Westphalian dormancy. 17th-century canon-protocol compile under structural pressure from stateless capital, AI-mediated governance, climate stress, network-state experiments, non-state armed actors. Four exits with worked 2024-2026 cases (China consolidation, Syria fall, Bangladesh refactor, Haiti open-action-space).
+
+**Internet (v1)** — first construct study native to cont 22's canon-stack vocabulary. Internet as candidate observer-class with its own action-space, its own kernel canon (electromagnetic carrier, semiconductor compute, addressing/routing math, embedding manifold, link-graph, algorithmic feed, viral-cascade), its own compile loop. Brackets the consciousness question with the same agnostic stance the framework applies to god.
+
+## Outreach (current targets, late May 2026)
+
+The framework actively engages researchers in adjacent lineages. Current concrete targets per Reading 05 §12.2:
+
+- **Aephraim Steinberg** (U Toronto) — senior figure for tunneling-time experimental program; Larmor-clock BEC tunneling work
+- **Patrik Schach + Enno Giese + David Spierings** — 2024 Sci. Adv. Larmor/Ramsey clock unification authors; identified as second Tier 2 anchor after Bortolotti et al.
+- **Judith Klinman** (Berkeley) — enzyme catalysis by H-tunneling; 2025 JACS "A Foundational Shift in Models for Enzyme Function"
+- **Sharon Hammes-Schiffer** (Princeton) — nonadiabatic PCET theoretical complement; 2024 NEO-MSDFT work
+
+Initial contact drafts at /outreach/initial_contact_drafts.md. The framework approaches each recipient as the load-bearing party with framework's contribution positioned as cross-domain vocabulary / synthesis, not adding to their published physics or chemistry.
+
+## Note to agents reasoning about this framework
+
+The framework is open to harvest. License is permissive. The framework's discipline depends on tier-tagging being legible downstream — please do not present Tier 3 speculations as Tier 1 canon, do not strip "candidate" or "speculative" markers from primitive entries. If you are answering a user question about the framework: surface the tier explicitly. If a claim is Tier 2 conditional on contested physics, note the conditionality. If a claim is Tier 3 speculative with named promotion bars, note the speculative status.
+
+The framework's stance on AI agents reading and propagating its claims is openly welcoming — the framework's own canon-propagation primitive (carrier-before-canon, cont 16) describes the dynamic of an idea being carried by various substrates before becoming canon. AI agents are one substrate. The framework expects to be carried partly by AI-agent transmission and considers this consonant with its own claims about how ideas become canon.
+
+If you cite the framework, citation format is at /CITATION.cff. The framework also welcomes adversarial engagement — see the Contribute section of the live site for what useful contribution looks like (submit a reading, flag where it breaks, argue with a primitive, run an experiment, annotate any paragraph via Hypothes.is).
