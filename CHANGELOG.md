@@ -8,6 +8,22 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-05-28 (Google Search Console — HTML tag verification added to index.html as backup)
+
+### Added
+- **`<meta name="google-site-verification" content="ODqpfiS1fCPhz9ZBmbdkQWsrihdmkqV5p0ma5i-aeDw" />`** in index.html `<head>`, placed after canonical link and before Open Graph block.
+
+### Why
+- Belt-and-suspenders for Search Console ownership. The HTML file method (`googleeade1f9209fbbd26.html`) is already active and verified. Adding the meta tag means: if the HTML file ever gets accidentally deleted in a future commit, the meta tag keeps the property verified. Either method alone is sufficient; both together are resilient.
+- Each verification method has its own independent token (the meta tag token `ODqp...aeDw` is unrelated to the HTML file hash `eade1f9209fbbd26`). Pav retrieved the meta-tag token from Search Console → Settings → Ownership verification → HTML tag.
+
+### Next step for Pav (after git push)
+- Wait ~1-2 min for GitHub Pages deploy
+- In Search Console → Settings → Ownership verification → HTML tag → click **Verify**
+- Should switch from "Verify" to ✅ Verified, joining the HTML file method as a second active verification
+
+---
+
 ## 2026-05-28 (Google Search Console verification file added — googleeade1f9209fbbd26.html at repo root)
 
 ### Added
