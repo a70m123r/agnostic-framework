@@ -8,6 +8,24 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-05-28 (Google Search Console verification file added — googleeade1f9209fbbd26.html at repo root)
+
+### Added
+- **googleeade1f9209fbbd26.html** at repo root — Google Search Console HTML file verification. Will be accessible at `https://a70m123r.github.io/agnostic-framework/googleeade1f9209fbbd26.html` after push.
+
+### Why
+- Verifying ownership of the site in Google Search Console unlocks: (a) submitting the sitemap.xml directly to accelerate indexing (sitemap was shipped earlier today but submitting it via Search Console gets it crawled faster), (b) seeing what queries the framework currently surfaces for, (c) inspecting individual URL indexing status, (d) Search Console alerts for crawl errors / coverage issues.
+
+### Next steps for Pav (after git push)
+1. **Wait ~1-2 minutes** for GitHub Pages to deploy the new file
+2. **Confirm the file is live** by visiting `https://a70m123r.github.io/agnostic-framework/googleeade1f9209fbbd26.html` — should display the line "google-site-verification: googleeade1f9209fbbd26.html"
+3. **Go back to Google Search Console**, click "Verify" on the property setup page — Google will fetch the file and confirm ownership
+4. **Submit sitemap.xml** under Indexing → Sitemaps → enter `sitemap.xml` and submit
+5. **Optionally**: in Search Console → URL Inspection, paste the homepage URL and request indexing for immediate priority crawl
+6. After 24-72 hours, Search Console will start showing query data + indexing status for the framework
+
+---
+
 ## 2026-05-28 (SEO discoverability pass — Open Graph + Twitter cards + JSON-LD + Google Scholar tags · sitemap.xml + robots.txt)
 
 ### Added
