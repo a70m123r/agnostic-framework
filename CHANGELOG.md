@@ -8,6 +8,24 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-05-28 (IndexNow enabled — single ping notifies Bing + Yandex + Seznam + Naver instantly of framework updates)
+
+### Added
+- **`/568fa5e82cc4459dabbfa57d220d26d8.txt` at repo root** — IndexNow key verification file. Content is the key string; protocol requires the file to live at exactly this path to prove site ownership.
+- **`scripts/ping-indexnow.sh`** — helper script for pinging IndexNow with the framework's high-traffic URLs (or any custom URL list). Single ping notifies Bing + Yandex + Seznam + Naver simultaneously. Default URL set covers homepage, timeline, llms.txt, llms-full.txt, manifest.json, primitives.json, CHANGELOG, /for-agents/, both animated artifacts. Includes HTTP status handling (200/202 success; 400/403/422/429 with specific error guidance).
+
+### Usage
+- **After any push that includes new continuations / readings / candidates:** `bash scripts/ping-indexnow.sh`
+- **For specific URLs only:** `bash scripts/ping-indexnow.sh https://a70m123r.github.io/agnostic-framework/continuations/29.md https://a70m123r.github.io/agnostic-framework/readings/...`
+- **Typical surface time after ping:** minutes (Bing/DuckDuckGo) to hours (Yandex/Seznam/Naver)
+
+### Why this matters
+- **Google doesn't accept IndexNow** but Bing/Yandex/Seznam/Naver do. Combined with the cont 28 §2.1 decision to lean into agent-substrate paths over the gatekeeper sitemap, IndexNow gives the framework instant-indexing on every non-Google search engine that participates.
+- **Framework's /timeline/ updates roughly daily** during active development phases. Without IndexNow these surface in Bing within ~24-72h via regular crawl; with IndexNow they surface within ~minutes-to-hours.
+- **The script is the operational complement to the agent-substrate optimization shipped earlier today.** Agent-substrate paths (llms.txt, JSON endpoints, RSS/Atom feeds) make the framework agent-readable; IndexNow makes the framework's updates instantly visible to the non-Google search engines whose results those agents may also be reading.
+
+---
+
 ## 2026-05-28 (Sitemap loop closed — accepted Google's structural failure with GitHub Pages project subpaths; framework leans into agent-substrate paths per cont 28 §2.1)
 
 ### Decision
