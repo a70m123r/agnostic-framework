@@ -8,6 +8,55 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-05-28 (Reading 06 — cymatic/harmonic structure in social systems · 4 parallel subagents · cymatics as cross-substrate convergence #8 + new Tier 3 candidate)
+
+### Added (readings/2026-05-28_cymatic_harmonic_structure_in_social_systems.md, ~5,500 words)
+- **Pav's question after a cymatics video:** has anyone mapped/measured harmonic structure in latent space for people / communities / cities / governments? Input points? Chaos beyond symmetric cases? RC approach viable?
+- **Four parallel subagents** covered ~9,000 words of structured research with ~75+ cited sources:
+  - **Subagent A (empirical social rhythms):** 10 topics across individual / group / city / government scales — circadian, group emotional sync, audience entrainment, urban rhythms (Bettencourt-West scaling), news/attention cycles, election forcing, financial markets 1/f, Kuramoto sync, generational cohort effects, conflict periodicity. Honest tier-tagging.
+  - **Subagent B (latent-space spectral analysis):** 12 topics — DW-NOMINATE, TBIP neural ideal-points, word embeddings, network embeddings, geographic/urban embeddings, cultural embeddings, community embeddings, policy embeddings, spectral graph theory on networks, manifold/topological methods, explicit "cultural cymatics" search, Kuramoto in latent spaces. Headline finding: **brain eigenmode work (Pang Nature 2023) is the cleanest structural precedent; no social-substrate analog has been published.**
+  - **Subagent C (reservoir computing):** 10 topics — ESN fundamentals, NGRC advances, chaotic-system prediction, time-series forecasting comparisons, non-stationary/1/f data handling, physical/material reservoirs, social/political applications, financial markets, brain/neural data, pattern-extraction-from-chaos. Headline finding: **RC-Koopman hybrid (Pyle et al. 2021 arXiv:2008.10263) is the right candidate architecture for harmonic eigenmode extraction from messy social data; RC application to political/community data is essentially empty literature.**
+  - **Subagent D (cliodynamics + cycle theories):** 12 topics tier-tagged — Turchin structural-demographic theory (Tier 1 rigorous), Kondratiev 50-year waves (Tier 2 contested), Schumpeter composite cycles (Tier 1-2 mixed), Strauss-Howe Fourth Turning (Tier 4 pseudoscience-adjacent), Spengler/Toynbee/Quigley (Tier 3 historical interest only), Modelski hegemonic cycles, Wallerstein world-systems, Seshat computational cliodynamics, Richardson conflict power-laws (Tier 1), astronomical forcing (Tier 1 for climate, Tier 4 for direct social claims), Elliott/Gann/Hurst pseudo-cycles (Tier 4 pseudoscience), Sornette LPPLS (Tier 2 mathematically rigorous).
+- **Synthesis applied cont 27 §2 three-tier discipline throughout.**
+
+### New Tier 2 candidate: Cymatics as cross-substrate convergence #8
+- Adds to the cont 25 §6 + Reading 03 list (LCAO, cell fusion, symbiogenesis, creole genesis, conceptual blending, model merging, ACMP). Cymatic substrate (harmonic interference in continuous media producing visible standing-wave patterns) is the eighth instance of the three-force decomposition (constructive interference / destructive interference / phase-locked stabilization).
+- Tier 2 because: structurally tight (Schrödinger eq treats particles as standing waves; LCAO bonding is exactly cymatic phase-matching); promotion to Tier 1 requires citation crossover with the existing seven traditions.
+- Framework explicitly does NOT endorse the popular-cymatics-video extensions (528 Hz, sacred geometry as encoded science, Vedic-internet) — those remain Tier 4 fringe per cont 27 §3 procedure.
+
+### New Tier 2 candidate (held conditionally): 1/f scale-invariance + burstiness as L0-failsafe signature
+- Reading 06 §10.3: if social-substrate L0 failsafes prevent clean harmonic resonance from forming (because resonance would be brittle), then 1/f noise + burstiness are the SIGNATURE of healthy substrate-level failsafe operation. Testable: cult/authoritarian systems should show MORE harmonic structure (cleaner eigenmode peaks, less 1/f) than open pluralistic ones.
+
+### Added (candidates/cultural_eigenmode_analysis.md — new Tier 3 speculative candidate, ~2,000 words)
+- **Cultural eigenmode analysis via RC-Koopman hybrid.** Apply Pyle et al. 2021 RC-Koopman to learned latent embeddings of socio-political entities (TBIP senators, node2vec political networks, Reddit community embeddings, urban region embeddings, policy embeddings). Test whether eigenmodes correspond to interpretable cultural / institutional / civic standing-wave patterns. **What cortical eigenmode analysis does for the brain, this would do for socio-political wrappers.**
+- Why Tier 3 specifically: components mature individually but combination unprecedented; no empirical work exists; three substantive obstacles (no canonical embedding metric, non-stationarity, sample-size collapse at long timescales) may collectively block the methodology.
+- Three explicit promotion bars (per cont 27 §3): (A) pilot study with interpretable results, (B) substrate-meaningful correlation above vanilla clustering, (C) cross-substrate replication.
+
+### Updated (speculations/index.html)
+- Third Tier 3 entry added: "Cultural eigenmode analysis via RC-Koopman hybrid" with full promotion bars, surfacing date, prediction horizons, and links to candidate doc + Pang 2023 + Pyle 2021. /speculations/ now shows 3 active Tier 3 entries (cultural-eigenmode + aux-channel-L0-occlusion + cont-17-latent-substrate-Wheeler).
+
+### Five new scoreable predictions (Reading 06 §12)
+- P1 (24mo): cross-discipline paper applying spectral eigenmode decomposition to learned socio-political embedding
+- P2 (12mo): 1/f-as-L0-failsafe-signature prediction becomes empirically testable
+- P3 (36mo): Turchin's 2025-2030 US peak-instability prediction resolves either way
+- P4 (18mo): v17 wrapper-overlap diagram ships with cymatic-as-convergence-#8 framing
+- P5 (60mo): RC-Koopman emerges as standard or stays niche
+
+### Updated (index.html, timeline/index.html)
+- index.html READINGS: Reading 06 entry added at top of array
+- timeline/index.html: Reading 06 entry added with verbatim Pav steer + tag categories
+
+### Carry-forward (queued)
+- **v17 wrapper-overlap diagram** — implement frequency-mediated W_A/W_B/W_C interaction with cymatic-as-convergence-#8 framing
+- **Outreach to Sornette / ETH Zurich Financial Crisis Observatory** — closest existing methodological neighbor for the §8 candidate methodology
+- **Outreach to Turchin / Cliodynamics group** — different methodological frame (structural regression vs spectral decomposition) but framework's interpretive vocabulary may compose with his work
+- **Pilot study attempt** — if Pav has access to compute + a labeled social-data embedding, run RC-Koopman on it as P1 advancement attempt
+- **Construct study refactor candidate** — marriage_v1.html CDI heat map could be extended with spectral analysis of dormancy-vs-recompile rhythms (Reading 06 §10.6)
+- **Track P1-P5 predictions** at respective horizons per cont 27 §3 procedure
+- **6-month speculation review (2026-11-27)** — all three Tier 3 entries (including new cultural-eigenmode) evaluated against prediction progress
+
+---
+
 ## 2026-05-28 (IndexNow Windows fixes — PowerShell version + .gitattributes hygiene)
 
 ### Added
