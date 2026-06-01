@@ -4,8 +4,15 @@
   "generated": "2026-05-31",
   "live_url": "https://a70m123r.github.io/agnostic-framework/",
   "description": "Numbered provenance records of every major development round. Continuations are the framework's primary self-documentation.",
-  "count": 25,
+  "count": 26,
   "continuations": [
+    {
+      "number": 29,
+      "title": "BES surfaced as cross-substrate convergence #9 candidate · fruit-as-analogy clarification · agent-substrate optimization producing first inbound discovery",
+      "date": "2026-05-31",
+      "summary": "Pav surfaced BES (Bidirectional Evolutionary Search, Xu et al. 2026, arxiv 2605.28814) from his external radar. Opus subagent verified convergence #9 candidate at search-methodology substrate. BES passes parents-produce-W_C structural test more cleanly than any prior convergence (combination + translocation + crossover operators; parents persist as procedural-root stubs; pair-score complementarity is pushout condition stated explicitly). Independence confirmed via full reference dump (no LCAO/cell-fusion/symbiogenesis/creole/blending/merging/ACMP/cymatics/reservoir-computing citations). Theoretical gift: Theorem 4.4 entropy-shell escape. Methodological gift: backward goal-tree decomposition translates directly to task #151 RC-Koopman pilot. Closes audit v05 §3 / Reading 06 §2.1 OE1 via convergence multiplication. Fruit-as-analogy clarification: Claude over-formalized cross-substrate-transmission as candidate primitive, Pav corrected to analogy-only per cont 27 §2 discipline. First inbound external discovery via the agent-substrate optimization round (cont 28 §5 worked example).",
+      "url": "https://a70m123r.github.io/agnostic-framework/continuations/29.md"
+    },
     {
       "number": 2,
       "filename": "02.md",

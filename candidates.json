@@ -4,8 +4,22 @@
   "generated": "2026-05-31",
   "live_url": "https://a70m123r.github.io/agnostic-framework/",
   "tier_discipline_note": "Per cont 27 §2 three-tier epistemic framework. Candidate entries are typically Tier 2 (ontological-candidate, conditional on contested evidence). When candidates get promoted to canon, status changes but the doc is preserved as the worked-example reference for the promotion.",
-  "count": 2,
+  "count": 3,
   "candidates": [
+    {
+      "title": "Cross-substrate convergence #9 candidate — Bidirectional Evolutionary Search (BES) at the search-methodology substrate",
+      "tier": "Tier 2 candidate",
+      "surfaced": "2026-05-31",
+      "source_paper": "Xu, Qi, Su, Ye, Lakkaraju, Kakade, Du. 'Self-Improving Language Models with Bidirectional Evolutionary Search.' arxiv 2605.28814 (2026). Embodied Minds Lab / Harvard.",
+      "summary": "BES instantiates the framework's three-force decomposition (forward candidate evolution + backward goal decomposition + dense-feedback-driven complementarity selection) at the search-methodology substrate. Passes the parents-produce-W_C structural test more cleanly than any prior convergence in the list: three of the four forward operators (combination, translocation, crossover) take two pre-existing trajectories and produce a third (W_C) unreachable by single-rollout expansion. Parents persist as procedural-root stubs per Eq. 3. Pair-score complementarity per Eq. 6 is the pushout structural condition stated explicitly. INDEPENDENCE confirmed: BES cites Fisher 1930 + Muller 1932 + Holland 1992 + Storn-Price 1997 + Sipper 1998 (classical evolutionary biology + GA canon) plus modern LLM search; cites NONE of LCAO / cell fusion / symbiogenesis / creole genesis / conceptual blending / model merging / ACMP / cymatics / reservoir computing. Cleanest convergence-by-independence signal in the list. Theoretical gift: Theorem 4.4 (entropy-shell escape) gives the framework formal mathematical grounding for parents-produce-W_C being non-trivial. Methodological gift: backward goal-tree decomposition translates directly to the task #151 RC-Koopman cultural-eigenmode pilot. Closes audit v05 §3 / Reading 06 §2.1 OE1 via convergence multiplication (cymatics stays narrowed-to-substrate-adjacent; convergence #9 becomes the load-bearing parents-produce-W_C instantiation).",
+      "promotion_bars": [
+        "(A) Reading 07 careful writeup confirms mapping holds at all sections",
+        "(B) PDF gap-fill on §4.1 entropy-shell proof + §4.2 backward-search proof + §6 Related Work prose closes residual independence-claim gap",
+        "(C) At least one BES author recognizes the convergence framing if outreach DM lands substantive response"
+      ],
+      "candidate_doc_url": "https://a70m123r.github.io/agnostic-framework/candidates/bes_convergence_9.md",
+      "continuation": "https://a70m123r.github.io/agnostic-framework/continuations/29.md"
+    },
     {
       "id": "energy_floor_failsafe",
       "title": "Energy-floor failsafe — worked-example library (now canon, preserved as reference)",

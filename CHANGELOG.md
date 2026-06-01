@@ -8,6 +8,48 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-05-31 (late session) — Cont 29 + BES surfaced as cross-substrate convergence #9 candidate · fruit-as-analogy clarification · audit v05 §3 OE1 closed via convergence multiplication · first inbound external discovery via agent-substrate optimization
+
+### Added (continuations/29.md, ~3,200 words)
+- **Pav's steer:** "this came up on my radar how does it map and does it give us some new methodology to takle the questions" — surfaced BES paper (Bidirectional Evolutionary Search, Xu et al. 2026, arxiv 2605.28814) from Embodied Minds Lab (Yilun Du / Harvard) after audit v05 + v17.1 + Reading 06 §2.1 amendment + agent-substrate refresh had all shipped earlier the same day.
+- **Opus subagent claim-validity read** of the BES paper (~3,500 word structured report, 9 sections). Headline: BES passes the parents-produce-W_C structural test more cleanly than ANY prior convergence in the list. Three of the four forward operators (combination, translocation, crossover) take two pre-existing trajectories and produce a third trajectory (W_C) that wasn't reachable by single-rollout expansion. Parents persist as procedural-root stubs (Eq. 3). Pair-score complementarity (Eq. 6) is the pushout structural condition stated explicitly.
+- **Independence confirmed via full reference dump.** BES cites Fisher 1930, Muller 1932, Holland 1992, Storn-Price 1997, Sipper 1998 (classical evolutionary biology + genetic algorithms canon) plus modern LLM search literature. **Cites NONE of the framework's existing convergence-list traditions** — no LCAO, no cell fusion, no symbiogenesis, no creole genesis, no conceptual blending, no model merging, no ACMP, no cymatics, no reservoir computing. This is the cleanest convergence-by-independence signal in the list to date.
+- **Theoretical gift:** Theorem 4.4 (entropy-shell escape) — formal result that auto-regressive sampling from a policy is confined to a "narrow entropy shell" and recombination operators provably escape it. First cite-able formal grounding for the parents-produce-W_C claim being non-trivial.
+- **Methodological gift for queued pilots:** BES backward goal-tree decomposition translates directly to task #151 (RC-Koopman pilot, cultural-eigenmode candidate) — decompose "is this eigenmode real?" into checkable V_g sub-goals. Honest limit: at social-substrate scale V_g is judgment-laden; anchor at least one leaf check to external data.
+- **Closes audit v05 §3 / Reading 06 §2.1 OE1 via convergence multiplication.** The cymatic-substrate parents-produce-W_C gap doesn't need to be fixed by working the coupled-oscillator example. Convergence #9 (BES) provides the load-bearing instantiation; cymatics stays narrowed-to-substrate-adjacent per the morning Reading 06 §2.1 amendment. Both findings now consistent.
+- **Important refinements to framework framing:** (i) the four BES operators don't all instantiate parents-produce-W_C — only combination (5/5 tightness), translocation (4/5), and crossover (4/5) qualify; deletion remaps to A⁻ pruning; expansion is baseline A⁺. (ii) BES backward goal-tree ≠ cont 27 §2 tier-tagging — similar shape, different semantics (granularity vs epistemic-certainty). (iii) The dense-vs-sparse-feedback claim is 5/5 tight — BES gives framework formal mathematical grounding (Theorem 4.4) for the A⁻-primacy claim cont 13 makes.
+
+### Fruit-as-analogy clarification (cont 29 §3)
+- Mid-conversation, an analogy surfaced: cross-substrate convergence as "fruits from different trees containing the same seed." Tree = substrate + observer-wrapper. Fruit = transmissible compressed artifact. Seed = structural pattern. Consumption + dispersal = receiving observer reads it. Germination = receiver compiles in own substrate.
+- **Claude over-formalized the analogy as a candidate primitive.** Pav's correction: "its a analogy, a narrow one but easy to digest" — NOT canon, NOT a primitive. Per cont 27 §2 discipline, analogies are illustrative pedagogical aids, not load-bearing structural commitments.
+- The fruit-decomposition exercise showed the analogy decomposes almost entirely into existing framework canon (carrier-before-canon, supersede branch, wrapper-overlap, bridge mode, A⁻ at consumer scale, kernel-meets-new-L0) — it's an assembly, not a new primitive.
+- **What the fruit analogy IS useful for:** outreach (legible to non-framework-fluent readers), teaching (makes cross-substrate-transmission tangible), bridging the framework to readers without the vocabulary yet.
+- **What it is NOT:** canon, candidate primitive, formal claim.
+- Two minor Tier 3 candidate refinements surfaced and held as candidates (NOT promoted): seed-hardness (structural compression as A⁻-resistance during transmission), maturation-gated supersede (compile loop with detachment-readiness as terminal state).
+
+### Added (candidates/bes_convergence_9.md, ~2,500 words)
+- New candidate doc for convergence #9 with explicit promotion bars A/B/C: (A) Reading 07 careful writeup confirming mapping holds at all sections; (B) PDF re-read of §4.1, §4.2, §6 Related Work prose closing the residual independence-claim gap; (C) at least one BES author recognizing the convergence framing if outreach lands.
+- Documents the three forces of the BES instantiation, the parents-produce-W_C structural test pass, the independence evidence, the operator-tightness ratings, the theoretical contribution (Theorem 4.4), the methodological gifts, the outreach affinity (Yilun Du + Sham Kakade + EBM/composable-models lineage), and the risks the framework should NOT overclaim.
+
+### Updated (readings/2026-05-28_cymatic_harmonic_structure_in_social_systems.md amendment log)
+- §13 Amendment log gets a 2026-05-31 (late session) entry noting OE1 closed via convergence multiplication. Cymatics-as-convergence-#8 stays narrowed-to-substrate-adjacent. Cross-refs cont 29 + bes_convergence_9.md.
+
+### Updated (audits/v05.md §12 OE1 closure update)
+- Audit-driven discipline cycle (find structural gap → narrow claim → name open edge → queue worked example) closed within ~12 hours by an unexpected mechanism (external paper surfacing). Audit's §9 self-applied caveat retrospectively becomes less important — both findings landed correction inside the same day, additively rather than correctively.
+
+### Why this matters
+- **First inbound external discovery via agent-substrate optimization.** Cont 28 §5 named agent-substrate as observer-class candidate; the recent llms.txt + llms-full.txt + /for-agents/ + JSON endpoints + RSS/Atom feeds + Bing/Google/IndexNow round was designed exactly to make this kind of cross-pollination easier. Cannot yet confirm the directionality (whether agents reading the framework's surfaces influenced BES paper authors — BES predates the optimization round). But the framework has demonstrated: outward-facing surfaces → external surfacing of structurally-aligned work → opus subagent verification → cross-substrate convergence claim.
+- **Audit-driven discipline cycle worked as designed AGAIN.** Framework's own discipline document (cont 27 §2) named the failure mode (i) the morning audit catches at the v17 banner. Substantive cross-substrate concern (audit v05 §3 OE1) named the gap. External surfacing brought a candidate instantiation. Discipline cycle closed within 12 hours, additively. The framework's machinery is operating predictably.
+- **Most cumulative-output day in framework history.** Audit v05 → v17.1 fixes → Reading 06 §2.1 amendment → agent-substrate refresh → cont 29 + BES candidate. Carries some risk of compounding decisions; audit v06 should scrutinize cont 29's claims when it runs.
+
+### Carry-forward (new tasks queued)
+- **Task #162 [QUEUED]:** Write Reading 07 — BES as cross-substrate convergence #9 (~5,000-6,000 words). Documents mapping with tightness ratings, independence evidence, theoretical contribution, methodological gifts, framework refinements.
+- **Task #163 [QUEUED]:** BES PDF gap-fill — read §4.1, §4.2, §6 prose. Verify independence claim. Promotion bar B. Must happen before outreach.
+- **Task #164 [QUEUED]:** Draft outreach DM to Yilun Du + cc Sham Kakade. Wait until §6 PDF gap-fill confirms independence claim. EBM/composable-models lineage framing.
+- **Optional follow-ups:** Diagram 07 v18 (BES operator overlay), add Tenenbaum + Kaelbling to Shoulders (Du's MIT advisors, conceptually adjacent), update cont 25 §6 with convergence #9 entry.
+
+---
+
 ## 2026-05-31 (Reading 06 §2.1 amendment — narrowing cymatics-as-convergence-#8 from substrate-deep to substrate-adjacent · audit v05 F14 closed)
 
 ### Updated (readings/2026-05-28_cymatic_harmonic_structure_in_social_systems.md)
