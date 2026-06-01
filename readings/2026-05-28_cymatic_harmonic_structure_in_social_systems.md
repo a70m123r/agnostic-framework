@@ -49,6 +49,40 @@ The eighth convergence is structurally tight because cymatics is the most genera
 
 ---
 
+### §2.1 Amendment (2026-05-31, per [audit v05](../audits/v05.md) §3 substantive finding) — narrowing the claim from substrate-deep to substrate-adjacent
+
+Audit v05's claim-validity subagent surfaced a structural concern this reading missed at writing time: **the seven existing convergences share a specific pattern that cymatics in its standard form does NOT cleanly instantiate.**
+
+**The structural test the existing seven satisfy.** LCAO, cell fusion, symbiogenesis, creole genesis, conceptual blending, model merging, ACMP all involve *two parent wrappers W_A and W_B that pre-exist as distinct entities, interact, and produce a third persistent W_C that is itself a wrapper of the same kind*. Two atomic orbitals → one molecular orbital. Two cells → one syncytium. Two languages → one creole. Two input spaces → one blended space. Two models → one merged model. The W_C is *categorically of the same kind* as the parents, and the parents *persist as procedural-root stubs* (cont 25 §1 supersede branch) after W_C consolidates.
+
+**What cymatics actually IS at the physics substrate.** Standing-wave eigenmode formation in a continuous medium under boundary conditions: Chladni plate (transverse vibration of a thin plate with free/clamped boundary), water-on-speaker (Faraday waves at a fluid surface), or any wave equation ψ_tt = c² ∇²ψ + boundary conditions admitting a discrete spectrum {ψ_n, ω_n}. The "pattern" is the nodal set of an eigenfunction (or superposition of degenerate eigenfunctions selected by symmetry-breaking).
+
+**Where this maps cleanly to the three-force pattern.** A standing wave IS attraction (restoring force in the medium) + dispersion/inertia ("repulsion" against compression) + boundary-imposed selection of a discrete spectrum. The Schrödinger equation IS a wave equation, and LCAO bonding IS an eigenvalue problem on a Coulomb potential. The *substrate-LEVEL physics* is genuinely shared with convergence #1. The original Reading 06 §2 claim that "cymatics is the most general physical substrate of the three-force pattern" holds at this level.
+
+**Where it does NOT map cleanly — the missing W_C-as-new-entity.** In all seven existing convergences, two parent wrappers produce a *third persistent wrapper of the same kind*. **In standard cymatics there are no two parent wrappers — there is one medium and a forcing function.** A Chladni pattern is not the offspring of two prior patterns negotiating; it is the eigenmode the medium "snaps to" under a driving frequency. The two frequencies f_A and f_B that v17 of the wrapper-overlap diagram introduces are *not* analogs of W_A and W_B as wrappers — they are *driving frequencies*, and the medium is L0.
+
+**The correct cymatic analog of the existing seven** would be: two pre-existing standing-wave patterns (two coupled plates, or two beating sources radiating into a shared cavity) producing a *new persistent third pattern* that itself qualifies as a stable mode of the joint system. That is plausible but the framework hasn't worked the example — and the closest physics in the literature for this is **mode coupling**, **avoided crossings**, and **normal-mode splitting in coupled oscillators**, NOT the popular cymatics-of-Chladni-plate imagery.
+
+**Net status after amendment:**
+
+- **Tier 2 candidate retained** (not demoted) — the substrate-level eigenmode-under-three-force-balance parallel is real and genuinely shared with the existing seven at the physics substrate.
+- **Narrowed claim:** cymatics is **substrate-adjacent**, not yet **structurally isomorphic**, to the existing seven convergences. The parents-produce-distinct-W_C structural element — load-bearing in all seven — is missing from the Chladni-style imagery.
+- **New framework open edge (Reading 06 §2.1 OE1):** the coupled-oscillator / normal-mode-splitting case needs to be worked as the *actual* structural analog of the seven. Until that worked example lands, convergence #8 should be presented as "substrate-deep parallel with named structural gap" rather than as "structurally identical instance."
+- **Downstream effect on outreach:** the framework should not lead cymatic-adjacent recipient contact (Sornette / Pang-eigenmode group / music-cognition researchers) with v17 the diagram — v17 is a teaching artifact that does NOT instantiate the parents-produce-W_C structure. Lead with the §8 RC-Koopman cultural-eigenmode candidate, which is the *substantive research move* from this round and which DOES preserve the parents-produce-third-pattern structure (two existing communities' embeddings → joint-eigenmode-extraction → new emergent mode-pattern).
+- **Downstream effect on v17:** the artifact's banner has been corrected (v17.1 per audit v05 F3) from `=` to `as Tier 2 candidate`. This amendment is the framework-level companion to that artifact-level fix.
+
+**What the amendment does NOT change:**
+
+- §3 Domain 1 (empirical social rhythms) findings — unchanged.
+- §7 honest synthesis ("driven rhythms + 1/f + burstiness, not endogenous harmonics") — unchanged; in fact reinforced, because social systems even less satisfy the parents-produce-W_C pattern than cymatics-of-medium does.
+- §8 cultural-eigenmode-via-RC-Koopman Tier 3 candidate — unchanged and *strengthened*, because RC-Koopman on a joint social embedding IS structurally closer to the parents-produce-W_C pattern (two communities' latent positions → joint mode decomposition → emergent shared eigenmode that didn't exist in either community alone).
+- §10.3 1/f-as-L0-failsafe-signature Tier 2 prediction — unchanged.
+- The fringe rejections (528 Hz, sacred geometry, Vedic-internet) — unchanged.
+
+**Provenance of the amendment:** caught by [audit v05](../audits/v05.md) §3 (subagent B claim-validity audit), promoted to canon as Reading 06 amendment per cont 27 §2 three-tier discipline. The framework's own machinery (parallel-subagent audit cadence) caught its own substrate-mapping over-reach before the cymatic framing propagated externally via outreach. This is the second instance of the audit-driven-discipline-cycle landing in 2026-05 (first was the cont-16 diagram-overwrite gap caught by the framework's own preservation principle, per audit v04 §6).
+
+---
+
 ## §3 Domain 1 — Empirical social rhythms (Tier 1 mostly-confirmed)
 
 Subagent A surveyed 10 topics across people / group / city / government scales. The pattern that emerges:
@@ -343,3 +377,66 @@ Four parallel research subagents covered: empirical social rhythms, latent-space
 - `timeline/index.html` — Reading 06 entry
 - (Future) `continuations/25.md` §6 — cymatics added as eighth cross-substrate convergence in a forward-pointer
 - (Future v17) `artifacts/wrapper_overlap_animated.html` — frequency-mediated W_A/W_B/W_C interaction per §10.4
+
+---
+
+**Amendment log:**
+
+- **2026-05-31** — §2.1 amendment added per [audit v05](../audits/v05.md) §3 substantive finding. Cymatics-as-convergence-#8 claim narrowed from "substrate-deep parallel" to "substrate-adjacent with named structural gap." Open edge OE1 named (coupled-oscillator / normal-mode-splitting case needs to be worked as the actual structural analog of the parents-produce-W_C pattern). Tier 2 candidate status retained, not demoted. §10.4 v17 framing implicitly affected — v17 is a teaching artifact that does NOT instantiate the parents-produce-W_C structure; the framework-level claim now reflects this. Outreach calibration: lead with §8 RC-Koopman cultural-eigenmode candidate (which DOES preserve the parents-produce-third-pattern structure) rather than v17 the diagram. v17 the artifact has been corrected at the banner level (v17.1 per audit v05 F3).
+l.
+
+**P2 (12 months, 2027-05-28):** At least one of the Reading 06 §10.3 "1/f as L0-failsafe signature" predictions becomes testable via published empirical comparison of harmonic-structure metrics across open vs authoritarian systems. *Counter-prediction:* the prediction stays methodologically intractable; nobody publishes the comparison.
+
+**P3 (36 months, 2029-05-28):** Turchin's 2025-2030 prediction of US peak instability either resolves (state-breakdown event observed; matching ~75% historical analog rate) or fails to resolve (the prediction window passes without state-breakdown). Either outcome is informative for the framework's structural-demographic Tier 1-2 reading. *Counter-prediction:* the prediction window is itself elastic enough to never resolve cleanly; it stays in perpetual "midpoint of turbulent decade" framing.
+
+**P4 (18 months, 2027-11-28):** The v17 wrapper-overlap diagram (frequency-mediated W_A/W_B/W_C interaction sketched in the previous round) ships with explicit cymatic-as-convergence-#8 framing. The diagram becomes a teaching tool for the harmonic-substrate version of the framework's wrapper-overlap dynamic. *Counter-prediction:* v17 doesn't ship or ships without the cymatic framing; the eighth-convergence claim stays text-only.
+
+**P5 (60 months, 2031-05-28):** Either RC-Koopman hybrid emerges as the standard methodology for spectral analysis of complex-systems data (in which case the framework's §8 candidate gets external validation), OR the methodology stays niche and the eigenmode-of-social-embeddings frame remains unattempted. *Counter-prediction:* the methodology gets superseded by a transformer-attention-based eigenmode-extraction approach that the framework didn't anticipate.
+
+---
+
+## §13 Provenance + cross-references
+
+Reading 06 was triggered by Pav's question after watching the cymatics video [Sonic Architecture | Cymatics Decoded](https://www.youtube.com/watch?v=Kxam-j7lHbg). The video itself mixes load-bearing physics (cymatics, standing-wave eigenstates, harmonic interference, LCAO bonding, atomic orbital phase-matching) with stretched claims (sonogenetics overstated) and fringe extensions (528 Hz miracle-tones, Vedic-internet star-maps, sacred-geometry-as-encoded-science). Per cont 27 §2 discipline, this Reading absorbs the Tier 1 substrate-level insight (eight-convergence cymatics) without endorsing the wrapper.
+
+Four parallel research subagents covered: empirical social rhythms, latent-space spectral analysis, reservoir computing state-of-the-art, and cliodynamics + cycle theories. Total raw research ~9,000 words with ~75+ cited sources from 2023-2026 peer-reviewed work plus historical foundational references.
+
+**Cross-references:**
+
+- [cont 25 §6](../continuations/25.md) — original seven-convergence list; this Reading proposes cymatics as eighth
+- [cont 26 §3](../continuations/26.md) — L0 as evolved failsafe environment; Reading 06 §10.3 candidate reading composes with this
+- [cont 27 §2-3](../continuations/27.md) — three-tier epistemic framework + pruning procedure that this Reading operates under
+- [cont 28 §2](../continuations/28.md) — supersede dynamic; Reading 06 §10.5 outreach implications compose with this
+- [Reading 03](2026-05-27_acmp_attraction_repulsion_gnn.md) — ACMP as convergence #7; Reading 06 cymatics adds #8
+- [Reading 05 + §12 addendum](2026-05-28_time_step_with_gaps_across_open_problems.md) — cross-substrate survey precedent; methodological parallel
+- [candidates/aux_channel_l0_occlusion.md](../candidates/aux_channel_l0_occlusion.md) — Tier 3 speculative entry pattern; Reading 06 §8 adds second entry
+- [/speculations/](../speculations/) — mode-page where new Tier 3 entry will live
+- [artifacts/wrapper_overlap_animated.html](../artifacts/wrapper_overlap_animated.html) — v17 idea (frequency-mediated W_A/W_B/W_C) gets cymatic-substrate grounding via §10.4
+
+**Key sources** (selected from ~75 cited across the four subagent bundles):
+
+**Empirical social rhythms:** Soltani-Burks-Smarr 2025 J Biol Rhythms (DOI 10.1177/07487304241310923); Trost et al. 2022 Frontiers Hum Neurosci (DOI 10.3389/fnhum.2022.855778); Lobo-Bettencourt-Ortman 2025 EPB Urban Analytics (DOI 10.1177/23998083241308418); Pfeffer et al. tweet half-life (arXiv:2302.09654); Cunen-Hjort-Nygård 2020 J Conflict Resolution (DOI 10.1177/0022343319896843).
+
+**Latent-space spectral analysis:** Pang et al. 2023 Nature brain eigenmodes (DOI 10.1038/s41586-023-06098-1); Vafa-Naidu-Blei TBIP (arXiv:2005.04232); Qiu et al. node2vec spectral equivalence; "Targeting Influence in a Harmonic Opinion Model" (arXiv:2407.00213, 2024); Hansen-Ghrist sheaf-Laplacian opinion dynamics (arXiv:2005.12798).
+
+**Reservoir computing:** Gauthier et al. 2021 NGRC Nat Commun (DOI 10.1038/s41467-021-25801-2); Pyle et al. 2021 RC-Koopman (arXiv:2008.10263); Pathak et al. 2018 PRL chaos prediction (DOI 10.1103/PhysRevLett.120.024102); Mahmoud et al. 2022 IEEE Access chaos detection (DOI 10.1109/ACCESS.2022.3173618); Ballarin et al. 2024 macroeconomic ESN (DOI 10.1016/j.ijforecast.2023.10.009); "Catch-22s of reservoir computing" Phys Rev Research 2023 (DOI 10.1103/PhysRevResearch.5.033213).
+
+**Cliodynamics:** Turchin et al. 2020 PLOS One retrospective (DOI 10.1371/journal.pone.0237458); Korotayev et al. 2025 (DOI 10.1177/10693971241245862); Hecht 2023 Review of Political Economy (DOI 10.1080/09538259.2023.2280803); Wheatley-Sornette 2019 Royal Soc Open Sci LPPLS; Seshat Global History Databank work via [cliodynamics overview](https://peterturchin.com/cliodynamics-history-as-science/seshat-the-global-history-databank/).
+
+---
+
+**Files updated alongside this Reading:**
+
+- `index.html` — Reading 06 entry added to READINGS array
+- `candidates/cultural_eigenmode_analysis.md` — new Tier 3 speculative candidate doc to be created with three promotion bars
+- `speculations/index.html` — third Tier 3 entry added (cultural eigenmode analysis)
+- `CHANGELOG.md` — Reading 06 entry
+- `timeline/index.html` — Reading 06 entry
+- (Future) `continuations/25.md` §6 — cymatics added as eighth cross-substrate convergence in a forward-pointer
+- (Future v17) `artifacts/wrapper_overlap_animated.html` — frequency-mediated W_A/W_B/W_C interaction per §10.4
+
+---
+
+**Amendment log:**
+
+- **2026-05-31** — §2.1 amendment added per [audit v05](../audits/v05.md) §3 substantive finding. Cymatics-as-convergence-#8 claim narrowed from "substrate-deep parallel" to "substrate-adjacent with named structural gap." Open edge OE1 named (coupled-oscillator / normal-mode-splitting case needs to be worked as the actual structural analog of the parents-produce-W_C pattern). Tier 2 candidate status retained, not demoted. §10.4 v17 framing implicitly affected — v17 is a teaching artifact that does NOT instantiate the parents-produce-W_C structure; the framework-level claim now reflects this. Outreach calibration: lead with §8 RC-Koopman cultural-eigenmode candidate (which DOES preserve the parents-produce-third-pattern structure) rather than v17 the diagram. v17 the artifact has been corrected at the banner level (v17.1 per audit v05 F3).

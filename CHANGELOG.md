@@ -8,6 +8,29 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-05-31 (Reading 06 §2.1 amendment — narrowing cymatics-as-convergence-#8 from substrate-deep to substrate-adjacent · audit v05 F14 closed)
+
+### Updated (readings/2026-05-28_cymatic_harmonic_structure_in_social_systems.md)
+- **§2.1 amendment added (~700 words)** narrowing the cymatics-as-convergence-#8 claim per audit v05 §3 substantive finding (parents-produce-distinct-W_C structural element is missing in standard cymatic imagery).
+- **Tier 2 candidate status RETAINED, not demoted** — the substrate-level eigenmode-under-three-force-balance parallel is real and genuinely shared with the existing seven at the physics substrate.
+- **Claim narrowed:** cymatics is now stated as **substrate-adjacent**, not yet **structurally isomorphic**, to the existing seven convergences. The parents-produce-distinct-W_C structural element (load-bearing in all seven) is missing from the Chladni-style imagery.
+- **New framework open edge (Reading 06 §2.1 OE1):** the coupled-oscillator / normal-mode-splitting / avoided-crossings case needs to be worked as the *actual* structural analog of the parents-produce-W_C pattern. Until that lands, convergence #8 is "substrate-deep parallel with named structural gap."
+- **Amendment log section added** to §13 documenting the narrowing.
+
+### Why this matters
+- **Audit v05 §9 self-applied caveat noted the most-important-because-most-substantive finding was the substrate-adjacency-not-isomorphism point — not the easier-to-fix banner slide.** This amendment is the framework-level companion to the artifact-level fixes shipped earlier today as v17.1.
+- **Closes the audit v05 discipline loop properly.** The artifact (v17.1) and the framework claim (Reading 06 §2.1) now both reflect the corrected understanding.
+- **Outreach calibration follows automatically:** outreach to Sornette / Pang-eigenmode group / music-cognition researchers should now lead with the §8 RC-Koopman cultural-eigenmode candidate (which DOES preserve the parents-produce-third-pattern structure: two communities' embeddings → joint mode decomposition → emergent shared eigenmode that didn't exist in either community alone) rather than with v17 the diagram (which doesn't).
+- **Second instance of the audit-driven-discipline-cycle landing in 2026-05** (first was the cont-16 diagram-overwrite gap, per audit v04 §6). The framework's own machinery (parallel-subagent audit cadence) caught its own substrate-mapping over-reach before the cymatic framing propagated externally.
+
+### Carry-forward
+- **Task #154 [COMPLETED]:** Reading 06 amendment now closed.
+- **New framework open edge OE1 added to Reading 06 §2.1:** coupled-oscillator worked example. This becomes a research direction the framework owes itself; will become a Reading 07 candidate if the worked example lands.
+- **Task #155 [QUEUED]:** Audit v06 spree assessment on cont-17-28 still pending.
+- **Task #151 [QUEUED, ELEVATED]:** RC-Koopman pilot study now elevated to "most substantive next move" given the cultural-eigenmode candidate's reinforced status from this amendment.
+
+---
+
 ## 2026-05-31 (Audit v05 + v17.1 discipline correction — audit-driven fixes to wrapper_overlap_animated.html)
 
 ### Added (audits/v05.md, ~6,000 words)
