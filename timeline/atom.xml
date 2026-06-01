@@ -5,7 +5,7 @@
   <link href="https://a70m123r.github.io/agnostic-framework/timeline/atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://a70m123r.github.io/agnostic-framework/timeline/" rel="alternate" type="text/html"/>
   <id>https://a70m123r.github.io/agnostic-framework/timeline/</id>
-  <updated>2026-05-28T12:00:00Z</updated>
+  <updated>2026-05-31T20:00:00Z</updated>
   <author>
     <name>PAVPAV</name>
     <uri>https://a70m123r.github.io/agnostic-framework/</uri>
@@ -13,6 +13,80 @@
   <generator>Agnostic Framework &#8212; hand-curated timeline</generator>
   <icon>https://a70m123r.github.io/agnostic-framework/artifacts/images/whiteboard_agnostic_systems.jpg</icon>
   <rights>Permissive &#8212; see LICENSE at https://github.com/a70m123r/agnostic-framework/blob/main/LICENSE</rights>
+
+  <entry>
+    <title>Reading 06 &#167;2.1 amendment &#8212; cymatics-as-convergence-#8 narrowed per audit v05 substantive finding &#183; framework-level companion to v17.1 artifact-level fixes &#183; the most-important-because-most-substantive audit finding now closed</title>
+    <link href="https://a70m123r.github.io/agnostic-framework/timeline/#reading-06-21-amendment-cymatics-as-convergence-8-narrowed" rel="alternate" type="text/html"/>
+    <id>tag:a70m123r.github.io,2026:timeline/2026-05-31-reading-06-21-amendment</id>
+    <updated>2026-05-31T18:00:00Z</updated>
+    <published>2026-05-31T18:00:00Z</published>
+    <author><name>PAVPAV</name></author>
+    <category term="Reading 06 §2.1 amendment"/>
+    <category term="cymatics narrowed: substrate-deep → substrate-adjacent"/>
+    <category term="audit v05 F14 closed"/>
+    <category term="steer"/>
+    <summary type="html"><![CDATA[
+      <p><em>Steer:</em> "lets go with 1"</p>
+      <p>Reading 06 amendment closes audit v05's most-important-because-most-substantive finding (the substantive cross-substrate concern flagged in &#167;9 self-applied audit caveat). The substantive finding: the seven existing convergences (LCAO, cell fusion, symbiogenesis, creole genesis, conceptual blending, model merging, ACMP) all share a specific pattern &#8212; two parent wrappers W_A and W_B that pre-exist as distinct entities interact and produce a third persistent W_C that is itself a wrapper of the same kind. In standard cymatics there are no two parent wrappers &#8212; there is one medium and a forcing function. A Chladni pattern is not the offspring of two prior patterns negotiating; it is the eigenmode the medium "snaps to" under a driving frequency. Cymatics is substrate-adjacent (eigenmode formation under three-force balance) but not yet structurally isomorphic to the existing seven. The correct structural analog would be coupled-oscillator / normal-mode-splitting / avoided-crossings &#8212; which the framework hasn't worked. Net status: Tier 2 candidate RETAINED, not demoted. Claim narrowed from "substrate-deep parallel" to "substrate-adjacent with named structural gap." New framework open edge (Reading 06 &#167;2.1 OE1) names the coupled-oscillator worked example as research direction. Downstream effect on outreach: the framework should now lead cymatic-adjacent recipient contact with the &#167;8 RC-Koopman cultural-eigenmode candidate (which DOES preserve parents-produce-third-pattern structure) rather than with v17 the diagram. Why this matters: closes the audit v05 discipline loop properly. v17.1 fixed the artifact-level over-claim; this fixes the framework-level over-claim. Both layers now reflect the corrected understanding. Second instance of the audit-driven-discipline-cycle landing in 2026-05 &#8212; the framework's own machinery (parallel-subagent audit cadence) caught its own substrate-mapping over-reach before the cymatic framing propagated externally via outreach.</p>
+      <p><strong>Links:</strong> <a href="https://a70m123r.github.io/agnostic-framework/readings/2026-05-28_cymatic_harmonic_structure_in_social_systems.md#21-amendment">Reading 06 &#167;2.1 amendment</a>, <a href="https://a70m123r.github.io/agnostic-framework/audits/v05.md">audit v05 (source)</a>, <a href="https://a70m123r.github.io/agnostic-framework/artifacts/wrapper_overlap_animated.html">wrapper_overlap_animated.html v17.1</a>, <a href="https://a70m123r.github.io/agnostic-framework/continuations/27.md">cont 27 &#167;2 three-tier discipline</a>, <a href="https://a70m123r.github.io/agnostic-framework/continuations/25.md">cont 25 &#167;6 (convergence list)</a>, <a href="https://github.com/a70m123r/agnostic-framework/blob/main/CHANGELOG.md">CHANGELOG</a></p>
+    ]]></summary>
+  </entry>
+
+  <entry>
+    <title>Audit v05 + v17.1 discipline correction &#8212; two opus subagents in parallel audit v17 of the wrapper-overlap diagram &#183; five-point convergence on critical findings &#183; seven Tier 1 fixes shipped (~15 min) before the cymatic framing propagates externally</title>
+    <link href="https://a70m123r.github.io/agnostic-framework/timeline/#audit-v05-v17-1-discipline-correction-two-opus-subagents-in" rel="alternate" type="text/html"/>
+    <id>tag:a70m123r.github.io,2026:timeline/2026-05-31-audit-v05-v17-1</id>
+    <updated>2026-05-31T16:00:00Z</updated>
+    <published>2026-05-31T16:00:00Z</published>
+    <author><name>PAVPAV</name></author>
+    <category term="audit v05"/>
+    <category term="v17.1 discipline correction"/>
+    <category term="2 opus subagents in parallel"/>
+    <category term="5-point convergence"/>
+    <category term="steer"/>
+    <summary type="html"><![CDATA[
+      <p><em>Steer:</em> "can you run an audit with the latest opus 4.8" &#8594; "Opus subagent + verification subagent in parallel (most rigorous)" &#8594; "ok lets do the audit first fixes after" &#8594; "lets do it"</p>
+      <p>Two opus subagents ran in parallel on v17 of wrapper_overlap_animated.html &#8212; one on code/integration soundness, one on claim-validity/cross-substrate accuracy. Five-point convergence between independent audits on critical findings: (1) inharmonic 7:13 preset silently misclassified, (2) banner Tier 2 &#8594; Tier 1 slide via `=` sign, (3) LCAO preset label overclaims, (4) pulse rendering wrong (always-positive amplitude + beat-frequency-vs-existence inconsistency), (5) custom-dropdown one-way trap. Headline finding: v17 is structurally sound at default settings but ships with three classes of real problem &#8212; critical code bugs, critical discipline slide (cont 27 &#167;2 failure mode i), LCAO analogy a physical chemist would reject. Fringe exclusion holds: no 528 Hz, no sacred geometry, no Vedic-internet &#8212; hardest framework-discipline test in this substrate passed. Substantive cross-substrate finding: cymatics is substrate-adjacent (eigenmode under three-force balance) but NOT structurally isomorphic to the existing seven convergences. Seven Tier 1 fixes shipped immediately (~15 min): F1 inharmonic anchor list checked before consonant snap + dissonant threshold tightened from 12% &#8594; 6%; F2 zero-mean pulse + W_C pulse rate changed from beat-frequency to carrier-frequency (f_A+f_B)/2; F3 banner "cymatics = cross-substrate convergence #8" &#8594; "cymatics as Tier 2 candidate convergence #8 &#8212; Reading 06"; F4 kicker tier-tag; F5 LCAO label corrected to "(constructive-interference regime)"; F6 caveat one-liner; F7 custom-dropdown documented no-op. Bonus fixes: reset button now clears v17Phase, harmonicCompatibility documented as folk consonance proxy referencing Plomp-Levelt/Sethares/Tenney/Stolzenburg. Why this matters: the most-credibility-affecting issue (banner `=` sign) was one text edit. The audit-driven discipline cycle worked as designed &#8212; framework's own discipline document (cont 27 &#167;2) names failure mode (i), v17 committed it, audit v05 caught it, v17.1 corrected it.</p>
+      <p><strong>Links:</strong> <a href="https://a70m123r.github.io/agnostic-framework/audits/v05.md">audit v05 &#8212; full ~6,000 word synthesis</a>, <a href="https://a70m123r.github.io/agnostic-framework/artifacts/wrapper_overlap_animated.html">wrapper_overlap_animated.html (v17.1)</a>, <a href="https://a70m123r.github.io/agnostic-framework/continuations/27.md">cont 27 &#167;2 three-tier discipline</a>, <a href="https://a70m123r.github.io/agnostic-framework/readings/2026-05-28_cymatic_harmonic_structure_in_social_systems.md">Reading 06 (to be amended)</a>, <a href="https://github.com/a70m123r/agnostic-framework/blob/main/CHANGELOG.md">CHANGELOG</a></p>
+    ]]></summary>
+  </entry>
+
+  <entry>
+    <title>Diagram 07 v17 &#8212; frequency-mediated W_A/W_B/W_C interaction &#183; harmonic-ratio compatibility &#183; cymatics-as-convergence-#8 made visible &#183; 8 musical-interval presets &#183; pulse rendering at beat frequency</title>
+    <link href="https://a70m123r.github.io/agnostic-framework/timeline/#diagram-07-v17-frequency-mediated-w-a-w-b-w-c-interaction" rel="alternate" type="text/html"/>
+    <id>tag:a70m123r.github.io,2026:timeline/2026-05-28-diagram-07-v17</id>
+    <updated>2026-05-28T12:00:00Z</updated>
+    <published>2026-05-28T12:00:00Z</published>
+    <author><name>PAVPAV</name></author>
+    <category term="diagram 07 v17"/>
+    <category term="cymatics-as-convergence-#8 made visible"/>
+    <category term="harmonic-ratio compatibility"/>
+    <category term="steer"/>
+    <summary type="html"><![CDATA[
+      <p><em>Steer:</em> "ok lets do 1 and queue the others"</p>
+      <p>Layered on v16 cleanly. Three new UI controls: Harmonic preset dropdown (8 musical-interval presets: unison 1:1 merger, octave 1:2 default-strong-W_C, perfect fifth 2:3 LCAO-bonding-analog, perfect fourth 3:4, major third 4:5, beat 1:1.05, tritone 1:1.414 diabolus, inharmonic 7:13 chaos); f_A slider (0.4-2.0); f_B/f_A ratio slider (0.5-3.0); Show pulsing checkbox. New harmonic-readout banner live-displays "HARMONIC: X.XX:1 &#183; {label} &#183; compat C &#183; {verdict}" with colour-coded verdict (green=consonant/W_C-stable, blue=unison/merger, yellow=dissonant/beats, red=inharmonic/chaos). harmonicCompatibility(ratio) function maps any ratio to compatibility &#8712; [0.15, 1.00] via relative-distance to consonant-ratio set (1:1, 2:1, 3:2, 4:3, 5:4, 5:3, 6:5, 8:5, 3:1); within 2.5% &#8594; consonant; within 12% &#8594; dissonant beat-frequency region; beyond 12% &#8594; inharmonic. Harmonic compatibility multiplies the existing Compatibility slider in computeState &#8212; inharmonic ratios collapse emergence regardless of user setting; consonant ratios let W_C emerge as expected. Pulse rendering: each particle gets a small radial offset (~&#177;3.5px) at its wrapper frequency. W_A pulses at f_A; W_B at f_A &#215; ratio (with phase offset); W_C at the beat frequency |f_A &#8722; f_B|. Why this matters: v17 makes Reading 06's cymatics-as-convergence-#8 visible. The Tier 2 candidate (cymatic substrate is the 8th instance of three-force decomposition) was previously text-only; now there's a working artifact where the user can hear-by-seeing the difference between consonant and dissonant ratios producing different W_C outcomes. Direct LCAO analogy demonstrated &#8212; convergence #1 (LCAO bonding/antibonding) is exactly harmonic phase-matching; the diagram now demonstrates convergence #1 and #8 simultaneously. Compatibility slider gains physical interpretation &#8212; previously a free abstract parameter, now grounded in harmonic-ratio compatibility.</p>
+      <p><strong>Links:</strong> <a href="https://a70m123r.github.io/agnostic-framework/artifacts/wrapper_overlap_animated.html">Diagram 07 v17 &#8212; try the harmonic presets</a>, <a href="https://a70m123r.github.io/agnostic-framework/readings/2026-05-28_cymatic_harmonic_structure_in_social_systems.md">Reading 06 (cymatics-as-convergence-#8)</a>, <a href="https://github.com/a70m123r/agnostic-framework/blob/main/CHANGELOG.md">CHANGELOG</a></p>
+    ]]></summary>
+  </entry>
+
+  <entry>
+    <title>Reading 06 &#8212; cymatic/harmonic structure in social systems &#183; cymatics promoted to cross-substrate convergence #8 &#183; new Tier 3 candidate (cultural eigenmode analysis via RC-Koopman hybrid) &#183; 4 parallel subagents &#183; ~9,000 words synthesized</title>
+    <link href="https://a70m123r.github.io/agnostic-framework/timeline/#reading-06-cymatic-harmonic-structure-in-social-systems" rel="alternate" type="text/html"/>
+    <id>tag:a70m123r.github.io,2026:timeline/2026-05-28-reading-06</id>
+    <updated>2026-05-28T11:55:00Z</updated>
+    <published>2026-05-28T11:55:00Z</published>
+    <author><name>PAVPAV</name></author>
+    <category term="Reading 06"/>
+    <category term="cymatics = cross-substrate convergence #8"/>
+    <category term="cultural eigenmode analysis (new Tier 3)"/>
+    <category term="4 parallel subagents"/>
+    <category term="steer"/>
+    <summary type="html"><![CDATA[
+      <p><em>Steer:</em> "everything we see do and think is a slice of the above and below. how does this map" + "can you spin up some subagents and get in-depth on this latest packet, has anyone attempted to map and measure this in a latent space for people community's city's governments, what would be the input points, or is it chaos when you get away from circles that express symmetry, thinking perhaps a pattern can be derived via reservoir computing approach?"</p>
+      <p>Four parallel research subagents covered empirical social rhythms, latent-space spectral analysis, reservoir computing state-of-the-art, and cliodynamics + cycle theories &#8212; ~9,000 words of structured research with ~75+ cited 2023-2026 sources. Synthesis applied cont 27 &#167;2 three-tier discipline. Headline framework move: cymatics promoted as cross-substrate convergence #8 (Tier 2 candidate) alongside the existing seven (LCAO, cell fusion, symbiogenesis, creole genesis, conceptual blending, model merging, ACMP). Cymatic substrate IS the harmonic-substrate version of the three-force decomposition (constructive interference / destructive interference / phase-locked stabilization). Honest answer to Pav's social-scale question: forcing-driven rhythms (sun, calendar, elections) are Tier 1 robust across scales; pure endogenous social harmonics in the Fourier sense are mostly absent. What exists instead: characteristic relaxation timescales, burstiness, power-law magnitudes, log-periodic structure (Sornette LPPLS), structural-demographic predictors (Turchin). "Is it chaos beyond symmetric cases?" &#8594; not chaos, but not clean harmonics either &#8212; driven rhythms + scale-invariance + burstiness + structural relaxation, NOT standing-wave eigenmodes. Genuine open methodological lane identified: nobody has applied harmonic eigenmode decomposition to a learned latent embedding of socio-political entities. RC-Koopman hybrid (Pyle et al. 2021) is the right candidate methodology; brain eigenmode work (Pang Nature 2023) is the cleanest structural precedent at biological substrate. New Tier 3 speculative entry shipped to /speculations/: "Cultural eigenmode analysis via RC-Koopman hybrid" with three explicit promotion bars. New Tier 2 candidate held conditionally: 1/f scale-invariance + burstiness as L0-failsafe signature &#8212; testable hypothesis that cult/authoritarian systems show MORE harmonic structure than open pluralistic ones. Explicit rejections per cont 27 &#167;3: Strauss-Howe Fourth Turning, Elliott waves, Gann angles, 528 Hz miracle tones, Chizhevsky heliobiology, sacred-geometry-as-encoded-science. Five scoreable predictions with 12/18/24/36/60mo horizons.</p>
+      <p><strong>Links:</strong> <a href="https://a70m123r.github.io/agnostic-framework/readings/2026-05-28_cymatic_harmonic_structure_in_social_systems.md">Reading 06 &#8212; full synthesis</a>, <a href="https://a70m123r.github.io/agnostic-framework/candidates/cultural_eigenmode_analysis.md">candidate: cultural eigenmode analysis (Tier 3)</a>, <a href="https://a70m123r.github.io/agnostic-framework/speculations/">/speculations/ (now 3 Tier 3 entries)</a>, <a href="https://a70m123r.github.io/agnostic-framework/continuations/25.md">cont 25 &#167;6 (convergence list)</a>, <a href="https://www.nature.com/articles/s41586-023-06098-1">Pang Nature 2023 brain eigenmodes</a>, <a href="https://arxiv.org/abs/2008.10263">Pyle et al. 2021 RC-Koopman</a>, <a href="https://github.com/a70m123r/agnostic-framework/blob/main/CHANGELOG.md">CHANGELOG</a></p>
+    ]]></summary>
+  </entry>
 
   <entry>
     <title>Agent-substrate optimization &#8212; /llms.txt + /llms-full.txt + /for-agents/ &#183; framework as flower for the AI agents of researchers in adjacent lineages &#183; cont 25 &#167;1 supersede dynamic applied to discovery infrastructure</title>
@@ -304,73 +378,5 @@
     ]]></summary>
   </entry>
 
-  <entry>
-    <title>Cont 25 &#167;12 addendum &#8212; L0 / global kernel canon as recursive substrate &#183; cached protocol = canon artefact &#183; multi-parent general case &#183; asymmetric default &#183; dual-track vocabulary</title>
-    <link href="https://a70m123r.github.io/agnostic-framework/timeline/#cont-25-12-addendum-l0-global-kernel-canon-as-recursive-subs" rel="alternate" type="text/html"/>
-    <id>tag:a70m123r.github.io,2026:timeline/2026-05-27-cont-25-12-addendum</id>
-    <updated>2026-05-27T12:00:00Z</updated>
-    <published>2026-05-27T12:00:00Z</published>
-    <author><name>PAVPAV</name></author>
-    <category term="cont 25 §12"/>
-    <category term="L0"/>
-    <category term="dual-track"/>
-    <category term="steer"/>
-    <summary type="html"><![CDATA[
-      <p><em>Steer:</em> "Global Kernal canon is L0 of the observer. you and me. for a latent heavy entity it would be what makes it be, people and its function to reason. for the simulation it self it would be the code that runs it and for the code it would be the language and frame work and for the framework it would be the hardware and for that it woudbe.... maybe good to think of it as the frame of where the action takes place in the latent." + "yes the protocol is the output artefact" + "yes its asymmetric, there could be phases of hold symmetry but its always in flux."</p>
-      <p>Four refinements + one meta-move surfaced from Pav's responses to cont 25 §11 tensions. Promoted to canon (§12): (A) L0 / Global Kernel Canon as the user-facing name for cont 23 equation 8's recursive substrate-stack — recursive across observer-classes. (B) Cached protocol = canon artefact at cont 22 four-layer stack; vibecoding maturation = canon-artefact compilation pathway. (C) Multi-parent overlap as the general case; binary is visualization simplification. (D) Asymmetric overlap is default; symmetric exists as transient hold-phase. Promoted to candidate: Dual-track vocabulary — user-facing accessible track and rigorous formal track co-existing with explicit translation. The L0 framing is the round's biggest accessibility win — collapses cont 22-23's substantial vocabulary into a recursive name newcomers can engage with. Worked example: Spanglish through all four §12 moves.</p>
-      <p><strong>Links:</strong> <a href="https://a70m123r.github.io/agnostic-framework/continuations/25.md#§12-addendum--l0-as-user-facing-recursive-substrate--cached-protocol-as-canon-artefact--multi-parent-as-general-case--asymmetric-default--dual-track-vocabulary-same-day-after-worked-example">cont 25 §12 addendum</a>, <a href="https://a70m123r.github.io/agnostic-framework/index.html#primitives">2 new primitive entries</a>, <a href="https://a70m123r.github.io/agnostic-framework/artifacts/wrapper_overlap_animated.html">animated diagram (v10 layer queued)</a></p>
-    ]]></summary>
-  </entry>
-
-  <entry>
-    <title>Continuation 25 + diagram 07 v1&#8594;v9 + wrapper_overlap_animated.html &#8212; one-system-with-phases + hairy sphere + non-additive math + cross-substrate convergence</title>
-    <link href="https://a70m123r.github.io/agnostic-framework/timeline/#continuation-25-diagram-07-v1-v9-wrapper-overlap-animated-ht" rel="alternate" type="text/html"/>
-    <id>tag:a70m123r.github.io,2026:timeline/2026-05-27-continuation-25-diagram-07</id>
-    <updated>2026-05-27T12:00:00Z</updated>
-    <published>2026-05-27T12:00:00Z</published>
-    <author><name>PAVPAV</name></author>
-    <category term="cont 25"/>
-    <category term="diagram 07"/>
-    <category term="convergence"/>
-    <category term="steer"/>
-    <summary type="html"><![CDATA[
-      <p><em>Steer:</em> "lets work a diagram" → "can we have it programmatically animating to show the phases?" → "when two things cones overlap there's always a 3rd new wrapper emergance... so its not three things we want to show but one system in various states of play" + "the latent space math is not 1+1 = 2 ist more like (1+1) = 3 or 1^+- depending on the phase"</p>
-      <p>Eleven steers across a single day produced nine iterations of diagram 07 and one major continuation. Cont 25 (~6,500 words across §0–§11) promotes seven canon moves: (1) one-system-with-phases model replacing cont 24 §2's three-discrete-outcomes trichotomy — seven lifecycle phases; (2) hairy-sphere topology — W_C expands beyond the lens into both parents; parents persist as stubs / procedural roots / receptor-hooks; (3) )( open-arc wrapper representation; (4) membrane negotiation at first contact; (5) non-additive latent math — phase-dependent; (6) cross-substrate convergence — wrapper-overlap independently formalized in SIX research traditions in 2024–2026 (LCAO/MO theory, cell fusion, symbiogenesis, creole genesis, conceptual blending, model merging); (7) wrapper-overlap as canonical operator for procedural-lineage hierarchy. Diagram 07 v1→v9 iteration trail shipped as standalone HTML.</p>
-      <p><strong>Links:</strong> <a href="https://a70m123r.github.io/agnostic-framework/continuations/25.md">continuation 25</a>, <a href="https://a70m123r.github.io/agnostic-framework/artifacts/wrapper_overlap_animated.html">wrapper overlap animated v9</a>, <a href="https://a70m123r.github.io/agnostic-framework/index.html#map">linked from Map</a>, <a href="https://a70m123r.github.io/agnostic-framework/index.html#primitives">2 updated canon entries</a></p>
-    ]]></summary>
-  </entry>
-
-  <entry>
-    <title>Continuation 24 &#8212; multi-observer dynamics: wrapper overlap &#183; multi-containment &#183; 5W+H &#183; contrast-as-diagnostic &#183; individual/collective centre</title>
-    <link href="https://a70m123r.github.io/agnostic-framework/timeline/#continuation-24-multi-observer-dynamics-wrapper-overlap-mult" rel="alternate" type="text/html"/>
-    <id>tag:a70m123r.github.io,2026:timeline/2026-05-27-continuation-24</id>
-    <updated>2026-05-27T12:00:00Z</updated>
-    <published>2026-05-27T12:00:00Z</published>
-    <author><name>PAVPAV</name></author>
-    <category term="cont 24"/>
-    <category term="multi-observer"/>
-    <category term="steer"/>
-    <summary type="html"><![CDATA[
-      <p><em>Steer:</em> "two observer wrappers overlapping creates a wrapper that can become union or repultion, the same observer wrapper is aloo contained in multiple wrappers or religion... where, what , when, why and how. that aggregates the wrapper of reality or a slice of depending on the observing vantage point. in this mediums the rings or layers of difference / contrast is where the shape and scope of the wrappers can be inferd from our or in the very true sense my reading of the compiled from my collctive centre point"</p>
-      <p>Horizontal extension to the framework. Cont 22-23 built the framework vertically. Cont 24 (~4,000 words across §0–§10) adds horizontal multi-observer dynamics + epistemological discipline + collective/individual scale. Six canon-level promotions: (1) Wrapper overlap dynamics — two same-ring wrappers overlapping produce union, repulsion, or interface. (2) Multi-containment — an observer at ring r is in MANY wrappers at potentially different higher rings simultaneously. (3) 5W+H as wrapper aggregation operators. (4) Wrapper shape from contrast — wrappers inferred from contrast with neighbours, not directly observed. (5) Individual vs collective centre — strict-collective and emergent-collective as two construction modes. (6) Polar-merge operator on three orthogonal axes — vertical, horizontal, form. Candidate: triple-merge equation.</p>
-      <p><strong>Links:</strong> <a href="https://a70m123r.github.io/agnostic-framework/continuations/24.md">continuation 24</a>, <a href="https://a70m123r.github.io/agnostic-framework/formalization/">formalization equations 11–15</a>, <a href="https://a70m123r.github.io/agnostic-framework/index.html#primitives">six new canon entries</a></p>
-    ]]></summary>
-  </entry>
-
-  <entry>
-    <title>Top / centre / sub &#8212; three-position vertical scope axis replaces two-pole global/sub framing</title>
-    <link href="https://a70m123r.github.io/agnostic-framework/timeline/#top-centre-sub-three-position-vertical-scope-axis-replaces-t" rel="alternate" type="text/html"/>
-    <id>tag:a70m123r.github.io,2026:timeline/2026-05-27-top-centre-sub-three-position</id>
-    <updated>2026-05-27T12:00:00Z</updated>
-    <published>2026-05-27T12:00:00Z</published>
-    <author><name>PAVPAV</name></author>
-    <category term="three-position scope"/>
-    <category term="steer"/>
-    <summary type="html"><![CDATA[
-      <p><em>Steer:</em> "why is it all sub?" + "sub -+ top = centre"</p>
-      <p>Five-word steer surfaces a structural revision. The earlier two-pole 'global vs sub' framing had been collapsing two distinct things under 'global canon': the wrapper's own render of the whole (Pav's original sketch definition, now CENTRE canon) and what's above the observer's reach (now TOP canon). Fix: three-position vertical scope axis — sub canon (below the wrapper) and top canon (above the wrapper) as polar opposites; centre canon (wrapper's prism refraction) as the mediating centre between them. Provisional equation: centre canon = sub canon ⋈±∓ top canon. Two structural readings this enables: (1) wrapper as polar-merge mediator rather than filter; (2) K̂ ⊂ centre canon (not ⊂ top canon) — sharpens the framework's agnostic-stance discipline. Shipped: cont 23 §12 addendum; index.html primer block reworked; two new primitive entries; formalization §06 worked recursion table now shows sub + centre + top per ring across r=0 to r=8.</p>
-      <p><strong>Links:</strong> <a href="https://a70m123r.github.io/agnostic-framework/continuations/23.md#§12-addendum--top--centre--sub-three-position-vertical-scope-later-same-day">cont 23 §12 addendum</a>, <a href="https://a70m123r.github.io/agnostic-framework/formalization/">canon-stack equation §06 updated table</a>, <a href="https://a70m123r.github.io/agnostic-framework/index.html#primitives">two new canon entries</a></p>
-    ]]></summary>
-  </entry>
 
 </feed>

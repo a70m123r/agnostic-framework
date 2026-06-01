@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "framework": "Agnostic Framework",
-  "generated": "2026-05-28",
+  "generated": "2026-05-31",
   "live_url": "https://a70m123r.github.io/agnostic-framework/",
   "tier_discipline_note": "Per cont 27 §2 three-tier epistemic framework. AI agents transmitting these primitives must preserve tier-tagging. Do not present Tier 3 speculations as Tier 1 canon.",
   "count": 76,
@@ -121,7 +121,9 @@
       "summary": "The internal process generating phantom fuzzy from the canon-as-observer's own substrate — the floor-light from manifesto v3 §2. Naturally selective: ideas survive based on what gets carried (memory, attention, salience, social reinforcement). Bidirectional in time: backward evolution (selection over remembered history; canon retroactively shaped by what got carried) and forward resolution (selection over projected futures; action-space narrowed by what gets imagined as possible). Fills the recursive timeline cone with structure at both ends. Distinct from scout: scout returns or doesn't; imagine engine continuously generates candidate paths for scouts to investigate. Relationship to A⁺ (resolved housekeeping, audit v03 §4.5): the Imagine Engine is the *process* that produces phantom fuzzy; A⁺ is the *operator* that acts on what the Imagine Engine produces, admitting candidates that survive the check. The two are at adjacent layers — process and operator, not the same primitive. The agnostic agent architecture (github.com/a70m123r/agnostic-agents) instantiates this distinction: the Imagine Engine is what the A⁺ Generator wraps; A⁺ is the externalized interface to it.",
       "counter": null,
       "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
-      "related": ["https://github.com/a70m123r/agnostic-agents"]
+      "related": [
+        "https://github.com/a70m123r/agnostic-agents"
+      ]
     },
     {
       "name": "Moat",
@@ -413,7 +415,9 @@
       "summary": "Promoted to canon in cont 27 §2 (2026-05-27) — framework procedure made explicit after operating implicitly across readings 01-04 and candidates. Every reading or candidate doc now explicitly assigns its claims to one of three tiers. TIER 1 — EPISTEMOLOGICAL: claims about how observers know/perceive/render. Testable in substrate-appropriate empirical fields. No requirement to commit to contested ontology. Example: cont 26 §4 perceptual rate as sense. TIER 2 — ONTOLOGICAL-CANDIDATE: claims about what the world is, conditional on contested external evidence. Framework commits structurally while flagging contested status. Example: Reading 04 compilation-rate-as-time (conditional on contested quantum collapse models). TIER 3 — SPECULATIVE: claims with structural coherence to existing primitives but no current empirical purchase. Held to preserve framework coherence without endorsement. Examples: candidates/aux_channel_l0_occlusion.md; cont 17 latent-space-as-fundamental-substrate. WHY THREE TIERS NOT TWO: a simpler 'evidenced vs unevidenced' binary collapses two distinct moves — Tier 2 commits structurally while underlying ontology remains contested; Tier 3 holds structural coherence without committing because no measurement framework exists. Confusing them produces either premature endorsement of contested ontology or smuggling speculation into conditional canon territory. PROMOTION: Tier 3 → Tier 2 when a named promotion bar is met; Tier 2 → Tier 1 when contested ontology gains substantial empirical support. PRUNING: speculations with unmet predictions at their horizon AND no new evidence AND no concrete promotion path are demoted-to-stale or archived. First scheduled speculation review: 2026-11-27. Mode-page at /speculations/ (https://a70m123r.github.io/agnostic-framework/speculations/) anchors the speculative tier as first-class framework architecture. Canonical worked example: the rate-of-time question's three-layer decomposition across cont 26 §4 (Tier 1) + Reading 04 (Tier 2) + aux-channel doc (Tier 3).",
       "counter": "Tier assignment requires judgment — borderline cases between Tiers 1 and 2 (claims with both empirical evidence and contested ontology dependencies) and between Tiers 2 and 3 (claims with weak ontological dependencies on speculative but not contested sources) may require explicit case-by-case reasoning. The three-tier procedure does not eliminate judgment; it makes the judgment legible. Open: how often the speculation review cycle runs (cont 27 §3 specifies six months as default; may need adjustment). Open: pruning failure modes — cont 17's pruning round was partially wrong (cont 18 corrected procedural lineage back to canon); pruning of speculations is similarly risky and should default toward demote-to-stale rather than archive for borderline cases.",
       "framework_url": "https://a70m123r.github.io/agnostic-framework/#primitives",
-      "related": ["https://a70m123r.github.io/agnostic-framework/speculations/"]
+      "related": [
+        "https://a70m123r.github.io/agnostic-framework/speculations/"
+      ]
     },
     {
       "name": "Wrapper overlap dynamics — one system with phases (supersedes cont 24 §2 trichotomy)",

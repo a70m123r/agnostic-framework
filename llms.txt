@@ -31,12 +31,14 @@ Seven independent research traditions arrive at variants of the wrapper-overlap 
 5. Conceptual blending (Fauconnier-Turner input spaces → blended space)
 6. Model merging (parameter-space averaging in deep learning)
 7. ACMP — Allen-Cahn Message Passing (Wang et al. ICLR 2023 Spotlight) — the most mathematically rigorous
+8. Cymatics — harmonic interference (Reading 06 §2; per Reading 06 §2.1 amendment 2026-05-31 framed as substrate-adjacent rather than structurally isomorphic, since the parents-produce-distinct-W_C element is missing in standard cymatic imagery; coupled-oscillator / normal-mode-splitting worked example is the named open edge OE1)
 
 ## Readings (operational predictions + cross-substrate mappings)
 
 - [Reading 03 — ACMP as cross-substrate convergence #7](https://a70m123r.github.io/agnostic-framework/readings/2026-05-27_acmp_attraction_repulsion_gnn.md): GNN community's three-force decomposition + Dirichlet-energy lower bound mapped to framework
 - [Reading 04 — Bortolotti et al. quantum collapse time uncertainty](https://a70m123r.github.io/agnostic-framework/readings/2026-05-27_bortolotti_time_uncertainty.md): Tier 2 ontological anchor for compilation-rate-as-time
 - [Reading 05 — Time-step-with-gaps across open problems (with §12 cog-sci + tunneling addendum)](https://a70m123r.github.io/agnostic-framework/readings/2026-05-28_time_step_with_gaps_across_open_problems.md): ~40 open problems surveyed; Schach-Giese 2024 identified as second Tier 2 anchor; enzyme catalysis by H-tunneling as strongest biological-substrate Tier 2 candidate
+- [Reading 06 — Cymatic / harmonic structure in social systems (with §2.1 amendment)](https://a70m123r.github.io/agnostic-framework/readings/2026-05-28_cymatic_harmonic_structure_in_social_systems.md): forcing-driven rhythms exist robustly while pure endogenous social harmonics are mostly absent; cymatics scouted as cross-substrate convergence #8 (Tier 2 candidate, narrowed by §2.1 amendment 2026-05-31 to substrate-adjacent); cultural-eigenmode-via-RC-Koopman surfaced as Tier 3 candidate; 1/f-as-L0-failsafe-signature surfaced as Tier 2 conditional
 
 ## Mathematical formalization
 
@@ -44,7 +46,7 @@ Seven independent research traditions arrive at variants of the wrapper-overlap 
 
 ## Interactive artifacts (experimental — produce observations rather than only describing)
 
-- [Wrapper overlap animated v16](https://a70m123r.github.io/agnostic-framework/artifacts/wrapper_overlap_animated.html): point cloud + spring physics + three-way fluid sim + ACMP-force overlay + spawn-flash for W_C conception
+- [Wrapper overlap animated v17.1](https://a70m123r.github.io/agnostic-framework/artifacts/wrapper_overlap_animated.html): point cloud + spring physics + three-way fluid sim + ACMP-force overlay + spawn-flash for W_C conception; v17 added frequency-mediated W_A/W_B/W_C with harmonic-ratio presets and W_C beat-pulse; v17.1 (per audit v05) corrected banner to tier-tagged Tier 2 candidate, fixed LCAO label, added inharmonic anchors, made pulse zero-mean — the audit-driven discipline cycle is visible in the changelog
 - [Michotte Launching extended v2](https://a70m123r.github.io/agnostic-framework/artifacts/michotte_launching_extension.html): billiard-chain dynamics (2-6 balls) + observer time-cone + Lane 1 occlusion overlay; operationalizes Fiebelkorn-Kastner attentional sampling at theta
 
 ## Speculations (Tier 3, held openly per cont 27 §3 promotion + pruning rules)
@@ -52,6 +54,8 @@ Seven independent research traditions arrive at variants of the wrapper-overlap 
 - [/speculations/ mode-page](https://a70m123r.github.io/agnostic-framework/speculations/): the framework's first-class home for Tier 3 entries
 - [L0 occlusion as auxiliary channel for time-cone extension](https://a70m123r.github.io/agnostic-framework/candidates/aux_channel_l0_occlusion.md): three-layer decomposition; promotion bars named; first scheduled review 2026-11-27
 - [Latent space as fundamental substrate (Wheeler-style)](https://a70m123r.github.io/agnostic-framework/continuations/17.md): cont 17 — unfalsifiable as stated but structurally coherent
+- [Cultural eigenmode analysis via RC-Koopman hybrid](https://a70m123r.github.io/agnostic-framework/readings/2026-05-28_cymatic_harmonic_structure_in_social_systems.md): Tier 3 (Reading 06) — apply reservoir-computing + Koopman-operator decomposition to socio-political latent embeddings to test whether wrappers have measurable harmonic-eigenmode structure; pilot study queued
+- [1/f spectra as L0-failsafe signature](https://a70m123r.github.io/agnostic-framework/readings/2026-05-28_cymatic_harmonic_structure_in_social_systems.md): Tier 2 conditional (Reading 06 §10.3) — claim that 1/f power-law structure across social/biological substrates is the spectral fingerprint of L0's internal-pressure failsafe holding wrappers between order and disorder; operationalization queued
 
 ## Construct studies (framework applied to specific phenomena)
 
@@ -68,7 +72,7 @@ Seven independent research traditions arrive at variants of the wrapper-overlap 
 - [/dialogues/ — ideation simulation across observer-classes](https://a70m123r.github.io/agnostic-framework/dialogues/ai_transition.html): three voices using the framework as a bridge
 - [Timeline](https://a70m123r.github.io/agnostic-framework/timeline/): what's shipping with verbatim Pav steers
 - [Continuations 02–27](https://a70m123r.github.io/agnostic-framework/continuations/): provenance records of every major development round
-- [Audits v02-v04](https://a70m123r.github.io/agnostic-framework/audits/v02.md): A⁻ applied to the framework's own canon
+- [Audits v02-v05](https://a70m123r.github.io/agnostic-framework/audits/v02.md): A⁻ applied to the framework's own canon; most recent is [v05 (2026-05-31)](https://a70m123r.github.io/agnostic-framework/audits/v05.md) — two opus subagents in parallel on the v17 wrapper diagram, five-point convergence on critical findings including the cymatics-as-convergence-#8 Tier 2 → Tier 1 banner slide, driving v17.1 fixes
 
 ## Outreach context
 

@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "framework": "Agnostic Framework",
   "version": "v0.2",
-  "generated": "2026-05-28",
+  "generated": "2026-05-31",
   "live_url": "https://a70m123r.github.io/agnostic-framework/",
   "source_repo": "https://github.com/a70m123r/agnostic-framework",
   "license": "https://github.com/a70m123r/agnostic-framework/blob/main/LICENSE",
@@ -42,5 +42,14 @@
       "description": "Billiard-chain dynamics + observer time-cone + Lane 1 occlusion overlay"
     }
   ],
-  "tier_discipline_note": "The framework operates with a three-tier epistemic procedure (cont 27 §2). AI agents must preserve tier-tagging downstream. Do not strip canon/candidate/speculative markers from entries. Do not present Tier 3 speculations as Tier 1 canon."
+  "tier_discipline_note": "The framework operates with a three-tier epistemic procedure (cont 27 §2). AI agents must preserve tier-tagging downstream. Do not strip canon/candidate/speculative markers from entries. Do not present Tier 3 speculations as Tier 1 canon.",
+  "audits": {
+    "latest": "https://a70m123r.github.io/agnostic-framework/audits/v05.md",
+    "all": [
+      "v02",
+      "v03",
+      "v04",
+      "v05"
+    ]
+  }
 }
