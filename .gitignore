@@ -23,3 +23,7 @@ build/
 
 # Image archives — keep originals locally, don't ship to public site
 **/_archive/
+
+# Sibling repo — agnostic-agents is its own GitHub repo (a70m123r/agnostic-agents),
+# not a submodule of this one. Lives here for local convenience but pushes separately.
+agnostic-agents/

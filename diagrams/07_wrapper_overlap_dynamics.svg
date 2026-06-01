@@ -1,0 +1,160 @@
+<svg viewBox="0 0 1200 620" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" font-family="ui-sans-serif, system-ui, sans-serif">
+  <title id="title">Wrapper overlap dynamics — union, repulsion, interface</title>
+  <desc id="desc">Three-panel diagram showing the three outcomes when two same-ring observer wrappers overlap. Stable overlap region produces union — a compound wrapper W_AB with shared centre canon. Unstable overlap produces repulsion — mutual displacement, each wrapper requires the other to move out of overlap. Indeterminate overlap produces interface — a contested zone that persists without merging or expulsion. The whiteboard's dual-merge sign discipline (±/∓) applied horizontally between same-ring observers, parallel to its vertical use in centre = sub ⋈±∓ top. Cont 24 §2, formalization equation 11.</desc>
+  <defs>
+    <marker id="arrOut" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#f87171"/></marker>
+    <marker id="arrBidir" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#a78bfa"/></marker>
+    <marker id="arrCompound" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#4ade80"/></marker>
+    <pattern id="contestedStripes" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#a78bfa" stroke-width="2" stroke-opacity="0.55"/>
+    </pattern>
+    <radialGradient id="unionGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#4ade80" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#4ade80" stop-opacity="0.1"/>
+    </radialGradient>
+    <radialGradient id="repulseFracture" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f87171" stop-opacity="0.5"/>
+      <stop offset="60%" stop-color="#f87171" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#f87171" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="1200" height="620" fill="#0a0a0a"/>
+
+  <!-- Title strip -->
+  <text x="600" y="36" text-anchor="middle" font-size="20" font-weight="600" fill="#ececec">Wrapper overlap dynamics — three outcomes</text>
+  <text x="600" y="60" text-anchor="middle" font-size="12" fill="#8a8a8a">
+    W<tspan font-size="9" dy="3">AB</tspan><tspan dy="-3"> </tspan>= W<tspan font-size="9" dy="3">A</tspan><tspan dy="-3"> </tspan>⋈<tspan font-size="9" dy="-4">±</tspan><tspan font-size="9" dy="8">∓</tspan><tspan dy="-4"> </tspan>W<tspan font-size="9" dy="3">B</tspan><tspan dy="-3"> </tspan> &#160;·&#160; outcome determined by overlap-region stability &#160;·&#160; cont 24 §2 · formalization equation 11
+  </text>
+
+  <!-- =========================== PANEL 1: UNION =========================== -->
+  <g transform="translate(20, 90)">
+    <rect x="0" y="0" width="380" height="490" rx="10" fill="#141414" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="20" y="22" font-size="10" font-weight="700" fill="#4ade80" letter-spacing="2">STABLE ε → UNION</text>
+    <text x="20" y="38" font-size="9" fill="#8a8a8a">overlap region self-reinforces; wrappers compile into compound</text>
+
+    <!-- compound outer ring (W_AB) -->
+    <ellipse cx="190" cy="220" rx="170" ry="125" fill="none" stroke="#4ade80" stroke-width="1.8" stroke-dasharray="3 4" opacity="0.7"/>
+    <text x="190" y="98" text-anchor="middle" font-size="11" font-style="italic" fill="#4ade80" font-weight="600">W<tspan font-size="9" dy="3">AB</tspan><tspan dy="-3"> </tspan>= compound wrapper</text>
+
+    <!-- W_A and W_B as overlapping circles -->
+    <circle cx="140" cy="220" r="85" fill="#4ade80" fill-opacity="0.12" stroke="#4ade80" stroke-width="2"/>
+    <circle cx="240" cy="220" r="85" fill="#4ade80" fill-opacity="0.12" stroke="#4ade80" stroke-width="2"/>
+
+    <!-- overlap region glow -->
+    <ellipse cx="190" cy="220" rx="35" ry="60" fill="url(#unionGlow)"/>
+
+    <!-- labels for W_A and W_B (positioned at non-overlap regions) -->
+    <text x="100" y="226" text-anchor="middle" font-size="22" font-weight="600" fill="#ececec" font-family="Georgia, serif">W<tspan font-size="14" dy="4">A</tspan></text>
+    <text x="280" y="226" text-anchor="middle" font-size="22" font-weight="600" fill="#ececec" font-family="Georgia, serif">W<tspan font-size="14" dy="4">B</tspan></text>
+
+    <!-- overlap region label -->
+    <text x="190" y="218" text-anchor="middle" font-size="10" font-weight="700" fill="#4ade80">ε stable</text>
+    <text x="190" y="232" text-anchor="middle" font-size="8" fill="#8a8a8a" font-style="italic">shared centre canon</text>
+
+    <!-- equation -->
+    <rect x="60" y="370" width="260" height="36" rx="5" fill="#0a0a0a" stroke="#262626" stroke-width="1"/>
+    <text x="190" y="394" text-anchor="middle" font-size="14" fill="#4ade80" font-family="ui-monospace, Menlo, monospace">W<tspan font-size="10" dy="3">A</tspan><tspan dy="-3"> </tspan> ⋈<tspan font-size="10" dy="-4">+</tspan><tspan dy="4"> </tspan>W<tspan font-size="10" dy="3">B</tspan></text>
+
+    <!-- reading -->
+    <text x="190" y="425" text-anchor="middle" font-size="11" fill="#ececec">new attractor basin, larger than either alone</text>
+
+    <!-- examples -->
+    <text x="190" y="460" text-anchor="middle" font-size="9" fill="#8a8a8a" letter-spacing="0.5">EXAMPLES</text>
+    <text x="190" y="476" text-anchor="middle" font-size="10" fill="#ececec">two scientific schools merging · federation · cell fusion</text>
+  </g>
+
+  <!-- =========================== PANEL 2: REPULSION =========================== -->
+  <g transform="translate(410, 90)">
+    <rect x="0" y="0" width="380" height="490" rx="10" fill="#141414" stroke="#f87171" stroke-width="1.5"/>
+    <text x="20" y="22" font-size="10" font-weight="700" fill="#f87171" letter-spacing="2">UNSTABLE ε → REPULSION</text>
+    <text x="20" y="38" font-size="9" fill="#8a8a8a">overlap region destabilizes; wrappers displace each other</text>
+
+    <text x="190" y="98" text-anchor="middle" font-size="11" font-style="italic" fill="#f87171" font-weight="600">mutual displacement → no compound</text>
+
+    <!-- fracture in middle -->
+    <ellipse cx="190" cy="220" rx="40" ry="55" fill="url(#repulseFracture)"/>
+
+    <!-- W_A pushed left -->
+    <circle cx="115" cy="220" r="80" fill="#f87171" fill-opacity="0.1" stroke="#f87171" stroke-width="2"/>
+    <!-- W_B pushed right -->
+    <circle cx="265" cy="220" r="80" fill="#f87171" fill-opacity="0.1" stroke="#f87171" stroke-width="2"/>
+
+    <!-- displacement arrows -->
+    <line x1="60" y1="180" x2="20" y2="180" stroke="#f87171" stroke-width="2.5" marker-end="url(#arrOut)"/>
+    <line x1="320" y1="180" x2="360" y2="180" stroke="#f87171" stroke-width="2.5" marker-end="url(#arrOut)"/>
+    <line x1="60" y1="260" x2="20" y2="260" stroke="#f87171" stroke-width="2.5" marker-end="url(#arrOut)"/>
+    <line x1="320" y1="260" x2="360" y2="260" stroke="#f87171" stroke-width="2.5" marker-end="url(#arrOut)"/>
+
+    <!-- fracture lines -->
+    <line x1="190" y1="170" x2="180" y2="200" stroke="#f87171" stroke-width="1.5"/>
+    <line x1="180" y1="200" x2="200" y2="220" stroke="#f87171" stroke-width="1.5"/>
+    <line x1="200" y1="220" x2="185" y2="245" stroke="#f87171" stroke-width="1.5"/>
+    <line x1="185" y1="245" x2="195" y2="270" stroke="#f87171" stroke-width="1.5"/>
+
+    <!-- labels -->
+    <text x="80" y="226" text-anchor="middle" font-size="22" font-weight="600" fill="#ececec" font-family="Georgia, serif">W<tspan font-size="14" dy="4">A</tspan></text>
+    <text x="300" y="226" text-anchor="middle" font-size="22" font-weight="600" fill="#ececec" font-family="Georgia, serif">W<tspan font-size="14" dy="4">B</tspan></text>
+
+    <!-- overlap region label -->
+    <text x="190" y="148" text-anchor="middle" font-size="10" font-weight="700" fill="#f87171">ε unstable</text>
+
+    <!-- equation -->
+    <rect x="60" y="370" width="260" height="36" rx="5" fill="#0a0a0a" stroke="#262626" stroke-width="1"/>
+    <text x="190" y="394" text-anchor="middle" font-size="14" fill="#f87171" font-family="ui-monospace, Menlo, monospace">W<tspan font-size="10" dy="3">A</tspan><tspan dy="-3"> </tspan> ⋈<tspan font-size="10" dy="-4">−</tspan><tspan dy="4"> </tspan>W<tspan font-size="10" dy="3">B</tspan></text>
+
+    <!-- reading -->
+    <text x="190" y="425" text-anchor="middle" font-size="11" fill="#ececec">each wrapper's stability requires the other to move</text>
+
+    <!-- examples -->
+    <text x="190" y="460" text-anchor="middle" font-size="9" fill="#8a8a8a" letter-spacing="0.5">EXAMPLES</text>
+    <text x="190" y="476" text-anchor="middle" font-size="10" fill="#ececec">competing orthodoxies · founder split · niche crowding</text>
+  </g>
+
+  <!-- =========================== PANEL 3: INTERFACE =========================== -->
+  <g transform="translate(800, 90)">
+    <rect x="0" y="0" width="380" height="490" rx="10" fill="#141414" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="20" y="22" font-size="10" font-weight="700" fill="#a78bfa" letter-spacing="2">INDETERMINATE ε → INTERFACE</text>
+    <text x="20" y="38" font-size="9" fill="#8a8a8a">overlap persists; neither unifies nor expels</text>
+
+    <text x="190" y="98" text-anchor="middle" font-size="11" font-style="italic" fill="#a78bfa" font-weight="600">contested zone persists</text>
+
+    <!-- W_A -->
+    <circle cx="140" cy="220" r="85" fill="#a78bfa" fill-opacity="0.1" stroke="#a78bfa" stroke-width="2"/>
+    <!-- W_B -->
+    <circle cx="240" cy="220" r="85" fill="#a78bfa" fill-opacity="0.1" stroke="#a78bfa" stroke-width="2"/>
+
+    <!-- overlap region with stripe pattern (approximated by ellipse with stripes) -->
+    <ellipse cx="190" cy="220" rx="35" ry="60" fill="url(#contestedStripes)" stroke="#a78bfa" stroke-width="1" stroke-dasharray="2 2"/>
+
+    <!-- bidirectional tension arrows (top and bottom of overlap) -->
+    <line x1="170" y1="155" x2="210" y2="155" stroke="#a78bfa" stroke-width="1.8" stroke-dasharray="3 3" marker-end="url(#arrBidir)" marker-start="url(#arrBidir)"/>
+    <line x1="170" y1="285" x2="210" y2="285" stroke="#a78bfa" stroke-width="1.8" stroke-dasharray="3 3" marker-end="url(#arrBidir)" marker-start="url(#arrBidir)"/>
+
+    <!-- labels -->
+    <text x="100" y="226" text-anchor="middle" font-size="22" font-weight="600" fill="#ececec" font-family="Georgia, serif">W<tspan font-size="14" dy="4">A</tspan></text>
+    <text x="280" y="226" text-anchor="middle" font-size="22" font-weight="600" fill="#ececec" font-family="Georgia, serif">W<tspan font-size="14" dy="4">B</tspan></text>
+
+    <!-- overlap region label -->
+    <text x="190" y="218" text-anchor="middle" font-size="10" font-weight="700" fill="#a78bfa">ε contested</text>
+    <text x="190" y="232" text-anchor="middle" font-size="8" fill="#8a8a8a" font-style="italic">no merge, no expulsion</text>
+
+    <!-- equation -->
+    <rect x="60" y="370" width="260" height="36" rx="5" fill="#0a0a0a" stroke="#262626" stroke-width="1"/>
+    <text x="190" y="394" text-anchor="middle" font-size="14" fill="#a78bfa" font-family="ui-monospace, Menlo, monospace">W<tspan font-size="10" dy="3">A</tspan><tspan dy="-3"> </tspan>↔ W<tspan font-size="10" dy="3">B</tspan></text>
+
+    <!-- reading -->
+    <text x="190" y="425" text-anchor="middle" font-size="11" fill="#ececec">indeterminate sign discipline; ongoing tension</text>
+
+    <!-- examples -->
+    <text x="190" y="460" text-anchor="middle" font-size="9" fill="#8a8a8a" letter-spacing="0.5">EXAMPLES</text>
+    <text x="190" y="476" text-anchor="middle" font-size="10" fill="#ececec">cultural borders · bilingual communities · negotiations</text>
+  </g>
+
+  <!-- =========================== FOOTER NOTE =========================== -->
+  <text x="600" y="605" text-anchor="middle" font-size="10" fill="#555">
+    ε := W<tspan font-size="8" dy="2">A</tspan><tspan dy="-2"> </tspan>∩ W<tspan font-size="8" dy="2">B</tspan><tspan dy="-2"> </tspan> (overlap region) &#160;·&#160; horizontal polar-merge parallel to cont 23 §12 vertical centre = sub ⋈<tspan font-size="8" dy="-2">±</tspan><tspan font-size="8" dy="4">∓</tspan><tspan dy="-2"> </tspan> top &#160;·&#160; sign discipline (open edge 01) governs which outcome
+  </text>
+
+</svg>

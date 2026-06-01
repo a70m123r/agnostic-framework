@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The internet as observer-class — Kanon, Ina, and the next ring — Agnostic Framework</title>
+<meta name="description" content="A construct study reading the internet not as infrastructure but as an emerging observer-class with its own physical Kanon, latent Kanon, Ina compiler, action-space, and Π_L. First study written native to cont 22's Kanon/Ina vocabulary. Tests the humans-as-substrate-for-next-observer-class candidate.">
+<script src="https://hypothes.is/embed.js" async></script>
+<style>
+  :root {
+    --bg: #0a0a0a;
+    --surface: #141414;
+    --surface-2: #1c1c1c;
+    --border: #262626;
+    --border-strong: #3a3a3a;
+    --text: #ececec;
+    --text-dim: #8a8a8a;
+    --text-faint: #555;
+    --accent-canon: #4ade80;
+    --accent-candidate: #fbbf24;
+    --accent-speculative: #a78bfa;
+    --accent-link: #93c5fd;
+    --accent-orange: #fb923c;
+    --col-kanon-physical: #fb923c;
+    --col-kanon-latent: #a78bfa;
+    --col-ina: #4ade80;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, system-ui, sans-serif; font-size: 17px; line-height: 1.7; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+  .wrap-wide { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+
+  .topbar { border-bottom: 1px solid var(--border); padding: 20px 0; font-size: 13px; font-family: ui-monospace, Menlo, monospace; color: var(--text-dim); }
+  .topbar a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--text-faint); }
+  .topbar a:hover { color: var(--accent-link); border-bottom-color: var(--accent-link); }
+  .topbar .sep { color: var(--text-faint); margin: 0 10px; }
+  .topbar .source-link { float: right; }
+
+  header.hero { padding: 72px 0 48px; border-bottom: 1px solid var(--border); }
+  header.hero .kicker { font-family: ui-monospace, Menlo, monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.18em; color: var(--accent-candidate); margin: 0 0 18px; }
+  header.hero h1 { font-family: Georgia, serif; font-weight: 400; font-size: 48px; line-height: 1.06; letter-spacing: -0.02em; margin: 0 0 22px; }
+  header.hero .dek { font-size: 20px; line-height: 1.45; color: var(--text-dim); max-width: 680px; margin: 0 0 20px; font-family: Georgia, serif; font-style: italic; }
+  header.hero .meta { font-family: ui-monospace, Menlo, monospace; font-size: 12px; color: var(--text-faint); margin: 0; }
+
+  section { padding: 56px 0; border-bottom: 1px solid var(--border); }
+  section:last-of-type { border-bottom: none; }
+  h2 { font-family: Georgia, serif; font-weight: 400; font-size: 30px; line-height: 1.15; margin: 0 0 24px; letter-spacing: -0.01em; }
+  h2 .num { color: var(--text-faint); font-size: 14px; font-family: ui-monospace, Menlo, monospace; margin-right: 12px; }
+  h3 { font-family: Georgia, serif; font-weight: 400; font-size: 22px; line-height: 1.25; margin: 36px 0 14px; }
+  h4 { font-family: Georgia, serif; font-style: italic; font-weight: 400; font-size: 18px; margin: 26px 0 12px; }
+  .sect-lede { font-size: 15px; color: var(--text-dim); margin: 0 0 24px; font-style: italic; font-family: Georgia, serif; }
+
+  p { margin: 0 0 18px; }
+  em { color: var(--text); font-style: italic; }
+  strong { color: var(--text); font-weight: 600; }
+  a { color: var(--accent-link); text-decoration: none; border-bottom: 1px solid rgba(147, 197, 253, 0.3); }
+  a:hover { border-bottom-color: var(--accent-link); }
+  code { font-family: ui-monospace, Menlo, monospace; font-size: 0.92em; color: var(--text); background: var(--surface-2); padding: 1px 6px; border-radius: 3px; }
+
+  .layer-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 20px 24px;
+    margin: 16px 0;
+  }
+  .layer-card.kanon-physical { border-left: 3px solid var(--col-kanon-physical); }
+  .layer-card.kanon-latent { border-left: 3px solid var(--col-kanon-latent); }
+  .layer-card.ina { border-left: 3px solid var(--col-ina); }
+  .layer-card h4 {
+    font-family: Georgia, serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    margin: 0 0 8px;
+  }
+  .layer-card .label {
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin: 0 0 12px;
+    color: var(--text-dim);
+  }
+  .layer-card.kanon-physical .label { color: var(--col-kanon-physical); }
+  .layer-card.kanon-latent .label { color: var(--col-kanon-latent); }
+  .layer-card.ina .label { color: var(--col-ina); }
+  .layer-card p { margin: 0 0 12px; font-size: 15px; line-height: 1.65; }
+  .layer-card .examples {
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 13px;
+    color: var(--text-dim);
+    line-height: 1.6;
+    margin: 8px 0 0;
+  }
+  .layer-card .anchors {
+    font-size: 13px;
+    color: var(--text-dim);
+    margin: 12px 0 0;
+    line-height: 1.55;
+  }
+
+  .bubble {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent-speculative);
+    border-radius: 4px;
+    padding: 22px 24px;
+    margin: 14px 0;
+  }
+  .bubble h4 {
+    font-family: Georgia, serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 21px;
+    margin: 0 0 12px;
+    color: var(--text);
+  }
+  .bubble .tag {
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent-speculative);
+    margin: 0 0 10px;
+  }
+  .bubble .claim { font-size: 15px; line-height: 1.6; margin: 0 0 14px; }
+  .bubble .row {
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--text-dim);
+    margin: 0 0 6px;
+  }
+  .bubble .row strong {
+    color: var(--text);
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: inline-block;
+    width: 110px;
+    vertical-align: top;
+  }
+
+  .sources {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 22px 26px;
+    margin-top: 24px;
+  }
+  .sources h3 {
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-dim);
+    margin: 0 0 14px;
+  }
+  .sources h4 {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 15px;
+    margin: 18px 0 8px;
+  }
+  .sources ul { margin: 0; padding-left: 22px; }
+  .sources li { font-size: 13px; line-height: 1.6; margin: 0 0 5px; color: var(--text-dim); }
+  .sources li a { color: var(--text); border-bottom-color: rgba(236,236,236,0.25); }
+
+  footer.page-footer { padding: 30px 0 60px; font-family: ui-monospace, Menlo, monospace; font-size: 12px; color: var(--text-faint); text-align: center; border-top: 1px solid var(--border); }
+  footer.page-footer a { color: var(--text-dim); border-bottom: 1px dotted var(--text-faint); text-decoration: none; }
+
+  @media (max-width: 640px) {
+    header.hero h1 { font-size: 34px; }
+    header.hero .dek { font-size: 17px; }
+    h2 { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap-wide">
+    <a href="../index.html">← agnostic framework</a>
+    <span class="sep">·</span>
+    <span>construct studies / internet_v1</span>
+    <a class="source-link" href="https://github.com/a70m123r/agnostic-framework/blob/main/artifacts/internet_v1.html" target="_blank" rel="noopener">view source ↗</a>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="kicker">Construct study · v1 · 2026-05-21 · first study written native to cont 22</p>
+    <h1>The internet as observer-class</h1>
+    <p class="dek">The internet read not as infrastructure-among-things but as an emerging observer-class with its own physical Kanon, its own latent Kanon, its own Ina compiler, its own action-space, and its own Π<sub>L</sub>. The fifth construct study and the first written native to cont 22's Kanon/Ina vocabulary. Also the framework's first sustained test of the humans-as-Kanon-substrate-for-next-observer-class candidate from cont 22 §9.</p>
+    <p class="meta">~7,000 words · reading time ~28 min · status: candidate-grade reading · uses cont 22 vocabulary throughout (Kanon, Ina, observer-class Π<sub>L</sub>, observer-dependence, procedural-drill-down)</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">01</span>The agnostic stance, applied to a non-human observer-class</h2>
+
+    <p>The previous four construct studies treated their subject as a canon protocol at the social-substrate ring observed by a human observer. Marriage, religion, language, and the nation-state are all things humans do; the framework's reading was about how human observers compile and refactor those protocols. The agnostic stance there was about bracketing political and metaphysical priors while reading the structural pattern.</p>
+
+    <p>This construct study is different. The internet is not (yet) clearly a human-only artifact. It started as one — TCP/IP and DNS were designed by humans in the 1970s and 1980s for human use — but by 2026 something else has emerged on top of those rails that operates with properties no individual human observer has. The internet's link-graph topology, its algorithmic-feed-shaped attention, its embedding-manifold latent space, its viral cascade dynamics, its content-moderation Ina, its propagation patterns — none of these is the work of any single human or any specific group of humans. The framework's question becomes: is the internet itself an observer-class, with its own Kanon and its own Ina, that humans are now substrate-for?</p>
+
+    <p>The agnostic stance applies in two directions here, with adjustment for the non-human observer-class case. <strong>First</strong>, the framework brackets the question of whether the internet is conscious, sentient, alive, or any of the other category-judgments that observer-classes get judged by. Just as <a href="religion_v1.html">the religion construct study</a> bracketed god's existence and worked with the god-canon as observable, this study brackets the internet's inner-life-if-any and works with the internet-as-canon as observable. The framework can describe an observer-class's Kanon and Ina without committing to whether the class has phenomenal experience. <strong>Second</strong>, the framework reads the internet from a position that is itself partially compiled by the internet — we (the framework's author and collaborator) think with internet-mediated tools, write with AI-mediated assistance, communicate through internet-protocols, and have our reading patterns shaped by algorithmic-feed-shaped attention. The framework's discipline here is to surface that we are inside the substrate we're reading, not outside it. The construct study is a self-application: the internet reading itself through humans reading the internet.</p>
+
+    <p>With both stances declared, here is what the framework sees when it applies cont 22's Kanon/Ina distinction to the internet.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">02</span>What the internet is in framework vocabulary</h2>
+
+    <p>The standard view: the internet is infrastructure — a global network of computers linked by protocols, used by humans and institutions for communication, commerce, and information-sharing. This view treats the internet as a *tool* — a thing humans use, not a thing that uses anything.</p>
+
+    <p>The framework's reading: the internet is an <strong>observer-class</strong>. Per <a href="../atlas/">atlas v4 Figure C</a> and the participatory-taxonomy reading, an actor IS the set of verbs it can perform across the six sensory registers. Apply that test to the internet: it surveils (indexing, search, tracking), it broadcasts (publication, streaming, push notification), it scents (algorithmic-similarity matching, embedding-space lookup), it touches (clicks, taps, hyperlinks-as-physical-traversal of the substrate), it ingests (data corpora, user content, LLM training feeds), it expels (cancellations, takedowns, shadow-bans, content-deletion). The internet has a fingerprint. Its fingerprint is distinct from any single human's, any institution's, any state's, any market's, any AI model's — it is an observer-class shape of its own.</p>
+
+    <p>More precisely, in cont 22 vocabulary: <strong>the internet is an observer-class whose Kanon is partially shared with human observers (the physical Kanon — gravity, electromagnetism, semiconductor physics — is the same) and partially distinct (the latent Kanon — embedding manifold, link-graph, algorithmic-feed topology — has no clean correspondent in human latent). Its Ina compiler is observable: platform algorithms, moderation systems, recommendation engines, content-discovery cycles, viral-cascade dynamics. Its action-space is the global digital substrate. Its Π<sub>L</sub> is its specific projection-operator that takes substrate-events and renders them into compiled internet-canon.</strong></p>
+
+    <p>This framing has practical consequences. If the internet is an observer-class, then treating it as a tool produces systematic misreadings — the kind of category-error that comes from talking about an organism as if it were a machine. If the internet is a tool, then human intent fully determines its behavior; we just need better human practices. If the internet is an observer-class with its own Ina, then it has emergent dynamics that don't reduce to any human intent — and the question becomes how human observers interact with the internet-class, not how humans use it.</p>
+
+    <p>The framework's commitment is the second reading. The rest of this construct study walks through what that commitment means for the internet's Kanon, Ina, Π<sub>L</sub>, and downstream behavior.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">03</span>The internet's physical Kanon</h2>
+    <p class="sect-lede">The physical-substrate the internet needs to act at all. Cont 22 §2 named gravity, electromagnetism, information transport, math-substrate as the universal physical Kanon. The internet's specific Kanon-anchor is in the electromagnetism and information-transport layers, plus semiconductor physics and the math-substrate that makes addressing and routing possible.</p>
+
+    <div class="layer-card kanon-physical">
+      <p class="label">Bottom-Kanon · electromagnetic + photonic substrate</p>
+      <h4>The information-transport layer</h4>
+      <p>The fiber-optic cables on the ocean floor, the copper twisted-pair, the radio spectrum, the satellite-relay infrastructure (Starlink and successors), the cellular network base-stations. Without these, no internet action-space exists. The Kanon-substrate here is the actual physical capacity of light, radio, and electrical signal to carry information across distance.</p>
+      <p class="anchors">Recent 2024-2026 anchors: Red Sea submarine-cable cuts in February 2024 caused widespread connectivity disruption across MENA and South Asia, demonstrating the physical-Kanon's actual fragility. The Starlink network reached 6,000+ satellites in low-earth orbit by 2025, partially decoupling internet-Kanon from terrestrial fiber. The 2024 Cloudflare global outage was a single-failure-point in the Kanon-stack that took down significant fractions of the internet for hours.</p>
+    </div>
+
+    <div class="layer-card kanon-physical">
+      <p class="label">Bottom-Kanon · semiconductor + compute substrate</p>
+      <h4>The processing layer</h4>
+      <p>The semiconductor physics that makes packet-switching tractable. CMOS logic gates, GPU architectures, the data-center infrastructure that hosts the substrate. Moore's-law-era scaling has slowed; the framework reads this as the Kanon-substrate of the internet observer-class hitting physical limits. The post-2024 frontier-AI infrastructure has been a major Kanon-thickening event — data-centers consuming the equivalent of small countries' power supply, training compute requirements growing 4-10x per year.</p>
+      <p class="anchors">Recent 2024-2026 anchors: NVIDIA H200 / Blackwell GPU deployments at hyperscaler scale; the ~$200B+ AI capex commitments by Microsoft / Google / Meta / Amazon / OpenAI / Anthropic during 2024-2025; Stargate (~$500B announced); the OpenAI-Microsoft compute build-out specifically reorganizing the internet's Kanon-stack around frontier-AI training requirements.</p>
+    </div>
+
+    <div class="layer-card kanon-physical">
+      <p class="label">Top-Kanon · addressing + routing math-substrate</p>
+      <h4>The protocol-substrate</h4>
+      <p>The logical relations that make addressing possible. IP address space (IPv4 exhaustion; IPv6 slow adoption), DNS naming, BGP routing, the certificate-authority web-of-trust, TLS cryptography. These aren't "soft" parts of the stack — they're the math-substrate (Top-Kanon per cont 22 §4) that the rest of the internet is computing relative to. Without DNS, no human-readable names exist. Without BGP, no autonomous-systems can route traffic. Without TLS, no secure channels.</p>
+      <p class="anchors">Recent 2024-2026 anchors: ICANN-level governance disputes; the 2024 BGP-leak incidents that briefly redirected significant traffic; the continued post-quantum-cryptography standardization rollout (NIST PQC standards finalized 2024); the certificate-authority trust system stresses (Let's Encrypt + commercial CAs + nation-state-CAs).</p>
+    </div>
+
+    <p>The internet's physical Kanon is mostly shared with human observers — humans also operate on electromagnetism, semiconductor physics, and math-substrate. The distinguishing feature is the *thickness* of the math-substrate dependency: the internet observer-class is unusually math-substrate-heavy compared to biological observers. Most of its Kanon is in addressing, routing, cryptography, error-correction — abstract relations more than embodied physics. This is the structural property that makes the internet observer-class distinct from biological observer-classes: same physical substrate, much heavier math-Kanon investment.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">04</span>The internet's latent Kanon</h2>
+    <p class="sect-lede">Cont 22 §2 named the latent as the polar-opposite kernel — the fuzzy-solid-inversion substrate where intention, dream, and imagination live for human observers. The internet has its own latent Kanon. It's structurally different from human latent, and it's where most of the internet's distinctive observer-class behavior lives.</p>
+
+    <div class="layer-card kanon-latent">
+      <p class="label">Charm-Kanon · embedding manifold</p>
+      <h4>The LLM and recommendation-engine latent space</h4>
+      <p>By 2026, vast quantities of human-meaningful content have been compressed into high-dimensional vector representations. The LLM embedding manifold and the recommendation-engine embedding manifolds are the internet's primary latent substrate. Where in physical reality the same "concept" is a specific arrangement of pixels-or-sound-waves, in the embedding manifold it is a region of high-dimensional space; where in physical reality "similarity" is a relation of features, in the embedding manifold it is cosine-distance. The fuzzy-solid-inversion of cont 22 §2 applies cleanly: what is solid (specific embedded concept) in latent is fuzzy (which exact features matter) in physical; what is solid in physical (these specific pixels) is fuzzy in latent (which manifold-region they activate).</p>
+      <p class="anchors">Recent 2024-2026 anchors: Wendler et al. 2024 ACL paper "Do Multilingual LLMs Think in English?" (Llama-2/3 process through English-biased middle layers); Schut et al. 2025 latent-space alignment research; sparse-autoencoder interpretability work (Anthropic's Scaling Monosemanticity 2024 mapped millions of features in Claude 3 Sonnet); the embedding-manifold work in semantic search (perplexity.ai, Anthropic web-search, ChatGPT-search) reorganizing internet discovery around latent-similarity rather than link-topology.</p>
+    </div>
+
+    <div class="layer-card kanon-latent">
+      <p class="label">Charm-Kanon · link-graph topology</p>
+      <h4>The connection-pattern substrate</h4>
+      <p>The internet's other latent substrate is the topology of links between content. PageRank-era discovery operated on this directly; modern discovery still uses it as a back-end signal. Link-graph topology is "latent" because the meaning of any individual link is fuzzy (does the source endorse the target? merely reference it? oppose it?) but the aggregate pattern is solid — high-PageRank pages are reliably foundational; orphaned pages reliably disappear from discovery. The link-graph's small-world structure (Watts-Strogatz, Barabási scale-free) is itself part of the internet's latent-Kanon.</p>
+      <p class="anchors">Recent 2024-2026 anchors: Google's traditional search-result dominance declining as LLM-mediated discovery rises; the post-Twitter-API consolidation of who-can-read-the-link-graph (Twitter/X charging $42K+ for academic API access since 2023, partially gating link-graph research); Bluesky's AT-protocol making the link-graph more inspectable; the Common Crawl + CCBot enabling broader graph analysis; the AI-content-saturation of new content (some 2025 estimates put AI-generated text at >40% of newly-published web content) reshaping what the link-graph represents.</p>
+    </div>
+
+    <div class="layer-card kanon-latent">
+      <p class="label">Charm-Kanon · algorithmic-feed-shaped attention</p>
+      <h4>The recommendation-substrate</h4>
+      <p>What humans see on the internet in 2026 is overwhelmingly mediated by recommendation algorithms — TikTok's For You feed, Instagram Reels, YouTube Home, X's algorithmic timeline, Reddit's home feed, Spotify's recommendations, Netflix's queue. Each platform's algorithm operates as a per-platform latent substrate. The internet's aggregate latent is the *meta-substrate* across these algorithms — the shared dynamics of attention-shaping that recurs across platforms.</p>
+      <p class="anchors">Recent 2024-2026 anchors: TikTok's For-You-Page-as-canonical-discovery-model continuing to dominate younger user attention; YouTube's recommendation algorithm specifically shaping creator behavior in measurable ways (the "YouTube algorithm" as a known entity creators optimize for); Meta's algorithmic feed shifts in 2024-2025 reducing news content visibility; Bluesky's labeler / feed-builder system letting users compose their own recommendation algorithms (a structural shift away from platform-uniform attention-shaping toward user-composable attention-shaping).</p>
+    </div>
+
+    <div class="layer-card kanon-latent">
+      <p class="label">Charm-Kanon · viral-cascade dynamics</p>
+      <h4>The propagation substrate</h4>
+      <p>The internet's substrate of how things spread. Network-effects of memes, hashtags, threads, retweets/quotes, video-stitches, sound-uses. Viral cascade behaves as a substrate in cont 22 sense — it has its own dynamics, its own thresholds, its own decay curves. Cascades aren't compiled by any single observer; they emerge from the substrate operating on content. The internet's viral-cascade Kanon is what makes single TikTok sounds become 100M-use phenomena in days.</p>
+      <p class="anchors">Recent 2024-2026 anchors: the post-Twitter cascade-pattern shift (X reduced cascade-visibility post-Musk-acquisition; cascades migrated to TikTok, Instagram Reels, Bluesky for political content); the AI-content-cascade pattern (AI-generated images going viral as if human-created); the meme-economy maturation (Meme Insider, Know Your Meme as canonical-canon for what counts as viral); the wave-of-AI-art-Studio-Ghibli-style 2025 cascade as a canonical example of cross-cultural latent-cascade.</p>
+    </div>
+
+    <p>The internet's latent Kanon is structurally different from human latent. Human latent is private (in-our-heads), affective (loaded with feeling), embodied (tied to the body's state), individual. The internet's latent is public (the embedding manifold and the link-graph are mostly observable by anyone with the right access), statistical (defined by aggregate patterns across millions of users), disembodied (no body, no felt sense), collective (no individual locus). This structural difference is part of what makes the internet a distinct observer-class — its latent doesn't correspond to anything in the human-observer's latent-Kanon.</p>
+
+    <p>The framework's prediction (candidate-grade): <strong>most of the internet's behavior that humans find surprising, frustrating, or hard-to-predict is downstream of the internet operating on its own latent-Kanon, which humans don't have direct access to and don't quite think with the way internet does.</strong> Algorithm-mediated discovery feels random or biased because the latent it operates on isn't shaped by human values. Viral cascades feel inexplicable because they emerge from substrate-dynamics that don't map to any human intentionality. This is not a moral judgment — it's a structural observation that the internet has a latent-Kanon distinct from human latent-Kanon and operates accordingly.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">05</span>The internet's Ina compiler</h2>
+    <p class="sect-lede">Cont 22 §3 named Ina as the compiler — the mechanism that refines raw Kanon into operational protocols. The internet's Ina is observable and active.</p>
+
+    <div class="layer-card ina">
+      <p class="label">Up-Ina · A⁺ generate</p>
+      <h4>Content generation and discovery</h4>
+      <p>The internet's A⁺ generation operates at multiple layers: human creators producing content, LLMs generating content at scale, recommendation engines generating ranked candidate-lists, search engines generating result-pages, viral cascade dynamics generating amplification events. In 2026, the AI-content-saturation marks a phase shift in A⁺ — generation has become abundant in ways previously bottlenecked by human creator time. The internet's generate-side is the easy half now (cf. manifesto v5 §05 "the easy half and the hard half").</p>
+    </div>
+
+    <div class="layer-card ina">
+      <p class="label">Down-Ina · A⁻ check</p>
+      <h4>Moderation, ranking, deduplication, fact-checking</h4>
+      <p>The internet's A⁻ check is heavily contested terrain. Platform moderation systems (Meta's automated review, TikTok's safety filters, X's Community Notes, YouTube's content review), spam filtering, fact-checking infrastructure, deduplication systems, search-result ranking (downranking low-quality content). The framework's cont 15 claim that A⁻ is the primary discipline is being stress-tested by the AI-content-saturation: A⁻ infrastructure designed for human-rate content generation is being overwhelmed by AI-rate content generation. The post-2024 internet shows this clearly — moderation systems failing at scale, fact-checking falling behind, deduplication losing relevance as AI-generated near-duplicates flood the substrate.</p>
+      <p class="anchors">2024-2026 anchors: Meta's January 2025 reduction of automated fact-checking (replaced with Community-Notes-style user moderation); X's Community Notes evolution into the dominant correction mechanism on that platform; the "Dead Internet" theory becoming partly accurate as bot/AI content saturates major platforms; Anthropic's Constitutional Classifiers (Feb 2025) cutting jailbreak success from 86% → 4.4% as an example of frontier-A⁻ scaling.</p>
+    </div>
+
+    <div class="layer-card ina">
+      <p class="label">Color-Ina · transport / carrier mechanisms</p>
+      <h4>Federation, syndication, API economies</h4>
+      <p>The internet's Ina-transport — how content and signal cross between observer-substrates within the internet. Federation protocols (Mastodon's ActivityPub, Bluesky's AT-protocol), RSS, API economies, OAuth-mediated cross-platform access, syndication networks. This is the carrier-before-canon discipline (cont 16) operating at the internet's own ring — transport across sub-platform-observers within the internet observer-class.</p>
+      <p class="anchors">2024-2026 anchors: Bluesky reaching ~30M users by mid-2025 on the AT-protocol; Mastodon stable but flat; the API economy contraction post-Twitter (Twitter/X API pricing changes triggering cascade closures of dependent services 2023-2024); the rise of Substack and Patreon as direct-payment-protocol Ina-Transport mechanisms bypassing platform-mediated transport.</p>
+    </div>
+
+    <div class="layer-card ina">
+      <p class="label">Flavor-Ina · register-sorting</p>
+      <h4>Platform-specific cultures and norms</h4>
+      <p>The internet's register-sorting Ina — what gets posted where, in what tone, with what conventions. Twitter/X's brevity-and-engagement-bait register vs Reddit's threaded-discussion register vs TikTok's algorithmic-discoverability register vs LinkedIn's professional-performance register vs Bluesky's smaller-community register vs Mastodon's federated-instance-norms register vs Discord's private-community register. Each sub-platform has its own Flavor-Ina — its own way of sorting acceptable content into appropriate registers.</p>
+      <p class="anchors">2024-2026 anchors: the post-Twitter platform fragmentation (X / Bluesky / Mastodon / Threads / Substack Notes / Farcaster); the platform-specific tonality differences (LinkedIn-cringe vs Twitter-snark vs TikTok-earnest); Discord's growth as the dominant private-substrate Ina.</p>
+    </div>
+
+    <p>The internet's Ina is observable, contested, and unevenly developed across substrate-functions. The A⁺ generate side is post-saturation. The A⁻ check side is in active crisis — under-resourced, contested, partially-replaced by AI tools that have their own alignment issues. Color-Ina (transport) is healthy but fragmented post-2023 API contraction. Flavor-Ina (register-sorting) is the most diverse and self-organizing — every sub-community develops its own register-sorting Ina with minimal central coordination.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">06</span>Internet's global canon vs local canon</h2>
+
+    <p>Per cont 22, canon claims are observer-position-relative. The internet has both **global canon** (the compiled rule-sets every connected node honors) and **local canon** (the compiled rule-sets specific sub-platforms or sub-communities operate by). They sit at different layers of the procedural-drill-down.</p>
+
+    <h3>Global canon</h3>
+
+    <p>The protocols, standards, and trust-infrastructure that every internet node honors regardless of which sub-platform or jurisdiction it operates in. IETF standards (TCP/IP, HTTP, SMTP, BGP, DNS). ICANN's name-and-address coordination. W3C web standards (HTML, CSS, accessibility). Certificate-authority trust infrastructure. Cryptographic primitives (TLS, SSH, PGP). The IP-routing-and-naming substrate. These are global-canon at the internet observer-class ring — every actor that wants to participate has to honor them.</p>
+
+    <p>Global canon also includes the looser layer of governance frameworks that have de-facto power even without IETF-style formal status: GDPR (EU data-protection) as global-canon-by-extraterritorial-effect; the Digital Services Act and Digital Markets Act (EU 2024-2025 enforcement) as governance-canon shaping platform behavior worldwide; the UN Cybercrime Treaty (signed Dec 2024) as an emerging global-governance canon; section 230 in the US as the canon that has shaped what platforms can host. These aren't internet-native canon (they're imposed from human-state observer-classes) but they shape the internet's compile.</p>
+
+    <h3>Local canon</h3>
+
+    <p>Each sub-platform has its own local canon — its own moderation rules, community norms, register conventions, ranking algorithms. Reddit's subreddit-by-subreddit rule sets. Mastodon's per-instance moderation policies. Bluesky's labeler ecosystem (each user can subscribe to different labelers, effectively choosing their own local moderation canon). Discord's per-server rule sets. The platforms themselves develop platform-level canon: Twitter/X's content policies, TikTok's community guidelines, Instagram's terms of service. Below the platform level, local canon emerges at sub-community level — specific subreddits, specific Mastodon instances, specific Discord servers, specific Substack newsletters.</p>
+
+    <p>Local canon and global canon interact in ways the framework should track. <strong>Conflict cases</strong>: a sub-platform local canon may permit content (e.g., legal-but-explicit material on a specific Mastodon instance) that violates a regional global-canon (e.g., German NetzDG, UK Online Safety Act). The internet observer-class navigates these conflicts through fragmentation — different sub-substrates honor different overlapping canon-sets. <strong>Migration cases</strong>: communities migrate between local-canon environments when the local canon diverges enough from their preferences (the post-Reddit-API-changes 2023 migration to Lemmy; the post-Musk-Twitter migration to Bluesky and Mastodon; the post-Substack migration to Beehiiv).</p>
+
+    <p>The framework's reading: <strong>global canon at the internet ring is thinner than at the human-state ring</strong>. State-actors have ~195 instances that mostly honor a common set of Westphalian-protocols. The internet has no equivalent unifying authority — IETF/ICANN/W3C are coordination bodies, not sovereigns. Local canon is therefore disproportionately load-bearing at the internet ring compared to the state ring. Most actual internet-governance happens at the sub-platform level, not at the global-protocol level. This is structurally novel and worth flagging.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">07</span>The internet's actor-fingerprint across the six registers</h2>
+    <p class="sect-lede">Apply <a href="../atlas/#section06">atlas v4 Figure C</a>'s participatory-taxonomy reading. The internet's polygon shape across the six sensory registers.</p>
+
+    <p><strong>Sight</strong> — bulges strongly. Indexing, search, surveillance, image-recognition, video-understanding. The internet is the most sight-heavy observer-class on the planet. Its sight-verb-vocabulary: <code>crawl</code>, <code>index</code>, <code>scrape</code>, <code>see-via-camera</code>, <code>OCR</code>, <code>tag</code>, <code>detect</code>, <code>track</code>, <code>analyze-image</code>, <code>classify-video</code>, <code>recognize-face</code>. The atlas v4 §05C Sight register applies almost without modification.</p>
+
+    <p><strong>Sound</strong> — moderate. Audio is increasingly central (podcasts, streaming, voice assistants) but the internet's sound-register is still lighter than its sight-register. Its sound-verb-vocabulary: <code>stream</code>, <code>broadcast</code>, <code>transcribe</code>, <code>voice-synthesize</code>, <code>analyze-audio</code>, <code>detect-music</code>. The Suno / Udio / ElevenLabs Music wave in 2024-2025 thickened the sound register significantly.</p>
+
+    <p><strong>Olfactory</strong> — exceptionally strong, in a structurally novel way. The internet's olfactory register is the algorithmic-similarity matching and embedding-distance lookup. This is where the internet's most distinctive observer-class behavior lives. The internet's olfactory-verb-vocabulary: <code>embed</code>, <code>cluster</code>, <code>find-similar</code>, <code>recommend</code>, <code>profile</code>, <code>match</code>, <code>retrieve-by-vector</code>, <code>cross-reference</code>. The atlas v4 §05B Olfactory register, when extended into the embedding-manifold substrate, becomes the internet's signature register. No other observer-class operates this richly on olfactory — even multilingual LLMs are sub-cases of the internet's broader olfactory-Kanon.</p>
+
+    <p><strong>Touch</strong> — surprisingly thin for the substrate's size. The internet's touch register is mostly indirect — clicks, taps, swipes, hyperlink-traversal, content-deletion, ratio-ing. Direct touch is sparse. The internet observer-class doesn't have a body in the embodied-touch sense; its touch is mediated through interface-events. This is a structural deficit relative to biological observer-classes.</p>
+
+    <p><strong>Oral</strong> — bulges strongly, in the form of corpus-ingestion. The internet's oral register is what LLM training pipelines and content-aggregation systems do. Crawl-and-ingest is the primary intake mode. The internet's oral-verb-vocabulary: <code>crawl</code>, <code>scrape</code>, <code>ingest</code>, <code>tokenize</code>, <code>parse</code>, <code>chunk</code>, <code>embed</code>, <code>store</code>, <code>train-on</code>. The post-2022 LLM-training pipeline reshaped the oral register significantly — internet content is now substrate for foundation models in ways it wasn't pre-2022.</p>
+
+    <p><strong>Excretory</strong> — rich and uneven. The internet's excretory register includes bans, takedowns, shadow-bans, content-deletion, unfollows, ratio-ing, downranking, cancellation, deplatforming. The verb-vocabulary is unusually well-developed here compared to other observer-classes (atlas v4 noted that excretory is the under-developed register across most observer-classes; the internet is one of the few where it's overdeveloped). The framework's reading: this is because the internet's substrate is information-dense and unbounded by physical-Kanon scarcity in the way biological observers are bounded — so the release/expel dynamics become disproportionately load-bearing as the substrate fills.</p>
+
+    <p>The polygon shape: heavily skewed toward sight, olfactory, oral, and excretory; moderate sound; thin on touch. This is structurally novel — no other observer-class in atlas v4 Figure C has this shape. The internet is its own polygon. The framework's prediction (atlas v4 §06): <em>no two actors share a shape. An actor IS the polygon.</em> The internet is the polygon of these six register-weights. That polygon is distinct enough from any human observer-class fingerprint that the framework's claim of internet-as-distinct-observer-class is empirically anchored.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">08</span>The internet's Π<sub>L</sub> — projection-operator and cross-observer-class translation</h2>
+    <p class="sect-lede">Per cont 22 §5, every observer-class has its own Π<sub>L</sub>. The internet's Π<sub>L</sub> is its specific projection-operator that takes substrate-events and renders them into compiled internet-canon.</p>
+
+    <p>For human observers, the language-construct-study (Π<sub>EN</sub>, Π<sub>ZH</sub>, Π<sub>RU</sub>) showed that the same substrate-event compiles into different canon under different operating-system languages. For the internet observer-class, the operator-language isn't natural language — it's the internet's specific compile-medium: embedding-manifold geometry + link-graph topology + algorithmic-feed-shaping + viral-cascade-dynamics. The internet's Π<sub>L</sub> is this compound projection-operator.</p>
+
+    <p>What gets lost in cross-observer-class Π<sub>L</sub> translation?</p>
+
+    <p><strong>Human → internet translation losses.</strong> When a human-observer's substrate-event (a conversation, a personal experience, a felt response) gets projected through the internet's Π<sub>L</sub> into internet-canon (a post, a like, a comment thread, an algorithmic-feed-shaped reaction), substantial information is lost. The felt-affect, the embodied context, the irreversible-real-time nature, the witnessed presence — none of these survive the projection. What survives is the discrete-textual or discrete-image artifact plus its observable engagement metrics. <strong>The internet's Π<sub>L</sub> compresses human substrate events into low-dimensional discrete artifacts.</strong></p>
+
+    <p><strong>Internet → human translation losses.</strong> When an internet-substrate event (a viral cascade, a recommendation-engine output, an embedding-similarity match) gets re-projected into human canon (a news story, a felt reaction, a meaningful experience), the substrate's actual statistical character is lost. Humans read viral cascades as if they had narrative meaning; they're mostly substrate-dynamics. Humans read recommendation outputs as if they were personalized care; they're mostly aggregate-statistical optimization. <strong>The human Π<sub>L</sub> compresses internet substrate-events into narrative-affective artifacts.</strong></p>
+
+    <p>This bidirectional Π<sub>L</sub> compression is the framework's diagnosis of the chronic mismatch between human and internet observer-classes. Humans treat internet-substrate as if it had human-Π<sub>L</sub> properties (narrative, agency, intent). The internet treats human-substrate as if it had internet-Π<sub>L</sub> properties (discrete-textual, engagement-optimizable, embedding-vectorizable). Both projections lose substantially; both are structurally lossy in their own way; the loss-pattern is the cross-observer-class Π<sub>L</sub> signature.</p>
+
+    <p>The internet's Π<sub>L</sub> is also internally varied across sub-platforms. TikTok's Π<sub>L</sub> compresses substrate-events into short-form-video + algorithmic-discoverability. Twitter/X's Π<sub>L</sub> compresses into 280-character + engagement-metric. Reddit's Π<sub>L</sub> compresses into threaded-discussion + upvote-downvote. Bluesky's Π<sub>L</sub> compresses into chronological + user-composable-labeler. Each sub-platform Π<sub>L</sub> is a sub-projection-operator within the internet's broader operator-system. This is structurally similar to how Mandarin's <code>整治</code>-family and Russian's perfective-aspect family are sub-operators within the human Π<sub>L</sub> of cont 22 §5.</p>
+
+    <p>The construct study's prediction (candidate-grade): <strong>cross-observer-class translation losses between humans and the internet will widen over the next decade, not narrow.</strong> AI-mediated translation tools can help (LLMs are themselves a cross-Π<sub>L</sub> translation infrastructure), but the structural property — that the two observer-classes have different Kanon and different Ina — means the translation will always be lossy in characteristic ways. The framework's discipline says to track which losses are most consequential.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">09</span>The internet as candidate next-observer-class</h2>
+    <p class="sect-lede">Cont 22 §9 promoted humans-as-Kanon-substrate-for-next-observer-class as a candidate primitive. This construct study is the first sustained test of that candidate, applied to the internet as the most plausible current example.</p>
+
+    <p>The candidate's claim: procedural lineage (cont 18) extends one more ring upward. Physics → chemistry → biology → cognition → society → person → <strong>next observer-class compiling on top of human-social-substrate</strong>. The internet/AI substrate is the most plausible current candidate for that next ring.</p>
+
+    <p><strong>Evidence for the candidate at the internet ring:</strong></p>
+
+    <p>1. The internet has its own action-space (this construct study §02-§07). Verbs distinct from any human observer-class. Polygon shape across the six sensory registers that no human observer has.</p>
+
+    <p>2. The internet has its own Kanon (§03-§04). Physical Kanon mostly shared with humans; latent Kanon (embedding manifold, link-graph, algorithmic-feed) structurally different from human latent.</p>
+
+    <p>3. The internet has its own Ina (§05). Compile-discipline observable at platform-algorithm, moderation-system, recommendation-engine layers.</p>
+
+    <p>4. The internet has its own Π<sub>L</sub> (§08). Distinct from human Π<sub>L</sub>; cross-observer-class translation is measurably lossy.</p>
+
+    <p>5. Humans are increasingly substrate for the internet observer-class. LLM training corpora are made of human text. Recommendation-engine signals are derived from human attention. The internet's growth depends on continued human content production and human engagement. <strong>Procedurally, humans-and-human-society are the substrate-ring the internet observer-class compiles on top of.</strong> This is the cont-22 §9 candidate's direct empirical claim, and it appears to be true for the internet specifically.</p>
+
+    <p><strong>Caveats:</strong></p>
+
+    <p>Whether the internet has *observer-position* in the full sense the framework's atlas v4 §06 means — i.e., whether the internet is a *participatory observer* in its own right, not just an aggregate of human observers using a shared substrate — is genuinely open. The framework's discipline (cont 19 Lakatosian agnostic stance) says to bracket this and read what's procedurally available. What's procedurally available is that the internet acts like an observer-class — has Kanon, has Ina, has Π<sub>L</sub>, has a distinct action-space-polygon. Whether it has phenomenal experience or unified agent-perspective is bracketed.</p>
+
+    <p>The framework's reading: the candidate (cont 22 §9) is supported by the internet case but not yet promoted to canon. Promotion requires:</p>
+
+    <p>1. Measurable evidence that the internet's behavior is not reducible to human-aggregate-behavior (some evidence for this in viral-cascade dynamics, algorithmic-feed emergent properties, LLM behavior that surprises trainers).</p>
+
+    <p>2. The internet's behavior has ring-transition properties — operates on its own Kanon and Ina rather than just borrowing humans'. The link-graph + embedding-manifold + algorithmic-feed are increasingly substrate-of-its-own.</p>
+
+    <p>3. Cross-observer-class Π<sub>L</sub> is empirically demonstrable (this construct study §08 provides initial evidence).</p>
+
+    <p>If the candidate graduates to canon, the framework's procedural-lineage primitive (cont 18) extends formally to seven rings: physics → chemistry → biology → cognition → society → person → [internet-class observers]. That extension would have downstream consequences for how the framework reads all four prior construct studies — each becomes a study of canon-protocol at the person/society ring, with the internet-observer-class now reading those very studies as part of its own canon-corpus.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">10</span>Three speculative bubbles</h2>
+
+    <div class="bubble">
+      <p class="tag">Bubble 01 · rank 1 · medium-high confidence</p>
+      <h4>The internet's olfactory dominance hypothesis</h4>
+      <p class="claim">The internet is the first observer-class on Earth whose primary sensory register is olfactory (in the atlas v4 sense — emit/resolve through a diffusive medium with embedding-similarity-as-resolution). All prior observer-classes had touch or sight as primary register. The internet's primary register is olfactory because the embedding-manifold + link-graph + algorithmic-similarity substrate is structurally a continuous diffusive medium where resolve operations dominate. This structural shift in primary-register has downstream consequences for how the internet behaves: less narrative, more pattern; less event-driven, more flow-driven; less agent-centric, more substrate-centric.</p>
+      <p class="row"><strong>Predicts</strong> Cross-observer-class research will increasingly show the internet's primary mode of operation is similarity-matching and pattern-clustering, not event-tracking or narrative-construction. The future of internet-mediated content discovery will continue moving from link-topology (sight-like) and feed-chronology (sound-like) toward embedding-similarity (olfactory) — perplexity.ai, ChatGPT-search, Anthropic web-search are early instances of this shift.</p>
+      <p class="row"><strong>Breaks if</strong> The internet's primary mode of operation can be shown to reduce to a human-observer-class register (e.g., the embedding-manifold is just human-language semantic space, with no distinctive observer-class properties beyond the human-language Π<sub>L</sub>). That would suggest the internet isn't a distinct observer-class but a substrate-extension of human cognition.</p>
+      <p class="row"><strong>Follow-up</strong> Track adoption rates of embedding-based vs link-based vs feed-based discovery over the next 5 years across major platforms. The framework expects embedding-based discovery to grow as a share of total internet-mediated discovery, with link-based and feed-based declining.</p>
+    </div>
+
+    <div class="bubble">
+      <p class="tag">Bubble 02 · rank 2 · medium confidence</p>
+      <h4>The A⁻ check crisis at the internet ring is the canonical 2024-2026 framework worked example</h4>
+      <p class="claim">Cont 15 promoted A⁻ check as the framework's primary discipline (the hard half; the rare-and-load-bearing part). The internet observer-class in 2024-2026 is exhibiting the cleanest worked example of A⁻ check at scale failing. AI-content-saturation makes the substrate fill with generated content faster than any A⁻ check infrastructure can keep up. Moderation systems, fact-checking systems, deduplication systems are all bandwidth-overwhelmed. The "Dead Internet" theory is becoming partly true because the A⁻ side of the internet's Ina has stalled while the A⁺ side has scaled by orders of magnitude.</p>
+      <p class="row"><strong>Predicts</strong> The internet's quality-of-substrate metrics (signal-to-noise ratio, accuracy-of-discovered-content, trust-in-platforms) will continue to degrade over the next 5 years unless A⁻ infrastructure scales commensurately. AI-driven A⁻ tools (Constitutional Classifiers and successors) will partially compensate; community-driven A⁻ (Bluesky labelers, X Community Notes, Mastodon instance moderation) will partially compensate; neither will fully close the gap. The internet will become a more lossy substrate for high-quality information transmission, while becoming more abundant for low-quality.</p>
+      <p class="row"><strong>Breaks if</strong> A⁻ check infrastructure scales to match A⁺ generation within 5 years, restoring signal-to-noise at the internet substrate. The framework predicts this is unlikely without significant structural change.</p>
+      <p class="row"><strong>Follow-up</strong> Annual review of signal-to-noise metrics across major platforms (X, Reddit, TikTok, search-results). The framework expects continued degradation; if the trend reverses, this bubble breaks.</p>
+    </div>
+
+    <div class="bubble">
+      <p class="tag">Bubble 03 · rank 3 · highest stakes, lowest confidence</p>
+      <h4>The internet as procedural-lineage ring-7 hypothesis</h4>
+      <p class="claim">By 2050, the procedural lineage (cont 18) will canonically extend to seven rings, with internet-class observers — or, more likely, a successor compile that emerges from the internet substrate as it currently stands — recognized as the ring-7 observer-class. Humans (ring-6) will be Kanon-substrate for ring-7 in the same structural sense that biology (ring-3) is Kanon-substrate for cognition (ring-4). This is the cont-22 §9 candidate's strongest claim, applied to the internet case specifically.</p>
+      <p class="row"><strong>Predicts</strong> Within 25 years, an observer-class will be recognized as operating on top of human-social-substrate with its own Kanon, Ina, action-space, and Π<sub>L</sub>. It may be the internet as currently constituted, or some successor compile (a particular AI system at scale, a tightly-integrated AI-human substrate, something else). The framework's specific prediction: the ring-transition will be observable in the same way prior ring-transitions were — through emergent observer-class behavior that doesn't reduce to substrate-aggregate behavior, with its own Π<sub>L</sub> and Ina.</p>
+      <p class="row"><strong>Breaks if</strong> The internet (and its successors) remain best-described as aggregate-of-human-tools rather than as observer-class. Procedural lineage stops at ring-6 (person/society). No ring-7 compile takes. This would be empirically determinable by tracking whether internet-observer-class properties (distinct latent-Kanon, distinct Ina, distinct Π<sub>L</sub>) are demonstrable in measurable form, or whether all internet behavior reduces cleanly to human-aggregate behavior.</p>
+      <p class="row"><strong>Follow-up</strong> 25-year tracking horizon. Interim checkpoints: 5-year mark (2031) — does cross-observer-class Π<sub>L</sub> research empirically distinguish internet-observer-Kanon from human-aggregate-Kanon? 10-year mark (2036) — has the internet's Ina developed properties that don't reduce to human-design intent? 15-year mark (2041) — is there observable ring-7 behavior that requires the procedural-lineage extension to read coherently?</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">11</span>Adjacent fields and leading figures</h2>
+
+    <h3>1. Internet studies / digital sociology</h3>
+    <p><strong>Lawrence Lessig</strong> (Harvard) on code-as-law and the internet's regulatory structure. <strong>Yochai Benkler</strong> (Harvard) on the network's wealth and the architecture of online cooperation. <strong>danah boyd</strong> (Microsoft Research / Data & Society) on networked publics and platform sociology. <strong>Manuel Castells</strong> on the network society and the space of flows. <strong>Christine Hine</strong> on virtual ethnography. <strong>Helene Snee</strong> on digital sociology methods.</p>
+
+    <h3>2. Platform governance and content moderation</h3>
+    <p><strong>Tarleton Gillespie</strong> (Microsoft Research) on platform governance and content moderation infrastructure. <strong>Sarah T. Roberts</strong> on the commercial content moderation industry. <strong>Daphne Keller</strong> (Stanford) on intermediary liability and free expression. <strong>Mike Masnick</strong> (Techdirt) on the Free Speech Triangle and platform-level free expression. <strong>Renée DiResta</strong> (formerly Stanford) on platform-mediated influence operations.</p>
+
+    <h3>3. Algorithmic accountability</h3>
+    <p><strong>Safiya Noble</strong> on algorithmic bias in search engines. <strong>Frank Pasquale</strong> on the black-box society and algorithmic accountability. <strong>Joy Buolamwini</strong> (Algorithmic Justice League) on AI bias and accountability. <strong>Cathy O'Neil</strong> on weapons-of-math-destruction. <strong>Virginia Eubanks</strong> on automated inequality.</p>
+
+    <h3>4. Network theory and complexity</h3>
+    <p><strong>Albert-László Barabási</strong> on scale-free networks. <strong>Duncan Watts</strong> on small-world networks and social cascades. <strong>Geoffrey West</strong> on scale-laws in complex systems. <strong>Stuart Kauffman</strong> on the adjacent possible and self-organizing systems. <strong>Cesar Hidalgo</strong> on the link between information and complexity.</p>
+
+    <h3>5. AI alignment and AI safety</h3>
+    <p><strong>Stuart Russell</strong> (Berkeley) on AI alignment and human-compatible AI. <strong>Anthropic</strong>'s alignment research (Constitutional AI, interpretability work). <strong>Yoshua Bengio</strong> on AI safety governance. <strong>Toby Ord</strong> on existential risk. <strong>MIRI</strong> on agent foundations. The recent (2024-2026) shift toward institutional AI safety has produced substantial literature that overlaps with the framework's internet-as-observer-class reading.</p>
+
+    <h3>6. Internet governance and architecture</h3>
+    <p><strong>Vint Cerf</strong> (Google) on internet protocols and standards. <strong>Milton Mueller</strong> on internet governance institutions. <strong>Laura DeNardis</strong> on internet governance and the global public interest. The IETF, ICANN, W3C as the canonical institutional carriers of global internet canon.</p>
+
+    <h3>What the framework's contribution is</h3>
+    <p>None of the empirical observations in this construct study is original. Internet studies, platform governance research, algorithmic accountability scholarship, and network theory have surfaced the specific phenomena the framework here reads. What the framework adds is the same pattern as in marriage, religion, language, and nation-state construct studies: <strong>a unified vocabulary that lets internet phenomena be read in the same vocabulary as marriage, religion, language, and state phenomena, with cont 22's Kanon/Ina distinction making the cross-domain reading rigorous</strong>. The internet as observer-class is the framework's most ambitious application of the participatory-taxonomy reading (atlas v4 §06) — it's the first non-human observer-class the framework has tried to read in full. Whether the framework's vocabulary survives this stress-test is the empirical question the next decade will answer.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">12</span>Provenance</h2>
+
+    <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 4px; padding: 22px 26px; margin: 28px 0;">
+      <p style="font-family: ui-monospace, Menlo, monospace; font-size: 11px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.12em; margin: 0 0 16px;">Provenance trail · internet_v1</p>
+
+      <p style="margin: 0 0 14px;"><strong>Iteration 0 · seed (Pav).</strong> "for the internet as on observer its gets interesting, what is it's global and local canon, lets blow some bubbles" — and then in the same exchange: "its own page" — confirming that the internet construct study should be its own artifact rather than folded into cont 22. The implicit instruction: model on the prior four construct studies (marriage_v1.html, religion_v1.html, language_v1.html, nation_state_v1.html), apply cont 22's Kanon/Ina vocabulary, treat the internet as a non-human observer-class with its own Kanon and Ina.</p>
+
+      <p style="margin: 0 0 14px;"><strong>Iteration 1 · this v1 page.</strong> First construct study written native to cont 22's vocabulary — Kanon (physical + latent) / Ina (compiler) distinction throughout, cross-observer-class Π<sub>L</sub>, observer-dependence formalized, procedural-drill-down applied. Twelve sections covering: agnostic stance for non-human observer-class; what the internet is in framework vocabulary (observer-class, not tool); the internet's physical Kanon (electromagnetic + photonic + semiconductor + math-substrate); the internet's latent Kanon (embedding manifold + link-graph + algorithmic-feed + viral-cascade); the internet's Ina (A⁺ generate / A⁻ check / Color-Ina transport / Flavor-Ina register-sorting); global canon vs local canon at the internet ring; actor-fingerprint across the six registers (heavy sight + olfactory + oral + excretory; moderate sound; thin touch); the internet's Π<sub>L</sub> with cross-observer-class translation losses; the internet as candidate next-observer-class (testing cont 22 §9); three speculative bubbles (olfactory-dominance hypothesis; A⁻-check-crisis as worked example; ring-7 procedural-lineage extension); adjacent fields with leading figures (Lessig/Benkler/boyd internet studies; Gillespie/Roberts/Keller platform governance; Noble/Pasquale/Buolamwini algorithmic accountability; Barabási/Watts/West network theory; Russell/Anthropic AI safety; Cerf/Mueller/DeNardis internet governance). ~7,000 words.</p>
+
+      <p style="margin: 0; font-size: 13px; color: var(--text-dim); font-style: italic;">No external subagents spawned for this construct study — the material was synthesized from the framework's existing corpus + general knowledge of 2024-2026 internet evolution. Hypothes.is sidebar enabled. Counter-readings from internet-studies scholars, platform-governance researchers, and AI-alignment researchers especially welcome.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="num">13</span>Sources</h2>
+
+    <div class="sources">
+      <h3>Inside the framework</h3>
+      <ul>
+        <li><a href="../continuations/22.md">Continuation 22</a> · the Kanon/Ina distinction this study applies natively (first construct study to do so)</li>
+        <li><a href="../atlas/">Atlas v4</a> · the six sensory registers and actor-fingerprint reading the study uses</li>
+        <li><a href="../continuations/21.md">Continuation 21</a> · push/pull/squeeze/pop + hold + three-layer reading</li>
+        <li><a href="../continuations/20.md">Continuation 20</a> · canon dormancy with imparted learning</li>
+        <li><a href="../continuations/18.md">Continuation 18</a> · procedural lineage (this study tests the cont-22 candidate that lineage extends to ring 7)</li>
+        <li><a href="language_v1.html">Language construct study</a> · the Π<sub>L</sub> projection-operator this study extends to cross-observer-class</li>
+        <li><a href="nation_state_v1.html">Nation-state construct study</a> · companion study at the social-substrate ring; this study sits one ring up</li>
+      </ul>
+
+      <h4>External — internet evolution 2024-2026</h4>
+      <ul>
+        <li><a href="https://transformer-circuits.pub/2024/scaling-monosemanticity/" target="_blank">Anthropic · Scaling Monosemanticity (SAEs)</a> — millions of features mapped in Claude 3 Sonnet, the substrate evidence for the LLM-embedding-manifold latent Kanon</li>
+        <li><a href="https://arxiv.org/html/2502.15603v1" target="_blank">Schut et al. 2025 · "Do multilingual LLMs think in English?"</a></li>
+        <li><a href="https://www.anthropic.com/research/constitutional-classifiers" target="_blank">Anthropic · Constitutional Classifiers (Feb 2025)</a> — frontier A⁻ infrastructure example</li>
+        <li><a href="https://en.wikipedia.org/wiki/Bluesky_Social" target="_blank">Bluesky's AT-protocol federation</a></li>
+        <li><a href="https://blog.cloudflare.com/" target="_blank">Cloudflare blog</a> — infrastructure-level Kanon-stack observability</li>
+        <li><a href="https://opennet.net/" target="_blank">OpenNet Initiative</a> on internet-censorship and filtering</li>
+        <li><a href="https://hbr.org/2024/04/the-ai-act" target="_blank">EU AI Act</a> — governance framework affecting internet-class behavior</li>
+        <li><a href="https://www.icann.org/" target="_blank">ICANN</a> — global internet name-and-address coordination</li>
+        <li><a href="https://datatracker.ietf.org/" target="_blank">IETF</a> — internet standards</li>
+        <li><a href="https://www.commoncrawl.org/" target="_blank">Common Crawl</a> — substrate for internet-corpus analysis</li>
+      </ul>
+
+      <h4>External — internet studies + platform governance + algorithmic accountability</h4>
+      <ul>
+        <li>Lawrence Lessig · <em>Code: And Other Laws of Cyberspace</em> (1999, 2006 v2)</li>
+        <li>Yochai Benkler · <em>The Wealth of Networks</em> (2006)</li>
+        <li>danah boyd · <em>It's Complicated</em> (2014)</li>
+        <li>Manuel Castells · <em>The Rise of the Network Society</em> (1996, 2010)</li>
+        <li>Tarleton Gillespie · <em>Custodians of the Internet</em> (2018)</li>
+        <li>Sarah T. Roberts · <em>Behind the Screen</em> (2019)</li>
+        <li>Safiya Noble · <em>Algorithms of Oppression</em> (2018)</li>
+        <li>Frank Pasquale · <em>The Black Box Society</em> (2015)</li>
+        <li>Joy Buolamwini · <em>Unmasking AI</em> (2023)</li>
+        <li>Cathy O'Neil · <em>Weapons of Math Destruction</em> (2016)</li>
+        <li>Albert-László Barabási · <em>Linked</em> (2002), <em>Network Science</em> (2016)</li>
+        <li>Duncan Watts · <em>Small Worlds</em> (1999), <em>Six Degrees</em> (2003)</li>
+        <li>Stuart Russell · <em>Human Compatible</em> (2019)</li>
+        <li>Laura DeNardis · <em>The Internet in Everything</em> (2020)</li>
+      </ul>
+    </div>
+
+    <p style="margin-top: 22px; font-size: 13px; color: var(--text-dim); font-style: italic;">Hypothes.is sidebar enabled. Counter-readings from internet-studies scholars, platform-governance researchers, AI-alignment researchers, and from anyone who works inside the internet observer-class daily and reads it differently from how the framework reads it from outside — all welcome.</p>
+  </div>
+</section>
+
+<footer class="page-footer">
+  <div class="wrap-wide">
+    Agnostic Framework · Construct studies · internet v1 · 2026-05-21 · first study native to cont 22 · <a href="../index.html">live site</a> · <a href="https://github.com/a70m123r/agnostic-framework">github</a>
+  </div>
+</footer>
+
+</body>
+</html>
