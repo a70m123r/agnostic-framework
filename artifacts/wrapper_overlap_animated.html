@@ -102,7 +102,7 @@
   </div>
 
   <header class="hero">
-    <p class="kicker">Animated diagram · 2026-05-27 · v16</p>
+    <p class="kicker">Animated diagram · 2026-05-28 · v17.1 · frequency-mediated interaction · cymatics as <strong>Tier 2 candidate</strong> convergence #8 (<a href="../readings/2026-05-28_cymatic_harmonic_structure_in_social_systems.md">Reading 06</a> · <a href="../audits/v05.md">audit v05</a>)</p>
     <h1>Wrapper overlap — one system with phases</h1>
     <p class="dek">Two parent observer wrappers (W_A and W_B) expand from <em>anchored-but-not-fixed</em> centres in <strong>L0 — global compiled canon</strong>, the medium everything in the frame needs (including the observer reading this). Wrappers are <em>fields, not sharp edges</em> — the visible )( arcs are level-sets of the underlying field; the soft halo around each shows the field extends beyond. <strong>v13:</strong> wobble is asymmetric — W_A faster and larger (imposing), W_B slower and phase-shifted (responding). The <strong>point-cloud view</strong> renders each wrapper as a field of particles with spring physics — the membrane is what emerges when you tune the density, not a line drawn over the top. Conceptually a 2D slice of a 3D wavelet point cloud. <strong>v14:</strong> the clouds behave as a fluid sim — each particle still bound to its centre by a spring, but particles also push on each other (repulsion) and exchange velocity (viscosity). Intra-wrapper prevents clustering; inter-wrapper makes the membranes slide past each other with real friction. <strong>v15:</strong> three refinements. (1) <em>Point size scales with wrapper radius</em> — wrapper expansion is latent (not balloon-like adding mass), so the same material becomes more legible at scale; sparse at small radius, denser dots at full expansion. (2) <em>W_C is now its own point cloud</em>, in canon-yellow, <strong>spawned</strong> from the A×B contact zone — particles are birthed at the midpoint of close A-B pairs (inheriting their blended velocity) and drift outward to anchor on the W_C circle. (3) The fluid sim is now <em>three-way</em> — intra-C cohesion, plus A×C and B×C interaction passes so all three clouds occupy the same space, push on each other, and connect while each remains anchored to its own centre. Centres oscillate under wake-phase pressure; ghost markers show where centres would sit without contact. The frame has three canon levels: <strong>top canon</strong> above, <strong>centre canon</strong> in the middle (where the overlap plays out), <strong>sub canon</strong> below. Non-additive latent math: (1+1) = 3 when emergent; 1⁺ when W_C supersedes; 1⁻ when the bridge breaks apart. <strong>Why the wrappers don't expand forever:</strong> every wrapper carries infinite-expansion inertia into other dimensions — bounded only by L0's evolved failsafes (the internal and external pressures you see negotiating at the contact zone).</p>
     <p class="meta">Toggle Mapping for Framework / LCAO / Model Merging labels. View switches between arcs (level-sets), point cloud (field), or both layered. Cloud density tunes particle count per wrapper. Friction tunes pairwise interaction strength — at 0 each particle only feels its anchor spring; at 1 particles strongly repel and drag each other. Compatibility modulates bridge viability — set low and the cycle stalls at wake. <strong>Try the Speed slider:</strong> the slower you watch, the more legible the membrane friction and W_C spawning become — time is a fidelity quantifier (<a href="../continuations/26.md">cont 26 §4</a>). At very slow / very fast settings the equilibria themselves shift — the slider changes the action, not just the view (<a href="../readings/2026-05-27_bortolotti_time_uncertainty.md">Reading 04</a> maps this against the physics of quantum-collapse-induced time uncertainty).</p>
@@ -110,7 +110,8 @@
 
   <div class="widget-mount">
     <div class="wos9-root">
-      <p class="wos9-title">Wrapper overlap — v16 · three-way fluid sim · ACMP-force overlay · spawn-flash for W_C conception</p>
+      <p class="wos9-title">Wrapper overlap — v17.1 · frequency-mediated interaction · harmonic-ratio compatibility (cymatics as <strong>Tier 2 candidate</strong> convergence #8 — Reading 06)</p>
+      <p style="text-align:center;color:#9ca3af;font-size:11px;font-style:italic;margin:-6px 0 8px;line-height:1.4;">Demo illustrates the hypothesis · cannot test it · see <a href="../continuations/27.md" style="color:#9ca3af;">cont 27 §2</a> for tier discipline · audit corrections per <a href="../audits/v05.md" style="color:#9ca3af;">v05</a> · LCAO analogy is qualitative · consonance model is a folk proxy (not Sethares-grade)</p>
       <p class="wos9-math" id="wos9-math">1 + 1 = 2</p>
       <p class="wos9-mathnote">layout in %, state from formula cascade, dynamic spans full width, phases below, mappings panel at bottom</p>
 
@@ -132,7 +133,22 @@
         <label>Cloud density <input type="range" id="v13-density" min="20" max="140" step="10" value="60"/><span id="v13-densityval">60</span></label>
         <label>Friction <input type="range" id="v14-friction" min="0" max="1" step="0.05" value="0.5"/><span id="v14-frictionval">0.50</span></label>
         <label><input type="checkbox" id="v16-show-forces"/> Show ACMP forces</label>
+        <label>Harmonic preset <select id="v17-preset">
+          <option value="custom">— custom (set via sliders below) —</option>
+          <option value="unison">1:1 unison (merger)</option>
+          <option value="octave" selected>1:2 octave (strong W_C)</option>
+          <option value="fifth">2:3 perfect fifth (constructive-interference regime)</option>
+          <option value="fourth">3:4 perfect fourth</option>
+          <option value="majthird">4:5 major third</option>
+          <option value="beat">1:1.05 beat frequency</option>
+          <option value="tritone">1:1.414 tritone (√2 — inharmonic, diabolus)</option>
+          <option value="inharmonic">13:7 inharmonic (chaos)</option>
+        </select></label>
+        <label>f_A <input type="range" id="v17-fa" min="0.4" max="2.0" step="0.05" value="1.0"/><span id="v17-faval">1.00</span></label>
+        <label>f_B/f_A ratio <input type="range" id="v17-ratio" min="0.5" max="3.0" step="0.01" value="2.0"/><span id="v17-ratioval">2.00</span></label>
+        <label><input type="checkbox" id="v17-show-pulse" checked/> Show pulsing</label>
       </div>
+      <p class="wos9-phase" id="v17-harmonic" style="text-align:center;color:#fbbf24;font-family:Georgia,serif;font-size:13px;font-style:italic;margin:0 0 12px;">HARMONIC: 1:2 octave · consonant (W_C stable)</p>
       <p class="wos9-phase" id="wos9-phase">PHASE: PRE-OVERLAP</p>
       <p class="wos9-detail" id="wos9-detail">two small )( arcs · fronts already facing each other · backs fading into unobservable</p>
 
@@ -406,7 +422,7 @@
 
 <footer>
   <div class="wrap">
-    Agnostic Framework · wrapper overlap · animated v16 · 2026-05-27 · <a href="../index.html">live site</a> · <a href="https://github.com/a70m123r/agnostic-framework">github</a>
+    Agnostic Framework · wrapper overlap · animated v17 · 2026-05-28 · <a href="../index.html">live site</a> · <a href="https://github.com/a70m123r/agnostic-framework">github</a>
   </div>
 </footer>
 
@@ -546,7 +562,12 @@
     const overlap = Math.max(0, 2 * r - distance);
     const contact = sigmoid(overlap * 50 - 1);
     const negotiation = bell(contact - 0.4, 0.18) * sigmoid((T - 0.30) * 30);
-    const emergence = sigmoid((contact - 0.5) * 12) * sigmoid((T - 0.40) * 8) * compatibility;
+    // v17: harmonic-ratio compatibility modulates the effective compatibility used by emergence.
+    // userCompat * harmonicCompat. Default ratio 2:1 (octave) → harmonicCompat = 1.0 → behaves like v16.
+    // Inharmonic ratio → harmonicCompat ≈ 0.15 → emergence collapses; W_C never consolidates.
+    const _v17Harm = harmonicCompatibility(ratio);
+    const _effectiveCompat = compatibility * _v17Harm.compatibility;
+    const emergence = sigmoid((contact - 0.5) * 12) * sigmoid((T - 0.40) * 8) * _effectiveCompat;
     const maturity = sigmoid((T - 0.58) * 7) * emergence;
     const rC_x = LAYOUT.rC_max_x * maturity, rC_y = LAYOUT.rC_max_y * maturity;
     const wakeVis = sigmoid((contact - 0.15) * 12) * (1 - sigmoid((T - 0.45) * 12));
@@ -767,7 +788,7 @@
     requestAnimationFrame(frame);
   }
   playBtn.addEventListener('click', () => { isPaused = !isPaused; playBtn.textContent = isPaused ? '▶ PLAY' : '⏸ PAUSE'; });
-  resetBtn.addEventListener('click', () => { cycleT = 0; manualPhase = null; jumpBtns.forEach(b => b.classList.remove('active')); });
+  resetBtn.addEventListener('click', () => { cycleT = 0; v17Phase = 0; manualPhase = null; jumpBtns.forEach(b => b.classList.remove('active')); });
   speedSlider.addEventListener('input', e => { speed = parseFloat(e.target.value); speedVal.textContent = speed.toFixed(2).replace(/\.?0+$/, '') + 'x'; });
   compatSlider.addEventListener('input', e => { compatibility = parseFloat(e.target.value); compatVal.textContent = compatibility.toFixed(2); });
   mappingSelect.addEventListener('change', e => { currentMapping = e.target.value; });
@@ -789,16 +810,89 @@
   const frictionSlider = document.getElementById('v14-friction');
   const frictionVal = document.getElementById('v14-frictionval');
   const showForcesCheck = document.getElementById('v16-show-forces');
+  // v17 — frequency-mediated interaction (cymatics as cross-substrate convergence #8, Reading 06)
+  const v17PresetSelect = document.getElementById('v17-preset');
+  const v17FaSlider     = document.getElementById('v17-fa');
+  const v17FaVal        = document.getElementById('v17-faval');
+  const v17RatioSlider  = document.getElementById('v17-ratio');
+  const v17RatioVal     = document.getElementById('v17-ratioval');
+  const v17ShowPulse    = document.getElementById('v17-show-pulse');
+  const v17HarmonicLbl  = document.getElementById('v17-harmonic');
   let particleCount = 60;
   let viewMode = 'arcs';
   let friction = 0.5;          // v14 — pairwise interaction strength (fluid-sim)
   let showForces = false;      // v16 — toggle force-decomposition overlay
+  // v17 frequency state
+  let fA = 1.0;                // base frequency for W_A (Hz-equivalent, scaled to simulation rate)
+  let ratio = 2.0;             // f_B / f_A
+  let showPulse = true;        // toggle for visible radial pulsation
   const pointsA = [];
   const pointsB = [];
   const pointsC = [];          // v15 — third cloud (emergent W_C), spawned from contact zone
   let activeCountC = 0;        // v15 — number of currently-spawned C particles
   const R_BASELINE = 80;       // v15 — px reference radius for point-size scaling (latent expansion)
   const SPAWN_FLASH_FRAMES = 24; // v16 — duration of spawn-flash halo for new C particles
+  let v17Phase = 0;            // accumulates over time for pulse rendering
+
+  // v17: harmonic-ratio compatibility — consonant ratios produce stable W_C, dissonant produce break-apart
+  // Returns object: { compatibility: 0..1, label: string, classification: 'unison'|'consonant'|'dissonant'|'inharmonic' }
+  //
+  // NOTE (audit v05, F8): this is a FOLK CONSONANCE PROXY, not a consonance model.
+  // The 30+ years of formal consonance research (Plomp-Levelt 1965 critical-band model,
+  // Sethares 1993 dissonance curves, Tenney harmonic distance, Stolzenburg relative periodicity)
+  // all compute consonance from the SPECTRUM of the tones, not from the bare fundamental ratio.
+  // This function has no spectrum at all. It is a teaching caricature kept here to illustrate
+  // the framework's wrapper-overlap claim, not to model consonance rigorously.
+  function harmonicCompatibility(r) {
+    // Normalize sub-unison ratios so 0.5 reads as octave-down etc. (audit v05 F12)
+    const rEff = r >= 1.0 ? r : 1.0 / r;
+    // (1) Explicit inharmonic anchors checked FIRST — fixes audit v05 F1
+    // 13/7 ≈ 1.857 was previously snapping to octave 2.0 within 7.14% and getting
+    // classified as 'beating octave' instead of inharmonic. The √2 tritone was
+    // landing near minor sixth 1.6. Both should be inharmonic by construction.
+    const inharmonicAnchors = [
+      { r: 13/7,         name: '13:7' },
+      { r: Math.sqrt(2), name: '√2 (tritone)' },
+      { r: 7/5,          name: '7:5 septimal tritone' },
+      { r: 11/8,         name: '11:8 (undecimal)' },
+    ];
+    for (const a of inharmonicAnchors) {
+      if (Math.abs(rEff - a.r) / a.r < 0.015) {
+        return { compatibility: 0.15, label: `inharmonic (${a.name})`, classification: 'inharmonic' };
+      }
+    }
+    // Snap-distance to nearest small-integer ratio (consonance proxy)
+    const consonantRatios = [
+      { r: 1.0,    name: 'unison',           class: 'unison',     compat: 0.55 }, // merger — no W_C
+      { r: 2.0,    name: 'octave',           class: 'consonant',  compat: 1.00 },
+      { r: 1.5,    name: 'perfect fifth',    class: 'consonant',  compat: 0.95 },
+      { r: 1.333,  name: 'perfect fourth',   class: 'consonant',  compat: 0.85 },
+      { r: 1.25,   name: 'major third',      class: 'consonant',  compat: 0.75 },
+      { r: 1.667,  name: 'major sixth',      class: 'consonant',  compat: 0.70 },
+      { r: 1.2,    name: 'minor third',      class: 'consonant',  compat: 0.65 },
+      { r: 1.6,    name: 'minor sixth',      class: 'consonant',  compat: 0.60 },
+      { r: 3.0,    name: 'twelfth (3:1)',    class: 'consonant',  compat: 0.80 },
+    ];
+    let best = null, bestDelta = Infinity;
+    for (const c of consonantRatios) {
+      const delta = Math.abs(rEff - c.r) / c.r;
+      if (delta < bestDelta) { bestDelta = delta; best = c; }
+    }
+    // Within ~2.5% of a consonant → use it
+    if (bestDelta < 0.025) {
+      return { compatibility: best.compat, label: best.name, classification: best.class };
+    }
+    // Dissonant beat region tightened from 12% to 6% per audit v05 F1/F3
+    if (bestDelta < 0.06) {
+      return {
+        compatibility: 0.35 + (0.025 / Math.max(bestDelta, 0.001)) * 0.1,
+        label: `~${best.name} (beating, Δ=${(bestDelta*100).toFixed(1)}%)`,
+        classification: 'dissonant'
+      };
+    }
+    // Far-from-consonant → inharmonic
+    return { compatibility: 0.15, label: `inharmonic (${rEff.toFixed(3)}:1)`, classification: 'inharmonic' };
+  }
 
   function angularPointSize(angle, contactAngle, sizeMul) {
     // Denser/larger at front (near contact direction), sparser at back — matches )( open-arc semantics
@@ -1035,6 +1129,21 @@
       }
     }
 
+    // v17.1 (audit v05 F2): zero-mean radial breathing — clouds breathe IN and OUT, not just out.
+    // Previously `2.0 + 1.5 * sin(...)` had range [+0.5, +3.5] — always-positive, so particles
+    // only expanded outward. Now `PULSE_AMPL * sin(...)` has range [-3.5, +3.5] — true breathing.
+    const PULSE_AMPL = 3.5;
+    v17Phase += 0.06;
+    const pulseA_amp = showPulse ? (PULSE_AMPL * Math.sin(v17Phase * fA)) : 0;
+    const pulseB_amp = showPulse ? (PULSE_AMPL * Math.sin(v17Phase * fA * ratio + Math.PI * 0.25)) : 0;
+    // For W_C: pulse at the carrier (f_A + f_B)/2 — the period of the COMBINED waveform,
+    // which is structurally meaningful (true mid-frequency of the interference) rather than
+    // the beat envelope. Audit v05 F9 flagged the previous beat-frequency choice as internally
+    // inconsistent (dissonant → faster pulse but weaker existence). Carrier-frequency pulse
+    // keeps W_C visually anchored to the parents' combined signal regardless of consonance.
+    const carrierFreq = (fA + fA * ratio) / 2;
+    const pulseC_amp = showPulse ? (PULSE_AMPL * Math.sin(v17Phase * carrierFreq)) : 0;
+
     // Phase 3: damping + position integration + render
     for (let i = 0; i < particleCount; i++) {
       const pA = pointsA[i];
@@ -1044,16 +1153,26 @@
       pB.vel.x *= damping; pB.vel.y *= damping;
       pA.pos.x += pA.vel.x; pA.pos.y += pA.vel.y;
       pB.pos.x += pB.vel.x; pB.pos.y += pB.vel.y;
-      // Render A & B with size scaled by wrapper radius
+      // v17: pulse offset along the radial direction from the cluster centre to the particle.
+      // Tiny visible breathing of the cloud at its wrapper's frequency.
+      const aDx = pA.pos.x - cxA, aDy = pA.pos.y - cy;
+      const aLen = Math.hypot(aDx, aDy) || 1;
+      const aPx = (aDx / aLen) * pulseA_amp;
+      const aPy = (aDy / aLen) * pulseA_amp;
+      const bDx = pB.pos.x - cxB, bDy = pB.pos.y - cy;
+      const bLen = Math.hypot(bDx, bDy) || 1;
+      const bPx = (bDx / bLen) * pulseB_amp;
+      const bPy = (bDy / bLen) * pulseB_amp;
+      // Render A & B with size scaled by wrapper radius + v17 pulse offset
       const sizeA = angularPointSize(pA.angle, 0, sizeMulAB);
       const sizeB = angularPointSize(pB.angle, Math.PI, sizeMulAB);
       const elA = cloudGroupA.children[i];
       const elB = cloudGroupB.children[i];
-      elA.setAttribute('cx', pA.pos.x.toFixed(1));
-      elA.setAttribute('cy', pA.pos.y.toFixed(1));
+      elA.setAttribute('cx', (pA.pos.x + aPx).toFixed(1));
+      elA.setAttribute('cy', (pA.pos.y + aPy).toFixed(1));
       elA.setAttribute('r', sizeA);
-      elB.setAttribute('cx', pB.pos.x.toFixed(1));
-      elB.setAttribute('cy', pB.pos.y.toFixed(1));
+      elB.setAttribute('cx', (pB.pos.x + bPx).toFixed(1));
+      elB.setAttribute('cy', (pB.pos.y + bPy).toFixed(1));
       elB.setAttribute('r', sizeB);
       // v15: render C particles (active only)
       const elC = cloudGroupC.children[i];
@@ -1061,10 +1180,15 @@
       if (pC.active && pC.pos) {
         pC.vel.x *= damping; pC.vel.y *= damping;
         pC.pos.x += pC.vel.x; pC.pos.y += pC.vel.y;
+        // v17: pulse offset for C — at beat frequency (interference signature)
+        const cDx = pC.pos.x - cxC, cDy = pC.pos.y - cyC;
+        const cLen = Math.hypot(cDx, cDy) || 1;
+        const cPx = (cDx / cLen) * pulseC_amp;
+        const cPy = (cDy / cLen) * pulseC_amp;
         // C is yellow and slightly larger — emergent wrapper, more prominent visual weight
         const sizeC = angularPointSize(pC.angle, 0, sizeMulC) * 1.15;
-        elC.setAttribute('cx', pC.pos.x.toFixed(1));
-        elC.setAttribute('cy', pC.pos.y.toFixed(1));
+        elC.setAttribute('cx', (pC.pos.x + cPx).toFixed(1));
+        elC.setAttribute('cy', (pC.pos.y + cPy).toFixed(1));
         elC.setAttribute('r', sizeC);
         elC.setAttribute('opacity', '0.85');
         // v16: spawn-flash halo — visualizes the Allen-Cahn phase-separation moment
@@ -1175,8 +1299,60 @@
     applyViewMode();
   });
 
+  // ============================================================
+  // v17 — frequency-mediated wrapper interaction (cymatics as cross-substrate convergence #8)
+  // ============================================================
+  const V17_PRESETS = {
+    custom:     null,
+    unison:     { fa: 1.0, ratio: 1.0 },
+    octave:     { fa: 1.0, ratio: 2.0 },
+    fifth:      { fa: 1.0, ratio: 1.5 },
+    fourth:     { fa: 1.0, ratio: 1.333 },
+    majthird:   { fa: 1.0, ratio: 1.25 },
+    beat:       { fa: 1.0, ratio: 1.05 },
+    tritone:    { fa: 1.0, ratio: 1.414 },
+    inharmonic: { fa: 1.0, ratio: 13/7 },
+  };
+  function applyV17Preset(key) {
+    // v17.1 (audit v05 F7): "custom" is a display label meaning "user has set sliders manually."
+    // Selecting it from the dropdown is intentionally a no-op — the dropdown's job is to either
+    // (a) load a named preset, or (b) show "— custom —" when the user has departed from any preset.
+    // The dropdown label hints at this: "— custom (set via sliders below) —".
+    if (key === 'custom') return; // documented no-op
+    const p = V17_PRESETS[key];
+    if (!p) return;
+    fA = p.fa; ratio = p.ratio;
+    v17FaSlider.value = fA; v17FaVal.textContent = fA.toFixed(2);
+    v17RatioSlider.value = ratio; v17RatioVal.textContent = ratio.toFixed(2);
+    updateHarmonicLabel();
+  }
+  function markV17Custom() {
+    if (v17PresetSelect.value !== 'custom') v17PresetSelect.value = 'custom';
+  }
+  function updateHarmonicLabel() {
+    const h = harmonicCompatibility(ratio);
+    const verdict = h.classification === 'consonant' ? 'W_C stable' :
+                    h.classification === 'dissonant' ? 'W_C wobbles · beats' :
+                    h.classification === 'unison'    ? 'wrappers may merge (no distinct W_C)' :
+                                                       'W_C breaks · chaotic';
+    const colour =  h.classification === 'consonant' ? '#4ade80' :
+                    h.classification === 'unison'    ? '#93c5fd' :
+                    h.classification === 'dissonant' ? '#fbbf24' :
+                                                       '#f87171';
+    v17HarmonicLbl.textContent = `HARMONIC: ${ratio.toFixed(3)}:1 · ${h.label} · compat ${h.compatibility.toFixed(2)} · ${verdict}`;
+    v17HarmonicLbl.style.color = colour;
+  }
+  v17PresetSelect.addEventListener('change', e => { applyV17Preset(e.target.value); });
+  v17FaSlider.addEventListener('input', e => { fA = parseFloat(e.target.value); v17FaVal.textContent = fA.toFixed(2); markV17Custom(); updateHarmonicLabel(); });
+  v17RatioSlider.addEventListener('input', e => { ratio = parseFloat(e.target.value); v17RatioVal.textContent = ratio.toFixed(2); markV17Custom(); updateHarmonicLabel(); });
+  v17ShowPulse.addEventListener('change', e => { showPulse = e.target.checked; });
+  updateHarmonicLabel(); // initial render
+
+  // ============================================================
   // Hook cloud update into the frame loop by patching renderState & renderBranch
-  // v15: also pass W_C centre/radius/alpha so the third cloud can spawn from the contact zone
+  // (restored from pre-v17 baseline + preserved as-is for v17 — pulse offsets are
+  // applied inside updateCloud's particle integration loop, not at the hook site)
+  // ============================================================
   const _origRenderState = renderState;
   renderState = function(state) {
     _origRenderState(state);

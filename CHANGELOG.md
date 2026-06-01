@@ -8,6 +8,76 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-05-31 (Audit v05 + v17.1 discipline correction — audit-driven fixes to wrapper_overlap_animated.html)
+
+### Added (audits/v05.md, ~6,000 words)
+- **Pav's steer:** "can you run an audit with the latest opus 4.8" → clarified current Opus is 4.6/4.7 → "Opus subagent + verification subagent in parallel (most rigorous)" → "lets do the audit first fixes after."
+- **Two opus subagents** ran in parallel on v17 of `wrapper_overlap_animated.html` — one on code/integration soundness, one on claim-validity/cross-substrate accuracy. Five-point convergence between independent audits on critical findings.
+- **Headline finding:** v17 ships with three classes of real problem — a critical code bug (inharmonic preset 13/7 was silently misclassified as 'dissonant' because it fell within 12% of octave anchor 2.0), a critical discipline slide (banner `cymatics = convergence #8` with `=` sign deletes Reading 06's Tier 2 conditional — exactly the cont 27 §2 named failure mode (i)), and an LCAO analogy that a physical chemist would reject.
+- **Substantive cross-substrate finding:** cymatics is substrate-adjacent (eigenmode formation under three-force balance) but not yet structurally isomorphic to the existing seven convergences (parents-produce-distinct-W_C structural element is missing in the Chladni-style imagery v17 evokes). The correct structural analog is coupled-oscillator normal-mode-splitting, which the framework owes itself a worked example in before convergence #8 can stand at full strength.
+- **Fringe exclusion holds:** no 528 Hz, no sacred geometry, no Vedic-internet anywhere in the artifact. Hardest framework-discipline test in this substrate (cymatic genre dominated by woo) — passed.
+- **v16-equivalence at default state preserved:** `harmonicCompatibility(2.0).compatibility = 1.0`. Zero regression risk for users who don't touch the harmonic controls.
+
+### Fixed (artifacts/wrapper_overlap_animated.html — v17.1 — audit-driven discipline correction)
+- **F1 (critical) — Inharmonic preset misclassification.** Added explicit inharmonic anchor list (13/7, √2, 7/5, 11/8) checked BEFORE consonant snap; tightened dissonant threshold from 12% to 6%. Both `inharmonic (13:7)` and `tritone (√2)` presets now correctly classify as `inharmonic` and gate W_C emergence at compat=0.15. Empirically verified in node.
+- **F2 (critical) — Zero-mean pulse.** Replaced `2.0 + 1.5 * sin(...)` with `PULSE_AMPL * sin(...)` where PULSE_AMPL=3.5. Clouds now breathe IN and OUT (range [−3.5, +3.5] px) instead of only expanding outward (previous range [+0.5, +3.5] px). W_C pulse rate changed from beat-frequency to carrier-frequency (f_A+f_B)/2 — structurally meaningful (period of combined waveform) and resolves the internal inconsistency where dissonant ratios gave both faster-pulse and weaker-existence simultaneously.
+- **F3 (critical, discipline) — Banner Tier 2 → Tier 1 slide.** Widget title changed from `cymatics = cross-substrate convergence #8` to `cymatics as Tier 2 candidate convergence #8 — Reading 06`. The `=` sign that deleted Reading 06's conditional has been replaced with explicit tier-tag. Cont 27 §2 failure mode (i) corrected.
+- **F4 (critical, discipline) — Kicker tier-tag.** Hero kicker changed from `cymatics as cross-substrate convergence #8` to `cymatics as Tier 2 candidate convergence #8` with links to Reading 06 and audit v05.
+- **F5 (important, discipline) — LCAO preset label overclaim.** Changed `2:3 perfect fifth (LCAO bonding analog)` to `2:3 perfect fifth (constructive-interference regime)`. The LCAO bonding mechanism (spatial wavefunction symmetric overlap at fixed energy) is not the same phenomenon as commensurate frequency ratio — a physical chemist would reject the structural analogy in 60 seconds. Both phenomena involve "wave superposition" loosely; the framework keeps that qualitative parallel but no longer asserts structural identity at the preset label.
+- **F5b (related) — Tritone label corrected.** Changed `tritone (diabolus)` to `tritone (√2 — inharmonic, diabolus)` to make the √2 → inharmonic classification visible at the dropdown.
+- **F6 (important) — Caveat banner added.** New italic gray line under the widget title: `Demo illustrates the hypothesis · cannot test it · see cont 27 §2 for tier discipline · audit corrections per v05 · LCAO analogy is qualitative · consonance model is a folk proxy (not Sethares-grade)`.
+- **F7 (important) — Custom-dropdown trap.** `applyV17Preset('custom')` now has explicit early-return with documented intent; dropdown label clarified to `— custom (set via sliders below) —` so users understand it is a status indicator, not a clickable preset.
+- **Bonus: F-I6 — Reset button.** Reset now also clears `v17Phase`, so the pulse phase no longer carries state across user reset cycles.
+- **Bonus: F-I8 — harmonicCompatibility documented as folk proxy.** Added prominent NOTE comment block referencing Plomp-Levelt 1965, Sethares 1993, Tenney harmonic distance, Stolzenburg as the formal literature this function does NOT implement.
+
+### Why this matters
+- **Cost: ~15 minutes. Discipline value: substantial.** The most-credibility-affecting issue (banner `=` sign) was one text edit. The most-credibility-affecting code bug (inharmonic preset silently dissonant) was a few lines of new logic. Both shipped before v17 propagated externally via outreach.
+- **The audit-driven discipline cycle worked as designed.** Framework's own discipline document (cont 27 §2) names failure mode (i) — v17 committed it at the banner — audit v05 caught it — v17.1 corrected it. This is exactly the Lakatosian positive heuristic the framework claims discriminates viable observer-classes: applied to its own canon.
+- **Substantive finding (cymatics as substrate-adjacent not isomorphic) deferred to Reading 06 amendment (task #154).** The artifact-level fixes ship now; the Reading-level amendment narrowing the convergence-#8 claim is the next round.
+
+### Carry-forward
+- **Task #154 [QUEUED]:** Reading 06 amendment narrowing the cymatics-as-convergence-#8 claim per audit v05 §3/§11 substantive finding (substrate-adjacency-not-isomorphism, coupled-oscillator worked example as new open edge).
+- **Task #155 [QUEUED]:** Audit v06 — cont-17 through cont-28 spree assessment that audit v05 §8 deferred (scope of v05 was v17 specifically).
+- **Tier 2 fixes (F8-F13) carried forward to next round** — rename `harmonicCompatibility` to `folkConsonanceProxy`, tighten consonant snap from 2.5% to ≤0.5%, replace tritone preset value 1.414 with explicit `2^(6/12) (equal-tempered)` label or 7:5 just-intonation alternative, add "Cymatics" entry to mapping toggle dropdown.
+
+---
+
+## 2026-05-28 (Diagram 07 v17 — frequency-mediated W_A/W_B/W_C interaction · harmonic-ratio compatibility · cymatics-as-convergence-#8 made visible)
+
+### Updated (artifacts/wrapper_overlap_animated.html — v17 layer added)
+- **Pav's steer:** "ok lets do 1 and queue the others" — chose to ship v17 first while queueing the 1/f-as-failsafe-signature operationalization (task #150) and the RC-Koopman pilot study (task #151) as later work.
+- **Three new UI controls added to the control bar:**
+  1. **Harmonic preset dropdown** — 8 musical-interval presets: unison (1:1, merger), octave (1:2, strong W_C — the default), perfect fifth (2:3, LCAO bonding analog), perfect fourth (3:4), major third (4:5), beat frequency (1:1.05), tritone (1:1.414 "diabolus"), inharmonic (7:13 chaos). Plus "— custom —" mode for slider tweaking.
+  2. **f_A slider** — base frequency for W_A (0.4–2.0 range)
+  3. **f_B/f_A ratio slider** — the harmonic ratio (0.5–3.0 range), with snap-to-consonant detection within 2.5%
+  4. **Show pulsing checkbox** — toggle for visible radial pulsation of clouds at their wrapper frequency (default on)
+- **New harmonic-readout banner** under the controls: live "HARMONIC: X.XX:1 · {label} · compat C · {verdict}" with colour-coded verdict (green=consonant/W_C-stable, blue=unison/merger, yellow=dissonant/beats, red=inharmonic/chaos).
+- **Harmonic compatibility computation** — `harmonicCompatibility(ratio)` function maps any ratio to a compatibility ∈ [0.15, 1.00] by computing relative distance to the consonant-ratio set; within 2.5% → consonant (compat 0.55–1.00 depending on which); within 12% → dissonant beat-frequency region (compat 0.35–0.45); beyond 12% → inharmonic (compat 0.15).
+- **Harmonic compatibility multiplies the existing compatibility slider** in `computeState`: `effectiveCompat = userCompat * harmonicCompat`. This means inharmonic ratios collapse emergence regardless of user compatibility setting — W_C never consolidates. Consonant ratios (especially octave) let W_C emerge as expected. The existing Compatibility slider now functions as a global multiplier on the harmonic-driven base.
+- **Pulse rendering** — each particle gets a small radial offset (~±3.5 px) at its wrapper's frequency. W_A pulses at f_A; W_B pulses at f_B = f_A × ratio (with phase offset for visual interest); W_C pulses at the **beat frequency |f_A − f_B|** — the interference signature of the two parents. Default `showPulse = true`; can be toggled off.
+- **Hero kicker, title-bar, footer updated to v17.** Title now reads "Wrapper overlap — v17 · frequency-mediated interaction · harmonic-ratio compatibility (cymatics = cross-substrate convergence #8, Reading 06)."
+
+### Why this matters
+- **v17 makes Reading 06's cymatics-as-convergence-#8 visible.** The Tier 2 candidate (cymatic substrate is the eighth instance of the three-force decomposition) was previously text-only in Reading 06. Now there's a working artifact where the user can hear-by-seeing the difference between consonant and dissonant ratios producing different W_C outcomes.
+- **The compatibility slider gains physical interpretation.** Previously a free abstract parameter ("bridge viability multiplier"); now grounded in harmonic-ratio compatibility. This addresses the v9 era concern that compatibility was arbitrary.
+- **Direct LCAO analogy demonstrated.** Convergence #1 (LCAO bonding/antibonding) is exactly harmonic phase-matching. Selecting the "perfect fifth (2:3)" preset shows W_C consolidating cleanly — the same phase-matching that produces stable molecular bonds. Selecting "tritone (1:√2)" shows W_C breaking — analogous to antibonding interference. This is the diagram showing convergence #1 and convergence #8 simultaneously.
+- **Five new presets give experiential teaching moments**:
+  - **1:2 octave** (default) — strong stable W_C; cleanest demonstration
+  - **2:3 perfect fifth** — slightly weaker but still stable W_C; the classic music-theory consonance
+  - **1:1 unison** — wrappers may merge; no distinct W_C emerges (union case)
+  - **1:1.05 beat frequency** — visible beats; W_C wobbles; demonstrates dissonance as "near-miss" rather than chaos
+  - **7:13 inharmonic** — W_C never forms; pure chaos; demonstrates substrate failure
+
+### Pav's queued items
+- **Task #150 [QUEUED]**: operationalize 1/f-as-L0-failsafe-signature testable prediction. Reading 06 §10.3 surfaced this Tier 2 candidate; queued for later work.
+- **Task #151 [QUEUED]**: pilot study attempt — RC-Koopman on a real socio-political latent embedding (cultural-eigenmode candidate, promotion bar A). The lowest-friction path to advancing the new Tier 3 entry to Tier 2.
+
+### Carry-forward
+- **v18 candidates**: render visible beats / standing-wave nodes in the contact zone explicitly (currently pulse is implicit; could be made richer); cymatic-pattern visualization on a Chladni-style "plate" overlay showing what the f_A:f_B ratio produces at the contact zone
+- Consider exposing f_A and ratio in the JSON endpoints (currently only static config; would let agent-substrate consumers query "what harmonic ratio is currently set"); low priority
+
+---
+
 ## 2026-05-28 (Reading 06 — cymatic/harmonic structure in social systems · 4 parallel subagents · cymatics as cross-substrate convergence #8 + new Tier 3 candidate)
 
 ### Added (readings/2026-05-28_cymatic_harmonic_structure_in_social_systems.md, ~5,500 words)
