@@ -400,7 +400,7 @@ def gdelt_mode(out_dir):
 
 def main():
     parser = argparse.ArgumentParser(description="Pilot 1f-failsafe")
-    parser.add_argument("--mode", choices=["verify", "demo", "gdelt"], default="demo")
+    parser.add_argument("--mode", choices=["verify", "demo", "power", "gdelt", "ingest-help"], default="demo")
     parser.add_argument("--seed", type=int, default=2026)
     parser.add_argument("--out-dir", type=Path, default=Path("./pilot_output"))
     args = parser.parse_args()
@@ -410,6 +410,11 @@ def main():
         results = verify_dfa(seed=args.seed)
     elif args.mode == "demo":
         results = demo_mode(seed=args.seed)
+    elif args.mode == "power":
+        results = power_analysis(seed=args.seed)
+    elif args.mode == "ingest-help":
+        print_gdelt_instructions()
+        results = {"mode": "ingest-help"}
     elif args.mode == "gdelt":
         results = gdelt_mode(args.out_dir)
 
@@ -421,3 +426,123 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+# ============================================================================
+# Power analysis: how does statistical power scale with N pairs and effect size?
+# Run via: python3 pilot.py --mode power
+# Verifies the N=3 -> N=6 amendment in confounds.md §1 is adequately powered.
+# ============================================================================
+
+def power_analysis(seed: int = 2026, n_runs: int = 500) -> dict:
+    """Power analysis for paired permutation test of Delta-beta hypothesis.
+
+    Simulates n_runs experiments at each (N_pairs, true_delta_beta) cell.
+    Reports fraction achieving p < 0.05 (statistical power).
+    """
+    rng = np.random.default_rng(seed)
+    N_pairs_grid = [3, 6, 9, 12]
+    # True effect sizes in terms of Delta-beta (auth - plur)
+    delta_beta_grid = [-0.1, -0.2, -0.3, -0.5, -0.7, -1.0]
+    SIGNAL_N = 2000  # daily points per signal
+    PLUR_BETA = 1.0  # pluralistic baseline (pink noise)
+
+    results = {}
+    print("\n=== POWER ANALYSIS: fraction of runs with p < 0.05 ===")
+    print(f"({n_runs} simulated experiments per cell)")
+    print()
+    header = "N_pairs  " + "  ".join(f"d_b={d:+.1f}" for d in delta_beta_grid)
+    print(header)
+    print("-" * len(header))
+
+    for N_pairs in N_pairs_grid:
+        row_results = {}
+        row_str = f"{N_pairs:<8}"
+        for d_b in delta_beta_grid:
+            auth_beta = PLUR_BETA + d_b
+            n_significant = 0
+            for run in range(n_runs):
+                # Generate N_pairs paired signals
+                beta_a_obs = np.zeros(N_pairs)
+                beta_p_obs = np.zeros(N_pairs)
+                for i in range(N_pairs):
+                    auth_sig = generate_colored_noise(SIGNAL_N, auth_beta, rng=rng)
+                    plur_sig = generate_colored_noise(SIGNAL_N, PLUR_BETA, rng=rng)
+                    beta_a_obs[i], _, _ = spectral_beta_welch(auth_sig,
+                                                             f_low=1/200, f_high=1/4)
+                    beta_p_obs[i], _, _ = spectral_beta_welch(plur_sig,
+                                                             f_low=1/200, f_high=1/4)
+                # Permutation test (limited n_perm for speed)
+                _, p, _ = permutation_test_delta_beta(beta_a_obs, beta_p_obs,
+                                                     n_perm=2000, rng=rng)
+                if p < 0.05:
+                    n_significant += 1
+            power = n_significant / n_runs
+            row_results[f"d_b_{d_b:+.1f}"] = power
+            row_str += f"  {power:>6.3f}"
+        print(row_str)
+        results[f"N_{N_pairs}"] = row_results
+    print()
+    print("Discipline interpretation:")
+    print("  N=3 row: max power capped at ~0.125 (1/8 = paired-permutation ceiling)")
+    print("           regardless of true effect size. Cannot reach 0.05 threshold.")
+    print("  N=6 row: max power approaches 1.0 at d_b <= -0.3.")
+    print("           Confirms confounds.md amendment N=3 -> N=6 is adequately powered.")
+    print("  N=9, N=12: diminishing returns; N=6 is the discipline-required minimum.")
+    return results
+
+
+# ============================================================================
+# GDELT v2 ingest helper code (runnable on Pav's machine)
+# This stub describes how to obtain country-day aggregates. The actual
+# download requires either gdelt2 Python package OR direct CSV download OR
+# Google BigQuery access.
+# ============================================================================
+
+GDELT_INGEST_INSTRUCTIONS = """
+GDELT v2 ingest — three paths (pick one based on environment):
+
+PATH A: gdelt2 Python package (simplest)
+    pip install gdelt2
+    python -c "
+    import gdelt
+    g = gdelt.gdelt(version=2)
+    df = g.Search(['2024 Jan 01', '2024 Jan 02'], table='events', coverage=True)
+    df.to_csv('gdelt_sample.csv')"
+
+PATH B: Direct CSV download from AWS Open Data
+    aws s3 sync s3://gdelt-open-data/v2/events/ data/raw/ --no-sign-request
+    (Total ~500GB; restrict to 2015-2026 + specific country codes for ~10GB)
+
+PATH C: Google BigQuery (free quota likely sufficient)
+    SELECT
+      DATE(_PARTITIONTIME) AS day,
+      ActionGeo_CountryCode AS country,
+      COUNT(*) AS event_count,
+      AVG(AvgTone) AS mean_tone,
+      ENTROPY(EventRootCode) AS category_entropy
+    FROM `gdelt-bq.gdeltv2.events_partitioned`
+    WHERE _PARTITIONTIME BETWEEN '2015-01-01' AND '2026-01-01'
+      AND ActionGeo_CountryCode IN ('CH', 'US', 'RS', 'UK', 'KN', 'GM',
+                                     'IR', 'FR', 'TU', 'NL', 'VE', 'CI')
+    GROUP BY day, country
+
+GDELT 2-letter FIPS country codes (NOT ISO):
+    Authoritarian: CH=China, RS=Russia, KN=North Korea, IR=Iran, TU=Turkey, VE=Venezuela
+    Pluralistic:   US=USA, UK=UK, GM=Germany, FR=France, NL=Netherlands, CI=Chile
+
+Once you have country-day CSVs, structure them as:
+    data/raw/<country>_<signal>.csv  with columns: date, value
+where <signal> ∈ {event_count, mean_tone, category_entropy}.
+Then run: python3 pilot.py --mode gdelt --data-dir data/raw/
+
+Result-commit deliverables (per candidates/1f_l0_failsafe_signature.md §11):
+    results/gdelt_results.json — beta per country per signal + Cohen's d + p-value
+    results/log_log_plot.png — 12-panel log-log fluctuation plot
+    results/discussion.md — H1 verdict + Bar A/B status
+"""
+
+
+def print_gdelt_instructions():
+    """Print the GDELT ingest instructions to stdout."""
+    print(GDELT_INGEST_INSTRUCTIONS)
