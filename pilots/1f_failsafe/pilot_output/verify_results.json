@@ -1,0 +1,32 @@
+{
+  "beta_0.0": {
+    "true_beta": 0.0,
+    "DFA_alpha": 0.46120467267424115,
+    "Welch_beta": -0.013437876489535745,
+    "expected_alpha": 0.5
+  },
+  "beta_0.5": {
+    "true_beta": 0.5,
+    "DFA_alpha": 0.7254793771019058,
+    "Welch_beta": 0.5158894627955631,
+    "expected_alpha": 0.75
+  },
+  "beta_1.0": {
+    "true_beta": 1.0,
+    "DFA_alpha": 1.0613677269747197,
+    "Welch_beta": 1.044854915370278,
+    "expected_alpha": 1.0
+  },
+  "beta_1.5": {
+    "true_beta": 1.5,
+    "DFA_alpha": 1.1829112692215265,
+    "Welch_beta": 1.498419345880251,
+    "expected_alpha": 1.25
+  },
+  "beta_2.0": {
+    "true_beta": 2.0,
+    "DFA_alpha": 1.5121547995362163,
+    "Welch_beta": 2.0522780863905425,
+    "expected_alpha": 1.5
+  }
+}

@@ -1,0 +1,9 @@
+# Pilot #150 dependencies — numpy only
+# pilot.py is self-contained beyond this. No scipy / pandas / pip-install needed.
+#
+# To run:
+#   python3 -m pip install -r requirements.txt
+#   python3 pilot.py --mode verify
+#   python3 pilot.py --mode demo
+
+numpy>=1.26
