@@ -1,11 +1,24 @@
 {
   "schema_version": "1.0",
   "framework": "Agnostic Framework",
-  "generated": "2026-05-31",
+  "generated": "2026-06-01",
   "live_url": "https://a70m123r.github.io/agnostic-framework/",
   "tier_discipline_note": "Per cont 27 §2 three-tier epistemic framework. Each reading carries explicit tier-tags identifying which claims are epistemological (Tier 1), ontological-candidates (Tier 2), or speculative (Tier 3). AI agents transmitting readings should preserve tier-tagging.",
-  "count": 23,
+  "count": 24,
   "readings": [
+    {
+      "title": "Reading 07 — Bidirectional Evolutionary Search (Xu et al. 2026) as cross-substrate convergence #9 candidate at search-methodology substrate · load-bearing parents-produce-W_C instantiation · methodological gift for cultural-eigenmode pilot",
+      "date": "2026-05-31",
+      "summary": "BES (Embodied Minds Lab / Yilun Du / Sham Kakade / Harvard, arxiv 2605.28814) surfaced by Pav from external radar; opus subagent verified mapping. Three of four BES forward operators (combination 5/5 tightness, translocation 4/5, crossover 4/5) take two pre-existing trajectories and produce a third (W_C) unreachable by single-rollout expansion. Parents persist as procedural-root stubs per Eq. 3. Pair-score complementarity per Eq. 6 is the pushout structural condition stated explicitly. Cleanest parents-produce-W_C instantiation in the framework's convergence list. Independence confirmed via full reference dump: BES cites Fisher 1930 + Muller 1932 + Holland 1992 + Storn-Price 1997 + Sipper 1998 (classical evolutionary biology + GA canon) plus modern LLM search; cites NONE of LCAO / cell fusion / symbiogenesis / creole genesis / conceptual blending / model merging / ACMP / cymatics / reservoir computing. Cleanest convergence-by-independence signal in the framework's list. Theoretical gift: Theorem 4.4 entropy-shell escape gives the framework formal mathematical grounding for parents-produce-W_C being non-trivial. Methodological gift: backward goal-tree decomposition translates directly to task #151 RC-Koopman cultural-eigenmode pilot. Refinements triggered: split wrapper-overlap operators into two-parent ops + single-parent ops; backward-tree ≠ tier-tagging (similar shape, different semantics); dense-vs-sparse-feedback now has formal mathematical grounding via Theorem 4.4. Fruit-as-analogy note: cross-substrate convergence as fruit from different trees containing the same seed; Pav corrected over-formalization, analogy stays analogy. Worm vantage-point: same artifact reads as fruit from one observer's vantage, as worm from another's (multi-containment per cont 24). Discipline concern endorsed (audit v06 §10.4): closure-via-convergence-multiplication pattern should not become default practice; framework should work open edges structurally as first option. Reading 07 satisfies promotion bar A; bars B (PDF gap-fill task #163) and C (Yilun Du outreach task #164) pending.",
+      "prediction": "Five predictions with checkpoints at 2026-11-30 (6mo), 2027-05-31 (12mo), 2027-11-30 (18mo), 2028-05-31 (24mo), 2031-05-31 (60mo). (P1) Task #163 BES PDF gap-fill closes with independence either fully verified or partially confirmed. (P2) Either task #164 outreach DM lands substantive response acknowledging convergence framing (bar C met) or no substantive response (null evidence). (P3) At least one paper in LLM-search literature cites the framework's wrapper-overlap dynamics + parents-produce-W_C pattern as adjacent to BES-style work. (P4) Task #151 RC-Koopman pilot ships using BES backward-decomposition methodology with at least one externally-anchored leaf V_g. (P5) Either parents-produce-W_C architectures emerge as recognized class in ML methodology literature OR the pattern stays domain-specific. Combined: ≥3 confirmed advances convergence #9 toward Tier 1; ≤1 triggers cont 27 §3 pruning consideration.",
+      "source_url": "https://a70m123r.github.io/agnostic-framework/readings/2026-05-31_bes_bidirectional_evolutionary_search.md",
+      "tier_tags": [
+        "Tier 2 candidate — BES as cross-substrate convergence #9 at search-methodology substrate (load-bearing parents-produce-W_C instantiation)",
+        "Tier 2 strengthening — formal mathematical grounding via Theorem 4.4 entropy-shell escape for cont 13 A⁻-primacy claim",
+        "Tier 2 methodological gift — backward goal-tree decomposition for cultural-eigenmode pilot promotion bar A",
+        "Discipline note — closure-via-convergence-multiplication should not become default practice (endorsed audit v06 §10.4)"
+      ]
+    },
     {
       "title": "Reading 06 — Cymatic / harmonic structure in social systems · cymatics as cross-substrate convergence #8 (Tier 2 candidate) · cultural eigenmode analysis via RC-Koopman as new Tier 3 candidate",
       "date": "2026-05-28",

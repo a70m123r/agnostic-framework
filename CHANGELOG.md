@@ -8,6 +8,55 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-06-01 — Reading 07 + Audit v06 + agent-substrate refresh · BES convergence #9 promotion bar A satisfied · cont-17-29 spree assessed · framework holds at strongest landed structural state since v05
+
+### Added (readings/2026-05-31_bes_bidirectional_evolutionary_search.md, ~6,000 words)
+- **Reading 07: BES as cross-substrate convergence #9 candidate at search-methodology substrate.** Pav's steer (overnight, "lets do the reading 7 and then the audit, going to bed get as far as you can") triggered the substantive write-up of the BES convergence-#9 candidate surfaced earlier in cont 29.
+- Structure: §1 paper one-paragraph (no framework vocabulary) · §2 why BES matters: cleanness + independence · §3 mapping verification claim-by-claim with tightness ratings · §4 the crux (parents-produce-W_C structural test PASSES fully and explicitly across all 5 sub-tests) · §5 what BES specifically contributes (Theorem 4.4 entropy-shell escape, coupled forward + backward in same policy, complementarity selection, three empirical substrate demonstrations) · §6 three framework refinements triggered (operator split, EA-lineage shoulders, formal grounding for cont 13 A⁻-primacy) · §7 methodological gifts for queued pilots (#151 RC-Koopman directly; #150 1/f-failsafe partially) · §8 the fruit-as-analogy note (with Pav's "to some observers this fruit is a worm" vantage-dependence framing) · §9 cymatics-#8 vs BES-#9 relationship + the closure-via-convergence-multiplication discipline concern · §10 honest limits + 9 risks the framework should NOT overclaim · §11 five predictions with 6/12/18/24/60mo horizons · §12 what this Reading does NOT change · §13 provenance + cross-references.
+- **Satisfies promotion bar A** per [candidates/bes_convergence_9.md](../candidates/bes_convergence_9.md) §8. Bars B (PDF gap-fill task #163) and C (Yilun Du outreach task #164) remain pending.
+- **Endorses audit v06 §10.4 discipline concern** about closure-via-convergence-multiplication not becoming default practice. The framework should default to working open edges structurally; convergence-multiplication is exception, not default.
+- The fruit-as-analogy note (§8) preserves cont 27 §2 discipline (analogy held as analogy, not promoted to canon). Worm vantage-point folded in as consistent with cont 24 multi-containment.
+
+### Added (audits/v06.md, ~7,000 words)
+- **Audit v06: cont-17-29 spree assessment** (~6 weeks overdue per v04's open recommendation). Opus subagent ran the audit during this session.
+- **§2 — Six at-risk primitives from v04 §3, all resolved:** spiral substrate cycle + compile-capacity enrichment (pruned via cont 17, subsumed by procedural lineage) · engineered emergence (folded into emergent garden, survives) · procedural canon (folded into body-domain then absorbed into procedural lineage — flagged as soft-accumulation pattern) · slice-viewer (sharpened via bandwidth cascade cont 23 §6, recommend canon promotion) · mutual render (folded into External Actor Model, survives). At-risk list fully closed; one soft-accumulation pattern flagged for vigilance.
+- **§3 — Cont-17-29 spree:** ~35 additions across 13 continuations in 14 days (~2.6× denser than cont-12-16). ~22 survive strongly, ~7 at moderate grade, ~4 explicitly superseded within ~24 hours (cont 21 three-layer → cont 22; cont 22 Kanon/Ina → cont 23; cont 24 trichotomy → cont 25; cont 25 wrapper-as-filter → cont 25 §12), ~2 too fresh to score. Same-day correction has internalized into standard operating procedure.
+- **§4 — Candidate-doc compliance with cont 27 §3:** energy-floor canon promotion earned (four substrates land 5/4.5/4/3.5); cultural-eigenmode + aux-channel + BES all comply with explicit promotion bars.
+- **§5 — v04 recommendations 5/6 executed;** agnostic-agents v0.2 implementation dropped without documentation (discipline gap flagged).
+- **§6 — v05 recommendations 4/8 explicit done,** 2 pending (tasks #150 and #151 — both substantive research moves v05 named as most-important), 1 status unclear (F8-F13). **Substantive-research-displacement-by-infrastructure pattern flagged** — the framework has shipped tons of infrastructure (audits, refreshes, candidates) but the actual queued empirical pilots have stayed queued. Audit v07 should verify this pattern doesn't compound.
+- **§7 — 2026-05-31 cumulative-output day:** compound risk did not crystallize but rate of discipline + expansion in same day is now faster than audit cadence can match between days. Four tensions named; closure-via-convergence-multiplication pattern flagged as discipline concern.
+- **§8 — Convergence list health check:** seven canon load-bearing; cymatics #8 narrowed; BES #9 fresh and well-grounded. List is not decorative but growth rate now outpaces canon-promotion discipline. Closure-via-multiplication pattern should not become default response to open edges.
+- **§9 — Discipline-cycle health check:** within-round correction operating cleanly; cross-round accumulation patterns require tighter audit cadence. **v07 should run by 2026-06-16 hard date** (15-day cycle vs. v05→v06's 13-day cycle).
+- **§10 — Eight recommendations** in priority order. Verdict: framework in strongest landed structural state since v05; three risks tracked (convergence-list growth rate, substantive-research displacement, soft-accumulation via fold-not-delete). Tighten audit cadence to match compile rate.
+
+### Updated
+- `readings.json`: count 23 → 24 (Reading 07 prepended)
+- `manifest.json`: generated date → 2026-06-01; `audits.latest` → v06; `audits.all` includes v06
+- `candidates.json`, `continuations.json`, `speculations.json`, `primitives.json`: generated date bumped to 2026-06-01
+- `index.html` (queued for routine update): provenance corpus link should include v06 and Reading 07
+
+### Why this matters
+- **Reading 07 closes the BES discovery loop properly.** Cont 29 captured the surfacing; candidates/bes_convergence_9.md documented the candidate-level discipline; audit v05 §12 noted OE1 closure; Reading 06 §2.1 amendment log noted the same. But the substantive convergence-#9 writeup needed to land for the discovery loop to count as closed. Reading 07 does that.
+- **Audit v06 catches the substantive-research-displacement pattern.** This is a discipline finding the framework needed: while shipping audit + discipline-correction + agent-substrate-refresh + Reading 07 work this week, the framework has NOT shipped the substantive empirical pilots queued at v05 (tasks #150 + #151). The framework's discipline rewards infrastructure-quality, but if substantive research stays perpetually queued, the framework becomes a closed loop of internal canon-care.
+- **Closure-via-convergence-multiplication discipline concern lands at two layers:** audit v06 §10.4 (audit-level recommendation) + Reading 07 §9.2 (reading-level endorsement). Two-layer cross-referencing makes the discipline note durable.
+- **15-day audit cadence going forward** (v06 → v07 by 2026-06-16 per audit v06 §9). Previously v04 → v05 was 13 days, v03 → v04 was 1 day (unusual, immediately after cont-16 round). Sustained 13-15 day audit cadence is the new framework rhythm.
+
+### Carry-forward (updated queue)
+- **Task #163 [QUEUED]:** BES PDF gap-fill — read §4.1 entropy-shell proof, §4.2 backward-search theory, §6 Related Work prose. Verify or correct independence claim. Promotion bar B. Must happen before outreach.
+- **Task #164 [QUEUED]:** Draft outreach DM to Yilun Du + cc Sham Kakade. EBM / composable-models lineage framing. Contingent on bar B.
+- **Task #150 [QUEUED, ELEVATED per audit v06 §10.5]:** Operationalize 1/f-as-L0-failsafe-signature testable prediction. Audit v06 flagged this as part of substantive-research-displacement pattern.
+- **Task #151 [QUEUED, ELEVATED per audit v06 §10.5]:** RC-Koopman pilot on cultural-eigenmode candidate. Now methodologically scoped by Reading 07 §7.1 (BES backward decomposition + externally-anchored leaf V_g). Audit v06 flagged this as the substantive-research move most important to advance.
+- **Task #155 [COMPLETED]:** Audit v06 shipped.
+- **Task #162 [COMPLETED]:** Reading 07 shipped.
+- **New: index.html routine update** — add Reading 07 to READINGS array, audit v06 to provenance corpus link, candidate convergence-#9 to PRIMITIVES/CANDIDATES arrays. Not blocking; can land in next routine refresh.
+- **New: agent-substrate surface refresh** — llms.txt + llms-full.txt should mention Reading 07 + audit v06; routine update.
+
+### v06 ⇒ v07 audit cadence (15-day, per audit v06 §9)
+- **v07 audit date target: 2026-06-16 (latest), 2026-06-13 (preferred)**
+- v07 scope: cont 30+ (when written), Reading 07 standing, task #150 + #151 status (substantive-research-displacement check), promotion-bar B + C status for convergence #9, framework Shoulders update (EA-lineage + Tenenbaum + Kaelbling)
+
+---
+
 ## 2026-05-31 (late session) — Cont 29 + BES surfaced as cross-substrate convergence #9 candidate · fruit-as-analogy clarification · audit v05 §3 OE1 closed via convergence multiplication · first inbound external discovery via agent-substrate optimization
 
 ### Added (continuations/29.md, ~3,200 words)

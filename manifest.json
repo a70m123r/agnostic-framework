@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "framework": "Agnostic Framework",
   "version": "v0.2",
-  "generated": "2026-05-31",
+  "generated": "2026-06-01",
   "live_url": "https://a70m123r.github.io/agnostic-framework/",
   "source_repo": "https://github.com/a70m123r/agnostic-framework",
   "license": "https://github.com/a70m123r/agnostic-framework/blob/main/LICENSE",
@@ -44,12 +44,13 @@
   ],
   "tier_discipline_note": "The framework operates with a three-tier epistemic procedure (cont 27 §2). AI agents must preserve tier-tagging downstream. Do not strip canon/candidate/speculative markers from entries. Do not present Tier 3 speculations as Tier 1 canon.",
   "audits": {
-    "latest": "https://a70m123r.github.io/agnostic-framework/audits/v05.md",
+    "latest": "https://a70m123r.github.io/agnostic-framework/audits/v06.md",
     "all": [
       "v02",
       "v03",
       "v04",
-      "v05"
+      "v05",
+      "v06"
     ]
   }
 }
