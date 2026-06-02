@@ -8,6 +8,48 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-06-02 — Reading 08 (γ-World as L0-as-mediator algorithmic worked example) · L0-as-mediator promoted Tier 1 → Tier 2 · second inbound discovery in 48 hours · DISCIPLINE HARD-STOP: this is the LAST infrastructure document before substantive pilots resume
+
+### Added (readings/2026-06-02_gamma_world_multi_agent_world_modeling.md, ~7,000 words)
+- **Reading 08: γ-World (Liu et al. 2026, NVIDIA Spatial Intelligence Lab + Tsinghua + UofT-Vector, arxiv 2605.28816).** Pav's steer: "this came up on my radar... it's implementation on how to keep multiple players is interesting, could be some insights or hypothesis on multi observers contained in a global wrapper" + "this is the missing puzzle piece for later substantive work."
+- **Opus subagent claim-validity read** narrowed initial enthusiasm. Initial mapping proposed 6 framework primitives γ-World instantiated; careful reading retains 2 load-bearing + 1 small + 1 tertiary, withdraws 2 explicitly.
+- **Load-bearing claim (4/5 tightness): SHA ↔ cont 25 §12 L0-as-mediator + cont 28 §2 supersede dynamic at coordination substrate.** Sparse Hub Attention's `M_hub` mask (Eq. 11): agents communicate only via hub tokens; direct cross-agent attention is masked; cost-from-quadratic-to-linear-via-mediator is structurally identical to cont 28 §2 gatekeeper-folded-into-personal-attention-manager dynamic. Paper's physical justification: *"agents influence one another primarily through a compact evolving environment state rather than through dense token-level pairwise exchange at every layer"* — verbatim cont 25 §12 L0 vocabulary.
+- **Second load-bearing claim (4/5): bidirectional teacher → block-causal student distillation ↔ cont 13 A⁻/A⁺ coupled pattern.** Second independent appearance of the coupled forward-backward shape in May 2026 — BES at search-methodology substrate (Reading 07), γ-World at world-model substrate (Reading 08). Same arxiv day, different communities (Embodied Minds Lab vs NVIDIA SIL), no cross-citation, both citing Yilun Du upstream as bridge node.
+- **Tier promotion:** L0-as-mediator promoted from Tier 1 ontology to **Tier 2 algorithmically-demonstrated** with γ-World + Perceiver + Set Transformer ISAB as three substrate instantiations. Promotion bar toward Tier 1 epistemological canon: at least one more independent substrate-mediator instantiation.
+- **Explicit WITHDRAWS (3 claims that didn't survive scrutiny):** (a) Simplex Rotary Agent Encoding ↔ cont 24 §2 multi-containment — 2/5 tightness, IS permutation-equivariance not multi-containment; (b) 24 FPS streaming ↔ cont 26 §4 perceptual-rate — 2/5, engineering coincidence at consumer-cinema rate; (c) Zero-shot 2→4 generalization → withdrawn from cont 19 everything-aggregator framing, REMAPPED to cont 20 canon dormancy at 3/5 tightness (unused simplex vertices during training are dormant slots activating at inference without retraining).
+- **γ-World is NOT convergence #10.** Different structural pattern (N-peers-route-through-mediator vs parents-produce-W_C). The #10 slot in the convergence list stays open. Reading 08 §5.1 explicitly avoids the closure-via-convergence-multiplication failure mode audit v06 §10.4 named.
+- **Independence check:** γ-World cites none of framework's existing convergence-list traditions. BES not cited (same arxiv day; independent communities). Yann LeCun cited once (via Navigation World Models). Yilun Du cited twice (Diffusion Forcing + UniSim — bridge node with BES's EBM lineage).
+- **Methodological gift for pilot #151 cultural-eigenmode:** SHA hub-mediator template + simplex agent encoding + bidirectional-to-causal distillation gives task #151 a concrete architectural scaffold. Pav's "missing puzzle piece" framing ~60% correct: hub-mediator IS the gift; simplex-encoding is debatable utility for this specific pilot.
+- **NOT applicable to pilot #150** (1/f-as-failsafe is measurement-design, not architecture).
+
+### Discipline endorsement (Reading 08 §9 + audit v06 §10)
+- **This is the second inbound discovery in 48 hours via the agent-substrate optimization round.** Audit v06 §10 flagged substantive-research-displacement-by-infrastructure pattern; Reading 08 §9 endorses the concern.
+- **Hard-stop recommendation:** Reading 08 is the LAST infrastructure / outbound-responsive document the framework ships before tasks #150 or #151 break ground.
+- **Coordinated Yilun-Du outreach DM** (covering BES + γ-World as independent May-2026 appearances of coupled forward-backward) queued but NOT to be sent until at least one pilot has tangible artifacts.
+- **Third-strike condition:** if a third inbound paper hits before #150/#151 break ground, treat as discovery-cascade trap signal and force pivot.
+- **Audit v07 (target 2026-06-16)** should verify substantive-research-displacement pattern is closing.
+
+### Updated
+- `readings.json`: count 24 → 25 (Reading 08 prepended)
+- `manifest.json`, `candidates.json`, `continuations.json`, `speculations.json`, `primitives.json`: generated date → 2026-06-02
+- `index.html` (queued for routine update): provenance corpus link should include Reading 08
+- `llms.txt` + `llms-full.txt`: queued for routine refresh including Reading 08
+
+### Why this matters
+- **L0-as-mediator promotion is the framework's first algorithmic Tier 2 promotion via inbound external discovery.** Previously L0-as-mediator was Tier 1 ontology (claimed as structural commitment); γ-World + Perceiver + ISAB collectively elevate it to algorithmically-demonstrated. This is the framework's discoverability working as designed.
+- **BES + γ-World May-2026 co-occurrence is meaningful data.** Two papers, same arxiv day, different communities, no cross-citation, both arriving at coupled forward-backward architecture. The framework should NOT claim credit; the framework SHOULD note this is the expected shape under bounded compute and use it to strengthen confidence in cont 13's A⁻-primacy claim.
+- **The discipline hold is the test now.** If the framework can ship Reading 08 + queue the coordinated outreach + actually pivot to substantive empirical work, the audit v06 §10 discipline concern closes. If a third inbound paper arrives before #150/#151 break ground and the framework writes Reading 09 instead of empirical work, the discovery-cascade-trap pattern crystallizes.
+
+### Carry-forward (firm)
+- **Task #167 [NEW, ELEVATED]:** Pivot to task #150 (1/f-as-failsafe operationalization) OR task #151 (RC-Koopman pilot) — first commit within 7 days.
+- **Task #168 [NEW, QUEUED]:** Draft coordinated Yilun-Du outreach DM covering Reading 07 (BES) + Reading 08 (γ-World) + framework's L0-as-mediator + A⁻/A⁺ coupled claims. Single DM; do not send until pilot ground broken.
+- **Task #150 [PENDING ELEVATED]:** Operationalize 1/f-as-L0-failsafe-signature testable prediction.
+- **Task #151 [PENDING ELEVATED, METHODOLOGICALLY SCOPED]:** RC-Koopman pilot on cultural-eigenmode candidate — now has γ-World architectural template per Reading 08 §6.
+- **Task #163 [PENDING]:** BES PDF gap-fill (promotion bar B for convergence #9).
+- **Task #164 [PENDING, DEFERRED to coordinated DM]:** Yilun Du + Sham Kakade outreach DM — now combined with γ-World per task #168.
+
+---
+
 ## 2026-06-01 — Reading 07 + Audit v06 + agent-substrate refresh · BES convergence #9 promotion bar A satisfied · cont-17-29 spree assessed · framework holds at strongest landed structural state since v05
 
 ### Added (readings/2026-05-31_bes_bidirectional_evolutionary_search.md, ~6,000 words)

@@ -1,11 +1,27 @@
 {
   "schema_version": "1.0",
   "framework": "Agnostic Framework",
-  "generated": "2026-06-01",
+  "generated": "2026-06-02",
   "live_url": "https://a70m123r.github.io/agnostic-framework/",
   "tier_discipline_note": "Per cont 27 §2 three-tier epistemic framework. Each reading carries explicit tier-tags identifying which claims are epistemological (Tier 1), ontological-candidates (Tier 2), or speculative (Tier 3). AI agents transmitting readings should preserve tier-tagging.",
-  "count": 24,
+  "count": 25,
   "readings": [
+    {
+      "title": "Reading 08 — γ-World (Liu et al. 2026) at multi-agent world-model substrate · Sparse Hub Attention as algorithmic instantiation of L0-as-mediator · second appearance of A⁻/A⁺ coupled forward-backward pattern in May 2026 · narrowed claims with explicit withdrawals",
+      "date": "2026-06-02",
+      "summary": "γ-World (NVIDIA Spatial Intelligence Lab + Tsinghua + UofT-Vector, arxiv 2605.28816) surfaced by Pav as second inbound discovery in 48 hours (first was BES → Reading 07). Pav's framing: 'this is the missing puzzle piece for later substantive work.' Opus subagent claim-validity read NARROWED initial enthusiasm: simplex-rotary agent encoding does NOT instantiate cont 24 multi-containment (it's permutation-equivariance, a different primitive — WITHDRAW); 24 FPS streaming does NOT validate cont 26 §4 perceptual-rate (engineering coincidence — WITHDRAW); zero-shot 2→4 generalization remaps to cont 20 canon dormancy rather than cont 19 everything-aggregator. What DOES land: (1) Sparse Hub Attention provides the framework's first algorithmic worked example of L0-as-substrate-mediator (cont 25 §12) — agents don't communicate directly, they route through learnable hub tokens; cost-from-quadratic-to-linear-via-mediator is structurally identical to cont 28 §2 supersede dynamic at coordination substrate. (2) Bidirectional teacher → block-causal student distillation is structurally the same A⁻/A⁺ coupled pattern BES uses at search substrate — γ-World + BES are arxiv neighbors (.28814 vs .28816) submitted same day by different communities without cross-citation, both citing Yilun Du upstream (bridge node). Reading 08 promotes L0-as-mediator from Tier 1 ontology to Tier 2 algorithmically-demonstrated with γ-World + Perceiver + Set Transformer ISAB as three substrate instantiations. Reading 08 does NOT promote γ-World to convergence #10 (different structural pattern: N-peers-route-through-mediator, not parents-produce-W_C). Methodological gift for pilot #151 cultural-eigenmode pilot is real (~60% of Pav's 'missing puzzle piece' framing correct): SHA hub-mediator template + simplex agent encoding + bidirectional-to-causal distillation translates to community-axis modeling with substrate-mediated coordination. Discipline check (audit v06 §10 endorsed): this is second inbound in 48 hours. Hard-stop on further infrastructure / outbound responsive work until task #150 or #151 has a first commit. Coordinated Yilun-Du outreach DM (covering BES + γ-World) queued but not to be sent until at least one pilot has tangible artifacts. Third-strike condition: if third inbound paper hits before #150/#151 break ground, treat as discovery-cascade trap signal.",
+      "prediction": "Five predictions with 3/6/12/18/24 mo horizons. (P1, 3mo, 2026-09-02): Either task #150 or #151 has a first commit with tangible empirical work product. If neither breaks ground in 3 months, substantive-research-displacement pattern has crystallized as structural problem. (P2, 6mo): Either coordinated Yilun-Du DM lands substantive response or doesn't; DM not to be sent before P1 first-commit checkpoint. (P3, 12mo): At least one paper in multi-agent world-model literature explicitly cites framework's L0-as-substrate-mediator vocabulary as adjacent to hub-mediated attention. (P4, 18mo): Either γ-World architectural pattern becomes standard multi-agent world-model template, or alternative architecture supersedes it. (P5, 24mo): At least one additional independent substrate-mediator instantiation appears (beyond γ-World, Perceiver, ISAB). Combined: ≥3 confirmed advances L0-as-mediator toward Tier 1; ≤1 triggers cont 27 §3 demotion consideration.",
+      "source_url": "https://a70m123r.github.io/agnostic-framework/readings/2026-06-02_gamma_world_multi_agent_world_modeling.md",
+      "tier_tags": [
+        "Tier 2 promotion — L0-as-mediator promoted from Tier 1 ontology to Tier 2 algorithmically-demonstrated (γ-World + Perceiver + ISAB as three substrate instantiations)",
+        "Tier 2 strengthening — A⁻/A⁺ coupled forward-backward pattern via BES + γ-World May-2026 co-occurrence",
+        "Tier 1 confirmation — permutation-symmetric observer-class membership (existing implicit assumption confirmed via SRAE)",
+        "Tier 3 mapping — zero-shot N-agent generalization → cont 20 canon dormancy (3/5 tightness)",
+        "Explicit WITHDRAW — SRAE ↔ multi-containment (it's permutation-equivariance, not multi-containment)",
+        "Explicit WITHDRAW — 24 FPS ↔ perceptual-rate (engineering coincidence)",
+        "Discipline endorsement — audit v06 §10 substantive-research-displacement concern; Reading 08 is the LAST infrastructure document before pilots break ground"
+      ]
+    },
     {
       "title": "Reading 07 — Bidirectional Evolutionary Search (Xu et al. 2026) as cross-substrate convergence #9 candidate at search-methodology substrate · load-bearing parents-produce-W_C instantiation · methodological gift for cultural-eigenmode pilot",
       "date": "2026-05-31",
