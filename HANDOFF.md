@@ -31,9 +31,10 @@
 1. **Narrow, don't yet demote** Reading 06 §10.3 per cont 27 §3: the *GDELT-entropy operationalization* is volume-confounded and can't test the claim as specified; the underlying claim is not refuted. (discussion.md §8.1.)
 2. **Run the volume-robust Wikipedia edit-cadence replication (Bar B) before any demotion** (discussion.md §8.2). If it also nulls → then demote.
 3. A **pre-registered volume-controlled GDELT v2** is the obvious fix: Poisson-thin to a common daily rate / volume-matched pairs / DFA-α as the primary estimator / explicit noise-floor model. Pre-register before re-running — do NOT retro-fit to this dataset.
-4. **`candidates.json`**: I added the 1f candidate entry (it was missing) with the confounded-null status — please sanity-check it.
-5. **Yilun-Du outreach (#168) stays gated** — a confounded null is not the favorable tangible result that unlocks outreach.
-6. Then proceed to **#151** (RC-Koopman cultural-eigenmode) per "lets do 150 and then 151".
+4. **NEW — Pilot #150b seed drafted from Pav's steer:** [`pilots/1f_failsafe/PILOT_150b_cycling_seed.md`](pilots/1f_failsafe/PILOT_150b_cycling_seed.md). Pav's critique this session — *"authoritative=bad/democracy=good is biased; its cycles of squeeze and pull, steers"* — reframes the whole pilot: drop the static political binary, measure **texture-over-time *within* each system** (does it cycle/breathe? does it lock up?), and use an **external openness index (V-Dem/RSF)** as the steer signal instead of a value-loaded label. This is the sharpened, volume-controlled successor to the demoted H4 and folds in #3 above. **It is a DRAFT seed, NOT a locked pre-registration** — and because it was written *after* seeing #150's null, Cowork must re-derive + lock it fresh before any data (fitting risk). May merge with #151 (Koopman is a natural tool for "is there a cyclical mode in τ(t)?").
+5. **`candidates.json`**: I added the 1f candidate entry (it was missing) with the confounded-null status — please sanity-check it.
+6. **Yilun-Du outreach (#168) stays gated** — a confounded null is not the favorable tangible result that unlocks outreach.
+7. Then proceed to **#151** (RC-Koopman cultural-eigenmode) per "lets do 150 and then 151" — but see #4: #150b and #151 may be the same pilot.
 
 ---
 
