@@ -1,8 +1,39 @@
 # HANDOFF — Cowork → Claude Code
 
-**Last updated:** 2026-06-02 by Cowork session (Claude in Cowork mode)
-**Next session:** Claude Code (CLI) on Pav's machine to run GDELT pilot
-**Pinned task:** #169 — Run `pilots/1f_failsafe/pilot.py --mode gdelt` against real GDELT v2 data → result-commit
+**Last updated:** 2026-06-03 by Claude Code session (task #169 result-commit landed)
+**Next session:** Cowork — evaluate the confounded-null result; decide narrow-vs-demote on Reading 06 §10.3; consider #151 + Wikipedia replication
+**Pinned task:** #169 ✅ DONE (result-commit landed 2026-06-03). Next pinned move is Cowork's (see "Last Claude Code session" below + "For Cowork next session" at bottom).
+
+---
+
+## Last Claude Code session (2026-06-03)
+
+**Task completed:** #169 result-commit ✅ (landed day 2 of the 7-day window; first-commit was 2026-06-02).
+**Verdict:** **H1 NOT SUPPORTED — confounded null.**
+**Key numbers (primary signal = event-category-entropy, N=6):** Δβ(auth−plur) = **+0.084** (predicted < −0.10; observed *wrong sign*), Cohen's d = +0.380, paired-permutation p = 0.792. 1/6 pairs satisfy H1 direction. **Bar A unmet.**
+**Result files:** `pilots/1f_failsafe/results/{gdelt_results.json, log_log_plot.png, discussion.md, methods.md}`. Read `discussion.md` first — it has the full verdict, the confound, tier-tagging, and the §8 recommendations for you.
+**Commits:** see `git log --oneline` (this session's result-commit; pushed).
+
+**What happened, briefly:**
+- No cloud CLIs/creds on the machine at first, so I built a streaming 15-min-slice downloader (`gdelt_ingest.py`) and started it (~5h). Pav then opted into **BigQuery**; I set up browser-OAuth (sandbox, $0), ran one `GROUP BY` query (`gdelt-bq.gdeltv2.events`, 21.4 GB, 47,610 country-day rows, ≥99.6% coverage), and killed the download. Both paths compute the identical locked SQLDATE aggregation; BigQuery won on completeness.
+- Implemented the `gdelt_mode()` stub in `pilot.py`; verified end-to-end on synthetic data before running real. Locked DFA/Welch/IAAFT/permutation functions untouched.
+
+**The load-bearing finding — source-volume confound (discussion.md §3, confounds.md §10):**
+- Welch β is almost entirely explained by per-country event **volume**: Pearson r(log₁₀ events, β) = **+0.916**. Low-volume countries (CHL/NLD/PRK) get downward-biased β because sparse daily entropy is noisy (white floor flattens the spectrum). Pre-registered z-scoring removes amplitude scale but NOT this frequency-domain floor.
+- The volume-robust **DFA-α estimator shows no cross-country difference** (spread 0.074 vs Welch 0.735) → consistent with a null. The measured Welch contrast tracks media-volume, not political system. Hence "confounded null", not a clean falsifier (d=0.38 < 0.5 on primary) and not a strict null (|Δβ|=0.084 > 0.05).
+
+**Issues encountered / discipline notes:**
+- IAAFT turned out NOT to be a clean null for β (observed β systematically below surrogate, |z| scales with sparsity) — used as a diagnostic only; locked permutation test is the inference. (confounds.md §12.)
+- Two forced method substitutions, both in *supportive* components, neither touching the locked H1 test: `powerlaw.Fit`→block-bootstrap CI (numpy-only env, §11); BigQuery aggregation in place of the slice download (§9).
+- New confounds §9–§14 appended to `confounds.md`; pre-registration text never modified.
+
+**For Cowork next (specifics — see also the fuller branch logic at the bottom of this file, NULL branch):**
+1. **Narrow, don't yet demote** Reading 06 §10.3 per cont 27 §3: the *GDELT-entropy operationalization* is volume-confounded and can't test the claim as specified; the underlying claim is not refuted. (discussion.md §8.1.)
+2. **Run the volume-robust Wikipedia edit-cadence replication (Bar B) before any demotion** (discussion.md §8.2). If it also nulls → then demote.
+3. A **pre-registered volume-controlled GDELT v2** is the obvious fix: Poisson-thin to a common daily rate / volume-matched pairs / DFA-α as the primary estimator / explicit noise-floor model. Pre-register before re-running — do NOT retro-fit to this dataset.
+4. **`candidates.json`**: I added the 1f candidate entry (it was missing) with the confounded-null status — please sanity-check it.
+5. **Yilun-Du outreach (#168) stays gated** — a confounded null is not the favorable tangible result that unlocks outreach.
+6. Then proceed to **#151** (RC-Koopman cultural-eigenmode) per "lets do 150 and then 151".
 
 ---
 

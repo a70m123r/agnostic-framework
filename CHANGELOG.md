@@ -8,6 +8,47 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-06-03 — Pilot #150 RESULT-COMMIT LANDED · GDELT v2 H1 NOT SUPPORTED (confounded null) · result-commit on day 2 of the 7-day window · source-volume confound is the load-bearing finding · candidate held at Tier 2 conditional (neither advanced nor demoted)
+
+### Verdict (primary signal = event-category-entropy, N=6 pairs)
+- **H1 NOT SUPPORTED.** Mean Δβ(auth − plur) = **+0.084** (predicted < −0.10; observed *wrong sign*), Cohen's d = +0.380, paired-permutation p = 0.792 (one-sided). Only 1/6 pairs satisfy the H1 direction.
+- **Promotion Bar A is NOT satisfied** (it required H1 at d ≥ 0.5, p < 0.05 in the predicted direction).
+- Not a clean §4.4 falsifier either (that needed Δβ > 0 at d ≥ 0.5 on the primary signal; observed d = 0.38 < 0.5) and not a strict null (|Δβ| = 0.084 > 0.05). Best description: **confounded null**.
+
+### The load-bearing finding — source-volume confound
+- On the primary signal, Welch β is almost entirely explained by per-country event volume: **Pearson r(log₁₀ events, β) = +0.916** (Spearman +0.909). The four lowest-volume countries (CHL 2.4M, PRK 3.3M, NLD 3.3M, VEN 6.0M) hold four of the five lowest β.
+- Mechanism: low daily event counts → noisy (≈white) daily entropy → flat high-frequency PSD floor → **downward-biased β**. Pre-registered z-scoring (§5.2.1) removes amplitude scale but NOT this spectral floor.
+- The volume-robust **DFA-α estimator shows essentially no cross-country difference** (range 0.827–0.901, spread 0.074 vs Welch-β spread 0.735) — consistent with a null. The measured Welch contrast tracks media-volume, not political system.
+- Per-pair pattern splits by provenance: original N=3 pairs lean weakly H1 (−0.13, −0.01, −0.08), the 3 amended pairs go anti-H1 (+0.05, +0.41, +0.26) and dominate — entangled with volume (the low-volume member of each pair drives its sign). Not cherry-picked to rescue H1.
+
+### Secondary (exploratory) signals
+- event_count: Δβ = +0.100, d = 0.527, p = 0.955 (anti-H1). mean_tone: Δβ = +0.148, d = 0.937, p = 0.955 (anti-H1, with the pre-registered cross-language caveat). Both same direction, both equally volume-confounded; not elevated above the primary verdict.
+
+### Data + method (full reproducibility in results/methods.md)
+- GDELT v2 `gdelt-bq.gdeltv2.events` via **BigQuery** (the pre-registration's canonical path, candidate §5.1), queried 2026-06-03: 21.39 GB scanned (free tier, $0), **47,610 country-day rows**, window 2015-02-18 → 2025-12-31 (3,970 daily points/country), coverage ≥ 99.6% all 12 countries. SQLDATE binning on ActionGeo_CountryCode, exactly as locked.
+- A streaming 15-min-slice downloader (`gdelt_ingest.py`) was also built/run as the no-cloud fallback before BigQuery auth was set up; superseded by BigQuery (complete archive → higher coverage). Both compute the identical locked aggregation.
+- `gdelt_mode()` implemented in `pilot.py` (the first-commit stub); verified end-to-end on synthetic data (correctly returns PASS / NULL). Locked DFA/Welch/IAAFT/permutation functions untouched; verify + demo still reproduce documented outputs.
+
+### Discipline notes
+- **Pre-registration held.** H1 locked 2026-06-02 before any data; result-commit 2026-06-03; the locked paired-permutation test was applied exactly as specified — no method swapped to move the verdict. Result-commit landed day 2 of the 7-day window (target 2026-06-09).
+- **New confounds logged** at `pilots/1f_failsafe/confounds.md` §9–§14: source-volume spectral floor (§10, the big one), BigQuery acquisition (§9), powerlaw→block-bootstrap CI substitution (§11), IAAFT non-degeneracy/diagnostic (§12), DFA-α vs Welch-β divergence (§13), gap interpolation (§14).
+- **IAAFT surprise:** observed β sits systematically below surrogate β (|z| scales with sparsity: USA −1.8 → CHL −13.9), the opposite of the naive "IAAFT preserves PSD → same β" expectation — itself further evidence the low-volume β is a distribution artifact.
+
+### Surfaced for Cowork (NOT actioned here — per HANDOFF guardrails)
+- **Narrow, do not yet demote** Reading 06 §10.3 per cont 27 §3: the *GDELT-entropy operationalization* is volume-confounded and cannot test the claim as specified; the underlying claim is not refuted.
+- **Run the volume-robust Wikipedia edit-cadence replication (Bar B) before any demotion.** If it also nulls, then consider demotion.
+- A **pre-registered volume-controlled GDELT v2** (Poisson-thin to common rate / volume-matched pairs / DFA-α as primary / explicit noise-floor model) is the obvious fix — pre-register before re-running, do not retro-fit to this dataset.
+- Yilun-Du outreach (task #168) remains gated — a confounded null is not the "tangible pilot result" that unlocks outreach in the framework's favor; hold for Cowork.
+
+### Files touched
+- `pilots/1f_failsafe/pilot.py` (gdelt_mode implemented + helpers; stdout UTF-8 hardening)
+- `pilots/1f_failsafe/gdelt_ingest.py` (NEW — streaming fallback downloader), `pilots/1f_failsafe/bq.py` (NEW — BigQuery path), `pilots/1f_failsafe/make_plot.py` (NEW — 12-panel plot)
+- `pilots/1f_failsafe/results/` (NEW — gdelt_results.json, log_log_plot.png, discussion.md, methods.md)
+- `pilots/1f_failsafe/data/raw/` (NEW — 36 daily-signal CSVs, committed for reproducibility)
+- `pilots/1f_failsafe/confounds.md` (§9–§14 appended), `candidates/1f_l0_failsafe_signature.md` (§8 Bar A status + §11 result-commit), `candidates.json` (1f entry added), `timeline/index.html`, `HANDOFF.md`
+
+---
+
 ## 2026-06-02 (later) — Pilot #150 FIRST COMMIT LANDED · 1/f-as-failsafe operationalization shipped with working pipeline + critical pre-registration discipline catch · audit v06 §10 + Reading 08 §9 hard-stop CLOSED on day 1
 
 ### Added (candidates/1f_l0_failsafe_signature.md, ~3,500 words)

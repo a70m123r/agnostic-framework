@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
   "framework": "Agnostic Framework",
-  "generated": "2026-06-02",
+  "generated": "2026-06-03",
   "live_url": "https://a70m123r.github.io/agnostic-framework/",
   "tier_discipline_note": "Per cont 27 §2 three-tier epistemic framework. Candidate entries are typically Tier 2 (ontological-candidate, conditional on contested evidence). When candidates get promoted to canon, status changes but the doc is preserved as the worked-example reference for the promotion.",
-  "count": 3,
+  "count": 4,
   "candidates": [
     {
       "title": "Cross-substrate convergence #9 candidate — Bidirectional Evolutionary Search (BES) at the search-methodology substrate",
@@ -61,6 +61,25 @@
         "https://a70m123r.github.io/agnostic-framework/artifacts/wrapper_overlap_animated.html",
         "https://a70m123r.github.io/agnostic-framework/artifacts/michotte_launching_extension.html",
         "https://a70m123r.github.io/agnostic-framework/speculations/"
+      ]
+    },
+    {
+      "id": "1f_l0_failsafe_signature",
+      "title": "1/f scale-invariance as L0-failsafe-health signature at the social substrate",
+      "status": "tier2_conditional_held",
+      "tier": "Tier 2 conditional",
+      "surfaced_date": "2026-05-28",
+      "promotion_status": "Bar A NOT satisfied (GDELT pilot #150 result-commit 2026-06-03): H1 not supported — confounded null. Held at Tier 2 conditional pending Wikipedia edit-cadence replication; not demoted.",
+      "summary": "Reading 06 §10.3 Tier 2 conditional: broadband 1/f + burstiness is the signature of healthy L0 substrate-level failsafe operation; systems with weakened/captured failsafes (authoritarian) should show less broadband 1/f (β far from 1). Operationalized as H1: spectral exponent β_authoritarian < β_pluralistic − 0.10 on GDELT v2 event-category-entropy across N=6 paired comparisons (confounds.md §1). GDELT pilot (2015–2026, BigQuery, 47,610 country-day rows) returned mean Δβ=+0.084 (wrong sign), Cohen d=0.380, permutation p=0.792 — H1 not supported. The small anti-direction contrast is confounded by per-country event volume (Welch β vs log10 volume r=0.92; entropy sampling-noise whitens low-volume spectra, which z-score normalization does not remove); the volume-robust DFA-α estimator shows no cross-country difference (spread 0.074 vs Welch 0.735). Reported as a confounded null, neither clean falsifier nor strict null.",
+      "promotion_criteria": "Bar A: GDELT pilot lands H1 at Cohen d>=0.5, p<0.05 in the predicted direction, plus within-language baseline reproduces direction, plus confound log committed. RESULT 2026-06-03: Bar A UNMET. Recommended next (Cowork): narrow Reading 06 §10.3 to exclude volume-unmatched GDELT aggregates; run the volume-robust Wikipedia edit-cadence replication (Bar B) before any cont 27 §3 demotion; a pre-registered volume-controlled GDELT v2 (Poisson-thinning or DFA-α primary) could re-test.",
+      "source_url": "https://a70m123r.github.io/agnostic-framework/candidates/1f_l0_failsafe_signature.md",
+      "related": [
+        "https://a70m123r.github.io/agnostic-framework/pilots/1f_failsafe/results/discussion.md",
+        "https://a70m123r.github.io/agnostic-framework/pilots/1f_failsafe/results/methods.md",
+        "https://a70m123r.github.io/agnostic-framework/pilots/1f_failsafe/confounds.md",
+        "https://a70m123r.github.io/agnostic-framework/readings/2026-05-28_cymatic_harmonic_structure_in_social_systems.md",
+        "https://a70m123r.github.io/agnostic-framework/continuations/26.md",
+        "https://a70m123r.github.io/agnostic-framework/continuations/27.md"
       ]
     }
   ]

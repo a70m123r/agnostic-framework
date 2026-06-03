@@ -87,7 +87,60 @@ Per `candidates/1f_l0_failsafe_signature.md` §7:
 
 ---
 
+## §9 Data acquisition path — BigQuery (2026-06-03, result-commit)
+
+**Discovered via:** result-commit ingest. The machine initially had no cloud CLIs/credentials, so a streaming 15-min-slice downloader (`gdelt_ingest.py`) was built and run. Mid-run, BigQuery auth was set up (browser OAuth via `pydata-google-auth`, sandbox/free tier) and the canonical path (candidate §5.1) was used instead.
+
+**Effect:** none on the locked aggregation — both paths compute GROUP BY SQLDATE on `ActionGeo_CountryCode`. BigQuery is strictly better here: it holds the complete archive (all events ever ADDED, including late-reported), so per-country coverage is higher (all countries ≥ 99.6% of 3970 days) than a partial slice sweep would reach. Query scanned 21.39 GB (free tier, $0), returned 47,610 country-day rows. Not a pre-registration change.
+
+---
+
+## §10 Source-volume → β spectral-floor confound (CRITICAL — discovered in real data)
+
+**Discovered via:** running the locked pipeline on real GDELT data, then correlating per-country β with event volume.
+
+**Issue:** on the PRIMARY signal (category_entropy), Welch β is almost perfectly explained by per-country event volume — **Pearson r(log₁₀ total events, β) = +0.916, Spearman = +0.909.** The four lowest-volume countries (CHL 2.4M, PRK 3.3M, NLD 3.3M, VEN 6.0M) hold four of the five lowest β; highest-volume USA (204M) has the highest β.
+
+**Mechanism:** daily category-entropy estimated from few events is noisy; that sampling noise is ~white → adds a flat high-frequency floor to the PSD → **flattens (lowers) the fitted β for low-volume countries.** Pre-registered z-score normalization (§5.2.1, candidate §5.2) removes amplitude scale but NOT this frequency-domain floor.
+
+**Why it matters for H1:** the small anti-H1 Welch-β contrast (mean Δβ = +0.084) is driven by low-β low-volume countries (NLD, CHL on the pluralistic side of the two largest anti-H1 pairs). The contrast tracks media-volume, not political system. **This is the reason the result-commit reports a "confounded null" rather than a clean falsifier** (see `results/discussion.md` §3–§4).
+
+**Status: NOT mitigated by the locked pipeline.** Surfaced to Cowork. Candidate v2 fixes (pre-register before re-running): Poisson-thin all countries to a common daily rate; volume-matched pairs; use DFA-α (volume-robust, see §13) as primary estimator; or explicitly model the white-noise floor. This supersedes the §4 assumption that z-scoring handles the source-volume confound — it handles amplitude, not the spectral floor.
+
+---
+
+## §11 Bootstrap-CI estimator substitution
+
+**Issue:** pre-registration §5.4.1 specified `powerlaw.Fit(...).power_law.confidence_interval()` parametric bootstrap. The `powerlaw` package is unavailable in this numpy-only environment.
+
+**Substitution:** moving-block bootstrap (block = 64, 1000 resamples) 95% CI on Welch β. Descriptive only; the H1 inference is the locked permutation test, unchanged. The resulting CIs are wide and overlapping across auth/plur (e.g. CHN entropy [0.94,1.61], TUR [0.62,1.72]), consistent with the §10 instability of per-country β. Logged; surfaced to Cowork for whether to re-run with `powerlaw` in a richer env.
+
+---
+
+## §12 IAAFT surrogate is not a clean null for β (non-degenerate)
+
+**Issue:** pre-registration §5.4.2 treats the IAAFT surrogate β distribution as "the null." Expectation was that IAAFT (preserves the global power spectrum) would give surrogate β ≈ observed β — a degenerate null. **In real data this was false:** observed β sits systematically BELOW surrogate β, with |z| scaling by sparsity (USA z=−1.8, CHN −7.3, PRK −14.2, CHL −13.9). Cause: β is fit on a sub-band [1/365,1/10] and the signals are strongly non-Gaussian/zero-inflated; IAAFT's amplitude-matching step shifts the sub-band slope.
+
+**Effect:** IAAFT is reported as a diagnostic (it corroborates §10 — low-volume β is most distribution-dependent), NOT as the H1 null. The locked permutation test remains the inference. Surfaced to Cowork: future pilots should pick a discriminating statistic for IAAFT (β is not one) or drop the IAAFT layer.
+
+---
+
+## §13 DFA-α vs Welch-β divergence
+
+**Observed:** on the primary signal, DFA-α is ≈ flat across all 12 countries (0.827–0.901, spread 0.074) while Welch-β spans 0.348–1.083 (spread 0.735). DFA (integrates before measuring) is far less sensitive to the §10 white-noise floor; it shows essentially NO cross-country difference — consistent with a null and with the floor contaminating the Welch sub-band fit. Per README §4 / candidate §5.3, Welch β is the pre-registered primary estimator, so the verdict is reported on Welch β; but the DFA-α null is the more volume-robust reading and is flagged accordingly (`results/discussion.md` §3, §8.4).
+
+---
+
+## §14 Temporal-gap handling
+
+**Issue:** pre-registration §5.2.4 prescribes interpolating <2-day gaps and windowing around >2-day gaps. Real data has very few missing (zero-event) days: PRK 5, NLD 5, VEN 5, CHL 13, DEU/TUR 1, all others 0 (< 0.4%).
+
+**Done:** all missing days linear-interpolated (edge-clamped); counts logged per (country, signal). Segment-windowing for the rare longer gaps was NOT implemented because (a) gaps are negligible in count and (b) windowing a 3970-point series breaks the 512-day Welch segmentation. Deviation logged; immaterial to the verdict given gap counts.
+
+---
+
 ## Audit trail
 
-- **2026-06-02:** §1 amendment locked before any GDELT data examined. All other confounds inherited from candidate-doc §7 at pre-registration time.
+- **2026-06-02:** §1 amendment locked before any GDELT data examined. All other confounds (§2–§8) inherited from candidate-doc §7 at pre-registration time.
+- **2026-06-03 (result-commit):** §9–§14 appended after running the locked pipeline on real GDELT v2 data. §10 (source-volume spectral-floor confound, r=0.92) is the load-bearing finding and the reason H1 is reported as a confounded null. Original pre-registration text never modified; locked H1 permutation test applied exactly as specified.
 - Future amendments will be appended with date and reason. Original pre-registration text never modified after lock.

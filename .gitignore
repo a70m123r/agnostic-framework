@@ -27,3 +27,12 @@ build/
 # Sibling repo — agnostic-agents is its own GitHub repo (a70m123r/agnostic-agents),
 # not a submodule of this one. Lives here for local convenience but pushes separately.
 agnostic-agents/
+
+# Pilot #150 ephemeral ingest artifacts (the committed data is data/raw/*.csv;
+# these are the resumable-download checkpoint + log, regenerated on re-run)
+pilots/1f_failsafe/data/gdelt_state.pkl
+pilots/1f_failsafe/data/gdelt_ingest.log
+
+# Python bytecode
+__pycache__/
+*.pyc

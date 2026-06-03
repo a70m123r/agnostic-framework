@@ -378,20 +378,249 @@ def demo_mode(seed: int = 2026, n_pairs: int = 3, N: int = 4000) -> dict:
 # GDELT mode: real data ingest stub (requires GDELT access on Pavs machine)
 # ============================================================================
 
-def gdelt_mode(out_dir):
-    """GDELT mode: requires external data. See README for ingest protocol."""
-    print()
-    print("=== GDELT MODE - requires external data ===")
-    print("Output:", out_dir)
-    print()
-    print("To run:")
-    print(" 1. Download GDELT v2 country-day events to data/raw/")
-    print(" 2. Aggregate by country code per README.md")
-    print(" 3. Call dfa() and spectral_beta_welch() on each signal")
-    print(" 4. Call permutation_test_delta_beta on paired result")
-    print()
-    print("All analysis functions in this file are tested via --mode verify and --mode demo.")
-    return {}
+# Locked pairing (confounds.md §1 N=6 amendment): (authoritarian, pluralistic)
+GDELT_PAIRS = [
+    ("CHN", "USA"), ("RUS", "GBR"), ("PRK", "DEU"),
+    ("IRN", "FRA"), ("TUR", "NLD"), ("VEN", "CHL"),
+]
+GDELT_SIGNALS = ["category_entropy", "event_count", "mean_tone"]
+GDELT_PRIMARY_SIGNAL = "category_entropy"  # pre-registration §4.1 H1 signal
+
+
+def _load_raw_signal(data_dir: Path, label: str, signal: str
+                     ) -> tuple[np.ndarray, np.ndarray]:
+    """Load a data/raw/<label>_<signal>.csv (date,value). Empty value -> nan."""
+    path = Path(data_dir) / f"{label}_{signal}.csv"
+    dates, vals = [], []
+    with open(path, encoding="utf-8") as fh:
+        next(fh)  # header
+        for line in fh:
+            line = line.strip()
+            if not line:
+                continue
+            d, _, v = line.partition(",")
+            dates.append(d)
+            vals.append(float(v) if v != "" else np.nan)
+    return np.array(dates), np.array(vals, dtype=float)
+
+
+def _fill_gaps(vals: np.ndarray) -> tuple[np.ndarray, dict]:
+    """Linear-interpolate internal nans, clamp-fill edges. Per pre-reg §5.2.4
+    (interpolate short gaps); long gaps flagged via gap stats rather than
+    segment-windowed — see confounds.md (deviation logged 2026-06)."""
+    n = len(vals)
+    isnan = np.isnan(vals)
+    n_missing = int(isnan.sum())
+    longest = cur = 0
+    for b in isnan:
+        cur = cur + 1 if b else 0
+        longest = max(longest, cur)
+    gap = {"n_missing": n_missing, "longest_gap": int(longest),
+           "frac_missing": float(n_missing / n) if n else 1.0}
+    if isnan.all() or n_missing == 0:
+        return (vals.copy() if n_missing == 0 else np.zeros(n)), gap
+    idx = np.arange(n)
+    good = ~isnan
+    filled = vals.copy()
+    filled[isnan] = np.interp(idx[isnan], idx[good], vals[good])
+    return filled, gap
+
+
+def _preprocess(vals: np.ndarray) -> tuple[np.ndarray, dict]:
+    """Pre-reg §5.2: gap-fill, z-score within country, linear-detrend."""
+    filled, gap = _fill_gaps(vals)
+    sd = filled.std()
+    z = (filled - filled.mean()) / sd if sd > 0 else filled - filled.mean()
+    t = np.arange(len(z))
+    p = np.polyfit(t, z, 1)
+    z = z - (p[0] * t + p[1])
+    return z, gap
+
+
+def _adf_stat(x: np.ndarray, nlags: int = 1) -> float:
+    """Augmented Dickey-Fuller test statistic (constant, nlags). numpy-only,
+    lightweight — logged not gated per pre-reg §5.2.3. More negative = more
+    stationary; 5% critical ≈ -2.86 (large N, constant, no trend)."""
+    x = np.asarray(x, float)
+    dx = np.diff(x)
+    if len(dx) <= nlags + 3:
+        return float("nan")
+    y = dx[nlags:]
+    xlag = x[:-1][nlags:]
+    cols = [np.ones_like(y), xlag]
+    for l in range(1, nlags + 1):
+        cols.append(dx[nlags - l:-l] if l != 0 else dx)
+    X = np.column_stack(cols)
+    beta, _, _, _ = np.linalg.lstsq(X, y, rcond=None)
+    resid = y - X @ beta
+    dof = len(y) - X.shape[1]
+    if dof <= 0:
+        return float("nan")
+    s2 = resid @ resid / dof
+    try:
+        se = np.sqrt(s2 * np.linalg.inv(X.T @ X)[1, 1])
+    except np.linalg.LinAlgError:
+        return float("nan")
+    return float(beta[1] / se) if se > 0 else float("nan")
+
+
+def _block_bootstrap_beta_ci(signal: np.ndarray, n_boot: int = 1000,
+                             block: int = 64, seed: int = 2026
+                             ) -> tuple[float, float]:
+    """Moving-block bootstrap 95% CI on Welch β (preserves local
+    autocorrelation). Substitutes for the pre-reg's powerlaw.Fit parametric
+    bootstrap (powerlaw pkg unavailable in numpy-only env — logged in
+    confounds.md). Descriptive uncertainty only; H1 inference is the locked
+    permutation test."""
+    rng = np.random.default_rng(seed)
+    N = len(signal)
+    if N < block * 2:
+        return float("nan"), float("nan")
+    nblocks = int(np.ceil(N / block))
+    betas = np.empty(n_boot)
+    for i in range(n_boot):
+        starts = rng.integers(0, N - block + 1, size=nblocks)
+        samp = np.concatenate([signal[s:s + block] for s in starts])[:N]
+        b, _, _ = spectral_beta_welch(samp)
+        betas[i] = b
+    betas = betas[~np.isnan(betas)]
+    if len(betas) < 10:
+        return float("nan"), float("nan")
+    lo, hi = np.percentile(betas, [2.5, 97.5])
+    return float(lo), float(hi)
+
+
+def _iaaft_null_beta(signal: np.ndarray, observed_beta: float,
+                    n_surr: int = 100, seed: int = 2026) -> dict:
+    """IAAFT surrogate β distribution (pre-reg §5.4.2). NOTE: IAAFT preserves
+    the power spectrum, so surrogate β ≈ observed β by construction — this is a
+    linearity diagnostic, NOT a discriminating null for β. Flagged in
+    confounds.md; reported for transparency."""
+    rng = np.random.default_rng(seed)
+    null = np.empty(n_surr)
+    for i in range(n_surr):
+        surr = iaaft_surrogate(signal, n_iter=100, rng=rng)
+        b, _, _ = spectral_beta_welch(surr)
+        null[i] = b
+    null = null[~np.isnan(null)]
+    if len(null) < 2:
+        return {"surrogate_beta_mean": float("nan"),
+                "surrogate_beta_std": float("nan"), "z_vs_surrogate": float("nan")}
+    mu, sd = float(null.mean()), float(null.std())
+    z = (observed_beta - mu) / sd if sd > 0 else float("nan")
+    return {"surrogate_beta_mean": mu, "surrogate_beta_std": sd,
+            "z_vs_surrogate": float(z)}
+
+
+def _analyze_signal(z: np.ndarray, do_iaaft: bool) -> dict:
+    """Welch β (primary) + DFA α (robustness, scales aligned to the
+    pre-registered [10,365]-day band) + bootstrap CI (+ IAAFT diagnostic)."""
+    beta, _, _ = spectral_beta_welch(z)               # default f∈[1/365,1/10]
+    alpha, _, _ = dfa(z, scale_min=10, scale_max=365, num_scales=20)
+    ci_lo, ci_hi = _block_bootstrap_beta_ci(z)
+    rec = {"welch_beta": float(beta), "dfa_alpha": float(alpha),
+           "beta_ci95": [ci_lo, ci_hi], "adf_stat": _adf_stat(z)}
+    if do_iaaft:
+        rec.update(_iaaft_null_beta(z, beta))
+    return rec
+
+
+def _verdict(obs_delta: float, p: float, d: float, per_pair_delta: list) -> str:
+    """H1 verdict per pre-registration §4.1-§4.4 + HANDOFF verdict table.
+    H1 direction is β_auth < β_plur (Δβ negative)."""
+    passes = (obs_delta < -0.10) and (p < 0.05) and (abs(d) >= 0.5)
+    fail_direction = (obs_delta > 0) and (abs(d) >= 0.5)
+    null_effect = abs(obs_delta) < 0.05 and p >= 0.05
+    if passes:
+        return "PASS"
+    if fail_direction:
+        return "FAIL_DIRECTION"
+    if null_effect:
+        return "NULL"
+    return "INCONCLUSIVE"
+
+
+def gdelt_mode(out_dir, data_dir):
+    """Run the locked pipeline on real GDELT v2 country-day signals.
+
+    Mirrors demo_mode() structure (the math is identical; only the signal
+    source differs). H1 verdict is decided on the PRIMARY signal
+    (category_entropy) via the locked permutation_test_delta_beta over the 6
+    pre-registered pairs. event_count (H2) and mean_tone (H3) are secondary.
+    """
+    data_dir = Path(data_dir)
+    print("\n=== GDELT MODE — real GDELT v2 country-day analysis (N=6 pairs) ===\n")
+
+    per_country = {}   # signal -> label -> analysis record
+    results_by_signal = {}
+
+    for signal in GDELT_SIGNALS:
+        is_primary = (signal == GDELT_PRIMARY_SIGNAL)
+        per_country[signal] = {}
+        print(f"--- signal: {signal}{'  [PRIMARY / H1]' if is_primary else '  [secondary]'} ---")
+        # analyze every country once
+        for auth, plur in GDELT_PAIRS:
+            for label in (auth, plur):
+                if label in per_country[signal]:
+                    continue
+                _, raw = _load_raw_signal(data_dir, label, signal)
+                z, gap = _preprocess(raw)
+                rec = _analyze_signal(z, do_iaaft=is_primary)
+                rec["gap"] = gap
+                rec["n_points"] = int(len(z))
+                per_country[signal][label] = rec
+                flag = "  ⚠ gaps" if gap["frac_missing"] > 0.05 else ""
+                print(f"  {label:4} β={rec['welch_beta']:+.3f} "
+                      f"α={rec['dfa_alpha']:.3f} "
+                      f"CI95=[{rec['beta_ci95'][0]:+.2f},{rec['beta_ci95'][1]:+.2f}] "
+                      f"miss={gap['frac_missing']*100:.1f}%{flag}")
+
+        # paired test across the 6 pairs
+        beta_auth = np.array([per_country[signal][a]["welch_beta"] for a, _ in GDELT_PAIRS])
+        beta_plur = np.array([per_country[signal][p]["welch_beta"] for _, p in GDELT_PAIRS])
+        per_pair_delta = (beta_auth - beta_plur).tolist()
+        obs, p, d = permutation_test_delta_beta(beta_auth, beta_plur,
+                                                n_perm=10000,
+                                                rng=np.random.default_rng(2026))
+        n_correct_dir = int(np.sum(beta_auth < beta_plur - 0.10))
+        verdict = _verdict(obs, p, d, per_pair_delta)
+        print(f"  >> Δβ(auth−plur)={obs:+.3f}  p={p:.4f}  d={d:+.3f}  "
+              f"pairs satisfying H1 direction: {n_correct_dir}/6  ->  {verdict}\n")
+
+        results_by_signal[signal] = {
+            "pairs": [list(pr) for pr in GDELT_PAIRS],
+            "beta_auth": beta_auth.tolist(),
+            "beta_plur": beta_plur.tolist(),
+            "per_pair_delta_beta": per_pair_delta,
+            "observed_delta_mean": float(obs),
+            "p_value": float(p),
+            "cohens_d": float(d),
+            "n_pairs_satisfying_direction": n_correct_dir,
+            "verdict": verdict,
+            "is_primary": is_primary,
+        }
+
+    primary = results_by_signal[GDELT_PRIMARY_SIGNAL]
+    print("=" * 64)
+    print(f"H1 VERDICT (primary signal {GDELT_PRIMARY_SIGNAL}): {primary['verdict']}")
+    print(f"  Δβ = {primary['observed_delta_mean']:+.4f}  "
+          f"Cohen's d = {primary['cohens_d']:+.4f}  "
+          f"p = {primary['p_value']:.4f}")
+    print("=" * 64)
+
+    return {
+        "pilot": "150_1f_failsafe",
+        "data_dir": str(data_dir),
+        "window": "2015-02-18..2026-01-01 (GDELT v2 availability-limited start)",
+        "n_pairs": len(GDELT_PAIRS),
+        "primary_signal": GDELT_PRIMARY_SIGNAL,
+        "h1_verdict": primary["verdict"],
+        "h1_delta_beta": primary["observed_delta_mean"],
+        "h1_cohens_d": primary["cohens_d"],
+        "h1_p_value": primary["p_value"],
+        "results_by_signal": results_by_signal,
+        "per_country": per_country,
+    }
 
 
 # ============================================================================
@@ -399,10 +628,16 @@ def gdelt_mode(out_dir):
 # ============================================================================
 
 def main():
+    # Make stdout robust to non-ASCII (β, Δ, α, ⚠) on Windows cp1252 consoles.
+    try:
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
     parser = argparse.ArgumentParser(description="Pilot 1f-failsafe")
     parser.add_argument("--mode", choices=["verify", "demo", "power", "gdelt", "ingest-help"], default="demo")
     parser.add_argument("--seed", type=int, default=2026)
     parser.add_argument("--out-dir", type=Path, default=Path("./pilot_output"))
+    parser.add_argument("--data-dir", type=Path, default=Path("./data/raw"))
     args = parser.parse_args()
     args.out_dir.mkdir(parents=True, exist_ok=True)
 
@@ -416,7 +651,7 @@ def main():
         print_gdelt_instructions()
         results = {"mode": "ingest-help"}
     elif args.mode == "gdelt":
-        results = gdelt_mode(args.out_dir)
+        results = gdelt_mode(args.out_dir, args.data_dir)
 
     out_file = args.out_dir / f"{args.mode}_results.json"
     with open(out_file, "w") as f:
