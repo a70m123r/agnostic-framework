@@ -237,3 +237,89 @@ In order of estimated tractability + structural fit:
 - **Risk:** Three-strike condition cont 30 §4 closed-out; cycling-reframe candidate (#150b/#151 merged pre-registration) is the next substantive empirical move via task #172. This adversarial-substrate candidate adds surface area but does NOT preempt that pilot work. Audit v07 should track whether the framework continues to push the empirical layer despite adding new candidate surface area.
 
 **Tier 3 promotion-review checkpoint: 2027-06-03 (12 months out).** If by then neither Bar A worked example nor cross-substrate replication has surfaced, cont 27 §3 demote-to-stale procedure applies.
+
+---
+
+## §11 Structural meta-frame: ecosystem-in-latent-space (added 2026-06-04 per cont 31)
+
+**Provenance:** Pav's steer immediately post-feedback-mode-page-push (2026-06-03 late evening): *"pushed, lets get into the meat of adversarial, the mimics the hijacers, its like an eco system in the latent space and internet is ground zero."* Full integration documented in [`continuations/31.md`](../continuations/31.md); this section names the structural depth the steer added to the candidate.
+
+**Tier discipline:** This is structural depth on the existing Tier 3 candidate, NOT a tier promotion and NOT a new candidate. Per [audit v06 §10.4](../audits/v06.md) closure-via-convergence-multiplication discipline applied at candidate layer, the framework actively resists declaring every new structural insight a new candidate. The ecosystem framing satisfies the test for "candidate structural depth" not "new candidate":
+- It does NOT propose new substrate primitives; it provides language for how existing §2 sub-primitives interact
+- It does NOT add new promotion bars; the existing §5 Bar A worked-example requirement still gates Tier 2
+- It does NOT add new pruning triggers; the existing 12-month checkpoint (2027-06-03) still applies
+- It does NOT change the candidate's tier (still Tier 3 speculative)
+
+### §11.1 The structural insight
+
+The six sub-primitives in §2 are not six different attack types — they are six different **niches in the same ecosystem.** Different adversarial actors occupy different niches under the same substrate selection pressure. The ecosystem-as-a-whole has dynamics that no single sub-primitive captures.
+
+**Implication for §3 shared-structural-property:** the property "broken symmetry of substrate dynamics by an observer who benefits at the substrate's cost" is correct but understates the case. The fuller structural property is: **adversarial actors are an evolved population shaped by the substrate's selection pressure; their strategies are coevolved counter-responses to the substrate's discriminative capacity; the population's composition continuously adapts to the substrate's defenses.** This is Red Queen dynamics at canon-protocol substrate.
+
+### §11.2 Ecological vocabulary mapping to the six sub-primitives
+
+Biology has worked vocabulary for evolved-strategy-against-substrate-selection that maps cleanly to the candidate's sub-primitives. (Cont 31 §2 develops these in depth; this section is the mapping summary.)
+
+- **Batesian mimicry** (harmless mimic of dangerous) → primarily maps to bad-faith rendering (§2.3): externally-rendered features of a high-cost-to-fake category without paying actual cost
+- **Müllerian mimicry** (multiple harmful species converge on shared signal) → primarily maps to memetic warfare (§2.2) when coordinated; converged signal harder to identify than any individual signal
+- **Aggressive mimicry** (predator mimics prey signal) → primarily maps to asymmetric wrapper-overlap (§2.6) acquisition phase: lure calibrated to victim's actual preference-landscape
+- **Automimicry** (mimicry within species, one organism presenting as multiple) → primarily maps to bad-faith rendering (§2.3) in coordinated-account / sock-puppet form
+- **Brood parasitism** (placing offspring in another's nest) → primarily maps to canon hijacking (§2.1): placing one's payload inside another's already-trusted distribution
+- **Lateral gene transfer** (hijacker captures cellular machinery) → primarily maps to canon hijacking (§2.1) and L0 mediator capture (§2.4)
+- **Coevolutionary arms race** (Red Queen dynamics) → cross-cuts ALL six sub-primitives; the structural reason the sub-primitives are continually evolved, not patched-and-done
+- **Niche construction** (organisms modify substrate selection criteria) → cross-cuts; the structural reason substrate-defenders' targets are moving
+
+The mappings are NOT 1:1; the ecosystem hosts mixed strategies. A single adversarial actor can simultaneously occupy multiple niches.
+
+### §11.3 Ecosystem failure modes (different from individual failure)
+
+Four canonical ecosystem failure modes transfer with structural import:
+
+- **Monoculture collapse** — substrate's selection rewards single fitness criterion overwhelmingly; all evolved actors converge; novelty drops; system becomes fragile. Substrate-canonical: engagement-optimized content ecosystems where signal-to-noise collapses to engagement-bait.
+- **Trophic collapse** — extractors exceed substrate's regenerative capacity; substrate degrades faster than it regenerates; eventual collapse; extractors move on; substrate-participants left with collapsed substrate. Substrate-canonical: attention-extraction platforms in late-cycle enshittification.
+- **Invasive species without native predators** — new substrate-introduced actor faces no evolved counter-strategies; population explodes unchecked. Substrate-canonical: AI-generated content at scale 2023-2025; generation capability vastly exceeds detection capability by structural lag.
+- **Keystone species capture** — small-population structurally-load-bearing actor whose removal cascades through ecosystem. Substrate-canonical: small number of L0-mediator institutions (Google, Meta, Apple, OpenAI, Anthropic) whose decisions cascade through the internet ecosystem.
+
+These ecosystem-level failure modes are NOT captured by any single §2 sub-primitive. They are the system-level health metrics the candidate was implicitly groping toward.
+
+### §11.4 Internet as ground zero — why this substrate first
+
+Per cont 31 §4, the internet substrate is ground zero for the ecosystem framing for four structural reasons:
+
+1. **Latent space is the densest and most measurable there** — embedding manifolds, recommender systems, search ranking, LLM-mediated agent-substrate. Adversarial dynamics empirically tractable in ways other substrates aren't.
+2. **L0 mediators are explicit and named** — Google's PageRank, Meta's EdgeRank, TikTok's For-You, OpenAI's RLHF reward model, Anthropic's Constitutional-AI process. Each is algorithmically-instantiated L0 per [Reading 08](../readings/2026-06-02_gamma_world_multi_agent_world_modeling.md) §3.2.
+3. **Coevolution arms races are documented and dated** — Google ranking ↔ SEO industry (1995+); spam filtering ↔ spam evolution (2002+); detection models ↔ adversarial examples (2014+); influence operations ↔ platform integrity (2016+); deepfakes ↔ detection (2019+); LLM prompt injection ↔ red-teaming (2023+); AI content saturation ↔ proposed provenance standards (2023+).
+4. **Ecosystem failure modes are currently visible** — monoculture collapse via engagement optimization, invasive-species via AI content, trophic collapse risk in attention-extraction platforms. Live as of 2026 drafting.
+
+### §11.5 What the ecosystem framing predicts the per-sub-primitive view doesn't
+
+Per cont 31 §6, six concrete observations:
+- Attacks are not isolated (single phishing campaign = Batesian mimic in persistent niche; patching the campaign doesn't patch the niche)
+- Defenses produce next-generation attacks (Red Queen structural prediction)
+- Adversarial populations occupy multiple niches simultaneously (multi-niche actor mapping)
+- Substrate's discriminative capacity creates next mimicry frontier (detection-vs-evasion structural asymmetry)
+- Substrate health is ecosystem-level, not patch-level (diversity, signal-to-noise, niche-occupancy, renewal-vs-extraction rate)
+- Adversarial-population control requires reshaping selection criteria, not patching mimics (upstream substrate-design as defense layer)
+
+### §11.6 Sharpened Bar A criteria
+
+The existing §5 Bar A still gates Tier 2 promotion. Cont 31 §9 sharpens what successful Bar A worked examples should demonstrate:
+- Predict next-niche emergence (concrete claims about which adversarial niches will be filled next, on what timeline)
+- Identify ecosystem-level interventions the per-sub-primitive view wouldn't surface
+- Demonstrate cross-niche actor mapping (single attacker filling multiple sub-primitive niches simultaneously, documented case)
+- Connect to formal coevolution literature (Lotka-Volterra, signaling-game equilibria, ESS analysis)
+
+These are not new Bar A criteria; they sharpen what existing Bar A worked examples should look like.
+
+### §11.7 Most-tractable Bar A worked example per cont 31 analysis
+
+Per cont 31 §7, the **search-ranking ecosystem as a whole** is the most-tractable Bar A worked example (more tractable than any individual §8 sub-primitive case) because:
+- 25+ years of documented coevolution
+- Multiple identified niches simultaneously occupied
+- Named selection pressure events (Google algorithm updates) with dates
+- Currently-visible ecosystem failure mode (invasive AI content, structural detection lag)
+- Predictions and intervention-classes the per-sub-primitive view doesn't surface
+
+This re-ranks the §8 priority list: search-ranking-ecosystem-as-a-whole tops the list (estimated effort: ~8-12 hr for finished Bar A worked example). The original §8 #1 (LLM jailbreak as memetic warfare) remains tractable but operates at sub-primitive layer rather than ecosystem layer; suitable as Bar A satellite worked example after the ecosystem case is developed.
+
+**Pav's call on whether to develop search-ranking-ecosystem case as Bar A worked example, or pick differently.**

@@ -8,6 +8,59 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-06-04 — CONT 31 SHIPPED · ecosystem-in-latent-space framing for adversarial-substrate-dynamics candidate · internet as ground zero · candidate doc §11 added documenting the structural meta-frame · Tier 3 discipline held throughout (NOT a new candidate, NOT a new convergence)
+
+### Provenance
+- Pav's steer immediately after pushing /feedback/ mode-page (2026-06-03 late evening): *"pushed, lets get into the meat of adversarial, the mimics the hijacers, its like an eco system in the latent space and internet is ground zero."*
+- 21 words. Three load-bearing structural moves: (1) layer ecosystem framing OVER the 6 sub-primitives as their unifying meta-frame; (2) name mimics and hijackers as the load-bearing actor archetypes; (3) commit to internet-as-substrate as the ground-zero worked example.
+
+### What shipped
+- **`continuations/31.md` (~6,500 words)** — ecosystem-in-latent-space framing for the adversarial-substrate-dynamics candidate. Twelve sections: provenance + structural insight + ecological vocabulary (mimicry types, hijackers as parasites, coevolutionary arms race, niche construction, ecosystem failure modes) + why this is candidate depth not new candidate + internet-as-ground-zero rationale + what this changes about existing canon + what ecosystem framing makes more legible + worked-example sketch (search-ranking ecosystem) + tier discipline + Bar A sharpening + carry-forward + cross-references + provenance.
+- **`candidates/adversarial_substrate_dynamics.md` §11 added (~1,800 words)** — structural meta-frame documented in candidate doc. Names the ecosystem framing as structural depth on the existing Tier 3 candidate, NOT a tier promotion. Ecological vocabulary mapped to the six §2 sub-primitives. Internet-as-ground-zero rationale summarized. Sharpened Bar A criteria named. Search-ranking ecosystem as most-tractable Bar A worked example identified pending Pav's call.
+- **Main `index.html` footer**: continuation range updated 02–30 → 02–31.
+
+### Structural moves
+- Ecological vocabulary maps cleanly to the 6 sub-primitives: Batesian mimicry → bad-faith rendering; Müllerian mimicry → memetic warfare (when coordinated); aggressive mimicry → asymmetric wrapper-overlap (acquisition phase); automimicry → bad-faith rendering (coordinated-account form); brood parasitism / lateral gene transfer → canon hijacking; coevolutionary arms race + niche construction → cross-cut ALL six sub-primitives.
+- Four ecosystem failure modes transferred with structural import: monoculture collapse (engagement-bait substrate), trophic collapse (enshittification), invasive species without native predators (AI-generated content saturation 2023-2025), keystone species capture (L0 mediator institutions).
+- Internet substrate is ground zero for four reasons: latent space is densest and most measurable there; L0 mediators are explicit and named (PageRank, EdgeRank, FYP, RLHF reward, Constitutional AI); coevolution arms races are documented and dated (1995+ Google↔SEO, 2002+ spam, 2014+ adversarial examples, 2016+ influence ops, 2019+ deepfakes, 2023+ prompt injection); ecosystem failure modes are currently visible (live 2026).
+- Search-ranking ecosystem named as most-tractable Bar A worked example — re-ranks the candidate doc §8 priority list above all six original per-sub-primitive cases.
+
+### What this changes about existing canon
+- **Cont 17 latent-substrate Tier 3 speculation: sharpened.** Broad Wheeler-style claim remains unfalsifiable; cont 31 surfaces a narrower empirically-tractable subclaim — latent space is the operative substrate for adversarial dynamics on the internet (checkable via embedding measurements, recommender audits, coevolution tracking).
+- **Cont 28 §2 supersede dynamic + §5 agent-substrate observer-class: sharpened.** Adversarial population shifts with substrate (memetic warfare → prompt injection; canon hijacking → RLHF capture). The ecosystem persists across substrate shift because niches persist.
+- **Cont 30 cycling reframe: enriched.** Suppression dynamics induce locked-squeeze; coordinated A⁺ injection induces locked-pull. Cycling-capacity measure stays right substrate-level metric; ecosystem framing shows upstream what affects it.
+- **Cont 22 wrapper-relative-ethics: reinforced.** Framework still makes no substrate-level normative claim; ecosystem framing names structural features adverse-to-substrate-viability (monoculture, trophic, invasive) without committing to substrate-level ethics.
+- **Cross-substrate convergence list (LCAO through BES #9): unchanged.** Ecosystem framing is NOT a new convergence. Audit v06 §10.4 closure-via-convergence-multiplication discipline holds.
+- **Reading 07 BES Theorem 4.4: sharpened at adversarial substrate.** Entropy-shell escape reads as adversarial-population recombination escaping defender's discriminative shells. Bidirectional coevolution at attack-defense substrate.
+- **Internet construct study v1: not invalidated; v2 surface area named** (Pav's call on whether to develop).
+
+### Tier discipline held throughout
+- The ecosystem-in-latent-space meta-frame is Tier 3 speculative — structural coherence with existing primitives, no current empirical purchase, held openly per the candidate's existing promotion bars.
+- The candidate's tier (Tier 3) is unchanged. Bar A still gates Tier 2 promotion.
+- Pruning trigger unchanged at 2027-06-03.
+- Per audit v06 §10.4 closure-via-convergence-multiplication discipline applied at candidate layer: the framework actively resists declaring every new structural insight a new candidate. Cont 31 §3 lays out the discipline test for "structural depth vs new candidate" — ecosystem framing satisfies the structural-depth side.
+
+### Audit v07 verification queue additions
+Audit v07 (target 2026-06-16) explicitly verifies:
+- Did cont 31 ecosystem-framing-development displace empirical work on tasks #172 (cycling pilot pre-registration cold-draft, Claude Code in flight) / #150b / #151? (audit v06 §10 substantive-research-displacement pattern check)
+- Did Pav surface a Bar A worked example direction (search-ranking ecosystem vs other §8 target)?
+- Did any sub-primitive get prematurely tier-promoted on structural-coherence-with-ecosystem-framing strength alone?
+- Is the framework over-reading internet-substrate dynamics as evidence for cont 17 latent-substrate Tier 3?
+
+### Risk warning carried
+- Volume of candidate surface area added in 72 hours (feedback log + adversarial candidate + cont 31 + candidate doc §11) is non-trivial. Cont 31 §10.4 explicitly flags this for audit v07.
+- Honest framework prediction (also from cont 31 §12): cont 31 should be the LAST major candidate-surface addition before audit v07 lands, regardless of what additional structural insights surface — discipline closure-mode.
+
+### Carry-forward
+- Search-ranking-ecosystem Bar A worked example development (estimated ~8-12 hr) — pending Pav's call
+- Internet construct study v2 with ecosystem-and-adversarial framing layered onto v1 — pending Pav's call
+- Audit v07 with cont 31 verification queue additions — target 2026-06-16
+- Task #172 cycling pilot pre-registration cold-draft (Claude Code in flight) — parallel, not blocked
+- Tasks #150b / #151 merged pilot — parallel, not blocked
+- Cross-disciplinary validation of biology-mimicry vocabulary mapping (game-theoretic signaling-game models, ESS analysis) — optional Bar A satellite work
+
+---
+
 ## 2026-06-03 (late evening, post-cont-30) — /feedback/ MODE-PAGE SHIPPED · framework's reply to external five-blind-spots review now public-facing · source anonymized at request · discipline-cycle artifact made visible
 
 ### What shipped
