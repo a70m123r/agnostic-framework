@@ -49,6 +49,50 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-06-03 (later evening) — External feedback log + Adversarial substrate dynamics Tier 3 candidate · five blind-spots review bucket-classified · Item #2 (adversarial / power dynamics) elevated to candidate with 6 sub-primitives
+
+### Added (feedback/2026-06-03_external_blindspots_review.md, ~2,000 words)
+- **External team feedback** surfaced by Pav while Claude Code session task #172 was in flight. Framework-vocabulary-aware critic (correctly uses Lakatos progressive-vs-degenerating, canon hijacking, viability).
+- **Five blind-spots reviewed** per cont 27 §2 three-tier bucket classification:
+  - **Bucket A (acknowledged as being-addressed):** Item 1 (empirical maturity) — pilot #150 result-commit + task #172 + audit v07 trajectory; Item 5 (formal-math-light) — BES Theorem 4.4 + pilot.py + γ-World architectural patterns
+  - **Bucket B (acknowledged as deliberate scope decisions):** Item 3 (qualia bracket per cont 17) — scope-defense; Item 4 (descriptive >> normative per cont 22 wrapper-relative-ethics) — scope-defense, could be more explicit
+  - **Bucket C (genuine gap → new candidate):** Item 2 (adversarial / power dynamics) — elevated to candidate
+- **Audit v07 verification queue** named: trajectory verification on Items 1+5; scope-defense honesty on Items 3+4; promotion-bar progress on Item 2; rate-of-math-vs-vocabulary discipline-cycle proposal.
+
+### Added (candidates/adversarial_substrate_dynamics.md, ~4,500 words)
+- **Tier 3 candidate** per cont 27 §2 — structurally coherent across multiple existing primitives but no empirical purchase yet.
+- **Six adversarial primitive sub-candidates** as a coherent class with shared structural property (broken symmetry of substrate dynamics): canon hijacking; memetic warfare; bad-faith rendering; power capture of L0 mediator; suppression dynamics (locked-squeeze induction); asymmetric wrapper-overlap (extraction without contribution).
+- **Each sub-primitive mapped to existing canon** (wrapper-overlap, A⁻/A⁺, canon-stack, L0 mediator, cycling reframe). The class names what existing primitives could host but hadn't applied.
+- **Why this matters:** (1) Sharpens cont 30 cycling reframe by providing actor-side vocabulary for what produces locked states. (2) Surfaces framework's first explicit ethics-adjacent vocabulary without committing to substrate-level ethics. (3) Engages alignment/AI safety researchers (jailbreaks = memetic warfare; deceptive alignment = bad-faith rendering; reward hacking = extraction without contribution). (4) Addresses the framework's longest-standing implicit assumption that observers participate in good faith.
+- **Promotion bars A/B/C named** per cont 27 §3: (A) worked example surfaces; (B) cross-substrate replication; (C) external recognition by adversarial-systems researchers.
+- **Pruning trigger:** 12-month review (2027-06-03); demote to "structurally-adjacent-but-unworked" if no Bar A worked example surfaces.
+- **Six worked-example targets ranked by tractability** for future Bar A work: LLM jailbreak (~4-6 hr; most tractable); regulatory capture (~6-8 hr); platform-monopoly attention extraction (~6-8 hr); ESG-washing (~4-6 hr); predatory monopoly (~6-8 hr); abusive relationship dynamics (~6-8 hr; sensitive subject matter). Pav's call on which to develop first.
+
+### Updated
+- `candidates.json`: count 4 → 5 (adversarial candidate prepended). Generated date 2026-06-03.
+
+### Why this matters
+- **External A⁻ check ran cleanly through cont 27 §2 three-tier procedure.** Bucket classification (A/B/C) + per-item honest response + tier-tagged candidate-elevation for genuine gap. The framework's own discipline machinery processed external feedback as substrate data, not noise.
+- **Adversarial-substrate-dynamics fills a long-standing implicit assumption gap.** Wrapper-overlap, A⁻/A⁺, canon-stack all assumed observers participate in good faith. That assumption is empirically false in many substrate scales (politics, business, relationships, online discourse). The candidate names the assumption and provides vocabulary for its violation.
+- **Sharpens cont 30 cycling reframe.** Cont 30 abandoned the value-coded "authoritarian = bad" framing but didn't replace it with actor-side vocabulary. Adversarial dynamics provides: locked-squeeze AND locked-pull are what adversarial capture produces. Suppression dynamics IS the actor-side cause of locked-squeeze. Asymmetric wrapper-overlap with A⁺ extraction IS the actor-side cause of locked-pull.
+- **Opens alignment / AI safety surface area** without breaking the cont 17 consciousness bracket. The framework can engage substrate-dynamics relevant to alignment (jailbreaks, deceptive alignment, reward hacking) without committing to qualia/phenomenology.
+
+### Discipline notes
+- **No canon-level promotion.** Adversarial-substrate-dynamics is Tier 3 candidate — structurally coherent but no worked example yet. Per cont 27 §2, structural-coherence-without-empirical-purchase = Tier 3.
+- **Resisted the temptation to over-promote.** The external feedback was strong and the structural integration is tight, but the framework's discipline says: Tier 3 candidate first, worked example surfaces Bar A, then advance toward Tier 2.
+- **Task #172 (Claude Code in flight) not affected.** Adversarial-substrate-dynamics is independent of the cycling-pilot pre-registration; it doesn't modify any locked pre-registration document.
+- **Audit v07 (target 2026-06-16) should verify:** (a) feedback log + adversarial candidate didn't reintroduce the substantive-research-displacement pattern audit v06 §10 named; (b) the cont 30 cycling reframe + adversarial-substrate-dynamics integration is structurally sound rather than vocabulary-accretion; (c) promotion bar A for adversarial candidate is being approached.
+
+### Carry-forward
+- **Task #175 ✅ COMPLETED** — feedback log shipped
+- **Task #176 ✅ COMPLETED** — adversarial candidate doc shipped
+- **Task #172 [IN FLIGHT on Claude Code]** — cycling-pilot pre-registration cold-draft; unaffected by this round
+- **Task #173 [QUEUED]** — audit v07 target 2026-06-16; scope now includes feedback log review + adversarial candidate verification
+- **NEW [QUEUED]:** Worked-example development for adversarial-substrate-dynamics Bar A. Six targets ranked by tractability in candidate doc §8; Pav's call on which to develop first.
+- **Possible follow-up:** Future continuation explicitly stating wrapper-relative-ethics claim (Bucket B item #4 acknowledgment that the framework's normative position IS its meta-discipline, not an evasion).
+
+---
+
 ## 2026-06-03 — Pilot #150 RESULT-COMMIT (confounded null) + Cont 30 (cycling reframe integration) + Reading 06 §10.3 narrowing · discipline cycle landed end-to-end in ~36 hours · Pav's "squeeze ↔ pull cycles" reframe is the load-bearing structural move
 
 ### Pilot #150 result-commit (Claude Code session, 2026-06-03)

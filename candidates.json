@@ -4,8 +4,23 @@
   "generated": "2026-06-03",
   "live_url": "https://a70m123r.github.io/agnostic-framework/",
   "tier_discipline_note": "Per cont 27 §2 three-tier epistemic framework. Candidate entries are typically Tier 2 (ontological-candidate, conditional on contested evidence). When candidates get promoted to canon, status changes but the doc is preserved as the worked-example reference for the promotion.",
-  "count": 4,
+  "count": 5,
   "candidates": [
+    {
+      "title": "Tier 3 candidate — Adversarial substrate dynamics (canon hijacking, memetic warfare, bad-faith rendering, L0 mediator capture, suppression dynamics, asymmetric wrapper-overlap)",
+      "tier": "Tier 3 speculative",
+      "surfaced": "2026-06-03",
+      "source": "External team feedback item #2 (lighter treatment of deliberate canon hijacking, memetic warfare, bad-faith actors, high-stakes power capture)",
+      "summary": "Framework has structural primitives (wrapper-overlap, A⁻/A⁺, canon-stack, L0 mediator, cycling reframe) that CAN handle adversarial dynamics but hasnt applied them. Six adversarial primitive sub-candidates share one structural property: deliberate asymmetry-breaking of an otherwise-neutral substrate dynamic by an observer who benefits at the substrates cost. Sharpens cont 30 cycling reframe by providing actor-side vocabulary for what produces locked states. Engages alignment/AI safety surface area. Reinforces cont 22 wrapper-relative-ethics by naming structural features that harm any wrapper regardless of values, without committing to substrate-level ethics.",
+      "promotion_bars": [
+        "(A) At least one worked example surfaces where adversarial vocabulary generates predictions/insights existing neutral vocabulary couldnt",
+        "(B) Cross-substrate replication across at least 3 distinct substrate scales",
+        "(C) External recognition from adversarial-systems/power-dynamics/political-economy literature"
+      ],
+      "pruning_trigger": "12 months (target 2027-06-03) — if neither Bar A nor cross-substrate replication, demote to structurally-adjacent-but-unworked per cont 27 §3",
+      "candidate_doc_url": "https://a70m123r.github.io/agnostic-framework/candidates/adversarial_substrate_dynamics.md",
+      "feedback_source": "https://a70m123r.github.io/agnostic-framework/feedback/2026-06-03_external_blindspots_review.md"
+    },
     {
       "title": "Cross-substrate convergence #9 candidate — Bidirectional Evolutionary Search (BES) at the search-methodology substrate",
       "tier": "Tier 2 candidate",
