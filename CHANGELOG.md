@@ -8,6 +8,47 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-06-04 (late) — READING 06 §10.3 THIRD AMENDMENT + CONT 30 §3 SHARPENING · Goldberger 2002 prior-art catch from Claude Code's EWS scout · symmetry-novelty positioning DROPPED · what survives as Tier 2 candidate: bridge + rolling-amplitude + social application · cont 26 §3 substrate-level Tier 1 canon UNCHANGED · HANDOFF refreshed with three locked Cowork decisions for Claude Code Phase E (ground-truth validation pilot)
+
+### What shipped (Cowork-side, minimal-viable canon correction per cont 32 lesson 8 candidate-layer narrow-before-extend)
+
+- **`readings/2026-05-28_cymatic_harmonic_structure_in_social_systems.md` §13 amendment log** — third entry (2026-06-04). Goldberger, Amaral, Hausdorff, Ivanov, Peng & Stanley 2002 PNAS (PMC128562) states the symmetric two-pole 1/f claim near-verbatim on the same DFA-α axis: *"the breakdown of fractal physiologic complexity may be associated with excessive order (pathologic periodicity), on the one hand, or uncorrelated randomness, on the other."* Three of four independent web-research scouts (Claude Code's EWS scout, commit bbb6d9c) converged on this paper. Symmetric-novelty claim DROPPED from framework's external-facing positioning per cont 27 §3 narrow-before-demote. **Surviving Tier 2 candidate:** (1) cross-field bridge between EWS/critical-transitions (Scheffer/Lenton/Dakos/Boers) and physiology decomplexification (Goldberger/Lipsitz/Costa/Peng) — these literatures describe the same two-pole phenomenon and barely cite each other (2024 Dakos *ESD* review verified to give DFA a single Table-2 line and never cite Goldberger / loss-of-1/f); (2) diagnostic shift from static LEVEL to cycling AMPLITUDE over rolling window — Goldberger and all prior threads measure static level; none operationalize the temporal cycling-amplitude collapse as a second-order rolling-DFA-α statistic; (3) social/GDELT application — Braha 2024 npj Complexity deferred EWS to future work.
+- **`continuations/30.md` §3 amendment 2026-06-04** — symmetric-in-direction discipline cont 30 §3 originally established STAYS. Framework's positioning of symmetric-failure as NOVEL contribution retracted from external-facing claims. Cont 26 §3 substrate-level Tier 1 canon UNCHANGED — the underlying failsafe claim holds independent of who first published the symmetric two-pole observation; what's narrowed is the framework's positioning, not the underlying structural claim.
+- **`HANDOFF.md` refreshed** with three locked Cowork decisions for Claude Code Phase E ground-truth validation pilot:
+  - **Decision #1:** Narrow public claim to bridge + rolling-amplitude metric + social application; drop symmetry-novelty
+  - **Decision #2:** Fold synthetic-gate revision into cycling pre-reg via `confounds_cycling.md` §1 (NEW file); H1b cycling-collapse + lock-sign primary; H2b shock-recovery + H3b slope → diagnostic; replacement estimators (Delecroix 2024 "resilience in bursts" + analytic λ = −log(AR1)/dt; PCMCI+ Hoegner-Boers 2025 or CNM-TE Bian 2025) must re-validate synthetically before re-entering primary family
+  - **Decision #3:** Ground-truth validation pilot PRECEDES any GDELT re-pull. Cascade Peter/Paul lakes + PhysioNet nsr2db/chf2db/Fantasia first. Pre-committed falsifier: if A_cyc doesn't beat best one-pole indicator on lead-time + AUC, metric-level claim REJECTED and contribution narrows to bridge alone.
+
+### What Cowork did NOT do (lesson 8 candidate-layer narrow-before-extend held)
+
+- NO new continuation written about the Goldberger finding. The Reading 06 amendment + cont 30 §3 amendment are the minimal-viable canon correction.
+- NO new candidate. The bridge + rolling-amplitude + social-application stays Tier 2 pending ground-truth validation.
+- NO canon promotion. Cont 26 §3 substrate-level claim unchanged.
+- NO modification of cycling `PRE_REGISTRATION.md` locked §4. Amendments go in `confounds_cycling.md`.
+
+### Discipline-cycle status
+
+- **Audit v07 §V8.1 verification target landing cleanly.** Task #172 Phase D landed; substantive-research-displacement pattern further closing. Audit v06 §10 closure language amended from "CLOSED CLEAN" to "FIRST INSTANCE BROKEN" still appropriate — sustained closure now depends on ground-truth validation Phase E landing.
+- **External A⁻ caught a real over-claim.** Three independent web-research scouts converged on Goldberger 2002. The framework's symmetry-novelty positioning was implicit; the EWS scout made it explicit and the framework's narrow-before-demote discipline applied it cleanly.
+- **Empirical lane is now genuinely self-sustaining** — pilot #150 result-commit + task #172 cold-draft + synthetic gate + EWS scout + ground-truth pilot seed = four substantive empirical artifacts in 72 hours, against Cowork's two-amendment canon correction. The conceptual:empirical ratio finally inverted vs the cont-17-29 spree pattern audit v06 §10 flagged.
+
+### Held Claude Code commits to push with this Cowork ship
+
+- `8e23308` — synthetic gate (`synthetic_validation/`)
+- `bbb6d9c` — EWS scout (`SCOUT_critical_transitions.md`)
+- (+ ground-truth validation seed commit, latest — `PILOT_groundtruth_EWS_validation_seed.md`)
+
+All three should push with the Cowork amendments below as a batched ship.
+
+### Carry-forward
+
+- Claude Code Phase E (ground-truth validation pilot lock + run) — task brief in HANDOFF.md
+- Audit v08 target 2026-06-19 — verifies ground-truth pilot landed + three locked decisions held + Cowork lesson 8 discipline preserved
+- Outreach (Yilun-Du + Scheffer/Dakos/Goldberger/Boers/Braha) — gated on ground-truth pilot PASS
+- GDELT re-pull — gated on ground-truth pilot PASS
+
+---
+
 ## 2026-06-04 (later) — CONT 32 SHIPPED · audit v07 Tier 1 fixes batched with canon consolidations from Pav's four steers · reality kernel canon named (B.1) · L0 sharpened as substrate not compiled canon (B.2) · functional split real→harness / latent→internal-processes (B.3) · canon-as-operational-coherence (B.4) · phantom action-space promoted to canon (Part C, cont 12 OQ8 finally addressed after 22 continuations) · spectrum primitive (D) · A+/- A-/+ asymmetric scaffolding (E) · W_C-as-cross-spectrum-bridge (F) · cont 30 §7 lesson 8 added (candidate-layer narrow-before-extend) · Tier discipline held throughout
 
 ### Provenance

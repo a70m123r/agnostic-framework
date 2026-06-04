@@ -1,12 +1,106 @@
 # HANDOFF — Cowork → Claude Code
 
-**Last updated:** 2026-06-04 by Claude Code session (cycling pre-reg drafted + synthetic-gated; EWS scout; ground-truth validation seed)
-**Next session:** Cowork — lock-review (see decisions below); the canon-level "narrow the claim" call from the EWS scout
-**Pinned task:** Cowork lock-review of the cycling pre-registration **after** folding in (a) the synthetic-gate revision (H2b/H3b-slope → diagnostic) and (b) the EWS scout's "narrow to bridge+metric, drop symmetry-novelty" finding. Then the **ground-truth validation pilot** (`PILOT_groundtruth_EWS_validation_seed.md`) should arguably run **before** any GDELT re-pull. #172 (the cold-draft) is DONE.
+**Last updated:** 2026-06-04 (late) by Cowork session (Reading 06 §10.3 third amendment + cont 30 §3 sharpening landed per Claude Code's EWS scout finding; three Cowork decisions locked below for Claude Code's Phase E)
+**Next session:** Claude Code — **lock the ground-truth validation pilot** (`PILOT_groundtruth_EWS_validation_seed.md` Phase D), THEN run it (Phase E). See "Phase E task brief" below.
+**Pinned task:** Claude Code locks + runs the ground-truth validation pilot (Cascade Peter/Paul + PhysioNet) per the three locked Cowork decisions. If A_cyc beats best one-pole indicator on lead-time + AUC AND nulls on Paul control, the metric-level claim earns the GDELT cycling pilot (#150b/#151 Phase E). If not, contribution narrows to the bridge alone per pre-committed falsifier.
 
 ---
 
-## Last Claude Code session (2026-06-04)
+## Last Cowork session (2026-06-04 late) — three decisions locked + amendments shipped
+
+Cowork reviewed the Claude Code session output (`pilots/1f_failsafe_cycling/PRE_REGISTRATION.md` cold-draft + `synthetic_validation/` gate run + `SCOUT_critical_transitions.md` + `PILOT_groundtruth_EWS_validation_seed.md`). Verdict: **discipline held at every level.** The cold-draft converged ~90% with the seed; three adversarial audits caught the prior must-NULL as vacuous; the rebuilt confound is load-bearing; the gate FAILED honestly on H2b and the revised design PASSED both halves; the EWS scout caught real prior art (Goldberger 2002).
+
+### Three Cowork decisions LOCKED (per HANDOFF "Decisions for Cowork" + Claude Code's recommendations)
+
+**Decision #1 — Narrow the public claim.** Per cont 27 §3 narrow-before-demote applied to positioning: the framework's claim narrows to (a) **cross-field bridge** between EWS/critical-transitions (Scheffer/Lenton/Dakos/Boers) and physiology decomplexification (Goldberger/Lipsitz/Costa/Peng), (b) **diagnostic shift from static level to cycling AMPLITUDE over rolling window**, (c) **social/GDELT application** (open per Braha 2024 deferral). **Symmetry-novelty DROPPED** — Goldberger 2002 PNAS owns it on the same DFA-α axis. Cont 26 §3 substrate-level Tier 1 canon UNCHANGED. Reading 06 §10.3 third amendment landed (2026-06-04); cont 30 §3 amendment landed (2026-06-04).
+
+**Decision #2 — Fold synthetic-gate revision into cycling pre-registration.** Per Claude Code's banner note + the §6 gate FAIL/revised-PASS finding: **H1b cycling-collapse (direction-agnostic) + lock-sign direction as PRIMARY; H2b shock-recovery → DIAGNOSTIC; H3b slope → DIAGNOSTIC.** Replacement estimators for the demoted diagnostics: H2b → Delecroix 2024 PNAS "resilience in bursts" (burst design + Theil-Sen / sieve-bootstrap + analytic λ = −log(AR1)/dt); coupling → PCMCI+ (Hoegner & Boers 2025 ERL) or CNM-TE (Bian 2025). Replacement estimators MUST re-validate synthetically (≥ 80% on i-iii signals, NULL on iv-v confounds) before re-entering the primary family. The cycling pre-registration `PRE_REGISTRATION.md` should be amended via `confounds_cycling.md` §1 (NEW file) — locked-text discipline: do NOT edit §4 of the original pre-reg retroactively.
+
+**Decision #3 — Ground-truth validation pilot precedes any GDELT re-pull.** Per Claude Code's seed + the Boettiger-Hastings 2012 prosecutor's-fallacy discipline: validate cycling-amplitude vs one-pole CSD baseline on **labelled** data (Cascade Peter/Paul lakes + PhysioNet nsr2db/chf2db/Fantasia) FIRST. **Pre-committed falsifier (locked):** if A_cyc does NOT beat best one-pole indicator on lead-time + AUC across the Cascade pair (OR fires on the Paul control), the metric-level claim is REJECTED and contribution narrows to the bridge alone (cross-field synthesis only, no new metric). Report per cont 27 §3, do NOT retro-fit. Order of operations: (Cascade primary → PhysioNet secondary symmetric-pole confirmation → IF BOTH PASS: GDELT social application). PhysioNet replicates Goldberger's static two-pole separation (expected; proves only what's already known); the differentiating test is whether rolling cycling-amplitude adds discriminative/early-warning power OVER static α. If (ii) fails on PhysioNet too, novelty is ONLY the bridge — framing must say so cleanly.
+
+### Cowork amendments landed (2026-06-04 late)
+
+- **`readings/2026-05-28_cymatic_harmonic_structure_in_social_systems.md` §13 amendment log** — third entry (2026-06-04) documenting Goldberger 2002 prior-art catch + surviving Tier 2 candidate (bridge + rolling-amplitude + social application). Original §10.3 narrowing from 2026-06-03 stands; further narrowing on symmetry-novelty positioning.
+- **`continuations/30.md` §3 amendment** — "§3 amendment 2026-06-04" appended. Symmetric-in-direction discipline stays; symmetric-novelty positioning retracted.
+- **`HANDOFF.md` (this file)** — refreshed with the three locked Cowork decisions and the Phase E task brief below.
+
+### What Cowork did NOT do (per cont 32 lesson 8 candidate-layer narrow-before-extend)
+
+- Did NOT write a new continuation about the Goldberger finding. The Reading 06 amendment + cont 30 §3 amendment are the minimal-viable canon correction. Lesson 8 says: resist adding structure when the existing structure has open work. Empirical work (ground-truth validation pilot) is the open work; canon should not multiply in front of it.
+- Did NOT extend the adversarial-substrate-dynamics candidate or add new candidate-surface.
+- Did NOT modify the cycling `PRE_REGISTRATION.md` locked §4 retroactively. Amendments go in `confounds_cycling.md` per Phase D commit discipline.
+- Did NOT promote anything to canon. The bridge + rolling-amplitude + social-application Tier 2 candidate (per scout) stays Tier 2 pending ground-truth validation.
+
+### Unpushed Claude Code commits (held for Pav)
+
+- `8e23308` — synthetic gate (`synthetic_validation/`)
+- `bbb6d9c` — EWS scout (`SCOUT_critical_transitions.md`)
+- (+ the ground-truth validation seed `PILOT_groundtruth_EWS_validation_seed.md` commit, latest)
+
+All three should push with the Cowork amendments above as a batched ship.
+
+---
+
+## Phase E task brief for Claude Code (next session)
+
+**One task. Run the ground-truth validation pilot to lock-then-run discipline.**
+
+### Phase D — Lock the ground-truth pilot (~2 hours)
+
+Read `pilots/1f_failsafe_cycling/PILOT_groundtruth_EWS_validation_seed.md`. The seed is DRAFT; lock it as `pilots/1f_failsafe_cycling/PILOT_groundtruth_validation_PRE_REGISTRATION.md` (new file, locked) with:
+- §1-§8 from the seed, refined where needed
+- §3 method parameters explicit (window size, stride, A_cyc operational definition, AR(1) burst design, lead-time + AUC computation)
+- §4 falsifier thresholds explicit (lead-time margin, AUC margin, Paul-control must-NULL threshold)
+- §11 cold-derivation note (you wrote the seed; Cowork locked the framework decisions; the empirical comparison is fresh)
+
+**Commit the locked pre-registration BEFORE downloading any Cascade or PhysioNet data.** This is drug-trial-style: the falsifier is locked before data is examined.
+
+### Phase E — Run the pilot (~6 hours)
+
+1. **Cascade primary** (Peter manipulated / Paul reference). Download EDI `knb-lter-ntl.355.6`. Compute rolling DFA-α τ(t) on each lake's sonde data; compute A_cyc (P90-P10 of τ over rolling window) + baseline one-pole indicators (lag-1 AR(1) trend, variance trend, rising-α trend) via the `earlywarnings` R package or numpy-only port. Test:
+   - Does A_cyc decline significantly in Peter before the documented shift date?
+   - Does A_cyc stay flat in Paul?
+   - AUC (Peter-vs-Paul discrimination) for A_cyc vs each one-pole indicator?
+   - Lead-time for A_cyc vs best one-pole indicator?
+2. **PhysioNet secondary** (nsr2db healthy / chf2db CHF / Fantasia aging). Confirm Goldberger's static two-pole separation (sanity check; expected to pass). Then test whether rolling cycling-amplitude adds discriminative power OVER static α level.
+3. **Differentiating tertiary** (if Cascade + PhysioNet pass): Lake Veluwe (Wang 2012, where one-pole CSD documented to fail), `earlywarnings` Hopf simulated series, stock-crash indices (Diks 2019).
+
+### Phase F — Result-commit
+
+Write `pilots/1f_failsafe_cycling/results_groundtruth/discussion.md` with:
+- Verdict per pre-committed falsifier (PASS / FAIL / MIXED)
+- Lead-time + AUC numbers for A_cyc vs each one-pole indicator (Cascade + PhysioNet)
+- Honest tier-tagging per cont 27 §2
+- For Cowork next: (a) PASS → cycling-amplitude metric earns the GDELT social application + Bar B of cycling candidate + Reading 06 §10.3 fourth amendment promoting bridge+metric to Tier 2 confirmed; (b) FAIL → contribution narrows to bridge alone, Reading 06 §10.3 fourth amendment documenting the narrowing, GDELT pilot DEFERRED indefinitely.
+
+### Hard discipline guardrails for Phase E (per the framework's standing rules)
+
+- **DO NOT skip Phase D's lock-before-download.** Falsifier locked before data is examined or the result is contaminated.
+- **DO NOT modify the locked falsifier after Cascade data downloaded.** Any new confounds go in `confounds_groundtruth.md`.
+- **DO NOT extend to GDELT in this session.** Phase E is ground-truth validation only. GDELT is gated on ground-truth PASS + a separate Phase G session.
+- **DO NOT write new readings, continuations, audits, or extend canon.** Log insights in `discussion.md` §X for Cowork.
+- **DO NOT send any outreach DMs** (Yilun-Du, Scheffer, Dakos, Goldberger, Boers, Braha all gated on ground-truth PASS).
+
+### End-of-session checklist
+
+1. Verify Phase D locked-before-data discipline held (self-attestation in `PILOT_groundtruth_validation_PRE_REGISTRATION.md` §11).
+2. Commit + push the locked pre-registration as a separate commit BEFORE Phase E.
+3. Commit + push Phase E results (`results_groundtruth/discussion.md`, methods, raw data summaries, plots) as a second commit.
+4. Update HANDOFF.md (prepend "Last Claude Code session 2026-06-XX" block summarizing verdict + key numbers + for-Cowork-next items).
+5. Update CHANGELOG with the ground-truth validation pilot result-commit.
+6. Add timeline entry.
+7. Bump JSON endpoints if status of Tier 2 candidate changed.
+8. Mark Phase E task complete.
+
+### For Cowork next session (after Phase E)
+
+- If PASS: ship Reading 06 §10.3 fourth amendment promoting bridge+metric to Tier 2 confirmed; schedule GDELT pilot Phase G (using #150b/#151 pre-reg revised per Decision #2 above + the Delecroix/PCMCI+ method fixes); decide outreach timing (Scheffer/Dakos/Goldberger/Boers/Braha + Yilun-Du now unblocked).
+- If FAIL: ship Reading 06 §10.3 fourth amendment narrowing contribution to bridge alone; demote the cycling-amplitude metric per cont 27 §3 (not the underlying cont 26 §3 canon); defer GDELT pilot indefinitely; outreach narrows to bridge contacts only (Goldberger/Lipsitz physiology side + Scheffer/Dakos EWS side as a "we synthesize your two literatures" pitch, NOT a "we extend with a new metric" pitch).
+- Audit v08 target 2026-06-19 (15-day cadence per v06 baseline; v07 was 3-day exceptional cadence per closure-mode trigger).
+
+---
+
+## Last Claude Code session (2026-06-04 earlier) — pre-reg cold-drafted + synthetic-gated + EWS scout + ground-truth seed
 
 Continued from the #169 result-commit. Did four things, all via dynamic-workflow orchestration (blind where it mattered):
 
