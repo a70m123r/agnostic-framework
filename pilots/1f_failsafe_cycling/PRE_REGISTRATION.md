@@ -13,6 +13,20 @@
 >
 > Cold-derivation provenance and a frank converged-vs-diverged accounting are in **§11**.
 
+> **§6 SYNTHETIC-GATE RESULT (2026-06-04, `synthetic_validation/`).** The locked 3-hypothesis
+> gate **FAILS** as written: **H2b (shock-recovery) has ~0% power** — a genuine design limitation
+> (the 365-day rolling-DFA window low-passes sub-annual recovery; reproduced across 4 recovery
+> metrics + windows {180,270,365}), not an estimator bug. **However, the REVISED design PASSES**
+> (`revised_gate: PASS`): with **H1b cycling-collapse + the lock-SIGN direction as the primary
+> test and H2b demoted to diagnostic**, classification power is **95–100%** (H1b 100%, squeeze pole
+> 0.95, pull pole 1.00). **The volume confound is genuinely controlled** — validated by a
+> non-vacuous test (rebuilt gen-iv: raw corr +0.755, H1b fires 100% raw → 5% after Poisson-thinning;
+> independently reproduced: raw +0.755 → thinned +0.012, H1b fires raw / not thinned). The H3b
+> magnitude-slope and H2b cannot be certified as locked. **REQUIRED before lock + data
+> (cont 27 §3 / §6):** fold in the revision — H1b cycling-collapse (direction-agnostic) + lock-sign
+> as the single primary; H2b (recovery) and the H3b magnitude-slope demoted to diagnostics pending
+> better estimators; then re-validate. This is Cowork's lock-review call.
+
 ---
 
 ## §1 The claim

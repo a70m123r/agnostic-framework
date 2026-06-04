@@ -1,0 +1,83 @@
+{
+  "params": {
+    "n_sim": 60,
+    "n_systems": 18,
+    "window": 365,
+    "stride": 30,
+    "n_perm": 120,
+    "seed": 2026
+  },
+  "per_generator": {
+    "i_cycling": {
+      "kind": "signal",
+      "n_sim": 60,
+      "power": 0.0,
+      "power_h1_lock": 1.0,
+      "H1b_rate": 1.0,
+      "H2b_rate": 0.0,
+      "H3b_rate": 0.0,
+      "lock_sign_correct": null
+    },
+    "ii_squeeze": {
+      "kind": "signal",
+      "n_sim": 60,
+      "power": 0.0,
+      "power_h1_lock": 0.95,
+      "H1b_rate": 1.0,
+      "H2b_rate": 0.0,
+      "H3b_rate": 0.0,
+      "lock_sign_correct": 0.95
+    },
+    "iii_pull": {
+      "kind": "signal",
+      "n_sim": 60,
+      "power": 0.0,
+      "power_h1_lock": 1.0,
+      "H1b_rate": 1.0,
+      "H2b_rate": 0.0,
+      "H3b_rate": 0.0,
+      "lock_sign_correct": 1.0
+    },
+    "iv_voldrift": {
+      "kind": "confound",
+      "n_sim": 60,
+      "fp_any_primary": 0.05,
+      "fp_e1": 0.05,
+      "H1b_rate": 0.05,
+      "H2b_rate": 0.0,
+      "H3b_rate": 0.0,
+      "volgate_raw_h1_fire_rate": 1.0,
+      "volgate_thin_h1_fire_rate": 0.05,
+      "volgate_n": 20
+    },
+    "v_cotrend": {
+      "kind": "confound",
+      "n_sim": 60,
+      "fp_any_primary": 0.0,
+      "fp_e1": 0.03333333333333333,
+      "H1b_rate": 0.0,
+      "H2b_rate": 0.0,
+      "H3b_rate": 0.0
+    }
+  },
+  "powers": {
+    "i_cycling": 0.0,
+    "ii_squeeze": 0.0,
+    "iii_pull": 0.0
+  },
+  "powers_h1_lock": {
+    "i_cycling": 1.0,
+    "ii_squeeze": 0.95,
+    "iii_pull": 1.0
+  },
+  "false_positives": {
+    "iv_voldrift": 0.05,
+    "v_cotrend": 0.03333333333333333
+  },
+  "power_ok": false,
+  "fp_ok": true,
+  "gate": "FAIL",
+  "revised_power_ok": true,
+  "revised_gate": "PASS",
+  "runtime_s": 1046.9615013599396
+}
