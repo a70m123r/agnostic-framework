@@ -112,6 +112,26 @@ Five published construct studies, each ~5-9k words with diagrams, heat maps, mul
 
 **Internet (v1)** — first construct study native to cont 22's canon-stack vocabulary. Internet as candidate observer-class with its own action-space, its own kernel canon (electromagnetic carrier, semiconductor compute, addressing/routing math, embedding manifold, link-graph, algorithmic feed, viral-cascade), its own compile loop. Brackets the consciousness question with the same agnostic stance the framework applies to god.
 
+## External feedback — held with discipline (cont 27 §2 bucket-classified)
+
+At /feedback/. The framework's public-facing record of how external A⁻ feedback gets processed. Each item bucket-classified per cont 27 §2 three-tier procedure into one of three response types:
+
+- **Bucket A — being addressed.** The critic is right and the framework is actively moving on the gap. Acknowledged as growing edge being pushed; audit will score whether the gap is closing within audit window.
+- **Bucket B — deliberate scope.** The critic is right that there's a limit but the limit is intentional and structurally consistent with existing framework commitments. Honest scope-defense, not gap-fix.
+- **Bucket C — gap → Tier 3 candidate.** The critic surfaced something the framework's existing primitives could host but hadn't applied. Elevated to Tier 3 with promotion bars A/B/C and 12-month pruning trigger per cont 27 §3.
+
+**First entry (2026-06-03)** — five blind-spots review from external team / collaborator reading (source anonymized at request):
+
+1. **Empirical maturity is still low** → Bucket A. Pilot #150 result-commit landed 2026-06-03 (confounded null but disciplined), task #172 cycling-pilot pre-registration cold-draft in flight, audit v07 (2026-06-16) will score empirical-maturity trajectory.
+2. **Light on adversarial / power dynamics** → Bucket C. Elevated to Tier 3 candidate at `candidates/adversarial_substrate_dynamics.md`. Six sub-primitives — canon hijacking, memetic warfare, bad-faith rendering, L0 mediator power capture, suppression dynamics, asymmetric wrapper-overlap — share structural property of broken substrate-dynamics symmetry by observer benefiting at substrate's cost. Each mapped to existing canon. Sharpens cont 30 cycling reframe by providing actor-side vocabulary for what produces locked-squeeze / locked-pull states. Opens alignment / AI safety surface area (jailbreaks = memetic warfare; deceptive alignment = bad-faith rendering; reward hacking = asymmetric extraction). Promotion bars A (worked example), B (independent prediction), C (third-party citation as cross-substrate convergence) named. 12-month pruning trigger 2027-06-03.
+3. **Brackets subjective experience (qualia / phenomenology)** → Bucket B. Acknowledged deliberate scope per cont 17. The bracket is intentional: framework's claims are structural observer-dynamics, not phenomenal-experience-of-being-an-observer. For human-AI alignment work specifically, framework would need extension. Scope-defense, not gap-fix. Bracket holds.
+4. **Descriptive power >> normative guidance** → Bucket B. Genuine but structurally consistent with framework's existing wrapper-relative-ethics claim (cont 22 canon-stack). Framework's meta-discipline (tier-tagging + audit cadence + pre-registration) IS its normative commitment — substrate-level normative claims deliberately avoided because normative ethics compile differently per observer-class. Could be MORE explicit, queued as possible future continuation.
+5. **Vocabulary-rich, formal-math-light** → Bucket A. Real gap; trajectory data: cont 23 canon-stack formalization, Reading 07 BES Theorem 4.4 (first cite-able formal theorem grounding A⁻-primacy), pilot.py first executable code, Reading 06 §10.3 first formal measurement protocol, Reading 08 architectural patterns. Audit v07 will track rate-of-math vs rate-of-vocabulary as new discipline metric.
+
+Source anonymity preserved per request — identity not load-bearing for the discipline cycle, the feedback substance is the framework-relevant material. Anonymous submission welcome via Hypothes.is annotations on any framework page (script loaded site-wide).
+
+**Recursive discipline:** external A⁻ → framework response → audit verification → next external A⁻. The /feedback/ section is the public-facing entry point for this loop. Audit v07 (2026-06-16) explicitly verifies whether framework's response to feedback re-introduced audit v06 §10 substantive-research-displacement pattern.
+
 ## Outreach (current targets, late May 2026)
 
 The framework actively engages researchers in adjacent lineages. Current concrete targets per Reading 05 §12.2:

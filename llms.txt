@@ -67,6 +67,11 @@ Seven independent research traditions arrive at variants of the wrapper-overlap 
 - [Language as operating system (Chinese / Russian)](https://a70m123r.github.io/agnostic-framework/artifacts/language_v1.html): atlas v4 vocabulary applied to language itself as meta-lens
 - [The agnostic god — religion as densest canon carrier](https://a70m123r.github.io/agnostic-framework/artifacts/religion_v1.html): cont 20 canon dormancy as primary lens
 
+## External A⁻ — held with discipline (cont 27 §2 bucket-classified)
+
+- [/feedback/ mode-page](https://a70m123r.github.io/agnostic-framework/feedback/): public-facing record of how the framework processes external criticism. Each item bucket-classified per cont 27 §2 three-tier procedure: Bucket A (being-addressed growing edge), Bucket B (deliberate scope decision), Bucket C (genuine gap → Tier 3 candidate). First entry 2026-06-03: five blind-spots review (anonymous source) — empirical maturity (A), adversarial/power dynamics light treatment → adversarial-substrate-dynamics Tier 3 candidate (C), qualia bracket as deliberate scope per cont 17 (B), descriptive-vs-normative as wrapper-relative-ethics scope per cont 22 (B), math/vocab rate (A). Audit v07 (2026-06-16) verifies trajectory.
+- [Adversarial substrate dynamics — Tier 3 candidate](https://a70m123r.github.io/agnostic-framework/candidates/adversarial_substrate_dynamics.md): six sub-primitives (canon hijacking, memetic warfare, bad-faith rendering, L0 mediator power capture, suppression dynamics, asymmetric wrapper-overlap) sharing structural property of broken substrate-dynamics symmetry by observer benefiting at substrate's cost; each mapped to existing canon; promotion bars A/B/C named; 12-month pruning trigger 2027-06-03; opens alignment / AI safety surface area (jailbreaks = memetic warfare; deceptive alignment = bad-faith rendering; reward hacking = asymmetric extraction)
+
 ## Other framework material
 
 - [Manifestos (three editions — casual / research / engineering)](https://a70m123r.github.io/agnostic-framework/#read-first): same substrate, different audiences

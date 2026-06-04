@@ -8,6 +8,38 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-06-03 (late evening, post-cont-30) — /feedback/ MODE-PAGE SHIPPED · framework's reply to external five-blind-spots review now public-facing · source anonymized at request · discipline-cycle artifact made visible
+
+### What shipped
+- **New mode-page at `/feedback/`** (`feedback/index.html`) — same architectural class as `/atlas/`, `/dialogues/`, `/speculations/`, `/formalization/`, `/notation/`, `/for-agents/`. Hero kicker uses accent-orange (Pav's "steer" color) to mark external-steering category. Five items reproduced + bucket-classified per cont 27 §2 three-tier procedure with visible color-coding: Bucket A (green, being addressed), Bucket B (blue, deliberate scope), Bucket C (amber, gap → Tier 3 candidate).
+- **Main `index.html` Map section sect-lede** (~line 580) extended with `/feedback/` link alongside other mode-pages — "the framework's public-facing record of how external A⁻ feedback gets processed."
+- **Timeline `index.html` 2026-06-03 day-section** prepended with the framework-reply-published entry above cont-30 entry; tagged `/feedback/ mode-page shipped` + `external A⁻ processed per cont 27 §2 bucket classification` + `adversarial substrate dynamics Tier 3 candidate` + `source anonymized`; Pav's verbatim steer "lets add the reply on the site. they dont wnat to be named" preserved.
+- **Public artifacts already shipped earlier same session** (this entry surfaces them to the live site as visible discipline-cycle artifacts):
+  - `feedback/2026-06-03_external_blindspots_review.md` (~2,300 words bucket-classified detail, anonymous source described as "External team / collaborator reading")
+  - `candidates/adversarial_substrate_dynamics.md` (~3,200 words, 6 sub-primitives mapped to existing canon, promotion bars A/B/C, 12-month pruning trigger 2027-06-03, 6 worked-example targets ranked by tractability)
+  - `candidates.json` updated 4 → 5 (adversarial candidate prepended)
+
+### Why this is a discipline-cycle artifact, not just publishing-feedback
+The five-item bucket classification IS the framework's three-tier procedure applied externally — same discipline used internally, made publicly visible:
+- Item #1 (empirical maturity) → **Bucket A**, growing edge being pushed (pilot #150 result-commit day 1, task #172 cycling pre-registration in flight, audit v07 will score whether the empirical-maturity gap is closing)
+- Item #2 (adversarial/power dynamics light treatment) → **Bucket C**, genuine gap, elevated to Tier 3 candidate `candidates/adversarial_substrate_dynamics.md` with 6 sub-primitives (canon hijacking, memetic warfare, bad-faith rendering, L0 mediator capture, suppression dynamics, asymmetric wrapper-overlap) sharing structural property of broken substrate-dynamics symmetry by observer benefiting at substrate's cost
+- Item #3 (qualia bracket) → **Bucket B**, deliberate scope per cont 17 — bracket holds, scope-defense not gap-fix
+- Item #4 (descriptive vs normative) → **Bucket B**, deliberate scope structurally consistent with wrapper-relative-ethics from cont 22 canon-stack — could be MORE explicit, queued
+- Item #5 (math/vocab rate) → **Bucket A**, real gap with trajectory data (cont 23 formalization, Reading 07 BES Theorem 4.4 = first cite-able formal theorem grounding A⁻-primacy, pilot.py first executable code, Reading 06 §10.3 first formal measurement protocol, Reading 08 architectural patterns); audit v07 will track rate-of-math vs rate-of-vocabulary as new discipline metric
+
+### Source anonymity
+- Source described as "External team / collaborator reading" — appropriately generic, no identifying info. Identity not load-bearing for discipline cycle; the feedback substance is the framework-relevant material. Anonymity preserved per source's request and acknowledged on `/feedback/` page §03 with explicit note: "If you want to send feedback that gets processed through this same discipline cycle, the simplest path is Hypothes.is annotations on any page of the framework. Anonymous submission is welcome."
+
+### Recursive expectation
+- External A⁻ → framework response (bucket classification + Tier 3 candidate elevation for Bucket C) → audit verification (v07 target 2026-06-16) → next external A⁻. The /feedback/ section is now the public-facing entry point for this loop.
+
+### Carry-forward queued
+- **#173 audit v07 (target 2026-06-16)** explicitly verifies: Item 1 trajectory (did #150 or #172 produce empirical results?), Item 2 surfacing (did adversarial candidate reach promotion bar A — worked example?), Items 3+4 scope-defense honesty (explicit or quietly hoping nobody notices?), Item 5 math/vocab rate (within audit window), whether Cowork's response to feedback re-introduced audit v06 §10 substantive-research-displacement pattern.
+- **#172 cycling pilot pre-registration cold-draft** still pending (Claude Code in flight on Pav's machine).
+- **Adversarial-substrate-dynamics Bar A worked example** — Pav's call on which of 6 targets first.
+
+---
+
 ## 2026-06-03 — Pilot #150 RESULT-COMMIT LANDED · GDELT v2 H1 NOT SUPPORTED (confounded null) · result-commit on day 2 of the 7-day window · source-volume confound is the load-bearing finding · candidate held at Tier 2 conditional (neither advanced nor demoted)
 
 ### Verdict (primary signal = event-category-entropy, N=6 pairs)

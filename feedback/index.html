@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>External feedback — held with discipline · Agnostic Framework</title>
+<meta name="description" content="External A⁻ feedback to the framework, processed per cont 27 §2 three-tier bucket classification. Bucket A: acknowledged as being-addressed. Bucket B: acknowledged as deliberate scope decisions. Bucket C: genuine gaps elevated to Tier 3 candidate. Sources anonymized at request.">
+<meta name="author" content="PAVPAV">
+<link rel="canonical" href="https://a70m123r.github.io/agnostic-framework/feedback/">
+<meta property="og:title" content="External feedback — held with discipline · Agnostic Framework">
+<meta property="og:description" content="The framework's three-tier procedure applied to external criticism. Visible discipline-cycle artifact — what gets acknowledged, what gets defended as scope, what gets elevated to candidate.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://a70m123r.github.io/agnostic-framework/feedback/">
+<meta property="og:image" content="https://a70m123r.github.io/agnostic-framework/artifacts/images/whiteboard_agnostic_systems.jpg">
+<meta property="og:site_name" content="Agnostic Framework">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="External feedback — held with discipline · Agnostic Framework">
+<meta name="twitter:description" content="External A⁻ feedback processed per cont 27 §2 three-tier bucket classification.">
+<meta name="twitter:image" content="https://a70m123r.github.io/agnostic-framework/artifacts/images/whiteboard_agnostic_systems.jpg">
+<script src="https://hypothes.is/embed.js" async></script>
+<style>
+  :root {
+    --bg: #0a0a0a;
+    --surface: #141414;
+    --surface-2: #1c1c1c;
+    --border: #262626;
+    --border-strong: #3a3a3a;
+    --text: #ececec;
+    --text-dim: #8a8a8a;
+    --text-faint: #555;
+    --accent-canon: #4ade80;
+    --accent-candidate: #fbbf24;
+    --accent-speculative: #a78bfa;
+    --accent-link: #93c5fd;
+    --accent-orange: #fb923c;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, system-ui, sans-serif; font-size: 17px; line-height: 1.7; margin: 0; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+
+  .topbar { border-bottom: 1px solid var(--border); padding: 20px 0; font-size: 13px; font-family: ui-monospace, "SF Mono", Menlo, monospace; color: var(--text-dim); }
+  .topbar a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--text-faint); }
+  .topbar a:hover { color: var(--accent-link); border-bottom-color: var(--accent-link); }
+  .topbar .sep { color: var(--text-faint); margin: 0 10px; }
+  .topbar .source-link { float: right; }
+
+  header.hero { padding: 72px 0 48px; border-bottom: 1px solid var(--border); }
+  header.hero .kicker { font-family: ui-monospace, Menlo, monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.18em; color: var(--accent-orange); margin: 0 0 18px; }
+  header.hero h1 { font-family: Georgia, serif; font-weight: 400; font-size: 44px; line-height: 1.1; letter-spacing: -0.02em; margin: 0 0 22px; }
+  header.hero .dek { font-size: 18px; line-height: 1.55; color: var(--text-dim); max-width: 680px; margin: 0 0 18px; font-family: Georgia, serif; font-style: italic; }
+  header.hero .meta { font-family: ui-monospace, Menlo, monospace; font-size: 11px; color: var(--text-faint); margin: 0; }
+
+  section { padding: 48px 0; border-bottom: 1px solid var(--border); }
+  section:last-of-type { border-bottom: none; }
+  h2 { font-family: Georgia, serif; font-weight: 400; font-size: 28px; line-height: 1.2; margin: 0 0 14px; letter-spacing: -0.01em; }
+  h2 .num { color: var(--text-faint); font-size: 13px; font-family: ui-monospace, Menlo, monospace; margin-right: 12px; }
+  h3 { font-family: Georgia, serif; font-weight: 400; font-size: 20px; line-height: 1.3; margin: 30px 0 10px; color: var(--text); }
+  p { margin: 0 0 18px; }
+  em { color: var(--text); font-style: italic; }
+  strong { color: var(--text); font-weight: 600; }
+  a { color: var(--accent-link); text-decoration: none; border-bottom: 1px solid var(--accent-link); }
+  a:hover { background: var(--accent-link); color: var(--bg); }
+
+  .item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--text-faint);
+    padding: 22px 24px 18px;
+    margin: 18px 0;
+    border-radius: 4px;
+  }
+  .item .item-num { font-family: ui-monospace, Menlo, monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.15em; color: var(--text-faint); margin-bottom: 4px; }
+  .item h3 { margin-top: 0; }
+  .item.bucket-a { border-left-color: var(--accent-canon); }
+  .item.bucket-a .item-num { color: var(--accent-canon); }
+  .item.bucket-b { border-left-color: var(--accent-link); }
+  .item.bucket-b .item-num { color: var(--accent-link); }
+  .item.bucket-c { border-left-color: var(--accent-candidate); }
+  .item.bucket-c .item-num { color: var(--accent-candidate); }
+
+  blockquote {
+    border-left: 2px solid var(--text-faint);
+    margin: 14px 0 18px;
+    padding: 4px 0 4px 18px;
+    color: var(--text-dim);
+    font-style: italic;
+    font-family: Georgia, serif;
+  }
+
+  .bucket-key {
+    display: flex;
+    gap: 16px;
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 11px;
+    margin: 24px 0 0;
+    flex-wrap: wrap;
+  }
+  .bucket-key span { padding: 3px 10px; border-radius: 3px; }
+  .bucket-key .ka { background: rgba(74, 222, 128, 0.12); color: var(--accent-canon); }
+  .bucket-key .kb { background: rgba(147, 197, 253, 0.12); color: var(--accent-link); }
+  .bucket-key .kc { background: rgba(251, 191, 36, 0.12); color: var(--accent-candidate); }
+
+  .links-out {
+    margin: 36px 0 0;
+    padding: 22px 24px;
+    background: var(--surface-2);
+    border-radius: 4px;
+  }
+  .links-out h4 { font-family: ui-monospace, Menlo, monospace; font-size: 12px; text-transform: uppercase; letter-spacing: 0.15em; color: var(--text-dim); margin: 0 0 14px; font-weight: 400; }
+  .links-out p { margin: 0 0 10px; font-size: 15px; }
+  .links-out p:last-child { margin-bottom: 0; }
+
+  footer { padding: 60px 0 80px; color: var(--text-faint); font-size: 13px; font-family: ui-monospace, Menlo, monospace; text-align: center; }
+  footer a { color: var(--text-faint); border-bottom-color: var(--text-faint); }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <nav class="topbar">
+    <a href="../">Agnostic Framework</a>
+    <span class="sep">/</span>
+    <span>feedback — held with discipline</span>
+    <a class="source-link" href="https://github.com/a70m123r/agnostic-framework/blob/main/feedback/" target="_blank" rel="noopener">view source ↗</a>
+  </nav>
+
+  <header class="hero">
+    <p class="kicker">External A⁻ · processed per cont 27 §2 · sources anonymized at request</p>
+    <h1>External feedback — held with discipline</h1>
+    <p class="dek">External critique is treated as substrate data, not noise. Each item gets bucket-classified into one of three responses: acknowledged-as-being-addressed (the critic is right and the framework is actively moving on the gap), acknowledged-as-deliberate-scope-decision (the critic is right that there's a limit but the limit is intentional), or genuine-gap-elevated-to-Tier-3-candidate (the critic surfaced something the framework's existing primitives could host but hadn't applied). This page makes the discipline cycle visible.</p>
+    <p class="meta">First entry: 2026-06-03 · five blind-spots review · sources anonymized at request</p>
+  </header>
+
+  <section>
+    <h2><span class="num">00</span>Why this section exists</h2>
+    <p>The framework's <a href="../continuations/27.md">three-tier epistemic procedure (cont 27 §2)</a> rewards external A⁻. The framework's <a href="../audits/v06.md">audit cadence</a> is designed to catch internal blind spots; external feedback catches blind spots the framework can't see from inside.</p>
+    <p>This page is the public-facing record of how the framework processed external critique. The discipline is: (a) reproduce the feedback faithfully, (b) bucket-classify into three response types, (c) acknowledge honestly what's being addressed, defend honestly what's scope, surface honestly what's a gap, (d) name the action each bucket triggers, (e) commit to audit-window verification.</p>
+    <p>Sources are anonymized at their request. The feedback substance is the framework-relevant material; identity is not load-bearing for the discipline cycle.</p>
+    <div class="bucket-key">
+      <span class="ka">Bucket A — being addressed</span>
+      <span class="kb">Bucket B — deliberate scope</span>
+      <span class="kc">Bucket C — gap → Tier 3 candidate</span>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">01</span>2026-06-03 — Five blind-spots review</h2>
+    <p>Source: external team / collaborator reading. Voice: framework-vocabulary-aware (correctly uses Lakatos progressive-vs-degenerating language, "canon hijacking," viability). Surfaced by Pav 2026-06-03 evening while Claude Code session task #172 (cycling-pilot pre-registration cold-draft) was in flight on Pav's machine.</p>
+    <p>Five items received. Bucket-classified response below.</p>
+
+    <div class="item bucket-a">
+      <div class="item-num">01 · Bucket A — being addressed</div>
+      <h3>Empirical maturity is still low</h3>
+      <blockquote>"The two side-experiments are proposed but not yet run/reported with results. Until they produce novel, confirmed predictions, the programme is still in the 'promising but unproven' stage under Lakatos' own progressive-vs-degenerating test."</blockquote>
+      <p><strong>Framework response:</strong> Correct as-of when written; framework is actively responding in the last 72 hours. <a href="../pilots/1f_failsafe/results/discussion.md">Pilot #150 result-commit</a> landed 2026-06-03 (first substantive empirical work in 6+ weeks — confounded null but disciplined). <a href="../candidates/1f_l0_failsafe_signature.md">Task #172 cycling-pilot pre-registration</a> cold-draft in flight on Claude Code. <a href="../audits/v06.md">Audit v07 (target 2026-06-16)</a> will explicitly score whether the empirical-maturity gap is closing. <strong>Acknowledged as growing edge being pushed</strong>, not permanent blind spot.</p>
+    </div>
+
+    <div class="item bucket-c">
+      <div class="item-num">02 · Bucket C — gap → new Tier 3 candidate</div>
+      <h3>Light on adversarial / power dynamics</h3>
+      <blockquote>"Excellent modeling of symbiosis, friction bands, and viability — but lighter treatment of deliberate canon hijacking, memetic warfare, bad-faith actors, or high-stakes power capture. The framework leans more 'how ideas travel and stick' than 'how they get weaponized or suppressed.'"</blockquote>
+      <p><strong>Framework response:</strong> Genuine gap. Elevated to new Tier 3 candidate at <a href="../candidates/adversarial_substrate_dynamics.md">candidates/adversarial_substrate_dynamics.md</a>. The framework has structural primitives (wrapper-overlap, A⁻/A⁺, canon-stack, L0 mediator, cycling reframe) that CAN handle adversarial dynamics but hasn't applied them. <strong>Six adversarial primitive sub-candidates</strong> surfaced as coherent class with shared structural property — broken symmetry of substrate dynamics by an observer who benefits at the substrate's cost:</p>
+      <p style="margin: 8px 0 0 18px; font-size: 15px;">
+        — <strong>Canon hijacking</strong> (capture of kernel-canon-protocol-function)<br>
+        — <strong>Memetic warfare</strong> (deliberate A⁺ injection to exhaust target's A⁻ capacity)<br>
+        — <strong>Bad-faith rendering</strong> (externally-rendered A⁻ doesn't match actual A⁻)<br>
+        — <strong>Power capture of L0 mediator</strong> (mediator extracts rather than serves)<br>
+        — <strong>Suppression dynamics</strong> (forced locked-squeeze; adversarial cont 20 dormancy induction)<br>
+        — <strong>Asymmetric wrapper-overlap</strong> (extraction without contribution)
+      </p>
+      <p>Each mapped to existing canon. Promotion bars A/B/C named. Sharpens <a href="../continuations/30.md">cont 30 cycling reframe</a> by providing actor-side vocabulary for what produces locked states. Opens alignment / AI safety surface area (jailbreaks = memetic warfare; deceptive alignment = bad-faith rendering; reward hacking = asymmetric extraction). Six worked-example targets ranked by tractability — Pav's call on which to develop first.</p>
+    </div>
+
+    <div class="item bucket-b">
+      <div class="item-num">03 · Bucket B — deliberate scope</div>
+      <h3>Brackets subjective experience (qualia / phenomenology) pretty cleanly</h3>
+      <blockquote>"Strong on observer architecture, wrappers, and canon stacks, but it treats first-person 'what it's like' as mostly outside the core primitives. This could be a blind spot when scaling to human-AI alignment or consciousness questions."</blockquote>
+      <p><strong>Framework response:</strong> Acknowledged deliberate scope limit per <a href="../continuations/17.md">cont 17</a>. The bracket is intentional: the framework's claims are about structural observer-dynamics, not phenomenal-experience-of-being-an-observer. The framework is <strong>not claiming completeness</strong>, not denying that qualia exist, and not taking a stance on hard-problem-of-consciousness because the framework's existing canon doesn't depend on it. <strong>For human-AI alignment work specifically</strong>, the framework would need extension. The critic is right that this limits applicability to consciousness questions. Scope-defense, not gap-fix. The bracket holds.</p>
+    </div>
+
+    <div class="item bucket-b">
+      <div class="item-num">04 · Bucket B — deliberate scope</div>
+      <h3>Descriptive power &gt;&gt; normative guidance</h3>
+      <blockquote>"World-class at describing how things become canon/true. Currently thinner on which canons we should actively protect or fight for (ethics, values, 'good' vs 'viable')."</blockquote>
+      <p><strong>Framework response:</strong> Genuine but structurally consistent with the framework's existing wrapper-relative-ethics claim. The framework's meta-discipline (tier-tagging + audit cadence + pre-registration + dense A⁻ feedback) IS its normative commitment — it claims those PRACTICES are good. But it deliberately avoids <strong>substrate-level normative claims</strong> because — per the framework's own <a href="../continuations/22.md">cont 22 canon-stack</a> — normative ethics compile differently per observer-class. So the framework's lack of substrate-level normative guidance is itself a framework claim: <strong>normative ethics are wrapper-relative</strong>. The critic is right that this looks like a gap; the honest response is that the gap is a deliberate scope decision rooted in an existing structural commitment. Could be MORE explicit — queued as possible future continuation.</p>
+    </div>
+
+    <div class="item bucket-a">
+      <div class="item-num">05 · Bucket A — being addressed</div>
+      <h3>Vocabulary-rich, formal-math-light</h3>
+      <blockquote>"Diagrams and language are intuitive and powerful for thinking, but there are fewer crisp equations or pseudocode definitions that would let other researchers easily replicate or falsify claims in a formal way."</blockquote>
+      <p><strong>Framework response:</strong> Real gap. Direction is right but progress is slow. Trajectory data: <a href="../continuations/23.md">cont 23 canon-stack formalization</a>; <a href="../readings/2026-05-31_bes_bidirectional_evolutionary_search.md">Reading 07 BES Theorem 4.4 (entropy-shell escape)</a> — framework's first cite-able formal theorem grounding A⁻-primacy; <a href="../pilots/1f_failsafe/pilot.py">pilot #150 pilot.py</a> (~545 lines numpy-only) — first executable code implementing framework claims; <a href="../readings/2026-05-28_cymatic_harmonic_structure_in_social_systems.md">Reading 06 §10.3 spectral protocol</a> — first formal measurement protocol; <a href="../readings/2026-06-02_gamma_world_multi_agent_world_modeling.md">Reading 08 architectural patterns</a> integrated as L0-mediator algorithmic instantiation. <strong>Critic correct that researchers can't easily replicate or falsify without more pseudocode + equations</strong>. Sustained improvement target, not single fix. Audit v07 will track rate-of-math vs rate-of-vocabulary as a new discipline metric.</p>
+    </div>
+
+    <h3 style="margin-top: 32px;">The critic's overall verdict (preserved verbatim)</h3>
+    <blockquote>"This is one of the most self-aware personal research programmes I've seen. The built-in pruning, tiering, and public checking already mitigate many classic blind spots that sink other Lakatosian-style projects. It's early-stage and honest about it — which is rare and refreshing.<br><br>The framework itself would probably say: 'If any of these feel like breaks in your own observer architecture, that data point is worth more than a thousand confirmations — flag it.'"</blockquote>
+  </section>
+
+  <section>
+    <h2><span class="num">02</span>What the discipline cycle requires next</h2>
+    <p><strong>Audit v07</strong> (target 2026-06-16) explicitly verifies:</p>
+    <p style="margin: 8px 0 0 18px;">
+      — Item 1 trajectory: did pilot #150 or #172 produce tangible empirical results?<br>
+      — Item 2 surfacing: did the <a href="../candidates/adversarial_substrate_dynamics.md">adversarial-substrate-dynamics candidate</a> reach promotion bar A (worked example surfaced)?<br>
+      — Item 3 + 4 scope-defense honesty: is the framework being explicit about scope limits or quietly hoping nobody notices?<br>
+      — Item 5 math/vocab rate: rate of math vs vocabulary additions within audit window.<br>
+      — Did Cowork's response to this feedback re-introduce the <a href="../audits/v06.md">audit v06 §10 substantive-research-displacement pattern</a>?
+    </p>
+    <p style="margin-top: 22px;">If audit v07 catches the framework failing any of these, that becomes the next discipline-cycle artifact. The procedure is recursive: external A⁻ → framework response → audit verification → next external A⁻.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">03</span>Sources and anonymity</h2>
+    <p>The 2026-06-03 feedback came from an external team / collaborator who asked not to be named. The framework respects this; identity is not load-bearing for the discipline cycle. The feedback substance is the framework-relevant material.</p>
+    <p>If you want to send feedback that gets processed through this same discipline cycle, the simplest path is <a href="https://hypothes.is/" target="_blank" rel="noopener">Hypothes.is</a> annotations on any page of the framework (the script is loaded site-wide). For deeper engagement, the framework's <a href="../outreach/initial_contact_drafts.md">outreach material</a> describes the discipline. Anonymous submission is welcome.</p>
+    <p>The framework's expectation of itself: process external A⁻ with the same discipline it asks of internal A⁻. If the feedback surfaces a structural blind spot, the candidate-elevation procedure is the right response. If it surfaces a deliberate scope decision, defend the scope honestly. If it surfaces a growing edge being addressed, acknowledge the trajectory.</p>
+    <div class="links-out">
+      <h4>Full discipline-cycle artifacts</h4>
+      <p>→ <a href="../feedback/2026-06-03_external_blindspots_review.md">Full feedback log 2026-06-03</a> (~2,300 words, bucket-classified detail)</p>
+      <p>→ <a href="../candidates/adversarial_substrate_dynamics.md">Adversarial substrate dynamics — Tier 3 candidate</a> (~3,200 words, 6 sub-primitives, promotion bars, worked-example targets)</p>
+      <p>→ <a href="../continuations/27.md">Cont 27 § 2-3</a> — three-tier procedure under which this feedback is processed</p>
+      <p>→ <a href="../continuations/30.md">Cont 30</a> — cycling reframe that the adversarial candidate sharpens</p>
+      <p>→ <a href="../audits/v06.md">Audit v06 §10</a> — substantive-research-displacement concern relevant to Item 1 trajectory</p>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    Agnostic Framework · feedback — held with discipline · 2026-06-03 ·
+    <a href="../">↑ home</a> ·
+    <a href="../speculations/">speculations</a> ·
+    <a href="../audits/v06.md">audits</a> ·
+    <a href="https://github.com/a70m123r/agnostic-framework">github</a>
+  </div>
+</footer>
+
+</body>
+</html>
