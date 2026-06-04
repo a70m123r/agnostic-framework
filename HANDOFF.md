@@ -1,8 +1,27 @@
 # HANDOFF — Cowork → Claude Code
 
-**Last updated:** 2026-06-03 (evening) by Cowork session (cont 30 + Reading 06 §10.3 narrowing + JSON refresh shipped)
-**Next session:** Whichever surface drafts the merged #150b/#151 pilot pre-registration (Cowork OR Claude Code — Pav's call)
-**Pinned task:** #172 — Cold-draft merged #150b/#151 pilot pre-registration (cycling-capacity + Koopman cultural-eigenmode). MUST be independently re-derived per cont 30 §5 + cont 27 §2 discipline; PILOT_150b_cycling_seed.md is a hypothesis-generating sketch only and carries fitting risk because written after seeing #150's null.
+**Last updated:** 2026-06-04 by Claude Code session (cycling pre-reg drafted + synthetic-gated; EWS scout; ground-truth validation seed)
+**Next session:** Cowork — lock-review (see decisions below); the canon-level "narrow the claim" call from the EWS scout
+**Pinned task:** Cowork lock-review of the cycling pre-registration **after** folding in (a) the synthetic-gate revision (H2b/H3b-slope → diagnostic) and (b) the EWS scout's "narrow to bridge+metric, drop symmetry-novelty" finding. Then the **ground-truth validation pilot** (`PILOT_groundtruth_EWS_validation_seed.md`) should arguably run **before** any GDELT re-pull. #172 (the cold-draft) is DONE.
+
+---
+
+## Last Claude Code session (2026-06-04)
+
+Continued from the #169 result-commit. Did four things, all via dynamic-workflow orchestration (blind where it mattered):
+
+1. **#172 cycling pre-registration drafted** — `pilots/1f_failsafe_cycling/PRE_REGISTRATION.md` (commit 6a8139e). Produced by a **results-blind** workflow (3 isolated cold-derivers → synthesis → seed-check §12); converged ~90% with the seed on operational decisions, demoted the seed's continuous-co-movement centrepiece (it re-admits the #150 artifact). Merges #150b + #151 (Koopman → diagnostic). **DRAFT, unlocked.**
+2. **§6 synthetic gate run** (commit 8e23308; `synthetic_validation/`) — build → 3 adversarial skeptics → finalize. **Locked 3-hyp gate FAILS** (H2b shock-recovery ~0% power — a genuine design limit, 365-day window low-passes recovery; reproduced across metrics/windows). **REVISED design PASSES** (`revised_gate: PASS`): H1b cycling-collapse + lock-sign as primary, H2b→diagnostic → 95–100% power (squeeze pole fixed 0.01→0.95). **Volume confound genuinely controlled** — a skeptic caught the build run's must-NULL as *vacuous*, the finalizer rebuilt a real confound (raw +0.755 → +0.012 thinned, fires H1b raw/not-thinned), independently reproduced. Banner note on the pre-reg records the required H2b/H3b-slope→diagnostic revision.
+3. **EWS scout** (commit bbb6d9c; `SCOUT_critical_transitions.md`) — web-grounded. **Honest novelty verdict: the symmetric two-pole 1/f claim is PRIOR ART** (Goldberger et al. 2002 PNAS, near-verbatim, same DFA-α axis); EWS is not purely one-pole. **Genuine open seam (Tier 2):** cross-field bridge (EWS ↔ physiology loss-of-complexity, mutually uncited) + the **rolling cycling-amplitude metric** (vs static level) + the **social/GDELT application** (open — Braha 2024 npj Complexity deferred EWS to future work; GDELT-EWS review field has none). Delivered ground-truth datasets, fixes for both gate gaps (H2b → Delecroix 2024 PNAS "resilience in bursts" / λ=−log(AR1)/dt; coupling → PCMCI+/transfer-entropy), and a falsifiable next pilot.
+4. **Ground-truth validation seed** (this commit) — `PILOT_groundtruth_EWS_validation_seed.md`: validate the cycling-amplitude metric against the one-pole CSD baseline on **labelled** data (Cascade lakes w/ negative control; PhysioNet healthy/CHF/aging) **before** the GDELT social application. DRAFT for Cowork to lock.
+
+**Decisions for Cowork (canon-level — not actioned here):**
+- **Narrow the public claim** to bridge + rolling-amplitude metric + social application; **drop symmetry-novelty** (it's Goldberger 2002). Scout §1.
+- **Fold the synthetic-gate revision** (H2b/H3b-slope → diagnostic; H1b cycling-collapse + lock-sign primary) into the cycling pre-reg before locking.
+- **Run the ground-truth validation pilot before any GDELT re-pull** — if cycling-amplitude can't beat one-pole CSD on labelled data, the metric claim collapses to the bridge.
+- Yilun-Du + new EWS-field outreach (Scheffer/Dakos/Goldberger/Boers/Braha) stay gated.
+
+**Unpushed (held for Pav):** commits 8e23308 (synthetic gate), bbb6d9c (scout), + this seed. The result-commit + cont 30 + the pre-reg draft are already on origin.
 
 ---
 
