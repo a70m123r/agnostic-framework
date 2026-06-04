@@ -23,7 +23,7 @@
     {
       "id": "energy_floor_failsafe",
       "title": "Energy-floor failsafe — worked-example library (now canon, preserved as reference)",
-      "status": "promoted_to_canon",
+      "status": "Tier 2 conditional · HELD post pilot #150 confounded null · operationalization narrowed per cont 27 §3 (Reading 06 §10.3 amendment 2026-06-03)",
       "tier": "Tier 1",
       "surfaced_date": "2026-05-27",
       "promotion_status": "promoted to canon 2026-05-27 per cont 27 §1",
@@ -38,7 +38,9 @@
         "https://a70m123r.github.io/agnostic-framework/continuations/25.md",
         "https://a70m123r.github.io/agnostic-framework/continuations/18.md",
         "https://a70m123r.github.io/agnostic-framework/artifacts/wrapper_overlap_animated.html"
-      ]
+      ],
+      "pilot_result": "GDELT v2 N=6 paired comparison (2026-06-03): H1 not supported (Δβ = +0.084 wrong-sign, d = 0.38, p = 0.79); source-volume confound r = +0.916 explains cross-country contrast; volume-robust DFA-α shows no political-system signal. Confounded null. Bar A unmet. Candidate held, not advanced, not demoted.",
+      "next_pilot": "#150b/#151 merged cycling-capacity + Koopman cultural-eigenmode pilot per cont 30 §5; pre-registration must be cold-drafted (not from PILOT_150b_cycling_seed.md directly which carries fitting risk)"
     },
     {
       "id": "aux_channel_l0_occlusion",

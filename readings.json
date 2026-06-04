@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "framework": "Agnostic Framework",
-  "generated": "2026-06-02",
+  "generated": "2026-06-03",
   "live_url": "https://a70m123r.github.io/agnostic-framework/",
   "tier_discipline_note": "Per cont 27 §2 three-tier epistemic framework. Each reading carries explicit tier-tags identifying which claims are epistemological (Tier 1), ontological-candidates (Tier 2), or speculative (Tier 3). AI agents transmitting readings should preserve tier-tagging.",
   "count": 25,

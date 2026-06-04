@@ -49,6 +49,81 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-06-03 — Pilot #150 RESULT-COMMIT (confounded null) + Cont 30 (cycling reframe integration) + Reading 06 §10.3 narrowing · discipline cycle landed end-to-end in ~36 hours · Pav's "squeeze ↔ pull cycles" reframe is the load-bearing structural move
+
+### Pilot #150 result-commit (Claude Code session, 2026-06-03)
+- **Verdict: H1 NOT SUPPORTED — confounded null.** Δβ(auth−plur) on primary signal = **+0.084** (predicted < −0.10; wrong sign), Cohen's d = +0.380, paired-permutation p = 0.792. 1/6 pairs in H1 direction. **Bar A unmet.** Not a clean falsifier (d = 0.38 < 0.5 on primary), not a strict null (|Δβ| = 0.084 > 0.05).
+- **The decisive finding (load-bearing): source-volume confound** — Welch β almost entirely explained by per-country event volume (Pearson r = +0.916, Spearman = +0.909). Pre-registered z-score normalization removes amplitude scale but NOT spectral floor (sparse daily entropy → white sampling noise → flat high-frequency floor → β biased downward for low-volume countries). Volume-robust DFA-α shows essentially no cross-country difference (range 0.074 vs Welch's 0.735) — confirms cross-country contrast tracks media-volume not political-system.
+- **Data:** GDELT v2 BigQuery aggregation, 2015-02-18 → 2025-12-31, 21.39 GB scanned (free tier $0), 47,610 country-day rows, ≥99.6% coverage per country.
+- **Method substitutions disclosed** in confounds.md §9-§14: BigQuery in place of streaming-slice downloader; block-bootstrap CI in place of `powerlaw.Fit` (numpy-only env); IAAFT moved to diagnostic only (not clean β-null on these signals). Neither touches the locked H1 permutation test.
+- **Discipline preserved end-to-end:** pre-registration text never modified; N=3→N=6 amendment locked 2026-06-02 BEFORE any data examined; post-hoc cherry-picking on N=3 subset explicitly named and rejected (discussion.md §4).
+- **Result files:** `pilots/1f_failsafe/results/{discussion.md (~14k words), gdelt_results.json, log_log_plot.png, methods.md}`.
+
+### Pav's mid-session reframe (the load-bearing framework move)
+- Pav's steer: *"the authoritative = bad, democracy = good is biased — its cycles of squeeze and pull, steers."*
+- **Removes the value-coded political binary.** "Authoritarian → brittle, pluralistic → healthy" was a value-loaded mapping the framework had been smuggling in. Replacing it with "does τ(t) cycle vs lock up?" is structurally cleaner — the framework's claim was always about substrate dynamics (cont 26 §3 evolved failsafes), not about political-system labels.
+- **Symmetrizes the dynamics.** Open systems can lock up (when captured). Closed systems can cycle (when they breathe). The framework's claim is about the dynamics under the label, not the label itself. Defuses any "framework imports Western liberal assumptions" critique.
+- **Replaces static label with independent steer signal.** Pre-specified external openness index (V-Dem `v2x_freexp_altinf` or `v2mecenefm`; RSF press-freedom) as the steer, locked before any τ(t) computed. Converts hypothesis from "labels predict β" to "does τ(t) co-move with independently-measured openness signal in framework-predicted direction" — much sharper, replicable, framework-honest.
+
+### Cont 30 — cycling reframe integration into existing canon (~4,500 words)
+- Squeeze ↔ pull cycling = [cont 13](continuations/13.md) A⁻/A⁺ coupled pattern operating at social substrate. Squeeze = system-wide A⁻ tightening (dense feedback). Pull = system-wide A⁺ generation. Healthy cycling = both phases active, alternating. Locked squeeze = A⁻ destructive (over-correlated, brittle). Locked pull = A⁺ without feedback (white-noise-random).
+- Loss of cycling maps to [cont 20](continuations/20.md) dormancy (locked-squeeze = preserved substrate, reduced expression) OR [cont 25 §1](continuations/25.md) break-apart (locked-pull = fragmentation, no stable W_C).
+- Structurally consistent with [cont 28 §2](continuations/28.md) supersede dynamic at discovery substrate (gatekeeper media institutions as procedural-root stubs while substrate diversifies).
+- **Integration, not new primitive.** The reframe makes visible what was already in canon. The framework now has three substrates instantiating the coupled-forward-backward pattern (search via BES, world-models via γ-World, social-systems via cycling).
+
+### Reading 06 §10.3 narrowing (per cont 27 §3 narrow-before-demote)
+- Original: "Authoritarian/cult systems should show MORE structured periodicities and LESS broadband 1/f than open pluralistic systems."
+- **Narrowed to:** "Loss of CYCLING CAPACITY (the ability to alternate between dense-feedback A⁻ tightening and broadband A⁺ generation, recovering toward 1/f after each shock) IS the signature of substrate-level failsafe failure. Captured/locked systems show collapse of τ(t) cycling, in either direction (locked-squeeze → β >> 1; locked-pull → β ≈ 0). The static-binary 'authoritarian = brittle, pluralistic = healthy' operationalization is rejected as value-coded and not framework-grounded; the symmetric capacity-to-cycle measure is the framework's actual claim."
+- Cont 26 §3 (L0 evolved failsafes) Tier 1 epistemological canon: unchanged. The narrowing aligns Reading 06 §10.3 more tightly with cont 26 §3.
+- Candidate `1f_l0_failsafe_signature.md` Tier 2 conditional: held (not advanced, not demoted). Bar A unmet. Bar B (Wikipedia replication) de-prioritized in favor of #150b reframe.
+
+### Audit v06 §10 substantive-research-displacement closure (CLEAN)
+- **Day 1 (2026-06-02 morning):** Reading 08 hard-stop declaration.
+- **Day 1 (2026-06-02 afternoon):** Pilot #150 first-commit lands (operationalization + pipeline + N=3→N=6 amendment locked BEFORE data).
+- **Day 2 (2026-06-03):** HANDOFF.md created; Claude Code session runs BigQuery ingest + analysis; result-commit pushed; reframe captured as DRAFT seed (not asserted).
+- **Day 2 (2026-06-03 evening):** Cowork resumes; cont 30 ships with canon integration.
+- **Discipline cycle ran end-to-end in ~36 hours** at the substantive empirical level (not just infrastructure). Framework's audit cadence is now demonstrably matching its compile rate at the empirical layer.
+
+### #150b / #151 convergence — merge intent confirmed (pre-registration deferred)
+- Pav's reframe + Reading 07 §7.1 BES backward decomposition + Reading 08 §6 γ-World architectural template all converge on the same pilot: cycling-capacity measurement via Koopman / eigenmode decomposition of τ(t) over time, with external openness index as steer.
+- **Merge confirmed structurally; pre-registration deferred** until next substantive session per cont 30 §5. Must be COLD-DRAFTED (not from `PILOT_150b_cycling_seed.md` directly, which carries fitting risk because written after seeing #150's null).
+- RC-Koopman vs rolling-DFA pipeline decision: deferred to pre-registration session.
+
+### Discipline lessons (cont 30 §7 + Claude Code's discussion.md §9)
+1. Pre-registered z-scoring removes amplitude scale but NOT spectral-floor mechanism — future pre-registrations on sparse/heterogeneous-rate signals must explicitly control for white-noise floor in spectral domain.
+2. Pre-registered N=3 paired-permutation ceiling at p ≥ 1/8 caught by running locked protocol against synthetic data BEFORE GDELT examined — should be standard discipline going forward.
+3. IAAFT was expected to be clean β-null and turned out not to be — surrogate-method assumptions must be tested on synthetic data; if assumption fails, demoted to diagnostic.
+4. Method substitutions in supportive components fine if disclosed and don't touch locked H1 test.
+5. Post-hoc cherry-picking on N=3 subset explicitly rejected — future result-commits should include equivalent rejection.
+6. A reframe written after seeing a null is NOT a clean pre-registration — next pre-registration must be independently re-derived.
+7. Narrow-before-demote (cont 27 §3) executed cleanly — future Tier 2 conditional candidates that hit confounded nulls should follow same pattern.
+
+### Updated
+- `continuations/30.md` (NEW, ~4,500 words)
+- `readings/2026-05-28_cymatic_harmonic_structure_in_social_systems.md` amendment log — §10.3 narrowing entry
+- `candidates/1f_l0_failsafe_signature.md` — status entries reflecting result-commit outcome (text never modified)
+- `pilots/1f_failsafe/confounds.md` — §9-§14 confounds discovered during result-commit
+- `pilots/1f_failsafe/results/` — discussion.md + gdelt_results.json + log_log_plot.png + methods.md (Claude Code session deliverables)
+- `pilots/1f_failsafe/PILOT_150b_cycling_seed.md` — DRAFT seed capturing Pav's reframe (NOT locked, NOT canon)
+- `pilots/1f_failsafe/pilot.py` — `gdelt_mode()` stub implemented by Claude Code (locked DFA/Welch/IAAFT/permutation functions untouched)
+
+### Carry-forward
+- **Task #169 ✅ COMPLETED** — GDELT pilot run with result-commit
+- **Task #170 ✅ COMPLETED** — HANDOFF.md drafted for Claude Code transition
+- **Task #171 ✅ COMPLETED** — Cont 30 shipped
+- **Task #172 [NEW, QUEUED]:** Cold-draft merged #150b/#151 pilot pre-registration. Lock external openness index source + variable; volume-control gate; RC-Koopman vs rolling-DFA; data-source decision. Est. ~3-5 hr drafting.
+- **Task #173 [NEW]: Audit v07 — target 2026-06-16** per audit v06 §9 15-day cadence. Verify discipline-cycle closure + reframe canon integration.
+- **Task #168 (Yilun-Du outreach):** stays gated. Confounded null is not the favorable tangible result Reading 08 §9 specified.
+- **Task #163 (BES PDF gap-fill):** unchanged status; queued.
+- **Task #157 (straggler sweep):** low priority; queued.
+
+### Why this matters
+- **First clean discipline-cycle execution at the substantive empirical level.** Audit v06 §10 named the substantive-research-displacement-by-infrastructure pattern as the framework's most pressing discipline concern. This round breaks the pattern cleanly: first commit landed day 1, result commit landed day 2, canon integration landed day 2 evening. The framework's audit cadence now matches its compile rate at the empirical layer, not just at the documentation layer.
+- **Pav's reframe is the framework's strongest steer in weeks.** Replacing the value-coded political binary with a symmetric capacity-to-cycle measure removes a long-standing implicit Western-liberal assumption the framework had been smuggling in. The reframe makes Reading 06 §10.3 falsifiable in a way the static binary wasn't. This is the framework's discipline doing what it's supposed to: surfacing an unexamined assumption and replacing it with a structurally-cleaner alternative.
+- **The cycling reframe integrates rather than expands.** Per cont 30 §2: squeeze ↔ pull maps directly to cont 13 A⁻/A⁺, cont 20 dormancy, cont 25 break, cont 28 supersede. No new primitive; integration of existing canon made visible by the confounded null. This is the right kind of canon move per cont 27 §2 — integration, not accretion.
+
+---
+
 ## 2026-06-02 (later) — Pilot #150 FIRST COMMIT LANDED · 1/f-as-failsafe operationalization shipped with working pipeline + critical pre-registration discipline catch · audit v06 §10 + Reading 08 §9 hard-stop CLOSED on day 1
 
 ### Added (candidates/1f_l0_failsafe_signature.md, ~3,500 words)

@@ -1,8 +1,24 @@
 # HANDOFF — Cowork → Claude Code
 
-**Last updated:** 2026-06-03 by Claude Code session (task #169 result-commit landed)
-**Next session:** Cowork — evaluate the confounded-null result; decide narrow-vs-demote on Reading 06 §10.3; consider #151 + Wikipedia replication
-**Pinned task:** #169 ✅ DONE (result-commit landed 2026-06-03). Next pinned move is Cowork's (see "Last Claude Code session" below + "For Cowork next session" at bottom).
+**Last updated:** 2026-06-03 (evening) by Cowork session (cont 30 + Reading 06 §10.3 narrowing + JSON refresh shipped)
+**Next session:** Whichever surface drafts the merged #150b/#151 pilot pre-registration (Cowork OR Claude Code — Pav's call)
+**Pinned task:** #172 — Cold-draft merged #150b/#151 pilot pre-registration (cycling-capacity + Koopman cultural-eigenmode). MUST be independently re-derived per cont 30 §5 + cont 27 §2 discipline; PILOT_150b_cycling_seed.md is a hypothesis-generating sketch only and carries fitting risk because written after seeing #150's null.
+
+---
+
+## Last Cowork session (2026-06-03 evening)
+
+**Task completed:** #171 — cont 30 shipped (~4,500 words) integrating Pav's "squeeze ↔ pull cycles" reframe into existing canon. Reading 06 §10.3 narrowed per cont 27 §3. Audit v06 §10 substantive-research-displacement closure documented end-to-end. JSON endpoints + timeline + CHANGELOG refreshed. Tasks #169 + #170 + #171 marked complete. New tasks #172 (pre-registration draft) + #173 (audit v07 target 2026-06-16) created.
+
+**What landed (Cowork side):**
+- `continuations/30.md` (NEW, ~4,500 words) — full integration with §2 canon mapping, §3 narrowing, §4 closure summary, §5 merge logic, §6 non-changes, §7 discipline lessons, §8 queue
+- `readings/2026-05-28_cymatic_harmonic_structure_in_social_systems.md` — §13 amendment log entry for 2026-06-03 narrowing
+- `CHANGELOG.md` — full 2026-06-03 round entry covering Claude Code's result-commit + Cowork's cont 30
+- `timeline/index.html` — "~latest" entry for cont 30 above the existing 2026-06-03 result-commit entry
+- `continuations.json`, `candidates.json` updated with cont 30 + 1f candidate pilot-result status
+- `readings.json`, `manifest.json`, `speculations.json`, `primitives.json` — generated dates bumped
+
+**For next session (whichever surface):** see "For next session" at bottom of this file — pre-registration drafting requirements, what to lock vs queue, six decisions that must be made before any τ(t) computed.
 
 ---
 
@@ -64,11 +80,105 @@ All of the above committed and pushed by Pav. See `git log --oneline -10` for th
 
 ---
 
-## Your job this session (Claude Code)
+## Your job this session (Claude Code) — Task #172: Cold-draft merged #150b/#151 pilot pre-registration
 
-**One task: Run `pilots/1f_failsafe/pilot.py --mode gdelt` against real GDELT v2 data and land the result-commit.**
+**One task. ~8 hours focused work. Highest discipline requirement the framework has seen yet.**
 
-Per `candidates/1f_l0_failsafe_signature.md` §11 timeline + `pilots/1f_failsafe/README.md` §3, the result-commit target is 2026-06-09 (within 7-day window). Realistically this is ~3 working days of pipeline work. Could fit in one focused session if GDELT ingest goes smoothly.
+You are drafting a NEW pre-registration document for the cycling-capacity + Koopman-cultural-eigenmode merged pilot. This becomes the locked protocol the next result-commit tests against. Get it wrong and every future result on this lineage is contaminated.
+
+### The discipline crux — read this first
+
+There is a draft seed at [`pilots/1f_failsafe/PILOT_150b_cycling_seed.md`](pilots/1f_failsafe/PILOT_150b_cycling_seed.md). It was written **on 2026-06-03, immediately after seeing pilot #150's confounded null**. That timing matters: any hypothesis written after seeing relevant data carries **fitting risk** — the framing was inevitably influenced by what the data showed. Even if the seed is structurally correct, treating it as the pre-registration would silently smuggle post-hoc reasoning into a Tier 1 promotion-bar test (cont 27 §2 violation).
+
+**Therefore:**
+
+1. **DO NOT read `PILOT_150b_cycling_seed.md` during the cold-derivation phase.** Read it ONLY at the end as a check-after-the-fact.
+2. **DO NOT read `pilots/1f_failsafe/results/discussion.md`** until after the cold-derivation is locked. The empirical findings should not shape the new hypotheses.
+3. **DO read** the framework canon listed in step 1 below — that's where the hypotheses come from.
+
+If your independently-derived pre-registration lands close to the seed afterward, that's confirmation. If it lands somewhere different, document why — the framework was pointing somewhere the seed missed.
+
+This is drug-trial-style pre-registration discipline: blind to results when locking the protocol.
+
+### Step-by-step
+
+**Phase A — Cold derivation (no seed, no results files; ~3 hours)**
+
+**1. Read these files first, in this order:**
+- [`continuations/30.md`](continuations/30.md) — §2 canon mapping (squeeze ↔ pull = cont 13 A⁻/A⁺ at social substrate; locked-squeeze = cont 20 dormancy; locked-pull = cont 25 break-apart; cont 28 supersede)
+- [`continuations/26.md`](continuations/26.md) §3 — L0 evolved failsafes Tier 1 canon (the underlying claim, unchanged)
+- [`readings/2026-05-28_cymatic_harmonic_structure_in_social_systems.md`](readings/2026-05-28_cymatic_harmonic_structure_in_social_systems.md) §10.3 + amendment log 2026-06-03 entry (the narrowed claim)
+- [`continuations/27.md`](continuations/27.md) §2 + §3 — three-tier procedure + pruning/promotion rules
+- [`continuations/13.md`](continuations/13.md) — A⁻/A⁺ coupled discipline (squeeze ↔ pull at social substrate)
+- [`continuations/20.md`](continuations/20.md) — canon dormancy (locked-squeeze form)
+- [`continuations/25.md`](continuations/25.md) §1 — supersede vs break-apart branches (locked-pull form)
+- [`readings/2026-05-31_bes_bidirectional_evolutionary_search.md`](readings/2026-05-31_bes_bidirectional_evolutionary_search.md) §7.1 — BES backward goal-tree decomposition methodology
+- [`readings/2026-06-02_gamma_world_multi_agent_world_modeling.md`](readings/2026-06-02_gamma_world_multi_agent_world_modeling.md) §6 — γ-World architectural template for multi-agent / multi-country modeling
+- [`candidates/1f_l0_failsafe_signature.md`](candidates/1f_l0_failsafe_signature.md) (the structural template for what a pre-registration looks like; do NOT copy its hypotheses — derive yours independently)
+
+**2. From those canon citations, derive the hypotheses cold:**
+
+What does cont 26 §3 + the Reading 06 §10.3 narrowing actually predict about τ(t) (within-system texture trajectory) and its relationship to an external openness index? Write your derivation step-by-step, citing the canon at each step. The hypotheses should fall out of the canon, not be imposed on it.
+
+Lock these hypotheses with thresholds matching #150's specificity:
+- **H1b** — some statement about within-system τ(t) variation (does it cycle? does the system "breathe"?). Effect size, significance threshold, falsifier all explicit.
+- **H2b** — some statement about τ(t) co-movement with external openness index (V-Dem or RSF). Direction, effect size, p-threshold, falsifier explicit.
+- **H3b** — some statement about cycling-amplitude collapse during sustained capture periods. All thresholds explicit.
+
+**3. The six locked decisions before any τ(t) computed:**
+
+Per cont 30 §5.2 — these decisions get made and recorded in §3-§5 of the pre-registration document:
+
+- **(D1) External openness index source + variable.** Choose ONE: V-Dem `v2x_freexp_altinf` (alternative information freedom), V-Dem `v2mecenefm` (government media censorship), or RSF press-freedom index. Justify the choice; pre-register the annual → daily interpolation method.
+- **(D2) Volume-control gate.** Choose ONE: (a) Poisson-thin all countries to common daily rate before τ(t); (b) volume-matched country pairs; (c) DFA-α primary, Welch β as robustness check; (d) explicit white-noise floor model in the spectral fit. Pre-register the validation: synthetic data with known cycling AND known volume heterogeneity must recover cycling correctly under the chosen control. Run that validation before any GDELT data examined.
+- **(D3) RC-Koopman vs rolling-DFA-α as primary τ(t) decomposition.** RC-Koopman handles non-stationarity better but adds methodological surface area. Rolling DFA-α is simpler but coarser. Pre-register which is primary; the other can be exploratory.
+- **(D4) Data-source decision.** Re-use existing `data/raw/` from #150 (faster, but inherits any unknown GDELT-pipeline-drift confounds) OR re-pull with volume controls in BigQuery itself (slower, cleaner).
+- **(D5) Country set.** Same 12 as #150, OR expanded, OR restricted to volume-matched subset. Pre-register count + selection rule. (Audit v06 §10 + cont 30 §6 caution: do NOT silently expand to make a positive result more likely.)
+- **(D6) Time-window structure.** Pre-register: rolling-window size, step size, total span. These determine the temporal resolution of τ(t).
+
+**4. Write the pre-registration document.**
+
+Path: `pilots/1f_failsafe_cycling/PRE_REGISTRATION.md` (create a NEW directory parallel to `1f_failsafe/` to keep #150 results unambiguous).
+
+Structure mirrors `candidates/1f_l0_failsafe_signature.md`:
+- §1 The claim (from cont 30 §2 + cont 26 §3 + Reading 06 §10.3 narrowed — NOT from the seed)
+- §2 Why this is operationalizable (cycling-detection methodology mature, openness-index sources available, framework-level questions surfaced)
+- §3 Dataset choice + signals + substrate-window structure (decisions D4, D5, D6)
+- §4 H1b/H2b/H3b pre-registered with thresholds, falsifiers, secondary hypotheses
+- §5 Protocol step-by-step (ingest → volume control [D2] → τ(t) decomposition [D3] → openness-index alignment [D1] → statistical test)
+- §6 First-commit deliverable (skeleton code + synthetic validation of D2's volume control)
+- §7 Confounds explicitly named — especially #150's spectral-floor (now controlled per D2); regime-intensity drift; openness-index resolution mismatch
+- §8 Promotion bars A/B/C for the cycling-capacity Tier 2 candidate
+- §9 What this does NOT change (cont 26 §3 unchanged, cymatics convergence #8 unchanged, etc.)
+- §10 Cross-references + provenance
+- §11 **Cold-derivation note** — explicit statement that the seed was NOT consulted during derivation; list which canon citations grounded each hypothesis
+
+**Phase B — Seed comparison (the check-after-the-fact; ~30 min)**
+
+5. AFTER §1-§11 are locked, read [`PILOT_150b_cycling_seed.md`](pilots/1f_failsafe/PILOT_150b_cycling_seed.md) and add a §12 to your pre-registration document:
+
+- Does your cold-derived H1b/H2b/H3b match the seed's H1b/H2b/H3b? In structure, in threshold, in falsifier?
+- If close (>80% structural overlap): confirmation. Note this in §12.
+- If different (<80%): the seed was missing something or fitting something. Document the divergence and explain which framing the canon actually grounds.
+
+**Phase C — Validate the volume-control gate on synthetic data (~2 hours)**
+
+6. Before any GDELT data examined, implement D2 and validate on synthetic data:
+- Generate signals with known cycling structure AND known per-country volume heterogeneity
+- Run your chosen volume control
+- Verify the cycling structure recovers under your chosen control while #150-style spurious volume-β contrast does not
+
+7. Save validation results to `pilots/1f_failsafe_cycling/synthetic_validation/`.
+
+8. If the validation fails (i.e., your chosen D2 doesn't actually neutralize the volume confound on synthetic data), STOP. Pick a different D2 and revalidate. Do not advance to real-data work until synthetic validation passes.
+
+**Phase D — First commit (~30 min)**
+
+9. Commit the pre-registration + synthetic validation. Pre-register cleanly: H1b/H2b/H3b text never modified after this commit (per cont 27 §2 discipline). Future amendments go in a separate `confounds_cycling.md` file with dates and reasons.
+
+10. Update HANDOFF.md (see end-of-session checklist below) and push.
+
+**Phase E (queued for next session, not this one)** — actually run the pilot. That's the result-commit work, distinct from the pre-registration work. Keep them separate to preserve the locked-before-data discipline.
 
 ### Step-by-step
 
@@ -135,16 +245,17 @@ Note: as of Cowork session's first-commit, `gdelt_mode()` in `pilot.py` is a stu
 
 ---
 
-## What NOT to do (hard discipline guardrails)
+## What NOT to do (hard discipline guardrails for task #172)
 
-- **DO NOT write new readings.** Reading 08 was the framework's LAST infrastructure document before pilots resume.
-- **DO NOT write new audits.** Audit v07 target is 2026-06-16, scoped by Cowork.
-- **DO NOT write new continuations.** Cont 29 stands; cont 30 is for the NEXT round, not for documenting your pilot run (that's `results/discussion.md`).
-- **DO NOT extend the framework canon, promote new primitives, or run scouts on new external papers.** Even if you discover something interesting in GDELT, log it in `results/discussion.md` for Cowork to evaluate next session — don't promote anything to canon-level yourself.
-- **DO NOT send the Yilun-Du outreach DM** (task #168). Outreach is firmly gated on at least one pilot result-commit landing first. Even after this commit lands, hold outreach for Cowork to draft per Pav's voice.
-- **DO NOT modify the locked pre-registration.** H1 is locked at 2026-06-02 in `candidates/1f_l0_failsafe_signature.md` §4. N=6 amendment is locked in `confounds.md` §1 (2026-06-02). New amendments go in `confounds.md` only, dated, with reason, and only for issues discovered after running real data — never modify the pre-registration retroactively to make a result land.
-- **DO NOT skip the confound log.** §5.5 of the pre-registration requires explicit confound documentation in the result commit. Even null findings need this.
-- **DO NOT silently change the statistical test stack.** The Welch PSD + log-log slope fit + paired permutation test stack is locked. If a problem arises (e.g., distribution non-normality), document it in `confounds.md` as a new entry and surface to Cowork for next-session decision rather than swapping methods mid-run.
+- **DO NOT read `PILOT_150b_cycling_seed.md` during Phase A cold-derivation.** Only at Phase B, after your hypotheses are locked. Fitting-risk is the entire reason this task exists.
+- **DO NOT read `pilots/1f_failsafe/results/discussion.md`** until after Phase A is locked. The empirical findings should not shape the new hypotheses.
+- **DO NOT copy hypotheses from `candidates/1f_l0_failsafe_signature.md` §4.** That document's H1 was the static-binary version that failed. Your H1b/H2b/H3b are derived from cont 30 §2 + cont 26 §3 + Reading 06 §10.3 narrowing, not from #150's pre-registration.
+- **DO NOT actually run the pilot in this session.** Task #172 is pre-registration only. The result-commit (Phase E) is a separate task in a separate session. Mixing them re-introduces fitting risk.
+- **DO NOT skip the synthetic-data validation of D2.** If you implement a volume control that you don't first prove neutralizes the confound on synthetic data, you're guessing — and if the real-data pilot fails, you can't disentangle "framework claim wrong" from "volume control didn't work."
+- **DO NOT write new readings, new audits, new continuations.** Even if you have insights during the cold-derivation, log them in §11 of the pre-registration document for Cowork to consider in the next round. Cont 30 was the framework-side capture; cont 31 is for next round.
+- **DO NOT extend the framework canon, promote new primitives, or run scouts on new external papers.** Same discipline as before.
+- **DO NOT send the Yilun-Du outreach DM** (task #168). Still gated on a favorable tangible result. A confounded null doesn't unlock it; a cycling-pilot result-commit could.
+- **DO NOT modify the cycling pre-registration after locking.** Phase D's commit locks H1b/H2b/H3b text. Future amendments go in `pilots/1f_failsafe_cycling/confounds.md` (or similar) only, dated, with reason. Never modify §4 retroactively.
 
 ---
 
@@ -163,28 +274,32 @@ Pre-registration discipline: H1 was locked BEFORE data examined. Any p-value rep
 
 ---
 
-## End-of-session checklist (before you close)
+## End-of-session checklist for task #172 (before you close)
 
-1. **Commit your work** with a structured message. Example pattern:
+1. **Verify the cold-derivation discipline held.** Add a self-attestation to §11 of the pre-registration document: "I derived H1b/H2b/H3b before reading PILOT_150b_cycling_seed.md or results/discussion.md. Phase B seed-comparison was done AFTER §1-§11 were locked. The canon citations grounding each hypothesis are listed below." This is a Tier 1 honesty claim; if you cannot make it truthfully, the pre-registration is contaminated and should be redone.
+
+2. **Verify the synthetic validation of D2 actually passed.** Save the validation script + output in `pilots/1f_failsafe_cycling/synthetic_validation/`. The output should explicitly show: (a) the synthetic signals had known cycling structure, (b) the synthetic signals had per-country volume heterogeneity matched to GDELT's, (c) the chosen volume control recovered the cycling structure while neutralizing the volume confound. If any of (a)/(b)/(c) is missing or fails, do not commit; pick a different D2.
+
+3. **Commit your work** with a structured message:
    ```
-   git add results/ pilots/1f_failsafe/pilot.py CHANGELOG.md HANDOFF.md
-   git commit -m "Pilot #150 result-commit — GDELT v2 H1 [PASS/FAIL/NULL] · Δβ = X.XX, Cohen's d = Y.YY, permutation p = Z.ZZZZ" -m "<details>"
+   git add pilots/1f_failsafe_cycling/ HANDOFF.md CHANGELOG.md
+   git commit -m "Task #172 — cycling-pilot pre-registration LOCKED · H1b/H2b/H3b cold-derived from cont 30 §2 + cont 26 §3 + Reading 06 §10.3 narrowing · six locked decisions D1-D6 · synthetic-data validation of volume-control gate PASSED" -m "<details>"
    git push
    ```
 
-2. **Update HANDOFF.md** with:
-   - Section "## Last Claude Code session (DATE)" with what shipped + verdict
-   - "## For Cowork next session" with anything Cowork should action
+4. **Update HANDOFF.md** with:
+   - Replace the "## Your job this session (Claude Code)" section's task-#172 instructions with a brief "## Last Claude Code session (DATE)" block summarizing what shipped + the locked H1b/H2b/H3b text + which D-decisions were made + whether seed-comparison agreed or diverged
+   - "## For Cowork next session" with: (a) review the locked pre-registration for any caught-by-Cowork issues, (b) decide whether to run the pilot immediately or schedule, (c) audit v07 target 2026-06-16 should verify the cold-derivation discipline held
 
-3. **Update CHANGELOG.md** with a result-commit entry (mirror the structure of the 2026-06-02 first-commit entry that's already there).
+5. **Update CHANGELOG.md** with an entry documenting: cycling-pilot pre-registration locked; H1b/H2b/H3b summary text; the six D-decisions; the synthetic validation outcome.
 
-4. **Update `candidates/1f_l0_failsafe_signature.md` §11** with the result-commit date and Bar A status.
+6. **Add a timeline entry** at `timeline/index.html` (~latest entry at top).
 
-5. **Add a timeline entry** at `timeline/index.html` (~latest entry at top, mirror the format).
+7. **Bump JSON endpoints** if a new candidate-doc was created or modified.
 
-6. **Bump JSON endpoints** (`readings.json` if you ship anything reading-shaped, `candidates.json` if candidate promotion bar changed). Use the bash script in `scripts/` for IndexNow if Bing should re-crawl.
+8. **Mark task #172 completed** in whatever tracking you use. Note it in HANDOFF.md's "Last Claude Code session" block.
 
-7. **Mark task #169 completed** in whatever tracking you use. Cowork's TodoList is not shared, so just note it in HANDOFF.md's "Last Claude Code session" block.
+9. **DO NOT run the pilot in this session.** That's Phase E, separate task, separate session. Resist the temptation even if you have time left. The discipline is locked-before-data.
 
 ---
 
@@ -202,7 +317,18 @@ Pre-registration discipline: H1 was locked BEFORE data examined. Any p-value rep
 
 ---
 
-## For Cowork next session (after Claude Code completes #169)
+## For Cowork next session (after Claude Code completes #172)
+
+1. **Review the locked pre-registration** at `pilots/1f_failsafe_cycling/PRE_REGISTRATION.md`. Look specifically for:
+   - Are H1b/H2b/H3b properly falsifiable? Do they have explicit thresholds + effect sizes + p-values like #150's H1 did?
+   - Does §11 (cold-derivation note) cite specific canon paragraphs grounding each hypothesis? Or does it gesture vaguely at cont 30 / cont 26 without specificity?
+   - Does §12 (seed comparison) honestly document agreement/divergence with `PILOT_150b_cycling_seed.md`?
+   - Does the synthetic validation in `synthetic_validation/` actually prove D2 works?
+2. **If issues found**, do NOT secretly edit Claude Code's locked pre-registration. Instead: write a follow-up amendment in `pilots/1f_failsafe_cycling/confounds_cycling.md` §1, dated and explicitly stated as "amendment before any GDELT data examined." Then re-lock.
+3. **Decide whether to run the pilot immediately or schedule.** If running immediately: hand back to Claude Code for Phase E with a HANDOFF.md update. If scheduling: log the run date and hold.
+4. **Audit v07 target 2026-06-16** should verify (a) cold-derivation discipline held; (b) seed-comparison was honest; (c) synthetic validation of D2 actually passed; (d) the pre-registration is genuinely falsifiable per cont 27 §2.
+
+## For Cowork next session (after Claude Code completes #169) — KEPT FOR HISTORICAL REFERENCE
 
 If the result-commit lands cleanly, Cowork's next move per Pav's "lets do 150 and then 151" sequence is task #151: RC-Koopman cultural-eigenmode pilot. Architecturally scoped by [`readings/2026-06-02_gamma_world_multi_agent_world_modeling.md` §6](readings/2026-06-02_gamma_world_multi_agent_world_modeling.md) (γ-World hub-mediator + simplex agent encoding template); methodologically scoped by [`readings/2026-05-31_bes_bidirectional_evolutionary_search.md` §7.1](readings/2026-05-31_bes_bidirectional_evolutionary_search.md) (BES backward goal-tree decomposition).
 

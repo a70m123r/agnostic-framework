@@ -1,11 +1,18 @@
 {
   "schema_version": "1.0",
   "framework": "Agnostic Framework",
-  "generated": "2026-06-02",
+  "generated": "2026-06-03",
   "live_url": "https://a70m123r.github.io/agnostic-framework/",
   "description": "Numbered provenance records of every major development round. Continuations are the framework's primary self-documentation.",
-  "count": 26,
+  "count": 27,
   "continuations": [
+    {
+      "number": 30,
+      "title": "Pilot #150 confounded null + Pav's cycling reframe (squeeze ↔ pull) · Reading 06 §10.3 narrowing · audit v06 §10 substantive-research-displacement closure · the discipline cycle landing end-to-end",
+      "date": "2026-06-03",
+      "summary": "Pilot #150 result-commit (Claude Code 2026-06-03) returned a confounded null on H1 (Δβ = +0.084 wrong-sign, d = 0.38, p = 0.79; source-volume confound r = 0.92 explains cross-country contrast; volume-robust DFA-α shows no political-system signal). Pav's mid-session reframe — 'the authoritative = bad, democracy = good is biased — its cycles of squeeze and pull, steers' — is the load-bearing structural move: replaces value-coded static political binary with symmetric within-system capacity-to-cycle measure, using external openness index (V-Dem / RSF) as steer signal. Cont 30 integrates the reframe into existing canon (squeeze ↔ pull = cont 13 A⁻/A⁺ at social substrate; locked-squeeze = cont 20 dormancy; locked-pull = cont 25 break-apart; structurally consistent with cont 28 supersede dynamic) — integration NOT new primitive. Reading 06 §10.3 NARROWED per cont 27 §3 narrow-before-demote: from 'authoritarian = lower β' to 'loss of cycling capacity = failsafe failure, symmetric in direction.' Audit v06 §10 substantive-research-displacement-by-infrastructure pattern CLOSED CLEAN in ~36-hour cycle (hard-stop → first-commit → result-commit → canon integration). #150b/#151 merge intent confirmed pending cold-drafted pre-registration. Seven discipline lessons documented for future pre-registrations.",
+      "url": "https://a70m123r.github.io/agnostic-framework/continuations/30.md"
+    },
     {
       "number": 29,
       "title": "BES surfaced as cross-substrate convergence #9 candidate · fruit-as-analogy clarification · agent-substrate optimization producing first inbound discovery",
