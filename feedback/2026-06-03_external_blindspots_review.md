@@ -106,7 +106,7 @@ The honest response:
 
 ### §2.4 Item 4 — Descriptive power >> normative guidance (Bucket B — deliberate scope, with acknowledgment)
 
-**Framework response:** **Genuine but structurally consistent with the framework's existing wrapper-relative-ethics claim. Could be MORE explicit.**
+**Framework response:** **Genuine but structurally consistent with the framework's existing substrate-level-no-normative-claim bracket (per cont 17 + cont 19 + cont 22 cumulative; see cont 32 Part B.1 for corrected canon position).** Could be MORE explicit. (Originally framed in this log as "wrapper-relative-ethics claim" — audit v07 F3 caught the back-attribution: cont 22 contains zero ethics content; the term was retroactively coined in this feedback round; cont 32 replaces it with the actual cumulative bracket-stance.)
 
 The framework's meta-discipline IS its normative commitment:
 - Cont 27 §2 three-tier procedure — claims tier-tagging, falsifiability, pre-registration are good practices
@@ -116,11 +116,11 @@ The framework's meta-discipline IS its normative commitment:
 
 But the framework deliberately avoids **substrate-level normative claims** because — per the framework's own canon — normative ethics compile differently per observer-class. Cont 22 canon-stack vocabulary names this: top-canon (institutional norms) varies per observer-class; centre-canon (lived practice) varies per situation; sub-canon (intuitive default) varies per ring.
 
-So the framework's lack of substrate-level normative guidance is itself a **framework claim**: normative ethics are wrapper-relative.
+So the framework's lack of substrate-level normative guidance is itself a **framework claim**: shared reality kernel canon (cont 32 Part B.1) contains whatever observer-independent normative substrate exists; each observer's L0 compile loop renders normative content observer-relatively. Compiled normative output is observer-relative; the underlying substrate is shared. (Per cont 32 F3 correction: this is NOT "ethics is wrapper-relative all the way down" as originally framed — the kernel is shared.)
 
 The critic is right that this looks like a gap. The framework's honest response is that the gap is a deliberate scope decision rooted in an existing structural commitment, but **the framework could be more explicit** about saying "our lack of substrate-ethics is itself a framework claim, not an evasion."
 
-**Possible follow-up (queued, not actioned this round):** A future continuation or reading explicitly stating the wrapper-relative-ethics claim and naming what kinds of ethics-discussion the framework CAN engage (process-ethics, meta-ethics about how ethics-canon forms) vs CANNOT engage (substrate-ethics that claim to be universally true).
+**Possible follow-up (queued, not actioned this round; partially addressed in cont 32 Part B.1 which canonized the shared-kernel + observer-relative-compile structure):** A future continuation or reading explicitly naming what kinds of ethics-discussion the framework CAN engage (process-ethics, meta-ethics about how ethics-canon forms in observer L0 compile loops) vs CANNOT engage (substrate-ethics claiming observer-independent normative content; the framework brackets WHAT'S in reality kernel canon).
 
 ---
 
@@ -158,7 +158,7 @@ Items 3 and 4 do not need new framework material — they are scope decisions th
 
 **Item 3 (brackets qualia/phenomenology):** Defended per cont 17. The bracket holds. Future extension possible if domain warrants.
 
-**Item 4 (descriptive >> normative):** Defended per cont 22 wrapper-relative-ethics claim. Could be MORE EXPLICIT in framework documentation that this is a structural claim, not an evasion. Queued for possible future continuation.
+**Item 4 (descriptive >> normative):** Defended per cont 17 + cont 19 + cont 22 substrate-level-no-normative-claim bracket (per cont 32 Part B.1 correction; was originally framed as "cont 22 wrapper-relative-ethics claim" but that was retroactive back-attribution caught by audit v07 F3 — cont 22 has zero ethics content). Cont 32 partially addresses by canonizing reality kernel canon + observer-relative compile structure. Could still be MORE EXPLICIT in framework documentation.
 
 ---
 
@@ -191,7 +191,8 @@ Items 3 and 4 do not need new framework material — they are scope decisions th
 
 - [`candidates/adversarial_substrate_dynamics.md`](../candidates/adversarial_substrate_dynamics.md) — new Tier 3 candidate from Item 2
 - [`continuations/17.md`](../continuations/17.md) — qualia bracket defense for Item 3
-- [`continuations/22.md`](../continuations/22.md) — canon-stack + wrapper-relative-ethics claim grounding Item 4 scope-defense
+- [`continuations/22.md`](../continuations/22.md) — canon-stack vocabulary; Item 4 scope-defense traces to cont 17 + cont 19 + cont 22 cumulative bracket, not to cont 22 alone (per cont 32 F3 correction)
+- [`continuations/32.md`](../continuations/32.md) Part B.1 — reality kernel canon + observer-relative compile (canonized position replacing the retroactive wrapper-relative-ethics framing)
 - [`continuations/27.md`](../continuations/27.md) §2 — three-tier procedure under which this feedback is processed
 - [`continuations/30.md`](../continuations/30.md) — cycling reframe; structurally adjacent to Item 2 adversarial dynamics
 - [`audits/v06.md`](../audits/v06.md) §10 — substantive-research-displacement-by-infrastructure concern relevant to Item 1 trajectory check

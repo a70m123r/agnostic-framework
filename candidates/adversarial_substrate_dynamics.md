@@ -44,7 +44,7 @@ Each sub-candidate maps to existing framework primitives but names the actor-dri
 
 **Definition:** Deliberate A⁺ injection designed to corrupt rival compile loops. Not random selection pressure but **targeted candidate-injection meant to exhaust target's A⁻ capacity.**
 
-**Maps to:** Cont 13 A⁻/A⁺ coupled discipline (the neutral version); Reading 07 BES Theorem 4.4 entropy-shell escape (the formal-math version of why this attack works).
+**Maps to:** Cont 13 A⁻/A⁺ coupled discipline (the neutral version); Reading 07 BES Theorem 4.4 entropy-shell escape at search substrate (the formal-math grounding for A⁻-primacy that the framework extends to adversarial substrate as a Tier 3 speculative reading per cont 31 §5.7 + cont 32 F5; the adversarial reading is the framework's lens, NOT what the BES authors claim).
 
 **Mechanism:** The framework's A⁻ discipline (cont 13) gates which A⁺ candidates survive. But A⁻ has finite capacity per unit time — an observer can only verify so many candidates. Adversarial actors flood the A⁺ stream with high-volume low-quality candidates designed to occupy target's A⁻ budget. The target's discriminative capacity is exhausted; lower-quality candidates slip through; the target's compile loop degrades.
 
@@ -181,7 +181,7 @@ Per cont 27 §2 discipline:
 
 **§7.3 Cont 17 consciousness bracket: unchanged.** Adversarial substrate dynamics operate at structural-observer-dynamics scale, not phenomenal-experience scale. The framework's existing consciousness bracket holds.
 
-**§7.4 Cont 22 wrapper-relative-ethics claim: reinforced.** This candidate does NOT claim substrate-level ethics. It names structural features that harm any wrapper regardless of ethics, but does not say what wrappers SHOULD value. Wrapper-relative-ethics holds.
+**§7.4 Cont 17 + cont 19 + cont 22 substrate-level-no-normative-claim bracket: reinforced (per audit v07 F3 + cont 32 Part B.1 correction — was originally framed as "Cont 22 wrapper-relative-ethics: reinforced" which back-attributed a retroactively-coined term to cont 22 that contains zero ethics content).** This candidate does NOT claim substrate-level ethics. It names structural features under which substrate-properties degrade (any wrapper whose substrate undergoes these failure modes loses its substrate as a chosen reference frame — the framework brackets WHAT specifically is in reality kernel canon per cont 32 Part B.1, including whether observer-independent normative substrate exists). The bracket-stance is traceable to cont 17 phenomenology bracket + cont 19 catalyst stance + cont 22 canon-stack cumulative, not to a single named "wrapper-relative-ethics" primitive in cont 22.
 
 **§7.5 The cross-substrate convergence list (LCAO through BES #9): unchanged.** Adversarial dynamics are not a new convergence; they're a class of primitives operating at every existing convergence's substrate.
 
@@ -311,15 +311,12 @@ The existing §5 Bar A still gates Tier 2 promotion. Cont 31 §9 sharpens what s
 
 These are not new Bar A criteria; they sharpen what existing Bar A worked examples should look like.
 
-### §11.7 Most-tractable Bar A worked example per cont 31 analysis
+### §11.7 Alternative Bar A worked-example angle from cont 31 analysis
 
-Per cont 31 §7, the **search-ranking ecosystem as a whole** is the most-tractable Bar A worked example (more tractable than any individual §8 sub-primitive case) because:
-- 25+ years of documented coevolution
-- Multiple identified niches simultaneously occupied
-- Named selection pressure events (Google algorithm updates) with dates
-- Currently-visible ecosystem failure mode (invasive AI content, structural detection lag)
-- Predictions and intervention-classes the per-sub-primitive view doesn't surface
+**Reverted per audit v07 F6 amendment 2026-06-04** — original wording re-ranked the §8 priority list (search-ranking-ecosystem at 8-12 hr above original #1 LLM jailbreak at 4-6 hr), violating cont 31 §10.2 item 3 ("Do NOT pre-commit to which §8 worked example develops to Bar A first").
 
-This re-ranks the §8 priority list: search-ranking-ecosystem-as-a-whole tops the list (estimated effort: ~8-12 hr for finished Bar A worked example). The original §8 #1 (LLM jailbreak as memetic warfare) remains tractable but operates at sub-primitive layer rather than ecosystem layer; suitable as Bar A satellite worked example after the ecosystem case is developed.
+The §8 priority list stands as originally ordered: LLM jailbreak / prompt injection as memetic warfare = §8 #1 at ~4-6 hr estimated effort.
 
-**Pav's call on whether to develop search-ranking-ecosystem case as Bar A worked example, or pick differently.**
+**Search-ranking-ecosystem-as-a-whole** is named as an ALTERNATIVE or SATELLITE Bar A worked-example angle that cont 31's ecosystem framing surfaced (cont 31 §7 sketches it). It operates at ecosystem-layer rather than sub-primitive-layer, with different properties (25+ years documented coevolution; multiple identified niches; named selection-pressure events; currently-visible ecosystem failure modes). Estimated effort ~8-12 hr. It is NOT ranked above the §8 priority list; it sits alongside as an alternative angle.
+
+**Pav's call on which Bar A worked example to develop first: any of §8 #1-#6 OR the alternative search-ranking-ecosystem angle from cont 31 §7. No pre-commitment.**

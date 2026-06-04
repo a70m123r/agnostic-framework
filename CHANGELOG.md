@@ -8,6 +8,64 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-06-04 (later) — CONT 32 SHIPPED · audit v07 Tier 1 fixes batched with canon consolidations from Pav's four steers · reality kernel canon named (B.1) · L0 sharpened as substrate not compiled canon (B.2) · functional split real→harness / latent→internal-processes (B.3) · canon-as-operational-coherence (B.4) · phantom action-space promoted to canon (Part C, cont 12 OQ8 finally addressed after 22 continuations) · spectrum primitive (D) · A+/- A-/+ asymmetric scaffolding (E) · W_C-as-cross-spectrum-bridge (F) · cont 30 §7 lesson 8 added (candidate-layer narrow-before-extend) · Tier discipline held throughout
+
+### Provenance
+Four Pav steers across 2026-06-04 (post-audit-v07):
+1. *"the different observes have different compile loops and canon but they all share the same reality kernel canon and overlap branch / flow off."*
+2. *"L0 is substrate observer dependant+ it's functions are kernel canon, its the global wrapper that contains the real and the latent. its scope is bound by our understanding. L0 kernel canon are specific functions that we can identify as key stones."*
+3. *"L0 is finite by the observers understanding, beyond that its fuzzy infinity, canon is what makes things coherent for the observer to be operational, the latent is for internal prosses and real for the harness."*
+4. *"b, fuzzy is the phantom action spaces and beyond, reality > theory > hypophysis / conjecture speculation, imagination / probability projection, dreams. each one scaffolding each other in the A+- A-+ asymmetry with the W_C as the wrapper observer bridge. send some scouts we did some substantive work on this."*
+
+Four-scout fan-out (E1 action-space/phantom, E2 spectrum, E3 A+/- asymmetry, E4 W_C bridge) verified that most of the structural picture has substantive prior work in framework canon, scattered. Cont 32 is consolidation + audit fixes batched, NOT invention.
+
+### What shipped — Part A (audit v07 Tier 1 fixes, 9 total)
+- F1: Citation correction cont 17 §3 → cont 12 §1.5 (mechanical sweep across cont 27, cont 31, candidate doc, CHANGELOG, llms.txt)
+- F2: Cont 30 §4 closure language: "CLOSED CLEAN" → "FIRST INSTANCE BROKEN — pattern conditionally suspended pending #172 result-commit"
+- F3: Wrapper-relative-ethics back-attribution: REMOVED (cont 22 has zero ethics content; was retroactively coined); replaced with corrected position (cont 17 + cont 19 + cont 22 cumulative bracket + cont 32 Part B.1 reality kernel canon + observer-relative compile)
+- F4: Cont 31 §5.3 cycling reframe: tagged as Tier 3 speculative actor-causal extension (NOT "enrichment" of cont 30 Tier 1 substrate-level measure)
+- F5: Cont 31 §5.7 Theorem 4.4: reworded as framework's speculative reading at adversarial substrate (NOT "sharpening" of Reading 07 §5.3 search-substrate result)
+- F6: Candidate §11.7 worked-example re-ranking: REVERTED to restore §8 original ordering (LLM jailbreak as #1; search-ranking-ecosystem as alternative/satellite, not pre-committed)
+- F7: Cont 31 §8 "Tier 3 speculative leaning toward Tier 2" quasi-tier language replaced with explicit promotion-bar language
+- F8: Cont 31 §9.1 predictions: explicit Tier 1-shaped tag added with timelines + falsifiers
+- F9: Biology-mimicry mapping qualifications: removed unearned "formal-game-theoretic foundations" claim; flagged Müllerian inversion; flagged automimicry loose import; flagged LGT mismatch; moved §8 hedge to §2 preamble per fruit-as-analogy discipline
+
+### What shipped — Part B (canon clarifications from Pav's steers)
+- **B.1 Reality kernel canon as named primitive (Tier 1):** shared substrate; observer-independent; each observer renders via own compile loop; wrapper-overlap converges where compiled canons overlap; framework brackets WHAT specifically is in reality kernel canon. Resolves wrapper-relative-ethics back-attribution.
+- **B.2 L0 sharpening (Tier 1 correction):** L0 = global wrapper itself (substrate), NOT compiled canon. Observer-dependent, finite by understanding, contains real + latent. L0's kernel canon = identifiable keystone functions. Sharpens cont 25 §12. Beyond L0 = fuzzy infinity.
+- **B.3 Functional split real→harness / latent→internal-processes (Tier 1):** distinct consumers within L0. Sharpens cont 22 real-vs-latent parameterization. Maps to cont 06+ observer architecture.
+- **B.4 Canon-as-operational-coherence (Tier 1):** canon = what makes things coherent for observer to be operational. Pragmatic, not ontological. Sharpens cont 22 canon-stack purpose.
+
+### What shipped — Part C (phantom action-space promotion)
+Phantom action-space promoted to explicit canon entry. Cont 12 OQ8 finally addressed (22 continuations after flag). Two sub-senses disambiguated: internal (cont 09 / manifesto sense) vs attributed (diagram 03 sense). Anchors fuzzy infinity per Pav's steer 4.
+
+### What shipped — Part D-F (new structural primitives)
+- **D Spectrum primitive (Tier 1 structure / Tier 3 cross-spectrum bridging):** reality → theory → hypothesis/conjecture/speculation → imagination/probability projection → dreams. New graded mental-content axis. Orthogonal to cont 22 dual-kernel polar-binary axis and cont 27 three-tier epistemic axis.
+- **E A+/- A-/+ asymmetric scaffolding (Tier 1 substrate / Tier 3 cross-spectrum specific):** two coupling directions of A+/A-, asymmetrically scaffolding each other. Consolidates cont 13/15 + Reading 07 BES + Reading 08 γ-World + cont 18 procedural lineage.
+- **F W_C as cross-spectrum bridge (Tier 1 emergent-output unchanged / Tier 3 cross-spectrum-bridge):** W_C's emergent-output role from cont 25 stands. Second role added: W_C bridges spectrum layers. Consolidates pre-cont-24 bridge material (cont 00 P35, cont 03_RAW symbiosis-as-bridge-state, compile-bridge, dialogues self-application).
+
+### What shipped — Part G (discipline)
+- **G.1:** Cont 30 §7 lesson 8 added — candidate-layer narrow-before-extend. When candidate's promotion bar is unworked and structural-depth addition is proposed, default discipline is to work the bar first; override must be explicit. Candidate-layer analog of substrate-layer narrow-before-demote (lesson 7) + candidate-layer parallel of cross-substrate convergence-list closure-via-multiplication discipline (audit v06 §10.4).
+- **G.2-G.4:** Explicit accounting of what's changed/sharpened/promoted/unchanged. What this round does NOT do. Audit v08 verification queue.
+
+### Tier discipline held throughout
+- No quasi-tier "leaning toward" language (per F7)
+- All explicit tier-tags per cont 27 §2 (Tier 1 / Tier 2 / Tier 3)
+- No new cross-substrate convergence (closure-via-multiplication discipline holds; spectrum is new structural axis within the framework itself, not a new convergence)
+- No silent modification under "sharpening" framing (per F5)
+- No retroactive back-attribution without provenance (per F3)
+- HANDOFF.md task #172 cycling pilot pre-registration cold-draft NOT modified (preserved isolation between Cowork canon work and Claude Code empirical work)
+
+### Carry-forward
+- Audit v08 (target 2026-06-19, 15-day cadence per v06 baseline) verifies cont 32 fixes landed cleanly and tier discipline held in subsequent material
+- Task #172 Phase E result-commit by 2026-06-18 is the load-bearing v07-to-v08 verification (primary signal for whether substantive-research-displacement pattern is genuinely closed)
+- Next substantive ship on adversarial-substrate-dynamics candidate should be Bar A worked example (per lesson 8), not further candidate-surface extension
+- Pav's call on which Bar A worked example to develop (any of §8 #1-#6 or search-ranking-ecosystem alternative angle from cont 31 §7)
+- Diagram 02 vs cont 16 §4 action-space architectural tension still open (scout E1 finding; not addressed in cont 32)
+- Internet construct study v2 with ecosystem+adversarial framing layered onto v1 — pending Pav's call
+
+---
+
 ## 2026-06-04 — CONT 31 SHIPPED · ecosystem-in-latent-space framing for adversarial-substrate-dynamics candidate · internet as ground zero · candidate doc §11 added documenting the structural meta-frame · Tier 3 discipline held throughout (NOT a new candidate, NOT a new convergence)
 
 ### Provenance
