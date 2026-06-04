@@ -58,9 +58,9 @@
 
 This is the Agnostic Framework — a Lakatosian research programme tracking how observers compile reality at every substrate scale. It has its own discipline (three-tier epistemic procedure per `continuations/27.md`), its own audit cadence (15-day rhythm; v07 target 2026-06-16), and a hard-earned habit of catching its own discipline failures BEFORE they propagate externally.
 
-**Critical context: framework is under a discipline hard-stop.** Per [audits/v06.md §10](audits/v06.md) + [readings/2026-06-02_gamma_world_multi_agent_world_modeling.md §9](readings/2026-06-02_gamma_world_multi_agent_world_modeling.md), the framework has been shipping infrastructure (audits, readings, scaffolding) while the queued empirical pilots (#150, #151) stayed queued. **Reading 08 declared itself the LAST infrastructure document before substantive empirical work resumes.** Task #150 first-commit landed 2026-06-02 (this morning); next required move is the result-commit (this session, task #169). **DO NOT** write new readings, new audits, new continuations, new outreach drafts, new candidates, or extend the framework canon. Run the pilot. Land the result. That's it.
+**Current state (2026-06-03): the audit v06 §10 + Reading 08 §9 hard-stop is CLEARED — empirical ground was broken.** Pilot #150's result-commit landed 2026-06-03 (H1 NOT SUPPORTED — confounded null; see `pilots/1f_failsafe/results/discussion.md`), and Cowork's `continuations/30.md` integrated it + narrowed Reading 06 §10.3. The framework is now in **pre-registration mode for the cycling successor pilot (task #172)** — see "Your job this session" below. Standing discipline still holds: **DO NOT** write new readings/audits/continuations/outreach/candidates or extend canon as a side-effect of #172 — log insights in §11 of the pre-registration doc for Cowork.
 
-**Third-strike condition.** If a third inbound external paper arrives before #150 or #151 produces empirical results, the framework treats that as a discovery-cascade-trap signal and forces a pivot. Two inbound papers already documented (BES → Reading 07; γ-World → Reading 08). The framework cannot absorb a third without empirical ground broken first.
+**Third-strike condition (now relieved).** The rule: a third inbound external paper before empirical ground was broken would signal a discovery-cascade trap. Ground IS now broken (#150 result-commit, 2026-06-03), so the acute pressure is off — but the underlying discipline stands: don't let inbound papers displace the queued empirical work (#172 → its result-commit).
 
 ---
 
@@ -99,6 +99,8 @@ There is a draft seed at [`pilots/1f_failsafe/PILOT_150b_cycling_seed.md`](pilot
 If your independently-derived pre-registration lands close to the seed afterward, that's confirmation. If it lands somewhere different, document why — the framework was pointing somewhere the seed missed.
 
 This is drug-trial-style pre-registration discipline: blind to results when locking the protocol.
+
+> **⚠ Who can run this — the make-or-break point.** The cold-derivation must be performed by an agent with **genuinely clean context** — one that has NOT already seen the seed, `results/discussion.md`, or #150's findings. The Claude Code session that produced #150's result-commit and wrote the seed is **maximally contaminated** and must NOT do the cold-derivation (it would just recite the seed from memory). Note that **this HANDOFF and `continuations/30.md` themselves summarise #150's findings** — so the cold-deriver must be handed a **curated brief (canon-file pointers + the task only)**, NOT told to read this HANDOFF. Cleanest implementation: a **dynamic-workflow subagent** (fresh isolated context by construction — it cannot see the orchestrator's conversation) or a brand-new session.
 
 ### Step-by-step
 
@@ -180,69 +182,6 @@ Structure mirrors `candidates/1f_l0_failsafe_signature.md`:
 
 **Phase E (queued for next session, not this one)** — actually run the pilot. That's the result-commit work, distinct from the pre-registration work. Keep them separate to preserve the locked-before-data discipline.
 
-### Step-by-step
-
-**1. Read these files first (in order):**
-- `pilots/1f_failsafe/README.md` — entry point + N=3 ceiling note
-- `pilots/1f_failsafe/confounds.md` — pre-registration amendments (especially §1)
-- `candidates/1f_l0_failsafe_signature.md` — full pre-registration with H1 + falsifier + promotion bars
-- `pilots/1f_failsafe/pilot.py` — the actual pipeline. Read the docstring + the `gdelt_mode()` function + the `GDELT_INGEST_INSTRUCTIONS` string.
-
-**2. Verify the pipeline works on your machine:**
-```bash
-cd pilots/1f_failsafe
-python3 pilot.py --mode verify    # DFA on synthetic colored noise [β ∈ 0, 2]
-python3 pilot.py --mode demo      # synthetic auth-vs-plur 3-pair contrast (will show N=3 ceiling)
-```
-
-If verify shows Welch β recovering ground truth within ±0.05 and demo shows the N=3 ceiling (p ≈ 0.13 at Cohen's d ≈ −1.8), the pipeline is correct. Both verified outputs are in `pilot_output/`.
-
-**3. Pick a GDELT ingest path.** Run `python3 pilot.py --mode ingest-help` for the three options. Recommended: **gdelt2 Python package** (simplest):
-```bash
-pip install gdelt2 pandas
-python3 -c "
-import gdelt
-g = gdelt.gdelt(version=2)
-# Test with one day first
-df = g.Search(['2024 Jan 01', '2024 Jan 02'], table='events', coverage=True)
-print(df.head())
-print(df.columns.tolist())
-"
-```
-
-**4. Build the daily aggregation.** Per the **N=6 amended** pre-registration in `confounds.md` §1:
-- 12 countries (6 authoritarian + 6 pluralistic): CHN-USA, RUS-GBR, PRK-DEU, IRN-FRA, TUR-NLD, VEN-CHL
-- GDELT FIPS country codes: CH, RS, KN, IR, TU, VE (auth); US, UK, GM, FR, NL, CI (plur)
-- Window: 2015-01-01 to 2026-01-01 (~4000 daily points per signal per country)
-- Three signals per country (per pre-registration §3): `event_count`, `mean_tone`, `event_category_entropy` (Shannon entropy of `EventRootCode` distribution per day)
-- Save as `data/raw/<country>_<signal>.csv` with columns `date,value`
-
-**5. Run the analysis:**
-```bash
-python3 pilot.py --mode gdelt --data-dir data/raw/ --out-dir results/
-```
-
-Note: as of Cowork session's first-commit, `gdelt_mode()` in `pilot.py` is a stub. **You will need to implement it.** The DFA / Welch / IAAFT / permutation functions are all done and tested. You just need to wire them: for each (country, signal), compute β; for each paired comparison, compute Δβ + bootstrap CI + IAAFT surrogate null + permutation test p; collect into results dict.
-
-**Implementation hint:** copy the structure of `demo_mode()`. The math is identical; the only difference is the signal source.
-
-**6. Generate the result-commit deliverables** (per `candidates/1f_l0_failsafe_signature.md` §11):
-- `results/gdelt_results.json` — β per country per signal + Cohen's d + permutation p + bootstrap CIs
-- `results/log_log_plot.png` — 12-panel log-log fluctuation plot (matplotlib; one panel per (country, signal) showing PSD with fit line)
-- `results/discussion.md` — H1 verdict (PASS / FAIL / NULL) + Bar A status + confound notes from actual data
-- `results/methods.md` — methods note + reproducibility info (GDELT download date, gdelt2 version, etc.)
-
-**7. Verdict interpretation:**
-
-| Result | Action |
-|---|---|
-| H1 PASSES (Δβ < −0.10 at d ≥ 0.5, p < 0.05) | Advance candidate Tier 2 conditional → **Tier 2 algorithmically-demonstrated** per Bar A. Update `candidates/1f_l0_failsafe_signature.md` §8 with date and result. Cont 30 entry can wait. |
-| H1 FAILS DIRECTION (Δβ > 0 at d ≥ 0.5) | Document falsifier outcome cleanly per `candidates/1f_l0_failsafe_signature.md` §4.4. Per cont 27 §3 pruning procedure: amend Reading 06 §10.3 to either narrow the claim or trigger demotion path. |
-| NULL EFFECT (|Δβ| < 0.05, no significance) | Document as null result. Candidate stays Tier 2 conditional. Consider Wikipedia edit-cadence pilot per scout report alternative #1 before demoting. |
-| Mixed (some pairs pass, others don't) | Document per-pair and look for pattern. Could indicate within-language confound issue per `confounds.md` §2. |
-
-**8. Update HANDOFF.md when you finish.** See §"End-of-session checklist" below.
-
 ---
 
 ## What NOT to do (hard discipline guardrails for task #172)
@@ -305,13 +244,14 @@ Pre-registration discipline: H1 was locked BEFORE data examined. Any p-value rep
 
 ## Cross-references
 
-- **Pre-registration locked at:** `candidates/1f_l0_failsafe_signature.md` (especially §4 H1, §5 protocol, §7 confounds, §11 status)
-- **Pilot code:** `pilots/1f_failsafe/pilot.py` (all DFA / Welch / IAAFT / permutation logic implemented; gdelt_mode() needs you to wire it)
-- **Confound log:** `pilots/1f_failsafe/confounds.md` (amendments go here)
-- **Framework discipline:** `continuations/27.md` (three-tier procedure + pruning rules)
-- **Audit history:** `audits/v05.md`, `audits/v06.md`
-- **Most recent reading:** `readings/2026-06-02_gamma_world_multi_agent_world_modeling.md` (declared hard-stop; §9 = discipline frame)
-- **Previous reading:** `readings/2026-05-31_bes_bidirectional_evolutionary_search.md` (BES backward decomposition methodology is what scoped this pilot)
+- **#150 result (the confounded null):** `pilots/1f_failsafe/results/discussion.md` (verdict + volume confound), `methods.md`, `gdelt_results.json`; new confounds in `pilots/1f_failsafe/confounds.md` §9–§14
+- **#150b cycling seed** — hypothesis-generating sketch, carries fitting risk: `pilots/1f_failsafe/PILOT_150b_cycling_seed.md`. **Do NOT feed this to the #172 cold-deriver.**
+- **Framework-side integration (canon input for #172):** `continuations/30.md` (§2 canon mapping, §3 narrowing, §5 merge logic)
+- **Narrowed claim:** `readings/2026-05-28_cymatic_harmonic_structure_in_social_systems.md` §10.3 + 2026-06-03 amendment log
+- **Framework discipline:** `continuations/27.md` §2–§3 (three-tier procedure + pruning/promotion)
+- **#172 deliverable target (to be created):** `pilots/1f_failsafe_cycling/PRE_REGISTRATION.md`
+- **#150 pre-registration (FORMAT template only — do NOT copy its hypotheses):** `candidates/1f_l0_failsafe_signature.md`
+- **Audit history:** `audits/v05.md`, `audits/v06.md` (v07 target 2026-06-16)
 - **Live site:** https://a70m123r.github.io/agnostic-framework/
 - **Source repo:** https://github.com/a70m123r/agnostic-framework
 
