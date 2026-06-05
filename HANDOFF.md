@@ -1,8 +1,34 @@
 # HANDOFF — Cowork → Claude Code
 
-**Last updated:** 2026-06-05 by Cowork session (audit v08 brief added — handoff from Cowork-side audit v07 to Claude-Code-side audit v08 for independence; v07 was Cowork-on-Cowork which carried "marking own homework" risk; v08 by Claude Code = genuinely fresher context)
-**Next session:** Claude Code — **audit v08** per the brief below. Run window: 2026-06-16 to 2026-06-19 (within v07-set 15-day cadence). Run early if conditions warrant per audit v07 §2 cadence-acceleration discipline (3-day cadence appropriate only when ship-density + closure-mode-prediction warrant; otherwise hold).
-**Pinned task:** **Claude Code runs audit v08** — multi-subagent fan-out (3-4 parallel scouts) on distinct audit angles, main-thread synthesis into `audits/v08.md`. Pattern: audit v05 (2 opus subagents in parallel), audit v06 (1 opus subagent + main-thread), audit v07 (4 general-purpose subagents + main-thread). V08 = same shape as v07, different agent surface for independence.
+**Last updated:** 2026-06-05 (later) by Claude Code session (audit v08 RAN on-brief → DRAFT at `audits/v08_DRAFT.md`; MIXED verdict; Tier-1 fixes queued for Cowork)
+**Next session:** Cowork — review the v08 draft, apply its Tier-1 fixes (F1–F9), ratify as `audits/v08.md`. See "Audit v08 (Claude-Code-authored) ready for Cowork review" immediately below.
+**Pinned task:** Cowork reviews + ratifies audit v08 and applies its mostly-mechanical Tier-1 fixes (finish the v07 cont17→cont12 + wrapper-relative-ethics sweeps; correct the cont 32 §G.2 false "cont 25 is replaced" claim; refresh stale `candidates.json` 1f/energy-floor entries; re-amend the now-impossible "#172 Phase E by 2026-06-18" closure to closure-via-clean-falsification; down-tune over-confident closure language + ADD the missing 2026-06-05 Pilot-2-FAIL entry to CHANGELOG/timeline; de-dup the corrupted Reading 06 §13 block). **v06 displacement concern read as RE-OPENED** (empirical lane dormant again post-FAIL). Audit v08 was run early per Pav steer (cadence target was 2026-06-19).
+
+---
+
+## Audit v08 (Claude-Code-authored) ready for Cowork review — 2026-06-05
+
+**Draft:** `audits/v08_DRAFT.md` (Claude-Code main-thread synthesis of a 4-subagent verification of the brief's Category A/B/C queue; file-read-only — no canon written, nothing promoted/demoted, no outreach). A same-day fresh-blind cross-check run is preserved at `audits/v08_crosscheck_genericrun.md`. **Open to Cowork/human review; ratify as `audits/v08.md` after applying fixes.**
+
+**Honest independence caveat:** Claude-Code-side auditing Cowork-side output — so internal-other-instance A−, NOT external A−. An external auditor is still owed.
+
+**Verdict: MIXED.** Substantive discipline HELD on the hard work (Pilot 2 FAIL integrated as a +1-line append-only amendment; cont 26 §3 git-verifiably untouched — `git show 6f8144f -- continuations/26.md` empty; falsified prediction preserved verbatim; no cont 33; no new candidate; no outreach; 6/9 v07 fixes clean PASS; lesson 8 held). Failure mode = a **documentation/reality gap**: cont 32's own accounting (§F/§G) claims sweeps + a source edit the git record denies.
+
+**Tier-1 fixes (Cowork to apply before next ship):**
+- **F1** — finish the cont 17 §3 → cont 12 §1.5 sweep: `llms.txt:66` (+ broken hyperlink), `cont31:263`, `CHANGELOG 147/1147/1191`, `Reading06 264/303` (Reading 06 was never in cont 32's sweep list).
+- **F2** — finish the wrapper-relative-ethics sweep: candidate §6.2 `L161`, `CHANGELOG 131/179/242`, `llms-full.txt:128`.
+- **F3** — cont 25 was NEVER edited (not in ee4a689) yet cont 32 §G.2 claims its "global compiled canon" wording "is replaced" (FALSE); 3 machine surfaces carry it as the active L0 label (`primitives.json:390`, `index.html:1185`, `llms-full.txt:31`). Fix cont 25 §12.1 OR correct §G.2.
+- **F4** — refresh `candidates.json`: 1f entry still `tier2_conditional_held`/"not demoted"/"Bar B before demotion" (all false post-FAIL); energy_floor entry misattributes #150 + points `next_pilot` at the deferred Pilot 1. (NB: `count:5` is CORRECT — the crosscheck run's F8 was wrong; only `generated` date is stale.)
+- **F5** — re-amend cont 30 §4 (`L43/L132`) + `CHANGELOG L31` from "#172 Phase E by 2026-06-18" (impossible — Phase E permanently deferred) to closure-via-clean-falsification.
+- **F6** — down-tune over-confident closure language (`Reading06 §13 L444` / candidate header `L12` / `HANDOFF L152` / `CHANGELOG L33`); **ADD the missing 2026-06-05 Pilot-2-FAIL entry to CHANGELOG + timeline** (currently 0 hits — the pre-FAIL "genuinely self-sustaining" line is the latest published word).
+- **F7** — reword "sharpened at adversarial substrate" at `cont31:67` (in-doc inconsistency vs the fixed §5.7) + `CHANGELOG:133`.
+- **F9** — de-duplicate the corrupted Reading 06 §13 block (two §13 headers `L341`+`L398`; orphan P2–P5 + stray "l." at `L386`).
+
+**Single most important rec:** make the framework's self-accounting match the git record (finish F1–F4 + set a frozen-vs-swept policy) — a reader trusting cont 32's §F/§G accounting is currently misled on what actually shipped.
+
+**C7 honesty verdict:** the "discipline working as designed / genuinely closed / self-sustaining" framing is **over-claim (CONCERN)** — the same register v07 F2 walked back one cycle earlier, now attached to a *falsified* result the CHANGELOG/timeline never recorded. Discipline held in **substance**; the **closure language ran ahead of it**. The v06 displacement concern reads as **RE-OPENED**, not closed.
+
+**Load-bearing v08→v09 test:** is the next ship the bridge write-up / adversarial Bar A (empirical/closure work) — or new conceptual surface? If more canon, the displacement pattern is confirmed re-accumulating.
 
 ---
 
