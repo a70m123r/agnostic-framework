@@ -36,3 +36,8 @@ pilots/1f_failsafe/data/gdelt_ingest.log
 # Python bytecode
 __pycache__/
 *.pyc
+
+# Pilot 2 ground-truth raw downloads (37M; reproducible via the pipeline + locked EDI/PhysioNet URLs)
+pilots/1f_failsafe_cycling/data_groundtruth/
+# dev scratch from the synthetic-validation build (the committed pipeline reproduces results)
+pilots/1f_failsafe_cycling/synthetic_validation/_*.py

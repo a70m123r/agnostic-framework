@@ -1,8 +1,32 @@
 # HANDOFF — Cowork → Claude Code
 
-**Last updated:** 2026-06-04 (late) by Cowork session (Reading 06 §10.3 third amendment + cont 30 §3 sharpening landed per Claude Code's EWS scout finding; three Cowork decisions locked below for Claude Code's next ground-truth pilot session)
-**Next session:** Claude Code — lock + run the **ground-truth validation pilot** (`PILOT_groundtruth_EWS_validation_seed.md`). See "Next Claude Code task brief" below.
-**Pinned task:** Claude Code locks + runs the ground-truth validation pilot (Cascade Peter/Paul + PhysioNet) per the three locked Cowork decisions. If A_cyc beats best one-pole indicator on lead-time + AUC AND nulls on Paul control, the metric-level claim earns the GDELT cycling pilot's real-data run (Pilot 1 Phase E — see two-pilot structure below). If not, contribution narrows to the bridge alone per pre-committed falsifier, and Pilot 1 Phase E stays permanently deferred.
+**Last updated:** 2026-06-05 by Claude Code session (Pilot 2 ground-truth validation RAN → **FAIL**; cycling-amplitude metric rejected; contribution narrows to the cross-field bridge)
+**Next session:** Cowork — ratify the FAIL branch (canon-level): Reading 06 §10.3 fourth amendment narrowing to bridge-only; demote the cycling-amplitude metric per cont 27 §3; Pilot 1 Phase E permanently deferred. See "Last Claude Code session (2026-06-05)" below.
+**Pinned task:** Cowork FAIL-branch integration. **Pilot 2 is DONE** — the cycling-amplitude metric `A_cyc` FAILED the locked ground-truth gate on real data (Cascade + PhysioNet). The GDELT social application (Pilot 1 Phase E) is **permanently deferred** per the frozen falsifier. **cont 26 §3 substrate canon UNCHANGED** (never on trial).
+
+---
+
+## Last Claude Code session (2026-06-05) — Pilot 2 ground-truth validation: FAIL (metric rejected)
+
+Locked + ran the ground-truth EWS validation pilot per Cowork's three decisions. **Verdict: FAIL** (clean, pre-registered — the §4 falsifier triggered). `A_cyc` (cycling amplitude of rolling-DFA-α) is **rejected**; the programme's empirical contribution narrows to the **cross-field bridge alone**; **Pilot 1 Phase E (GDELT real-data run) permanently deferred.** cont 26 §3 untouched.
+
+**What ran** (build → 3 adversarial skeptics → finalize; `9112281` locked the falsifier BEFORE data; outputs in `pilots/1f_failsafe_cycling/results_groundtruth/`):
+- **Cascade primary gate — all 3 conditions FAIL.** (a) AUC: A_cyc 0.677 vs best one-pole AR(1) 0.651 — beat by +0.026, needed +0.05. (b) Lead-time: A_cyc's predicted *decline* never fires in Peter — its amplitude significantly *rises* (Kendall τ=+0.50, p≈1e-27), the **wrong direction**; AR(1) warns +5 d vs onset. (c) Paul control: A_cyc declines significantly → fires (construction-sensitive; (a)+(b) fail robustly regardless).
+- **PhysioNet secondary — does NOT add over static α.** Static-α1 (HRV scales 4–16) reproduces Goldberger (NSR 1.27 / CHF 1.00, AUC 0.813); rolling A_cyc AUC 0.646 < 0.813.
+- **Verification:** 3 skeptics → zero confirmed bugs, `verdict_honest: true`; independent end-to-end re-run reproduced every number bit-for-bit. The A_cyc construction used was *conservative against the candidate* (the candidate-favorable one gives 0.812 AUC but still fails cond-b). FAIL is robust.
+
+**Honest discipline notes (`confounds_groundtruth.md`):**
+- Locked EDI id `knb-lter-ntl.355.6` (from the scout) was **wrong** (resolves to zooplankton core data). The agent found the package matching every locked §3 *term* (`knb-lter-ntl.360.2`: 5-min sonde, `chl`=chlorophyll-a, Peter+Paul, 2008–2011), used it, **did NOT edit locked §3**, logged the mis-ID (C1); a skeptic + cross-validation vs an independent Carpenter-2011 companion (r=0.84–0.90) confirmed it's legitimate and unbiased.
+- §3-vs-§4 A_cyc construction ambiguity resolved conservatively (C4/C10); locked text never edited; falsifier applied as frozen.
+
+**For Cowork next (FAIL branch):**
+- Reading 06 §10.3 **fourth amendment** — narrow the contribution to the **cross-field bridge alone** (EWS ↔ physiology decomplexification synthesis); rolling-amplitude metric empirically rejected on ground truth.
+- **Demote the cycling-amplitude metric** per cont 27 §3 — NOT cont 26 §3.
+- **Pilot 1 Phase E permanently deferred**; no GDELT re-pull.
+- Outreach → the bridge pitch only ("we synthesize your two literatures": Goldberger/Lipsitz ↔ Scheffer/Dakos), not "we have a new metric." Still gated.
+- Integrate into CHANGELOG / timeline / a cont entry (Cowork's domain). Audit v08 target 2026-06-19.
+
+**Unpushed (held for Pav):** the Pilot 2 result-commit (`results_groundtruth/` + .gitignore + this block). The locked pre-reg (`9112281`) is already on origin.
 
 ---
 
