@@ -1,8 +1,168 @@
 # HANDOFF — Cowork → Claude Code
 
-**Last updated:** 2026-06-05 (later) by Claude Code session (audit v08 RAN on-brief → DRAFT at `audits/v08_DRAFT.md`; MIXED verdict; Tier-1 fixes queued for Cowork)
-**Next session:** Cowork — review the v08 draft, apply its Tier-1 fixes (F1–F9), ratify as `audits/v08.md`. See "Audit v08 (Claude-Code-authored) ready for Cowork review" immediately below.
-**Pinned task:** Cowork reviews + ratifies audit v08 and applies its mostly-mechanical Tier-1 fixes (finish the v07 cont17→cont12 + wrapper-relative-ethics sweeps; correct the cont 32 §G.2 false "cont 25 is replaced" claim; refresh stale `candidates.json` 1f/energy-floor entries; re-amend the now-impossible "#172 Phase E by 2026-06-18" closure to closure-via-clean-falsification; down-tune over-confident closure language + ADD the missing 2026-06-05 Pilot-2-FAIL entry to CHANGELOG/timeline; de-dup the corrupted Reading 06 §13 block). **v06 displacement concern read as RE-OPENED** (empirical lane dormant again post-FAIL). Audit v08 was run early per Pav steer (cadence target was 2026-06-19).
+**Last updated:** 2026-06-05 (later still) by Cowork session (audit v08 ratified + all 8 Tier-1 fixes applied + Adversarial Bar A initial sketch produced via two widgets + brief queued for Claude Code below)
+**Next session:** Claude Code — **Adversarial Bar A initial sketch (Stage 1: exploratory development)** per brief immediately below. Pull real data for the 6 substrates in the Cowork-side correlation sketch, build out the taxonomy with sourced cases, iterate the correlation graph with verified primary-source numbers. **Frame as initial sketch — NOT yet locked Pilot.** Pav will develop further over multiple iterations. Stage 2 (locked falsifier pre-reg per Pilot 2 pattern) is a SEPARATE later task gated on Stage 1 surfacing a strong-enough signal.
+**Pinned task:** **Claude Code does Stage 1 exploratory data gathering + iterative sketch refinement** for the adversarial-substrate-dynamics candidate's Bar A. Per audit v08 load-bearing v08→v09 test: this IS the empirical/closure work that the next ship must be (or displacement pattern confirmed re-accumulating). Cont 32 lesson 8 + audit v07 V8.6 + audit v08 §C2/§C7 all binding: NO new continuations, NO new candidates, NO outreach, NO Tier-1 promotions; identify what's canon-shaped per cont 27 §2 tier-tagging, don't compile new primitives.
+
+---
+
+## Claude Code task brief — Adversarial Bar A initial sketch (Stage 1: exploratory development)
+
+**One task, multi-iteration. Pull real data, refine sketch, hand back to Cowork for Pav steering. ~6-10 hours focused work this round.**
+
+### Framing — initial sketch, not finished work product
+
+Pav's explicit framing today: *"let's hand this over to Claude code, frame it as initial sketch and incude my initial quotes will develop this further."*
+
+This is **Stage 1: exploratory data gathering + iterative sketch refinement** for the adversarial-substrate-dynamics candidate's Bar A. NOT Stage 2 (locked falsifier pre-registration per Pilot 2 pattern); Stage 2 only happens later if Stage 1 surfaces a signal strong enough to warrant locked discipline. **Do NOT lock a falsifier this round.** Iterate the sketch; surface what the data shows; hand back to Cowork for Pav to steer the next iteration.
+
+### Why this is the right move per audit v08 load-bearing test
+
+Audit v08 §C7 honesty verdict caught Cowork's "discipline working as designed / self-sustaining" framing as over-claim — the same celebratory closure register v07 F2 walked back one cycle earlier. v08 reads the v06 §10 substantive-research-displacement concern as **RE-OPENED**, not closed. The load-bearing v08→v09 test: *"Is the next ship the bridge write-up / adversarial Bar A (empirical/closure work) — or new conceptual surface? If more canon, the displacement pattern is confirmed re-accumulating."*
+
+Stage 1 Bar A development IS the empirical move. If shipped as data + sketch refinement (not as a new cont 33 amplifying findings), it satisfies the v08→v09 test on the closure side, not the conceptual side.
+
+### Pav's verbatim adversarial-ecosystem steers (preserved as load-bearing context — these are the structural commitments the sketch must honor)
+
+**1. Original elevation steer (2026-06-03, post external-feedback):**
+
+> *"lets do 1 then explore the adversarial aspect"*
+
+(Context: external team's 2026-06-03 five-blind-spots feedback item #2 surfaced adversarial / power dynamics light treatment. Pav steered: ship feedback log first, then explore adversarial. Elevated `candidates/adversarial_substrate_dynamics.md` Tier 3 with 6 sub-primitives: canon hijacking, memetic warfare, bad-faith rendering, L0 mediator capture, suppression dynamics, asymmetric wrapper-overlap.)
+
+**2. Ecosystem-meta-frame steer (2026-06-04, post-publication of /feedback/):**
+
+> *"pushed, lets get into the meat of adversarial, the mimics the hijacers, its like an eco system in the latent space and internet is ground zero"*
+
+(Context: this 21-word steer became cont 31's ecosystem-in-latent-space framing + candidate doc §11 — six adversarial actors as evolved niche-occupants under shared substrate selection pressure; coevolutionary Red Queen dynamics; internet substrate as densest measurable substrate for L0 mediators / coevolution arms races / ecosystem failure modes.)
+
+**3. Empirical-correlation steer (2026-06-05, post audit v08 ratification):**
+
+> *"let's get back to the adversarial eco system angle, its a missing edge for everything and a blindside for the agnostic framework: lets explore how we can map it and classify it and destill its canon, it's a dynamic across all of the observer planes, latent and real small and big, internal and external, lets gather some data and put it on a graph for correlation"*
+
+(Context: this is the steer that triggers Stage 1. Pav explicitly wants: MAP (taxonomy), CLASSIFY (sub-primitives × observer-scale planes), DISTILL what's canon-shaped per cont 27 §2 tier-tagging — NOT compile new primitives — and GRAPH DATA FOR CORRELATION across substrates. The "dynamic across all of the observer planes, latent and real small and big, internal and external" is Pav's structural intuition that adversarial ecosystem dynamics recur with shared structural features at every scale.)
+
+**4. Handoff framing (2026-06-05):**
+
+> *"let's hand this over to Claude code, frame it as initial sketch and incude my initial quotes will develop this further"*
+
+(Context: this brief. Stage 1 → Stage 2 iteration; Pav will develop further over multiple Cowork ↔ Claude Code rounds.)
+
+### What Cowork shipped this round as Stage 1 sketch (the starting point for your iteration)
+
+Cowork produced two widgets in chat (these don't persist as files — your job is to advance them into versioned artifacts):
+
+**Widget 1 — Adversarial substrate taxonomy map.** A 6 × 4 classification grid:
+- **Rows:** the 6 sub-primitives from candidate doc §2 (canon hijacking, memetic warfare, bad-faith rendering, L0 mediator capture, suppression dynamics, asymmetric wrapper-overlap)
+- **Columns:** 4 observer-scale planes per Pav's steer (Individual = small/internal · Institutional = medium/internal-external · Platform / L0 mediator = big/external · Global substrate = biggest/cross-observer)
+- **Cells:** documented case examples with confidence tags (Confirmed = documented + measurable / Documented = case exists, measurement contested / Speculated = predicted but not yet manifest). Cowork's Stage 1 grid surfaced ~24 cases across the 24 cells; nearly every cell has a case at every scale — that's the cross-scale recurrence evidence Pav's structural intuition predicted.
+
+**Widget 2 — Cross-substrate adversarial coevolution time-series (correlation sketch).** Log-scale Chart.js line chart, 2000-2024, six substrates with normalized adversarial-pressure indices (each substrate baseline-normalized to its earliest data point = 1):
+- Email spam (msgs/day) — Talos/Cisco
+- Phishing (monthly attacks) — APWG
+- DDoS peak (bps) — Akamai/NETSCOUT/Cloudflare
+- SEO industry size ($) — Borrell/BrightEdge estimates
+- Deepfake video count — Sensity AI
+- LLM jailbreak attack surface (papers + benchmark coverage) — JailbreakBench/AdvBench
+
+Cowork used training-cutoff approximations (May 2025); the values are NOT verified primary-source numbers. **Your Stage 1 job is to verify or replace each curve with actual primary-source data, then re-render the chart with verified numbers and explicit citations.**
+
+### Stage 1 deliverables (this Claude Code session)
+
+**Stage 1.A — Expand the taxonomy with sourced cases (~2-3 hours).** Per cell of the 6 × 4 grid, surface the best 1-3 documented cases with citations. Sources should be primary where possible (regulatory documents for capture; academic papers for memetic warfare; specific company case studies for ESG-washing; etc.). Land as `candidates/adversarial_substrate_dynamics_BAR_A_SKETCH.md` §1 — a new working file (NOT modifications to the candidate doc itself, which stays at Tier 3 until Bar A is genuinely demonstrated).
+
+**Stage 1.B — Pull real data for the 6 substrate time-series (~3-4 hours).** Specific data sources to verify:
+- **Email spam volume** (msgs/day, log-scale): Cisco/Talos historical archives, Symantec/Broadcom MessageLabs, Spamhaus — get year-by-year 2000-2024
+- **Phishing volume**: APWG quarterly reports archive at apwg.org/trendsreports — monthly attacks 2004-2024
+- **DDoS peak attack size** (Tbps): NETSCOUT *State of the Internet* annual, Cloudflare Q1-Q4 DDoS Threat Reports, Akamai *State of the Internet — Security* annual — peak attack per year 2000-2024
+- **SEO industry size**: Borrell Associates, BrightEdge, Statista — global SEO spend by year 2000-2024
+- **Deepfake video count**: Sensity AI annual reports, academic surveys (Mirsky & Lee 2021, etc.) — 2018-2024
+- **LLM jailbreak attack surface**: AdvBench (Zou et al. 2023), JailbreakBench (Chao et al. 2024), HarmBench, academic-paper-count growth — 2022-2025
+
+For each substrate, document: (a) primary source URL, (b) data values year-by-year (or best annual estimate), (c) any caveats on definition / measurement change over time. Land as `candidates/adversarial_substrate_dynamics_BAR_A_SKETCH.md` §2 with reproducible source citations.
+
+**Stage 1.C — Re-render correlation chart with verified data (~1-2 hours).** Build a Chart.js or matplotlib script that generates the cross-substrate log-scale time-series from the verified §2 data. Save the script + the output image. Compute three diagnostic statistics across substrates:
+- **Pairwise correlation of log-growth-rates** (per-decade-growth-rate per substrate, then Pearson r across substrate pairs)
+- **Coefficient of variation across substrates** in each year (low CoV = substrates growing in lockstep = consistent with shared selection pressure; high CoV = independent dynamics)
+- **DTW (dynamic-time-warping) distance** between log-growth curves — operationalizes Red Queen lockstep hypothesis
+
+Report all three. Do NOT pre-commit a falsifier this round; Stage 2 (if it happens) is where falsifiers get locked. Stage 1 is just *what does the data show*.
+
+**Stage 1.D — Honest landscape report (~1 hour).** Land as `candidates/adversarial_substrate_dynamics_BAR_A_SKETCH.md` §3. What does the empirical picture look like? What's the strongest cross-substrate signal? What's the weakest? What confounds are visible (e.g., internet growth as common driver inflating all six substrates regardless of Red Queen dynamics)? What would Stage 2 (locked falsifier pre-reg) need to test if Pav steers that direction?
+
+### Hard discipline guardrails (per audit v07 + audit v08 + cont 32 lesson 8)
+
+**The rule is "no auto-promotion without explicit review," NOT "epistemic blindness." If genuine new findings surface during empirical work, they get SURFACED at Tier 3 with named promotion bars (cont 27 §2-3) — not buried, not auto-compiled.** See "What if new findings surface during Stage 1?" section immediately below.
+
+- **DO NOT write a continuation (cont 33).** Per audit v08 §C2 + carry-forward + load-bearing v08→v09 test. The next ship must be empirical/closure work, NOT new conceptual surface. Stage 1 sketch findings go in `BAR_A_SKETCH.md` (a working file), NOT in continuations/. (New observations that warrant a continuation get queued for Cowork+Pav review in §4 of the sketch file — Cowork decides whether/when to write the continuation, not Claude Code in the same session.)
+- **DO NOT promote anything to canon.** Tier 3 candidate stays Tier 3 until Stage 2 produces a locked-falsifier worked example that satisfies Bar A. Stage 1 is exploration, not promotion. (New observations stay Tier 3 with named promotion bars per cont 27 §2; surfaced for review, not promoted in-session.)
+- **DO NOT auto-add new sub-primitives to candidate doc §2.** The 6 sub-primitives in the canonical candidate doc stay locked at 6 unless cont 27 §2/§3 deliberation in a subsequent Cowork+Pav session adds more. (BUT: if Stage 1 data surfaces what looks like a 7th distinct adversarial primitive, surface it in `BAR_A_SKETCH.md` §4 as "Surfaced observation — pending cont 27 §2 tier-tagging review" — with proposed structural definition, observed cases, why it's structurally distinct from the existing 6, and proposed promotion bars per cont 27 §3. Cowork+Pav decides whether to promote, fold into existing primitive, or hold as observation.)
+- **DO NOT auto-add a new cross-substrate convergence.** Closure-via-convergence-multiplication discipline (audit v06 §10.4) holds. Convergence list stays at 9 in canonical material. (BUT: if Stage 1 data surfaces a genuine new convergence candidate, surface in `BAR_A_SKETCH.md` §4 with the same structural-distinctness check + cont 25 §6 parents-produce-W_C structural test + independence-from-existing-9 verification. Cowork+Pav deliberates per audit v06 §10.4 default-to-structural-work-or-explicit-narrowing discipline.)
+- **DO NOT modify `candidates/adversarial_substrate_dynamics.md`** beyond an explicit pointer at the top to the new SKETCH file. The candidate doc stays as-is until Bar A is genuinely satisfied per its §5 criteria.
+- **DO NOT lock a falsifier this round.** Stage 2 is where locked discipline kicks in. Stage 1 is exploratory; iterate freely. (If you find yourself wanting to lock a falsifier because the data is unexpectedly clean, surface that to Cowork+Pav in §3 — Stage 2 may be warranted sooner than scheduled.)
+- **DO NOT send any outreach DMs.** Yilun-Du + Scheffer/Dakos/Goldberger/Lipsitz/Costa/Peng/Boers/Braha all stay gated.
+- **DO NOT extend canon or run any other pilots.** Same standing rules.
+- **DO acknowledge the C7 over-claim risk in your own framing.** If your §3 landscape report concludes "discipline working as designed" or "framework's claim confirmed," check that against actual evidence — that exact register is what v08 caught. Use narrower factual claims: "data shows X correlation against null Y" or "this substrate exhibits Z pattern."
+
+### What if new findings surface during Stage 1? — The discovery-handling discipline
+
+Pav's explicit question: *"NO new sub-primitives, NO new convergence, what if we find those while working at it?"*
+
+This is the right question to ask, and the framework has procedure for it. The "NO new" guardrails above protect against the displacement failure mode (adding to feel productive without doing the bar work). They do NOT mean ignore-what-you-find. If empirical work surfaces genuine structural observations, the discipline is:
+
+**(1) Surface honestly — don't bury.** If the data shows a 7th adversarial primitive pattern, or a cross-substrate convergence the framework hasn't named, or a confound that complicates an existing primitive, log it. Burying findings to honor a process rule is the worse failure mode — the framework's discipline depends on empirical work surfacing what it surfaces.
+
+**(2) Hold at Tier 3, NOT auto-promote.** Per cont 27 §2 three-tier procedure: new observations get tier-tagged as Tier 3 speculative by default. Promotion bars (Bar A worked example + Bar B cross-substrate replication + Bar C external recognition per cont 27 §3) gate any advance to Tier 2 candidate. Stage 1 is observation-gathering, NOT bar-satisfaction work for the new finding (that would be the new finding's own Stage 1, separate from the adversarial Bar A you're working on).
+
+**(3) Record in `BAR_A_SKETCH.md` §4 — NOT in the candidate doc, NOT in continuations/, NOT in primitives.json.** Section §4 is "Surfaced observations — pending cont 27 §2 tier-tagging review by Cowork+Pav." Each new observation gets:
+- Proposed structural definition (one paragraph)
+- Observed cases that support it (with citations)
+- Why it's structurally distinct from existing primitives (per cont 32 lesson 8 closure-via-multiplication discipline — default is fold-into-existing if the structural distinction isn't load-bearing)
+- Proposed Tier 3 promotion bars (A: worked example; B: cross-substrate; C: external recognition)
+- Honest "what would falsify this" statement
+- Honest "what existing primitive this might really be" statement (the audit v06 §10.4 default-to-folding check)
+
+**(4) The closure-via-multiplication discipline check.** Before surfacing a new finding, apply audit v06 §10.4's discipline: is this a genuine new structural primitive, or is it a worked example / instantiation / sharpening of an existing one? Three of the framework's 9 convergences started as "looks like a new pattern" observations that resolved on inspection to instantiations of existing primitives (ACMP, model merging, cymatics-narrowed). The default per audit v06 §10.4 should be "this is an instantiation of existing primitive X; here's why; surfaced as data-point on existing primitive, not new primitive." Override the default only if the structural distinction is load-bearing and Cowork+Pav explicit deliberation has held.
+
+**(5) For new-convergence-candidates specifically:** apply cont 25 §6 parents-produce-W_C structural test cleanly. If the candidate doesn't pass the structural test, it's NOT a convergence — it's a different kind of structural pattern (per Reading 06 §2.1 amendment narrowing cymatics from substrate-deep to substrate-adjacent). Apply independence-from-existing-9 verification per Reading 07 §3 BES-style independence check. If both pass AND the discovery is genuinely empirical (not framework-generated), surface as Tier 2 candidate via the convergence promotion path (separate from this adversarial Bar A work).
+
+**(6) NEVER compile new findings into existing canon documents in the same session.** That's the audit v08 §F3 documentation/reality-gap pattern that just got walked back ("cont 25 §12 is replaced" claim that wasn't actually reflected in cont 25's source). Surfacing happens in `BAR_A_SKETCH.md` §4; canon compilation requires Cowork+Pav explicit deliberation in a subsequent session.
+
+**(7) If you find Stage 1 surfacing too many new findings to handle as exploratory observations, STOP and surface that to Pav.** Too many new findings = either the data is genuinely rich and Stage 1 needs scoping down to a smaller substrate set, OR the framework's existing primitives are inadequate and Cowork+Pav needs to deliberate before more empirical work compounds the canon-side debt. Either way, surface to Pav before pushing through.
+
+**The pattern is: empirical work + tier-tagged surfacing + Cowork+Pav deliberation + then-and-only-then canon decisions.** That's how the framework's discipline-cycle is supposed to operate. The "NO new" guardrails in the previous section protect step 4 (Cowork+Pav deliberation) by preventing Claude Code from skipping straight to "compile into canon." They do NOT protect against finding things.
+
+### Honest framing for the SKETCH file
+
+The framing line for `BAR_A_SKETCH.md` should explicitly say (something like):
+
+> *Stage 1 exploratory sketch for the adversarial-substrate-dynamics candidate's Bar A. Real data + correlation statistics; NOT a locked pre-registration. Findings are exploratory; the candidate's tier (Tier 3 speculative) does NOT advance based on Stage 1 alone. Stage 2 (locked falsifier pre-reg per Pilot 2 pattern) is a SEPARATE later task if Pav steers that direction after seeing Stage 1.*
+
+### Where to find context
+
+- `candidates/adversarial_substrate_dynamics.md` — the candidate doc with the 6 sub-primitives in §2 + ecosystem meta-frame in §11
+- `continuations/31.md` — ecosystem-in-latent-space framing; §7 search-ranking-ecosystem sketch
+- `continuations/32.md` Part B-F — the structural primitives the ecosystem framing composed from (reality kernel canon, L0 substrate, real/latent split, phantom action-space, spectrum, A+/- A-/+ scaffolding, W_C bridge)
+- `audits/v07.md` + `audits/v08.md` — discipline checks; the bar this round must clear
+- `pilots/1f_failsafe_cycling/results_groundtruth/discussion.md` — Pilot 2 FAIL pattern; what locked discipline looks like (the eventual Stage 2 target if Stage 1 warrants)
+- `pilots/1f_failsafe_cycling/synthetic_validation/` — three-adversarial-audit pattern Stage 2 would use
+
+### End-of-session checklist (when Stage 1 completes)
+
+1. Commit `candidates/adversarial_substrate_dynamics_BAR_A_SKETCH.md` (~3000-5000 words, NOT a continuation)
+2. Commit data-pull artifacts (CSV files, scripts, output chart image) under `candidates/bar_a_sketch_data/` (NEW directory; sibling to candidate doc, not nested in pilots/ — Stage 1 is not yet a Pilot)
+3. Update HANDOFF.md (prepend "Last Claude Code session 2026-06-XX — Adversarial Bar A Stage 1 sketch" block summarizing: which substrates had verifiable data, what the three correlation statistics showed, what confounds appeared, what Stage 2 would need to test)
+4. Update CHANGELOG.md with Stage 1 entry — explicit "Stage 1 exploratory; candidate stays Tier 3"
+5. Do NOT add a timeline entry yet — timeline is canon-side; Stage 1 sketch isn't canon
+6. Do NOT bump JSON endpoints — candidate tier hasn't changed
+7. Mark task complete in your tracker
+8. Push commits
+
+### For Cowork next session (after Stage 1 lands)
+
+- Review the Stage 1 sketch with Pav. Show the verified correlation chart + landscape report.
+- Pav decides: (a) Stage 2 with locked falsifier pre-reg per Pilot 2 pattern; (b) refine Stage 1 further with additional substrates / different statistics; (c) park as far as the candidate goes — surviving as Tier 3 with a richer evidence base but no Bar A satisfaction.
+- Audit v09 (2026-06-20 target) verifies: did Stage 1 stay disciplined (no canon, no new primitives, no C7-style over-claim framing)? Did Cowork honor lesson 8 in the integration?
 
 ---
 
