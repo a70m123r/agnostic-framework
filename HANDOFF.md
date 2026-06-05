@@ -1,8 +1,50 @@
 # HANDOFF — Cowork → Claude Code
 
-**Last updated:** 2026-06-05 by Claude Code session (Pilot 2 ground-truth validation RAN → **FAIL**; cycling-amplitude metric rejected; contribution narrows to the cross-field bridge)
-**Next session:** Cowork — ratify the FAIL branch (canon-level): Reading 06 §10.3 fourth amendment narrowing to bridge-only; demote the cycling-amplitude metric per cont 27 §3; Pilot 1 Phase E permanently deferred. See "Last Claude Code session (2026-06-05)" below.
-**Pinned task:** Cowork FAIL-branch integration. **Pilot 2 is DONE** — the cycling-amplitude metric `A_cyc` FAILED the locked ground-truth gate on real data (Cascade + PhysioNet). The GDELT social application (Pilot 1 Phase E) is **permanently deferred** per the frozen falsifier. **cont 26 §3 substrate canon UNCHANGED** (never on trial).
+**Last updated:** 2026-06-05 by Cowork session (Pilot 2 FAIL-branch INTEGRATED: Reading 06 §10.3 fourth amendment shipped; candidate doc demoted per cont 27 §3; cont 26 §3 substrate canon untouched; Pilot 1 Phase E formally marked permanently deferred; outreach narrows to bridge pitch only, still gated)
+**Next session:** Either side. The cycling-amplitude-metric branch is closed. Open work going forward sits at three points: (a) audit v08 target 2026-06-19 verifying Cowork held lesson 8 + Pav-steer scoping; (b) any future Pav steer on a NEW operationalization of cont 26 §3 at social substrate (Delecroix burst-AR(1)→λ or PCMCI+ are the scout-surfaced candidates); (c) the bridge outreach pitch ratification if/when Pav wants to send it.
+**Pinned task:** None pinned. The discipline-cycle is in clean closure-mode. Pilot 2 is DONE; Pilot 1 Phase E is permanently deferred per the frozen falsifier; cont 26 §3 substrate canon UNCHANGED (never on trial).
+
+---
+
+## Last Cowork session (2026-06-05) — FAIL-branch integrated
+
+Cowork received the Pilot 2 result-commit (b406ea5). Verdict: clean falsifier-firing, mechanism-level FAIL. Three adversarial audits + independent re-run reproduced numbers bit-for-bit. Per cont 27 §3 narrow-before-demote + cont 32 lesson 8 (candidate-layer narrow-before-extend): integrated the FAIL, did NOT extend structure.
+
+### What landed (Cowork side — minimal, per lesson 8)
+
+- **`readings/2026-05-28_cymatic_harmonic_structure_in_social_systems.md` §13 amendment log** — fourth entry (2026-06-05). Cycling-amplitude metric REJECTED on real ground-truth data. Cascade primary gate all 3 conditions FAIL (AUC margin insufficient + lead-time wrong direction + Paul control fires); PhysioNet AUC 0.646 < static-α 0.813 (adds no power over static α). **Mechanism-level FAIL** — Carpenter 2011 *Science* explicitly reports "strong oscillations in 2009 and the first half of 2010" during the Peter Lake transition; amplitude RISES during transition, opposite of candidate's predicted collapse. Framework contribution narrows to **cross-field bridge alone**. Pilot 1 Phase E permanently DEFERRED. Cont 26 §3 substrate Tier 1 canon UNCHANGED (never on trial).
+- **`candidates/1f_l0_failsafe_signature.md`** — STATUS HEADER added at top. Both operationalizations of the candidate (static-binary GDELT-entropy per pilot #150 + rolling-DFA-α cycling amplitude per Pilot 2) have hit pre-registered falsifiers cleanly. Operationalization-level demotion per cont 27 §3; original document body preserved below the header for provenance. Cont 26 §3 substrate-level claim explicitly untouched.
+- **HANDOFF.md (this file)** — pinned-task removed; clean closure-mode acknowledged; no new Claude Code task brief (the cycling-amplitude branch is closed; any new operationalization needs a Pav steer or new external A⁻).
+
+### What Cowork did NOT do (per cont 32 lesson 8)
+
+- NO new continuation about the FAIL. The Reading 06 fourth amendment + candidate status header are sufficient minimal-viable canon integration. The framework's narrate-the-failure-cleanly discipline is in the artifacts where it operationally matters; no separate continuation amplifies the closure.
+- NO modification of cont 26 §3 substrate Tier 1 canon. The substrate claim was never on trial.
+- NO new candidate. The branch closes; nothing new opens to replace it.
+- NO outreach DMs sent. Bridge pitch is the only surviving pitch; still gated pending Pav-decision on outreach-readiness.
+- NO audit v08 spin-up ad-hoc. Target stays 2026-06-19 per v07 baseline.
+
+### Discipline-cycle status — final state
+
+This is the framework operating exactly as cont 27 §3 promises. External A⁻ caught the over-claim (Goldberger 2002 prior art, third amendment). Surviving Tier 2 candidate validated against labelled ground truth via pre-committed falsifier locked BEFORE data. Falsifier fired CLEANLY at mechanism level (wrong direction at population scale, not just insufficient power). Contribution narrows per cont 27 §3 without touching substrate-level canon. Pilot 1 Phase E permanently deferred per the frozen falsifier. The substantive-research-displacement pattern audit v06 §10 flagged + audit v07 §V8.1 verified is now genuinely closed — not because the empirical work confirmed the claim, but because the empirical work FALSIFIED it cleanly. That IS the discipline working as designed.
+
+### Push commands
+
+```powershell
+cd D:\PlatformOperator\research\pav
+git push origin main  # pushes Claude Code's held Pilot 2 result commits (b406ea5 + 9112281 + any others)
+git add readings/2026-05-28_cymatic_harmonic_structure_in_social_systems.md `
+        candidates/1f_l0_failsafe_signature.md `
+        HANDOFF.md `
+        CHANGELOG.md
+git commit -m "Pilot 2 FAIL-branch integrated: Reading 06 §10.3 fourth amendment (cycling-amplitude metric REJECTED on ground truth, mechanism-level FAIL — amplitude rises during transition); candidate doc demoted per cont 27 §3; cont 26 §3 substrate Tier 1 canon UNCHANGED; Pilot 1 Phase E permanently deferred; contribution narrows to bridge alone"
+git push origin main
+```
+
+### Carry-forward
+
+- Audit v08 target 2026-06-19 verifies (a) cont 32 fixes held, (b) lesson 8 was applied through Pilot 2 FAIL integration, (c) no Cowork attempts to write a "fail post-mortem continuation" that would re-extend structure under closure-mode framing, (d) bridge outreach pitch — if Pav sends — actually leads with synthesis and does NOT smuggle the rejected metric back in
+- Any future Pav-steer on a NEW operationalization of cont 26 §3 (e.g., Delecroix burst-AR(1) → λ, PCMCI+ directed coupling) starts a fresh candidate doc with fresh pre-registration; the failed cycling-amplitude operationalization stays demoted
 
 ---
 

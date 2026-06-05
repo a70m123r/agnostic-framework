@@ -1,6 +1,23 @@
-# Candidate operationalization — 1/f as L0-failsafe signature at social substrate (Reading 06 §10.3, Tier 2 conditional)
+# Candidate operationalization — 1/f as L0-failsafe signature at social substrate (Reading 06 §10.3) — **OPERATIONALIZATION DEMOTED 2026-06-05**
 
-**Tier:** Tier 2 conditional per [cont 27 §2](../continuations/27.md). Conditional on the empirical-comparison pilot landing the hypothesized spectral-exponent contrast at significance. Operationalization document task #150 completes 2026-06-02; empirical work product (first pilot commit) is the next deliverable per task #167 discipline hard-stop.
+**STATUS HEADER (2026-06-05) — DEMOTED PER CONT 27 §3 NARROW-BEFORE-DEMOTE PROCEDURE:**
+
+The original Tier 2 conditional operationalizations of this candidate have been exhausted by Pilot #150 + Pilot 2:
+
+1. **Static-binary GDELT-entropy operationalization** (cont 26-30 generation) — confounded null (pilot #150 result-commit 2026-06-03 — Δβ = +0.084 wrong-sign, source-volume confound r = +0.916 explains cross-country contrast). Narrowed per cont 30 §3 to cycling-capacity reframe; NOT demoted.
+2. **Cycling-capacity reframe (rolling-DFA-α cycling amplitude A_cyc as second-order EWS)** — empirically REJECTED on real ground-truth data (Pilot 2 result-commit 2026-06-05, `pilots/1f_failsafe_cycling/results_groundtruth/discussion.md`). Cascade Peter/Paul all 3 conditions FAIL; PhysioNet adds no power over static α; mechanism-level FAIL (amplitude RISES during transition, opposite of predicted collapse); three adversarial audits verified, independent re-run reproduced bit-for-bit.
+
+**Both operationalizations have hit their pre-registered falsifiers cleanly.** Per cont 27 §3 narrow-before-demote applied at the operationalization layer: the cycling-amplitude metric is demoted from Tier 2 candidate to "structurally adjacent but empirically rejected on ground truth." The framework's empirical contribution at the social substrate narrows to the **cross-field bridge alone** (EWS ↔ physiology decomplexification synthesis per Reading 06 §10.3 third amendment 2026-06-04 + EWS scout 2026-06-04 commit bbb6d9c). Pilot 1 Phase E (GDELT cycling pilot real-data run) **permanently DEFERRED.**
+
+**What this does NOT change:** [cont 26 §3](../continuations/26.md) L0 evolved failsafes Tier 1 epistemological canon UNCHANGED. The substrate-level claim was never on trial — it's about failsafe DYNAMICS, not about a specific operationalization. Pilot #150 falsified the static-binary operationalization; Pilot 2 falsified the rolling-amplitude operationalization; cont 26 §3 stands independent of which operationalization the framework chose to test. The discipline-cycle worked exactly as cont 27 §3 promises: clean falsifier-firings prune operationalizations without touching the underlying substrate claim.
+
+**Pruning trigger:** the cycling-amplitude operationalization is now "structurally adjacent but unworked" per cont 27 §3 12-month checkpoint; future framework rounds may attempt new operationalizations of cont 26 §3 at social substrate via different metrics (e.g., burst-design AR(1) → λ per Delecroix 2024; PCMCI+ directed coupling per Hoegner & Boers 2025) but no new operationalization is scheduled until a Pav-steer or new substantive external A⁻ surfaces one.
+
+The original candidate document below is preserved for provenance. Future readings should cite this candidate as "operationalizations exhausted at social substrate; bridge contribution surviving; cont 26 §3 substrate canon intact."
+
+---
+
+**Tier:** Tier 2 conditional per [cont 27 §2](../continuations/27.md) at original surface. Conditional on the empirical-comparison pilot landing the hypothesized spectral-exponent contrast at significance. Operationalization document task #150 completes 2026-06-02; empirical work product (first pilot commit) is the next deliverable per task #167 discipline hard-stop. **(See status header above — both operationalizations falsified 2026-06-03 + 2026-06-05.)**
 **Surfaced:** Reading 06 §10.3 (2026-05-28). Methodologically scoped by Reading 07 §7.2 (BES backward goal-tree decomposition); architecturally NOT applicable per Reading 08 §6 (1/f is measurement-design, not architecture). Operationalized 2026-06-02 per audit v06 §10 substantive-research-displacement-by-infrastructure discipline concern.
 **Trigger:** Audit v06 §10 + Reading 08 §9 jointly endorsed the hard-stop on further infrastructure work until task #150 or #151 has a first commit with tangible empirical work product. Pav's call: "lets do 150 and then 151." Task #150 operationalization is the first substantive empirical move the framework has shipped in 6+ weeks.
 
