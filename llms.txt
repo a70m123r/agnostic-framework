@@ -63,7 +63,7 @@ Seven independent research traditions arrive at variants of the wrapper-overlap 
 
 - [/speculations/ mode-page](https://a70m123r.github.io/agnostic-framework/speculations/): the framework's first-class home for Tier 3 entries
 - [L0 occlusion as auxiliary channel for time-cone extension](https://a70m123r.github.io/agnostic-framework/candidates/aux_channel_l0_occlusion.md): three-layer decomposition; promotion bars named; first scheduled review 2026-11-27
-- [Latent space as fundamental substrate (Wheeler-style)](https://a70m123r.github.io/agnostic-framework/continuations/17.md): cont 17 — unfalsifiable as stated but structurally coherent
+- [Latent space as fundamental substrate (Wheeler-style)](https://a70m123r.github.io/agnostic-framework/continuations/12.md): **cont 12 §1.5** (citation corrected per audit v07 F1 + audit v08 F1 sweep completion 2026-06-05 — previously mis-cited as cont 17) — unfalsifiable as stated but structurally coherent
 - [Cultural eigenmode analysis via RC-Koopman hybrid](https://a70m123r.github.io/agnostic-framework/readings/2026-05-28_cymatic_harmonic_structure_in_social_systems.md): Tier 3 (Reading 06) — apply reservoir-computing + Koopman-operator decomposition to socio-political latent embeddings to test whether wrappers have measurable harmonic-eigenmode structure; pilot study queued
 - [1/f spectra as L0-failsafe signature](https://a70m123r.github.io/agnostic-framework/readings/2026-05-28_cymatic_harmonic_structure_in_social_systems.md): Tier 2 conditional (Reading 06 §10.3) — claim that 1/f power-law structure across social/biological substrates is the spectral fingerprint of L0's internal-pressure failsafe holding wrappers between order and disorder; operationalization queued
 

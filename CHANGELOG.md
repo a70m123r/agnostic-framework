@@ -8,6 +8,98 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-06-05 (later) — AUDIT v08 (Claude-Code-authored, DRAFT at `audits/v08_DRAFT.md`) · MIXED verdict · Tier-1 fixes applied this round; v08 ratified to `audits/v08.md` · documentation/reality gap closed (cont 32 §G.2 false "cont 25 is replaced" claim corrected; full F1/F3 sweeps completed across previously-missed files; candidates.json refreshed post-FAIL; cont 30 §4 closure language re-amended for Pilot 2 falsification; closure-mode framing down-tuned across multiple files; missing Pilot 2 FAIL CHANGELOG entry restored — THIS ENTRY AND THE ONE BELOW) · C7 over-claim concern acknowledged: "discipline working as designed / self-sustaining" framing was the same over-confident register v07 F2 walked back one cycle earlier · v06 displacement concern read as RE-OPENED per v08
+
+### What landed (Cowork side — apply audit v08 Tier-1 fixes)
+
+- **F1 citation sweep COMPLETED** — cont 17 → cont 12 §1.5 references swept across previously-missed files: `llms.txt:66`, `continuations/31.md:263`, `continuations/31.md:283` cross-ref, `readings/2026-05-28_cymatic_harmonic_structure_in_social_systems.md:264` + `:303`, `CHANGELOG.md:147` + `:1147` + `:1191` + `:1194`. Original cont 32 F1 sweep (cont 27 §1, cont 31 §4.1/§5.1, candidate doc §11.4) held; v08 found 8+ additional hits in files cont 32's sweep list missed. Now genuinely complete.
+- **F2 wrapper-relative-ethics sweep COMPLETED** — replaced with corrected canon position (cont 17 + cont 19 + cont 22 cumulative bracket + cont 32 Part B.1 reality kernel canon framing) across previously-missed files: `candidates/adversarial_substrate_dynamics.md:161` §6.2, `CHANGELOG.md:131` + `:179` + `:242` + `:276`, `llms-full.txt:128`. Original cont 32 F3 sweep held; v08 found 6 additional hits the previous sweep missed.
+- **F3 cont 25 §12 sharpening AMENDED IN PLACE** — cont 32 §G.2 originally claimed cont 25 §12's "global compiled canon" framing "is replaced" but cont 25 §12 was never actually edited (audit v08 caught the documentation/reality gap via `git show 6f8144f -- continuations/25.md` confirming empty diff). Two fixes applied: (a) cont 25 §12 now carries an amendment block (2026-06-05) per cont 32 Part B.2 explicitly stating L0 is global wrapper (observer-dependent substrate), with original "global compiled canon" wording preserved for provenance + amendment marker; (b) `primitives.json` L0 entry + `index.html` L0 entry + `llms-full.txt` L0 entry sharpened to reflect L0-as-substrate framing per cont 32 Part B.2. Documentation now matches git record.
+- **F4 candidates.json REFRESHED** — `1f_l0_failsafe_signature` entry status updated from `tier2_conditional_held` to demoted-per-cont-27-§3 (Pilot 2 FAIL, both operationalizations falsified); `energy_floor_failsafe` misattribution (was pointing `next_pilot` at deferred Pilot 1) corrected; `generated` date bumped to 2026-06-05.
+- **F5 cont 30 §4 closure language RE-AMENDED** — was "FIRST INSTANCE BROKEN — pattern conditionally suspended pending #172 result-commit lands. Sustained closure now waits on task #172 Phase E result-commit by 2026-06-18." Pilot 2 falsified that pathway (Phase E permanently deferred). Re-amended to: "**CLOSURE-VIA-CLEAN-FALSIFICATION** — the framework's discipline-cycle ran end-to-end at substantive empirical level (~96 hours from pilot #150 result through Pilot 2 ground-truth FAIL). The cycling-amplitude operationalization is empirically rejected; cont 26 §3 substrate Tier 1 canon UNCHANGED. The substantive-research-displacement pattern audit v06 §10 flagged is now closed via the discipline-cycle delivering a clean falsifier outcome, not via sustained-empirical-cadence verification (which never materialized because the falsifier closed the pathway)." Parallel update to `CHANGELOG.md` L31 (the prior amendment block). Acknowledges the closure is real but narrower than the original closure-claim implied.
+- **F6 over-confident closure language DOWN-TUNED** across `Reading 06 §13 L444` (third amendment text), `candidates/1f_l0_failsafe_signature.md` header (Pilot 2 demote block), `HANDOFF.md L152`, and `CHANGELOG.md L33`. "Discipline working as designed / genuinely self-sustaining / framework operating as cont 27 §3 promises" → narrower factual claims: "Pilot 2 falsifier fired cleanly per pre-registered locked design; cont 26 §3 substrate Tier 1 canon held untouched; operationalization-level demote applied per cont 27 §3 procedure." The substantive discipline DID hold; the celebratory register was the failure mode v08 §C7 caught. (Same register v07 F2 walked back as "CLOSED CLEAN" → "FIRST INSTANCE BROKEN" one cycle earlier; v08 found it recurring.)
+- **F7 "sharpened at adversarial substrate" residual instances** at `continuations/31.md:67` (in-document inconsistency with the fixed §5.7) + `CHANGELOG.md:133` reworded per cont 32 F5 framework's-speculative-reading framing.
+- **F9 Reading 06 §13 corrupted block DE-DUPLICATED** — two §13 headers at L341+L398 collapsed to one canonical §13 (the later block); orphan P2-P5 fragments + stray "l." at L386 removed. The amendment log integrity restored.
+- **Missing Pilot 2 FAIL CHANGELOG entry RESTORED — THIS ENTRY plus the dedicated 2026-06-05 entry below.** Critical v08 §F6 catch: the 2026-06-05 Pilot 2 FAIL was previously absent from CHANGELOG and timeline — meaning the public-facing record's "latest word" was the pre-FAIL "genuinely self-sustaining" framing from the 2026-06-04 (late) entry. That gap is now closed.
+- **`audits/v08_DRAFT.md` ratified to `audits/v08.md`** with this entry's fixes documented in §6.
+
+### What Cowork did NOT do (per cont 32 lesson 8 + v08 §C2 + v08 load-bearing v08→v09 test)
+
+- NO new continuation written about the audit findings or the FAIL. Lesson 8 + v08 §C2 explicitly track this. Audit findings + Tier-1 fixes are the integration; no continuation amplifies the closure.
+- NO new candidate.
+- NO outreach sent.
+- NO modification of cont 26 §3 substrate Tier 1 canon. Audit v08 verified this stayed untouched throughout — v08 §C3 check passed.
+- NO premature ratification of v08 — applied fixes first, then ratified. The DRAFT → ratified workflow followed per v08 end-of-session checklist.
+
+### v08 load-bearing v08→v09 test held in mind
+
+V08's load-bearing test: "Is the next ship the bridge write-up / adversarial Bar A (empirical/closure work) — or new conceptual surface? If more canon, the displacement pattern is confirmed re-accumulating." This round applied audit fixes (housekeeping, not new conceptual surface). The next substantive ship per v08 + carry-forward must be empirical / closure work, NOT a new continuation. The cycling-amplitude branch is closed; the adversarial-substrate-dynamics candidate's Bar A is still owed; the bridge outreach pitch is gated pending Pav decision. None of these unlock automatically.
+
+### Honest reframe of the closure narrative (per v08 §C7)
+
+The framework's prior closure framing — "discipline working as designed / genuinely self-sustaining / framework operating as cont 27 §3 promises" — was over-confident. The narrower truth that survives audit v08:
+
+- Pilot 2's falsifier fired CLEANLY per a locked pre-registration, with three adversarial audits confirming bit-for-bit reproducibility. That part of the discipline is real and substantive.
+- Cont 26 §3 substrate Tier 1 canon held UNCHANGED throughout. That part is real and verified by git diff.
+- The cycling-amplitude operationalization is empirically rejected; the framework integrated the FAIL as a +1-line append-only amendment without spawning a post-mortem continuation. That part is real (lesson 8 held).
+- BUT: the celebratory closure register was over-claim. Audit v07 F2 caught this register as "CLOSED CLEAN" one cycle earlier and walked it back to "FIRST INSTANCE BROKEN"; v08 caught it recurring on the post-FAIL closure. The framework's narrate-the-discipline-cleanly muscle is weaker than its execute-the-discipline-cleanly muscle.
+- The v06 substantive-research-displacement concern reads as RE-OPENED per v08, NOT closed. The empirical lane delivered one clean falsifier outcome; closure of the displacement pattern requires sustained empirical cadence (not just one falsifier), which hasn't materialized because Pilot 1 Phase E was deferred.
+
+### Carry-forward
+
+- v08 ratified to `audits/v08.md`. Tier-1 fixes applied this round.
+- v09 target 2026-06-20 (15-day cadence per v06 baseline; v08 ran early per Pav steer).
+- **Load-bearing v08→v09 test:** what's the next substantive ship? If empirical / closure work (bridge write-up, adversarial Bar A worked example, new operationalization of cont 26 §3 per scout-surfaced candidates), displacement closes. If new conceptual surface (cont 33, new candidate, ecosystem-framing extension), displacement confirmed re-accumulating.
+
+---
+
+## 2026-06-05 — PILOT 2 GROUND-TRUTH VALIDATION FAIL · cycling-amplitude metric REJECTED on labelled data · Pilot 1 Phase E permanently deferred · contribution narrows to cross-field bridge alone · cont 26 §3 substrate Tier 1 canon UNCHANGED (never on trial) · clean pre-registered falsifier outcome per locked PILOT_groundtruth_validation_PRE_REGISTRATION.md §4
+
+### Verdict (from `pilots/1f_failsafe_cycling/results_groundtruth/discussion.md`, commit b406ea5)
+
+**FAIL — clean, pre-registered.** A_cyc (cycling amplitude of rolling-DFA-α) does NOT add early-warning / state-discrimination power beyond one-pole CSD indicators on real ground-truth data. The metric-level claim is REJECTED. Framework's empirical contribution at social substrate narrows to the cross-field bridge alone (EWS ↔ physiology decomplexification synthesis).
+
+### Key numbers
+
+- **Cascade primary gate — all 3 conditions FAIL.**
+  - (a) AUC margin: A_cyc 0.677 vs best one-pole AR(1) 0.651 = +0.026, required +0.05 (insufficient margin)
+  - (b) **Lead-time wrong direction** — A_cyc significantly RISES in Peter (Kendall-τ = +0.50, p ≈ 1e-27 in rising direction), opposite of candidate's predicted decline; AR(1) warns +5d vs onset
+  - (c) Paul control: A_cyc declines significantly → false alarm fires
+- **PhysioNet secondary — adds no power over static α.** Static-α1 (HRV scales 4-16) reproduces Goldberger (NSR 1.27 / CHF 1.00, AUC 0.813); rolling A_cyc AUC 0.646 < 0.813.
+- **Verification:** 3 adversarial audits returned `verdict_honest: true`, zero confirmed bugs; independent end-to-end re-run reproduced every number bit-for-bit. A_cyc construction was conservative-against-candidate; even the candidate-favorable construction (AUC 0.812) still fails cond-b.
+
+### Mechanism-level FAIL (the most important finding)
+
+In a real, documented ecological regime shift, rolling-DFA-α cycling amplitude **does not collapse toward the transition — it expands**, the opposite of the candidate's predicted mechanism. Peter epoch-A_cyc rises 0.81 → 0.92 → **1.48** → 1.27 across 2008→2011, peaking in the 2010 transition year. Consistent with Carpenter et al. 2011 *Science* explicit report: chlorophyll "displayed strong oscillations in 2009 and the first half of 2010" during the shift. The FAIL is mechanism-level and holds at both constructions of A_cyc.
+
+### Process integrity
+
+- Locked pre-registration committed BEFORE any data examined (commit 9112281, 2026-06-05 00:41 — Step 1 of Pilot 2)
+- Run executed against locked falsifier verbatim (commit b406ea5, 2026-06-05 01:50 — Step 3 of Pilot 2)
+- One discipline note logged honestly (`confounds_groundtruth.md` C1): locked EDI id `knb-lter-ntl.355.6` was mis-recorded — resolves to zooplankton core data; the agent found the package matching every locked §3 *term* (`knb-lter-ntl.360.2`: 5-min sonde, `chl` = chlorophyll-a, Peter+Paul, 2008-2011), used it, did NOT edit locked §3, logged the mis-ID. Skeptic + cross-validation vs Carpenter 2011 companion (r = 0.84-0.90) confirmed legitimate substitution.
+- §3-vs-§4 A_cyc construction ambiguity resolved conservatively (against candidate); locked text never edited; falsifier applied as frozen.
+
+### What this DOES (per cont 27 §3 narrow-before-demote)
+
+- **Cycling-amplitude metric DEMOTED** from Tier 2 candidate to "structurally adjacent but empirically rejected on ground truth" per cont 27 §3 procedure
+- **Framework's empirical contribution at social substrate narrows to the cross-field bridge alone** (EWS ↔ physiology decomplexification synthesis — Goldberger/Lipsitz/Costa/Peng + Scheffer/Dakos/Lenton/Boers, mutually uncited literatures)
+- **Pilot 1 Phase E (GDELT cycling pilot real-data run) permanently DEFERRED** per the frozen falsifier
+- Reading 06 §10.3 fourth amendment shipped 2026-06-05 documenting the rejection
+
+### What this DOES NOT
+
+- **Cont 26 §3 L0 evolved failsafes Tier 1 epistemological canon: UNCHANGED.** The substrate-level claim was never on trial — it's about failsafe DYNAMICS, not about a specific operationalization. Audit v08 §C3 verified this stayed untouched (git diff empty for cont 26).
+- The bridge contribution remains structurally coherent (cross-field synthesis where two literatures describe the same phenomenon and barely cite each other); demoting the rolling-amplitude METRIC does not demote the bridge.
+
+### Carry-forward (post-FAIL)
+
+- Reading 06 §10.3 fourth amendment landed (2026-06-05); candidate `1f_l0_failsafe_signature.md` STATUS HEADER added documenting demote
+- Bridge outreach pitch (Scheffer/Dakos/Goldberger/Lipsitz/Costa/Peng/Boers/Braha + Yilun-Du) remains gated pending Pav-decision on outreach-readiness
+- Any future Pav-steer on a NEW operationalization of cont 26 §3 at social substrate (scout-surfaced candidates: Delecroix 2024 burst-AR(1)→λ, PCMCI+ directed coupling, CNM-TE) starts a fresh candidate doc with fresh pre-registration; the failed cycling-amplitude operationalization stays demoted
+- Audit v08 ran early per Pav steer (target was 2026-06-19); v09 target 2026-06-20
+
+---
+
 ## 2026-06-04 (late) — READING 06 §10.3 THIRD AMENDMENT + CONT 30 §3 SHARPENING · Goldberger 2002 prior-art catch from Claude Code's EWS scout · symmetry-novelty positioning DROPPED · what survives as Tier 2 candidate: bridge + rolling-amplitude + social application · cont 26 §3 substrate-level Tier 1 canon UNCHANGED · HANDOFF refreshed with three locked Cowork decisions for Claude Code Phase E (ground-truth validation pilot)
 
 ### What shipped (Cowork-side, minimal-viable canon correction per cont 32 lesson 8 candidate-layer narrow-before-extend)
@@ -28,9 +120,9 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ### Discipline-cycle status
 
-- **Audit v07 §V8.1 verification target landing cleanly.** Task #172 Phase D landed; substantive-research-displacement pattern further closing. Audit v06 §10 closure language amended from "CLOSED CLEAN" to "FIRST INSTANCE BROKEN" still appropriate — sustained closure now depends on ground-truth validation Phase E landing.
-- **External A⁻ caught a real over-claim.** Three independent web-research scouts converged on Goldberger 2002. The framework's symmetry-novelty positioning was implicit; the EWS scout made it explicit and the framework's narrow-before-demote discipline applied it cleanly.
-- **Empirical lane is now genuinely self-sustaining** — pilot #150 result-commit + task #172 cold-draft + synthetic gate + EWS scout + ground-truth pilot seed = four substantive empirical artifacts in 72 hours, against Cowork's two-amendment canon correction. The conceptual:empirical ratio finally inverted vs the cont-17-29 spree pattern audit v06 §10 flagged.
+- **Audit v07 §V8.1 verification target answered (per audit v08 F5 + F6 down-tune 2026-06-05).** Task #172 Phase D landed; Pilot 2 ground-truth validation ran and FAILED cleanly per locked falsifier. Audit v06 §10 closure language was further re-amended (cont 30 §4 audit v08 F5) from "FIRST INSTANCE BROKEN — pattern conditionally suspended pending #172 Phase E by 2026-06-18" to "CLOSURE-VIA-CLEAN-FALSIFICATION" — Pilot 1 Phase E permanently deferred per the frozen falsifier; sustained-empirical-cadence verification never materialized because the falsifier closed the pathway. Per audit v08 §C7, audit v06 §10 displacement concern reads as RE-OPENED until next substantive empirical work ships (bridge write-up / adversarial Bar A / new operationalization).
+- **External A⁻ caught a real over-claim** (acknowledged honestly per audit v08 §C7 — earlier celebratory framing was the failure mode). Three independent web-research scouts converged on Goldberger 2002. The framework's symmetry-novelty positioning was implicit; the EWS scout made it explicit and the framework's narrow-before-demote discipline applied it cleanly.
+- **Substantive discipline held; closure register ran ahead of it** (per audit v08 §C7 honest reframe 2026-06-05). The narrower factual claim that survives: pilot #150 + Pilot 2 + the cold-draft + synthetic gate + EWS scout + ground-truth pilot ran end-to-end as locked pre-registrations against pre-committed falsifiers, with three adversarial audits + independent re-runs confirming reproducibility on the FAIL outcome. The empirical lane DELIVERED ONE CLEAN FALSIFIER OUTCOME — not sustained empirical cadence (which audit v08 §C7 read as RE-OPENED until next substantive ship). The original "genuinely self-sustaining" framing was over-claim; v08 caught the same celebratory register v07 F2 walked back one cycle earlier.
 
 ### Held Claude Code commits to push with this Cowork ship
 
@@ -128,7 +220,7 @@ Phantom action-space promoted to explicit canon entry. Cont 12 OQ8 finally addre
 - **Cont 17 latent-substrate Tier 3 speculation: sharpened.** Broad Wheeler-style claim remains unfalsifiable; cont 31 surfaces a narrower empirically-tractable subclaim — latent space is the operative substrate for adversarial dynamics on the internet (checkable via embedding measurements, recommender audits, coevolution tracking).
 - **Cont 28 §2 supersede dynamic + §5 agent-substrate observer-class: sharpened.** Adversarial population shifts with substrate (memetic warfare → prompt injection; canon hijacking → RLHF capture). The ecosystem persists across substrate shift because niches persist.
 - **Cont 30 cycling reframe: enriched.** Suppression dynamics induce locked-squeeze; coordinated A⁺ injection induces locked-pull. Cycling-capacity measure stays right substrate-level metric; ecosystem framing shows upstream what affects it.
-- **Cont 22 wrapper-relative-ethics: reinforced.** Framework still makes no substrate-level normative claim; ecosystem framing names structural features adverse-to-substrate-viability (monoculture, trophic, invasive) without committing to substrate-level ethics.
+- **Cont 17 + cont 19 + cont 22 substrate-level-no-normative-claim bracket: reinforced** (per audit v07 F3 + audit v08 F2 sweep correction; was originally framed as "Cont 22 wrapper-relative-ethics" which back-attributed a retroactively-coined term to cont 22 that has zero ethics content). Framework still makes no substrate-level normative claim; ecosystem framing names structural features adverse-to-substrate-viability (monoculture, trophic, invasive) without committing to substrate-level ethics.
 - **Cross-substrate convergence list (LCAO through BES #9): unchanged.** Ecosystem framing is NOT a new convergence. Audit v06 §10.4 closure-via-convergence-multiplication discipline holds.
 - **Reading 07 BES Theorem 4.4: sharpened at adversarial substrate.** Entropy-shell escape reads as adversarial-population recombination escaping defender's discriminative shells. Bidirectional coevolution at attack-defense substrate.
 - **Internet construct study v1: not invalidated; v2 surface area named** (Pav's call on whether to develop).
@@ -144,7 +236,7 @@ Audit v07 (target 2026-06-16) explicitly verifies:
 - Did cont 31 ecosystem-framing-development displace empirical work on tasks #172 (cycling pilot pre-registration cold-draft, Claude Code in flight) / #150b / #151? (audit v06 §10 substantive-research-displacement pattern check)
 - Did Pav surface a Bar A worked example direction (search-ranking ecosystem vs other §8 target)?
 - Did any sub-primitive get prematurely tier-promoted on structural-coherence-with-ecosystem-framing strength alone?
-- Is the framework over-reading internet-substrate dynamics as evidence for cont 17 latent-substrate Tier 3?
+- Is the framework over-reading internet-substrate dynamics as evidence for cont 12 §1.5 latent-substrate Tier 3 (citation corrected per audit v08 F1)?
 
 ### Risk warning carried
 - Volume of candidate surface area added in 72 hours (feedback log + adversarial candidate + cont 31 + candidate doc §11) is non-trivial. Cont 31 §10.4 explicitly flags this for audit v07.
@@ -176,7 +268,7 @@ The five-item bucket classification IS the framework's three-tier procedure appl
 - Item #1 (empirical maturity) → **Bucket A**, growing edge being pushed (pilot #150 result-commit day 1, task #172 cycling pre-registration in flight, audit v07 will score whether the empirical-maturity gap is closing)
 - Item #2 (adversarial/power dynamics light treatment) → **Bucket C**, genuine gap, elevated to Tier 3 candidate `candidates/adversarial_substrate_dynamics.md` with 6 sub-primitives (canon hijacking, memetic warfare, bad-faith rendering, L0 mediator capture, suppression dynamics, asymmetric wrapper-overlap) sharing structural property of broken substrate-dynamics symmetry by observer benefiting at substrate's cost
 - Item #3 (qualia bracket) → **Bucket B**, deliberate scope per cont 17 — bracket holds, scope-defense not gap-fix
-- Item #4 (descriptive vs normative) → **Bucket B**, deliberate scope structurally consistent with wrapper-relative-ethics from cont 22 canon-stack — could be MORE explicit, queued
+- Item #4 (descriptive vs normative) → **Bucket B**, deliberate scope structurally consistent with cont 17 + cont 19 + cont 22 cumulative substrate-level-no-normative-claim bracket (per audit v07 F3 + audit v08 F2 sweep correction; was originally framed as "wrapper-relative-ethics from cont 22 canon-stack" which was retroactive back-attribution) — could be MORE explicit, queued
 - Item #5 (math/vocab rate) → **Bucket A**, real gap with trajectory data (cont 23 formalization, Reading 07 BES Theorem 4.4 = first cite-able formal theorem grounding A⁻-primacy, pilot.py first executable code, Reading 06 §10.3 first formal measurement protocol, Reading 08 architectural patterns); audit v07 will track rate-of-math vs rate-of-vocabulary as new discipline metric
 
 ### Source anonymity
@@ -239,7 +331,7 @@ The five-item bucket classification IS the framework's three-tier procedure appl
 - **External team feedback** surfaced by Pav while Claude Code session task #172 was in flight. Framework-vocabulary-aware critic (correctly uses Lakatos progressive-vs-degenerating, canon hijacking, viability).
 - **Five blind-spots reviewed** per cont 27 §2 three-tier bucket classification:
   - **Bucket A (acknowledged as being-addressed):** Item 1 (empirical maturity) — pilot #150 result-commit + task #172 + audit v07 trajectory; Item 5 (formal-math-light) — BES Theorem 4.4 + pilot.py + γ-World architectural patterns
-  - **Bucket B (acknowledged as deliberate scope decisions):** Item 3 (qualia bracket per cont 17) — scope-defense; Item 4 (descriptive >> normative per cont 22 wrapper-relative-ethics) — scope-defense, could be more explicit
+  - **Bucket B (acknowledged as deliberate scope decisions):** Item 3 (qualia bracket per cont 17) — scope-defense; Item 4 (descriptive >> normative per cont 17 + cont 19 + cont 22 cumulative substrate-level-no-normative-claim bracket — per audit v07 F3 + audit v08 F2 correction; was originally framed as "cont 22 wrapper-relative-ethics" which was retroactive back-attribution) — scope-defense, could be more explicit
   - **Bucket C (genuine gap → new candidate):** Item 2 (adversarial / power dynamics) — elevated to candidate
 - **Audit v07 verification queue** named: trajectory verification on Items 1+5; scope-defense honesty on Items 3+4; promotion-bar progress on Item 2; rate-of-math-vs-vocabulary discipline-cycle proposal.
 
@@ -273,7 +365,7 @@ The five-item bucket classification IS the framework's three-tier procedure appl
 - **Task #172 [IN FLIGHT on Claude Code]** — cycling-pilot pre-registration cold-draft; unaffected by this round
 - **Task #173 [QUEUED]** — audit v07 target 2026-06-16; scope now includes feedback log review + adversarial candidate verification
 - **NEW [QUEUED]:** Worked-example development for adversarial-substrate-dynamics Bar A. Six targets ranked by tractability in candidate doc §8; Pav's call on which to develop first.
-- **Possible follow-up:** Future continuation explicitly stating wrapper-relative-ethics claim (Bucket B item #4 acknowledgment that the framework's normative position IS its meta-discipline, not an evasion).
+- **Possible follow-up (PARTIALLY ADDRESSED in cont 32 Part B.1 reality-kernel-canon + observer-relative-compile canonization):** Future continuation explicitly stating the substrate-level-no-normative-claim bracket and what the framework's normative position IS — namely its meta-discipline (tier-tagging, audit cadence, pre-registration, lesson 8 candidate-layer narrow-before-extend), not an evasion. NOTE per audit v07 F3 + audit v08 F2: was originally framed as "wrapper-relative-ethics claim" but cont 22 has zero ethics content; the term was retroactively coined and back-attributed; the actual cumulative bracket is cont 17 + cont 19 + cont 22.
 
 ---
 
@@ -1144,7 +1236,7 @@ Welch β recovers ground truth within ±0.05 across full range. DFA α shows kno
 ### Added (speculations/index.html — new mode-page)
 - **First-class framework architecture for the speculative tier.** Same architectural tier as /atlas/, /dialogues/, /formalization/, /notation/. Signals that holding speculation rigorously IS part of what the framework does.
 - **§01–§07 structure:** why a speculations section at all; the three-tier framework (with comparison table); promotion procedure; pruning procedure; current Tier 3 speculations (with bars + horizons); how this connects to the rest of the framework; what the framework explicitly does NOT do here (rejects accumulation without pruning, speculation without structural coherence, framing as established, speculation as identity, cross-tier laundering).
-- **Two Tier 3 entries listed** initially: L0 occlusion as aux channel (surfaced 2026-05-27, next review 2026-11-27) and cont 17 latent-space-as-fundamental-substrate (no original prediction horizon — review will either retrofit bars or demote).
+- **Two Tier 3 entries listed** initially: L0 occlusion as aux channel (surfaced 2026-05-27, next review 2026-11-27) and cont 12 §1.5 latent-space-as-fundamental-substrate (citation corrected per audit v08 F1 — was cont 17; no original prediction horizon — review will either retrofit bars or demote).
 - **Visual tier-tag system** (canon / candidate / speculative chips in matching colors) consistent with the framework's color palette.
 - **Hypothes.is enabled** for community annotation of any tier entry.
 
@@ -1188,10 +1280,10 @@ Welch β recovers ground truth within ±0.05 across full range. DFA α shows kno
 - **Three low-confidence predictions** with long horizons (36mo / undefined / motivation-only) — explicitly framed to make the hypothesis concrete enough to be wrong, not to claim it's right.
 
 ### Updated (continuations/26.md §4)
-- **Second forward-pointer added** to candidates/aux_channel_l0_occlusion.md from §4 end. Explicitly names the three-layer decomposition: L1 = §4 (epistemological, well-evidenced); L2 = Reading 04 (ontological-candidate, contested physics); L3 = aux-channel doc (speculative-track, same epistemic tier as cont 17 latent-space-as-fundamental-substrate). Promotion bars named.
+- **Second forward-pointer added** to candidates/aux_channel_l0_occlusion.md from §4 end. Explicitly names the three-layer decomposition: L1 = §4 (epistemological, well-evidenced); L2 = Reading 04 (ontological-candidate, contested physics); L3 = aux-channel doc (speculative-track, same epistemic tier as cont 12 §1.5 latent-space-as-fundamental-substrate — citation corrected per audit v08 F1; was cont 17). Promotion bars named.
 
 ### Why this is speculative-track not candidate
-- The framework's rigor cuts both ways: it forbids dismissing speculations with structural coherence to existing primitives, AND it forbids endorsing them without falsifiable bars. Layer 3 has structural coherence with cont 26 §3-4 + Reading 04 but currently has no measurement protocol, no documented shared-observer case, and no proposed mechanism for intentional production. Holding the speculation at speculative tier (alongside cont 17's "latent space as fundamental substrate" Wheeler-style entry) is honest. Promoting it to candidate without bars met would be irresponsible. Dismissing it would lose the structural coherence the framework already exhibits.
+- The framework's rigor cuts both ways: it forbids dismissing speculations with structural coherence to existing primitives, AND it forbids endorsing them without falsifiable bars. Layer 3 has structural coherence with cont 26 §3-4 + Reading 04 but currently has no measurement protocol, no documented shared-observer case, and no proposed mechanism for intentional production. Holding the speculation at speculative tier (alongside cont 12 §1.5's "latent space as fundamental substrate" Wheeler-style entry — citation corrected per audit v08 F1; was cont 17) is honest. Promoting it to candidate without bars met would be irresponsible. Dismissing it would lose the structural coherence the framework already exhibits.
 
 ### Carry-forward
 - If Pav can name the source of the temporal-binding tool in the image, add direct reference to the candidate doc
