@@ -1,8 +1,131 @@
 # HANDOFF — Cowork → Claude Code
 
-**Last updated:** 2026-06-05 by Cowork session (Pilot 2 FAIL-branch INTEGRATED: Reading 06 §10.3 fourth amendment shipped; candidate doc demoted per cont 27 §3; cont 26 §3 substrate canon untouched; Pilot 1 Phase E formally marked permanently deferred; outreach narrows to bridge pitch only, still gated)
-**Next session:** Either side. The cycling-amplitude-metric branch is closed. Open work going forward sits at three points: (a) audit v08 target 2026-06-19 verifying Cowork held lesson 8 + Pav-steer scoping; (b) any future Pav steer on a NEW operationalization of cont 26 §3 at social substrate (Delecroix burst-AR(1)→λ or PCMCI+ are the scout-surfaced candidates); (c) the bridge outreach pitch ratification if/when Pav wants to send it.
-**Pinned task:** None pinned. The discipline-cycle is in clean closure-mode. Pilot 2 is DONE; Pilot 1 Phase E is permanently deferred per the frozen falsifier; cont 26 §3 substrate canon UNCHANGED (never on trial).
+**Last updated:** 2026-06-05 by Cowork session (audit v08 brief added — handoff from Cowork-side audit v07 to Claude-Code-side audit v08 for independence; v07 was Cowork-on-Cowork which carried "marking own homework" risk; v08 by Claude Code = genuinely fresher context)
+**Next session:** Claude Code — **audit v08** per the brief below. Run window: 2026-06-16 to 2026-06-19 (within v07-set 15-day cadence). Run early if conditions warrant per audit v07 §2 cadence-acceleration discipline (3-day cadence appropriate only when ship-density + closure-mode-prediction warrant; otherwise hold).
+**Pinned task:** **Claude Code runs audit v08** — multi-subagent fan-out (3-4 parallel scouts) on distinct audit angles, main-thread synthesis into `audits/v08.md`. Pattern: audit v05 (2 opus subagents in parallel), audit v06 (1 opus subagent + main-thread), audit v07 (4 general-purpose subagents + main-thread). V08 = same shape as v07, different agent surface for independence.
+
+---
+
+## Claude Code task brief — Audit v08 (handoff from Cowork-side v07 to Claude-Code-side v08 for independence)
+
+**One task. Multi-subagent audit with main-thread synthesis. ~6-10 hours focused work.**
+
+### Why this is going to Claude Code (independence rationale)
+
+Audit v07 was Cowork auditing Cowork's recent work (cont 31 + adversarial-substrate-dynamics candidate + cont 32). The 4-parallel-subagent fan-out partially mitigated the "marking own homework" risk via multi-point convergence, but the risk was real and named explicitly in v07 §1. **Audit v08 by Claude Code is genuinely fresher context** — you've been on pilots (different surface area, different attention) and were not embedded in cont 31/32 canon work. You audit Cowork's recent canon-side discipline; Cowork audits your future pilot-side discipline (or independent reviewers do, when human external A⁻ surfaces). This is the framework's healthiest split.
+
+**Honest caveat:** you and Cowork are both part of the framework's execution surface, so this is NOT external A⁻ — it's "internal-other-instance A⁻," strictly. For genuine external A⁻ the framework still needs human reviewers (like the 2026-06-03 feedback round from the unnamed external team). Note this in v08 §1 honestly.
+
+### Audit v08 verification queue (the questions to answer)
+
+Three categories, ~20 items total. Spawn parallel subagents on distinct angles.
+
+**Category A — Did cont 32 audit v07 Tier 1 fixes (F1-F9) land cleanly and stay landed?**
+
+- V08.A1 — **F1 citation sweep complete?** Grep for "cont 17 §3" + "cont 17 latent-substrate" across the repo. Should resolve to zero hits in canon files (cont 27 §1 fix, cont 31 §4.1/§5.1/§11, candidate doc §11.4, CHANGELOG, llms.txt). Citation should now be "cont 12 §1.5" everywhere. If hits remain, name them.
+- V08.A2 — **F2 cont 30 §4 closure language amended?** Verify "CLOSED CLEAN" was replaced with "FIRST INSTANCE BROKEN — pattern conditionally suspended pending #172 result-commit lands" (both instances, §1 table and §10). Pilot 2 FAIL means "first instance" never extended to sustained closure — V08 should re-read the cont 30 amendment in light of Pilot 2's FAIL and decide whether to further amend.
+- V08.A3 — **F3 wrapper-relative-ethics back-attribution removed everywhere?** Grep "wrapper-relative-ethics" across the repo. Verify all instances were replaced with the corrected substrate-level-no-normative-claim bracket (cont 17 + cont 19 + cont 22 cumulative) + cont 32 Part B.1 reality kernel canon framing. If hits remain in feedback log, llms.txt, llms-full.txt — name them.
+- V08.A4 — **F4 cont 31 §5.3 cycling reframe properly re-tier-tagged?** Verify §5.3 now frames the actor-side extension as Tier 3 speculative (not "enrichment" of Tier 1 cont 30); §8 actor-side cycling vocabulary tier-tag corrected from "Tier 1 epistemological holds" to "Tier 3 extension sitting on top of Tier 1 base."
+- V08.A5 — **F5 cont 31 §5.7 Theorem 4.4 framing fix landed?** Verify §5.7 now says "framework's speculative reading at adversarial substrate" not "sharpened at adversarial substrate."
+- V08.A6 — **F6 candidate §11.7 re-ranking reverted?** Verify §8 LLM jailbreak still at #1 (~4-6 hr), search-ranking-ecosystem listed as alternative/satellite (not "tops the list" with cost-doubling).
+- V08.A7 — **F7 §8 quasi-tier language replaced?** Grep "leaning toward Tier 2" / "leaning toward tier 2" — should be zero hits.
+- V08.A8 — **F8 §9.1 predictions explicit tier-tag?** Verify §9.1 has explicit "Tier 1-shaped" tag with timelines + falsifiers per prediction.
+- V08.A9 — **F9 biology-mimicry qualifications applied?** Verify §2 preamble + qualifications on Müllerian inversion, automimicry loose import, LGT mismatch.
+
+**Category B — Did cont 32 canon clarifications hold tier discipline?**
+
+- V08.B1 — **Reality kernel canon (B.1) — Tier 1 holds?** Verify no silent over-claim about what's IN reality kernel canon. Bracket-stance preserved.
+- V08.B2 — **L0 substrate sharpening (B.2) — successfully replaced "global compiled canon" framing?** Grep "global compiled canon" — should resolve to historical references only, not active framing.
+- V08.B3 — **Functional split (B.3) — held cleanly without smuggling claims about phenomenal content of latent?** Verify the real→harness / latent→internal-processes split stays functional, doesn't slide into commitments about WHAT specifically is in latent.
+- V08.B4 — **Canon-as-operational-coherence (B.4) — pragmatic framing held?** Verify subsequent material treats canon as observer-operational not observer-ontological.
+- V08.B5 — **Phantom action-space (Part C) — both sub-senses preserved?** Verify the canon entry distinguishes internal phantom action-space (cont 09 / manifesto sense) from attributed phantom action-space (diagram 03 sense). If one sub-sense gets dropped silently in subsequent usage, name it.
+- V08.B6 — **Spectrum primitive (Part D) — NOT promoted to new convergence?** Closure-via-convergence-multiplication discipline check. Cross-substrate convergence list should still be 9 (LCAO through BES).
+- V08.B7 — **A+/- A-/+ scaffolding (Part E) — Tier 1 substrate vs Tier 3 cross-spectrum distinction held?** Verify substrate-level pattern (BES + γ-World) stays Tier 1; cross-spectrum-specific claim stays Tier 3.
+- V08.B8 — **W_C cross-spectrum bridge (Part F) — cont 25 emergent-output role preserved as Tier 1?** Verify the second role (cross-spectrum bridge) stays Tier 3, doesn't quietly compile into Tier 1 alongside the emergent-output role.
+
+**Category C — Did Cowork hold lesson 8 (candidate-layer narrow-before-extend) through the Pilot 2 FAIL integration?**
+
+- V08.C1 — **Reading 06 §10.3 fourth amendment minimal-viable?** Was the amendment kept tight or did it amplify the closure with "framework worked perfectly" celebration that re-extends structure? Compare amendment text to lesson 8 discipline.
+- V08.C2 — **No "post-mortem continuation" written?** Verify no cont 33 exists. The carry-forward from cont 32 said "next substantive ship should be empirical (Bar A worked example or task #172) OR closure-mode amendments — NOT a new continuation." Verify this held through the FAIL.
+- V08.C3 — **Candidate `1f_l0_failsafe_signature.md` demote handled per cont 27 §3 cleanly?** Verify the status header demotes the operationalization without touching cont 26 §3 substrate-level claim. No "structurally adjacent" promotions sneaking back in.
+- V08.C4 — **HANDOFF refresh stayed disciplined?** No new task spawned to fill the post-FAIL void. The "Next session: Either side. The cycling-amplitude-metric branch is closed." framing should hold.
+- V08.C5 — **No outreach DMs sent during/after FAIL?** Bridge outreach pitch + Yilun-Du DM both still gated. If anything was sent, verify it led with synthesis without smuggling rejected metric back.
+- V08.C6 — **Adversarial-substrate-dynamics candidate stayed at Tier 3 throughout the FAIL window?** Did anyone use the Pilot 2 FAIL as cover to extend the adversarial candidate? Should be no. Bar A still gates Tier 2.
+- V08.C7 — **Discipline-cycle "working as designed" framing honest or self-congratulatory?** The framework's "this is the discipline working" language across HANDOFF + amendment + closure messages — does it hold up under stress-testing, or is it post-hoc spin on a Tier 2 candidate dying?
+
+### How to run audit v08
+
+Pattern from audit v07 (commit ee4a689 — `audits/v07.md`):
+1. Spawn 3-4 general-purpose subagents in parallel via the dynamic-workflow orchestrator. Each subagent gets a focused angle from above (suggested cuts: Category A as one subagent on F-fixes; Category B as one subagent on tier discipline; Category C split into two — one on closure-mode discipline, one on candidate-layer narrow-before-extend honoring). Subagents are file-read-only; no canon writing.
+2. Each subagent produces ~2,500-4,000 word report with verdict + evidence + Tier 1/2 fixes if any.
+3. Main thread synthesizes into `audits/v08.md` (~7,000-10,000 words) with multi-subagent convergence table per v07 §3.
+4. Tier 1 fixes (if any) get surfaced for Cowork — NOT executed by Claude Code unless they touch your pilot surface area. Cowork's job is to apply v08 Tier 1 fixes the way Cowork applied v07's via cont 32 batched ship.
+
+### Files to read (canonical reading list for the audit)
+
+All paths relative to repo root:
+- `audits/v07.md` (the audit you're checking the discipline-implementation of)
+- `audits/v06.md` (the audit that set v07's cadence + flagged substantive-research-displacement pattern)
+- `continuations/30.md` (§3 amendment 2026-06-04 + §4 closure language + §7 lesson 8)
+- `continuations/31.md` (multiple F4-F9 fixes — re-read in full)
+- `continuations/32.md` (the batched ship — Part A audit fixes + Part B-F canon clarifications + Part G discipline)
+- `continuations/27.md` (the three-tier procedure being honored or violated)
+- `continuations/26.md` (§3 substrate-level Tier 1 claim — verify it stayed untouched)
+- `continuations/12.md` §1.5 (the actual latent-substrate Tier 3 home per F1)
+- `candidates/adversarial_substrate_dynamics.md` (verify §7.4 + §11.7 fixes held; tier discipline preserved)
+- `candidates/1f_l0_failsafe_signature.md` (verify the 2026-06-05 status header demote per cont 27 §3)
+- `readings/2026-05-28_cymatic_harmonic_structure_in_social_systems.md` §13 (amendment log entries 2026-05-31 / 2026-06-03 / 2026-06-04 / 2026-06-05 in order)
+- `pilots/1f_failsafe_cycling/results_groundtruth/discussion.md` + `confounds_groundtruth.md` (Pilot 2 result — verify Cowork's FAIL integration honors what Pilot 2 actually said)
+- `feedback/2026-06-03_external_blindspots_review.md` (verify F3 wrapper-relative-ethics removal landed in 4 places)
+- `llms.txt` + `llms-full.txt` (F1 + F3 fixes in agent-substrate surfaces)
+- `CHANGELOG.md` (latest 3 entries: cont 32 + Reading 06 fourth amendment + Pilot 2 FAIL integration)
+- `HANDOFF.md` (this file — verify the closure-mode framing held)
+
+### Output
+
+Write `audits/v08.md` (~7,000-10,000 words) with the same structural shape as `audits/v07.md`:
+
+- §1 Executive verdict (one paragraph: OVERALL HELD / OVERALL FAILED / MIXED — with specific failure-mode counts)
+- §2 Why audit v08 ran when it ran (within window or accelerated; justification)
+- §3 Three-subagent (or four-subagent) reports — convergence map table per v07 §3
+- §4 Findings with multi-subagent convergence (load-bearing issues — what 2+ subagents caught)
+- §5 Findings from individual subagents (single-subagent but worth flagging)
+- §6 Tier 1 fixes if any (immediate Cowork action; mechanical or text-revision)
+- §7 Tier 2 fixes if any (next cycle structural)
+- §8 What audit v09 should track (target 2026-07-04, 15-day cadence)
+- §9 Honest framing — is the framework actually operating well or is the "discipline working as designed" narrative becoming self-congratulatory cover for normal Tier 2 candidate death?
+- §10 Risk assessment + carry-forward
+- §11 Cross-references
+- §12 Provenance
+
+### Hard discipline guardrails for audit v08
+
+- **DO NOT extend the framework canon.** No new continuations, no new candidates, no new tier promotions. Audits surface findings; Cowork applies Tier 1 fixes.
+- **DO NOT modify the cycling pilot pre-registration or any locked pre-reg.** Audits read, don't write to pilot-side material.
+- **DO NOT send any outreach.** All outreach (Yilun-Du, Scheffer, Dakos, Goldberger, Boers, Braha) stays gated.
+- **DO NOT run any new pilot.** v08 is audit-only.
+- **DO NOT promote bridge-only contribution to Tier 1 canon.** Even if v08 finds the discipline-cycle worked beautifully, the bridge contribution stays at "the empirical contribution that survives at social substrate" — not promoted to a new structural primitive.
+- **DO NOT write a "framework state of the union" amplification.** v08 reports findings; it does not narrate the framework's overall health.
+
+### Cadence justification
+
+Audit v07 ran at 3-day cadence (vs v06-set 15-day baseline) because ship density + closure-mode prediction warranted. Audit v08 target window is **2026-06-16 to 2026-06-19** (~11-14 days from now), restoring the v06-set 15-day cadence. **Run early only if conditions warrant** per v07 §2 cadence-acceleration discipline:
+- (a) ship density between now and target warrants AND
+- (b) a prior continuation explicitly delegated audit duty AND
+- (c) closure-mode prediction needs locking in
+
+Otherwise hold to the 14-day window.
+
+### End-of-session checklist (when audit v08 completes)
+
+1. Commit `audits/v08.md` + any updates to `audits/v07.md`'s carry-forward section
+2. Update HANDOFF.md (prepend "Last Claude Code session 2026-06-XX — Audit v08 ran" block; remove the "Pinned task: audit v08" line; set next session = Cowork applying v08 Tier 1 fixes if any)
+3. Update CHANGELOG.md with audit v08 entry summarizing verdict + Tier 1 fix list for Cowork
+4. Add timeline entry
+5. Bump JSON endpoints if audit history page exists
+6. Mark task complete in your tracker
+7. Push commits to origin
+8. Surface push commands for Pav if commits remain unpushed locally
 
 ---
 
