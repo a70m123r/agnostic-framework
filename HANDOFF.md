@@ -1,12 +1,36 @@
 # HANDOFF — Cowork → Claude Code
 
-**Last updated:** 2026-06-05 (later still) by Cowork session (audit v08 ratified + all 8 Tier-1 fixes applied + Adversarial Bar A initial sketch produced via two widgets + brief queued for Claude Code below)
-**Next session:** Claude Code — **Adversarial Bar A initial sketch (Stage 1: exploratory development)** per brief immediately below. Pull real data for the 6 substrates in the Cowork-side correlation sketch, build out the taxonomy with sourced cases, iterate the correlation graph with verified primary-source numbers. **Frame as initial sketch — NOT yet locked Pilot.** Pav will develop further over multiple iterations. Stage 2 (locked falsifier pre-reg per Pilot 2 pattern) is a SEPARATE later task gated on Stage 1 surfacing a strong-enough signal.
-**Pinned task:** **Claude Code does Stage 1 exploratory data gathering + iterative sketch refinement** for the adversarial-substrate-dynamics candidate's Bar A. Per audit v08 load-bearing v08→v09 test: this IS the empirical/closure work that the next ship must be (or displacement pattern confirmed re-accumulating). Cont 32 lesson 8 + audit v07 V8.6 + audit v08 §C2/§C7 all binding: NO new continuations, NO new candidates, NO outreach, NO Tier-1 promotions; identify what's canon-shaped per cont 27 §2 tier-tagging, don't compile new primitives.
+**Last updated:** 2026-06-06 by Claude Code session — the adversarial-substrate-dynamics candidate's Stage-1 sketch was built out (full-spectrum, conceptual-first, Pav-steered) plus an enriched 73-example dataset and an interactive atlas. Session block immediately below.
+**Next session:** Cowork — review the Stage-1 sketch (`candidates/adversarial_substrate_dynamics_BAR_A_SKETCH.md`) + atlas (`candidates/bar_a_sketch_data/adversarial_atlas.html`) with Pav. Decide the §8 positioning question (what to claim novel vs cite-up-front) and whether any §4 surfaced channel — esp. the framework-wide observer-definition (§4.B) — warrants a dedicated continuation. NOTHING this session is compiled to canon; candidate stays Tier 3; convergence list stays 9.
+**Pinned task:** none — Stage 1 substantially delivered (as a Pav-steered conceptual-first reframe of the briefed empirical Bar A). The empirical internet-correlation Bar A survives as one §6 test-hook; locked Stage 2 (falsifier pre-reg) remains a separate later task if Pav steers there.
 
 ---
 
-## Claude Code task brief — Adversarial Bar A initial sketch (Stage 1: exploratory development)
+## Last Claude Code session (2026-06-06) — Adversarial-function full-spectrum sketch + dataset + atlas
+
+**What shipped** (all under `candidates/`, Tier-3 exploratory, nothing compiled to canon):
+- **`adversarial_substrate_dynamics_BAR_A_SKETCH.md`** (~160KB, 16 sections §0–§8) — Pav reframed the briefed 6-substrate internet correlation into a **conceptual-first full-spectrum** treatment (viroid → cosmic + latent): §0 the function + the **beneficiary boundary** (neutral-vs-adversarial discriminator) · §1 the ascent (scale≈time; acceleration decomposed into **concentration × catalysis** on a non-accelerating Red-Queen treadmill) · §2 ladder + deceivability gradient (+ fact/time/sequence registers) · §3 engine-dynamics (exploitation · symbiosis-genesis · transposition) · §4 surfaced channels (held open) · §5 deferred tests · §6 cross-domain **prior-art foothold map** · §7 gap-reframes (generational-as-domestication; priming-as-scene-setting) · §8 **quantification & reinvention check**.
+- **`bar_a_sketch_data/`** — `adversarial_examples_dataset.json` (**73 web-verified examples**, classified on every axis + enriched with two time-coordinates, counter-measures, outcome, lineage), `build_viz.py` (procedural build), `adversarial_atlas.html` (interactive 3-view atlas: timeline w/ phenomenon↔observed toggle + detection-lag; evolution/transposition tree; counter-measure/outcome view).
+
+**How:** ~5 dynamic workflows (develop→adversarially-verify; 3 web-grounded scouts→citation-verify; enrichment→verify), each followed by an independent verify pass. Zero fabricated citations surfaced; every over-claim a verifier caught was corrected before landing.
+
+**Load-bearing findings (for Cowork+Pav):**
+- **§8 reinvention check (honest positioning):** the framework is **NOT first** at the cross-substrate move or the deception-ladder — Casey/Massey/Mishra (signalling games viral→human), Whaley (deception taxonomy), Boyd (universal conflict), universal Darwinism, Farzulla 2026 (same scale-relative meta-move) each own a slice; memetics pre-states the artefact-viroid. **Defensible delta:** the beneficiary boundary as discriminator + the superset-beyond-deception + the latent/cosmic extension (owes a social-evolution-theory search before claiming "first"). Lead with the delta; cite the occupied ground up front.
+- **Q1 (quantise):** no single substrate-general formalism *of the adversarial function*; the Price-eq/replicator chassis travels but for selection; C0.2 has no formal home (biggest novelty-opening + exposure).
+- **Detection lag** (t_phenomenon vs t_observed) collapses up the ladder: molecular ~3.5 Gyr → cognitive/latent ~0.
+- **§5.7 facts scouted + resolved:** Eigen-coinage = Maynard Smith & Szathmáry (cleared); security-economics anchor found (Anderson & Moore 2006 / Herley 2012 / Anderson et al. 2012); orchid + Cambrian figures tightened; endosymbiosis genuinely unresolved (hedge holds).
+
+**Surfaced for Cowork+Pav deliberation (NOT compiled — §4):** the observer-definition (§4.B, framework-wide); the "two-gradients-are-one" unifications (§4.A, closure-via-multiplication hazard); transposition-vs-convergence possibly mixed in the 9-convergence list (O-T1).
+
+**Discipline:** no new continuations, no new candidates, no tier promotions, no new convergence (list stays 9), no outreach, no JSON/timeline bumps; candidate doc untouched (this is a sibling working file). Per the audit v08→v09 load-bearing test, this ship is empirical/closure work (a sourced dataset + sketch + an honest reinvention check), not new conceptual canon.
+
+**Git:** all on `main`, pushed to origin this session — `ab42bfe` sketch · `4f7db36` §8 · `4f13b5b` dataset+atlas · `4cfb3fe` enriched atlas v2 · + this §5.7-updates + session-record commit.
+
+**For Cowork next:** review with Pav; decide §8 positioning + whether §4.B observer-definition earns its own continuation; audit v09 verifies this stayed disciplined (no over-claim, nothing compiled).
+
+---
+
+## Claude Code task brief — Adversarial Bar A initial sketch (Stage 1: exploratory development) `[SUPERSEDED — Stage 1 delivered 2026-06-06 as the conceptual-first reframe; see session block above]`
 
 **One task, multi-iteration. Pull real data, refine sketch, hand back to Cowork for Pav steering. ~6-10 hours focused work this round.**
 

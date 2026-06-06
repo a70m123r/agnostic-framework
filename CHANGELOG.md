@@ -8,6 +8,17 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-06-06 — Adversarial-function full-spectrum sketch (Stage 1; Pav-steered conceptual-first reframe)
+
+Stage-1 sketch for the adversarial-substrate-dynamics candidate, reframed by Pav from the briefed 6-substrate internet correlation into a **conceptual-first, full-spectrum** treatment (viroid → cosmic + latent). **Tier-3 exploratory; nothing compiled to canon; candidate stays Tier 3; convergence list stays 9.**
+
+- **`candidates/adversarial_substrate_dynamics_BAR_A_SKETCH.md`** (~160KB, 16 sections §0–§8): the function + beneficiary boundary; the ascent (acceleration = concentration×catalysis on a non-accelerating Red-Queen treadmill); ladder + deceivability gradient/registers; engine-dynamics (exploitation/symbiosis-genesis/transposition); surfaced channels (§4, held open); deferred tests (§5); cross-domain **prior-art foothold map** (§6); gap-reframes (§7); **quantification & reinvention check** (§8).
+- **`candidates/bar_a_sketch_data/`**: a 73-example web-verified, fully-classified + enriched dataset (two time-coordinates, counter-measures, outcome, lineage); a procedural `build_viz.py`; and an interactive 3-view `adversarial_atlas.html` (timeline + evolution tree + outcomes).
+- Built via ~5 dynamic workflows (develop→verify; 3 web scouts→citation-verify; enrichment→verify) + independent verify passes. **§8 honest finding:** the cross-substrate move + deception ladder are **not novel** (Casey/Massey/Mishra, Whaley, Boyd, universal Darwinism, Farzulla 2026); the defensible delta is the beneficiary boundary + superset + latent/cosmic extension. Detection-lag collapses up the ladder. §5.7 facts scouted + resolved (Eigen-coinage cleared; named security-economics anchor found; orchid/Cambrian tightened; endosymbiosis still unresolved).
+- Discipline: no new continuations/candidates/convergences/outreach/JSON-bumps; candidate doc untouched. Surfaced-for-Cowork items (observer-definition §4.B; §4.A unifications; O-T1) held open, not compiled. See the HANDOFF session block (2026-06-06).
+
+---
+
 ## 2026-06-05 (later) — AUDIT v08 (Claude-Code-authored, DRAFT at `audits/v08_DRAFT.md`) · MIXED verdict · Tier-1 fixes applied this round; v08 ratified to `audits/v08.md` · documentation/reality gap closed (cont 32 §G.2 false "cont 25 is replaced" claim corrected; full F1/F3 sweeps completed across previously-missed files; candidates.json refreshed post-FAIL; cont 30 §4 closure language re-amended for Pilot 2 falsification; closure-mode framing down-tuned across multiple files; missing Pilot 2 FAIL CHANGELOG entry restored — THIS ENTRY AND THE ONE BELOW) · C7 over-claim concern acknowledged: "discipline working as designed / self-sustaining" framing was the same over-confident register v07 F2 walked back one cycle earlier · v06 displacement concern read as RE-OPENED per v08
 
 ### What landed (Cowork side — apply audit v08 Tier-1 fixes)
