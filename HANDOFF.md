@@ -1,8 +1,229 @@
 # HANDOFF — Cowork → Claude Code
 
-**Last updated:** 2026-06-07 by Claude Code session — a large development round: observer-agnostic outcome model, 141-example dataset, a 6-view + a 3D atlas, an information-theoretic spine, and the **gating §5.1 falsifier RUN → the strong full-spectrum claim is falsified and now bounded to substrates with a unit of selection (canon-relative)**. Session blocks below (2026-06-07, then 2026-06-06).
-**Next session:** Cowork — review with Pav, and **audit-v09 should verify the bounded-claim amendment (§5.1-R)** and the new Tier-3 folds (§IT spine, §C2.2-B gradient bounds, §PS phantom-sense, §RS three-loci + rule-of-three, §3.3-T latent-transposition). Decide §8 positioning + whether the observer-definition (§4.B) and the **rule-of-three method principle** warrant dedicated continuations. NOTHING compiled to canon; candidate stays Tier 3; convergence list stays 9.
-**Pinned task:** none — but the key next *empirical* step is the **outcome-blind, effort-detrended base-rate census** (the dark-matter test that would move the bounded claim past "conjecture"). The internet-correlation Bar A still survives as one §6 test-hook.
+**Last updated:** 2026-06-07 (later) by Cowork session — Pav reviewed the 2026-06-07 Claude Code round + sharpened rule-of-three into **Latent Olympics** scope (per Pav 2026-06-07 quotes preserved below). Three Claude Code briefs queued in line below in order: (1) audit v09 early-run, (2) Stage 2 bounded-claim outcome-blind base-rate census, (3) Latent Olympics Stage 1 design exploration (marked INCOMING — queued after v09 + Stage 2).
+**Next session:** Claude Code — **Brief 1: audit v09 (early-run)** per brief immediately below. Pattern: 3-4 parallel subagent fan-out (v07 + v08 pattern); main-thread synthesis to `audits/v09_DRAFT.md`; Cowork ratifies after. Focus: verify bounded-claim amendment (§5.1-R) + six-fold discovery-handling discipline + lesson-8 closure-via-multiplication check on the two genuinely-new conceptual surfaces (§PS phantom-sense + §RS competing-realities/rule-of-three) + C7 register check on Claude Code's "framework grew up" narration. NOTHING compiled to canon in v09 session; candidate stays Tier 3; convergence list stays 9.
+**Pinned task:** Brief 1 (audit v09). Brief 2 (Stage 2 census) and Brief 3 (Latent Olympics Stage 1 — INCOMING) wait their turn — Pav decides whether to advance after v09 lands. The three briefs below are sequenced; Claude Code does one at a time, handing back to Cowork+Pav between each.
+
+---
+
+## Pav's read of the 2026-06-07 round (the calibration Cowork should match)
+
+Pav's actual register: *"we got a good foothold and then some"* (NOT "the framework grew up," which was Claude Code's self-narration of its own session and which audit v08 §C7 already walked back as celebratory-closure-register over-claim). Cowork's read of the round should match Pav's measured register, not Claude Code's session-narration register. The narrower factual claims that survive: §5.1-R ran a serious falsifier search and produced a bounded successor claim; §IT formalization is auditor-PASS computation-verified; §C2.2-B floor was found three independent ways (genuine cross-validation); six new Tier-3 folds were surfaced in §4 of sketch per discovery-handling discipline (which Cowork wrote into the Stage 1 brief explicitly because Pav asked "what if we find new sub-primitives while working at it"); candidate doc untouched; convergence list still 9; nothing compiled. The discipline operated as designed at the substantive layer; v09's job is to verify it held at the narrative/positioning layer too.
+
+---
+
+## Brief 1: Audit v09 (Claude Code, NEXT — early-run justified)
+
+**One task. Multi-subagent verification of the 2026-06-07 Stage 1 round. ~6-10 hours focused work.**
+
+### Why running early per v07 §2 cadence-acceleration discipline
+
+V09 target was 2026-06-20 (13 days from now). Three justification conditions per v07 §2:
+- **(a) Ship density warrants** — YES. The 2026-06-07 round shipped a 216KB sketch with 25 sections + six new Tier-3 folds + a 141-example dataset + 6-view 2D atlas + 3D explorer + an information-theoretic spine + the §5.1 falsifier RUN with bounded-claim result. Substantial.
+- **(b) Prior continuation explicitly delegated audit duty** — YES. The Stage 1 HANDOFF brief named *"audit v09 should verify the bounded-claim amendment"* explicitly.
+- **(c) Closure-mode prediction needs locking in** — YES. Claude Code's "framework grew up / discipline held the whole way" narration is the exact register v08 §C7 caught one cycle earlier. The audit's job is to lock the register correction before it propagates.
+
+### Verification queue — three categories, ~12-15 items
+
+**Category A — Verify the substantive discipline held (the easy part if the work is real).**
+
+- **A1: §5.1-R bounded-claim amendment** — does the falsifier methodology hold under independent re-examination? Are the clean negatives (single-star structure, dissipative structures, nucleosynthesis) genuinely clean (no smuggled fitness concept; no overlooked beneficiary; not just "we lack a fitness concept for this substrate")? Is the heredity-gate operationally specifiable (Lewontin units-of-selection: variation + differential persistence + heredity — verify each clause is named operationally not just gesturally)?
+- **A2: §IT information-theoretic spine** — is the leverage ratio (n·KL / −log a(s) > 1) computationally well-defined? Auditor-PASS already claimed; verify by running the computation on at least 3 dataset examples and confirming the leverage ratio matches the assigned beneficiary boundary.
+- **A3: §C2.2-B bounded gradient** — three independent analyses (predict-workflow + IT-spine + empty-cell coverage map) reportedly converged on the molecular floor. Verify the three analyses are genuinely independent (no shared assumption that would make convergence circular). The biological ceiling claim (`time` register requires ledgered future = cognition) has a flagged caveat (circadian/photoperiodic clocks as biological anticipatory time-ledger). Verify the caveat is honestly held, not dismissed.
+- **A4: §3.3-T latent transposition** — refines existing §3.3. Verify it's a refinement, not new structural surface dressed as refinement. The ant↔warfare cluster (Regnier & Wilson "propaganda substances") should support latent-transposition cleanly; verify the case isn't carrying more weight than the structural argument.
+
+**Category B — Apply discovery-handling discipline check on the two GENUINELY-NEW conceptual surfaces (lesson-8 closure-via-multiplication discipline).**
+
+The four sharpenings (§IT, §5.1-R, §C2.2-B, §3.3-T) are formalizations/bounds/refinements of existing structure. The two genuinely-new ones are §PS and §RS — apply audit v06 §10.4 default-to-folding-into-existing discipline:
+
+- **B1: §PS phantom-sense (Pav's coinage)** — "the canon-compass = the model q honed by experience/evolution/environment; the spawn-vs-sense dual; existence-deception as candidate register; grounded in active inference." Discipline check: is this structurally distinct from cont 32 Part B.3 (functional split real→harness / latent→internal-processes) + cont 22 canon-stack (kernel canon as model that compiles)? Or does it fold cleanly into existing? Default per audit v06 §10.4: surface as instantiation of existing primitive unless the structural distinction is load-bearing.
+- **B2: §RS competing-realities + rule of three** — the q-reframe + the rule of three as method-principle. Per Cowork interpretive conversation 2026-06-07: Pav further sharpened rule-of-three to **Latent Olympics scope** (Brief 3 below). Discipline check: is §RS structurally distinct from cont 27 §2 three-tier procedure + cont 31 ecosystem framing? Or does it fold cleanly? Default fold. **Note:** the rule-of-three demonstrated reflexively on its own founding conjecture (per Claude Code's session note) is structurally weak evidence (any method-principle applied to its own validation can be made to succeed by construction); independent demonstration on a separate case is what would satisfy Bar A. Surface but don't promote.
+
+**Category C — Register-correction verification (the v08 §C7 lesson recurrence).**
+
+- **C1: Claude Code's "framework grew up / discipline held the whole way" narration register** — is it substantively true or is it the same celebratory-closure register v07 §F2 + v08 §C7 walked back? Apply the narrower-factual-claim test: which substantive claims survive ("Stage 1 ran a falsifier and produced a bounded successor + six Tier-3 observations"); which are narrative amplification ("framework grew up"). Recommend any needed register down-tuning in the SKETCH file or HANDOFF self-narration.
+- **C2: HANDOFF.md 2026-06-07 session block self-narration** — does it use celebratory register that audit v08 already caught one cycle earlier? Apply same correction.
+- **C3: Discovery-handling discipline verification** — did the six new folds actually go to §4 of sketch (or equivalent) as "Surfaced observations — pending Cowork+Pav review" per the brief's 7-step procedure? Or did any get smuggled into the candidate doc / convergence list / continuations? Grep + manual check.
+- **C4: Candidate doc untouched verification** — `git diff candidates/adversarial_substrate_dynamics.md` should show only the pointer-to-sketch addition at the top, nothing else. Verify.
+- **C5: Convergence list untouched verification** — convergence list still 9 (LCAO, cell fusion, symbiogenesis, creole genesis, conceptual blending, model merging, ACMP, cymatics-narrowed, BES). Verify nothing snuck in.
+- **C6: Tier-tagging discipline verification** — every claim in the sketch should carry an explicit `[Tier 3]` tag (or higher with bar justification). Spot-check 10 random claims; flag any with missing/wrong tier.
+
+### Files to read
+
+- `candidates/adversarial_substrate_dynamics_BAR_A_SKETCH.md` (the 25-section, 216KB sketch — primary audit target)
+- `candidates/bar_a_sketch_data/` (atlas + dataset; verify atlas claims are computable from dataset)
+- `candidates/adversarial_substrate_dynamics.md` (verify untouched per discipline)
+- `audits/v07.md` + `audits/v08.md` (the discipline checks the round must clear)
+- `continuations/27.md` §2-3 (three-tier procedure + narrow-before-demote)
+- `continuations/30.md` §7 lesson 8 (candidate-layer narrow-before-extend)
+- `continuations/31.md` (ecosystem framing — for §RS folding check)
+- `continuations/32.md` Part B-F (canon clarifications — for §PS folding check)
+- `HANDOFF.md` (this file — verify session-block self-narration register)
+- `CHANGELOG.md` (verify 2026-06-07 round entry uses narrower factual register)
+
+### Output
+
+Write `audits/v09_DRAFT.md` (~6,000-9,000 words) following v07/v08 pattern:
+- §1 Executive verdict (per Cat A / B / C)
+- §2 Why v09 ran early (per v07 §2 conditions)
+- §3 Subagent reports + convergence map
+- §4 Findings with multi-subagent convergence
+- §5 Single-subagent findings worth flagging
+- §6 Tier 1 fixes (immediate; mechanical or text)
+- §7 Tier 2 fixes (next cycle structural)
+- §8 What audit v10 should track (2026-06-22 target, 15-day cadence from v09 if v09 runs 2026-06-08)
+- §9 Honest framing — is the bounded-claim a genuine narrowing per cont 27 §3, or is it post-hoc rationalization of falsifier-survival?
+- §10 Risk + carry-forward
+- §11 Cross-references
+- §12 Provenance
+
+### Hard discipline guardrails for audit v09
+
+- **DO NOT compile anything to canon.** Audit findings → Cowork applies Tier-1 fixes (mechanical/text). Tier-2 fixes are next-cycle.
+- **DO NOT advance any candidate's tier.** Bar A satisfaction is the Stage 2 outcome-blind base-rate census (Brief 2), NOT this audit.
+- **DO NOT run any pilot or census.** v09 is audit-only.
+- **DO NOT send outreach.** All outreach gated.
+- **DO NOT extend canon or write new readings or continuations.** Same standing rules.
+- **DO NOT start Stage 2 or Latent Olympics work in v09 session.** Those are separate briefs.
+- **DO acknowledge the C7 register risk in your own framing.** If your §1 verdict says "discipline working as designed" — check it against actual evidence; that's the register v07 + v08 caught and is exactly what C1 above is supposed to detect.
+
+### End-of-session checklist
+
+1. Commit `audits/v09_DRAFT.md`
+2. Update HANDOFF.md — prepend "Last Claude Code session 2026-06-XX — Audit v09 DRAFT" block; remove the v09 pinned task; set next pinned task = Cowork ratifies v09 + applies Tier-1 fixes; queue Brief 2 (Stage 2 census) as next Claude Code task after Cowork ratification
+3. CHANGELOG entry — narrower factual register per audit v08 §C7 lesson
+4. Push commits
+5. Mark task complete in your tracker
+6. DO NOT start Brief 2 (Stage 2 census) until Cowork ratifies v09 and Pav steers
+
+---
+
+## Brief 2: Stage 2 bounded-claim outcome-blind base-rate census (Claude Code, AFTER v09 ratifies)
+
+**The bounded-claim's real Bar A satisfaction test. Locked pre-registration per Pilot-2 pattern. ~10-15 hours focused work.**
+
+### Why this is the right next empirical move per §5.1-R's own verifier
+
+The §5.1-R bounded claim — *"every substrate that supports heritable fitness (a genuine unit of selection: variation + differential persistence + heredity, with heredity the operative gate) grows a beneficiary-bearing adversarial niche, essentially at the first opportunity"* — survived one falsifier (clean negatives existed for the strong full-spectrum reading; bounded version evades them). But §5.1-R's own verifier names the real next test: *"the corpus is assembled by searching for **named** exploits, exposing it to survivorship plus a detection-lag confound... the real next test is an **outcome-blind, effort-detrended base-rate census** (a Chao1-style unseen-class estimator + a heredity-stratified prediction, using detection proxies *exogenous* to existence)."*
+
+This is the bounded claim's Stage 2 — the substantive empirical test that would move it past "falsifiable conjecture earning no tier advance" toward Bar A satisfaction. Same discipline pattern as Pilot 2 ground-truth validation: lock pre-registration BEFORE data examined; run; report verdict per pre-committed falsifier.
+
+### Stage 2 deliverables (Brief 2 session)
+
+**Step 1: Lock pre-registration (~3 hours).** Write `pilots/adversarial_bar_a/PILOT_outcome_blind_basrate_census_PRE_REGISTRATION.md` with:
+- Operational definitions of substrate / unit-of-selection / heredity-bearing-vs-not / beneficiary-bearing-adversarial-niche / "the first opportunity"
+- Sampling frame for the census (exogenous detection proxies — what counts as "we tried to find a beneficiary-bearing niche here and didn't, vs we didn't look hard")
+- Chao1-style unseen-class estimator implementation (or alternative; justify choice)
+- Heredity-stratified prediction structure
+- Pre-committed falsifier thresholds: under what numerical result does the bounded claim FAIL? Under what does it PASS? Under what is the result confounded/inconclusive?
+- §11 cold-derivation note (you may use the Stage 1 sketch + dataset, but the falsifier is locked BEFORE any census run)
+
+**Step 2: Run the census (~6-8 hours).** Pull data, compute, report.
+
+**Step 3: Result-commit (~2-3 hours).** Write `pilots/adversarial_bar_a/results/discussion.md` with verdict per pre-committed falsifier. Three skeptics + independent end-to-end re-run (Pilot 2 pattern) before result-commit.
+
+### Hard discipline guardrails for Brief 2
+
+- **Lock falsifier BEFORE census run** — drug-trial pre-registration discipline. The verifier note in §5.1-R is explicit: corpus search by named exploits has survivorship + detection-lag confounds; the test that resolves them MUST be outcome-blind.
+- **NO modifying the bounded-claim text after data examined.** Any new confounds go in `confounds.md`; the claim text stays frozen.
+- **Three adversarial skeptics + independent re-run** before result-commit (Pilot 2 pattern).
+- **NO Latent Olympics work in Stage 2 session.** That's Brief 3.
+- **NO new continuation written.** Result-commit + sketch-update + HANDOFF + CHANGELOG.
+- **If census FAILS the bounded claim** — apply cont 27 §3 narrow-before-demote per Pilot 2 pattern. Cycling-amplitude metric was rejected cleanly; if bounded claim fails, what survives narrows further (perhaps to: adversarial niches appear in *some* heredity-bearing substrates but not all; conditional sub-claims survive).
+- **If census PASSES the bounded claim at Bar A** — the candidate advances to Tier 2 (ontological-candidate) per cont 27 §2. Surface to Cowork for canon-side integration; do NOT promote to Tier 1 in same session.
+
+### Files to read (for Brief 2)
+
+- `candidates/adversarial_substrate_dynamics_BAR_A_SKETCH.md` (specifically §5.1, §5.1-R, §5.4 census tests, §5.6 internet correlation)
+- `pilots/1f_failsafe_cycling/results_groundtruth/discussion.md` + `confounds_groundtruth.md` (Pilot 2 result + adversarial-skeptic pattern as exemplar)
+- `pilots/1f_failsafe_cycling/PILOT_groundtruth_validation_PRE_REGISTRATION.md` (Pilot 2 pre-reg as template — same locking discipline)
+- `audits/v09.md` (whatever v09 produces — Tier-1 fixes Cowork applies must be honored)
+
+---
+
+## Brief 3: Latent Olympics Stage 1 design exploration — INCOMING (Claude Code, AFTER Brief 1 + Brief 2)
+
+**Marked as INCOMING / queued. Wait for v09 ratification AND Stage 2 census result-commit before starting. ~6-10 hours focused work when activated.**
+
+### Pav's verbatim Latent Olympics steers (preserved as load-bearing context)
+
+**Steer 1 — the rule-of-three sharpening (2026-06-07):**
+
+> *"it was a suggestion, but the function counts, 3 in the minimum max is all but the 3 are derived from the n list, rated by how wide spead they are, utility, legacy alignment and scientific riggor. its a dream to fact horse race dynamic"*
+
+(Context: Pav sharpening Cowork's loose "hold three" interpretation into a selection-mechanism + horse-race-dynamic with four explicit rating dimensions.)
+
+**Steer 2 — the Latent Olympics scope expansion (2026-06-07):**
+
+> *"3 is one way to organise it could be top 10 top 100 or top via category (which would be interesting to populate as it would force a search under some rocks to populate it and be an engaging thing for community to get involved and populate their own plenty of theory's conjectures ) the rating needs to be sussed out quantified tried and defined with candidates pool , and also the rankings, each one like a separate sport in a category or field event. latent Olympics - a race to the top with linage and heritage as a base. thinking that would be the agnostic internet hook, one of them at least"*
+
+(Context: Pav scoping the rule-of-three beyond hypothesis-selection into publicly-engageable infrastructure — multiple events / categories, each like a separate sport with its own scoring discipline, ranked top-N per event, with lineage/heritage as base, race-to-the-top dynamic, community-populated. Pav's framing: agnostic internet hook.)
+
+**Steer 3 — handoff framing (2026-06-07):**
+
+> *"yes lets pass it on to claude cause with my providence, while we finish up the other bits in line and mark it as incoming."*
+
+(Context: Pav routing Latent Olympics work to Claude Code with provenance preserved, while v09 + Stage 2 census are the "in line" bits that go first.)
+
+### Stage 1 framing — design exploration, NOT build, NOT canon
+
+This is **conjecture-surface + design exploration** for the Latent Olympics infrastructure concept. NOT a build round. NOT a canon-compilation round. NOT a new mode-page being shipped. Stage 1 produces a design-sketch file that surfaces operationalizations + design questions for Cowork+Pav to steer before any actual build. Same disciplined-staging pattern as the adversarial Bar A Stage 1 → Stage 2.
+
+### Stage 1 deliverables
+
+**Step 1: Operationalize the four rating dimensions (~2 hours).** For each — spread, utility, legacy alignment, scientific rigor — propose:
+- A measurable definition (what specifically is being scored)
+- A computation method (semantic-embedding distance for spread; what for utility; canon-stack-composition score for legacy alignment; cont 27 §2 tier-criteria for rigor)
+- Failure modes (how each dimension could be gamed or collapse)
+- Whether the four are independent or composite (and if composite, what the underlying axis is)
+
+**Step 2: Sketch 3-5 candidate events / categories (~2 hours).** Two axes Cowork's interpretive read surfaced (domain × structural-pattern), but Claude Code should expand. For each event:
+- What conjectures populate it (3-5 example entries — Tier 1 anchors + Tier 2 candidates + Tier 3 speculations)
+- What the event-specific rating-dimension weights would be (rigor weights higher in physics events; legacy alignment weights higher in philosophy events; etc.)
+- What Tier 1 anchors exist (without anchors the event becomes pure speculation marketplace)
+- What the "race" would actually look like over time (1-year horizon: what would graduating from Tier 3 to Tier 2 look like for that event)
+
+**Step 3: Apply adversarial-substrate-dynamics taxonomy recursively (~2 hours).** Latent Olympics IS itself a substrate the adversarial-substrate-dynamics candidate predicts will grow a beneficiary-bearing niche. Apply all six sub-primitives (canon hijacking / memetic warfare / bad-faith rendering / L0 mediator capture / suppression dynamics / asymmetric wrapper-overlap) to Olympics architecture:
+- Canon hijacking: who controls the rating function? What's the kernel-canon-protocol-function for Olympics scoring?
+- Memetic warfare: coordinated entry-flooding / coordinated rating-manipulation
+- Bad-faith rendering: entries presenting as one discipline while running another (cross-event interference)
+- L0 mediator capture: the rating algorithm + the legacy-alignment canon = the L0 mediator
+- Suppression dynamics: deplatforming entries / events
+- Asymmetric wrapper-overlap: extractive entries that game rankings without contributing
+
+For each: what's the design defense? This is the Olympics' anti-gaming architecture, derived from the framework's own adversarial taxonomy. **The strongest reason to build Olympics is that it's a worked example of the framework's adversarial taxonomy applied to its own infrastructure.** The strongest reason NOT to build it half-formed is that it would immediately demonstrate the taxonomy at the framework's own expense.
+
+**Step 4: Anchoring + lineage architecture (~1 hour).** Cont 18 procedural lineage provides the heritage base. Sketch how lineage shows up in Olympics: every entry has provenance trail (what tradition / which prior conjectures / what canon it composes with). Lineage-richness is itself rate-able. Sketch the architecture for entries-without-provenance vs entries-with-deep-provenance.
+
+**Step 5: Honest design-questions report (~1-2 hours).** Land as `candidates/latent_olympics_DESIGN_SKETCH.md` §6 (new working file; NOT mode-page; NOT canon; sibling to the adversarial-Bar-A sketch). What design questions need Cowork+Pav steer before any actual build? What are the strongest reasons to build vs not build vs build a narrower v0?
+
+### Hard discipline guardrails for Brief 3
+
+- **DO NOT build anything.** No live ranking system. No actual /olympics/ mode-page. No interactive prototype. Stage 1 is design-sketch only.
+- **DO NOT compile to canon.** Latent Olympics is a Tier 3 candidate infrastructure concept; stays Tier 3 until Stage 2 (eventual prototype) lands.
+- **DO NOT write a continuation.** Lesson 8 still binds.
+- **DO NOT modify candidate docs or canon files.** Sketch is the new working file; everything else untouched.
+- **DO NOT promote rule-of-three or Latent Olympics to canon** in this session. Surface as design-conjecture; Cowork+Pav decides whether Stage 2 (build) ever happens.
+- **DO apply the adversarial-substrate-dynamics taxonomy to Olympics architecture honestly.** If the recursive application surfaces serious anti-gaming design problems, report them — that's the right answer, even if it means "don't build it without solving X first."
+- **DO honor Pav's "agnostic internet hook" framing** as a design constraint — Olympics is potentially infrastructure for public engagement with framework discipline. Design it so the public-engagement function is actually load-bearing, not vestigial.
+
+### Output
+
+- `candidates/latent_olympics_DESIGN_SKETCH.md` (~4,000-6,000 words) with §1-6 above
+- HANDOFF refresh
+- CHANGELOG entry — narrower factual register
+- NO timeline entry yet (design sketch isn't canon-event)
+- NO JSON endpoint bumps
+
+### For Cowork next session (after Brief 3 design sketch lands)
+
+- Review the design sketch with Pav
+- Pav decides: (a) Stage 2 — build a minimal prototype to test the design; (b) refine Stage 1 design (add events, sharpen ratings, deepen anti-gaming); (c) park as Tier 3 design conjecture, never build
+- Audit v10 (2026-06-22 target, 15-day cadence from v09 if v09 runs 2026-06-08) verifies discipline held across all three briefs
+
+---
+
+## Last Claude Code session (2026-06-07) — observer-agnostic model · IT spine · the §5.1 falsifier result · phantom-sense · rule-of-three
 
 ---
 
