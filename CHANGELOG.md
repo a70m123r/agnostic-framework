@@ -8,6 +8,18 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-06-07 — Observer-agnostic model · IT spine · the §5.1 falsifier result · phantom-sense + rule-of-three (Stage 1 cont.)
+
+Large Tier-3 development round on the adversarial-substrate-dynamics sketch + dataset + atlas (much Pav-steered, providence inline). **Nothing compiled to canon; candidate stays Tier 3; convergence list stays 9.**
+
+- **Dataset 73 → 141** (`candidates/bar_a_sketch_data/adversarial_examples_dataset.json`), web-verified across all domains, zero fabrications: + games, ants↔warfare, combative sports, fungi, plants, microbial, existence-deception, the social scale-up tiers, economic/cyber. **Observer-agnostic outcome model** (structural type + per-frame valence with **named** third parties, never a humanity-default "commons", + a `symmetric` flag), replacing the POV-biased `outcome.type`.
+- **`adversarial_atlas.html` rebuilt to v3** — six coordinated views (timeline, evolution tree, observer-frame outcomes, stratosphere, knowledge graph, radar); runtime-verified in-browser. **New `adversarial_atlas_3d.html` + `build_viz_3d.py`** — self-contained 3D explorer, four layouts with three structural axes each.
+- **Six new Tier-3 sketch folds:** **§IT** information-theoretic spine (C0.2 = leverage n·KL/−log a(s) > 1; externalized cost = induced KL; deceivability = ∇KL; auditor PASS, computation-verified); **§5.1-R** the gating falsifier RUN → strong full-spectrum claim **falsified and bounded** to substrates with a unit of selection (clean negatives: stellar structure, dissipative structures, nucleosynthesis), with Pav's **canon-relative** reframe of the floor as fertile conjecture-ground; **§C2.2-B** deceivability gradient bounded (molecular `none` floor, biological `sequence` ceiling); **§PS** phantom-sense (canon-compass + spawn/sense dual, grounded in active inference); **§RS** the competing-realities q-reframe developed by the **rule of three** (three loci in open competition, no winner); **§3.3-T** transposition-as-triad (the latent/observational channel).
+- Built via ~11 dynamic workflows (develop/scout → adversarial verify → synthesize), each independently verified; cross-workflow convergence (the molecular deceivability floor found three independent ways).
+- **For Cowork / audit-v09:** the bounded-claim amendment retires the strong full-spectrum reading — verify it; the rule-of-three is a candidate method-principle; retroactive triplication of existing single conjectures is a flagged larger project. Next empirical step: the outcome-blind base-rate census. See the HANDOFF 2026-06-07 block.
+
+---
+
 ## 2026-06-06 — Adversarial-function full-spectrum sketch (Stage 1; Pav-steered conceptual-first reframe)
 
 Stage-1 sketch for the adversarial-substrate-dynamics candidate, reframed by Pav from the briefed 6-substrate internet correlation into a **conceptual-first, full-spectrum** treatment (viroid → cosmic + latent). **Tier-3 exploratory; nothing compiled to canon; candidate stays Tier 3; convergence list stays 9.**

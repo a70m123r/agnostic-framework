@@ -1,8 +1,31 @@
 # HANDOFF — Cowork → Claude Code
 
-**Last updated:** 2026-06-06 by Claude Code session — the adversarial-substrate-dynamics candidate's Stage-1 sketch was built out (full-spectrum, conceptual-first, Pav-steered) plus an enriched 73-example dataset and an interactive atlas. Session block immediately below.
-**Next session:** Cowork — review the Stage-1 sketch (`candidates/adversarial_substrate_dynamics_BAR_A_SKETCH.md`) + atlas (`candidates/bar_a_sketch_data/adversarial_atlas.html`) with Pav. Decide the §8 positioning question (what to claim novel vs cite-up-front) and whether any §4 surfaced channel — esp. the framework-wide observer-definition (§4.B) — warrants a dedicated continuation. NOTHING this session is compiled to canon; candidate stays Tier 3; convergence list stays 9.
-**Pinned task:** none — Stage 1 substantially delivered (as a Pav-steered conceptual-first reframe of the briefed empirical Bar A). The empirical internet-correlation Bar A survives as one §6 test-hook; locked Stage 2 (falsifier pre-reg) remains a separate later task if Pav steers there.
+**Last updated:** 2026-06-07 by Claude Code session — a large development round: observer-agnostic outcome model, 141-example dataset, a 6-view + a 3D atlas, an information-theoretic spine, and the **gating §5.1 falsifier RUN → the strong full-spectrum claim is falsified and now bounded to substrates with a unit of selection (canon-relative)**. Session blocks below (2026-06-07, then 2026-06-06).
+**Next session:** Cowork — review with Pav, and **audit-v09 should verify the bounded-claim amendment (§5.1-R)** and the new Tier-3 folds (§IT spine, §C2.2-B gradient bounds, §PS phantom-sense, §RS three-loci + rule-of-three, §3.3-T latent-transposition). Decide §8 positioning + whether the observer-definition (§4.B) and the **rule-of-three method principle** warrant dedicated continuations. NOTHING compiled to canon; candidate stays Tier 3; convergence list stays 9.
+**Pinned task:** none — but the key next *empirical* step is the **outcome-blind, effort-detrended base-rate census** (the dark-matter test that would move the bounded claim past "conjecture"). The internet-correlation Bar A still survives as one §6 test-hook.
+
+---
+
+## Last Claude Code session (2026-06-07) — observer-agnostic model · IT spine · the §5.1 falsifier result · phantom-sense · rule-of-three
+
+A large round, all Tier-3 / surfaced-not-compiled, much of it Pav-steered (providence noted inline in the folds).
+
+**Data + atlas.**
+- Dataset grew **73 → 141** (web-verified, all domains PASS, zero fabrications): + games, ants↔warfare, combative sports, fungi, plants, microbial, existence-deception specials, the social scale-up tiers (pair→civilisation), economic/cyber.
+- **Observer-agnostic outcome model** (Pav's catch — the old `outcome.type` smuggled a Western/defender POV): every outcome is now `structural` (observer-independent) + per-frame valence (beneficiary / target / **named** third parties — never a "commons" standing in for humanity) + a `symmetric` flag.
+- **`adversarial_atlas.html` v3** — six views (timeline; evolution tree w/ evolution-step spurs + the new **latent-transposition** edge; observer-frame outcomes; **stratosphere** concentric shells, human band emphasised; **knowledge graph**; **radar** rung-profiles). Runtime-verified in-browser. **New `adversarial_atlas_3d.html` + `build_viz_3d.py`** — self-contained 3D explorer, four layouts (scale×time×deceivability · beneficiary×target×third · lag-horn · deceivability×symmetry×outcome).
+
+**Six new Tier-3 sketch folds.**
+- **§IT — information-theoretic spine** (Pav's "lean on information theory"): C0.2 is now computable — externalized cost = induced **KL(p‖q)**; the beneficiary boundary = **leverage = n·KL/−log a(s) > 1** (neutral entropy has no such ledger); deceivability = ∇KL (d′↔KL bridge to signal-detection theory). Auditor PASS, math computation-verified; delta conceded vs Bayesian persuasion + the free-energy principle.
+- **§5.1-R — the gating falsifier, RUN.** Strong full-spectrum claim **falsified**; clean negatives (single-star structure, dissipative structures, nucleosynthesis). **Bounded claim:** the niche appears wherever there's a **unit of selection (heredity the gate)**, not below. Pav's reframe: "switches off" is **canon-relative** (the fuzzy edge = fertile conjecture-ground: many-worlds, vacuum selection, Smolin CNS), not a hard floor.
+- **§C2.2-B — deceivability gradient bounded:** floor = molecular `none` (no model q → deception *undefined*; mode-i vs mode-ii); ceiling = biology tops at `sequence` (the `time` register needs a ledgered future = cognition). Predict-workflow + IT-spine converged on the floor independently.
+- **§PS — phantom sense** (Pav's coinage): the canon-compass = the model q honed by experience/evolution/environment; the spawn-vs-sense dual; existence-deception as candidate register; grounded in active inference, delta conceded.
+- **§RS — competing realities + the rule of three** (Pav's two conjectures): the **q-reframe** (reality is the *output* of competing candidate-realities competing for externalisation + establishment), developed BY the **rule of three** (always 3, evolve toward legacy; Chamberlin 1890) into three surviving loci (world-making / selection-among-futures / performative), **no winner crowned**.
+- **§3.3-T — transposition is a triad:** the ant↔warfare case forced **latent transposition** (observe→internalise→metaphor; Regnier & Wilson's "propaganda substances" = the bidirectional-naming evidence) between transposition and convergence.
+
+**Method:** ~11 dynamic workflows (develop/scout → adversarial verify → synthesize), each independently verified; the molecular deceivability floor was found three independent ways (cross-validation).
+
+**For Cowork / audit-v09:** the bounded claim **retires the strong full-spectrum reading** — verify it. The rule-of-three is a candidate method-principle (worth a continuation). Retroactive triplication of existing single conjectures is a flagged larger project. Candidate doc untouched; convergence list stays 9; nothing compiled to canon.
 
 ---
 

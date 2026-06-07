@@ -678,6 +678,310 @@ Convergent honest verdict across domains: **no one has built a substrate-general
 
 ---
 
+## §IT — The information-theoretic spine
+
+**Status:** Tier-3 **exploratory** section-fold. `[surfaced — NOT compiled]` Nothing here is promoted to canon; the convergence list stays where it is. This fold does one job: it **re-describes the §0 keystone definitions in the native units of Shannon/Bayes**, so that the framework's eyeball verdicts (this is more deceptive, that observer is more corruptible) become *portable estimands* with explicit error bars rather than intuitions. The math below is **borrowed and correct, not discovered** — see the reinvention check; the honest delta is narrow and stated there.
+
+**Pav's steer (provenance, 2026-06-06, preserved):** the decision to *"lean on information theory — the phantom sense is the observer's predictive model q of reality p, honed by experience/evolution/environment; the adversarial dual is SPAWN a phantom (move q away from p) vs SENSE-and-dodge/parry,"* anchored on four identities Pav put on the table: `information = -log2 p`, `H = Σ p(-log2 p)`, `H(p,q) = Σ p(-log2 q)`, `KL = H(p,q) - H(p)`. This fold is the development of that steer. The single load-bearing identity — **KL(p‖q) = H(p,q) − H(p)** — is verified exact; it is the spine of everything below.
+
+---
+
+### C-IT-1 — The adversarial function in information units. `[Tier 3]` `[grounding: §0 C0.1; KL = excess code-length (Cover & Thomas); Landauer kT ln2 floor]`
+
+Read §0's *"capture fitness from a substrate's compiled order while externalizing the maintenance cost"* as a **two-ledger split denominated in bits**. "Compiled order" = a low-entropy, structured source distribution `p_S` that is expensive to build and hold (the framework's energy-floor `E_S`, cont 27 §1, read information-theoretically: maintaining one bit of order against the second law costs ≥ `kT ln2`, Landauer). The adversarial map routes captured negentropy to a beneficiary **while assigning the maintenance-bit-cost to a node that is not the beneficiary**.
+
+What information theory **rigorously supplies** is the *cost* ledger (bits/energy to hold order; Landauer floor is strictly positive and separable) and a clean notion of *order captured* (reduction in the beneficiary's conditional entropy given the substrate). What it **cannot** supply is the *sign of value* — "fitness"/"benefit" is exogenous to IT. So C0.1 is a **well-posed framing** (two separable bit-ledgers), **not a derived theorem**; it needs C0.2's beneficiary predicate to become non-vacuous. `[fuzzy — IT gives the cost side rigorously and the benefit side not at all]`
+
+> *test-hook:* for any admitted adversarial case, write the two ledgers in bits (negentropy captured by B; maintenance-KL/Landauer-cost borne by S's other participants) and check they have **different owners**. Same owner ⇒ not externalized ⇒ reclassify (cf. §0 C0.2 audit pass).
+
+---
+
+### C-IT-2 — The beneficiary boundary as a cheap-to-send / costly-to-hold asymmetry. `[Tier 3]` `[grounding: §0 C0.2; KL = excess held-cost; Kraft–McMillan emit-cost; this is the most defensible quantitative claim in the fold]`
+
+This is the strongest mapping and the math genuinely supports it. Cast the two costs C0.2 already distinguishes (damage vs who-pays) as two divergences:
+
+- **Target's externalized burden** = the **induced KL it carries**: KL(p‖q_target) = H(p,q_target) − H(p) is, theorem-for-theorem, *the expected extra bits the target spends because it models reality as q instead of p*. Every decision it makes is inflated by KL bits per sample. Over a behavioural horizon of `n` samples the burden is **n · KL(p‖q_target)** — a *recurring* cost.
+- **Attacker's emit cost** = description length to send the deceptive signal: **L_send = −log2 a(s)** bits under the adversary's emission distribution `a` (Kraft–McMillan optimal-code bound; exact for dyadic `a`, else within +1 bit/symbol — state the caveat). A *one-time* cost.
+
+The crisp, defensible core: **adversarial leverage = n · KL(p‖q_target) / L_send**. Because the target's cost scales with `n` while the send cost is paid once, **leverage grows without bound in n**. This is the precise statement of "cheap to send, costly to hold," and it operationalizes C0.2: a **localized beneficiary exists exactly when this ratio exceeds 1 for some party** (someone nets bits). **Neutral entropy increase has no such accounting node** — entropy rises, but no ledger books the gain, so the leverage ratio is *undefined*. That is the same cut §0 C0.2 draws by hand (beneficiary vs. neutral failsafe-stressor), now with a number attached. `[Tier 3 — the IT object matches C0.2's hand-drawn cut; it does not prove C0.2]`
+
+Honest caveats, all real: (i) KL(p‖q) scores the target's errors against the *true* p; if the target only sometimes acts on the corrupted region, use the **restricted/conditional KL** over the action-relevant sub-σ-algebra (smaller, sometimes zero). (ii) **`n` is ecological, not information-theoretic** — the per-sample KL is IT, the multiplier `n` is the framework's "behavioural horizon" and IT does not provide it. (iii) −log2 a(s) is the adversary's *self*-cost only if it is an efficient coder over its own repertoire; "cost to be believed" ≠ "cost to build" — two different ledgers (a state actor can cheaply emit what a naive target finds astronomically improbable). `[fuzzy]`
+
+> *test-hook:* on a rung where q is instrumented (latent/algorithmic), estimate n·KL(p‖q_target) (held-cost) and −log2 a(s) (emit-cost) and check leverage > 1 for the beneficiary and *undefined* for a matched neutral-decay control (e.g. model collapse with no profiting actor, cf. §2A.4 boundary-flag).
+
+---
+
+### C-IT-3 — Phantom-sense GROUNDED in free-energy / active inference (not asserted). `[Tier 3]` `[grounding: Pav's phantom-sense steer; Friston FEP / active inference; cross-entropy minimization = learning]`
+
+The fold's job here is to **derive** the phantom-sense claim from existing math rather than assert it. Phantom-sense / canon-compass **= q**, the observer's predictive model honed to approximate p. Two results make this literal, not metaphor:
+
+1. **"Honed by experience/evolution" = cross-entropy minimization = driving KL→0.** Rigorously, `argmin_q H(p,q) = argmin_q KL(p‖q) = p`, since H(p) is fixed w.r.t. q. So learning/evolution calibrating the compass over a lifetime *is* gradient descent on cross-entropy — "honed by experience" reads verbatim as "drove KL toward 0." The compass's *quality* = −KL(p‖q) (0 = perfect).
+2. **The free-energy bridge** is the cleanest existing home for Pav's "move the target's q off p." In Friston's FEP, q is the recognition density, p the generative truth, and variational free energy **F = surprisal + KL(q‖p) = E_q[−log p(s,ψ)] − H[q]**, with minimizing F = minimizing KL(q‖p). Then: **SPAWN a phantom = adversarially raise another agent's F** (push its q off p); **SENSE-and-dodge/parry = minimize your own F** (perception updates q toward p; action resamples the world to confirm predictions). Active inference already contains *both halves of Pav's dual within one agent* — the framework's contribution is naming them as a conjugate pair and weaponizing it *cross-agent*.
+
+**Honest math correction (do NOT overclaim):** the FEP "free energy = energy − entropy" line is a **cousin of, not identical to**, the textbook "KL = cross-entropy − entropy." FEP uses the *joint* and **H[q]** (entropy of the approximate posterior), the textbook identity uses one ordered pair and **H(p)**. Write it as *"free energy = surprisal + KL(q‖p) = a model-vs-reality divergence plus an irreducible floor"* — **not** the bare "cross-entropy minus entropy" gloss, which is heuristic. `[fuzzy — same spirit, different algebraic line; flagged so the fold doesn't equate them verbatim]`
+
+The SENSE/SPAWN dual has a **theorem forcing its shape**: the **Data Processing Inequality** (holds for all f-divergences). For the Markov chain reality → signal → target's-update, post-processing by the target *cannot increase* divergence about reality — **you cannot deceive a correct Bayesian with no input**. Consequence: SPAWN is necessarily an act on the **channel/source** (emit a biased signal / spoof an observation), never a purely internal nudge. This is *why* C-IT-2's attack cost is "bits to emit." The pieces are consistent: DPI is the theorem that forces the externalized-signal picture. `[Tier 3 — DPI is a genuine theorem; the cross-agent weaponization is the framework's lens, not Friston's claim]`
+
+> *test-hook:* model a target as a Bayesian/active-inference updater; confirm (a) no admissible internal computation raises its KL(p‖q) without an injected signal (DPI), and (b) a spoofed-likelihood signal does. A "deception" that needs no channel injection would break the SPAWN-acts-on-the-channel claim.
+
+---
+
+### C-IT-4 — The four registers as four coordinates of q displaced off p. `[Tier 3]` `[fuzzy — orthogonal only under a fixed factorization; grounding: §2.2 deceivability registers fact/time/sequence/existence]`
+
+Factor the target's joint model over labelled, time-stamped, ordered, support-flagged events into **(support) × (value-marginals) × (temporal-marginal) × (dependency-conditionals)**. The framework's four registers are then four *axes* along which an attack moves q off p:
+
+| Register | Coordinate displaced | IT object | Note |
+|---|---|---|---|
+| **Fact** | value-marginal q(value) | KL on the value-marginal; −log q(true_value) inflates | pure mislabeling |
+| **Time** | temporal-marginal q(t), q(latency) | KL on the temporal marginal; corrupts the point-process intensity → mis-discounting, wrong arrival prediction | clock/rate model wrong |
+| **Sequence** | conditionals q(x_k\|x_<k) and their order | KL between true and modeled **chain/joint**; equivalently corrupting transfer entropy / directed information | strictly richer — can leave *every marginal correct* and still drive KL>0 by permuting dependence (same histogram, wrong Markov structure) |
+| **Existence** | the **support** of q | move mass off a state p has (q→0 where p>0) ⇒ **KL→∞**; or onto a phantom state p never produces | the **only register that makes the held-cost term diverge** |
+
+The existence register is the most powerful precisely because **KL is unbounded under support mismatch** (verified: KL = ∞ if q(x)=0 while p(x)>0) — "you didn't even know this category could happen." This is the IT face of §2.2's claim that existence-deception is the deepest corruption. **Two honest fixes** are mandatory there (see open_gaps): a raw +∞ is false precision. `[fuzzy]`
+
+**Honest note:** these four are non-overlapping **only** under a fixed factorization. Real attacks mix coordinates. The decomposition is a defensible **basis choice**, not a theorem that attacks must be pure. `[fuzzy]`
+
+> *test-hook:* take a documented attack and decompose its induced KL onto the four coordinates; check the registers are separable for that factorization (or honestly report the cross-terms). A register that cannot be isolated for any natural factorization weakens the four-way split.
+
+---
+
+### C-IT-5 — Stealth vs. damage as two competing divergences. `[Tier 3]` `[grounding: DPI/SDPI; the precise meaning of "a convincing phantom"]`
+
+A SPAWN move has **two divergences in tension**: **KL(p‖q_target)** = damage inflicted (want large) and **KL(a‖p_honest)** = detectability of the lie, the divergence between how the liar emits (`a`) and how an honest source would emit (want small). *"Spawn a convincing phantom"* = **maximize induced KL(p‖q_target) per unit KL(a‖p_honest)** — cheap, stealthy, high-damage attacks live at high deceivability-gradient operating points. This also gives the framework's **detectability = leaked-incongruity in bits**: the residue the deceiver cannot hide, KL( p(U\|C) ‖ q_dec(U\|C) ) on the channels U the target monitors but the attacker does not control (the information-theoretic reading of the Whaley–Jones rule that creating a deception creates the clues to detect it; ≥2 incongruities ⇒ ≥2 nonzero leakage terms). `[Tier 3]`
+
+> *test-hook:* the natural unsolved formalization (open) — solve "maximize induced KL(p‖q_target) subject to fixed detectability KL(a‖p_honest) and a fixed emit budget" as a Lagrangian / rate-distortion-style damage-vs-stealth tradeoff. The framework currently has no closed-form optimal-attack; this is the single most valuable missing piece (see open_gaps).
+
+---
+
+### C-IT-6 — The portable metric panel (replacing eyeball judgments). `[Tier 3]` `[grounding: synthesizes C-IT-1..5; verified gold-standard rows: adversarial-example softmax, poker pot-odds]`
+
+The deliverable Pav asked for — five in-principle-computable quantities, each tagged with where it is **exact**, **order-of-magnitude**, or **breaks**:
+
+| Metric | Definition (bits) | Where it is sharp / where it breaks |
+|---|---|---|
+| **Deception magnitude** | D_mag = KL(p‖q₁) − KL(p‖q₀) (induced change) | **same object** as externalized cost, read as a *change* not a *level* — do not present as independent |
+| **Externalized cost** | C_ext = KL(p‖q₁) per observation (×n; ×kT ln2 for energy) | charge **only the KL**, not full cross-entropy — H(p) is nature's noise, double-counting it is an error. Upper-bounds *realized* cost (which is KL only under log-loss; else use matched **decision regret**) |
+| **Deceivability** | sup over budget-B signals of KL(p‖q_after(s)); governed by **precision** Π=[Cov(err)]⁻¹ | for equal-variance Gaussians **KL = d′²/2 nats** (the d′↔KL bridge — ties to the standard, estimable sensitivity index d′ = z(hit) − z(false-alarm)). **Breaks for unequal variance** (use full Gaussian KL, asymmetric). Must be defined *relative to a budget* or it is +∞ at the existence rung |
+| **Attack cost** | C_atk = −log2 q_legit(s) (cost **to be believed**) | code-relative (MDL surrogate; Kolmogorov DL uncomputable). ≥ D_mag in the honest channel; C_atk ≪ D_mag **only** when the attack exploits the target's *own* priors — the sharp version of "the mark wants to believe" |
+| **Detectability** | C_det = KL( p(U\|C) ‖ q_dec(U\|C) ) on monitored uncontrolled channels U | detectability **in principle** (bits leaked), not in practice (bits used). Monitoring-policy-relative — a joint property, not attacker-only |
+
+**The deceivability gradient (§2.2 / C2.2) = the represented-ness of q**, recovered independently from the pilot's six dataset rows and matching the dataset's own `register` field: *no-q (KL undefined)* < *scalar fact* < *joint/sequence* < *existence/counterfactual* < *shared-population q*. Two **distinct optima** appear, both KL-native — a genuinely new sub-finding: **extraction attacks MAXIMIZE KL** (adversarial example: FGSM `x′ = x + ε·sign(∇ₓL)` literally ascends cross-entropy; the panda→gibbon flip injects ~10 bits of label-surprisal on a 1000-class net, ceiling log2 1000 = 9.97, for an imperceptible ε), whereas **fair-frame deception EQUALIZES EV at an indifference point** (poker bluff at frequency = bet/(pot+bet); the bettor pins the caller at indifference rather than maximizing its error — that is the definition of unexploitable). The poker row is also the clean **C0.2 control**: full KL machinery, **~0 externalized cost** (the opponent consented to a frame that prices in bluffing), therefore **non-adversarial** — confirming that **C0.2's externalized-cost term, not the mere presence of KL, is what makes something adversarial**. `[Tier 3]`
+
+> *test-hook:* run the panel on instrumented rungs (logged classifier softmaxes, solver range files, predator confusion matrices) to put error bars on the bits; on a real adversarial example all five are *derivable*, on the social rung they are order-of-magnitude only. Distinguish the two optima (maximize-KL vs equalize-EV) per case; a third optimum (maximize the target's KL about its *own* objective — reward hacking / reflexive control) is an untested candidate worth a follow-up pass across the full 141-row dataset.
+
+---
+*Auditor corrections (IT-spine verify = PASS, all math verified by computation, no fabricated citations): the panda/adversarial-example figure is illustrative — Goodfellow et al.'s actual FGSM case is 57.7% -> 99.3% (gibbon) at epsilon 0.007; the d'<->KL identity KL = d'^2/2 holds in NATS and only for equal-variance Gaussians (unequal variance -> use the full Gaussian-KL, not a function of d' alone); the free-energy principle uses the REVERSE KL(q||p) with H(q), distinct from this spine's forward KL(p||q) with H(p).*
+
+---
+
+## Phantom Sense
+
+*Tier-3 / EXPLORATORY. Foothold-tagged, surfaced-not-compiled. Nothing here is promoted to canon. Coinage and framing are Pav's — recorded with my providence.*
+
+> **PHANTOM SENSE** *(working definition, Pav's coinage).* An observer's compiled, predictive **canon-compass** that lets it project an **action space** beyond what is directly observed — the live set of moves, threats, and affordances it believes are *available to itself or to another agent* in a region it cannot see into — together with that compass's **adversarial dual**: the same model run outward to **spawn a phantom action space** inside a target, or run defensively to **sense an incoming spawn and dodge / use / parry** it.
+
+The unit of phantom sense is not a stimulus, not a fact, not a single predicted event. It is a **field of latent affordance** attributed across an unobserved region. The faculty's two outputs are the *projection* (what's live out there) and the *weaponization* (what I can make you believe is live).
+
+---
+
+### C-PS-1 — The compass exists, but as a convergence, not a named organ *(foothold: cog-sci / control theory)*
+
+The claim that an observer carries an internal model which **projects an action space it does not directly observe** is not fiction and not a single existing term. It is the convergence point of four mature programs, each of which owns one face:
+
+- **Active inference / Free-Energy Principle** (Friston) — a generative model predicts the sensory consequences of *hidden states and of its own candidate actions*; policies are scored by expected free energy (pragmatic + epistemic value). The models are explicitly "counterfactually rich" and "deep-temporal" — they project action-contingent futures that are not currently observed. This is phantom sense, mathematized.
+- **Affordance-competition / "Navigating the Affordance Landscape"** (Cisek; Pezzulo & Cisek 2016) — the brain simultaneously specifies the *set* of available actions as a continuous desirability landscape, biased by predicted outcomes, over a lifetime-built goal hierarchy. The closest mechanistic analog to "a compass over an action space."
+- **Constructive episodic simulation / prospection** (Schacter & Addis; Szpunar) — past episodes are recombined to *simulate* unobserved futures. The mechanism by which lifetime experience is compiled into a projected space.
+- **Bayesian / predictive-coding substrate** — perception = prior × likelihood → posterior; precision-weighting gates whether priors or prediction-errors drive belief.
+
+*Surfaced, not compiled:* none of these packages itself as a single sense-organ-like faculty. The **integration** is the contribution, not the parts (see reinvention_check).
+
+### C-PS-2 — Honed by three timescales: experience, evolution, environment/niche *(foothold: the three-source compiler)*
+
+The compass is *trained*, and the framework's three honing inputs each have a real, named mechanism:
+
+- **(i) Experience / lifetime learning** — Bayesian precision-weighted prediction-error minimization (slow posterior updating of model parameters) plus constructive recombination of episodic traces; in the motor domain, **forward models acquired by reps**. Documented concretely in expert action-anticipation: elite athletes run their own motor system as an internal forward model (Action Observation Network); goalkeepers who blocked more penalties read kicks better. *Phantom sense trained by reps.*
+- **(ii) Evolution / inherited priors** — **phylogenetic priors**: natural selection genetically specifies inheritable priors that constrain lifetime learning; a "primary repertoire of valuable states with innate value" is inherited (Friston 2010). Selection itself is cast as free-energy / "free-fitness" minimization over model *structure*. Evolution sets the priors the lifetime-learner starts from.
+- **(iii) Environment / niche** — **niche construction + scaffolding** (Clark): predictions "structure our worlds and alter the very things we need to predict." The affordance landscape is "defined by the geometry of the external world and changed continuously by events in the environment and the animal's own actions" (Pezzulo & Cisek 2016). A closed loop — the agent shapes the niche; the niche shapes the priors.
+
+*Foothold flag:* this three-timescale honing is itself standard **hierarchical-Bayes / meta-learning** (innate prior + learned likelihood + task-distribution meta-prior). The framework does not claim the legs are new. It claims the legs have never been **co-formalized as inputs to one action-space projector**.
+
+### C-PS-3 — The compass has a tunable threshold, and a measured failure floor *(foothold: signal-detection theory)*
+
+The tightest *exact* (non-metaphorical) formalization of the compass core is **Signal-Detection Theory**: any detection decomposes into **d′** (sensitivity — how good the compass is, bias-invariant) and a **criterion c / β** (the tunable cutoff — where you point it, set to optimize payoff given priors and costs). *d′ = compass quality; criterion = aim.* Predictive coding's **precision-weighting** is the continuous, learnable cousin — a confidence gain on each prediction error, i.e., "how much do I trust my phantom projection."
+
+This gives the framework a number and a warning:
+
+- **Failure floor.** A naive, fixed phantom sense — read concealed intent off the face (Ekman / leakage / microexpressions) — performs at roughly **54% accuracy, near chance** (Bond & DePaulo, ~200+ studies); microexpression training did not help. *Cite Ekman as the negative result that motivates the reframing, not as evidence the sense works.* Phantom sense is defensible **only** when recast as a *trained, criterion-setting, Bayesian* compass — not a fixed feature-reader.
+- **Mis-set criterion is a named pathology.** Set the criterion too liberal and the compass hallucinates threats: **hyper-mentalizing / paranoia** projects a hostile phantom action space that *isn't there* — a self-inflicted false-positive (Computational Psychiatry 2024). The boundary case lives inside the construct, not outside it.
+
+### C-PS-4 — The adversarial dual: SPAWN vs SENSE-and-dodge/use/parry *(foothold: deception theory + command theory)*
+
+The same compiled model runs two ways. This bidirectionality is the framework's spine.
+
+**(a) SPAWN a phantom action space — *existence deception*.** Make the target commit *against something that is not there*. The move is named in pieces:
+- **Bell & Whaley** split all deception into *dissimulation* (hide the real) vs **simulation** (show the false), and simulation's leaf is literally **"inventing a new reality."** Pav's fact-vs-space cut maps onto dissimulation-vs-simulation; spawn-a-phantom = the *inventing* leaf.
+- **Military doctrine** (JP 3-13.4) operationalizes it: feints, **demonstrations**, ruses, displays — "capabilities may not exist, but are made to appear so." Canonical instance: **Operation Fortitude / FUSAG**, a fictitious phantom army that pinned real German divisions defending an attack that did not exist.
+- The *offensive engine* is **Soviet reflexive control** (Lefebvre; Thomas 2004): feed an adversary "specially prepared information to incline him to *voluntarily* make the predetermined decision desired by the initiator" — drive the target's model rather than refute it. **Bayesian persuasion** (Kamenica & Gentzkow) is the rational-receiver formalization of the same prong (commit to a signal structure → install a posterior → target acts as designed).
+
+**(b) SENSE the attack — then DODGE / USE / PARRY.** The defensive prong is genuinely under-named relative to the offensive one. What exists:
+- **Whaley's counterdeception** = *incongruity analysis*, resting on the **two-clue principle**: "whoever creates a deception simultaneously creates all the clues needed for its solution" — every deception leaks ≥2 clues (one about the hidden real, one about the shown false). *Spawning a phantom necessarily emits its own tell.* In free-energy terms: the injected reality shows up as a **surprise / prediction-error spike**.
+- The richest single existing dual object is **defensive-deception signaling games / hypergames** (Pawlick, Colbert & Zhu): a defender crafts signals to install false beliefs (offense) **and** a *detector* emits probabilistic evidence when the opponent misrepresents (sensing) — but it lives in cybersecurity, not framed as one cognitive faculty.
+- The single best *cognitive* hit for "one model, both directions" is **recursive theory-of-mind** (Oey, Schachner & Vul 2019; Yoshida, Dolan & Friston 2008, "Game Theory of Mind"): one recursive-Bayesian model where a liar trades gain vs believability *while anticipating a detector who is modeling the liar*. Same model spawns and senses.
+
+*Anti-over-claim:* existing work gives **detect-then-defend** (signaling games) and **detect-then-discount** (Oey). The **dodge / use / parry trichotomy** — sense the phantom, then evade it, *turn it back on the spawner*, or *counter-deceive* — is surfaced here as a strategy-class distinction, **not** something the literature has written down.
+
+### C-PS-5 — Existence deception as a candidate new register *(foothold: the framework's register set)*
+
+The corpus already organizes deception by the dimension it corrupts — **fact** (mis-state what is true), **time**, **sequence**. C-PS surfaces a *candidate* fourth register, offered **not promoted**:
+
+> **EXISTENCE DECEPTION** — corrupt the target's belief about *what action space exists at all*, so they act inside a space with no referent — distinct from mis-stating a fact *within* a real space.
+
+The negative result is the whole point of flagging it: a direct search of deception-taxonomy literature for "existential deception" / "deception about existence" **returns nothing as a labeled, first-class construct**. Bell-Whaley's *inventing* is the nearest leaf but is never elevated to a register with a defensive dual. So the register is **coinable, unclaimed white space** — which is exactly why it stays Tier-3 and unpromoted until pressure-tested against the existing fact/time/sequence cuts.
+
+### C-PS-6 — Already cross-rung in the corpus *(foothold: the Agnostic Framework's observer-agnostic ladder)*
+
+Phantom sense is not a new island. It is *already* the hidden mechanism behind conjectures across the rungs — which is the strongest internal evidence that it is real-but-unnamed:
+
+- **Cosmic rung — dark-forest as a phantom reasoned into being.** The dark-forest equilibrium is the limit case: an action space (a hostile civilization's strike) projected *purely from priors*, with **zero direct observation**, that then *drives real action* (the pre-emptive strike). The phantom and the response are co-generated by the compass alone. Existence deception at cosmic scale needs no deceiver — the observer spawns the phantom *in itself*. (Cross-link to the dark-forest conjecture; cf. the hyper-mentalizing failure mode in C-PS-3 — same shape, civilizational gain.)
+- **Cognitive-social rung — gaslighting / cons / merchants-of-doubt / reflexive control.** These are existence-deception *installed in another mind*: the con's **"convincer"** (staged proof the false world is real, Konnikova), **gaslighting** (corrupt the victim's reality-prior until they distrust their own compass), **merchants-of-doubt / FUD** (manufacture a doubt-*space* that has no referent), and **reflexive control / active measures** as the state-scale engineering of a false reality. Each is a named slice; phantom sense is the shared object underneath.
+- **Embodied rung — combative-sports feints.** The fully embodied instance, with experimental grounding (Raffan, Mann & Savelsbergh 2024): a **feint** spawns a phantom action space ("make them expect a jab when a hook's on its way"); **deceit** (false intention) vs **disguise** (concealed intention) is a motor-domain re-derivation of Bell-Whaley's simulation/dissimulation. *"Ring IQ"* = the tuned compass; *"tells"* = Whaley's two-clue leak, embodied; *"ring generalship"* = controlling tempo to keep the opponent's compass a beat behind (Boyd's OODA, ringside). Experts are *less* susceptible but **not immune** — and can be *more* fooled when over-reliant on a faked cue (the criterion exploited at its blind spot).
+
+*The ladder claim (Tier-3, unpromoted):* the **same loop** — compiled-priors → project action space → act / spawn / parry — appears to run at every rung, from a cell reading a gradient to a civilization reading a silent sky. The framework's bet is that phantom sense is **observer-agnostic**. That bet is surfaced here, not demonstrated.
+
+---
+
+*Status: EXPLORATORY. Footholds named per conjecture. No promotion. The defensible core is the unification and the action-space-as-primitive (see reinvention_check); the open territory is candid below.*
+
+---
+*Auditor correction (phantom-sense verify = PASS, no fabrications across ~16 checked): the 'two-clue principle' is the Whaley-Jones law (R.V. Jones with Whaley), not Whaley alone — primary source confirmed; Whaley's own contribution is the two-incongruity corollary.*
+
+---
+
+# Three Loci of Establishment — A Tier-3 Fold (surfaced, not compiled)
+
+**Framing (Pav's providence — see `credited_to_pav`).** Two of Pav's conjectures frame everything below. **(Q) The Q-reframe:** there is no single given reality *p* that an observer's model *q* chases; the observer's action space holds a *population of competing candidate-realities* (counterfactuals, "all the things that could have been") that compete to be **externalised** and **established** as standing canon. Reality is the *output* of that competition, not its input — the candidate that won. The adversarial function biases *which* candidate gets established. **(R) The Rule of Three:** the framework holds **three** competing conjectures — not one (premature establishment), not two (false binary) — that compete and *evolve*, the method instantiating the thesis (see `rule_of_three_statement`).
+
+Below are the three evolved conjectures, each a distinct **locus of establishment** answering one shared question — *where does the won candidate-reality become real?* — with three irreducible answers: **in the deed (A), in the populated substrate over time (B), between the minds at the tipping point (C).** All three remain live. None is crowned (see `open_competition_note`).
+
+---
+
+## CONJECTURE A — WORLD-MAKING (enactive / constructivist locus)
+**Evolved form: the Defection-Closure criterion.**
+
+**One-line claim.** Establishment is something **one Markov blanket DOES** with its effectors: reality-for-an-agent is the **action-sustained fixed point** its own non-defecting effectors carve and re-supply. Take active inference's action-half literally — alongside "change *q* to fit the world" there is a second, equally primitive move, "change the **world** to fit *q*." The competing candidate-realities live *inside one agent* as competing policies/preferences; the winner is the candidate *q\** whose policy the blanket actually executes, dragging the sensorium and (through sustained action) the material world into the configuration *q\** predicts.
+
+**Substrate / locus.** The closed sensorimotor loop of **one Markov blanket**, plus the local matter it has acted on. Agent-indexed, substrate-local, **no shared ledger**.
+
+**Key evolution (what the critique forced).** The boundary-collapse dilemma (Markov blankets nest, so "one agent" looked like a free modeling choice) is answered by **defection-closure**: the A-locus is exactly wherever there is one *undivided active-state set whose effectors cannot internally disagree/defect*. A nation/firm/crowd is **not** one blanket — its "effectors" are sub-agents who can defect, and defection is precisely what B and C operate on. So the criterion *sorts* cases rather than conceding them.
+- **Enacted-vs-felt line** (closes the wishful-thinking charge **intrinsically**): *q\** is enacted-true iff clamping **this** blanket's own effectors, `do(action=∅)`, makes the confirming exteroceptive sensation **cease** (the world reverts). Felt-true/delusion persists under the clamp. No borrowed B-trace or C-observer required.
+- **Adversary = capture, not deception.** The adversary edits the **C-vector** (prior preferences) and lets the victim's *own hands* build a self-ratifying world. Conceding that preferences are learnable (the critique's blow), A *re-inverts* it: once the world is materially changed, the now-genuinely-confirming sensation **re-trains** the prior in the adversary's direction. Result — the **deception** attack (B/C's channel) is *channel-resident* and reverts when the attacker stops; the **capture** attack is *autocatalytic* and **the attacker can leave**. Capture is A's strongest organ, not its weakest.
+
+**Falsifier (conjunction — each conjunct alone is escapable).** Established **∧** action-sustained (`do(action=∅)` reverts it) **∧** exteroceptively real (not just interoceptive) **∧** agent-indexed (two co-located blankets sustaining *different* entrenched worlds via divergent action-histories) **∧** defection-closed (effectors are one undivided set). Sub-falsifiers: if pure false-**evidence** capture *persists* after withdrawal with C untouched, or a C-edit *decoupled from action* installs a persistent world-resident fixed point, the "second primitive" collapses.
+
+**Uniquely owns (fortified niche).** The **solo, mute, materially-efficacious, defection-closed** case (Crusoe/locked-room operator); **individual-scale psychosomatic** loops that close *physiologically* not socially (A concedes the *expectation* component of placebo to the perception-half; claims only the action-closed sub-component, separable by the clamp); the **two-primitives** insight itself (only A even *represents* "change the world" vs "change the model" as distinct moves on one objective); **agent-indexed divergence** (the two-Soren case — separate SDK bridges, separate JSONL niche-memories, each entrenching a different self-world); and the **capture-that-can-leave** adversary.
+
+---
+
+## CONJECTURE B — SELECTION-AMONG-FUTURES (generalized-Darwinian / populational locus)
+**Evolved form: establishment as a MAINTAINED QUASISPECIES.**
+
+**One-line claim.** Establishment is **populational entrenchment** in the distribution of **self-reproducing traces** across a substrate — decided by no agent and by no crowd's belief, but by a substrate-neutral Darwinian process (variation + differential persistence + heredity) running over the candidate ensemble across many observers and across time. Reality = the candidate whose self-reproducing trace dominates the population.
+
+**Substrate / locus.** The **extra-cranial, cross-observer, often cross-generational trace-frequency** — redundant, mutually-corroborating copies spread through the medium (records, artifacts, downstream decisions, institutions, other observers' externalisations). Not in any head (≠ C), not in any single act (≠ A).
+
+**Key evolution (what the critique forced).** The **absorbing-state objection** was decisive: at strict fixation (`x_k→1`) the selection term `Cov(w_i,z_i)` vanishes — the mechanism switches *off* at the very state it called "established," making B a theory of *becoming* mute on *being*. B **concedes the narrow point and upgrades**: it **demotes fixation to a zero-variation limit** and relocates establishment to a **maintained quasispecies** (Eigen) — a dominant "master" candidate at **high-but-sub-unity** frequency, surrounded by a corroborating mutant cloud, **continuously re-secured** by ongoing differential trace-reproduction. Because Kauffman's adjacent possible never stops injecting variants, recurrent variation *removes* the absorbing state (Wright–Fisher with recurrent mutation), so selection is **on** in the established state (`Cov≠0`, balancing the transmission term in the Price equation).
+- **Stability / restoring force** (the thing the critique said B lacked): a sharp **error threshold** `Q_c = 1/a`. Below it the canon stays localized (rugged, restoring); above it the master **delocalizes** — an **error catastrophe** in which the standing reality smears into noise. Establishment now has a phase boundary, a restoring force, **and** a distinctive failure mode.
+- **Adversary = selection-and-fidelity distorter.** Bias channel (`w_i → w_i·exp(β·a_i)`), drift channel (shrink effective population `N_e` at a bottleneck), and the sharpened **fidelity/recording channel**: capture archives / destroy rival records to push a *rival* lineage **above** its error threshold (delocalize it) while keeping the favored candidate localized — changing which lineage is canon **without** touching any belief (≠ C) or executing a foreground act (≠ A).
+
+**Falsifier.** The **stationarity / ongoing-contest test** (a robustly-established reality should show a maintained quasispecies — master at sub-unity frequency *with* `Cov≠0` — not a literal monoculture); the **error-threshold test** (establishment should show a *phase transition* in fidelity, not smooth degradation); and the decisive **carrier-gap / non-contemporaneity test** (find establishment sustained where the only possible observers do **not** co-exist and there is documented differential cross-cycle copying — if it instead requires a surviving actor (collapses to A) or present minds re-coordinating on the records (collapses to C), B owns nothing even in deep time).
+
+**Uniquely owns (re-scoped).** B does **not** own present-tense maintenance when a living actor (A) or a contemporaneous mind-lattice (C) is the maintainer. It owns: **no-contemporaneous-carrier entrenchment** (deep-time/cross-generational fixation; Smolin's cosmological natural selection as the clean limit — no actor, no believer, no co-existing carriers); **agreement-without-contact** (Zurek redundancy, demoted to *epistemic-access*: why dispersed, non-communicating observers re-find the same fact); the **foreground-absent, argument-absent adversary** operating on recording/fidelity across the generational gap where C has no purchase; and the **delocalization / error-catastrophe** failure mode that is neither A's decay nor C's defection-event.
+
+---
+
+## CONJECTURE C — PERFORMATIVE ESTABLISHMENT (intersubjective / hyperstitional locus)
+**Evolved form: the THRESHOLD-AND-SWITCH.**
+
+**One-line claim.** Establishment lives at the **between-observer** layer: a candidate wins when a **critical mass of observers coordinate on acting as-if it is true**. The unit is Searle's **status function** ("X counts as Y in context C," loaded with deontic powers); the truthmaker is the **standing coordination itself** — irreducibly intersubjective, with no seat in any single nervous system or in brute physics. The selection dynamic is **hyperstitional** (a false candidate becomes true by being collectively acted upon; Thomas–Merton self-fulfilling prophecy lifted to a population law).
+
+**Substrate / locus.** Originally "the lattice of higher-order beliefs." **Evolved:** *no static substrate at all* — establishment lives in the **TRANSITION between equilibria** of the coordination game, governed by the **publicity of an already-held belief** (the step-change from distributed private belief `p⁽¹⁾` to common knowledge). C's signature variable is `p⁽²⁾` — *what I expect you to do* — which is neither A's effected action `a_i` nor B's private prior / trace-rate.
+
+**Key evolution (what the critique forced).** The **circularity-cascade pincer** (you read `p⁽²⁾` off the very behavior it explains; supply an independent measure and the cases re-home into B and A) forced a **retreat to a thinner, rival-proof freehold**:
+- **Concessions baked in.** Durable, materially-entrenched institutions (once `Truth=g(A)` has fired — presses, walls, the prison holding the defector) are **co-owned** with B (trace-redundancy) and A (enforcement). The original "evaporates with no physical residue" boast is **retracted for the steady state** and restricted to the *transition*.
+- **Repairs.** A **sanctioning operator** `s_i` is added (the Emperor's-Dilemma *enforcement-anxiety* engine the old formalism couldn't express — explicitly assigned to A/B, with only its `p⁽²⁾`-gating retained by C); a **pre-registered salience proxy** (Chwe-style reach × simultaneity × ritual markers) to de-vacuum equilibrium selection; the self-refuting old falsifier #1 (common-knowledge-of-*falsity* should dissolve it — which Centola–Willer–Macy show it does **not**) **retracted** and rewritten around common-knowledge-of-*willingness-to-defect* (Kuran).
+- **Counter-move.** The transience/durability split is **reclaimed as a signature prediction**: adversary leverage `L=∂A/∂Δ` is **peaked at the threshold and decays to zero with lock-in** — so BHW cascade-fragility becomes C's *evidence*, with durability iff `τ_lockin < τ_counter-signal`. C is potent *where transient*, silent *where durable*, and says so up front.
+
+**Falsifier.** **Higher-order ablation** (elicit `p⁽¹⁾` and `p⁽²⁾` independently; if establishment tracks `p⁽¹⁾` and is *insensitive* to orthogonal shifts in `p⁽²⁾`, C reduces to B; if `p⁽²⁾` can't be moved without moving `a_i` or `R_k`, C is epiphenomenal); the **C/B lock-in / shock-response discriminator** (sever the publicity channel with material traces held fixed, then apply a collapse-shock — C predicts the shock *fails to propagate*; if it still collapses, B/A own the dynamics); plus salience pre-registration and durability-timing tests.
+
+**Uniquely owns (sharpened freehold).** Two **transition operators** the others structurally lack: **(1) the publicity-flip / ignition** — outcomes turning on the difference between "everyone privately believes X" and "everyone *knows* that everyone knows X," first-order belief held flat (the coronation effective on being *public*; the bank run on the *visible queue* — Diamond–Dybvig; the revolution igniting when grievance becomes *commonly known* — Kuran); and **(2) the simultaneity-of-defection switch / collapse** — why dissolving a frozen canon is a *coordination* problem (commonly-known simultaneous defection at a focal moment) not an *aggregation* one (the one child's costless public laugh that a thousand prior private doubts could not muster). C voluntarily cedes the plateau between transitions; it keeps the tipping points.
+
+---
+
+## How they relate (the seams, not a merger)
+The three are **deliberately non-convergent**. They share question and frame (Q-reframe) but differ on *where the won candidate becomes real*: **A** = the deed and its physical trace (adversary perturbs `a_i` / the C-vector); **B** = the populated trace-distribution maintained over time (adversary perturbs `w_i` / fidelity `Q`); **C** = the flip of the publicity layer / focal point at the tipping moment (adversary perturbs `p⁽²⁾` via the consensus signal `S`).
+
+Named hand-off seams (live, not closed): **A→B** is a *phase transition* — when an agent's carved niche stops being re-enacted within one blanket and starts being **inherited/replicated** across blanket boundaries (the onset of replication), it leaves A for B. **C→{A,B}** is the *lock-in* — once `Truth=g(A)` fires, the steady state is co-owned by B's traces and A's enforcement, and C keeps only ignition and collapse-condition. **B→C** is blocked by the **carrier-gap** discriminator: where carriers do not co-exist, the quasispecies math runs with no belief variable and C has no channel.
+
+A **genuine reductive bridge** in any direction — e.g. proving the publicity-flip is fully cashed out by single-agent action or single-mind updating with the `p⁽²⁾` channel *provably severed*, or proving every defection-closed loop is really a relabeled population — would be the **cross-locus falsifier** that collapses one conjecture into another. The Rule of Three forbids *assuming* such a bridge in advance; demonstrating one is exactly what would (legitimately) resolve the trilemma.
+
+---
+
+*Tier-3, foothold-tagged, surfaced-NOT-compiled. Every formal object (active-inference EFE & the C-vector; the mutation-selection/quasispecies map, Price equation, error threshold, Zurek redundancy; the `p⁽¹⁾/p⁽²⁾/s_i` split, heterogeneous-threshold cascades, the decaying-leverage law) is a sketch assembled from standing prior art, not a derived or validated model. Cited authors supply components; none assembled them as a three-locus adversarial-function trilemma — that assembly is conjectural. No citation invented.*
+
+---
+*Auditor correction (three-loci verify = PASS, no winner crowned, three conjectures genuinely distinct): arXiv:2101.08937 'Prior Preference Learning...' is Shin, Kim & Hwang (POSTECH), not 'Sajid, Tigas' — byline only; the learnable-preferences point stands. Chamberlin 1890 'parental affection' verified verbatim.*
+
+---
+
+## §5.1‑R — The gating falsifier, run: the full‑spectrum claim is bounded (canon‑relative). `[Tier 3]` `[grounding: clean-negative falsifier workflow 2026-06-07 — probes over physical / designed-formal / fitness-floor substrates, independently verified SOUND; Lewontin units-of-selection; Eigen RNA-world; Chamberlin 1890]`
+
+§5.1 named the one test that gates the full-spectrum narrative: **a clean negative — a substrate with a canon-function but no beneficiary-bearing exploitation.** It has now been run as a serious search (not a confirmation pass), and it returned one.
+
+**Result.** The strong-universal reading — *"every substrate with a compiled canon order grows a beneficiary-bearing adversarial niche"* — does **not** survive. Credible **clean negatives** were found and survived adversarial re-examination: single-star stellar structure (hydrostatic equilibrium + the negative-specific-heat thermostat continuously re-compiling the H/He/C/Ne/O/Si onion shells), non-replicating dissipative structures (Bénard convection cells, hurricanes), and stellar nucleosynthesis. Each maintains a genuine compiled order, yet has **no candidate beneficiary at all** — and crucially not via the "we lack a fitness concept here" escape: even when a fitness concept is actively imported, there is no localized unit that persists or propagates differentially at the order's expense.
+
+**The surviving, bounded claim.** *Every substrate that supports **heritable fitness** — a genuine unit of selection (variation + differential persistence + **heredity**, with heredity the operative gate) — grows a beneficiary-bearing adversarial niche, essentially at the first opportunity.* The boundary is heredity: the beneficiary appears at the first rung that has it (autocatalytic / RNA-world parasites — Eigen; mc-01/mc-02) and **not below**. Within that scope the claim is strong and cross-domain; outside it, the function is — on current canon — absent.
+
+**Pav's canon‑relative reframe (providence, 2026-06-07).** "The function switches off" is an observation **against the current standing scientific canon** — it marks the *fuzzy edge*, not a hard floor. For an agnostic programme that edge is **fertile ground for competing conjectures, myths and beliefs**, not a wall. The physics floor is not actually silent about *competing futures competing for establishment*; it hosts the dynamic under other names — many-worlds branching (competing futures, one observed), spontaneous symmetry-breaking / vacuum selection (one of many possible vacua established), Smolin's cosmological natural selection (universes competing to reproduce). Current canon simply does not *frame* these as beneficiary-bearing. So the clean negative is **where the framework deposits competing conjectures** (developed in §RS), not where it stops.
+
+**Two guardrails (from the falsifier's own verifier).** (1) The designed/formal cases (seL4, RSA, constitutions, Gödelian systems) all show the niche *relocating outside the proof's model*; "the niche always moves" is near-unfalsifiable on its own, so it is held as a **by-rule reclassification** — any relocation that cannot name a concrete beneficiary **and** an externalized cost is reclassified *neutral* by rule. (2) The corpus is assembled by searching for **named** exploits, exposing it to survivorship plus a detection-lag confound (recent rungs ship changelogs; ancient rungs leave only fossils — we may be reading the lit streetlight). The real next test is an **outcome-blind, effort-detrended base-rate census** (a Chao1-style unseen-class estimator + a heredity-stratified prediction, using detection proxies *exogenous* to existence). Until that is run, the bounded claim stays a **falsifiable conjecture earning no tier advance.**
+
+This is the §5.1 falsifier doing its job: a confirmation-by-construction narrative converted into a defended, bounded, falsifiable claim. The Tier-3 candidate doc is untouched; the result is surfaced for Cowork + audit-v09 to verify.
+
+---
+
+## §C2.2‑B — The deceivability gradient is bounded, not merely fuzzy: a floor and a ceiling. `[Tier 3]` `[grounding: empty-niche prediction workflow + the information-theoretic spine (§IT), independent convergence 2026-06-07; dataset register coverage]`
+
+C2.2 framed deceivability as a *fuzzy gradient*. Two independent analyses — the empty-cell coverage map and the §IT information-theoretic spine — converged from opposite directions on **principled bounds** for it.
+
+**The floor (molecular).** The deceivability register is `none` across every molecular row (6/6). At the molecular floor deception is **undefined, not merely unobserved**: a polymerase, a replicase pool, a folding template carries no represented model *q* of the world that could be displaced — there is no "read" to falsify. §IT states this exactly — the induced KL(p‖q) is undefined where there is no q. The first corruptible read appears **one rung up** (mc-07 CD47 self-mimicry, the dim bottom of the gradient). This pins the gradient's zero at *"there is no model to corrupt,"* and yields the clean split: **mode‑i (mechanism-hijack, no q — resource / copy-number capture)** versus **mode‑ii (model-hijack — deception of an observer).** The adversarial *function* (resource capture) operates at the floor; *deception* does not.
+
+**The ceiling (biology).** The `time` register is empty across the entire biological band (0/50, molecular through organismal). Time-register deception — corrupting a target's model of a promised future payout (Ponzi, pig-butchering) — requires a **ledgered future** to rug-pull. Biology has perception (existence), can be fooled about facts (mimicry), and tracks recent order (sequence: cowbird "mafia," mast-seeding), but carries no falsifiable internal ledger of a multi-step future commitment. So the biological band brackets cleanly: **`none` floor → `sequence` ceiling**, with the `time` register the signature of the cognitive / institutional rungs. *(Caveat, from the verifier: circadian / photoperiodic clocks are a genuine biological anticipatory time-ledger, so a clock-corruption move may exist — a scout target, not a closed impossibility.)*
+
+**Symmetry at the floor.** Symmetric *contests* are impossible at the molecular floor — asymmetry is structural (a cost-bearing cooperative cycle cannot free-ride back on a free-rider). The only true symmetric biological contest in the corpus is phage ↔ CRISPR (cellular).
+
+**Fill‑cells (real‑but‑uncatalogued, surfaced by the framework's own structure).** The empty-cell map points at documented moves that fill structurally-important gaps and are worth a targeted scout — these are *undersampling*, not predictions of the unobserved: molecular × existence (viral **decoy receptors / cytokine mimics**, a quorum-sensing **"phantom quorum"** autoinducer-mimic — cataloguing one would lower the deceivability floor by a rung); molecular × mimicry (autoimmune molecular mimicry); latent × time (sleeper backdoors / train-time data-poisoning / deceptive alignment firing past the oversight window); latent × {canon-hijacking, memetic-warfare} (training-distribution capture, generative-AI astroturf — the §2A.4-predicted cells); cellular × sequence (CRISPR-array order-spoofing); organismal × time (periodical-cicada dormancy as predator-satiation).
+
+This sharpens C2.2 from "fuzzy" to *bounded + principled* without compiling it; Tier-3, surfaced for Cowork.
+
+---
+
+## §3.3‑T — Transposition is a triad, not a binary: the latent channel (O‑T1 refined). `[Tier 3]` `[grounding: Pav 2026-06-07 reframe of the ant↔warfare convergence; Regnier & Wilson 1971 "propaganda substances"; the ant/warfare dataset cluster + the new latent-transposition edge type]`
+
+§3.3 (transposition) and the open item O-T1 posed transposition **versus** convergence as a binary: dependent copying (a tactic ported across planes, fishing→phishing) against independent re-invention. The ant↔human-warfare cluster forced a third category.
+
+**Pav's refinement (providence).** The relation between ant strategy (slave-raids, "propaganda substances," column raids, aphid-herding) and human warfare is *related, just far removed* — and it runs through **two** channels at once:
+
+- **Harness‑convergence.** Both are outputs of the same generative *harness* (the adversarial function + selection running on each substrate). The same optimizer independently re-invents the same primitives — raid, enslave, propagandize, herd — so the similarity is convergence *by shared generative origin*, not coincidence and not copying.
+- **Latent transposition (the new middle term).** Human observers *observe the ant act and internalise it*; the pattern enters the human latent / conceptual space. The evidence is **bidirectional naming**: Regnier & Wilson (1971) named the slave-maker allomone **"propaganda substances,"** projecting a human-warfare concept onto the ant; "slave-making ants," "army ants," "soldiers," "raids" are the same channel made visible; Darwin reasoned about human institutions *from* slave-making ants. The connection is real but lives in **latent space** — the observer's rendering and the shared metaphor — not in genetic lineage.
+
+So O-T1 resolves into a **gradient / triad**: *genetic-lineage transposition* (direct technique-port) ↔ **latent / observational transposition** (observe → internalise → metaphor; far-removed planes touching through the latent medium) ↔ *harness-convergence* (same optimizer, no transmission). The ant↔warfare pair is the clean case that **forces the middle category into existence**, which is why it is a good O-T1 probe rather than a settled classification.
+
+This is itself an instance of phantom-sense / the artefact-viroid (§PS, §4.B): the latent space is the *transmission medium* — the act becomes a latent payload that recruits the observer's canon-compass and is re-rendered as strategy. The atlas now carries a distinct **`latent-transposition` edge type** (the ant → military-deception links).
+
+Discipline: this refines O-T1 and the transposition channel; the framework's 9-item convergence list is **not** changed by it (it sharpens how transposition-versus-convergence is read; it does not add a convergence). Tier-3, surfaced for Cowork + Pav.
+
+---
+
 ## Provenance
 
 - **Created:** 2026-06-05/06, Claude Code session — interactive shaping with Pav (multi-turn) + a dynamic workflow for the bulk development. Reframed from the handoff's empirical-Bar-A brief to conceptual-first full-spectrum per Pav's live steers (preserved in the header).
