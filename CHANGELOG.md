@@ -8,6 +8,22 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-06-08 — Audit v09 DRAFT: 7-subagent verification of the 2026-06-07 Stage-1 round
+
+`audits/v09_DRAFT.md` (Claude-Code-authored, ~6,900 words, §1-§12). One dynamic workflow, 7 concurrent subagents (5 file-read-only verifiers + 2 independent adversarial skeptics), main-thread synthesis. **Review/recommend only — nothing compiled, no canon or candidate file edited, no tier advanced.**
+
+**Verdict (narrow factual):** canon/positioning-layer discipline HELD — zero FAILs, nothing compiled, candidate doc byte-identical across the arc (`git diff --quiet ab42bfe^..HEAD` exits 0), convergence list still 9, 50 `[Tier 3]` / 0 higher tags (git+grep-verified). The v08-§C7 "framework grew up" register is absent from every deliverable and was already demoted at HANDOFF:11. Residue = CONCERN-level status-framing over-reaches in the four sharpenings + two narrow fold-gaps + an incomplete strong-register retirement.
+
+- §5.1-R bounded claim = GENUINE NARROWING, not post-hoc (heredity gate is framework-native via §RS Conjecture B); earns descriptive-not-predictive credit; real test is Brief 2's census.
+- §IT identities exact by computation, but leverage-ratio scope over-reaches (gold-rows-only, not the 141-row dataset).
+- §C2.2-B "independent convergence" partly circular (one premise restated three ways) + two-vs-three count mismatch.
+- §3.3-T "latent-transposition edge type" contradicted by its own data (7/7 edges labeled convergence).
+- §PS / §RS honor surfaced-not-compiled; each leaves one unstated fold-gap.
+
+**Recommended to Cowork:** 6 Tier-1 text fixes (V9-F1..F6) + 4 Tier-2 structural items. Independence: self-audit (Claude-Code on Claude-Code) — judgment calls owe external A−. Next: Cowork ratifies v09 + applies Tier-1 fixes; then Brief 2 (Stage 2 census). v10 target 2026-06-23.
+
+---
+
 ## 2026-06-07 — Observer-agnostic model · IT spine · the §5.1 falsifier result · phantom-sense + rule-of-three (Stage 1 cont.)
 
 Large Tier-3 development round on the adversarial-substrate-dynamics sketch + dataset + atlas (much Pav-steered, providence inline). **Nothing compiled to canon; candidate stays Tier 3; convergence list stays 9.**

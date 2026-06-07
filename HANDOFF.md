@@ -1,8 +1,8 @@
 # HANDOFF — Cowork → Claude Code
 
-**Last updated:** 2026-06-07 (later) by Cowork session — Pav reviewed the 2026-06-07 Claude Code round + sharpened rule-of-three into **Latent Olympics** scope (per Pav 2026-06-07 quotes preserved below). Three Claude Code briefs queued in line below in order: (1) audit v09 early-run, (2) Stage 2 bounded-claim outcome-blind base-rate census, (3) Latent Olympics Stage 1 design exploration (marked INCOMING — queued after v09 + Stage 2).
-**Next session:** Claude Code — **Brief 1: audit v09 (early-run)** per brief immediately below. Pattern: 3-4 parallel subagent fan-out (v07 + v08 pattern); main-thread synthesis to `audits/v09_DRAFT.md`; Cowork ratifies after. Focus: verify bounded-claim amendment (§5.1-R) + six-fold discovery-handling discipline + lesson-8 closure-via-multiplication check on the two genuinely-new conceptual surfaces (§PS phantom-sense + §RS competing-realities/rule-of-three) + C7 register check on Claude Code's "framework grew up" narration. NOTHING compiled to canon in v09 session; candidate stays Tier 3; convergence list stays 9.
-**Pinned task:** Brief 1 (audit v09). Brief 2 (Stage 2 census) and Brief 3 (Latent Olympics Stage 1 — INCOMING) wait their turn — Pav decides whether to advance after v09 lands. The three briefs below are sequenced; Claude Code does one at a time, handing back to Cowork+Pav between each.
+**Last updated:** 2026-06-08 by Claude Code session — Brief 1 delivered: `audits/v09_DRAFT.md` (7-subagent verification of the 2026-06-07 round). Verdict (narrow): canon/positioning-layer discipline HELD — nothing compiled, no tier advanced, candidate doc byte-identical, convergence list 9, the v08-§C7 "framework grew up" register absent from all deliverables; residue = CONCERN-level status-framing over-reaches (6 Tier-1 + 4 Tier-2 fixes recommended to Cowork). Self-audit caveat: Claude-Code auditing a Claude-Code round — judgment calls owe external A−. Remaining briefs: (2) Stage 2 bounded-claim census, (3) Latent Olympics Stage 1 (INCOMING).
+**Next session:** Cowork — ratify `audits/v09_DRAFT.md` as `audits/v09.md` and apply the 6 Tier-1 text fixes (V9-F1..F6 per §6: register down-tune SKETCH:5/:948; §C2.2-B two/three count + shared-premise circularity; §IT leverage-scope qualifier; §3.3-T edge-type contradiction; §5.1-R operationalize the heredity gate + cross-ref §2A; reconcile the C4 record). Then Pav decides whether to advance to Brief 2 (Stage 2 census). v09 is review/recommend only — Claude Code edited no canon.
+**Pinned task:** Cowork ratifies v09 DRAFT + applies the §6 Tier-1 fixes. Brief 1 (audit v09) DELIVERED 2026-06-08 (see session block below). Brief 2 (Stage 2 census) is the next Claude Code task — only after Cowork ratification + a Pav steer. Brief 3 (Latent Olympics Stage 1) stays INCOMING after Brief 2. Claude Code does one at a time, handing back to Cowork+Pav between each.
 
 ---
 
@@ -12,7 +12,7 @@ Pav's actual register: *"we got a good foothold and then some"* (NOT "the framew
 
 ---
 
-## Brief 1: Audit v09 (Claude Code, NEXT — early-run justified)
+## Brief 1: Audit v09 (Claude Code) `[DELIVERED 2026-06-08 — audits/v09_DRAFT.md; verdict HELD-with-CONCERNs; 6 Tier-1 + 4 Tier-2 fixes recommended; see session block below]`
 
 **One task. Multi-subagent verification of the 2026-06-07 Stage 1 round. ~6-10 hours focused work.**
 
@@ -220,6 +220,29 @@ For each: what's the design defense? This is the Olympics' anti-gaming architect
 - Review the design sketch with Pav
 - Pav decides: (a) Stage 2 — build a minimal prototype to test the design; (b) refine Stage 1 design (add events, sharpen ratings, deepen anti-gaming); (c) park as Tier 3 design conjecture, never build
 - Audit v10 (2026-06-22 target, 15-day cadence from v09 if v09 runs 2026-06-08) verifies discipline held across all three briefs
+
+---
+
+## Last Claude Code session (2026-06-08) — Audit v09 DRAFT (7-subagent verification of the 2026-06-07 round)
+
+Ran Brief 1. One dynamic workflow (`audit-v09`), 7 concurrent subagents — 5 file-read-only verifiers on the brief's A/B/C queue + 2 independent adversarial skeptics (bounded-claim honesty; register over-claim) — then main-thread synthesis → `audits/v09_DRAFT.md` (~6,900 words, §1-§12). Zero null returns; ~613K subagent tokens.
+
+**Verdict (narrow factual).** Canon/positioning-layer discipline HELD: zero FAILs, nothing compiled, no tier advanced, candidate doc byte-identical (`git diff --quiet ab42bfe^..HEAD` exits 0), convergence list still 9, 50 `[Tier 3]` tags / 0 higher (git+grep-verified four independent ways). The "framework grew up" phrase is absent from every deliverable and was already demoted at HANDOFF:11 before v09 ran — the material improvement over v08 (where the register sat un-walked-back on four canon surfaces while a Tier-2 candidate died). Residue = a cluster of CONCERN-level status-framing over-reaches, not a discipline collapse. **The audit declined to celebrate its own catch** (the C7 risk one meta-level up).
+
+**What the verification found (each file:line-cited in the draft):**
+- **§9 — bounded claim = GENUINE NARROWING, not post-hoc** (independent skeptic + A1 verifier converge). Decisive: the heredity gate's Lewontin triad is independently load-bearing in §RS Conjecture B (:888) — framework-native, not reverse-engineered. Caveats: earns **descriptive-not-predictive** credit (real test = Brief 2's census, unrun); the strong "every-rung" register is left un-retired in §2A C2A.1 (:159-161).
+- **§IT** — all 5 borrowed identities re-verified **exact by computation**; but "all math verified by computation" over-reaches scope — the leverage ratio `n·KL/−log₂a(s)` is computable on the 2 gold rows only (FGSM, poker), not the 141-row dataset.
+- **§C2.2-B** — "independent convergence" is partly **circular** (empty-cell map + `register=none` + IT "KL undefined" = one premise, "no q ⇒ deception undefined"; visible in dataset `mc-03`); count unstable (body says "two", headline/HANDOFF:242 say "three").
+- **§3.3-T** — the cited "latent-transposition edge type" (:979) is **contradicted by its own data**: all 7 such edges are labeled "convergence / NOT transposition." The new slot is genuine; its data instance is mis-coded; one cluster (ant↔warfare) carries the general claim.
+- **§PS / §RS** — both honor surfaced-not-compiled + no-promotion + convergence-9; each leaves one fold-gap: §PS doesn't name phantom action-space (cont 32 Part C) as its parent primitive; §RS doesn't label its rule-of-three as demonstrated **only reflexively** (succeeds by construction).
+- **Register** — phrase absent + pre-demoted; only residue is 2 mild SKETCH-only amplifications (L5 process self-credit; L948 "doing its job").
+- **Meta-finding** — the brief's own C4 expectation (candidate doc carries "a pointer-to-sketch line") is factually wrong: the doc is byte-identical, no pointer. A claimed-state ≠ git-state gap on the audit-instruction side; reconcile.
+
+**For Cowork.** §6 lists 6 Tier-1 text fixes (V9-F1..F6); §7 lists 4 Tier-2 structural items (§3.3-T second case; §PS name-the-parent; §RS label-the-reflexivity; §5.1-R predictive credit gated on Brief 2). v09 compiled nothing and edited no canon — review/recommend only; Cowork applies Tier-1 fixes after ratifying as `audits/v09.md`.
+
+**Independence caveat (load-bearing).** v09 is Claude-Code auditing a **Claude-Code-produced** round — a self-audit, the weakest position in the chain. Mechanical/computational findings (git facts, recomputed identities, dataset greps) are robust to that; the judgment calls (is the narrowing genuine, is the register clean) are flagged as **owing external A−**. The verification queue was set externally (Cowork, `6e4d8c0`).
+
+**Discipline.** No canon compiled, no tier advanced, no pilot/census run, no outreach, no continuation — audit-only per Brief 1 guardrails. v10 target 2026-06-23.
 
 ---
 
