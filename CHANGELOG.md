@@ -19,8 +19,9 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 - §C2.2-B "independent convergence" partly circular (one premise restated three ways) + two-vs-three count mismatch.
 - §3.3-T "latent-transposition edge type" contradicted by its own data (7/7 edges labeled convergence).
 - §PS / §RS honor surfaced-not-compiled; §PS leaves an unstated parent-primitive fold; §RS's rule-of-three is reflexive *inside §RS* but the principle is sharpened (Pav Steer 1 → Latent-Olympics four-dimension rating function), independent demonstration queued for Brief 3 (draft §5d corrected post-draft 2026-06-08 per Pav's steer).
+- **Brief-1 addendum (draft §5.5):** per the same-day HANDOFF Brief-1 update, v09 rules on the dedicated (untracked) `candidates/rule_of_three_SKETCH.md` via a second 3-agent fan-out — rule-of-three **folds** into cont 27 §2-3 + cont 18 + audit-cadence (only *spread* + the N→3-simultaneity new; precedent cont 30 §2); the three-privilege argument = **confirmation-bias artifact** (canon spans N=2…9; most load-bearing is the dual-kernel two); the reflexive validation = **artifact, not evidence** (two cited validations succeed under opposite crowning rules); but the sketch's own discipline is exemplary. Recommended sketch-edits: V9-F7. Bounds (does not withdraw) the §5d sharpening credit.
 
-**Recommended to Cowork:** 6 Tier-1 text fixes (V9-F1..F6) + 4 Tier-2 structural items. Independence: self-audit (Claude-Code on Claude-Code) — judgment calls owe external A−. Next: Cowork ratifies v09 + applies Tier-1 fixes; then Brief 2 (Stage 2 census). v10 target 2026-06-23.
+**Recommended to Cowork:** 6 Tier-1 text fixes (V9-F1..F6) + V9-F7 (rule-of-three sketch edits, §5.5 addendum) + 4 Tier-2 structural items. Independence: self-audit (Claude-Code on Claude-Code) — judgment calls owe external A−. Next: Cowork ratifies v09 + applies Tier-1 fixes; then Brief 2 (Stage 2 census). v10 target 2026-06-23.
 
 ---
 
