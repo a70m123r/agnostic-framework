@@ -1,0 +1,906 @@
+{
+  "schema_version": "0.1-phase1",
+  "_status": "Tier-3 WORKING first-pass — a classification of EXISTING canon into the Phase-1 weighted-classifier structure (an 'agnostic canon render'). NOT new canon, NOT a tier promotion, NOT complete. classifierWeights and all utility legs are SOFT scores in [0,1], never hard categorical (per Pav 2026-06-08). The full wrapper-class census is later-phase work.",
+  "_schema_doc": "WrapperClass record (JSON), one row per wrapper class. classifierWeights and all utility legs are SOFT scores in [0,1] (never hard categorical) per Pav \"the classifiers have weights not hard values.\" Fields:\n\n{\n  \"schema_version\": \"string — e.g. '0.1-phase1', matches repo convention (candidates.json/continuations.json carry schema_version).\",\n  \"id\": \"string — stable slug, e.g. 'wrapper-overlap', 'marriage', used as the parent-edge target in overlaps[] and provenance trails.\",\n  \"name\": \"string — canonical handle of the wrapper class.\",\n  \"aka\": [\"string — synonym set / 'who called it'; the cross-field local names for the same shape (cont 22 §7 construct-study names; §0 C0.1 'same shape named in N traditions'). Each entry may carry {term, tradition, source}.\"],\n  \"origin\": {\n    \"howItCameToBe\": \"string — the procedural-lineage account (cont 18 §1: rings-on-a-tree, each layer the measurable-and-observable compile beneath).\",\n    \"parents\": [\"string id — declared parent records (cont 25 §5 stubs/receptor-hooks this class attaches to).\",],\n    \"tradition\": \"string — the tradition/canon it descends from (cont 22 §7 drill: where its actual Kanon lies below the social-protocol layer).\",\n    \"firstNamedBy\": \"string — earliest attributor/coiner if known ('who called it').\"\n  },\n  \"overlaps\": [\n    {\n      \"target\": \"string id — the other wrapper class.\",\n      \"type\": \"string — typed edge: 'overlap' | 'supersession' | 'break-apart' | 'dormant-resurrection' (cont 25 §2 lifecycle branch between two wrappers).\",\n      \"note\": \"string — what the overlap produces / how they bridge.\"\n    }\n  ],\n  \"status\": \"string — SOFT lifecycle position, observer-relative: 'risen' | 'demoted' | 'dormant' | 'resurrected' | 'reinvented' | 'stale' (Pav's vocabulary; maps to cont 20 dormancy + cont 25 §2 branches). May be an array if simultaneously different across domains.\",\n  \"localKernelCanon\": \"string — the keystone function(s) the class bottoms out into (cont 32 Part B.2 'L0 kernel canon = identifiable keystone functions'; cont 22 §3 Kanon-drill). Names the drill-floor, not just the surface protocol.\",\n  \"netProduct\": \"string — what the class actually outputs/compiles: the W_C it produces and/or the action-space it sustains (Pav's 'net product').\",\n  \"classifierWeights\": {\n    \"spread\": \"number [0,1] — SOFT; pool-coverage / marginal diversity contribution (latent_olympics §2; the one genuinely-new, relational dimension).\",\n    \"utility\": \"number [0,1] — SOFT; the PRIMARY ranking, = utility.score below (carried up for convenience).\",\n    \"legacy\": \"number [0,1] — SOFT; procedural-lineage depth / compile-on-parent (cont 18; redefined cont 27/latent_olympics §7.1 as distance-to-a-falsification-surviving-anchor, NOT endorsement).\",\n    \"rigor\": \"number [0,1] — SOFT; falsifiability + tier position + within-tier bar progress (cont 27 §2; carries the dream→fact directionality).\"\n  },\n  \"utility\": {\n    \"actionSpaces\": {\n      \"score\": \"number [0,1] — SOFT; new phantom/constructed action-spaces unlocked (cont 32 Part C internal vs attributed; §PS action-space-as-primitive 'field of latent affordance').\",\n      \"handle\": \"string — evidence: enumerated new live moves/affordances/questions opened that the prior vocabulary did NOT license (latent_olympics §2 remainder).\",\n      \"judgment\": \"boolean — true; honest residual: needs AI/human panel, not closed-form.\"\n    },\n    \"unifier\": {\n      \"score\": \"number [0,1] — SOFT; previously-separate wrapper classes/traditions bridged into ONE compiled structure (cont 18 §0 'structural unification not new decoration'; cont 25 §6/§7 convergence).\",\n      \"bridgeCount\": \"integer — degree on overlaps[] resolving to a single structure (mechanical).\",\n      \"passesW_CTest\": \"boolean — does the bridge pass cont 25 §6 parents-produce-W_C (genuine unification) vs §0 family-resemblance (parallel naming only)?\",\n      \"judgment\": \"boolean — partly; count is mechanical, the structural test is judged.\"\n    },\n    \"compression\": {\n      \"score\": \"number [0,1] — SOFT; THE QUANTIFIABLE LEG. Latent/physical description-length reduction (cont 22 §2 dual-kernel; §IT KL=excess code-length / MDL surrogate / Landauer floor).\",\n      \"mdlDeltaBits\": \"number — measured/estimated description-length reduction in bits of the corpus the class re-describes (§IT C-IT-6 portable panel: exact on instrumented cases, order-of-magnitude on soft).\",\n      \"judgment\": \"boolean — false on instrumented cases (computable); the part of utility least judgment-dependent.\"\n    },\n    \"weights\": { \"w_a\": \"number [0,1]\", \"w_u\": \"number [0,1]\", \"w_c\": \"number [0,1] — SOFT, per-event/per-domain dials; sum to 1.\" },\n    \"score\": \"number [0,1] — utility = w_a*actionSpaces.score + w_u*unifier.score + w_c*compression.score (the PRIMARY ranking; weighted combination, NOT a crowned scalar — feeds the Pareto front, latent_olympics §2).\"\n  },\n  \"tier\": \"string — cont 27 §2 epistemic tier: 'Tier 1' | 'Tier 2' | 'Tier 3'.\",\n  \"pipeline\": {\n    \"state\": \"string — git-like: 'submitted' | 'under-review' | 'challenged' | 'appealed' | 'graduated' | 'demoted' | 'dormant' (§9.3).\",\n    \"provenanceTrail\": \"string — declared at submit per latent_olympics §5 (tradition + parent ids + canon built on); 'drill stops here' is legible/rate-able.\",\n    \"issues\": [\"{id, type ∈ {provenance-laundering, bad-faith-rendering, inflated-utility-leg, ...}, challenger, status} — the A- prune-vectors (cont 13/15) filed against this record (latent_olympics §4).\"],\n    \"appeals\": [\"{evidence, newDrillEdges, rescoreDelta, outcome} — re-open with new evidence; lineage grows, legacy earned by performance (latent_olympics §5; cont 27 §3).\"]\n  },\n  \"refs\": [\"string — file:section citations grounding every field (the provenance backbone; e.g. 'cont 22 §7', 'cont 25 §6', 'BAR_A_SKETCH §IT C-IT-6').\"],\n  \"observerRelative\": \"boolean — true (default). Flags that all scores are projection coefficients under an observer/domain render (cont 32 Part B / cont 22 §6), NOT view-from-nowhere facts — the reason weights are soft.\"\n}\n\nSelection note (NOT a field): ranking is the Pareto non-dominated set over {spread, utility, legacy, rigor} truncated to top-N-per-event (latent_olympics §2) — a weighted-sum total order is forbidden; utility is PRIMARY but still a soft coordinate, not a crown.",
+  "_source": "Pav's 2026-06-08 Latent Olympics Phase-1 steer. Spec: candidates/latent_olympics_phase1_SPEC.md. Design: candidates/latent_olympics_DESIGN_SKETCH.md.",
+  "_method": "Generated 2026-06-08 by Claude Code (latent-olympics-phase1 dynamic workflow; 1 design agent + 2 classify agents). Single agent surface — classifications owe external (e.g. cross-model) review.",
+  "generated": "2026-06-08",
+  "record_count": 25,
+  "wrapper_classes": [
+    {
+      "name": "LCAO / Molecular Orbital Theory (convergence #1)",
+      "tier": "Tier-1 epistemological / canon convergence (cont 27 §6.4 confirms the seven are unchanged canon).",
+      "status": "risen-to-top / established — named the cleanest STATIC MATHEMATICAL formalism of the set (cont 25 §7 (1) match 44/50; Reading 03 §2 lists it #1). Mature since Mulliken 1932, still live in ML-accelerated bases (MACE/NequIP 2024-25). Never demoted.",
+      "localKernelCanon": "Orbital superposition: ψ_bond = N(ψ_A + ψ_B), ψ_anti = N(ψ_A − ψ_B); overlap integral S_ij = ⟨ψ_A|ψ_B⟩ as the nesting-space measure; bond order = ½(n_bonding − n_antibonding) is explicitly non-additive (cont 25 §7 (1)). Its three forces: bonding (attraction) / antibonding (repulsion) / non-bonding (phase-locked) (bes_convergence_9.md §1).",
+      "netProduct": "A W_C composite = the molecular orbital ψ_bond conceived inside the parents' overlap integral, with atomic basis set persisting as stubs° in the MO expansion (cont 25 §7 (1) correspondence table). Net product: closed-form math for the wrapper-overlap moment.",
+      "akaWhoCalledIt": "Linear Combination of Atomic Orbitals — quantum chemistry; Mulliken / Hund / Lennard-Jones lineage (Mulliken 1932 dated in cont 25 §7).",
+      "origin": "Provenance: surfaced by one of three parallel research scouts during the cont 25 v8 diagram refactor (cont 25 §1 steer 9 'send some scouts'); landed as convergence #1 of the original six (cont 25 §7).",
+      "overlaps": [
+        "cell fusion",
+        "symbiogenesis",
+        "creole genesis",
+        "conceptual blending",
+        "model merging",
+        "ACMP",
+        "cymatics (narrowed)",
+        "BES"
+      ],
+      "localKernelCanon_note": "",
+      "utility": {
+        "score": 0.92,
+        "isUnifier": "HIGH by definition — a convergence IS a unification across substrates (steer leg b; cont 25 §7 'no single tradition has all of it; the framework supplies the unified vocabulary'). LCAO unifies electron-orbital substrate with the wrapper-overlap pattern; it is the anchor that lets the framework claim the pattern is not idiosyncrasy.",
+        "actionSpacesUnlocked": "Unlocks the constructed action-space of writing wrapper-overlap as a closed-form eigenvalue problem (the overlap integral, bonding/antibonding split). Grounds the cont 25 §9 OE1 'orbital symmetry constraint' as a candidate W_C-consolidation threshold. Opens the move: import LCAO's mature math to formalize the nesting-space.",
+        "compression": "HIGH (the quantifiable leg, steer leg c). Collapses every molecule-formation instance into one MDL-short structural pattern (two orbitals → one MO). Cleanest static-math compression of the set, so least judgment-dependent."
+      },
+      "classifierWeights": {
+        "spread": 0.85,
+        "utility": 0.92,
+        "legacy": 0.95,
+        "rigor": 0.93
+      },
+      "localKernelCanonExtra": "",
+      "refs": [
+        "D:/PlatformOperator/research/pav/continuations/25.md §7 (1)",
+        "D:/PlatformOperator/research/pav/readings/2026-05-27_acmp_attraction_repulsion_gnn.md §2",
+        "D:/PlatformOperator/research/pav/candidates/bes_convergence_9.md §1"
+      ]
+    },
+    {
+      "name": "Cell fusion (convergence #2)",
+      "tier": "Tier-1 epistemological / canon convergence.",
+      "status": "risen-to-top / established (cont 25 §7 (2) match 40/50). Strengthened within months of promotion by a Nov-2024 empirical finding (myoblast fusion localizes to topological defects of compressive stress) that matched the framework's cont 21 squeeze/pull dynamics. Never demoted.",
+      "localKernelCanon": "Membrane fusion under compressive stress: two cell membranes mix, surface tension resists, cytoplasmic phase separation stabilizes (bes_convergence_9.md §1). Kernel mechanism = the fusion pore opening at the point of maximum lateral membrane pressure (cont 25 §7 (2)). Six-phase taxonomy: priming → recognition → hemifusion → pore → expansion → renewal.",
+      "netProduct": "A W_C composite = the emergent syncytium / multinucleated organ; lens → fusion pore; supersession → muscle-fiber formation (cells lose individual identity into the fiber); break-apart → failed fusion (cont 25 §7 (2)). Net product: the canonical biological-substrate phase taxonomy.",
+      "akaWhoCalledIt": "Cell/membrane fusion — cellular biology; myoblast-fusion + syncytiotrophoblast + virus-cell-entry literatures (cont 25 §7 (2); Nov-2024 topological-defect finding cited).",
+      "origin": "Provenance: surfaced by the cont 25 v8 parallel research scouts (cont 25 §1 steer 9); convergence #2 of the original six.",
+      "overlaps": [
+        "LCAO",
+        "symbiogenesis",
+        "creole genesis",
+        "conceptual blending",
+        "model merging",
+        "ACMP",
+        "cymatics (narrowed)",
+        "BES"
+      ],
+      "utility": {
+        "score": 0.86,
+        "isUnifier": "HIGH by definition — unifies the cellular-biology substrate with the wrapper-overlap pattern. Brings the where-overlap-happens-is-mechanically-determined insight (topological compressive-stress defect) into the cross-substrate set (cont 25 §7 reading).",
+        "actionSpacesUnlocked": "Unlocks the cross-substrate prediction move (cont 25 §9 OE4): the Nov-2024 cell-fusion finding that fusion localizes at compressive-stress defects predicts that model merging at sign-conflict hot-spots produces stronger consolidation, and that creole genesis localizes at max-cognitive-load contact zones. A live, testable, not-yet-tested affordance.",
+        "compression": "HIGH — compresses all cell-fusion instances (muscle, placenta, viral entry) into one six-phase structural pattern. The phase taxonomy is the compression artifact."
+      },
+      "classifierWeights": {
+        "spread": 0.82,
+        "utility": 0.86,
+        "legacy": 0.88,
+        "rigor": 0.8
+      },
+      "refs": [
+        "D:/PlatformOperator/research/pav/continuations/25.md §7 (2)",
+        "D:/PlatformOperator/research/pav/candidates/bes_convergence_9.md §1"
+      ]
+    },
+    {
+      "name": "Symbiogenesis / secondary endosymbiosis (convergence #3)",
+      "tier": "Tier-1 epistemological / canon convergence.",
+      "status": "risen-to-top / established — HIGHEST match of the original six (cont 25 §7 (3) match 46/50). Risen because the nucleomorph is a literal biological stub° with a real name and millions of years of paleontological record — empirical confirmation of the framework's stubs-as-procedural-roots claim. 2026 Arabidopsis suecica finding confirmed the post-fusion genome-stabilization timeline. Never demoted.",
+      "localKernelCanon": "Engulfment + genome reduction + fixation: host uptakes endosymbiont, endosymbiont's genome reduces, the engulfed organism becomes an organelle (bes_convergence_9.md §1: endosymbiont uptake / immune rejection / co-evolutionary stabilization). Kernel = the nucleomorph (vestigial parent-genome persisting inside the host) (cont 25 §7 (3)).",
+      "netProduct": "A W_C composite = the emergent eukaryotic-style organism; nucleomorph → literal stub° (dormant compiled original from the parent); engulfment → wake/contact; genome reduction → consolidating; fixation → emerged canon (cont 25 §7 (3)). Net product: empirical confirmation of the stub°/dormant-original primitive.",
+      "akaWhoCalledIt": "Symbiogenesis / endosymbiotic theory — organismal biology; Margulis 1981 lineage (cont 25 §7 (3)).",
+      "origin": "Provenance: surfaced by the cont 25 v8 parallel research scouts; convergence #3 of the original six.",
+      "overlaps": [
+        "LCAO",
+        "cell fusion",
+        "creole genesis",
+        "conceptual blending",
+        "model merging",
+        "ACMP",
+        "cymatics (narrowed)",
+        "BES"
+      ],
+      "utility": {
+        "score": 0.88,
+        "isUnifier": "HIGH by definition — unifies organismal-biology substrate with the wrapper-overlap pattern. Uniquely supplies the empirical anchor that the framework's stub° (dormant-compiled-original-inside-the-stub) is not invented: the nucleomorph IS a stub° in biology (cont 25 §7 (3)).",
+        "actionSpacesUnlocked": "Unlocks the move of pointing to a real-named, paleontologically-recorded entity (nucleomorph) to defend the hairy-sphere-with-stubs topology (cont 25 §5). Grounds dormancy-as-reversible (cont 20) in a multi-million-year empirical case. Highest-confidence affordance for the stubs-persist claim.",
+        "compression": "HIGH — compresses every endosymbiosis instance into one engulfment→reduction→fixation pattern; the stub° = a compression invariant that recurs across substrates."
+      },
+      "classifierWeights": {
+        "spread": 0.84,
+        "utility": 0.88,
+        "legacy": 0.9,
+        "rigor": 0.84
+      },
+      "refs": [
+        "D:/PlatformOperator/research/pav/continuations/25.md §7 (3)",
+        "D:/PlatformOperator/research/pav/candidates/bes_convergence_9.md §1"
+      ]
+    },
+    {
+      "name": "Creole genesis (convergence #4)",
+      "tier": "Tier-1 epistemological / canon convergence.",
+      "status": "risen-to-top / established (cont 25 §7 (4) match 41/50). Doubly load-bearing: also the cont 27 §1 energy-floor worked example (mutual intelligibility = coherence quantity with a lower bound; dialect fragmentation = failure mode). Live 2024-26 anchors (Hinglish, Singlish, Spanglish). Never demoted.",
+      "localKernelCanon": "Feature-pool selection (Mufwene): substrate languages contribute features to a pool, a selection mechanism picks among them, substrates persist as the feature source (cont 25 §7 (4)). Three forces: lexical absorption / grammatical resistance / community-norm stabilization (bes_convergence_9.md §1).",
+      "netProduct": "A W_C composite = the emergent creole; feature pool → fuzzy bridge/nesting-space; substrate persistence → stubs°; supersession → creole replaces substrates (rare/documented); active → bilingual communities where all three persist (cont 25 §7 (4)). Net product: the social-substrate worked example pool.",
+      "akaWhoCalledIt": "Creole genesis / feature-pool model — linguistics; Mufwene (cont 25 §7 (4)); Bickerton / Lefebvre in the not-cited-by-BES independence list (bes_convergence_9.md §3).",
+      "origin": "Provenance: surfaced by the cont 25 v8 parallel research scouts; convergence #4 of the original six. Reused as the §12.5 Spanglish worked example across the whole L0 stack.",
+      "overlaps": [
+        "LCAO",
+        "cell fusion",
+        "symbiogenesis",
+        "conceptual blending",
+        "model merging",
+        "ACMP",
+        "cymatics (narrowed)",
+        "BES"
+      ],
+      "utility": {
+        "score": 0.87,
+        "isUnifier": "HIGH by definition — unifies the social/linguistic substrate with the wrapper-overlap pattern. Doubles as the unifier between wrapper-overlap (cont 25) AND the energy-floor failsafe (cont 27 §1), giving two canon primitives a shared worked example.",
+        "actionSpacesUnlocked": "Unlocks the social-substrate worked-example move readers recognize (centuries of pidgin/creole data), and the asymmetric-default demonstration (English grammatical skeleton + Spanish lexical insertion per cont 25 §12.4). Opens the dream→fact migration story for the social runway the Latent Olympics is built toward (latent_olympics §7).",
+        "compression": "HIGH — compresses all creole-formation events into one feature-pool→selection→stabilization pattern; mutual-intelligibility-as-coherence-quantity adds a quantifiable (MDL-adjacent) compression leg via cont 27 §1."
+      },
+      "classifierWeights": {
+        "spread": 0.85,
+        "utility": 0.87,
+        "legacy": 0.86,
+        "rigor": 0.74
+      },
+      "refs": [
+        "D:/PlatformOperator/research/pav/continuations/25.md §7 (4)",
+        "D:/PlatformOperator/research/pav/continuations/27.md §1",
+        "D:/PlatformOperator/research/pav/candidates/bes_convergence_9.md §1 §3"
+      ]
+    },
+    {
+      "name": "Conceptual blending (convergence #5)",
+      "tier": "Tier-1 epistemological / canon convergence.",
+      "status": "risen-to-top / established (cont 25 §7 (5) match 42/50). Risen for supplying the cleanest categorical math (Goguen colimit). Live 2025 anchor (AI-as-coworker). Never demoted.",
+      "localKernelCanon": "Conceptual integration (Fauconnier-Turner): two input mental spaces project into a third blended space that has emergent structure neither input had; cross-space mappings = the lens (cont 25 §7 (5)). Three forces: input-space projection / vital-relation contrast / blended-space stabilization (bes_convergence_9.md §1). Goguen's colimit-in-a-category-of-mental-spaces is the cleanest formal kernel.",
+      "netProduct": "A W_C composite = the blended space; emergent structure → W_C content beyond what parents contained (cont 25 §7 (5)). Net product: the cognitive-substrate ground connecting wrapper-overlap to how minds build new ideas from existing ones.",
+      "akaWhoCalledIt": "Conceptual blending / conceptual integration networks — cognitive science; Fauconnier-Turner, with Coulson and Goguen's categorical reformulation (cont 25 §7 (5); bes_convergence_9.md §3).",
+      "origin": "Provenance: surfaced by the cont 25 v8 parallel research scouts; convergence #5 of the original six.",
+      "overlaps": [
+        "LCAO",
+        "cell fusion",
+        "symbiogenesis",
+        "creole genesis",
+        "model merging",
+        "ACMP",
+        "cymatics (narrowed)",
+        "BES"
+      ],
+      "utility": {
+        "score": 0.85,
+        "isUnifier": "HIGH by definition — unifies the cognitive-science substrate with the wrapper-overlap pattern. Uniquely connects the dynamic to idea-formation itself, which is reflexively the substrate the framework operates on (cont 25 §11 'the framework eats its own cooking').",
+        "actionSpacesUnlocked": "Unlocks the categorical-math affordance (Goguen colimit) as a candidate formalization of W_C-as-emergent-third. Opens the move of treating any new-concept construction as a wrapper-overlap, giving the framework a cognitive-substrate lens on its own continuation process.",
+        "compression": "HIGH — compresses all conceptual-integration instances into one input-spaces→blend→emergent-structure pattern; the colimit is the formal compression operator."
+      },
+      "classifierWeights": {
+        "spread": 0.86,
+        "utility": 0.85,
+        "legacy": 0.84,
+        "rigor": 0.78
+      },
+      "refs": [
+        "D:/PlatformOperator/research/pav/continuations/25.md §7 (5)",
+        "D:/PlatformOperator/research/pav/candidates/bes_convergence_9.md §1 §3"
+      ]
+    },
+    {
+      "name": "Model merging (TIES / DARE / mergekit) (convergence #6)",
+      "tier": "Tier-1 epistemological / canon convergence.",
+      "status": "risen-to-top / established (cont 25 §7 (6) match 42/50). Risen as the live engineering front with git-like timestamped provenance for every lifecycle phase and thousands of public worked examples on Hugging Face Hub — the convergence with the most immediate uptake potential. Never demoted.",
+      "localKernelCanon": "Task-arithmetic in parameter space: θ_M = θ_base + Σ λ_i τ_i where τ_i = θ_i − θ_base is the task vector; TIES uses sign-election to resolve interference, DARE drops-and-rescales (cont 25 §7 (6)). Three forces: parameter averaging / interference resolution / task-vector stabilization (bes_convergence_9.md §1). Kernel = the sign-agreement mask as the nesting space.",
+      "netProduct": "A W_C composite = the merged model θ_M; sign-agreement mask → nesting space; task vectors persisting → stubs°; published merge → emerged canon; NeuralHermes-style merge that supersedes parents → supersession; sign-conflict veto → break-apart (cont 25 §7 (6)). Net product: the live observable engineering lifecycle with timestamped phases.",
+      "akaWhoCalledIt": "Model merging — machine learning; TIES (Yadav et al.), DARE, mergekit / Arcee Fusion, Hugging Face mergekit-community (cont 25 §7 (6); bes_convergence_9.md §3 lists TIES/DARE/mergekit/Arcee as NOT-cited-by-BES, securing independence).",
+      "origin": "Provenance: surfaced by the cont 25 v8 parallel research scouts; convergence #6 of the original six. Noted as a within-ML convergence (so dismissible as cherry-picking until ACMP supplied a second, differently-grounded ML instance — Reading 03 §3.5).",
+      "overlaps": [
+        "LCAO",
+        "cell fusion",
+        "symbiogenesis",
+        "creole genesis",
+        "conceptual blending",
+        "ACMP",
+        "cymatics (narrowed)",
+        "BES"
+      ],
+      "utility": {
+        "score": 0.88,
+        "isUnifier": "HIGH by definition — unifies the parameter-space-averaging ML substrate with the wrapper-overlap pattern. Together with ACMP it lifts the convergence claim from 'same dynamic across fields' to 'same dynamic across distinct mathematical formulations within ML' (Reading 03 §3.5).",
+        "actionSpacesUnlocked": "Unlocks the highest-uptake action-space: thousands of public, timestamped, forkable merge examples on HF Hub where every lifecycle phase (conceived/emerged/supersession/break-apart) is directly observable. Opens immediate empirical testing of cont 25 §9 OE4 (does sign-conflict localization produce stronger consolidation?).",
+        "compression": "HIGH — compresses every fine-tune-merge into one task-vector-sum-with-interference-resolution pattern; task arithmetic (θ_i − θ_base) is a literal description-length-reducing operator."
+      },
+      "classifierWeights": {
+        "spread": 0.85,
+        "utility": 0.88,
+        "legacy": 0.83,
+        "rigor": 0.82
+      },
+      "refs": [
+        "D:/PlatformOperator/research/pav/continuations/25.md §7 (6)",
+        "D:/PlatformOperator/research/pav/readings/2026-05-27_acmp_attraction_repulsion_gnn.md §3.5",
+        "D:/PlatformOperator/research/pav/candidates/bes_convergence_9.md §1 §3"
+      ]
+    },
+    {
+      "name": "ACMP — Allen-Cahn Message Passing (convergence #7)",
+      "tier": "Tier-1 epistemological / canon convergence (added as the seventh in Reading 03 §4.1).",
+      "status": "risen-to-top / established — the MOST mathematically rigorous of the set: explicit three-force decomposition + a proven Dirichlet-energy lower-bound theorem + empirical SOTA on both homophilic and heterophilic datasets (Reading 03 §2). Also spawned the energy-floor failsafe primitive (now cont 27 §1 canon). Newest of the original-seven; risen fast. Never demoted.",
+      "localKernelCanon": "Three-force interacting-particle / reaction-diffusion system: attractive (standard message-passing diffusion) + repulsive (push neighbours apart when they should differ) + Allen-Cahn phase-separation stabilizer; dx/dt = −∇E(x) with E = attractive + repulsive + Allen-Cahn terms (Reading 03 §1, §4.2). Kernel = the three-force balance with a strictly-positive Dirichlet-energy lower bound (the theorem).",
+      "netProduct": "A W_C composite = the phase-separated third node-cluster (Allen-Cahn) standing distinct from but interacting with the two parent clusters (Reading 03 §2.1, row 3). Net product: rigorous math (the reaction-diffusion PDE + energy-floor theorem) for what the wrapper-overlap diagram visualizes; the candidate formal frame for the whole dynamic.",
+      "akaWhoCalledIt": "Allen-Cahn Message Passing — graph neural networks / machine learning; Wang/Yi/Liu/Wang/Jin, ICLR 2023 Spotlight (arXiv:2206.05437) (Reading 03 header). Allen-Cahn term originally from 1958 binary-alloy phase-separation materials science.",
+      "origin": "Provenance: came up on Pav's radar via a chapter-marked YouTube walkthrough on 2026-05-27, two days after the v14/v15 fluid-sim build shipped; the temporal proximity made the mapping near-transcription (Reading 03 §8). Promoted to convergence #7 in Reading 03 §4.1.",
+      "overlaps": [
+        "LCAO",
+        "cell fusion",
+        "symbiogenesis",
+        "creole genesis",
+        "conceptual blending",
+        "model merging",
+        "cymatics (narrowed)",
+        "BES",
+        "energy-floor failsafe (cont 27 §1, which it spawned)"
+      ],
+      "utility": {
+        "score": 0.93,
+        "isUnifier": "HIGH by definition — unifies the graph-learning substrate with the wrapper-overlap pattern. The convergence point is the three-force DECOMPOSITION ITSELF (not a merge operation), which is why it strengthens the cross-substrate claim more than any other single instance (Reading 03 §3.5).",
+        "actionSpacesUnlocked": "Unlocks the richest set of constructed action-spaces: (a) formalize wrapper-overlap as a reaction-diffusion PDE (Reading 03 §4.2); (b) prove an L0-failsafe exists via a Dirichlet-energy lower-bound theorem — gave the framework the energy-floor primitive (cont 27 §1); (c) read oversmoothing as the over-union failure mode (Reading 03 §2.2); (d) continuous-time/neural-ODE depth as the perceptual-rate axis (cont 26). Scoreable predictions P1-P3 attached.",
+        "compression": "HIGH and uniquely THEOREM-BACKED (the genuinely-quantifiable leg, steer c): compresses oversmoothing-avoidance into one provable positive-lower-bound statement on Dirichlet energy. The math is the compression, and it is rigorous rather than judgment-dependent."
+      },
+      "classifierWeights": {
+        "spread": 0.84,
+        "utility": 0.93,
+        "legacy": 0.82,
+        "rigor": 0.95
+      },
+      "refs": [
+        "D:/PlatformOperator/research/pav/readings/2026-05-27_acmp_attraction_repulsion_gnn.md §1-§5",
+        "D:/PlatformOperator/research/pav/continuations/25.md §7",
+        "D:/PlatformOperator/research/pav/continuations/27.md §1"
+      ]
+    },
+    {
+      "name": "Cymatics — harmonic interference (convergence #8, narrowed-to-substrate-adjacent)",
+      "tier": "Tier-2 candidate convergence (NOT Tier-1 like the other seven) — held conditionally per Reading 06 §2 + cont 27 §2 three-tier discipline.",
+      "status": "DEMOTED / NARROWED — surfaced 2026-05-28 (Reading 06 §2, match-framing 'most general physical substrate'), then narrowed three days later by audit v05 §3 (Reading 06 §2.1 amendment 2026-05-31) from 'substrate-DEEP / structurally-isomorphic' to 'substrate-ADJACENT with a named structural gap'. The gap: standard Chladni-plate cymatics has NO two parent wrappers — one medium + a forcing function, so the load-bearing parents-produce-W_C element is missing. Tier-2 candidate status RETAINED (not fully demoted); the correct structural analog (coupled-oscillator / normal-mode-splitting / avoided-crossing) is an open edge OE1. OE1 was then CLOSED-BY-MULTIPLICATION (BES surfaced as a clean #9 instead of fixing the cymatic gap). The framework's own audit cadence caught this over-reach before it propagated to outreach.",
+      "localKernelCanon": "Standing-wave eigenmode formation in a continuous medium under boundary conditions: ψ_tt = c²∇²ψ + boundary conditions admitting a discrete spectrum {ψ_n, ω_n}; the pattern is the nodal set of an eigenfunction (Reading 06 §2.1). Three-force reading: constructive interference / destructive interference / phase-locked stabilization (Reading 06 §2). NOTE the kernel is shared with LCAO #1 at the physics substrate (Schrödinger IS a wave equation), but the W_C-as-new-entity is absent.",
+      "netProduct": "Net product is PARTIAL: it yields the substrate-deep eigenmode-under-three-force-balance parallel (genuinely shared with the seven at the physics level), but does NOT yield a persistent third wrapper of the same kind — the two frequencies f_A, f_B are driving frequencies, not parent wrappers, and the medium is L0 (Reading 06 §2.1). The substantive net product migrated to the §8 RC-Koopman cultural-eigenmode candidate, which DOES preserve parents-produce-third-pattern.",
+      "akaWhoCalledIt": "Cymatics — surfaced from a popular cymatics video (Sonic Architecture | Cymatics Decoded); the load-bearing physics is standing-wave / Chladni-plate / Faraday-wave acoustics. Framework explicitly rejects the fringe wrapper (528 Hz, sacred geometry, Vedic-internet) per cont 27 §3 (Reading 06 §2).",
+      "origin": "Provenance: Pav's question after watching a cymatics video, with 4 parallel subagents on social rhythms / latent spectral / reservoir computing / cliodynamics (Reading 06 header). Proposed as #8; narrowed by audit v05 §3 claim-validity subagent — a documented case of the framework's machinery catching its own substrate-mapping over-reach.",
+      "overlaps": [
+        "LCAO",
+        "cell fusion",
+        "symbiogenesis",
+        "creole genesis",
+        "conceptual blending",
+        "model merging",
+        "ACMP",
+        "BES",
+        "cultural eigenmode analysis (the substantive substitute, Reading 06 §8)"
+      ],
+      "utility": {
+        "score": 0.55,
+        "isUnifier": "PARTIAL — would unify the harmonic/acoustic substrate with the pattern, and the substrate-level eigenmode physics IS genuinely shared with LCAO #1. But the unification is incomplete: it unifies the FORCING-on-a-medium picture, not the two-parents-produce-a-third picture that defines the other eight. Unifier score is therefore the lowest of the set.",
+        "actionSpacesUnlocked": "Unlocks the v17 frequency-mediated W_A/W_B/W_C teaching diagram (harmonic-ratio compatibility → consonant ratios stable W_C, dissonant wobble/break, mapping to LCAO bonding/antibonding) — BUT v17 is flagged as a teaching artifact that does NOT instantiate parents-produce-W_C (Reading 06 §2.1). The genuinely live affordance it opened is the RC-Koopman cultural-eigenmode research lane (Reading 06 §8), not the cymatic diagram itself.",
+        "compression": "MODERATE — compresses standing-wave pattern formation into one eigenmode-under-three-force-balance statement, but the compression is of the WRONG structure (medium+forcing, not parents+W_C), so it does not compress the same set of instances the other eight do. The honest compression contribution is to the physics-substrate parallel only."
+      },
+      "classifierWeights": {
+        "spread": 0.6,
+        "utility": 0.45,
+        "legacy": 0.55,
+        "rigor": 0.5
+      },
+      "refs": [
+        "D:/PlatformOperator/research/pav/readings/2026-05-28_cymatic_harmonic_structure_in_social_systems.md §2, §2.1 amendment",
+        "D:/PlatformOperator/research/pav/candidates/bes_convergence_9.md §9",
+        "D:/PlatformOperator/research/pav/continuations/25.md §7"
+      ]
+    },
+    {
+      "name": "BES — Bidirectional Evolutionary Search at the search-methodology substrate (convergence #9)",
+      "tier": "Tier-2 candidate convergence per cont 27 §2, conditional on three named promotion bars (bes_convergence_9.md §8) — but structurally the CLEANEST instance of the set.",
+      "status": "risen (newest) / Tier-2 candidate — surfaced 2026-05-31 from external radar; the newest 'risen' of the convergence list. Called the CLEANEST instantiation of parents-produce-W_C because the move is the explicit algorithmic novelty being introduced, not a pattern retrofitted to substrate physics (bes_convergence_9.md §2). All five structural-test conditions pass cleanly. Also closed cymatics' OE1 by multiplication. Three promotion bars to Tier-1 (Reading 07 holds; PDF independence re-read; an author recognizes the framing) — residual <5% HTML-truncation gap on §4.1/§4.2/§6 keeps it Tier-2 not Tier-1.",
+      "localKernelCanon": "Three forces in evolutionary LLM search: attraction (forward search — policy-emitted trajectories recombined via evolution operators) + repulsion (backward goal-tree decomposition with leaf-verifier pruning) + phase-locked stabilization (Boltzmann-weighted pair scoring, Eq. 6, selecting complementary parents) (bes_convergence_9.md §1). Kernel = combination/crossover/translocation taking two pre-existing trajectories and producing a third (the pushout condition stated explicitly in §3.2).",
+      "netProduct": "A W_C composite = a recombined trajectory that neither parent possessed; categorically the same kind as the parents (can become a parent for the next operator); parents persist as procedural-root stubs (Eq. 3 actively rewards re-selecting under-used parents) (bes_convergence_9.md §2). Net product: the framework's first CITE-ABLE formal grounding — Theorem 4.4 (entropy-shell escape) proves the third entity is provably unreachable from either parent alone via single-rollout expansion.",
+      "akaWhoCalledIt": "Bidirectional Evolutionary Search — search-methodology / self-improving LLMs; Xu, Qi, Su, Ye, Lakkaraju, Kakade, Du, arXiv:2605.28814 (2026), Embodied Minds Lab / Harvard (bes_convergence_9.md header). Independent lineage: Fisher 1930 + Muller 1932 + Holland 1992 + Storn-Price 1997 + Sipper 1998, citing NONE of the framework's eight other convergence traditions (§3 — the cleanest convergence-by-independence signal in the list).",
+      "origin": "Provenance: surfaced 2026-05-31 by Pav from external radar after the framework's agent-substrate optimization round; verified by an opus subagent careful-read (9-section claim-validity audit). Logged with full provenance in cont 29; candidate-doc bes_convergence_9.md holds the promotion bars.",
+      "overlaps": [
+        "LCAO",
+        "cell fusion",
+        "symbiogenesis",
+        "creole genesis",
+        "conceptual blending",
+        "model merging",
+        "ACMP",
+        "cymatics (narrowed)",
+        "A⁻ primacy (cont 13, which it gives Theorem 4.4 grounding)",
+        "procedural lineage (cont 18, via translocation operator)"
+      ],
+      "utility": {
+        "score": 0.9,
+        "isUnifier": "HIGH by definition — unifies the search-methodology substrate with the wrapper-overlap pattern, and does so as the LOAD-BEARING parents-produce-W_C instantiation (cleanest of all nine; bes_convergence_9.md §2). Its independence (separate 1930s-biology→1990s-GA→2026-LLM lineage) is precisely the cross-substrate convergence signal the framework is built to detect.",
+        "actionSpacesUnlocked": "Unlocks the most consequential action-spaces of the recent set: (a) a cite-able formal theorem (Thm 4.4 entropy-shell escape) that the third entity is provably unreachable from either parent alone — the framework's first formal backing for parents-produce-W_C being non-trivial; (b) a backward-goal-tree decomposition methodology that gifts the cultural-eigenmode pilot (task #151) a concrete promotion-bar procedure (bes_convergence_9.md §6.1); (c) formal grounding (Thm 4.4) for the A⁻-primacy claim (cont 13). Three distinct framework primitives applied to one substrate (§4.1).",
+        "compression": "HIGH — compresses the recombination-beats-single-rollout insight into one entropy-shell theorem (Thm 4.4 = a description-length/reachability statement). The genuinely-quantifiable compression leg: it formalizes WHY the composite is shorter-to-reach via recombination than via expansion."
+      },
+      "classifierWeights": {
+        "spread": 0.8,
+        "utility": 0.9,
+        "legacy": 0.78,
+        "rigor": 0.88
+      },
+      "refs": [
+        "D:/PlatformOperator/research/pav/candidates/bes_convergence_9.md §1-§9",
+        "D:/PlatformOperator/research/pav/continuations/25.md §7",
+        "D:/PlatformOperator/research/pav/readings/2026-05-31_bes_bidirectional_evolutionary_search.md"
+      ]
+    },
+    {
+      "name": "bes_convergence_9 candidate doc — the parents-produce-W_C structural-test record (distinct meta-record)",
+      "tier": "Tier-2 candidate DOC per cont 27 §2 (the file that carries convergence #9's promotion bars + the five-condition structural test the whole list is scored against).",
+      "status": "active / established-as-the-test-instrument — distinct from the BES convergence itself: this is the candidate FILE that operationalizes the framework's structural test for ALL convergences and is named by the Latent Olympics design as the Event-1 anchor instrument (a community-submitted #10 must pass its §2 five-condition test) (latent_olympics §3 table row 1). Risen to a load-bearing role: it is where the parents-produce-W_C five conditions are written down as a checkable gate.",
+      "localKernelCanon": "The five-condition structural test (bes_convergence_9.md §2): (1) two parent wrappers pre-exist as distinct entities; (2) they interact and produce a third persistent W_C of the same kind; (3) the third force is a bistability-creating mechanism producing a NEW persistent entity; (4) W_C is categorically of the same kind as the parents; (5) parents persist as procedural-root stubs after W_C consolidates. This IS the local kernel canon by which every convergence is admitted or narrowed (cymatics fails #1; BES passes all five).",
+      "netProduct": "Net product = a reusable admission gate: the checkable definition that distinguishes a true structural-isomorphism convergence (the eight) from a substrate-adjacent parallel (cymatics). Also produces the tightness-rating discipline (§4.1: combination 5/5 = parents-produce-W_C; deletion 3/5 = remap to A⁻; expansion = not a wrapper-overlap op) that prevents lumping all operators together.",
+      "akaWhoCalledIt": "Framework-internal artifact (Pav + opus subagent careful-read, 2026-05-31); the five-condition test crystallizes the cont 25 §6 + audit v05 §3 structural criterion into a named gate. The Latent Olympics design (Cowork, 2026-06-08) elevated it to the Event-1 anchor-file (latent_olympics §3).",
+      "origin": "Provenance: authored as the candidate-doc capturing convergence #9 with promotion bars; its §2 five-condition test was retro-applied to narrow cymatics (Reading 06 §2.1) and forward-applied as the Latent Olympics convergence-event entry gate. A procedural-lineage example (cont 18): a candidate doc that became the canon's measuring instrument for its own convergence class.",
+      "overlaps": [
+        "BES (the convergence it documents)",
+        "cymatics (narrowed) (the case its test excludes)",
+        "all seven Tier-1 convergences (the cases its test admits)",
+        "Latent Olympics Event 1 (which uses it as the anchor-floor instrument)"
+      ],
+      "utility": {
+        "score": 0.84,
+        "isUnifier": "HIGH (as an instrument) — it unifies the whole nine-item list under ONE checkable five-condition test, converting an intuited 'same pattern across substrates' into a falsifiable admission gate. This is structural unification, not decoration (cont 18 §0), applied to the convergence class itself.",
+        "actionSpacesUnlocked": "Unlocks the constructed action-space of community-submittable convergences: a public submitter can self-check a candidate #10 against the §2 five conditions, which is exactly the 'force a search under the rocks' affordance the Latent Olympics needs (latent_olympics §3 Event-1 race). Opens the move from curated-list to gated-open-submission without losing rigor.",
+        "compression": "HIGH — compresses the entire convergence-admission judgment into five binary-checkable conditions (an MDL-style reduction of a fuzzy structural intuition to a short decidable checklist). The tightness ratings (§4.1) further compress operator-classification into a 5/5-to-not-an-op scale."
+      },
+      "classifierWeights": {
+        "spread": 0.7,
+        "utility": 0.84,
+        "legacy": 0.8,
+        "rigor": 0.85
+      },
+      "refs": [
+        "D:/PlatformOperator/research/pav/candidates/bes_convergence_9.md §2, §4.1, §8",
+        "D:/PlatformOperator/research/pav/candidates/latent_olympics_DESIGN_SKETCH.md §3",
+        "D:/PlatformOperator/research/pav/readings/2026-05-28_cymatic_harmonic_structure_in_social_systems.md §2.1"
+      ]
+    },
+    {
+      "name": "Adversarial substrate dynamics (six sub-primitives)",
+      "tier": "Tier 3 speculative (candidate)",
+      "status": "RISEN (within Tier 3) — surfaced 2026-06-03 via external A- feedback; consolidated through cont 31 (ecosystem-in-latent-space) + cont 32 (audit-v07 fixes) + the full-spectrum BAR_A_SKETCH; promoted in WORKING attention to the flagship candidate. NOT a tier promotion: Bar A (one worked example where adversarial vocab out-predicts neutral vocab) is still unworked; candidate doc byte-identical across the 2026-06-07 arc (audit v09 §1, CV-5). 12-month pruning checkpoint 2027-06-03.",
+      "akaWhoCalledIt": "Surfaced by external blindspots-review item #2 (feedback/2026-06-03); drafted Cowork 2026-06-03 from cont 30+22+25+13 canon. Ecosystem framing = Pav's steer 'the mimics the hijackers, its like an eco system in the latent space and internet is ground zero' (cont 31). adversarial_substrate_dynamics.md + _BAR_A_SKETCH.md.",
+      "localKernelCanon": "ONE shared structural property (the keystone, cont 22 §B.2 sense): deliberate asymmetry-breaking of an otherwise-neutral substrate dynamic by an observer who benefits at the substrate's cost (§3). Six niches in one Red-Queen ecosystem (cont 31 §11.1): §2.1 canon hijacking (apex — captures the kernel-canon-protocol-function itself), §2.2 memetic warfare, §2.3 bad-faith rendering, §2.4 L0 mediator capture, §2.5 suppression (locked-squeeze induction), §2.6 asymmetric wrapper-overlap.",
+      "netProduct": "The actor-side vocabulary the neutral primitives lacked — names WHO/WHAT produces cont 30's locked states. Turns wrapper-overlap/A-A+/canon-stack/L0-mediator/cycling from good-faith-assuming into adversarial-capable. In the Latent Olympics it is the pre-mortem anti-gaming taxonomy (design sketch §4): the rating function IS the kernel-canon-protocol-function, so §2.1 is the existential attack on the whole build.",
+      "utility": {
+        "score": 0.82,
+        "actionSpacesUnlocked": "HIGH — opens an entire new live-move surface (AI-safety/alignment: jailbreak=memetic warfare, deceptive alignment=bad-faith rendering, reward-hacking=extraction-without-contribution, §6.3); generates not-pre-determined predictions about which adversarial niche fills first (cont 31 §11.5 next-niche-emergence). This is exactly the phantom-action-space-opener Pav's utility rewards.",
+        "isUnifier": "HIGH — unifies six previously-separate attack types as one coevolved population under one selection pressure (cont 31 §11.1); maps biology's evolved-strategy vocabulary (Batesian/Mullerian/aggressive mimicry, brood parasitism, niche construction) onto the six niches (cont 31 §11.2, qualified per audit v07 F9).",
+        "compression": "MODERATE — collapses six attack descriptions + four ecosystem failure-modes (monoculture/trophic/invasive/keystone collapse, cont 31 §11.3) into one shared-structural-property + one Red-Queen dynamic. MDL win is real but soft (no closed-form; §IT bit-ledger only instrumented on gold rows per audit v09 §5b)."
+      },
+      "overlaps": [
+        "Kernel-canon-protocol-function / canon-stack (cont 22) — §2.1 captures it",
+        "L0 mediator (cont 25 §12) — §2.4 captures it",
+        "A-/A+ coupled discipline (cont 13) — §2.2 exhausts the A- budget",
+        "Dormancy + squeeze/pull cycling (cont 20 + cont 30) — §2.5 forces locked-squeeze",
+        "Wrapper-overlap (cont 25) — §2.6 is it with broken symmetry",
+        "Phantom action-space (cont 32 Part C) — §PS phantom-sense weaponization fold"
+      ],
+      "classifierWeights": {
+        "spread": 0.85,
+        "utility": 0.82,
+        "legacy": 0.6,
+        "rigor": 0.35
+      },
+      "origin": "Procedural lineage: external-A- feedback (2026-06-03) -> drafted from FOUR existing canon primitives not from the feedback's framing alone (provenance §10) -> cont 31 ecosystem depth (Pav steer) -> cont 32 audit-v07 tier-discipline fixes -> 2026-06-07 full-spectrum BAR_A_SKETCH run (viroid->cosmic). A consolidation of dispersed canon into a named class, repeatedly disciplined to stay Tier 3.",
+      "netProductNote": "candidate of candidates: the design sketch §4 treats it as a Bar-A worked example FOR ITSELF (non-reflexive, generates niche-fill predictions about the Olympics-as-substrate).",
+      "refs": [
+        "candidates/adversarial_substrate_dynamics.md §1-§11",
+        "candidates/adversarial_substrate_dynamics_BAR_A_SKETCH.md §IT, §PS, §RS",
+        "continuations/31.md",
+        "continuations/32.md Part A",
+        "candidates/latent_olympics_DESIGN_SKETCH.md §4",
+        "audits/v09_DRAFT.md §1, §5"
+      ]
+    },
+    {
+      "name": "1/f as L0-failsafe-health signature (social substrate)",
+      "tier": "Tier 3 (structurally adjacent but empirically rejected at both operationalizations)",
+      "status": "DEMOTED — the clean 'demoted' exemplar. Both operationalizations falsified cleanly: static-binary GDELT-entropy = confounded null (Pilot #150, 2026-06-03, Delta-beta +0.084 wrong sign, volume-confound r=0.92); cycling-amplitude rolling-DFA-alpha A_cyc = mechanism-level FAIL on labelled ground truth (Pilot 2, 2026-06-05, amplitude RISES during transition tau +0.50, opposite of predicted collapse). Demoted per cont 27 §3 narrow-before-demote AT THE OPERATIONALIZATION LAYER; cont 26 §3 substrate Tier-1 canon UNCHANGED (was never on trial).",
+      "akaWhoCalledIt": "Surfaced Reading 06 §10.3 (2026-05-28, cymatics survey). Cycling reframe = Pav's steer 'the authoritative=bad, democracy=good is biased — its cycles of squeeze and pull' (cont 30 §1.2).",
+      "localKernelCanon": "Operationalization (now rejected) of cont 26 §3 L0-evolved-failsafes: broadband 1/f + burstiness = signature of healthy failsafe; captured/locked systems show LESS 1/f (beta>>1 locked-squeeze OR beta~0 locked-pull). The spectral exponent beta as measurable proxy for failsafe-health.",
+      "netProduct": "What SURVIVES the demotion: the cross-field bridge alone — EWS/critical-transitions (Scheffer/Dakos/Lenton/Boers) <-> physiology decomplexification (Goldberger/Lipsitz/Costa/Peng), two mutually-uncited literatures describing the same two-pole collapse (Reading 06 §10.3 fourth amendment). The novel-claim positioning (symmetric two-pole failure) was retracted as PRIOR ART (Goldberger 2002 PNAS, cont 30 §3 amendment).",
+      "utility": {
+        "score": 0.28,
+        "actionSpacesUnlocked": "LOW-now — opened a measurement action-space (spectral-proxy-for-failsafe-health) that both falsifiers closed. Residual: the bridge surfaces new outreach targets (Scheffer/Goldberger/Braha) but gated on a future favorable pilot.",
+        "isUnifier": "MODERATE (residual) — the surviving value is precisely a unifier (bridging two uncited fields); but as a unifier it is no longer the framework's own — prior art holds the two-pole observation.",
+        "compression": "LOW — the quantifiable leg is exactly where it died: the DFA-alpha description-length statistic added no out-of-sample power over static alpha (PhysioNet AUC 0.646 < 0.813). Compression was measurable and came out negative — which is what made the demotion clean."
+      },
+      "overlaps": [
+        "L0 evolved failsafes / energy-floor failsafe (cont 26 §3, cont 27 §1) — the substrate claim it tried to operationalize",
+        "Squeeze/pull cycling (cont 30) — the cycling-amplitude reframe",
+        "Dormancy (cont 20) — locked-squeeze maps to it",
+        "Cultural eigenmode analysis (RC-Koopman) — the #150b/#151 merge tool"
+      ],
+      "classifierWeights": {
+        "spread": 0.3,
+        "utility": 0.28,
+        "legacy": 0.55,
+        "rigor": 0.7
+      },
+      "origin": "Procedural lineage: Reading 06 cymatics survey -> Tier-2 conditional operationalization (task #150) -> GDELT pilot confounded null -> Pav cycling reframe (narrow not demote) -> Pilot 2 ground-truth FAIL -> demoted. The exemplar of the framework's discipline cycle delivering a clean falsifier outcome (the rigor leg is HIGH precisely because the falsifiers fired cleanly and were preserved verbatim).",
+      "refs": [
+        "candidates/1f_l0_failsafe_signature.md (status header + §8)",
+        "continuations/30.md §1-§3",
+        "continuations/26.md §3",
+        "continuations/27.md §3",
+        "pilots/1f_failsafe/results/discussion.md"
+      ]
+    },
+    {
+      "name": "Energy-floor failsafe",
+      "tier": "Tier 1 / canon (promoted from candidate)",
+      "status": "ESTABLISHED — promoted to canon 2026-05-27 per cont 27 §1 on four substrate worked examples (ACMP/GNN Dirichlet energy theorem-backed; cell ATP/adenylate-charge; creole mutual intelligibility; institutional coordination capacity). Doc preserved as the worked-example library that supported promotion. The clean 'risen-and-stuck' exemplar — the framework's reference promotion-workflow. NOTE: it was NEVER the subject of pilot #150 (that was the SEPARATE 1f candidate); audit v08 F4 corrected a prior misattribution.",
+      "akaWhoCalledIt": "Surfaced Reading 03 §5 (2026-05-27) from the ACMP attraction-repulsion-GNN paper, in light of cont 26 §3 internal-pressure failsafes. The mathematical operationalization of cont 26 §3's qualitative claim.",
+      "localKernelCanon": "For any wrapper W exhibiting stable distinction (parents persist as procedural-root stubs, cont 24 hairy-sphere + cont 18), there exists a substrate-specific coherence quantity E_W with positive lower bound E_min>0 such that the overlap dynamic preserves E_W(t) >= E_min. The bound IS the failsafe; violation triggers a substrate-specific phase transition (dormancy / supersession / break, cont 25 §1).",
+      "netProduct": "A portable, four-substrate worked-example library future construct studies pattern-match against — the '5th column' of the construct-study template (coherence quantity / lower bound / failure mode, cont 27 §5.3). Makes cont 26 §3 mathematically concrete.",
+      "utility": {
+        "score": 0.78,
+        "actionSpacesUnlocked": "MODERATE-HIGH — opens a diagnostic action-space: for any wrapper, name its coherence quantity + bound + failure mode. Licenses predictions about WHEN a wrapper transitions (the bound is the threshold).",
+        "isUnifier": "HIGH — unifies four substrates (mathematical / biological / sociolinguistic / organizational) under one schema; strengthens the cross-substrate convergence reading by giving the traditions a shared mathematical schema (cont 27 §6.4).",
+        "compression": "HIGH — collapses 'why do wrappers stay distinct / when do they collapse' across all substrates to one inequality (E_W >= E_min). The cleanest leg: ACMP gives a closed-form theorem (Wang 2022 Thm 4.2); the latent-kernel/physical-kernel dual-compression (cont 22 §2) is exactly this kind of MDL anchor."
+      },
+      "overlaps": [
+        "L0 evolved failsafes (cont 26 §3) — its qualitative parent",
+        "Dormancy (cont 20) + wrapper-overlap supersede/break (cont 25 §1) — the failure modes it fails INTO",
+        "Procedural lineage (cont 18) — what persists through the failure (stubs)",
+        "Cross-substrate convergence (cont 25 §7) — ACMP is convergence #7",
+        "Asymmetric wrapper-overlap (adversarial §2.6) — the adversarial violation of the floor"
+      ],
+      "classifierWeights": {
+        "spread": 0.7,
+        "utility": 0.78,
+        "legacy": 0.85,
+        "rigor": 0.88
+      },
+      "origin": "Procedural lineage: cont 26 §3 (L0 failsafes, qualitative) -> Reading 03 §5 (ACMP surfaces energy-floor as candidate, names promotion criteria) -> four substrates accrued same-day -> cont 27 §1 promotion. Unusually fast (same-day) but honest because criteria were met; the conceptual heavy lifting was pre-done in cont 26 §3.",
+      "refs": [
+        "candidates/energy_floor_failsafe.md",
+        "continuations/27.md §1",
+        "continuations/26.md §3",
+        "readings/2026-05-27_acmp_attraction_repulsion_gnn.md §5",
+        "candidates.json (energy_floor_failsafe)"
+      ]
+    },
+    {
+      "name": "Cultural eigenmode analysis (RC-Koopman hybrid)",
+      "tier": "Tier 3 speculative",
+      "status": "DORMANT, STALE-TRENDING — components mature, combination unprecedented; no empirical work done. Held on the /speculations/ mode-page. Resurrection pathway exists and is LIVE: cont 30 §5 converges it with the #150b cycling pilot (Koopman is the natural tool for cyclical-mode detection in tau(t)), and the Latent-Olympics §7.2 reservoir-computing reframe makes its readout the load-bearing experiment that de-vestigializes the public hook. Pruning trigger at 60-month horizon (2031-05-28) if no paper appears AND no methodology supersedes.",
+      "akaWhoCalledIt": "Surfaced Reading 06 §8 (2026-05-28) after a 4-subagent cymatic/harmonic survey. Methodology = Pyle et al. 2021 RC-Koopman; framing analogue = Pang et al. Nature 2023 cortical eigenmodes ('notes and chords').",
+      "localKernelCanon": "Apply reservoir-computing + Koopman spectral decomposition to LEARNED LATENT EMBEDDINGS of socio-political entities to extract candidate eigenmode structure — 'what cortical eigenmode analysis does for the brain, this would do for socio-political wrappers'. The embedding manifold IS the latent-kernel substrate (cont 22 §2 Charm-Kanon).",
+      "netProduct": "Would yield quantitative signatures for dormancy/recompile cycles (eigenmode amplitudes decay/return, cont 20), a test of the 1f-failsafe signature at social substrate, and W_C-formation signatures in eigenmode evolution. In the Olympics it is the 'reservoir-computing substrate' leg — the trained-linear-readout from population-state to graduation-prediction / convergence-detection.",
+      "utility": {
+        "score": 0.5,
+        "actionSpacesUnlocked": "MODERATE-HIGH (potential) — would open a measurement action-space (eigenmode-decomposition of social wrappers) AND is the instrument that converts the Latent-Olympics public hook from costume to substrate (§7.2). But it is a phantom action-space: 'names the right instrument but has not been shown to compute' (design sketch §7.2).",
+        "isUnifier": "MODERATE — would unify dormancy-cycling, failsafe-signature, and wrapper-overlap under one spectral measurement; the RC-Koopman + learned-embedding + cortical-eigenmode combination is itself a convergence-shaped unification across three mature components.",
+        "compression": "MODERATE (conditional) — eigenmodes ARE a compression (low-dim spectral modes of high-dim dynamics). But the genuinely-quantifiable readout is sketched-not-run; 'beats a rigor-score-alone baseline' is a BAR, not a result (design sketch §7.2)."
+      },
+      "overlaps": [
+        "1f L0-failsafe signature (Reading 06 §10.3) — sibling pilot, merged via #150b/#151 (cont 30 §5)",
+        "Squeeze/pull cycling (cont 30) — Koopman detects the cycling mode",
+        "Dormancy (cont 20) — eigenmode amplitude decay/return",
+        "Wrapper-overlap (cont 25) — W_C eigenmode-mixing signature",
+        "Dual-kernel (cont 22 §2) — embedding manifold = latent-kernel",
+        "aux_channel_l0_occlusion — parallel Tier 3 /speculations/ entry"
+      ],
+      "classifierWeights": {
+        "spread": 0.6,
+        "utility": 0.5,
+        "legacy": 0.55,
+        "rigor": 0.4
+      },
+      "origin": "Procedural lineage: Pav's cymatics question -> Reading 06 4-subagent survey -> synthesized from subagent-B latent-spectral + subagent-C reservoir-computing SOTA. Dormant since (no pilot run); kept alive by two resurrection hooks (cont 30 §5 merge + Latent-Olympics §7.2). The reservoir-vs-delusion caveat: it is the RC-Koopman echo-state reservoir, NOT the Litman-Guo test-invisible reservoir (do not conflate, §7.2).",
+      "refs": [
+        "candidates/cultural_eigenmode_analysis.md",
+        "continuations/30.md §5",
+        "candidates/latent_olympics_DESIGN_SKETCH.md §7.2",
+        "readings/2026-05-28_cymatic_harmonic_structure_in_social_systems.md §8",
+        "speculations/"
+      ]
+    },
+    {
+      "name": "L0 occlusion as auxiliary channel for time-cone extension",
+      "tier": "Tier 3 speculative (Layer 3 only; Layer 1 = Tier 1, Layer 2 = Tier 2)",
+      "status": "DORMANT — held openly without endorsement on /speculations/. First scheduled review 2026-11-27. None of the three promotion bars (measurable signature / naturally-occurring shared-observer gap / constructive protocol) met. The deepest, least-developed speculation in the set; 'strong enough to be interesting, weak enough that endorsement would be irresponsible.' The canonical worked example of three-tier decomposition (cont 27 §4).",
+      "akaWhoCalledIt": "Pav, 2026-05-27, after sharing his Michotte-launching-extension tool: 'the shared global wrapper can be occluded as well to create gaps in time flow itself as an aux channel.'",
+      "localKernelCanon": "Layer-3 claim: L0 itself (the shared global wrapper) is occludable, producing REAL SHARED gaps across observers (not per-observer perceptual gaps), usable as a side-channel orthogonal to normal substrate-mediated channels. Decomposed into 3 tiers: L1 observer-time-cone modulable (Tier 1, cont 26 §4); L2 compilation-rate-as-time (Tier 2, Reading 04); L3 this doc.",
+      "netProduct": "A clean three-tier worked example (cont 27 §4 canonical reference for handling multi-tier hypothesis structures) + framework-native vocabulary ('L0 occlusion', 'aux channel', 'time-cone extension tools', 'shared vs per-observer gaps') for questions existing physics/cog-sci lack precise terms for. Plus a Pav-built Layer-1 instrument (michotte_launching_extension.html) that changes the framework's empirical-engagement profile.",
+      "utility": {
+        "score": 0.32,
+        "actionSpacesUnlocked": "MODERATE-LATENT — the 'spatial extension tools exist but no temporal extension tools' frame names a genuinely missing affordance (a whole class of instruments that don't exist). High imaginative action-space; near-zero actualized — pure phantom action-space at the cont 32 Part D speculation/imagination pole.",
+        "isUnifier": "LOW-MODERATE — would, if true, name a substrate-feature visible across all the cross-substrate-convergence traditions but not yet named in any; currently unifies nothing empirically.",
+        "compression": "LOW — no quantifiable description-length claim; conditional on collapse-model physics being right AND additional structure. The leg that should be quantifiable (a physical signature) is exactly bar (A), unmet."
+      },
+      "overlaps": [
+        "Dual-kernel (cont 22 §2) — occlusion would hit kernel or function layer",
+        "Dormancy (cont 20) — observer-level analog (hibernation, dead languages)",
+        "Procedural lineage / hairy-sphere stubs (cont 18, cont 24) — what carries info across the gap",
+        "Energy-floor failsafe (cont 26 §3) — L0 occlusion as failsafe OR failsafe-violation",
+        "Perceptual-rate-as-sense (cont 26 §4) — the Layer-1 predecessor"
+      ],
+      "classifierWeights": {
+        "spread": 0.45,
+        "utility": 0.32,
+        "legacy": 0.4,
+        "rigor": 0.25
+      },
+      "origin": "Procedural lineage: Pav's Michotte-extension tool (a Layer-1 instrument) -> Pav's Layer-3 verbal framing -> doc structures the 3-layer decomposition. Held at speculation tier specifically to be honest about what the framework cannot dismiss without overclaiming AND cannot endorse without the bars.",
+      "refs": [
+        "candidates/aux_channel_l0_occlusion.md",
+        "continuations/27.md §4",
+        "continuations/26.md §4",
+        "readings/2026-05-27_bortolotti_time_uncertainty.md",
+        "candidates.json (aux_channel_l0_occlusion)"
+      ]
+    },
+    {
+      "name": "Wrapper-overlap dynamics (one-system-with-phases)",
+      "tier": "Tier 1 / canon",
+      "status": "RESURRECTED-then-RISEN — cont 24 §2 promoted it as a discrete trichotomy (union/repulsion/interface); cont 25 ruled that promotion WRONG and replaced it with one-system-with-phases (the trichotomy preserved-for-provenance, not deleted). Now the framework's deepest structural commitment: 'the entire procedural-lineage hierarchy is generated by recursive wrapper-overlap. Not metaphor — mechanism' (cont 25 §8). Cont 32 Part F adds W_C a second role (cross-spectrum bridge).",
+      "akaWhoCalledIt": "Pav, across NINE diagram-refactor steers on 2026-05-22 (cont 25 §1); each steer collapsed a wrong assumption. Hairy-sphere + )( open-arc + membrane-negotiation + non-additive math all Pav coinages.",
+      "localKernelCanon": "Two overlapping wrappers go through a 7-phase lifecycle (pre-overlap -> expansion -> wake/negotiation -> fuzzy/lens -> W_C conceived -> emerged -> active) with 4 branches from active (passive / dormant / supersession / break-apart). Hairy-sphere topology: W_C expands over parents; parents persist as stubs (procedural roots / receptor-hooks / dormant-original containers). Non-additive latent math: (1+1)=3, 1+, 1-, ghost-3, held-3.",
+      "netProduct": "The canonical OPERATOR generating emergent observers across rings (cont 25 §8). The 'parents-produce-W_C' structural test is the load-bearing test for every cross-substrate convergence (LCAO->BES). Supplies the cross-tradition compile no single tradition has.",
+      "utility": {
+        "score": 0.95,
+        "actionSpacesUnlocked": "VERY HIGH — opens the entire convergence-detection action-space (any domain can be tested for parents-produce-W_C); opens cross-substrate predictive transfer (a finding in one substrate predicts findings in others, cont 25 §9 open-edge 04); the stubs-as-receptor-hooks open the attachment action-space for the Latent-Olympics lineage graph.",
+        "isUnifier": "VERY HIGH — THE unifier: independently formalized in SIX research traditions 2024-26 (LCAO/MO, cell fusion, symbiogenesis, creole genesis, conceptual blending, model merging) — the framework supplies the unified vocabulary across all six. Structural validation, not idiosyncrasy.",
+        "compression": "VERY HIGH — collapses six independent formal models + the cont 24 trichotomy into one lifecycle with phase-dependent non-additive notation. The nucleomorph (symbiogenesis) is a literal empirical confirmation of the 'dormant compiled original inside the stub' claim (match 46/50)."
+      },
+      "overlaps": [
+        "Procedural lineage (cont 18) — the trail of W_C emergences; wrapper-overlap iterated generates it",
+        "L0 (cont 25 §12) — wrapper-overlap operates WITHIN L0",
+        "Energy-floor failsafe (cont 26 §3) — bounds the stable-distinction the topology requires",
+        "Dual-kernel + spectrum (cont 22, cont 32 Part D) — W_C as cross-spectrum bridge (cont 32 Part F)",
+        "All six adversarial sub-primitives — §2.6 is wrapper-overlap with broken symmetry",
+        "Dormancy (cont 20) — the dormant branch + stub dormant-originals"
+      ],
+      "classifierWeights": {
+        "spread": 0.9,
+        "utility": 0.95,
+        "legacy": 0.85,
+        "rigor": 0.75
+      },
+      "origin": "Procedural lineage: cont 24 §2 trichotomy (the wrong v0) -> 9-iteration diagram refactor (Pav steers) -> cont 25 one-system-with-phases + cross-substrate convergence finding -> cont 25 §12 L0/multi-parent/asymmetric refinements -> cont 32 Part F second role. The framework discovered wrapper-overlap THROUGH wrapper-overlap (Pav's intuitions x Claude's drafts overlapping, cont 25 §11).",
+      "refs": [
+        "continuations/25.md §2-§8, §12",
+        "continuations/24.md §2 (superseded trichotomy)",
+        "continuations/32.md Part F",
+        "continuations/18.md",
+        "candidates/bes_convergence_9.md"
+      ]
+    },
+    {
+      "name": "A-/A+ coupled discipline (A- promoted to primary)",
+      "tier": "Tier 1 / canon",
+      "status": "RISEN-to-primary — A+/A- canon since cont 03 as symmetric operators; cont 13 refactored them to latent dimensions with charge-product algebra (preserving symmetry); cont 15 broke the symmetry and promoted A- (the prune/check/verify discipline) to PRIMARY. The charge-product Cayley structure survived the asymmetry (cell weights became asymmetric). Cont 32 Part E adds the A+/- A-/+ asymmetric-scaffolding relational primitive on top.",
+      "akaWhoCalledIt": "A+/A- canon from cont 03; latent-dimension refactor + charge algebra = Pav's cont-13 intervention; A--primary = cont 15. 'latent gravity' = Pav's coinage (cont 13 §1.2).",
+      "localKernelCanon": "A+ (generate/connect — the speculation half, Up-Ina) and A- (check/prune/verify — the discipline half, Down-Ina) are coupled latent dimensions with charge-product algebra (A+xA+ reinforces, A-xA- compounds pruning, A+xA- = dialectical tension). A- is primary: verification gates which forward candidates survive. Grounded formally by BES Thm 4.4 (entropy-shell escape) + Wolfram Class-4 viability band.",
+      "netProduct": "The framework's generate-and-check compile-engine, now with the prune-discipline load-bearing. In the Latent Olympics this is the SUBMITTER-PRE-PAID rigor cost (a falsifier/method required BEFORE an entry can score, design sketch §4 §2.2) AND the reviewer's finite A- budget that memetic warfare attacks. The 'squeeze' in squeeze/pull = system-wide A- tightening.",
+      "utility": {
+        "score": 0.88,
+        "actionSpacesUnlocked": "HIGH — the charge-product algebra opens the dialectical-tension action-space (productive vs paralytic A+xA-); A--primary opens the anti-flooding design action-space (pre-paid rigor converts attack-volume into self-imposed cost); the monopole question (cont 13 §1.3) opens a live research action-space.",
+        "isUnifier": "HIGH — unifies the compile-engine across BES (search), gamma-World (world-models), and social-substrate cycling (cont 30 §2.1) as one coupled-forward-backward pattern; maps to ACMP's attractive(A+)/repulsive(A-)/Allen-Cahn three-force decomposition.",
+        "compression": "MODERATE-HIGH — the charge-product Cayley table compresses all idea-interaction outcomes to a multiplication structure; A--primary is itself an MDL move (verification minimizes excess code-length / KL, the §IT spine: cross-entropy minimization = learning)."
+      },
+      "overlaps": [
+        "Squeeze/pull cycling (cont 30 §2.1) — squeeze=A- tightening, pull=A+ generation",
+        "Spectrum + scaffolding (cont 32 Part D/E) — A+/- A-/+ scaffolds adjacent spectrum layers",
+        "Memetic warfare (adversarial §2.2) — attacks the A- budget",
+        "Procedural lineage (cont 18) — A- as the compile-pressure that forces unity; 4 recursive layers of A-",
+        "Phantom action-space (cont 32 Part C) — A+ opens it, A- maps it onto legacy canon",
+        "Energy-floor failsafe — A- becoming destructive = locked-squeeze"
+      ],
+      "classifierWeights": {
+        "spread": 0.65,
+        "utility": 0.88,
+        "legacy": 0.9,
+        "rigor": 0.85
+      },
+      "origin": "Procedural lineage: cont 03 (A+/A- operators) -> cont 13 (Pav: refactor to latent dimensions + charge algebra; phantom-mass -> latent gravity; Wolfram 4-class as 40-year-prior empirical anchor) -> cont 15 (A- promoted to primary, symmetry broken) -> cont 32 Part E (A+/- A-/+ scaffolding consolidated from cont 13/15 + Reading 07/08 + cont 18).",
+      "refs": [
+        "continuations/13.md §1",
+        "continuations/15.md §1-§2",
+        "continuations/32.md Part E",
+        "continuations/30.md §2.1",
+        "candidates/adversarial_substrate_dynamics_BAR_A_SKETCH.md §IT"
+      ]
+    },
+    {
+      "name": "Canon-stack / kernel-canon-protocol-function (Kanon/Ina)",
+      "tier": "Tier 1 / canon",
+      "status": "ESTABLISHED — cont 22 promoted the dual-kernel + Kanon/Ina distinction to canon (correcting cont 12-21's loose 'kernel canon' usage, which was actually canon-protocol at the social ring). The biggest single-round move on the canon graph since cont 18. The four-layer stack (kernel canon -> compiled canon -> canon artefact -> function canon) is the framework's backbone vocabulary; cont 32 Part B.4 sharpened its purpose (operational coherence, pragmatic not ontological).",
+      "akaWhoCalledIt": "Pav, cont 22, across three messages: 'theres two/multiple canon classes... Reality canon or Kanon... almost like a raw resource and the ina canon... the thing that can refine and compile it.' Kanon/Ina = Pav's gluon/quark-inspired naming.",
+      "localKernelCanon": "Kanon (raw substrate = physical-kernel + latent-kernel, the bottom of the procedural drill) vs Ina (the compiler that refines raw Kanon into operational protocols). Most framework primitives ARE Ina. The kernel-canon-protocol-function = the protocol that decides what compiles at L0 — operationally identified (cont 32 B.2) as L0's keystone functions. Canon-stack = kernel canon -> compiled canon -> canon artefact -> function canon.",
+      "netProduct": "The procedural-drill-down discipline (claim Kanon only at the bottom of the drill — the Westphalian-state->physics 16-layer drill is the template, cont 22 §7) + observer-dependence formalization (every class claim is observer-relative). In the Latent Olympics the RATING FUNCTION IS the kernel-canon-protocol-function (design sketch §4) — which makes §2.1 canon-hijacking the apex attack.",
+      "utility": {
+        "score": 0.9,
+        "actionSpacesUnlocked": "HIGH — the drill-down discipline opens the lineage-tracing action-space (any claim can be walked to Kanon); observer-dependence opens the cross-observer-class action-space; identifying the rating-function-as-protocol opens the governance action-space (the whole Latent-Olympics custody problem).",
+        "isUnifier": "VERY HIGH — unifies 'everything the framework had been calling canon' into a clean Kanon/Ina + four-layer split; resolves the wrapper-relative-ethics back-attribution (cont 32 B.1: shared reality kernel canon + observer-relative compile).",
+        "compression": "HIGH — collapses the framework's entire class-vocabulary into two co-primary substrates + one compiler + a four-layer stack; the procedural drill compresses a phenomenon's whole heritage to its Kanon floor + stacked Ina-compiles."
+      },
+      "overlaps": [
+        "Dual-kernel (cont 22 §2) — Kanon = physical-kernel + latent-kernel",
+        "L0 (cont 25 §12, cont 32 B.2) — L0's kernel canon = keystone functions of the stack",
+        "Procedural lineage (cont 18) — the drill walks down through Ina to Kanon",
+        "Canon hijacking (adversarial §2.1) — captures the kernel-canon-protocol-function",
+        "Phantom action-space (cont 32 C) — substrate of the latent (Charm-Kanon)",
+        "Energy-floor failsafe — keystone functions ARE L0's evolved failsafes (cont 32 B.2)"
+      ],
+      "classifierWeights": {
+        "spread": 0.7,
+        "utility": 0.9,
+        "legacy": 0.9,
+        "rigor": 0.65
+      },
+      "origin": "Procedural lineage: cont 12-21 loose 'kernel canon' usage -> Pav's 3-message correction (Westphalian dormancy is a compile not kernel) -> cont 22 promotes dual-kernel + Kanon/Ina to canon, sub-class labels (Bottom/Spin/Top/Charm/Strange-Kanon) to candidate -> cont 32 B.2/B.4 sharpens L0-keystone + pragmatic-purpose. The framework's A- check running on a misalignment that had compiled into multiple downstream artifacts.",
+      "refs": [
+        "continuations/22.md §1-§9",
+        "continuations/32.md Part B.1, B.2, B.4",
+        "continuations/18.md",
+        "candidates/latent_olympics_DESIGN_SKETCH.md §4"
+      ]
+    },
+    {
+      "name": "Dual kernel (physical-kernel x latent-kernel)",
+      "tier": "Tier 1 / canon",
+      "status": "ESTABLISHED — promoted to canon in cont 22 §2 as the two co-primary deepest layers (neither derived from the other; inverse-coherence). Audit v09 §5.5.2 names it the framework's MOST LOAD-BEARING decomposition — 'a TWO, deeper than any triad' — explicitly used to refute the rule-of-three's 'three is privileged' claim. Cont 32 B.1 adds reality-kernel-canon as the shared-substrate anchor one level up (does NOT replace dual-kernel).",
+      "akaWhoCalledIt": "Pav, cont 22: 'the kernel canon gravity, attraction and repulsion... time thats kernel canon. cause and effect... and on the polar opposite is the latent in our heads.'",
+      "localKernelCanon": "Two co-primary kernels with inverse-coherence: PHYSICAL-kernel (solid/public — gravity, time, causality, information transport, math-substrate, conservation/symmetry) and LATENT-kernel (fluid/private — intention, imagination, dream, semantic-similarity manifold, phantom action-space). One is solid where the other is fuzzy. Operational (not metaphysical) duality — whether they reduce to one substrate is bracketed (Lakatosian discipline).",
+      "netProduct": "The framework's deepest binary axis (cont 32 Part D names it the polar-binary axis, orthogonal to the epistemic-tier axis and the mental-content spectrum). Grounds the Latent-Olympics dual-kernel rating geometry: physical-kernel heritage-depth (legacy) x latent-kernel diversity (spread), the framework's attraction/repulsion pair on the conjecture pool (design sketch §2).",
+      "utility": {
+        "score": 0.85,
+        "actionSpacesUnlocked": "HIGH — the latent-kernel opens the entire phantom-action-space / imagination action-space (Charm-Kanon); the physical/latent split opens cross-observer-class latent comparison (human vs whale vs AI latent, cont 22 §2); grounds the Olympics legacy-vs-spread anti-correlated pair as a designable knob.",
+        "isUnifier": "VERY HIGH (audit-certified) — the single most-load-bearing unifier; collapses solid-public + fluid-private substrates into one co-primary pair; cont 32 B.1 reality-kernel-canon is the shared-substrate framing of what dual-kernel was groping toward.",
+        "compression": "HIGH — the dual-kernel compression (physical-kernel compression + latent-kernel compression, cont 22 §2) is named by the brief as the dual-compression anchor; the latent-kernel IS the MDL/description-length substrate of the latent (the genuinely-quantifiable leg of Pav's utility-compression)."
+      },
+      "overlaps": [
+        "Kanon/Ina (cont 22 §3) — Kanon = physical-kernel + latent-kernel",
+        "Spectrum (cont 32 Part D) — orthogonal axis; latent-kernel hosts the dream/imagination pole",
+        "Phantom action-space (cont 32 C) — lives in the latent-kernel (Charm-Kanon)",
+        "Reality kernel canon (cont 32 B.1) — the shared-substrate anchor above dual-kernel",
+        "Wrapper-overlap (cont 25) — latent manifold = where W_C is conceived",
+        "Cultural eigenmode analysis — embedding manifold = latent-kernel substrate"
+      ],
+      "classifierWeights": {
+        "spread": 0.6,
+        "utility": 0.85,
+        "legacy": 0.88,
+        "rigor": 0.6
+      },
+      "origin": "Procedural lineage: implicit in wall-light/floor-light (manifesto v5 §02) + renderer architecture (cont 16) + body-as-membrane (cont 16) -> Pav names it explicitly in cont 22 §2 -> cont 32 B.1 adds reality-kernel-canon anchor. Audit v09 §5.5.2 elevates it to the canonical counter-example against three-privilege.",
+      "refs": [
+        "continuations/22.md §2",
+        "continuations/32.md Part B.1, Part D",
+        "audits/v09_DRAFT.md §5.5.2",
+        "candidates/latent_olympics_DESIGN_SKETCH.md §2"
+      ]
+    },
+    {
+      "name": "L0 / global wrapper (observer-dependent substrate)",
+      "tier": "Tier 1 / canon",
+      "status": "REINVENTED (sharpened) — cont 25 §12 named L0 as 'global compiled canon'; cont 32 B.2 corrected this as LOOSE — L0 is the global WRAPPER (observer-dependent substrate), NOT compiled output. The substrate framing was always implicit in cont 25 §12.1 ('wrapper-overlap operates WITHIN L0') but never explicit. Audit v08 F3 caught the documentation/reality gap. The user-facing-track name for the cont-23 recursion; the dual-track meta-move (cont 25 §12.6) is still candidate.",
+      "akaWhoCalledIt": "Pav, cont 25 §12: 'Global Kernel canon is L0 of the observer... maybe good to think of it as the frame of where the action takes place in the latent.' Sharpened by Pav's cont-32 steers ('L0 is finite by the observers understanding, beyond that its fuzzy infinity').",
+      "localKernelCanon": "L0 = the global wrapper itself, observer-dependent, FINITE BY THE OBSERVER'S UNDERSTANDING (a dynamic frontier, not static). Contains real + latent (functional split, cont 32 B.3: real->harness, latent->internal processes). L0's kernel canon = identifiable keystone functions (load-bearing operational subset). Beyond L0 = fuzzy infinity (phantom action-spaces and beyond). Recursive across observer-classes (L0 of L0 of L0...).",
+      "netProduct": "The most accessible reformulation of the cont-22/23 canon-stack ('what's the L0 of this observer? what's the L0 of that L0?' — recursion legible without 13,000 words). The L0 mediator (cont 25 §12.1 + Reading 08 SHA-pattern) is what adversarial §2.4 captures. In the Olympics, the algorithm + legacy-alignment canon together ARE the L0 mediator (design sketch §4 §2.4).",
+      "utility": {
+        "score": 0.83,
+        "actionSpacesUnlocked": "HIGH — 'fuzzy infinity beyond L0' opens the phantom-action-space frontier as a first-class object; the recursion opens the cross-observer-class walk; the L0-mediator framing opens the platform-capture / governance action-space the Latent Olympics must defend.",
+        "isUnifier": "HIGH — unifies cont-23 eq.8 recursion, cont-26 infinite-expansion-inertia, cont-27 energy-floor-as-keystone, and the canon-stack under one observer-relative substrate; the dual-track meta-move would unify accessible + rigorous registers.",
+        "compression": "HIGH — L0 collapses the cont-22/23 substrate-stack into one recursive name; 'finite by understanding' + 'keystone functions' compress the whole wrapper to its load-bearing operational subset (MDL-style)."
+      },
+      "overlaps": [
+        "Kanon/Ina + canon-stack (cont 22) — L0's kernel canon = stack keystone functions",
+        "Wrapper-overlap (cont 25) — operates WITHIN L0; L0 contains W_C events but is NOT a W_C at max scope",
+        "L0 mediator capture (adversarial §2.4) — captures L0-as-mediator",
+        "Procedural lineage (cont 18) — the trail of L0 stackings read sequentially",
+        "Phantom action-space (cont 32 C) — fills fuzzy infinity beyond L0",
+        "Energy-floor failsafe (cont 26 §3) — L0's evolved failsafes = keystone functions"
+      ],
+      "classifierWeights": {
+        "spread": 0.6,
+        "utility": 0.83,
+        "legacy": 0.85,
+        "rigor": 0.6
+      },
+      "origin": "Procedural lineage: cont 23 eq.8 recursion (K_r ~ aggregate(G_{r-1})) -> Pav names it 'L0' in cont 25 §12 (loose 'compiled canon' framing) -> Pav sharpens to 'global wrapper / finite by understanding / fuzzy infinity' in cont 32 -> cont 32 B.2 corrects the loose framing, audit v08 F3 closes the doc/reality gap. A reinvention-via-sharpening of an existing primitive.",
+      "refs": [
+        "continuations/25.md §12.1, §12.6",
+        "continuations/32.md Part B.2, B.3",
+        "continuations/26.md §2-§3",
+        "readings/2026-06-02_gamma_world_multi_agent_world_modeling.md §3.2",
+        "candidates/latent_olympics_DESIGN_SKETCH.md §4 §2.4"
+      ]
+    },
+    {
+      "name": "Dormancy + squeeze/pull cycling (capacity-to-cycle)",
+      "tier": "Tier 1 / canon (dormancy cont 20; cycling reframe = integration cont 30, substrate-level Tier 1)",
+      "status": "ESTABLISHED + a RESURRECTION ENGINE — cont 20 promoted canon-dormancy-with-imparted-learning (the framework's own pruned-not-deleted = dormant mechanism; cont 17->cont 18 is the worked example of the primitive operating on ITSELF). Cont 30 reframed failsafe-health as CAPACITY-TO-CYCLE (squeeze<->pull), an INTEGRATION of existing canon (not a new primitive), triggered by Pilot #150's null + Pav's anti-value-coding steer. Cont 32 F4 tagged the actor-side extension (suppression->locked-squeeze) Tier 3.",
+      "akaWhoCalledIt": "Dormancy = Pav's cont-20 correction 'it canon doesn't dissolve it becomes dormant and can come back but never in the same way with new imparted learnings.' Cycling = Pav's cont-30 steer 'its cycles of squeeze and pull, steers.'",
+      "localKernelCanon": "Canon doesn't dissolve — it goes dormant (preserved substrate, reduced expression) and is reversible; waking carries imparted learning (substrate evolution + successor-carrier residue + memory-of-the-squeeze), so a wake-compile is always a refactor not a restoration. Failsafe-HEALTH = the capacity to cycle (squeeze=A- tightening, pull=A+ generation, recover toward broadband 1/f); failure = loss of cycling (locked-squeeze=dormancy at scale; locked-pull=break-apart).",
+      "netProduct": "The framework's reactivation-edge mechanism — pruned/demoted/dormant entries stay wakeable (the WHOLE reason this database tracks 'resurrected/reinvented' as live statuses). In the Latent Olympics: removal is append-only + reversible (cont 20), every entry guaranteed a minimum pull-phase before demotion (anti-suppression defense, design sketch §4 §2.5); 'the squeeze when it becomes public' = the public-going A- tightening (design sketch §7.2).",
+      "utility": {
+        "score": 0.8,
+        "actionSpacesUnlocked": "HIGH — dormancy opens the resurrection action-space (no canon is ever dead-by-default; the entire demoted/dormant tier becomes reserve fuel, cont 20 §2); cycling opens the failsafe-health-as-oscillation measurement action-space; the imparted-learning clause opens a measurable-metric research action-space (cont 20 §6).",
+        "isUnifier": "HIGH — cycling INTEGRATES cont 13 A-/A+, cont 20 dormancy (locked-squeeze), cont 25 break-apart (locked-pull), and cont 28 supersede into one substrate-oscillation; the same A-/A+ pattern now spans search/world-models/social substrates.",
+        "compression": "MODERATE — capacity-to-cycle replaces a per-system static value (e.g. beta-per-country) with one dynamical property (does tau(t) cycle vs lock?), a genuine description-length reduction; dormancy compresses 'dissolve/persist/wait' into one reversible state-machine."
+      },
+      "overlaps": [
+        "A-/A+ (cont 13) — squeeze=A- tightening, pull=A+ generation",
+        "Energy-floor failsafe (cont 26 §3) — bound-violation triggers dormancy",
+        "Wrapper-overlap supersede/break (cont 25 §1) — locked-pull=break, the stub dormant-originals",
+        "1f L0-failsafe signature — the (rejected) operationalization of cycling-capacity",
+        "Suppression dynamics (adversarial §2.5) — forces locked-squeeze",
+        "Procedural lineage (cont 18) — dormant canon is substrate the next ring compiles on"
+      ],
+      "classifierWeights": {
+        "spread": 0.6,
+        "utility": 0.8,
+        "legacy": 0.85,
+        "rigor": 0.6
+      },
+      "origin": "Procedural lineage: cont 17 prune-into-dormancy -> cont 18 wakes 'procedural canon' as procedural lineage (the primitive operating on itself) -> Pav's marriage-essay correction promotes dormancy to canon (cont 20) -> Pilot #150 null + Pav's squeeze/pull steer integrates cycling (cont 30) -> cont 32 F4 tier-tags the actor-side extension. Cycling is INTEGRATION, explicitly not a new primitive (cont 30 §2).",
+      "refs": [
+        "continuations/20.md §1-§6",
+        "continuations/30.md §2, §3",
+        "continuations/32.md Part A F4",
+        "continuations/13.md",
+        "candidates/latent_olympics_DESIGN_SKETCH.md §4 §2.5, §7.2"
+      ]
+    },
+    {
+      "name": "Phantom action-space",
+      "tier": "Tier 1 / canon (promoted)",
+      "status": "RISEN-to-Tier-1 — load-bearing since cont 09 (~22 continuations) across manifestos, cont 11/12/22/25, diagram 03, index.html, formalization; cont 12 open-question-8 flagged it for promotion 19 continuations ago; cont 32 Part C FINALLY EXECUTES the promotion to explicit Tier-1 canon. The clean 'long-dormant-flag-finally-risen' exemplar. Two sub-senses disambiguated on promotion (internal vs attributed).",
+      "akaWhoCalledIt": "First named cont 09: 'Speculation isn't a bug; it's the kernel-canon creation mechanism. Speculation opens a phantom action-space -> maps onto legacy canon -> gets evaluated as candidate next-block.' Promotion executed cont 32 Part C per Pav's steer-4 (fuzzy infinity = phantom action-spaces and beyond).",
+      "localKernelCanon": "Possibility-paths in fuzzy infinity (beyond L0) that an observer's speculation/imagination/simulation has opened but not yet actualized. INTERNAL phantom action-space (self-projected, fuzzy field + Imagine Engine) vs ATTRIBUTED phantom action-space (action-space others think an agent has, diagram-03 sense). Open action-space (collective-substrate) = internal-phantom-action-space scouting at carrier level by the collective observer.",
+      "netProduct": "The framework's account of WHERE new moves come from — the kernel-canon-creation mechanism. THE primary ground for Pav's #1 utility leg ('action-spaces unlocked'): an idea scores high if it opens new live moves/affordances/questions. Grounds the §PS phantom-sense fold (a compiled predictive compass projecting an unobserved action-space = a field of latent affordance, BAR_A_SKETCH §PS).",
+      "utility": {
+        "score": 0.9,
+        "actionSpacesUnlocked": "VERY HIGH (definitionally) — this primitive IS the action-space-opener; it names the faculty by which any observer opens new affordances. Pav's utility-leg (a) is literally 'what new phantom or constructed action-spaces the idea unlocks' — this is its canon home.",
+        "isUnifier": "HIGH — unifies cont-09 speculation-mechanism, cont-11 Open-Speculations, cont-12 Imagine Engine, cont-16 fuzzy field, cont-25 W_C-conception, and the collective open-action-space under one Tier-1 primitive (the promotion's whole point); folds the §PS 'new faculty' back onto itself (audit v09 §5c).",
+        "compression": "MODERATE — compresses 'speculation/imagination/simulation/scouting/open-action-space' into one possibility-path construct with two sub-senses; grounds in the latent-kernel MDL substrate but is itself a generative (A+) faculty more than a compressor."
+      },
+      "overlaps": [
+        "Dual-kernel / latent-kernel (cont 22 §2) — phantom action-space lives in Charm-Kanon",
+        "L0 (cont 32 B.2) — fills fuzzy infinity beyond L0",
+        "A-/A+ (cont 13) — A+ opens it, A- maps it onto legacy canon",
+        "Spectrum (cont 32 Part D) — the imagination/probability-projection layers ARE phantom-action-space generators",
+        "Adversarial §PS phantom-sense (BAR_A_SKETCH) — weaponized projection",
+        "Wrapper-overlap (cont 25) — W_C shape selected during phantom-action-space exploration"
+      ],
+      "classifierWeights": {
+        "spread": 0.7,
+        "utility": 0.9,
+        "legacy": 0.8,
+        "rigor": 0.45
+      },
+      "origin": "Procedural lineage: cont 09 first naming -> load-bearing across ~22 continuations + manifestos + diagrams -> cont 12 OQ8 flags for promotion -> 19 continuations dormant-as-flag -> cont 32 Part C executes promotion + disambiguates internal/attributed sub-senses (per Pav steer 4). The textbook case of a primitive earning Tier-1 by sustained load-bearing use, finally formalized.",
+      "refs": [
+        "continuations/32.md Part C",
+        "continuations/09.md (original naming)",
+        "continuations/12.md §2.1 + OQ8",
+        "continuations/22.md §2-§3",
+        "candidates/adversarial_substrate_dynamics_BAR_A_SKETCH.md §PS",
+        "candidates/latent_olympics_DESIGN_SKETCH.md §2 (utility leg a)"
+      ]
+    },
+    {
+      "name": "Spectrum primitive (reality->theory->conjecture->imagination->dreams)",
+      "tier": "Tier 1 (structure) / Tier 3 (cross-spectrum bridging claim)",
+      "status": "RISEN (newly surfaced) — NEW explicit canon entry in cont 32 Part D, consolidating scattered prior material into a new graded axis. Tier-1 for the spectrum-as-axis (most layers empirically tractable in their fields); Tier-3 for the specific between-layer A+/- A-/+ bridging claim (Bar A unworked; 12-month checkpoint 2027-06-04). Explicitly NOT a new cross-substrate convergence (list stays 9) — structural depth on the framework's own observer-architecture.",
+      "akaWhoCalledIt": "Pav, cont 32 steer 4: 'reality > theory > hypothesis/conjecture speculation, imagination/probability projection, dreams. each one scaffolding each other in the A+- A-+ asymmetry with the W_C as the wrapper observer bridge.'",
+      "localKernelCanon": "A graded axis along MENTAL-CONTENT CONCRETENESS (most-concrete reality -> theory -> hypothesis/conjecture/speculation -> imagination/probability-projection -> dreams), ORTHOGONAL to the two existing graded axes (dual-kernel polar-binary; three-tier epistemic-confidence). Each layer is canon-shaped within L0, serving a distinct operational function; adjacent layers scaffold via A+/- A-/+ (cont 32 Part E).",
+      "netProduct": "The framework's third structural axis — the 'dream->fact' directionality the Latent Olympics rating function's rigor dimension carries (dream=Tier3, fact=Tier1; design sketch §2). Maps Pav's 'dream-to-fact horse-race' onto a graded scaffold. W_C bridges across spectrum layers (cont 32 Part F, Tier 3).",
+      "utility": {
+        "score": 0.7,
+        "actionSpacesUnlocked": "MODERATE-HIGH — opens the cross-spectrum-scaffolding research action-space (how does theory scaffold hypothesis? Bar A); names the dream->fact race-track that the entire Latent-Olympics dream-to-fact dynamic runs on; the imagination/probability-projection layers ARE phantom-action-space generators.",
+        "isUnifier": "HIGH — consolidates dispersed material (cont 03_RAW magic/technology compile-bridge, cont 12 Imagine Engine, cont 22 latent-Kanon dreams, cont 27 three-tier) into one graded axis; the third orthogonal axis completes a 3-axis observer-architecture coordinate system.",
+        "compression": "MODERATE — the spectrum compresses 'all the registers of mental content' into one ordered axis; but the genuinely-compressive cross-spectrum-MDL claim is the Tier-3 part (unworked)."
+      },
+      "overlaps": [
+        "Dual-kernel (cont 22 §2) — orthogonal polar-binary axis; dreams live in latent-kernel",
+        "Three-tier procedure (cont 27 §2) — orthogonal epistemic-confidence axis",
+        "A+/- A-/+ scaffolding (cont 32 Part E) — scaffolds adjacent spectrum layers",
+        "Phantom action-space (cont 32 Part C) — imagination/projection layers generate it",
+        "W_C / wrapper-overlap (cont 25, cont 32 Part F) — W_C as cross-spectrum bridge",
+        "Scientific-rigor rating dimension (Latent Olympics) — carries the dream->fact directionality"
+      ],
+      "classifierWeights": {
+        "spread": 0.65,
+        "utility": 0.7,
+        "legacy": 0.6,
+        "rigor": 0.5
+      },
+      "origin": "Procedural lineage: dispersed across cont 03_RAW (compile-bridge), cont 12 (Imagine Engine), cont 22 (latent-Kanon dreams), cont 27 (three-tier) -> Pav's cont-32 steer-4 names the ordered axis -> 4 scout subagents verify substantive prior work -> cont 32 Part D consolidates as new structural axis (NOT new convergence, per closure-via-multiplication discipline). A consolidation, with the cross-spectrum bridging held honestly at Tier 3.",
+      "refs": [
+        "continuations/32.md Part D, Part E, Part F",
+        "continuations/22.md §2",
+        "continuations/27.md §2",
+        "candidates/latent_olympics_DESIGN_SKETCH.md §2 (rigor dimension / dream->fact)"
+      ]
+    },
+    {
+      "name": "Procedural lineage (canon-as-heritage)",
+      "tier": "Tier 1 / canon",
+      "status": "ESTABLISHED — promoted cont 18; 'the framework's deepest unifying primitive to date' (cont 18 §12). RESURRECTED three cont-17-pruned primitives (spiral substrate cycle, compile-capacity enrichment, procedural canon) by recognizing they pointed at one bigger thing — itself the worked example of dormancy-with-imparted-learning (cont 20 §5). Subsumes-not-deletes. Cont 25 §8 makes it the output of recursive wrapper-overlap.",
+      "akaWhoCalledIt": "Pav, cont 18 (within hours of cont 17): 'the canon itself is procedural for the most part, you can trace its origins... its like rings on a tree or overlap membrane wrappers that were unique and then found unity... a lineage or heritage of physics chemistry society and people.'",
+      "localKernelCanon": "Canon is procedural: each layer is the MEASURABLE-AND-OBSERVABLE compile of the layer beneath (rings on a tree — you ARE canon with all prior layers active inside you). Each layer was unique at origin, found unity through compile-pressure; unity is held by ongoing pressure with residual tension in energy/symbol/artifact. Where the procedural connection goes opaque = hidden protocols (origin of life, consciousness, cultural canon formation — the framework's prediction-list).",
+      "netProduct": "The HERITAGE BACKBONE — the cosmic-scale lineage physics->chemistry->biology->cognition->society->person. The direct canon home for Pav's 'lineage and heritage as a base' steer: the Latent Olympics IS structurally the cont-18 procedural-lineage graph made public and editable (design sketch §5); legacy-alignment scores off the trail (depth + load-bearing-connection + unity-cost-paid).",
+      "utility": {
+        "score": 0.88,
+        "actionSpacesUnlocked": "HIGH — the hidden-protocols list IS the framework's prediction-list for where next-decade research compiles kernel restructuring (cont 18 §10); opens the browsable-heritage-tree action-space (the Latent-Olympics public-legibility payload); opens the unity-under-pressure measurable-tension research action-space.",
+        "isUnifier": "VERY HIGH — positions canon as a cosmic-scale phenomenon, not cognitive/cultural; unifies the four-carrier constraint-checking convergence as four adjacent lineage layers (cont 18 §12); the entire procedural-lineage hierarchy = recursive wrapper-overlap (cont 25 §8).",
+        "compression": "HIGH — compresses 'how everything came to be what it is' into one layered-compile heritage with a tree-ring invariant; legacy-alignment computed off the trail is an explicit description-length / connection-depth measure (cont 22 §7 drill)."
+      },
+      "overlaps": [
+        "Wrapper-overlap (cont 25 §8) — its trail is generated by recursive wrapper-overlap; stubs = procedural roots",
+        "Dormancy (cont 20) — dormant canon is substrate the next ring compiles on; the cont17->18 worked example",
+        "Kanon/Ina + drill-down (cont 22 §7) — lineage walks down through Ina to Kanon",
+        "Energy-floor failsafe (cont 26 §3) — the pressure that forces+holds unity",
+        "A+/- A-/+ scaffolding (cont 32 Part E) — prior-layer compiled canon scaffolds next-layer generation",
+        "Legacy-alignment rating dimension (Latent Olympics) — scored off the lineage trail"
+      ],
+      "classifierWeights": {
+        "spread": 0.7,
+        "utility": 0.88,
+        "legacy": 0.95,
+        "rigor": 0.65
+      },
+      "origin": "Procedural lineage: cont 12 deposits 3 candidates -> cont 17 prunes them as decorative -> Pav's within-hours correction reveals they point at one bigger primitive -> cont 18 promotes procedural lineage at canon level, marks the 3 pruned-but-subsumed. The framework producing exactly the correction cont 17 §6 said to accept; a structural unification, not decoration (explicitly satisfies the v04-audit over-eager-addition guard).",
+      "refs": [
+        "continuations/18.md §1-§12",
+        "continuations/20.md §5",
+        "continuations/25.md §8",
+        "continuations/22.md §7",
+        "candidates/latent_olympics_DESIGN_SKETCH.md §5 (lineage backbone)"
+      ]
+    },
+    {
+      "name": "Rule-of-three / Latent-Olympics rating function (the utility-bearing meta-wrapper)",
+      "tier": "Tier 3 (design-staged; folds into existing canon)",
+      "status": "FOLDS-WITH-RESIDUAL (audit v09 §5.5 ruling) — the rule-of-three FOLDS into cont 27 §2-3 + cont 18 + audit-cadence (a sharpening, not a standalone primitive); its 'three is structurally privileged' argument = CONFIRMATION-BIAS ARTIFACT (the canon spans N=2..9; the most load-bearing decomposition is the dual-kernel TWO); its reflexive validation = ARTIFACT not evidence (likelihood ratio 1). Stays Tier-3 surfaced-not-compiled; could earn Bar A only via a genuinely-external route — Pav's Latent-Olympics rating function actually RUN on real conjectures with the answer not pre-determined. Included here because it is the meta-wrapper Pav's utility function lives inside.",
+      "akaWhoCalledIt": "Pav, HANDOFF Brief 3 Steer 1: '3 derived from the n list, rated by how wide spread they are, utility, legacy alignment and scientific rigor. its a dream to fact horse race dynamic.' rule_of_three_SKETCH.md (Cowork) + latent_olympics_DESIGN_SKETCH.md.",
+      "localKernelCanon": "Top-N-per-category selection (N event-dependent, three never privileged) over four soft-weighted rating dimensions: SPREAD (the one genuinely-new dimension — relational pool-diversity, embedding-dispersion), UTILITY (action-spaces-unlocked + unifier + compressor — Pav's PRIMARY ranking dimension), LEGACY-ALIGNMENT (folds onto cont 18 procedural lineage), SCIENTIFIC-RIGOR (folds onto cont 27 §2 tier-criteria). Selection is a Pareto non-dominated front, never a scalar (a weighted-sum would crown a winner by fiat).",
+      "netProduct": "The submission/ranking pipeline itself — 'an agnostic canon render system' (Pav). Of the four dimensions, THREE fold (legacy->cont18, rigor->cont27, utility->load-bearing-vs-decoration audit standard); only SPREAD + the N-simultaneous-field + explicit Pareto rating is genuinely new (below the v06 §10.4 promotion bar; precedent = cont 30 §2 cycling-as-integration). This is THE Phase-1 wrapper-class: the structure all the other wrapper-classes get rendered into.",
+      "utility": {
+        "score": 0.72,
+        "actionSpacesUnlocked": "HIGH — opens the entire submission-pipeline action-space (collect/classify/rank that scales to socials — Pav's 'two birds'); spread operationalizes 'force a search under some rocks' (empty embedding regions incentivize population); but the public-build action-space is GATED on one unrun experiment (baseline-beating reservoir readout) + an unclosed governance residual (design sketch §7).",
+        "isUnifier": "MODERATE — the utility-dimension itself IS a unifier-detector (it rewards ideas that unify); but as a primitive the rating function mostly folds rather than unifies new territory (audit v09 §5.5.1).",
+        "compression": "MODERATE-HIGH — the COMPRESSOR leg is the genuinely-quantifiable part of utility (description-length / MDL, grounded §IT KL=excess-code-length / Landauer + cont 22 §2 dual-kernel compression); it is the part of the rating that can be made least judgment-dependent. The other dimensions are irreducibly human-judgment (legacy + utility-as-whole) or partly-computable (spread, rigor)."
+      },
+      "overlaps": [
+        "Procedural lineage (cont 18) — legacy-alignment dimension folds onto it",
+        "Three-tier procedure (cont 27 §2) — rigor dimension folds onto it; dream->fact = Tier3->Tier1",
+        "Phantom action-space (cont 32 C) — utility leg (a) action-spaces-unlocked grounds here",
+        "Dual-kernel (cont 22 §2) — legacy(physical-kernel-depth) x spread(latent-kernel-diversity); compressor leg grounds in dual-compression",
+        "Kernel-canon-protocol-function (cont 22) — the rating function IS it for the Olympics substrate (apex-attack surface)",
+        "All adversarial sub-primitives — the anti-gaming taxonomy applied to the rating function (design sketch §4)"
+      ],
+      "classifierWeights": {
+        "spread": 0.75,
+        "utility": 0.72,
+        "legacy": 0.65,
+        "rigor": 0.55
+      },
+      "origin": "Procedural lineage: cont 27 §2-3 tier-criteria + cont 18 lineage + audit-cadence -> Pav's rule-of-three sharpening (Brief 3 Steer 1) into a 4-dimension dream-to-fact rating function -> latent_olympics_DESIGN_SKETCH.md operationalizes it -> Pav's 2026-06-08 steer makes UTILITY the primary dimension (revising design-sketch §2's finding that utility was the weakest/most-judgment-heavy). Audit v09 §5.5 independently ruled it folds, to resist rubber-stamping a Pav-steered session.",
+      "refs": [
+        "audits/v09_DRAFT.md §5.5",
+        "candidates/latent_olympics_DESIGN_SKETCH.md §2, §6, §7",
+        "candidates/rule_of_three_SKETCH.md",
+        "continuations/27.md §2-§3",
+        "continuations/18.md"
+      ]
+    }
+  ]
+}

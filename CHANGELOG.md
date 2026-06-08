@@ -8,6 +8,12 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-06-08 (later) — Latent Olympics Phase 1 started (Pav's build steer)
+
+Per Pav's 2026-06-08 steer (git-like submit/AI-panel/issues/appeal; **utility as PRIMARY ranking** = action-space-unlock + unifier + latent/physical compressor; collect+classify+layout the wrapper classes as a **weighted-classifier database, weights not hard values**; agnostic-canon-render-system; social-later-on-a-runway). One dynamic workflow (1 design + 2 classify agents). **Tier-3 working *render* of existing canon — NOT new canon, NOT a promotion, NOT complete.** Two artifacts: `candidates/latent_olympics_phase1_SPEC.md` (architecture — schema + utility function + git-like pipeline + render framing + phase plan; the utility grounding **revises the design-sketch §2 "utility is weakest" finding**, with the compression leg genuinely MDL-computable) and `candidates/latent_olympics_data/wrapper_classes_phase1.json` (first-pass **25-record database** of the framework's wrapper classes — 9 convergences + candidates + core primitives — soft weights, full status range; utility tops at wrapper-overlap 0.95 / ACMP 0.93, demoted 1/f-failsafe 0.28). Design sketch §8 points to both; provenance bumped to §9. Single-agent-surface first pass — owes external (e.g. cross-model) review. No timeline entry / no JSON-endpoint bump (working render, not canon). Next: Cowork+Pav review; the §7 public-layer gates gate the later social phases.
+
+---
+
 ## 2026-06-08 (later) — Brief 3: Latent Olympics Stage-1 design sketch
 
 `candidates/latent_olympics_DESIGN_SKETCH.md` (Claude Code, ~5,150 words, §1-7). Pulled ahead of Brief 2 per Pav's steer (the §5.5 ruling made the Olympics rating-function-run the rule-of-three's only non-reflexive Bar-A route). One dynamic workflow (4 development agents + 1 design-critique), main-thread synthesis. **Design-sketch only — Latent Olympics stays Tier 3; nothing compiled; no canon/candidate file modified; no timeline entry / no JSON bump.**

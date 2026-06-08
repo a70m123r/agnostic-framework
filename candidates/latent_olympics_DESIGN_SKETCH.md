@@ -187,7 +187,18 @@ Pre-steer (§6) the verdict was "build a narrow internal v0; the public hook is 
 
 ---
 
-## §8 — Provenance + tier status
+## §8 — Phase 1: started (2026-06-08, per Pav's steer)
+
+Pav's 2026-06-08 steer specified the build: a **git-like** public model (submit → AI cross-expert panel → issues/poke-holes → appeal-with-evidence); **utility as the PRIMARY ranking**, grounded as *new phantom/constructed action-spaces unlocked + unifier + latent/physical compressor*; **collect + classify + lay out** the framework's own *wrapper classes* as a **weighted-classifier database (weights, not hard values)** — an **"agnostic canon render system"** portable to other domains; with the **social/public layer later on a runway** (the submission pipeline is built once, internally, to scale to social — "two birds"). Phase 1 is the **internal** collect/classify step (the §6.3 internal v0), which needs none of the §7 public-layer residuals resolved. Two artifacts landed:
+
+- **[`latent_olympics_phase1_SPEC.md`](latent_olympics_phase1_SPEC.md)** — the architecture: the weighted-classifier wrapper-class schema; the **utility function** (now the PRIMARY ranking — grounded as action-space-unlock + unification + compression, with the **compression leg genuinely computable** via MDL/excess-code-length; this **revises the §2 finding** that utility was the weakest/most-diffuse dimension — it is now "primary, one-third computable, two judged legs"); the git-like submission pipeline (submit/AI-panel/issues-poke-holes/appeal — the *same object* that scales to the public/social layer); and the agnostic-canon-render framing + portability + phase plan.
+- **[`latent_olympics_data/wrapper_classes_phase1.json`](latent_olympics_data/wrapper_classes_phase1.json)** — a **first-pass 25-record database** of the framework's own wrapper classes (the 9 convergences + candidates + core primitives), classified into the schema with **soft weights, not hard values**, spanning the full status range Pav named: *risen* (wrapper-overlap, A⁻/A⁺, phantom-action-space), *demoted* (1/f-failsafe), *dormant/stale* (cultural-eigenmode, aux-channel-L0), *resurrected* (wrapper-overlap), *reinvented* (L0), *established* (energy-floor, canon-stack, dual-kernel), *folds-with-residual* (rule-of-three). Utility tops at wrapper-overlap 0.95 / ACMP 0.93 / phantom-action-space 0.90; the demoted 1/f-failsafe sits at 0.28 (its compression leg "measurable and negative — which made the demotion clean").
+
+**Discipline:** a *render* of existing canon into the new structure — Tier-3 working first-pass, NOT new canon, NOT a promotion, NOT complete. The classifications + weights are a **single-agent-surface first pass and owe external (e.g. cross-model) review.** Phase 1 is defensible precisely because it is the internal step; the §7 public-layer gates (governance residual, soft-band ruler, reservoir readout) gate the **later** social phases.
+
+---
+
+## §9 — Provenance + tier status
 
 - **Authored:** 2026-06-08, Claude Code session, at Pav's steer to pull Brief 3 ahead of Brief 2. Method: one dynamic workflow (`latent-olympics-stage1`) — 4 parallel development agents (rating dimensions / events / anti-gaming taxonomy / lineage) + 1 adversarial design-critique on the assembled design — then main-thread synthesis. ~591K subagent tokens.
 - **Source steers:** Pav's verbatim quotes preserved in §1; the underlying rule-of-three sharpening in [`rule_of_three_SKETCH.md`](rule_of_three_SKETCH.md) §1.
