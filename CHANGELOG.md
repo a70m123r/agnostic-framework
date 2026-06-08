@@ -18,7 +18,7 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 - §IT identities exact by computation, but leverage-ratio scope over-reaches (gold-rows-only, not the 141-row dataset).
 - §C2.2-B "independent convergence" partly circular (one premise restated three ways) + two-vs-three count mismatch.
 - §3.3-T "latent-transposition edge type" contradicted by its own data (7/7 edges labeled convergence).
-- §PS / §RS honor surfaced-not-compiled; each leaves one unstated fold-gap.
+- §PS / §RS honor surfaced-not-compiled; §PS leaves an unstated parent-primitive fold; §RS's rule-of-three is reflexive *inside §RS* but the principle is sharpened (Pav Steer 1 → Latent-Olympics four-dimension rating function), independent demonstration queued for Brief 3 (draft §5d corrected post-draft 2026-06-08 per Pav's steer).
 
 **Recommended to Cowork:** 6 Tier-1 text fixes (V9-F1..F6) + 4 Tier-2 structural items. Independence: self-audit (Claude-Code on Claude-Code) — judgment calls owe external A−. Next: Cowork ratifies v09 + applies Tier-1 fixes; then Brief 2 (Stage 2 census). v10 target 2026-06-23.
 
