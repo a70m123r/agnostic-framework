@@ -8,6 +8,14 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-06-08 (later) — Brief 3: Latent Olympics Stage-1 design sketch
+
+`candidates/latent_olympics_DESIGN_SKETCH.md` (Claude Code, ~5,150 words, §1-7). Pulled ahead of Brief 2 per Pav's steer (the §5.5 ruling made the Olympics rating-function-run the rule-of-three's only non-reflexive Bar-A route). One dynamic workflow (4 development agents + 1 design-critique), main-thread synthesis. **Design-sketch only — Latent Olympics stays Tier 3; nothing compiled; no canon/candidate file modified; no timeline entry / no JSON bump.**
+
+**Verdict (narrow factual): conditional, not "build it."** The design grounds cleanly in canon (rating function = a sharpening of cont 27 + cont 18 + the one new *spread* criterion per §5.5; top-N-per-category not three-privilege; Pareto-non-dominated selection, not a scalar). Honest engineering blockers: (1) **governance of the rating function is the one existential, un-defended attack** (§2.1 canon hijacking + §2.4 legacy-alignment custody — a protocol can't certify its own legitimacy from inside); (2) the public hook and the anti-gaming requirement are **structurally opposed** (the friction that stops flooding kills the hook); (3) the public **"agnostic internet hook" is vestigial as currently argued** — the genuine value is captured by an internal version while the public layer imports the existential attacks. **Defensible v0 = an internal, curated, closed-submission exhibition** that discharges the non-reflexive Bar-A run but defers Pav's headline public goal. Six §6 design questions need a Pav steer. The new sketch + `rule_of_three_SKETCH.md` are untracked (pending Cowork). Next: Cowork+Pav review §6; Brief 2 (census) is the remaining Claude Code task.
+
+---
+
 ## 2026-06-08 — Audit v09 DRAFT: 7-subagent verification of the 2026-06-07 Stage-1 round
 
 `audits/v09_DRAFT.md` (Claude-Code-authored, ~6,900 words, §1-§12). One dynamic workflow, 7 concurrent subagents (5 file-read-only verifiers + 2 independent adversarial skeptics), main-thread synthesis. **Review/recommend only — nothing compiled, no canon or candidate file edited, no tier advanced.**
