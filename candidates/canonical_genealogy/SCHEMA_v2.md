@@ -1,6 +1,6 @@
 # Canonical Wrapper-Genealogy Specimen — SCHEMA v2
 
-> **Status:** Tier-3 exploratory data-harvest schema, **DRAFT for Cowork+Pav ratification** — NOT canon, NOT a tier promotion, NOT a convergence-list change (stays **9**). This file is a *render spec*: it refines the VARIABLES used to capture one merge event as a rooted genealogy. It does not compile canon or promote anything. Specimens remain **calibration instruments / worked examples** extending `latent_olympics_data/wrapper_classes_phase1.json` at deeper zoom — NOT new convergences.
+> **Status:** Working canonical render-system — **RATIFIED 2026-06-09 by Pav.** This ratifies a TOOL / render-spec, NOT a framework substantive claim: the cross-substrate convergence list stays **9**, no continuation is compiled, no tier is promoted, surprise stays qualitative (no bits), and the framework's substantive claims still owe an external A−. Supersedes `SCHEMA.md` (v1). Specimens remain calibration instruments / worked examples extending `latent_olympics_data/wrapper_classes_phase1.json` at deeper zoom — NOT new convergences.
 >
 > **Provenance:** Authored 2026-06-09. v2 **supersedes** `SCHEMA.md` (v1). v2 = v1 **plus** (a) the 16 cross-cut refinements **R1–R16** from `BATCH_FINDINGS.md` (Maxwell / Darwin+Mendel / QM+GR read against each other), folded into the existing field groups; and (b) **five new first-class dimensions D1–D5** at Pav's steer (weld lifecycle+type · actors generalized · physical/latent LOD filter · external pull/squeeze events · fuzzy-by-design). Single-agent surface (architect + adversarial hardener) — owes external review.
 >
@@ -10,6 +10,25 @@
 > Every field added in v2 is **OPTIONAL** and **DEFAULTS EMPTY on a clean sharp weld.** A Maxwell-style settled case fills the v1 trunk (`child`, `weld.parents`, `when`, `child.status`) and leaves the new machinery empty or at its trivial default (`weld_necessity_confidence` ⇒ read as 1.0 when empty, `candidate_children = []`, `lifecycle` collapsed to a single consolidated phase, `forcing_events = []`). The schema stays **thin at the certain core and expands only at the frontier** — the framework's own fuzzy-LOD principle applied reflexively to the schema itself. *If filling a v2 field on a sharp case feels forced, leave it empty: that emptiness is correct signal, not missing work.*
 >
 > **Companion files:** `one_specimen.v2.template.json` (the v2 fill template, every new field pre-marked OPTIONAL) · `one_specimen.template.json` (the v1 template, retained for the three v1 specimens) · `BATCH_FINDINGS.md` (the R1–R16 derivation) · `specimens/{maxwell,darwin_mendel,qm_relativity}.{json,md}` (the three v1 worked examples this draft generalizes).
+
+---
+
+## Ratification (2026-06-09)
+
+**Ratified by Pav** as the working canonical render-system. This ratifies a TOOL — the schema for rendering one merge event as a fuzzy genealogy — NOT any framework substantive claim. Convergence list stays **9**; nothing compiled to canon; no tier promoted; surprise qualitative; the framework's substantive claims still owe an external A−.
+
+v2 (R1–R16 + D1–D5) is accepted. The following v3 refinements from `BATCH_FINDINGS_v2.md` are **ACCEPTED and folded into the fields below** (each was multi-attested across ≥2 specimens, or is vocabulary the harvest already forced):
+- **R17/R18** — three weld-type vocabulary terms added: `foil-constructed-weld`, `dormancy-revival-cycling`, `double-dormancy-revival`.
+- **R19** — `weld.revival` becomes an array (per-revival), each entry carrying `method_continuity ∈ [0,1]` (degree-of-reinterpretation); a child can revive method-incompatibly more than once.
+- **R20** — `forcing_events[].direction` moves to the **per-target** level (`acted_on[].direction: pull|squeeze`): one event can pull one lineage while squeezing its rival (lineage-relativity).
+- **R24** — `child.status_trajectory[]` gains `continuity ∈ [0,1]` (and/or `identity_break`) to mark a child that dies and reincarnates method-incompatibly, not merely relabels state.
+- **R25** — a surprise/adoption state `demonstrated-not-adopted` plus an `adoption_lag` field: a deployed, working weld can sit unadopted (deep learning's ~23 years).
+- **R28** — a `parent_is_gating` / `rate_limiting` flag on `weld.parents_full[]`, distinct from `parent_kind`: an instrument-parent can be the rate-limiter (compute/data gated deep learning).
+- **R32** — `weld.dormancy_intervals[].contested` flag: the FACT of dormancy and the clean NARRATIVE of it are separable (AI-winter and Mendel-neglect historiography).
+
+**DEFERRED — proposed, pending a second instance of the same stressor** (single-specimen so far; honest scope per `BATCH_FINDINGS_v2.md §D`): R21 (forcing `veridical` flag), R22 (`contested_frame_ownership`), R23 (`rival_lifecycle_coupling`), R26 (`parent.reconstructed_by_welder` / strawman parent), R27 (mediating-welder as an ordered cascade), R29 (`flame_keeper` / dormancy-patron role), R30 (symbolic-carrier vs producing-inhabitant), R31 (`mediating_wrapper.later_disowned_by`), R33/R34 (render-modes: forcing-as-primary-axis; diachronic candidate_children). Well-motivated but each rests on one case; they wait for a second specimen before folding.
+
+The DESIGN LAW is unchanged: every accepted field is OPTIONAL and defaults empty on a clean sharp weld.
 
 ---
 
@@ -35,6 +54,16 @@
 - **D3** — `frame_layer` on every node + `schema_capabilities.layer_filter` (§2.11): a second zoom axis (layer) orthogonal to v1 depth (roots↔harvest).
 - **D4** — new top-level `forcing_events[]` (§2.9): the exogenous pull/squeeze "weather" layer.
 - **D5** — `schema_capabilities.graded_membership` (§2.11): graded membership in [0,1] is now the pervasive default.
+
+**Added (R17–R34 ratified subset, 2026-06-09 — the multi-attested v3 refinements from `BATCH_FINDINGS_v2.md`, all optional, default empty):**
+- **R17/R18** — three weld-type vocabulary terms added to the §2.2.h closed set: `foil-constructed-weld`, `dormancy-revival-cycling`, `double-dormancy-revival`.
+- **R19** — `weld.revival` (§2.2.g) may be an **array** (per-revival), each entry carrying `method_continuity ∈ [0,1]`.
+- **R20** — `forcing_events[].acted_on[]` (§2.9) gains a per-target `direction: pull|squeeze` (lineage-relativity).
+- **R24** — `child.status_trajectory[]` (§2.1) gains `continuity ∈ [0,1]` / `identity_break` (discontinuous re-identification).
+- **R25** — `weld.adoption{ state: demonstrated-not-adopted, adoption_lag }` (§2.2.b), the demonstrated-side twin of R15.
+- **R28** — `weld.parents_full[]` (§2.2.a) gains `parent_is_gating` / `rate_limiting`, distinct from `parent_kind`.
+- **R32** — `weld.dormancy_intervals[]` (§2.2.g) gains a `contested` flag (FACT vs NARRATIVE separable).
+- The remaining R21/R22/R23/R26/R27/R29/R30/R31/R33/R34 are **DEFERRED** (single-specimen; see the Ratification section above).
 
 **Removed / collapsed vs the v2 *draft* (hardening cuts — see §8):**
 - `weld.people_0` is **no longer a storage field**. In v2, `actors[]` is the **single store** for the ground kernel; `roots.people_0` is removed (kept only as a documented rename: a v1 `people_0[]` entry becomes an `actors[]` entry with `kind: individual`). This eliminates the dual-home drift hazard.
@@ -119,7 +148,7 @@ The thing born in this merge. The trunk node.
 | `frame` | string[] ⊆ `{time,space,knowledge,meaning}` | **(v1)** which observer global kernel(s) `W_C` is rendered in. |
 | `frame_layer` | object | **(D3)** `{layer: physical|latent|straddle, physical_membership ∈ [0,1], latent_membership ∈ [0,1]}`. A child theory is `latent` (≈1.0); defaults to `latent` for an idea-child. The render-filter key (§2.11, D3). |
 | `status` | enum | **(v1, R5-extended)** one of `risen \| active \| dormant \| resurrected \| stale \| open-conjecture`. **R5 adds `open-conjecture`** (a.k.a. `live-unconsummated-weld`) for a high-synergy weld that never produced a settled child (QG). Observer-relative lifecycle position. |
-| `status_trajectory` | array | **(R5)** OPTIONAL `[{state, when, by, confidence}]` — the child as a *trajectory* of states (Modern Synthesis: pluralist-1937 → hardened-1959 → contested-2007). Empty on a child whose status never moved. |
+| `status_trajectory` | array | **(R5, R24-extended)** OPTIONAL `[{state, when, by, confidence}]` — the child as a *trajectory* of states (Modern Synthesis: pluralist-1937 → hardened-1959 → contested-2007). Empty on a child whose status never moved. **R24 (ratified 2026-06-09):** each entry may additionally carry `continuity ∈ [0,1]` and/or `identity_break: bool` to mark a child that **dies and reincarnates method-incompatibly** (Keynesian, deep learning) rather than merely relabelling its state — a low `continuity` / `identity_break: true` flags discontinuous re-identification, not a state-change. **Default: absent ⇒ continuous (`continuity ≈ 1.0`)**, the Modern-Synthesis-style relabel. |
 | `confidence` | number [0,1] | **(v1)** confidence that `W_C` is a real, distinct emergent (not a relabel of a parent / not a pile). **R9: INDEPENDENT of `weld.surprise_confidence` — see §3.4.** |
 | `utility` | object | **(v1)** `{ unifier, compressor, action_spaces_unlocked[] }` — Pav's three utility legs as prose + an enumerated affordance list. |
 
@@ -132,7 +161,7 @@ The edge that *is* the event. The heart of the specimen and the locus of the par
 | field | type | meaning |
 |---|---|---|
 | `parents` | array of 2 | **(v1, kept)** `[W_A, W_B]`, each `{ name, kernel, frame[], confidence }`. **The clean binary projection — the framework's canonical visualization. Always present.** |
-| `parents_full` | array (n-ary) | **(R1)** OPTIONAL the honest N-ary parent set, each `{ name, kernel, frame[], confidence, parent_kind, frame_layer }`. Maxwell ≈ 7; Darwin+Mendel = 2 roots + synthesizers. **Empty when the 2-projection is faithful.** When present, `parents` is the declared 2-projection *of* this set. |
+| `parents_full` | array (n-ary) | **(R1, R28-extended)** OPTIONAL the honest N-ary parent set, each `{ name, kernel, frame[], confidence, parent_kind, frame_layer }`. Maxwell ≈ 7; Darwin+Mendel = 2 roots + synthesizers. **Empty when the 2-projection is faithful.** When present, `parents` is the declared 2-projection *of* this set. **R28 (ratified 2026-06-09):** each entry may additionally carry `parent_is_gating` / `rate_limiting` (a bool or a `strength ∈ [0,1]`), **distinct from `parent_kind`** — it marks the parent that *rate-limited* the weld, not merely its kind. An instrument-parent can be the gating parent: deep learning's algorithm existed ~1989 and the weld fired only when the compute+data instruments arrived ~2012. **Default: absent ⇒ no single gating parent (the design-law default).** |
 | `parent_kind` (per parent) | enum | **(R4)** `content \| method \| instrument`. Maxwell's EM *content* (Faraday) vs the mechanical-analogy *method* (Thomson) vs the calibration-*target* instrument (Fizeau's light-speed). Default `content`. Reused for `sub_wrappers` and QG's tooling roots. |
 | `mediating_wrapper` | object | **(R1)** OPTIONAL `{ name, kernel, who_or_what, confidence }` — the agent that *performed* the weld when it is **not one of the parents** but sits a layer up (population genetics / Fisher-Haldane-Wright welded Darwin+Mendel; the Maxwellians welded birth-2). Empty when a parent welds itself. |
 
@@ -145,6 +174,7 @@ The edge that *is* the event. The heart of the specimen and the locus of the par
 | `surprise` | string (PROSE) | **(v1)** what `W_C` does that **neither parent predicts alone** — the synergy. Prose, not a number. |
 | `surprise_confidence` | number [0,1] | **(v1, R9-emphasized)** confidence the surprise is real synergy (vs additive blend). **R9: ORTHOGONAL to `child.confidence`.** QG: surprise_confidence 0.85 while child.confidence 0.40 — a maximally fertile seam with an unborn child. Never tie one to the other (§3.4). |
 | `surprise_priority` | object | **(R15)** OPTIONAL `{ first_conjectured_by, when, dormant_interval?, confidence }` — the **conjecture-in-a-parent**. Faraday's 1846 "light is a vibration of the lines of force" pre-existed the quantitative weld by ~15 years as a low-confidence weld drawn-but-not-confirmed inside W_A. Empty when the surprise is born with the weld. |
+| `adoption` | object | **(R25; ratified 2026-06-09)** OPTIONAL `{ state, adoption_lag, confidence }` — the **demonstrated-side twin of R15**. A surprise may be `state: demonstrated-not-adopted` — a *deployed, working* weld that sits unadopted for want of scale (deep learning: LeNet read bank cheques in 1989, ~23 years before the child consolidated in 2012). `adoption_lag` records the gap (a date interval or duration). Stronger than R15's conjecture-lag: the synergy was *demonstrated*, not merely conjectured. **Empty when the surprise was adopted as soon as it was shown.** |
 | `bits_note` | string (QUALITATIVE ONLY) | **(v1, R16-extended)** a qualitative note on description-length / synergy-in-bits. **R16:** may be explicitly `"principled-null"` for a frontier weld (you cannot MDL-score a theory you do not have). **Do NOT fabricate bit values.** See §3. |
 
 #### 2.2.c What crossed the weld (R7)
@@ -184,8 +214,8 @@ The edge that *is* the event. The heart of the specimen and the locus of the par
 
 | field | type | meaning |
 |---|---|---|
-| `dormancy_intervals` | array | **(v1, R11-extended)** `[{ from, to, why, why_frame }]`. **R11:** `why_frame ⊆ {time, space, knowledge, meaning, physical/political}` — a lineage can be cut by a **purge** (physical: Bronstein executed by the NKVD, 1938) as well as by a **theorem** (knowledge: QG no-go results; Mendel's blending-orthodoxy misreading). Default: `why_frame` empty ⇒ inferred from `why`. **NOTE (D4):** when the dormancy was caused by an *external* event, record the event once in `forcing_events[]` and let `why_frame` name only the frame — do not restate the event narrative here. |
-| `revival` | object | **(v1, R10-extended)** `{ when, by, trigger, kind }`. **R10:** `kind: same \| reinterpreted` — a revival can *re-frame* the dormant object rather than wake it (Mendel did species-hybridization; revived as heredity). Default `same`. |
+| `dormancy_intervals` | array | **(v1, R11-extended, R32-extended)** `[{ from, to, why, why_frame }]`. **R11:** `why_frame ⊆ {time, space, knowledge, meaning, physical/political}` — a lineage can be cut by a **purge** (physical: Bronstein executed by the NKVD, 1938) as well as by a **theorem** (knowledge: QG no-go results; Mendel's blending-orthodoxy misreading). Default: `why_frame` empty ⇒ inferred from `why`. **NOTE (D4):** when the dormancy was caused by an *external* event, record the event once in `forcing_events[]` and let `why_frame` name only the frame — do not restate the event narrative here. **R32 (ratified 2026-06-09):** each interval may additionally carry a `contested` flag (a bool or a `{ fact_confidence, narrative_confidence }` pair) — the **FACT of the dormancy and the clean NARRATIVE of it are separable** (Haigh's "There Was No First AI Winter": elite-lab defunding was real ~0.9, the whole-field-froze story ~0.5; Mendel's disputed "35 years of neglect"). **Default: absent ⇒ uncontested (fact = narrative).** |
+| `revival` | object **or** array | **(v1, R10-extended, R19-extended)** `{ when, by, trigger, kind }`. **R10:** `kind: same \| reinterpreted` — a revival can *re-frame* the dormant object rather than wake it (Mendel did species-hybridization; revived as heredity). Default `same`. **R19 (ratified 2026-06-09):** OPTIONAL — `revival` may be an **array** of per-revival entries, each additionally carrying `method_continuity ∈ [0,1]` (degree-of-reinterpretation; 1.0 = woke unchanged, low = woke a method-incompatible object under the inherited name). A child can revive method-incompatibly more than once (Keynesian ×2, deep learning ×3); the binary `kind` is the coarse view, `method_continuity` the graded one. **Default: a single object with `kind: same` (≡ `method_continuity ≈ 1.0`) on a weld revived once or never.** |
 | `reattribution` | object | **(R10)** OPTIONAL `{ named_after, actually_produced_by, why }` — the canonical **name attaches to the wrong node.** "Maxwell's equations" (4-eqn vector form) were forged by the Maxwellians 1879–94; Maxwell left 20 coupled equations. Empty when name = producer. |
 | `weld_chain` | array | **(R10)** OPTIONAL `[{ birth_label, weld_ref }]` — lets a `weld` **CHAIN**: birth-1's `W_C` becomes a parent of birth-2 (Maxwell's raw form → welded with vector analysis + Hertz's confirmation → the form we use). Empty on a single-birth weld. |
 
@@ -228,6 +258,9 @@ lifecycle: {
   //   state/war-mobilized-weld         (Manhattan Project: war mobilizes the weld)
   //   crisis-pulled-weld               (Keynesianism: the Depression pulls the theory into government)
   //   never-consummated-frontier-weld  (QG: rival children, no winner)
+  //   foil-constructed-weld            (R17/R18; ratified 2026-06-09) (Keynesianism: W_A "classical economics" partly a foil the welder built)
+  //   dormancy-revival-cycling         (R17/R18; ratified 2026-06-09) (a weld that repeatedly goes dormant and revives; Keynesian multi-cycle)
+  //   double-dormancy-revival          (R17/R18; ratified 2026-06-09) (a weld through two distinct dormancy→revival cycles; deep learning's two winters)
 }
 ```
 
@@ -325,9 +358,14 @@ forcing_events: [
     kind,                       // (D4) controlled vocabulary, extensible:
                                 //   war | fashion | cultural-focus | funding | politics |
                                 //   economic-crisis | technology | religion
-    direction,                  // pull | squeeze | both
+    direction,                  // pull | squeeze | both  (the coarse event-level view; per-target direction below is finer)
     acted_on: [                 // which nodes/welds/actors/lineages it forced (by id else name, §0.1)
       { target, target_kind: weld|child|actor|sub_wrapper|lineage|candidate_child,
+        direction: pull|squeeze, // (R20; ratified 2026-06-09) OPTIONAL per-target direction — one event can PULL one
+                                 //   lineage while SQUEEZING its rival (Nazi persecution + total war pulled the US bomb
+                                 //   lineage while squeezing the German Uranverein; the 1987 Lisp-collapse squeezed
+                                 //   symbolic AI and thereby pulled connectionism). Lineage-relative. Default: empty ⇒
+                                 //   inherit the event-level `direction` (the design-law default for a single-lineage event).
         effect: accelerate|fund|elevate|suppress|starve|redirect|kill,
         strength ∈ [0,1] }      // (D5) graded — an event's influence is a membership, not binary
     ],
@@ -487,4 +525,4 @@ The adversarial pass made five cuts and one addition, all in service of the desi
 
 All five D-dimensions and all sixteen R-refinements are preserved and faithful to Pav's intent; nothing in the architect's *capability* set was removed — only redundant *representations* of the same capability.
 
-*End v2 spec. Tier-3 DRAFT, surfaced for Cowork+Pav ratification. Folds R1–R16 + makes D1–D5 first-class; preserves the optional-fields-default-empty design law; promotes nothing; convergence list stays 9; specimens remain calibration instruments extending wrapper_classes_phase1.json at deeper zoom.*
+*End v2 spec. RATIFIED 2026-06-09 by Pav as the working canonical render-system (a tool/render-spec, not a framework substantive claim; the framework's claims still owe an external A−). Folds R1–R16 + makes D1–D5 first-class; ratified v3 subset R17/18,R19,R20,R24,R25,R28,R32 folded, rest deferred; preserves the optional-fields-default-empty design law; promotes nothing; convergence list stays 9; specimens remain calibration instruments extending wrapper_classes_phase1.json at deeper zoom.*

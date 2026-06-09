@@ -1,3 +1,5 @@
+> **Superseded by [`SCHEMA_v2.md`](SCHEMA_v2.md) — ratified 2026-06-09.** Retained as the v1 historical render-spec.
+
 # Canonical Wrapper-Genealogy Specimen — SCHEMA
 
 > **Status:** Tier-3 exploratory data-harvest schema, surfaced for **Cowork+Pav ratification** — NOT canon, NOT a tier promotion, NOT a convergence-list change (stays **9**). This file is a *render spec*: it refines the VARIABLES used to capture one merge event as a rooted genealogy. It does not compile canon or promote anything.

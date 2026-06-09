@@ -8,6 +8,16 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-06-09 — canonical-genealogy SCHEMA v2 RATIFIED (tool/render-spec) + pushed
+
+Pav ratified `candidates/canonical_genealogy/SCHEMA_v2.md` as the working canonical render-system — a TOOL/render-spec, NOT a framework substantive claim (convergence list stays 9; no tier promoted; surprise qualitative; the framework's substantive claims still owe an external A−). Status flipped DRAFT→RATIFIED; v1 `SCHEMA.md` marked superseded.
+- **ACCEPTED + folded** (multi-attested across ≥2 specimens, or vocabulary the harvest forced; each OPTIONAL + default-empty, design law intact): R17/18 (3 weld-type terms), R19 (per-revival `method_continuity`), R20 (lineage-relative per-target forcing direction), R24 (`status_trajectory` continuity/identity_break), R25 (`demonstrated-not-adopted` + `adoption_lag`), R28 (`parent_is_gating`), R32 (`dormancy.contested`).
+- **DEFERRED** (single-specimen, pending a 2nd instance): R21, R22, R23, R26, R27, R29, R30, R31, R33, R34.
+
+The genealogy commit (`0c35df6`) + the two frame-lock-pilot commits (`183d593`, `ff71272`) pushed to origin/main.
+
+---
+
 ## 2026-06-09 — canonical wrapper-genealogy: the render system + 6 specimens (v1+v2), Pav's "make it canonical" direction
 
 The "agnostic canon render system" for theory-merges, per Pav's enriched model (a theory is a wrapper-of-wrappers rooted DOWN in people/institutions in the physical frame, harvesting UP into utility + culture, everything FUZZY level-of-detail). Two dynamic-workflow batches (web-harvested from real aggregators — Wikidata/OpenAlex/SEP/scholarly histories — with cited sources + discrepancy registers). Tier-3 exploratory, surfaced for Cowork+Pav ratification; promotes nothing; convergence list stays 9 (specimens are calibration instruments/worked-examples extending `wrapper_classes_phase1.json` at deeper zoom, NOT new convergences); surprise qualitative, never in bits.
