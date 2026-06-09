@@ -8,6 +8,15 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-06-09 — synergy-gate vs PID benchmark + the cross-model pass catches a real bug
+
+The sharpened bar-to-promote (does the witnessed synergy gate beat plain PID?), run as a dynamic workflow on controlled numpy ground truth, then externally checked. `candidates/synergy_vs_pid/` (witnessed_synergy.py, pid_synergy.py, compare.py, RESULTS.md, CROSS_MODEL_REVIEW.md, separable_falsification_test.py). Tier-3; list stays 9; controlled ground-truth only (real-corpus / real-merge owed).
+- **Workflow result:** the witnessed gate (non-affinity = codelength of M after removing its best affine fit from A,B) gives OPPOSITE verdicts to a calibrated PID (binned Williams-Beer I_min + Gaussian MMI) on additive blends — it FLOORS `0.5A+0.5B` (excess 0 at every resolution) while PID flags it strongly synergistic (1.70 b), even rating the blend *above* a genuine `A·B` interaction. Initial conclusion: more-than-PID.
+- **Cross-model pass (GPT-5.5 + Gemini — the standing external A−) walked it back:** both confirmed gate≠PID but flagged circularity, and **Gemini predicted a specific bug** — the gate false-positives on separable nonlinearity. **Ran the test: CONFIRMED** — `A²+B²` (separable, no parent-interaction) flags at 1,040,352 b, *higher* than the genuine `A·B` interaction. The gate measures NON-AFFINITY, not interaction.
+- **Correction:** "additive blend = no emergence" must be operationalized as **separable** (`f(A)+g(B)`), not merely **affine**; the right measure is the functional-ANOVA **interaction residual** (floors `A²+B²` by construction). Bar status revised to **NOT discharged**; the surviving clean differentiator from PID is frame-relativity, not the quotient. The standing cross-model phase earned its keep on first use.
+
+---
+
 ## 2026-06-09 — genealogy v3 fold (D6 friction layer) + Internet specimen + latent-cosmology verdict
 
 Three linked steps on the ratified canonical render-spec (`canonical_genealogy/SCHEMA_v2.md`, stays RATIFIED; tool only; list stays 9; surprise qualitative; optional-default-empty design law intact):
