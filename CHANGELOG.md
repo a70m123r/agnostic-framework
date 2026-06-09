@@ -8,6 +8,15 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-06-09 — synergy gate reformulation: the bug is deeper (basis/readout mismatch); cross-model #2 walks back the differentiator
+
+Follow-up to the `A²+B²` bug: reformulated the gate to the functional-ANOVA interaction residual, re-benchmarked, and ran a 2nd cross-model pass. `candidates/synergy_vs_pid/` (interaction_synergy.py, INTERACTION_RESULTS.md, CROSS_MODEL_REVIEW_2.md). Tier-3; list stays 9; controlled ground-truth only.
+- **Reformulation finding:** the binned functional-ANOVA interaction is correct in *variance* (floors all separable `f(A)+g(B)`, flags `A·B`/XOR) but as a fixed-grid *codelength* it floors **nothing** — the binned plug-in leaks a within-bin wiggle that swamps the fine-grid readout (even affine ADD leaks ~880k bits). The polynomial-quotient variant floors `A²+B²` but recurs the bug on `|A|+|B|`. A general **basis/readout mismatch** in codelength emergence gates.
+- **Cross-model #2 (GPT-5.5 + Gemini, convergent):** the right bits-measure is **GAM-bits** = held-out MDL of the best joint model over the best separable-GAM main-effects model (the fixed-grid codelength was the wrong instrument; salvageable with penalized splines + differential-entropy coding). Crucially, **frame-relativity (resolution-dependence) is mostly a quantization artifact**, not a genuine PID-differentiator — so the more-than-PID claim does **not** survive as a property of the *measure*.
+- **Net (sharpens the latent-cosmology verdict):** done right, the synergy gate is a *standard* interaction measure (GAM-bits / functional-ANOVA, PID-adjacent); the framework's genuine contribution is the **framing + the genealogy render-system**, not a new synergy measure. The standing cross-model phase earned its keep twice in a row.
+
+---
+
 ## 2026-06-09 — synergy-gate vs PID benchmark + the cross-model pass catches a real bug
 
 The sharpened bar-to-promote (does the witnessed synergy gate beat plain PID?), run as a dynamic workflow on controlled numpy ground truth, then externally checked. `candidates/synergy_vs_pid/` (witnessed_synergy.py, pid_synergy.py, compare.py, RESULTS.md, CROSS_MODEL_REVIEW.md, separable_falsification_test.py). Tier-3; list stays 9; controlled ground-truth only (real-corpus / real-merge owed).
