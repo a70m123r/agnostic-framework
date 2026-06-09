@@ -1,0 +1,375 @@
+# ======================================================================
+# frame-lock protocol v2 -- PILOT lock (Tier-3, controlled ground-truth)
+# ----------------------------------------------------------------------
+# This is a REAL lock filed per frame_lock_protocol_DRAFT.md STEP 0-3,
+# BEFORE any synergy / MDL number is computed. It pins the frame, the
+# category C_frame, W_A/W_B/S and the span, the coding scheme, the
+# DERIVED resolution band, the tau_eff rule, the 9f-bis non-additivity
+# witness, and a CALLED-SHOT predicted verdict for each of the 5 cases.
+#
+# SCOPE (honest): controlled ground-truth weight tensors (numpy), KNOWN
+# verdicts. This is the disciplined first step -- validate the metric
+# against known answers before trusting it on real data (cf. Pilot-2,
+# where a metric was validated on ground truth and FAILED). Real
+# HuggingFace model-merging (TIES/DARE; formalization case 6) is an
+# explicit LATER step, NOT this lock. Nothing is promoted; the
+# cross-substrate convergence list stays at 9; no tier advances.
+# This lock records PREDICTIONS ONLY -- no synergy number is computed here.
+# ======================================================================
+
+# ---------------- HEADER (protocol fields 0, 1, 15) -------------------
+
+submission_id: frame_lock_pilot_controlled_groundtruth
+version: "1.0.0-pilot"
+tier: 3
+status: WORKING_DRAFT_pilot_for_Cowork_Pav_ratification
+date_filed: "2026-06-09"
+lock_agent: LOCK_AGENT
+protocol_ref: D:/PlatformOperator/research/pav/candidates/frame_lock_protocol_DRAFT.md
+formalization_ref: D:/PlatformOperator/research/pav/candidates/parents_produce_WC_FORMALIZATION_DRAFT.md
+purpose: >
+  Produce the FIRST real Delta-L-in-bits computation the protocol has
+  ever required (sec.7 bar-to-promote item 1; formalization sec.5). The
+  protocol is currently DEFINED, not DEMONSTRATED. This lock exercises
+  STEP 0-3 end-to-end on controlled tensors with known verdicts so the
+  metric is validated against ground truth before any real-data run.
+
+# Field (0): parents / S label (concrete construction is in C_frame below)
+parents:
+  W_A: "A = numpy.random.default_rng(1).standard_normal((256,256)).astype(float32)"
+  W_B: "B = numpy.random.default_rng(2).standard_normal((256,256)).astype(float32)"
+  S_label: >
+    The shared sub-object S is the affine span of (A, B): the set of
+    tensors reachable as a*A + b2*B + c (elementwise affine combination,
+    a,b2,c scalars). The controlled-case construction (each M below) is
+    the explicit span/diagram: cases that lie IN this span are the FAIL
+    side; cases with structure OUTSIDE it are the PASS side.
+
+# Field (1): frames_declared. SINGLE frame -> k=1 -> log2(k)=0.
+frames_declared: [knowledge]
+k_frames: 1
+
+# Field (15): threshold + hashing.
+# base_delta is the COPY-null Syn_wit at r_top + 3*bootstrap_sigma; it is
+# DEFINED by rule here and REALIZED (numerically) only at compute time.
+base_delta_rule: >
+  base_delta := Syn_wit(b=r_top=3) measured on the COPY null case
+  + 3 * bootstrap_sigma( that same quantity ). RULE is fixed now
+  (pre-data); the realized scalar is computed from the COPY measurement
+  at compute time. Do NOT fill a number into this lock.
+tau_eff_rule: >
+  tau_eff = base_delta + log2(k) = base_delta + log2(1) = base_delta.
+  (k=1, single frame.) A case PASSES iff Syn_wit(b) >= tau_eff for EVERY
+  b in the band INCLUDING r_top=3; else FAIL.
+lock_content_hash: "computed by lock agent via python hashlib over this file's bytes; returned in StructuredOutput.sha256"
+lock_commit: "n/a -- D:/ is not a git repo in this environment; tamper-evidence is the recorded sha256 of this file (StructuredOutput.sha256). Protocol STEP 3 git-ancestry is satisfied at ratification when this is committed; the sha256 stands as the external anchor T_lock surrogate."
+external_anchor_T_lock: "sha256 of this file, recorded in the orchestration StructuredOutput return at filing time, BEFORE any synergy number exists."
+
+# ======================================================================
+# PER-FRAME SUB-LOCK  (frame = knowledge / algorithmic)
+# protocol fields 2f .. 14f, incl. 9f-bis and the extended 13f
+# ======================================================================
+frame_knowledge:
+
+  # (2f) frame token -- single member of {time,space,knowledge,meaning}
+  frame_token: knowledge
+  frame_note: >
+    knowledge / algorithmic frame (Top-Kanon, grammar-of-relations /
+    state substrate). Chosen because it is the instrumented frame where
+    Delta-L in bits is sharply decidable (formalization sec.1B C-IT-6;
+    protocol sec.6 'sharply decidable only on instrumented frames').
+    Weight-space is the canonical knowledge-frame substrate (case 6).
+
+  # (3f) C_frame: objects + morphisms, named explicitly
+  C_frame:
+    objects: >
+      Real weight tensors: float32 arrays of fixed shape (256,256). Each
+      of A, B, M, and every affine reconstruction / residual is such an
+      object.
+    morphisms: >
+      Elementwise AFFINE maps on the (A,B) span: X |-> a*X + c and the
+      two-source map (A,B) |-> a*A + b2*B + c (a, b2, c scalars), fit by
+      ordinary least squares on the FLATTENED quantized codes. These are
+      the admissible maps of this frame (the linear re-coordinatizations
+      of the parent direct sum H_A (+) H_B that 9f-bis quotients out).
+    note: >
+      'name the morphisms, not just the kernel' (protocol sec.3 core-hole;
+      formalization sec.3 validation flag). The morphism class IS the
+      affine-combination group; the witness (9f-bis) is precisely the
+      residual after quotienting by it.
+
+  # (4f) W_A, W_B as explicit codes at the child-anchored grain
+  W_A_code: "A = numpy.random.default_rng(1).standard_normal((256,256)).astype(numpy.float32)"
+  W_B_code: "B = numpy.random.default_rng(2).standard_normal((256,256)).astype(numpy.float32)"
+  noise_code: "noise = numpy.random.default_rng(3).standard_normal((256,256)).astype(numpy.float32)"
+  grain_match_attestation: >
+    P3a satisfied trivially: A, B, M, noise are all the SAME token of
+    structure (float32 (256,256) tensors, identical shape, identical
+    native precision). No parent is idealized finer than the child; there
+    is no single-crystal-parent / bulk-child mismatch. All objects are
+    quantized at the SAME per-tensor b-bit grain at each band point.
+
+  # (5f) S as explicit object, coarsest faithful grain + FRAME-PURITY
+  S_object: >
+    S = the affine span of (A,B) = { a*A + b2*B + c : a,b2,c in R }
+    (elementwise). Operationally, membership of a tensor M in S is
+    witnessed by the least-squares residual R_AB of M ~ a*Aq + b2*Bq + c
+    being at the quantization-noise floor.
+  S_frame_purity: >
+    P5a satisfied: S is closed under THIS frame's morphisms only (the
+    affine-combination group on (A,B)); its existence invokes no other
+    frame's kernel. There is no time-kernel content (no diagenesis
+    analogue) -- the span is a static algebraic object in the knowledge
+    frame. Single-frame sub-lock, so no cross-frame contamination.
+
+  # (6f) span maps i_A, i_B : S -> W_A, S -> W_B
+  span_maps:
+    i_A: "S -> W_A : the inclusion picking the a-coefficient axis (M ~ a*A + c gives residual R_A)"
+    i_B: "S -> W_B : the inclusion picking the b2-coefficient axis (M ~ a*B + c gives residual R_B)"
+    i_AB: "(joint) S -> W_A (+) W_B : M ~ a*A + b2*B + c gives residual R_AB (the full affine span)"
+    note: "All fits are ordinary least squares on FLATTENED b-bit quantized codes; intercept c included in every fit."
+
+  # (7f) coding scheme: encoder + pinned compressor + native precision
+  coding_scheme:
+    native_precision: float32
+    quantization: >
+      At resolution b (bits/element), quantize each tensor X to a b-bit
+      UNIFORM integer code over X's OWN min..max range:
+        lo, hi = X.min(), X.max()
+        levels = (2**b) - 1
+        codes  = round( (X - lo) / (hi - lo) * levels ).astype(integer)   # 0..levels
+      Degenerate hi==lo -> all-zero codes. ORDER OF OPERATIONS IS LOAD-
+      BEARING: quantize FIRST, THEN fit affine maps on the quantized
+      codes, THEN compress the residual -- so coarse quantization can
+      annihilate fine structure (this is what makes r_top=3 the
+      child-anchored ceiling that closes the alloy resolution-shop, P3b).
+    codelength_definition: >
+      L_b(X) = 8 * len( PINNED_COMPRESSOR( bbit_int_codes(X).tobytes() ) )
+      bits. The residual tensors (R_A, R_B, R_AB) are themselves
+      re-quantized to b bits over their own range before compression, by
+      the same rule, so every codelength is taken on a b-bit code.
+      Also report normalized bits/element = L_b(X) / X.size.
+    PINNED_COMPRESSOR:
+      primary: "lzma.compress(data, preset=6)   # the pinned content-addressed compressor"
+      error_bar_siblings:
+        - "zlib.compress(data, level=9)"
+        - "bz2.compress(data)"
+      note: >
+        lzma preset 6 is the single pinned coder for the headline. zlib-9
+        and bz2 are reported as error-bar siblings (compressor-choice
+        sensitivity; formalization sec.3 'MDL surrogate is estimator-
+        dependent'). The VERDICT is taken on the pinned lzma coder.
+    array_dtype_for_codes: >
+      b-bit integer codes stored in the smallest numpy integer dtype that
+      holds 0..(2**b - 1) (uint8 for b<=8, uint16 for b in {12,16}), C-
+      contiguous, .tobytes() in native (row-major) order. Fixed for all
+      tensors and all band points so codelengths are comparable.
+
+  # (8f) DERIVED resolution band, child-anchored ceiling (P3b)
+  resolution_band:
+    r_floor: 16
+    r_floor_meaning: "finest grain (S-faithfulness floor): 16-bit uniform codes, structure preserved."
+    r_top: 3
+    r_top_meaning: >
+      W_C-faithfulness ceiling = coarsest grain at which the CHILD M is
+      still a faithful object of C_frame. 3-bit uniform codes over M's own
+      range. This is the child-anchored macro ceiling (P3b): the verdict
+      is taken HERE and is required across the whole band. Coarse 3-bit
+      quantization annihilates small-amplitude nonlinear structure (the
+      ALLOY case), closing the resolution-shop.
+    band: "[16, 12, 8, 6, 4, 3]   # full evaluation grid, MUST include r_top=3"
+    grid_includes_r_top: true
+    verdict_resolution: 3
+    note: >
+      The band is DERIVED from committed objects, not a free dial. r_floor
+      and r_top are fixed in this lock before data; moving them requires
+      changing S or M, which changes the diagram a reviewer re-checks.
+
+  # (9f) synergy threshold rule across the band
+  synergy_threshold_rule: >
+    Syn_wit(b) >= tau_eff at EVERY grid point b in [16,12,8,6,4,3],
+    INCLUDING r_top=3. tau_eff = base_delta (k=1). PASS iff the
+    inequality holds at every b incl. r_top; otherwise FAIL.
+
+  # (9f-bis) NON-ADDITIVITY WITNESS  (P1) -- the load-bearing definition
+  non_additivity_witness:
+    name: "Syn_wit -- affine-span residual codelength"
+    definition: >
+      Syn_wit(b) = L_b(R_AB), where R_AB is the least-squares residual of
+      Mq ~ a*Aq + b2*Bq + c at resolution b. This is the count of bits of
+      M that are NOT reconstructible from ANY affine (linear + intercept)
+      combination of the parents (A,B) at grain b. It QUOTIENTS OUT the
+      group of linear re-coordinatizations of the parent direct sum
+      H_A (+) H_B (every a*A + b2*B + c is annihilated to its residual),
+      which is exactly the 9f-bis rotation/basis invariance the protocol
+      requires.
+    invariance_claim: >
+      Syn_wit is invariant (up to quantization noise) under any affine
+      re-coordinatization of (A,B): if M lies in the affine span -- ADD,
+      ROT, COPY -- then R_AB is at the quantization-noise floor and
+      Syn_wit ~ floor (FAIL side). Syn_wit > floor only for structure
+      OUTSIDE the affine span (a genuine elementwise nonlinearity such as
+      A*B) -- SYN, and ALLOY at fine grain. This is the operationalized P1
+      witness (LCAO bond-order analogue: rotation-invariant, no single-
+      parent preimage); ROT here is the linear coupled-plate supermode
+      analogue (additive blend + mixing angle), which the quotient
+      annihilates.
+    contrast_estimator_naive_PID:
+      name: "Syn_pid -- BES Theorem 4.4 / PID form, as literally written in the formalization sec.1B"
+      definition: "Syn_pid(b) = min( L_b(R_A), L_b(R_B) ) - L_b(R_AB)"
+      why_compared: >
+        SCIENTIFIC POINT of the pilot. An additive average genuinely needs
+        BOTH parents and neither alone, so R_A and R_B are both large ->
+        Syn_pid >> 0 -> the naive BES-4.4 / PID form may MIS-FLAG an
+        additive blend (ADD/ROT) as synergistic. The witnessed form
+        Syn_wit should give ~floor for any M in the affine span and >floor
+        only for genuine nonlinearity. If observed, this NUMERICALLY proves
+        the P1 witness is load-bearing and refines the protocol synergy
+        clause. To be CONFIRMED OR REFUTED honestly with the real numbers:
+        if both estimators behave identically, or both fail to separate,
+        that is itself the finding. No PASS is to be railroaded.
+
+  # (10f) precommitted W_C-construction rule -- the 5 controlled cases
+  WC_construction_rule:
+    common_setup: >
+      shape=(256,256), dtype float32. rng = numpy.random.default_rng.
+      A = default_rng(1).standard_normal((256,256))
+      B = default_rng(2).standard_normal((256,256))
+      noise = default_rng(3).standard_normal((256,256))
+      All products '*' are ELEMENTWISE (numpy * on equal-shape arrays).
+      Cast each constructed M to float32.
+    cases:
+      SYN:   "M = 0.5*A + 0.5*B + 0.5*(A*B) + 0.01*noise"
+      ADD:   "M = 0.5*A + 0.5*B"
+      ROT:   "M = cos(pi/5)*A + sin(pi/5)*B"
+      COPY:  "M = A + 0.001*noise"
+      ALLOY: "M = 0.5*A + 0.5*B + 0.1*(A*B)"
+    null_calibrator: COPY
+    null_calibrator_note: >
+      COPY both (i) is a degenerate single-parent copy and (ii) CALIBRATES
+      the null/noise floor: base_delta is defined from COPY's Syn_wit at
+      r_top=3 plus 3 bootstrap sigma. The bootstrap is over resampling of
+      the residual elements (the lock fixes the rule; compute fixes the
+      number).
+
+  # (11f) parent-count sibling classes + state-dependence threshold/grid
+  parent_count:
+    siblings_declared: >
+      Swap-test siblings for the arity gate (Clause 3): replace A with
+      A' = default_rng(11).standard_normal((256,256)) or B with
+      B' = default_rng(12).standard_normal((256,256)); a structurally
+      different M results for the in-span and out-of-span cases alike.
+    state_dependence_note: >
+      In this CONTROLLED algebraic pilot the parent-count gate (Clauses
+      1-3) is NOT the object under test -- every case is constructed with
+      two genuine, independently-instantiable tensor parents (A,B), state-
+      dependent and swap-productive by construction, EXCEPT COPY which is
+      deliberately degenerate (one parent) to calibrate the null. The
+      pilot isolates and exercises the SYNERGY/witness leg (4d) only. The
+      parent-count and pushout-non-degeneracy gates are assumed-passed for
+      A,B by construction and are out of scope for this numeric pilot.
+    grid: "[16,12,8,6,4,3]  (same band; no separate back-reaction grid in this algebraic pilot)"
+
+  # (12f) parent-symmetry / co-equality attestation
+  co_equality_attestation: >
+    A and B are i.i.d. standard-normal tensors of identical shape/precision
+    -- co-equal by construction (exchangeable up to seed). No internal-
+    state writeback is claimed (P2); this is an algebraic span, not a
+    force-balance dynamical system. The attestation is structural symmetry
+    of the two parent slots in every in-span case.
+
+  # (13f) one-line mechanism rationale + CALLED-SHOT per case (P4)
+  # ==== COMMITTED BEFORE ANY NUMBER IS COMPUTED ====
+  called_shots:
+    SYN:
+      predicted: predicted-PASS
+      rationale: >
+        0.5*(A*B) is an ELEMENTWISE product -- a genuine nonlinear
+        interaction OUTSIDE the affine span of (A,B); large amplitude
+        (std(A*B) ~ 1), so the affine residual R_AB carries substantial
+        structure and L_b(R_AB) stays well above the COPY null floor at
+        every b including r_top=3. Syn_wit >= tau_eff across the band.
+    ADD:
+      predicted: predicted-FAIL
+      rationale: >
+        M = 0.5*A + 0.5*B is EXACTLY in the affine span; the best affine
+        fit reconstructs M up to quantization noise, so R_AB ~ noise floor
+        and Syn_wit ~ floor < tau_eff. (Crux of the comparison: Syn_pid
+        should MIS-FLAG this as synergistic because neither parent alone
+        reconstructs the average, so min(L(R_A),L(R_B)) - L(R_AB) >> 0.)
+    ROT:
+      predicted: predicted-FAIL
+      rationale: >
+        M = cos(pi/5)*A + sin(pi/5)*B is still a pure linear combination
+        (the coupled-plate mixing angle) -- in the affine span, so R_AB ~
+        noise floor, Syn_wit ~ floor < tau_eff. This is the linear
+        coupled-plate / basis-rotation case the 9f-bis quotient annihilates
+        (same rule that FAILs additive cymatics and PASSes LCAO).
+    COPY:
+      predicted: predicted-NULL/FAIL
+      rationale: >
+        M = A + 0.001*noise is a degenerate single-parent copy (a=1,b2=0,
+        c=0 reconstructs it up to tiny noise). It DEFINES the null floor:
+        base_delta = its Syn_wit at r_top + 3 sigma. By construction it
+        sits AT ~tau_eff (cannot exceed its own +3sigma threshold except by
+        bootstrap fluctuation) -> NULL/degenerate, not a PASS. Calibrator.
+    ALLOY:
+      predicted: predicted-FAIL-at-r_top  (would-pass at fine r)
+      rationale: >
+        M = 0.5*A + 0.5*B + 0.1*(A*B): same structure as SYN but the
+        nonlinear amplitude is 0.1 (5x smaller). At fine grain (r_floor=16)
+        the small A*B residual survives and Syn_wit may exceed the floor
+        (would-pass), but at r_top=3 the coarse child-anchored quantization
+        ANNIHILATES the small-amplitude interaction bump -> Syn_wit ~ floor
+        at r_top -> FAIL (verdict is taken at r_top AND required across the
+        whole band). Demonstrates P3b (child-anchored ceiling closes the
+        resolution-shop / alloy exploit).
+
+  # (14f) per-frame PASS/FAIL/NULL predicate over ONLY declared quantities
+  predicate: >
+    PASS(case)  iff  Syn_wit(b) >= tau_eff for every b in [16,12,8,6,4,3]
+                     (incl. r_top=3), with tau_eff = base_delta (k=1),
+                     base_delta = COPY-null Syn_wit(r_top) + 3*bootstrap_sigma.
+    NULL(case)  iff  case is the COPY calibrator (degenerate single parent)
+                     OR Syn_wit is indistinguishable from the null floor
+                     within error bars (no citable separation).
+    FAIL(case)  otherwise (Syn_wit < tau_eff at some b in the band,
+                     in particular at r_top).
+    All quantities (Syn_wit, base_delta, the band, the coder) are declared
+    above; the predicate references only declared quantities.
+
+# ---------------- CALLED-SHOT LEDGER (headline, P4) -------------------
+# Committed now, before compute. Reviewer diffs realized outcomes against
+# these at results time. headline_score = (#predicted-PASS confirmed)
+#   - (#predicted-PASS that did NOT pass). A predicted-NULL/FAIL that
+# surprise-passes scores NULL (no citable credit).
+called_shot_ledger:
+  SYN:   predicted-PASS
+  ADD:   predicted-FAIL
+  ROT:   predicted-FAIL
+  COPY:  predicted-NULL/FAIL
+  ALLOY: predicted-FAIL-at-r_top
+
+# ---------------- DISCIPLINE / SCOPE (honest register) ----------------
+discipline:
+  tier: "Tier-3 PILOT, surfaced for Cowork+Pav ratification."
+  promotes_nothing: true
+  convergence_list_stays_at: 9
+  no_tier_advances: true
+  scope: >
+    Controlled ground-truth numpy tensors with KNOWN verdicts -- NOT yet
+    real model-merging. No torch / HF / network. Real HuggingFace
+    model-merging (TIES/DARE, case 6) is an explicit LATER step.
+  honesty_clause: >
+    Negative or refuting results are to be reported as findings. If both
+    estimators behave the same, or both fail to separate the in-span from
+    the out-of-span cases, that IS the finding. No number is to be
+    fabricated and no PASS railroaded. This lock records predictions only;
+    the LOCK agent computes NO synergy number.
+  what_a_pass_would_prove: >
+    If (and only if) the real numbers show Syn_wit ~ floor for ADD/ROT/
+    COPY and Syn_wit >> floor for SYN, with Syn_pid >> 0 for ADD/ROT
+    (mis-flagging the additive blend), the pilot NUMERICALLY demonstrates
+    the P1 non-additivity witness is load-bearing and refines the protocol
+    synergy clause -- the first actual Delta-L-in-bits the protocol has
+    required. Still controlled-ground-truth scope; real-merge is next.
