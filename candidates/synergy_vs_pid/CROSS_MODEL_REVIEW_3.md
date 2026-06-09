@@ -1,0 +1,11 @@
+# Cross-model review #3 (2026-06-09) — gain_v2 + one-directionality (GPT-5.5 + Gemini)
+
+Per the standing rule, the two new load-bearing claims from `EMERGENCE_CANDIDATES_AND_FRAME.md` (the **gain_v2** gate + the **one-directionality** theorem) were put to GPT-5.5 + Gemini. Both endorsed, with one shared caveat. **Four models now converge** (the workflow agents + Fable's second pass + GPT + Gemini).
+
+- **GATE (gain_v2): sound.** Gemini: "joint-LS isolates non-additive effects by accounting for input covariance." GPT: "partly — sound if model classes and validation are well-controlled."
+- **Baseline fix: correct + generalizes.** Both: joint-LS is the right additive baseline; marginal-means "fail by attributing shared variance to interaction" (Gemini). Caveat (GPT): near-singular / highly-correlated parents need **regularization + uncertainty reporting**.
+- **One-directionality: a theorem — at the POPULATION level.** Both confirm (Taylor: a local linearization of interactions; additive structure stays additive). Sharpening (GPT): "finite samples, misspecification, support holes can FAKE it" — so the empirical one-directionality needs the controls + a proper null; it is not bulletproof in finite samples.
+- **Framing: fair.** Both: this is standard **effect-modification / conditional-vs-marginal** statistics with "frame-relativity" terminology layered on — NOT new statistics. (Consistent with instrument-not-field.)
+- **The recurring deep risk (both):** the verdict is only as good as the *flexible, held-out separable baseline* — if it cannot fit univariate curvature, parent curvature (`A²`) is misread as emergence (Gemini); more broadly, conclusions can be artifacts of basis / regularization / sample-geometry / extrapolation (GPT). `gain_v2`'s flexible joint-LS baseline addresses this, but it remains the load-bearing assumption.
+
+**Net:** `gain_v2` is the validated emergence gate (regularize at high parent correlation; flexible baseline load-bearing). Contextual frame-relativity is **real and principled** but is **standard effect-modification** — a population-level theorem with a finite-sample caveat, not a new phenomenon. The real-substrate model-merge step (still owed) must use `gain_v2` (v1 false-flags correlated parents) + a proper null. Tier-3; convergence list stays 9; nothing compiled.

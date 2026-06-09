@@ -8,6 +8,17 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-06-09 — emergence-function menu + CONTEXTUAL frame-relativity is REAL (Fable + GPT-5.5 + Gemini)
+
+Revisited observer-kernel frame-relativity the right way (Pav: contextual-scaling, not grid-zoom) + explored a menu of alternative emergence-functions; Fable (a different Claude model) ran the second pass; GPT-5.5 + Gemini the external pass. `candidates/synergy_vs_pid/` (cand_*.py, contextual_frame_test.py, CONTEXTUAL_FRAME_TEST.md, EMERGENCE_CANDIDATES_AND_FRAME.md, CROSS_MODEL_REVIEW_3.md; Fable probes review2_*.py). Tier-3; list stays 9; controlled ground-truth only.
+- **The gate, done right = gain_v2:** held-out R²[joint] − R²[additive] with the additive baseline fit by JOINT least-squares/backfit. Floors `A²+B²` AND irreducible noise AND pure-additive merges of CORRELATED parents (the failure that would flag every real model-merge). Standard (functional-ANOVA / CV-adjacent), not novel. Menu: GAM-frac = misspecification *diagnostic* (counts noise as interaction); co-information + kernel/dCor = honest negatives.
+- **Fable earned its seat:** caught two critical, verified bugs the first pass missed — (i) v1 marginal-means baseline false-flags correlated-parent additive merges (+0.73 @ r=0.9), fixed by gain_v2's joint-LS baseline; (ii) GAM-frac counts noise as interaction (0.338 on noisy-additive). Added the one-directionality control.
+- **CONTEXTUAL frame-relativity is REAL and principled (Pav's distinction vindicated):** the same `M=A·B` genuinely flips interactive→additive when you change which RANGE of the relevant parent is in frame (locality of nonlinearity), distinct from the killed grid artifact — proven by equal-n, irrelevant-axis, Taylor-law (r≈1) controls + **one-directionality** (range-framing hides but never manufactures interaction; opposite signature to the grid artifact).
+- **Cross-model (GPT-5.5 + Gemini) confirm:** gain_v2 sound, joint-LS baseline correct (regularize at high parent correlation); one-directionality a population-level theorem (finite-sample caveat); framing fair — standard EFFECT-MODIFICATION statistics with frame-relativity terminology, NOT a new phenomenon. Four models converge.
+- Real-substrate model-merge step still owed; MUST use gain_v2 (v1 false-flags correlated parents).
+
+---
+
 ## 2026-06-09 — synergy gate reformulation: the bug is deeper (basis/readout mismatch); cross-model #2 walks back the differentiator
 
 Follow-up to the `A²+B²` bug: reformulated the gate to the functional-ANOVA interaction residual, re-benchmarked, and ran a 2nd cross-model pass. `candidates/synergy_vs_pid/` (interaction_synergy.py, INTERACTION_RESULTS.md, CROSS_MODEL_REVIEW_2.md). Tier-3; list stays 9; controlled ground-truth only.
