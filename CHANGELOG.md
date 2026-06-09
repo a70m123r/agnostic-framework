@@ -8,6 +8,15 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-06-09 — genealogy v3 fold (D6 friction layer) + Internet specimen + latent-cosmology verdict
+
+Three linked steps on the ratified canonical render-spec (`canonical_genealogy/SCHEMA_v2.md`, stays RATIFIED; tool only; list stays 9; surprise qualitative; optional-default-empty design law intact):
+- **Internet specimen** (`specimens/internet.{json,md}`, commit `c81a040`) — 2nd crisis-pulled / institutional-cascade case; its graduation check supplied second instances for several deferred refinements.
+- **latent-cosmology exploration** (`latent_cosmology_EXPLORATION.md`, commit `f1c2b13`) — Pav's "is this a new field / cosmology?" adjudicated by the framework's OWN parents-produce-W_C test: verdict **a new INSTRUMENT/sub-field within existing fields** (conceptual blending / recombinant-innovation / science-of-science / cultural phylogenetics), NOT a new field. Frame leg passes (frame-relativity is the real novelty); pushout leg shallow (= conceptual blending's Goguen colimit, reached independently); synergy leg = the decider = defined-but-not-delivered (the frame-lock pilot's real bits came back partial-with-refutation). Gifts: external/internal = a camera position (no 5th kernel; per the no-outside-L0-vantage corollary); crosscoder model-diffing = a literal runnable weld test; SLERP-not-linear for reframe transitions.
+- **v3 fold** (this commit) — GRADUATED (now multi-attested): R27 (`welder_cascade`), R23 (`rival_coupling`), R21 (`forcing.veridical`), R33 (forcing-as-primary-axis render mode), R26 → `reconstructed_by_winner`. INTRODUCED the **D6 friction/combat cluster** (§2.10): D6a adversarial (`opposes[]` — a FOLD into the framework's A−/A+ canon, not a new primitive), D6b gatekeepers (`gates[]` permit/block/delay; the framework's own ratify loop is itself a gatekeeper), D6c lag-of-reality (`weld.lag` with cause), D6d propagation/bandwidth (flagged most-conjectural). Still deferred: R22/R29/R30/R31/R34 + new single-case conjectures `flame_extinguisher` / record-contamination / definitional-child-boundary.
+
+---
+
 ## 2026-06-09 — canonical-genealogy SCHEMA v2 RATIFIED (tool/render-spec) + pushed
 
 Pav ratified `candidates/canonical_genealogy/SCHEMA_v2.md` as the working canonical render-system — a TOOL/render-spec, NOT a framework substantive claim (convergence list stays 9; no tier promoted; surprise qualitative; the framework's substantive claims still owe an external A−). Status flipped DRAFT→RATIFIED; v1 `SCHEMA.md` marked superseded.

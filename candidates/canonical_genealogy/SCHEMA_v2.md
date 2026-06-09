@@ -26,9 +26,34 @@ v2 (R1–R16 + D1–D5) is accepted. The following v3 refinements from `BATCH_FI
 - **R28** — a `parent_is_gating` / `rate_limiting` flag on `weld.parents_full[]`, distinct from `parent_kind`: an instrument-parent can be the rate-limiter (compute/data gated deep learning).
 - **R32** — `weld.dormancy_intervals[].contested` flag: the FACT of dormancy and the clean NARRATIVE of it are separable (AI-winter and Mendel-neglect historiography).
 
-**DEFERRED — proposed, pending a second instance of the same stressor** (single-specimen so far; honest scope per `BATCH_FINDINGS_v2.md §D`): R21 (forcing `veridical` flag), R22 (`contested_frame_ownership`), R23 (`rival_lifecycle_coupling`), R26 (`parent.reconstructed_by_welder` / strawman parent), R27 (mediating-welder as an ordered cascade), R29 (`flame_keeper` / dormancy-patron role), R30 (symbolic-carrier vs producing-inhabitant), R31 (`mediating_wrapper.later_disowned_by`), R33/R34 (render-modes: forcing-as-primary-axis; diachronic candidate_children). Well-motivated but each rests on one case; they wait for a second specimen before folding.
+**DEFERRED at v2 ratification — proposed, pending a second instance of the same stressor** (single-specimen at the time; honest scope per `BATCH_FINDINGS_v2.md §D`): R21 (forcing `veridical` flag), R22 (`contested_frame_ownership`), R23 (`rival_lifecycle_coupling`), R26 (`parent.reconstructed_by_welder` / strawman parent), R27 (mediating-welder as an ordered cascade), R29 (`flame_keeper` / dormancy-patron role), R30 (symbolic-carrier vs producing-inhabitant), R31 (`mediating_wrapper.later_disowned_by`), R33/R34 (render-modes: forcing-as-primary-axis; diachronic candidate_children). Well-motivated but each rested on one case; they wait for a second specimen before folding.
+
+> **Updated by the v3 fold (2026-06-09; see the "## v3 fold (2026-06-09)" section below).** After the Internet (2nd crisis-pulled/institutional) specimen, **R27, R23, R21, R33, and R26 (reframed → `reconstructed_by_winner`) GRADUATE** (now 2nd- or 3rd-attested) and **leave this deferred list.** Still DEFERRED: **R22** (contested-frame-ownership, weak/loosely-attested), **R29** (flame-keeper, single), **R30** (symbolic-vs-producing carriers, single), **R31** (disowned-mediator, single), **R34** (diachronic candidate_children, single). **New single-case conjectures surfaced by the Internet specimen (deferred, pending a 2nd instance):** **`flame_extinguisher`** (a patron that KILLS its own winning lineage — France killing CYCLADES for Minitel; the inverse of R29 flame-keeper); **record-contamination** (an adversarial priority-dispute that corrupts the historical RECORD itself — the Kleinrock dispute; a new discrepancy TYPE); **definitional-child-boundary** (the child's identity contested definitionally — "the Internet" = internetworking-weld vs ARPANET-grown-up).
 
 The DESIGN LAW is unchanged: every accepted field is OPTIONAL and defaults empty on a clean sharp weld.
+
+---
+
+## v3 fold (2026-06-09)
+
+**Pav-authorized v3 fold** after the **Internet** (2nd crisis-pulled / institutional-cascade) specimen was rendered against the ratified schema. Its graduation check (see `specimens/internet.md`, the verdict table) supplied SECOND independent instances for several DEFERRED refinements, so they now fold into the fields below. This is applied to the **RATIFIED** spec; the Status line stays RATIFIED.
+
+**GRADUATED (now multi-attested) — moved from DEFERRED to folded:**
+- **R27** — `weld.welder_cascade[]`, an ordered relay of mediating institutions/documents (§2.2.a). Manhattan + Internet. 2nd-attested.
+- **R23** — `weld.rival_coupling[]`, a signed phase-relation to a rival weld/wrapper (§2.2.f); ties to `candidate_children` and to D6a `opposes`. Deep learning + Internet. 2nd-attested.
+- **R21** — `forcing_events[].veridical`, the phantom/veridical flag (force real, object may be false) (§2.9). Manhattan + Internet. 2nd-attested.
+- **R33** — the forcing-as-primary-axis **render-mode** note (NOT a data field) (§2.9). Keynesian / Manhattan / Internet. Thrice-attested.
+- **R26 → `reconstructed_by_winner`** — generalized from the parent-only `parent.reconstructed_by_welder` to a strawman/foil on **any node** (parent OR rival) (§2.2.g). The generalization is what graduates it (Keynes's reconstructed *parent* "classical economics" + OSI, a reconstructed *rival* lampooned by the TCP/IP winners).
+
+**INTRODUCED — the D6 cluster (§2.10, the friction/combat layer; each field OPTIONAL, default-empty):**
+- **D6a — Adversarial** (`opposes[]`): **a FOLD into the framework's existing A−/A+ adversarial canon, NOT a new primitive** — it reuses the framework's own adversarial charge (`a_charge`). The pre_weld antagonism (R14) and `rival_coupling` (R23) are special cases of it.
+- **D6b — Gatekeepers** (`gates[]`): permit/block/delay relations; with the reflexive note that the framework's own ratify/audit/tier loop is itself a gatekeeper.
+- **D6c — Lag-of-reality** (`weld.lag`): a causal account of WHY a weld waits; unifies `adoption_lag` (R25) + `dormancy_intervals[].why_frame` (R11).
+- **D6d — Propagation / bandwidth** (`propagation`): the medium's carrying capacity at a (time, place); **flagged the MOST CONJECTURAL of D6** (one strong case — Mendel's low-bandwidth silence; pending more specimens).
+
+**Still DEFERRED (single-/loosely-attested):** R22, R29, R30, R31, R34 — plus the **new single-case conjectures** surfaced by the Internet specimen: **`flame_extinguisher`** (a patron that kills its own winning lineage — CYCLADES/Minitel; the inverse of R29), **record-contamination** (an adversarial priority-dispute that corrupts the historical record itself — the Kleinrock dispute; a new discrepancy type), and **definitional-child-boundary** (the child's identity contested definitionally — "the Internet" = internetworking-weld vs ARPANET-grown-up).
+
+**Discipline (held):** this is a **TOOL / render-spec** only, not a framework substantive claim; the convergence list **stays 9**; **no tier is promoted**; surprise stays **qualitative** (no bits); the **design law** (every field OPTIONAL, default-empty on a clean sharp weld) is intact; and **D6a reuses the framework's own adversarial primitive rather than inventing one.**
 
 ---
 
@@ -51,9 +76,9 @@ The DESIGN LAW is unchanged: every accepted field is OPTIONAL and defaults empty
 **Added (D1–D5, new first-class machinery):**
 - **D1** — `weld.lifecycle{ phase_trajectory[], pre_weld_relationship, weld_type[] }` (§2.2.h): the weld's graded life + a weighted weld-type classification. A **weighted index** over the R5/R6/R10/R14 fields, not a duplicate of them.
 - **D2** — new top-level `actors[]` (§2.6): generalizes v1 `people_0` to institutions/gov/labs/etc., with two role-relations `carrier_of[]` (champion, UP) and `inhabitant_of[]` (operator, WITHIN). The physical↔latent bridge.
-- **D3** — `frame_layer` on every node + `schema_capabilities.layer_filter` (§2.11): a second zoom axis (layer) orthogonal to v1 depth (roots↔harvest).
+- **D3** — `frame_layer` on every node + `schema_capabilities.layer_filter` (§2.12): a second zoom axis (layer) orthogonal to v1 depth (roots↔harvest).
 - **D4** — new top-level `forcing_events[]` (§2.9): the exogenous pull/squeeze "weather" layer.
-- **D5** — `schema_capabilities.graded_membership` (§2.11): graded membership in [0,1] is now the pervasive default.
+- **D5** — `schema_capabilities.graded_membership` (§2.12): graded membership in [0,1] is now the pervasive default.
 
 **Added (R17–R34 ratified subset, 2026-06-09 — the multi-attested v3 refinements from `BATCH_FINDINGS_v2.md`, all optional, default empty):**
 - **R17/R18** — three weld-type vocabulary terms added to the §2.2.h closed set: `foil-constructed-weld`, `dormancy-revival-cycling`, `double-dormancy-revival`.
@@ -63,7 +88,15 @@ The DESIGN LAW is unchanged: every accepted field is OPTIONAL and defaults empty
 - **R25** — `weld.adoption{ state: demonstrated-not-adopted, adoption_lag }` (§2.2.b), the demonstrated-side twin of R15.
 - **R28** — `weld.parents_full[]` (§2.2.a) gains `parent_is_gating` / `rate_limiting`, distinct from `parent_kind`.
 - **R32** — `weld.dormancy_intervals[]` (§2.2.g) gains a `contested` flag (FACT vs NARRATIVE separable).
-- The remaining R21/R22/R23/R26/R27/R29/R30/R31/R33/R34 are **DEFERRED** (single-specimen; see the Ratification section above).
+- At v2 ratification the remaining R21/R22/R23/R26/R27/R29/R30/R31/R33/R34 were **DEFERRED** (single-specimen; see the Ratification section above). **The v3 fold (2026-06-09) graduates R21, R23, R26, R27, R33 — see the next sub-list;** R22/R29/R30/R31/R34 stay deferred.
+
+**Added (v3 fold, 2026-06-09 — graduated after the Internet 2nd crisis-pulled/institutional specimen; all optional, default empty; see the "## v3 fold (2026-06-09)" section):**
+- **R27** — `weld.welder_cascade[]` (§2.2.a), the `mediating_wrapper` as an ordered relay of institutions/documents (Manhattan + Internet). 2nd-attested.
+- **R23** — `weld.rival_coupling[]` (§2.2.f), a signed phase-relation to a rival weld/wrapper; ties to `candidate_children` and to D6a `opposes` (deep learning + Internet). 2nd-attested.
+- **R21** — `forcing_events[].veridical` (§2.9), the phantom/veridical flag (force real, object may be false) (Manhattan + Internet). 2nd-attested.
+- **R33** — the forcing-as-primary-axis **render-mode** note (§2.9, NOT a data field) (Keynesian/Manhattan/Internet). Thrice-attested.
+- **R26 → `reconstructed_by_winner`** — `weld.reconstructed_by_winner` (§2.2.g), generalizing the parent-only strawman to any node (parent OR rival); the generalization is what graduates it.
+- **D6 cluster** (§2.10 — the friction/combat layer): **D6a** `opposes[]` (a FOLD into the framework's A−/A+ adversarial canon, not a new primitive), **D6b** `gates[]` (gatekeepers; reflexive note on the framework's own ratify/audit/tier loop), **D6c** `weld.lag` (lag-of-reality; unifies R25 `adoption_lag` + R11 `why_frame`), **D6d** `propagation` (medium bandwidth; flagged most-conjectural).
 
 **Removed / collapsed vs the v2 *draft* (hardening cuts — see §8):**
 - `weld.people_0` is **no longer a storage field**. In v2, `actors[]` is the **single store** for the ground kernel; `roots.people_0` is removed (kept only as a documented rename: a v1 `people_0[]` entry becomes an `actors[]` entry with `kind: individual`). This eliminates the dual-home drift hazard.
@@ -133,7 +166,7 @@ Plus, threaded across all of it:
 
 ## 2. Field groups (the canonical specimen record — v2)
 
-**Eleven** top-level groups: the **eight from v1** (`child`, `weld`, `roots`, `harvest`, `relatives`, `fuzzy_layer`, `discrepancies`, `sources`) **+ three new first-class groups** (`actors` [D2], `forcing_events` [D4], plus the header `schema_capabilities` block [D3+D5]). Within the eight, **R1–R16** are folded as optional sub-fields. Every leaf that asserts a fact carries (or inherits) a `confidence ∈ [0,1]`; nodes additionally carry an LOD/`depth` and a `frame_layer`. Bit-level MDL values stay **qualitative only** (§3, the `bits_note` discipline).
+**Eleven** top-level groups: the **eight from v1** (`child`, `weld`, `roots`, `harvest`, `relatives`, `fuzzy_layer`, `discrepancies`, `sources`) **+ three new first-class groups** (`actors` [D2], `forcing_events` [D4], plus the header `schema_capabilities` block [D3+D5]). Within the eight, **R1–R16** are folded as optional sub-fields. **(v3 fold, 2026-06-09)** the **D6 cluster** (§2.10 — the friction/combat layer: `opposes[]` [D6a], `gates[]` [D6b], `weld.lag` [D6c], `propagation` [D6d]) is added, every field OPTIONAL and default-empty; D6a is a *fold* into the framework's existing A−/A+ adversarial canon rather than a new group/primitive. Every leaf that asserts a fact carries (or inherits) a `confidence ∈ [0,1]`; nodes additionally carry an LOD/`depth` and a `frame_layer`. Bit-level MDL values stay **qualitative only** (§3, the `bits_note` discipline).
 
 > **Reading convention.** A field marked **(v1)** is unchanged. **(R#)** marks a v2 refinement folded from `BATCH_FINDINGS.md`. **(D#)** marks a new-dimension field. All R# and D# fields are **OPTIONAL, default empty** (design law).
 
@@ -146,7 +179,7 @@ The thing born in this merge. The trunk node.
 | `name` | string | **(v1)** canonical handle of `W_C`. |
 | `kernel` | string | **(v1)** net product / what it essentially *is* (its localKernelCanon, Phase-1 sense). |
 | `frame` | string[] ⊆ `{time,space,knowledge,meaning}` | **(v1)** which observer global kernel(s) `W_C` is rendered in. |
-| `frame_layer` | object | **(D3)** `{layer: physical|latent|straddle, physical_membership ∈ [0,1], latent_membership ∈ [0,1]}`. A child theory is `latent` (≈1.0); defaults to `latent` for an idea-child. The render-filter key (§2.11, D3). |
+| `frame_layer` | object | **(D3)** `{layer: physical|latent|straddle, physical_membership ∈ [0,1], latent_membership ∈ [0,1]}`. A child theory is `latent` (≈1.0); defaults to `latent` for an idea-child. The render-filter key (§2.12, D3). |
 | `status` | enum | **(v1, R5-extended)** one of `risen \| active \| dormant \| resurrected \| stale \| open-conjecture`. **R5 adds `open-conjecture`** (a.k.a. `live-unconsummated-weld`) for a high-synergy weld that never produced a settled child (QG). Observer-relative lifecycle position. |
 | `status_trajectory` | array | **(R5, R24-extended)** OPTIONAL `[{state, when, by, confidence}]` — the child as a *trajectory* of states (Modern Synthesis: pluralist-1937 → hardened-1959 → contested-2007). Empty on a child whose status never moved. **R24 (ratified 2026-06-09):** each entry may additionally carry `continuity ∈ [0,1]` and/or `identity_break: bool` to mark a child that **dies and reincarnates method-incompatibly** (Keynesian, deep learning) rather than merely relabelling its state — a low `continuity` / `identity_break: true` flags discontinuous re-identification, not a state-change. **Default: absent ⇒ continuous (`continuity ≈ 1.0`)**, the Modern-Synthesis-style relabel. |
 | `confidence` | number [0,1] | **(v1)** confidence that `W_C` is a real, distinct emergent (not a relabel of a parent / not a pile). **R9: INDEPENDENT of `weld.surprise_confidence` — see §3.4.** |
@@ -164,6 +197,7 @@ The edge that *is* the event. The heart of the specimen and the locus of the par
 | `parents_full` | array (n-ary) | **(R1, R28-extended)** OPTIONAL the honest N-ary parent set, each `{ name, kernel, frame[], confidence, parent_kind, frame_layer }`. Maxwell ≈ 7; Darwin+Mendel = 2 roots + synthesizers. **Empty when the 2-projection is faithful.** When present, `parents` is the declared 2-projection *of* this set. **R28 (ratified 2026-06-09):** each entry may additionally carry `parent_is_gating` / `rate_limiting` (a bool or a `strength ∈ [0,1]`), **distinct from `parent_kind`** — it marks the parent that *rate-limited* the weld, not merely its kind. An instrument-parent can be the gating parent: deep learning's algorithm existed ~1989 and the weld fired only when the compute+data instruments arrived ~2012. **Default: absent ⇒ no single gating parent (the design-law default).** |
 | `parent_kind` (per parent) | enum | **(R4)** `content \| method \| instrument`. Maxwell's EM *content* (Faraday) vs the mechanical-analogy *method* (Thomson) vs the calibration-*target* instrument (Fizeau's light-speed). Default `content`. Reused for `sub_wrappers` and QG's tooling roots. |
 | `mediating_wrapper` | object | **(R1)** OPTIONAL `{ name, kernel, who_or_what, confidence }` — the agent that *performed* the weld when it is **not one of the parents** but sits a layer up (population genetics / Fisher-Haldane-Wright welded Darwin+Mendel; the Maxwellians welded birth-2). Empty when a parent welds itself. |
+| `welder_cascade` | array (ordered) | **(R27; graduated v3 fold 2026-06-09)** OPTIONAL `[{ name, who_or_what, when, confidence }]` — the `mediating_wrapper` may itself be an **ORDERED SEQUENCE** (a relay of mediating institutions/documents that hand the weld forward), not a single node. Manhattan: Einstein-Szilárd letter → Advisory Committee → MAUD → OSRD → MED/Groves. Internet: ARPA → IPTO → BBN → Cerf-Kahn → IETF. **2nd-attested** (both crisis-pulled/institutional specimens have a cascade welder). The single `mediating_wrapper` is the coarse view, `welder_cascade[]` the ordered one. **Default: absent ⇒ a single mediating welder (or a parent welds itself), the design-law default.** |
 
 #### 2.2.b The seam and the surprise (R12, R9, R15, R16)
 
@@ -209,6 +243,7 @@ The edge that *is* the event. The heart of the specimen and the locus of the par
 | `unresolved` | bool | **(R6)** OPTIONAL `true` when `candidate_children` has no winner. Default `false`. |
 | `contest_axis` | string | **(R6)** OPTIONAL the axis the candidates disagree along — *which-parent-dominates* / *background-dependent-vs-independent* (QG). Empty unless `unresolved`. |
 | `weld_necessity_confidence` | number [0,1] | **(R8)** OPTIONAL **"is a third even NEEDED?"** — the falsifier-of-the-weld. A serious minority (semiclassical gravity) holds `W_C` may be a category error (no child). **Empty ⇒ read as 1.0** (the design-law default); `< 1` only on a frontier where the weld itself is in doubt. |
+| `rival_coupling` | array | **(R23; graduated v3 fold 2026-06-09)** OPTIONAL `[{ rival, sign: anti\|co, strength ∈ [0,1], mechanism, confidence }]` — a **SIGNED phase-relation to a rival weld/wrapper** ("A's rise is B's fall"): an `anti`-coupling means the lineages' fortunes move inversely. A D1×D4 cross-product no single forcing event states. Ties to `candidate_children` (the within-weld rivals) and to the new **D6a `opposes`** (§2.10) — `rival_coupling` is the *lifecycle-level* signed companion of D6a's per-act antagonism. Evidence: deep learning (connectionism's winter = symbolic AI's spring) + Internet (TCP/IP's rise IS OSI/X.25/Minitel's fall — GOSIP pulls OSI / squeezes TCP/IP; NSF commercialization inverts it; France killed CYCLADES's datagram, which then won globally as IP). **2nd-attested.** **Default: empty ⇒ no load-bearing rival coupling (the design-law default).** |
 
 #### 2.2.g Dormancy & revival (R10, R11)
 
@@ -217,6 +252,7 @@ The edge that *is* the event. The heart of the specimen and the locus of the par
 | `dormancy_intervals` | array | **(v1, R11-extended, R32-extended)** `[{ from, to, why, why_frame }]`. **R11:** `why_frame ⊆ {time, space, knowledge, meaning, physical/political}` — a lineage can be cut by a **purge** (physical: Bronstein executed by the NKVD, 1938) as well as by a **theorem** (knowledge: QG no-go results; Mendel's blending-orthodoxy misreading). Default: `why_frame` empty ⇒ inferred from `why`. **NOTE (D4):** when the dormancy was caused by an *external* event, record the event once in `forcing_events[]` and let `why_frame` name only the frame — do not restate the event narrative here. **R32 (ratified 2026-06-09):** each interval may additionally carry a `contested` flag (a bool or a `{ fact_confidence, narrative_confidence }` pair) — the **FACT of the dormancy and the clean NARRATIVE of it are separable** (Haigh's "There Was No First AI Winter": elite-lab defunding was real ~0.9, the whole-field-froze story ~0.5; Mendel's disputed "35 years of neglect"). **Default: absent ⇒ uncontested (fact = narrative).** |
 | `revival` | object **or** array | **(v1, R10-extended, R19-extended)** `{ when, by, trigger, kind }`. **R10:** `kind: same \| reinterpreted` — a revival can *re-frame* the dormant object rather than wake it (Mendel did species-hybridization; revived as heredity). Default `same`. **R19 (ratified 2026-06-09):** OPTIONAL — `revival` may be an **array** of per-revival entries, each additionally carrying `method_continuity ∈ [0,1]` (degree-of-reinterpretation; 1.0 = woke unchanged, low = woke a method-incompatible object under the inherited name). A child can revive method-incompatibly more than once (Keynesian ×2, deep learning ×3); the binary `kind` is the coarse view, `method_continuity` the graded one. **Default: a single object with `kind: same` (≡ `method_continuity ≈ 1.0`) on a weld revived once or never.** |
 | `reattribution` | object | **(R10)** OPTIONAL `{ named_after, actually_produced_by, why }` — the canonical **name attaches to the wrong node.** "Maxwell's equations" (4-eqn vector form) were forged by the Maxwellians 1879–94; Maxwell left 20 coupled equations. Empty when name = producer. |
+| `reconstructed_by_winner` | object | **(R26 reframed + graduated v3 fold 2026-06-09)** OPTIONAL `{ node, node_kind: parent\|rival, by_winner, strength ∈ [0,1], note }` — a **strawman/foil constructed by the winning lineage.** Generalized from the original parent-only `parent.reconstructed_by_welder`: the foil may be a reconstructed **PARENT** (Keynes's caricatured "classical economics," a single-bloc "always full employment" parent no one held) **OR** a reconstructed **RIVAL** (OSI lampooned by the TCP/IP winners as "a misguided monstrosity"; Russell's own 2006 piece "presented OSI as a foil"). **The generalization is what graduates it** — the 2nd instance is on a *rival*, not a parent, so the parent-only field could not have held it; widening the slot to *any node* is the fold. **Default: absent ⇒ no reconstructed foil (the design-law default).** |
 | `weld_chain` | array | **(R10)** OPTIONAL `[{ birth_label, weld_ref }]` — lets a `weld` **CHAIN**: birth-1's `W_C` becomes a parent of birth-2 (Maxwell's raw form → welded with vector analysis + Hertz's confirmation → the form we use). Empty on a single-birth weld. |
 
 #### 2.2.h `lifecycle` (D1) — the weld's graded life, first-class
@@ -371,6 +407,14 @@ forcing_events: [
     ],
     when,                       // a date or interval (may reuse the R2 {from,to} shape)
     mechanism,                  // HOW it pulled/squeezed (prose): "wartime funding + secrecy + concentration of physicists"
+    veridical,                  // (R21; graduated v3 fold 2026-06-09) OPTIONAL {force_confidence, object_confidence, note}
+                                //   — a PHANTOM/VERIDICAL flag: the FORCE is real but its OBJECT may be FALSE. The
+                                //   mechanism (the force that drove the program) and the truth-of-the-trigger (whether
+                                //   the thing feared/believed was real) are SEPARABLE. Manhattan: the German-bomb threat
+                                //   drove the program (~0.9) but the Uranverein was a phantom (object false ~0.85).
+                                //   Internet: the OSI-inevitability belief drove GOSIP + a decade of investment (force
+                                //   ~0.85) toward a stack that never shipped (object false ~0.85). 2nd-attested.
+                                //   Default: absent ⇒ veridical (force and object both real), the design-law default.
     confidence
   }
 ]
@@ -383,16 +427,88 @@ forcing_events: [
   - **The AI winters** — `kind: funding` (+ `fashion`), `direction: squeeze`, acted_on connectionism's lifecycle as repeated dormancy cycles; the compute/funding/fashion *pull* of the 2010s is the inverse event.
 - **Why first-class (not a discrepancy or a dormancy `why`):** the *same* event often forces *multiple* nodes (WWII pulled the Manhattan weld AND squeezed European basic science AND redirected a generation of physicists), and pull/squeeze is a *recurring driver type* across specimens (the "weather"), not a one-off note. It connects to D2: a forcing event often acts *through* an actor (a government funds via a lab).
 - **Default on a sharp case:** `forcing_events: []`. Maxwell's EM had no load-bearing exogenous forcing (the design law: empty is correct). The three new specimens exist precisely to populate this layer.
+- **RENDER-MODE note — forcing-as-primary-axis (R33; graduated v3 fold 2026-06-09; NOT a data field):** for a **crisis-pulled** wrapper the `forcing_events[]` layer **IS the lifecycle spine**, not a secondary "weather" overlay — the timeline is best read with the forcing events as the main time-axis (Cold War → birth of the welding institution; deregulation → consummation). **Thrice-attested** (Keynesian / Manhattan / Internet). This is a *way to read the existing layer* (a render choice), not a new field — `forcing_events[]` is unchanged; on a non-crisis-pulled weld the lifecycle (D1) remains the spine.
 
-### 2.10 `sources` — the citation backbone (v1, unchanged)
+### 2.10 D6 — adversarial / gatekeeper / medium (the friction/combat layer)
+
+**(D6; introduced v3 fold 2026-06-09)** A new dimension **cluster** — the **friction / combat layer** that sits between the idea-genealogy and its uptake: who *opposes* a weld, who *gates* it, why it *waits*, and what *carries* it. Four relations, **each OPTIONAL and default-empty on a clean sharp weld** (the design law). D6 is a *cluster*, not a single field; the four sub-parts (D6a–D6d) attach across the existing groups (the weld, the actors, the forcing layer). The Internet specimen — a rival-standard war fought through standards bodies, government mandates and a physical medium — is what forced the cluster.
+
+#### 2.10.a D6a — Adversarial (`opposes[]`)
+
+**(D6a)** A **FOLD into the framework's existing A−/A+ adversarial-function canon — NOT a new primitive.** D6a reuses the framework's own adversarial primitive (the A− adversarial charge) rather than inventing a combat construct; it merely gives that primitive a render-slot at the weld. An `opposes[]` relation:
+
+```
+opposes: [
+  { from,                       // the antagonist (an actor or a wrapper)
+    target,                     // the weld or wrapper opposed (by id else name, §0.1)
+    a_charge ∈ [0,1],           // the A− adversarial charge (the framework's existing primitive)
+    mode,                       // debunk | suppress | out-compete | co-opt | ignore
+    note }
+]
+```
+
+- **It generalizes two existing fields.** The `pre_weld` antagonism (R14, the parents' antagonism before the weld) and the `rival_coupling` (R23, the signed rival-lifecycle relation, §2.2.f) are **special cases** of `opposes[]` — R14 is antagonism *internal* to the parent pair, R23 is the *signed lifecycle* version, D6a is the general *per-act* antagonism (the TCP/IP camp out-competing OSI; the PTTs suppressing the datagram).
+- **Default:** empty ⇒ no load-bearing adversary (Maxwell — the design-law default).
+
+#### 2.10.b D6b — Gatekeepers (`gates[]`)
+
+**(D6b)** A `gates[]` relation — an actor that **permits, blocks, or delays** a weld's passage through a chokepoint:
+
+```
+gates: [
+  { gatekeeper,                 // the actor at the chokepoint (by id else name, §0.1)
+    target,                     // the weld gated
+    verdict,                    // permit | block | delay
+    lag,                        // OPTIONAL the delay imposed (a duration or interval)
+    frame,                      // knowledge = peer-review | physical/political = censorship | meaning = cultural-license
+    note }
+]
+```
+
+- **Reflexive note:** the framework's **own ratify/audit/tier loop is itself a gatekeeper** — it permits/blocks/delays a render's passage to canon. D6b is the same relation turned on the framework's own process; recording it keeps the schema honest about its own gating.
+- **Default:** empty ⇒ no load-bearing gatekeeper (the design-law default).
+
+#### 2.10.c D6c — Lag-of-reality (`weld.lag`)
+
+**(D6c)** `weld.lag { value, cause, confidence }` — a **causal account of WHY a weld waits**:
+
+```
+weld.lag: {
+  value,                        // the wait (a duration or interval)
+  cause,                        // gatekept | out-competed | low-bandwidth | no-demand-yet | instrument-gated
+  confidence
+}
+```
+
+- **It UNIFIES two existing fields into a causal account:** `adoption_lag` (R25, the demonstrated-not-adopted gap, §2.2.b) records *that* a weld waited; `dormancy_intervals[].why_frame` (R11, §2.2.g) records the *frame* of a dormancy; `weld.lag` records the **cause** — *why* the wait happened (gatekept by peer-review, out-competed by a rival, starved of bandwidth, no demand yet, or gated by a missing instrument). The instrument-gated cause overlaps `parent_is_gating` (R28); record the gating parent there and the *wait it caused* here.
+- **Default:** absent ⇒ no load-bearing lag (a weld adopted as soon as it was shown — the design-law default).
+
+#### 2.10.d D6d — Propagation / bandwidth (`propagation`)
+
+**(D6d)** `propagation { bandwidth, at_time, at_place, note }` — the **medium's carrying capacity** at a (time, place); a **PHYSICAL-frame** field that distinguishes *low-bandwidth* dormancy from gatekept / adversarial / no-demand dormancy:
+
+```
+propagation: {
+  bandwidth ∈ [0,1],            // the medium's carrying capacity (a membership)
+  at_time, at_place,            // bandwidth is relative to a (time, place)
+  note
+}
+```
+
+- **FLAGGED as the MOST CONJECTURAL of D6** — **one strong case so far** (Mendel's low-bandwidth silence: the result existed but the medium could not carry it to the readers who could use it), pending more specimens. It is the D6c `cause: low-bandwidth` made into its own physical-frame field; until a second instance, treat it as a single-case conjecture.
+- **Default:** empty (the design-law default; also the default for every weld whose medium was not the limiting factor).
+
+> **D6 design-law note.** Every D6 field is OPTIONAL and defaults empty on a clean sharp weld. D6a is a *fold* (it reuses the A−/A+ primitive), D6c/D6d *unify/recast* existing fields (R25/R11; R28) into a causal account — the cluster adds render-slots for friction the record already carried in scattered form, it does not add new substance. A Maxwell-style settled weld fills none of D6.
+
+### 2.11 `sources` — the citation backbone (v1, unchanged)
 
 Array of `{ name, type, url, what_used_for, reliability }`, where `type ∈ [aggregator, encyclopedia, scholarly-history, primary]` and `reliability ∈ [0,1]` (or a labelled band).
 
 > **Harvest discipline (carried forward):** consult the WEB, do **not** work from memory; cite real sources; mark uncertain claims low-confidence. Aggregators: **Wikidata** (influenced-by, discoverer, field-of-work, dates, place), **OpenAlex**, **SEP**/**IEP**, Wikipedia "history of …" sections, the **Mathematics Genealogy Project**, **nLab**, **Semantic Scholar/Google Scholar** citation lineage, named **scholarly histories**. For the three new specimens the actor/forcing layers (D2/D4) add: government/agency archives (Manhattan: AHF/DOE histories), economic-history sources (Keynes: the General Theory's reception, the 1930s–70s policy record, Skidelsky), and AI-history sources (connectionism: Rosenblatt 1958, Minsky-Papert 1969, Rumelhart-Hinton-Williams 1986, the two AI-winter literatures, AlexNet 2012, "Attention Is All You Need" 2017). Mark discrepancies, **especially framework-vs-record tensions.**
 
-### 2.11 `schema_capabilities` (D3 + D5) — declared render capabilities (header block)
+### 2.12 `schema_capabilities` (D3 + D5) — declared render capabilities (header block)
 
-**(D3 + D5)** A small declared-capabilities block (carried in the header, §2.12) announcing what a v2 render *supports*, so consumers (and a future renderer) can rely on it:
+**(D3 + D5)** A small declared-capabilities block (carried in the header, §2.13) announcing what a v2 render *supports*, so consumers (and a future renderer) can rely on it:
 
 ```
 schema_capabilities: {
@@ -419,7 +535,7 @@ schema_capabilities: {
 - **D3 (physical/latent LOD filter):** the genealogy can be rendered at the **physical** layer (actors, institutions, places, forcing events) or the **latent** layer (ideas, theories, sub-wrappers), with **actors the explicit bridge.** Every node's `frame_layer` is the filter key. This is *zoom on a new axis*: not just depth (roots↔harvest) but layer (physical↔latent). **Status:** declared but not yet exercised by a renderer — the three new specimens should at minimum be **hand-checkable** under each filter (§6 item 5).
 - **D5 (fuzzy edges by design):** graded membership is the **pervasive default.** A crisp boundary is recorded as a membership that *happens* to be ~0 or ~1 — never as a special "this one is crisp" type.
 
-### 2.12 specimen header (top-level metadata — v1 + v2 additions)
+### 2.13 specimen header (top-level metadata — v1 + v2 additions)
 
 | field | type | meaning |
 |---|---|---|
@@ -431,7 +547,7 @@ schema_capabilities: {
 | `frames_present` | string[] | union of all `{time,space,knowledge,meaning}` frames used (convenience index). |
 | `layers_present` | string[] | **(D3)** union of `frame_layer`s used — `["physical","latent"]` when both are populated. New in v2. |
 | `overall_confidence` | number [0,1] | confidence in the specimen as a whole — **always read paired with `fuzzy_layer` (a split aggregate, never a flat scalar).** |
-| `schema_capabilities` | object | **(D3+D5)** the declared-capabilities block of §2.11. |
+| `schema_capabilities` | object | **(D3+D5)** the declared-capabilities block of §2.12. |
 
 ---
 
@@ -441,7 +557,7 @@ schema_capabilities: {
 A claim near the trunk (the merge event, the two named parents, the date) should be high (≈0.8–1.0); a deep root or a wide edge should be low (≈0.2–0.5) and may live in `fuzzy_layer.frontier`.
 
 ### 3.2 (v1) LOD / `depth` is a zoom coordinate.
-Zooming in on the trunk reveals more certain structure; zooming into roots/edges reveals the probabilistic frontier. **R3 adds a second zoom axis at the weld:** `sub_welds[]` + `coherence_under_zoom` record whether higher zoom *confirms* or *contradicts* the weld. **D3 adds a third axis:** the physical↔latent layer (§2.11).
+Zooming in on the trunk reveals more certain structure; zooming into roots/edges reveals the probabilistic frontier. **R3 adds a second zoom axis at the weld:** `sub_welds[]` + `coherence_under_zoom` record whether higher zoom *confirms* or *contradicts* the weld. **D3 adds a third axis:** the physical↔latent layer (§2.12).
 
 ### 3.3 (v1, R16) Bits stay qualitative.
 `weld.bits_note` and the `compressor` utility leg describe description-length *qualitatively* only. **MDL-in-bits is a LATER step** needing latent embeddings — do **not** fabricate numeric bit values. **R16:** on a frontier the value may be a **principled null** (`bits_note: "principled-null"`) — you cannot MDL-score a theory you do not have; the blank is *intrinsic*, not deferred.
@@ -465,11 +581,11 @@ A compact statement of *why* each new dimension is first-class and *how* it pres
 
 - **D2 — Actors generalized (`actors`, §2.6).** v1's `people_0` could only hold individuals. D2 generalizes to **institutions/governments/labs/journals/companies/movements/fields/universities/states**, with **two role-relations** — `carrier_of` (champions latent wrappers UP) and `inhabitant_of` (operates WITHIN other wrappers). Actors become the **explicit bridge** between the physical and latent layers (D3). *Design law:* `actors[]` *is* v1's `people_0` for `kind:individual`; non-individual kinds and the two relations default empty and only fill where an institution is load-bearing.
 
-- **D3 — Physical/latent LOD filter (`frame_layer` on every node + `schema_capabilities.layer_filter`, §2.11).** v2 adds a **second zoom axis**: not just depth (roots↔harvest) but **layer** (physical↔latent). Every node declares `frame_layer ∈ {physical, latent, straddle}` (graded); a render can show the **physical view** or the **latent view**, with **actors the bridge.** *Design law:* an idea-child defaults `latent`; a person defaults `physical`; the filter is free on a specimen that does not care about the split.
+- **D3 — Physical/latent LOD filter (`frame_layer` on every node + `schema_capabilities.layer_filter`, §2.12).** v2 adds a **second zoom axis**: not just depth (roots↔harvest) but **layer** (physical↔latent). Every node declares `frame_layer ∈ {physical, latent, straddle}` (graded); a render can show the **physical view** or the **latent view**, with **actors the bridge.** *Design law:* an idea-child defaults `latent`; a person defaults `physical`; the filter is free on a specimen that does not care about the split.
 
 - **D4 — External pull/squeeze forcing events (`forcing_events`, §2.9).** A first-class **exogenous layer** — wars, depressions, fashions, funding, purges — that **pull** or **squeeze** welds and lineages: the "weather" over the genealogy. Lifted out of v1's `dormancy.why` string because one event forces *many* nodes and pull/squeeze is a recurring *driver type*. Often acts *through* an actor (D2). *Design law:* `forcing_events:[]` on a case with no load-bearing exogenous forcing (Maxwell).
 
-- **D5 — Fuzzy edges by design (graded membership pervasive; `schema_capabilities.graded_membership`, §2.11).** v2 leans all the way in: **every boundary is graded** — node membership, weld extent, actor role-strength, forcing-event influence, frame-layer straddle, lifecycle phase membership, weld-type weight — each a value in [0,1]. **A crisp boundary is the special case (membership ≈0/1), not the default.** *Design law in its purest form:* the certain core is *defined* as where membership ≈ 1.0; D5 declares that the [0,1] grading already pervading the schema is the *norm*, and the schema's own thin-core/expressive-frontier shape is just the membership field at work.
+- **D5 — Fuzzy edges by design (graded membership pervasive; `schema_capabilities.graded_membership`, §2.12).** v2 leans all the way in: **every boundary is graded** — node membership, weld extent, actor role-strength, forcing-event influence, frame-layer straddle, lifecycle phase membership, weld-type weight — each a value in [0,1]. **A crisp boundary is the special case (membership ≈0/1), not the default.** *Design law in its purest form:* the certain core is *defined* as where membership ≈ 1.0; D5 declares that the [0,1] grading already pervading the schema is the *norm*, and the schema's own thin-core/expressive-frontier shape is just the membership field at work.
 
 ---
 
@@ -525,4 +641,4 @@ The adversarial pass made five cuts and one addition, all in service of the desi
 
 All five D-dimensions and all sixteen R-refinements are preserved and faithful to Pav's intent; nothing in the architect's *capability* set was removed — only redundant *representations* of the same capability.
 
-*End v2 spec. RATIFIED 2026-06-09 by Pav as the working canonical render-system (a tool/render-spec, not a framework substantive claim; the framework's claims still owe an external A−). Folds R1–R16 + makes D1–D5 first-class; ratified v3 subset R17/18,R19,R20,R24,R25,R28,R32 folded, rest deferred; preserves the optional-fields-default-empty design law; promotes nothing; convergence list stays 9; specimens remain calibration instruments extending wrapper_classes_phase1.json at deeper zoom.*
+*End v2 spec. RATIFIED 2026-06-09 by Pav as the working canonical render-system (a tool/render-spec, not a framework substantive claim; the framework's claims still owe an external A−). Folds R1–R16 + makes D1–D5 first-class; ratified v3 subset R17/18,R19,R20,R24,R25,R28,R32 folded; the v3 fold (2026-06-09, after the Internet specimen) graduates R27/R23/R21/R33 + R26→reconstructed_by_winner and introduces the D6 cluster (D6a opposes [a fold into the A−/A+ adversarial canon], D6b gates, D6c weld.lag, D6d propagation [most-conjectural]); R22/R29/R30/R31/R34 + the new single-case conjectures (flame_extinguisher, record-contamination, definitional-child-boundary) stay deferred; preserves the optional-fields-default-empty design law; promotes nothing; convergence list stays 9; specimens remain calibration instruments extending wrapper_classes_phase1.json at deeper zoom.*
