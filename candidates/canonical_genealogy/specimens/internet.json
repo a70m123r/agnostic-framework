@@ -1,0 +1,1424 @@
+{
+  "_template_doc": "CANONICAL WRAPPER-GENEALOGY SPECIMEN — v2 render, one merge event (packet-switching x internetworking/open-architecture -> the Internet, TCP/IP) as a rooted genealogy that STOPS AT THE PRESENT. Spec: ../SCHEMA_v2.md. Tier-3 exploratory data-harvest for Cowork+Pav ratification — NOT canon, NOT a promotion, convergence list stays 9. This specimen is a WORKED EXAMPLE / CALIBRATION INSTRUMENT and the SECOND crisis-pulled / institutional-cascade specimen (after Manhattan), chosen to TEST WHETHER the DEFERRED single-case v3 refinements RECUR (graduating them): especially R27 (mediating-welder as an ordered CASCADE: ARPA->IPTO->BBN->universities->INWG->IAB/IETF->ISOC), R23 (rival-lifecycle-coupling: TCP/IP's rise = OSI/X.25/Minitel's fall), R29 (flame-keeper/dormancy-patron), R21 (phantom/veridical forcing), R26 (strawman parent/foil). It TRIPLE-attests D2 (institutions/government: DARPA/NSF/CERN/ISO/IETF) and D4 (Cold-War + deregulation forcing). Every node/edge/actor-role/event carries SOFT confidence in [0,1] + a frame_layer (D3); welds carry a graded lifecycle+type (D1); actors carry carrier_of/inhabitant_of (D2); exogenous forces live in forcing_events[] (D4); graded membership is the default (D5). bits_note QUALITATIVE ONLY. Sources web-checked (see sources[]); framework-vs-record tensions flagged in discrepancies[]. DISCIPLINE: extends wrapper_classes_phase1.json at deeper zoom; promotes nothing; the list stays 9; surprise qualitative (no bits).",
+
+  "schema_version": "0.2-canonical-genealogy",
+  "specimen_id": "internet",
+  "_status": "Tier-3 WORKING specimen — exploratory data-harvest, surfaced for Cowork+Pav ratification. NOT canon, NOT a tier promotion, does NOT grow the convergence list (stays 9). All confidences are SOFT scores in [0,1]; bits are qualitative only. This is the SECOND crisis-pulled / institutional-cascade specimen (the Manhattan Project being the first). Its PRIMARY JOB is the GRADUATION CHECK: a calibration instrument testing whether the DEFERRED refinements (R21,R22,R23,R26,R27,R29,R30,R31,R33,R34) get a SECOND independent instance. Like Manhattan it is a CONSUMMATED, institution-cascade-welded, exogenously-forced weld; UNLIKE Manhattan its consummation was SLOW and DISTRIBUTED (a ~14-30-year cascade, not a 33-month crash) and its defining feature is a RIVAL-LINEAGE WAR (the protocol wars: TCP/IP vs OSI vs X.25/Minitel) in which one standard's rise IS another's fall.",
+  "extends": {
+    "_comment": "Linkage back to the Phase-1 wrapper CLASS this merge-event specimen instantiates (SCHEMA_v2.md §5). Same graph, deeper zoom. HONEST NOTE: the Internet is NOT a row in wrapper_classes_phase1.json (a grep for packet/internet/TCP/ARPANET/network-of-networks returns no wrapper-class row; only incidental prose about adversarial substrate / cymatics mentions the word 'internet'). This specimen therefore EXTENDS the Phase-1 DB by adding a SECOND state/institution-mobilized, crisis-pulled, internetworking weld row — handled exactly as Manhattan and Keynesian handle their (also-absent) rows. It populates the D2 (institution/government actors), D4 (exogenous Cold-War + deregulation forcing) and the DEFERRED-refinement machinery (R23/R27/R29) at deeper zoom.",
+    "phase1_file": "../latent_olympics_data/wrapper_classes_phase1.json",
+    "phase1_class_name": "(none yet — proposed NEW row: 'The Internet (internetworking weld: packet-switching x open-architecture internetworking -> TCP/IP, the network of networks)'; nearest existing kin is the Manhattan specimen as the STRUCTURAL SIBLING — same institution-cascade-welded, exogenously-forced, consummated shape — and the QG frontier specimen as the contrast (QG never consummated; the Internet consummated slowly via a standards war).",
+    "relation_note": "INSTANCE-OF / proposed new row, NOT a 10th convergence. Rendered as a single weld event (packet-switching W_A x open-architecture internetworking W_B, fused along the gateway/datagram seam S) to exercise v2's institution-actors (D2), exogenous-forcing (D4), and — its CHIEF purpose — the DEFERRED v3 refinements. Where Manhattan is the FAST crisis-pull (33 months) with ONE phantom enemy, the Internet is the SLOW institutional cascade (Sputnik 1957 -> ARPANET 1969 -> Cerf-Kahn 1974 -> flag day 1983 -> NSFNET 1986 -> commercialization 1995) whose defining dynamic is a RIVAL-STANDARD WAR — making it the natural SECOND instance for R23 (rival-lifecycle-coupling), R27 (cascade welder), and R29 (a lineage starved by its own patron state: CYCLADES)."
+  },
+  "generated": "2026-06-09",
+  "frames_present": ["time", "space", "knowledge", "meaning"],
+  "layers_present": ["physical", "latent"],
+  "_layers_present_comment": "(D3) BOTH layers heavily populated — like Manhattan and Keynesian, the institution/government/company actors (DARPA, NSF, BBN, IETF, CERN, ISO, the PTTs) are physical and load-bearing, while the protocols/architecture/standards (latent) are the trunk and canopy. Standards documents (RFC 675, the 1974 Cerf-Kahn paper, the OSI model, X.25) straddle — physical artifacts carrying a latent architecture.",
+  "overall_confidence": 0.82,
+  "_overall_confidence_comment": "ALWAYS read paired with fuzzy_layer — a SPLIT aggregate, never a flat scalar. The TRUNK FACTS are high (~0.9-0.95): packet-switching was invented (Baran/Davies, early-mid 1960s), internetworking/open-architecture was specified by Cerf-Kahn (1974), TCP/IP became the ARPANET standard on the 1 Jan 1983 flag day, NSFNET (1986) scaled it, and commercialization (1995) consummated it as the global network-of-networks. The CHILD indisputably EXISTS and works (unlike QG). The figure is pulled DOWN from Manhattan's 0.90 by genuinely-contested frontier zones: (a) the PRIORITY DISPUTE over who invented packet-switching (Kleinrock's contested claim vs the Baran/Davies attribution — a live, bitter dispute); (b) the CONTESTED GENEALOGY of what 'the Internet' even IS (the ARPANET-as-origin whig narrative vs the internetworking-weld reading); (c) the WHIG-VS-REVISIONIST historiography of the protocol wars (was TCP/IP's victory inevitable-on-merit or contingent-and-political? — Russell's revisionist thesis); (d) the strawman-framing of OSI by the winners. High-confidence core, honestly-contested frontier — and the fuzz here is in ATTRIBUTION and HISTORIOGRAPHY (who/why), not in whether the child was born.",
+
+  "schema_capabilities": {
+    "_comment": "(D3+D5) Declared render capabilities. Static block — announces what a v2 render supports.",
+    "layer_filter": {
+      "_comment": "(D3) The render is FILTERABLE on the physical/latent axis; actors are the bridge. EXERCISED here: see _layer_filter_hand_check below.",
+      "supported": true,
+      "axes": ["physical", "latent"],
+      "bridge_via": "actors",
+      "note": "A render may show the PHYSICAL view (actors, agencies, labs, companies, the IMPs/routers, the backbone, the standards bodies) OR the LATENT view (the protocols, the open-architecture principle, the end-to-end principle, the network-of-networks idea); every node declares frame_layer; actors straddle and connect the two."
+    },
+    "graded_membership": {
+      "_comment": "(D5) Fuzzy edges by design — graded membership is the pervasive default. The signature D5 demonstrations here: the W_B parent ('open-architecture internetworking') is ~0.7 as a single parent but ~0.95 decomposed into Kahn's four ground rules + the datagram + the end-to-end principle; a single forcing event (national PTT/government standards policy) PULLS the OSI/X.25 lineage while SQUEEZING TCP/IP, then inverts after 1992; the priority of packet-switching is graded across Baran/Davies/Kleinrock.",
+      "supported": true,
+      "default": "graded",
+      "applies_to": [
+        "node membership", "weld extent (sub_welds)", "actor role-strength (carrier/inhabitant)",
+        "forcing-event influence (acted_on.strength)", "frame-layer straddle (physical/latent membership)",
+        "lifecycle phase membership", "weld_type weight"
+      ],
+      "note": "Every boundary is a membership/confidence in [0,1]; the certain core is just where membership ~1.0. Crisp = the membership happens to be ~0/1."
+    }
+  },
+
+  "_layer_filter_hand_check": {
+    "_comment": "(D3, SCHEMA_v2.md §6 item 5) Hand-check that the specimen is renderable under each filter. PHYSICAL-only view = {actors of kind individual/government/agency/lab/company/university + the IMPs/gateways/routers + the NSFNET backbone + the PTT telco networks + forcing_events of kind war/funding/politics/economic}. LATENT-only view = {child (the Internet-as-network-of-networks idea, TCP/IP, the open-architecture & end-to-end principles) + harvest descendants (the Web, the platform economy) + sub_wrappers of kind knowledge (packet-switching, the datagram, queueing theory)}. STRADDLE / bridge = actors (every actor carries a latent protocol/principle UP and inhabits physical+latent institutions WITHIN); the 1974 Cerf-Kahn paper / RFC 675 / the OSI reference model / the X.25 recommendation straddle (physical documents carrying a latent architecture). Both views are non-empty and connected through actors — the filter is satisfied.",
+    "physical_view_nodes": ["all kind:individual/government/institution/lab/company/university actors (Baran, Davies, Cerf, Kahn, Pouzin; DARPA, NSF, BBN, RAND, NPL, CERN, ISO, CCITT, IETF, the PTTs)", "the IMPs / gateways / routers (Cisco)", "the ARPANET + NSFNET backbones + the X.25 public data networks (Transpac/Minitel)", "forcing_events: Sputnik/Cold War, the Mansfield-era defense-research climate, GOSIP mandates, NSF commercialization/deregulation"],
+    "latent_view_nodes": ["child W_C (the Internet = the network-of-networks; TCP/IP; the open-architecture + end-to-end principles)", "sub_wrappers tagged knowledge (packet-switching, distributed/survivable routing, the datagram, queueing theory, layering)", "harvest descendants (the World Wide Web, e-commerce/the platform economy, social media, the cloud)"],
+    "bridge_nodes": ["every actor (carrier_of UP into latent protocols/principles; inhabitant_of WITHIN physical agencies/labs/companies)", "the 1974 Cerf-Kahn paper + RFC 675 + the OSI reference model + the X.25 recommendation (physical documents carrying a latent architecture); RFCs as the genre that IS the bridge"]
+  },
+
+  "child": {
+    "_comment": "W_C — THE INTERNET (the network of networks, running TCP/IP). The trunk node, and — like Manhattan and unlike QG — it is SOLID (the crown is not hollow). NOT the ARPANET (that is a parent-substrate); the CHILD is the internetworking layer that lets HETEROGENEOUS, independently-owned networks interconnect with no central control. The thing born in this merge is the open, end-to-end, network-of-networks ARCHITECTURE — which is why the WEB, e-commerce and social media are harvest (descendants), not the child.",
+    "id": "child-internet",
+    "name": "The Internet (TCP/IP — the network of networks)",
+    "kernel": "A global, decentralized network-of-networks: independently-owned heterogeneous packet networks interconnected through gateways/routers by a common protocol suite (TCP/IP), under the open-architecture principle (each network stands on its own, no internal change required to join) and the end-to-end principle (intelligence at the hosts, not in the network). CRUCIAL contrast with QG's kernel: this is a description of an EXISTING, deployed object (billions of hosts; the substrate of the world economy), not a specification of a sought target. CRUCIAL contrast with the ARPANET: the child is NOT a single packet network but the INTERNETWORKING layer that federates many.",
+    "frame": ["space", "time", "knowledge", "meaning"],
+    "_frame_note": "knowledge (the protocol architecture), space+time (a planet-spanning infrastructure built over ~3 decades), and a real {meaning} engagement: the Internet became a moral/political object (the 'two visions' of standardization — decentralized open process vs centralized state/PTT control; later net-neutrality, surveillance, platform power). The meaning-frame engagement here is for 'WHO governs the network and by what process' (the protocol wars as a power struggle), echoing QG's meaning-frame 'which child is winning' and Manhattan's 'was the child's use justified'.",
+    "frame_layer": {
+      "_comment": "(D3) The child STRADDLES: the PROTOCOL/architecture (TCP/IP, open-architecture, end-to-end) is latent, while the deployed network (routers, fiber, the backbone) is a physical artifact. Graded toward latent because the genealogy treats W_C primarily as the latent architectural wrapper, with a strong physical limb (the deployed infrastructure).",
+      "layer": "straddle",
+      "physical_membership": 0.5,
+      "latent_membership": 0.9
+    },
+    "status": "risen",
+    "_status_enum": "one of: risen | active | dormant | resurrected | stale | open-conjecture. Here UNAMBIGUOUSLY 'risen' (and hardened) — the consummated antithesis of QG's 'open-conjecture', and like Manhattan a monotone-hardening trajectory. The child rose (1974 specification), consolidated (1983 flag day -> 1986 NSFNET), WON its rival war (the protocol wars, ~1990-95), and HARDENED irreversibly into the global communications baseline. No dormancy after firing.",
+    "status_trajectory": [
+      {
+        "_comment": "(R5) the child as a TRAJECTORY — a MONOTONE-HARDENING one (like Manhattan, the inverse of QG and unlike Keynesian's die-and-reincarnate). It rises, wins its standards war, and hardens; it does not go dormant or reincarnate method-incompatibly. continuity stays high throughout (default ~1.0): TCP/IP at scale in 2026 is method-CONTINUOUS with the 1974-83 design (the same datagram/end-to-end architecture) — explicitly NOT the Keynesian/deep-learning identity_break. This is itself a graduation datum (see R24, already-ratified).",
+        "state": "specified (Cerf-Kahn 1974 'A Protocol for Packet Network Intercommunication'; the internetworking architecture drawn)",
+        "when": "1974",
+        "by": "Vint Cerf & Bob Kahn (with the Stanford/BBN/UCL group; Gerard Le Lann + Pouzin's CYCLADES concepts)",
+        "confidence": 0.95,
+        "continuity": 1.0
+      },
+      {
+        "state": "consolidated (ARPANET 'flag day' 1 Jan 1983: NCP -> TCP/IP cutover; the internetwork becomes the operational baseline)",
+        "when": "1 Jan 1983",
+        "by": "DARPA / DCA; the ARPANET community",
+        "confidence": 0.95,
+        "continuity": 1.0
+      },
+      {
+        "state": "won-its-rival-war + scaled (NSFNET 1986 -> the protocol wars decided ~1990-95: TCP/IP displaces OSI and X.25)",
+        "when": "1986-1995",
+        "by": "NSF; the IETF; the commercial-ISP market; CERN's Web as the killer harvest",
+        "confidence": 0.9,
+        "continuity": 1.0
+      },
+      {
+        "state": "hardened (irreversible global baseline: commercialization 1995, the dot-com build-out, the mobile/cloud era; the substrate of the world economy)",
+        "when": "1995 -> present",
+        "by": "the global ISP/telecom/platform industry; ICANN/IETF/ISOC governance",
+        "confidence": 0.92,
+        "continuity": 1.0
+      }
+    ],
+    "confidence": 0.92,
+    "_confidence_note": "0.92 = confidence the child is a real, distinct emergent that EXISTS and works (billions of hosts; the substrate of modern life). Slightly below Manhattan's 0.95 only because the BOUNDARY of 'the Internet' as the child (vs the ARPANET substrate vs the Web harvest) is itself a contested-genealogy frontier (discrepancies). NOTE the v2 pattern (cf. Manhattan): child.confidence HIGH while the SURPRISE is the subtler axis — packet-switching ALONE implied a single network; the genuine joint-surprise is INTERNETWORKING (that independently-owned, heterogeneous, mutually-distrusting networks could federate with NO central control). R9 confirmed: surprise_confidence (0.85) and child.confidence (0.92) are orthogonal.",
+    "utility": {
+      "_comment": "Pav's three utility legs. Like Manhattan (and unlike QG's largely-prospective utility), the utility is overwhelmingly REALIZED.",
+      "unifier": "Fused two previously-separate wrappers — single-network packet-switching + the open-architecture internetworking principle — into one operational system that UNIFIES all prior heterogeneous networks (ARPANET, SATNET, PRNET, Ethernet LANs, X.25 publics, later cellular) under one address+transport scheme, AND became the universal substrate the Web, e-commerce, the cloud and social media all sit on. passesW_CTest: YES — the network-of-networks is genuinely unreachable from either parent alone: packet-switching alone yields ISOLATED single networks (the ARPANET, NPL, CYCLADES, X.25 publics — each a silo); the open-architecture/end-to-end PRINCIPLE alone is an empty design stance with nothing to connect. Only TOGETHER do they yield a federating internetwork.",
+      "compressor": "QUALITATIVE ONLY (no fabricated bits). TCP/IP 'compresses' the entire heterogeneity of the world's networks into one thin waist ('IP on everything' — Cerf's 1992 slogan): every application above and every link-layer below need know only the narrow IP datagram interface (the hourglass/narrow-waist architecture). It also compresses 'how to add a new network' into a single rule (run IP at the gateway), distinct from QG's PRINCIPLED-null compressor: here the compression is REAL but still assessed qualitatively (MDL-in-bits needs latent embeddings — a later step).",
+      "action_spaces_unlocked": [
+        "The World Wide Web (Berners-Lee, CERN, 1989-91) — the dominant harvest application.",
+        "Electronic commerce + the platform economy (Amazon, eBay, Google, and the entire digital economy).",
+        "Email/messaging/VoIP and the collapse of distance in personal + business communication.",
+        "Cloud computing + streaming media + the mobile-app ecosystem.",
+        "Social media + the modern public sphere (and its pathologies: misinformation, platform power, surveillance).",
+        "A new domain of statecraft + conflict (cyberwar, internet governance, the splinternet/sovereignty debates)."
+      ]
+    }
+  },
+
+  "weld": {
+    "_comment": "The merge: parents -> child. THE HEART OF THE SPECIMEN. Here the weld is a CONSUMMATED, institution-cascade-welded, exogenously-forced merge whose distinctive feature (vs Manhattan) is that consummation ran through a RIVAL-STANDARD WAR. The clean 2-parent diagram (packet-switching x internetworking) is present and faithful as a projection, but (R1/R27) the welding agent is NEITHER parent: it is an ORDERED CASCADE of mediating institutions (ARPA -> IPTO -> BBN -> universities-under-contract -> INWG -> IAB/IETF -> ISOC), with the human welders (Cerf & Kahn) sitting a layer up from both packet-switching and the open-architecture stance. See mediating_wrapper and discrepancies.",
+    "id": "weld-main",
+
+    "parents": [
+      {
+        "_role": "W_A",
+        "name": "Packet-switching (distributed, survivable, store-and-forward data networking)",
+        "kernel": "The technique of chopping messages into addressed blocks (packets) and routing them independently, store-and-forward, over a decentralized mesh: Baran's distributed-adaptive-message-block / survivable-network design at RAND (1959-64, 'On Distributed Communications'); Davies' independent NPL invention that COINED 'packet' (1965-66); Kleinrock's queueing theory; realized in the ARPANET (BBN's IMPs, 1969) and the NPL network (1970). The technology that makes data networking efficient and robust. frame {knowledge}.",
+        "frame": ["knowledge"],
+        "confidence": 0.95,
+        "parent_kind": "content",
+        "_parent_kind_note": "(R4) the CONTENT parent — the core networking technology. Itself multiply-rooted + priority-disputed (Baran/Davies/Kleinrock); see parents_full + discrepancies."
+      },
+      {
+        "_role": "W_B",
+        "name": "Open-architecture internetworking (the network-of-networks principle)",
+        "kernel": "Kahn's open-architecture stance (1973): connect INDEPENDENTLY-OWNED, heterogeneous networks with no internal change required to any of them, via gateways, with reliability pushed to the end hosts (the end-to-end principle) and a connectionless datagram core (Pouzin's CYCLADES contribution). The design philosophy + the datagram + the end-to-end principle that turn many isolated packet networks into ONE internetwork. frame {knowledge, meaning}.",
+        "frame": ["knowledge", "meaning"],
+        "confidence": 0.92,
+        "_confidence_note": "0.92 that the open-architecture/internetworking principle EXISTED and was load-bearing; BUT only ~0.7 that it is faithfully ONE parent rather than a composite (Kahn's four ground rules + Pouzin's datagram + Saltzer-Reed-Clark's end-to-end principle + the gateway concept) — see parents_full. The D5 graded-membership signature, milder than Manhattan's 0.6 war-state because internetworking is a more coherent single idea than 'the war-state'.",
+        "parent_kind": "method",
+        "_parent_kind_note": "(R4) the METHOD parent — a design philosophy / architectural principle, not a physical technology. Contrast W_A's CONTENT (the packet-switching technique)."
+      }
+    ],
+    "_parents_comment": "(v1, kept) The clean BINARY projection [packet-switching, open-architecture internetworking]. Present and useful as the framework's canonical visualization. Both parents decompose (W_A into Baran/Davies/Kleinrock; W_B into Kahn's ground rules + the datagram + end-to-end) — see parents_full + discrepancies.",
+
+    "parents_full": [
+      {
+        "_comment": "(R1) The honest N-ary parent set. BOTH parents decompose. W_A (packet-switching) is itself a priority-disputed multi-root; W_B (internetworking) is a composite of an architectural stance + the datagram + the end-to-end principle + the gateway. This is the specimen's R1 instance — milder than Manhattan's institutional assemblage but real.",
+        "id": "pf-baran",
+        "name": "Baran's distributed/survivable packet network (RAND, 1959-64)",
+        "kernel": "Distributed-adaptive-message-block 'hot-potato' store-and-forward routing over a survivable mesh, motivated by surviving a nuclear first strike ('On Distributed Communications', RAND P-2626 1962 / RM-3420 1964). The survivability + distributed-routing root of W_A.",
+        "frame": ["knowledge", "meaning"],
+        "confidence": 0.95,
+        "parent_kind": "content",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.15, "latent_membership": 0.9 }
+      },
+      {
+        "id": "pf-davies",
+        "name": "Davies' NPL packet-switching (1965-66)",
+        "kernel": "Independent invention of packet-switching at the National Physical Laboratory; COINED the word 'packet'; proposed a UK national data network; built the NPL network (1970). The civil/commercial root of W_A (and the term itself).",
+        "frame": ["knowledge"],
+        "confidence": 0.95,
+        "parent_kind": "content",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.15, "latent_membership": 0.9 }
+      },
+      {
+        "id": "pf-kleinrock",
+        "name": "Kleinrock's queueing theory of message/packet networks",
+        "kernel": "Doctoral queueing-theoretic analysis of message-switched networks (1961-62, book 1964); later analytic work on the ARPANET. CONTESTED as a packet-switching origin (Davies/Baran/Taylor dispute the claim) — recorded as a parent at reduced confidence + a priority-dispute discrepancy.",
+        "frame": ["knowledge"],
+        "confidence": 0.6,
+        "_confidence_note": "0.6, NOT because the queueing-theory work is doubtful (it is real and load-bearing for ARPANET performance) but because the CLAIM that it ORIGINATED packet-switching is contested (Davies 2001: 'I can find no evidence that he understood the principles of packet switching'; McKenzie: 'nothing in the entire 1964 book...alludes to the idea of packetization'; Kleinrock 2023 acknowledged the early work was about MESSAGE switching). Graded membership as a PARENT.",
+        "parent_kind": "method",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.1, "latent_membership": 0.95 }
+      },
+      {
+        "id": "pf-kahn-openarch",
+        "name": "Kahn's open-architecture principle (1973)",
+        "kernel": "The four ground rules: each network stands on its own; no internal change required to connect; best-effort with end-host recovery; no global control. The architectural stance that defines W_B.",
+        "frame": ["knowledge", "meaning"],
+        "confidence": 0.92,
+        "parent_kind": "method",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.1, "latent_membership": 0.95 }
+      },
+      {
+        "id": "pf-datagram",
+        "name": "Pouzin's datagram / connectionless model (CYCLADES, early 1970s)",
+        "kernel": "The CONNECTIONLESS datagram (Pouzin coined 'datagram'); CYCLADES was the first to push reliable delivery to the END HOSTS rather than the network. Cerf & Kahn explicitly acknowledged CYCLADES in the 1974 paper; Gerard Le Lann carried the concepts into the Transmission Control Program. The datagram leg of W_B.",
+        "frame": ["knowledge"],
+        "confidence": 0.92,
+        "parent_kind": "content",
+        "_parent_kind_note": "(R4) borderline content/method — the datagram is a concrete construct (content) embodying the end-to-end stance (method). Load-bearing AND a dormancy/forcing story in its own right (CYCLADES was defunded — see forcing_events + R29).",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.15, "latent_membership": 0.9 }
+      },
+      {
+        "id": "pf-e2e",
+        "name": "The end-to-end principle (Saltzer-Reed-Clark, articulated 1981)",
+        "kernel": "Put function at the endpoints, keep the network simple (the design rationale later articulated formally in 'End-to-End Arguments in System Design', 1981/84). Present in practice in CYCLADES/TCP from the early 1970s; the principle that justifies the thin-waist architecture. The methodological spine of W_B.",
+        "frame": ["knowledge", "meaning"],
+        "confidence": 0.88,
+        "parent_kind": "method",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.05, "latent_membership": 0.97 }
+      }
+    ],
+
+    "mediating_wrapper": {
+      "_comment": "(R1, R27) The agent that PERFORMED the weld, sitting a layer up from BOTH parents — and here, as in Manhattan, it is NOT a single node but an ORDERED TEMPORAL CASCADE of institutional hand-offs. THIS IS THE SPECIMEN'S CHIEF GRADUATION TARGET: a SECOND independent instance of the Manhattan 'welder-as-cascade' pattern (R27). Modeled here as an ORDERED SEQUENCE (the gap R27 asks for). The human welders Cerf & Kahn sit a layer up from both packet-switching and the open-architecture stance.",
+      "name": "The institutional welding cascade (ORDERED): Sputnik-shock -> ARPA (1958) -> IPTO/Licklider's 'Intergalactic Network' (1962-63) -> Taylor+Roberts launch the ARPANET (1966) -> BBN builds the IMPs (1969) -> the academic Network Working Group / RFC process (Crocker, 1969) -> Cerf-Kahn internetworking (1974) -> INWG attempts international reconciliation (1972-76) -> DARPA/DCA mandate TCP/IP (flag day 1983) -> IAB/IETF institutionalize the standards (1986) -> NSF scales it (NSFNET 1986) -> ISOC/commercialization hand it to the world (1992-95)",
+      "ordered_sequence": [
+        { "step": 1, "stage": "ARPA created (post-Sputnik)", "who_or_what": "the US DoD / Eisenhower", "when": "Feb 1958", "confidence": 0.95 },
+        { "step": 2, "stage": "IPTO + the 'Intergalactic Network' vision", "who_or_what": "J.C.R. Licklider (IPTO)", "when": "1962-63", "confidence": 0.9 },
+        { "step": 3, "stage": "the ARPANET launched + RFP", "who_or_what": "Bob Taylor + Larry Roberts (IPTO)", "when": "1966-68", "confidence": 0.92 },
+        { "step": 4, "stage": "the IMPs / the subnet built", "who_or_what": "BBN (Kahn, Heart, Walden, Crowther)", "when": "1969", "confidence": 0.95 },
+        { "step": 5, "stage": "the Network Working Group / RFC process (the open standards genre)", "who_or_what": "Steve Crocker + the graduate-student NWG (RFC 1, 1969)", "when": "1969-", "confidence": 0.9 },
+        { "step": 6, "stage": "internetworking specified (TCP)", "who_or_what": "Vint Cerf + Bob Kahn (Stanford/BBN/UCL; Le Lann)", "when": "1973-74", "confidence": 0.95 },
+        { "step": 7, "stage": "INWG attempts international reconciliation (FAILS)", "who_or_what": "INWG (Cerf chair, then Barber); Zimmermann, McKenzie, Scantlebury", "when": "1972-76", "confidence": 0.85 },
+        { "step": 8, "stage": "TCP/IP mandated on the ARPANET (flag day)", "who_or_what": "DARPA / the Defense Communications Agency", "when": "1 Jan 1983", "confidence": 0.95 },
+        { "step": 9, "stage": "standards institutionalized", "who_or_what": "the IAB + the IETF", "when": "1986", "confidence": 0.9 },
+        { "step": 10, "stage": "scaled to the research/education world", "who_or_what": "the NSF (NSFNET)", "when": "1986-", "confidence": 0.92 },
+        { "step": 11, "stage": "handed to the world (governance + commercialization)", "who_or_what": "ISOC (1992) + NSF backbone retirement (1995); later ICANN (1998)", "when": "1992-95", "confidence": 0.9 }
+      ],
+      "kernel": "An ORDERED relay of mediating institutions and documents, each handing the weld to the next, that fused the packet-switching parent to the open-architecture parent and carried the consummated child from a defense research project to a global public utility. No single one is the welder; the SEQUENCE is. STRONGLY recurs the Manhattan cascade pattern (R27).",
+      "who_or_what": "Cerf & Kahn (the human internetworking welders, a layer up from both parents); the cascade of agencies/labs/bodies above",
+      "confidence": 0.92,
+      "_disowned_note": "(R31-adjacent, WEAK) the INWG stage (step 7) produced a 1976 compromise international protocol (Cerf-McKenzie-Scantlebury-Zimmermann) that NEITHER the CCITT NOR the ARPANET adopted — Cerf 'could not persuade the TCP community to adopt the compromise'. A mediating stage that was effectively BYPASSED/superseded by its own constituency — a faint echo of Keynesian's disowned-IS-LM-mediator (R31), but NOT a clean second instance (no named author repudiated his own creation; the stage was abandoned, not disowned). See R31 graduation verdict."
+    },
+
+    "shared_sub_object_S": "S = the GATEWAY/DATAGRAM INTERCONNECTION POINT at the exact place where the PACKET-SWITCHING technique (efficient routing WITHIN a network) meets the OPEN-ARCHITECTURE requirement to join INDEPENDENT networks WITHOUT a common owner or internal change. Three faces: (1) the GATEWAY (later 'router') — the box that sits BETWEEN networks and forwards datagrams across the boundary (the literal seam, Cerf-Kahn 1974); (2) the COMMON DATAGRAM FORMAT (IP) — a single address+packet format every network agrees to carry, embodying the narrow waist; (3) the END-TO-END principle — reliability lives at the hosts, so the heterogeneous, unreliable networks in the middle need not be changed. Genuine overlap, not a pile: packet-switching owns intra-network routing, open-architecture owns the no-central-control federation, and ONLY at the gateway+datagram do they fuse into an internetwork.",
+    "_shared_sub_object_S_confidence": 0.9,
+    "_shared_sub_object_S_note": "HIGH confidence the seam is genuine. Contrast QG (direction-of-weld disputed) and Darwin+Mendel (fractured S): here S is multi-faceted but AGREED among the Internet engineers. The CONTEST at the seam is EXTERNAL — the rival OSI/X.25 camps proposed a DIFFERENT seam (virtual circuits + strict layering + connection-oriented network service), which is the protocol-wars discrepancy, NOT an internal fracture of THIS S.",
+
+    "S_structure": {
+      "_comment": "(R12) OPTIONAL — S here is multi-faceted but AGREED among the welders (like Manhattan's S and QG's S; unlike Darwin+Mendel's fractured S). The three faces (gateway / common datagram / end-to-end) are mutually-reinforcing, not in conflict. agreed:true WITHIN the Internet lineage. The DISAGREEMENT is BETWEEN lineages (TCP/IP's datagram seam vs OSI/X.25's virtual-circuit seam) — recorded as the protocol-wars rival-coupling + a frame-ownership discrepancy, NOT as an internal conflict of S.",
+      "components": [
+        "the gateway/router — the box between networks (Cerf-Kahn 1974)",
+        "the common datagram format (IP) — the narrow waist every network carries",
+        "the end-to-end principle — reliability at the hosts, simple network in the middle"
+      ],
+      "internal_conflict": "",
+      "agreed": true
+    },
+
+    "surprise": "The genuine JOINT-surprise (reachable only from BOTH parents) is NOT that a data network exists — single packet networks (the ARPANET, NPL, CYCLADES, the X.25 publics) were implied by packet-switching ALONE (W_A). The genuine joint-surprise is INTERNETWORKING: that INDEPENDENTLY-OWNED, HETEROGENEOUS, MUTUALLY-DISTRUSTING networks could be federated into one seamless whole with NO central control, NO common owner, and NO internal change to any member network — and that this open, end-to-end, 'dumb-network/smart-edges' architecture would SCALE to a planet and outcompete every centrally-planned alternative. Neither parent predicts this alone: packet-switching alone yields SILOS (each network a walled garden); the open-architecture PRINCIPLE alone is an empty stance with nothing to connect. STANDOUT SUB-SURPRISE: the winning architecture was the LESS-CONTROLLED one — the camp with no central authority, no government mandate, and 'rough consensus and running code' beat the camp (OSI/X.25) backed by ISO, the CCITT, the PTTs and government procurement mandates (GOSIP). The PHANTOM here (cf. Manhattan's phantom enemy): the heavily-funded, officially-mandated OSI stack was widely believed INEVITABLE ('OSI is now inevitable' — Metcalfe 1989) and never shipped at scale — a real institutional force defeated by a child it had dismissed. META-SURPRISE: a consummated weld can be carried to global victory NOT by the best-funded mediating institutions but by the FASTEST-ITERATING, least-governed ones — and a rival lineage's STATE BACKING can be the very thing that SLOWS it (OSI's committee process; CYCLADES killed by its own PTT in favor of Minitel).",
+    "surprise_confidence": 0.85,
+    "_surprise_confidence_note": "0.85 (cf. QG 0.85, Manhattan 0.80). DELIBERATELY DECOUPLED from child.confidence (0.92) per R9. The internetworking surprise (federating heterogeneous networks with no central control) is well-attested and genuinely unforeseeable from either parent; the 'less-controlled camp won' sub-surprise is strongly documented (Russell; the GOSIP-mandate failure). Slightly below a maximal score only because, like Manhattan, a PORTION of 'the Internet' (some data network) was forecastable from W_A alone — the joint-surprise is the FEDERATION-without-control, not the existence of networking. Populates the (surprise x child) plane near Manhattan (high-child / high-but-tempo-or-means-surprise), distinct from QG (low-child).",
+
+    "surprise_priority": {
+      "_comment": "(R15) OPTIONAL the CONJECTURE-IN-A-PARENT. The internetworking surprise pre-existed the quantitative weld as a low-confidence vision inside the W_B lineage: Licklider's 'Intergalactic Computer Network' memos (1962-63) imagined a globe-spanning interconnected network of computers ~11 years before the 1974 TCP specification and ~21 before the flag day — a 'drawn but not confirmed' weld living inside the IPTO vision, analogous to Faraday's 1846 light-guess inside Maxwell's W_A and Szilard's 1933 chain-reaction patent inside Manhattan's W_A.",
+      "first_conjectured_by": "J.C.R. Licklider ('Intergalactic Computer Network' memos, IPTO)",
+      "when": "1962-1963",
+      "dormant_interval": "1963 -> 1973 (the vision sat inside the IPTO/ARPA culture until packet-switching was deployed (ARPANET 1969) and Kahn's open-architecture problem (1973) made internetworking concrete)",
+      "confidence": 0.85
+    },
+
+    "bits_note": "QUALITATIVE ONLY. The Internet is a REAL compression — the IP 'narrow waist' collapses the heterogeneity of every link-layer below and every application above into one thin datagram interface ('IP on everything'), and 'how to add a network' compresses to 'run IP at the gateway'. Distinct from QG's PRINCIPLED-null (QG could not be MDL-scored because the child did not exist); here the child exists, so the compression is real, but it is still assessed QUALITATIVELY (MDL-in-bits needs latent embeddings — a later step). NO numeric bit values fabricated.",
+
+    "survived": [
+      "Packet-switching itself (Baran/Davies) — survived as the core transport of every Internet link.",
+      "The DATAGRAM / connectionless model (Pouzin/CYCLADES) — survived as IP, defeating the rival virtual-circuit model (X.25/OSI CONS).",
+      "The END-TO-END principle (CYCLADES->TCP; Saltzer-Reed-Clark 1981) — survived as the Internet's defining architectural commitment.",
+      "Baran's distributed/no-central-control survivability — survived as the Internet's decentralization and its governance ethos.",
+      "The RFC / 'rough consensus and running code' open-process method (Crocker 1969; Clark 1992) — survived as the IETF's standardization culture."
+    ],
+    "dropped": [
+      "Baran's ORIGINAL motivation (surviving a nuclear first strike) — DROPPED as the operative rationale; the survivability MECHANISM (decentralization) survived, the COLD-WAR PURPOSE did not (the network became civil then commercial).",
+      "The VIRTUAL-CIRCUIT / connection-oriented network model (X.25, the CCITT/PTT approach) — DROPPED/defeated by the rival lineage (the datagram won).",
+      "OSI's STRICT SEVEN-LAYER model + connection-oriented network service — DROPPED/defeated (TCP/IP's looser four-layer + connectionless IP won the protocol wars).",
+      "NCP (the original ARPANET host protocol) — DROPPED at the 1983 flag day, replaced by TCP/IP.",
+      "NOTE (D5): unlike QG, 'dropped' here is essentially SINGLE-VALUED (one consummated child), so the per-candidate feature_ledger DEFAULTS EMPTY per the design law — there are no rival CHILDREN dropping DIFFERENT features. The 'drops' here are of RIVAL ARCHITECTURES/LINEAGES (X.25, OSI, NCP), recorded via the rival-lifecycle-coupling + forcing_events.direction being lineage-relative — see weld_type rival-coupling note + gaps."
+    ],
+    "feature_ledger": [],
+    "_feature_ledger_comment": "(R7) EMPTY by design — a single consummated child (TCP/IP) makes the flat survived[]/dropped[] sufficient. The per-candidate matrix is a frontier-case (QG) device; this consummated case correctly leaves it empty. The rival ARCHITECTURES (OSI/X.25) are RELATIVES (relation:rival), not candidate_children of THIS weld.",
+
+    "frame_of_weld": ["space", "time", "knowledge", "meaning"],
+    "_frame_of_weld_note": "The weld holds in {knowledge} (the protocol architecture), {space} (a planet-spanning physical infrastructure), {time} (the active operator — a multi-decade institutional cascade + a late deregulation pull; see weld_operator), and {meaning}: because the child is also a GOVERNANCE object, the VALENCE of its consummation is observer- and era-relative (the 'two visions' of standardization — open bottom-up process vs centralized state/PTT control; Russell's contested historiography). Same meaning-frame relativity QG showed for 'which child is winning' and Manhattan for 'was the use justified', here for 'WHO should govern the network and by what process'.",
+    "weld_operator": "TIME-AS-INSTITUTIONAL-CASCADE + LATE EXOGENOUS DEREGULATION-PULL. The active frame-ingredient is not a physics operator (cf. Maxwell's d/dt) but the multi-decade RELAY OF INSTITUTIONS that carried the weld (ARPA->IPTO->BBN->INWG->IETF->NSF->ISOC), accelerated at the end by an EXOGENOUS policy pull (NSF lifting the commercial-traffic ban, 1991-92; backbone retirement 1995). Contrast Manhattan (the war-driven 33-month tempo — FAST crisis-pull) and QG (no operator could fire it in 90 years): the Internet's operator is a SLOW cascade with a late deregulation accelerant — which is why both D4 (forcing) AND R27 (cascade welder) are first-class here.",
+
+    "lod_scale": "HOLDS at every useful zoom — like Manhattan, the inverse of QG. At coarse grain: 'packet-switching + open-architecture -> the Internet'. Zoom in and it CONFIRMS into an ordered chain of sub-welds (RAND/NPL packet-switching -> ARPANET IMPs -> Cerf-Kahn internetworking -> the TCP/IP split -> the flag day -> NSFNET -> the protocol-wars victory -> commercialization), each a real hand-off that strengthens the weld. A healthy CONSUMMATED weld confirmed by its sub-structure (coherence_under_zoom: confirms) — the diagnostic opposite of QG's shattering. The ONE complication (vs Manhattan's clean confirm) is the INWG sub-weld, which partially FAILED/forked — recorded honestly below.",
+    "sub_welds": [
+      {
+        "_comment": "(R3) the ordered chain the coarse weld resolves into when zoomed. CONFIRMS the weld overall (healthy), with one partially-failed link (INWG).",
+        "id": "sw-packet-switching",
+        "name": "Packet-switching invented (Baran RAND + Davies NPL, independently)",
+        "when": "1959-64 (Baran) / 1965-66 (Davies, coined 'packet')",
+        "confidence": 0.93
+      },
+      {
+        "id": "sw-arpanet",
+        "name": "The ARPANET built — packet-switching deployed (BBN's IMPs)",
+        "when": "1969 (first IMP at UCLA 30 Aug 1969; NCP 1970)",
+        "confidence": 0.95
+      },
+      {
+        "id": "sw-cerf-kahn",
+        "name": "Internetworking specified — the weld DRAWN (Cerf-Kahn 'A Protocol for Packet Network Intercommunication')",
+        "when": "1973 (open-architecture problem) -> May 1974 (the paper); RFC 675 (Dec 1974) names 'Internet'",
+        "confidence": 0.95
+      },
+      {
+        "id": "sw-inwg",
+        "name": "INWG attempts an international reconciliation — PARTIALLY FAILS / forks",
+        "when": "1972-76 (1976 compromise protocol; adopted by NEITHER the CCITT NOR the ARPANET)",
+        "confidence": 0.82,
+        "_note": "The one sub-weld that does NOT cleanly confirm: the 1976 INWG compromise was rejected by both camps, and the CCITT instead adopted X.25 (1976), forking the lineage into the protocol wars. A real hand-off that PARTIALLY failed — see discrepancies + the R31-adjacent disowned note."
+      },
+      {
+        "id": "sw-tcp-ip-split",
+        "name": "TCP split into TCP + IP (the layering that made the narrow waist)",
+        "when": "1978 (TCP/IP v4 split; the IP datagram separated from TCP)",
+        "confidence": 0.9
+      },
+      {
+        "id": "sw-flag-day",
+        "name": "Flag day — NCP -> TCP/IP cutover on the ARPANET (the weld CONSUMMATES operationally)",
+        "when": "1 Jan 1983 (complete by Jun 1983)",
+        "confidence": 0.95
+      },
+      {
+        "id": "sw-nsfnet",
+        "name": "NSFNET scales the internetwork beyond defense (the research/education backbone)",
+        "when": "1986",
+        "confidence": 0.92
+      },
+      {
+        "id": "sw-protocol-wars-won",
+        "name": "The protocol wars decided — TCP/IP displaces OSI and X.25",
+        "when": "~1990-1995 (JANET IP overtakes X.25 1991; GOSIP drops OSI 1994-95)",
+        "confidence": 0.88
+      },
+      {
+        "id": "sw-commercialization",
+        "name": "Commercialization — NSF backbone retired, commercial ISPs take over (the weld HARDENS globally)",
+        "when": "30 Apr 1995",
+        "confidence": 0.92
+      }
+    ],
+    "coherence_under_zoom": "confirms",
+    "_coherence_under_zoom_note": "(R3) CONFIRMS — the signature diagnostic of a HEALTHY/consummated weld (like Manhattan; the diagnostic OPPOSITE of QG). Zooming in reveals an ordered chain of mutually-reinforcing hand-offs. The ONE wrinkle (vs Manhattan's perfectly-clean confirm) is the INWG sub-weld, which partially failed/forked — so coherence is 'confirms with one partially-failed link', a slightly weaker confirm than Manhattan's. Still emphatically NOT QG's contradiction.",
+
+    "when": {
+      "_comment": "(R2) an interval — a weld is a PROCESS. Here the interval is LONG and DISTRIBUTED (the antithesis of both QG's null/open interval AND Manhattan's ultra-compressed 33 months): a multi-decade cascade with several defensible birth-dates. A null 'to' is NOT used (the weld closed/consummated).",
+      "from": "1962-63 (Licklider's Intergalactic Network vision inside W_B) / 1973-74 (Cerf-Kahn draw the internetworking weld)",
+      "to": "1983-1995 (flag day consummates operationally; commercialization 1995 hardens it globally) — CLOSED (unlike QG's null 'to')",
+      "defensible_dates": [
+        "1969 (ARPANET — packet-switching deployed; the substrate parent operational)",
+        "May 1974 (Cerf-Kahn paper — the internetworking weld DRAWN)",
+        "Dec 1974 (RFC 675 — the term 'Internet' first used)",
+        "1 Jan 1983 (flag day — the weld FIRES/consummates operationally)",
+        "1986 (NSFNET — the weld scales beyond defense)",
+        "~1990-95 (the protocol wars decided — the weld WINS its rival war)",
+        "30 Apr 1995 (commercialization — the weld hardens into a global utility)"
+      ]
+    },
+    "_when_extra_note": "The DRAWN-vs-FIRING-vs-WON span is itself diagnostic (R2): the weld was DRAWN 1974, FIRED 1983 (flag day), and WON its rival war only ~1990-95. Unlike Manhattan (one phantom enemy, one fast pull), the Internet's interval contains a decade-long RIVAL-STANDARD WAR between firing and final victory — which is exactly the feature that makes it the natural second instance for rival-lifecycle-coupling (R23).",
+
+    "dormancy_intervals": [
+      {
+        "_comment": "(v1, R11, R32) The MAIN weld did NOT go dormant (a monotone cascade, like Manhattan). The dormancy story lives in a PARENT-LINEAGE: the datagram/CYCLADES branch was STARVED by its own patron state. Recorded here as a dormancy of a CONTRIBUTING ROOT (the datagram leg of W_B), caused by an EXTERNAL event (recorded once in forcing_events fe-cyclades-defund); why_frame names only the frames per the design law.",
+        "from": "1978 (CYCLADES funding cut) ",
+        "to": "1981 (CYCLADES network goes offline) — but the IDEAS never died (carried into TCP/IP)",
+        "why": "the French PTT (DGT) chose a connection-oriented network (Transpac/Minitel) over Pouzin's connectionless CYCLADES and cut its funding; the network went offline 1981",
+        "why_frame": "physical/political",
+        "_why_frame_comment": "(R11) PHYSICAL/POLITICAL — a state/PTT funding-and-policy decision killed the network (echoing QG/Bronstein's physical-frame squeeze and Keynesian's neoliberal-movement squeeze, NOT a theorem). The IDEAS survived (the datagram + end-to-end were carried into TCP/IP), so this is a dormancy of the NETWORK/lineage, not of the concept. The external cause is recorded once in forcing_events[fe-cyclades-defund]."
+      }
+    ],
+    "_dormancy_intervals_extra_note": "(R32) CONTESTED-flag NOT set on this interval: the CYCLADES defunding is a well-documented FACT (not a disputed narrative like the AI winters or Mendel-neglect). The contested-dormancy phenomenon does NOT recur cleanly in this specimen — see the R32 verdict in the .md (R32 is already RATIFIED via deep-learning+Darwin-Mendel, so this specimen need not re-attest it; it simply does not supply a third).",
+
+    "revival": {
+      "_comment": "(v1, R10, R19) The MAIN weld was not dormant, so it was not 'revived'. The nearest revival is the datagram CONCEPT surviving CYCLADES' death by being carried into TCP/IP — kind = SAME (the datagram was carried forward UNCHANGED, not reinterpreted). method_continuity ~1.0. UNLIKE Keynesian (reinterpreted x2) and deep learning (reinterpreted x3) — the Internet does NOT supply a method-incompatible multi-revival, so it does not re-stress R19 (which is already ratified). Recorded as a single same-kind carry-forward.",
+      "when": "1974-1983 (the datagram carried from dying CYCLADES into TCP/IP)",
+      "by": "Cerf & Kahn (acknowledging CYCLADES); Gerard Le Lann",
+      "trigger": "the internetworking weld needed a connectionless core; the datagram was the available, proven construct",
+      "kind": "same",
+      "method_continuity": 1.0,
+      "_kind_note": "(R10/R19) SAME, method_continuity ~1.0 — the datagram was carried forward method-CONTINUOUS into IP, not re-framed. This specimen is a MONOTONE-CONTINUOUS case (like Manhattan), the deliberate contrast with the Keynesian/deep-learning method-incompatible multi-revivals. It therefore does NOT add a second instance of R19's multi-revival stressor (R19 is already ratified anyway)."
+    },
+    "reattribution": {
+      "_comment": "(R10) OPTIONAL — DEFAULTS EMPTY for the WELD as a whole ('the Internet' / TCP/IP is not mis-named; it names the producer-architecture). BUT a CREDIT/PRIORITY tension exists at the PARENT level (who invented packet-switching: Kleinrock's contested claim vs the Baran/Davies attribution) — recorded as a priority-dispute discrepancy + graded parent-confidence, NOT here, because it is a dispute over CREDIT for a PARENT, not a structural re-welding of the child. Leaving this field empty is the correct design-law signal (cf. Manhattan's empty reattribution + its credit-dispute discrepancy).",
+      "named_after": "",
+      "actually_produced_by": "",
+      "why": ""
+    },
+    "weld_chain": [],
+    "_weld_chain_comment": "(R10) EMPTY — a single-birth weld (no birth-2 re-welding of the Maxwell raw-form->Maxwellian-form kind). The Internet consummated once (1974 draw -> 1983 fire -> 1995 harden) and hardened; it was not re-forged into a structurally-different re-attributed object. (The IPv4->IPv6 transition is a within-child upgrade, not a re-weld — and is method-continuous.)",
+
+    "candidate_children": [],
+    "_candidate_children_comment": "(R6) EMPTY BY DESIGN — this is a CONSUMMATED single-child weld (TCP/IP), the antithesis of QG's rival-children frontier. CRUCIAL DISTINCTION: OSI and X.25 are NOT candidate_children of THIS weld (they are not rival outputs of packet-switching x open-architecture); they are RIVAL ARCHITECTURES from adjacent lineages, recorded as relatives (relation:rival) + a rival-lifecycle-coupling. The weld that produced TCP/IP produced ONE winner. Leaving candidate_children empty (and unresolved:false, weld_necessity_confidence empty->1.0) is the load-bearing design-law contrast with QG.",
+    "unresolved": false,
+    "contest_axis": "",
+    "weld_necessity_confidence": null,
+    "_weld_necessity_confidence_comment": "(R8) EMPTY => read as 1.0. There is no serious position that 'no internetworking child was needed' — the Internet demonstrably exists. (Contrast QG's semiclassical dissent ~0.45 and Keynesian's new-classical dissent ~0.78.) The contest was over WHICH architecture (TCP/IP vs OSI vs X.25), not WHETHER an internetwork was needed — recorded as the rival-coupling + the protocol-wars discrepancies, not as weld_necessity.",
+
+    "lifecycle": {
+      "_comment": "(D1) the weld's GRADED LIFE made first-class — a WEIGHTED INDEX over the when/sub_welds/forcing fields above (NOT restating them). A LONG, DISTRIBUTED, monotone-hardening cascade (the contrast with Manhattan's ultra-compressed arc AND with Keynesian's die-and-reincarnate arc). pre_weld_relationship is COMPLEMENTARITY (the two parents were mutually-needy). weld_type is a weighted mix DOMINATED by mediator-welded (the cascade), state/funding-mobilized, and crisis-pulled (Cold War) + a RIVAL-COUPLED dynamic (the protocol wars).",
+      "phase_trajectory": [
+        {
+          "_comment": "(D1) the graded trajectory. Memberships overlap. The membership IS the soft value (no separate confidence per the hardening cut).",
+          "phase": "pre_weld",
+          "membership": 0.85,
+          "from": "1959-66",
+          "to": "1969",
+          "note": "Packet-switching (Baran/Davies) and the internetworking VISION (Licklider's Intergalactic Network) develop in COMPLEMENTARITY — independent but mutually-needy. See pre_weld_relationship (the single home for the relationship strength)."
+        },
+        {
+          "phase": "conception / first_conjecture",
+          "membership": 0.9,
+          "from": "1973",
+          "to": "1974",
+          "note": "Kahn's open-architecture problem (1973) + the Cerf-Kahn paper (May 1974) DRAW the internetworking weld as a low-confidence conjecture. RFC 675 (Dec 1974) names 'Internet'. Indexes sw-cerf-kahn + surprise_priority."
+        },
+        {
+          "phase": "welding (process) — distributed",
+          "membership": 0.85,
+          "from": "1974",
+          "to": "1983",
+          "note": "A ~9-year DISTRIBUTED welding phase (NOT Manhattan's ultra-fast 33 months): TCP/IP split (1978), the INWG fork (1976), UNIX/BSD shipping TCP/IP (1983), refinement via the RFC process. The longest non-frontier welding(process) phase in the batch. Indexes sub_welds + the cascade."
+        },
+        {
+          "phase": "consolidation (flag day)",
+          "membership": 0.95,
+          "from": "1 Jan 1983",
+          "to": "1986",
+          "note": "The NCP->TCP/IP flag day consummates the weld operationally; NSFNET (1986) scales it. Indexes sw-flag-day + sw-nsfnet."
+        },
+        {
+          "phase": "rival-war (the protocol wars) — a phase the batch's other consummated welds lack",
+          "membership": 0.8,
+          "from": "1986",
+          "to": "1995",
+          "note": "A distinctive RIVAL-WAR phase: TCP/IP fights OSI + X.25 for ~a decade and wins (~1990-95). This phase is where the rival-lifecycle-coupling (R23) lives — one standard's rise IS another's fall. Indexes sw-protocol-wars-won + the rival relatives + the rival-coupling forcing events."
+        },
+        {
+          "phase": "hardening",
+          "membership": 0.92,
+          "from": "1995",
+          "to": null,
+          "note": "Commercialization (NSF backbone retired 30 Apr 1995) + the dot-com build-out + mobile/cloud HARDEN the Internet into the global communications baseline. to=null marks an OPEN hardening (still the baseline in 2026) — same 'never-stops-mattering' null as Manhattan's, the OPPOSITE of QG's never-born null."
+        }
+      ],
+      "pre_weld_relationship": {
+        "_comment": "(R14) COMPLEMENTARITY (weight ~0.85) — like Manhattan (mutually-needy parents), NOT antagonism (Darwin+Mendel / deep learning). Packet-switching had the transport technology but no federation principle; the open-architecture stance had the federation vision but no transport to federate. Each held what the other lacked. This is the SINGLE HOME for the relationship strength (the phase_trajectory pre_weld entry marks only WHEN).",
+        "kind": "complementarity",
+        "membership": 0.85,
+        "note": "Mutually-needy parents: packet-switching held the intra-network transport, open-architecture held the no-central-control federation principle. NOTE: the ANTAGONISM in this specimen is BETWEEN RIVAL LINEAGES (TCP/IP vs OSI/X.25), not between the two PARENTS — a structural difference from Darwin+Mendel (where the parents themselves were antagonists)."
+      },
+      "weld_type": [
+        {
+          "_comment": "(D1) WEIGHTED classification — a weld is several types at once. All listed types are from the CORE controlled vocabulary (no NEW vocabulary term proposed, so no discrepancy row needed for vocabulary — unlike Keynesian/deep-learning which proposed new terms). The dominant types (mediator-welded + state/funding-mobilized + crisis-pulled) are exactly the cascade/institution/Cold-War features this specimen was chosen to instantiate.",
+          "type": "mediator-welded",
+          "weight": 0.95,
+          "note": "Welded by a non-parent ORDERED CASCADE a layer up (ARPA->IPTO->BBN->INWG->IETF->NSF->ISOC). The CHIEF graduation target: a SECOND instance of Manhattan's cascade welder (R27). Indexes mediating_wrapper.ordered_sequence."
+        },
+        {
+          "type": "state/war-mobilized-weld",
+          "weight": 0.85,
+          "note": "The defense state (ARPA/DARPA/DCA) mobilized the weld — funding, the ARPANET testbed, the 1983 flag-day mandate; then the NSF (a civilian agency) scaled it. A state/funding-mobilized weld (the 'war' sense is the Cold-War research climate, not a hot war). TRIPLE-attests D2's government-actor finding (with Manhattan + Keynesian)."
+        },
+        {
+          "type": "crisis-pulled-weld",
+          "weight": 0.7,
+          "note": "The Cold-War crisis (Sputnik) PULLED ARPA into existence and funded the whole enterprise; a late DEREGULATION pull (NSF commercialization) accelerated consummation. A milder, slower crisis-pull than Manhattan's (decades, not 33 months) — but the second crisis-pulled instance the batch was seeking."
+        },
+        {
+          "type": "instrument-enabled-weld",
+          "weight": 0.7,
+          "note": "Enabling instruments: the ARPANET/IMPs (the deployable packet testbed), cheap minicomputers + UNIX/BSD shipping TCP/IP (1983), and later Ethernet LANs + Cisco routers (the gateway-as-product). The instruments made the open-architecture principle deployable at scale."
+        },
+        {
+          "type": "unifier-weld",
+          "weight": 0.85,
+          "note": "Fused packet-switching with the open-architecture principle into one operational system that UNIFIES all prior heterogeneous networks under one protocol suite — the classic unifier leg."
+        },
+        {
+          "type": "rival-coupled-weld (CANDIDATE NEW TERM — proposed in discrepancy #5 BEFORE use, per SCHEMA_v2 §6 item 7)",
+          "weight": 0.7,
+          "note": "NOVEL candidate type, flagged in discrepancies BEFORE use: this weld's consummation was COUPLED to the DECLINE of rival architectures (OSI, X.25/Minitel) — one standard's rise IS another's fall (the protocol wars). The existing vocabulary (foil-constructed-weld covers a strawman PARENT; this is a strawman/defeat of a RIVAL) does not hold it. This is the lifecycle-side companion to the DEFERRED R23 (rival_lifecycle_coupling). Proposed, NOT adopted — pending ratification alongside R23."
+        }
+      ]
+    }
+  },
+
+  "roots": {
+    "_comment": "DOWN, in the PHYSICAL frame. The recursive descent from W_C toward people and place. Confidence FADES and depth RISES as you go deeper. The ground kernel '(0)' lives in actors[] (kind:individual + agencies/labs/companies), NOT here. The deep frontier roots are the PRIORITY DISPUTE (who invented packet-switching) and the CONTESTED GENEALOGY (what counts as 'the Internet'), which sit in fuzzy_layer.frontier.",
+    "sub_wrappers": [
+      {
+        "id": "sw-packet-concept",
+        "name": "Packet-switching (the technique)",
+        "kernel": "Chop messages into addressed packets, route them independently store-and-forward over a decentralized mesh. Baran (RAND, 1959-64) + Davies (NPL, 1965-66, coined 'packet'), independently.",
+        "frame": ["knowledge"],
+        "depth": 1,
+        "confidence": 0.93,
+        "who_called_it": "Paul Baran (RAND) + Donald Davies (NPL); Davies coined 'packet'",
+        "parent_kind": "content",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.15, "latent_membership": 0.92 }
+      },
+      {
+        "id": "sw-distributed-survivable",
+        "name": "Distributed / survivable no-central-control routing",
+        "kernel": "Baran's survivable-network insight: a distributed mesh with redundant paths and no single point of failure (motivated by surviving a nuclear first strike). The decentralization root.",
+        "frame": ["knowledge", "meaning"],
+        "depth": 2,
+        "confidence": 0.9,
+        "who_called_it": "Paul Baran ('On Distributed Communications', RAND)",
+        "parent_kind": "content",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.15, "latent_membership": 0.9 }
+      },
+      {
+        "id": "sw-queueing",
+        "name": "Queueing theory of networks",
+        "kernel": "Analytic performance theory of message/packet networks (Kleinrock, 1961-64). A METHOD root for sizing/analyzing the network — its CONTESTED status as a packet-switching ORIGIN is a priority dispute, but as an analysis tool it is uncontested.",
+        "frame": ["knowledge"],
+        "depth": 2,
+        "confidence": 0.8,
+        "who_called_it": "Leonard Kleinrock",
+        "parent_kind": "method",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.1, "latent_membership": 0.95 }
+      },
+      {
+        "id": "sw-datagram-root",
+        "name": "The datagram / connectionless model",
+        "kernel": "Pouzin's CYCLADES datagram (early 1970s): a self-contained, independently-routed packet with delivery responsibility at the END HOSTS. The connectionless core that became IP and defeated the virtual-circuit (X.25) rival.",
+        "frame": ["knowledge"],
+        "depth": 1,
+        "confidence": 0.9,
+        "who_called_it": "Louis Pouzin (coined 'datagram'); CYCLADES",
+        "parent_kind": "content",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.15, "latent_membership": 0.9 }
+      },
+      {
+        "id": "sw-openarch-root",
+        "name": "The open-architecture principle",
+        "kernel": "Kahn's four ground rules (1973): each network stands on its own; no internal change to join; best-effort with end-host recovery; no global control. The federation stance of W_B.",
+        "frame": ["knowledge", "meaning"],
+        "depth": 1,
+        "confidence": 0.9,
+        "who_called_it": "Robert Kahn",
+        "parent_kind": "method",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.1, "latent_membership": 0.95 }
+      },
+      {
+        "id": "sw-e2e-root",
+        "name": "The end-to-end principle",
+        "kernel": "Function at the endpoints, simple network in the middle (CYCLADES->TCP in practice; articulated formally by Saltzer, Reed & Clark 1981/84). The design rationale for the narrow waist.",
+        "frame": ["knowledge", "meaning"],
+        "depth": 2,
+        "confidence": 0.87,
+        "who_called_it": "Jerome Saltzer, David Reed, David Clark (1981); practiced earlier in CYCLADES/TCP",
+        "parent_kind": "method",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.05, "latent_membership": 0.97 }
+      },
+      {
+        "id": "sw-rfc-method",
+        "name": "The RFC / 'rough consensus and running code' open-process method",
+        "kernel": "The Request for Comments genre (Crocker, RFC 1, 1969) + the IETF norm 'we reject kings, presidents and voting; we believe in rough consensus and running code' (Clark 1992). The METHODOLOGICAL root of how the Internet standardizes — and a key reason TCP/IP out-iterated OSI.",
+        "frame": ["knowledge", "meaning"],
+        "depth": 1,
+        "confidence": 0.9,
+        "who_called_it": "Steve Crocker (RFC) + David Clark (the slogan)",
+        "parent_kind": "method",
+        "frame_layer": { "layer": "straddle", "physical_membership": 0.4, "latent_membership": 0.8 }
+      },
+      {
+        "id": "sw-gateway",
+        "name": "The gateway / router",
+        "kernel": "The box that sits BETWEEN networks and forwards datagrams across the boundary (Cerf-Kahn 1974) — the literal physical embodiment of the seam S; later a commercial product (Cisco). The instrument root.",
+        "frame": ["knowledge", "space"],
+        "depth": 1,
+        "confidence": 0.92,
+        "who_called_it": "Cerf & Kahn (the concept); Cisco et al. (the product)",
+        "parent_kind": "instrument",
+        "frame_layer": { "layer": "physical", "physical_membership": 0.85, "latent_membership": 0.3 }
+      }
+    ]
+  },
+
+  "harvest": {
+    "_comment": "UP, in the LATENT + CULTURAL frame. Like Manhattan (and unlike QG's canopy-over-a-hollow-trunk), here the canopy grows over a SOLID trunk — the harvest is the realized descendant order. All harvest nodes frame_layer: latent by default (D3). The dominant harvest (the Web) is itself a child-of-the-child.",
+    "descendants": [
+      {
+        "id": "h-web",
+        "name": "The World Wide Web",
+        "what": "Berners-Lee at CERN (1989-91): HTTP/HTML/URLs over TCP/IP; the first website (info.cern.ch) Aug 1991; CERN placed it in the public domain (1993). The dominant harvest application — the Internet's 'killer app' that drove mass adoption and was itself the killer argument that ended the protocol wars.",
+        "frame": ["knowledge", "meaning", "space"],
+        "confidence": 0.95,
+        "frame_layer": { "layer": "latent", "physical_membership": 0.2, "latent_membership": 0.95 }
+      },
+      {
+        "id": "h-ecommerce",
+        "name": "E-commerce + the platform economy",
+        "what": "The dot-com boom and the digital economy — Amazon, eBay, Google, and the entire commercial Internet; the platform business model. The Internet as the substrate of a large fraction of the world economy.",
+        "frame": ["space", "time", "meaning"],
+        "confidence": 0.9,
+        "frame_layer": { "layer": "straddle", "physical_membership": 0.35, "latent_membership": 0.9 }
+      },
+      {
+        "id": "h-social",
+        "name": "Social media + the networked public sphere",
+        "what": "The 2010s social-platform transformation of communication, media and politics — and its pathologies (misinformation, surveillance, platform power, the attention economy). A double-edged harvest.",
+        "frame": ["meaning", "space"],
+        "confidence": 0.88,
+        "frame_layer": { "layer": "latent", "physical_membership": 0.15, "latent_membership": 0.95 }
+      },
+      {
+        "id": "h-cloud-mobile",
+        "name": "Cloud computing + the mobile/streaming era",
+        "what": "Cloud infrastructure, the smartphone/app ecosystem, streaming media — the Internet as a utility delivered to billions of pocket devices. The infrastructural maturation of the child.",
+        "frame": ["space", "time", "knowledge"],
+        "confidence": 0.9,
+        "frame_layer": { "layer": "straddle", "physical_membership": 0.45, "latent_membership": 0.85 }
+      },
+      {
+        "id": "h-governance",
+        "name": "Internet governance + cyber-statecraft",
+        "what": "A new domain of statecraft and conflict: ICANN/IETF/ISOC governance, the net-neutrality debates, cyberwar, and the 'splinternet'/digital-sovereignty fragmentation. The 'two visions' meaning-frame conflict, harvested into geopolitics.",
+        "frame": ["meaning", "space"],
+        "confidence": 0.85,
+        "frame_layer": { "layer": "latent", "physical_membership": 0.25, "latent_membership": 0.9 }
+      }
+    ],
+    "cultural_harvest": [
+      {
+        "domain": "tech",
+        "what": "The Internet as the defining infrastructure of the late-20th/early-21st century — 'cyberspace', 'online', 'going viral', the 'information superhighway'; the reorganization of work, commerce, media and social life around being networked. confidence ~0.9."
+      },
+      {
+        "domain": "scifi",
+        "what": "Cyberpunk and the 'cyberspace' imaginary (Gibson's 'Neuromancer' 1984 coined cyberspace just as the real internetwork consolidated; 'The Matrix' 1999; the metaverse) — fiction running ahead of and feeding back into the real network. confidence ~0.8."
+      },
+      {
+        "domain": "other",
+        "what": "The 'rough consensus and running code' ethos + the open-standards/open-source movement as a reusable cultural template for decentralized, permissionless coordination (later echoed by open-source software, the blockchain/'decentralization' discourse). confidence ~0.8."
+      }
+    ]
+  },
+
+  "relatives": {
+    "_comment": "WIDE edges (SCHEMA_v2.md §2.5; still flagged for ratification). THE MOST TELLING RELATIVES here are the RIVAL ARCHITECTURES (OSI, X.25, Minitel/Transpac) — recorded as relation:rival, and the locus of the rival-lifecycle-coupling (R23). NOTE: these rivals are NOT candidate_children of the weld (they are adjacent lineages, not rival outputs of THIS weld's two parents) — the §2.5 relatives layer is exactly where a defeated rival framework belongs (cf. Manhattan's Uranverein, Maxwell's Weber electrodynamics).",
+    "edges": [
+      {
+        "id": "rel-osi",
+        "name": "OSI (Open Systems Interconnection, ISO/CCITT, model published 1984)",
+        "relation": "rival",
+        "frame": ["knowledge", "meaning"],
+        "confidence": 0.9,
+        "note": "The PRIMARY RIVAL ARCHITECTURE: a seven-layer, connection-oriented, formally-standardized stack backed by ISO, the CCITT, European governments and US GOSIP procurement mandates. Widely believed INEVITABLE ('OSI is now inevitable' — Metcalfe 1989) and never shipped at scale; defeated by TCP/IP ~1990-95. The locus of the rival-lifecycle-coupling (its mandate-driven rise SQUEEZED TCP/IP; its collapse was TCP/IP's victory) AND the whig-vs-revisionist historiography (Russell: was its defeat inevitable-on-merit or contingent-and-political?). SQUEEZED TCP/IP via GOSIP, then collapsed.",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.25, "latent_membership": 0.9 }
+      },
+      {
+        "id": "rel-x25",
+        "name": "X.25 (CCITT virtual-circuit packet standard, 1976) + the public data networks",
+        "relation": "rival",
+        "frame": ["knowledge", "space", "meaning"],
+        "confidence": 0.9,
+        "note": "The CONNECTION-ORIENTED (virtual-circuit) rival, championed by the PTTs/telcos and the CCITT (approved 1976). 'The main European data protocol for fifteen to twenty years' (Kirstein). Embodies the OPPOSITE seam to TCP/IP (virtual circuits + network-managed reliability vs datagrams + end-host reliability). Pouzin: the datagram-vs-virtual-circuit fight was 'a power struggle between carriers and the computer industry ... IBM vs Telecommunications'. Declined as IP overtook it (JANET 1991; closed 1997). The rival whose architecture lost even though its backers held the standards bodies.",
+        "frame_layer": { "layer": "straddle", "physical_membership": 0.45, "latent_membership": 0.7 }
+      },
+      {
+        "id": "rel-minitel",
+        "name": "Minitel / Transpac (France's national X.25 network)",
+        "relation": "rival",
+        "frame": ["space", "meaning"],
+        "confidence": 0.85,
+        "note": "France's wildly-successful national videotex network over the connection-oriented Transpac (X.25). THE DEEPEST RIVAL-COUPLING IRONY: France's PTT KILLED its own datagram pioneer (CYCLADES, defunded 1978) to back the connection-oriented Minitel/Transpac — and the connectionless datagram principle CYCLADES had pioneered then WON globally as IP, while Minitel itself was eventually shut down (2012, displaced by the Internet). A lineage that suppressed the winning idea at home and lost to it abroad. The single best rival-lifecycle-coupling (R23) datum in the specimen.",
+        "frame_layer": { "layer": "straddle", "physical_membership": 0.55, "latent_membership": 0.6 }
+      },
+      {
+        "id": "rel-proprietary",
+        "name": "Proprietary vendor stacks (IBM SNA 1974, DEC DECnet 1975, Xerox XNS)",
+        "relation": "rival",
+        "frame": ["knowledge", "space"],
+        "confidence": 0.85,
+        "note": "Closed, single-vendor network architectures that pre-dated and competed with open internetworking (by the late 1970s IBM's networking was 'two orders of magnitude larger' than the ARPANET). Defeated/absorbed by TCP/IP's open multi-vendor model. The closed-garden rivals (contrast the open child).",
+        "frame_layer": { "layer": "straddle", "physical_membership": 0.4, "latent_membership": 0.75 }
+      },
+      {
+        "id": "rel-arpanet",
+        "name": "The ARPANET (the parent-substrate, decommissioned 1990)",
+        "relation": "influence",
+        "frame": ["knowledge", "space"],
+        "confidence": 0.92,
+        "note": "NOT the child and not a rival — the PACKET-SWITCHING SUBSTRATE the weld was built on/over (the W_A parent realized). Recorded as relation:influence to keep the genealogy honest: the popular 'ARPANET = the Internet' is a contested-genealogy conflation (the Internet is the internetworking LAYER, the ARPANET one network it federated). The ARPANET was decommissioned 1990; the Internet outgrew it.",
+        "frame_layer": { "layer": "straddle", "physical_membership": 0.6, "latent_membership": 0.6 }
+      },
+      {
+        "id": "rel-manhattan",
+        "name": "The Manhattan Project (the structural-sibling specimen)",
+        "relation": "sibling",
+        "frame": ["knowledge", "meaning"],
+        "confidence": 0.85,
+        "note": "The STRUCTURAL SIBLING in the batch: both are consummated, institution-cascade-welded, exogenously-(state)-forced weld instances. The deliberate SECOND-INSTANCE pairing for the deferred refinements R27 (cascade welder) and the institution/government-actor + Cold-War-forcing findings. KEY DIFFERENCE: Manhattan = FAST crisis-pull (33 months, one phantom enemy); the Internet = SLOW cascade (decades) with a RIVAL-STANDARD WAR — which is what lets it test R23 (rival-coupling), a refinement Manhattan only hinted at (Uranverein as a single squeezed rival).",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.1, "latent_membership": 0.95 }
+      }
+    ]
+  },
+
+  "actors": [
+    {
+      "_comment": "(D2) the ground kernel generalized. Like Manhattan, an institution-heavy specimen: a person-only people_0 cannot hold DARPA/NSF/CERN/ISO/CCITT/IETF/the PTTs. carrier_of = the latent protocol/principle the actor pushes UP; inhabitant_of = the institution/network it operates WITHIN (the physical<->latent bridge). Individuals AND agencies/labs/companies/standards-bodies/movements all populated. This is the THIRD heavy-institution specimen — TRIPLE-attesting D2's government-actor finding.",
+      "id": "act-baran",
+      "name": "Paul Baran",
+      "kind": "individual",
+      "frame_layer": { "layer": "straddle", "physical_membership": 0.55, "latent_membership": 0.85 },
+      "role": "co-inventor of packet-switching (distributed/survivable)",
+      "when": "1959-1964",
+      "where": "RAND Corporation, US",
+      "culture": "Polish-American engineer (émigré, fled with family from Poland as a child)",
+      "relation": "originator (distributed packet-switching; the survivability root)",
+      "confidence": 0.93,
+      "carrier_of": [
+        { "wrapper": "sw-distributed-survivable", "role": "founds", "strength": 0.95, "when": "1959-64", "confidence": 0.93 },
+        { "wrapper": "sw-packet-concept", "role": "founds", "strength": 0.85, "when": "1959-64", "confidence": 0.9 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "RAND Corporation (US Air Force-funded think tank)", "layer": "physical", "role": "works_within", "strength": 0.9, "when": "1959-68", "confidence": 0.92 },
+        { "wrapper": "the Cold-War defense-research complex", "layer": "physical", "role": "operates_in", "strength": 0.85, "when": "1959-", "confidence": 0.88 }
+      ]
+    },
+    {
+      "id": "act-davies",
+      "name": "Donald Davies",
+      "kind": "individual",
+      "frame_layer": { "layer": "straddle", "physical_membership": 0.55, "latent_membership": 0.85 },
+      "role": "co-inventor of packet-switching; coined 'packet'",
+      "when": "1965-1970",
+      "where": "National Physical Laboratory (NPL), UK",
+      "culture": "British physicist/computer scientist",
+      "relation": "originator (independent invention of packet-switching; coined the term)",
+      "confidence": 0.93,
+      "carrier_of": [
+        { "wrapper": "sw-packet-concept", "role": "founds", "strength": 0.95, "when": "1965-66", "confidence": 0.93 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "act-npl", "layer": "physical", "role": "operates_in", "strength": 0.9, "when": "1947-1984", "confidence": 0.92 },
+        { "wrapper": "British government science (NPL)", "layer": "physical", "role": "works_within", "strength": 0.85, "when": "1965-", "confidence": 0.9 }
+      ]
+    },
+    {
+      "id": "act-kleinrock",
+      "name": "Leonard Kleinrock",
+      "kind": "individual",
+      "frame_layer": { "layer": "straddle", "physical_membership": 0.6, "latent_membership": 0.8 },
+      "role": "queueing-theorist of networks; ARPANET node-1 host (UCLA); CONTESTED packet-switching claimant",
+      "when": "1961-",
+      "where": "MIT then UCLA, US",
+      "culture": "American computer scientist",
+      "relation": "originator (queueing theory) + CONTESTED claimant (packet-switching priority)",
+      "confidence": 0.85,
+      "carrier_of": [
+        { "wrapper": "sw-queueing", "role": "founds", "strength": 0.9, "when": "1961-64", "confidence": 0.9 },
+        { "wrapper": "sw-packet-concept", "role": "champions", "strength": 0.35, "when": "claimed from the 1990s", "note": "CONTESTED — Davies/Baran/Taylor/McKenzie reject the claim; recorded at low strength + a priority-dispute discrepancy", "confidence": 0.5 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "UCLA (ARPANET node 1)", "layer": "physical", "role": "operates_in", "strength": 0.9, "when": "1963-", "confidence": 0.9 },
+        { "wrapper": "the ARPANET research community", "layer": "latent", "role": "works_within", "strength": 0.85, "when": "1969-", "confidence": 0.88 }
+      ]
+    },
+    {
+      "id": "act-cerf",
+      "name": "Vint Cerf",
+      "kind": "individual",
+      "frame_layer": { "layer": "straddle", "physical_membership": 0.6, "latent_membership": 0.85 },
+      "role": "co-architect of TCP/IP; 'father of the Internet'; INWG chair; later ISOC/ICANN",
+      "when": "1973-",
+      "where": "Stanford -> DARPA -> MCI/Google; US",
+      "culture": "American computer scientist",
+      "relation": "originator (the human internetworking welder, with Kahn) + institutionalizer (ISOC, ICANN)",
+      "confidence": 0.95,
+      "carrier_of": [
+        { "wrapper": "child-internet", "role": "founds", "strength": 0.95, "when": "1973-83", "confidence": 0.95 },
+        { "wrapper": "sw-openarch-root", "role": "champions", "strength": 0.85, "when": "1973-", "confidence": 0.9 },
+        { "wrapper": "h-governance", "role": "institutionalizes", "strength": 0.8, "when": "1992- (ISOC, ICANN)", "confidence": 0.85 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "act-darpa", "layer": "physical", "role": "operates_in", "strength": 0.85, "when": "1976-82 (program manager)", "confidence": 0.9 },
+        { "wrapper": "act-inwg", "layer": "latent", "role": "operates_in", "strength": 0.85, "when": "1972-75 (chair, then resigned)", "confidence": 0.88 },
+        { "wrapper": "act-stanford", "layer": "physical", "role": "works_within", "strength": 0.8, "when": "1972-76", "confidence": 0.88 }
+      ]
+    },
+    {
+      "id": "act-kahn",
+      "name": "Robert Kahn",
+      "kind": "individual",
+      "frame_layer": { "layer": "straddle", "physical_membership": 0.65, "latent_membership": 0.8 },
+      "role": "co-architect of TCP/IP; originator of the open-architecture principle; BBN IMP designer; DARPA/IPTO",
+      "when": "1969-",
+      "where": "BBN -> DARPA; US",
+      "culture": "American electrical engineer",
+      "relation": "originator (the open-architecture principle + the human internetworking welder, with Cerf)",
+      "confidence": 0.95,
+      "carrier_of": [
+        { "wrapper": "sw-openarch-root", "role": "founds", "strength": 0.95, "when": "1973", "confidence": 0.95 },
+        { "wrapper": "child-internet", "role": "founds", "strength": 0.95, "when": "1973-83", "confidence": 0.95 },
+        { "wrapper": "sw-gateway", "role": "champions", "strength": 0.85, "when": "1973-74", "confidence": 0.9 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "act-bbn", "layer": "physical", "role": "operates_in", "strength": 0.85, "when": "1966-72 (designed the IMP protocol)", "confidence": 0.9 },
+        { "wrapper": "act-darpa", "layer": "physical", "role": "operates_in", "strength": 0.9, "when": "1972-86 (IPTO; ran the internetworking program)", "confidence": 0.92 }
+      ]
+    },
+    {
+      "id": "act-pouzin",
+      "name": "Louis Pouzin",
+      "kind": "individual",
+      "frame_layer": { "layer": "straddle", "physical_membership": 0.55, "latent_membership": 0.85 },
+      "role": "datagram inventor; CYCLADES director; the starved-lineage flame-bearer",
+      "when": "1971-",
+      "where": "IRIA, France",
+      "culture": "French computer scientist",
+      "relation": "originator (the datagram + the connectionless/end-to-end model that Cerf-Kahn acknowledged) — whose own network was killed by his own state",
+      "confidence": 0.92,
+      "carrier_of": [
+        { "wrapper": "sw-datagram-root", "role": "founds", "strength": 0.95, "when": "1971-73", "confidence": 0.92 },
+        { "wrapper": "sw-e2e-root", "role": "champions", "strength": 0.8, "when": "1972- (CYCLADES practiced end-host reliability)", "confidence": 0.85 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "act-cyclades", "layer": "physical", "role": "operates_in", "strength": 0.95, "when": "1971-78", "confidence": 0.92 },
+        { "wrapper": "the French state research apparatus (IRIA) that then DEFUNDED CYCLADES in favor of Minitel/Transpac (a carrier starved by his own inhabited state — echoing Oppenheimer consumed by the MED)", "layer": "physical", "role": "works_within", "strength": 0.8, "when": "1971-78", "confidence": 0.88 }
+      ]
+    },
+    {
+      "id": "act-licklider",
+      "name": "J.C.R. Licklider",
+      "kind": "individual",
+      "frame_layer": { "layer": "straddle", "physical_membership": 0.6, "latent_membership": 0.85 },
+      "role": "the visionary (the 'Intergalactic Network'); first IPTO director",
+      "when": "1962-1964 (and a second IPTO term 1974-75)",
+      "where": "ARPA/IPTO, US",
+      "culture": "American psychologist/computer scientist",
+      "relation": "originator (the internetworking VISION; the surprise_priority conjecture-in-a-parent)",
+      "confidence": 0.9,
+      "carrier_of": [
+        { "wrapper": "the Intergalactic Computer Network vision (the internetworking conjecture-in-a-parent)", "role": "champions", "strength": 0.9, "when": "1962-63", "confidence": 0.9 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "act-ipto", "layer": "physical", "role": "operates_in", "strength": 0.9, "when": "1962-64", "confidence": 0.9 },
+        { "wrapper": "act-darpa", "layer": "physical", "role": "works_within", "strength": 0.85, "when": "1962-64", "confidence": 0.88 }
+      ]
+    },
+    {
+      "id": "act-roberts-taylor",
+      "name": "Bob Taylor & Larry Roberts",
+      "kind": "individual",
+      "frame_layer": { "layer": "straddle", "physical_membership": 0.7, "latent_membership": 0.7 },
+      "role": "ARPANET initiators/program managers (IPTO)",
+      "when": "1966-1973",
+      "where": "ARPA/IPTO, US",
+      "culture": "American technologists",
+      "relation": "originator/mobilizer (Taylor launched the ARPANET 1966; Roberts ran it + chose packet-switching from Davies/Baran)",
+      "confidence": 0.9,
+      "carrier_of": [
+        { "wrapper": "the ARPANET-as-resource-sharing-network wrapper", "role": "champions", "strength": 0.9, "when": "1966-73", "confidence": 0.9 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "act-ipto", "layer": "physical", "role": "operates_in", "strength": 0.95, "when": "1966-73", "confidence": 0.92 }
+      ]
+    },
+    {
+      "id": "act-crocker",
+      "name": "Steve Crocker (and the Network Working Group)",
+      "kind": "individual",
+      "frame_layer": { "layer": "straddle", "physical_membership": 0.5, "latent_membership": 0.85 },
+      "role": "originator of the RFC process (RFC 1, 1969)",
+      "when": "1969-",
+      "where": "UCLA / the ARPANET community, US",
+      "culture": "American computer scientist (graduate student)",
+      "relation": "originator (the RFC genre — the open-standardization METHOD)",
+      "confidence": 0.9,
+      "carrier_of": [
+        { "wrapper": "sw-rfc-method", "role": "founds", "strength": 0.9, "when": "1969", "confidence": 0.9 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "the ARPANET Network Working Group", "layer": "latent", "role": "operates_in", "strength": 0.9, "when": "1969-", "confidence": 0.9 }
+      ]
+    },
+    {
+      "id": "act-clark",
+      "name": "David D. Clark",
+      "kind": "individual",
+      "frame_layer": { "layer": "straddle", "physical_membership": 0.5, "latent_membership": 0.88 },
+      "role": "chief Internet architect (IAB); coined 'rough consensus and running code'; co-author of the end-to-end principle",
+      "when": "1981-",
+      "where": "MIT, US",
+      "culture": "American computer scientist",
+      "relation": "originator/transmitter (the end-to-end principle + the IETF process ethos)",
+      "confidence": 0.88,
+      "carrier_of": [
+        { "wrapper": "sw-e2e-root", "role": "champions", "strength": 0.85, "when": "1981-84", "confidence": 0.88 },
+        { "wrapper": "sw-rfc-method", "role": "popularizes", "strength": 0.85, "when": "1992 ('rough consensus and running code')", "confidence": 0.88 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "act-iab-ietf", "layer": "latent", "role": "operates_in", "strength": 0.9, "when": "1981-90 (chief protocol architect)", "confidence": 0.9 },
+        { "wrapper": "MIT", "layer": "physical", "role": "works_within", "strength": 0.8, "when": "1981-", "confidence": 0.88 }
+      ]
+    },
+    {
+      "id": "act-berners-lee",
+      "name": "Tim Berners-Lee",
+      "kind": "individual",
+      "frame_layer": { "layer": "straddle", "physical_membership": 0.45, "latent_membership": 0.9 },
+      "role": "inventor of the World Wide Web (the dominant harvest)",
+      "when": "1989-1991",
+      "where": "CERN, Switzerland",
+      "culture": "British computer scientist",
+      "relation": "harvest-originator (the Web — the killer application that drove the child's mass adoption)",
+      "confidence": 0.92,
+      "carrier_of": [
+        { "wrapper": "h-web", "role": "founds", "strength": 0.95, "when": "1989-91", "confidence": 0.92 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "act-cern", "layer": "physical", "role": "operates_in", "strength": 0.9, "when": "1984-94", "confidence": 0.9 },
+        { "wrapper": "child-internet", "layer": "latent", "role": "works_within", "strength": 0.9, "when": "1989- (the Web sits ON TCP/IP)", "confidence": 0.9 }
+      ]
+    },
+    {
+      "id": "act-darpa",
+      "name": "ARPA / DARPA (+ the Defense Communications Agency)",
+      "kind": "government",
+      "frame_layer": { "layer": "physical", "physical_membership": 0.92, "latent_membership": 0.35 },
+      "role": "the originating + mandating state agency (funded the ARPANET; mandated the 1983 flag day)",
+      "when": "1958-",
+      "where": "US Department of Defense",
+      "culture": "US Cold-War defense-research state",
+      "relation": "patron / mobilizer / mandater (the apex node of the welding cascade's early stages)",
+      "confidence": 0.93,
+      "carrier_of": [
+        { "wrapper": "child-internet", "role": "funds", "strength": 0.9, "when": "1969-90", "confidence": 0.92 },
+        { "wrapper": "sw-packet-concept", "role": "institutionalizes", "strength": 0.85, "when": "1969 (the ARPANET testbed)", "confidence": 0.9 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "the US Department of Defense / the Cold-War state", "layer": "physical", "role": "operates_in", "strength": 0.95, "when": "1958-", "confidence": 0.93 }
+      ]
+    },
+    {
+      "id": "act-ipto",
+      "name": "IPTO (Information Processing Techniques Office, within ARPA)",
+      "kind": "government",
+      "frame_layer": { "layer": "physical", "physical_membership": 0.88, "latent_membership": 0.45 },
+      "role": "the ARPA office that ran the networking program (Licklider->Taylor->Roberts->Kahn)",
+      "when": "1962-1986",
+      "where": "ARPA, US",
+      "culture": "US defense-research state",
+      "relation": "operator / incubator (the cascade stage that carried the vision to the testbed)",
+      "confidence": 0.9,
+      "carrier_of": [
+        { "wrapper": "the ARPANET-as-resource-sharing-network wrapper", "role": "founds", "strength": 0.9, "when": "1966-72", "confidence": 0.9 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "act-darpa", "layer": "physical", "role": "operates_in", "strength": 0.95, "when": "1962-86", "confidence": 0.92 }
+      ]
+    },
+    {
+      "id": "act-bbn",
+      "name": "Bolt Beranek & Newman (BBN)",
+      "kind": "company",
+      "frame_layer": { "layer": "physical", "physical_membership": 0.9, "latent_membership": 0.35 },
+      "role": "built the ARPANET subnet (the IMPs) — the packet-switching parent made physical",
+      "when": "1969-",
+      "where": "Cambridge, Massachusetts, US",
+      "culture": "American R&D contractor",
+      "relation": "operator (the contractor that built the deployable packet network)",
+      "confidence": 0.92,
+      "carrier_of": [
+        { "wrapper": "sw-packet-concept", "role": "institutionalizes", "strength": 0.85, "when": "1969 (the IMPs)", "confidence": 0.9 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "act-darpa", "layer": "physical", "role": "works_within", "strength": 0.85, "when": "1969-72 (the IMP contract)", "confidence": 0.9 }
+      ]
+    },
+    {
+      "id": "act-npl",
+      "name": "National Physical Laboratory (NPL), UK",
+      "kind": "government",
+      "frame_layer": { "layer": "physical", "physical_membership": 0.88, "latent_membership": 0.4 },
+      "role": "Davies' lab; built the first operational packet-switched network (NPL network, 1970)",
+      "when": "1965-",
+      "where": "Teddington, UK",
+      "culture": "British government science",
+      "relation": "originator-site (independent packet-switching + the first running packet network)",
+      "confidence": 0.9,
+      "carrier_of": [
+        { "wrapper": "sw-packet-concept", "role": "institutionalizes", "strength": 0.85, "when": "1965-70", "confidence": 0.9 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "British government science", "layer": "physical", "role": "operates_in", "strength": 0.9, "when": "1965-", "confidence": 0.9 }
+      ]
+    },
+    {
+      "id": "act-cyclades",
+      "name": "CYCLADES (the French research network, IRIA)",
+      "kind": "lab",
+      "frame_layer": { "layer": "straddle", "physical_membership": 0.7, "latent_membership": 0.6 },
+      "role": "the datagram pioneer network — STARVED by its own state (the flame-keeper-in-reverse)",
+      "when": "1971-1981",
+      "where": "IRIA, France",
+      "culture": "French state research",
+      "relation": "originator-then-defunded (pioneered the datagram/end-to-end; killed by the French PTT in favor of Minitel/Transpac)",
+      "confidence": 0.9,
+      "carrier_of": [
+        { "wrapper": "sw-datagram-root", "role": "founds", "strength": 0.9, "when": "1971-78", "confidence": 0.9 },
+        { "wrapper": "sw-e2e-root", "role": "champions", "strength": 0.8, "when": "1972-78", "confidence": 0.85 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "the French state / the PTT (DGT) that DEFUNDED it (1978) in favor of the connection-oriented Minitel/Transpac — the inverse of a flame-keeper: the patron that EXTINGUISHED its own lineage", "layer": "physical", "role": "operates_in", "strength": 0.85, "when": "1971-81", "confidence": 0.88 }
+      ]
+    },
+    {
+      "id": "act-nsf",
+      "name": "National Science Foundation (NSF) + NSFNET",
+      "kind": "government",
+      "frame_layer": { "layer": "physical", "physical_membership": 0.9, "latent_membership": 0.4 },
+      "role": "the civilian agency that SCALED the internetwork (NSFNET 1986) and then PRIVATIZED it (1995)",
+      "when": "1985-1995",
+      "where": "US",
+      "culture": "US civilian science-funding state",
+      "relation": "patron / scaler / privatizer (carried the weld from defense research to the world; the late deregulation pull acts through it)",
+      "confidence": 0.92,
+      "carrier_of": [
+        { "wrapper": "child-internet", "role": "funds", "strength": 0.9, "when": "1986-95", "confidence": 0.92 },
+        { "wrapper": "h-ecommerce", "role": "institutionalizes", "strength": 0.7, "when": "1991-95 (lifting the commercial-traffic ban; backbone retirement)", "confidence": 0.85 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "the US civilian federal state", "layer": "physical", "role": "operates_in", "strength": 0.92, "when": "1985-95", "confidence": 0.92 }
+      ]
+    },
+    {
+      "id": "act-iab-ietf",
+      "name": "The IAB + the IETF (Internet Architecture Board / Internet Engineering Task Force)",
+      "kind": "institution",
+      "frame_layer": { "layer": "straddle", "physical_membership": 0.4, "latent_membership": 0.85 },
+      "role": "the standards-institutionalizing stage of the cascade (from 1986)",
+      "when": "1986-",
+      "where": "the (initially US-government-funded) Internet community",
+      "culture": "the 'rough consensus and running code' engineering culture",
+      "relation": "institutionalizer (the open-standards body that out-iterated ISO/OSI)",
+      "confidence": 0.9,
+      "carrier_of": [
+        { "wrapper": "child-internet", "role": "institutionalizes", "strength": 0.9, "when": "1986-", "confidence": 0.9 },
+        { "wrapper": "sw-rfc-method", "role": "institutionalizes", "strength": 0.9, "when": "1986-", "confidence": 0.9 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "act-isoc", "layer": "physical", "role": "operates_in", "strength": 0.8, "when": "1992- (placed under ISOC)", "confidence": 0.85 }
+      ]
+    },
+    {
+      "id": "act-inwg",
+      "name": "INWG (International Network Working Group)",
+      "kind": "institution",
+      "frame_layer": { "layer": "latent", "physical_membership": 0.35, "latent_membership": 0.85 },
+      "role": "the international reconciliation stage that PARTIALLY FAILED (1972-76)",
+      "when": "1972-1976",
+      "where": "international (IFIP-affiliated)",
+      "culture": "the international networking-research community",
+      "relation": "transmitter / failed-reconciler (proposed a 1976 compromise protocol adopted by NEITHER the CCITT NOR the ARPANET)",
+      "confidence": 0.85,
+      "carrier_of": [
+        { "wrapper": "the international-internetworking-standard wrapper (the 1976 compromise)", "role": "champions", "strength": 0.7, "when": "1972-76", "note": "the compromise was bypassed by both camps — a partially-failed welding stage", "confidence": 0.8 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "IFIP / the international research community", "layer": "latent", "role": "operates_in", "strength": 0.8, "when": "1972-76", "confidence": 0.85 }
+      ]
+    },
+    {
+      "id": "act-iso-ccitt",
+      "name": "ISO + CCITT (the OSI/X.25 standards bodies)",
+      "kind": "institution",
+      "frame_layer": { "layer": "straddle", "physical_membership": 0.5, "latent_membership": 0.8 },
+      "role": "the RIVAL standardization camp (formal, government/PTT-backed)",
+      "when": "1976- (X.25 1976; OSI model 1984)",
+      "where": "international (Geneva)",
+      "culture": "formal international standardization + the PTT/telco establishment",
+      "relation": "rival (carried the OSI + X.25 architectures that lost the protocol wars)",
+      "confidence": 0.9,
+      "carrier_of": [
+        { "wrapper": "rel-osi", "role": "founds", "strength": 0.9, "when": "1977-84", "confidence": 0.9 },
+        { "wrapper": "rel-x25", "role": "founds", "strength": 0.9, "when": "1976 (CCITT)", "confidence": 0.9 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "the formal international-standards + PTT establishment", "layer": "physical", "role": "operates_in", "strength": 0.9, "when": "1976-", "confidence": 0.9 }
+      ]
+    },
+    {
+      "id": "act-ptts",
+      "name": "The national PTTs / telcos (incl. France's DGT)",
+      "kind": "government",
+      "frame_layer": { "layer": "physical", "physical_membership": 0.85, "latent_membership": 0.4 },
+      "role": "the state telecom monopolies backing connection-oriented networking (X.25/Minitel) — the rival-lineage patrons",
+      "when": "1970s-1990s",
+      "where": "Europe + worldwide",
+      "culture": "state telecom monopolies",
+      "relation": "rival-patron (funded the virtual-circuit lineage; France's DGT killed CYCLADES for Minitel)",
+      "confidence": 0.88,
+      "carrier_of": [
+        { "wrapper": "rel-x25", "role": "champions", "strength": 0.85, "when": "1976-90s", "confidence": 0.88 },
+        { "wrapper": "rel-minitel", "role": "founds", "strength": 0.8, "when": "1980s (France)", "confidence": 0.85 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "the state-monopoly telecom order (carrier-vs-computer-industry power struggle — Pouzin's 'IBM vs Telecommunications')", "layer": "physical", "role": "operates_in", "strength": 0.85, "when": "1970s-90s", "confidence": 0.88 }
+      ]
+    },
+    {
+      "id": "act-cern",
+      "name": "CERN (European Organization for Nuclear Research)",
+      "kind": "institution",
+      "frame_layer": { "layer": "physical", "physical_membership": 0.8, "latent_membership": 0.5 },
+      "role": "the lab where the Web was born (and which placed it in the public domain, 1993)",
+      "when": "1989-",
+      "where": "Geneva, Switzerland",
+      "culture": "international big-science",
+      "relation": "harvest-originator-site (the Web; and the decision to make it royalty-free)",
+      "confidence": 0.9,
+      "carrier_of": [
+        { "wrapper": "h-web", "role": "institutionalizes", "strength": 0.85, "when": "1989-93 (and the 1993 public-domain release)", "confidence": 0.9 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "international big-science", "layer": "physical", "role": "operates_in", "strength": 0.85, "when": "1954-", "confidence": 0.9 }
+      ]
+    },
+    {
+      "id": "act-cisco",
+      "name": "Cisco + the router industry",
+      "kind": "company",
+      "frame_layer": { "layer": "physical", "physical_membership": 0.92, "latent_membership": 0.25 },
+      "role": "the gateway/router made a commercial product (the instrument that scaled the internetwork)",
+      "when": "1984-",
+      "where": "US",
+      "culture": "Silicon Valley networking industry",
+      "relation": "operator/instrument-maker (turned the gateway concept into mass-market hardware; favored over ISO by the agile-vendor market)",
+      "confidence": 0.85,
+      "carrier_of": [
+        { "wrapper": "sw-gateway", "role": "institutionalizes", "strength": 0.85, "when": "1984-", "confidence": 0.85 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "the commercial-Internet equipment market", "layer": "physical", "role": "operates_in", "strength": 0.9, "when": "1984-", "confidence": 0.88 }
+      ]
+    },
+    {
+      "id": "act-stanford",
+      "name": "Stanford / UCLA / UCL (universities-under-contract)",
+      "kind": "university",
+      "frame_layer": { "layer": "straddle", "physical_membership": 0.7, "latent_membership": 0.6 },
+      "role": "the academic sites where TCP/IP was developed + tested (the universities stage of the cascade)",
+      "when": "1969-",
+      "where": "US + UK",
+      "culture": "academic computer science under government contract",
+      "relation": "operator (the contract-research sites that built + ran the early internetwork; UCL = the first international node)",
+      "confidence": 0.88,
+      "carrier_of": [
+        { "wrapper": "child-internet", "role": "champions", "strength": 0.8, "when": "1973-83", "confidence": 0.85 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "act-darpa", "layer": "physical", "role": "works_within", "strength": 0.8, "when": "1969-83 (DARPA contracts)", "confidence": 0.88 }
+      ]
+    },
+    {
+      "id": "act-isoc",
+      "name": "Internet Society (ISOC) + ICANN",
+      "kind": "institution",
+      "frame_layer": { "layer": "straddle", "physical_membership": 0.45, "latent_membership": 0.8 },
+      "role": "the governance bodies that carried the network from a US-government entity to an international public one",
+      "when": "1992- (ISOC); 1998- (ICANN)",
+      "where": "international",
+      "culture": "Internet governance",
+      "relation": "institutionalizer (the final cascade stage — handing the child to the world)",
+      "confidence": 0.88,
+      "carrier_of": [
+        { "wrapper": "h-governance", "role": "founds", "strength": 0.85, "when": "1992-98", "confidence": 0.88 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "the international Internet-governance order", "layer": "latent", "role": "operates_in", "strength": 0.85, "when": "1992-", "confidence": 0.88 }
+      ]
+    }
+  ],
+
+  "fuzzy_layer": {
+    "_comment": "The LOD/confidence partition — a DERIVED digest of the per-node memberships (D5). Like Manhattan (and unlike QG's hollow crown), the certain core spans the LOWER, MIDDLE AND CROWN of the tree — a consummated case with a solid trunk all the way up. The frontier is located OFF the main trunk: the PRIORITY DISPUTE (who invented packet-switching), the CONTESTED GENEALOGY (what 'the Internet' is), and the WHIG-VS-REVISIONIST historiography (was TCP/IP's victory inevitable?). The fuzz here is in ATTRIBUTION + HISTORIOGRAPHY (who/why), not in whether the child was born.",
+    "certain_core": [
+      "W_A = packet-switching exists (Baran/Davies, early-mid 1960s) and W_B = the open-architecture/internetworking principle exists (Kahn 1973; Pouzin's datagram) (~0.9-0.93).",
+      "The seam S is genuine (gateway + common datagram + end-to-end) (~0.9).",
+      "The child EXISTS and works — the Internet is the deployed global network-of-networks running TCP/IP (~0.92).",
+      "Cerf-Kahn specified internetworking (May 1974) and the term 'Internet' dates to RFC 675 (Dec 1974) (~0.95).",
+      "The 1 Jan 1983 flag day (NCP->TCP/IP) consummated the weld operationally; NSFNET (1986) scaled it; commercialization (1995) hardened it (~0.92-0.95).",
+      "The mediating welder is an ORDERED INSTITUTIONAL CASCADE (ARPA->IPTO->BBN->INWG->IETF->NSF->ISOC), NOT a single node (~0.92) — the R27 second instance.",
+      "TCP/IP DEFEATED the rival architectures OSI + X.25 in the protocol wars (~1990-95) (~0.88).",
+      "The Web (Berners-Lee, CERN, 1989-91) is the dominant harvest application that drove mass adoption (~0.95)."
+    ],
+    "frontier": [
+      "THE PACKET-SWITCHING PRIORITY DISPUTE — who 'invented' it: Kleinrock's contested claim vs the historians'/Hall-of-Fame Baran+Davies attribution (Davies 2001 rebuttal; McKenzie; Taylor). A live, bitter dispute (~0.5 on Kleinrock's origin claim; ~0.9 on the Baran/Davies attribution). The specimen's deepest frontier root.",
+      "THE CONTESTED GENEALOGY of 'the Internet' — is the child the internetworking WELD (this render) or is it just the ARPANET grown up (the popular conflation)? The boundary of the child is itself fuzzy (~0.6 that 'ARPANET = the Internet' is wrong-but-popular).",
+      "THE WHIG-VS-REVISIONIST historiography of the protocol wars — was TCP/IP's victory inevitable-on-technical-merit (the winners' story) or contingent-and-political (Russell's revisionist thesis: government subsidy + commercialization timing + OSI's self-inflicted committee paralysis)? (~0.5, observer-relative).",
+      "THE STRAWMAN-FRAMING of OSI by the winners — Internet engineers 'lampooned OSI as a misguided monstrosity created by clueless European bureaucrats' (Russell); Russell's own 2006 article 'presented OSI as a foil'. The clean 'TCP/IP simply better' rendering is part-constructed (~0.6).",
+      "W_B as a SINGLE parent (vs the composite of Kahn's ground rules + datagram + end-to-end) — a lossy projection (~0.7)."
+    ],
+    "core_boundary_locus": "The certain-core/frontier boundary does NOT fall horizontally across the trunk (as in QG, where it sinks below the child). Like Manhattan, it runs VERTICALLY ALONGSIDE a solid trunk: the entire main lineage (parents -> seam -> weld -> child -> hardening) is certain core, and the frontier is a thin sheath of (a) the PRIORITY DISPUTE + CONTESTED GENEALOGY beneath/around the parents (who invented what; what the child even is) and (b) the WHIG-VS-REVISIONIST historiography + the OSI strawman hovering beside the consummated child (why it won). The boundary's location is itself the diagnostic: a consummated weld keeps its core all the way up the trunk and pushes the fuzz OUT to attribution (the roots) and historiography (the periphery) — the same geometric inverse of QG's hollow crown that Manhattan showed, with the difference that here BOTH the roots (priority) AND the periphery (historiography) carry fuzz (Manhattan's roots were clean; only its moral periphery was fuzzy)."
+  },
+
+  "discrepancies": [
+    {
+      "_comment": "discrepancy[0] — the central framework-vs-record tension, and the SPECIMEN'S CHIEF GRADUATION DATUM: a SECOND independent instance of Manhattan's welder-as-cascade (R27).",
+      "what": "The schema renders parents -> ONE child via a weld, but here (as in Manhattan) the welding agent is NEITHER parent — it is an ORDERED CASCADE of mediating institutions and documents (Sputnik -> ARPA -> IPTO/Licklider -> Taylor/Roberts -> BBN -> the NWG/RFC process -> Cerf-Kahn -> INWG -> DARPA/DCA flag-day mandate -> IAB/IETF -> NSF -> ISOC), with the human welders (Cerf & Kahn) sitting a layer up from both packet-switching and the open-architecture stance. The clean 2-parent diagram cannot name the relay that did the welding.",
+      "sources_in_conflict": ["Wikipedia 'ARPANET' (the institutional chain)", "Internet Society 'Brief History of the Internet'", "Wikipedia 'Internet Engineering Task Force' / 'Internet Architecture Board'"],
+      "type": "framework-vs-record-tension",
+      "why_interesting": "STRONGLY supplies the SECOND independent instance of R27 (mediating_wrapper as an ordered sequence): the Manhattan 'relay of war-state institutions did the welding' pattern recurs as 'a relay of defense+civilian agencies + standards bodies did the welding'. Two crisis-pulled/institutional specimens now BOTH have a cascade welder -> R27 GRADUATES (ready to fold). Rendered here AS an ordered_sequence (the gap R27 asked for). Caps nothing on child-confidence (the child is real). -> motivates folding R27 (mediating_wrapper may be an ordered sequence).",
+      "confidence_impact": "Holds the clean-dyad-welds-itself reading at ~0.25; the ordered-cascade reading at ~0.92. No impact on child.confidence."
+    },
+    {
+      "_comment": "discrepancy[1] — the priority dispute (the specimen's deepest frontier root).",
+      "what": "WHO invented packet-switching? Kleinrock has claimed priority (and to have convinced Roberts to adopt it); Donald Davies (posthumously, 2001) denied Kleinrock's early-1960s work was about packet-switching ('I can find no evidence that he understood the principles of packet switching'); Alex McKenzie ('nothing in the entire 1964 book...alludes to packetization'); Bob Taylor ('the Kleinrock-Roberts claims are not believed'). Historians + the US National Inventors Hall of Fame credit Baran AND Davies, independently. Kleinrock (2023) acknowledged the early work was about MESSAGE switching.",
+      "sources_in_conflict": ["Wikipedia 'Packet switching' (priority section)", "Wikipedia 'Leonard Kleinrock'", "Davies' 2001 posthumous paper; McKenzie; Taylor (via Isaacson)"],
+      "type": "priority-dispute",
+      "why_interesting": "A LIVE, BITTER priority dispute over a PARENT — analogous to deep learning's Schmidhuber-vs-the-laureates and Maxwell's re-attribution, and to Manhattan's Szilard-vs-Einstein/Oppenheimer credit. Recorded via graded parent-confidence (Kleinrock's packet-switching carrier-strength 0.35) + this row, NOT via weld.reattribution (it is a dispute over CREDIT for a parent, not a structural re-welding). Notably the dispute 'has affected sources on the topic, creating methodological challenges in the historiography' — the dispute contaminates the record itself.",
+      "confidence_impact": "Holds Kleinrock's packet-switching-origin claim at ~0.5; the Baran/Davies attribution at ~0.9. Pulls overall_confidence down via the contested root."
+    },
+    {
+      "_comment": "discrepancy[2] — the contested genealogy of the child itself.",
+      "what": "WHAT is 'the Internet'? The popular narrative conflates it with the ARPANET ('the ARPANET became the Internet'). This render distinguishes them: the ARPANET is a PARENT-SUBSTRATE (one packet network), and the CHILD is the INTERNETWORKING layer (TCP/IP, the network-of-networks) that federates many networks — which is why the ARPANET could be decommissioned (1990) while the Internet grew. The boundary of the child is itself contested.",
+      "sources_in_conflict": ["Internet Society 'Brief History' (internetworking framing)", "popular 'ARPANET = the Internet' narratives", "Cerf-Kahn 1974 / RFC 675 (the internetworking definition)"],
+      "type": "contested-genealogy",
+      "why_interesting": "A framework-vs-record tension about node IDENTITY: the framework needs the child to be the WELD'S output (internetworking), but the popular record draws the child boundary around the substrate (the ARPANET). Recorded by making the ARPANET a relation:influence relative (not the child, not a rival). Echoes Manhattan's 'is the child the device or the nuclear order' straddle and Keynesian's 'what is Keynesianism' instability — but here the instability is DEFINITIONAL (what counts), not diachronic.",
+      "confidence_impact": "Holds 'the child = the internetworking weld' at ~0.85; the popular 'ARPANET = the Internet' conflation at ~0.6 (wrong-but-widespread). Child existence unaffected (~0.92)."
+    },
+    {
+      "_comment": "discrepancy[3] — the whig-vs-revisionist historiography of the protocol wars.",
+      "what": "WAS TCP/IP's victory inevitable? The winners' (whig) narrative: TCP/IP simply had superior technology + 'rough consensus and running code'. Russell's revisionist thesis: OSI's defeat was CONTINGENT and POLITICAL — TCP/IP rode US government subsidy, the timing of NSF commercialization (1992), free UNIX/BSD bundling, and OSI's self-inflicted committee paralysis; OSI was 'also designed to be open'. 'History is written by the winners.'",
+      "sources_in_conflict": ["Andrew L. Russell, 'OSI: The Internet That Wasn't' (IEEE Spectrum) + his 'Rough Consensus and Running Code'", "the standard whig narrative (TCP/IP won on merit)", "Wikipedia 'Protocol Wars'"],
+      "type": "whig-vs-revisionist",
+      "why_interesting": "Engages the {meaning} frame (the 'two visions' of standardization — open bottom-up vs centralized state/PTT) more than any technology specimen, and is the SECOND batch instance (with QG's forked historiography) of a frame-ownership-style contest -> bears on the DEFERRED R22 (contested_frame_ownership) and the whig-vs-revisionist type. The valence of the consummation ('the open Internet triumphed') is observer- and era-relative. -> shows frame_of_weld must engage {meaning} for any weld whose child is a governance object.",
+      "confidence_impact": "Child existence ~0.92; the 'inevitable-on-merit' valence ~0.5 (contingent vs inevitable — observer-relative; placed in fuzzy_layer.frontier)."
+    },
+    {
+      "_comment": "discrepancy[4] — the strawman/foil tension (the SECOND-INSTANCE test for R26).",
+      "what": "STRAWMAN / foil framing of the RIVAL: Internet engineers 'frequently misconstrued OSI, lampooning it as a misguided monstrosity created by clueless European bureaucrats' (Russell); Marshall Rose's 1990 textbook called OSI 'ugly'; the Internet community 'reject[ed] any technical insights from OSI' even where OSI had merit. Russell admits his OWN 2006 article 'presented OSI as a foil'. The clean 'TCP/IP was simply better' rendering is part-CONSTRUCTED by the winners.",
+      "sources_in_conflict": ["Russell 'OSI: The Internet That Wasn't' (the lampoon quotes)", "Marshall Rose's 1990 textbook", "the standard 'TCP/IP > OSI' rendering"],
+      "type": "framework-vs-record-tension",
+      "why_interesting": "Tests the DEFERRED R26 (parent.reconstructed_by_welder / strawman). Keynesian's R26 instance was a strawman PARENT ('classical economics' as a foil Keynes built). HERE the foil is a strawman RIVAL (OSI), not a parent — SAME mechanism (a foil constructed by the winning lineage) but a DIFFERENT structural slot (relatives, not parents). This is a PARTIAL second instance: it re-confirms the strawman PHENOMENON but NOT specifically R26's parent-slot. -> R26 graduates ONLY IF the field is generalized from 'reconstructed_by_welder on a parent' to 'reconstructed_by_winner on any node (parent OR rival)'; as written (parent-only) it does NOT cleanly graduate. See the R26 verdict.",
+      "confidence_impact": "Holds the clean 'TCP/IP simply better' rendering at ~0.6; the part-constructed-foil reading at ~0.85 (Russell's own admission). Does not touch surprise_confidence (the internetworking synergy is real regardless of how OSI was framed)."
+    },
+    {
+      "_comment": "discrepancy[5] — rival-lifecycle-coupling (the SPECIMEN'S OTHER CHIEF GRADUATION DATUM: the second instance of R23).",
+      "what": "RIVAL-LIFECYCLE-COUPLING: the protocol wars are a case where one architecture's RISE IS another's FALL. GOSIP mandates + ISO backing PULLED OSI/X.25 while SQUEEZING TCP/IP (1985-88); then NSF commercialization (1992-95) + the Web + UNIX-bundling PULLED TCP/IP while OSI/X.25 COLLAPSED. The deepest instance: France's PTT KILLED its own datagram pioneer (CYCLADES, defunded 1978) to back the connection-oriented Minitel/Transpac — and the datagram CYCLADES pioneered then won globally as IP, while Minitel was eventually shut down (2012). One lineage suppressed the winning idea at home and lost to it abroad.",
+      "sources_in_conflict": ["Wikipedia 'Protocol Wars'", "Russell 'OSI: The Internet That Wasn't'", "Wikipedia 'CYCLADES' / 'Louis Pouzin' (the defunding + Minitel choice)"],
+      "type": "framework-vs-record-tension",
+      "why_interesting": "Supplies the SECOND independent instance of the DEFERRED R23 (rival_lifecycle_coupling — a signed phase-relation between two rival welds' lifecycles). Deep learning's R23 instance was 'connectionism's winter = symbolic AI's spring' (anti-correlated fortunes). HERE it is 'TCP/IP's rise = OSI/X.25/Minitel's fall', explicitly mediated by lineage-relative forcing (GOSIP, commercialization). TWO independent instances (deep learning + the Internet) of a signed rival-lifecycle coupling -> R23 GRADUATES (ready to fold). Also proposes (in weld_type) a companion 'rival-coupled-weld' vocabulary term BEFORE use, per §6 item 7. -> motivates folding R23.",
+      "confidence_impact": "Holds the rival-coupling reading at ~0.85. No impact on child.confidence; strengthens the rival relatives (rel-osi, rel-x25, rel-minitel)."
+    },
+    {
+      "_comment": "discrepancy[6] — the starved-lineage / inverse-flame-keeper (bears on the DEFERRED R29).",
+      "what": "CYCLADES was a datagram-pioneer lineage STARVED by its own patron: the French PTT (DGT) cut its funding (1978) and the network went offline (1981), in favor of the connection-oriented Minitel/Transpac. Its IDEAS (datagram, end-to-end) survived by being carried into TCP/IP (Cerf-Kahn acknowledged CYCLADES). A patron that EXTINGUISHED its own lineage — the inverse of deep learning's CIFAR (a patron that KEPT a marginalized lineage's flame alive through a winter).",
+      "sources_in_conflict": ["Wikipedia 'CYCLADES'", "Wikipedia 'Louis Pouzin'", "Inria 'Louis Pouzin: a major Internet figure'"],
+      "type": "framework-vs-record-tension",
+      "why_interesting": "Bears on the DEFERRED R29 (flame_keeper / dormancy_patron — a named carrier-through-dormancy role). Deep learning's R29 instance was a POSITIVE dormancy-patron (CIFAR funded connectionism THROUGH its winter). HERE the case is the INVERSE — a patron that STARVED its lineage (the DGT killed CYCLADES) — which is NOT a second instance of the flame-KEEPER role; it is its mirror-image (a flame-EXTINGUISHER). It enriches the actor-role vocabulary (carrier strength of CYCLADES' patron is negative/extinguishing) but does NOT cleanly graduate R29 as written (R29 names a carrier-THROUGH-dormancy; this is a carrier that CAUSED dormancy). -> R29 does NOT get a clean second instance here; flagged honestly. See the R29 verdict.",
+      "confidence_impact": "Holds the CYCLADES-defunding fact at ~0.9; the 'inverse-flame-keeper' framing at ~0.8. No impact on child.confidence (the datagram survived)."
+    },
+    {
+      "_comment": "discrepancy[7] — the phantom/veridical-forcing test (the SECOND-INSTANCE test for R21).",
+      "what": "PHANTOM-style forcing: the heavily-funded, government-mandated (GOSIP) OSI stack was widely believed INEVITABLE ('it has not been worth the ten years wait...but OSI is now inevitable' — Metcalfe 1989; the 1985 NRC recommended migrating FROM TCP/IP TO OSI) and never shipped at scale. The belief in OSI's inevitability was a real institutional FORCE (it drove procurement mandates + the 1985 NRC recommendation + a decade of investment) with a FALSE object (OSI-at-scale never arrived). Compare Manhattan's German-bomb fear: a real driving force with a false object.",
+      "sources_in_conflict": ["Russell 'OSI: The Internet That Wasn't' (Metcalfe 1989; the NRC 1985 recommendation; GOSIP)", "Wikipedia 'Protocol Wars' (the GOSIP mandates that were 'toothless')"],
+      "type": "framework-vs-record-tension",
+      "why_interesting": "Tests the DEFERRED R21 (forcing_events.veridical — mechanism vs truth-of-the-trigger separable). Manhattan's R21 instance was the German-bomb phantom (a pull-event with a real force but a false object). HERE the analogous structure is the OSI-inevitability belief that drove government mandates + investment toward a stack that never shipped (a real institutional force, a false object). This is a SECOND independent instance of the same stressor (a forcing belief whose object proved false) -> R21 GRADUATES (ready to fold). The forcing event fe-gosip-osi-mandate carries the veridicality note. -> motivates folding R21.",
+      "confidence_impact": "Holds 'the OSI-inevitability belief drove real forcing' at ~0.85; 'the object (OSI-at-scale) was a phantom' at ~0.85. No impact on child.confidence."
+    },
+    {
+      "_comment": "discrepancy[8] — the R9 corner (orthogonal surprise/child), briefly.",
+      "what": "SURPRISE vs CHILD-CONFIDENCE (R9): child_confidence is HIGH (0.92, the Internet indisputably exists) while the SURPRISE is the subtler INTERNETWORKING axis (packet-switching alone implied single networks; the joint-surprise is federation-without-central-control), surprise_confidence ~0.85.",
+      "sources_in_conflict": ["this render vs the QG specimen (qm_relativity.json) and the Manhattan specimen"],
+      "type": "framework-vs-record-tension",
+      "why_interesting": "Confirms R9 (already ratified) from the same corner as Manhattan (high-child / surprise-in-the-means-not-the-existence). NOT a new corner — the Internet sits near Manhattan in the (surprise x child) plane, reinforcing that the consummated-cascade specimens cluster at high-child / means-surprise. Adds nothing R9 needs (it is ratified) but is recorded for completeness.",
+      "confidence_impact": "No impact on child.confidence (0.92). Reinforces the high-child / means-surprise corner."
+    }
+  ],
+
+  "forcing_events": [
+    {
+      "_comment": "(D4) the EXOGENOUS-FORCING 'weather' layer — FIRST-CLASS and load-bearing here (TRIPLE-attesting D4 with Manhattan + Keynesian). Two distinctive features: (1) a SLOW, multi-stage forcing (Cold War at the start, deregulation at the end) vs Manhattan's single fast war-pull; (2) LINEAGE-RELATIVE direction is everywhere (the protocol wars) — GOSIP/ISO mandates PULL OSI while SQUEEZING TCP/IP, then NSF commercialization inverts it. The R20 (per-target direction) machinery — already ratified — is used heavily.",
+      "id": "fe-sputnik",
+      "name": "Sputnik / the Cold War (1957) -> ARPA created (1958)",
+      "kind": "war",
+      "direction": "pull",
+      "acted_on": [
+        { "target": "act-darpa", "target_kind": "actor", "effect": "fund", "strength": 0.9 },
+        { "target": "weld-main", "target_kind": "weld", "effect": "accelerate", "strength": 0.7 }
+      ],
+      "when": "1957-1958",
+      "mechanism": "The Soviet launch of Sputnik (4 Oct 1957) triggered a Cold-War technological-prestige panic; Eisenhower created ARPA (Feb 1958) to fund high-risk defense research. ARPA -> IPTO -> the ARPANET is the root of the whole cascade. The Cold-War PULL that brought the welding institution into existence (the slow analogue of Manhattan's WWII pull). Baran's survivable-network work was directly Cold-War-motivated (surviving a nuclear first strike).",
+      "confidence": 0.9
+    },
+    {
+      "id": "fe-defense-funding",
+      "name": "Sustained DARPA/DoD research funding (the ARPANET program)",
+      "kind": "funding",
+      "direction": "pull",
+      "acted_on": [
+        { "target": "weld-main", "target_kind": "weld", "effect": "fund", "strength": 0.85 },
+        { "target": "child-internet", "target_kind": "child", "effect": "accelerate", "strength": 0.8 }
+      ],
+      "when": "1966-1983",
+      "mechanism": "Defense funding built the ARPANET testbed (1969), paid Cerf-Kahn's internetworking program (1973-83), and mandated the 1983 flag day. Without a patient, deep-pocketed state patron with no near-term ROI demand, the open-architecture weld would not have been built + tested at scale. The state-funding PULL (TRIPLE-attesting the D2/D4 government-as-carrier finding with Manhattan + Keynesian).",
+      "confidence": 0.9
+    },
+    {
+      "id": "fe-gosip-osi-mandate",
+      "name": "Government OSI mandates (GOSIP) + ISO backing — the rival-lineage pull/squeeze",
+      "kind": "politics",
+      "direction": "both",
+      "acted_on": [
+        { "target": "rel-osi", "target_kind": "lineage", "direction": "pull", "effect": "elevate", "strength": 0.8 },
+        { "target": "rel-x25", "target_kind": "lineage", "direction": "pull", "effect": "elevate", "strength": 0.7 },
+        { "target": "child-internet", "target_kind": "child", "direction": "squeeze", "effect": "suppress", "strength": 0.6 }
+      ],
+      "when": "1985-1990",
+      "mechanism": "The 1985 US National Research Council recommended migrating FROM TCP/IP TO OSI; the 1988 Commerce Department mandated OSI compliance for federal purchases after Aug 1990 (GOSIP); European governments tied funding to OSI. This PULLED the OSI/X.25 lineage (mandates, investment, the belief it was 'inevitable') while SQUEEZING TCP/IP (officially slated for replacement). LINEAGE-RELATIVE direction (R20, ratified): the SAME policy pulled one lineage and squeezed its rival.",
+      "confidence": 0.88,
+      "_veridicality_note": "(R21 graduation datum) The OSI-inevitability belief was a real institutional FORCE (it drove the NRC recommendation + GOSIP + a decade of investment) with a FALSE object — OSI-at-scale never shipped ('OSI is now inevitable' — Metcalfe 1989, proved wrong by 1995). This is the SECOND independent instance of Manhattan's phantom-forcing (real force, false object) -> R21 graduates. A forcing_events.veridical flag would record: ~0.85 the belief drove real forcing; ~0.85 the object was a phantom."
+    },
+    {
+      "id": "fe-cyclades-defund",
+      "name": "France's PTT defunds CYCLADES in favor of Minitel/Transpac",
+      "kind": "politics",
+      "direction": "both",
+      "acted_on": [
+        { "target": "act-cyclades", "target_kind": "lineage", "direction": "squeeze", "effect": "kill", "strength": 0.9 },
+        { "target": "sw-datagram-root", "target_kind": "sub_wrapper", "direction": "squeeze", "effect": "starve", "strength": 0.4 },
+        { "target": "rel-minitel", "target_kind": "lineage", "direction": "pull", "effect": "fund", "strength": 0.8 }
+      ],
+      "when": "1978-1981",
+      "mechanism": "The French telecom monopoly (DGT) chose the connection-oriented Transpac/Minitel over Pouzin's connectionless CYCLADES, cut CYCLADES' funding (1978); the network went offline (1981). LINEAGE-RELATIVE (R20): SQUEEZED the datagram pioneer (kill) while PULLING the virtual-circuit rival (Minitel). THE DEEPEST RIVAL-COUPLING IRONY: the datagram CYCLADES pioneered survived into TCP/IP and WON globally; Minitel was eventually shut down (2012). A patron that EXTINGUISHED its own winning lineage (the inverse of a flame-keeper — bears on R29, see discrepancies[6]).",
+      "confidence": 0.88,
+      "_lineage_relative_note": "(R20, ratified; + R23 graduation datum) the single best rival-lifecycle-coupling datum: the state's pull on one lineage (Minitel) WAS the squeeze on its rival (CYCLADES), and the suppressed idea (datagram) later defeated the favored one. Feeds the DEFERRED R23 second instance."
+    },
+    {
+      "id": "fe-commercialization",
+      "name": "NSF commercialization / deregulation (lifting the commercial-traffic ban; backbone retirement)",
+      "kind": "politics",
+      "direction": "both",
+      "acted_on": [
+        { "target": "child-internet", "target_kind": "child", "direction": "pull", "effect": "accelerate", "strength": 0.9 },
+        { "target": "rel-osi", "target_kind": "lineage", "direction": "squeeze", "effect": "kill", "strength": 0.7 },
+        { "target": "rel-x25", "target_kind": "lineage", "direction": "squeeze", "effect": "kill", "strength": 0.6 }
+      ],
+      "when": "1991-1995",
+      "mechanism": "The NSF lifted the Acceptable Use Policy's ban on commercial traffic (1991-92) and retired the NSFNET backbone (30 Apr 1995), handing the Internet to commercial ISPs. This DEREGULATION PULL accelerated TCP/IP to global dominance (free + available + already-deployed) while SQUEEZING the now-pointless OSI/X.25 mandates to death (GOSIP dropped OSI 1994-95). LINEAGE-RELATIVE (R20): the deregulation that pulled TCP/IP was the same event that killed OSI's regulatory backing. The DEREGULATION half of the brief's 'Cold-War + deregulation' double forcing.",
+      "confidence": 0.9
+    },
+    {
+      "id": "fe-web",
+      "name": "The World Wide Web (Berners-Lee/CERN, 1989-91; public domain 1993) — the killer-harvest pull",
+      "kind": "technology",
+      "direction": "pull",
+      "acted_on": [
+        { "target": "child-internet", "target_kind": "child", "effect": "elevate", "strength": 0.9 },
+        { "target": "rel-osi", "target_kind": "lineage", "direction": "squeeze", "effect": "kill", "strength": 0.6 }
+      ],
+      "when": "1989-1995",
+      "mechanism": "The Web gave the Internet a mass-market application that ran ONLY on TCP/IP; its explosive growth (and CERN's 1993 royalty-free release) made TCP/IP the obvious universal choice and rendered the OSI debate moot. A harvest that fed back as a FORCING PULL on its own parent-child — the killer argument that ended the protocol wars. (Recorded as forcing because it acted on the WELD's victory, beyond being a descendant.)",
+      "confidence": 0.88
+    }
+  ],
+
+  "sources": [
+    {
+      "name": "Wikipedia, 'Packet switching'",
+      "type": "encyclopedia",
+      "url": "https://en.wikipedia.org/wiki/Packet_switching",
+      "what_used_for": "the invention + priority dispute (Baran RAND 1959-64 / P-2626 1962 / RM-3420 1964; Davies NPL 1965-66, coined 'packet', NPL network 1970; Kleinrock queueing theory + the contested origin claim; Davies' 2001 rebuttal; McKenzie; Taylor; Kleinrock's 2023 acknowledgment); the datagram (Pouzin) vs internetworking (Cerf-Kahn) distinction; ARPANET incorporating Baran + Davies.",
+      "reliability": 0.85
+    },
+    {
+      "name": "Wikipedia, 'Protocol Wars'",
+      "type": "encyclopedia",
+      "url": "https://en.wikipedia.org/wiki/Protocol_Wars",
+      "what_used_for": "the rival stacks (TCP/IP vs OSI 1984 vs X.25 1976 vs proprietary SNA/DECnet/XNS) and their backers; the timeline (X.25 ascendance 1976; flag day 1983; GOSIP mandates 1988; JANET IP overtakes X.25 1991; GOSIP drops OSI 1994-95; NSFNET retired 1995); WHY TCP/IP won (datagram + end-to-end + rough-consensus-and-running-code + UNIX bundling + commercialization); X.25/Minitel/Transpac (Pouzin 'IBM vs Telecommunications'); the rival-lifecycle-coupling.",
+      "reliability": 0.85
+    },
+    {
+      "name": "Andrew L. Russell, 'OSI: The Internet That Wasn't' (IEEE Spectrum) + 'Rough Consensus and Running Code and the Internet-OSI Standards War'",
+      "type": "scholarly-history",
+      "url": "https://spectrum.ieee.org/osi-the-internet-that-wasnt",
+      "what_used_for": "the 'two visions' of standardization (open bottom-up vs formal state/PTT); the WHIG-VS-REVISIONIST historiography (TCP/IP's contingent, not inevitable, victory); the STRAWMAN-framing of OSI (Internet engineers 'lampooned OSI as a misguided monstrosity'; Marshall Rose 1990 'ugly'; Russell's own 2006 'OSI as a foil'); GOSIP's toothlessness; Metcalfe 1989 'OSI is now inevitable'; INWG (Cerf chair, 1975 CCITT rejection, Cerf resigned); Pouzin/Zimmermann/Bachman.",
+      "reliability": 0.85,
+      "_reliability_note": "high for the revisionist thesis (Russell is the leading scholarly historian of the protocol wars); carried as the revisionist pole against the whig narrative."
+    },
+    {
+      "name": "Cerf & Kahn, 'A Protocol for Packet Network Intercommunication' (IEEE Trans. Comms, May 1974) + HistoryOfInformation / IEEE Milestones",
+      "type": "primary",
+      "url": "https://www.cs.princeton.edu/courses/archive/fall06/cos561/papers/cerf74.pdf",
+      "what_used_for": "the internetworking specification (gateways + datagrams + a common protocol); the term 'Internet' (~1973, abbrev. 'inter-networking of networks'); the split into TCP + IP (1978); DARPA's operational launch 1983; the 1973 open-architecture problem (connecting ARPANET + SATNET + ALOHANET).",
+      "reliability": 0.9
+    },
+    {
+      "name": "Wikipedia, 'ARPANET' + Internet Society 'A Brief History of the Internet'",
+      "type": "encyclopedia",
+      "url": "https://en.wikipedia.org/wiki/ARPANET",
+      "what_used_for": "the institutional cascade (Licklider/IPTO 1962-63 'Intergalactic Network'; Taylor launches ARPANET 1966; Roberts + packet-switching from Davies/Baran; BBN IMP contract 1969; first IMP at UCLA 30 Aug 1969; NCP 1970); Kahn's four open-architecture ground rules (1973); the ARPANET decommissioned 1990; the internetworking-vs-single-network distinction.",
+      "reliability": 0.85
+    },
+    {
+      "name": "Wikipedia, 'CYCLADES' + 'Louis Pouzin' + Inria 'Louis Pouzin: a major Internet figure'",
+      "type": "encyclopedia",
+      "url": "https://en.wikipedia.org/wiki/CYCLADES",
+      "what_used_for": "Pouzin coined 'datagram'; CYCLADES first implemented end-host reliability (the end-to-end principle); Cerf & Kahn acknowledged CYCLADES in the 1974 paper; Le Lann carried concepts into TCP; France chose connection-oriented Minitel/Transpac; CYCLADES defunded 1978, offline 1981 — the starved-lineage / rival-coupling datum.",
+      "reliability": 0.85
+    },
+    {
+      "name": "Wikipedia, 'International Network Working Group' + historyofcomputercommunications.info",
+      "type": "encyclopedia",
+      "url": "https://en.wikipedia.org/wiki/International_Network_Working_Group",
+      "what_used_for": "the 1976 INWG compromise protocol (Cerf-McKenzie-Scantlebury-Zimmermann), presented to CCITT by Barber, adopted by NEITHER the CCITT NOR the ARPANET (Cerf 'could not persuade the TCP community'); the CCITT adopting X.25 instead (1976); the partially-failed/forked welding stage.",
+      "reliability": 0.8
+    },
+    {
+      "name": "Wikipedia, 'National Science Foundation Network' + 'Commercialization of the Internet'",
+      "type": "encyclopedia",
+      "url": "https://en.wikipedia.org/wiki/National_Science_Foundation_Network",
+      "what_used_for": "NSFNET 1986-1995; the Acceptable Use Policy banning commercial traffic; NSF's 1992 intent to phase out federal backbone support; the 30 Apr 1995 backbone retirement + the lifting of commercial-traffic restrictions; the privatization to commercial ISPs.",
+      "reliability": 0.85
+    },
+    {
+      "name": "Wikipedia, 'Sputnik crisis' + SpaceNews 'Feb. 7, 1958: U.S. Creates ARPA' + history.state.gov 'Sputnik 1957'",
+      "type": "encyclopedia",
+      "url": "https://en.wikipedia.org/wiki/Sputnik_crisis",
+      "what_used_for": "Sputnik launched 4 Oct 1957; the Cold-War technological panic; Eisenhower creating ARPA Feb 1958 as the high-risk-research agency; ARPA as the parent agency of the ARPANET; the Cold-War forcing context (incl. Baran's survivable-network motivation).",
+      "reliability": 0.85
+    },
+    {
+      "name": "Wikipedia, 'History of the Internet' + 'World Wide Web' (Berners-Lee/CERN) + 'Internet Engineering Task Force' / 'Internet Architecture Board' / 'Vint Cerf'",
+      "type": "encyclopedia",
+      "url": "https://en.wikipedia.org/wiki/History_of_the_Internet",
+      "what_used_for": "the Web (Berners-Lee CERN 1989; first website info.cern.ch Aug 1991; public domain 1993) as the dominant harvest; the dot-com/platform/social/cloud harvest; IETF formed 1986 (from GADS, under the IAB); RFC 985 (May 1986); ISOC 1992 + the IETF moving under ISOC; ICANN 1998; the cascade's governance hand-off.",
+      "reliability": 0.85
+    }
+  ]
+}
