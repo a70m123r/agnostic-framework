@@ -8,6 +8,17 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-06-09 — frame-lock PILOT: first real ΔL-in-bits (bar-to-promote, controlled ground truth)
+
+The bar-to-promote run for the frame-lock protocol (Pav's steer). No torch/HF here, so the disciplined first step: validate the MDL-synergy metric on controlled ground-truth tensors with KNOWN verdicts (cf. Pilot-2) before real model-merging. 8-agent dynamic workflow (2 lock+pipeline → 5 measure → 1 synthesize). Tier-3 PILOT, surfaced for ratification; nothing promoted; convergence list stays 9.
+
+- `candidates/frame_lock_pilot_RESULTS.md` + `candidates/frame_lock_data/` (lock_pilot.yaml with pre-compute called shots, sha256 `747ed7f2…`; mdl_synergy.py; cases.py; per-case runners). The first actual ΔL in bits the protocol ever required.
+- **CONFIRMED:** the P1 non-additivity witness is load-bearing — the naive BES-4.4/PID form `min[K(M|A),K(M|B)]−K(M|A,B)` is *inverted* on these cases (rates a pure additive blend ~28× above genuine nonlinear synergy: ADD +880k vs SYN +31k bits @ b=16), while the witnessed affine-residual `L(R_AB)` separates correctly (SYN 905k ≫ ADD 105k).
+- **REFUTED (operational, R1–R4 for ratification):** R1 synergy clause = witnessed residual not min−joint; R2 null = affine blend + floor-relative contrast, not copy-null/absolute-threshold (the locked absolute τ false-PASSed ADD/ROT/ALLOY — 2 hits / 3 misses); R3 verdict at FINE resolution, not the coarse r_top (which annihilates genuine synergy too — P3b needs residual-floor-subtraction); R4 code residuals on the child's b-bit grid, not their own range (own-range coding inverts the witness).
+- **Bar: PARTIAL** — leg-1-on-ground-truth MET; real HF model-merging (now carrying R1–R4) remains; leg-2 lock-before-data demonstrated via content-hash + git strict-ancestry (lock committed before results); leg-3 witness works floor-relative, fails as an absolute gate. The `frame_lock_protocol_DRAFT.md` carries a top Pilot-update callout.
+
+---
+
 ## 2026-06-09 — frame-lock protocol DRAFT (closes the formalization's #1 hole), stress-hardened
 
 Continues the parents-produce-W_C formalization (entry below). Per Pav's steer ("spin up a dynamic workflow for the frame-lock protocol"). One Tier-3 working DRAFT, surfaced for Cowork+Pav ratification (not compiled; convergence list stays 9; no tier promotion):
