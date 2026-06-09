@@ -8,6 +8,44 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-06-09 — frame-lock protocol DRAFT (closes the formalization's #1 hole), stress-hardened
+
+Continues the parents-produce-W_C formalization (entry below). Per Pav's steer ("spin up a dynamic workflow for the frame-lock protocol"). One Tier-3 working DRAFT, surfaced for Cowork+Pav ratification (not compiled; convergence list stays 9; no tier promotion):
+
+- `candidates/frame_lock_protocol_DRAFT.md` — the pre-registration discipline that makes `PPWc(W_A,W_B | frame)` non-frame-shoppable and falsifiable (the hole the formalization §4 triple-convergence named). A hash-committed `lock.yaml` — frame, C_frame, the span W_A←S→W_B, coding scheme, a DERIVED resolution band, synergy threshold, a non-additivity witness, and a called-shot prediction — committed as a strict git-ancestor of the first W_C MDL artifact (the Pilot-2 falsifier-before-data precedent), adjudicated by a reviewer from lock+report alone. Three gates in fixed order: parent-count → pushout non-degeneracy → synergy-across-the-band.
+
+Built by an 11-agent dynamic workflow (4 decompose → 1 assemble → 5 adversarial stress-test → 1 synthesize). **All five red-teamers found a real leak/overshoot in the assembled v1; all five patches folded into v2:** P1 non-additivity witness (kills coupled-plate cymatics on the *same rule* that passes LCAO), P2 state-dependence Clause 2 (separates ACMP from cymatics by mechanism, not by an incompatible double reading), P3a/b child-anchored resolution ceiling (closes the alloy resolution-shop), P4 called-shot frame-shopping bond (prices the max-over-k option a flat log2(k) toll could not), P5a/b frame-purity + conjunction-over-NULL (restores rocks-in-space = NULL). All four settled anchors (cymatics fails every frame / ACMP passes / rocks time-pass space-null / additive fails) survive every patch **by mechanism** (draft §5). Eight residual holes flagged (look-then-lock deepest: git proves lock-before-commit, not lock-before-knowledge). Cross-model review PENDING (offered). Bar to promote (draft §7): first real MDL synergy in bits on model-merging weight-space, computed *after* filing a real `lock.yaml`. No timeline/JSON bump (working draft).
+
+---
+
+## 2026-06-09 — Audit v09 RATIFIED + Tier-1 fixes applied (V9-F1 through V9-F7)
+
+`audits/v09.md` ratified from `audits/v09_DRAFT.md` (preserved) by Cowork. Verdict CONFIRMED: canon/positioning-layer HELD-with-CONCERNs; six SKETCH register/operationalization fixes + one rule_of_three_SKETCH fold-discipline fix applied per audit §6. Mechanical/text fixes only — nothing compiled to canon; convergence list stays 9; candidate doc still byte-identical; no tier advanced; no continuation written.
+
+**Applied to `candidates/adversarial_substrate_dynamics_BAR_A_SKETCH.md` (V9-F1 through V9-F5):**
+- **F1** — SKETCH:5 + SKETCH:948 register down-tuned (the closure-mode-register the audit caught one cycle earlier; flattened without re-narrating the flattening).
+- **F2** — §C2.2-B (SKETCH:954): corrected "three independent analyses converged" to "two analyses produced consistent bounds" + named the shared "no-q ⇒ deception undefined" premise; the floor is real but established one way, not three.
+- **F3** — §IT auditor-corrections line (SKETCH:773): qualified math-verification scope (exact identities + exact-on-instrumented-gold-rows leverage-ratio computation; order-of-magnitude on social rungs).
+- **F4** — §3.3-T (SKETCH:979): named the schema-vs-data mismatch (atlas's `latent-transposition` edge type is a schema slot, but the 7 ant→military edges are labeled `convergence / NOT transposition` in the dataset). Don't cite the edge type as populated until labels are corrected; structural argument stands on the ant↔warfare case directly.
+- **F5** — §5.1-R + §2A C2A.1: (a) operationalized the heredity gate with Eigen error-threshold + quasispecies + Price covariance machinery already in §RS; named the three test clauses (variation / differential persistence / heredity-transmission) and the descriptive-not-predictive scope honestly; (b) added §2A C2A.1 cross-reference to the §5.1-R bound so the strong "every-rung tracking" register doesn't sit un-annotated.
+
+**Applied to `HANDOFF.md` (V9-F6):**
+- **F6** — C4 line corrected: the candidate doc is byte-identical across the arc (no pointer line was ever added); the prior "should show only the pointer-to-sketch addition at the top" wording was factually wrong. The discipline holds stricter than the original brief assumed.
+
+**Applied to `candidates/rule_of_three_SKETCH.md` (V9-F7 per audit §5.5):**
+- **§3** — demoted the 1/2/3/4+ ladder from "structural argument for why three" to "abstract methodological heuristic"; added explicit counter-census (canon's compile-loop is a TWO; W_C is a 2-spawns-third; the §2A ladder is 6-rung; convergence list is 9; observer-frame-kernels is a 4 or dual-2+2; A+/− A−/+ is a TWO-with-bridging-asymmetry).
+- **§5** — annotated every three in the census as free-standing-triad / two-plus-emergent / 3-slice-of-larger-N; added the rival-N's the framework runs with equal frequency (6-rung §2A ladder, 9-item convergence list, 4-kernel observer-frame, compile-loop two-step, 5-tier evidence-grade, 5W+H six-element).
+- **§7** — demoted §5.1-R from "strongest independent case" to "internal replication only" (framework-internal + likelihood-ratio-1 per §5.5 reflexive-validation finding); named true-Bar-A external candidates (pre-registered scientific controversies + historical decision-process retrospectives).
+- **§8:147** — narrowed the genuine-novelty inventory: only **N≥3 simultaneous-candidate requirement** + **spread-rating as first-class criterion** are genuinely new; utility / legacy-alignment / scientific-rigor were already in cont 27 §3 / cont 18 / framework's general operational discipline.
+
+**Audit v09 ratified header** (`audits/v09.md:3-5`): Cowork preamble recording the ratification + the uncomfortable-but-correct §5.5 ruling on the sketch + the rule that V9-F1 through V9-F7 were applied in place. Source DRAFT preserved.
+
+Discipline cross-check: no canon edited; no candidate tier advanced; no continuation written this round; the C7 register risk that was the audit's flagship concern was acknowledged in audit §1 and Cowork ratification preamble both declined to celebrate the catch. Self-audit caveat (Claude-Code-on-Claude-Code) stays honest; external A− is owed before any finding hardens into structural canon.
+
+Next: Pav decides between (a) Brief 2 (Stage 2 outcome-blind base-rate census — the bounded claim's real Bar A test) and (b) further deliberation on the two new structural drafts (`observer_frame_kernels_DRAFT.md` + `parents_produce_WC_FORMALIZATION_DRAFT.md`, 2026-06-09 entry below) and/or (c) further Latent Olympics build. V10 cadence target: 2026-06-23 (or earlier if ship density warrants).
+
+---
+
 ## 2026-06-09 — parents-produce-W_C formalization (frame-indexed) + the frame insight, cross-modeled
 
 Per Pav's steer (1 = formalize the convergence test; 4 = capture the frame insight). Two Tier-3 working DRAFTS, surfaced for Cowork+Pav ratification (not compiled; convergence list stays 9):
