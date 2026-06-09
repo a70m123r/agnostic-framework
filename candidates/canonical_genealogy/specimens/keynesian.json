@@ -1,0 +1,1437 @@
+{
+  "_template_doc": "CANONICAL WRAPPER-GENEALOGY SPECIMEN — v2 render, one merge event as a rooted genealogy that STOPS AT THE PRESENT. Spec: ../SCHEMA_v2.md. Tier-3 exploratory data-harvest for Cowork+Pav ratification — NOT canon, NOT a promotion, convergence list stays 9. This specimen is a WORKED EXAMPLE / CALIBRATION INSTRUMENT chosen to HAMMER the five new v2 dimensions (D1 lifecycle+type; D2 actors-as-institutions/governments; D3 physical/latent layer filter; D4 exogenous forcing events; D5 graded-by-default), NOT a 10th convergence. The Keynesian case is the batch's crisis-pulled, government-adoption, multi-cycle-dormancy-and-reinterpretation specimen. Every node/edge carries SOFT confidence in [0,1] + a frame_layer (D3); welds carry a graded lifecycle+type (D1); actors carry carrier_of/inhabitant_of (D2); exogenous forces live in forcing_events[] (D4); graded membership is the default (D5). bits_note QUALITATIVE ONLY. Sources web-checked (see sources[]); framework-vs-record tensions flagged in discrepancies[].",
+
+  "schema_version": "0.2-canonical-genealogy",
+  "specimen_id": "keynesian-economics",
+  "_status": "Tier-3 WORKING specimen — exploratory data-harvest, surfaced for Cowork+Pav ratification. NOT canon, NOT a tier promotion, does NOT grow the convergence list (stays 9). All confidences are SOFT scores in [0,1]; bits are qualitative only. This is the CRISIS-PULLED + STATE-MOBILIZED + MULTI-CYCLE-DORMANCY worked example, used to STRESS-TEST v2's D1-D5 (the weld's whole lifecycle is paced by EXTERNAL crises — Depression births it, WWII consolidates it, stagflation buries it, the GFC and COVID exhume it twice into structurally different objects).",
+  "extends": {
+    "_comment": "Linkage back to the Phase-1 wrapper CLASS this merge-event specimen instantiates (SCHEMA_v2.md §5). Same graph, deeper zoom. A SOCIAL-SCIENCE / economics instance of the parents-produce-W_C wrapper-overlap pattern; NOT itself a 10th convergence — a calibration instrument for the D4 (exogenous-forcing) and D1 (lifecycle) machinery.",
+    "phase1_file": "../latent_olympics_data/wrapper_classes_phase1.json",
+    "phase1_class_name": "bes_convergence_9 candidate doc — the parents-produce-W_C structural-test record (the five-condition gate the whole list is scored against); the merge instantiates the same wrapper-overlap pattern on the macroeconomics substrate.",
+    "relation_note": "INSTANCE-OF, not a new class row. The General Theory weld is rendered as a single weld event (a pushout W_A ⊔_S W_B) to exercise v2's exogenous-forcing layer (D4), institution/government actors (D2), and multi-cycle dormancy/reinterpretation lifecycle (D1). It is the social-science sibling of the physics/biology v1 specimens: like Darwin+Mendel it has a mediating welder a layer up (the IS-LM/neoclassical synthesis ≈ the population-genetics analogue) and a re-attribution; like QG it decouples surprise from child-confidence — but via a DIFFERENT mode (born-then-died-then-reborn-different, not unborn)."
+  },
+  "generated": "2026-06-09",
+  "frames_present": ["time", "space", "knowledge", "meaning"],
+  "layers_present": ["physical", "latent"],
+  "_layers_present_comment": "(D3) BOTH layers heavily populated — this is a defining feature of the specimen: governments/institutions (physical) are load-bearing actors, and the theory + its rival schools (latent) are the trunk and canopy. The physical layer is unusually thick here (vs Maxwell), which is the point of the D2/D3 stress-test.",
+  "overall_confidence": 0.62,
+  "_overall_confidence_comment": "ALWAYS read paired with fuzzy_layer — a SPLIT aggregate, never a flat scalar. The TRUNK FACTS are high: the General Theory (Feb 1936) welded a classical/marginalist apparatus to an effective-demand insight via the multiplier+liquidity-preference machinery, redefined the economy as a demand-determined aggregate, and was adopted by governments after WWII (~0.85-0.92). The figure is pulled DOWN by (a) the child being unstable-over-time — born, hardened, pronounced dead in the 1970s, and re-born as structurally DIFFERENT objects in 2008 and 2020 (child as a single stable wrapper ~0.55, mirroring R9 from a new direction); (b) the second parent ('classical economics') being substantially a STRAWMAN Keynes constructed (caps the clean two-parent rendering, ~0.6); (c) the durable taught object (IS-LM) being forged by the synthesizers, not Keynes (a re-attribution, ~0.8); (d) the weld's NECESSITY being disputed by a new-classical school that captured the discipline for a generation (~0.78). High-confidence core, honestly-fuzzy frontier — and the fuzz here is TEMPORAL (the child's identity drifts across decades) more than depth-wise."
+  ,
+  "schema_capabilities": {
+    "_comment": "(D3+D5) Declared render capabilities. Static block — announces what a v2 render supports.",
+    "layer_filter": {
+      "_comment": "(D3) The render is FILTERABLE on the physical/latent axis; actors are the bridge. Hand-checkable here: PHYSICAL view = Keynes, the Cambridge Circus, HM Treasury, the US Federal Government, the Fed/IMF/G20, the Great Depression/WWII/stagflation/GFC/COVID events. LATENT view = the General Theory child, the classical apparatus + underconsumption parents, the multiplier/liquidity-preference seam, the descendant schools (synthesis, post-Keynesian, monetarism, new-classical, New Keynesian, MMT).",
+      "supported": true,
+      "axes": ["physical", "latent"],
+      "bridge_via": "actors",
+      "note": "A render may show the PHYSICAL view (actors, institutions, places, events) OR the LATENT view (ideas, theories, sub-wrappers); every node declares frame_layer; actors straddle and connect the two."
+    },
+    "graded_membership": {
+      "_comment": "(D5) Fuzzy edges by design — graded membership is the pervasive default. Heavily exercised here: the 'classical' parent is a graded straddle between a real wrapper and Keynes's caricature; 'Keynesianism' is a graded family of four mutually-critical wrappers; each forcing event's influence is a graded strength.",
+      "supported": true,
+      "default": "graded",
+      "applies_to": [
+        "node membership", "weld extent (sub_welds)", "actor role-strength (carrier/inhabitant)",
+        "forcing-event influence (acted_on.strength)", "frame-layer straddle (physical/latent membership)",
+        "lifecycle phase membership", "weld_type weight"
+      ],
+      "note": "Every boundary is a membership/confidence in [0,1]; the certain core is just where membership ~1.0. Crisp = the membership happens to be ~0/1."
+    }
+  },
+
+  "child": {
+    "_comment": "W_C — the emergent wrapper born in this merge. The trunk node. Corresponds to one Phase-1 wrapper_classes[] row, zoomed in. Its instability OVER TIME is the specimen's signature (see status_trajectory + discrepancies).",
+    "id": "child-keynesian-macro",
+    "name": "Keynesian macroeconomics / aggregate-demand management (demand-determined output with a state residual-demand-maker)",
+    "kernel": "The redefinition of the economy as an aggregate SYSTEM whose total output and employment are DEMAND-determined and can stably settle BELOW full employment, so that government fiscal/monetary action is needed to close the gap. Net product: 'the economy is a single circular-flow object with an emergent equilibrium that can be STUCK at involuntary unemployment; the state is the residual demand-maker.' It welds (a) the classical/marginalist apparatus Keynes inherited from Marshall/Pigou with (b) the underconsumptionist insight that aggregate demand can be chronically deficient — fused via the proximate seam of the multiplier + liquidity-preference machinery. Born canonically with Keynes's 'General Theory of Employment, Interest and Money' (Feb 1936); but the TAUGHT object (the IS-LM / aggregate-demand model) was actually forged by the synthesizers (Hicks 1937, Hansen, Samuelson 1948/1955) — a re-weld + partial re-attribution.",
+    "frame": ["time", "knowledge", "meaning", "space"],
+    "_frame_note": "PRIMARY: knowledge (a theoretical/learned-competence render of the economy) + meaning (it reorganized what 'the economy', 'unemployment' and 'the state's role' SIGNIFY — it invented 'macroeconomics' as a level). time (a flow/circular-income dynamic; multiplier rounds over time). SECONDARY: space (national-economy bounded object; the closed-economy assumption, and the cross-country adoption pattern). A wide-frame child like the Modern Synthesis — and, like QG, it touches MEANING because in the absence of a single stable child, 'which Keynesianism is real / is one even needed' is an era-relative, observer-relative judgment.",
+    "frame_layer": {
+      "_comment": "(D3) An idea-child — latent ~1.0. But unusually it STRADDLES toward physical because the child is partly CONSTITUTED by a physical institution (the demand-managing state): the theory and the apparatus of government are hard to separate here. Recorded as a small physical membership.",
+      "layer": "latent",
+      "physical_membership": 0.25,
+      "latent_membership": 1.0
+    },
+    "status": "resurrected",
+    "_status_enum": "one of: risen | active | dormant | resurrected | stale | open-conjecture. 'resurrected' chosen because the dormancy->resurrection arc (TWICE) is THIS specimen's defining feature; but see status_trajectory — the honest answer is 'active-contested, repeatedly buried-and-exhumed', a state a single enum cannot hold.",
+    "status_trajectory": [
+      {
+        "_comment": "(R5) the child as a TRAJECTORY of states across DECADES — pushes R5 PAST Darwin+Mendel: not just hardening/relabeling but a full die-and-REINCARNATE-as-a-different-object cycle, TWICE. status_trajectory here needs to support DISCONTINUOUS re-identification, not just state-relabeling (see gaps).",
+        "state": "born-contested (verbal, ambiguous, immediately disputed)",
+        "when": "1936-1937",
+        "by": "Keynes; first reviewers; Hicks's IS-LM reduction begins the domestication",
+        "confidence": 0.9
+      },
+      {
+        "state": "hardened/orthodox ('the Age of Keynes' / 'Golden Age of Capitalism')",
+        "when": "~1945-1973",
+        "by": "the neoclassical synthesis (Hicks/Modigliani/Samuelson) + government institutionalization (Employment Act 1946; Bretton Woods; postwar settlement); pulled by WWII validation",
+        "confidence": 0.88
+      },
+      {
+        "state": "dormant/eclipsed ('we are all monetarists now'; pronounced dead)",
+        "when": "~1973-2008",
+        "by": "1970s stagflation falsifying the naive Phillips-curve form; the monetarist (Friedman) + new-classical (Lucas) counter-revolution; the Thatcher/Reagan political turn",
+        "confidence": 0.82
+      },
+      {
+        "state": "resurrected-as-REINTERPRETED #1 (fiscal-stimulus practice + New-Keynesian DSGE)",
+        "when": "2008-2009",
+        "by": "the GFC crisis-pull; G20 coordinated stimulus; Krugman/DeLong/Stiglitz; New Keynesian microfoundations integrated with neoclassical equilibrium",
+        "confidence": 0.8
+      },
+      {
+        "state": "resurrected-as-REINTERPRETED #2 (largest peacetime fiscal expansion; MMT flirtation)",
+        "when": "2020-2021",
+        "by": "the COVID crisis-pull; CARES Act + further bills; MMT enters the policy conversation",
+        "confidence": 0.72
+      },
+      {
+        "state": "active-contested (a live, repeatedly-buried-and-exhumed wrapper; never fully hardened nor fully stale)",
+        "when": "2021-present",
+        "by": "ongoing fiscal/monetary debate; post-pandemic inflation re-opening the stagflation-era critique; rival schools coexisting",
+        "confidence": 0.7
+      }
+    ],
+    "confidence": 0.72,
+    "_confidence_comment": "Confidence W_C is a real, distinct emergent (not a relabel of a parent / not a pile). (R9) INDEPENDENT of weld.surprise_confidence (0.9). Held at 0.72 (NOT lower like QG's 0.4, NOT as high as Maxwell's 0.97): the child WAS unambiguously born and reorganized the 20th-c. state (so > QG), but it is unstable-over-time — pronounced dead and re-born DIFFERENTLY twice, and it fractures into 4 mutually-critical schools that disagree about what it IS (so < Maxwell). The instability is TEMPORAL/identity-wise, not birth-wise.",
+    "utility": {
+      "_comment": "Pav's three utility legs as prose + an enumerated affordance list.",
+      "unifier": "Welds the classical marginalist apparatus (Marshall/Pigou) to the heretical effective-demand tradition (Malthus/Hobson) AND, at a level up, unifies previously-separate price-theory pieces ('savings', 'investment', 'interest', 'money') into ONE aggregate income-determination system — inventing MACROECONOMICS as a level distinct from summed individual markets. Bridge degree high but CONTESTED: post-Keynesians say the synthesis 'unification' was a domestication that betrayed the original; new-classicals say the macro level is a category error (no real unification, just a mislabeling of aggregated micro). A disputed unifier.",
+      "compressor": "Collapses a mass of separate intuitions (gluts, hoarding, demand deficiency, unemployment, the trade cycle) into ONE short statement: output and employment are set by aggregate demand, which can settle below full employment because liquidity preference + the marginal efficiency of capital + the multiplier let saving and investment be equated by INCOME adjusting rather than the interest rate. Bits QUALITATIVE ONLY: the joint description (a demand-determined aggregate with an under-employment equilibrium) is plainly shorter than carrying classical full-employment equilibrium AND the under-consumptionists' mechanism-less demand-deficiency as two unreconciled accounts — order-of-magnitude only, no bit value computed (latent embeddings are a LATER step), and on a social/contested substrate at that.",
+      "action_spaces_unlocked": [
+        "Discretionary fiscal policy (deficit spending to close an output gap) — the core policy affordance; New Deal, the Employment Act 1946, ARRA 2009, CARES 2020 all descend from it",
+        "National-income accounting (GDP/GNP as a measurable aggregate) — the statistical apparatus the demand-determined view requires and helped motivate (Kuznets/Stone, wartime)",
+        "Counter-cyclical demand management as a standing function of the central bank + treasury (Councils of Economic Advisers, automatic stabilizers)",
+        "The IS-LM diagram (Hicks 1937) — the trainable, teachable model that made the theory operational for policy and pedagogy",
+        "The Phillips curve trade-off (1958) — an inflation-unemployment policy menu (later the FALSIFIED naive form blamed for the dormancy)",
+        "International monetary architecture — Bretton Woods (IMF/World Bank, 1944), Keynes co-architect; the managed-exchange-rate + reserve-currency toolkit",
+        "Modern stabilization macro generally — DSGE models with nominal rigidities (New Keynesian) descend from the synthesis-of-the-synthesis"
+      ]
+    }
+  },
+
+  "weld": {
+    "_comment": "The merge itself: parents -> child. The heart of the specimen and the locus of the parents-produce-W_C test. NOTE three load-bearing tensions live here: (1) the W_B 'classical' parent is partly a STRAWMAN Keynes built; (2) the durable taught child (IS-LM) was forged by a MEDIATING welder a layer up, not by Keynes — a re-attribution; (3) the surprise is high-confidence while the child is only moderate-confidence because the child is unstable-OVER-TIME. The whole lifecycle is paced by EXTERNAL forces in forcing_events[] (D4) — see lifecycle (D1) for the weighted index.",
+    "id": "weld-general-theory",
+
+    "parents": [
+      {
+        "_role": "W_A",
+        "name": "The classical / Marshallian-marginalist apparatus (Marshall's supply-demand + Pigou; Say's-law equilibrium economics)",
+        "kernel": "The inherited orthodox price-theory machinery: markets clear, supply creates its own demand (Say's law), the interest rate equilibrates saving and investment, and the economy self-corrects to full employment; involuntary unemployment is transient/frictional. Keynes was TRAINED in this (Marshall's pupil) and built W_C OUT OF its apparatus (he kept much of the marginalist calculus) while attacking its full-employment conclusion. CRITICAL TWIST: Keynes partly RECONSTRUCTED this parent as a single 'classical' bloc (lumping Ricardo, Mill, Marshall, Pigou) and attributed to it an 'always full employment' assumption that arguably no one quite held — a foil partly manufactured to be welded against (see discrepancy #1).",
+        "frame": ["knowledge", "meaning"],
+        "confidence": 0.78,
+        "_confidence_note": "The apparatus is real and high-confidence as a body of method; the confidence is capped because the SHARP 'classical school as Keynes characterized it' is substantially his caricature — so 'W_A as the parent Keynes welded against' is part-real, part-constructed.",
+        "parent_kind": "content",
+        "_parent_kind_note": "Primarily CONTENT (the substantive equilibrium theory) but ALSO method: Keynes inherited the marginalist analytical apparatus (the calculus he reused) from this parent — a content/method straddle."
+      },
+      {
+        "_role": "W_B",
+        "name": "The underconsumption / deficient-effective-demand tradition (Malthus's 'effective demand' vs Ricardo; Hobson; the Birmingham School/Attwood; Foster & Catchings)",
+        "kernel": "The heretical underground intuition — running from Malthus (who LOST the debate to Ricardo ~1820s) through J.A. Hobson to 1920s American underconsumptionists (Foster & Catchings) — that aggregate demand can be CHRONICALLY deficient: gluts and unemployment are possible because saving need not be automatically re-spent, so the economy can fail to absorb its own output. Had the INSIGHT but no rigorous mechanism; was scorned by classical orthodoxy for ~100 years. The 'content-parent' supplying the demand-deficiency idea Keynes made rigorous.",
+        "frame": ["knowledge", "meaning"],
+        "_frame_note": "knowledge + meaning; a heterodox/heretical body of doctrine. Gains a time-frame only once embedded in the multiplier dynamics (the income-adjustment process).",
+        "confidence": 0.82,
+        "parent_kind": "content"
+      }
+    ],
+    "_parents_comment": "(v1, kept) The clean BINARY projection [W_A, W_B] — the framework's canonical visualization: the marginalist APPARATUS (W_A) turned on the heretics' DEMAND-DEFICIENCY intuition (W_B). ALWAYS present. The honest set is N-ary (see parents_full): Wicksell/Stockholm as a near-identical independent content-parent, and Kahn's multiplier + Keynes's liquidity-preference as the method/instrument welding-operator.",
+
+    "parents_full": [
+      {
+        "_comment": "(R1) the honest N-ary parent set. The binary parents[] above is the declared 2-projection OF this set.",
+        "id": "pf-classical",
+        "name": "Classical/Marshallian-marginalist apparatus (W_A, as above)",
+        "kernel": "Orthodox equilibrium price theory + Say's law + self-correction to full employment; Keynes's inherited apparatus AND his (partly-constructed) foil.",
+        "frame": ["knowledge", "meaning"],
+        "confidence": 0.78,
+        "parent_kind": "content",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.05, "latent_membership": 1.0 }
+      },
+      {
+        "id": "pf-underconsumption",
+        "name": "Underconsumption / deficient-effective-demand tradition (W_B, as above)",
+        "kernel": "Malthus->Hobson->Foster&Catchings: aggregate demand can be chronically deficient; the heretical content-parent.",
+        "frame": ["knowledge", "meaning"],
+        "confidence": 0.82,
+        "parent_kind": "content",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.05, "latent_membership": 1.0 }
+      },
+      {
+        "id": "pf-wicksell-stockholm",
+        "name": "Wicksell / Stockholm-school monetary-disequilibrium tradition (cumulative process; break from the quantity theory)",
+        "kernel": "Wicksell's cumulative process (natural vs market rate of interest) and the Stockholm School (Lindahl, Myrdal, Ohlin) ex-ante/ex-post saving-investment analysis — an INDEPENDENT, near-identical content-parent that reached much of the General Theory's territory contemporaneously in the 1930s (and Sweden arguably adopted demand-management FIRST). A multiple-independent-origin content root.",
+        "frame": ["knowledge", "meaning"],
+        "confidence": 0.78,
+        "parent_kind": "content",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.05, "latent_membership": 1.0 }
+      },
+      {
+        "id": "pf-multiplier-liqpref",
+        "name": "Kahn's 1931 multiplier + Keynes's liquidity-preference construction (the welding OPERATOR)",
+        "kernel": "The ACTIVE welding apparatus that made deficient demand CALCULABLE: Kahn's 1931 employment multiplier (an infinite series of re-spending rounds) + Keynes's own liquidity-preference theory of interest (money demand fixes the rate, so income — not the interest rate — adjusts to equate saving and investment). This is the METHOD/INSTRUMENT parent: it is what turned the W_B intuition into a mechanism inside the W_A apparatus.",
+        "frame": ["knowledge", "time"],
+        "confidence": 0.85,
+        "parent_kind": "method",
+        "_parent_kind_note": "METHOD/INSTRUMENT — the calculational machinery (multiplier) + the interest-theory device (liquidity preference) that performed the weld; the analogue of Maxwell's d/dt displacement-current operator. The multiplier itself has a contested deep genealogy (pre-Kahn originators — see discrepancy #4).",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.05, "latent_membership": 1.0 }
+      }
+    ],
+
+    "mediating_wrapper": {
+      "_comment": "(R1) the agent that PERFORMED the DURABLE weld a layer up — NOT one of the ancestral parents. The population-genetics analogue of this specimen.",
+      "name": "The IS-LM / neoclassical-synthesis formalization (Hicks 1937 'Mr Keynes and the Classics'; Modigliani 1944; Samuelson 1948 textbook / 1955 'neoclassical synthesis')",
+      "kernel": "The IS-LM aggregate-demand model and its textbook propagation: the mathematized, teachable structure that fused Keynes's verbal General Theory BACK with the classical apparatus into a single determinate system (goods-market IS curve + money-market LM curve). It sits a layer UP from Keynes/Marshall/Malthus and is what actually produced the DURABLE TAUGHT child ('Keynesianism' as economists learned it for 30 years). Exactly analogous to population genetics welding Darwin+Mendel, and to the Maxwellians forging the 4-equation 'Maxwell's equations'.",
+      "who_or_what": "John Hicks (1937), Franco Modigliani (1944), Paul Samuelson (1948 textbook; coined 'neoclassical synthesis' 1955), Alvin Hansen (American transmission)",
+      "confidence": 0.85,
+      "_disowned_note": "DISOWNED-MEDIATOR wrinkle (see gaps): Hicks himself later (~1980s) RENOUNCED IS-LM, and post-Keynesians reject the synthesis as 'bastard Keynesianism' — the mediator was later repudiated by its own author and by a school. A wrinkle beyond R1."
+    },
+
+    "shared_sub_object_S": "S = the multiplier + liquidity-preference + IS-LM machinery — the formal apparatus where 'savings', 'investment', and 'interest' (from the classical parent) and 'deficient demand' (from the underconsumption parent) become the SAME object expressed as an aggregate INCOME-determination system. The seam is NOT '1936 book meets classical textbook'; it is the move whereby Keynes accepted the classical identity I(r)=S(Y) but REINTERPRETED it so that INCOME (not just the interest rate) adjusts to equate saving and investment. That reinterpretation IS the seam — the layer where the two parents' vocabularies fuse into one calculable system. (The population-genetics analogue: as Hardy-Weinberg gene frequencies are the seam where Darwin's 'variation' and Mendel's 'factor' become one object, the income-determination system is the seam where classical equilibrium and demand-deficiency become one object.)",
+
+    "S_structure": {
+      "_comment": "(R12) S is NON-UNITARY and itself CONTESTED — like Darwin+Mendel's Fisher-Wright-fractured S, NOT like QG's multi-faceted-but-agreed S. agreed:false.",
+      "components": [
+        "Kahn's 1931 multiplier (re-spending rounds; the income-amplification mechanism)",
+        "Keynes's liquidity-preference theory of interest (money-demand fixes the rate; frees income to adjust)",
+        "The marginal efficiency of capital (investment as a function of expected return vs the interest rate)",
+        "The income-adjustment reinterpretation of the saving=investment identity (the core conceptual seam)",
+        "The IS-LM formalization of all the above (Hicks 1937) — itself a CONTESTED component of S"
+      ],
+      "internal_conflict": "The IS-LM formalization of S (Hicks) is REJECTED by post-Keynesians as a DISTORTION of the true seam — they hold the real seam is fundamental UNCERTAINTY + liquidity preference (the General Theory ch.12/17), which IS-LM's mechanical equilibrium suppresses. So the seam along which the parents were welded is itself disputed between the synthesis reading (IS-LM determinate equilibrium) and the post-Keynesian reading (uncertainty-driven, non-ergodic). The seam has a rift.",
+      "agreed": false
+    },
+
+    "surprise": "A STABLE under-full-employment equilibrium that NEITHER parent predicts. Classical economics (W_A) says the economy self-corrects to full employment (Say's law); underconsumptionism (W_B) intuited demand could fall short but had no rigorous mechanism. Only the WELD — liquidity preference × marginal efficiency of capital × multiplier — shows the economy can SETTLE and STAY stuck at involuntary unemployment, with no automatic force returning it to full employment. Reachable only from BOTH parents jointly: the marginalist apparatus turned on the heretics' demand-deficiency intuition. SECOND-ORDER surprise: the weld INVENTS macroeconomics as a level distinct from summed individual markets — aggregate demand as a PRIMARY cause, and the PARADOX OF THRIFT (individually-rational saving can be collectively self-defeating, an emergent aggregate property absent in any single agent, exactly like a wrapper-level property not present in the parts). DEEPEST surprise: it makes the STATE the residual demand-maker, converting an economic theory into a permanent REORGANIZATION of the 20th-century state — a meaning-frame shift neither Darwin-of-economics nor the heretics articulated.",
+    "surprise_confidence": 0.9,
+    "_surprise_confidence_comment": "(v1, R9) ORTHOGONAL to child.confidence (0.72). HIGH (0.9): the synergy (a stable under-employment equilibrium; the paradox of thrift; the invention of macroeconomics) is real and decisive and unreachable from either parent alone — this is well-attested and not seriously disputed even by critics (who dispute its NECESSITY and POLICY, not that the weld produced a genuinely new aggregate level). NOTE the sharp divergence from child.confidence (0.72): a maximally fertile, genuinely-emergent weld whose CHILD is nonetheless unstable-over-time. A SECOND mode of R9's orthogonality, distinct from QG: in QG the child is UNBORN (nothing consolidated); here the child was BORN, hardened, DIED, and was RE-BORN differently — high surprise, but moderate child-confidence because the child is unstable-over-time, not unborn.",
+
+    "surprise_priority": {
+      "_comment": "(R15) the CONJECTURE-IN-A-PARENT: the under-employment / demand-deficiency surprise pre-existed the quantitative weld as a low-confidence guess inside W_B for ~100 years. The economics analogue of Faraday's 1846 light-guess.",
+      "first_conjectured_by": "Thomas Malthus (the 'effective demand' / general-glut argument vs Ricardo, ~1820), revived by J.A. Hobson (underconsumption, ~1889-1909) and the 1920s underconsumptionists",
+      "when": "~1820 (Malthus), ~1889-1920s (Hobson, Foster & Catchings)",
+      "dormant_interval": "~1820-1930s: the demand-deficiency idea lost to Ricardo/Say's-law orthodoxy and lay heretical for ~100 years — a low-confidence weld 'drawn but not confirmed' inside W_B, awaiting the OTHER parent (the marginalist apparatus + the multiplier) to make it calculable. Keynes explicitly rehabilitated Malthus as 'the first of the Cambridge economists' and Hobson as a neglected prophet.",
+      "confidence": 0.82
+    },
+
+    "bits_note": "QUALITATIVE ONLY. The joint description is clearly shorter than the two parents carried separately: ONE statement ('output and employment are set by aggregate demand, which can equilibrate below full employment because income adjusts to equate saving and investment') replaces TWO unreconciled accounts (classical full-employment self-correction; mechanism-less demand-deficiency). The synergy is genuine, not additive — the under-employment equilibrium is unreachable from either parent's own vocabulary. NO bit value computed: MDL-in-bits needs latent embeddings (a LATER step per SCHEMA.md §3), and the substrate is social/contested with a child that changes identity over time, making any bit count doubly ill-posed. Not 'principled-null' (the child exists, unlike QG) — just a normal qualitative-for-now assessment.",
+
+    "survived": [
+      "The marginalist analytical apparatus (the calculus; supply/demand curves) — kept from W_A",
+      "Marginal efficiency of capital; the interest rate; money — classical price-theory pieces RE-PURPOSED into the aggregate system",
+      "The demand-deficiency / under-employment INSIGHT — kept from W_B (now mechanized)",
+      "The multiplier (Kahn 1931) and liquidity preference — the welding operators, which BECAME the durable core",
+      "The saving=investment identity — KEPT but REINTERPRETED (income adjusts, not just the rate) — the seam itself",
+      "PARENTS PERSIST AS PROCEDURAL-ROOT STUBS: 'classical/neoclassical price theory' survives literally as the OTHER curve of IS-LM and as the microfoundations the New Keynesians later re-imported — the dormant compiled original W_A° lives on inside the synthesis"
+    ],
+    "dropped": [
+      "Say's law (supply creates its own demand) — the DROP that is the whole point of the weld",
+      "Automatic self-correction to full employment",
+      "The classical (loanable-funds) theory of interest as the sole equilibrator of saving and investment (replaced by liquidity preference + income adjustment)",
+      "W_B's saltationist/crankish underconsumptionist baggage (the 'gluts from greed' moralizing) — the rigorous core kept, the heretical framing dropped",
+      "CONTESTED-dropped-then-revived: the classical MICROFOUNDATIONS — dropped by Keynes (macro as primary), RE-IMPORTED by the New Keynesians (2008-era) and demanded by the new-classicals (the Lucas critique) — so a feature dropped at birth was forced back later, which is part of why the revived child is method-incompatible with the original"
+    ],
+
+    "feature_ledger": [
+      {
+        "_comment": "(R7) the PER-VERSION survived/dropped matrix — needed here because 'Keynesianism' is at least FOUR mutually-critical wrappers (spread across TIME, where QG's were held simultaneously) that keep/drop DIFFERENT features. This is the temporal analogue of QG's candidate-children ledger.",
+        "feature": "Microfoundations (the economy reduces to optimizing individual agents)",
+        "kept_by": ["New Keynesian (DSGE, sticky-price microfoundations)", "New-classical/RBC (rivals; microfoundations PRIMARY)"],
+        "dropped_by": ["Orthodox/IS-LM synthesis (aggregates primary)", "Post-Keynesian (rejects the equilibrium frame)", "Original Keynes (macro as a distinct level)"]
+      },
+      {
+        "feature": "Fundamental (non-probabilistic) uncertainty + liquidity preference as the deep seam",
+        "kept_by": ["Post-Keynesian (Robinson/Minsky; this IS the true seam)", "Original Keynes (ch.12/17)"],
+        "dropped_by": ["Orthodox/IS-LM synthesis (suppressed into mechanical equilibrium)", "New Keynesian (rational expectations + calculable risk)", "New-classical (rational expectations)"]
+      },
+      {
+        "feature": "Active discretionary fiscal demand-management (the policy core)",
+        "kept_by": ["Orthodox/IS-LM synthesis", "Post-Keynesian", "New Keynesian (in a crisis / at the zero lower bound)", "MMT (strongly)"],
+        "dropped_by": ["New-classical/RBC (policy-ineffectiveness; the Lucas critique)", "Monetarism (rules over discretion; monetary not fiscal)"]
+      },
+      {
+        "feature": "A determinate equilibrium framework (the economy as a solvable system)",
+        "kept_by": ["Orthodox/IS-LM synthesis", "New Keynesian (DSGE)", "New-classical (Walrasian equilibrium)"],
+        "dropped_by": ["Post-Keynesian (non-ergodic, fundamentally uncertain, no stable equilibrium)"]
+      }
+    ],
+
+    "frame_of_weld": ["knowledge", "meaning", "time"],
+    "_frame_of_weld_comment": "The weld HOLDS in knowledge (it was BUILT as theory — the income-determination system Keynes/Kahn/Hicks constructed), in MEANING (its decisive move is a re-signification: 'unemployment is a system property / the state is the demand-maker' — a meaning-frame reorganization), and in TIME (the multiplier is a dynamic process over re-spending rounds; the child lives as a flow). NOTE this differs from child.frame (which adds space). Critically, the weld also engages MEANING for the QG-like reason: with no single stable child, 'is this a real new object or a relabeling, and is one even needed' is an era-relative judgment (see weld_necessity_confidence + discrepancy #5).",
+    "weld_operator": "The MULTIPLIER + LIQUIDITY PREFERENCE as the active frame-ingredients — specifically the income-adjustment mechanism: making INCOME (not the interest rate) the variable that moves to equate saving and investment is the operative move that lets the system settle below full employment. The economics analogue of Maxwell's displacement-current d/dt term: not a passive backdrop but the specific device that does the welding. Without the multiplier (re-spending dynamics) and liquidity preference (freeing the interest rate from the saving=investment job), the two parents sit side-by-side and make nothing — exactly the 'two rocks in space = nothing; through time = strata' test, here 'classical apparatus + demand-deficiency intuition = nothing; through the multiplier = an under-employment equilibrium'.",
+
+    "lod_scale": "Holds at the FIELD/theory grain ('Keynes welded classical equilibrium to demand-deficiency via the multiplier, inventing demand-determined macro'). ZOOM IN and the single weld dissolves into an ordered chain of sub-welds (Malthus-Ricardo glut debate -> Hobson underconsumption -> Wicksell cumulative process -> Kahn 1931 multiplier -> the Cambridge 'Circus' critique of the Treatise 1930-31 -> the General Theory 1936 -> the Hicks/Modigliani/Samuelson synthesis 1937-55). At fine grain it is NOT one weld but a multi-decade cascade with TWO distinct births (Keynes 1936; the synthesis 1937-55) — the weld_chain. Its sub-structure CONFIRMS the weld (it is a coherent chain, like Maxwell/Darwin-Mendel), NOT contradicts it (unlike QG) — the fork in THIS specimen is over TIME (revivals as different objects) and over SCHOOLS, not a simultaneous shattering at first zoom.",
+    "sub_welds": [
+      {
+        "_comment": "(R3) ordered chain — one weld at coarse grain is a family of sub-welds zoomed in.",
+        "id": "sw-malthus-ricardo",
+        "name": "Malthus vs Ricardo on general gluts / effective demand (the W_B seed; Malthus loses, the idea goes dormant)",
+        "when": "~1814-1823",
+        "confidence": 0.8
+      },
+      {
+        "id": "sw-hobson-underconsumption",
+        "name": "Hobson's underconsumption + the 1920s underconsumptionists (Foster & Catchings) — W_B revived heretically",
+        "when": "~1889-1928",
+        "confidence": 0.78
+      },
+      {
+        "id": "sw-wicksell-stockholm",
+        "name": "Wicksell cumulative process -> Stockholm School (independent near-identical content)",
+        "when": "1898-1930s",
+        "confidence": 0.75
+      },
+      {
+        "id": "sw-kahn-multiplier",
+        "name": "Kahn's 1931 multiplier (the welding operator made calculable)",
+        "when": "1931",
+        "confidence": 0.88
+      },
+      {
+        "id": "sw-cambridge-circus",
+        "name": "The Cambridge 'Circus' critique of Keynes's Treatise on Money (1930) -> pivot toward effective demand",
+        "when": "1930-1931",
+        "confidence": 0.82
+      },
+      {
+        "id": "sw-general-theory",
+        "name": "BIRTH-1: the General Theory (the raw, verbal, contested object)",
+        "when": "1936",
+        "confidence": 0.92
+      },
+      {
+        "id": "sw-synthesis",
+        "name": "BIRTH-2: the IS-LM / neoclassical-synthesis formalization (the durable taught object; a re-weld)",
+        "when": "1937-1955",
+        "confidence": 0.85
+      }
+    ],
+    "coherence_under_zoom": "confirms",
+    "_coherence_under_zoom_comment": "(R3) CONFIRMS — the sub-structure is a coherent ordered chain that supports the weld (like Maxwell and Darwin+Mendel), NOT a simultaneous shattering (unlike QG). The 'fork' in this specimen is DIACHRONIC (the child re-incarnates differently across decades) and SCHOOL-wise (4 rival readings), not a first-zoom contradiction of the weld itself. Worth noting as a contrast: a multi-cycle-dormancy weld can be confirms-under-zoom yet still profoundly unstable over TIME — coherence_under_zoom (a synchronic diagnostic) and lifecycle-stability (a diachronic one) are independent.",
+
+    "when": {
+      "_comment": "(R2) a PROCESS with a duration and several defensible dates; TWO births (the re-weld).",
+      "from": "1930",
+      "to": "1955",
+      "defensible_dates": [
+        "1930-1931 (the Cambridge Circus + Kahn's multiplier — conception/first-conjecture)",
+        "Feb 1936 (the General Theory — BIRTH-1, the canonical date)",
+        "1937 (Hicks 'Mr Keynes and the Classics' — IS-LM, the start of BIRTH-2)",
+        "1944 (Modigliani) / 1948 (Samuelson's textbook) / 1955 (Samuelson coins 'neoclassical synthesis') — BIRTH-2 consolidated"
+      ]
+    },
+
+    "dormancy_intervals": [
+      {
+        "_comment": "(v1, R11) PRE-HISTORY DORMANCY of the W_B parent — the demand-deficiency idea was heretical for ~100 years before the Depression revived it. why_frame names the FRAME only; the external cause (the dominance of Ricardian/Say's-law orthodoxy) is intellectual, not a single exogenous event, so no forcing_events entry — this dormancy is knowledge-framed.",
+        "from": "~1823",
+        "to": "~1930",
+        "why": "The underconsumption/effective-demand idea (W_B) lost the debate to Ricardo; Say's law became canon; underconsumptionists were treated as cranks. A ~100-year heretical dormancy of the demand-deficiency parent, ended when the Great Depression created the demand for exactly such a theory.",
+        "why_frame": "knowledge"
+      },
+      {
+        "_comment": "(v1, R11) THE MAIN DORMANCY of the CHILD: ~1973-2008. CAUSE-FRAME SPLIT — partly knowledge-frame (stagflation falsified the naive Phillips curve), partly physical/political-frame (a FUNDED ideological movement displaced it from curricula and treasuries). A single 'why' cannot hold both (the Darwin+Mendel / QG cause-frame finding, here in economics). The EXTERNAL events (1970s stagflation; the neoliberal turn) are recorded ONCE in forcing_events[] — this why_frame names only the frames.",
+        "from": "1973",
+        "to": "2008",
+        "why": "Eclipsed by (a) the 1970s stagflation falsifying the naive Phillips-curve form Keynesianism had been reduced to (a refuting FACT), with the Lucas critique (1976) as the theoretical kill-shot; AND (b) the neoliberal/monetarist POLITICAL turn (Chicago funding + Thatcher 1979 / Reagan 1981) actively displacing it from policy and graduate curricula (a funded ideological movement). See forcing_events fe-stagflation and fe-neoliberal-turn.",
+        "why_frame": "knowledge, physical/political"
+      }
+    ],
+    "revival": {
+      "_comment": "(v1, R10) TWO revivals, BOTH reinterpreted (not same) — a STRONGER form than the binary 'same|reinterpreted' allows (see gaps). Each revival wakes a method-incompatible object under the inherited name. The fuller multi-cycle structure is in dormancy_revival (the rich prose field below) and indexed in lifecycle (D1); this object records the headline.",
+      "when": "2008-2009 (revival #1); 2020-2021 (revival #2)",
+      "by": "(#1) Krugman/DeLong/Stiglitz + the academic New-Keynesian mainstream + G20/IMF; (#2) the COVID fiscal response + MMT advocates",
+      "trigger": "(#1) the 2008 Global Financial Crisis (conditions resembling the 1930s) -> near-instant G20 fiscal stimulus; (#2) the 2020 COVID-19 pandemic -> the largest peacetime fiscal expansion in history. Both are EXTERNAL crisis-pulls (forcing_events fe-gfc, fe-covid).",
+      "kind": "reinterpreted",
+      "_kind_note": "REINTERPRETED both times, and DIFFERENTLY each time. Revival #1 wakes a NEW-KEYNESIAN object: sticky-price microfoundations inside a neoclassical-equilibrium DSGE frame — closer in METHOD to Keynes's classical opponents than to Keynes. Revival #2 flirts with MMT, a different heterodox object again. 'same|reinterpreted' is too coarse: each resurrection wakes a structurally DIFFERENT, method-incompatible object wearing the same name (see gaps: needs a degree-of-reinterpretation / method-continuity axis)."
+    },
+    "reattribution": {
+      "_comment": "(R10) the canonical NAME attaches partly to the WRONG node — the Maxwell-analogue. Direct sibling of the 'Maxwell's equations were the Maxwellians' finding.",
+      "named_after": "John Maynard Keynes ('Keynesian economics', 'the Keynesian Revolution')",
+      "actually_produced_by": "The durable TAUGHT object (IS-LM aggregate-demand model) was forged by Hicks (1937), Modigliani (1944) and Samuelson (1948/55) — the mediating welders. Keynes's own General Theory is verbal, ambiguous, and its IS-LM reduction was contested; Hicks himself later RENOUNCED IS-LM; post-Keynesians call the synthesis 'bastard Keynesianism'.",
+      "why": "The canonical name attaches to the originator of the RAW, contested form (Keynes 1936), not to the producers of the durable taught STRUCTURE (the synthesizers 1937-55). The weld CHAINS: birth-1 (Keynes) -> a second welding event (the synthesis) producing a structurally different, partly-DISOWNED object. Triple-attests the re-weld + mediating-welder variables and adds a 'disowned-mediator' wrinkle (Hicks repudiated his own weld)."
+    },
+    "weld_chain": [
+      {
+        "_comment": "(R10) the weld CHAINS — birth-1's W_C becomes the input to birth-2.",
+        "birth_label": "BIRTH-1: the General Theory (raw, verbal, contested)",
+        "weld_ref": "sw-general-theory"
+      },
+      {
+        "birth_label": "BIRTH-2: the IS-LM / neoclassical-synthesis re-weld (the durable taught child; partly disowned)",
+        "weld_ref": "sw-synthesis"
+      }
+    ],
+
+    "candidate_children": [],
+    "_candidate_children_comment": "(R6) EMPTY in the QG sense (no SIMULTANEOUS family of mutually-rejecting children at first zoom). The Keynesian child DID resolve (it was born and adopted). HOWEVER — and this is a finding — the schools (orthodox/IS-LM, post-Keynesian, New Keynesian, MMT-adjacent) are FOUR mutually-critical wrappers that disagree about what the child IS, but spread across TIME (successive revivals) rather than held simultaneously, AND they are descendants/reinterpretations rather than never-resolved rivals. They are therefore recorded as harvest.descendants + the feature_ledger + status_trajectory, NOT as candidate_children. A frontier note: 'candidate children spread across time vs held simultaneously' is a mode candidate_children[] does not cleanly capture (see gaps).",
+    "unresolved": false,
+    "contest_axis": "",
+    "weld_necessity_confidence": 0.78,
+    "_weld_necessity_confidence_comment": "(R8) 'is a third even NEEDED?' held at 0.78 (NOT empty/1.0). The weld is almost certainly REAL (the Depression and 2008 are hard to explain agent-by-agent; mass involuntary unemployment is a genuine aggregate fact). But its NECESSITY is genuinely DISPUTED by a serious new-classical / real-business-cycle / Austrian minority that holds macroeconomics is a CATEGORY ERROR — the aggregate is just summed optimizing agents (microfoundations primary; the Lucas-critique position) — a school that CAPTURED the discipline for a generation. So this is the falsifier-of-the-weld, LIVE, not 1.0. (Economics instance of QG's semiclassical-dissent slot, but stronger: the dissent here was the orthodoxy for ~25 years.)",
+
+    "lifecycle": {
+      "_comment": "(D1) the weld's GRADED LIFE as a weighted INDEX over dormancy_intervals/revival/status/weld_chain above — does NOT restate their content. This is the RICHEST lifecycle in the batch (full multi-cycle trajectory). The whole trajectory is PACED BY EXTERNAL FORCES (forcing_events D4) — that pacing is the specimen's headline.",
+      "phase_trajectory": [
+        {
+          "_comment": "(D1) GRADED trajectory, NOT an enum; the membership IS the soft value. Phases overlap. This trajectory is unusually LONG and multi-cycle (the defining feature). The 'when' marks the phase; the antagonism STRENGTH lives in pre_weld_relationship (not double-recorded here).",
+          "phase": "pre_weld:complementarity-with-suppressed-antagonism",
+          "membership": 0.85,
+          "from": "~1820",
+          "to": "1930",
+          "note": "W_B (underconsumption) was a heretical underground tradition that classical orthodoxy (W_A) actively SCORNED for ~100 years (Malthus lost to Ricardo; Say's law was canon) — so the parents were antagonists-BY-STATUS before the weld, not symmetric complementary partners. A complementarity/antagonism straddle (see pre_weld_relationship)."
+        },
+        {
+          "phase": "conception/first_conjecture",
+          "membership": 0.85,
+          "from": "1930",
+          "to": "1933",
+          "note": "Kahn's multiplier (1931); the Cambridge 'Circus'; Kalecki and the Stockholm School reaching it independently. The Depression (fe-depression) is the exogenous pull that creates the demand for the theory."
+        },
+        {
+          "phase": "welding(process)",
+          "membership": 0.95,
+          "from": "1933",
+          "to": "1936",
+          "note": "Keynes drafts and publishes the General Theory (Feb 1936) — BIRTH-1 of the raw object."
+        },
+        {
+          "phase": "consolidation/hardening (the 'Age of Keynes' / 'Golden Age of Capitalism')",
+          "membership": 0.9,
+          "from": "1937",
+          "to": "1973",
+          "note": "BIRTH-2 (the IS-LM/neoclassical synthesis) + government institutionalization; pulled hard by WWII validation (fe-wwii) and the postwar settlement (fe-postwar). The taught child hardens."
+        },
+        {
+          "phase": "dormancy/eclipse",
+          "membership": 0.8,
+          "from": "1973",
+          "to": "2008",
+          "note": "Stagflation (fe-stagflation) falsifies the naive Phillips-curve form; the monetarist + new-classical counter-revolution; the neoliberal political turn (fe-neoliberal-turn). 'We are all monetarists now.' Not TOTAL dormancy (it survived inside the synthesis + New Keynesianism), hence membership 0.8 not 1.0."
+        },
+        {
+          "phase": "revival:reinterpreted (#1, GFC)",
+          "membership": 0.85,
+          "from": "2008",
+          "to": "2009",
+          "note": "The GFC (fe-gfc) crisis-pull -> instant G20 fiscal stimulus + New-Keynesian DSGE. Reinterpreted: microfounded, integrated with neoclassical equilibrium — method-incompatible with the original."
+        },
+        {
+          "phase": "revival:reinterpreted (#2, COVID)",
+          "membership": 0.8,
+          "from": "2020",
+          "to": "2021",
+          "note": "The COVID shock (fe-covid) -> largest peacetime fiscal expansion + MMT flirtation. A second, different reinterpretation."
+        },
+        {
+          "phase": "active-contested (never fully hardened nor fully stale; capacity-to-cycle demonstrated)",
+          "membership": 0.75,
+          "from": "2021",
+          "to": null,
+          "note": "A live, repeatedly-buried-and-exhumed wrapper. Post-pandemic inflation re-opens the stagflation-era critique; rival schools coexist. The canonical economic instance of dormancy + squeeze/pull CYCLING."
+        }
+      ],
+      "pre_weld_relationship": {
+        "_comment": "(R14) the SINGLE HOME for the antagonism strength. Distinctive here: a COMPLEMENTARITY-with-suppressed-antagonism — the parents were complementary in CONTENT (apparatus + insight) but antagonistic in STATUS (orthodoxy scorned the heresy for a century). Not a clean single kind.",
+        "kind": "complementarity",
+        "membership": 0.6,
+        "note": "PRIMARY complementarity (the marginalist apparatus and the demand-deficiency insight genuinely complete each other — the weld fuses them) but with a strong SUPPRESSED-ANTAGONISM component (~0.4): W_B was a heretical tradition that W_A's orthodoxy actively scorned for ~100 years (Malthus lost to Ricardo; underconsumptionists were 'cranks'). So unlike Darwin+Mendel's OVERT antagonism (Mendelism as an anti-Darwinian weapon), this is antagonism-by-STATUS/hierarchy, not open warfare — a complementarity/antagonism straddle. Graded: complementarity ~0.6, antagonism ~0.4."
+      },
+      "weld_type": [
+        {
+          "_comment": "(D1) WEIGHTED classification — a weld is SEVERAL types at once; the weight IS the soft value. PRIMARY tags.",
+          "type": "crisis-pulled-weld",
+          "weight": 0.9,
+          "note": "The Great Depression was the SQUEEZE on the old order that PULLED the new theory into existence and into government (fe-depression). The canonical instance of this type — the reason the specimen was chosen."
+        },
+        {
+          "type": "state/war-mobilized-weld",
+          "weight": 0.8,
+          "note": "WWII deficits (fe-wwii) restored full employment exactly as predicted, VALIDATING the theory and mobilizing it into permanent government machinery (Employment Act, Bretton Woods). The war did for Keynesianism's CONSOLIDATION what the Depression did for its birth."
+        },
+        {
+          "type": "re-weld / re-attribution",
+          "weight": 0.75,
+          "note": "The durable taught 'Keynesianism' (IS-LM) was forged by Hicks/Samuelson, not written in Keynes's own contested text — a Maxwell-analogue mediator re-weld (see reattribution + weld_chain)."
+        },
+        {
+          "type": "antagonism-then-fusion",
+          "weight": 0.45,
+          "note": "At the parent level: underconsumption heresy vs classical orthodoxy (status-antagonism for ~100 years) fused by the weld. Weaker/different from Darwin+Mendel's OVERT war — hence 0.45 — because the antagonism was hierarchical scorn, not open battle (see pre_weld_relationship)."
+        },
+        {
+          "type": "unifier-weld",
+          "weight": 0.5,
+          "note": "It DID unify (price-theory pieces into one aggregate income system; invented macro). But CONTESTED: post-Keynesians call the synthesis-unification a domestication/betrayal, and new-classicals deny the macro level unifies anything real (it's mislabeled micro). A disputed unifier — hence 0.5, not 1.0."
+        },
+        {
+          "type": "dormancy-revival-cycling weld",
+          "weight": 0.85,
+          "note": "PROPOSED in BATCH_FINDINGS terms but here promoted to a near-primary tag: the multi-cycle die-and-reincarnate pattern (birth -> hardening -> death -> two reinterpreted rebirths) is the specimen's DEFINING structural feature. (A candidate extension to the controlled vocabulary — flagged in discrepancy #8.)"
+        },
+        {
+          "type": "foil-constructed-weld",
+          "weight": 0.55,
+          "note": "NOVEL candidate type (flagged in discrepancy #1 BEFORE use, per §6 item 7): one parent (W_A 'classical economics') was substantially MANUFACTURED by the welder (Keynes) as a strawman/foil to be welded against, rather than found pre-existing. A weld against a partly-reconstructed parent. (A candidate extension to the controlled vocabulary.)"
+        }
+      ]
+    }
+  },
+
+  "roots": {
+    "_comment": "DOWN, in the PHYSICAL frame. Confidence FADES and depth RISES going deeper. The MEDIATING WRAPPER (the IS-LM/synthesis) is recorded in weld.mediating_wrapper, NOT duplicated here; the sub_wrappers below are the CONTENT/METHOD constituents the child is built from. The ground kernel '(0)' (people) lives in the top-level actors[] group as kind:individual — NOT here (v2 migration).",
+    "sub_wrappers": [
+      {
+        "_comment": "The welding OPERATOR as a sub-wrapper (method root) — the real proximate machinery.",
+        "id": "sub-multiplier",
+        "name": "Kahn's 1931 multiplier (the welding operator)",
+        "kernel": "The employment multiplier: an initial injection of spending generates rounds of re-spending (each recipient spends a fraction), summing to an amplified total change in income/employment. The device that made deficient demand and the gap CALCULABLE. (Pre-Kahn originators exist — see discrepancy #4.)",
+        "frame": ["knowledge", "time"],
+        "depth": 0,
+        "confidence": 0.88,
+        "who_called_it": "Richard Kahn (1931); Keynes (the 'investment multiplier', General Theory ch.10)",
+        "parent_kind": "method",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.05, "latent_membership": 1.0 }
+      },
+      {
+        "id": "sub-liquidity-preference",
+        "name": "Liquidity preference (Keynes's theory of interest)",
+        "kernel": "Money demand (transactions/precautionary/speculative motives) determines the interest rate, so the rate no longer has to equilibrate saving and investment — freeing INCOME to do that job. The device that lets the system settle below full employment.",
+        "frame": ["knowledge"],
+        "depth": 0,
+        "confidence": 0.85,
+        "who_called_it": "J.M. Keynes (General Theory, 1936)",
+        "parent_kind": "method",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.05, "latent_membership": 1.0 }
+      },
+      {
+        "id": "sub-effective-demand",
+        "name": "The principle of effective demand",
+        "kernel": "Aggregate output/employment are set by aggregate demand (the point where aggregate demand price meets aggregate supply price), which can settle below full employment. The conceptual CORE of W_C, rehabilitated from Malthus's 'effective demand'.",
+        "frame": ["knowledge", "meaning"],
+        "depth": 1,
+        "confidence": 0.85,
+        "who_called_it": "Keynes (rehabilitating Malthus)",
+        "parent_kind": "content",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.05, "latent_membership": 1.0 }
+      },
+      {
+        "id": "sub-marshall-apparatus",
+        "name": "Marshallian marginalist apparatus (Marshall's 'Principles', 1890; Pigou)",
+        "kernel": "Supply-demand price theory, marginal analysis, the partial-equilibrium method — the orthodox calculus Keynes was trained in (Marshall's pupil) and built W_C out of. A root of W_A.",
+        "frame": ["knowledge"],
+        "depth": 1,
+        "confidence": 0.88,
+        "who_called_it": "Alfred Marshall / A.C. Pigou",
+        "parent_kind": "content",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.05, "latent_membership": 1.0 }
+      },
+      {
+        "id": "sub-says-law",
+        "name": "Say's law / classical full-employment equilibrium",
+        "kernel": "'Supply creates its own demand' — the proposition that general gluts are impossible and the economy self-corrects to full employment. The classical CONCLUSION Keynes DROPPED; the thing the weld is built to overturn. A root of W_A (and Keynes's foil).",
+        "frame": ["knowledge", "meaning"],
+        "depth": 2,
+        "confidence": 0.8,
+        "who_called_it": "J.-B. Say; David Ricardo; (as a bloc) Keynes's 'classical economists'",
+        "parent_kind": "content",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.05, "latent_membership": 1.0 }
+      },
+      {
+        "id": "sub-underconsumption",
+        "name": "Underconsumption / 'effective demand' heresy (Malthus; Hobson; Foster & Catchings)",
+        "kernel": "The deficient-aggregate-demand intuition running Malthus -> Hobson -> 1920s underconsumptionists. A root of W_B; dormant ~100 years (the surprise_priority node).",
+        "frame": ["knowledge", "meaning"],
+        "depth": 2,
+        "confidence": 0.8,
+        "who_called_it": "Thomas Malthus / J.A. Hobson / Foster & Catchings",
+        "parent_kind": "content",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.05, "latent_membership": 1.0 }
+      },
+      {
+        "id": "sub-wicksell",
+        "name": "Wicksell's cumulative process (natural vs market rate)",
+        "kernel": "Monetary-disequilibrium theory: a gap between the natural and market interest rates drives a cumulative movement of prices/output — a break from the quantity theory and a root of the Stockholm School's independent near-Keynesian content.",
+        "frame": ["knowledge", "time"],
+        "depth": 2,
+        "confidence": 0.75,
+        "who_called_it": "Knut Wicksell (1898); the Stockholm School",
+        "parent_kind": "content",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.05, "latent_membership": 1.0 }
+      },
+      {
+        "id": "sub-national-accounts",
+        "name": "National-income accounting (the measurable aggregate)",
+        "kernel": "GDP/GNP and the circular-flow accounts — the statistical apparatus that makes 'aggregate demand' a measurable object; developed alongside/after the theory (Kuznets; Stone; wartime planning) and required for demand-management to be operational.",
+        "frame": ["knowledge", "space"],
+        "depth": 1,
+        "confidence": 0.8,
+        "who_called_it": "Simon Kuznets / Richard Stone / wartime statistical offices",
+        "parent_kind": "instrument",
+        "_parent_kind_note": "INSTRUMENT root — the measurement apparatus (the economics analogue of Fizeau's light-speed as Maxwell's calibration target): demand-management needs a measured aggregate to manage.",
+        "frame_layer": { "layer": "straddle", "physical_membership": 0.5, "latent_membership": 0.7 }
+      }
+    ]
+  },
+
+  "harvest": {
+    "_comment": "UP, in the LATENT + CULTURAL frame. The tree grows to the present here. INCLUDES the rival/counter-children (monetarism, new-classical) that drove the dormancy AND the reinterpreted revivals (New Keynesian, MMT) — i.e. this specimen's 'candidate children spread across time' live HERE as descendants, not as simultaneous candidate_children. Also institutions-as-harvest (IMF/World Bank) per D2, and the austerity counter-movement as the dark cousin.",
+    "descendants": [
+      {
+        "id": "desc-synthesis",
+        "name": "Neoclassical synthesis / IS-LM (Hicks 1937, Samuelson 1948/55)",
+        "what": "The dominant taught descendant for ~30 years — the mediating-welder's product, also the durable taught child. A child of (Keynes x the classical apparatus, re-fused). Post-Keynesians call it 'bastard Keynesianism'.",
+        "frame": ["knowledge"],
+        "confidence": 0.88,
+        "frame_layer": { "layer": "latent", "physical_membership": 0.05, "latent_membership": 1.0 }
+      },
+      {
+        "id": "desc-postkeynesian",
+        "name": "Post-Keynesian economics (Robinson, Kaldor, the Kalecki lineage, Minsky's financial-instability hypothesis)",
+        "what": "The heterodox 'true Keynesian' counter-child claiming the synthesis betrayed Keynes — keeps fundamental uncertainty + liquidity preference as the real seam; rejects the equilibrium frame. A child that disputes what the parent IS.",
+        "frame": ["knowledge", "meaning"],
+        "confidence": 0.82,
+        "frame_layer": { "layer": "latent", "physical_membership": 0.05, "latent_membership": 1.0 }
+      },
+      {
+        "id": "desc-monetarism",
+        "name": "Monetarism (Friedman)",
+        "what": "A RIVAL child born partly IN REACTION (the natural-rate hypothesis; money-supply rules over discretion) that DROVE the dormancy. An antagonist-descendant — generated by the weld it then suppressed.",
+        "frame": ["knowledge", "meaning"],
+        "confidence": 0.85,
+        "frame_layer": { "layer": "latent", "physical_membership": 0.05, "latent_membership": 1.0 }
+      },
+      {
+        "id": "desc-newclassical",
+        "name": "New-classical / rational-expectations macro (Lucas, Sargent; Prescott RBC)",
+        "what": "The antagonist-child: rational expectations + the Lucas critique (the theoretical kill-shot on naive Keynesian models) + real-business-cycle theory. Holds the macro level is a category error (microfoundations primary) — the school behind weld_necessity_confidence < 1.",
+        "frame": ["knowledge", "meaning"],
+        "confidence": 0.85,
+        "frame_layer": { "layer": "latent", "physical_membership": 0.05, "latent_membership": 1.0 }
+      },
+      {
+        "id": "desc-newkeynesian",
+        "name": "New Keynesian economics (Mankiw, Romer, Stiglitz; menu costs, sticky prices, DSGE)",
+        "what": "The 2008-era REVIVED synthesis-of-synthesis: Keynesian conclusions (demand matters; nominal rigidities) rebuilt ON new-classical microfoundations (rational expectations, DSGE) — closer in METHOD to Keynes's opponents. The object revival #1 actually woke.",
+        "frame": ["knowledge"],
+        "confidence": 0.85,
+        "frame_layer": { "layer": "latent", "physical_membership": 0.05, "latent_membership": 1.0 }
+      },
+      {
+        "id": "desc-mmt",
+        "name": "Modern Monetary Theory (MMT)",
+        "what": "The 2020-era heterodox revival flirtation: a monetary-sovereign government faces an inflation constraint, not a financing constraint. A different heterodox object again — the (partial) face of revival #2.",
+        "frame": ["knowledge", "meaning"],
+        "confidence": 0.7,
+        "frame_layer": { "layer": "latent", "physical_membership": 0.1, "latent_membership": 1.0 }
+      },
+      {
+        "id": "desc-phillips",
+        "name": "The Phillips curve (1958)",
+        "what": "A descendant that became the FALSIFIED naive form blamed for the dormancy: an empirical inflation-unemployment trade-off, read as a policy menu, then broken by 1970s stagflation. The child's own most consequential vulnerability.",
+        "frame": ["knowledge"],
+        "confidence": 0.85,
+        "frame_layer": { "layer": "latent", "physical_membership": 0.05, "latent_membership": 1.0 }
+      },
+      {
+        "id": "desc-institutions",
+        "name": "INSTITUTIONS as harvest: the IMF + World Bank (Bretton Woods 1944); national Councils of Economic Advisers; the central-bank/fiscal-coordination toolkit",
+        "what": "The weld's most consequential PHYSICAL descendants — Keynes co-architected the postwar international monetary order (IMF/World Bank, 1944); the Employment Act 1946 created the US Council of Economic Advisers. A theory whose harvest includes standing GOVERNMENT MACHINERY (the D2/D3 bridge: a latent theory descending into physical institutions).",
+        "frame": ["space", "meaning", "knowledge"],
+        "confidence": 0.85,
+        "frame_layer": { "layer": "straddle", "physical_membership": 0.85, "latent_membership": 0.5 }
+      }
+    ],
+    "cultural_harvest": [
+      {
+        "domain": "other",
+        "_subdomain": "political-economy / the settlement",
+        "what": "The entire MIXED-ECONOMY WELFARE-STATE SETTLEMENT — full-employment statutes, automatic stabilizers, the postwar social-democratic consensus; 'we are all Keynesians now' (widely attributed to Nixon, 1971, and earlier to Friedman in a qualified form). The weld's largest cultural/political spill: it reorganized what the 20th-c. state was FOR."
+      },
+      {
+        "domain": "other",
+        "_subdomain": "the dark cousin / counter-movement",
+        "what": "AUSTERITY politics as the recurring COUNTER-movement — the standing political antagonist that re-emerges each time the crisis-pull fades (1930s 'Treasury view', 1980s, post-2010 European austerity). The dark cousin of demand-management: the doctrine that the state should NOT be the residual demand-maker."
+      },
+      {
+        "domain": "art",
+        "what": "The post-2008 POPULAR REVIVAL of Keynes as a public figure — Robert Skidelsky's biography and 'Keynes: The Return of the Master' (2009); Keynes-vs-Hayek as a public-imagination framing of the macro debate; the meme/figure of 'Keynes' as shorthand for stimulus."
+      },
+      {
+        "domain": "art",
+        "_subdomain": "the meme spill",
+        "what": "'Fear the Boom and Bust' — the 'Keynes vs Hayek' EconStories rap video (2010, Papola & Roberts), with a sequel (2011): the macro debate as viral edutainment. The clearest art/meme spill of the weld and its rivalry into popular culture."
+      },
+      {
+        "domain": "tech",
+        "what": "National-income accounting + macroeconometric models (the Klein models; modern central-bank DSGE forecasting suites) — the computational/measurement apparatus the demand-determined view spawned, now standing infrastructure of every treasury and central bank."
+      }
+    ]
+  },
+
+  "relatives": {
+    "_comment": "WIDE edges (SCHEMA_v2.md §2.5; still flagged for ratification). Cousins, influences, siblings, rivals spanning physical AND latent. The DEFEATED/RIVAL frameworks (monetarism, new-classical) are ALSO recorded as harvest.descendants (they are reaction-children); here they appear as RIVAL edges to capture the lateral-antagonism relation, mirroring QG's rival edges.",
+    "edges": [
+      {
+        "id": "rel-monetarism",
+        "name": "Monetarism / the Chicago School (Friedman)",
+        "relation": "rival",
+        "frame": ["knowledge", "meaning"],
+        "confidence": 0.85,
+        "note": "The defeating rival that drove the 1970s-2000s dormancy ('we are all monetarists now'). Both a descendant (reaction-child) and a lateral rival — recorded in both roles, as QG's candidate-children behave like lateral rivals.",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.05, "latent_membership": 1.0 }
+      },
+      {
+        "id": "rel-austrian",
+        "name": "Austrian school (Hayek; the Keynes-Hayek debate)",
+        "relation": "rival",
+        "frame": ["knowledge", "meaning"],
+        "confidence": 0.8,
+        "note": "The contemporaneous 1930s rival (Hayek's 'Prices and Production' vs Keynes's 'Treatise'/'General Theory') and the enduring free-market antagonist; part of the school that disputes the weld's NECESSITY. The 'Keynes vs Hayek' framing is the popular face of the whole rivalry.",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.05, "latent_membership": 1.0 }
+      },
+      {
+        "id": "rel-stockholm",
+        "name": "The Stockholm School (Lindahl, Myrdal, Ohlin; Wicksell lineage)",
+        "relation": "sibling",
+        "frame": ["knowledge"],
+        "confidence": 0.78,
+        "note": "A near-simultaneous INDEPENDENT sibling-weld reaching much of the same territory in the 1930s (and Sweden arguably adopted demand-management first) — the multiple-independent-discovery pattern (see discrepancy #3). A sibling, not a parent, because it developed in parallel rather than feeding in.",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.05, "latent_membership": 1.0 }
+      },
+      {
+        "id": "rel-kaleckian",
+        "name": "Kaleckian / Marxian macro (Kalecki's independent effective-demand theory)",
+        "relation": "sibling",
+        "frame": ["knowledge", "meaning"],
+        "confidence": 0.75,
+        "note": "Kalecki independently derived the essentials (1933-35) from a Marxian, class-conscious starting point BEFORE the General Theory; a sibling-origin and the root of the post-Keynesian counter-child. A reflexive curiosity: a sibling that arguably 'got there first' (Robinson's 'a neglected prophet').",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.05, "latent_membership": 1.0 }
+      },
+      {
+        "id": "rel-marginalist-revolution",
+        "name": "The marginalist revolution (Jevons/Menger/Walras, 1870s) -> general equilibrium",
+        "relation": "cousin",
+        "frame": ["knowledge"],
+        "confidence": 0.75,
+        "note": "The latent cousin that produced the W_A apparatus and, via Walras, the general-equilibrium frame the new-classicals later used to RE-ABSORB the macro child. The grandparent-apparatus that both built and (later) besieged the weld.",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.05, "latent_membership": 1.0 }
+      }
+    ]
+  },
+
+  "actors": [
+    {
+      "_comment": "(D2) NEW first-class group. The SINGLE store for the ground kernel '(0)', generalized BEYOND people to institutions/governments. Actors are the BRIDGE between physical and latent: carrier_of pushes latent wrappers UP; inhabitant_of lives WITHIN other wrappers. This specimen is a HEAVY D2 case — governments and institutions are load-bearing (unlike Maxwell). Individuals first, then universities, then governments, then international institutions.",
+      "id": "act-keynes",
+      "name": "John Maynard Keynes",
+      "kind": "individual",
+      "frame_layer": { "layer": "physical", "physical_membership": 1.0, "latent_membership": 0.3 },
+      "role": "Originator/welder of W_C (the General Theory weld)",
+      "when": "b. 5 Jun 1883, d. 21 Apr 1946; General Theory Feb 1936; 'How to Pay for the War' 1940; Bretton Woods 1944",
+      "where": "Cambridge, England; the British Treasury; Bretton Woods (New Hampshire)",
+      "culture": "Cambridge/Marshallian academic economics; the British Treasury & policy elite; the Bloomsbury/liberal-establishment milieu",
+      "relation": "originator (the welder; the name-bearer of the re-attributed child)",
+      "confidence": 0.97,
+      "carrier_of": [
+        { "wrapper": "child-keynesian-macro", "role": "founds", "strength": 0.95, "when": "1936", "confidence": 0.95 },
+        { "wrapper": "sub-effective-demand", "role": "champions", "strength": 0.9, "when": "1936", "confidence": 0.9 },
+        { "wrapper": "sub-liquidity-preference", "role": "founds", "strength": 0.95, "when": "1936", "confidence": 0.95 },
+        { "wrapper": "desc-institutions", "role": "founds", "strength": 0.7, "when": "1944", "confidence": 0.85, "_note": "Keynes co-architected Bretton Woods (IMF/World Bank) — a carrier of the institutional harvest UP into physical form" }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "sub-marshall-apparatus", "layer": "latent", "role": "works_within", "strength": 0.85, "when": "1900s-1930s", "confidence": 0.9, "_note": "trained as Marshall's pupil; built W_C out of the apparatus he inhabited" },
+        { "wrapper": "HM Treasury / British policy elite", "layer": "physical", "role": "operates_in", "strength": 0.85, "when": "1915-1946", "confidence": 0.9 }
+      ]
+    },
+    {
+      "id": "act-kahn",
+      "name": "Richard Kahn",
+      "kind": "individual",
+      "frame_layer": { "layer": "physical", "physical_membership": 1.0, "latent_membership": 0.25 },
+      "role": "Builder of the welding operator (the multiplier)",
+      "when": "multiplier 1931; Cambridge Circus 1930-31",
+      "where": "Cambridge, England",
+      "culture": "Cambridge economics; Keynes's inner circle",
+      "relation": "co-producer (forged the multiplier — the welding operator)",
+      "confidence": 0.92,
+      "carrier_of": [
+        { "wrapper": "sub-multiplier", "role": "founds", "strength": 0.9, "when": "1931", "confidence": 0.9 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "University of Cambridge (the 'Circus')", "layer": "physical", "role": "works_within", "strength": 0.95, "when": "1930s", "confidence": 0.92 }
+      ]
+    },
+    {
+      "id": "act-kalecki",
+      "name": "Michał Kalecki",
+      "kind": "individual",
+      "frame_layer": { "layer": "physical", "physical_membership": 1.0, "latent_membership": 0.3 },
+      "role": "Independent co-originator (priority claimant)",
+      "when": "independent effective-demand papers 1933-35 (pre-General-Theory)",
+      "where": "Poland; later Cambridge",
+      "culture": "Polish/Marxian economics; later Cambridge & the underground post-Keynesian lineage",
+      "relation": "independent co-originator / rival-priority (declined to claim priority)",
+      "confidence": 0.85,
+      "carrier_of": [
+        { "wrapper": "rel-kaleckian", "role": "founds", "strength": 0.9, "when": "1933-1935", "confidence": 0.85 },
+        { "wrapper": "desc-postkeynesian", "role": "champions", "strength": 0.7, "when": "1950s-1960s", "confidence": 0.8, "_note": "his profit-driven cycle became a root of the post-Keynesian counter-child" }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "rel-stockholm", "layer": "latent", "role": "lives_in", "strength": 0.2, "when": "1930s", "confidence": 0.4, "_note": "weakly — part of the broader independent-1930s-discovery milieu, though Marxian not Stockholm" }
+      ]
+    },
+    {
+      "id": "act-hicks",
+      "name": "John Hicks",
+      "kind": "individual",
+      "frame_layer": { "layer": "physical", "physical_membership": 1.0, "latent_membership": 0.3 },
+      "role": "Mediating welder (forged IS-LM) — later DISOWNED it",
+      "when": "IS-LM 1937 ('Mr Keynes and the Classics'); renunciation ~1980s",
+      "where": "LSE; later Oxford",
+      "culture": "LSE then the neoclassical-synthesis mainstream",
+      "relation": "mediating-producer (made the durable taught object) + later repudiator (the disowned-mediator)",
+      "confidence": 0.9,
+      "carrier_of": [
+        { "wrapper": "desc-synthesis", "role": "founds", "strength": 0.9, "when": "1937", "confidence": 0.9 },
+        { "wrapper": "child-keynesian-macro", "role": "popularizes", "strength": 0.6, "when": "1937", "confidence": 0.8, "_note": "carried a REINTERPRETED (IS-LM) version up; later renounced it" }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "desc-synthesis", "layer": "latent", "role": "lives_in", "strength": 0.7, "when": "1937-1970s", "confidence": 0.75, "_note": "inhabited then exited the very paradigm he founded" }
+      ]
+    },
+    {
+      "id": "act-samuelson",
+      "name": "Paul Samuelson",
+      "kind": "individual",
+      "frame_layer": { "layer": "physical", "physical_membership": 1.0, "latent_membership": 0.3 },
+      "role": "Mediating welder + propagator (the neoclassical synthesis; the textbook)",
+      "when": "'Economics' textbook 1948; coined 'neoclassical synthesis' 1955",
+      "where": "MIT, USA",
+      "culture": "MIT; the postwar American-economics establishment",
+      "relation": "mediating-producer + popularizer (propagated taught Keynesianism to a generation)",
+      "confidence": 0.92,
+      "carrier_of": [
+        { "wrapper": "desc-synthesis", "role": "institutionalizes", "strength": 0.92, "when": "1948-1955", "confidence": 0.9 },
+        { "wrapper": "child-keynesian-macro", "role": "popularizes", "strength": 0.85, "when": "1948", "confidence": 0.88, "_note": "the textbook 'Economics' (1948) is how most economists learned Keynesianism" }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "US Federal Government economics orbit", "layer": "physical", "role": "operates_in", "strength": 0.4, "when": "1960s", "confidence": 0.6 }
+      ]
+    },
+    {
+      "id": "act-hansen",
+      "name": "Alvin Hansen",
+      "kind": "individual",
+      "frame_layer": { "layer": "physical", "physical_membership": 1.0, "latent_membership": 0.25 },
+      "role": "'American Keynes' — transmitter into US policy",
+      "when": "1930s-1950s; secular-stagnation thesis; Employment Act advocacy",
+      "where": "Harvard, USA",
+      "culture": "Harvard; the US Council of Economic Advisers orbit",
+      "relation": "transmitter/popularizer (carried Keynesianism into the American policy establishment)",
+      "confidence": 0.85,
+      "carrier_of": [
+        { "wrapper": "child-keynesian-macro", "role": "institutionalizes", "strength": 0.8, "when": "1938-1950", "confidence": 0.82, "_note": "'American Keynesianism'; secular-stagnation; pushed it into US policy" }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "US Federal Government (Treasury + CEA)", "layer": "physical", "role": "works_within", "strength": 0.6, "when": "1940s", "confidence": 0.7 }
+      ]
+    },
+    {
+      "id": "act-friedman",
+      "name": "Milton Friedman",
+      "kind": "individual",
+      "frame_layer": { "layer": "physical", "physical_membership": 1.0, "latent_membership": 0.3 },
+      "role": "Counter-revolutionary (monetarism) — drove the dormancy",
+      "when": "permanent-income 1957; presidential address (natural rate) 1968; 'monetary history' 1963",
+      "where": "University of Chicago, USA",
+      "culture": "the Chicago School; the University of Chicago",
+      "relation": "rival/antagonist (built the counter-wrapper that suppressed the child)",
+      "confidence": 0.9,
+      "carrier_of": [
+        { "wrapper": "desc-monetarism", "role": "founds", "strength": 0.92, "when": "1956-1968", "confidence": 0.9 },
+        { "wrapper": "rel-monetarism", "role": "champions", "strength": 0.92, "when": "1950s-1980s", "confidence": 0.9 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "University of Chicago / Chicago School", "layer": "physical", "role": "operates_in", "strength": 0.95, "when": "1946-2006", "confidence": 0.92 },
+        { "wrapper": "the free-market/neoliberal movement", "layer": "latent", "role": "champions", "strength": 0.8, "when": "1960s-1980s", "confidence": 0.85 }
+      ]
+    },
+    {
+      "id": "act-lucas",
+      "name": "Robert Lucas",
+      "kind": "individual",
+      "frame_layer": { "layer": "physical", "physical_membership": 1.0, "latent_membership": 0.3 },
+      "role": "Theoretical kill-shot (rational expectations; the Lucas critique)",
+      "when": "rational expectations 1972-76; the Lucas critique 1976",
+      "where": "University of Chicago, USA",
+      "culture": "the new-classical school; University of Chicago",
+      "relation": "rival/antagonist (the theoretical kill-shot on naive Keynesian models; the necessity-disputer)",
+      "confidence": 0.88,
+      "carrier_of": [
+        { "wrapper": "desc-newclassical", "role": "founds", "strength": 0.9, "when": "1972-1976", "confidence": 0.88 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "University of Chicago / Chicago School", "layer": "physical", "role": "operates_in", "strength": 0.9, "when": "1970s-2000s", "confidence": 0.88 }
+      ]
+    },
+    {
+      "id": "act-revival-economists",
+      "name": "Paul Krugman / Joseph Stiglitz / J. Bradford DeLong",
+      "kind": "individual",
+      "frame_layer": { "layer": "physical", "physical_membership": 1.0, "latent_membership": 0.35 },
+      "role": "Champions of the 2008 New-Keynesian revival",
+      "when": "2008-2009 onward ('the return of depression economics')",
+      "where": "Princeton/CUNY; Columbia; UC Berkeley; the op-ed/policy public sphere",
+      "culture": "the academic New-Keynesian mainstream; the public/policy commentariat",
+      "relation": "revivers/popularizers (champions of revival #1)",
+      "confidence": 0.85,
+      "carrier_of": [
+        { "wrapper": "desc-newkeynesian", "role": "champions", "strength": 0.85, "when": "2008-", "confidence": 0.85 },
+        { "wrapper": "child-keynesian-macro", "role": "popularizes", "strength": 0.8, "when": "2008-", "confidence": 0.85, "_note": "'return of depression economics'; fiscal-stimulus advocacy in the public sphere" }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "desc-newkeynesian", "layer": "latent", "role": "lives_in", "strength": 0.85, "when": "2008-", "confidence": 0.85 }
+      ]
+    },
+    {
+      "id": "act-robinson",
+      "name": "Joan Robinson",
+      "kind": "individual",
+      "frame_layer": { "layer": "physical", "physical_membership": 1.0, "latent_membership": 0.35 },
+      "role": "Post-Keynesian critic of the synthesis; champion of Kalecki's priority",
+      "when": "1930s (Circus member) -> 1960s-70s ('bastard Keynesianism' critique; 'a neglected prophet' 1976)",
+      "where": "Cambridge, England",
+      "culture": "Cambridge; the heterodox post-Keynesian lineage",
+      "relation": "transmitter + internal critic (defends the 'true' Keynes against the synthesis)",
+      "confidence": 0.85,
+      "carrier_of": [
+        { "wrapper": "desc-postkeynesian", "role": "founds", "strength": 0.85, "when": "1950s-1970s", "confidence": 0.85 },
+        { "wrapper": "rel-kaleckian", "role": "champions", "strength": 0.7, "when": "1976", "confidence": 0.8, "_note": "advocated Kalecki's priority ('a neglected prophet')" }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "University of Cambridge (the 'Circus')", "layer": "physical", "role": "works_within", "strength": 0.9, "when": "1930s-1970s", "confidence": 0.88 }
+      ]
+    },
+    {
+      "id": "act-cambridge",
+      "name": "University of Cambridge (the 'Circus')",
+      "kind": "university",
+      "frame_layer": { "layer": "straddle", "physical_membership": 0.85, "latent_membership": 0.5 },
+      "role": "Institutional cradle of the weld and its post-Keynesian descendants",
+      "when": "1930s (the Circus) onward",
+      "where": "Cambridge, England",
+      "culture": "British academic economics; the Marshallian tradition",
+      "relation": "institutional carrier (the cradle)",
+      "confidence": 0.85,
+      "carrier_of": [
+        { "wrapper": "child-keynesian-macro", "role": "institutionalizes", "strength": 0.8, "when": "1930s", "confidence": 0.82 },
+        { "wrapper": "desc-postkeynesian", "role": "institutionalizes", "strength": 0.8, "when": "1950s-1970s", "confidence": 0.8 },
+        { "wrapper": "sub-multiplier", "role": "institutionalizes", "strength": 0.7, "when": "1931", "confidence": 0.75 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "sub-marshall-apparatus", "layer": "latent", "role": "operates_in", "strength": 0.85, "when": "1890s-1930s", "confidence": 0.85, "_note": "the Marshallian tradition Cambridge economics inhabited and Keynes built from" },
+        { "wrapper": "British academic economics", "layer": "physical", "role": "operates_in", "strength": 0.9, "when": "20th c.", "confidence": 0.88 }
+      ]
+    },
+    {
+      "id": "act-chicago",
+      "name": "University of Chicago / the Chicago School",
+      "kind": "university",
+      "frame_layer": { "layer": "straddle", "physical_membership": 0.85, "latent_membership": 0.55 },
+      "role": "Institutional carrier of the counter-wrappers that suppressed the child",
+      "when": "1950s-2000s (peak influence 1970s-1990s)",
+      "where": "Chicago, USA",
+      "culture": "American academic economics; the free-market/neoliberal movement",
+      "relation": "institutional rival (the home of the suppressing counter-wrappers)",
+      "confidence": 0.85,
+      "carrier_of": [
+        { "wrapper": "desc-monetarism", "role": "institutionalizes", "strength": 0.9, "when": "1950s-1980s", "confidence": 0.88 },
+        { "wrapper": "desc-newclassical", "role": "institutionalizes", "strength": 0.9, "when": "1970s-2000s", "confidence": 0.88 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "the free-market/neoliberal movement", "layer": "latent", "role": "operates_in", "strength": 0.85, "when": "1960s-2000s", "confidence": 0.85 },
+        { "wrapper": "American academic economics", "layer": "physical", "role": "operates_in", "strength": 0.9, "when": "20th c.", "confidence": 0.88 }
+      ]
+    },
+    {
+      "id": "act-us-government",
+      "name": "US Federal Government (Treasury + Council of Economic Advisers)",
+      "kind": "government",
+      "frame_layer": { "layer": "physical", "physical_membership": 1.0, "latent_membership": 0.2 },
+      "role": "Government ADOPTER — demand-management as official doctrine",
+      "when": "New Deal 1933-; Employment Act 1946 (created the CEA); ARRA 2009; CARES 2020",
+      "where": "Washington, D.C., USA",
+      "culture": "the postwar Keynesian policy consensus / mixed-economy settlement",
+      "relation": "adopter/institutionalizer (the canonical government that made the theory official doctrine)",
+      "confidence": 0.85,
+      "carrier_of": [
+        { "wrapper": "child-keynesian-macro", "role": "institutionalizes", "strength": 0.85, "when": "1946-", "confidence": 0.85, "_note": "demand-management became official doctrine after the Employment Act of 1946; New Deal & wartime planning" },
+        { "wrapper": "desc-institutions", "role": "institutionalizes", "strength": 0.7, "when": "1946", "confidence": 0.8 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "the postwar Keynesian policy consensus / mixed-economy settlement", "layer": "latent", "role": "operates_in", "strength": 0.85, "when": "1945-1980", "confidence": 0.82 }
+      ]
+    },
+    {
+      "id": "act-hm-treasury",
+      "name": "HM Treasury (United Kingdom)",
+      "kind": "government",
+      "frame_layer": { "layer": "physical", "physical_membership": 1.0, "latent_membership": 0.2 },
+      "role": "Government adopter — wartime planning + the 1944 White Paper + 2008 response",
+      "when": "1944 White Paper on Employment Policy; 2008 'classic Keynesian response' (Darling)",
+      "where": "London, UK",
+      "culture": "the British postwar settlement",
+      "relation": "adopter/institutionalizer (Keynes's own home institution as policy machine)",
+      "confidence": 0.82,
+      "carrier_of": [
+        { "wrapper": "child-keynesian-macro", "role": "institutionalizes", "strength": 0.8, "when": "1944-", "confidence": 0.82, "_note": "wartime Keynesian planning; the 1944 White Paper on Employment Policy; the 2008 'classic Keynesian response'" }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "the British postwar settlement", "layer": "latent", "role": "operates_in", "strength": 0.85, "when": "1945-1979", "confidence": 0.8 }
+      ]
+    },
+    {
+      "id": "act-sweden",
+      "name": "Government of Sweden",
+      "kind": "government",
+      "frame_layer": { "layer": "physical", "physical_membership": 1.0, "latent_membership": 0.2 },
+      "role": "Arguably the FIRST government to adopt Keynesian demand-management",
+      "when": "1930s (via the Stockholm School)",
+      "where": "Sweden",
+      "culture": "Scandinavian social democracy",
+      "relation": "adopter (the priority claimant on FIRST government adoption)",
+      "confidence": 0.7,
+      "carrier_of": [
+        { "wrapper": "child-keynesian-macro", "role": "institutionalizes", "strength": 0.7, "when": "1930s", "confidence": 0.7, "_note": "arguably the first government to adopt demand-management, via the home-grown Stockholm School — a priority wrinkle (the theory was adopted in policy before/independent of Keynes's text)" },
+        { "wrapper": "rel-stockholm", "role": "institutionalizes", "strength": 0.7, "when": "1930s", "confidence": 0.7 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "Scandinavian social democracy", "layer": "latent", "role": "operates_in", "strength": 0.85, "when": "1930s-", "confidence": 0.8 }
+      ]
+    },
+    {
+      "id": "act-china",
+      "name": "Government of China (State Council)",
+      "kind": "government",
+      "frame_layer": { "layer": "physical", "physical_membership": 1.0, "latent_membership": 0.15 },
+      "role": "2008 crisis-Keynesian adopter (among the first and largest)",
+      "when": "Nov 2008 (the RMB¥4tn / US$586bn stimulus)",
+      "where": "Beijing, China",
+      "culture": "the post-2008 global-coordination moment",
+      "relation": "adopter (one of the largest single crisis-Keynesian responses)",
+      "confidence": 0.85,
+      "carrier_of": [
+        { "wrapper": "child-keynesian-macro", "role": "institutionalizes", "strength": 0.8, "when": "2008", "confidence": 0.85, "_note": "the ~US$586bn stimulus (announced 9 Nov 2008) — among the first and largest crisis-Keynesian responses; a non-Western government enacting demand-management at scale" }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "the post-2008 global-coordination moment", "layer": "latent", "role": "operates_in", "strength": 0.7, "when": "2008-2009", "confidence": 0.7 }
+      ]
+    },
+    {
+      "id": "act-imf-worldbank",
+      "name": "International Monetary Fund / World Bank",
+      "kind": "institution",
+      "frame_layer": { "layer": "physical", "physical_membership": 0.95, "latent_membership": 0.3 },
+      "role": "Bretton Woods institutional embodiment + 2008 stimulus advocate",
+      "when": "founded 1944 (Bretton Woods); 2008-09 coordinated-stimulus advocacy",
+      "where": "Washington, D.C.; global",
+      "culture": "the postwar international monetary order Keynes co-architected",
+      "relation": "institutional harvest + carrier (the weld descending into standing institutions; later a revival advocate)",
+      "confidence": 0.82,
+      "carrier_of": [
+        { "wrapper": "desc-institutions", "role": "institutionalizes", "strength": 0.85, "when": "1944", "confidence": 0.82 },
+        { "wrapper": "child-keynesian-macro", "role": "champions", "strength": 0.6, "when": "2008-2009", "confidence": 0.75, "_note": "advocated coordinated global fiscal stimulus in 2008-09 — a striking reversal given its 1980s-90s structural-adjustment (austerity) reputation" }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "the postwar international monetary order", "layer": "latent", "role": "operates_in", "strength": 0.85, "when": "1944-", "confidence": 0.82 }
+      ]
+    },
+    {
+      "id": "act-g20",
+      "name": "The G20",
+      "kind": "institution",
+      "frame_layer": { "layer": "physical", "physical_membership": 0.9, "latent_membership": 0.3 },
+      "role": "Institutional VEHICLE of the 2008 revival (coordinated global stimulus)",
+      "when": "Nov 2008 (the Washington summit launching coordinated fiscal stimulus)",
+      "where": "global (the Washington / London summits)",
+      "culture": "the post-crisis international-policy regime",
+      "relation": "institutional vehicle (the body through which revival #1 was coordinated)",
+      "confidence": 0.8,
+      "carrier_of": [
+        { "wrapper": "child-keynesian-macro", "role": "institutionalizes", "strength": 0.75, "when": "2008-2009", "confidence": 0.8, "_note": "coordinated global fiscal stimulus (from Nov 2008) — the institutional vehicle of the revival" }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "the post-crisis international-policy regime", "layer": "latent", "role": "operates_in", "strength": 0.8, "when": "2008-", "confidence": 0.78 }
+      ]
+    }
+  ],
+
+  "fuzzy_layer": {
+    "_comment": "The LOD/confidence partition made explicit, as a DERIVED human digest of the per-node memberships (D5 — the memberships are ground truth; this two-bin split is a curated reading). certain_core = the trunk (high-confidence); frontier = speculative/conjectural + SCHEMA-STRESS notes. The DISTINCTIVE feature here: the fuzz is largely TEMPORAL — the child's IDENTITY is solid at any instant but drifts across decades, so the frontier includes 'which Keynesianism, when'.",
+    "certain_core": [
+      "TRUNK (conf ~0.9): a weld happened — the General Theory (Feb 1936) fused a classical/marginalist apparatus to an effective-demand insight via the multiplier + liquidity-preference machinery, producing a demand-determined view of aggregate output/employment with a possible under-employment equilibrium.",
+      "The multiplier (Kahn 1931) and liquidity preference (Keynes 1936) are the welding operators; Keynes's multiplier is explicitly 'related to' Kahn's (General Theory ch.10) (conf ~0.9).",
+      "The weld INVENTED macroeconomics as a level (aggregate demand as a primary cause; the paradox of thrift) and made the state the residual demand-maker (conf ~0.88) — the surprise.",
+      "Government ADOPTION is real and consequential: WWII deficits validated it; the US Employment Act 1946 created the CEA; Keynes co-architected Bretton Woods (IMF/World Bank, 1944) (conf ~0.85).",
+      "The durable TAUGHT object was IS-LM, forged by Hicks (1937), Modigliani (1944), Samuelson (1948/55) — a mediating welder a layer up (conf ~0.85).",
+      "The 1970s stagflation falsified the naive Phillips-curve form and (with the Lucas critique + the neoliberal political turn) drove a ~1973-2008 dormancy (conf ~0.82).",
+      "The 2008 GFC and 2020 COVID triggered crisis-pull REVIVALS (ARRA $787bn; China ~$586bn; CARES $2.2tn) — well-attested external facts (conf ~0.85).",
+      "Surprise/synergy (a stable under-employment equilibrium; the paradox of thrift) is high-confidence even though the child is not (conf ~0.9) — the R9 decoupling, here from the 'born-then-reborn-different' direction."
+    ],
+    "frontier": [
+      "FRONTIER — strawman-parent conjecture (conf ~0.6): that W_A ('classical economics') is a real pre-existing parent as Keynes characterized it. Multiple historians hold he caricatured/manufactured it as a foil (the 'always full employment' assumption no one quite held). The APPARATUS is real; the SHARP foil is part-constructed. = discrepancy #1 (highest-value; motivates a strawman/reconstructed-parent variable + the foil-constructed-weld type).",
+      "FRONTIER — the child as a single STABLE wrapper (conf ~0.55): 'Keynesianism' names at least FOUR mutually-critical wrappers (orthodox/IS-LM, post-Keynesian, New Keynesian, MMT-adjacent) spread across TIME; the revived-2008 object differs in method from the original-1936. The child is unstable-over-time. = discrepancies #2, #5, #7.",
+      "FRONTIER — the re-attribution (conf ~0.8 on the fact; the wrinkle is the frontier): the durable taught child was forged by the synthesizers, not Keynes; Hicks later DISOWNED IS-LM and post-Keynesians reject the synthesis ('bastard Keynesianism') — a disowned-mediator. = discrepancy #2.",
+      "FRONTIER — whether 1936 was a 'revolution' at all (conf ~0.65): contested from BOTH directions (Austrians/IEA: not a real break, the classics weren't wrong; post-Keynesians: a real break immediately betrayed by its popularizers). The child's very existence as a distinct wrapper is frame-dependent. = discrepancy #5.",
+      "FRONTIER — the dormancy's cause and extent (conf ~0.6): a CAUSE-FRAME split (stagflation falsification in {knowledge} vs a funded neoliberal political movement in {physical/political}); the '1970s death of Keynes' is partly an ideological narrative (it survived inside the synthesis throughout). = discrepancy #6.",
+      "FRONTIER — weld NECESSITY (conf ~0.78): a serious new-classical/RBC/Austrian minority holds macroeconomics is a category error (the aggregate is just summed agents; the Lucas critique). The falsifier-of-the-weld, live. = discrepancy #9.",
+      "FRONTIER — multiple-independent-origin / priority (conf ~0.7): Kalecki (1933-35) and the Stockholm School reached the essentials independently and contemporaneously; the multiplier has pre-Kahn originators. The surprise was 'in the air' once the Depression created the pull. = discrepancies #3, #4.",
+      "SCHEMA-STRESS (frontier of the MODEL, not the record): the strawman/reconstructed-parent (no slot), the diachronic candidate-children-spread-across-time (candidate_children[] assumes simultaneity), the revived-as-reinterpreted-DIFFERENTLY-each-time (the same|reinterpreted binary is too coarse), the disowned-mediator, and exogenous-forcing-as-the-primary-timeline all sit at the edge of what the v2 schema can hold — see gaps + discrepancies."
+    ],
+    "core_boundary_locus": "(R3-adjacent) UNUSUAL: the certain-core/frontier boundary does NOT sit cleanly at the trunk (Maxwell) nor sink below the child (QG) — it runs ALONG THE TIME AXIS. At any single instant the child is fairly solid (the 1948 synthesis, the 2009 New-Keynesian object, are each well-defined); but ACROSS instants the identity drifts (born -> hardened -> dead -> reborn-different x2). So the fuzz is DIACHRONIC: the core is 'the weld happened and reorganized the state'; the frontier is 'which child, when, and is it the same child'. A third locus-type beyond Maxwell's (fuzz-in-roots) and QG's (fuzz-in-canopy): fuzz-along-time. The vertical-position-of-the-boundary thermometer (BATCH_FINDINGS §D) gains a horizontal (temporal) reading here."
+  },
+
+  "discrepancies": [
+    {
+      "_comment": "THE highest-value discrepancy and NOVEL vs all prior specimens: a parent partly MANUFACTURED by the welder. Proposes a new variable AND a new weld-type (named here BEFORE use, per §6 item 7).",
+      "what": "The second parent W_A ('classical economics') was substantially a STRAWMAN that Keynes constructed to be welded against. Multiple historians (IEA; Econlib; post-Keynesians) hold Keynes 'set up an utterly false caricature of classical theory' and falsely attributed an 'always full employment' assumption to it, lumping Marshall, Pigou, Ricardo and others into a single 'classical' bloc that no one quite held.",
+      "sources_in_conflict": [
+        "IEA 'Keynes versus the classics — the true story' + Econlib 'Keynesian Economics' (the caricature/strawman case)",
+        "vs the General Theory's own framing (Keynes's 'classical economists') + the textbook Keynes-vs-classics narrative"
+      ],
+      "type": "framework-vs-record-tension",
+      "why_interesting": "The prize tension: in a normal weld BOTH parents pre-exist as real wrappers. Here one parent appears partly INVENTED by the welder in order to have something to fuse against — a weld against a reconstructed/fictionalized parent. The schema assumes parents are FOUND, not manufactured by W_C's author. Caps confidence on the clean two-parent rendering (~0.6). -> motivates a NEW variable 'strawman/parent_reconstructed_by_welder' AND a NEW weld-type 'foil-constructed-weld' (both flagged HERE before use, per §6 item 7; rendered at weld.lifecycle.weld_type with weight 0.55).",
+      "confidence_impact": "Lowers confidence in the clean two-parent rendering / in 'W_A as Keynes characterized it' to ~0.6; the APPARATUS-as-a-real-root stays high (~0.88). Does not touch surprise_confidence (the synergy is real regardless of how the foil was framed)."
+    },
+    {
+      "what": "The DURABLE, taught 'Keynesianism' (the IS-LM aggregate-demand model) was NOT written by Keynes — it was forged by Hicks (1937), Modigliani (1944) and Samuelson (1948/55). Keynes's own General Theory is verbal, ambiguous, and its IS-LM reduction was contested; Hicks himself later RENOUNCED IS-LM; post-Keynesians call the synthesis 'bastard Keynesianism.'",
+      "sources_in_conflict": [
+        "Wikipedia 'Neoclassical synthesis' (Hicks 1937 IS-LM; Modigliani 1944; Samuelson coined the term 1955; Hicks's later renunciation)",
+        "vs the canonical attribution of 'Keynesian economics' to Keynes",
+        "vs post-Keynesians (Robinson) calling the synthesis 'bastard Keynesianism'"
+      ],
+      "type": "framework-vs-record-tension",
+      "why_interesting": "Direct analogue of the Maxwell re-attribution finding (the Maxwellians forged the surviving 4-equation form). The canonical NAME ('Keynesian') attaches to the originator of the raw, contested form, not to the producers of the durable taught structure. The weld CHAINS: birth-1 (Keynes 1936) -> a second welding event (the synthesis 1937-55) producing a structurally different, partly-disowned object. -> triple-attests the re-weld + mediating-welder variables (R1, R10; rendered at weld.mediating_wrapper + weld.reattribution + weld.weld_chain) and adds a 'disowned-mediator' wrinkle (Hicks repudiated his own weld; see gaps).",
+      "confidence_impact": "The re-attribution fact is high (~0.8); it lowers confidence that 'Keynesianism = what Keynes wrote' and supports the mediating-welder rendering. Adds the disowned-mediator wrinkle (not in R1/R10)."
+    },
+    {
+      "what": "Michał Kalecki independently derived the essentials of the General Theory in Polish/French papers (1933, 1934, 1935) BEFORE Keynes, arguably in a more complete and class-conscious form; he declined to claim priority. The Stockholm School (Wicksell lineage; Lindahl, Myrdal, Ohlin) developed numerous Keynesian concepts independently and contemporaneously in the 1930s.",
+      "sources_in_conflict": [
+        "Wikipedia 'Michał Kalecki' + HET profile + 'Did Kalecki Get There First?' + Robinson 'A Neglected Prophet' (NYRB 1976)",
+        "vs the standard Keynes-as-sole-originator narrative"
+      ],
+      "type": "priority-dispute",
+      "why_interesting": "The surprise (effective demand / deficient-demand equilibrium) was reachable from the parents by at least THREE independent welders nearly simultaneously (Keynes, Kalecki, the Stockholm School) — a multiple-independent-discovery pattern suggesting the weld was 'in the air' once the Depression created the pull. Bears on surprise_priority (R15) and confirms multi-origin is normal (cf. QG's multi-rooted origin). Kalecki-co-priority held ~0.7 (well attested but he never pressed it). Rendered at relatives rel-kaleckian + rel-stockholm and actor act-kalecki.",
+      "confidence_impact": "Does not lower the weld's confidence; multiplies the origin-roots and supports the crisis-pull reading (the Depression made the same weld appear in three places at once)."
+    },
+    {
+      "what": "The 'multiplier' had numerous pre-Kahn originators: Dutch mercantilists, Julius Wulff (1896), Nicholas Johannsen (1890s), Alfred de Lissa and others — Kahn (1931) formalized rather than originated it. Keynes also distinguished his 'investment multiplier' from Kahn's 'employment multiplier' ('only a little different').",
+      "sources_in_conflict": [
+        "Wikipedia 'Multiplier (economics)' / 'Keynesian economics' (pre-Kahn originators)",
+        "vs the standard 'Kahn 1931 invented the multiplier' attribution"
+      ],
+      "type": "priority-dispute",
+      "why_interesting": "The welding-OPERATOR (the multiplier) itself has a contested deep genealogy — a sub-weld priority dispute beneath the main weld. Mirrors Maxwell's surprise-priority (Faraday's 1846 light-guess) at the operator level. Low confidence-impact on the trunk; enriches the roots. Rendered at sub-welds sw-kahn-multiplier + sub_wrapper sub-multiplier.",
+      "confidence_impact": "Negligible on the trunk; slightly lowers 'Kahn ORIGINATED the multiplier' (formalized, not originated) while keeping 'Kahn made it the operative welding device' high (~0.88)."
+    },
+    {
+      "what": "Whether the 1936 event was a genuine 'revolution' or an overstated rebranding is contested. Some Austrians/classicals (and the IEA) argue Keynes solved a problem the classics had not actually got wrong; the very term 'Keynesian Revolution' is whig historiography. Conversely post-Keynesians argue the revolution was real but immediately BETRAYED by its popularizers (Hicks, Samuelson).",
+      "sources_in_conflict": [
+        "IEA / Austrian revisionism (no real break)",
+        "vs the standard 'Keynesian Revolution' framing",
+        "vs post-Keynesians (a real break, then domesticated)"
+      ],
+      "type": "whig-vs-revisionist",
+      "why_interesting": "Two-sided: the magnitude of the weld is disputed from BOTH directions (it wasn't a real break / it was a real break that got domesticated). The child is genuinely status-at-a-time and observer-relative — its very EXISTENCE as a distinct wrapper is frame-dependent (in {knowledge} it may be a relabeling; in {meaning}/{politics} it unmistakably reorganized the state). This is WHY frame_of_weld engages {meaning} (the QG-like reason). Rendered at child.status_trajectory + frame_of_weld {meaning}.",
+      "confidence_impact": "Lowers confidence that 1936 was a clean single 'revolution' to ~0.65; supports reading the child as observer-/frame-relative."
+    },
+    {
+      "what": "The dormancy is CONTESTED in extent and cause. The 1970s 'death of Keynes' is partly an ideological narrative; Keynesianism survived inside the neoclassical synthesis and New Keynesianism throughout, and the dormancy was driven as much by an exogenous neoliberal POLITICAL movement (Thatcher/Reagan/Chicago funding) as by the stagflation falsification.",
+      "sources_in_conflict": [
+        "Wikipedia 'Stagflation' / 'Keynesian Revolution' (stagflation as the falsifier)",
+        "vs accounts foregrounding the neoliberal political turn (Thatcher/Reagan/Chicago) as the driver",
+        "vs the fact of survival-inside-the-synthesis throughout"
+      ],
+      "type": "dormancy-contested",
+      "why_interesting": "Dormancy has a CAUSE-FRAME split (the Darwin+Mendel / QG finding): partly knowledge-frame (stagflation falsified the Phillips curve) and partly physical/political-frame (a funded ideological movement displaced it from curricula and treasuries). A single 'why' string cannot hold both. Confirms dormancy.why_frame (R11) with an economics instance: a theory can be SUPPRESSED by a political turn as well as by a refuting fact. Rendered at weld.dormancy_intervals[1].why_frame = 'knowledge, physical/political' + forcing_events fe-stagflation + fe-neoliberal-turn.",
+      "confidence_impact": "Lowers confidence in the clean 'stagflation killed Keynes' story to ~0.6; the FACT of the eclipse stays high (~0.82); confirms the why_frame split."
+    },
+    {
+      "what": "The child has NO single stable identity across its revivals: revived-2008 ≠ original-1936. The 2008 revival was New-Keynesian (sticky-price microfoundations inside a neoclassical-equilibrium DSGE frame) — closer in METHOD to Keynes's classical opponents than to Keynes; the 2020 revival flirted with MMT, a different heterodox object again.",
+      "sources_in_conflict": [
+        "Wikipedia 'New Keynesian economics' (microfounded, DSGE, neoclassical assumptions)",
+        "vs 'Keynesian economics' as Keynes's own object",
+        "vs the MMT literature (2020) as a further different object"
+      ],
+      "type": "contested-genealogy",
+      "why_interesting": "revived-as-REINTERPRETED, not revived-as-same (R10): each resurrection wakes a structurally different object wearing the same name. The seam S is non-unitary and itself contested (R12) — 'Keynesianism' names at least four mutually-critical wrappers (orthodox/IS-LM, post-Keynesian, New Keynesian, MMT-adjacent) that disagree about what the child IS, much like QG's candidate-children but spread across TIME rather than held simultaneously. Rendered at weld.revival.kind='reinterpreted' + weld.feature_ledger + harvest.descendants + S_structure.agreed=false. -> motivates a degree-of-reinterpretation / method-continuity axis (see gaps).",
+      "confidence_impact": "Lowers confidence in the child as a single stable wrapper to ~0.55; supports S_structure.agreed=false and the diachronic-candidate-children frontier note."
+    },
+    {
+      "_comment": "The R9-confirming discrepancy, from a NEW direction vs QG.",
+      "what": "surprise_confidence (~0.9) and child_confidence (~0.72) DIVERGE. The synergy (stable under-full-employment equilibrium; the invention of macroeconomics) is real and decisive; but the child as a STABLE, agreed wrapper is low-confidence because it has been pronounced dead and exhumed repeatedly and fractures into rival schools.",
+      "sources_in_conflict": [
+        "the well-attested synergy (the under-employment equilibrium; the paradox of thrift) at ~0.9",
+        "vs the contested, unstable-over-time, school-fractured child at ~0.72"
+      ],
+      "type": "framework-vs-record-tension",
+      "why_interesting": "Confirms R9 (decouple surprise from child-confidence) from a NEW direction vs QG. In QG the child is UNBORN (high surprise, low child-confidence because nothing consolidated). Here the child was BORN, hardened, DIED, and was RE-BORN differently — high surprise, but lower child-confidence because the child is unstable-OVER-TIME, not unborn. A second, distinct MODE of the same orthogonality: synergy can be real while the child is perpetually-contested rather than merely-unborn. Rendered at weld.surprise_confidence (0.9) vs child.confidence (0.72).",
+      "confidence_impact": "Defines the gap between the two axes as the specimen's signature; neither axis moves the other."
+    },
+    {
+      "what": "Is a third wrapper (macroeconomics-as-a-distinct-object) even NEEDED? A serious minority (new-classical / real-business-cycle / Austrian) argues NO — the economy IS just the equilibrium of optimizing individuals (microfoundations primary; 'macroeconomics' a category error, the Lucas-critique position). The Keynesian mainstream and the bare fact of mass involuntary unemployment argue YES (the aggregate has emergent properties — paradox of thrift — absent in any agent).",
+      "sources_in_conflict": [
+        "new-classical / RBC / Austrian (no child; the aggregate is summed agents; the Lucas critique)",
+        "vs the Keynesian mainstream + the fact of mass involuntary unemployment (the aggregate has emergent properties)"
+      ],
+      "type": "framework-vs-record-tension",
+      "why_interesting": "Confirms weld_necessity_confidence (R8) with an economics instance held at ~0.78: the weld is almost certainly real (the Depression and 2008 are hard to explain agent-by-agent), but its NECESSITY is genuinely disputed by a school that CAPTURED the discipline for a generation — the falsifier-of-the-weld, live, not 1.0. Stronger than QG's semiclassical-dissent slot because here the dissent WAS the orthodoxy for ~25 years. Rendered at weld.weld_necessity_confidence = 0.78 + harvest desc-newclassical + relatives rel-austrian.",
+      "confidence_impact": "Holds weld_necessity_confidence at 0.78 (not 1.0); the necessity is the disputed quantity, not the weld's reality."
+    }
+  ],
+
+  "forcing_events": [
+    {
+      "_comment": "(D4) THE defining exogenous forcing of this specimen — the SQUEEZE that pulled the theory into existence and government. This specimen's whole lifecycle is paced by such events (see gaps: external_events may deserve to be the PRIMARY timeline axis for crisis-pulled wrappers).",
+      "id": "fe-depression",
+      "name": "The Great Depression (1929-33; ~30% GDP fall, ~25% US unemployment)",
+      "kind": "economic-crisis",
+      "direction": "both",
+      "_direction_note": "BOTH: it SQUEEZED the old classical order (discrediting self-correction) AND PULLED the new theory into existence. Recorded as both because the pull on W_C and the squeeze on W_A are the same event's two faces.",
+      "acted_on": [
+        { "target": "weld-general-theory", "target_kind": "weld", "effect": "accelerate", "strength": 0.95 },
+        { "target": "pf-underconsumption", "target_kind": "sub_wrapper", "effect": "elevate", "strength": 0.85, "_note": "revived the ~100-year-dormant demand-deficiency parent" },
+        { "target": "pf-classical", "target_kind": "sub_wrapper", "effect": "suppress", "strength": 0.7, "_note": "the squeeze on the classical full-employment orthodoxy" }
+      ],
+      "when": "1929-1933 (effects through the 1930s)",
+      "mechanism": "The catastrophic failure of self-correction discredited classical orthodoxy (the SQUEEZE on W_A) and created the demand for a theory of mass involuntary unemployment, PULLING the General Theory into existence and creating an audience for it. The defining exogenous forcing of this specimen — and the reason three independent welders (Keynes, Kalecki, the Stockholm School) reached the same weld at once.",
+      "confidence": 0.92
+    },
+    {
+      "id": "fe-wwii",
+      "name": "World War II (1939-45; US deficits up to ~$55bn in 1943)",
+      "kind": "war",
+      "direction": "pull",
+      "acted_on": [
+        { "target": "child-keynesian-macro", "target_kind": "child", "effect": "elevate", "strength": 0.9, "_note": "consolidation phase — real-world validation" },
+        { "target": "act-us-government", "target_kind": "actor", "effect": "accelerate", "strength": 0.85, "_note": "mobilized the theory into permanent government machinery" }
+      ],
+      "when": "1939-1945",
+      "mechanism": "Massive war deficits restored full employment exactly as Keynes predicted, providing a real-world VALIDATION the Depression-era arguments could not. Mobilized the theory into permanent government machinery (planning boards, the Employment Act, Bretton Woods). Keynes's 'How to Pay for the War' (1940) operationalized it (compulsory saving, deferred pay, anti-inflation). The war did for the CONSOLIDATION what the Depression did for the birth.",
+      "confidence": 0.88
+    },
+    {
+      "id": "fe-postwar",
+      "name": "The postwar settlement (Bretton Woods 1944 + US Employment Act 1946 + UK 1944 White Paper)",
+      "kind": "politics",
+      "direction": "pull",
+      "acted_on": [
+        { "target": "child-keynesian-macro", "target_kind": "child", "effect": "elevate", "strength": 0.85 },
+        { "target": "desc-institutions", "target_kind": "child", "effect": "fund", "strength": 0.8, "_note": "created the standing institutions (IMF/World Bank, CEA)" },
+        { "target": "act-us-government", "target_kind": "actor", "effect": "elevate", "strength": 0.8 }
+      ],
+      "when": "1944-1946",
+      "mechanism": "Political consensus that mass unemployment was politically intolerable converted Keynesianism into the OFFICIAL doctrine of the mixed-economy state (Councils of Economic Advisers, full-employment statutes, the IMF/World Bank). The institutionalization that made the 'Age of Keynes'.",
+      "confidence": 0.85
+    },
+    {
+      "id": "fe-stagflation",
+      "name": "1970s stagflation + 1973/1979 oil shocks",
+      "kind": "economic-crisis",
+      "direction": "squeeze",
+      "acted_on": [
+        { "target": "child-keynesian-macro", "target_kind": "child", "effect": "suppress", "strength": 0.85, "_note": "drove it into dormancy" },
+        { "target": "desc-phillips", "target_kind": "child", "effect": "kill", "strength": 0.9, "_note": "falsified the naive Phillips-curve trade-off" },
+        { "target": "desc-monetarism", "target_kind": "child", "effect": "elevate", "strength": 0.8, "_note": "opened the door for the monetarist counter-revolution" }
+      ],
+      "when": "1973-1982 (oil shocks 1973, 1979)",
+      "mechanism": "Simultaneous high inflation AND high unemployment falsified the naive Phillips-curve trade-off that Keynesianism had been reduced to, destroying its policy credibility and OPENING the door for the monetarist/new-classical counter-revolution. The squeeze that caused the dormancy (the knowledge-frame half of the cause-frame split).",
+      "confidence": 0.85
+    },
+    {
+      "id": "fe-neoliberal-turn",
+      "name": "The neoliberal / monetarist political turn (Thatcher 1979, Reagan 1981; 'we are all monetarists now')",
+      "kind": "politics",
+      "direction": "squeeze",
+      "_kind_note": "kind: politics, with a strong FASHION component (the free-market intellectual fashion + a curricular/funding shift). Logged as politics primarily.",
+      "acted_on": [
+        { "target": "child-keynesian-macro", "target_kind": "child", "effect": "suppress", "strength": 0.85, "_note": "displaced from policy AND graduate curricula for ~25 years" },
+        { "target": "act-chicago", "target_kind": "actor", "effect": "elevate", "strength": 0.8 },
+        { "target": "act-us-government", "target_kind": "actor", "effect": "redirect", "strength": 0.7, "_note": "demand-management dropped from official policy" }
+      ],
+      "when": "1979-2008 (peak displacement 1980s-1990s)",
+      "mechanism": "A political-ideological movement (free-market fashion + a funding/curricular shift toward Chicago-style economics) actively displaced Keynesian demand-management from policy and graduate curricula for ~25 years — an exogenous fashion/politics squeeze LAYERED ON the intellectual (stagflation) one. The physical/political-frame half of the dormancy's cause-frame split: a theory suppressed by a funded movement, not only by a refuting fact.",
+      "confidence": 0.8
+    },
+    {
+      "id": "fe-gfc",
+      "name": "The 2008 Global Financial Crisis",
+      "kind": "economic-crisis",
+      "direction": "pull",
+      "acted_on": [
+        { "target": "child-keynesian-macro", "target_kind": "child", "effect": "elevate", "strength": 0.9, "_note": "the first revival; ended the ~35-year dormancy" },
+        { "target": "desc-newkeynesian", "target_kind": "child", "effect": "elevate", "strength": 0.8 },
+        { "target": "act-g20", "target_kind": "actor", "effect": "accelerate", "strength": 0.85, "_note": "G20 coordinated stimulus" },
+        { "target": "act-china", "target_kind": "actor", "effect": "accelerate", "strength": 0.8 }
+      ],
+      "when": "2008-2009",
+      "mechanism": "Conditions resembling the 1930s triggered a near-instant return to fiscal stimulus across G20 governments (ARRA $787bn; China ~$586bn; TARP $700bn) and a 'return of Keynes' — the crisis-pull that ended the ~35-year dormancy. Several prominent anti-Keynesians (Feldstein, Posner) publicly converted; ~300 economists (Barro, Prescott, V. Smith, Buchanan) signed against. Revived a REINTERPRETED (New-Keynesian, microfounded) object.",
+      "confidence": 0.88
+    },
+    {
+      "id": "fe-covid",
+      "name": "The 2020 COVID-19 pandemic",
+      "kind": "economic-crisis",
+      "direction": "pull",
+      "_kind_note": "An exogenous HEALTH shock acting as an economic-crisis forcing — arguably its own kind (a pandemic), logged as economic-crisis for its mechanism (a demand/output collapse pulling fiscal expansion).",
+      "acted_on": [
+        { "target": "child-keynesian-macro", "target_kind": "child", "effect": "elevate", "strength": 0.85, "_note": "the second revival" },
+        { "target": "desc-mmt", "target_kind": "child", "effect": "elevate", "strength": 0.7, "_note": "elevated the MMT variant into the policy conversation" }
+      ],
+      "when": "2020-2021",
+      "mechanism": "An exogenous health shock produced the largest peacetime fiscal expansion in history (CARES Act $2.2tn + four further bills), reviving demand-management AND elevating the heterodox MMT variant — a second crisis-pull, reinforcing the dormancy-revival-cycling pattern. A different reinterpretation again (MMT-adjacent), confirming revived-as-reinterpreted-DIFFERENTLY-each-time.",
+      "confidence": 0.85
+    },
+    {
+      "id": "fe-coldwar-mccarthy",
+      "name": "Cold War / McCarthyism (the Tarshis-textbook red-scare attacks)",
+      "kind": "politics",
+      "direction": "both",
+      "_direction_note": "BOTH: it did not simply squeeze Keynesianism out — it RESHAPED which VERSION survived, pushing toward a domesticated form (a redirect), which is a squeeze on the radical content and a (perverse) pull on the safe synthesis form.",
+      "acted_on": [
+        { "target": "desc-synthesis", "target_kind": "child", "effect": "redirect", "strength": 0.6, "_note": "pushed toward a politically-safe 'neoclassical synthesis' form" },
+        { "target": "child-keynesian-macro", "target_kind": "child", "effect": "redirect", "strength": 0.55, "_note": "diluted the more radical claims" }
+      ],
+      "when": "~1947-1955 (the Tarshis textbook attacks 1947; the McCarthy climate early 1950s)",
+      "mechanism": "Political pressure (the red-scare attacks on Lorie Tarshis's Keynesian textbook; the climate of McCarthyism) pushed Samuelson/Solow toward a DOMESTICATED 'neoclassical synthesis' that diluted Keynes's more radical claims to make them politically safe — an exogenous force reshaping which VERSION of the child survived (post-Keynesians call the result 'bastard Keynesianism'). A rare example of a forcing event acting on the FORM of a child, not just its rise/fall.",
+      "confidence": 0.7
+    }
+  ],
+
+  "sources": [
+    {
+      "name": "Wikipedia, 'Keynesian economics'",
+      "type": "encyclopedia",
+      "url": "https://en.wikipedia.org/wiki/Keynesian_economics",
+      "what_used_for": "predecessors (Malthus/Hobson/underconsumption), key concepts (effective demand, liquidity preference, multiplier related to Kahn 1931), dormancy/revival, schools, Kalecki/Stockholm priority, multiplier deep-genealogy",
+      "reliability": 0.8,
+      "_reliability_comment": "encyclopedia, well-referenced; multiplier-related-to-Kahn-1931 and Feb 1936 publication web-verified 2026-06-09"
+    },
+    {
+      "name": "Wikipedia, 'The General Theory of Employment, Interest and Money'",
+      "type": "encyclopedia",
+      "url": "https://en.wikipedia.org/wiki/The_General_Theory_of_Employment,_Interest_and_Money",
+      "what_used_for": "Feb 1936 publication; the consumption function, aggregate demand, the multiplier (ch.10, related to Kahn 1931), marginal efficiency of capital, liquidity preference, expectations",
+      "reliability": 0.85,
+      "_reliability_comment": "web-verified 2026-06-09: published Feb 1936; multiplier explicitly related to Kahn 1931 in ch.10"
+    },
+    {
+      "name": "Wikipedia, 'Keynesian Revolution'",
+      "type": "encyclopedia",
+      "url": "https://en.wikipedia.org/wiki/Keynesian_Revolution",
+      "what_used_for": "institutionalization timeline (Sweden first; Tarshis 1947; Samuelson textbook), Hansen, monetarist counter-revolution timing, the 'revolution'-as-whig-history question",
+      "reliability": 0.8
+    },
+    {
+      "name": "Wikipedia, '2008-2009 Keynesian resurgence'",
+      "type": "encyclopedia",
+      "url": "https://en.wikipedia.org/wiki/2008%E2%80%932009_Keynesian_resurgence",
+      "what_used_for": "government/institution adopters (ARRA $787bn web-verified, China ~$586bn web-verified, UK, G20, IMF), champions (Krugman/DeLong/Shiller) and converts (Feldstein/Posner), opponents (Barro, ~300 economists incl. Buchanan/Prescott/V.Smith), reinterpretation-not-return",
+      "reliability": 0.8,
+      "_reliability_comment": "web-verified 2026-06-09: ARRA cut to $787bn; China RMB¥4tn/US$586bn announced by the State Council 9 Nov 2008"
+    },
+    {
+      "name": "Wikipedia, 'Neoclassical synthesis'",
+      "type": "encyclopedia",
+      "url": "https://en.wikipedia.org/wiki/Neoclassical_synthesis",
+      "what_used_for": "Hicks 1937 IS-LM, Modigliani 1944, Samuelson coined the term 1955, stagflation discredit, Hicks's later renunciation (the disowned-mediator)",
+      "reliability": 0.8
+    },
+    {
+      "name": "Wikipedia, 'How to Pay for the War' (1940)",
+      "type": "encyclopedia",
+      "url": "https://en.wikipedia.org/wiki/How_to_Pay_for_the_War",
+      "what_used_for": "WWII Keynesian wartime fiscal strategy (compulsory saving, deferred pay, anti-inflation) — the consolidation-phase operationalization",
+      "reliability": 0.8
+    },
+    {
+      "name": "Wikipedia, 'New Keynesian economics'",
+      "type": "encyclopedia",
+      "url": "https://en.wikipedia.org/wiki/New_Keynesian_economics",
+      "what_used_for": "late-1970s emergence, menu costs (Mankiw), sticky prices, DSGE integration with neoclassical assumptions — the revival-#1 reinterpreted object",
+      "reliability": 0.8
+    },
+    {
+      "name": "Wikipedia, 'Stagflation'",
+      "type": "encyclopedia",
+      "url": "https://en.wikipedia.org/wiki/Stagflation",
+      "what_used_for": "1970s simultaneous inflation+unemployment falsifying the Phillips-curve Keynesian form; monetarist ascendancy — the knowledge-frame half of the dormancy",
+      "reliability": 0.8
+    },
+    {
+      "name": "Wikipedia 'Michał Kalecki' + HET profile (hetwebsite.net) + 'Did Kalecki Get There First?' (ResearchGate) + Joan Robinson 'A Neglected Prophet' (NYRB 1976)",
+      "type": "scholarly-history",
+      "url": "https://en.wikipedia.org/wiki/Micha%C5%82_Kalecki",
+      "what_used_for": "independent 1933-35 priority; Robinson's advocacy; Kalecki declined to claim priority — the multiple-independent-discovery discrepancy",
+      "reliability": 0.75,
+      "_reliability_comment": "priority claim genuinely contested in the literature; held ~0.7-0.75"
+    },
+    {
+      "name": "IMF Finance & Development, 'What Is Keynesian Economics?' (Jahan/Mahmud/Papageorgiou, 2014)",
+      "type": "scholarly-history",
+      "url": "https://www.imf.org/external/pubs/ft/fandd/2014/09/basics.htm",
+      "what_used_for": "aggregate-demand core, government-stabilization role, institutional framing",
+      "reliability": 0.85,
+      "_reliability_comment": "institutional explainer; high reliability for the core doctrine"
+    },
+    {
+      "name": "AEA, 'Keynesianism, Pennsylvania Avenue Style' (J. Econ. Perspectives 1996) + Wikipedia 'Employment Act of 1946'",
+      "type": "scholarly-history",
+      "url": "https://en.wikipedia.org/wiki/Employment_Act_of_1946",
+      "what_used_for": "the 1946 Act created the CEA; govt acceptance of macro-stabilization; Hansen as American disciple",
+      "reliability": 0.85
+    },
+    {
+      "name": "IEA blog 'Keynes versus the classics — the true story' + Econlib 'Keynesian Economics'",
+      "type": "scholarly-history",
+      "url": "https://iea.org.uk/blog/keynes-versus-the-classics-%E2%80%93-the-true-story/",
+      "what_used_for": "the 'Keynes caricatured/strawmanned the classics' revisionist case (the highest-value framework-vs-record tension, discrepancy #1)",
+      "reliability": 0.65,
+      "_reliability_comment": "advocacy outlets (free-market), but the historiographical point (Keynes lumped a 'classical' bloc + attributed an always-full-employment assumption) is independently attested; held ~0.65"
+    },
+    {
+      "name": "Reserve Bank of Australia Museum, 'Keynesian Economics in Wartime' + Independent Institute 'World War II and the Triumph of Keynesianism' (R. Higgs)",
+      "type": "scholarly-history",
+      "url": "https://museum.rba.gov.au/exhibitions/make-your-money-fight/keynesian-economics-in-wartime/",
+      "what_used_for": "WWII deficits as validation; the contrarian 'Keynes did not get it right' counterpoint (Higgs)",
+      "reliability": 0.75,
+      "_reliability_comment": "one source (Higgs/Independent Institute) contrarian-by-design, flagged; the RBA museum item is reliable for the wartime-validation narrative"
+    },
+    {
+      "name": "San Francisco Fed Economic Letter (2020) + CSIS 'Shifting Roles of Monetary and Fiscal Policy in Light of Covid-19'",
+      "type": "scholarly-history",
+      "url": "https://www.frbsf.org/research-and-insights/publications/economic-letter/2020/05/covid-19-fiscal-multiplier-lessons-from-great-recession/",
+      "what_used_for": "CARES Act $2.2tn, CBO multiplier ~0.58, MMT discussion (the 2020 second revival)",
+      "reliability": 0.8,
+      "_reliability_comment": "Fed letter high reliability; the MMT-discussion framing softer"
+    },
+    {
+      "name": "Peter Clarke, 'Hobson and Keynes as economic heretics' + Ambrosi 'Malthus: Keynes's First Cambridge Economist'",
+      "type": "scholarly-history",
+      "url": "http://tankona.free.fr/clarke09.pdf",
+      "what_used_for": "scholarly-history on the underconsumption/heretic parent lineage (Malthus 'effective demand', Hobson) — the W_B parent and surprise_priority",
+      "reliability": 0.8,
+      "_reliability_comment": "scholarly PDFs, read via summary; held ~0.8"
+    },
+    {
+      "name": "Wikipedia, 'Chinese economic stimulus program' + Wikipedia 'National fiscal policy responses to the Great Recession'",
+      "type": "encyclopedia",
+      "url": "https://en.wikipedia.org/wiki/Chinese_economic_stimulus_program",
+      "what_used_for": "China RMB¥4tn / US$586bn stimulus announced by the State Council 9 Nov 2008; cross-country G20 fiscal responses",
+      "reliability": 0.8,
+      "_reliability_comment": "web-verified 2026-06-09"
+    }
+  ]
+}

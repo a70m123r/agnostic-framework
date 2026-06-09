@@ -1,0 +1,637 @@
+{
+  "_template_doc": "CANONICAL WRAPPER-GENEALOGY SPECIMEN — one merge event rendered as a rooted genealogy graph that STOPS AT THE PRESENT. Spec: ../SCHEMA.md. Tier-3 exploratory data-harvest for Cowork+Pav ratification — NOT canon, NOT a promotion, convergence list stays 9. THIS SPECIMEN IS THE FRONTIER / UNCONSUMMATED-WELD CASE: the merge event has produced NO settled child W_C in ~90 years; it has instead split into a FAMILY of mutually-rejecting candidate children. It is the deliberate counterpoint to the 9 settled convergences. Every node/edge carries confidence in [0,1] + a zoom/LOD depth. bits_note is QUALITATIVE ONLY. Sources cited in sources[]; discrepancies[] carries the real-record fuzzy frontier.",
+
+  "schema_version": "0.1-canonical-genealogy",
+  "specimen_id": "quantum-gravity",
+  "_status": "Tier-3 WORKING specimen — exploratory data-harvest, surfaced for Cowork+Pav ratification. NOT canon, NOT a tier promotion, does NOT grow the convergence list (stays 9). All confidences are SOFT scores in [0,1]; bits are qualitative only. NOTE: this is the schema's first 'frontier / unconsummated weld' instance — the child does not yet exist, so child-confidence is LOW BY CONSTRUCTION while parent/seam confidence is HIGH.",
+  "extends": {
+    "_comment": "Linkage back to the Phase-1 wrapper CLASS this merge-event specimen instantiates (SCHEMA.md §4). Same graph, deeper zoom. HONEST NOTE: quantum gravity is NOT currently a row in wrapper_classes_phase1.json (the DB holds 25 classes, including the 9 settled convergences; QG is not among them). This specimen therefore EXTENDS the Phase-1 DB by adding the first NEW row of a kind the DB does not yet hold: an open/contested weld with no risen child. It is the negative control for the parents-produce-W_C test — the case where the same two parents + same seam S produce a FORK, not a fusion.",
+    "phase1_file": "../latent_olympics_data/wrapper_classes_phase1.json",
+    "phase1_class_name": "(none yet — proposed NEW row: 'Quantum gravity (sought / open frontier weld)'; nearest existing kin is convergence #1 'LCAO / Molecular Orbital Theory', which is the SETTLED analogue of an orbital-superposition weld — QG is the UNsettled analogue at the spacetime substrate)",
+    "relation_note": "Adds a frontier/unconsummated-weld row the Phase-1 census lacks. Where every Phase-1 convergence has one risen child and a measurable utility, this row's child is a ~90-year-old open conjecture with HIGH synergy and NO consolidated output — exposing the schema's missing CONTESTED-WELD / RIVAL-CHILDREN variable (see discrepancies[0] and gaps)."
+  },
+  "generated": "2026-06-09",
+  "frames_present": ["time", "space", "knowledge", "meaning"],
+  "overall_confidence": 0.45,
+  "_overall_confidence_note": "~0.45 is a DELIBERATELY split aggregate: confidence is HIGH (0.95-0.99) on the two parents, HIGH (~0.9) on the seam S and the field's timeline/dormancy arc, but LOW (~0.4-0.5) on the CHILD because the child does not exist — there is no single W_C to be confident about, only rival candidates. The low overall number encodes 'real weld, real synergy, no settled product', not 'weak evidence'. surprise_confidence (0.85) and child confidence (0.4) are deliberately decoupled (see gaps).",
+
+  "child": {
+    "_comment": "W_C — the SOUGHT/CONJECTURED emergent wrapper. The trunk node — except here the trunk node is HOLLOW: it is a named target with no settled referent. This hollowness is the specimen's signature finding.",
+    "name": "Quantum gravity (sought / conjectured — NO settled child yet)",
+    "kernel": "The sought net product: a single framework in which gravity (spacetime geometry) is described quantum-mechanically — i.e. a theory that (a) reduces to General Relativity in the low-energy / large-scale limit, (b) reduces to Quantum Field Theory in the no-gravity / flat-background limit, (c) is well-defined at the Planck scale where both parents break down, and (d) accounts microscopically for black-hole entropy S=A/4. CRUCIAL: this kernel is a SPECIFICATION OF A TARGET, not a description of an existing object. No theory yet meets all of (a)-(d) to the field's satisfaction; instead there is a FAMILY of competing candidate kernels (string/M-theory, loop quantum gravity, causal sets/CDT/spin foams, asymptotic safety, ...), each of which the other camps reject as not-even-the-right-question.",
+    "frame": ["space", "time", "knowledge"],
+    "_frame_note": "space+time inherited from GR (the geometry being quantized); knowledge inherited from QM (the probabilistic/operator description). 'meaning' enters only at the meta-level (the sociological 'which child is winning' contest, see frame_of_weld and the whig-vs-revisionist discrepancy), not in the physics kernel itself.",
+    "status": "open-conjecture / contested-frontier (PROPOSED new enum value — see gaps)",
+    "_status_enum": "STANDARD enum is one of: risen | active | dormant | resurrected | stale. NONE FITS. This child has never risen (no settled W_C), is not merely dormant (it is intensely active as a research program), is not resurrected (it never first lived as a single object), and is not stale (it is a flagship open problem). The honest value is a NEW status the schema lacks: 'open-conjecture' / 'live-unconsummated-weld' / 'perpetual-frontier'. Flagged as the #1 enum gap.",
+    "confidence": 0.4,
+    "_confidence_note": "0.4 = confidence that a SINGLE, distinct, settled emergent wrapper 'quantum gravity' (a) exists or (b) will exist / (c) is even the right question. It is NOT low because the evidence is weak — the seam S and the need for SOME reconciliation are near-certain. It is low because (i) the child has not consolidated in ~90 years, (ii) serious dissenters hold no weld is needed at all (semiclassical gravity — the child may be a category error), and (iii) the rival candidates disagree about what the child even IS. Compare: the 9 Phase-1 convergences carry child-confidence ~0.85+. This 0.4 is the frontier signature.",
+    "utility": {
+      "_comment": "Pav's three utility legs. NOTE the asymmetry: the SOUGHT child's utility is largely PROSPECTIVE (what it WOULD unlock), but the WELD ITSELF — even unconsummated — has already delivered enormous ACTUAL utility by reorganizing fundamental physics and spawning the holography grandchild. So utility here is split into 'realized-by-the-search' vs 'promised-by-the-child'.",
+      "unifier": "PROMISED (the entire point): a genuine quantum gravity would be the deepest unification in physics — folding gravity into the same quantum framework as the other three forces, completing the arc EM->electroweak->(strong)->gravity. REALIZED-ALREADY-BY-THE-SEARCH (this is the surprise): the seam itself produced the HOLOGRAPHIC PRINCIPLE / AdS/CFT, which DID unify quantum field theory with gravity in a special (anti-de Sitter) setting and now bridges quantum-information, condensed-matter, and gravity — a unification the search delivered before the child consolidated. passesW_CTest: UNDECIDED for the child (no settled W_C to test); PASSES for the AdS/CFT grandchild.",
+      "compressor": "PROMISED but UNMEASURABLE: a settled child would presumably compress the two-theory corpus into one description-shorter framework — but you cannot MDL-score a theory you do not have. This is a PRINCIPLED null, not a lazy blank: the compression leg is intrinsically undefined while the child is unborn (see bits_note and gaps). The one PARTIAL realized compressor is black-hole entropy S=A/4: it compresses 'all the microstates inside a horizon' into a single area, a holographic (area-not-volume) compression that is the search's hardest-won and most compressing result.",
+      "action_spaces_unlocked": [
+        "Planck-scale physics as a computable regime (the cGh / Bronstein-cube corner) — made addressable, if not yet solved.",
+        "Black-hole thermodynamics & the information paradox — an entire field of live moves (Bekenstein-Hawking, the firewall debate, islands/replica-wormholes 2019-) opened by the seam.",
+        "The holographic principle -> AdS/CFT -> 'spacetime emergent from entanglement' (Ryu-Takayanagi, ER=EPR) — arguably the richest action-space in 21st-c. theoretical physics, fed back into quantum information.",
+        "Quantum-gravity phenomenology (born ~1997): Planck-scale Lorentz-violation tests, gamma-ray-burst photon timing, tabletop gravity-entanglement experiments (Bose-Marletto-Vedral 2017) — the attempt to make the frontier empirical.",
+        "Quantum cosmology (wave-function-of-the-universe, no-boundary proposal, bouncing-universe scenarios in loop quantum cosmology) — a new way to ask 'what happened at t=0'.",
+        "Effective field theory of gravity (Donoghue): the UNCONTROVERSIAL part of the weld — compute leading quantum corrections to GR without resolving the UV. The action-space that actually, quietly works."
+      ]
+    }
+  },
+
+  "weld": {
+    "_comment": "The merge: parents -> child. THE HEART OF THE SPECIMEN. Here the weld is an ~90-YEAR-OLD OPEN CONJECTURE in the schema's own sense — a low-confidence weld DRAWN (the seam is agreed) but NOT CONFIRMED (no child consolidated). It is also the schema's cleanest case of ONE seam yielding MANY rival welds (string covariant line / LQG canonical line / sum-over-histories line / ...), which the two-parent-one-child schema cannot natively express. See discrepancies[0].",
+    "parents": [
+      {
+        "_role": "W_A",
+        "name": "General Relativity (Einstein 1915)",
+        "kernel": "Gravity IS spacetime curvature: matter-energy tells spacetime how to curve (the Einstein field equations), and spacetime tells matter how to move. Classical, deterministic, geometric, and crucially BACKGROUND-INDEPENDENT — the metric is itself the dynamical variable, the theory is diffeomorphism-invariant, there is no fixed stage. frame {space,time}.",
+        "frame": ["space", "time"],
+        "confidence": 0.99,
+        "_confidence_note": "Mature, experimentally confirmed to high precision: Mercury perihelion, light bending / lensing, gravitational redshift, GPS corrections, direct gravitational-wave detection (LIGO 2015), and event-horizon imaging (EHT: M87* 2019, Sgr A* 2022)."
+      },
+      {
+        "_role": "W_B",
+        "name": "Quantum Mechanics / Quantum Field Theory (1925-26 QM; QED/QFT 1927-1950s)",
+        "kernel": "Physical quantities are operators with probabilistic (not definite) values; fields are quantized into particles; dynamics run on a FIXED background spacetime with time as an external parameter; renormalization tames the infinities for the other three forces. frame {knowledge,time} (probabilistic state, external clock).",
+        "frame": ["knowledge", "time"],
+        "confidence": 0.99,
+        "_confidence_note": "The Standard Model (QFT's culmination) is the most precisely tested theory in physics (e.g. electron g-2 agreement to ~12 significant figures)."
+      }
+    ],
+    "shared_sub_object_S": "S = the regime where BOTH theories must simultaneously apply AND where each predicts the other should NOT be trusted: the PLANCK SCALE (l_P ~ 1.6e-35 m, t_P ~ 5.4e-44 s, E_P ~ 1.2e19 GeV), reached by combining exactly the three constants G (gravity, from W_A), hbar (quantum, from W_B) and c (relativity, shared) — the cGh corner of the Gamow-Ivanenko-Landau / Bronstein 'cube of theories'. Concretely S has THREE FACES, each a real overlap the parents share but answer differently: (1) the GRAVITON — a massless spin-2 quantum of the gravitational field, a notion BOTH the linearized-GR-as-spin-2-field reading (Fierz-Pauli 1939) and QFT admit (named ~1934, Blokhintsev-Galperin); (2) BLACK HOLES — GR solutions that nonetheless radiate thermally and carry entropy S=A/4 (Bekenstein 1973, Hawking 1974), a statement simultaneously gravitational, thermodynamic AND quantum, demanding a microscopic (quantum) account of geometric AREA; (3) the EARLY UNIVERSE / curvature SINGULARITIES, where GR's own equations break down and quantum effects are forced. S is GENUINE OVERLAP, not a pile: the same physical situation (Planck-scale geometry, the horizon, t=0) is JOINTLY claimed by both parents, and each parent declares the OTHER ill-defined there. That mutual ill-definedness at the shared seam is precisely what makes a weld necessary — and what has resisted consummation for ~90 years.",
+    "_shared_sub_object_S_confidence": 0.9,
+    "_shared_sub_object_S_note": "HIGH confidence: that S (Planck scale, graviton, black-hole entropy, singularities) is a real shared seam where both parents apply and clash is essentially undisputed across all camps. The DISAGREEMENT is not about S but about the DIRECTION of the weld over S (which parent's kernel to keep) — see discrepancies[1]. This is the certain core of the specimen.",
+    "surprise": "The deepest surprise is STRUCTURAL and is what makes QG the schema's signature FRONTIER case rather than a settled convergence: the two parents, pushed together at S, do NOT yield ONE third — they yield a CONTRADICTION that forces a CHOICE about which parent's deepest commitment to keep, and each choice grows a DIFFERENT proposed child that the OTHER child's adherents reject as not-even-the-right-question. Neither parent alone predicts this. (i) QM alone never predicts that quantizing the metric DESTROYS THE BACKGROUND you quantize against (the recursion: ordinary QFT needs a fixed stage to define fluctuations; here the stage IS the thing fluctuating) — this 'problem of time' and the loss of local observables emerge only from BOTH parents jointly. (ii) GR alone never predicts black-hole entropy S=A/4 finite and proportional to AREA not VOLUME — a holographic, information-theoretic fact needing hbar AND G AND c together, which became the single hardest constraint and the richest seed (it later spawned the holographic principle and AdS/CFT). (iii) Within the COVARIANT proposed-weld specifically, the standout LOCAL surprise (1974, Scherk-Schwarz & Yoneya): a theory built to model the STRONG nuclear force was found to NECESSARILY contain a massless spin-2 state in its closed-string spectrum interacting exactly like a graviton — string theory 'predicts gravity whether you want it or not', a result neither hadron physics nor GR forecast; the response was to shrink the string ~20 orders of magnitude to the Planck length and reinterpret the whole edifice as quantum gravity. (iv) Within the CANONICAL proposed-weld (LQG), the standout surprise: AREA and VOLUME operators have DISCRETE spectra (Rovelli-Smolin 1994-95) — space is granular at the Planck scale, with a smallest possible area — a quantitative Planck-scale prediction falling out of taking GR's background-independence and QM's operator-spectra seriously together, labelled by Penrose's spin networks (drawn ~1964 for an unrelated reason). THE META-SURPRISE FOR THE SCHEMA: this is a weld whose SYNERGY is real and enormous (it reorganized all of fundamental physics) yet whose CHILD has NOT consolidated for ~90 years — synergy WITHOUT a settled W_C. The surprise is partly that a genuine high-synergy seam can stay an open conjecture for a human lifetime, splitting into rival children instead of fusing into one.",
+    "surprise_confidence": 0.85,
+    "_surprise_confidence_note": "HIGH (0.85): that the seam produces genuine, non-additive synergy — reachable only from both parents jointly — is well-attested (the graviton-in-string-spectrum result, S=A/4, the problem of time, discrete spectra are all real and load-bearing). Deliberately DECOUPLED from child-confidence (0.4): synergy is real even though the child is unborn. This decoupling is itself a finding (see gaps).",
+    "bits_note": "QUALITATIVE ONLY — and here intrinsically NULL on the child. The compression question ('would the sought child shorten the two-theory corpus?') is GENUINELY UNDEFINED while the child does not exist: you cannot MDL-score a theory you do not have. This is a PRINCIPLED blank, not a lazy one. The only qualitative bit-claims one can make: (a) black-hole entropy S=A/4 is a real, large compression — it replaces an astronomical microstate count with a single area, the most description-shortening result the search has produced; (b) AdS/CFT is a compression in that a (d+1)-dim gravity theory is fully encoded by a d-dim field theory on the boundary (a literal holographic dimension-reduction). But the CHILD's own MDL delta is null-until-consolidated. Frontier specimens may have intrinsically-null bits — flag in gaps. NO numeric bit values fabricated.",
+    "survived": [
+      "The GRAVITON as the massless spin-2 quantum of the linearized field (Fierz-Pauli spin-2 reading persists as a stub in string theory's spectrum AND in effective-field-theory / perturbative QG alike) — survived into EVERY candidate.",
+      "The requirement to reproduce GR at large scales / low energy: every candidate must have a classical-GR limit. GR survives as the IR boundary condition.",
+      "The requirement to reproduce QFT in the no-gravity limit.",
+      "The Planck scale as the regime of new physics — survived as the shared arena.",
+      "Black-hole entropy S=A/4 — survived as the shared BENCHMARK both string theory and LQG must (and do, in their own ways) reproduce."
+    ],
+    "dropped": [
+      "(COVARIANT / string child) DROPS GR's manifest background-independence — works perturbatively on a FIXED background; M-theory's non-perturbative background-free definition is still missing.",
+      "(COVARIANT / string child) DROPS the point-particle ontology — replaces it with extended objects + extra dimensions + supersymmetry, none yet observed.",
+      "(CANONICAL / LQG child) DROPS QM's fixed external time and the smooth continuum — space becomes discrete/granular, time disappears into constraints (the 'problem of time'); has long struggled to recover smooth GR and compute scattering.",
+      "(SEMICLASSICAL dissent) DROPS THE WELD ITSELF — keeps spacetime classical, denies gravity needs quantizing.",
+      "CRITICAL META-NOTE: 'dropped' is NOT single-valued here. Each rival child drops a DIFFERENT parent-feature, and the schema's flat survived[]/dropped[] arrays cannot record 'dropped-BY-WHICH-CHILD'. This asymmetry is itself a primary finding (see gaps — needs a per-candidate {feature, kept_by[], dropped_by[]} matrix)."
+    ],
+    "frame_of_weld": ["space", "time", "knowledge", "meaning"],
+    "_frame_of_weld_note": "The PHYSICS of the weld holds in {space,time,knowledge} (geometry + probabilistic operators). BUT this specimen uniquely also engages {meaning}: because there is no settled child, WHICH candidate is 'winning' is a sociological, observer- and era-relative judgment (string-by-headcount dominance since the mid-1980s; partial reversal after the LHC found no SUSY) — a meaning-frame contest, not a view-from-nowhere fact. The weld's resolution is currently being adjudicated in the meaning frame as much as the knowledge frame. See the whig-vs-revisionist discrepancy.",
+    "lod_scale": "HOLDS at the coarsest grain only: at field-level zoom, 'GR + QM must be reconciled at the Planck scale' is a single, agreed weld. ZOOM IN ONE STEP and it SHATTERS into mutually-rejecting sub-welds (covariant/string vs canonical/LQG vs sum-over-histories vs asymptotic-safety vs ...), each claiming to be THE weld and calling the others wrong. So the lod_scale behaviour is the inverse of a healthy weld: a settled convergence holds when you zoom in (sub-structure confirms it); THIS weld DISSOLVES when you zoom in (sub-structure contradicts itself). That inversion is a diagnostic of an unconsummated weld.",
+    "when": "Seam first noticed 1916 (Einstein: quantum effects must modify GR); 'cube of theories' framing 1928 (Gamow-Ivanenko-Landau); first technical papers early 1930s (Rosenfeld) and 1935-36 (Bronstein). Still OPEN as of 2026 — ~90-110 years depending on where you date the start. The merge event has no end date; it stops at the present unresolved.",
+    "dormancy_intervals": [
+      {
+        "from": "1970",
+        "to": "1983",
+        "why": "FIELD-LEVEL dormancy ('the Middle Ages', Rovelli's periodization). 'The seventies soon disappoint the hopes of the sixties': the Wheeler-DeWitt equation proves too ill-defined for calculations; non-renormalizability of GR is confirmed ('t Hooft-Veltman 1973 one-loop-with-matter; Goroff-Sagnotti 1985-86 two-loop nail for pure gravity); supergravity and higher-derivative rescue attempts fail. 'The landscape of quantum gravity is gloomy.' CAUSE-FRAME: internal / knowledge-frame (no-go theorems + ill-definedness)."
+      },
+      {
+        "from": "1964 (drawn) / 1971 (published)",
+        "to": "1988",
+        "why": "NODE-LEVEL dormancy: Penrose's SPIN NETWORKS lay dormant ~20-25 years (sources vary on the exact span; see date/attribution discrepancy). Drawn ~1964 for an unrelated combinatorial-geometry reason (existing first only as a handwritten manuscript; published 1971), then REVIVED 1988-90 when Rovelli-Smolin found they exactly label the quantum-geometry states of LQG. Rovelli: 'the idea will surprisingly re-emerge.' CAUSE-FRAME: tool-orphaning / knowledge-frame (a premature tool awaiting a host)."
+      },
+      {
+        "from": "~1938",
+        "to": "~1990s",
+        "why": "ROOT-LEVEL dormancy: Matvei Bronstein's foundational mid-1930s work went dormant for DECADES after his execution by the Soviet NKVD in February 1938 (age 32, nephew of Trotsky). Reconstructed only recently (Stachel; Gorelik & Frenkel biography). CAUSE-FRAME: EXTERNAL / physical-political-frame — a death/purge severing a lineage, NOT an internal-to-the-idea cause. The schema's single 'why' string cannot tag that this dormancy was physical-frame while the others were knowledge-frame (see gaps: dormancy.why_frame)."
+      }
+    ],
+    "revival": {
+      "_comment": "Two-sided revival of the dormant FIELD, plus the node-level spin-network revival.",
+      "when": "1984-1994 (the 'Renaissance'), with node-level spin-network revival 1988-90.",
+      "by": "COVARIANT side: Green-Schwarz (1984) + the heterotic-string group. CANONICAL side: Ashtekar (1986, building on Sen 1981) + Jacobson-Smolin (1988) + Rovelli-Smolin (spin networks, 1988-90).",
+      "trigger": "COVARIANT trigger = the 1984 Green-Schwarz anomaly cancellation + the heterotic string ('strings might describe our universe'), reviving the covariant program AS string theory. CANONICAL trigger = Ashtekar's 1986 'new variables' + Jacobson-Smolin 1988 loop solutions, reviving the dead Wheeler-DeWitt program as loop quantum gravity 'twenty years after'. Note: the revival produced TWO children, not one — the fork hardened here."
+    }
+  },
+
+  "roots": {
+    "_comment": "DOWN, in the PHYSICAL frame. The recursive descent toward people and place. Confidence FADES and depth RISES going deeper. NOTE the unusual structure: because BOTH parents share deep sub-wrappers (the action principle, symmetry/group theory), the roots already OVERLAP below the seam S — part of why a weld feels possible at all.",
+    "sub_wrappers": [
+      {
+        "name": "Special Relativity (Einstein 1905; Lorentz-Poincare lineage)",
+        "kernel": "Spacetime as a unified Minkowski geometry; invariance of c; the relativity of simultaneity. A constituent of GR (the flat-spacetime / no-gravity limit).",
+        "frame": ["space", "time"],
+        "depth": 1,
+        "confidence": 0.92,
+        "who_called_it": "Einstein 1905; geometry by Minkowski 1908; contested priority with Lorentz-Poincare (a separate specimen)."
+      },
+      {
+        "name": "Equivalence principle (gravity = acceleration)",
+        "kernel": "Locally, a gravitational field is indistinguishable from acceleration — Einstein's 'happiest thought'; the conceptual seed that gravity is geometry.",
+        "frame": ["space"],
+        "depth": 1,
+        "confidence": 0.93,
+        "who_called_it": "Einstein 1907-1911."
+      },
+      {
+        "name": "Riemannian / differential geometry (the math substrate of GR)",
+        "kernel": "Curved-manifold geometry; metric tensor; curvature; the Ricci-Levi-Civita tensor calculus that GR is written in.",
+        "frame": ["space"],
+        "depth": 1,
+        "confidence": 0.9,
+        "who_called_it": "Riemann 1854; tensor calculus by Ricci & Levi-Civita (1900); supplied to Einstein via Grossmann."
+      },
+      {
+        "name": "Quantum mechanics (the operator/probabilistic substrate of QFT)",
+        "kernel": "State vectors; operators; non-commutation; Born-rule probabilities; the matrix/wave formulations.",
+        "frame": ["knowledge"],
+        "depth": 1,
+        "confidence": 0.92,
+        "who_called_it": "Heisenberg / Born / Jordan (1925), Schrodinger (1926), Dirac (1925-28)."
+      },
+      {
+        "name": "Quantum field theory / second quantization",
+        "kernel": "Fields promoted to operators; particles as field excitations; the framework gravity must be quantized INTO (or against).",
+        "frame": ["knowledge"],
+        "depth": 1,
+        "confidence": 0.9,
+        "who_called_it": "Dirac, Jordan, Pauli, Heisenberg (1927-1930s)."
+      },
+      {
+        "name": "Gauge theory + renormalization (the QFT success machinery)",
+        "kernel": "Local gauge invariance + the renormalization that tames infinities for the OTHER three forces — and whose FAILURE for gravity (non-renormalizability) is the central obstruction.",
+        "frame": ["knowledge"],
+        "depth": 1,
+        "confidence": 0.9,
+        "who_called_it": "Tomonaga-Schwinger-Feynman-Dyson (QED, 1947-50); Yang-Mills (1954); 't Hooft-Veltman (1971)."
+      },
+      {
+        "name": "The ACTION PRINCIPLE / Lagrangian-Hamiltonian variational formalism (SHARED deep root)",
+        "kernel": "Euler-Lagrange / Hamilton / Jacobi variational mechanics — BOTH parents are built on it (Einstein-Hilbert action for GR; path-integral and canonical quantization for QM). A REAL shared root BELOW the seam S: the parents already overlap in their substructure, which is part of why a weld feels possible.",
+        "frame": ["space", "knowledge"],
+        "depth": 2,
+        "confidence": 0.85,
+        "who_called_it": "Euler, Lagrange, Hamilton, Jacobi (18th-19th c.); Einstein-Hilbert action (Hilbert 1915)."
+      },
+      {
+        "name": "SYMMETRY / group theory (SHARED deep root)",
+        "kernel": "Lie groups; Noether's theorem (1918) tying symmetry to conservation; the diffeomorphism group for GR vs internal gauge groups for QFT. The DISPUTE over the weld is largely a dispute over WHICH symmetry is fundamental (diffeomorphism invariance vs background Poincare/conformal) — so this shared root is also a fault line.",
+        "frame": ["space", "knowledge"],
+        "depth": 2,
+        "confidence": 0.8,
+        "who_called_it": "Lie; Noether (1918); Weyl."
+      },
+      {
+        "name": "Penrose spin networks / SU(2) recoupling (tooling sub-wrapper, became load-bearing in LQG)",
+        "kernel": "Combinatorial graphs labelled by SU(2) representations; the orphaned 1964 tool that turned out to label LQG's quantum-geometry states.",
+        "frame": ["space", "knowledge"],
+        "depth": 2,
+        "confidence": 0.75,
+        "who_called_it": "Penrose (1964 manuscript / 1971 publication)."
+      },
+      {
+        "name": "Conformal field theory + Calabi-Yau geometry (tooling sub-wrapper, load-bearing in strings)",
+        "kernel": "2D CFT on the string worldsheet; Calabi-Yau compactification of the extra dimensions.",
+        "frame": ["space", "knowledge"],
+        "depth": 2,
+        "confidence": 0.75,
+        "who_called_it": "Polyakov; Belavin-Polyakov-Zamolodchikov (BPZ, 1984); Candelas-Horowitz-Strominger-Witten (1985)."
+      },
+      {
+        "name": "Knot theory + topological QFT (tooling sub-wrappers, entered via the loop representation)",
+        "kernel": "Knot invariants (entered LQG via the loop representation, Rovelli-Smolin 1988); topological quantum field theory.",
+        "frame": ["space", "knowledge"],
+        "depth": 2,
+        "confidence": 0.7,
+        "who_called_it": "Rovelli-Smolin (1988); Witten (TQFT, 1988)."
+      }
+    ],
+    "people_0": [
+      {
+        "who": "Albert Einstein",
+        "role": "Originator of W_A (general relativity); ALSO first (1916) to note quantum effects must modify GR — i.e. first to draw the seam.",
+        "when": "1915-1955 (GR 1915; QG remark 1916)",
+        "where": "Berlin / Princeton",
+        "culture": "German-Jewish theoretical physics",
+        "relation": "parent-originator (of W_A) + first-seer (of the seam)",
+        "confidence": 0.98
+      },
+      {
+        "who": "Oskar Klein",
+        "role": "Early suggestion (1927) that quantum gravity modifies space-time concepts.",
+        "when": "1927",
+        "where": "Sweden / Copenhagen circle",
+        "culture": "Scandinavian theoretical physics, Bohr orbit",
+        "relation": "early-seer",
+        "confidence": 0.85
+      },
+      {
+        "who": "Leon Rosenfeld",
+        "role": "First technical QG papers (early 1930s) — applied Pauli's gauge-field quantization to the linearized Einstein equations. ALSO the source of the later DISSENT that gravity may not need quantizing (the semiclassical position).",
+        "when": "early 1930s",
+        "where": "Belgium / Copenhagen",
+        "culture": "Bohr-school theoretical physics",
+        "relation": "covariant-originator + dissent-root",
+        "confidence": 0.85
+      },
+      {
+        "who": "Markus Fierz & Wolfgang Pauli",
+        "role": "Showed linearized gravity = a massless spin-2 field (Fierz-Pauli 1939) — the graviton stub, face (1) of the seam S.",
+        "when": "1939",
+        "where": "Switzerland (ETH Zurich)",
+        "culture": "Central-European theoretical physics",
+        "relation": "seam-formalizers",
+        "confidence": 0.9
+      },
+      {
+        "who": "Matvei Petrovich Bronstein",
+        "role": "The CONTESTED 'first real quantum-gravitist': quantized weak gravity (1935-36), realized field-quantization must work WITHOUT a fixed background metric, and derived that GR's bound on mass density forces rejecting Riemannian geometry and 'our ordinary concepts of space and time'. Executed by the NKVD Feb 1938, age 32 (Trotsky's nephew); work neglected for decades.",
+        "when": "1935-1936 (executed Feb 1938)",
+        "where": "Leningrad, USSR",
+        "culture": "Soviet theoretical-physics school (Landau circle), under Stalinist terror",
+        "relation": "deep-root originator + politically-severed lineage",
+        "confidence": 0.8,
+        "_confidence_note": "Confidence ~0.8 reflects a genuine PRIORITY DISPUTE (no single founder) AND the historiographic reconstruction being recent. Rovelli: in Russia he is remembered by some as 'smarter than Landau'."
+      },
+      {
+        "who": "George Gamow, Dmitri Ivanenko, Lev Landau",
+        "role": "Originated the 'cube of theories' (c, G, h) framing of the seam (1928) — the cGh corner that IS S.",
+        "when": "1928",
+        "where": "USSR (Leningrad)",
+        "culture": "Soviet theoretical-physics school",
+        "relation": "seam-framers",
+        "confidence": 0.82
+      },
+      {
+        "who": "Peter Bergmann & Paul Dirac",
+        "role": "Founded the CANONICAL / constrained-Hamiltonian line (1949-1959): Dirac's constraint theory + Bergmann's gauge-invariant-observables program — the substrate of Wheeler-DeWitt and later LQG.",
+        "when": "1949-1959",
+        "where": "USA (Syracuse) / UK (Cambridge)",
+        "culture": "Anglo-American mathematical physics",
+        "relation": "canonical-line founders",
+        "confidence": 0.85
+      },
+      {
+        "who": "Bryce DeWitt & John Archibald Wheeler",
+        "role": "The Wheeler-DeWitt equation (canonical quantum gravity, 1966-67); 'superspace', 'spacetime foam'. DeWitt ALSO did the covariant Feynman-rules + ghost work. Wheeler the great namer ('black hole', 'quantum foam'). Subject of a ~20-year NAMING DISPUTE (see discrepancies).",
+        "when": "1957-1967",
+        "where": "USA (North Carolina / Princeton / Texas)",
+        "culture": "American mathematical/gravitational physics",
+        "relation": "canonical-line keystone (+ long naming dispute)",
+        "confidence": 0.88
+      },
+      {
+        "who": "Richard Feynman & Bryce DeWitt",
+        "role": "Covariant Feynman rules for GR, tree amplitudes, Faddeev-Popov-type ghosts (1962-1967) — built the COVARIANT (perturbative-graviton) line.",
+        "when": "1962-1967",
+        "where": "USA (Caltech / North Carolina)",
+        "culture": "American theoretical physics",
+        "relation": "covariant-line builders",
+        "confidence": 0.86
+      },
+      {
+        "who": "Roger Penrose",
+        "role": "Spin networks (1964/1971 — the orphaned tool revived 25 yr later in LQG) + twistor theory + gravity-induced state reduction. A cross-cutting seer whose tools and cousin-lines feed multiple children.",
+        "when": "1964-onward",
+        "where": "UK (Oxford / Birkbeck)",
+        "culture": "British mathematical physics",
+        "relation": "cross-cutting seer / cousin-line founder",
+        "confidence": 0.88
+      },
+      {
+        "who": "Gerard 't Hooft & Martinus Veltman",
+        "role": "Proved GR non-renormalizable (1971-73, with matter) — the dormancy TRIGGER. 't Hooft later CO-FOUNDS the holographic principle (1993) — so the same person is both weld-falsifier and harvest-originator.",
+        "when": "1971-1973 (and 1993)",
+        "where": "Netherlands (Utrecht)",
+        "culture": "Dutch theoretical physics",
+        "relation": "weld-falsifier (perturbative) + harvest-originator",
+        "confidence": 0.9
+      },
+      {
+        "who": "Jacob Bekenstein & Stephen Hawking",
+        "role": "Black-hole entropy S=A/4 (Bekenstein 1973) and Hawking radiation (1974) — face (2) of S, the hardest constraint on any child and the seed of holography.",
+        "when": "1973-1974",
+        "where": "USA (Princeton) / UK (Cambridge)",
+        "culture": "Anglo-American gravitational physics",
+        "relation": "seam-deepeners",
+        "confidence": 0.93
+      },
+      {
+        "who": "John Schwarz, Joel Scherk, Tamiaki Yoneya, Michael Green",
+        "role": "The graviton-in-string-spectrum reinterpretation (Scherk-Schwarz & Yoneya 1974) and the anomaly cancellation (Green-Schwarz 1984) — founders of the COVARIANT / string child.",
+        "when": "1973-1984",
+        "where": "USA / France / Japan / UK",
+        "culture": "international high-energy theory",
+        "relation": "child-A (string) originators",
+        "confidence": 0.9
+      },
+      {
+        "who": "Amitabha Sen, Abhay Ashtekar, Ted Jacobson, Carlo Rovelli, Lee Smolin",
+        "role": "Ashtekar 'new variables' (1986, on Sen 1981) + the loop representation + discrete area/volume (1994-95) — founders of the CANONICAL / LQG child. NOTE: Rovelli is ALSO the field's main HISTORIAN (source of this specimen's backbone) — a reflexivity worth flagging (the narrator is a partisan of one child).",
+        "when": "1981-1995",
+        "where": "India / USA / France / etc.",
+        "culture": "international gravitational physics",
+        "relation": "child-B (LQG) originators (Rovelli also = historian, reflexivity flag)",
+        "confidence": 0.9
+      },
+      {
+        "who": "Juan Maldacena & Leonard Susskind",
+        "role": "Holographic principle / AdS/CFT (Maldacena 1997) / ER=EPR (Maldacena-Susskind 2013) — the harvest GRANDCHILD that overgrew its parent program. Maldacena 1997 is among the most-cited papers in theoretical physics.",
+        "when": "1993-2013",
+        "where": "Argentina / USA (Princeton / Stanford)",
+        "culture": "international high-energy theory",
+        "relation": "descendant-originators (the grandchild)",
+        "confidence": 0.9
+      }
+    ]
+  },
+
+  "harvest": {
+    "_comment": "UP, in the LATENT + CULTURAL frame. NOTE the inversion characteristic of a frontier weld: the harvest is LUSH even though the child is unborn — the search spawned a whole forest of descendant programs and one grandchild (holography) that arguably outgrew the parents, all WITHOUT a settled W_C. A weld can be barren at the trunk and fertile in the canopy.",
+    "descendants": [
+      {
+        "name": "String theory -> superstrings -> M-theory",
+        "what": "The dominant COVARIANT child: the 5 superstring theories unified by dualities into M-theory (Witten 1995). The by-headcount-largest program — but accused of dropping background-independence and of being unfalsifiable (see whig-vs-revisionist discrepancy).",
+        "frame": ["space", "time", "knowledge"],
+        "confidence": 0.7,
+        "_confidence_note": "Confidence here = 'this is a real, serious descendant program', NOT 'this is the correct child' (which is contested)."
+      },
+      {
+        "name": "Loop quantum gravity -> spin foam models + loop quantum cosmology",
+        "what": "The CANONICAL child: discrete quantum geometry (granular space, discrete area/volume), with spin foams as its covariant form and loop quantum cosmology (bouncing-universe scenarios) as its cosmological wing.",
+        "frame": ["space", "time", "knowledge"],
+        "confidence": 0.68
+      },
+      {
+        "name": "Sum-over-histories line: causal dynamical triangulations (CDT), causal set theory, Euclidean / Hartle-Hawking quantum cosmology",
+        "what": "The third lineage: path-integral-over-geometries descendants — CDT (Ambjorn-Loll), causal sets (Sorkin et al.), and the no-boundary 'wave function of the universe' (Hartle-Hawking 1983).",
+        "frame": ["space", "time", "knowledge"],
+        "confidence": 0.6
+      },
+      {
+        "name": "Holographic principle -> AdS/CFT -> 'spacetime emergent from entanglement' (THE richest grandchild)",
+        "what": "Born FROM the black-hole-entropy face of S: holographic principle ('t Hooft 1993, Susskind 1995) -> AdS/CFT correspondence (Maldacena 1997) -> Ryu-Takayanagi, ER=EPR (Maldacena-Susskind 2013) -> celestial holography. A descendant that arguably OUTGREW the parent program and now feeds BACK into quantum-information and condensed-matter physics. The single most successful thing the search produced.",
+        "frame": ["space", "knowledge", "time"],
+        "confidence": 0.8,
+        "_confidence_note": "Higher confidence (0.8) than the candidate children themselves, because AdS/CFT is a CONCRETE, calculationally-validated correspondence (a realized unification), not a candidate-for-the-final-child."
+      },
+      {
+        "name": "Effective field theory of gravity (Donoghue) — the modest, AGREED descendant",
+        "what": "Treats GR as a low-energy EFT and computes leading quantum corrections without resolving the UV. The part of the weld that DOES work and is UNCONTROVERSIAL across all camps — the quiet success amid the contested grand programs.",
+        "frame": ["space", "knowledge"],
+        "confidence": 0.85,
+        "_confidence_note": "Highest descendant confidence: EFT-of-gravity is uncontested and computationally validated; everyone agrees it is correct as far as it goes."
+      },
+      {
+        "name": "Quantum-gravity phenomenology (adjacent field seeded, born ~1997)",
+        "what": "The attempt to make the frontier EMPIRICAL: Planck-scale Lorentz-violation tests, gamma-ray-burst photon timing, tabletop entanglement-of-gravity experiments (Bose-Marletto-Vedral 2017 proposal).",
+        "frame": ["space", "time", "knowledge"],
+        "confidence": 0.65
+      }
+    ],
+    "cultural_harvest": [
+      {
+        "domain": "scifi",
+        "what": "WORMHOLES (Einstein-Rosen bridges — the 'ER' of ER=EPR) as the central device of Carl Sagan's 'Contact' (1985, with Kip Thorne consulting) and Christopher Nolan's 'Interstellar' (2014, Thorne again — the black-hole 'Gargantua' render became an actual physics paper)."
+      },
+      {
+        "domain": "scifi",
+        "what": "The SIMULATION / HOLOGRAPHIC-UNIVERSE trope ('reality is a projection from a lower-dimensional boundary') diffused from the holographic principle into popular culture, fiction, and philosophy-of-mind speculation."
+      },
+      {
+        "domain": "art",
+        "what": "Planck-scale 'spacetime foam' and 'granular space' imagery (Wheeler's 'quantum foam'; the LQG spin-network mesh) recur in science-art visualizations and museum installations as the visual shorthand for 'the smallest scale'."
+      },
+      {
+        "domain": "other",
+        "what": "The very phrase 'Theory of Everything' (popularized around the string program) became a cultural target — book/film 'The Theory of Everything', and the framing of physics as a quest for one final unifying equation."
+      }
+    ]
+  },
+
+  "relatives": {
+    "_comment": "WIDE edges (OPTIONAL group, flagged in SCHEMA.md §5). Cousins / influences / siblings / rivals spanning the physical AND latent. For QG, the most important WIDE edges are the RIVAL CANDIDATE CHILDREN themselves — which is exactly the anomaly: in a settled convergence the children are descendants (UP); here the 'children' behave like RIVALS (WIDE), because none is THE child. This mis-placement is a symptom of the missing rival-children variable.",
+    "edges": [
+      {
+        "name": "Asymptotic safety (Weinberg's program)",
+        "relation": "cousin",
+        "frame": ["space", "knowledge"],
+        "confidence": 0.6,
+        "note": "A fourth candidate line: gravity may be non-perturbatively renormalizable via a UV fixed point. A cousin-weld over the same seam S, keeping QFT methods but seeking a non-trivial fixed point."
+      },
+      {
+        "name": "Twistor theory (Penrose)",
+        "relation": "cousin",
+        "frame": ["space", "knowledge"],
+        "confidence": 0.55,
+        "note": "Penrose's alternative geometric substrate; a cousin-line that re-encodes spacetime in twistor space, later feeding amplitude methods (twistor strings, amplituhedron)."
+      },
+      {
+        "name": "Noncommutative geometry (Connes)",
+        "relation": "cousin",
+        "frame": ["space", "knowledge"],
+        "confidence": 0.5,
+        "note": "A cousin approach in which spacetime coordinates fail to commute at the Planck scale — another way to grant geometry quantum structure."
+      },
+      {
+        "name": "Semiclassical gravity (Rosenfeld -> Mattingly)",
+        "relation": "rival",
+        "frame": ["space", "knowledge"],
+        "confidence": 0.45,
+        "note": "The DISSENTING rival that denies the weld is needed at all: quantum matter coupled to CLASSICAL spacetime. If correct, there IS no child — W_C is a category error. The falsifier-of-the-weld. (See discrepancies.)"
+      },
+      {
+        "name": "Electroweak / strong-force unification (the prior unifications)",
+        "relation": "sibling",
+        "frame": ["knowledge"],
+        "confidence": 0.8,
+        "note": "The SETTLED siblings: EM+weak -> electroweak (Glashow-Weinberg-Salam) and the strong force in the Standard Model are the welds that DID consummate, against which gravity's stubborn non-fusion stands out. The contrast is the point: same kind of unification ambition, opposite outcome."
+      },
+      {
+        "name": "LCAO / Molecular Orbital Theory (Phase-1 convergence #1)",
+        "relation": "cousin",
+        "frame": ["space", "knowledge"],
+        "confidence": 0.7,
+        "note": "STRUCTURAL cousin across the Phase-1 DB: LCAO is the SETTLED orbital-superposition weld (two orbitals -> one MO, closed-form). QG is the UNsettled superposition-of-frameworks weld at the spacetime substrate. LCAO shows what a consummated version of this kind of weld looks like; QG is its frontier mirror. This is the cleanest link back to the extends-target."
+      }
+    ]
+  },
+
+  "fuzzy_layer": {
+    "_comment": "The trunk/frontier partition. For THIS specimen the partition is unusually inverted: the PARENTS and the SEAM are certain core, but the CHILD — normally the trunk's crown — is itself in the frontier (it is a conjecture). So the certain core is the LOWER half of the tree (parents + seam + deep shared roots), and the frontier is BOTH the deep people-roots AND the entire would-be canopy (the child + rival children). A conjecture = a low-confidence weld drawn but not confirmed; here the whole child IS that conjecture.",
+    "certain_core": [
+      "W_A = General Relativity (parent, 0.99) — experimentally confirmed.",
+      "W_B = Quantum Mechanics / QFT (parent, 0.99) — most precisely tested theory in physics.",
+      "The seam S exists and is genuine (Planck scale / graviton / black-hole entropy S=A/4 / singularities) — agreed across all camps (0.9).",
+      "Black-hole entropy S=A/4 (Bekenstein-Hawking) is a real, hard, shared constraint (0.93).",
+      "GR is perturbatively non-renormalizable ('t Hooft-Veltman 1973; Goroff-Sagnotti 1985-86) — a confirmed no-go (0.9).",
+      "The field-level dormancy 1970-1983 and the 1984-94 two-sided revival are well-documented (0.85).",
+      "SOME reconciliation/effective description is needed in regime S — even dissenters agree quantum matter and gravity must be jointly describable somehow (effective field theory of gravity works) (0.85).",
+      "The action principle and symmetry/group theory are shared deep roots of BOTH parents (0.8-0.85)."
+    ],
+    "frontier": [
+      "THE CHILD ITSELF: 'quantum gravity' as a single settled W_C — a ~90-year-old open conjecture; may never consolidate or may be the wrong question (0.4). The crown of the tree is in the frontier — the specimen's signature.",
+      "Which candidate is the right child (string vs LQG vs causal sets vs asymptotic safety vs ...) — unresolved; sociologically loaded (0.3-0.7 spread, no winner).",
+      "Whether the weld is even NEEDED (semiclassical-gravity dissent) — a live minority position that there is no child (0.45).",
+      "Bronstein as 'first quantum-gravitist' — contested priority, recently reconstructed history (0.8 but disputed).",
+      "The exact span of the spin-network dormancy (1964 vs 1971 start; ~20 vs ~25 years) — date conflict across sources (0.7).",
+      "Deep tooling roots (spin networks, CFT/Calabi-Yau, knot theory, TQFT becoming load-bearing) — medium confidence, lineage-specific (0.7-0.75).",
+      "Quantum-gravity phenomenology yielding any empirical signal — aspirational frontier (0.5-0.65).",
+      "The Wikidata structured influence-graph for QG — NOT cleanly harvested this pass (only adjacents confirmed); a provenance gap (low confidence in the structured-graph backbone)."
+    ]
+  },
+
+  "discrepancies": [
+    {
+      "_comment": "THE central framework-vs-record tension and the single most valuable row in the specimen.",
+      "what": "The schema renders parents -> ONE child W_C, but the real record has TWO-plus RIVAL proposed children over the SAME two parents and the SAME seam S — string/M-theory (covariant line), loop quantum gravity (canonical line), and the sum-over-histories descendants (causal sets, CDT, spin foams), plus asymptotic safety, twistors, noncommutative geometry. They are NOT sub-welds of one pushout; they DISAGREE about what the child even is and call each other's child the wrong question. The schema has NO slot for 'a weld with multiple competing, mutually-rejecting candidate outputs and no winner'.",
+      "sources_in_conflict": ["SEP 'Quantum Gravity'", "Rovelli gr-qc/0006061 (canonical-line partisan)", "Schwarz arXiv:1201.0981 (string-line participant)", "'Contested Boundaries: The String Theory Debates' (MIT Press)"],
+      "type": "framework-vs-record-tension",
+      "why_interesting": "Exposes the schema's missing CONTESTED-WELD / RIVAL-CHILDREN variable. The 9 settled convergences each had ONE child; QG is the control case where the same two parents + same S produce a FORK, not a fusion. Recommends adding {candidate_children[], unresolved:true, contest_axis} to the weld. QG is the cleanest case making this blind spot visible.",
+      "confidence_impact": "Caps child-confidence at ~0.4 (there is no single child to be confident in); RAISES the value of the specimen as a schema-stress-test."
+    },
+    {
+      "_comment": "Which parent dominates the weld is itself the fault line.",
+      "what": "The DIRECTION of the weld is disputed. Covariant/string line = QFT-method applied TO gravity (perturbative graviton on a fixed background; W_B's machinery SWALLOWS W_A) and is accused by the other camp of NOT being background-independent. Canonical/LQG line = GR's background-independence is PRIMARY and QM is rebuilt on it (W_A SWALLOWS W_B). SEP: 'there is no firm definition of background independence on the table... two camps almost certainly talking past each other.'",
+      "sources_in_conflict": ["SEP 'Quantum Gravity' (background-independence section)", "Rovelli gr-qc/0006061", "string-theory literature (Schwarz 1201.0981)"],
+      "type": "contested-genealogy",
+      "why_interesting": "The shared sub-object S is AGREED, but the DIRECTION of the weld (which parent's kernel is kept vs reformed) is disputed — a variable the SYMMETRIC two-parent schema flattens. Suggests a weld needs a 'dominance_axis' / 'which_parent_reformed' field.",
+      "confidence_impact": "Splits the would-be child into direction-dependent variants; keeps frame_of_weld engaging {meaning} (the dispute is partly definitional)."
+    },
+    {
+      "_comment": "Priority / origin of the FIELD — genuinely multi-origin.",
+      "what": "Rovelli (gr-qc/0006061) dates first awareness to Einstein 1916 (quantum effects must modify GR), Klein 1927 (QG modifies space-time concepts), Rosenfeld early-1930s (first technical papers). But the 'cube of theories' framing is credited to Gamow-Ivanenko-Landau (1928), DEVELOPED by Bronstein (1935 dissertation, 1936 papers). 'Graviton' first named ~1934 (Blokhintsev-Galperin). NO single founder.",
+      "sources_in_conflict": ["Rovelli gr-qc/0006061", "Wikipedia 'Quantum gravity'", "Wikipedia 'Matvei Petrovich Bronstein'", "Oriti 'Bronstein hypercube' arXiv:1803.02577"],
+      "type": "priority-dispute",
+      "why_interesting": "The people-(0) ROOT is genuinely multi-origin and the canonical originator is contested — exactly the fuzzy deep-root frontier the schema predicts (low-confidence who-called-it at the base). Confirms the schema's expectation that confidence should fade in the deep roots.",
+      "confidence_impact": "Holds Bronstein/founder confidence at ~0.8; validates the certain-core->frontier gradient by example."
+    },
+    {
+      "_comment": "Contested DORMANCY for an EXTERNAL/physical-frame reason.",
+      "what": "Matvei Bronstein's mid-1930s work (quantization of weak gravity; the realization that GR's mass-density bound forces rejecting Riemannian geometry and 'our ordinary concepts of space and time') was largely neglected for decades — partly because he was EXECUTED by the Soviet NKVD in Feb 1938 at age 32 (nephew of Trotsky). Reconstructed only recently (Stachel; Gorelik & Frenkel biography). Rovelli: in Russia remembered by some as 'smarter than Landau'.",
+      "sources_in_conflict": ["Wikipedia 'Matvei Petrovich Bronstein'", "Rovelli gr-qc/0006061", "Gorelik & Frenkel biography (cited via Wikipedia)"],
+      "type": "dormancy-contested",
+      "why_interesting": "A real-record example of a ROOT node going dormant for EXTERNAL (political/biographical, physical-frame) reasons, NOT internal-to-the-idea reasons — a dormancy cause the schema's 'why' field should TAG by frame (people-(0) deaths/purges can sever a lineage). Distinct in KIND from the field-level dormancy (knowledge-frame no-go theorems) and the spin-network dormancy (tool-orphaning).",
+      "confidence_impact": "Motivates a dormancy.why_frame tag (physical vs knowledge frame); does not move child-confidence but enriches the root layer."
+    },
+    {
+      "_comment": "Naming/attribution conflict on the canonical line's keystone equation.",
+      "what": "DeWitt long called it the 'Einstein-Schrodinger equation' and attributed it to Wheeler; Wheeler called it the 'DeWitt equation'; only in 1988 (Osgood Hill conference) did DeWitt concede the now-standard 'Wheeler-DeWitt equation'. Paper written 1966, published 1967 (delayed, partly over publication charges).",
+      "sources_in_conflict": ["Rovelli gr-qc/0006061", "Wikipedia 'Wheeler-DeWitt equation' / DeWitt-Wheeler accounts"],
+      "type": "date/attribution-conflict",
+      "why_interesting": "A clean MICRO-case of a node's name and credit being unstable for ~20 years — the schema's 'who_called_it' field is genuinely TIME-DEPENDENT and disputed even among the originators THEMSELVES. Suggests who_called_it may need a time-stamp / 'name settled when' sub-field.",
+      "confidence_impact": "Lowers the precision (not the existence) of the Wheeler-DeWitt root's attribution; a who_called_it volatility example."
+    },
+    {
+      "_comment": "Is the weld even NECESSARY? The falsifier-of-the-weld.",
+      "what": "A dissenting MINORITY (traceable to Rosenfeld; defended by Mattingly 2006-2014 against Eppley-Hannah 1977 / Page-Geilker 1981) holds gravity may NOT need to be quantized — quantum matter could couple to CLASSICAL spacetime (semiclassical gravity). If so, there is NO weld at all; W_C is a category error.",
+      "sources_in_conflict": ["SEP 'Quantum Gravity'", "Mattingly (semiclassical defense)", "Eppley-Hannah 1977 / Page-Geilker 1981 (arguments that gravity must be quantized)"],
+      "type": "framework-vs-record-tension",
+      "why_interesting": "A LIVE position that the parents should NOT be welded — the schema has no representation for 'some serious observers deny a third is needed'. This is the FALSIFIER-OF-THE-WELD case, the strongest form of the fuzzy frontier. Recommends a first-class 'weld_necessity_confidence' field (is a third even wanted?), not buried in discrepancies.",
+      "confidence_impact": "Directly lowers child-confidence (there may be no child at all); makes 'is a third needed?' an explicit axis."
+    },
+    {
+      "_comment": "Whig-vs-revisionist on string theory's status — the meaning-frame contest.",
+      "what": "String theory has been by-headcount-dominant since the mid-1980s 'first/second superstring revolutions'; Witten (1995): 'the mathematics of the next millennium will be dominated by string theory.' Revisionist counter-narrative (Smolin 'The Trouble with Physics' 2006; Woit 'Not Even Wrong' 2006): unfalsifiable landscape, no Planck-scale predictions, SUSY non-appearance at the LHC. Rovelli (2016): 'the string planet is infinitely less arrogant than ten years ago.'",
+      "sources_in_conflict": ["Witten (pro-string)", "Smolin 'The Trouble with Physics'", "Woit 'Not Even Wrong'", "Rovelli gr-qc/0006061 and later remarks", "'Contested Boundaries' (MIT Press HPS)"],
+      "type": "whig-vs-revisionist",
+      "why_interesting": "The 'which proposed child is winning' judgment is SOCIOLOGICALLY loaded and has PARTIALLY REVERSED over time — a reminder that 'status' on a frontier weld is observer- and era-relative, not a view-from-nowhere fact. This is precisely why frame_of_weld here engages {meaning}: the weld's adjudication is happening in the social/meaning frame.",
+      "confidence_impact": "Keeps any single candidate-child's 'winning' confidence soft and era-relative; justifies the meaning-frame tag on the weld."
+    }
+  ],
+
+  "sources": [
+    {
+      "name": "Stanford Encyclopedia of Philosophy — 'Quantum Gravity'",
+      "type": "encyclopedia",
+      "url": "https://plato.stanford.edu/entries/quantum-gravity/",
+      "what_used_for": "Backbone for the conceptual structure: the seam S, background-independence dispute, the two-camps-talking-past framing, semiclassical dissent, problem of time.",
+      "reliability": 0.95,
+      "_reliability_comment": "high — peer-reviewed philosophy-of-physics reference."
+    },
+    {
+      "name": "Rovelli, 'Notes for a brief history of quantum gravity', arXiv:gr-qc/0006061",
+      "type": "scholarly-history",
+      "url": "https://arxiv.org/pdf/gr-qc/0006061",
+      "what_used_for": "The field periodization (prehistory / classical age / middle ages / renaissance), dormancy-revival arc, spin-network and Bronstein stories, dates.",
+      "reliability": 0.9,
+      "_reliability_comment": "high but PARTISAN — scholarly history by a founder of the CANONICAL/LQG line; self-declared bias. Reflexivity flag: the narrator backs one of the rival children."
+    },
+    {
+      "name": "Wikipedia — 'Quantum gravity'",
+      "type": "aggregator",
+      "url": "https://en.wikipedia.org/wiki/Quantum_gravity",
+      "what_used_for": "Cross-check on candidate approaches, the graviton, Planck scale, general structure.",
+      "reliability": 0.8
+    },
+    {
+      "name": "Wikipedia — 'History of loop quantum gravity'",
+      "type": "aggregator",
+      "url": "https://en.wikipedia.org/wiki/History_of_loop_quantum_gravity",
+      "what_used_for": "Spin-network revival dates (Penrose 1971 / Rovelli-Smolin 1988-90), Ashtekar variables, canonical-line timeline.",
+      "reliability": 0.8,
+      "_reliability_comment": "Used to VERIFY the spin-network dormancy claim this pass — confirmed Penrose 1971 publication and Rovelli-Smolin 1988-90 revival, 'two decades' (sources vary on 20 vs 25 years; the 1964 drawing date is the softer end)."
+    },
+    {
+      "name": "Wikipedia — 'Matvei Petrovich Bronstein'",
+      "type": "aggregator",
+      "url": "https://en.wikipedia.org/wiki/Matvei_Petrovich_Bronstein",
+      "what_used_for": "Bronstein's 1935-36 work, NKVD execution Feb 1938, Trotsky-nephew detail, historiographic reconstruction.",
+      "reliability": 0.8
+    },
+    {
+      "name": "Schwarz, 'The Early History of String Theory and Supersymmetry', arXiv:1201.0981",
+      "type": "scholarly-history",
+      "url": "https://arxiv.org/pdf/1201.0981",
+      "what_used_for": "The 1974 graviton-in-string-spectrum reinterpretation, the strong-force origin of strings, the covariant-line story.",
+      "reliability": 0.85,
+      "_reliability_comment": "high but a PARTICIPANT MEMOIR (string-line partisan) — the mirror-image bias to Rovelli."
+    },
+    {
+      "name": "Oriti, 'The Bronstein hypercube of quantum gravity', arXiv:1803.02577 / philsci-archive 15939",
+      "type": "scholarly-history",
+      "url": "https://philsci-archive.pitt.edu/15939/",
+      "what_used_for": "The cGh 'cube of theories' framing and its extension; seam-framing provenance.",
+      "reliability": 0.8
+    },
+    {
+      "name": "Wikipedia — 'AdS/CFT correspondence' & 'Holographic principle'",
+      "type": "aggregator",
+      "url": "https://en.wikipedia.org/wiki/AdS/CFT_correspondence",
+      "what_used_for": "The holography grandchild lineage ('t Hooft 1993 / Susskind 1995 / Maldacena 1997 / ER=EPR 2013).",
+      "reliability": 0.8
+    },
+    {
+      "name": "'Contested Boundaries: The String Theory Debates' (Perspectives on Science, MIT Press)",
+      "type": "scholarly-history",
+      "url": "https://direct.mit.edu/posc/article/23/2/192/15504",
+      "what_used_for": "The whig-vs-revisionist sociology of the string debate; the 'which child is winning' contest as a meaning-frame phenomenon.",
+      "reliability": 0.85,
+      "_reliability_comment": "high — peer-reviewed history-and-philosophy-of-science."
+    },
+    {
+      "name": "Goroff & Sagnotti, 'Quantum gravity at two loops' (Phys. Lett. B 160, 1985) / 'The ultraviolet behavior of Einstein gravity' (Nucl. Phys. B 266, 1986)",
+      "type": "primary",
+      "url": "https://ui.adsabs.harvard.edu/abs/1986NuPhB.266..709G/abstract",
+      "what_used_for": "VERIFIED this pass: the two-loop non-renormalizability of PURE gravity (the dormancy 'nail') — result 1985 (Letters), full details 1986 (Nucl. Phys. B). Corrects the findings' '1986' to the more precise '1985-86'.",
+      "reliability": 0.95,
+      "_reliability_comment": "high — primary research papers, independently confirmed via ADS/ScienceDirect this pass."
+    },
+    {
+      "name": "Wikidata adjacents (PARTIAL / FLAGGED)",
+      "type": "aggregator",
+      "url": "https://www.wikidata.org/wiki/Q2067074",
+      "what_used_for": "Confirmed only 'canonical quantum gravity' (Q2067074) and 'problem of time' (Q18344764) as adjacent items; the main QG item was NOT cleanly retrieved. The structured influence-graph backbone for this specimen is UNVERIFIED and leans on SEP + Rovelli + Wikipedia instead — a real provenance gap to close in a later pass.",
+      "reliability": 0.5,
+      "_reliability_comment": "UNVERIFIED for this specimen — structured-graph harvest incomplete; flagged in gaps."
+    }
+  ],
+
+  "_schema_gaps_in_record": [
+    "STATUS ENUM GAP (#1 enum gap): the child's lifecycle value should be 'open-conjecture' / 'live-unconsummated-weld' / 'perpetual-frontier' — NONE of {risen,active,dormant,resurrected,stale} fits a ~90-year-old high-synergy weld that has NEVER produced a settled child. The schema implicitly assumes welds RESOLVE; this one hasn't. Recommend adding the new status value.",
+    "MISSING VARIABLE — RIVAL/COMPETING CHILDREN (the single biggest gap): 'weld' maps parents -> ONE W_C, but here the SAME two parents + SAME seam S yield a FAMILY of mutually-rejecting candidate children (string, LQG, causal sets, CDT, asymptotic safety, ...). There is no field for candidate_children[] with their contest axis (which-parent-dominates; background-dependent-vs-independent) and no field for 'no winner yet'. QG is the cleanest case exposing this blind spot. Recommend {candidate_children[], unresolved:true, contest_axis}.",
+    "SURVIVED/DROPPED ARE NOT SINGLE-VALUED: each rival child drops a DIFFERENT parent-feature (string drops GR's background-independence; LQG drops QM's fixed time/continuum; semiclassical drops the weld itself). Flat survived[]/dropped[] arrays cannot record 'dropped-BY-which-child'. Needs a per-candidate survived/dropped, or a {feature, kept_by[], dropped_by[]} matrix.",
+    "WELD-NECESSITY IS ITSELF CONTESTED: there is no field to record that a serious minority denies the weld should happen at all (semiclassical gravity). The schema assumes the third is WANTED; 'is a third even needed?' should be a first-class confidence (weld_necessity_confidence), not buried in discrepancies.",
+    "DORMANCY 'WHY' NEEDS A FRAME TAG: this specimen has dormancy at THREE grains with different-FRAME causes — internal/knowledge-frame (field stagnation 1970-83), tool-orphaning/knowledge-frame (spin networks 1964/71-88), and EXTERNAL physical/political-frame (Bronstein's purge ~1938-1990s). The single 'why' string can't capture that a lineage can be severed by physical-frame events (a death) vs knowledge-frame events (a no-go theorem). Recommend dormancy.why_frame.",
+    "SURPRISE/SYNERGY vs CONSOLIDATION ARE DECOUPLED: the schema (and the Phase-1 DB's whole logic) ties high synergy to a RISEN child. QG shows synergy can be enormous and real while the child stays UNBORN for a lifetime — so surprise_confidence (0.85, synergy is real) and child-confidence (0.4, child may never settle / may be the wrong question) must be allowed to diverge SHARPLY. Worth making explicit that these are INDEPENDENT axes.",
+    "BITS_NOTE LEFT QUALITATIVE BY NECESSITY (principled null): the description-length question ('would the sought child compress the two-theory corpus?') is GENUINELY UNDEFINED while the child doesn't exist — you cannot MDL-score a theory you don't have. This is a principled, not lazy, blank; flag that FRONTIER specimens may have intrinsically-null bits until/unless a child consolidates.",
+    "WIKIDATA STRUCTURED GRAPH NOT CLEANLY HARVESTED: guessed QID failed; only 'canonical quantum gravity' (Q2067074) and 'problem of time' (Q18344764) confirmed adjacent. The aggregator backbone leans on SEP + Rovelli + Wikipedia rather than a verified Wikidata influence-graph — a real provenance gap to close in a later pass.",
+    "EXTENDS-LINKAGE GAP: QG is not an existing Phase-1 row, so 'extends.phase1_class_name' had to be rendered as a PROPOSED new row rather than a pointer to an existing class. The Phase-1 DB has no frontier/unconsummated-weld row type; this specimen argues for adding one (see extends.relation_note)."
+  ]
+}

@@ -1,0 +1,1457 @@
+{
+  "_template_doc": "CANONICAL WRAPPER-GENEALOGY SPECIMEN — v2 — one merge event rendered as a rooted genealogy graph that STOPS AT THE PRESENT. Spec: ../SCHEMA_v2.md. Tier-3 exploratory data-harvest for Cowork+Pav ratification — NOT canon, NOT a promotion, convergence list stays 9. THIS SPECIMEN IS THE MULTI-CYCLE DORMANCY-REVIVAL + INSTITUTIONAL/GOVERNMENT/CORPORATE-ACTOR + COMPUTE/FUNDING/FASHION-FORCING CASE: the connectionist program twice went dormant (AI winters) and twice revived REINTERPRETED, finally CONSUMMATING at 2012 AlexNet when two non-idea INSTRUMENT-parents (GPU compute, ImageNet data) arrived. It is the v2 calibration instrument hammering all five new dimensions D1-D5. Extends the deep-learning / model-merging family already in wrapper_classes_phase1.json (#6 model merging, #7 Allen-Cahn message passing, #9 BES) at a far deeper HISTORICAL zoom. NOT a 10th convergence; a worked example. Every node/edge carries confidence in [0,1] + a zoom/LOD depth + a frame_layer; graded membership is the pervasive default (D5). bits_note QUALITATIVE ONLY. Sources cited in sources[]; discrepancies[] carries the real-record fuzzy frontier.",
+
+  "schema_version": "0.2-canonical-genealogy",
+  "specimen_id": "deep-learning",
+  "_status": "Tier-3 WORKING specimen — exploratory data-harvest, surfaced for Cowork+Pav ratification. NOT canon, NOT a tier promotion, does NOT grow the convergence list (stays 9). All confidences are SOFT scores in [0,1]; bits are qualitative only. This is the batch's richest MULTI-CYCLE-DORMANCY specimen and its strongest D2 (institutional/government/corporate actors) + D4 (compute/funding/fashion pull-squeeze) case.",
+  "extends": {
+    "_comment": "Linkage back to the Phase-1 wrapper CLASS this merge-event specimen instantiates (SCHEMA_v2.md §5). Same graph, deeper zoom. This specimen sits BELOW (historically upstream of) the deep-learning/model-merging family already in the DB: the 2012 AlexNet consummation is the HISTORICAL ROOT of which #6 model merging (TIES/DARE/mergekit), #7 Allen-Cahn message passing, and #9 BES are present-edge descendants. It is NOT a new convergence row; it is a deeper-zoom worked-example of the SAME lineage the DB already holds at the leaf.",
+    "phase1_file": "../latent_olympics_data/wrapper_classes_phase1.json",
+    "phase1_class_name": "Model merging (TIES / DARE / mergekit) (convergence #6) + ACMP — Allen-Cahn Message Passing (convergence #7); deep learning is the COMMON ANCESTOR child of both (the trained differentiable net is the substrate model-merging merges and message-passing runs on). Nearest single kin: #6 model merging (parameter-space task-arithmetic on trained nets).",
+    "relation_note": "Adds the HISTORICAL-DEPTH render of the lineage whose present leaves (#6/#7/#9) the Phase-1 census already holds. Where those rows render a present-day overlap edge (e.g. two task-vectors -> one merged model), this specimen renders the ~70-year multi-cycle dormancy-revival weld (perceptron 1958 -> Minsky-Papert squeeze 1969 -> backprop 1986 -> LeNet 1989 -> AlexNet 2012 -> transformers 2017 -> LLMs 2022) that BORE the child those leaves descend from. Exercises D1 (double-dormancy lifecycle), D2 (DARPA/CIFAR/NVIDIA/Google/OpenAI actors), D4 (AI-winter squeezes + compute/data/hype pulls)."
+  },
+  "generated": "2026-06-09",
+  "frames_present": ["time", "space", "knowledge", "meaning"],
+  "layers_present": ["physical", "latent"],
+  "_layers_present_comment": "(D3) Both layers heavily populated — this is the batch's strongest physical/latent case: the LATENT layer (connectionism, backprop, deep learning as a paradigm) is driven through its whole lifecycle by the PHYSICAL layer (DARPA, CIFAR, NVIDIA, GPUs, ImageNet labor, Big-Tech labs). Actors are the explicit bridge.",
+  "overall_confidence": 0.86,
+  "_overall_confidence_comment": "~0.86 is a SPLIT aggregate, NOT a flat scalar (read with fuzzy_layer): HIGH (~0.95) on the consummated child and the three-element-convergence fact, HIGH (~0.9) on the actors/institutions and the forcing events, but the DORMANCY INTERVALS and the priority-attribution are FRONTIER (~0.55-0.75: Haigh's revisionism contests the winter narrative; the Schmidhuber re-attribution dispute is live and bitter). Unlike QG (0.45), the child here is REAL and DOMINANT — the fuzz is in the dormancy-narrative and the credit, not in the existence of the child. weld_necessity_confidence ~0.95 (a third was unambiguously produced); surprise_confidence (0.9) and child-confidence (0.95) are BOTH high here, but the R9 decoupling still bites in TIME: the surprise was demonstrated working ~23 years before the child consolidated.",
+
+  "schema_capabilities": {
+    "_comment": "(D3+D5) Declared render capabilities. Static block — announces what a v2 render supports.",
+    "layer_filter": {
+      "_comment": "(D3) The render is FILTERABLE on the physical/latent axis; actors are the bridge.",
+      "supported": true,
+      "axes": ["physical", "latent"],
+      "bridge_via": "actors",
+      "note": "A render may show the PHYSICAL view (Rosenblatt, Hinton, DARPA, CIFAR, NVIDIA, ImageNet labor, Toronto/Google/OpenAI) OR the LATENT view (connectionism, backprop, representation learning, deep learning, transformers); every node declares frame_layer; actors straddle and connect the two. This specimen is hand-checkable under each filter — see fuzzy_layer.core_boundary_locus and the per-node frame_layer tags."
+    },
+    "graded_membership": {
+      "_comment": "(D5) Fuzzy edges by design — graded membership is the pervasive default.",
+      "supported": true,
+      "default": "graded",
+      "applies_to": [
+        "node membership", "weld extent (sub_welds)", "actor role-strength (carrier/inhabitant)",
+        "forcing-event influence (acted_on.strength)", "frame-layer straddle (physical/latent membership)",
+        "lifecycle phase membership", "weld_type weight"
+      ],
+      "note": "Every boundary is a membership/confidence in [0,1]; the certain core is just where membership ~1.0. Crisp = the membership happens to be ~0/1. Here the dormancy-interval EDGES are deliberately soft (1969-86 and 1995-2006 have fuzzy endpoints; Haigh disputes whether the first 'winter' had crisp edges at all)."
+    }
+  },
+
+  "child": {
+    "_comment": "W_C — the emergent wrapper born in this merge: DEEP LEARNING as a working, dominant paradigm (the connectionist program vindicated). The trunk node. Unlike QG this trunk is FULL — a real, distinct, hegemonic child — but it took ~70 years and two winters to consolidate.",
+    "id": "child-dl",
+    "name": "Deep learning (the connectionist program vindicated)",
+    "kernel": "Stack many layers of simple differentiable units, train the whole stack end-to-end by gradient descent (backpropagation) on large labeled data with massive parallel compute, and let useful representations EMERGE (distributed, sub-symbolic) rather than be hand-coded. Net product: a general-purpose function approximator + representation learner that, at scale, supersedes hand-engineered features and symbolic rules across vision, speech, language, and games. CRUCIAL contrast with QG: this kernel describes an EXISTING, dominant object, not a sought target — the weld_necessity question is ~1.0 here.",
+    "frame": ["time", "knowledge", "meaning", "space"],
+    "_frame_note": "knowledge+meaning primary (what intelligence IS — emergent statistical structure vs explicit symbol manipulation, a meaning-frame displacement of the rival paradigm); time (the ~70-year multi-cycle lifecycle is intrinsic to the specimen); space enters literally as the optimization landscape / parameter space that gradient descent searches.",
+    "frame_layer": {
+      "_comment": "(D3) An idea-paradigm child — latent ~1.0.",
+      "layer": "latent",
+      "physical_membership": 0.05,
+      "latent_membership": 1.0
+    },
+    "status": "risen",
+    "_status_enum": "risen (hardened/hegemonic). Contrast QG's 'open-conjecture': this child unambiguously rose. But the SINGLE enum is lossy — the honest value is the status_trajectory below (dormant-conjecture -> reinterpreted-revival -> dark-ages -> reinterpreted-revival -> risen -> hegemonic). status as a single enum captures only the endpoint.",
+    "status_trajectory": [
+      {
+        "_comment": "(R5) the child as a TRAJECTORY of states — the headline multi-cycle feature. This is the strongest status_trajectory in the batch (more cycles than Darwin+Mendel's pluralist->hardened->contested).",
+        "state": "dormant-conjecture (latent in the substrate; perceptron a shallow classifier, deep-net conjecture un-adopted)",
+        "when": "1969-1986",
+        "by": "post-Minsky-Papert neural-net winter",
+        "confidence": 0.8
+      },
+      {
+        "state": "reinterpreted-revival (single-layer perceptron -> multi-layer backprop net)",
+        "when": "1986 (PDP) + 1982 (Hopfield)",
+        "by": "Rumelhart-Hinton-Williams; Hopfield",
+        "confidence": 0.85
+      },
+      {
+        "state": "dark-ages / dormant-again ('Hinton's dark ages'; SVMs/kernel methods fashionable)",
+        "when": "~1995-2006",
+        "by": "kernel-methods fashion wave",
+        "confidence": 0.7,
+        "_confidence_note": "Lower confidence: the 'dark ages' label is Hinton's own retrospective framing; the exact span is soft."
+      },
+      {
+        "state": "reinterpreted-revival #2 (shallow backprop -> deep belief nets / deep CNNs)",
+        "when": "2006",
+        "by": "Hinton (deep belief nets); CIFAR program carrying the flame",
+        "confidence": 0.82
+      },
+      {
+        "state": "HARDENED / risen (the weld FIRES at three-parent convergence)",
+        "when": "2012",
+        "by": "AlexNet (Krizhevsky-Sutskever-Hinton)",
+        "confidence": 0.95
+      },
+      {
+        "state": "hegemonic / active (transformers -> LLMs)",
+        "when": "2017 (transformers) -> 2022 (ChatGPT)",
+        "by": "Google Brain (Vaswani et al.); OpenAI",
+        "confidence": 0.95
+      }
+    ],
+    "confidence": 0.95,
+    "_confidence_comment": "0.95 = confidence the child is a real, distinct, dominant emergent (not a relabel of a parent / not a pile). HIGH and well-attested (deep learning is the dominant paradigm of 2010s-2020s AI). (R9) INDEPENDENT of surprise_confidence — both happen to be high here, but the decoupling shows up in TIME (surprise demonstrated 1989, child consolidated 2012). Compare QG's 0.40 (unborn child); this 0.95 is a consummated weld.",
+    "utility": {
+      "_comment": "Pav's three utility legs. Unlike QG these are REALIZED, not promised.",
+      "unifier": "REALIZED: deep learning unified vision, speech, language, and game-playing under ONE architecture+training-recipe (differentiable layers + backprop + scale), superseding decades of separate hand-engineered, domain-specific, symbolic pipelines. A single general method replaced many bespoke ones — the deepest methodological unification in modern AI. passesW_CTest: YES (~0.95).",
+      "compressor": "QUALITATIVE: a trained deep net compresses an enormous labeled corpus into a fixed parameter set + learned representations; scaling laws (Kaplan 2020) make loss a smooth power-law in compute+data+params, i.e. capability is PREDICTABLE from scale — a striking regularity. BUT no numeric bit value asserted: MDL-on-learned-representations is itself an OPEN PROBLEM (a near-principled-null per R16) — you cannot cleanly MDL-score what the network has compressed. See bits_note.",
+      "action_spaces_unlocked": [
+        "End-to-end representation learning — the network discovers WHAT to represent, not just how to weight fixed features (the core unlock).",
+        "Transfer / pretraining+fine-tuning — features learned on one task transfer to others (ImageNet pretraining; later foundation models).",
+        "Sequence modeling at scale -> transformers -> large language models -> ChatGPT-class assistants.",
+        "Generative modeling — GANs, diffusion models, neural machine translation, AI-generated art.",
+        "Deep reinforcement learning — AlphaGo/AlphaZero, game-playing and control.",
+        "Scientific deep learning — AlphaFold (protein structure), and the model-merging/message-passing leaves already in the Phase-1 DB (#6/#7/#9)."
+      ]
+    }
+  },
+
+  "weld": {
+    "_comment": "The merge: parents -> child. THE HEART OF THE SPECIMEN. Here the idea-weld EXISTED by 1986/1989 but only FIRED into a risen child at 2012 when two INSTRUMENT-parents arrived — the apparatus, not the idea, was rate-limiting. This is the schema's cleanest INSTRUMENT-ENABLED-WELD and its strongest multi-cycle DORMANCY case. The honest parent set is ~5 typed parents (2 ancestral content/method + 1 mediating welder + 2 gating instruments); the binary {neural-substrate x optimization-calculus} is a defensible but lossy 2-projection — see parents_full and discrepancies[0].",
+    "id": "weld-main",
+
+    "parents": [
+      {
+        "_role": "W_A",
+        "name": "Connectionist substrate — artificial neural networks (adjustable-weight nets)",
+        "kernel": "Brain-inspired distributed computation: networks of simple units with adjustable connection weights that learn from data. Lineage: McCulloch-Pitts logical neuron (1943) -> Hebb learning (1949) -> Rosenblatt perceptron (1958) -> Fukushima Neocognitron (1980). frame {knowledge,space}.",
+        "frame": ["knowledge", "space"],
+        "confidence": 0.95,
+        "parent_kind": "content",
+        "_parent_kind_enum": "(R4) content — the substrate / what gets trained."
+      },
+      {
+        "_role": "W_B",
+        "name": "Continuous-optimization / differentiable-calculus apparatus (gradient descent via the chain rule)",
+        "kernel": "Minimize a differentiable objective by gradient descent, computing gradients via the chain rule (reverse-mode automatic differentiation). Lineage: Ivakhnenko-Lapa GMDH (1965, precursor) -> Linnainmaa reverse-mode autodiff (1970) -> Werbos (1974, applied to nets). frame {knowledge,space}.",
+        "frame": ["knowledge", "space"],
+        "confidence": 0.9,
+        "parent_kind": "method",
+        "_parent_kind_enum": "(R4) method — the optimization procedure, not content."
+      }
+    ],
+    "_parents_comment": "(v1, kept) The clean BINARY projection: {neural-substrate x optimization-calculus}. The framework's canonical visualization. ALWAYS present — but here it is explicitly a LOSSY 2-projection of the 5-parent set in parents_full (the consummation required two INSTRUMENT-parents the dyad omits).",
+
+    "parents_full": [
+      {
+        "_comment": "(R1) the honest N-ary parent set: 2 ancestral (content+method) + 1 mediating welder (separately in mediating_wrapper) + 2 gating instruments. parents[] is the 2-projection of the two ancestral ones.",
+        "id": "par-substrate",
+        "name": "Connectionist neural-network substrate (W_A)",
+        "kernel": "Adjustable-weight brain-inspired nets; McCulloch-Pitts 1943 -> Hebb 1949 -> Rosenblatt 1958 -> Fukushima 1980.",
+        "frame": ["knowledge", "space"],
+        "confidence": 0.95,
+        "parent_kind": "content",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.1, "latent_membership": 1.0 }
+      },
+      {
+        "id": "par-optimization",
+        "name": "Continuous-optimization / differentiable-calculus (W_B)",
+        "kernel": "Gradient descent via the chain rule; Ivakhnenko 1965 -> Linnainmaa 1970 -> Werbos 1974.",
+        "frame": ["knowledge", "space"],
+        "confidence": 0.9,
+        "parent_kind": "method",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.1, "latent_membership": 1.0 }
+      },
+      {
+        "id": "par-compute",
+        "name": "GPU / CUDA massive parallel COMPUTE (gating instrument-parent #1)",
+        "kernel": "General-purpose GPU computing makes the matrix-multiply core of deep nets orders of magnitude cheaper. NVIDIA CUDA 2007; AlexNet trained on two GTX 580 GPUs. WITHOUT this instrument the idea-weld (extant 1986/1989) did not fire into a risen child.",
+        "frame": ["space", "time"],
+        "confidence": 0.92,
+        "parent_kind": "instrument",
+        "_parent_kind_note": "(R4) instrument AND the GATING / rate-limiting parent (the algorithm waited ~23 years for it) — see gaps (parent_is_gating flag).",
+        "frame_layer": { "layer": "physical", "physical_membership": 0.95, "latent_membership": 0.1 }
+      },
+      {
+        "id": "par-data",
+        "name": "ImageNet large-scale labeled DATA (gating instrument-parent #2)",
+        "kernel": "14M+ labeled images (Fei-Fei Li 2009, labeled via Amazon Mechanical Turk crowd labor) — the large-scale supervised signal deep nets need to generalize. The second non-idea instrument that gated the 2012 weld.",
+        "frame": ["space", "time"],
+        "confidence": 0.9,
+        "parent_kind": "instrument",
+        "frame_layer": { "layer": "physical", "physical_membership": 0.9, "latent_membership": 0.15 }
+      }
+    ],
+
+    "mediating_wrapper": {
+      "_comment": "(R1) the agent that PERFORMED the weld, a layer up from the ancestral parents — the Darwin+Mendel population-genetics analogue. Backprop-as-neural-training + the PDP group's connectionist framing recognized that 'neuron weights' and 'the variables you differentiate' are the SAME object.",
+      "name": "Backpropagation-as-neural-training + the PDP connectionist framing",
+      "kernel": "Rumelhart-Hinton-Williams 1986 (backprop popularized for multi-layer nets) + the PDP group's parallel-distributed-processing framework; with Hopfield 1982 (spin-glass bridge) + the Boltzmann machine (Hinton-Sejnowski/Ackley 1985) as the physics-respectability sub-weld. This is what WELDED W_A and W_B — it is not itself one of the ancestral parents but the mediator that fused them.",
+      "who_or_what": "David Rumelhart, Geoffrey Hinton, Ronald Williams + the UCSD PDP Research Group; John Hopfield; Terry Sejnowski",
+      "confidence": 0.92
+    },
+
+    "shared_sub_object_S": "S = the differentiable parameterized FUNCTION trained to minimize error — the realization that a neural network IS a composed differentiable function whose weights live in a continuous space gradient descent can search. Concretely: 'neuron weights' (the connectionist substrate's adjustable parameters, W_A) and 'the variables of an objective you differentiate' (the optimization calculus's degrees of freedom, W_B) are the SAME OBJECT; backprop is the chain rule recognizing that identity. The loss landscape / parameter space / chain-rule gradient flow. AT THE 2012 CONSUMMATION the seam WIDENS to a three-way seam: it absorbs the DATA MANIFOLD (ImageNet) and the COMPUTE substrate (GPU SIMD parallelism maps onto the matrix-multiply structure of layers) — algorithm, data geometry, and hardware parallelism coincide. Unlike Darwin+Mendel's fractured S, this S is largely AGREED.",
+    "S_structure": {
+      "_comment": "(R12) S is multi-faceted but AGREED (contrast Darwin+Mendel's Fisher-Wright rift). agreed:true. The widening at consummation (algorithm/data/hardware) is the notable structure.",
+      "components": [
+        "the loss landscape / continuous parameter space",
+        "the chain-rule gradient flow (the weld_operator)",
+        "(at consummation) the data manifold (ImageNet)",
+        "(at consummation) the GPU SIMD/matrix-multiply compute substrate"
+      ],
+      "internal_conflict": "",
+      "agreed": true
+    },
+
+    "surprise": "The synergy neither parent predicts alone: that STACKING MANY LAYERS of the simple connectionist unit and training the whole stack by gradient descent yields EMERGENT, hierarchical, distributed REPRESENTATIONS that automatically discover features — making a single general architecture beat decades of hand-engineered, domain-specific, symbolic solutions across vision, speech, language, and games. Neither parent alone reaches it: the neural substrate alone (perceptron) is a SHALLOW classifier that provably cannot compute XOR (Minsky-Papert 1969); the optimization calculus alone is just curve-fitting. Only JOINTLY — a deep differentiable net + backprop gradient flow + (at consummation) enough compute and data — does 'representation learning' appear: the network learns WHAT to represent, not just how to weight fixed features. The DEEPEST surprise is a MEANING-FRAME shift: intelligence-as-explicit-symbol-manipulation (the rival symbolic paradigm's axiom) is displaced by intelligence-as-emergent-statistical-structure-in-a-trained-function. A SECOND-ORDER surprise sits on top: SCALING LAWS (Kaplan 2020) — loss falls as a smooth power law in compute+data+parameters — so the child's capability is PREDICTABLE from scale alone, a regularity neither parent nor even the 1986 welders anticipated. The META-SURPRISE for the schema is the R9 DECOUPLING-IN-TIME: surprise_confidence was already ~0.9 and the synergy was DEMONSTRATED WORKING (LeNet on real handwritten digits, deployed reading bank cheques, 1989) ~23 years BEFORE the child consolidated as the dominant paradigm (2012) — a maximally fertile, repeatedly-demonstrated weld that stayed unborn-as-paradigm through TWO winters for want of the instrument-parents.",
+    "surprise_confidence": 0.9,
+    "_surprise_confidence_comment": "(v1, R9) HIGH (0.9): the synergy (deep+backprop = emergent representation learner) is real, non-additive, and was DEMONSTRATED, not merely conjectured. ORTHOGONAL to child.confidence — here BOTH are high, but the decoupling bites in TIME: the synergy was a deployed product (1989) ~23 years before the dominant child rose (2012). The most extreme batch case of demonstrated-but-not-adopted (see gaps). Synergy assessed QUALITATIVELY only; no bits fabricated.",
+
+    "surprise_priority": {
+      "_comment": "(R15) the deep-learning surprise pre-existed its 2012 consummation as a working-but-unadopted result inside the substrate — and in a STRONGER state than QG's conjecture-in-a-parent: not merely conjectured, but DEMONSTRATED working and IGNORED (see gaps: 'demonstrated-not-adopted' is stronger than 'conjectured-not-confirmed').",
+      "first_conjectured_by": "Ivakhnenko-Lapa (GMDH, 1965; 8-layer net by 1971) and Werbos (1974); DEMONSTRATED at scale-for-its-day by LeCun (LeNet, 1989, deployed on bank cheques)",
+      "when": "1965 (conjectured) / 1989 (demonstrated working)",
+      "dormant_interval": "~1965-2012 as a paradigm (the synergy worked but was not adopted as dominant for want of compute+data scale)",
+      "confidence": 0.85
+    },
+
+    "bits_note": "QUALITATIVE ONLY — and here a NEAR-PRINCIPLED-NULL per R16, for a different reason than QG. The child EXISTS (so it is not undefined-because-unborn), but the compression question ('how many bits does the learned representation save?') is itself an OPEN PROBLEM: MDL-on-learned-representations / the description length of a trained deep net is unresolved (minimum-description-length and deep learning is an active, unsettled research area). Qualitative bit-claims one CAN make: (a) scaling laws (Kaplan 2020; Chinchilla 2022) show loss is a smooth power-law in compute+data+params — a strong regularity suggesting predictable compression-with-scale; (b) a trained net compresses a labeled corpus into a fixed parameter set + reusable representations. But NO numeric bit value is asserted — the clean MDL delta is not cleanly computable here. NO bit values fabricated.",
+
+    "survived": [
+      "The adjustable-weight unit (the connectionist neuron) — survived from W_A as the atomic building block of every deep net.",
+      "Gradient descent + the chain rule (backprop) — survived from W_B as the universal training procedure.",
+      "Distributed / sub-symbolic representation (W_A's philosophy) — survived and was vindicated as the dominant account of what the net learns.",
+      "The differentiable composed function as the object of study — the seam S itself, survived as the foundational abstraction (a net IS a differentiable function).",
+      "Brain-inspiration as motivation (McCulloch-Pitts/Hebb lineage) — survived rhetorically, though the engineering diverged from biology."
+    ],
+    "dropped": [
+      "Biological fidelity — modern deep nets dropped most neuroscientific realism (no spikes, backprop is biologically implausible); the brain-inspiration is loose.",
+      "The single-layer perceptron's provable limitations (XOR) — dropped by going DEEP (multi-layer + nonlinearity).",
+      "Hand-engineered features / symbolic rules (the RIVAL paradigm's core) — dropped wholesale; displaced rather than fused (see weld_type: fusion-by-displacement).",
+      "Unsupervised pretraining via deep belief nets (the 2006 revival trigger) — partly dropped after ~2012-14 once large labeled data + better initialization/ReLU/dropout made it unnecessary; a revival-trigger that the consummated child later shed.",
+      "Symbolic AI's explicit knowledge representation — dropped as the dominant approach (though neuro-symbolic hybrids persist as a minority)."
+    ],
+    "feature_ledger": [
+      {
+        "_comment": "(R7) OPTIONAL — here a LIGHT use: a single consummated child makes flat survived/dropped largely sufficient, but the rival-paradigm contrast (deep-learning vs symbolic AI) is worth one ledger row to show fusion-by-displacement (the rival's feature is dropped, not kept).",
+        "feature": "explicit hand-coded features / symbolic rules (the symbolic-AI paradigm's core commitment)",
+        "kept_by": ["neuro-symbolic hybrids (minority descendants)"],
+        "dropped_by": ["mainstream deep learning (the consummated child) — displaced the rival wholesale rather than fusing with it"]
+      }
+    ],
+
+    "frame_of_weld": ["knowledge", "space", "time", "meaning"],
+    "_frame_of_weld_note": "knowledge (the identity 'weights = differentiable variables') + space (the parameter/loss landscape the gradient searches) are where the PHYSICS of the weld holds. time is load-bearing here in a way it is not for Maxwell: the weld is a PROCESS spanning ~70 years with two dormancies, and crucially the weld DID NOT FIRE until the instrument-parents arrived in time. meaning enters because the consummation was also a paradigm-displacement (symbolic -> connectionist) adjudicated partly sociologically (funding fashion, AI-winter narratives, the priority/credit disputes).",
+    "weld_operator": "The GRADIENT — the d(loss)/d(weights) backward flow (backpropagation / the chain rule). Like Maxwell's d/dt displacement-current term, the weld is welded BY a specific operator — the chain-rule gradient — not merely IN a frame. Static W_A + W_B side by side (a net you cannot train; a calculus with nothing to optimize) make nothing; the gradient is the active ingredient that fuses them.",
+
+    "lod_scale": "Holds at the coarse grain ('neural substrate + gradient descent -> trainable deep net') AND is CONFIRMED by its sub-structure when zoomed in (contrast QG, which shatters). Zooming in reveals an ORDERED CHAIN of sub-welds (perceptron -> Minsky-Papert squeeze -> backprop -> CNN/LeNet -> AlexNet three-element fire -> transformers) each of which BUILDS ON the last rather than rejecting it — the signature of a healthy, eventually-consummated weld. The one twist: the chain has two DORMANCY gaps (the winters) where the weld lay drawn-but-unfired.",
+    "sub_welds": [
+      {
+        "_comment": "(R3) the ordered chain of sub-welds; coherence_under_zoom = confirms (each builds on the last). Two of the gaps between sub-welds are dormancies.",
+        "id": "sw-perceptron",
+        "name": "Perceptron: learnable single-layer neural net (Rosenblatt)",
+        "when": "1958",
+        "confidence": 0.9
+      },
+      {
+        "id": "sw-minsky-papert",
+        "name": "Minsky-Papert 'Perceptrons': single-layer XOR impossibility -> winter (a SQUEEZE sub-weld, the anti-weld)",
+        "when": "1969",
+        "confidence": 0.9
+      },
+      {
+        "id": "sw-backprop",
+        "name": "Backprop for multi-layer nets (Rumelhart-Hinton-Williams) — the mediating weld fires; + Hopfield 1982 physics bridge",
+        "when": "1986 (+1982)",
+        "confidence": 0.88
+      },
+      {
+        "id": "sw-lenet",
+        "name": "LeNet: working CNN on real handwritten digits (LeCun), deployed reading bank cheques — the surprise DEMONSTRATED",
+        "when": "1989",
+        "confidence": 0.88
+      },
+      {
+        "id": "sw-dbn",
+        "name": "Deep belief nets (Hinton) — the second revival; deep training made practical",
+        "when": "2006",
+        "confidence": 0.82
+      },
+      {
+        "id": "sw-alexnet",
+        "name": "AlexNet: the THREE-ELEMENT fire (deep CNN + GPU/CUDA compute + ImageNet data) — the weld consummates",
+        "when": "2012",
+        "confidence": 0.95
+      },
+      {
+        "id": "sw-transformer",
+        "name": "Transformer ('Attention Is All You Need', Google Brain) -> LLMs -> ChatGPT — hegemony",
+        "when": "2017 -> 2022",
+        "confidence": 0.9
+      }
+    ],
+    "coherence_under_zoom": "confirms",
+    "_coherence_under_zoom_note": "(R3) CONFIRMS — the sub-welds form a coherent build-chain (each step uses the last), the hallmark of a healthy consummated weld, the INVERSE of QG (which contradicts/shatters). The only complication is the two dormancy gaps in the chain; the chain itself is coherent across them (the revived object is reinterpreted but continuous in lineage).",
+
+    "when": {
+      "_comment": "(R2) a PROCESS with a duration and several defensible birth-dates — and a CONSUMMATION date distinct from the idea-weld date. The defining feature: the idea-weld (1986) and the firing (2012) are ~26 years apart because the instruments were rate-limiting.",
+      "from": "1943 (McCulloch-Pitts substrate root) / 1958 (perceptron) / 1986 (idea-weld: backprop) ",
+      "to": "2012 (consummation: AlexNet) — child then hardens 2017+ ; lineage continues to present",
+      "defensible_dates": [
+        "1958 (perceptron — the conjecture)",
+        "1986 (backprop/PDP — the idea-weld)",
+        "1989 (LeNet — the surprise demonstrated working)",
+        "2012 (AlexNet — the three-element consummation / firing)",
+        "2017 (transformers — hegemony begins)"
+      ]
+    },
+
+    "dormancy_intervals": [
+      {
+        "_comment": "(R11) CYCLE 1. why_frame names only the frame; the external event is in forcing_events (Minsky-Papert + the symbolic-AI funding capture). Endpoints deliberately soft (D5).",
+        "from": "1969",
+        "to": "1986",
+        "why": "Neural-net winter #1: Minsky-Papert 'Perceptrons' (1969) mathematical critique compounded by the symbolic-AI funding capture of the mid-1960s. The hidden-layer training problem was held unsolvable until backprop.",
+        "why_frame": "knowledge AND physical/political (a theorem-squeeze compounded by an institutional defunding)"
+      },
+      {
+        "_comment": "(R11) CYCLE 2 — 'Hinton's dark ages'. why_frame = fashion + insufficient-instrument. Endpoints soft.",
+        "from": "~1995",
+        "to": "~2006",
+        "why": "Neural-net winter #2: kernel methods / SVMs became fashionable and outperformed nets on the era's small data + weak compute; nets marginalized/underfunded; only a handful (Hinton, Bengio, LeCun) persist, carried by CIFAR.",
+        "why_frame": "meaning (fashion) AND physical (insufficient compute/data instrument not yet ready)"
+      }
+    ],
+    "revival": {
+      "_comment": "(v1, R10) TWO revivals, both REINTERPRETED (see weld_chain for the cycle structure; this object records the headline). kind = reinterpreted — the object that revives is never the object that went dormant.",
+      "when": "1986 (revival #1) and 2006 (revival #2); CONSUMMATED 2012",
+      "by": "Revival #1: Rumelhart-Hinton-Williams (PDP/backprop) + Hopfield (physics bridge). Revival #2: Hinton (deep belief nets), carried through the trough by CIFAR.",
+      "trigger": "Revival #1 trigger = backprop solving the hidden-layer training problem Minsky-Papert called unsolvable + Hopfield's statistical-mechanics/spin-glass bridge making nets respectable to physicists. Revival #2 trigger = Hinton's 2006 deep belief nets + the CIFAR program networking the marginalized connectionists; CONSUMMATION trigger = the 2012 arrival of GPU compute + ImageNet data.",
+      "kind": "reinterpreted",
+      "_kind_note": "(R10) REINTERPRETED, three times over: single-layer perceptron -> multi-layer backprop net (1986); shallow backprop net -> deep belief net / deep CNN (2006/2012); and 'connectionism' (a cognitive-science theory of MIND) -> 'deep learning' (an engineering toolkit) — a science-to-technology reframing. Strongest multi-instance R10 support in the batch."
+    },
+    "reattribution": {
+      "_comment": "(R10) the canonical NAME attaches to the POPULARIZERS, not the originators — the deep-learning analogue of Maxwell's re-attribution, but FAR hotter (live, bitter dispute). See discrepancies[1].",
+      "named_after": "Hinton, Bengio, LeCun (2018 Turing Award 'for deep learning'); Hopfield + Hinton (2024 Nobel Physics)",
+      "actually_produced_by": "originating techniques are earlier: reverse-mode backprop = Linnainmaa 1970; applied to nets = Werbos 1974; first deep multilayer trained nets = Ivakhnenko-Lapa 1965 (GMDH); stochastic gradient = Amari 1967",
+      "why": "'It is not the first inventor who gets credit but the last re-inventor' — credit attached to the popularizers who consolidated the field, not the originators. Schmidhuber's 88-page, 17-point priority report accuses the trio of 'plagiarism and incorrect attribution'; LeCun calls Schmidhuber 'manically obsessed with recognition'. The deepest root (Ivakhnenko 1965, Soviet/Kyiv cybernetics) is a politically-marginalized lineage, faintly echoing QG's Bronstein."
+    },
+    "weld_chain": [
+      {
+        "_comment": "(R10) the weld CHAINS across the two dormancy-revival cycles — each revival's reinterpreted object becomes the input to the next. weld_ref points at the sub_welds.",
+        "birth_label": "Cycle 1: perceptron (1958) -> Minsky-Papert squeeze (1969) -> backprop-net revival (1986, reinterpreted as multi-layer)",
+        "weld_ref": "sw-backprop"
+      },
+      {
+        "birth_label": "Cycle 2: backprop-net -> SVM/dark-ages dormancy (~1995) -> deep-belief-net/deep-CNN revival (2006, reinterpreted as deep)",
+        "weld_ref": "sw-dbn"
+      },
+      {
+        "birth_label": "Consummation: deep CNN + compute + data -> AlexNet fires (2012) -> transformer hegemony (2017)",
+        "weld_ref": "sw-alexnet"
+      }
+    ],
+
+    "candidate_children": [],
+    "_candidate_children_comment": "(R6) EMPTY — this weld RESOLVED (contrast QG). There is a single dominant child (deep learning); no family of mutually-rejecting candidates with no winner. The rival was the SYMBOLIC paradigm, which lives in relatives[] as relation:rival (defeated by displacement), not as a candidate child of THIS weld.",
+    "unresolved": false,
+    "contest_axis": "",
+    "weld_necessity_confidence": 0.95,
+    "_weld_necessity_confidence_comment": "(R8) ~0.95 — 'is a third even needed?' is answered YES with high confidence: this weld unambiguously produced a real, distinct, dominant child. Filled (not left empty/1.0) only to make the explicit CONTRAST with QG's <1 frontier: where QG's weld-necessity is genuinely in doubt, this one is settled. The ~0.05 residual is the bare logical possibility that 'deep learning' is better described as 'just W_B (optimization) applied to W_A (nets)' with no genuine emergent third — a position almost no one holds given representation-learning's demonstrated emergence.",
+
+    "lifecycle": {
+      "_comment": "(D1) the weld's GRADED LIFE — the batch's richest multi-cycle lifecycle. A weighted INDEX over dormancy_intervals/revival/status_trajectory/weld_chain (does NOT restate them). The full arc: antagonism -> conjecture -> SQUEEZE -> reinterpreted-revival -> dormancy-again -> reinterpreted-revival -> consummation -> hardening -> hegemony. A DOUBLE-dormancy weld.",
+      "phase_trajectory": [
+        {
+          "_comment": "(D1) graded phases; membership = weight (no separate confidence). pre_weld antagonism strength lives in pre_weld_relationship; this entry marks only WHEN.",
+          "phase": "pre_weld:antagonism",
+          "membership": 0.85,
+          "from": "1943",
+          "to": "1958",
+          "note": "Connectionism (cybernetics wing) vs symbolic AI (Dartmouth 1956) as rival research programs before any weld."
+        },
+        {
+          "phase": "conception/first_conjecture",
+          "membership": 0.9,
+          "from": "1958",
+          "to": "1965",
+          "note": "Perceptron (1958); deep-learning conjecture latent in Ivakhnenko 1965 / Werbos 1974."
+        },
+        {
+          "phase": "dormancy",
+          "membership": 0.8,
+          "from": "1969",
+          "to": "1986",
+          "note": "Winter #1 (Minsky-Papert + funding capture). The conjecture lies drawn-but-unfired."
+        },
+        {
+          "phase": "revival:reinterpreted",
+          "membership": 0.85,
+          "from": "1986",
+          "to": "1995",
+          "note": "PDP/backprop (1986) + Hopfield (1982): perceptron returns as multi-layer backprop net. LeNet (1989) demonstrates the surprise."
+        },
+        {
+          "phase": "dormancy",
+          "membership": 0.7,
+          "from": "1995",
+          "to": "2006",
+          "note": "Winter #2 ('Hinton's dark ages'): SVMs/kernel methods fashionable; nets marginalized; CIFAR carries the flame."
+        },
+        {
+          "phase": "revival:reinterpreted",
+          "membership": 0.8,
+          "from": "2006",
+          "to": "2012",
+          "note": "Deep belief nets (2006); the object returns as DEEP. Instruments (compute/data) catching up."
+        },
+        {
+          "phase": "welding/consummation",
+          "membership": 0.95,
+          "from": "2012",
+          "to": "2012",
+          "note": "AlexNet — the three-element convergence (algorithm + compute + data) fires the weld into a risen child."
+        },
+        {
+          "phase": "hardening/hegemony",
+          "membership": 0.95,
+          "from": "2017",
+          "to": null,
+          "note": "Transformers (2017) -> LLMs/ChatGPT (2022) -> dominant paradigm. Ongoing."
+        }
+      ],
+      "pre_weld_relationship": {
+        "_comment": "(R14) the SINGLE HOME for the antagonism strength. Connectionism vs symbolic AI were rival programs; symbolic proponents 'gained control of national funding conduits and ruthlessly defunded' neural-net research by the mid-1960s. Stronger/longer-lived antagonism than Darwin+Mendel's.",
+        "kind": "antagonism",
+        "membership": 0.85,
+        "note": "Cybernetics/connectionism wing (McCulloch-Pitts-Rosenblatt) vs symbolic AI (Dartmouth 1956, McCarthy-Minsky). Note: the fusion was largely fusion-BY-DISPLACEMENT of the rival, not literal fusion — connectionism won the substrate rather than merging with symbolic AI."
+      },
+      "weld_type": [
+        {
+          "_comment": "(D1) WEIGHTED classification — several types at once. PRIMARY: instrument-enabled-weld.",
+          "type": "instrument-enabled-weld",
+          "weight": 0.85,
+          "note": "PRIMARY: the idea-weld existed by 1986/1989 but only FIRED when GPU-compute and big-data INSTRUMENTS arrived ~2012. The apparatus, not the idea, was rate-limiting — the cleanest instrument-enabled case in the batch."
+        },
+        {
+          "type": "mediator-welded",
+          "weight": 0.85,
+          "note": "Backprop/PDP (the mediating_wrapper) did the welding, not the ancestral parents — the population-genetics analogue."
+        },
+        {
+          "type": "state/war-mobilized-weld",
+          "weight": 0.9,
+          "note": "Re-read as STATE/FUNDING-mobilized (not war): DARPA squeeze, CIFAR carry, NVIDIA instrument, Big-Tech harvest — institutions/governments/companies drive EVERY phase. The strongest D2 case in the batch."
+        },
+        {
+          "type": "antagonism-then-fusion",
+          "weight": 0.6,
+          "note": "Connectionism vs symbolic AI — but here it is fusion-by-DISPLACEMENT of the rival more than literal fusion (weight reduced accordingly)."
+        },
+        {
+          "type": "re-weld/re-attribution",
+          "weight": 0.7,
+          "note": "Each revival reinterprets the object (R10, three times); canonical credit disputed (Schmidhuber vs the Turing/Nobel laureates) — a live re-attribution."
+        },
+        {
+          "type": "double-dormancy-revival-weld",
+          "weight": 0.9,
+          "note": "PROPOSED NEW weld-type term (multi-cycle dormancy) — proposed in discrepancies[2] before use per §6 item 7. TWO winter-cycles before consolidation; the multi-cycle dormancy type the core 8-vocabulary lacks."
+        }
+      ]
+    }
+  },
+
+  "roots": {
+    "_comment": "DOWN, in the PHYSICAL frame. Recursive descent toward people and place; confidence fades and depth rises going deeper. The ground kernel '(0)' lives in actors[] (kind:individual), not here. NOTE: the substrate (W_A) and optimization (W_B) lineages share a deep root in differentiable calculus + statistics, part of why a weld is possible.",
+    "sub_wrappers": [
+      {
+        "id": "sw-mcculloch-pitts",
+        "name": "McCulloch-Pitts logical neuron (1943)",
+        "kernel": "A formal model of the neuron as a threshold logic unit — the root abstraction of the connectionist substrate.",
+        "frame": ["knowledge"],
+        "depth": 1,
+        "confidence": 0.9,
+        "who_called_it": "Warren McCulloch & Walter Pitts (1943).",
+        "parent_kind": "content",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.2, "latent_membership": 1.0 }
+      },
+      {
+        "id": "sw-hebb",
+        "name": "Hebbian learning (1949)",
+        "kernel": "'Cells that fire together wire together' — the root learning rule; weights change with correlated activity.",
+        "frame": ["knowledge"],
+        "depth": 1,
+        "confidence": 0.88,
+        "who_called_it": "Donald Hebb (1949).",
+        "parent_kind": "content",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.2, "latent_membership": 1.0 }
+      },
+      {
+        "id": "sw-neocognitron",
+        "name": "Neocognitron (Fukushima 1980) — the CNN architectural blueprint",
+        "kernel": "Hubel-Wiesel-inspired hierarchical layered visual net with local receptive fields — the architectural ancestor of the convolutional neural network.",
+        "frame": ["knowledge", "space"],
+        "depth": 1,
+        "confidence": 0.85,
+        "who_called_it": "Kunihiko Fukushima (NHK Labs, Japan, 1980).",
+        "parent_kind": "content",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.2, "latent_membership": 1.0 }
+      },
+      {
+        "id": "sw-autodiff",
+        "name": "Reverse-mode automatic differentiation / the chain rule (the gradient method root)",
+        "kernel": "Efficient computation of derivatives of a composed function by the chain rule — the mathematical core of backpropagation. Linnainmaa 1970; applied to nets Werbos 1974.",
+        "frame": ["knowledge", "space"],
+        "depth": 1,
+        "confidence": 0.88,
+        "who_called_it": "Seppo Linnainmaa (1970); Paul Werbos (1974). Disputed credit (Schmidhuber's central priority claim).",
+        "parent_kind": "method",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.1, "latent_membership": 1.0 }
+      },
+      {
+        "id": "sw-gmdh",
+        "name": "GMDH — Group Method of Data Handling (Ivakhnenko-Lapa 1965): the first deep multilayer trained nets",
+        "kernel": "Layer-by-layer trained polynomial networks; an 8-layer net by 1971 — the deepest, most-disputed priority root of 'deep learning'.",
+        "frame": ["knowledge"],
+        "depth": 2,
+        "confidence": 0.8,
+        "who_called_it": "Alexey Ivakhnenko & Valentin Lapa (Soviet cybernetics, Kyiv, 1965).",
+        "parent_kind": "method",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.2, "latent_membership": 1.0 }
+      },
+      {
+        "id": "sw-sgd",
+        "name": "Stochastic gradient descent / optimization theory (deep shared root)",
+        "kernel": "Iterative minimization of an objective from noisy gradient estimates; Amari 1967 stochastic-gradient for nets; the optimization substrate both parents share.",
+        "frame": ["knowledge", "space"],
+        "depth": 2,
+        "confidence": 0.82,
+        "who_called_it": "Robbins-Monro (1951); Shun-Ichi Amari (1967, for nets).",
+        "parent_kind": "method",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.1, "latent_membership": 1.0 }
+      },
+      {
+        "id": "sw-statmech",
+        "name": "Statistical mechanics / spin-glass physics (the physics-respectability tooling root)",
+        "kernel": "Ising/spin-glass energy models; the bridge by which Hopfield (1982) and the Boltzmann machine (1985) made neural nets respectable to physicists — and the root the 2024 Nobel cited.",
+        "frame": ["knowledge", "space"],
+        "depth": 2,
+        "confidence": 0.8,
+        "who_called_it": "Ising/Sherrington-Kirkpatrick lineage; into nets via Hopfield (1982), Ackley-Hinton-Sejnowski (1985).",
+        "parent_kind": "method",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.2, "latent_membership": 1.0 }
+      },
+      {
+        "id": "sw-cuda",
+        "name": "CUDA / GPGPU general-purpose GPU computing (the compute-instrument root)",
+        "kernel": "NVIDIA's 2007 CUDA exposed the GPU's massive SIMD parallelism for general computation; the matrix-multiply core of deep nets maps onto it. A PHYSICAL/instrument root that gated the 2012 firing.",
+        "frame": ["space", "time"],
+        "depth": 1,
+        "confidence": 0.85,
+        "who_called_it": "NVIDIA (CUDA 2007); gaming-GPU market repurposed for compute.",
+        "parent_kind": "instrument",
+        "frame_layer": { "layer": "physical", "physical_membership": 0.95, "latent_membership": 0.1 }
+      },
+      {
+        "id": "sw-imagenet",
+        "name": "ImageNet + Amazon Mechanical Turk crowd labor (the data-instrument root)",
+        "kernel": "14M+ labeled images assembled 2007-2009 via web-scale crowd labor; the large-scale supervised signal. A PHYSICAL/instrument+labor root.",
+        "frame": ["space", "time"],
+        "depth": 1,
+        "confidence": 0.83,
+        "who_called_it": "Fei-Fei Li (Princeton/Stanford, 2009); labeled by Amazon Mechanical Turk workers.",
+        "parent_kind": "instrument",
+        "frame_layer": { "layer": "physical", "physical_membership": 0.9, "latent_membership": 0.15 }
+      }
+    ]
+  },
+
+  "harvest": {
+    "_comment": "UP, in the LATENT + CULTURAL frame. The canopy is LUSH and growing — unlike QG's lush-canopy-over-hollow-trunk, here the trunk is full too. The harvest links the specimen back into the Phase-1 convergence DB at the present edge (#6/#7/#9 are descendants).",
+    "descendants": [
+      {
+        "id": "desc-transformer",
+        "name": "Transformer -> BERT/GPT -> GPT-3 -> ChatGPT -> the LLM / foundation-model paradigm",
+        "what": "Self-attention (Vaswani et al. 2017, Google Brain), building on attention (Bahdanau 2014) -> BERT/GPT (2018) -> GPT-3 (2020) -> ChatGPT (2022, 100M users in 2 months). The dominant successor architecture and the consumer-facing consummation.",
+        "frame": ["knowledge", "meaning", "time"],
+        "confidence": 0.9,
+        "frame_layer": { "layer": "latent", "physical_membership": 0.05, "latent_membership": 1.0 }
+      },
+      {
+        "id": "desc-scaling",
+        "name": "Scaling laws (Kaplan 2020; Chinchilla/Hoffmann 2022)",
+        "what": "A descendant THEORY ABOUT the child: 'more compute+data+params = lower loss' as a smooth power law — converted deep learning from empirical art into a predictive science.",
+        "frame": ["knowledge", "time"],
+        "confidence": 0.82,
+        "frame_layer": { "layer": "latent", "physical_membership": 0.05, "latent_membership": 1.0 }
+      },
+      {
+        "id": "desc-crossdomain",
+        "name": "GANs, diffusion models, deep RL (AlphaGo/AlphaZero), self-supervised learning, NMT, AlphaFold",
+        "what": "The cross-domain descendant cluster — generative modeling, game-playing, protein structure; deep learning crossed with each domain.",
+        "frame": ["knowledge", "space", "time"],
+        "confidence": 0.85,
+        "frame_layer": { "layer": "latent", "physical_membership": 0.1, "latent_membership": 1.0 }
+      },
+      {
+        "id": "desc-phase1",
+        "name": "Model merging / BES (#6/#9) + Allen-Cahn message passing (#7) — the Phase-1 DB leaves",
+        "what": "DIRECT descendants of this child that link the specimen back into the convergence DB at the present edge: TIES/DARE/mergekit task-arithmetic on trained nets (#6), Allen-Cahn message-passing GNNs (#7), Bidirectional Evolutionary Search (#9). The consummated deep-learning child is the substrate these operate on.",
+        "frame": ["knowledge", "space"],
+        "confidence": 0.85,
+        "frame_layer": { "layer": "latent", "physical_membership": 0.1, "latent_membership": 1.0 }
+      }
+    ],
+    "cultural_harvest": [
+      {
+        "domain": "tech",
+        "what": "The GPU/accelerator industry (NVIDIA's trillion-dollar pivot), the AI-investment boom ($50B 2022 -> projected $364B 2025), the data-labeling gig economy (Mechanical Turk -> dedicated labeling firms), 800k US AI job openings (2022)."
+      },
+      {
+        "domain": "other",
+        "what": "Meaning/society: the AI-safety + AI-ethics movements, the 'AI doom' / x-risk discourse (Hinton quit Google 2023 to warn), algorithmic-bias and copyright debates, labor-displacement anxiety."
+      },
+      {
+        "domain": "art",
+        "what": "AI-generated art (the diffusion-model image boom), deepfakes, the renewed cultural salience of machine-mind narratives."
+      },
+      {
+        "domain": "other",
+        "what": "Reflexive consecration harvest: the 2018 Turing Award and 2024 Nobel Prize in Physics canonized the child — and themselves triggered re-attribution disputes (a cultural-focus PULL that doubles as a re-attribution event)."
+      },
+      {
+        "domain": "other",
+        "what": "DARK-CHILD / contested harvest: surveillance/facial-recognition deployments, generative-AI misinformation — the deep-learning analogue of Darwin+Mendel's eugenics dark child."
+      }
+    ]
+  },
+
+  "relatives": {
+    "_comment": "WIDE edges (OPTIONAL group). The most important is the SYMBOLIC-AI rival — the defeated rival paradigm, displaced rather than fused. Plus the Phase-1 structural cousins.",
+    "edges": [
+      {
+        "id": "rel-symbolic",
+        "name": "Symbolic AI / GOFAI (the rival paradigm)",
+        "relation": "rival",
+        "frame": ["knowledge", "meaning"],
+        "confidence": 0.9,
+        "note": "The defeated rival research program (Dartmouth 1956; McCarthy-Minsky; expert systems; Lisp machines; Japan's Fifth Generation). Displaced by deep learning at the dominant-paradigm level (fusion-by-displacement, not fusion). Its commercial arm (Symbolics) collapsed 1987; its state bet (Fifth Generation) failed 1992. CRUCIAL anti-correlation: symbolic AI's 1987 second winter overlapped connectionism's PDP-driven RISE — A's winter was B's spring (see gaps: rival_lifecycle_coupling).",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.2, "latent_membership": 1.0 }
+      },
+      {
+        "id": "rel-cybernetics",
+        "name": "Cybernetics (Wiener's MIT circle)",
+        "relation": "influence",
+        "frame": ["knowledge"],
+        "confidence": 0.8,
+        "note": "The 1940s-50s milieu the connectionist substrate grew from (McCulloch-Pitts, Wiener); the wing symbolic AI split FROM (McCarthy distancing from Wiener at Dartmouth).",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.3, "latent_membership": 1.0 }
+      },
+      {
+        "id": "rel-modelmerge",
+        "name": "Model merging / BES (Phase-1 convergence #6/#9)",
+        "relation": "cousin",
+        "frame": ["knowledge", "space"],
+        "confidence": 0.8,
+        "note": "The present-edge link back to the extends-target: model merging (task-arithmetic in parameter space) is a SETTLED present-day weld ON the trained deep net this specimen's child produced. Structural cousin across the DB; shows where the lineage's leaves currently sit.",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.1, "latent_membership": 1.0 }
+      },
+      {
+        "id": "rel-acmp",
+        "name": "Allen-Cahn Message Passing (Phase-1 convergence #7)",
+        "relation": "cousin",
+        "frame": ["knowledge", "space"],
+        "confidence": 0.75,
+        "note": "A graph-neural-network descendant (three-force reaction-diffusion message passing); another present-edge leaf of the deep-learning lineage in the Phase-1 DB.",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.1, "latent_membership": 1.0 }
+      },
+      {
+        "id": "rel-neuro",
+        "name": "Computational neuroscience / biological vision (Hubel-Wiesel)",
+        "relation": "sibling",
+        "frame": ["knowledge"],
+        "confidence": 0.7,
+        "note": "The biological-inspiration sibling lineage (Hubel-Wiesel receptive fields -> Neocognitron -> CNN); deep learning diverged from biological fidelity but kept the architectural inspiration.",
+        "frame_layer": { "layer": "straddle", "physical_membership": 0.5, "latent_membership": 0.7 }
+      }
+    ]
+  },
+
+  "actors": [
+    {
+      "_comment": "(D2) the ground kernel '(0)' generalized — the batch's strongest institutional/government/corporate case. Individuals first, then institutions/government/companies that are genuinely load-bearing (DARPA, CIFAR, NVIDIA, Google, OpenAI, Symbolics, MITI). carrier_of = champions latent wrappers UP; inhabitant_of = operates WITHIN.",
+      "id": "act-rosenblatt",
+      "name": "Frank Rosenblatt",
+      "kind": "individual",
+      "frame_layer": { "layer": "physical", "physical_membership": 1.0, "latent_membership": 0.2 },
+      "role": "Originator of the perceptron (the learnable single-layer neural net); made bold public predictions",
+      "when": "1958",
+      "where": "Cornell Aeronautical Laboratory, USA",
+      "culture": "1950s US cybernetics milieu",
+      "relation": "originator (of W_A's perceptron)",
+      "confidence": 0.9,
+      "carrier_of": [
+        { "wrapper": "par-substrate", "role": "champions", "strength": 0.9, "when": "1958-1971", "confidence": 0.9 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "rel-cybernetics", "layer": "latent", "role": "works_within", "strength": 0.8, "when": "1950s", "confidence": 0.8 },
+        { "wrapper": "Office of Naval Research funding", "layer": "physical", "role": "operates_in", "strength": 0.7, "when": "1957-1971", "confidence": 0.75 }
+      ]
+    },
+    {
+      "id": "act-minsky-papert",
+      "name": "Marvin Minsky & Seymour Papert",
+      "kind": "individual",
+      "frame_layer": { "layer": "physical", "physical_membership": 1.0, "latent_membership": 0.2 },
+      "role": "Authors of 'Perceptrons' (1969) — the case AGAINST perceptrons (the squeeze authors)",
+      "when": "1969",
+      "where": "MIT AI Lab, USA",
+      "culture": "symbolic-AI paradigm (GOFAI)",
+      "relation": "rival / squeeze-author",
+      "confidence": 0.9,
+      "carrier_of": [
+        { "wrapper": "rel-symbolic", "role": "champions", "strength": 0.9, "when": "1956-1990s", "confidence": 0.85 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "rel-symbolic", "layer": "latent", "role": "lives_in", "strength": 0.95, "when": "1956-1990s", "confidence": 0.9 }
+      ]
+    },
+    {
+      "id": "act-mcculloch-pitts",
+      "name": "Warren McCulloch & Walter Pitts",
+      "kind": "individual",
+      "frame_layer": { "layer": "physical", "physical_membership": 1.0, "latent_membership": 0.2 },
+      "role": "The logical-calculus neuron (the substrate's root, 1943)",
+      "when": "1943",
+      "where": "USA (Chicago / MIT)",
+      "culture": "cybernetics movement; Wiener's MIT circle",
+      "relation": "deep-root originator",
+      "confidence": 0.88,
+      "carrier_of": [
+        { "wrapper": "sw-mcculloch-pitts", "role": "founds", "strength": 0.95, "when": "1943", "confidence": 0.9 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "rel-cybernetics", "layer": "latent", "role": "lives_in", "strength": 0.85, "when": "1940s-50s", "confidence": 0.8 }
+      ]
+    },
+    {
+      "id": "act-pdp",
+      "name": "David Rumelhart, James McClelland & the PDP Research Group",
+      "kind": "lab",
+      "frame_layer": { "layer": "straddle", "physical_membership": 0.7, "latent_membership": 0.7 },
+      "role": "Connectionism / parallel distributed processing / backprop-popularization (the mediating welder, 1986)",
+      "when": "1986",
+      "where": "UC San Diego cognitive science, USA",
+      "culture": "1980s anti-symbolic cognitive-science insurgency",
+      "relation": "mediating-welder",
+      "confidence": 0.9,
+      "carrier_of": [
+        { "wrapper": "weld-main", "role": "champions", "strength": 0.92, "when": "1986", "confidence": 0.9 },
+        { "wrapper": "child-dl", "role": "champions", "strength": 0.8, "when": "1986", "confidence": 0.85 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "rel-cybernetics", "layer": "latent", "role": "works_within", "strength": 0.5, "when": "1980s", "confidence": 0.6 }
+      ]
+    },
+    {
+      "id": "act-hinton",
+      "name": "Geoffrey Hinton",
+      "kind": "individual",
+      "frame_layer": { "layer": "physical", "physical_membership": 1.0, "latent_membership": 0.3 },
+      "role": "Backprop, Boltzmann machines, deep belief nets, deep learning — THE flame-keeper across both winters (2018 Turing + 2024 Nobel)",
+      "when": "1986-present",
+      "where": "CMU -> Univ. Toronto -> CIFAR -> Google Brain",
+      "culture": "the connectionist program",
+      "relation": "flame-keeper / champion",
+      "confidence": 0.95,
+      "carrier_of": [
+        { "wrapper": "child-dl", "role": "champions", "strength": 0.95, "when": "1986-present", "confidence": 0.95 },
+        { "wrapper": "weld-main", "role": "champions", "strength": 0.9, "when": "1986-2012", "confidence": 0.9 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "act-cifar", "layer": "physical", "role": "operates_in", "strength": 0.9, "when": "2004-2012", "confidence": 0.9 },
+        { "wrapper": "act-google", "layer": "physical", "role": "operates_in", "strength": 0.7, "when": "2013-2023", "confidence": 0.85 }
+      ]
+    },
+    {
+      "id": "act-lecun",
+      "name": "Yann LeCun",
+      "kind": "individual",
+      "frame_layer": { "layer": "physical", "physical_membership": 1.0, "latent_membership": 0.3 },
+      "role": "Convolutional neural networks / LeNet (the CNN algorithm parent, 1989) — the surprise demonstrated working",
+      "when": "1989-present",
+      "where": "AT&T Bell Labs -> NYU -> Facebook/Meta AI; CIFAR",
+      "culture": "the connectionist program",
+      "relation": "originator (CNN) / flame-keeper",
+      "confidence": 0.92,
+      "carrier_of": [
+        { "wrapper": "sw-lenet", "role": "founds", "strength": 0.95, "when": "1989", "confidence": 0.92 },
+        { "wrapper": "child-dl", "role": "champions", "strength": 0.9, "when": "1989-present", "confidence": 0.9 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "act-cifar", "layer": "physical", "role": "operates_in", "strength": 0.8, "when": "2004-2012", "confidence": 0.85 }
+      ]
+    },
+    {
+      "id": "act-bengio",
+      "name": "Yoshua Bengio",
+      "kind": "individual",
+      "frame_layer": { "layer": "physical", "physical_membership": 1.0, "latent_membership": 0.3 },
+      "role": "Deep learning, representation learning (third Turing co-laureate, flame-keeper)",
+      "when": "1990s-present",
+      "where": "Univ. Montreal / MILA; CIFAR",
+      "culture": "the connectionist program",
+      "relation": "flame-keeper / champion",
+      "confidence": 0.9,
+      "carrier_of": [
+        { "wrapper": "child-dl", "role": "champions", "strength": 0.9, "when": "1990s-present", "confidence": 0.9 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "act-cifar", "layer": "physical", "role": "operates_in", "strength": 0.85, "when": "2004-present", "confidence": 0.85 }
+      ]
+    },
+    {
+      "id": "act-schmidhuber",
+      "name": "Jurgen Schmidhuber",
+      "kind": "individual",
+      "frame_layer": { "layer": "physical", "physical_membership": 1.0, "latent_membership": 0.3 },
+      "role": "LSTM, and the PRIORITY-DISPUTE counter-narrative (champions the earlier originators: Ivakhnenko, Werbos, Amari, Linnainmaa)",
+      "when": "1990s-present",
+      "where": "IDSIA (Swiss/Italian)",
+      "culture": "positioned OUTSIDE the Hinton-Bengio-LeCun citation cluster",
+      "relation": "rival-claimant / re-attribution champion",
+      "confidence": 0.85,
+      "carrier_of": [
+        { "wrapper": "sw-autodiff", "role": "champions", "strength": 0.8, "when": "2010s-present", "confidence": 0.7, "_note": "champions the ORIGINATORS' priority (Linnainmaa/Werbos/Ivakhnenko) against the popularizers' canonical credit" },
+        { "wrapper": "sw-gmdh", "role": "champions", "strength": 0.8, "when": "2010s-present", "confidence": 0.7 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "child-dl", "layer": "latent", "role": "works_within", "strength": 0.7, "when": "1990s-present", "confidence": 0.8 }
+      ]
+    },
+    {
+      "id": "act-ivakhnenko",
+      "name": "Alexey Ivakhnenko & Valentin Lapa",
+      "kind": "individual",
+      "frame_layer": { "layer": "physical", "physical_membership": 1.0, "latent_membership": 0.2 },
+      "role": "GMDH / the first deep multilayer trained networks 1965 (the deepest, most-disputed priority root)",
+      "when": "1965-1971",
+      "where": "Institute of Cybernetics, Kyiv, USSR",
+      "culture": "Soviet cybernetics",
+      "relation": "deep-root originator (politically-marginalized lineage)",
+      "confidence": 0.8,
+      "_confidence_note": "Priority disputed; the Soviet/Kyiv lineage faintly echoes QG's Bronstein (a politically-marginalized deep root that canonical Western credit overlooks).",
+      "carrier_of": [
+        { "wrapper": "sw-gmdh", "role": "founds", "strength": 0.95, "when": "1965-1971", "confidence": 0.85 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "Soviet cybernetics", "layer": "physical", "role": "lives_in", "strength": 0.85, "when": "1960s-70s", "confidence": 0.8 }
+      ]
+    },
+    {
+      "id": "act-fukushima",
+      "name": "Kunihiko Fukushima",
+      "kind": "individual",
+      "frame_layer": { "layer": "physical", "physical_membership": 1.0, "latent_membership": 0.2 },
+      "role": "The Neocognitron (the CNN architectural blueprint, 1980)",
+      "when": "1980",
+      "where": "NHK Science & Technology Research Laboratories, Japan",
+      "culture": "Japanese applied-research labs; Hubel-Wiesel-inspired",
+      "relation": "architectural-root originator",
+      "confidence": 0.85,
+      "carrier_of": [
+        { "wrapper": "sw-neocognitron", "role": "founds", "strength": 0.95, "when": "1980", "confidence": 0.88 }
+      ],
+      "inhabitant_of": []
+    },
+    {
+      "id": "act-hopfield",
+      "name": "John Hopfield",
+      "kind": "individual",
+      "frame_layer": { "layer": "physical", "physical_membership": 1.0, "latent_membership": 0.2 },
+      "role": "The Hopfield network / statistical-mechanics bridge (the physics-respectability revival, 1982; 2024 Nobel)",
+      "when": "1982",
+      "where": "Caltech / Princeton, USA",
+      "culture": "physics-meets-biology community",
+      "relation": "revival-originator (physics bridge)",
+      "confidence": 0.88,
+      "carrier_of": [
+        { "wrapper": "sw-statmech", "role": "champions", "strength": 0.9, "when": "1982", "confidence": 0.88 },
+        { "wrapper": "weld-main", "role": "champions", "strength": 0.6, "when": "1982", "confidence": 0.8 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "physics-meets-biology community", "layer": "latent", "role": "works_within", "strength": 0.85, "when": "1980s", "confidence": 0.8 }
+      ]
+    },
+    {
+      "id": "act-feifei",
+      "name": "Fei-Fei Li",
+      "kind": "individual",
+      "frame_layer": { "layer": "physical", "physical_membership": 1.0, "latent_membership": 0.2 },
+      "role": "ImageNet / the data-centric paradigm (the data INSTRUMENT-parent)",
+      "when": "2007-2012",
+      "where": "Princeton -> Stanford, USA",
+      "culture": "computer-vision community; built ImageNet via Amazon Mechanical Turk crowd labor",
+      "relation": "instrument-parent originator (data)",
+      "confidence": 0.9,
+      "carrier_of": [
+        { "wrapper": "par-data", "role": "founds", "strength": 0.95, "when": "2007-2009", "confidence": 0.9 },
+        { "wrapper": "sw-imagenet", "role": "founds", "strength": 0.95, "when": "2007-2009", "confidence": 0.9 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "the computer-vision community", "layer": "latent", "role": "works_within", "strength": 0.85, "when": "2000s", "confidence": 0.85 }
+      ]
+    },
+    {
+      "id": "act-alexnet-team",
+      "name": "Alex Krizhevsky & Ilya Sutskever",
+      "kind": "individual",
+      "frame_layer": { "layer": "physical", "physical_membership": 1.0, "latent_membership": 0.2 },
+      "role": "AlexNet (the consummation; the GPU-implemented deep CNN, 2012) — 'team SuperVision'",
+      "when": "2012",
+      "where": "Univ. Toronto (Hinton's lab), Canada",
+      "culture": "the connectionist program at the instrument frontier",
+      "relation": "consummation-originators",
+      "confidence": 0.92,
+      "carrier_of": [
+        { "wrapper": "sw-alexnet", "role": "founds", "strength": 0.95, "when": "2012", "confidence": 0.92 },
+        { "wrapper": "child-dl", "role": "champions", "strength": 0.85, "when": "2012", "confidence": 0.9 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "act-cifar", "layer": "physical", "role": "operates_in", "strength": 0.7, "when": "2012", "confidence": 0.8 }
+      ]
+    },
+    {
+      "id": "act-darpa",
+      "name": "DARPA / ARPA (US)",
+      "kind": "government",
+      "frame_layer": { "layer": "physical", "physical_membership": 0.95, "latent_membership": 0.15 },
+      "role": "(historically) carried symbolic AI, speech understanding, the Strategic Computing Initiative — and delivered the SQUEEZE that defunded AI 'deeply and brutally' (Jack Schwarz 1987)",
+      "when": "1960s-1990s",
+      "where": "US Department of Defense",
+      "culture": "Cold-War tech-funding apparatus; constrained post-1969 by the Mansfield Amendment",
+      "relation": "patron-then-squeezer (of the RIVAL, and of basic AI research broadly)",
+      "confidence": 0.88,
+      "carrier_of": [
+        { "wrapper": "rel-symbolic", "role": "funds", "strength": 0.8, "when": "1960s-1980s", "confidence": 0.85 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "US Department of Defense / Cold-War funding apparatus", "layer": "physical", "role": "operates_in", "strength": 0.95, "when": "1958-present", "confidence": 0.9 }
+      ]
+    },
+    {
+      "id": "act-cifar",
+      "name": "CIFAR (Canadian Institute for Advanced Research) + Canadian government",
+      "kind": "institution",
+      "frame_layer": { "layer": "physical", "physical_membership": 0.9, "latent_membership": 0.2 },
+      "role": "Carried neural networks / deep learning THROUGH the dark ages (the 'Neural Computation and Adaptive Perception' program, 2004+; the institutional flame-keeper / dormancy-patron)",
+      "when": "2004-present",
+      "where": "Canadian federal research-funding ecosystem",
+      "culture": "Canadian advanced-research funding; later the Pan-Canadian AI Strategy ($125M)",
+      "relation": "carrier-through-dormancy / dormancy-patron",
+      "confidence": 0.85,
+      "_role_note": "The clearest D2 'flame_keeper / dormancy_patron' instance in the batch — a FOUNDATION/STATE that deliberately funded a marginalized wrapper through its winter to keep it alive (see gaps: flame_keeper named role).",
+      "carrier_of": [
+        { "wrapper": "child-dl", "role": "funds", "strength": 0.85, "when": "2004-2012", "confidence": 0.85 },
+        { "wrapper": "weld-main", "role": "institutionalizes", "strength": 0.7, "when": "2004-2012", "confidence": 0.8 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "Canadian federal research ecosystem", "layer": "physical", "role": "operates_in", "strength": 0.9, "when": "2004-present", "confidence": 0.85 }
+      ]
+    },
+    {
+      "id": "act-nvidia",
+      "name": "NVIDIA (Jensen Huang)",
+      "kind": "company",
+      "frame_layer": { "layer": "physical", "physical_membership": 0.95, "latent_membership": 0.1 },
+      "role": "CUDA / general-purpose GPU computing (the compute INSTRUMENT that gated the weld; released CUDA 2007)",
+      "when": "2007-present",
+      "where": "the semiconductor industry, USA",
+      "culture": "the gaming-GPU market repurposed for compute",
+      "relation": "instrument-supplier (compute)",
+      "confidence": 0.88,
+      "carrier_of": [
+        { "wrapper": "sw-cuda", "role": "founds", "strength": 0.95, "when": "2007", "confidence": 0.9 },
+        { "wrapper": "par-compute", "role": "funds", "strength": 0.9, "when": "2007-2012", "confidence": 0.88 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "the semiconductor / gaming-GPU industry", "layer": "physical", "role": "operates_in", "strength": 0.95, "when": "1993-present", "confidence": 0.9 }
+      ]
+    },
+    {
+      "id": "act-symbolics",
+      "name": "Symbolics / Lisp Machines Inc.",
+      "kind": "company",
+      "frame_layer": { "layer": "physical", "physical_membership": 0.95, "latent_membership": 0.1 },
+      "role": "Symbolic-AI hardware (the RIVAL paradigm's commercial arm — collapsed 1987, the second-winter trigger)",
+      "when": "1980-1987",
+      "where": "USA",
+      "culture": "the 1980s expert-systems boom; the AI-hardware market that commoditized away",
+      "relation": "rival's-commercial-arm (collapsed)",
+      "confidence": 0.82,
+      "carrier_of": [
+        { "wrapper": "rel-symbolic", "role": "institutionalizes", "strength": 0.8, "when": "1980-1987", "confidence": 0.8 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "the 1980s expert-systems / AI-hardware market", "layer": "physical", "role": "operates_in", "strength": 0.9, "when": "1980-1987", "confidence": 0.8 }
+      ]
+    },
+    {
+      "id": "act-miti",
+      "name": "Japan MITI / Fifth Generation Computer project",
+      "kind": "government",
+      "frame_layer": { "layer": "physical", "physical_membership": 0.95, "latent_membership": 0.15 },
+      "role": "Symbolic/logic-programming AI (a $850M state bet, 1981-1992, that failed — a rival-paradigm squeeze-by-disappointment)",
+      "when": "1981-1992",
+      "where": "Japanese Ministry of International Trade and Industry",
+      "culture": "1980s techno-nationalism",
+      "relation": "rival-state-bet (failed)",
+      "confidence": 0.82,
+      "carrier_of": [
+        { "wrapper": "rel-symbolic", "role": "funds", "strength": 0.8, "when": "1981-1992", "confidence": 0.8 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "Japanese MITI / 1980s techno-nationalism", "layer": "physical", "role": "operates_in", "strength": 0.9, "when": "1981-1992", "confidence": 0.8 }
+      ]
+    },
+    {
+      "id": "act-google",
+      "name": "Google Brain / Google",
+      "kind": "company",
+      "frame_layer": { "layer": "physical", "physical_membership": 0.95, "latent_membership": 0.2 },
+      "role": "Transformers ('Attention Is All You Need' 2017) + scaled deep learning (the harvest-era corporate carrier)",
+      "when": "2011-present",
+      "where": "USA",
+      "culture": "the post-2012 big-tech AI-research gold rush",
+      "relation": "harvest-carrier (corporate)",
+      "confidence": 0.88,
+      "carrier_of": [
+        { "wrapper": "desc-transformer", "role": "founds", "strength": 0.9, "when": "2017", "confidence": 0.9 },
+        { "wrapper": "child-dl", "role": "institutionalizes", "strength": 0.85, "when": "2011-present", "confidence": 0.88 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "the post-2012 big-tech AI gold rush", "layer": "physical", "role": "operates_in", "strength": 0.9, "when": "2011-present", "confidence": 0.88 }
+      ]
+    },
+    {
+      "id": "act-openai",
+      "name": "OpenAI",
+      "kind": "company",
+      "frame_layer": { "layer": "physical", "physical_membership": 0.95, "latent_membership": 0.2 },
+      "role": "GPT / scaling laws / ChatGPT (the LLM harvest; the consumer-facing consummation 2022)",
+      "when": "2015-present",
+      "where": "USA",
+      "culture": "the post-2017 transformer ecosystem; the AI-investment boom",
+      "relation": "harvest-carrier (LLM)",
+      "confidence": 0.88,
+      "carrier_of": [
+        { "wrapper": "desc-transformer", "role": "champions", "strength": 0.9, "when": "2018-present", "confidence": 0.88 },
+        { "wrapper": "desc-scaling", "role": "champions", "strength": 0.85, "when": "2020-present", "confidence": 0.85 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "the post-2017 transformer ecosystem / AI-investment boom", "layer": "physical", "role": "operates_in", "strength": 0.9, "when": "2015-present", "confidence": 0.88 }
+      ]
+    }
+  ],
+
+  "fuzzy_layer": {
+    "_comment": "The trunk/frontier partition — a DERIVED digest of the per-node memberships (D5). Unlike QG, here the trunk is FULL (the child is real and dominant): the certain core includes the CHILD itself. The frontier is the DORMANCY-NARRATIVE and the CREDIT/PRIORITY, not the child's existence. The fulcrum sits HIGH (most of the tree is solid) with fuzz concentrated in two places: the winter-narrative granularity (Haigh) and the re-attribution dispute (Schmidhuber).",
+    "certain_core": [
+      "The CHILD: deep learning as a working, dominant paradigm (0.95) — uncontested as the dominant AI paradigm of the 2010s-2020s.",
+      "W_A = the connectionist neural-net substrate (0.95) and W_B = the optimization/differentiable-calculus apparatus (0.9).",
+      "The 2012 AlexNet THREE-ELEMENT convergence (algorithm + GPU compute + ImageNet data) (0.95) — stated verbatim by Wikipedia AND Fei-Fei Li.",
+      "The mediating welder: backprop/PDP 1986 recognized 'weights = differentiable variables' (0.92).",
+      "The seam S (a net IS a differentiable function trained by gradient descent) — agreed, not fractured (0.9).",
+      "The surprise (deep+backprop = emergent representation learner) was DEMONSTRATED working (LeNet 1989) (0.9).",
+      "The instrument-parents (CUDA 2007; ImageNet 2009) and their gating role (0.88).",
+      "The institutional actors driving every phase: DARPA squeeze, CIFAR carry, NVIDIA instrument, Google/OpenAI harvest (0.85-0.9).",
+      "The forcing events as a class (Minsky-Papert squeeze; SVM-fashion squeeze; CUDA/ImageNet pull; post-2012 investment pull) (0.8-0.9).",
+      "The harvest: transformers -> LLMs -> ChatGPT, and the Phase-1 DB leaves (#6/#7/#9) as descendants (0.85-0.9)."
+    ],
+    "frontier": [
+      "The EXACT DORMANCY INTERVALS and whether the 'AI winter' narrative is clean (Haigh: 'There Was No First AI Winter' — SIGART membership grew through the 1970s; the freeze hit elite labs, not the field) (~0.55-0.75; the FACT of elite-lab defunding ~0.9, the clean whole-field-froze NARRATIVE ~0.5).",
+      "The RE-ATTRIBUTION / priority dispute: whether canonical credit (Hinton/Bengio/LeCun Turing; Hopfield/Hinton Nobel) belongs to the popularizers or the originators (Linnainmaa/Werbos/Ivakhnenko/Amari) — LIVE and bitter; Schmidhuber's claims read partly from his own partisan pages (held ~0.6).",
+      "Whether the three winters (neural-net ~1969-86; 'first AI winter' ~1973-80; 'second AI winter' ~1987-93) are ONE phenomenon or three differently-caused, differently-timed downturns hitting different sub-fields (~0.6; the popular single-'AI winter' story flattens them).",
+      "The anti-correlated rival fortunes ('A's winter is B's spring' — symbolic AI's 1987 collapse overlapped connectionism's rise): well-attested but the schema has no clean slot for it (~0.7).",
+      "The Nobel-Prize-in-Physics-for-a-neural-net frame-ownership dispute ('is it even physics?' — claimed by physics/CS/cognitive-science) (~0.6).",
+      "Deep priority roots (Ivakhnenko 1965 as 'first deep learning'; Amari 1967 stochastic gradient) — disputed attribution at the base (~0.7-0.8).",
+      "Bits / MDL-on-learned-representations as a near-principled-null — the compression delta is not cleanly computable (an open research problem)."
+    ],
+    "core_boundary_locus": "(R3-adjacent) The fulcrum sits HIGH — most of the tree (parents, seam, mediating weld, child, consummation, actors, harvest) is certain core. Unlike QG (core sinks BELOW the child) or Darwin+Mendel (fuzz climbs INTO the trunk at the parent-identity), here the fuzz is concentrated in TWO lateral pockets that do NOT touch the trunk: (1) the dormancy-narrative granularity (the winters), and (2) the credit/priority attribution. The child's EXISTENCE is solid; only its HISTORY (how dormant it really was) and its CREDIT (who produced it) are frontier. This is the signature of a consummated weld with a contested historiography."
+  },
+
+  "discrepancies": [
+    {
+      "_comment": "THE central framework-vs-record tension — the three-element consummation directly hits R1+R4.",
+      "what": "THE THREE-PARENT CONSUMMATION vs the binary weld. AlexNet 2012 is framed by Wikipedia AND Fei-Fei Li verbatim as 'three fundamental elements converged for the FIRST time': algorithm (deep CNN) + compute (GPU/CUDA) + data (ImageNet). Two of the three (compute, data) are INSTRUMENTS, not content — a parent_kind=instrument case. The clean two-parent (substrate x calculus) weld cannot hold the actual consummation, which required two non-idea instruments to arrive. The weld did NOT fire when the algorithm existed (1989) — it fired only when the two instruments arrived (~2012).",
+      "sources_in_conflict": ["Wikipedia 'AlexNet' (three-element-convergence framing)", "Fei-Fei Li ('three elements converged for the first time')", "the clean two-parent framework projection"],
+      "type": "framework-vs-record-tension",
+      "why_interesting": "The single biggest framework signal: the historical record's OWN language ('three elements converged') is a direct empirical hit on R1 (N-ary parents) + R4 (parent_kind: instrument). Strongly supports the instrument-enabled-weld type and a 'weld awaits its apparatus' lifecycle. -> motivates parents_full + parent_kind=instrument (R1/R4) AND a parent_is_gating/rate_limiting flag (see gaps). The convergence is well-attested (~0.95); it PROVES the binary projection is lossy here.",
+      "confidence_impact": "Does not lower child-confidence (the child is real); RAISES the value of parents_full and the instrument-parent machinery. Forces the 5-parent honest set."
+    },
+    {
+      "_comment": "Re-attribution — the deep-learning analogue of Maxwell's, but FAR hotter (live, bitter).",
+      "what": "RE-ATTRIBUTION: 'deep learning' is canonically credited to Hinton/Bengio/LeCun (2018 Turing) and Hopfield/Hinton (2024 Nobel), but the originating techniques were earlier: backprop's reverse-mode = Linnainmaa 1970; applied to nets = Werbos 1974; first deep multilayer trained nets = Ivakhnenko-Lapa 1965 (GMDH); stochastic gradient = Amari 1967. Schmidhuber's 88-page, 17-point priority report accuses the trio of 'plagiarism and incorrect attribution'; he calls the 2024 Nobel a reward for 'plagiarism'. LeCun calls Schmidhuber 'manically obsessed with recognition'.",
+      "sources_in_conflict": ["Schmidhuber's priority pages (idsia.ch — partisan primary)", "Wikipedia 'Backpropagation' / 'Jurgen Schmidhuber'", "the 2018 Turing / 2024 Nobel citations"],
+      "type": "priority-dispute",
+      "why_interesting": "The deep-learning analogue of Maxwell's re-attribution ('it is not the first inventor who gets credit but the last re-inventor'). Directly instantiates R10 (reattribution{named_after, actually_produced_by}). The dispute is LIVE and bitter, with named primary sources on both sides — a far hotter re-attribution than Maxwell's settled one. The deepest root (Ivakhnenko 1965, Soviet/Kyiv cybernetics) is a politically-marginalized lineage, faintly echoing QG's Bronstein.",
+      "confidence_impact": "Holds the priority-attribution at frontier confidence (~0.6, partisan sourcing); does not move child-confidence. Fills reattribution{}."
+    },
+    {
+      "_comment": "Contested dormancy — directly parallels Darwin+Mendel's '35 years of neglect' dispute. ALSO proposes the new weld-type term.",
+      "what": "CONTESTED DORMANCY: Thomas Haigh (CACM 2023, 'There Was No First AI Winter') argues the 1970s neural/AI 'winter' is substantially a MYTH — ACM SIGART membership ~doubled to 1,241 by 1973 (Lighthill year) and ~tripled to 3,500 by 1978, growing faster than ACM overall. The 'freeze' hit a few elite labs (MIT/Stanford/CMU) losing easy government money, not the globally growing field. ALSO: this specimen proposes the NEW weld-type term 'double-dormancy-revival-weld' (multi-cycle dormancy) — proposed HERE before use per §6 item 7, because the core 8-vocabulary has single instrument-enabled/crisis-pulled types but no multi-cycle-dormancy type.",
+      "sources_in_conflict": ["Haigh, CACM 2023 'There Was No First AI Winter' (full text 403-blocked; reconstructed from search summaries)", "the popular 'AI winter' narrative (Wikipedia 'AI winter')"],
+      "type": "dormancy-contested",
+      "why_interesting": "Directly parallels Darwin+Mendel's disputed '35 years of neglect' (Olby/Brannigan vs Glass). The FACT of elite-lab defunding is solid (~0.9); the clean 'whole field froze' NARRATIVE is frontier (~0.5). Instantiates the dormancy-contested type and supports R11 (dormancy.why_frame): the squeeze was lab-and-funding-specific, not a uniform field-wide knowledge-frost. Forces distinguishing 'the neural-net research-program winter' from 'the broad-AI winter'. -> PROPOSES new weld-type 'double-dormancy-revival-weld' (per §6 item 7).",
+      "confidence_impact": "Caps the dormancy-interval confidence at ~0.55-0.75 (contested narrative); the child and the FACT of elite-lab defunding stay high."
+    },
+    {
+      "_comment": "Two/three winters conflated — granularity-of-dormancy tension; and the anti-correlation the schema cannot express.",
+      "what": "TWO/THREE DIFFERENT WINTERS conflated. The neural-net/connectionism dormancy (~1969-1986, cause = Minsky-Papert + funding capture) is distinct from the 'first AI winter' (~1973-1980, cause = Lighthill + Mansfield + speech-understanding failure, mostly SYMBOLIC AI) AND from the 'second AI winter' (~1987-1993, cause = Lisp-machine collapse + expert-system brittleness, again mostly SYMBOLIC AI). The popular single-'AI winter' story flattens at least three differently-caused, differently-timed downturns hitting different sub-fields. Critically, connectionism's fortunes were sometimes INVERSE to symbolic AI's: the 1987 second winter (which crushed symbolic expert systems) overlapped connectionism's PDP-driven RISE.",
+      "sources_in_conflict": ["Wikipedia 'AI winter' (multi-cycle timeline)", "Lighthill Report 1973", "the single-'AI winter' popular narrative"],
+      "type": "contested-genealogy",
+      "why_interesting": "A framework-vs-record tension about the GRANULARITY of dormancy: one render needs MULTIPLE dormancy_intervals with different why_frames on different sub-wrappers (R11). The schema has no clean way to express 'A's winter is B's spring' — connectionism rose exactly as symbolic AI's second winter began. -> motivates a rival_lifecycle_coupling variable (see gaps).",
+      "confidence_impact": "Holds the dormancy granularity at ~0.6; the anti-correlation is a clean signal the schema flattens."
+    },
+    {
+      "_comment": "Demonstrated-but-not-adopted — the most extreme R9 case in the batch; a STRONGER state than conjectured-not-confirmed.",
+      "what": "SURPRISE DEMONSTRATED-but-NOT-ADOPTED in a parent, decades before consummation. The deep-learning surprise (deep+backprop = universal representation learner) was conjectured AND demonstrated working small-scale long before it consolidated: Ivakhnenko 1965 (8-layer net by 1971), Werbos 1974, LeNet 1989 (working CNN on real handwritten digits, deployed reading bank cheques). The synergy was a HIGH-confidence weld DEMONSTRATED but not ADOPTED — for ~20-40 years inside the substrate, awaiting the compute/data instrument.",
+      "sources_in_conflict": ["LeNet 1989 deployment record (demonstrated working)", "the 2012-consolidation date (adopted as paradigm)", "the framework's 'conjecture = low-confidence weld drawn-but-not-confirmed' definition"],
+      "type": "framework-vs-record-tension",
+      "why_interesting": "The framework's OWN definition of a conjecture found in the record — instantiates R15 (surprise_priority) — AND a STRONGER state it lacks: 'demonstrated-not-adopted' (a working proof the field ignored for want of scale), distinct from 'conjectured-not-confirmed'. Most extreme batch case of R9: surprise_confidence ~0.9 and the synergy was a DEPLOYED PRODUCT (1989) while the risen DOMINANT child waited until 2012. -> motivates a 'demonstrated-not-adopted' surprise-state + an adoption-lag variable (see gaps).",
+      "confidence_impact": "Sharpens the R9 decoupling-in-time; raises surprise_priority's value. No effect on child-confidence."
+    },
+    {
+      "_comment": "Revived-as-reinterpreted THREE times within one specimen — strongest multi-instance R10 support in the batch.",
+      "what": "REVIVED-AS-REINTERPRETED across each cycle. The object that revives is never the object that went dormant: single-layer perceptron (dormant 1969) -> multi-layer backprop net (revived 1986); shallow backprop net (dormant ~1995) -> deep belief net / deep CNN (revived 2006/2012); and 'connectionism' (a cognitive-science theory of MIND) -> 'deep learning' (an engineering toolkit), a re-framing from science to technology.",
+      "sources_in_conflict": ["the perceptron->backprop-net reinterpretation", "the shallow->deep reinterpretation", "the connectionism(science)->deep-learning(engineering) reframing"],
+      "type": "framework-vs-record-tension",
+      "why_interesting": "Instantiates R10 (revival.kind = reinterpreted) THREE times within one specimen — the strongest multi-instance support in the batch. Pairs with the Maxwell re-attribution and Darwin+Mendel's species-hybridization->heredity re-framing: 'the object that comes out of a revival is not the object that went in' is now triple-attested across specimens AND thrice WITHIN this one.",
+      "confidence_impact": "Strongly confirms R10; no effect on child-confidence."
+    },
+    {
+      "_comment": "Institutional/state actors as first-class lineage nodes — the strongest D2 demand in the batch.",
+      "what": "INSTITUTIONAL/STATE actors as first-class lineage nodes, not backdrop. The genealogy is unintelligible without DARPA (squeeze), CIFAR+Canadian govt (carrier-through-dormancy), NVIDIA (instrument), Symbolics (rival's commercial arm), Japan's MITI Fifth Generation (rival state bet), Google/OpenAI (harvest carriers). The seam, the dormancies, and the consummation are all driven by institution/government/company actions, not just individuals' ideas.",
+      "sources_in_conflict": ["the v1 people_0-only ground kernel", "the actual record where institutions drive every phase"],
+      "type": "framework-vs-record-tension",
+      "why_interesting": "Direct empirical demand for D2 (actors generalized to institutions/governments/companies with carrier vs inhabitant roles): a foundation (CIFAR) literally CARRIED the latent wrapper through a winter; a government agency (DARPA) was the chief SQUEEZE; a company (NVIDIA) supplied the gating instrument. The people_0-only ground kernel of the original schema cannot hold these — this specimen is the strongest case in the batch for promoting institutional actors to first-class. -> validates D2; -> motivates a flame_keeper/dormancy_patron named role (see gaps).",
+      "confidence_impact": "Validates D2; raises actor-layer richness. No effect on child-confidence."
+    },
+    {
+      "_comment": "Frame-ownership contest — the 2024 Nobel 'is it even physics?'",
+      "what": "Nobel Prize in Physics 2024 to a NEURAL-NETWORK result — 'is it even physics?' Hopfield/Hinton won for Hopfield-network + Boltzmann-machine work; Hinton was 'flabbergasted'; the committee justified it via spin-glass/Ising-model physics roots. Widespread debate that this is computer science, not physics.",
+      "sources_in_conflict": ["Nobel committee (physics framing via spin-glass)", "the 'this is CS not physics' debate", "the cognitive-science claim on connectionism"],
+      "type": "contested-genealogy",
+      "why_interesting": "A frame-boundary dispute: the SAME weld is claimed by physics (statistical mechanics), computer science (ML), and cognitive science (connectionism) — a frame-straddle (D3 physical/latent + which knowledge-frame owns it). The consecration itself is contested along the seam's multi-disciplinary origin, echoing QG's reflexive 'the historiography forks along the same seam as the physics'. -> motivates a contested-frame-ownership slot (see gaps).",
+      "confidence_impact": "Keeps the frame-ownership soft (~0.6); does not move child-confidence."
+    }
+  ],
+
+  "forcing_events": [
+    {
+      "_comment": "(D4) the EXOGENOUS-FORCING 'weather' layer — the batch's richest, with both SQUEEZE (the winters) and PULL (compute/data/hype) events. Each acts THROUGH actors (D2).",
+      "id": "fe-minsky-papert",
+      "name": "Minsky-Papert 'Perceptrons' (1969)",
+      "kind": "fashion",
+      "_kind_note": "fashion (intellectual-fashion redirection) with a politics/prestige amplifier — a KNOWLEDGE-frame critique that acted as a fashion+funding squeeze.",
+      "direction": "squeeze",
+      "acted_on": [
+        { "target": "par-substrate", "target_kind": "sub_wrapper", "effect": "suppress", "strength": 0.85 },
+        { "target": "weld-main", "target_kind": "weld", "effect": "starve", "strength": 0.7 }
+      ],
+      "when": "1969",
+      "mechanism": "A rigorous mathematical critique (single-layer perceptrons cannot compute XOR/parity) that, amplified by the authors' MIT prestige, redirected intellectual fashion and funding AWAY from connectionism toward symbolic AI — triggering the ~1969-1986 neural-net winter. A KNOWLEDGE-frame squeeze with a politics/prestige amplifier.",
+      "confidence": 0.9
+    },
+    {
+      "id": "fe-funding-capture",
+      "name": "Symbolic-AI funding capture (mid-1960s)",
+      "kind": "politics",
+      "direction": "squeeze",
+      "acted_on": [
+        { "target": "par-substrate", "target_kind": "sub_wrapper", "effect": "starve", "strength": 0.8 },
+        { "target": "rel-cybernetics", "target_kind": "lineage", "effect": "starve", "strength": 0.85 }
+      ],
+      "when": "mid-1960s",
+      "mechanism": "Symbolic-AI proponents (post-Dartmouth-1956) 'gained control of national funding conduits and ruthlessly defunded' the cybernetics wing — an institutional/political squeeze that 'liquidated' neural-net research for decades BEFORE Minsky-Papert formalized it.",
+      "confidence": 0.78,
+      "_confidence_note": "The 'ruthlessly defunded' phrasing is from aggregator histories (~0.7); the directional fact (symbolic AI captured funding) is well-attested."
+    },
+    {
+      "id": "fe-mansfield",
+      "name": "Mansfield Amendment (1969) + DARPA mission-orientation",
+      "kind": "politics",
+      "direction": "squeeze",
+      "acted_on": [
+        { "target": "act-darpa", "target_kind": "actor", "effect": "redirect", "strength": 0.8 },
+        { "target": "weld-main", "target_kind": "weld", "effect": "starve", "strength": 0.5 }
+      ],
+      "when": "1969 (+1974 speech-understanding cancellation)",
+      "mechanism": "US legislation forced DARPA to fund 'mission-oriented direct research' with near-term military payoff, starving open-ended basic research; compounded by the 1974 cancellation of CMU's $3M/yr speech-understanding contract ('taught a lesson'). Acts THROUGH the DARPA actor.",
+      "confidence": 0.8
+    },
+    {
+      "id": "fe-lighthill",
+      "name": "Lighthill Report (1973, UK)",
+      "kind": "politics",
+      "direction": "squeeze",
+      "acted_on": [
+        { "target": "rel-symbolic", "target_kind": "lineage", "effect": "suppress", "strength": 0.8 },
+        { "target": "weld-main", "target_kind": "weld", "effect": "starve", "strength": 0.3 }
+      ],
+      "when": "1973",
+      "mechanism": "Sir James Lighthill's survey for UK Parliament declared AI had failed its 'grandiose objectives' (combinatorial explosion); 'led to the complete dismantling of AI research in the UK' — the canonical broad-AI-winter trigger. NOTE: more symbolic-AI than neural-net-specific (a framework-vs-record nuance — acted weakly on the neural-net weld, strongly on the broad/symbolic field).",
+      "confidence": 0.82
+    },
+    {
+      "id": "fe-lisp-collapse",
+      "name": "Lisp-machine market collapse (1987)",
+      "kind": "economic-crisis",
+      "direction": "squeeze",
+      "acted_on": [
+        { "target": "rel-symbolic", "target_kind": "lineage", "effect": "suppress", "strength": 0.85 },
+        { "target": "act-symbolics", "target_kind": "actor", "effect": "kill", "strength": 0.95 }
+      ],
+      "when": "1987",
+      "mechanism": "Cheap general workstations (Sun/Apple/IBM) crossed the threshold to run Lisp, erasing a ~$500M specialized-hardware industry in one year (Symbolics bankrupt); collapsed confidence in the symbolic program — a squeeze on the RIVAL that, ironically, cleared space for connectionism's later rise (the anti-correlation: this squeeze on B was a pull on A).",
+      "confidence": 0.85
+    },
+    {
+      "id": "fe-darpa-schwarz",
+      "name": "DARPA 'deep and brutal' AI cut (1987-89, Jack Schwarz)",
+      "kind": "funding",
+      "direction": "squeeze",
+      "acted_on": [
+        { "target": "act-darpa", "target_kind": "actor", "effect": "redirect", "strength": 0.85 },
+        { "target": "rel-symbolic", "target_kind": "lineage", "effect": "starve", "strength": 0.8 }
+      ],
+      "when": "1987-1989",
+      "mechanism": "New IPTO head Jack Schwarz dismissed expert systems as 'clever programming' and cut AI funding 'deeply and brutally'; he wanted DARPA to 'surf' waves not 'dog-paddle' and judged AI not the next wave — a leadership-driven funding squeeze.",
+      "confidence": 0.82
+    },
+    {
+      "id": "fe-fifth-gen",
+      "name": "Fifth Generation project failure (1981-1992, Japan)",
+      "kind": "politics",
+      "direction": "both",
+      "acted_on": [
+        { "target": "rel-symbolic", "target_kind": "lineage", "effect": "elevate", "strength": 0.7 },
+        { "target": "rel-symbolic", "target_kind": "lineage", "effect": "suppress", "strength": 0.7 }
+      ],
+      "when": "1981-1992",
+      "mechanism": "Japan's $850M MITI bet PULLED global AI funding in the early 1980s (defensive Western response: MCC, Alvey, ESPRIT) then SQUEEZED confidence when it ended 'with a whimper' in 1992 having missed its goals. A both-direction event on the RIVAL paradigm. Acts through the MITI actor.",
+      "confidence": 0.8
+    },
+    {
+      "id": "fe-svm-fashion",
+      "name": "Kernel-methods/SVM fashion wave (mid-1990s-2000s)",
+      "kind": "fashion",
+      "direction": "squeeze",
+      "acted_on": [
+        { "target": "child-dl", "target_kind": "child", "effect": "suppress", "strength": 0.75 },
+        { "target": "weld-main", "target_kind": "weld", "effect": "starve", "strength": 0.6 }
+      ],
+      "when": "~1995-2006",
+      "mechanism": "Support vector machines and kernel methods had cleaner theory and beat nets on the era's small data + weak compute, making neural nets unfashionable/unfundable — a FASHION-frame squeeze (not a theorem, not politics: the field's taste shifted). This is the 'Hinton's dark ages' (dormancy #2) driver.",
+      "confidence": 0.8
+    },
+    {
+      "id": "fe-cifar",
+      "name": "CIFAR program (2004+) + Canadian state support",
+      "kind": "funding",
+      "direction": "pull",
+      "acted_on": [
+        { "target": "child-dl", "target_kind": "child", "effect": "fund", "strength": 0.85 },
+        { "target": "act-hinton", "target_kind": "actor", "effect": "fund", "strength": 0.8 }
+      ],
+      "when": "2004-2012",
+      "mechanism": "A foundation/government PULL that deliberately funded and networked the marginalized connectionists (Hinton/Bengio/LeCun) during dormancy #2 — the institutional carrier that kept the wrapper alive until the instrument caught up. ('Neural Computation and Adaptive Perception' program, Hinton director, ~$2.5M/5yr.) Acts through the CIFAR actor.",
+      "confidence": 0.85
+    },
+    {
+      "id": "fe-cuda",
+      "name": "NVIDIA CUDA / GPGPU (2007)",
+      "kind": "technology",
+      "direction": "pull",
+      "acted_on": [
+        { "target": "child-dl", "target_kind": "child", "effect": "accelerate", "strength": 0.9 },
+        { "target": "weld-main", "target_kind": "weld", "effect": "accelerate", "strength": 0.9 }
+      ],
+      "when": "2007",
+      "mechanism": "General-purpose GPU computing made the matrix-multiply core of deep nets ~orders of magnitude cheaper; the gaming-GPU market (an exogenous consumer-tech driver) accidentally supplied the apparatus that GATED the 2012 weld. The PULL that un-stuck the rate-limited weld. Acts through the NVIDIA actor.",
+      "confidence": 0.88
+    },
+    {
+      "id": "fe-bigdata",
+      "name": "Big-data / internet-scale labeled data (2007-2012, ImageNet + Mechanical Turk)",
+      "kind": "technology",
+      "direction": "pull",
+      "acted_on": [
+        { "target": "child-dl", "target_kind": "child", "effect": "accelerate", "strength": 0.85 },
+        { "target": "weld-main", "target_kind": "weld", "effect": "accelerate", "strength": 0.85 }
+      ],
+      "when": "2007-2012",
+      "mechanism": "The web + crowd-labor platforms (Amazon Mechanical Turk) made 14M-image labeled datasets feasible — an exogenous data-economy driver that supplied the second gating instrument. Acts through the Fei-Fei Li actor.",
+      "confidence": 0.85
+    },
+    {
+      "id": "fe-investment-boom",
+      "name": "Post-2012 AI investment + hype boom",
+      "kind": "funding",
+      "direction": "pull",
+      "acted_on": [
+        { "target": "child-dl", "target_kind": "child", "effect": "elevate", "strength": 0.9 },
+        { "target": "desc-transformer", "target_kind": "child", "effect": "accelerate", "strength": 0.85 }
+      ],
+      "when": "2012-present",
+      "mechanism": "A fashion+capital PULL ($50B 2022 -> projected $364B 2025; 800k US job openings 2022; ChatGPT 100M users in 2 months) that accelerated the consolidated child into hegemony — the mirror image of the earlier squeeze events.",
+      "confidence": 0.83
+    },
+    {
+      "id": "fe-prizes",
+      "name": "2018 Turing Award + 2024 Nobel Prize in Physics",
+      "kind": "cultural-focus",
+      "direction": "pull",
+      "acted_on": [
+        { "target": "child-dl", "target_kind": "child", "effect": "elevate", "strength": 0.8 },
+        { "target": "act-hinton", "target_kind": "actor", "effect": "elevate", "strength": 0.85 }
+      ],
+      "when": "2018, 2024",
+      "mechanism": "Elite institutional recognition (ACM, Nobel committee) consolidated and CANONIZED deep learning — but triggered re-attribution disputes (Schmidhuber: the Nobel 'rewards plagiarism'); a cultural-consecration pull that doubles as a re-attribution event (cross-references discrepancies[1] and the reattribution{} field).",
+      "confidence": 0.85
+    }
+  ],
+
+  "sources": [
+    {
+      "name": "Wikipedia — 'Connectionism'",
+      "type": "encyclopedia",
+      "url": "https://en.wikipedia.org/wiki/Connectionism",
+      "what_used_for": "The three waves of connectionism, McCulloch-Pitts/Hebb/Rosenblatt roots, connectionism-vs-symbolic antagonism, distributed/sub-symbolic philosophy.",
+      "reliability": 0.8
+    },
+    {
+      "name": "Wikipedia — 'AI winter'",
+      "type": "encyclopedia",
+      "url": "https://en.wikipedia.org/wiki/AI_winter",
+      "what_used_for": "The multi-cycle winter timeline, Lighthill, Mansfield Amendment, DARPA cuts (Jack Schwarz 'deeply and brutally'), Lisp-machine collapse 1987, Fifth Generation $850M, and the Haigh revisionist note.",
+      "reliability": 0.8
+    },
+    {
+      "name": "Wikipedia — 'AlexNet'",
+      "type": "encyclopedia",
+      "url": "https://en.wikipedia.org/wiki/AlexNet",
+      "what_used_for": "The THREE-element convergence (algorithm+GPU+ImageNet), GTX 580 training, 15.3% top-5 error / >10.8pt margin, Toronto team, Fei-Fei Li 'three elements converged for the first time' quote.",
+      "reliability": 0.85
+    },
+    {
+      "name": "Wikipedia — 'Backpropagation'",
+      "type": "encyclopedia",
+      "url": "https://en.wikipedia.org/wiki/Backpropagation",
+      "what_used_for": "Linnainmaa 1970, Werbos 1974, Rumelhart-Hinton-Williams 1986; 'last re-inventor gets credit'.",
+      "reliability": 0.8
+    },
+    {
+      "name": "Haigh — 'There Was No First AI Winter' (CACM 2023)",
+      "type": "scholarly-history",
+      "url": "https://cacm.acm.org/opinion/there-was-no-first-ai-winter/",
+      "what_used_for": "The dormancy-contested SIGART membership argument (1,241 in 1973, 3,500 by 1978).",
+      "reliability": 0.85,
+      "_reliability_comment": "peer-reviewed venue; accessed via SEARCH SUMMARIES, full text 403-blocked — argument reconstructed from multiple summaries, held ~0.85 not 1.0 (sourcing caveat, see gaps)."
+    },
+    {
+      "name": "Wikipedia — 'Jurgen Schmidhuber'",
+      "type": "encyclopedia",
+      "url": "https://en.wikipedia.org/wiki/J%C3%BCrgen_Schmidhuber",
+      "what_used_for": "The 17-point priority dispute, 88-page report, 'plagiarism' accusation vs Hinton/Bengio/LeCun, LeCun's rebuttal.",
+      "reliability": 0.75
+    },
+    {
+      "name": "Schmidhuber's own pages (who-invented-backpropagation; critique-turing-award)",
+      "type": "primary",
+      "url": "https://people.idsia.ch/~juergen/who-invented-backpropagation.html",
+      "what_used_for": "The originator-priority counter-narrative (Ivakhnenko, Amari, Linnainmaa, Werbos).",
+      "reliability": 0.6,
+      "_reliability_comment": "PARTISAN PRIMARY SOURCE — one side of the dispute; held ~0.6 and flagged as one-sided (see gaps)."
+    },
+    {
+      "name": "Wikipedia — 'Alexey Ivakhnenko' & 'Group method of data handling'",
+      "type": "encyclopedia",
+      "url": "https://en.wikipedia.org/wiki/Group_method_of_data_handling",
+      "what_used_for": "GMDH 1965 'Cybernetic Predicting Devices', first deep multilayer trained nets, 8-layer net by 1971 (the deepest priority root).",
+      "reliability": 0.8
+    },
+    {
+      "name": "CIFAR — 'Turing Award honours CIFAR pioneers' / 'Canada's foundational role in generative AI'",
+      "type": "aggregator",
+      "url": "https://cifar.ca/cifarnews/2019/03/27/turing-award-honours-cifar-s-pioneers-of-ai/",
+      "what_used_for": "The 2004 Neural Computation and Adaptive Perception program, ~$2.5M/5yr, Hinton director, carrier-through-dormancy.",
+      "reliability": 0.7,
+      "_reliability_comment": "self-reported (CIFAR's own account) but factual on dates/$."
+    },
+    {
+      "name": "Wikipedia — 'CUDA' + Quartr/Chip Letter on NVIDIA",
+      "type": "encyclopedia",
+      "url": "https://en.wikipedia.org/wiki/CUDA",
+      "what_used_for": "CUDA 2007, GPGPU, the compute instrument that gated AlexNet.",
+      "reliability": 0.75
+    },
+    {
+      "name": "Wikipedia — 'Attention Is All You Need'",
+      "type": "encyclopedia",
+      "url": "https://en.wikipedia.org/wiki/Attention_Is_All_You_Need",
+      "what_used_for": "Transformer 2017, Google Brain authors, attention (Bahdanau 2014) lineage, the harvest path to LLMs.",
+      "reliability": 0.85
+    },
+    {
+      "name": "IEEE Spectrum + Nobelprize.org — 2024 Nobel Prize in Physics",
+      "type": "primary",
+      "url": "https://www.nobelprize.org/prizes/physics/2024/",
+      "what_used_for": "2024 Nobel to Hopfield+Hinton, spin-glass/Ising physics justification, the 'is it physics' + Schmidhuber 'rewards plagiarism' controversy.",
+      "reliability": 0.85
+    },
+    {
+      "name": "ImageNet creation (Pinecone / Britannica / Zilliz on Fei-Fei Li)",
+      "type": "aggregator",
+      "url": "https://www.pinecone.io/learn/imagenet/",
+      "what_used_for": "ImageNet 2007-2009, 14M images, Amazon Mechanical Turk, Princeton/Stanford.",
+      "reliability": 0.7
+    },
+    {
+      "name": "CNN lineage (ETHW Milestones:CNN 1989; com-cog-book; Medium histories)",
+      "type": "aggregator",
+      "url": "https://ethw.org/Milestones:Convolutional_Neural_Networks_(CNN)",
+      "what_used_for": "Fukushima Neocognitron 1980 (NHK Japan, Hubel-Wiesel inspired) -> LeCun LeNet 1989 (Bell Labs, MNIST).",
+      "reliability": 0.7
+    },
+    {
+      "name": "Cybernetics-vs-symbolic schism (Dartmouth 1956; cybernetics Wikipedia; antikythera.org)",
+      "type": "encyclopedia",
+      "url": "https://en.wikipedia.org/wiki/Dartmouth_workshop",
+      "what_used_for": "McCarthy distancing from Wiener, symbolic proponents 'gained control of national funding conduits and ruthlessly defunded' neural nets mid-1960s.",
+      "reliability": 0.7
+    },
+    {
+      "name": "Hopfield/Boltzmann second-wave bridge (Boltzmann machine Wikipedia; IEEE Spectrum)",
+      "type": "encyclopedia",
+      "url": "https://en.wikipedia.org/wiki/Boltzmann_machine",
+      "what_used_for": "Hopfield 1982 (spin glass/Ising), Ackley-Hinton-Sejnowski 1985 Boltzmann machine + hidden units.",
+      "reliability": 0.8
+    },
+    {
+      "name": "Scaling laws / LLM harvest (Kaplan 2020, Chinchilla 2022, GPT/BERT 2018) via sebastianraschka / fabricatedknowledge",
+      "type": "aggregator",
+      "url": "https://arxiv.org/abs/2001.08361",
+      "what_used_for": "The post-transformer scaling-law harvest into GPT-3/ChatGPT.",
+      "reliability": 0.65
+    }
+  ],
+
+  "_schema_gaps_in_record": [
+    "GRANULAR MULTI-DORMANCY: the schema's single dormancy_intervals + revival can't cleanly hold TWO nested winter-cycles WITH different why_frames (1969-86 knowledge+politics squeeze; 1995-2006 fashion+insufficient-instrument) AND a contested-dormancy revisionist overlay (Haigh). Needs R11 (dormancy.why_frame) applied PER-INTERVAL (done here) AND a dormancy.contested flag (not in the schema — worked around via discrepancies[2] + fuzzy_layer.frontier).",
+    "ANTI-CORRELATED RIVAL FORTUNES: no field expresses 'this weld's winter is its RIVAL's spring' (connectionism rose 1986-89 exactly as symbolic AI's second winter began; symbolic AI's 1987 collapse cleared its space). pre_weld_relationship=antagonism (R14) captures the rivalry but NOT the INVERSE-PHASE dynamic between the two paradigms' lifecycles. PROPOSED new variable: rival_lifecycle_coupling (a signed phase-relation between two welds' lifecycles). Worked around here via relatives[rel-symbolic].note + forcing_events[fe-lisp-collapse] (a squeeze on B that pulled A).",
+    "INSTRUMENT-PARENT AS RATE-LIMITER: the 2012 weld needed compute (NVIDIA/CUDA) and data (ImageNet) as INSTRUMENT-parents that are not ideas. R4 (parent_kind=instrument) covers the TAG, but this specimen shows an instrument-parent can be the GATING/rate-limiting parent (the algorithm waited ~23 years for it). PROPOSED: a parent_is_gating / rate_limiting boolean distinct from merely tagging the kind. Worked around via parents_full[par-compute]._parent_kind_note + the instrument-enabled-weld type weight.",
+    "DEMONSTRATED-NOT-ADOPTED state: R15 (surprise_priority) covers 'conjectured early', but here the surprise was repeatedly DEMONSTRATED working (LeNet 1989, deployed on bank cheques) yet not ADOPTED as paradigm for ~23 years for want of scale. The gap between technical proof and paradigm consolidation (ADOPTION-LAG) is its own variable, STRONGER than conjecture-lag. PROPOSED: a surprise-state value 'demonstrated-not-adopted' + an adoption_lag field. Worked around via surprise_priority (with 'demonstrated working' noted) + discrepancies[4].",
+    "INSTITUTIONAL CARRIER-THROUGH-DORMANCY: D2 carrier role is well-supported, but the specific pattern 'a FOUNDATION/STATE deliberately funds a marginalized wrapper through its winter to keep it alive' (CIFAR) is a distinct actor-function worth a NAMED ROLE (flame_keeper / dormancy_patron) beyond generic carrier_of. Worked around via actors[act-cifar].relation='carrier-through-dormancy' + _role_note.",
+    "FRAME-OWNERSHIP CONTEST: the 2024 Nobel shows the SAME child claimed by physics / CS / cognitive science — D3's physical/latent straddle plus a WHICH-KNOWLEDGE-FRAME-owns-it dispute. The schema can tag frame[] but has no slot for CONTESTED frame-ownership (which discipline's frame the weld 'belongs' to), relevant where consecration/credit follows frame-ownership. Worked around via discrepancies[7].",
+    "SOURCING CAVEAT: the Haigh CACM article full text was 403-blocked; its argument was reconstructed from multiple search summaries (held ~0.85, not 1.0). Schmidhuber's priority claims were read partly from his own partisan pages (held ~0.6, flagged as one-sided primary). No bit-values fabricated (bits_note kept qualitative; on the deep-learning frontier, MDL-on-learned-representations is itself an open problem — a near-principled-null per R16).",
+    "WELD-TYPE VOCABULARY EXTENSION: this specimen PROPOSES the new weld-type term 'double-dormancy-revival-weld' (multi-cycle dormancy), proposed in discrepancies[2] before use per §6 item 7 — the core 8-vocabulary has single-cycle types (instrument-enabled, crisis-pulled) but no MULTI-cycle-dormancy type. Used at weight 0.9 in lifecycle.weld_type."
+  ]
+}

@@ -1,0 +1,500 @@
+{
+  "_template_doc": "CANONICAL WRAPPER-GENEALOGY SPECIMEN — one merge event (Maxwell: electricity + magnetism -> classical electromagnetism) rendered as a rooted genealogy graph that STOPS AT THE PRESENT (2026). Spec: ../SCHEMA.md. Tier-3 exploratory data-harvest for Cowork+Pav ratification — NOT canon, NOT a promotion, convergence list stays 9. Every node/edge carries confidence in [0,1] (SOFT) + a zoom/LOD depth; certain core (the merge event + named parents + dates) fades into a probabilistic frontier in the deep roots (people/culture) and at the wide cultural edges. frame = observer global kernels {time,space,knowledge,meaning}; emergence is frame-relative. Sources are WEB-cited in sources[]; the two most load-bearing facts (Weber-Kohlrausch 1855 ratio = light speed; the Maxwellian 20->4 second birth + Hertz 1887-88) were spot-verified against Wikipedia 'History of Maxwell's equations' and IEEE Spectrum 'The Long Road to Maxwell's Equations' during render. bits_note QUALITATIVE ONLY (MDL-in-bits needs latent embeddings, a LATER step — no bit values fabricated). EXTENDS ../../latent_olympics_data/wrapper_classes_phase1.json (LCAO #1 is the named physics sibling — shares the wave-equation/eigenmode substrate; no Maxwell row exists in Phase-1 yet, this is the canonical worked specimen of the cross-substrate pattern in PHYSICS).",
+
+  "schema_version": "0.1-canonical-genealogy",
+  "specimen_id": "maxwell-electromagnetism",
+  "_status": "Tier-3 WORKING specimen — exploratory data-harvest, surfaced for Cowork+Pav ratification. NOT canon, NOT a tier promotion, does NOT grow the convergence list (stays 9). This is the SHARP / CALIBRATION-RULER case: a settled top-tier unifier whose record is solid enough to test the schema against. All confidences are SOFT scores in [0,1]; bits are qualitative only.",
+  "extends": {
+    "_comment": "Linkage back to the Phase-1 wrapper CLASS this merge-event specimen instantiates (SCHEMA.md §4). Same organism, deeper zoom. No Maxwell/EM row exists in Phase-1 yet; this specimen is a NEW instantiation of the general wrapper-overlap convergence class in the PHYSICS substrate, sibling to LCAO #1 which shares the wave-equation/eigenmode substrate (Schrodinger IS a wave equation; the antibonding-vs-bonding split is the LCAO analogue of the transverse EM wave's two field components).",
+    "phase1_file": "../../latent_olympics_data/wrapper_classes_phase1.json",
+    "phase1_class_name": "LCAO / Molecular Orbital Theory (convergence #1) — named sibling substrate; the general class instantiated is 'wrapper-overlap / parents-produce-W_C' as rendered across the 9.",
+    "relation_note": "Maxwell's EM is the physics-substrate worked specimen of the same wrapper-overlap pattern the 9 instantiate. It is NOT being proposed as convergence #10 (the list stays 9); it is rendered here as the SHARP calibration ruler — a settled, well-documented unifier against which the genealogy schema's variables are tested. Per SCHEMA.md §4 its child corresponds to one Phase-1 row, its weld is the frame-indexed render of one overlaps[] edge."
+  },
+  "generated": "2026-06-09",
+  "frames_present": ["time", "space", "knowledge", "meaning"],
+  "overall_confidence": 0.88,
+  "_overall_confidence_note": "Trunk is very solid (the merge event, the named parents, the displacement-current keystone, the c=light coincidence, the canonical paper dates are all ~0.9-0.97). Softer at the deep people-roots (culture/relation data ~0.8-0.9) and at the cultural-harvest frontier (spiritualism/electrical-sublime ~0.65-0.75). 0.88 is the trunk-weighted aggregate.",
+
+  "child": {
+    "_comment": "W_C — the emergent wrapper born in this merge. The trunk node.",
+    "name": "Classical electromagnetism — the unified electromagnetic field",
+    "kernel": "(E,B) rendered as ONE self-propagating dynamical field over space-time, governed by the coupled field equations, carrying with it the identification of light as an electromagnetic wave. Net product: a single field-ontological object where electricity and magnetism are two aspects of one entity, and optics falls out as a special case. The canonical settled-top-tier UNIFIER in physics.",
+    "frame": ["space", "knowledge", "meaning", "time"],
+    "_frame_note": "Read primarily in {space, knowledge} (a field over space, expressed in the calculus); {meaning} because 'light IS electromagnetism' reframes what light signifies; {time} because the field is intrinsically dynamical (self-propagating). NOTE: the child is read in {space,knowledge,meaning} but the WELD only FIRES through {time} — see weld.frame_of_weld and discrepancy on frame-relativity.",
+    "status": "risen",
+    "_status_enum": "one of: risen | active | dormant | resurrected | stale. 'risen' = settled-top-tier, established since the Maxwellian consolidation (~1885-94) and never demoted; still the live language of field physics. (Its TANGLED 1865/1873 FORM was dormant-then-resurrected — see weld.dormancy_intervals and discrepancy 2; the clean form is the risen one.)",
+    "confidence": 0.97,
+    "utility": {
+      "_comment": "Pav's three utility legs as prose + an enumerated affordance list.",
+      "unifier": "The paradigm unifier: folds electricity, magnetism, AND optics into one field. A two-force merge that incidentally absorbed a THIRD pre-existing science (light). Later re-unified one level up (electroweak) — the 'merge two forces' move recursing.",
+      "compressor": "Collapses electrostatics + magnetostatics + induction + optics into four field equations (in the Maxwellian form). Description-length of 'everything electric, magnetic, and optical' drops to div/curl content + one keystone term. (Qualitative only; see weld.bits_note.)",
+      "action_spaces_unlocked": [
+        "the entire EM-spectrum technosphere (radio, radar, TV, microwave, fiber optics) — radio/light/X-ray recognized as one continuum",
+        "special relativity (the frame-independence of c sat latent inside the equations)",
+        "gauge field theory (Maxwell's is the first U(1) gauge theory) -> QED -> the Standard Model",
+        "vector calculus (div/grad/curl) as the standard language of all field physics",
+        "the move: treat any two coupled phenomena as aspects of one field and look for the wave that propagates the coupling"
+      ]
+    }
+  },
+
+  "weld": {
+    "_comment": "The merge: parents -> child. The heart of the specimen. NOTE this specimen has a documented SECOND weld (the Maxwellian consolidation) that the schema's single-weld slot cannot cleanly hold — captured via dormancy_intervals + revival here, and flagged as the load-bearing schema gap (gaps[0]). See discrepancy 2.",
+    "parents": [
+      {
+        "_role": "W_A",
+        "name": "Faraday's FIELD / lines-of-force programme",
+        "kernel": "Contiguous near-field action; the electrotonic state; space-filling lines of force as the real ontological substrate; the 1846 'Thoughts on Ray-Vibrations' guess that light is a vibration of the lines of force. The experimental, near-mathless ONTOLOGICAL parent.",
+        "frame": ["space", "knowledge"],
+        "confidence": 0.95
+      },
+      {
+        "_role": "W_B",
+        "name": "The mathematical apparatus of continental/British electrodynamics",
+        "kernel": "Ampere's force law, Coulomb electrostatics, Gauss's flux laws, Neumann/Weber induction formalism, plus William Thomson's mechanical-analogy method. The QUANTITATIVE parent — much of it originally framed as action-at-a-distance.",
+        "frame": ["knowledge"],
+        "confidence": 0.9
+      }
+    ],
+    "shared_sub_object_S": "S = the empirically established two-way electricity<->magnetism COUPLING that BOTH traditions already accepted and re-described in their own idioms: Oersted's current-deflects-compass (1820), Ampere's current-current force (1820s), and above all Faraday's electromagnetic INDUCTION (1831). Faraday rendered this seam as 'lines being cut'; the continentals as flux/force integrals. Maxwell fused along it by writing Faraday's lines IN the continental calculus and closing the induction loop with the displacement current.",
+    "_shared_sub_object_S_note": "S is genuinely shared (both parents describe the SAME coupling phenomena), which is what makes this a pushout and not a pile — the seam pre-exists the weld in both parents' vocabularies. This is the cleanest S in the specimen set: a real, named, experimentally-fixed overlap.",
+    "surprise": "That LIGHT ITSELF falls out of the merge, at the experimentally measured speed of light — an entire third science (optics) emerging unbidden from a synthesis built only out of electricity and magnetism. Neither parent contains it: Faraday's field ontology had no velocity (his own 1846 light-guess was explicitly speed-less for 'want of data'), and the continental force laws had no light at all. Only after Maxwell adds the DISPLACEMENT CURRENT (in neither parent) do the two field equations close into a self-propagating transverse wave whose speed is the pure-laboratory ratio of electromagnetic to electrostatic units (Weber-Kohlrausch ~3.1x10^8 m/s) — which equalled Fizeau's measured speed of light. A number got by weighing charges and currents on a bench turned out to BE the speed of light. (And latent inside it, unseen by Maxwell, sat the frame-independence of c that would become special relativity.)",
+    "surprise_confidence": 0.96,
+    "_surprise_note": "Very high confidence the surprise is REAL synergy (not additive): the bench-measured unit-ratio = optical light-speed coincidence is the single most-cited fact in the whole specimen and is the textbook definition of an emergent third reachable only from both parents jointly. BUT the surprise has a PRIORITY complication: Faraday qualitatively conjectured 'light = vibration of lines of force' in 1846, 15 years before Maxwell made it quantitative — so the surprise pre-existed as a low-confidence weld (a conjecture) inside parent W_A. See discrepancy 1 and gaps[4].",
+    "bits_note": "QUALITATIVE ONLY. The joint description (four field equations + the constant c) is clearly far shorter than the union of {all electrostatics + all magnetostatics + all induction phenomenology + all of optics} described separately — this is a large, obvious description-length win, plausibly the largest of the specimen set. But NO bit value is asserted: MDL-in-bits here needs latent embeddings (a later step). The synergy is qualitatively maximal (an entire independent science, optics, became derivable), which is exactly the K(W_C|W_A) large / K(W_C|W_B) large / K(W_C|W_A,W_B) small signature — but unquantified.",
+    "survived": [
+      "displacement current (the keystone term Maxwell ADDED — the part with no parent preimage; closes the loop and enables waves)",
+      "Faraday's field / contiguous-action ontology (the part of W_A that truly WON — the field is real, not a bookkeeping device)",
+      "the four empirical laws as the div/curl content (the part of W_B that survived: Faraday-induction, Ampere, the two Gauss laws)",
+      "c as a theory-internal constant (the bench unit-ratio promoted to a fundamental speed)"
+    ],
+    "dropped": [
+      "the molecular-vortex + 'idle wheel' mechanical-ether SCAFFOLDING (demoted by Maxwell HIMSELF in 1865 — the heuristic scaffold that birthed the displacement current was kicked away once the product existed; a clean scaffold-vs-product separation)",
+      "the 20-equation quaternion/vector-potential formulation (Heaviside 'threw all the potentials overboard', 1884-85)",
+      "the luminiferous ether as a real substrate (killed later by special relativity)",
+      "action-at-a-distance as the correct ontology (the defeated parent-STANCE; the rival Weber electrodynamics, which also predicted a characteristic velocity, lost) — NOTE: this is a defeated RIVAL FRAMEWORK, not just a dropped feature; the schema's dropped[] cannot fully express that (see gaps[5])"
+    ],
+    "frame_of_weld": ["time"],
+    "_frame_of_weld_note": "THE WELD FIRES ONLY THROUGH {time}. Electricity + magnetism as two STATIC facts side-by-side in the {space} frame make NOTHING (two adjacent phenomena). It is only through CHANGING fields (induction + displacement current, i.e. the d/dt terms) that the third (a self-propagating wave) appears. The displacement current is literally a time-derivative term — the weld is welded BY time. This is a textbook confirmation of the brief's frame-relativity thesis ('two rocks in SPACE = nothing; two rocks through TIME = strata'). The child is then READ in {space,knowledge,meaning}, but it is BORN in {time}. See discrepancy 6 and gaps[3].",
+    "lod_scale": "Holds as ONE weld at coarse grain (E + M -> EM). Zoomed in, it dissolves into a CHAIN of sub-welds: Oersted seam (1820) -> Faraday induction half-loop (1831) -> Maxwell's displacement-current closure (1861-62) -> Maxwellian vector compression 20->4 (1884-85) -> Hertz experimental confirmation (1887-88). At the coarsest grain it is a single E+M->EM unification; at finest grain it is a five-step procedural lineage with two distinct births. See gaps[6].",
+    "when": "Birth-1 (the conceptual weld): displacement current 1861-62 ('On Physical Lines of Force'); full field theory read 1864, published 1865 ('A Dynamical Theory of the Electromagnetic Field'); precursor 'On Faraday's Lines of Force' 1856. Birth-2 (the consolidation): the Maxwellian 20->4 vector reformulation 1884-85 + Hertz confirmation 1887-88.",
+    "dormancy_intervals": [
+      {
+        "from": "1846",
+        "to": "1861",
+        "why": "DORMANCY (A) — the light-as-EM CONJECTURE. Faraday's speculative 1846 'Ray-Vibrations' proposed light is a vibration of the lines of force, but it sat as an unconfirmable speculation (speed-less, 'for want of data') until Maxwell's equations supplied the velocity. A conjecture = a low-confidence weld drawn but not yet confirmed; this is that, sitting dormant inside parent W_A for ~15 years until the OTHER parent (the math) arrived to make it calculable."
+      },
+      {
+        "from": "1865",
+        "to": "1879",
+        "why": "DORMANCY (B) — the THEORY ITSELF was semi-dormant / under-received. 'Fertile but half-finished'; the opaque 20-equation quaternion/potential form was hard to use; credible continental rivals (Weber) still in play. Maxwell died 1879 with the theory not yet consolidated or widely accepted."
+      }
+    ],
+    "revival": {
+      "_comment": "Two revivals, matching the two dormancies. This single 'revival' slot under-counts — see gaps[0]; the second revival is structurally a SECOND WELD producing a re-attributed child.",
+      "when": "Revival (A): late 1861. Revival (B): ~1879-1894, sharpest trigger 1887-88.",
+      "by": "Revival (A): Maxwell himself. Revival (B): the MAXWELLIANS — Oliver Heaviside (vector recast, potentials eliminated, 1884-85), Heinrich Hertz (independent reformulation + the 1887-88 experimental detection of the waves), George FitzGerald and Oliver Lodge (spread + theoretical strengthening).",
+      "trigger": "Revival (A): Maxwell spotting the Weber-Kohlrausch unit-ratio (~3.1x10^8 m/s, dated 1855 in Wikipedia) matching Fizeau's measured speed of light (~3.14x10^8 m/s, 1848-49), late 1861 while working on Part III of 'On Physical Lines of Force'. Revival (B): Heaviside's vector reduction made the theory USABLE (4 equations not 20), and the single sharpest trigger was Hertz's 1887-88 experimental generation/detection of the waves, which converted contested math into confirmed physics. Maxwell (d.1879) saw NEITHER revival complete."
+    }
+  },
+
+  "roots": {
+    "_comment": "DOWN, in the PHYSICAL frame. Recursive descent from W_C toward people and place. Confidence FADES and depth RISES going deeper.",
+    "sub_wrappers": [
+      {
+        "_comment": "depth 1 = immediate constituent of the field equations.",
+        "name": "Faraday's law of induction (changing B -> circulating E)",
+        "kernel": "Maxwell's existing half of the wave loop; the experimental seed of dynamical coupling.",
+        "frame": ["space", "time"],
+        "depth": 1,
+        "confidence": 0.97,
+        "who_called_it": "Michael Faraday, 1831"
+      },
+      {
+        "name": "Ampere's circuital law (current -> circulating B)",
+        "kernel": "The other half of the loop on the static side.",
+        "frame": ["space"],
+        "depth": 1,
+        "confidence": 0.95,
+        "who_called_it": "Andre-Marie Ampere, 1820s"
+      },
+      {
+        "name": "Displacement current (changing E sources B)",
+        "kernel": "Maxwell's ADDED keystone — the term in NEITHER parent that closes the induction loop and enables self-propagating waves. The single most load-bearing sub-wrapper; the part of W_C with no parent preimage.",
+        "frame": ["space", "time"],
+        "depth": 1,
+        "confidence": 0.97,
+        "who_called_it": "James Clerk Maxwell, 1861-62"
+      },
+      {
+        "name": "Gauss's laws for E and for B (div E ~ charge; div B = 0)",
+        "kernel": "The divergence content of the field equations.",
+        "frame": ["space"],
+        "depth": 1,
+        "confidence": 0.95,
+        "who_called_it": "Gauss lineage (Carl Friedrich Gauss)"
+      },
+      {
+        "name": "The unit-ratio c (later 1/sqrt(mu0*eps0))",
+        "kernel": "The bench-measured number (electromagnetic-to-electrostatic unit ratio) that equalled light speed — the calibration coincidence that made the surprise land. THE single most load-bearing NUMBER in the specimen.",
+        "frame": ["knowledge"],
+        "depth": 1,
+        "confidence": 0.95,
+        "who_called_it": "Weber & Kohlrausch, ~1855-56 (date wobbles across sources — see discrepancy 4)"
+      },
+      {
+        "name": "Lines of force / field concept",
+        "kernel": "Faraday's space-filling ontological substrate — the deeper conceptual root the whole field-ontology rests on.",
+        "frame": ["space"],
+        "depth": 2,
+        "confidence": 0.9,
+        "who_called_it": "Michael Faraday (and Thomson's mathematization)"
+      },
+      {
+        "name": "Molecular-vortex + idle-wheel mechanical ether model",
+        "kernel": "Heuristic SCAFFOLDING Maxwell used to DERIVE the displacement current, then dropped. A deeper root that did its job and was kicked away (scaffold, not product).",
+        "frame": ["space"],
+        "depth": 2,
+        "confidence": 0.85,
+        "who_called_it": "James Clerk Maxwell, 1861-62"
+      },
+      {
+        "name": "Vector calculus (div/grad/curl)",
+        "kernel": "The compression wrapper that made the 20->4 reduction possible. A root of the SECOND birth (the consolidated child), not the first — a METHOD/instrument root, not a content root (see gaps[1]).",
+        "frame": ["knowledge"],
+        "depth": 1,
+        "confidence": 0.92,
+        "who_called_it": "Oliver Heaviside & Josiah Willard Gibbs, 1880s"
+      },
+      {
+        "name": "Luminiferous ether",
+        "kernel": "The assumed wave-carrying substrate, taken as real at the time, later dropped (killed by special relativity).",
+        "frame": ["space"],
+        "depth": 2,
+        "confidence": 0.9,
+        "who_called_it": "19th-century optics (inherited assumption)"
+      }
+    ],
+    "people_0": [
+      {
+        "_comment": "The ground kernel '(0)': people-wrappers the deepest roots plug into, in the PHYSICAL frame (time, place, culture).",
+        "who": "James Clerk Maxwell",
+        "role": "WELDER — originator of W_C (birth-1)",
+        "when": "1831-1879",
+        "where": "Edinburgh / Cambridge (Peterhouse, then Trinity) / Glenlair (Scotland)",
+        "culture": "Scottish laird's son; Cambridge-wrangler mathematical elite",
+        "relation": "originator",
+        "confidence": 1.0
+      },
+      {
+        "who": "Michael Faraday",
+        "role": "PARENT W_A — the experimental-ontological parent and 1846 light-conjecturer",
+        "when": "1791-1867",
+        "where": "London / Royal Institution",
+        "culture": "working-class self-taught ex-BOOKBINDER; Sandemanian religious sect; almost no mathematics",
+        "relation": "originator (of the field parent) + surprise-priority-holder",
+        "confidence": 1.0,
+        "_note": "The artisan/aristocrat gulf with Maxwell (self-taught bookbinder vs Cambridge wrangler) is itself a root datum — the field ontology came from the man with no math, the calculus from the mathematical elite, and the weld bridged the class+culture gap."
+      },
+      {
+        "who": "Andre-Marie Ampere",
+        "role": "founder of electrodynamics / the force law — continental content-parent",
+        "when": "1775-1836",
+        "where": "France",
+        "culture": "French mathematical-physics tradition (action-at-a-distance)",
+        "relation": "originator (of a W_B component)",
+        "confidence": 0.95
+      },
+      {
+        "who": "Hans Christian Oersted",
+        "role": "1820 current-deflects-compass — the FOUNDING observation of the E<->M seam S",
+        "when": "1777-1851",
+        "where": "Denmark (Copenhagen)",
+        "culture": "Danish natural philosophy (Naturphilosophie-influenced)",
+        "relation": "originator (of the shared sub-object S)",
+        "confidence": 0.95
+      },
+      {
+        "who": "William Thomson / Lord Kelvin",
+        "role": "gave Maxwell the mechanical-analogy METHOD; the Faraday->Maxwell bridge",
+        "when": "1824-1907",
+        "where": "Glasgow",
+        "culture": "British mathematical physics",
+        "relation": "transmitter / METHODOLOGICAL parent (not a content parent — see gaps[1])",
+        "confidence": 0.92
+      },
+      {
+        "who": "Carl Friedrich Gauss & Wilhelm Weber",
+        "role": "flux laws + the unit-ratio measurement (~1855-56) supplying the SPEED; Weber's rival electrodynamics",
+        "when": "Gauss 1777-1855; Weber 1804-1891",
+        "where": "Gottingen",
+        "culture": "German mathematical-physics tradition",
+        "relation": "originator (of S-content + the calibration number) + rival (Weber's competing theory)",
+        "confidence": 0.9
+      },
+      {
+        "who": "The Maxwellians — Oliver Heaviside, George FitzGerald, Oliver Lodge, Heinrich Hertz",
+        "role": "SECOND BIRTH (~1879-1894): consolidators who made the modern 4-equation child and confirmed it experimentally",
+        "when": "Heaviside 1850-1925; FitzGerald 1851-1901; Lodge 1851-1940; Hertz 1857-1894 (confirmer 1887-88)",
+        "where": "England (Heaviside, self-taught ex-telegrapher) / Dublin (FitzGerald) / England (Lodge) / Germany (Hertz, Karlsruhe)",
+        "culture": "late-Victorian physics; notably Heaviside another self-taught artisan (ex-telegrapher), echoing Faraday",
+        "relation": "consolidator / re-welder / re-attributee (the child is NAMED after Maxwell but the surviving 4-equation STRUCTURE is theirs — see discrepancy 2)",
+        "confidence": 0.95
+      },
+      {
+        "who": "Hippolyte Fizeau",
+        "role": "measured light's speed (~1848-49) — the calibration TARGET the wave speed had to match",
+        "when": "1819-1896",
+        "where": "France",
+        "culture": "French experimental optics",
+        "relation": "instrument-supplier (supplied the calibration target, not content — see gaps[1])",
+        "confidence": 0.9
+      }
+    ]
+  },
+
+  "harvest": {
+    "_comment": "UP, in the LATENT + CULTURAL frame. What sat on top of W_C and what it spilled into. Grows to the present (2026).",
+    "descendants": [
+      {
+        "name": "Special relativity",
+        "what": "Born directly of the frame-independence of c in Maxwell's equations; Einstein 1905 'On the Electrodynamics of Moving Bodies' (title names electrodynamics), with Lorentz / Larmor (1900) / Poincare in the contested lineage. The latent frame-independence of c, unseen by Maxwell, became the founding postulate.",
+        "frame": ["space", "time", "knowledge"],
+        "confidence": 0.97
+      },
+      {
+        "name": "Gauge theory & QED -> the Standard Model",
+        "what": "Maxwell's is the first (U(1)) gauge field theory; quantized = QED (~1945-55, Tomonaga/Schwinger/Feynman/Dyson); generalized via Yang-Mills (1954) to the electroweak + strong sectors.",
+        "frame": ["knowledge"],
+        "confidence": 0.95
+      },
+      {
+        "name": "Electroweak unification (Glashow-Salam-Weinberg)",
+        "what": "Re-unifies EM with the weak force — the 'merge two forces' move recursing one level up. The child becomes a parent of a further weld.",
+        "frame": ["knowledge"],
+        "confidence": 0.9
+      },
+      {
+        "name": "Vector calculus (div/grad/curl) as the standard language of field physics",
+        "what": "Forged by Heaviside/Gibbs specifically to express Maxwell; became the universal notation of all subsequent field theory. (Also appears as a sub-wrapper of the second birth — it is both an instrument of the consolidation and a descendant artifact.)",
+        "frame": ["knowledge"],
+        "confidence": 0.92
+      }
+    ],
+    "cultural_harvest": [
+      {
+        "domain": "tech",
+        "what": "The whole EM-spectrum technosphere — radio (Marconi), wireless telegraphy, radar, TV, microwave, fiber optics; radio/light/X-ray recognized as one continuum. The single highest-impact cultural harvest; arguably the technological backbone of the 20th century."
+      },
+      {
+        "domain": "scifi",
+        "what": "The 'invisible waves through the ether' imaginary — spiritualism/psychical research borrowing Hertzian-wave language for telepathy and 'psychic wireless' (~1900-1930); force-fields, rays, and wireless minds in science fiction. FRONTIER (cultural, softer sourcing)."
+      },
+      {
+        "domain": "art",
+        "what": "The 'electrical sublime' and Tesla mythology — electromagnetism as a Romantic symbol of unseen cosmic forces; wireless-energy dreams. FRONTIER (cultural, softer sourcing)."
+      }
+    ]
+  },
+
+  "relatives": {
+    "_comment": "WIDE edges (SCHEMA.md §5 flag 2 — OPTIONAL group, flagged for ratification). Cousins, influences, siblings, rivals spanning physical AND latent.",
+    "edges": [
+      {
+        "name": "Weber electrodynamics",
+        "relation": "rival",
+        "_relation_enum": "one of: cousin | influence | sibling | rival",
+        "frame": ["knowledge"],
+        "confidence": 0.88,
+        "note": "The serious continental action-at-a-distance RIVAL theory that ALSO predicted a characteristic velocity. The weld defeated it; its defeat is part of W_C's success (not merely a dropped feature). See discrepancy 3 and gaps[5]."
+      },
+      {
+        "name": "LCAO / Molecular Orbital theory (Phase-1 convergence #1)",
+        "relation": "sibling",
+        "frame": ["space"],
+        "confidence": 0.8,
+        "note": "The named PHYSICS sibling in the Phase-1 DB. Shares the wave-equation/eigenmode substrate (Schrodinger IS a wave equation); the bonding/antibonding split is the LCAO analogue of the transverse EM wave's coupled field components. Same general wrapper-overlap class, different physics substrate."
+      },
+      {
+        "name": "Thermodynamics / statistical mechanics (Maxwell's OTHER major work)",
+        "relation": "cousin",
+        "frame": ["knowledge"],
+        "confidence": 0.75,
+        "note": "Maxwell-Boltzmann distribution, Maxwell's demon — the same welder's parallel lineage in a different field; a cousin-by-author, not by content."
+      },
+      {
+        "name": "Faraday's unity-of-nature / Sandemanian motivation",
+        "relation": "influence",
+        "frame": ["meaning"],
+        "confidence": 0.7,
+        "note": "Faraday's religious conviction of the unity and economy of nature plausibly motivated his search for the field connection — a meaning-frame influence on parent W_A. FRONTIER (interpretive)."
+      }
+    ]
+  },
+
+  "fuzzy_layer": {
+    "_comment": "The LOD / confidence partition made explicit. certain_core = the trunk (high-confidence); frontier = speculative/conjectural (low-confidence — the cultivation zone). Complements the per-node confidence numbers.",
+    "certain_core": [
+      "child: classical electromagnetism as a settled unified field (0.97)",
+      "weld: the displacement-current closure producing self-propagating EM waves (keystone, ~0.96)",
+      "the SURPRISE: c = light speed falling out of the merge at the bench-measured ratio (0.96) — the single best-attested fact in the specimen",
+      "parents: Faraday's field programme (W_A, 0.95) + the continental/British mathematical apparatus (W_B, 0.9)",
+      "shared_sub_object S: Oersted(1820)+Ampere+Faraday-induction(1831) two-way E<->M coupling",
+      "the canonical paper sequence/dates: 1856 / 1861-62 / 1865 (spot-verified)",
+      "the second birth: Maxwellian 20->4 reduction (Heaviside 1884-85) + Hertz confirmation (1887-88) (spot-verified)",
+      "displacement current, Faraday/Ampere/Gauss laws, the unit-ratio c as immediate sub-wrappers (depth 1, 0.95-0.97)",
+      "Maxwell + Faraday as people-roots (1.0)",
+      "descendants: special relativity (0.97), gauge theory/QED/Standard Model (0.95), the EM-spectrum technosphere (0.97)"
+    ],
+    "frontier": [
+      "CONJECTURE-IN-THE-RECORD: Faraday's 1846 light-guess as a low-confidence weld 'drawn but not confirmed' for 15 years inside parent W_A (the surprise pre-existed as a conjecture — the fuzzy frontier living in the historical record; see discrepancy 1)",
+      "deep sub-wrappers at depth 2: molecular-vortex/idle-wheel scaffolding (0.85), lines-of-force concept (0.9), luminiferous ether (0.9) — lower confidence, deeper roots",
+      "cultural_harvest: spiritualism / psychic-wireless imaginary (~0.75) and the electrical-sublime / Tesla mythology (~0.7) — the softest-sourced edges",
+      "relatives.edges: Faraday's Sandemanian unity-of-nature motivation as a meaning-frame influence (0.7, interpretive); thermodynamics-as-cousin (0.75)",
+      "the exact date of the Weber-Kohlrausch measurement (1855 vs 1856) and of Maxwell's c-realization (1861 vs 1862) — a small fuzzy flicker on the most load-bearing number (see discrepancy 4)",
+      "which tradition is the 'true' parent (Faraday's field vs continental action-at-a-distance) — a live historiographical choice, frame-relative (see discrepancy 3)"
+    ]
+  },
+
+  "discrepancies": [
+    {
+      "_comment": "Discrepancy 1 — priority on the light claim.",
+      "what": "PRIORITY / contested-genealogy on the LIGHT claim: Faraday's 1846 'Thoughts on Ray-Vibrations' already proposed that light IS a vibration of the lines of force. Maxwell himself wrote it was 'the same in substance' as his own theory 'except that in 1846 there was no data to calculate the velocity of propagation.' So is the 'light = EM' surprise Maxwell's child or Faraday's? The schema credits the WELD (Faraday had the qualitative guess; only Maxwell's fusion gives the quantitative c), but the priority is genuinely shared and Maxwell graciously conceded it.",
+      "sources_in_conflict": ["Faraday 1846 (Phil. Mag.) + Maxwell's own acknowledgement", "the popular 'Maxwell discovered light is EM' narrative"],
+      "type": "priority-dispute",
+      "_type_enum": "one of: priority-dispute | contested-genealogy | date/attribution-conflict | framework-vs-record-tension | dormancy-contested | whig-vs-revisionist",
+      "why_interesting": "The surprise is OLDER than the weld in QUALITATIVE form — it sat dormant as a speculation in ONE parent for ~15 years until the OTHER parent (the math) arrived to make it calculable. This is exactly the framework's 'conjecture = a low-confidence weld drawn but not yet confirmed' living in the historical record: Faraday DREW the weld; Maxwell CONFIRMED it. Motivates a surprise_priority field (gaps[4]).",
+      "confidence_impact": "Does NOT lower confidence in the surprise's reality (still 0.96); it RELOCATES part of the credit to parent W_A and time-stamps the conjecture. Raises the value of the specimen as a frontier-in-the-record exemplar."
+    },
+    {
+      "_comment": "Discrepancy 2 — THE highest-value one. The second birth + misattribution.",
+      "what": "FRAMEWORK-VS-RECORD TENSION (highest value): 'Maxwell's equations' as universally taught were NOT written by Maxwell. The clean child W_C had effectively a SECOND birth. Maxwell left 20 coupled equations in 20 variables (potentials/quaternions) in the 1873 Treatise — 'fertile but half-finished.' The compact 4-equation vector field theory was forged 1879-1894 by the MAXWELLIANS: Oliver Heaviside (vector recast, potentials eliminated, ~1884-85), Heinrich Hertz (independent reformulation + the 1887-88 experimental detection of the waves), George FitzGerald and Oliver Lodge. Heaviside's own 1893 line: if Maxwell would have accepted the modifications 'then I think the resulting modified theory may well be called Maxwell's.' The equations were even called Hertz-Heaviside / Maxwell-Hertz before settling on 'Maxwell's.'",
+      "sources_in_conflict": ["Bruce J. Hunt, The Maxwellians (1991)", "IEEE Spectrum 'The Long Road to Maxwell's Equations'", "Wikipedia 'History of Maxwell's equations'", "vs the textbook attribution 'Maxwell's equations'"],
+      "type": "framework-vs-record-tension",
+      "why_interesting": "The clean two-parent->one-child diagram HIDES a whole SECOND merge event: the raw W_C (Treatise) was ITSELF a parent that, welded with vector analysis (Gibbs/Heaviside) and experimental confirmation (Hertz), produced the W_C we actually use. The schema's single 'weld' under-counts: there is a BIRTH (Maxwell, 1865) AND a CONSOLIDATION/RESURRECTION (Maxwellians, ~1885) — and the canonical NAME attaches to the WRONG node. This is the missing schema variable: a child can be RE-WELDED and RE-ATTRIBUTED; 'who the child is named after' != 'who produced the surviving structure.' Captured here in the DB's own vocabulary as a dormant-resurrection of the Treatise's tangled form into the clean form (dormancy_intervals[1] + revival B). The load-bearing schema gap (gaps[0]).",
+      "confidence_impact": "Does not lower confidence in the child's reality, but SPLITS the weld into two events the schema renders as one. The single most important variable-refinement the specimen surfaces."
+    },
+    {
+      "_comment": "Discrepancy 3 — contested genealogy of the whole field.",
+      "what": "CONTESTED GENEALOGY of the whole field: was the real lineage Faraday's FIELD/contiguous-action tradition, or the CONTINENTAL action-at-a-distance tradition (Ampere, Gauss, Weber, Neumann, Riemann, Helmholtz)? Maxwell's synthesis is usually told as the field view's triumph, but its mathematical bones (Ampere's law, induction formalism) are continental, and Weber's electrodynamics was a serious rival theory that ALSO predicted a characteristic velocity. The 'parents' are thus drawn from two WARRING SCHOOLS, and which one is the 'true' parent is a live historiographical choice.",
+      "sources_in_conflict": ["Wikipedia 'History of electromagnetic theory' + Britannica + Hunt", "vs Whewell/older Whig 'Faraday->Maxwell straight line' accounts"],
+      "type": "contested-genealogy",
+      "why_interesting": "Directly the framework's 'what were the real parents?' problem (the brief's special-relativity Einstein-vs-Lorentz-Poincare analogue). The weld SUCCEEDED partly by LAUNDERING continental math into a field ontology — the winning child kept W_A's ONTOLOGY but W_B's CALCULUS, so each losing parent can claim half of it. Frame-relative: in the {knowledge} frame the continental math is a parent; in the {space}/ontology frame Faraday's field is the parent. The two-parent split {Faraday-field, continental-math} is itself the resolution of this dispute, not a neutral given.",
+      "confidence_impact": "Keeps both parents at high confidence but flags that their RELATIVE weight is frame-dependent and contested; the 0.95/0.9 split is a defensible projection, not a fact."
+    },
+    {
+      "_comment": "Discrepancy 4 — date wobble on the load-bearing number.",
+      "what": "DATE/ATTRIBUTION conflict on the Weber-Kohlrausch unit-ratio measurement that supplied the speed: sources give 1855 AND 1856 (Wikipedia 'History of Maxwell's equations' gives 1855, value 3.107x10^8 m/s; other histories cite Weber-Kohlrausch 1856). Maxwell's recognition of the c-coincidence is variously dated to late 1861 / 1862. Also the paper-date spread: 'On Faraday's Lines of Force' 1855-56; 'On Physical Lines of Force' 1861-62; 'A Dynamical Theory of the Electromagnetic Field' read 1864, published 1865 (often cited as either).",
+      "sources_in_conflict": ["Wikipedia 'History of Maxwell's equations' (1855, 3.107x10^8)", "other histories citing Weber-Kohlrausch 1856", "Royal Society commentary vs Wikipedia on Maxwell's 1861 vs 1862 realization"],
+      "type": "date/attribution-conflict",
+      "why_interesting": "Minor but real: the EXACT bench measurement that turned the qualitative light-guess into a quantitative weld has a wobbling date across reputable sources — a small fuzzy-frontier flicker on the single most LOAD-BEARING number in the whole specimen (the one that makes the surprise land). The flicker is on the trigger of revival (A), so it sits exactly at the hinge of the weld.",
+      "confidence_impact": "Negligible on the substance (the coincidence is solid regardless of +/-1 year); keeps the unit-ratio sub-wrapper at 0.95 but the precise DATE on it is a frontier item, not core."
+    },
+    {
+      "_comment": "Discrepancy 5 — multi-parent reality vs 2-parent schema.",
+      "what": "MULTI-PARENT reality vs the schema's 2-parent weld (SCHEMA.md flag 6 instantiated): the honest parent set is at LEAST seven — Coulomb (electrostatics), Oersted (current->magnetism), Ampere (force law), Faraday (induction + field ontology), Gauss (flux laws), Neumann/Weber (induction formalism), William Thomson/Kelvin (the mechanical-analogy METHOD Maxwell borrowed). Collapsing to {Faraday-field, continental-math} is a defensible but lossy 2-projection.",
+      "sources_in_conflict": ["Wikipedia/Britannica multi-figure lineage", "vs the framework's binary W_A/W_B visualization"],
+      "type": "framework-vs-record-tension",
+      "why_interesting": "This is the canonical clean-two-vs-messy-many tension the brief most wants flagged. The 2-parent render is a deliberate DIMENSIONALITY REDUCTION; the residue (Thomson's analogy method, Oersted's founding observation) is exactly the 'which variables is the schema missing' signal. Notably Thomson is a parent of the METHOD, not of the content, and Fizeau supplied the calibration TARGET, not content — the schema has no slot for a 'methodological parent' or an 'instrument parent' distinct from a 'content parent' (gaps[1]), and no n-ary parents_full[] (gaps[2]).",
+      "confidence_impact": "Does not change the child confidence; flags that parents[] length-2 is a lossy projection here and motivates both a parent_kind tag and an optional n-ary parents_full[]."
+    },
+    {
+      "_comment": "Discrepancy 6 — frame-relativity of the weld (textbook confirmation of the brief thesis).",
+      "what": "Whether the WELD's frame even produces a third in SPACE alone: two static facts ('electricity exists', 'magnetism exists') side by side in the SPACE frame make NOTHING; it is only through TIME (CHANGING fields — induction + displacement current, i.e. d/dt) that the third (self-propagating wave) appears. The unification is intrinsically a TIME-frame weld.",
+      "sources_in_conflict": ["observer_frame_kernels_DRAFT.md frame thesis", "vs a naive static reading of 'unifying two forces'"],
+      "type": "framework-vs-record-tension",
+      "why_interesting": "A TEXTBOOK confirmation of the brief's frame-relativity thesis ('two rocks in SPACE = nothing; two rocks through TIME = strata'). Electricity+magnetism in the {space} frame = two adjacent phenomena; in the {time} frame = one self-propagating field. frame_of_weld is therefore {time} essentially, even though the child W_C is read in {space,knowledge,meaning}. The displacement current is LITERALLY a time-derivative term — the weld is welded BY time. This makes Maxwell's EM a clean positive analogue to the rocks-in-time case in parents_produce_WC_FORMALIZATION_DRAFT §2 (case 10). Motivates a weld_operator note-field (gaps[3]).",
+      "confidence_impact": "Strengthens the render: confirms frame_of_weld=[time] is correct and that the frame thesis discriminates correctly on a settled top-tier case. Raises confidence the schema's frame machinery is right."
+    }
+  ],
+
+  "sources": [
+    {
+      "name": "Wikipedia — History of Maxwell's equations",
+      "type": "aggregator",
+      "_type_enum": "one of: aggregator | encyclopedia | scholarly-history | primary",
+      "url": "https://en.wikipedia.org/wiki/History_of_Maxwell's_equations",
+      "what_used_for": "paper sequence/dates (1856/1861-62/1865), prior-laws synthesis, Weber-Kohlrausch ratio 1855 + value 3.107x10^8 m/s, Fizeau 1848 + Foucault 1850 light-speed values, Maxwell's late-1861 realization, 20->4 Heaviside reduction (1884). SPOT-VERIFIED during render.",
+      "reliability": 0.8,
+      "_reliability_comment": "tertiary but well-sourced; the load-bearing numerical claims were directly confirmed against this page during the render."
+    },
+    {
+      "name": "Wikipedia — History of electromagnetic theory",
+      "type": "aggregator",
+      "url": "https://en.wikipedia.org/wiki/History_of_electromagnetic_theory",
+      "what_used_for": "field-vs-action-at-a-distance traditions, continental figures (Ampere/Gauss/Weber/Neumann/Helmholtz), Thomson/Kelvin bridge.",
+      "reliability": 0.75
+    },
+    {
+      "name": "Wikipedia — James Clerk Maxwell + The Maxwellians",
+      "type": "encyclopedia",
+      "url": "https://en.wikipedia.org/wiki/James_Clerk_Maxwell , https://en.wikipedia.org/wiki/The_Maxwellians",
+      "what_used_for": "biography (1831-1879, Edinburgh/Cambridge/Glenlair), the Maxwellians group composition (Heaviside/FitzGerald/Lodge/Hertz) and 1879-1894 dating.",
+      "reliability": 0.8
+    },
+    {
+      "name": "Wikidata — James Clerk Maxwell (Q9095)",
+      "type": "aggregator",
+      "url": "https://www.wikidata.org/wiki/Q9095",
+      "what_used_for": "hard facts: dates (1831-1879), Edinburgh birth, Cambridge/Peterhouse education, field-of-work. NOTE: P737 influenced-by relations were not exposed in the fetched excerpt — a data gap, not used.",
+      "reliability": 0.85
+    },
+    {
+      "name": "Bruce J. Hunt, 'The Maxwellians' (Cornell UP, 1991; repr. 2005)",
+      "type": "scholarly-history",
+      "url": "https://en.wikipedia.org/wiki/The_Maxwellians , https://www.degruyterbrill.com/document/doi/10.7591/9781501703270/html",
+      "what_used_for": "THE definitive history of the second birth — the framework-vs-record tension that the Maxwellians (FitzGerald, Heaviside, Lodge, Hertz) made 'Maxwell's theory,' 1879-1894 (discrepancy 2).",
+      "reliability": 0.95
+    },
+    {
+      "name": "IEEE Spectrum — 'The Long Road to Maxwell's Equations' (2016)",
+      "type": "scholarly-history",
+      "url": "https://spectrum.ieee.org/the-long-road-to-maxwells-equations",
+      "what_used_for": "20-equations-in-20-unknowns, Heaviside 'threw all the potentials overboard' + 1884 (pub. 1885), Hertz began 1886 / published July 1888, Heaviside's 1893 attribution quote, the four Maxwellians' roles. SPOT-VERIFIED during render.",
+      "reliability": 0.85
+    },
+    {
+      "name": "Royal Society — commentary on Maxwell (1865) 'A Dynamical Theory of the Electromagnetic Field', Phil. Trans. R. Soc. A 373:20140473 (+ PMC mirror)",
+      "type": "scholarly-history",
+      "url": "https://royalsocietypublishing.org/doi/10.1098/rsta.2014.0473 , https://pmc.ncbi.nlm.nih.gov/articles/PMC4360095/",
+      "what_used_for": "provenance of the 1865 paper in the 1856 + 1861-62 papers; displacement current; light-as-EM.",
+      "reliability": 0.95
+    },
+    {
+      "name": "Royal Society — 'Vortices and atoms in the Maxwellian era', Phil. Trans. R. Soc. A (2019) (+ arXiv:1906.00453)",
+      "type": "scholarly-history",
+      "url": "https://royalsocietypublishing.org/doi/10.1098/rsta.2018.0451",
+      "what_used_for": "the molecular-vortex / idle-wheel mechanical ether model and its status as dropped scaffolding.",
+      "reliability": 0.9
+    },
+    {
+      "name": "Faraday, 'Thoughts on Ray-Vibrations' (Phil. Mag. 1846) — via Maricourt Academic Press + Britannica Faraday",
+      "type": "primary",
+      "url": "https://maricourt.press/keohane_foy/contents/faraday-on-ray-vibrations/ , https://www.britannica.com/biography/Michael-Faraday/Later-life",
+      "what_used_for": "Faraday's 1846 light-as-vibration-of-lines-of-force PRIORITY and Maxwell's 'same in substance' acknowledgement (discrepancy 1).",
+      "reliability": 0.85
+    },
+    {
+      "name": "Open University OpenLearn 'The restless Universe: Faraday and Maxwell' + ASA 'Faraday: Man of God-Man of Science'",
+      "type": "scholarly-history",
+      "url": "https://www.open.edu/openlearn/science-maths-technology/the-restless-universe/content-section-2.4.2 , https://www.asa3.org/ASA/PSCF/1988/PSCF6-88Eichman.html",
+      "what_used_for": "the Faraday(Sandemanian artisan)/Maxwell(laird wrangler) class+culture contrast and Faraday's unity-of-nature motivation (people_0, relatives).",
+      "reliability": 0.8
+    },
+    {
+      "name": "Wikipedia 'Classical electromagnetism and special relativity' + arXiv:1302.6965 'From aether theory to Special Relativity' + arXiv:2510.17838 'Lorentz, Poincare, Einstein...'",
+      "type": "scholarly-history",
+      "url": "https://en.wikipedia.org/wiki/Classical_electromagnetism_and_special_relativity",
+      "what_used_for": "the harvest into special relativity (Larmor 1900, Lorentz, Einstein 1905) and Maxwell's equations' Lorentz covariance (descendants).",
+      "reliability": 0.85
+    },
+    {
+      "name": "Media-history scholarship — 'Spiritualism and Telegraphy' (mediafantasy.hypotheses.org) + 'Thoughts and Spirits by Wireless' (academia.edu) + Marconi/Tesla cultural sources",
+      "type": "scholarly-history",
+      "url": "https://mediafantasy.hypotheses.org/117",
+      "what_used_for": "the spiritualism/psychic-wireless and electrical-sublime cultural harvest (cultural_harvest FRONTIER).",
+      "reliability": 0.65,
+      "_reliability_comment": "softer, cultural-frontier — explicitly low; these are the frontier edges of the specimen."
+    }
+  ]
+}

@@ -1,0 +1,571 @@
+{
+  "_template_doc": "CANONICAL WRAPPER-GENEALOGY SPECIMEN — one merge event rendered as a rooted genealogy graph that STOPS AT THE PRESENT. Spec: ../SCHEMA.md. Tier-3 exploratory data-harvest for Cowork+Pav ratification — NOT canon, NOT a promotion, convergence list stays 9. This specimen is a WORKED EXAMPLE of the schema (a dormancy->resurrection + multi-parent-weld case), NOT one of the 9 cross-substrate convergence rows. Every node/edge carries confidence in [0,1] (SOFT) + a zoom/LOD depth. bits_note QUALITATIVE ONLY. Sources web-checked (see sources[]); revisionist/conflict claims flagged low-confidence in discrepancies[].",
+
+  "schema_version": "0.1-canonical-genealogy",
+  "specimen_id": "darwin-mendel-modern-synthesis",
+  "_status": "Tier-3 WORKING specimen — exploratory data-harvest, surfaced for Cowork+Pav ratification. NOT canon, NOT a tier promotion, does NOT grow the convergence list (stays 9). All confidences are SOFT scores in [0,1]; bits are qualitative only. This is the canonical dormancy->resurrection + multi-parent-weld worked example, used to STRESS-TEST the schema variables (see discrepancies[] and the gap notes in fuzzy_layer.frontier).",
+  "extends": {
+    "_comment": "Linkage back to the Phase-1 wrapper CLASS this merge-event specimen instantiates (SCHEMA.md §4). Same graph, deeper zoom. This specimen is a HISTORICAL-science instance of the parents-produce-W_C / wrapper-overlap pattern that the bes_convergence_9 test instrument scores all convergences against. It is NOT itself a 10th convergence — it is a worked example of the weld pattern on the evolutionary-biology substrate (which already appears in the DB indirectly via the Fisher/Muller recombination lineage cited under BES, and via symbiogenesis as a biology-substrate convergence).",
+    "phase1_file": "../latent_olympics_data/wrapper_classes_phase1.json",
+    "phase1_class_name": "bes_convergence_9 candidate doc — the parents-produce-W_C structural-test record (the five-condition gate the whole list is scored against); the merge instantiates the same wrapper-overlap pattern catalogued there, on the evolutionary-biology substrate.",
+    "relation_note": "INSTANCE-OF, not a new class row. The Modern Synthesis is rendered here as a single weld event (a pushout W_A ⊔_S W_B) to exercise the genealogy schema's dormancy/revival, multi-parent, and status-over-time fields. Its closest DB cousins: 'Symbiogenesis (convergence #3)' (a different biology-substrate two-parent weld) and the 'Fisher 1930 + Muller 1932 + Holland 1992' recombination lineage named under 'BES (convergence #9)' — i.e. this specimen's Fisher root is literally an ancestor named in the DB's BES row."
+  },
+  "generated": "2026-06-09",
+  "frames_present": ["time", "space", "knowledge", "meaning"],
+  "overall_confidence": 0.9,
+  "_overall_confidence_note": "The TRUNK (the merge happened across ~1918-1950, was named 'modern synthesis' by Huxley 1942, welded Darwinian selection to Mendelian inheritance via population genetics) is ~0.95-0.97. The overall figure is pulled down to ~0.9 by the well-attested framework-vs-record tensions: the literal 'Darwin-Mendel dyad as THE two parents' is only ~0.55 (the real proximate parent is population genetics), and the clean-dormancy narrative is ~0.5 (Olby/Brannigan contest it). High-confidence core, honestly-fuzzy frontier.",
+
+  "child": {
+    "_comment": "W_C — the emergent wrapper born in this merge. The trunk node.",
+    "name": "The Modern Synthesis (neo-Darwinian synthesis / synthetic theory of evolution / 'evolutionary synthesis')",
+    "kernel": "The reconciliation of Darwinian natural selection with Mendelian particulate inheritance into ONE mathematical framework: evolution REDEFINED as 'change in allele/gene frequencies within populations', with micro-evolution (population genetics) scaled up to explain macro-evolution (speciation, paleontological tempo). The net product is a quantitative, predictive theory of evolution carrying a conservation law (Hardy-Weinberg) and theorems (Fisher's fundamental theorem) — a flow d/dt over generations with a Lyapunov-like fitness quantity.",
+    "frame": ["time", "knowledge", "meaning", "space"],
+    "_frame_note": "PRIMARY: time (it is a lineage/flow theory over generations) + knowledge (a learned-competence/theoretical render) + meaning (it reorganized what 'evolution' and 'species' signify). SECONDARY: space (geographic/allopatric speciation, Mayr 1942). All four observer global kernels are touched, which is itself notable — this is a wide-frame child.",
+    "status": "resurrected",
+    "_status_enum": "one of: risen | active | dormant | resurrected | stale",
+    "_status_note": "SCHEMA GAP (see discrepancies + frontier): status is genuinely status-AT-A-TIME. Trajectory: resurrected (1900-1937, Mendel's revival supplies the missing piece) -> risen (1937-1959, becomes the orthodox theory) -> hardened/contested (1959 Darwin centennial onward) -> currently ACTIVE with a live extension debate (the Extended Evolutionary Synthesis, Pigliucci & Mueller 2007+, contests its sufficiency). A single enum cannot hold this; 'resurrected' is chosen because the dormancy->resurrection arc is THIS specimen's defining feature.",
+    "confidence": 0.95,
+    "utility": {
+      "_comment": "Pav's three utility legs as prose + an enumerated affordance list.",
+      "unifier": "Welds 5+ previously-warring sub-disciplines (genetics, systematics/taxonomy, paleontology, botany, ecology) under one allele-frequency calculus, AND resolves the biometrician-vs-Mendelian war (continuous biometric variation = many Mendelian loci of small effect; Fisher 1918). Bridge degree is unusually high: it is a unification of unifications.",
+      "compressor": "Collapses 'descent with modification' + '3:1 Mendelian segregation' + continuous biometric variation into ONE short statement — continuous variation arises from many Mendelian loci of small effect summing under the central limit theorem (Fisher 1918). An MDL-style reduction of a fuzzy intuition ('blending-ish heredity') to a decidable population-genetic model. Bits QUALITATIVE ONLY: the joint description (selection acting on gene-frequency distributions) is clearly shorter than carrying Darwin's mechanism-less variation + Mendel's discrete characters as two unreconciled accounts — order-of-magnitude only, no bit value computed (latent embeddings are a LATER step).",
+      "action_spaces_unlocked": [
+        "Quantitative prediction of selection response (the breeder's equation, heritability h^2) — direct descendant of Fisher 1918's infinitesimal model",
+        "The adaptive-landscape move (Wright 1932) — visualizing evolution as hill-climbing on a fitness surface",
+        "The biological species concept (Mayr 1942) — species as reproductively isolated populations, enabling allopatric-speciation reasoning",
+        "Molecular-clock and neutral tests (Kimura 1968 onward) — a quantitative null model for drift vs selection",
+        "The entire apparatus of modern evolutionary + quantitative + medical genetics — GWAS (genome-wide association studies) descends directly from Fisher 1918's polygenic model",
+        "Evolutionary/genetic algorithms in computer science (Holland 1975) — the population-genetics math reused as an optimization substrate (this is the lineage named under BES convergence #9 in the Phase-1 DB)"
+      ]
+    }
+  },
+
+  "weld": {
+    "_comment": "The merge itself: parents -> child. The heart of the specimen and the locus of the parents-produce-W_C test. SEE discrepancy #1: the literal Darwin/Mendel dyad below is the POPULAR rendering; the record's proximate parent is population genetics (recorded as the shared sub-object S and in roots.sub_wrappers, and as a framework-vs-record tension).",
+    "parents": [
+      {
+        "_role": "W_A",
+        "name": "Darwinian evolution by natural selection",
+        "kernel": "Descent with modification driven by natural selection acting on heritable variation under a Malthusian struggle for existence (variation + heredity + differential survival -> adaptation). CRITICAL WEAKNESS that made the weld necessary: Darwin had NO mechanism of inheritance ('the laws governing inheritance are quite unknown'); he assumed effectively blending inheritance, which Fleeming Jenkin (1867) showed would halve any new favorable variant each generation, dissolving it. Darwin's own fix, pangenesis (1868), failed.",
+        "frame": ["time", "space", "meaning"],
+        "confidence": 0.98
+      },
+      {
+        "_role": "W_B",
+        "name": "Mendelian genetics / particulate inheritance",
+        "kernel": "Discrete, non-blending hereditary factors ('genes') segregating in fixed ratios (law of segregation, independent assortment; the 3:1 F2 ratio), so variation is PRESERVED rather than averaged away. NOTE: early-1900s Mendelism arrived as an ANTI-Darwinian 'mutationism' (Bateson, de Vries) — W_B initially OPPOSED W_A before being welded to it (see discrepancy #?: the 'antagonism-then-fusion' lifecycle the schema has no field for).",
+        "frame": ["knowledge", "meaning"],
+        "_frame_note": "knowledge + meaning at origin; gains a time-frame only once embedded in populations (the population-genetics move).",
+        "confidence": 0.97
+      }
+    ],
+    "shared_sub_object_S": "S = hereditary variation, operationally realized as POPULATION GENETICS (the allele-frequency distribution under Hardy-Weinberg, 1908). Darwin's 'heritable variation selection acts on' and Mendel's 'discrete conserved factor' are the SAME object ONLY once expressed as gene frequencies in a population — the seam Fisher (1918, 1930), Haldane, and Wright actually welded. This is NOT the '1866-paper-meets-1859-book' seam the popular two-parent story implies; the real S sits a layer UP from the two ancestral theories. CONTESTED: S itself was internally fractured (Fisher's mass-selection vs Wright's shifting-balance) — see discrepancy on the Fisher-Wright controversy.",
+    "surprise": "Neither parent alone predicts that the biometricians' smooth continuous variation and the Mendelians' discrete particulate genes are the SAME thing. Darwin-alone gives heritable variation with no conservation law (it should blend away — the fatal Jenkin objection); Mendel-alone (as his rediscoverers read him) gives sharp discrete characters and a saltationist mutationism that made gradual selection seem redundant. The emergent third — reachable ONLY from BOTH, via Fisher 1918 — is that MANY Mendelian loci of small effect SUM to a continuous, normally-distributed, NON-blending variation that natural selection can move smoothly and irreversibly. This one move (i) rescues Darwinian gradualism from the blending-inheritance objection that had eclipsed it for ~50 years, (ii) shows the two warring schools (biometry vs Mendelism) were describing one phenomenon at two grains, and (iii) turns evolution into a quantitative predictive science with a conservation law (Hardy-Weinberg) and theorems (Fisher's fundamental theorem). The DEEPEST surprise: the synthesis redefined 'evolution' itself from 'descent of forms' to 'change in allele frequencies' — a meaning-frame shift neither Darwin nor Mendel articulated.",
+    "surprise_confidence": 0.9,
+    "bits_note": "QUALITATIVE ONLY. The joint description is clearly shorter than either parent carried alone: ONE statement ('selection acting on a Hardy-Weinberg gene-frequency distribution, with continuous variation = sum of many small-effect Mendelian loci') replaces TWO unreconciled and mutually-contradicting accounts (Darwin's mechanism-less, blending-doomed variation; Mendel's discrete, gradualism-defeating characters). The synergy is genuine, not additive — the reconciliation is unreachable from either parent's own vocabulary (the surprise term above is the qualitative ΔL>0 reading). NO bit value computed: MDL-in-bits needs latent embeddings (a LATER step per SCHEMA.md §3). Order-of-magnitude only, and on a social/meaning-laden substrate at that.",
+    "survived": [
+      "Natural selection as primary mechanism (W_A core)",
+      "Particulate/discrete inheritance and segregation ratios (W_B core)",
+      "Gradualism (RESCUED, now mechanistically grounded in many small-effect loci)",
+      "Descent with modification (W_A)",
+      "Geographic/allopatric isolation in speciation (Mayr; the space-frame leg)",
+      "Hard heredity / Weismann's germ-plasm barrier (a pre-weld sub-wrapper that survived into W_C)",
+      "PARENTS PERSIST AS PROCEDURAL-ROOT STUBS: 'Mendelian ratios' and 'Darwinian selection' are still the NAMED foundations beneath the population-genetic surface (the hairy-sphere stubs; the dormant compiled originals W_A°, W_B° live here)"
+    ],
+    "dropped": [
+      "Darwin's pangenesis (1868)",
+      "Blending inheritance (the assumption that DOOMED W_A pre-weld; its removal is the whole point of the weld)",
+      "Lamarckian inheritance of acquired characters",
+      "Orthogenesis (directed evolution)",
+      "de Vries/Bateson SALTATIONIST mutationism ('new species in one jump' dropped; the discrete-factor CORE kept)",
+      "Galton/Pearson's law of ancestral heredity (the continuous DATA kept, the anti-Mendelian FRAMEWORK dropped)",
+      "Huxley's residual notion of evolutionary 'progress'",
+      "CONTESTED-dropped-then-partly-revived: genetic drift / non-adaptive variation — de-emphasized in the 1940s-50s 'hardening', revived by Kimura 1968 + the EES (see the whig-vs-revisionist discrepancy)"
+    ],
+    "frame_of_weld": ["time", "knowledge"],
+    "_frame_of_weld_comment": "The weld actually HOLDS in time + knowledge: it is in the knowledge-frame (population-genetic theory, a learned competence) that the reconciliation was BUILT (Fisher/Haldane/Wright), and in the time-frame (the flow of allele frequencies over generations) that the welded object DYNAMICALLY lives. The child is also READ in space (allopatric speciation) and meaning (the redefinition of 'evolution'), but the WELD-construction holds in time+knowledge — note this differs from child.frame, exactly the frame_of_weld-vs-child.frame distinction SCHEMA.md §5 flag 4 anticipates.",
+    "lod_scale": "Holds at the FIELD-level / theory-level grain ('Darwinism welded to Mendelism via population genetics'). ZOOM IN and the single weld dissolves into many sub-welds: Fisher-1918 (continuous<->discrete), Haldane's selection-rate models, Wright's adaptive landscape, Dobzhansky's naturalist translation (1937), Mayr's species concept (1942), Simpson's paleontology (1944), Stebbins's botany (1950). At fine grain it is NOT one weld but a ~30-year cascade of pairwise welds among ~8 architects — which is precisely the multi-parent tension (discrepancy #1).",
+    "when": "~1918-1950 (a ~30-year PROCESS, not an event). Defensible birth-dates: Fisher 1918 (mathematical origin), Fisher/Haldane/Wright 1930-32 (the population-genetics trio), Dobzhansky 1937 ('the work that initiated the Modern Synthesis', per David Hull). NAMED by Huxley 1942. SCHEMA GAP: a single 'when' cannot hold a multi-defensible-date process — see the date/attribution discrepancy.",
+    "dormancy_intervals": [
+      {
+        "from": "1866",
+        "to": "1900",
+        "why": "W_B (Mendel's 'Versuche ueber Pflanzen-Hybriden') cited only ~3 times in ~34 years. Causes: read as SPECIES-HYBRIDIZATION not heredity; no modern allele concept circulating; Carl von Naegeli's misdirection of Mendel to Hieracium (hawkweed, which breeds apomictically and gave anomalous results); blending-inheritance orthodoxy; Mendel's later absorption into abbot duties + tax disputes; his successor reportedly burned his papers. [DORMANCY CONTESTED — Olby 1979/Brannigan 1979: arguably NOT 'neglect' but 'not-yet-the-same-question'. See the dormancy-contested discrepancy.]"
+      },
+      {
+        "from": "~1880s",
+        "to": "~1930s",
+        "why": "W_A's MECHANISM (natural selection SPECIFICALLY) dormant/eclipsed — the 'eclipse of Darwinism' (Bowler 1983). Descent-with-modification was ACCEPTED, but natural-selection-as-mechanism was UNpopular versus mutationism / orthogenesis / neo-Lamarckism (Dennert 1903: 'Darwinism will soon be a thing of the past'). This is a SECOND, nested dormancy distinct from Mendel's: the mechanism slept while the fact of common descent did not."
+      }
+    ],
+    "revival": {
+      "_comment": "TWO nested revivals — and the resurrection of one (Mendel) supplied the missing piece that resurrected the other (selection). This nesting is itself a schema-stress point.",
+      "when": "1900 (Mendel's rediscovery); 1918-1937 (the full weld revives Darwinian selection)",
+      "by": "(a) W_B revived 1900 by the independent (CONTESTED) rediscovery — Hugo de Vries, Carl Correns, Erich von Tschermak. (b) The FULL weld 'revived' Darwinian selection 1918-1937 — R.A. Fisher (1918 reconciliation), J.B.S. Haldane and Sewall Wright (population genetics 1924-32), Theodosius Dobzhansky (1937, translating the math for naturalists).",
+      "trigger": "(a) For Mendel: the rediscoverers' OWN hybridization experiments hitting the same ratios + the new cytological/chromosome context (Boveri-Sutton, Morgan's Drosophila ~1910-15) making particulate inheritance legible. (b) For selection: Fisher's 1918 mathematical reconciliation removing the blending-inheritance objection, then Dobzhansky 1937 making the population-genetic math usable by working naturalists. NOTE the revival was itself a contested three-way (maybe two-way) priority event — a revival is a mini-merge with its own politics (see the priority-dispute discrepancy)."
+    }
+  },
+
+  "roots": {
+    "_comment": "DOWN, in the PHYSICAL frame. Confidence FADES and depth RISES going deeper. The MEDIATING PARENT (population genetics) lives at depth 0 here because the record's proximate parent is NOT the two ancestral theories but the population-genetics layer that welded them — this is where the framework-vs-record tension is recorded structurally.",
+    "sub_wrappers": [
+      {
+        "_comment": "The MEDIATING WRAPPER that IS the operational S — the real proximate parent the schema's 2-slot parents[] cannot hold.",
+        "name": "Population genetics (the mediating wrapper that IS the operational S)",
+        "kernel": "Hardy-Weinberg equilibrium (1908) + Fisher's fundamental theorem (1930) + Wright's adaptive landscape (1932) + Haldane's selection-rate models. The allele-frequency calculus in which Darwin's variation and Mendel's factor become the same object.",
+        "frame": ["time", "knowledge"],
+        "depth": 0,
+        "confidence": 0.92,
+        "who_called_it": "Fisher / Haldane / Wright (the population-genetics trio)"
+      },
+      {
+        "name": "Fisher 1918 ('The Correlation between Relatives on the Supposition of Mendelian Inheritance')",
+        "kernel": "The specific BRIDGE sub-wrapper: continuous biometric variation reconciled with discrete Mendelian loci via the infinitesimal/polygenic model (many loci of small effect summing, informally via the central limit theorem). Founding stone of quantitative genetics. (Initially REJECTED by referees for the Royal Society of London; published in Trans. Roy. Soc. Edinburgh.)",
+        "frame": ["knowledge"],
+        "depth": 1,
+        "confidence": 0.95,
+        "who_called_it": "R.A. Fisher"
+      },
+      {
+        "name": "Biometry / the law of ancestral heredity",
+        "kernel": "The continuous-variation statistics (regression, correlation) that initially OPPOSED Mendelism; a sub-wrapper later ABSORBED into S (data kept, anti-Mendelian framework dropped).",
+        "frame": ["knowledge"],
+        "depth": 1,
+        "confidence": 0.85,
+        "who_called_it": "Francis Galton / Karl Pearson / W.F.R. Weldon"
+      },
+      {
+        "name": "Mutationism (de Vries's mutation theory; Bateson's discontinuous variation)",
+        "kernel": "The anti-Darwinian GUISE W_B first wore ~1900-1915; dropped as a saltationist mechanism, but its 'discrete factor' core survived into S.",
+        "frame": ["knowledge", "meaning"],
+        "depth": 1,
+        "confidence": 0.85,
+        "who_called_it": "Hugo de Vries / William Bateson"
+      },
+      {
+        "name": "Weismann's germ-plasm theory (1892)",
+        "kernel": "'Hard heredity' — barring inheritance of acquired characters; a sub-wrapper that PRE-CLEARED the ground by killing Lamarckism, making a clean selection-on-conserved-variation weld possible.",
+        "frame": ["knowledge", "meaning"],
+        "depth": 1,
+        "confidence": 0.85,
+        "who_called_it": "August Weismann"
+      },
+      {
+        "name": "Morgan's Drosophila chromosome genetics (~1910-15)",
+        "kernel": "Located Mendelian factors on chromosomes, supplying the PHYSICAL gene; hardened S between the 1900 rediscovery and the synthesis (made particulate inheritance cytologically legible).",
+        "frame": ["space", "knowledge"],
+        "depth": 1,
+        "confidence": 0.85,
+        "who_called_it": "T.H. Morgan school (the 'fly room')"
+      },
+      {
+        "name": "Mendel's pea experiments (1856-63)",
+        "kernel": "The empirical KERNEL of W_B: ~28,000 plants, 7 traits, the 3:1 F2 segregation ratio. The root of W_B.",
+        "frame": ["space", "knowledge"],
+        "depth": 1,
+        "confidence": 0.95,
+        "who_called_it": "Gregor Mendel"
+      },
+      {
+        "name": "Malthusian population pressure (struggle for existence)",
+        "kernel": "The empirical/conceptual KERNEL of W_A's selection mechanism — superfecundity meeting finite resources. The root of W_A's selection leg.",
+        "frame": ["time", "meaning"],
+        "depth": 1,
+        "confidence": 0.9,
+        "who_called_it": "Thomas Malthus (1798) / Darwin"
+      }
+    ],
+    "people_0": [
+      {
+        "_comment": "MENDEL SIDE — the dormant root that was resurrected.",
+        "who": "Gregor (Johann) Mendel",
+        "role": "Originator of W_B (Mendelian particulate inheritance)",
+        "when": "b. 20 Jul 1822, d. 6 Jan 1884; key work presented 8 Feb & 8 Mar 1865, published 1866",
+        "where": "b. Heinzendorf/Hyncice (Silesia, Austrian Empire); worked at St Thomas's Abbey, Brno (Bruenn), Moravia",
+        "culture": "German-speaking Moravian peasant family (farm held ~130 yrs); Catholic; Augustinian friar, later abbot",
+        "relation": "originator (the dormant root that was resurrected)",
+        "confidence": 0.97
+      },
+      {
+        "who": "Abbot Cyril Frantisek Napp",
+        "role": "Patron / institutional enabler of W_B",
+        "when": "abbacy mid-19th c. (sponsored Mendel's Vienna studies 1851)",
+        "where": "St Thomas's Abbey, Brno",
+        "culture": "Moravian monastic scientific-agriculture / sheep-breeding hub (the Moravian wool economy)",
+        "relation": "patron (sponsored the studies; ran the monastery that made the work possible)",
+        "confidence": 0.85
+      },
+      {
+        "who": "Christian Doppler, Andreas von Ettingshausen, Franz Unger (Mendel's Vienna teachers, 1851-53)",
+        "role": "Methodological roots of W_B",
+        "when": "1851-53 (Mendel's University of Vienna period)",
+        "where": "University of Vienna",
+        "culture": "Habsburg academic physics / mathematics / plant physiology",
+        "relation": "transmitter (Doppler: physics/quantitative habit; Ettingshausen: combinatorics — plausible root of the ratio-counting method; Unger: cell theory/plant physiology). The quantitative, combinatorial habit that made the 3:1 ratio VISIBLE.",
+        "confidence": 0.7
+      },
+      {
+        "who": "Carl von Naegeli",
+        "role": "Transmitter-who-failed-to-transmit (a key node in the dormancy)",
+        "when": "correspondence ~1866-1873",
+        "where": "Munich",
+        "culture": "leading German-speaking academic botany",
+        "relation": "rival/failed-transmitter (steered Mendel toward Hieracium/hawkweed, which breeds apomictically and gave anomalous results; did NOT appreciate the work). A causal node in the 34-year dormancy.",
+        "confidence": 0.85
+      },
+      {
+        "_comment": "DARWIN SIDE — the other deep ancestral root.",
+        "who": "Charles Darwin",
+        "role": "Originator of W_A (evolution by natural selection)",
+        "when": "b. 12 Feb 1809, d. 19 Apr 1882; On the Origin of Species 24 Nov 1859",
+        "where": "Shrewsbury / Down House, England",
+        "culture": "English upper-middle-class, Whig/Unitarian-rationalist intellectual milieu, gentleman-naturalist",
+        "relation": "originator (the other deep ancestral root)",
+        "confidence": 0.98
+      },
+      {
+        "who": "Alfred Russel Wallace",
+        "role": "Independent co-discoverer of natural selection",
+        "when": "1858 Ternate essay; joint Darwin-Wallace announcement 1 Jul 1858",
+        "where": "Malay Archipelago / England",
+        "culture": "English working-class self-made naturalist (contrast to Darwin's gentleman status)",
+        "relation": "co-originator/rival (forced Darwin's publication; the priority near-miss that itself prefigures the discrepancy theme)",
+        "confidence": 0.95
+      },
+      {
+        "who": "Erasmus Darwin; Charles Lyell; Thomas Malthus",
+        "role": "Ancestral sub-wrappers of W_A (the deep intellectual roots)",
+        "when": "Erasmus (late 18th c.); Lyell (Principles of Geology, 1830-33); Malthus (Essay on Population, 1798)",
+        "where": "England",
+        "culture": "English Enlightenment / early-Victorian science",
+        "relation": "transmitter (Erasmus Darwin: early transmutationism; Lyell: uniformitarian deep time; Malthus: the struggle-for-existence kernel). Plus the HMS Beagle voyage 1831-36 (Galapagos finches/tortoises) as the empirical root.",
+        "confidence": 0.9
+      },
+      {
+        "_comment": "THE ARCHITECTS — the REAL proximate people-0 of W_C. The schema's 2-slot parents[] cannot hold these; they are recorded here AND surfaced as the framework-vs-record discrepancy.",
+        "who": "R.A. Fisher (1890-1962, England), J.B.S. Haldane (1892-1964, England), Sewall Wright (1889-1988, USA)",
+        "role": "The population-genetics trio — the mathematical WELDERS of W_C",
+        "when": "Fisher 1918 & 1930; Haldane 1924-32; Wright 1931-32",
+        "where": "England (Fisher, Haldane) + USA (Wright)",
+        "culture": "transatlantic early-20th-c. academic mathematical biology",
+        "relation": "co-equal producer (the actual proximate parents of W_C, via the mediating wrapper population genetics). Fisher and Wright DISAGREED (mass-selection vs shifting-balance) — S was internally fractured.",
+        "confidence": 0.92
+      },
+      {
+        "who": "Theodosius Dobzhansky (1900-75, Ukraine->USA), Ernst Mayr (1904-2005, Germany->USA), George Gaylord Simpson (1902-84, USA), G. Ledyard Stebbins (1906-2000, USA), Julian Huxley (1887-1975, England), E.B. Ford (England)",
+        "role": "The empirical/naturalist synthesizers — the co-architects who extended the math across disciplines",
+        "when": "Dobzhansky 1937; Mayr 1942 (biological species concept); Simpson 1944 (paleontology); Stebbins 1950 (botany); Huxley 1942 (coined the name); Ford (ecological genetics)",
+        "where": "USA + UK + emigre-European network",
+        "culture": "transatlantic (UK + US + emigre-European) early-20th-c. academic network",
+        "relation": "co-equal producer (the architects who turned the population-genetic math into a cross-disciplinary theory; Dobzhansky 1937 is often dated as the synthesis's true initiator)",
+        "confidence": 0.92
+      }
+    ]
+  },
+
+  "harvest": {
+    "_comment": "UP, in the LATENT + CULTURAL frame. The tree grows to the present here. Includes the live extension debate (EES) and the dark cultural child (eugenics).",
+    "descendants": [
+      {
+        "name": "Neutral theory of molecular evolution",
+        "what": "Most molecular change is genetic drift, not selection (Motoo Kimura 1968; King & Jukes 1969). A child of (Modern Synthesis x molecular biology) that RE-OPENED the drift question the hardened synthesis had closed — a partial counter-child.",
+        "frame": ["time", "knowledge"],
+        "confidence": 0.9
+      },
+      {
+        "name": "Gene-centered view / kin selection / inclusive fitness",
+        "what": "W.D. Hamilton (1964), George C. Williams (Adaptation and Natural Selection, 1966), popularized by Dawkins' The Selfish Gene (1976). A child of (Synthesis x game theory/optimization).",
+        "frame": ["knowledge", "meaning"],
+        "confidence": 0.9
+      },
+      {
+        "name": "Sociobiology",
+        "what": "E.O. Wilson (1975) — extending the synthesis to social behavior; child of (Synthesis x ethology x ecology).",
+        "frame": ["knowledge", "meaning"],
+        "confidence": 0.85
+      },
+      {
+        "name": "Evolutionary developmental biology (evo-devo)",
+        "what": "Re-injecting the development the synthesis had black-boxed; a partial RIVAL-child claiming the synthesis omitted a key causal layer.",
+        "frame": ["knowledge", "time"],
+        "confidence": 0.85
+      },
+      {
+        "name": "Extended Evolutionary Synthesis (EES)",
+        "what": "Pigliucci & Mueller 2007+ — adds niche construction, developmental plasticity, inclusive/epigenetic inheritance; an explicit CONTESTING child claiming the parent W_C is insufficient. This is the live debate that keeps W_C's status 'active-contested' rather than closed.",
+        "frame": ["knowledge", "meaning"],
+        "confidence": 0.85
+      },
+      {
+        "name": "Quantitative genetics -> animal/plant breeding -> heritability -> GWAS",
+        "what": "Methodological lineage descending DIRECTLY from Fisher 1918's infinitesimal model; genome-wide association studies are its current form. The most quantitatively continuous descendant.",
+        "frame": ["knowledge"],
+        "confidence": 0.9
+      }
+    ],
+    "cultural_harvest": [
+      {
+        "domain": "other",
+        "_subdomain": "tech-society / dark child",
+        "what": "EUGENICS — Francis Galton coined the term 1883 from his half-cousin Darwin's work; Fisher's 1930 Genetical Theory of Natural Selection itself contained eugenic chapters; weaponized by the Nazi state and US/UK sterilization programs. A dark cultural child of the selection-on-variation kernel — the synthesis's most consequential and harmful cultural spill."
+      },
+      {
+        "domain": "scifi",
+        "what": "Darwinian evolution as a pervasive literary engine — H.G. Wells (The Time Machine 1895, Eloi/Morlocks as evolutionary divergence; The Island of Doctor Moreau), Olaf Stapledon (Last and First Men, future human evolution); the whole 'far-future human speciation' and 'survival of the fittest' trope."
+      },
+      {
+        "domain": "art",
+        "what": "Social Darwinism in political/economic/artistic thought (Herbert Spencer's 'survival of the fittest' migrating into literature, painting of 'struggle', and naturalist fiction) — a meaning-frame spill of the selection kernel into culture writ large."
+      },
+      {
+        "domain": "tech",
+        "what": "Evolutionary / genetic algorithms in computer science (Holland 1975; Fisher/Muller's recombination ideas as a named ancestor in the BES convergence #9 lineage ALREADY in the Phase-1 DB) — the population-genetics math reused as an optimization substrate. This is the most direct cross-link back into the convergence DB."
+      }
+    ]
+  },
+
+  "relatives": {
+    "_comment": "WIDE edges (SCHEMA.md §5 flag 2). Cousins, influences, siblings, rivals spanning the physical AND the latent. OPTIONAL group, flagged for ratification.",
+    "edges": [
+      {
+        "name": "Symbiogenesis / endosymbiotic theory (convergence #3 in the Phase-1 DB)",
+        "relation": "cousin",
+        "frame": ["time", "space"],
+        "confidence": 0.8,
+        "note": "A SIBLING two-parent weld on the same biology substrate (host + endosymbiont -> organelle-bearing organism). Lives in the Phase-1 DB as a Tier-1 convergence. Cousin to this specimen: both are biology-substrate pushouts, but symbiogenesis is a clean two-parent case where THIS specimen is the messy multi-parent one — the contrast is informative for the schema."
+      },
+      {
+        "name": "Model merging (TIES/DARE) (convergence #6) + BES (convergence #9)",
+        "relation": "cousin",
+        "frame": ["knowledge"],
+        "confidence": 0.78,
+        "note": "Latent-frame cousins: the population-genetics recombination math at this specimen's core is a NAMED ANCESTOR of BES (Fisher 1930 + Muller 1932 in the BES lineage) and conceptually kin to weight-space model merging. The Modern Synthesis is, in the DB's terms, an ancestor of two of the nine convergences."
+      },
+      {
+        "name": "Lamarckism / neo-Lamarckism (inheritance of acquired characters)",
+        "relation": "rival",
+        "frame": ["time", "meaning"],
+        "confidence": 0.85,
+        "note": "The defeated rival theory — the 'eclipse of Darwinism' alternative that the synthesis (via Weismann's hard heredity) closed off. A rival edge, not a parent."
+      },
+      {
+        "name": "Mendel-Fisher controversy (Fisher 1936: 'too good to be true' data)",
+        "relation": "influence",
+        "frame": ["knowledge"],
+        "confidence": 0.75,
+        "note": "A reflexive cousin-conflict: Fisher (a proximate parent of W_C) statistically accused Mendel (an ancestral root of W_C) of data too close to expectation. A parent auditing an ancestor — a curiosity of this genealogy, and an active historiographic dispute in its own right."
+      }
+    ]
+  },
+
+  "fuzzy_layer": {
+    "_comment": "The LOD / confidence partition made explicit. certain_core = the trunk (high-confidence); frontier = speculative/conjectural + the SCHEMA-STRESS notes (where the record strains the schema's fields). A conjecture = a weld drawn in the frontier but not yet confirmed.",
+    "certain_core": [
+      "TRUNK (conf ~0.95-0.97): a merge happened — Darwinian natural selection was reconciled with Mendelian particulate inheritance into one framework across ~1918-1950, named 'the modern synthesis' by Huxley 1942.",
+      "Fisher 1918 reconciled continuous biometric variation with discrete Mendelian loci (many small-effect loci summing); this is the mathematical heart of the weld (conf ~0.95).",
+      "Mendel's 1866 paper was cited only ~3 times in ~34 years and was independently rediscovered in 1900 by de Vries, Correns, and Tschermak (the FACT of low citation + 1900 rediscovery is high-confidence ~0.9-0.95, even though the INTERPRETATION of the neglect is contested).",
+      "Darwin lacked a mechanism of inheritance and the blending-inheritance assumption (Jenkin 1867) was a genuine fatal objection that the Mendelian weld removed (conf ~0.95).",
+      "The redefinition of evolution as 'change in allele frequencies in populations' is the synthesis's net product (conf ~0.95).",
+      "Hardy-Weinberg (1908) as the conservation law / population-genetics foundation (conf ~0.95).",
+      "The architect roster (Fisher, Haldane, Wright, Dobzhansky, Mayr, Simpson, Stebbins, Huxley) is well-attested (conf ~0.92).",
+      "The Extended Evolutionary Synthesis (2007+) as a live contesting descendant (conf ~0.9)."
+    ],
+    "frontier": [
+      "FRONTIER — literal-dyad conjecture (conf ~0.55): that 'Darwin' and 'Mendel' are THE two proximate parents. The record's proximate parent is population genetics; Darwin and Mendel are better read as the two DEEP ROOTS. This is recorded as discrepancy #1 (framework-vs-record-tension) — the highest-value frontier item.",
+      "FRONTIER — clean-dormancy conjecture (conf ~0.5): that Mendel was a misunderstood genius simply ignored-then-rediscovered intact. Olby 1979/Brannigan contest this (he was doing species-hybridization, a different question; the 'long neglect' framing traces to Glass 1953). The FACT of ~3 citations stays high; the NARRATIVE is frontier.",
+      "FRONTIER — Tschermak as a true co-equal rediscoverer (conf ~0.5): several historians argue he did not fully grasp segregation; the 'three rediscoverers' trope may be inflated to ~two.",
+      "FRONTIER — S as a single coherent object (conf ~0.7): the Fisher-Wright controversy means the shared sub-object (population genetics) was internally FRACTURED. The seam is non-unitary.",
+      "FRONTIER — the child as a single fixed object (conf ~0.7): the 'hardening of the synthesis' (Gould/Provine) means W_C at t=1937 (pluralist) differs from W_C at t=1959 (hardened pan-selectionism). The object is time-indexed.",
+      "FRONTIER — single birth-date (conf <0.6 for any single date; the 1918-1950 RANGE is ~0.95): no defensible single 'when'.",
+      "FRONTIER — Vienna-teacher methodological roots (conf ~0.7): the claim that Ettingshausen's combinatorics specifically seeded Mendel's ratio-counting is plausible but not firmly attested — a deep-root conjecture.",
+      "SCHEMA-STRESS (not a historical conjecture but a frontier of the MODEL): the multi-parent reality, the status-trajectory, the revived-as-reinterpreted question, the fractured-S, the antagonism-then-fusion lifecycle, and the weld-as-process all sit at the edge of what the schema's fields can hold — see discrepancies[] and the gap notes carried into discrepancy #1's why_interesting."
+    ]
+  },
+
+  "discrepancies": [
+    {
+      "_comment": "THE HIGHEST-VALUE discrepancy: the framework-vs-record tension. Also the structural home for the EXTRA real-world parents (SCHEMA.md §5 flag 6).",
+      "what": "The clean 'Darwin + Mendel -> Synthesis' two-parent weld does NOT match the record. The real weld was MULTI-PARENT and the true shared sub-object was POPULATION GENETICS, not Mendel's 1866 paper meeting Darwin's 1859 book. The actual co-equal producers were (at least) Fisher, Haldane, Wright (the mathematical population geneticists, ~1918-32) PLUS the empirical/naturalist synthesizers Dobzhansky (1937), Mayr (1942), Simpson (1944), Stebbins (1950), Huxley (1942), Ford. 'Darwin' and 'Mendel' are better read as the two DEEP ROOTS/ancestors than as the two proximate parents; the proximate parents are Darwinism-as-inherited and Mendelism-as-rediscovered-AND-mathematized, welded BY population genetics. Per SCHEMA.md §5 gap #6, this is exactly the binary-weld-vs-multi-parent tension the schema flags: it renders 2 parents; the record has ~6-8 architects + 2 ancestral theories + 1 mediating theory.",
+      "sources_in_conflict": [
+        "Wikipedia 'Modern synthesis (20th century)' + Provine 'The Origins of Theoretical Population Genetics' (multi-architect; population-genetics-as-the-real-seam)",
+        "vs the popular/textbook 'Darwin + Mendel' two-parent shorthand (encyclopedia.com, study.com, museum exhibits)"
+      ],
+      "type": "framework-vs-record-tension",
+      "why_interesting": "The cleanest demonstration in the harvest that the schema's binary pushout is a VISUALIZATION SIMPLIFICATION; the 'real S' sits a layer UP (population genetics) from where the two-parent story puts it. Tells us the schema is missing an explicit 'mediating_wrapper' / 'weld_was_actually_built_by_a_third_theory' variable distinct from 'parents', plus an N-parent mode. This specimen is strong evidence to ratify SCHEMA.md §5 flag 6. The extra parents are recorded in roots.people_0 (the architects) and roots.sub_wrappers (population genetics at depth 0) per the schema's instruction, but it visibly STRAINS the 2-slot model.",
+      "confidence_impact": "Lowers confidence in the literal Darwin-Mendel DYAD as 'the parents' to ~0.55; RAISES confidence that population genetics is the true seam S to ~0.9."
+    },
+    {
+      "what": "CONTESTED DORMANCY: the canonical '35 years of neglect' of Mendel is historiographically disputed. Revisionists (Robert Olby, 'Mendel no Mendelian?', 1979; Augustine Brannigan 1979; L.A. Callender) argue Mendel was NOT simply ignored-then-rediscovered: (a) the 'long neglect' framing itself traces only to Glass 1953 and is a retrospective geneticists' myth; (b) Mendel was read as doing SPECIES-HYBRIDIZATION / species-multiplication (a Linnaeus/Naegeli hybridist question), not 'genetics' — he arguably did not hold a modern allele concept or a universal law of segregation, so there was less to 'neglect' than the legend claims; (c) the 1900 'rediscovery' partly RE-INTERPRETED Mendel through new (mutationist) questions rather than simply recovering him. NOTE the revisionism is itself contested back (Oxford Genetics 2023, 'Gregor Mendel and the theory of species multiplication', and the John Innes 'Placing Mendel back among the Mendelians' argue Olby over-read the strict species definition).",
+      "sources_in_conflict": [
+        "Traditional account (encyclopedia.com 'Rediscovery of Mendel's Laws'; Kronecker-Wallis 'why science ignored him 35 years')",
+        "vs revisionist historiography (Olby 1979 at MendelWeb; Brannigan 1979; Mueller-Wille 2018)",
+        "vs counter-revisionist (Oxford Genetics 2023 iyad046; John Innes 'Placing Mendel back among the Mendelians'; ScienceDaily 2011 archival re-dating)"
+      ],
+      "type": "dormancy-contested",
+      "why_interesting": "This is THE dormancy->resurrection specimen, and its dormancy interval is PRECISELY what is contested — it directly stresses the schema's dormancy_intervals/revival fields: was it dormancy (a W_C-stub asleep) or a DIFFERENT wrapper (species-hybridization) later RE-WELDED into a new role? Suggests a missing schema variable: 'was the revived object the SAME object, or RE-FRAMED?' A revival can be a re-weld into a new role, not a wake-up.",
+      "confidence_impact": "Keeps the FACT of low citation (~3 in 34 yrs) HIGH (~0.9) but lowers confidence in the clean 'ignored genius rediscovered intact' NARRATIVE to ~0.5. The three-way (traditional/revisionist/counter-revisionist) state of the literature is itself recorded honestly."
+    },
+    {
+      "what": "PRIORITY DISPUTE in the 1900 rediscovery: Hugo de Vries published in 1900 (in a French journal) WITHOUT citing Mendel, and added the citation only after Correns objected; de Vries later complained it was unfair that Mendel be called the founder. Correns explicitly credited Mendel. von Tschermak's claim is the weakest — several historians argue he did not fully grasp Mendelian segregation, so the 'three independent rediscoverers' trope is partly inflated (some reduce it to ~two).",
+      "sources_in_conflict": [
+        "de Vries vs Correns (contemporaries), re-litigated by historyofinformation.com",
+        "PubMed 'Hugo de Vries: from intracellular pangenesis to the rediscovery of Mendel' (11147091)",
+        "Tschermak's status questioned in the ScienceDaily 2011 'Early history of genetics revised' reframing"
+      ],
+      "type": "priority-dispute",
+      "why_interesting": "Multiplies the people-0 roots and shows the 'revival TRIGGER' was itself a contested three-way (maybe two-way) event, not a single clean wake-up — a revival is itself a MINI-MERGE with its own priority politics. Suggests the schema's revival.by/revival.trigger fields may need their own internal discrepancy slot.",
+      "confidence_impact": "de Vries/Correns rediscovery HIGH (~0.95); Tschermak as a true co-equal rediscoverer LOWER (~0.5)."
+    },
+    {
+      "what": "CONTESTED GENEALOGY / founding pluralism: the synthesis's own architects DISAGREED on the mechanism, and the disagreement OUTLIVED the synthesis. The R.A. Fisher vs Sewall Wright controversy (1929-1962, persisting after) pits Fisher's large-population mass-selection (drift negligible) against Wright's small-subpopulation 'shifting balance' (drift important). They are NOT one harmonious parent but two RIVAL population-genetic engines.",
+      "sources_in_conflict": [
+        "Fisher 1930 (Genetical Theory of Natural Selection) vs Wright 1931/1932 (shifting-balance)",
+        "analyzed in Provine; the Fisher-Wright-controversy literature (Skipper, 'The persistence of the R.A. Fisher-Sewall Wright controversy', Biology & Philosophy)"
+      ],
+      "type": "contested-genealogy",
+      "why_interesting": "Undercuts treating 'population genetics' (the shared sub-object S) as a SINGLE coherent object — S itself contained an unresolved internal rift; the seam is FRACTURED. Schema gap: a 'parent' / shared-sub-object can be internally NON-UNITARY / itself contested. The schema currently treats S as one string.",
+      "confidence_impact": "Lowers confidence that S is a single coherent object to ~0.7; the rift itself is HIGH-confidence (~0.95)."
+    },
+    {
+      "what": "WHIG-VS-REVISIONIST 'hardening of the synthesis': Gould and Provine argue the synthesis NARROWED/HARDENED between the 1940s and 1959 (the Darwin centennial) from a pluralistic 1930s view (drift, non-adaptive traits allowed) into a rigid pan-selectionism (adaptation everywhere, drift demoted). So the 'finished' Modern Synthesis (the W_C usually cited) is a HARDENED descendant, not the original weld.",
+      "sources_in_conflict": [
+        "Stephen Jay Gould + William Provine (the hardening thesis)",
+        "vs the synthesis architects' own triumphal self-history (Mayr & Provine eds., The Evolutionary Synthesis, 1980 — which contains BOTH readings)",
+        "PubMed 27907853 'Sewall Wright, shifting balance theory, and the hardening of the modern synthesis'"
+      ],
+      "type": "whig-vs-revisionist",
+      "why_interesting": "The W_C CHANGED SHAPE over time (lod/time-indexed): the object at t=1937 (pluralist) differs from the object at t=1959 (hardened). Directly exercises the schema's status-over-time and lod_scale fields — the SAME weld read at two dates gives two different children. Strong evidence for a status-TRAJECTORY field rather than a single status enum.",
+      "confidence_impact": "Introduces TIME-DEPENDENCE into the child's own kernel; confidence that 'the Modern Synthesis' is a single fixed object lowered to ~0.7."
+    },
+    {
+      "what": "DATE/ATTRIBUTION of the term and the 'start': Julian Huxley coined 'modern synthesis' in 1942 (Evolution: The Modern Synthesis), but the synthesis is variously dated to START at Fisher 1918, Fisher/Haldane/Wright 1930-32, or Dobzhansky 1937 ('the work that initiated the Modern Synthesis', per David Hull). Different sources name different 'birth dates' and different 'first architect'.",
+      "sources_in_conflict": [
+        "Berkeley Evolution 101 (Dobzhansky 1937 as the start)",
+        "vs Wikipedia/Provine (Fisher 1918 as the mathematical origin)",
+        "vs Huxley 1942 (the name itself)"
+      ],
+      "type": "date/attribution-conflict",
+      "why_interesting": "The 'when' field of the weld has NO single answer — the merge was a ~30-year PROCESS with several defensible birth-dates, not an event; stresses the schema's single 'when' field. Evidence for a duration/interval 'when' rather than a date.",
+      "confidence_impact": "No single date exceeds ~0.6; the 1918-1950 RANGE is high-confidence (~0.95)."
+    },
+    {
+      "_comment": "An extra discrepancy surfaced from the weld's own lifecycle — the antagonism-then-fusion the schema has no field for.",
+      "what": "ANTAGONISM-THEN-FUSION: W_B (Mendelism) did not arrive as a complementary partner to W_A — early-1900s Mendelism was an ANTI-Darwinian 'mutationism' (Bateson, de Vries) that seemed to make gradual natural selection redundant (saltationist 'new species in one jump'). For ~15 years (~1900-1915) the two PARENTS were ENEMIES; the biometrician-vs-Mendelian war was fought BEFORE Fisher 1918 welded them. The schema's survived/dropped fields capture what persisted, but there is no field for 'a parent that first OPPOSED the other parent before being fused to it'.",
+      "sources_in_conflict": [
+        "Wikipedia 'Modern synthesis (20th century)' (the biometrician-Mendelian dispute section)",
+        "Provine (the biometrician-Mendelian war as the synthesis's prehistory)"
+      ],
+      "type": "framework-vs-record-tension",
+      "why_interesting": "The weld has a LIFECYCLE the schema does not model: parents can be antagonists first and partners later. This is distinct from dormancy (neither parent was asleep — they were actively fighting). Suggests a missing 'pre-weld relationship' variable on the weld (antagonism | independence | complementarity) and a note that the shared sub-object S (population genetics) had to be BUILT to make peace, not merely discovered.",
+      "confidence_impact": "The antagonism phase is HIGH-confidence (~0.9); it does not lower the weld's confidence but flags a missing schema variable."
+    }
+  ],
+
+  "sources": [
+    {
+      "name": "Wikipedia, 'Modern synthesis (20th century)'",
+      "type": "encyclopedia",
+      "url": "https://en.wikipedia.org/wiki/Modern_synthesis_(20th_century)",
+      "what_used_for": "Founder roster, dates, biometrician-Mendelian dispute, eclipse of Darwinism, retained/dropped ideas, the hardening narrative",
+      "reliability": 0.8,
+      "_reliability_comment": "good tertiary synthesis; cross-checked against Provine"
+    },
+    {
+      "name": "Wikipedia, 'Gregor Mendel'",
+      "type": "encyclopedia",
+      "url": "https://en.wikipedia.org/wiki/Gregor_Mendel",
+      "what_used_for": "Mendel people-0 roots: dates/places, monastery, Napp, Doppler/Vienna training, 1865/66 paper, Naegeli correspondence, ~3 citations, abbot life",
+      "reliability": 0.8
+    },
+    {
+      "name": "Wikipedia, 'On the Origin of Species'",
+      "type": "encyclopedia",
+      "url": "https://en.wikipedia.org/wiki/On_the_Origin_of_Species",
+      "what_used_for": "Darwin people-0 roots: 1859, Beagle 1831-36, Malthus, Lyell, Wallace 1858, Erasmus Darwin, blending-inheritance weakness, pangenesis 1868",
+      "reliability": 0.8
+    },
+    {
+      "name": "William B. Provine, 'The Origins of Theoretical Population Genetics' (Univ. Chicago Press; orig. 1971)",
+      "type": "scholarly-history",
+      "url": "https://press.uchicago.edu/ucp/books/book/chicago/O/bo3618372.html",
+      "what_used_for": "The population-genetics-as-the-real-seam claim; biometrician-Mendelian war; Castle; the hardening thesis",
+      "reliability": 0.95,
+      "_reliability_comment": "the authoritative monograph; accessed via search summaries, NOT full text — see gap note"
+    },
+    {
+      "name": "Wikipedia, 'The Correlation between Relatives on the Supposition of Mendelian Inheritance' (Fisher 1918)",
+      "type": "encyclopedia",
+      "url": "https://en.wikipedia.org/wiki/The_Correlation_between_Relatives_on_the_Supposition_of_Mendelian_Inheritance",
+      "what_used_for": "The 1918 reconciliation (continuous variation from many small-effect Mendelian loci); founding stone of quantitative genetics; initial Royal Society referee rejection",
+      "reliability": 0.85,
+      "_reliability_comment": "web-verified 2026-06-09: confirmed Fisher resolved the biometrician-Mendelian dispute via many-loci-small-effect + central limit theorem"
+    },
+    {
+      "name": "'From R.A. Fisher's 1918 Paper to GWAS a Century Later' (PMC6456325)",
+      "type": "scholarly-history",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6456325/",
+      "what_used_for": "Fisher 1918 as origin of quantitative genetics and ancestor of GWAS (harvest/descendants)",
+      "reliability": 0.9
+    },
+    {
+      "name": "Robert C. Olby, 'Mendel no Mendelian?' (1979) via MendelWeb; Brannigan (1979); Mueller-Wille, 'Gregor Mendel and the History of Heredity' (2018)",
+      "type": "scholarly-history",
+      "url": "http://www.mendelweb.org/MWolby.html",
+      "what_used_for": "The contested-dormancy / 'neglect is a myth' / species-hybridization revisionist historiography",
+      "reliability": 0.9,
+      "_reliability_comment": "revisionist; itself contested by Oxford Genetics 2023 and John Innes (recorded in discrepancy #2) — web-verified 2026-06-09"
+    },
+    {
+      "name": "'Gregor Mendel and the theory of species multiplication' (Oxford Genetics 2023, iyad046) + John Innes 'Placing Mendel back among the Mendelians'",
+      "type": "scholarly-history",
+      "url": "https://academic.oup.com/genetics/article/224/2/iyad046/7082906",
+      "what_used_for": "The COUNTER-revisionist response to Olby (Mendel did accept within-species variation; Olby over-read the strict species definition) — the third pole of the dormancy dispute",
+      "reliability": 0.9,
+      "_reliability_comment": "web-verified 2026-06-09; peer-reviewed, recent"
+    },
+    {
+      "name": "Peter J. Bowler, 'The Eclipse of Darwinism' (Johns Hopkins UP, 1983)",
+      "type": "scholarly-history",
+      "url": "https://www.press.jhu.edu/books/title/2572/eclipse-darwinism",
+      "what_used_for": "The ~1880s-1930s period when natural selection was UNpopular and mutationism/orthogenesis/neo-Lamarckism reigned (the dormancy context for W_A's mechanism)",
+      "reliability": 0.95
+    },
+    {
+      "name": "Wikipedia, 'Genetics and the Origin of Species' (Dobzhansky 1937) + Berkeley Evolution 101 'Starting The Modern Synthesis: Dobzhansky'",
+      "type": "encyclopedia",
+      "url": "https://evolution.berkeley.edu/the-history-of-evolutionary-thought/1900-to-present/starting-the-modern-synthesis-theodosius-dobzhansky/",
+      "what_used_for": "Dobzhansky 1937 as initiator; Mayr/Simpson/Stebbins/Huxley as co-architects; David Hull attribution",
+      "reliability": 0.85
+    },
+    {
+      "name": "Wikipedia, 'Evolution: The Modern Synthesis' (Huxley 1942)",
+      "type": "encyclopedia",
+      "url": "https://en.wikipedia.org/wiki/Evolution:_The_Modern_Synthesis",
+      "what_used_for": "Huxley 1942 coined the term 'modern synthesis'; the union dated to 'the thirties'",
+      "reliability": 0.85,
+      "_reliability_comment": "web-verified 2026-06-09"
+    },
+    {
+      "name": "Fisher-Wright controversy literature: Skipper 'The persistence of the R.A. Fisher-Sewall Wright controversy' (Biology & Philosophy) + PubMed 27907853 'Sewall Wright, shifting balance theory, and the hardening of the modern synthesis'",
+      "type": "scholarly-history",
+      "url": "https://link.springer.com/article/10.1023/A:1020178411042",
+      "what_used_for": "The founding-pluralism (contested-genealogy) and hardening (whig-vs-revisionist) discrepancies",
+      "reliability": 0.9
+    },
+    {
+      "name": "Mendel rediscovery priority: historyofinformation.com 'de Vries, Correns & Tschermak Independently Rediscover...' + PubMed 11147091 'Hugo de Vries: from pangenesis to the rediscovery of Mendel' + ScienceDaily 2011 'Early history of genetics revised'",
+      "type": "aggregator",
+      "url": "https://www.historyofinformation.com/detail.php?id=3828",
+      "what_used_for": "The 1900 priority dispute (de Vries non-citation, Tschermak contested); confirms ~3 citations in 35 years",
+      "reliability": 0.8,
+      "_reliability_comment": "web-verified 2026-06-09: ~3 citations and read-as-hybridization confirmed across multiple independent sources"
+    },
+    {
+      "name": "Wikipedia, 'Neutral theory of molecular evolution' + 'Eugenics' + 'Extended evolutionary synthesis'",
+      "type": "encyclopedia",
+      "url": "https://en.wikipedia.org/wiki/Extended_evolutionary_synthesis",
+      "what_used_for": "The harvest/descendants (Kimura 1968, Galton/eugenics 1883, EES 2007) and cultural spill",
+      "reliability": 0.8
+    }
+  ]
+}

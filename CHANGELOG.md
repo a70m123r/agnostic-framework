@@ -8,6 +8,19 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-06-09 — canonical wrapper-genealogy: the render system + 6 specimens (v1+v2), Pav's "make it canonical" direction
+
+The "agnostic canon render system" for theory-merges, per Pav's enriched model (a theory is a wrapper-of-wrappers rooted DOWN in people/institutions in the physical frame, harvesting UP into utility + culture, everything FUZZY level-of-detail). Two dynamic-workflow batches (web-harvested from real aggregators — Wikidata/OpenAlex/SEP/scholarly histories — with cited sources + discrepancy registers). Tier-3 exploratory, surfaced for Cowork+Pav ratification; promotes nothing; convergence list stays 9 (specimens are calibration instruments/worked-examples extending `wrapper_classes_phase1.json` at deeper zoom, NOT new convergences); surprise qualitative, never in bits.
+
+Lives in `candidates/canonical_genealogy/`: `SCHEMA.md` (v1) → `SCHEMA_v2.md` (current) + templates; `BATCH_FINDINGS.md` + `BATCH_FINDINGS_v2.md`; 6 specimens in `specimens/` (maxwell, darwin_mendel, qm_relativity, manhattan, keynesian, deep_learning), each {json + readable md}.
+
+- **Batch 1 (Maxwell sharp / Darwin+Mendel dormant / QM+GR frontier) → v1 + R1–R16.** The clean two-parent→one-child model is a PROJECTION the record overflows in a structured way — the overflow IS the fuzzy frontier. Three convergent breaks: N-ary parents + a mediating welder (often not a parent); weld-as-process-with-duration; one weld = a chain of sub-welds (coherence-under-zoom diagnostic). Deepest correction (R9): surprise and a consolidated child are ORTHOGONAL (QG = huge synergy, unborn after 90 yrs).
+- **Batch 2 (Pav's 5 new dimensions; Manhattan / Keynesian / deep-learning) → v2 + R17–R34.** All five (weld lifecycle+type classification; actors→institutions/governments with carrier+inhabitant roles; physical/latent LOD filter; external pull/squeeze forcing events; fuzzy-edges-by-default) earned first-class status on real data. D2 + D4 the strongest — they re-rank the framework (a person-only model cannot hold the Manhattan war-state parent; the tempo of all three welds is exogenous). Fuzzy-by-default did NOT bloat (design law keeps the sharp case thin; 0 out-of-[0,1] across ~193 scalars). The surprise⊥child plane is now 3D (+ time): QG unborn / Manhattan born-fast / Keynesian reborn-different ×2 / deep-learning demonstrated-but-unadopted-23-years. v3 wishlist R17–R34 dominated by LINEAGE-RELATIVITY + DIACHRONIC IDENTITY.
+
+The propose-in-a-discrepancy-row-before-extending-vocabulary discipline worked. Sources mixed-reliability, flagged in-record (partisan AI-winter + Manhattan-revisionist sources noted). v3 refinements are PROPOSALS owing review; SCHEMA_v2 remains a Tier-3 DRAFT.
+
+---
+
 ## 2026-06-09 — frame-lock PILOT: first real ΔL-in-bits (bar-to-promote, controlled ground truth)
 
 The bar-to-promote run for the frame-lock protocol (Pav's steer). No torch/HF here, so the disciplined first step: validate the MDL-synergy metric on controlled ground-truth tensors with KNOWN verdicts (cf. Pilot-2) before real model-merging. 8-agent dynamic workflow (2 lock+pipeline → 5 measure → 1 synthesize). Tier-3 PILOT, surfaced for ratification; nothing promoted; convergence list stays 9.

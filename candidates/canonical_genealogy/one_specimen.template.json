@@ -1,0 +1,176 @@
+{
+  "_template_doc": "CANONICAL WRAPPER-GENEALOGY SPECIMEN — empty template, one merge event rendered as a rooted genealogy graph that STOPS AT THE PRESENT. Spec: SCHEMA.md (same dir). Tier-3 exploratory data-harvest for Cowork+Pav ratification — NOT canon, NOT a promotion, convergence list stays 9. FILL DISCIPLINE: every node/edge carries confidence in [0,1] (SOFT, never hard categorical) + a zoom/LOD depth; certain core near the surface (the merge event + its parents) fades into a probabilistic frontier in the deep roots (down to people/place) and at the wide edges (cousins, influences) — and that frontier is FIRST-CLASS (where conjectures are cultivated; a conjecture = a low-confidence weld not yet confirmed). frame is the observer global kernels {time,space,knowledge,meaning}; emergence is frame-relative. SEARCH THE WEB, do not work from memory; cite real sources in sources[]; mark uncertain claims low-confidence. MARK DISCREPANCIES (priority disputes, contested genealogies, date/attribution conflicts, contested dormancy, and especially framework-vs-record tensions) — they are SIGNAL. bits_note is QUALITATIVE ONLY (MDL-in-bits needs latent embeddings, a LATER step — do NOT fabricate bit values). Each array below holds ONE empty exemplar element showing the shape; duplicate or delete elements as needed. EXTENDS ../latent_olympics_data/wrapper_classes_phase1.json — same organism, deeper zoom (see SCHEMA.md §4).",
+
+  "schema_version": "0.1-canonical-genealogy",
+  "specimen_id": "",
+  "_status": "Tier-3 WORKING specimen — exploratory data-harvest, surfaced for Cowork+Pav ratification. NOT canon, NOT a tier promotion, does NOT grow the convergence list (stays 9). All confidences are SOFT scores in [0,1]; bits are qualitative only.",
+  "extends": {
+    "_comment": "Linkage back to the Phase-1 wrapper CLASS this merge-event specimen instantiates (SCHEMA.md §4). Same graph, deeper zoom.",
+    "phase1_file": "../latent_olympics_data/wrapper_classes_phase1.json",
+    "phase1_class_name": "",
+    "relation_note": ""
+  },
+  "generated": "",
+  "frames_present": [],
+  "overall_confidence": null,
+
+  "child": {
+    "_comment": "W_C — the emergent wrapper born in this merge. The trunk node. Corresponds to one Phase-1 wrapper_classes[] row, zoomed in.",
+    "name": "",
+    "kernel": "",
+    "frame": [],
+    "status": "",
+    "_status_enum": "one of: risen | active | dormant | resurrected | stale (observer-relative lifecycle position)",
+    "confidence": null,
+    "utility": {
+      "_comment": "Pav's three utility legs as prose + an enumerated affordance list.",
+      "unifier": "",
+      "compressor": "",
+      "action_spaces_unlocked": []
+    }
+  },
+
+  "weld": {
+    "_comment": "The merge itself: parents -> child. The heart of the specimen and the locus of the parents-produce-W_C test. This is the frame-indexed, per-node-confidence render of ONE entry in the Phase-1 row's overlaps[].",
+    "parents": [
+      {
+        "_role": "W_A",
+        "name": "",
+        "kernel": "",
+        "frame": [],
+        "confidence": null
+      },
+      {
+        "_role": "W_B",
+        "name": "",
+        "kernel": "",
+        "frame": [],
+        "confidence": null
+      }
+    ],
+    "shared_sub_object_S": "",
+    "_shared_sub_object_S_comment": "The seam the parents fused along — what overlapped (the S of the pushout; the nesting space / Venn-lens).",
+    "surprise": "",
+    "_surprise_comment": "PROSE: what W_C does that NEITHER parent predicts alone (the synergy). Prose, not a number.",
+    "surprise_confidence": null,
+    "bits_note": "",
+    "_bits_note_comment": "QUALITATIVE ONLY. A note on description-length / synergy-in-bits (e.g. 'joint description clearly shorter than either parent alone; order-of-magnitude only'). Do NOT fabricate numeric bit values — MDL-in-bits needs latent embeddings, a LATER step.",
+    "survived": [],
+    "_survived_comment": "Parent features that persisted into W_C (the stubs / procedural roots that live on).",
+    "dropped": [],
+    "_dropped_comment": "Parent features lost / not carried through the weld.",
+    "frame_of_weld": [],
+    "_frame_of_weld_comment": "Frame(s) in which the weld actually holds (may differ from child.frame; e.g. a weld that only holds through time). Subset of {time,space,knowledge,meaning}.",
+    "lod_scale": "",
+    "_lod_scale_comment": "At what zoom/resolution the weld holds (e.g. 'holds at field-level grain; dissolves into many sub-welds when zoomed in').",
+    "when": "",
+    "_when_comment": "Date / era of the merge.",
+    "dormancy_intervals": [
+      {
+        "from": "",
+        "to": "",
+        "why": ""
+      }
+    ],
+    "revival": {
+      "_comment": "If resurrected: when, by whom, and what triggered the wake. Leave blank if never dormant.",
+      "when": "",
+      "by": "",
+      "trigger": ""
+    }
+  },
+
+  "roots": {
+    "_comment": "DOWN, in the PHYSICAL frame. The recursive descent from W_C toward people and place. Confidence FADES and depth RISES as you go deeper — this is where the certain-core -> probabilistic-frontier gradient lives.",
+    "sub_wrappers": [
+      {
+        "_comment": "A smaller wrapper W_C is built from, recursively down. depth = levels below W_C (0 = immediate constituent; larger = deeper root, typically lower confidence).",
+        "name": "",
+        "kernel": "",
+        "frame": [],
+        "depth": null,
+        "confidence": null,
+        "who_called_it": ""
+      }
+    ],
+    "people_0": [
+      {
+        "_comment": "The ground kernel '(0)': a people-wrapper the deepest roots plug into, standing in the PHYSICAL frame (their time, place, environment, culture).",
+        "who": "",
+        "role": "",
+        "when": "",
+        "where": "",
+        "culture": "",
+        "relation": "",
+        "_relation_comment": "how they relate to the lineage, e.g. originator | transmitter | patron | rival | popularizer",
+        "confidence": null
+      }
+    ]
+  },
+
+  "harvest": {
+    "_comment": "UP, in the LATENT + CULTURAL frame. What sat on top of W_C and what it spilled into. The tree grows to the present here.",
+    "descendants": [
+      {
+        "_comment": "An emergent child: a new theory W_C (crossed with others) went on to seed.",
+        "name": "",
+        "what": "",
+        "frame": [],
+        "confidence": null
+      }
+    ],
+    "cultural_harvest": [
+      {
+        "_comment": "Spill into culture: the emergent clusters of this theory crossed with others.",
+        "domain": "",
+        "_domain_enum": "one of: art | scifi | tech | other",
+        "what": ""
+      }
+    ]
+  },
+
+  "relatives": {
+    "_comment": "WIDE edges (SCHEMA.md §5 flag 2 — added because the brief's prose stresses 'wide relatives spanning the physical AND the latent' but the explicit field list only enumerated DOWN/UP). Cousins, influences, siblings, rivals. OPTIONAL group, flagged for ratification.",
+    "edges": [
+      {
+        "name": "",
+        "relation": "",
+        "_relation_enum": "one of: cousin | influence | sibling | rival",
+        "frame": [],
+        "confidence": null,
+        "note": ""
+      }
+    ]
+  },
+
+  "fuzzy_layer": {
+    "_comment": "The LOD / confidence partition made explicit. certain_core = the trunk (high-confidence nodes/welds); frontier = the speculative/conjectural roots+branches (low-confidence — the cultivation zone). A conjecture = a weld drawn in the frontier but not yet confirmed. Complements the per-node confidence numbers above (numbers per node PLUS this curated trunk/frontier list).",
+    "certain_core": [],
+    "frontier": []
+  },
+
+  "discrepancies": [
+    {
+      "_comment": "An interesting conflict in the historical record. SIGNAL, not noise (Pav's explicit ask). framework-vs-record-tension is the highest-value type — it flags where the clean two-parent weld does NOT match the messy multi-parent reality (which variables the schema is missing). Also record EXTRA real-world parents here (SCHEMA.md §5 flag 6).",
+      "what": "",
+      "sources_in_conflict": [],
+      "type": "",
+      "_type_enum": "one of: priority-dispute | contested-genealogy | date/attribution-conflict | framework-vs-record-tension | dormancy-contested | whig-vs-revisionist",
+      "why_interesting": "",
+      "confidence_impact": ""
+    }
+  ],
+
+  "sources": [
+    {
+      "_comment": "Citation backbone. Consult the WEB (Wikidata, OpenAlex, SEP/IEP, Wikipedia 'history of...', Mathematics Genealogy Project, nLab, Semantic Scholar, named scholarly histories). Every load-bearing field should trace here. Be honest about reliability.",
+      "name": "",
+      "type": "",
+      "_type_enum": "one of: aggregator | encyclopedia | scholarly-history | primary",
+      "url": "",
+      "what_used_for": "",
+      "reliability": null,
+      "_reliability_comment": "number [0,1] or a labelled band (e.g. 'high — peer-reviewed scholarly history')"
+    }
+  ]
+}

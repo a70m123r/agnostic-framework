@@ -1,0 +1,441 @@
+{
+  "_template_doc": "CANONICAL WRAPPER-GENEALOGY SPECIMEN — v2 TEMPLATE, one merge event rendered as a rooted genealogy graph that STOPS AT THE PRESENT. Spec: SCHEMA_v2.md (same dir). Tier-3 exploratory data-harvest for Cowork+Pav ratification — NOT canon, NOT a promotion, convergence list stays 9. DESIGN LAW: every field tagged (R#) or (D#) is OPTIONAL and DEFAULTS EMPTY on a clean sharp weld — fill the v1 trunk (child, weld.parents, when, child.status) and leave the new machinery empty unless the record forces it. If a v2 field feels forced on your case, leave it empty: empty is correct. FILL DISCIPLINE: every node/edge carries confidence in [0,1] (SOFT, never hard categorical) + a zoom/LOD depth + a frame_layer; certain core near the surface fades into a probabilistic frontier in the deep roots and wide edges (the frontier is FIRST-CLASS — a conjecture = a low-confidence weld not yet confirmed). frame = observer global kernels {time,space,knowledge,meaning}; emergence is frame-relative. GRADED IS THE DEFAULT (D5): every boundary is a membership in [0,1]; crisp = membership ~0/1. SEARCH THE WEB, do not work from memory; cite real sources in sources[]; mark uncertain claims low-confidence. MARK DISCREPANCIES (priority disputes, contested genealogies, date/attribution conflicts, contested dormancy, and especially framework-vs-record tensions) — they are SIGNAL; a NEW weld_type/phase term must be proposed in a discrepancy row BEFORE use. bits_note is QUALITATIVE ONLY (no fabricated bit values; 'principled-null' allowed on a frontier). OPTIONAL id slugs (e.g. 'weld-main') let forcing_events/actors cross-reference interior nodes cleanly; default is reference-by-name. Each array holds ONE empty exemplar element showing the shape; duplicate or delete as needed. EXTENDS ../latent_olympics_data/wrapper_classes_phase1.json — same organism, deeper zoom (SCHEMA_v2.md §5).",
+
+  "schema_version": "0.2-canonical-genealogy",
+  "specimen_id": "",
+  "_status": "Tier-3 WORKING specimen — exploratory data-harvest, surfaced for Cowork+Pav ratification. NOT canon, NOT a tier promotion, does NOT grow the convergence list (stays 9). All confidences are SOFT scores in [0,1]; bits are qualitative only.",
+  "extends": {
+    "_comment": "Linkage back to the Phase-1 wrapper CLASS this merge-event specimen instantiates (SCHEMA_v2.md §5). Same graph, deeper zoom.",
+    "phase1_file": "../latent_olympics_data/wrapper_classes_phase1.json",
+    "phase1_class_name": "",
+    "relation_note": ""
+  },
+  "generated": "",
+  "frames_present": [],
+  "layers_present": [],
+  "_layers_present_comment": "(D3) union of frame_layer values used — ['physical','latent'] when both are populated. New in v2.",
+  "overall_confidence": null,
+  "_overall_confidence_comment": "Confidence in the specimen as a whole. ALWAYS read paired with fuzzy_layer — it is a SPLIT aggregate (e.g. 0.99 on parents AND 0.40 on an unborn child), never a flat scalar.",
+
+  "schema_capabilities": {
+    "_comment": "(D3+D5) Declared render capabilities. Static block — copy as-is; announces what a v2 render supports.",
+    "layer_filter": {
+      "_comment": "(D3) The render is FILTERABLE on the physical/latent axis; actors are the bridge.",
+      "supported": true,
+      "axes": ["physical", "latent"],
+      "bridge_via": "actors",
+      "note": "A render may show the PHYSICAL view (actors, institutions, places, events) OR the LATENT view (ideas, theories, sub-wrappers); every node declares frame_layer; actors straddle and connect the two."
+    },
+    "graded_membership": {
+      "_comment": "(D5) Fuzzy edges by design — graded membership is the pervasive default.",
+      "supported": true,
+      "default": "graded",
+      "applies_to": [
+        "node membership", "weld extent (sub_welds)", "actor role-strength (carrier/inhabitant)",
+        "forcing-event influence (acted_on.strength)", "frame-layer straddle (physical/latent membership)",
+        "lifecycle phase membership", "weld_type weight"
+      ],
+      "note": "Every boundary is a membership/confidence in [0,1]; the certain core is just where membership ~1.0. Crisp = the membership happens to be ~0/1."
+    }
+  },
+
+  "child": {
+    "_comment": "W_C — the emergent wrapper born in this merge. The trunk node. Corresponds to one Phase-1 wrapper_classes[] row, zoomed in.",
+    "id": "",
+    "_id_comment": "OPTIONAL slug (SCHEMA_v2.md §0.1) so forcing_events/discrepancies can reference this node cleanly. Default: reference-by-name.",
+    "name": "",
+    "kernel": "",
+    "frame": [],
+    "frame_layer": {
+      "_comment": "(D3) An idea-child is latent (~1.0). layer in {physical|latent|straddle}; the two memberships are graded in [0,1].",
+      "layer": "latent",
+      "physical_membership": 0.0,
+      "latent_membership": 1.0
+    },
+    "status": "",
+    "_status_enum": "one of: risen | active | dormant | resurrected | stale | open-conjecture. (R5 adds open-conjecture / live-unconsummated-weld for a high-synergy weld that never produced a settled child.)",
+    "status_trajectory": [
+      {
+        "_comment": "(R5) OPTIONAL — the child as a TRAJECTORY of states, not one enum (e.g. pluralist-1937 -> hardened-1959 -> contested-2007). Empty if status never moved.",
+        "state": "",
+        "when": "",
+        "by": "",
+        "confidence": null
+      }
+    ],
+    "confidence": null,
+    "_confidence_comment": "Confidence W_C is a real, distinct emergent (not a relabel of a parent / not a pile). (R9) INDEPENDENT of weld.surprise_confidence — see SCHEMA_v2.md §3.4.",
+    "utility": {
+      "_comment": "Pav's three utility legs as prose + an enumerated affordance list.",
+      "unifier": "",
+      "compressor": "",
+      "action_spaces_unlocked": []
+    }
+  },
+
+  "weld": {
+    "_comment": "The merge itself: parents -> child. The heart of the specimen and the locus of the parents-produce-W_C test. The frame-indexed, per-node-confidence render of ONE entry in the Phase-1 row's overlaps[]. Most of R1-R16 and all of D1 land here.",
+    "id": "",
+    "_id_comment": "OPTIONAL slug (e.g. 'weld-main') so forcing_events.acted_on / weld_chain.weld_ref can target this weld.",
+
+    "parents": [
+      {
+        "_role": "W_A",
+        "name": "",
+        "kernel": "",
+        "frame": [],
+        "confidence": null,
+        "parent_kind": "content",
+        "_parent_kind_enum": "(R4) one of: content | method | instrument. Default content."
+      },
+      {
+        "_role": "W_B",
+        "name": "",
+        "kernel": "",
+        "frame": [],
+        "confidence": null,
+        "parent_kind": "content"
+      }
+    ],
+    "_parents_comment": "(v1, kept) The clean BINARY projection [W_A, W_B] — the framework's canonical visualization. ALWAYS present.",
+
+    "parents_full": [
+      {
+        "_comment": "(R1) OPTIONAL the honest N-ary parent set (Maxwell ~7; Darwin+Mendel = 2 roots + synthesizers). EMPTY when the 2-projection is faithful. When present, parents[] is the declared 2-projection OF this set.",
+        "id": "",
+        "name": "",
+        "kernel": "",
+        "frame": [],
+        "confidence": null,
+        "parent_kind": "",
+        "_parent_kind_enum": "(R4) content | method | instrument",
+        "frame_layer": { "layer": "", "physical_membership": null, "latent_membership": null }
+      }
+    ],
+
+    "mediating_wrapper": {
+      "_comment": "(R1) OPTIONAL the agent that PERFORMED the weld when it is NOT one of the parents but sits a layer up (population genetics / Fisher-Haldane-Wright; the Maxwellians). EMPTY when a parent welds itself.",
+      "name": "",
+      "kernel": "",
+      "who_or_what": "",
+      "confidence": null
+    },
+
+    "shared_sub_object_S": "",
+    "_shared_sub_object_S_comment": "The seam the parents fused along — what overlapped (the S of the pushout; the nesting space / Venn-lens).",
+
+    "S_structure": {
+      "_comment": "(R12) OPTIONAL — S may be NON-UNITARY / itself contested. agreed:false = fractured-and-contested seam (Darwin+Mendel's Fisher-Wright rift); agreed:true = multi-faceted-but-agreed (QG). EMPTY when S is one coherent object.",
+      "components": [],
+      "internal_conflict": "",
+      "agreed": null
+    },
+
+    "surprise": "",
+    "_surprise_comment": "PROSE: what W_C does that NEITHER parent predicts alone (the synergy). Prose, not a number.",
+    "surprise_confidence": null,
+    "_surprise_confidence_comment": "(v1, R9) Confidence the surprise is real synergy (vs additive blend). ORTHOGONAL to child.confidence — a seam can be maximally fertile (high here) with an unborn child (low there). Never tie one to the other.",
+
+    "surprise_priority": {
+      "_comment": "(R15) OPTIONAL the CONJECTURE-IN-A-PARENT: a surprise that pre-existed the quantitative weld as a low-confidence guess inside one parent (Faraday's 1846 light-guess, ~15 yrs early). EMPTY when the surprise is born with the weld.",
+      "first_conjectured_by": "",
+      "when": "",
+      "dormant_interval": "",
+      "confidence": null
+    },
+
+    "bits_note": "",
+    "_bits_note_comment": "QUALITATIVE ONLY. A note on description-length / synergy-in-bits. (R16) may be exactly 'principled-null' on a frontier (you cannot MDL-score a theory you do not have). Do NOT fabricate numeric bit values — MDL-in-bits needs latent embeddings, a LATER step.",
+
+    "survived": [],
+    "_survived_comment": "Parent features that persisted into W_C (the stubs / procedural roots that live on).",
+    "dropped": [],
+    "_dropped_comment": "Parent features lost / not carried through the weld.",
+
+    "feature_ledger": [
+      {
+        "_comment": "(R7) OPTIONAL the PER-CANDIDATE survived/dropped matrix — needed when multiple candidate_children drop DIFFERENT parent-features (string drops GR's background-independence; LQG drops QM's fixed external time). EMPTY when a single child makes flat survived/dropped sufficient.",
+        "feature": "",
+        "kept_by": [],
+        "dropped_by": []
+      }
+    ],
+
+    "frame_of_weld": [],
+    "_frame_of_weld_comment": "Frame(s) in which the weld actually holds (may differ from child.frame; e.g. a weld that only holds through time). Subset of {time,space,knowledge,meaning}.",
+    "weld_operator": "",
+    "_weld_operator_comment": "(R13) OPTIONAL the ACTIVE frame-ingredient — not just which frame but WHAT in it does the welding (Maxwell: 'the time-derivative / displacement current / induction-loop closure'). EMPTY when no single operator is identifiable.",
+
+    "lod_scale": "",
+    "_lod_scale_comment": "At what zoom/resolution the weld holds (e.g. 'holds at field-level grain; dissolves into sub-welds when zoomed in').",
+    "sub_welds": [
+      {
+        "_comment": "(R3) OPTIONAL ordered chain — one weld at coarse grain is a family of sub-welds zoomed in (Maxwell: Oersted -> Faraday-induction -> displacement-current -> Maxwellian compression -> Hertz). EMPTY when the weld is atomic at all useful zooms.",
+        "id": "",
+        "name": "",
+        "when": "",
+        "confidence": null
+      }
+    ],
+    "coherence_under_zoom": "",
+    "_coherence_under_zoom_enum": "(R3) OPTIONAL confirms | contradicts — the cross-cut's signature diagnostic. A healthy weld is CONFIRMED by its sub-structure (sharp/dormant); an unconsummated weld is CONTRADICTED by it (QG shatters into mutually-rejecting sub-welds). EMPTY (~confirms) on a sharp case.",
+
+    "when": "",
+    "_when_comment": "(v1, R2) v1 string still valid for a dated merge. OR an object {from, to|null, defensible_dates[]} — a weld is a PROCESS with a duration. A null 'to' marks an open/unconsummated weld (QG: 1916 -> present) and is itself diagnostic.",
+    "_when_interval_example": { "from": "", "to": null, "defensible_dates": [] },
+
+    "dormancy_intervals": [
+      {
+        "_comment": "(v1, R11) Periods the weld/child went dormant. EMPTY if never dormant.",
+        "from": "",
+        "to": "",
+        "why": "",
+        "why_frame": "",
+        "_why_frame_comment": "(R11) OPTIONAL subset of {time, space, knowledge, meaning, physical/political} — a lineage can be cut by a PURGE (physical: Bronstein executed by the NKVD 1938) as well as a THEOREM (knowledge). Empty => inferred from why. NOTE: if the cause was an EXTERNAL event, record it once in forcing_events[] and let why_frame name only the frame — do not restate the event narrative here."
+      }
+    ],
+    "revival": {
+      "_comment": "(v1, R10) If resurrected: when, by whom, what triggered the wake, and whether the object came back the SAME or REINTERPRETED. Leave blank if never dormant.",
+      "when": "",
+      "by": "",
+      "trigger": "",
+      "kind": "same",
+      "_kind_enum": "(R10) same | reinterpreted — a revival can RE-FRAME the dormant object (Mendel did species-hybridization; revived as heredity) rather than wake it. Default same."
+    },
+    "reattribution": {
+      "_comment": "(R10) OPTIONAL the canonical NAME attaches to the WRONG node ('Maxwell's equations' = the Maxwellians' 4-eqn form; Maxwell left 20). EMPTY when name = producer.",
+      "named_after": "",
+      "actually_produced_by": "",
+      "why": ""
+    },
+    "weld_chain": [
+      {
+        "_comment": "(R10) OPTIONAL lets a weld CHAIN — birth-1's W_C becomes a parent of birth-2 (Maxwell's raw form -> welded with vector analysis + Hertz -> the form we use). EMPTY on a single-birth weld. weld_ref resolves to a weld id/name (SCHEMA_v2.md §0.1).",
+        "birth_label": "",
+        "weld_ref": ""
+      }
+    ],
+
+    "candidate_children": [
+      {
+        "_comment": "(R6) OPTIONAL a weld with COMPETING, mutually-rejecting outputs and NO winner (QG: string/LQG/causal-sets/CDT/asymptotic-safety). Same two parents + same seam yielding rivals that DISAGREE about what the child is (they behave like lateral rivals, not descendants). EMPTY on any resolved weld.",
+        "id": "",
+        "name": "",
+        "what": "",
+        "frame": [],
+        "frame_layer": { "layer": "", "physical_membership": null, "latent_membership": null },
+        "confidence": null,
+        "drops": [],
+        "keeps": []
+      }
+    ],
+    "unresolved": false,
+    "_unresolved_comment": "(R6) OPTIONAL true when candidate_children has no winner. Default false.",
+    "contest_axis": "",
+    "_contest_axis_comment": "(R6) OPTIONAL the axis the candidates disagree along (which-parent-dominates / background-dependent-vs-independent). Empty unless unresolved.",
+    "weld_necessity_confidence": null,
+    "_weld_necessity_confidence_comment": "(R8) OPTIONAL 'is a third even NEEDED?' — the falsifier-of-the-weld (a minority holds W_C may be a category error / no child). EMPTY => read as 1.0 (design-law default); < 1 only on a frontier where the weld itself is in doubt.",
+
+    "lifecycle": {
+      "_comment": "(D1) OPTIONAL the weld's GRADED LIFE made first-class: a weighted INDEX over dormancy_intervals/revival/status/candidate_children — DO NOT restate their content here. EMPTY/collapsed on a clean sharp weld (which is simply 'consolidated, membership ~1.0'). DEFAULT for a sharp settled weld: phase_trajectory empty (= single consolidation phase at 1.0), pre_weld_relationship = complementarity, weld_type = [{unifier-weld, 1.0}].",
+      "phase_trajectory": [
+        {
+          "_comment": "(D1) A GRADED trajectory, NOT an enum — phases overlap and carry weights (membership). Controlled extensible phase vocabulary, canonical order: pre_weld:{independence|antagonism|complementarity} -> conception/first_conjecture -> welding(process) -> consolidation|dormancy -> revival:{same|reinterpreted} -> hardening|staleness OR never_born_frontier:{candidate_children,unresolved}. Same shape as status_trajectory (R5) but for the WELD's life, not the child's. The membership IS the soft value (no separate confidence — weights not hard values).",
+          "phase": "",
+          "membership": null,
+          "from": "",
+          "to": null,
+          "note": ""
+        }
+      ],
+      "pre_weld_relationship": {
+        "_comment": "(R14) the parents' relationship BEFORE the weld, as a weighted classification (Mendelism was an ANTI-Darwinian weapon ~1900-15 before Fisher welded them). This is the SINGLE HOME for the antagonism strength; the phase_trajectory pre_weld entry, if present, marks only WHEN. Default complementarity.",
+        "kind": "complementarity",
+        "_kind_enum": "antagonism | independence | complementarity",
+        "membership": null,
+        "note": ""
+      },
+      "weld_type": [
+        {
+          "_comment": "(D1) WEIGHTED classification — a weld may be SEVERAL types at once, each with a weight (weights, not hard values; no separate confidence). CORE closed vocabulary (extend ONLY via a discrepancy row first, SCHEMA_v2.md §6 item 7): unifier-weld | re-weld/re-attribution | antagonism-then-fusion | instrument-enabled-weld | mediator-welded | state/war-mobilized-weld | crisis-pulled-weld | never-consummated-frontier-weld.",
+          "type": "",
+          "weight": null,
+          "note": ""
+        }
+      ]
+    }
+  },
+
+  "roots": {
+    "_comment": "DOWN, in the PHYSICAL frame. The recursive descent from W_C toward people and place. Confidence FADES and depth RISES as you go deeper — the certain-core -> probabilistic-frontier gradient lives here. NOTE (v2): the ground kernel '(0)' (people-roots) now lives in the top-level actors[] group as kind:individual — NOT here. v1's roots.people_0 is removed; migrate a v1 people_0[] entry to an actors[] entry with kind:individual.",
+    "sub_wrappers": [
+      {
+        "_comment": "A smaller wrapper W_C is built from, recursively down. depth = levels below W_C (0 = immediate constituent; larger = deeper root, typically lower confidence).",
+        "id": "",
+        "name": "",
+        "kernel": "",
+        "frame": [],
+        "depth": null,
+        "confidence": null,
+        "who_called_it": "",
+        "parent_kind": "content",
+        "_parent_kind_enum": "(R4) content | method | instrument — a sub-wrapper can be a METHOD root (vector calculus; QG's spin networks / Calabi-Yau / knot theory) vs a CONTENT root. Default content.",
+        "frame_layer": {
+          "_comment": "(D3) most sub-wrappers are physical-leaning content; an abstract method root may straddle toward latent.",
+          "layer": "physical",
+          "physical_membership": 1.0,
+          "latent_membership": 0.0
+        }
+      }
+    ]
+  },
+
+  "harvest": {
+    "_comment": "UP, in the LATENT + CULTURAL frame. What sat on top of W_C and what it spilled into. The tree grows to the present here. All harvest nodes are frame_layer: latent by default (D3).",
+    "descendants": [
+      {
+        "_comment": "An emergent child: a new theory W_C (crossed with others) went on to seed.",
+        "id": "",
+        "name": "",
+        "what": "",
+        "frame": [],
+        "confidence": null,
+        "frame_layer": { "layer": "latent", "physical_membership": 0.0, "latent_membership": 1.0 }
+      }
+    ],
+    "cultural_harvest": [
+      {
+        "_comment": "Spill into culture: the emergent clusters of this theory crossed with others.",
+        "domain": "",
+        "_domain_enum": "one of: art | scifi | tech | other",
+        "what": ""
+      }
+    ]
+  },
+
+  "relatives": {
+    "_comment": "WIDE edges (SCHEMA_v2.md §2.5; v1 flag 2 — OPTIONAL group, still flagged for ratification). Cousins, influences, siblings, rivals spanning physical AND latent. A defeated rival framework (Weber electrodynamics) lives here as relation:rival.",
+    "edges": [
+      {
+        "id": "",
+        "name": "",
+        "relation": "",
+        "_relation_enum": "one of: cousin | influence | sibling | rival",
+        "frame": [],
+        "confidence": null,
+        "note": "",
+        "frame_layer": { "layer": "", "physical_membership": null, "latent_membership": null }
+      }
+    ]
+  },
+
+  "actors": [
+    {
+      "_comment": "(D2) NEW first-class group — the ground kernel '(0)' generalized beyond people. The SINGLE store for actors (v1's roots.people_0 folds in here as kind:individual). Actors are the BRIDGE between the physical and latent layers: carrier_of pushes latent wrappers UP; inhabitant_of lives WITHIN other wrappers. DEFAULT on a sharp case: fill individuals exactly as v1 filled people_0 (role/when/where/culture/relation); leave carrier_of/inhabitant_of and non-individual kinds EMPTY unless an institution/government/lab is genuinely load-bearing.",
+      "id": "",
+      "_id_comment": "OPTIONAL slug (e.g. 'act-fisher') so carrier_of/inhabitant_of/forcing refs resolve cleanly.",
+      "name": "",
+      "kind": "",
+      "_kind_enum": "(D2) controlled, extensible: individual | institution | university | journal | company | government | state | movement | field | lab",
+      "frame_layer": {
+        "_comment": "(D3) actors typically STRADDLE — that is the point of D2 (a government/lab is strongly physical; a movement/field leans latent).",
+        "layer": "",
+        "physical_membership": null,
+        "latent_membership": null
+      },
+      "role": "",
+      "when": "",
+      "where": "",
+      "culture": "",
+      "relation": "",
+      "_relation_comment": "how they relate to the lineage, e.g. originator | transmitter | patron | rival | popularizer | funder",
+      "confidence": null,
+      "carrier_of": [
+        {
+          "_comment": "(D2-i) CARRIER / CHAMPION-OF: a latent wrapper this actor carries/pushes/advocates UP. An actor champions MULTIPLE latent wrappers. wrapper resolves to an in-graph id/name, else a free-string ref to a wrapper outside this tree (allowed; flagged SCHEMA_v2.md §6 item 3).",
+          "wrapper": "",
+          "role": "",
+          "_role_enum": "champions | founds | funds | popularizes | institutionalizes",
+          "strength": null,
+          "when": "",
+          "confidence": null
+        }
+      ],
+      "inhabitant_of": [
+        {
+          "_comment": "(D2-ii) INHABITANT / OPERATOR-OF: a latent OR physical wrapper this actor lives/operates inside (a paradigm, a nation, a university, an era). Inhabitants point WITHIN other wrappers.",
+          "wrapper": "",
+          "layer": "",
+          "_layer_enum": "physical | latent",
+          "role": "",
+          "_role_enum": "operates_in | lives_in | works_within",
+          "strength": null,
+          "when": "",
+          "confidence": null
+        }
+      ]
+    }
+  ],
+
+  "fuzzy_layer": {
+    "_comment": "The LOD / confidence partition made explicit, as a DERIVED human digest of the per-node memberships (D5 — the memberships are the ground truth; this two-bin split is a curated reading of them, NOT an independent source). certain_core = the trunk (high-confidence); frontier = speculative/conjectural (low-confidence — the cultivation zone).",
+    "certain_core": [],
+    "frontier": [],
+    "core_boundary_locus": "",
+    "_core_boundary_locus_comment": "(R3-adjacent) OPTIONAL WHERE in the tree the certain-core/frontier boundary falls — itself a confidence-thermometer. Sharp: core at the trunk. Dormant: fuzz climbs INTO the trunk. Frontier: core SINKS BELOW the child, the whole crown is frontier. Empty on a textbook sharp case."
+  },
+
+  "discrepancies": [
+    {
+      "_comment": "An interesting conflict in the historical record. SIGNAL, not noise. framework-vs-record-tension is the highest-value type — it flags where the clean two-parent weld does NOT match the messy multi-parent reality (which variables the schema is missing). A tension that motivates a field should NAME the field ('-> motivates candidate_children (R6)'). A NEW weld_type/phase term must be proposed HERE before use. A forcing-vs-internal tension (was the weld pulled by a war/depression or by its own logic?) cross-references a forcing_events[] id.",
+      "what": "",
+      "sources_in_conflict": [],
+      "type": "",
+      "_type_enum": "one of: priority-dispute | contested-genealogy | date/attribution-conflict | framework-vs-record-tension | dormancy-contested | whig-vs-revisionist",
+      "why_interesting": "",
+      "confidence_impact": ""
+    }
+  ],
+
+  "forcing_events": [
+    {
+      "_comment": "(D4) NEW first-class group — the EXOGENOUS-FORCING 'weather' layer: events OUTSIDE the idea-genealogy that PULL (accelerate/fund/elevate) or SQUEEZE (suppress/starve/redirect/kill) welds and lineages. Lifted out of v1's dormancy.why because the SAME event forces MANY nodes and pull/squeeze is a recurring driver type. Often acts THROUGH an actor (D2). DEFAULT: [] on a case with no load-bearing exogenous forcing (Maxwell). Seeds: Bronstein's NKVD execution (politics/squeeze/kill on a QG root); WWII (war/pull on the Manhattan weld); the Great Depression (economic-crisis/both on Keynesianism); the AI winters (funding+fashion/squeeze on connectionism).",
+      "id": "",
+      "name": "",
+      "kind": "",
+      "_kind_enum": "(D4) controlled, extensible: war | fashion | cultural-focus | funding | politics | economic-crisis | technology | religion",
+      "direction": "",
+      "_direction_enum": "pull | squeeze | both",
+      "acted_on": [
+        {
+          "_comment": "Which nodes/welds/actors/lineages it forced. target resolves by id else name (SCHEMA_v2.md §0.1).",
+          "target": "",
+          "target_kind": "",
+          "_target_kind_enum": "weld | child | actor | sub_wrapper | lineage | candidate_child",
+          "effect": "",
+          "_effect_enum": "accelerate | fund | elevate | suppress | starve | redirect | kill",
+          "strength": null,
+          "_strength_comment": "(D5) graded — an event's influence is a membership in [0,1], not binary."
+        }
+      ],
+      "when": "",
+      "_when_comment": "a date or interval (may reuse the R2 {from, to} shape).",
+      "mechanism": "",
+      "_mechanism_comment": "HOW it pulled/squeezed, prose (e.g. 'wartime funding + secrecy + concentration of physicists').",
+      "confidence": null
+    }
+  ],
+
+  "sources": [
+    {
+      "_comment": "Citation backbone. Consult the WEB (Wikidata, OpenAlex, SEP/IEP, Wikipedia 'history of...', Mathematics Genealogy Project, nLab, Semantic Scholar, named scholarly histories; for D2/D4: government/agency archives, economic-history, AI-history sources). Every load-bearing field should trace here. Be honest about reliability.",
+      "name": "",
+      "type": "",
+      "_type_enum": "one of: aggregator | encyclopedia | scholarly-history | primary",
+      "url": "",
+      "what_used_for": "",
+      "reliability": null,
+      "_reliability_comment": "number [0,1] or a labelled band (e.g. 'high — peer-reviewed scholarly history')"
+    }
+  ]
+}

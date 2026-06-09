@@ -1,0 +1,1326 @@
+{
+  "_template_doc": "CANONICAL WRAPPER-GENEALOGY SPECIMEN — v2 render. One merge event (nuclear fission physics × US war-mobilization state -> the atomic bomb + the nuclear age) rendered as a rooted genealogy graph that STOPS AT THE PRESENT. Spec: ../SCHEMA_v2.md. Tier-3 exploratory data-harvest for Cowork+Pav ratification — NOT canon, NOT a promotion, convergence list stays 9. THIS SPECIMEN IS THE MAXIMAL INSTITUTIONS/GOVERNMENT/WAR CASE and the deliberate CONSUMMATED ANTITHESIS of the QG frontier specimen: where QG is a high-synergy weld that never consummated in ~90 years, the Manhattan Project is a high-synergy weld CRISIS-PULLED to full consummation in ~33 months (Groves Sep 1942 -> Trinity 16 Jul 1945). It is chosen to HAMMER the five v2 dimensions: D1 (an ultra-fast crisis-pulled lifecycle + a state/war-mobilized weld-type), D2 (actors generalized to institutions/government/labs/companies/movements as the physical<->latent bridge), D3 (a clean physical view [actors, three secret cities, the war, costs] vs latent view [the bomb-as-idea, deterrence, Big Science]), D4 (war/Pearl-Harbor/German-threat-fear/emigre-exodus/espionage as exogenous pull/squeeze 'weather'), D5 (graded membership pervasive — the composite 'war-state' parent is ~0.6 as a single parent, ~0.95 decomposed). Every node/edge/actor-role/event carries confidence/membership in [0,1]; bits_note is QUALITATIVE ONLY; sources cited in sources[]; discrepancies[] carries the real-record fuzzy frontier (esp. framework-vs-record tensions). DESIGN LAW honored: a clean fully-consummated single-direction weld leaves never-consummated-frontier / re-attribution / candidate_children machinery DEFAULT EMPTY.",
+
+  "schema_version": "0.2-canonical-genealogy",
+  "specimen_id": "manhattan-project",
+  "_status": "Tier-3 WORKING specimen — exploratory data-harvest, surfaced for Cowork+Pav ratification. NOT canon, NOT a tier promotion, does NOT grow the convergence list (stays 9). All confidences are SOFT scores in [0,1]; bits are qualitative only. NOTE: this is the v2 schema's first STATE/WAR-MOBILIZED, INSTITUTION-MAXIMAL weld instance — the CONSUMMATED mirror of QG's unconsummated frontier. overall_confidence is HIGH and NON-split (the inverse of QG): parents, seam, child AND consummation are all near-certain; the fuzz is in the deep counterfactual root ('would it have happened without the war') and in moral/credit historiography, NOT in whether the child was born.",
+  "extends": {
+    "_comment": "Linkage back to the Phase-1 wrapper CLASS this merge-event specimen instantiates (SCHEMA_v2.md §5). Same graph, deeper zoom. HONEST NOTE: the Manhattan Project is NOT currently a row in wrapper_classes_phase1.json (the DB holds 25 classes incl. the 9 settled convergences; grep for war/fission/nuclear/Manhattan/atomic returns no row). This specimen therefore EXTENDS the Phase-1 DB by adding the first STATE/WAR-MOBILIZED, INSTITUTION-MAXIMAL weld row — the consummated mirror of QG's unconsummated frontier. It populates the D2 (institution-actors), D4 (exogenous-forcing) and D1 (crisis-pulled lifecycle) machinery the DB and the v1 specimens left empty.",
+    "phase1_file": "../latent_olympics_data/wrapper_classes_phase1.json",
+    "phase1_class_name": "(none yet — proposed NEW row: 'The atomic bomb / nuclear age (state-war-mobilized weld: fission physics × the US war-state)'; nearest existing kin is convergence #1 'LCAO / Molecular Orbital Theory' as the settled-physics analogue, and the QG frontier specimen as the structural OPPOSITE — same high-synergy two-parent shape, opposite consummation outcome)",
+    "relation_note": "Adds a consummated state/war-mobilized weld row the Phase-1 census lacks. Where QG is HIGH synergy / unborn child (0.45 split aggregate) and Maxwell is a sharp internally-matured unifier with no load-bearing exogenous forcing, the Manhattan Project is HIGH synergy / FULLY-BORN child driven by EXOGENOUS forcing (total war + a phantom enemy) — exposing the schema's D4 (external pull/squeeze) and D2 (institution-actors) machinery as first-class, and showing a weld can be crisis-PULLED to completion far faster than its internal logic allows."
+  },
+  "generated": "2026-06-09",
+  "frames_present": ["time", "space", "knowledge", "meaning"],
+  "layers_present": ["physical", "latent"],
+  "_layers_present_comment": "(D3) BOTH layers heavily populated — this is the cleanest specimen in the batch for the physical/latent filter: a physical view (Szilard/Oppenheimer/Groves, Los Alamos/Oak Ridge/Hanford, the war, ~$2bn, ~130,000 peak workers) vs a latent view (the bomb-as-idea, deterrence/MAD, Big Science, scientists'-responsibility). Actors are the explicit bridge.",
+  "overall_confidence": 0.9,
+  "_overall_confidence_note": "~0.90 is HIGH and NON-split — the INVERSE of QG's 0.45. Confidence is HIGH (0.95-0.97) on the two parents, HIGH (~0.9) on the seam S, HIGH (0.95) on the CHILD (it indisputably exists and works — two designs detonated), and HIGH (~0.92) on the lifecycle/consummation. The ONLY frontier-grade fuzz is (a) the deep COUNTERFACTUAL pre-weld root ('no bomb ever without the war' ~0.5), (b) the lifecycle phase 'would-it-have-fired-without-the-war' (~0.5), and (c) the MORAL/credit historiography (Hiroshima justification ~0.5 valence; Einstein/Oppenheimer popular attribution ~0.5 vs distributed reality ~0.9). Read paired with fuzzy_layer: the certain core is the lower AND middle tree AND the crown (unlike QG, the crown is solid); the frontier is the counterfactual root and the meaning-frame valence.",
+
+  "schema_capabilities": {
+    "_comment": "(D3+D5) Declared render capabilities. Static block — announces what a v2 render supports.",
+    "layer_filter": {
+      "_comment": "(D3) The render is FILTERABLE on the physical/latent axis; actors are the bridge. EXERCISED HARD here: see _layer_filter_hand_check below.",
+      "supported": true,
+      "axes": ["physical", "latent"],
+      "bridge_via": "actors",
+      "note": "A render may show the PHYSICAL view (actors, institutions, places, events) OR the LATENT view (ideas, theories, sub-wrappers); every node declares frame_layer; actors straddle and connect the two."
+    },
+    "graded_membership": {
+      "_comment": "(D5) Fuzzy edges by design — graded membership is the pervasive default. The signature D5 demonstration in this specimen: the 'war-state' parent W_B is ~0.6 as a SINGLE parent but ~0.95 DECOMPOSED into institutions; the weld extent fades into a 0.5-confidence counterfactual root; actor role-strengths vary (Szilard carries multiple wrappers at different strengths); a single forcing event (Nazi persecution) has OPPOSITE directions on the two rival lineages.",
+      "supported": true,
+      "default": "graded",
+      "applies_to": [
+        "node membership", "weld extent (sub_welds)", "actor role-strength (carrier/inhabitant)",
+        "forcing-event influence (acted_on.strength)", "frame-layer straddle (physical/latent membership)",
+        "lifecycle phase membership", "weld_type weight"
+      ],
+      "note": "Every boundary is a membership/confidence in [0,1]; the certain core is just where membership ~1.0. Crisp = the membership happens to be ~0/1."
+    }
+  },
+
+  "_layer_filter_hand_check": {
+    "_comment": "(D3, SCHEMA_v2.md §6 item 5) Hand-check that the specimen is renderable under each filter. PHYSICAL-only view = {actors of kind individual/government/company/university/lab + the three secret cities (Oak Ridge/Hanford/Los Alamos) + the costs/employment + forcing_events of kind war/politics}. LATENT-only view = {child (the bomb-as-idea, deterrence, Big Science) + harvest descendants + sub_wrappers of kind knowledge (fission physics, criticality, the chain-reaction concept)}. STRADDLE / bridge = actors (every actor carries a latent wrapper UP and inhabits physical+latent wrappers WITHIN); the MAUD report and the Frisch-Peierls memo straddle (a physical document carrying a latent feasibility-proof). Both views are non-empty and connected through actors — the filter is satisfied.",
+    "physical_view_nodes": ["all kind:individual/government/company/university/lab actors", "Oak Ridge / Hanford / Los Alamos (the three secret cities)", "the ~$2bn cost + ~130,000 peak / ~500,000 total workers", "forcing_events: WWII, Pearl Harbor, the emigre exodus, espionage"],
+    "latent_view_nodes": ["child W_C (the bomb-as-idea + the nuclear order)", "sub_wrappers tagged knowledge (fission physics, criticality, chain-reaction concept, implosion)", "harvest descendants (deterrence/MAD, Big Science, scientists'-responsibility)"],
+    "bridge_nodes": ["every actor (carrier_of UP into latent; inhabitant_of WITHIN physical+latent)", "the MAUD report + Frisch-Peierls memo (physical documents carrying a latent feasibility-proof)"]
+  },
+
+  "child": {
+    "_comment": "W_C — THE ATOMIC BOMB + THE NUCLEAR AGE. The trunk node, and unlike QG it is SOLID (the crown is not hollow). A deliverable fission weapon AND the irreversible socio-technical order it founded.",
+    "id": "child-bomb",
+    "name": "The atomic bomb + the nuclear age",
+    "kernel": "A deliverable fission weapon — Little Boy (U-235 gun-type, Hiroshima 6 Aug 1945); Fat Man (Pu-239 implosion, Trinity 16 Jul 1945 + Nagasaki 9 Aug 1945) — AND the irreversible socio-technical order it founded: nuclear deterrence, the US national-laboratory complex, government-funded 'Big Science', the civilian Atomic Energy Commission (1947), nuclear power, and a permanently altered relationship between the state, science, and existential risk. CRUCIAL contrast with QG's kernel: this is a description of an EXISTING object (two designs detonated), not a specification of a sought target.",
+    "frame": ["space", "time", "knowledge", "meaning"],
+    "_frame_note": "knowledge (the fission physics), space+time (the industrial geography of the three secret cities + the compressed wartime clock), and UNIQUELY STRONG {meaning}: the bomb is a moral/political object — Hiroshima, deterrence, the Doomsday Clock — to a degree NO purely-physics child is. The meaning-frame engagement here is for 'was the child's USE justified' (vs QG's meaning-frame engagement for 'which candidate child is winning'). See discrepancies and frame_of_weld.",
+    "frame_layer": {
+      "_comment": "(D3) The child STRADDLES more than a pure idea-child: the WEAPON is a physical artifact (a detonated device + the three production cities) while the NUCLEAR ORDER (deterrence, Big Science) is latent. Graded toward latent because the genealogy treats W_C primarily as the latent socio-technical wrapper, with a strong physical limb (the device itself).",
+      "layer": "straddle",
+      "physical_membership": 0.55,
+      "latent_membership": 0.85
+    },
+    "status": "risen",
+    "_status_enum": "one of: risen | active | dormant | resurrected | stale | open-conjecture. Here UNAMBIGUOUSLY 'risen' (and hardened) — the consummated antithesis of QG's 'open-conjecture'. The child indisputably rose, consolidated (Hiroshima/Nagasaki), and HARDENED irreversibly into the geopolitical baseline (AEC 1947, the arms race). No dormancy after firing. See status_trajectory for the hardening arc.",
+    "status_trajectory": [
+      {
+        "_comment": "(R5) the child as a TRAJECTORY — but a SHORT, MONOTONE-HARDENING one (the inverse of QG's never-resolving trajectory and of Darwin+Mendel's pluralist->hardened->contested). It rises and hardens; it does not go dormant or contested as an OBJECT (the contest is over its MORAL valence, not its existence — see discrepancies).",
+        "state": "conjectured (Einstein-Szilard letter: 'extremely powerful bombs of a new type may thus be constructed')",
+        "when": "1939",
+        "by": "Szilard / Einstein (letter); the Frisch-Peierls memo (Mar 1940) made it quantitative",
+        "confidence": 0.95
+      },
+      {
+        "state": "born / consummated (Trinity; Hiroshima & Nagasaki)",
+        "when": "16 Jul - 9 Aug 1945",
+        "by": "Los Alamos / the Manhattan Engineer District",
+        "confidence": 0.97
+      },
+      {
+        "state": "hardened (irreversible geopolitical baseline: Atomic Energy Act 1946, AEC 1947, the arms race, the permanent national-lab/Big-Science order)",
+        "when": "1946 -> present",
+        "by": "the US Congress / AEC; the bipolar nuclear order",
+        "confidence": 0.92
+      }
+    ],
+    "confidence": 0.95,
+    "_confidence_note": "0.95 = confidence the child is a real, distinct emergent that EXISTS and works (two designs detonated; an irreversible order founded). NOTE the v2 inversion vs QG: there child.confidence was LOW (0.40, unborn) while surprise stayed high (0.85); HERE child.confidence is HIGH (0.95) while the SURPRISE is the subtler axis (the bomb's physical possibility was implied by fission physics ALONE — the genuine joint-surprise is the TEMPO/industrializability-in-wartime, not the object's existence). R9 confirmed: surprise_confidence (0.8) and child.confidence (0.95) are orthogonal and the two frontier/antithesis specimens populate OPPOSITE corners of the (surprise x child) plane.",
+    "utility": {
+      "_comment": "Pav's three utility legs. Unlike QG (largely PROSPECTIVE utility), here the utility is overwhelmingly REALIZED.",
+      "unifier": "Fused two previously-separate wrappers — frontier physics + the war-state's industrial/organizational capacity — into one operational system, AND became the TEMPLATE unifier for all later state-science megaprojects (Apollo, the LHC, the genome). 'A Manhattan Project for ___' is the standing idiom for any all-out state-mobilized technical effort. passesW_CTest: YES — the bomb is genuinely unreachable from either parent alone (physics alone moved at peace-time bureau tempo and the German program with the same physics never consummated; the war-state alone had no weapon to build and depended on the refugees the Axis expelled).",
+      "compressor": "QUALITATIVE ONLY (no fabricated bits). The bomb 'compresses' the entire chain radioactivity -> nucleus -> neutron -> fission -> criticality into one deployed device, AND compresses 'national industrial mobilization for a scientific goal' into a reusable institutional pattern. Distinct from QG's PRINCIPLED-null compressor: here the compression is REAL but still assessed qualitatively (MDL-in-bits needs latent embeddings — a later step).",
+      "action_spaces_unlocked": [
+        "Nuclear weapons & deterrence (the bipolar arms race, MAD, arms-control as a discipline).",
+        "Civilian nuclear power (reactors descended from Chicago Pile-1 and the Hanford production reactors).",
+        "The US national-laboratory system (Los Alamos, Oak Ridge/ORNL, Argonne, later Lawrence Berkeley/Livermore, Brookhaven).",
+        "Government patronage of basic research (Vannevar Bush's 'Science—The Endless Frontier' Jul 1945 -> NSF 1950) — the Big-Science template.",
+        "Nuclear medicine & isotopes.",
+        "The existential-risk / scientists'-social-responsibility movement (Bulletin of the Atomic Scientists 1945, the Doomsday Clock 1947) — the makers turned critics."
+      ]
+    }
+  },
+
+  "weld": {
+    "_comment": "The merge: parents -> child. THE HEART OF THE SPECIMEN. Here the weld is a CONSUMMATED, CRISIS-PULLED, single-direction merge — the antithesis of QG's open conjecture. The clean 2-parent diagram is present and faithful as a projection, but (R1) the welding agent is NEITHER parent: it is a CASCADE of mediating institutions/documents (Einstein-Szilard letter -> Advisory Committee on Uranium -> MAUD/Oliphant -> OSRD/S-1 -> Manhattan Engineer District/Groves), with the human welder (Szilard) sitting a layer up from both the physics and the state. See mediating_wrapper and discrepancies[0].",
+    "id": "weld-main",
+
+    "parents": [
+      {
+        "_role": "W_A",
+        "name": "Nuclear fission physics (the chain-reacting critical-mass weapon concept)",
+        "kernel": "The chain-reacting critical-mass weapon concept: Szilard's 1933 chain-reaction idea + Hahn-Strassmann radiochemistry (Dec 1938) + Meitner-Frisch liquid-drop ~200 MeV interpretation (1938-39) + secondary-neutron confirmation (1939) + Bohr-Wheeler U-235/U-238 theory (Sep 1939) + the decisive Frisch-Peierls memorandum (Mar 1940, ~10-25 lb of U-235, buildable in ~2 years). The physics that makes a fast-fission bomb possible. frame {knowledge}.",
+        "frame": ["knowledge"],
+        "confidence": 0.97,
+        "parent_kind": "content",
+        "_parent_kind_note": "(R4) the CONTENT parent — the physical possibility. Contrast W_B's composite-institution content+method+instrument mix."
+      },
+      {
+        "_role": "W_B",
+        "name": "The US war-mobilization state",
+        "kernel": "The wartime federal apparatus that turns a scientific possibility into an industrial reality: OSRD (Bush-Conant) + the Army Corps of Engineers / Manhattan Engineer District / Groves + industrial contractors (DuPont, Stone & Webster, Tennessee Eastman) + universities-under-contract (UC, Chicago). Near-unlimited money, industrial capacity, secrecy, conscripted manpower, and command authority (AA-1 priority). frame {space,time,meaning}.",
+        "frame": ["space", "time", "meaning"],
+        "confidence": 0.97,
+        "_confidence_note": "0.97 that the war-state EXISTED and was load-bearing; BUT only ~0.6 that 'the US war-state' is faithfully ONE parent rather than a composite institutional assemblage — see parents_full, S_structure-adjacent note, and discrepancies[1]. This is the D5 graded-membership signature: high as a fact, lower as a single-node projection.",
+        "parent_kind": "content"
+      }
+    ],
+    "_parents_comment": "(v1, kept) The clean BINARY projection [fission physics, the war-state]. Present and useful as the framework's canonical visualization. But this specimen is the one that most strains the dyad on the W_B side (a composite institution) — see parents_full + discrepancies[1].",
+
+    "parents_full": [
+      {
+        "_comment": "(R1) The honest N-ary parent set. W_A is reasonably atomic (the physics). W_B DECOMPOSES into ~a dozen distinct institutional actors with DIFFERENT kinds (government / company / university / lab / foreign-program). This is the specimen that FORCES D2: a purely person-based ground kernel cannot represent W_B at all, because the parent IS an institutional assemblage. The decomposition holds at ~0.95 while W_B-as-single-parent holds at ~0.6.",
+        "id": "pf-fission",
+        "name": "Nuclear fission physics",
+        "kernel": "see parents[W_A]",
+        "frame": ["knowledge"],
+        "confidence": 0.97,
+        "parent_kind": "content",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.1, "latent_membership": 0.95 }
+      },
+      {
+        "id": "pf-osrd",
+        "name": "OSRD / Bush-Conant (civilian science-mobilization)",
+        "kernel": "The civilian Office of Scientific Research and Development that incubated the program (the S-1 Committee) before the Army took production. The institutional brain that made the weld a national program.",
+        "frame": ["space", "time", "meaning"],
+        "confidence": 0.95,
+        "parent_kind": "method",
+        "_parent_kind_note": "(R4) METHOD parent — the organizational method of mobilizing science (the pattern reused for NSF/Big Science), distinct from the physics CONTENT and the production INSTRUMENT.",
+        "frame_layer": { "layer": "physical", "physical_membership": 0.85, "latent_membership": 0.4 }
+      },
+      {
+        "id": "pf-med",
+        "name": "Manhattan Engineer District / Groves (Army Corps of Engineers)",
+        "kernel": "The Army command that fused money + industry + secrecy + physics by directive (formed 13 Aug 1942; Groves Sep 1942; obtained AA-1 priority). The realization arm.",
+        "frame": ["space", "time", "meaning"],
+        "confidence": 0.96,
+        "parent_kind": "method",
+        "frame_layer": { "layer": "physical", "physical_membership": 0.95, "latent_membership": 0.2 }
+      },
+      {
+        "id": "pf-industry",
+        "name": "Industrial contractors (DuPont / Stone & Webster / Tennessee Eastman)",
+        "kernel": "The industry leg made concrete: Hanford plutonium reactors (DuPont at $1 nominal fee), Oak Ridge construction & calutron operation. Fissile-material PRODUCTION as an industrial, not laboratory, task.",
+        "frame": ["space", "time"],
+        "confidence": 0.95,
+        "parent_kind": "instrument",
+        "_parent_kind_note": "(R4) INSTRUMENT parent — the production plants are the instrument that turned milligrams into kilograms (>80% of the ~$2bn). Analogous to Fizeau's light-speed as Maxwell's calibration instrument: not content, an enabling apparatus.",
+        "frame_layer": { "layer": "physical", "physical_membership": 0.97, "latent_membership": 0.05 }
+      },
+      {
+        "id": "pf-universities",
+        "name": "Universities-under-contract (UC, Chicago)",
+        "kernel": "Academic physics under government contract — the NEW institutional form the weld created (the operator of Los Alamos and the Met Lab).",
+        "frame": ["space", "knowledge", "meaning"],
+        "confidence": 0.95,
+        "parent_kind": "method",
+        "frame_layer": { "layer": "straddle", "physical_membership": 0.6, "latent_membership": 0.6 }
+      },
+      {
+        "id": "pf-tubealloys",
+        "name": "Tube Alloys / MAUD (the British programme, absorbed)",
+        "kernel": "The independent-British-bomb parent-lineage that started AHEAD (MAUD proved feasibility-in-time) but lacked scale and was subordinated to the US at the Quebec Agreement (Aug 1943). A parent-lineage that was SQUEEZED/absorbed rather than a co-equal parent.",
+        "frame": ["knowledge", "space", "meaning"],
+        "confidence": 0.9,
+        "parent_kind": "instrument",
+        "_parent_kind_note": "(R4) INSTRUMENT/catalyst — MAUD is the feasibility-PROOF instrument that fired the weld; see mediating_wrapper and the MAUD actor.",
+        "frame_layer": { "layer": "straddle", "physical_membership": 0.5, "latent_membership": 0.7 }
+      }
+    ],
+
+    "mediating_wrapper": {
+      "_comment": "(R1) The agent that PERFORMED the weld, sitting a layer up from BOTH parents — and here it is NOT a single node but a TEMPORAL CASCADE of institutional hand-offs (a gap, see gaps[0]). STRONGLY ratifies R1 at INSTITUTIONAL scale: the Darwin+Mendel 'population genetics did the welding' pattern recurs as 'a relay of war-state institutions did the welding'. The human welder Szilard sits a layer up from both the physics and the state.",
+      "name": "The institutional welding cascade: Einstein-Szilard letter -> Advisory Committee on Uranium (Briggs) -> MAUD report + Oliphant's visit -> OSRD/S-1 (Bush, Conant) -> Manhattan Engineer District/Groves",
+      "kernel": "A relay of mediating institutions and documents, each handing the weld to the next, that fused the physics parent to the state parent. No single one is the welder; the SEQUENCE is.",
+      "who_or_what": "Szilard (conceiver+drafter, a layer up from both parents); Sachs (carried letter to FDR 11 Oct 1939); Oliphant (carried MAUD to the US in person Aug 1941); Bush & Conant (institutionalized via OSRD); Roosevelt (authorized the crash program 17 Jun 1942)",
+      "confidence": 0.92
+    },
+
+    "shared_sub_object_S": "S = the CRITICAL-MASS FISSION-WEAPON CONCEPT at the exact point where PHYSICAL FEASIBILITY (Frisch-Peierls / MAUD: ~10-25 lb of U-235, buildable in ~2 years) coincides with STRATEGIC WAR-WINNING NECESSITY (whoever builds it first wins/survives). Three faces: (1) the CRITICAL-MASS CALCULATION — the literal number that is the seam (small enough for a bomber, which is what converted a curiosity into a weapon); (2) fissile-material PRODUCTION as an INDUSTRIAL not laboratory task (>80% of ~$2bn = the Oak Ridge / Hanford plants; Chicago Pile-1 the bridging proof-of-principle); (3) the GERMAN-THREAT that made the seam URGENT (and was largely illusory — see forcing_events + discrepancies). Genuine overlap, not a pile: physics owns its POSSIBILITY, the state owns its REALIZATION, neither alone owns the buildable-in-TIME weapon.",
+    "_shared_sub_object_S_confidence": 0.9,
+    "_shared_sub_object_S_note": "HIGH confidence the seam is genuine. Contrast QG: there the disagreement was about the DIRECTION of the weld over S; here there is NO direction-dispute (the weld is single-direction and consummated). The fuzz at the seam is only in face (3) — whether the German threat (the urgency face) was VERIDICAL (it was largely a phantom). The seam is the certain core.",
+
+    "S_structure": {
+      "_comment": "(R12) OPTIONAL — S here is multi-faceted but AGREED (like QG's S, unlike Darwin+Mendel's fractured-and-contested S). The three faces (feasibility-number / industrial-production / German-threat-urgency) are not in conflict with each other; they are the three things that had to co-occur. agreed:true. The ONE wrinkle is that face (3) rests on a FALSE belief (the phantom enemy) — recorded as a forcing-event veridicality flag, not as an internal conflict of S.",
+      "components": [
+        "the critical-mass feasibility number (~10-25 lb U-235, buildable in ~2 years) — Frisch-Peierls / MAUD",
+        "fissile-material production as an industrial task (Oak Ridge/Hanford; CP-1 the bridge)",
+        "the German-threat urgency (the face that made the seam pull — and was largely illusory)"
+      ],
+      "internal_conflict": "",
+      "agreed": true
+    },
+
+    "surprise": "The genuine JOINT-surprise (reachable only from BOTH parents) is NOT that the bomb exists — the bomb's physical POSSIBILITY was implied by fission physics ALONE (W_A). The genuine joint-surprise is the TEMPO: a speculative 1938 laboratory phenomenon was industrialized into a deployed weapon inside a SINGLE WAR (~33 months Groves Sep 1942 -> Hiroshima Aug 1945) — a tempo neither parent predicts alone. Fission physics alone moved at 'peace-time bureau tempo' (the German Uranverein had the SAME physics and never consummated — the negative control); the war-state alone had no weapon to build and depended on the refugee physicists the Axis had expelled. The two together collapsed a multi-decade industrialization into ~33 months. STANDOUT SUB-SURPRISE: the German-bomb fear that PULLED the program was largely a PHANTOM (Einstein: 'had I known the Germans would not succeed... I would have done nothing') — the weld was pulled to consummation by a misplaced fear with a real driving force but a false object. META-SURPRISE (the inverse of QG): synergy AND consummation are BOTH high, but the consummation was driven by EXOGENOUS forcing (total war + a phantom enemy) NOT internal maturation — a weld can be crisis-PULLED to completion far faster than its internal logic allows, the exact opposite of QG's 90-year non-consummation. The surprise here lives in the (surprise x child) plane at high-child / medium-surprise, where QG lives at low-child / high-surprise.",
+    "surprise_confidence": 0.8,
+    "_surprise_confidence_note": "0.8 (vs QG's 0.85). DELIBERATELY DECOUPLED from child.confidence (0.95) per R9 — and note the divergence runs in the OPPOSITE direction to QG: QG = high-surprise/low-child (fertile-unborn); Manhattan = high-child/medium-surprise (born, but the synergy is in the TEMPO/industrializability, not the object's existence). The 0.8 reflects that the TEMPO-surprise and the phantom-enemy sub-surprise are well-attested, but a portion of 'the bomb' was forecastable from W_A alone, so the joint-surprise is subtler than a case where the child itself is unforeseeable. This populates the second corner of the 2-D (surprise x child) plane — see discrepancies[3] and gaps[5].",
+
+    "surprise_priority": {
+      "_comment": "(R15) OPTIONAL the CONJECTURE-IN-A-PARENT. The chain-reaction-weapon surprise pre-existed the consummating weld as a low-confidence conjecture inside W_A: Szilard CONCEIVED and PATENTED the neutron chain-reaction idea in 1933 — six years before fission was discovered and before any weld with the state. A 'drawn but not confirmed' weld living inside the physics parent, analogous to Faraday's 1846 light-guess inside Maxwell's W_A.",
+      "first_conjectured_by": "Leo Szilard (neutron chain-reaction concept, patented)",
+      "when": "1933",
+      "dormant_interval": "1933 -> 1939 (the conjecture sat inside W_A until fission's discovery Dec 1938 made it physical, then the letter drew the weld)",
+      "confidence": 0.9
+    },
+
+    "bits_note": "QUALITATIVE ONLY. The bomb is a REAL compression — it collapses the chain radioactivity->nucleus->neutron->fission->criticality into one deployed device, and 'national industrial mobilization for a scientific goal' into a reusable institutional pattern. Distinct from QG's PRINCIPLED-null (QG could not be MDL-scored because the child did not exist); here the child exists, so the compression is real, but it is still assessed QUALITATIVELY (MDL-in-bits needs latent embeddings — a later step). NO numeric bit values fabricated.",
+
+    "survived": [
+      "The fission-physics core (criticality, U-235 vs Pu-239 paths, the Bohr-Wheeler theory) — survived as the operating principle of the device.",
+      "Szilard's chain-reaction concept — survived from the 1933 conjecture into the working pile and bomb.",
+      "Chicago Pile-1 / the controlled chain reaction — survived as the bridge from physics to the Hanford production reactors and to civilian power.",
+      "The OSRD organizational method — survived as the permanent Big-Science / national-lab pattern (-> NSF 1950).",
+      "The emigre-physics expertise — survived as the postwar US theoretical-physics establishment."
+    ],
+    "dropped": [
+      "The independent British bomb (Tube Alloys) — DROPPED/absorbed: subordinated to the US at the Quebec Agreement (Aug 1943).",
+      "The German fission path (Uranverein) — DROPPED by the rival lineage itself (de-prioritized by Speer 1942; graphite-moderator error; talent exodus) — the road not taken / negative control.",
+      "Civilian/peacetime scientific control during the war — DROPPED in favor of military secrecy & compartmentalization (the ~130,000 workers who did not know what they built); partially recovered postwar via the AEC (1947).",
+      "NOTE (D5): unlike QG, 'dropped' here is essentially SINGLE-VALUED (one consummated child), so the per-candidate feature_ledger DEFAULTS EMPTY per the design law — there are no rival children dropping DIFFERENT features. The 'drops' here are of RIVAL NATIONAL LINEAGES (British absorbed, German starved), recorded via forcing_events.direction being lineage-relative — see gaps[4]."
+    ],
+    "feature_ledger": [],
+    "_feature_ledger_comment": "(R7) EMPTY by design — a single consummated child makes the flat survived[]/dropped[] sufficient. The per-candidate matrix is a frontier-case (QG) device; this consummated case correctly leaves it empty.",
+
+    "frame_of_weld": ["space", "time", "knowledge", "meaning"],
+    "_frame_of_weld_note": "The weld holds in {knowledge} (the physics), {space} (the industrial geography), {time} (the active operator — the compressed wartime clock; see weld_operator), and UNIQUELY {meaning}: because the child is a weapon/policy object, its STATUS and even the VALENCE of its consummation are observer- and era-relative (orthodox 'ended the war' vs Alperovitz revisionist 'atomic diplomacy'). Same meaning-frame relativity QG showed for 'which child is winning', here for 'was the child's use justified'. See discrepancies (moral historiography).",
+    "weld_operator": "TIME-AS-COMPRESSED-WARTIME-CLOCK + EXOGENOUS CRISIS-FORCING. The active frame-ingredient is not a physics operator (as Maxwell's d/dt displacement current) but the WAR-DRIVEN TEMPO itself: total-war mobilization is the operator that fired and accelerated the weld, collapsing decades into ~33 months. The weld is welded BY the war (an exogenous operator), not by an internal term — which is precisely why forcing_events (D4) is first-class here. Contrast Maxwell (internal time-derivative operator) and QG (no operator could fire it in 90 years).",
+
+    "lod_scale": "HOLDS at every useful zoom — the inverse of QG. At coarse grain: 'fission physics + the war-state -> the bomb'. Zoom in and it CONFIRMS into an ordered chain of sub-welds (letter -> committee -> MAUD/Oliphant+Pearl Harbor -> MED/Groves -> CP-1 -> the three cities -> Trinity), each a real hand-off that strengthens the weld rather than contradicting it. A healthy CONSUMMATED weld confirmed by its sub-structure (coherence_under_zoom: confirms) — the diagnostic opposite of QG's shattering.",
+    "sub_welds": [
+      {
+        "_comment": "(R3) the ordered chain the coarse weld resolves into when zoomed. CONFIRMS the weld (healthy). This is also the mediating cascade seen as a temporal weld-chain (see mediating_wrapper + gaps[0]).",
+        "id": "sw-letter",
+        "name": "Einstein-Szilard letter draws the weld (conception)",
+        "when": "2 Aug 1939 (signed); delivered to FDR 11 Oct 1939 by Sachs",
+        "confidence": 0.95
+      },
+      {
+        "id": "sw-committee",
+        "name": "Advisory Committee on Uranium (Briggs) — the DRAWN-but-not-firing runway",
+        "when": "Oct 1939 -> 1941 (near-inert on $6,000)",
+        "confidence": 0.9
+      },
+      {
+        "id": "sw-maud-pearl",
+        "name": "MAUD report + Oliphant's in-person visit (feasibility-in-time) AND Pearl Harbor — the DOUBLE TRIGGER that fires the weld",
+        "when": "Aug 1941 (MAUD/Oliphant) + 7 Dec 1941 (Pearl Harbor); 18 Dec 1941 S-1 meeting 'pervaded by enthusiasm and urgency'",
+        "confidence": 0.92
+      },
+      {
+        "id": "sw-med-groves",
+        "name": "Manhattan Engineer District + Groves — welding becomes a directed program",
+        "when": "13 Aug 1942 (MED) - 23 Sep 1942 (Groves)",
+        "confidence": 0.96
+      },
+      {
+        "id": "sw-cp1",
+        "name": "Chicago Pile-1 critical — the controlled-chain-reaction bridge proven",
+        "when": "2 Dec 1942",
+        "confidence": 0.97
+      },
+      {
+        "id": "sw-cities",
+        "name": "Three secret cities built from scratch (Oak Ridge, Hanford, Los Alamos) — industrial production",
+        "when": "1943-1945",
+        "confidence": 0.95
+      },
+      {
+        "id": "sw-trinity",
+        "name": "Trinity test — the weld consummates (proof the implosion design works)",
+        "when": "16 Jul 1945",
+        "confidence": 0.98
+      }
+    ],
+    "coherence_under_zoom": "confirms",
+    "_coherence_under_zoom_note": "(R3) CONFIRMS — the signature diagnostic of a HEALTHY/consummated weld (the diagnostic OPPOSITE of QG, which CONTRADICTS / shatters). Zooming in reveals an ordered chain of mutually-reinforcing hand-offs, not mutually-rejecting rivals. This is the cleanest 'confirms' case in the batch precisely because the consummation is so complete.",
+
+    "when": {
+      "_comment": "(R2) an interval — a weld is a PROCESS. Here the interval is the STEEPEST/most-compressed in the batch (the antithesis of QG's null-to / open interval). Two grains: the full conception->hardening arc, and the ultra-fast ~33-month welding core.",
+      "from": "1933 (Szilard's chain-reaction conjecture inside W_A) / 1939 (the letter draws the weld)",
+      "to": "1945-1947 (Hiroshima/Nagasaki consummate; AEC 1947 hardens) — CLOSED (unlike QG's null 'to')",
+      "defensible_dates": [
+        "1933 (Szilard conjecture — the surprise_priority date)",
+        "2 Aug 1939 (Einstein-Szilard letter — weld drawn)",
+        "Aug-Dec 1941 (MAUD + Oliphant + Pearl Harbor — weld fires)",
+        "Sep 1942 (Groves — the ~33-month core begins)",
+        "16 Jul 1945 (Trinity — weld consummates)",
+        "6 & 9 Aug 1945 (Hiroshima/Nagasaki — public consummation)"
+      ]
+    },
+    "_when_extra_note": "The DRAWN-vs-FIRING gap is itself diagnostic (R2): the weld was DRAWN Aug-Oct 1939 but did not FIRE until late 1941 (post-MAUD + post-Pearl-Harbor) — a ~2-year drawn-but-not-firing interval (the only 'dormancy', recorded in dormancy_intervals). The popular 'the letter started the Manhattan Project' compresses this ~2-3 year near-dormant runway into an instant (date/attribution discrepancy).",
+
+    "dormancy_intervals": [
+      {
+        "_comment": "(v1, R11) the ONE dormancy-like interval — and it is PRE-consummation and SHORT (unlike QG's three dormancies and Darwin+Mendel's 35-year sleep, and unlike the POST-consummation dormancy that this weld NEVER has). A ~2-year DRAWN-BUT-NOT-FIRING runway. The external triggers that REVIVED it are recorded once in forcing_events (Pearl Harbor; and MAUD/Oliphant which is partly internal-instrument); why_frame names only the frames per the design law.",
+        "from": "Aug/Oct 1939",
+        "to": "late 1941",
+        "why": "the Advisory Committee on Uranium under-funded ($6,000) and near-inert; nobody yet believed weaponization was feasible-in-time OR urgent enough",
+        "why_frame": "knowledge + politics",
+        "_why_frame_comment": "(R11) KNOWLEDGE (feasibility-in-time not yet believed/proven — the MAUD trigger is the knowledge-frame revival) + POLITICS (urgency not yet total — Pearl Harbor is the politics/war-frame revival). NOT physical/political-frame in the QG/Bronstein sense (no purge of THIS weld); the physical/political-frame squeeze here falls on the RIVAL lineages (German Uranverein) — see dormancy_revival prose and forcing_events."
+      }
+    ],
+    "revival": {
+      "_comment": "(v1, R10) revival of the short drawn-but-not-firing runway. kind = SAME (the same weld fired, not reinterpreted) — contrast Mendel's 'reinterpreted' revival. A DOUBLE EXOGENOUS trigger.",
+      "when": "Aug-Dec 1941",
+      "by": "OSRD/S-1 (Bush, Conant); FDR (authorized the crash program 17 Jun 1942)",
+      "trigger": "(1) the MAUD report + Mark Oliphant's in-person Aug 1941 visit (knowledge-frame: proof the bomb was buildable in time, which woke the locked-in-a-safe US committee) AND (2) Pearl Harbor 7 Dec 1941 (politics/war-frame: total mobilization)",
+      "kind": "same",
+      "_kind_note": "(R10) SAME — the identical weld (fission-weapon × the state) fired; it was not re-framed into a different object. Distinct from Mendel (species-hybridization -> heredity) and from Maxwell (raw form -> re-attributed 4-eqn form)."
+    },
+    "reattribution": {
+      "_comment": "(R10) OPTIONAL — DEFAULTS EMPTY for the WELD as a whole (the weld is not mis-named; 'the Manhattan Project' names the producer). BUT note a CREDIT tension exists at the CHILD/actor level (the bomb is popularly attributed to Einstein/Oppenheimer, not to the conceiver Szilard or the ~130,000 anonymous workers) — that is recorded as a priority-dispute discrepancy + actor SYMBOLIC-vs-PRODUCING distinction (gaps[6]), not here, because it is an attribution of CREDIT not a structural re-welding of the object. Leaving this field empty is the correct design-law signal.",
+      "named_after": "",
+      "actually_produced_by": "",
+      "why": ""
+    },
+    "weld_chain": [],
+    "_weld_chain_comment": "(R10) EMPTY — a single-birth weld (no birth-2 re-welding of the kind Maxwell's raw-form -> Maxwellian-form had). The bomb consummated once and hardened; it did not get re-forged into a structurally-different re-attributed object.",
+
+    "candidate_children": [],
+    "_candidate_children_comment": "(R6) EMPTY BY DESIGN — this is a CONSUMMATED single-child weld, the antithesis of QG's rival-children frontier. There is ONE child (the bomb/nuclear age), not a family of mutually-rejecting candidates. Leaving this empty (and unresolved:false, contest_axis empty, weld_necessity_confidence empty->1.0) is the load-bearing design-law contrast with QG: the never-consummated-frontier machinery is exactly what a consummated case should NOT populate.",
+    "unresolved": false,
+    "contest_axis": "",
+    "weld_necessity_confidence": null,
+    "_weld_necessity_confidence_comment": "(R8) EMPTY => read as 1.0. There is no serious position that 'no third was needed' — the child demonstrably exists. (Contrast QG's semiclassical dissent at ~0.45.) The ONLY adjacent doubt is the COUNTERFACTUAL 'would it have happened WITHOUT the war' — but that questions the CAUSE/tempo, not whether a child was needed or born; it is recorded as a contested-genealogy discrepancy + a frontier lifecycle phase, not as weld_necessity.",
+
+    "lifecycle": {
+      "_comment": "(D1) the weld's GRADED LIFE made first-class — a WEIGHTED INDEX over the dormancy/revival/when/surprise_priority fields above (NOT restating them). This is the STEEPEST, most-compressed lifecycle in the batch and the consummated antithesis of QG's perpetual frontier. The phase_trajectory carries the crisis-pulled ultra-fast arc; pre_weld_relationship is COMPLEMENTARITY (not antagonism like Darwin+Mendel); weld_type is a weighted mix dominated by state/war-mobilized + crisis-pulled.",
+      "phase_trajectory": [
+        {
+          "_comment": "(D1) the graded trajectory. Memberships overlap. The membership IS the soft value (no separate confidence per the hardening cut).",
+          "phase": "conception / first_conjecture",
+          "membership": 0.9,
+          "from": "1933 (Szilard) / 1939 (the letter)",
+          "to": "1939",
+          "note": "Szilard's 1933 chain-reaction patent idea -> the Einstein-Szilard letter (2 Aug 1939) drew the weld as a low-confidence conjecture ('extremely powerful bombs of a new type may thus be constructed')."
+        },
+        {
+          "phase": "dormancy (pre-consummation, drawn-but-not-firing)",
+          "membership": 0.6,
+          "from": "Aug/Oct 1939",
+          "to": "late 1941",
+          "note": "A SHORT, SHALLOW dormancy (membership only 0.6 — it was drawn, just not firing). The Advisory Committee on Uranium near-inert on $6,000. The only dormancy this weld has; indexes dormancy_intervals[0]. NOT the deep multi-decade dormancy of QG/Darwin+Mendel."
+        },
+        {
+          "phase": "revival (same)",
+          "membership": 0.85,
+          "from": "Aug 1941",
+          "to": "Dec 1941",
+          "note": "DOUBLE EXOGENOUS trigger (MAUD/Oliphant + Pearl Harbor). kind=same. Indexes revival{}. The weld fires."
+        },
+        {
+          "phase": "welding (process)",
+          "membership": 1.0,
+          "from": "Sep 1942",
+          "to": "Jul 1945",
+          "note": "The ultra-fast ~33-month core: MED -> Groves -> CP-1 -> three secret cities -> Trinity. The most compressed welding(process) phase in the batch. Indexes sub_welds[]."
+        },
+        {
+          "phase": "consolidation",
+          "membership": 1.0,
+          "from": "16 Jul 1945",
+          "to": "9 Aug 1945",
+          "note": "Trinity then Hiroshima & Nagasaki consummate the child publicly."
+        },
+        {
+          "phase": "hardening",
+          "membership": 0.95,
+          "from": "1946",
+          "to": null,
+          "note": "Atomic Energy Act 1946, AEC 1947, the arms race, the permanent national-lab/Big-Science order. The child HARDENS into the geopolitical baseline and never goes dormant or stale (no staleness phase). to=null marks an OPEN hardening (still the baseline in 2026) — note this null is the OPPOSITE meaning of QG's null 'to' (there: never-born; here: never-stops-mattering)."
+        }
+      ],
+      "pre_weld_relationship": {
+        "_comment": "(R14) COMPLEMENTARITY (weight ~0.9) — NOT antagonism (Darwin+Mendel) and NOT independence (Maxwell's complementary-from-the-start parents are the nearest kin). The two parents were MUTUALLY-NEEDY from the start: fission physics had no money/industry/secrecy to weaponize itself; the war-state had a war to win but no super-weapon — each held exactly what the other lacked. This is the SINGLE HOME for the relationship strength (the phase_trajectory has no pre_weld entry to avoid double-recording).",
+        "kind": "complementarity",
+        "membership": 0.9,
+        "note": "Mutually-needy parents: physics held the possibility, the state held the realization. The complementarity is what made the crisis-pull so fast once the trigger fired."
+      },
+      "weld_type": [
+        {
+          "_comment": "(D1) WEIGHTED classification — a weld is several types at once. All are from the CORE controlled vocabulary (no new term proposed, so no discrepancy row needed for vocabulary). The two dominant types (state/war-mobilized + crisis-pulled) are exactly the types this specimen was chosen to instantiate.",
+          "type": "state/war-mobilized-weld",
+          "weight": 0.95,
+          "note": "The war-state mobilized the weld — money, industry, secrecy, conscripted manpower, command authority. The canonical instance of this type."
+        },
+        {
+          "type": "crisis-pulled-weld",
+          "weight": 0.95,
+          "note": "Total war + a phantom enemy PULLED the weld to consummation in ~33 months — far faster than its internal logic allowed. The antithesis of QG's non-consummation."
+        },
+        {
+          "type": "mediator-welded",
+          "weight": 0.9,
+          "note": "Welded by a non-parent layer up — the institutional cascade (letter -> committee -> MAUD/Oliphant -> OSRD -> MED/Groves). Recurs the Darwin+Mendel mediator pattern at institutional scale. Indexes mediating_wrapper."
+        },
+        {
+          "type": "instrument-enabled-weld",
+          "weight": 0.85,
+          "note": "Two instruments enabled it: MAUD/Frisch-Peierls (the feasibility-proof that fired it) and the Oak Ridge/Hanford production plants (the apparatus that made fissile material in time)."
+        },
+        {
+          "type": "unifier-weld",
+          "weight": 0.8,
+          "note": "Fused frontier physics with the war-state's industrial capacity into one operational system, AND became the template unifier for later state-science megaprojects (Apollo, LHC, genome)."
+        }
+      ]
+    }
+  },
+
+  "roots": {
+    "_comment": "DOWN, in the PHYSICAL frame. The recursive descent from W_C toward people and place. Confidence FADES and depth RISES as you go deeper. The ground kernel '(0)' lives in actors[] (kind:individual + institutions), NOT here. The deep frontier root is the COUNTERFACTUAL ('no bomb without the war'), which sits at depth in fuzzy_layer.frontier at ~0.5.",
+    "sub_wrappers": [
+      {
+        "id": "sw-szilard-concept",
+        "name": "The neutron chain-reaction concept",
+        "kernel": "Szilard 1933: a neutron-induced chain reaction could release large energy — the seed of both the reactor and the bomb.",
+        "frame": ["knowledge"],
+        "depth": 1,
+        "confidence": 0.95,
+        "who_called_it": "Leo Szilard (1933 patent)",
+        "parent_kind": "content",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.1, "latent_membership": 0.95 }
+      },
+      {
+        "id": "sw-fission-discovery",
+        "name": "Nuclear fission (the discovery)",
+        "kernel": "Hahn-Strassmann radiochemistry (Dec 1938) + Meitner-Frisch liquid-drop ~200 MeV interpretation (1938-39); Frisch named 'fission' via biologist W. Arnold.",
+        "frame": ["knowledge"],
+        "depth": 1,
+        "confidence": 0.97,
+        "who_called_it": "Hahn, Strassmann, Meitner, Frisch",
+        "parent_kind": "content",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.15, "latent_membership": 0.95 }
+      },
+      {
+        "id": "sw-bohr-wheeler",
+        "name": "Bohr-Wheeler fission theory (U-235 vs U-238)",
+        "kernel": "Sep 1939: which isotope fissions with slow vs fast neutrons — the theory that made U-235 the target and shaped the separation problem.",
+        "frame": ["knowledge"],
+        "depth": 2,
+        "confidence": 0.93,
+        "who_called_it": "Bohr & Wheeler",
+        "parent_kind": "content",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.1, "latent_membership": 0.95 }
+      },
+      {
+        "id": "sw-frisch-peierls",
+        "name": "The Frisch-Peierls memorandum (critical mass)",
+        "kernel": "Mar 1940: ~10-25 lb of U-235 gives a super-bomb buildable in ~2 years — the calculation that is the literal seam S(1). Turned a curiosity into a weapon.",
+        "frame": ["knowledge"],
+        "depth": 1,
+        "confidence": 0.94,
+        "who_called_it": "Frisch & Peierls (refugees at Birmingham)",
+        "parent_kind": "instrument",
+        "_parent_kind_note": "(R4) borderline content/instrument — it is the CALCULATION that calibrated feasibility-in-time (the seam number), so tagged instrument like Fizeau's c.",
+        "frame_layer": { "layer": "straddle", "physical_membership": 0.3, "latent_membership": 0.85 }
+      },
+      {
+        "id": "sw-criticality",
+        "name": "Controlled criticality (Chicago Pile-1)",
+        "kernel": "Fermi's CP-1 (critical 2 Dec 1942) — the proof-of-principle bridge from physics to industrial reactors; the plutonium path.",
+        "frame": ["knowledge", "space"],
+        "depth": 1,
+        "confidence": 0.97,
+        "who_called_it": "Enrico Fermi / the Met Lab",
+        "parent_kind": "content",
+        "frame_layer": { "layer": "straddle", "physical_membership": 0.7, "latent_membership": 0.6 }
+      },
+      {
+        "id": "sw-implosion",
+        "name": "Implosion / explosive-lens design",
+        "kernel": "The Fat Man Pu-239 implosion design (the harder, leaked design — see Fuchs) vs the Little Boy U-235 gun design. The weaponization integration problem Los Alamos solved.",
+        "frame": ["knowledge", "space"],
+        "depth": 1,
+        "confidence": 0.92,
+        "who_called_it": "Los Alamos (Neddermeyer, von Neumann, Kistiakowsky); Oppenheimer integrating",
+        "parent_kind": "content",
+        "frame_layer": { "layer": "straddle", "physical_membership": 0.6, "latent_membership": 0.6 }
+      },
+      {
+        "id": "sw-mobilization-method",
+        "name": "State science-mobilization (OSRD method)",
+        "kernel": "The organizational method of mobilizing civilian science by federal contract + secrecy + priority — the methodological root of W_B (and the seed of postwar Big Science).",
+        "frame": ["space", "time", "meaning"],
+        "depth": 1,
+        "confidence": 0.93,
+        "who_called_it": "Vannevar Bush / OSRD",
+        "parent_kind": "method",
+        "frame_layer": { "layer": "physical", "physical_membership": 0.8, "latent_membership": 0.45 }
+      },
+      {
+        "id": "sw-industrial-production",
+        "name": "Industrial fissile-material production",
+        "kernel": "Isotope separation at scale (Oak Ridge Y-12 calutrons + K-25 gaseous diffusion) and plutonium breeding (Hanford reactors) — fissile material as an industrial, not laboratory, output. >80% of ~$2bn.",
+        "frame": ["space", "time"],
+        "depth": 1,
+        "confidence": 0.95,
+        "who_called_it": "the MED + DuPont / Tennessee Eastman / Stone & Webster",
+        "parent_kind": "instrument",
+        "frame_layer": { "layer": "physical", "physical_membership": 0.97, "latent_membership": 0.05 }
+      }
+    ]
+  },
+
+  "harvest": {
+    "_comment": "UP, in the LATENT + CULTURAL frame. Unlike QG (a lush canopy over a HOLLOW trunk), here the canopy grows over a SOLID trunk — the harvest is the realized descendant order, not a set of conjectures. All harvest nodes frame_layer: latent by default (D3).",
+    "descendants": [
+      {
+        "id": "h-deterrence",
+        "name": "The nuclear arms race / deterrence theory / MAD",
+        "what": "The Soviet RDS-1 (1949, accelerated ~18-24 months by Fuchs's espionage), the H-bomb (1952), and the entire bipolar nuclear order. The child's largest geopolitical descendant.",
+        "frame": ["space", "time", "meaning"],
+        "confidence": 0.9,
+        "frame_layer": { "layer": "latent", "physical_membership": 0.2, "latent_membership": 0.95 }
+      },
+      {
+        "id": "h-nuclear-power",
+        "name": "Civilian nuclear power + nuclear medicine",
+        "what": "Reactors descended from Fermi's Chicago Pile-1 and the Hanford production reactors; the AEC (1947) civilian-control settlement; nuclear medicine & isotopes.",
+        "frame": ["space", "time", "knowledge"],
+        "confidence": 0.9,
+        "frame_layer": { "layer": "straddle", "physical_membership": 0.5, "latent_membership": 0.8 }
+      },
+      {
+        "id": "h-national-labs",
+        "name": "The US national-laboratory complex",
+        "what": "Los Alamos, Oak Ridge/ORNL, Argonne, later Lawrence Berkeley/Livermore, Brookhaven — the permanent infrastructure the project left behind.",
+        "frame": ["space", "knowledge", "meaning"],
+        "confidence": 0.95,
+        "frame_layer": { "layer": "straddle", "physical_membership": 0.7, "latent_membership": 0.6 }
+      },
+      {
+        "id": "h-big-science",
+        "name": "Government-funded Big Science (the OSRD -> NSF model)",
+        "what": "Vannevar Bush's 'Science—The Endless Frontier' (Jul 1945) -> NSF (1950); the template for Apollo, the LHC, the Human Genome Project. The weld's organizational form became more influential than its weapon.",
+        "frame": ["meaning", "time"],
+        "confidence": 0.9,
+        "frame_layer": { "layer": "latent", "physical_membership": 0.25, "latent_membership": 0.95 }
+      },
+      {
+        "id": "h-scientists-responsibility",
+        "name": "The scientists'-social-responsibility & arms-control movement",
+        "what": "The Bulletin of the Atomic Scientists (1945) and its Doomsday Clock (1947), the Federation of American Scientists, the Pugwash movement — the makers turned critics; the birth of existential-risk discourse.",
+        "frame": ["meaning"],
+        "confidence": 0.9,
+        "frame_layer": { "layer": "latent", "physical_membership": 0.1, "latent_membership": 0.97 }
+      }
+    ],
+    "cultural_harvest": [
+      {
+        "domain": "scifi",
+        "what": "The entire ATOMIC AGE imaginary — Godzilla/Gojira (1954, the monster as the Bomb, head shaped like a mushroom cloud, skin modeled on hibakusha), 'Them!' (1954) and the radioactive-mutant genre, post-apocalyptic fiction. confidence ~0.85."
+      },
+      {
+        "domain": "art",
+        "what": "The mushroom cloud and 'atomic' aesthetic as the 20th century's defining image; the figure of the conflicted bomb-maker (Oppenheimer's 'I am become Death'; the film 'Oppenheimer' 2023); the moral archetype of science-that-cannot-be-un-invented. confidence ~0.85."
+      },
+      {
+        "domain": "other",
+        "what": "'A Manhattan Project for ___' as the standing metaphor for any all-out, crash, state-mobilized technical effort — the weld's NAME became a reusable cultural template. confidence ~0.9."
+      }
+    ]
+  },
+
+  "relatives": {
+    "_comment": "WIDE edges (SCHEMA_v2.md §2.5; still flagged for ratification). The most telling relatives here are the RIVAL NATIONAL LINEAGES (German Uranverein = the negative control; British Tube Alloys = the absorbed sibling) and the structural opposite QG.",
+    "edges": [
+      {
+        "id": "rel-uranverein",
+        "name": "German nuclear program (Uranverein) / Heisenberg",
+        "relation": "rival",
+        "frame": ["knowledge", "space", "meaning"],
+        "confidence": 0.9,
+        "note": "The NEGATIVE CONTROL: had the SAME physics parent (W_A) under a rival state but never consummated the weld (de-prioritized by Speer 1942; graphite-moderator error; talent exodus). The proof that W_A alone, even with a state, does not produce the child without the right exogenous pull. SQUEEZED (not pulled) by its war-state.",
+        "frame_layer": { "layer": "straddle", "physical_membership": 0.6, "latent_membership": 0.6 }
+      },
+      {
+        "id": "rel-tubealloys",
+        "name": "Tube Alloys (the British programme)",
+        "relation": "sibling",
+        "frame": ["knowledge", "space", "meaning"],
+        "confidence": 0.9,
+        "note": "Started AHEAD (MAUD proved feasibility), lacked scale, SUBORDINATED/absorbed at the Quebec Agreement (Aug 1943). The absorbed sibling-lineage — squeezed by industrial-scale asymmetry, not by a state's hostility.",
+        "frame_layer": { "layer": "straddle", "physical_membership": 0.55, "latent_membership": 0.65 }
+      },
+      {
+        "id": "rel-qg",
+        "name": "Quantum gravity (the QG frontier specimen)",
+        "relation": "sibling",
+        "frame": ["knowledge", "meaning"],
+        "confidence": 0.85,
+        "note": "The STRUCTURAL OPPOSITE in the batch: same high-synergy two-parent shape, OPPOSITE consummation outcome (QG = unborn after 90 years via internal non-resolution; Manhattan = born in 33 months via exogenous forcing). Together they populate opposite corners of the (surprise x child) plane. The deliberate antithesis pairing.",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.05, "latent_membership": 0.95 }
+      },
+      {
+        "id": "rel-apollo",
+        "name": "Apollo / the LHC / the Human Genome Project",
+        "relation": "cousin",
+        "frame": ["space", "meaning"],
+        "confidence": 0.85,
+        "note": "Later state-science megaprojects built on the Manhattan TEMPLATE ('a Manhattan Project for ___'). Cousins via the unifier/organizational-form descendant, not via the physics.",
+        "frame_layer": { "layer": "straddle", "physical_membership": 0.5, "latent_membership": 0.7 }
+      }
+    ]
+  },
+
+  "actors": [
+    {
+      "_comment": "(D2) the ground kernel generalized. This is the FORCING specimen for D2: a purely person-based people_0 CANNOT hold the W_B parent (it IS an institutional assemblage). carrier_of = the latent wrapper the actor pushes UP; inhabitant_of = the wrapper it operates WITHIN (the physical<->latent bridge). Individuals AND institutions/governments/companies/labs/universities/movements all populated.",
+      "id": "act-szilard",
+      "name": "Leo Szilard",
+      "kind": "individual",
+      "frame_layer": { "layer": "straddle", "physical_membership": 0.7, "latent_membership": 0.8 },
+      "role": "conceiver + drafter + later restrainer",
+      "when": "1933-1945",
+      "where": "London / New York / Chicago",
+      "culture": "Hungarian-Jewish emigre physicist (fled Nazi Germany)",
+      "relation": "originator (of the chain-reaction concept and the letter) + dissenter (the 1945 petition)",
+      "confidence": 0.95,
+      "carrier_of": [
+        { "wrapper": "sw-szilard-concept", "role": "founds", "strength": 0.95, "when": "1933", "confidence": 0.95 },
+        { "wrapper": "the scientists'-political-agency wrapper", "role": "champions", "strength": 0.8, "when": "1939 (letter) + 1945 (petition against use)", "confidence": 0.85 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "the emigre-physics diaspora", "layer": "latent", "role": "lives_in", "strength": 0.9, "when": "1933-", "confidence": 0.9 },
+        { "wrapper": "act-metlab", "layer": "physical", "role": "works_within", "strength": 0.8, "when": "1942-", "confidence": 0.9 },
+        { "wrapper": "pf-osrd", "layer": "physical", "role": "operates_in", "strength": 0.6, "when": "1939- (the war-state he helped trigger)", "confidence": 0.8 }
+      ]
+    },
+    {
+      "id": "act-oppenheimer",
+      "name": "J. Robert Oppenheimer",
+      "kind": "individual",
+      "frame_layer": { "layer": "straddle", "physical_membership": 0.7, "latent_membership": 0.75 },
+      "role": "scientific director, Los Alamos",
+      "when": "1942-1945 (then the 1954 security hearing)",
+      "where": "Los Alamos, New Mexico",
+      "culture": "American physicist",
+      "relation": "integrator ('father of the atomic bomb')",
+      "confidence": 0.95,
+      "carrier_of": [
+        { "wrapper": "sw-implosion", "role": "champions", "strength": 0.9, "when": "1943-45", "confidence": 0.9 },
+        { "wrapper": "the bomb-design-integration wrapper (dispersed physics -> one deliverable device)", "role": "champions", "strength": 0.95, "when": "1943-45", "confidence": 0.9 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "act-losalamos", "layer": "physical", "role": "operates_in", "strength": 0.97, "when": "1943-45", "confidence": 0.95 },
+        { "wrapper": "pf-universities", "layer": "physical", "role": "works_within", "strength": 0.7, "when": "1943-45 (UC contract)", "confidence": 0.85 },
+        { "wrapper": "pf-med", "layer": "physical", "role": "operates_in", "strength": 0.85, "when": "1943-45 (later destroyed BY it in the 1954 hearing — a carrier consumed by his own inhabited wrapper)", "confidence": 0.9 }
+      ]
+    },
+    {
+      "id": "act-groves",
+      "name": "Leslie R. Groves",
+      "kind": "individual",
+      "frame_layer": { "layer": "physical", "physical_membership": 0.95, "latent_membership": 0.3 },
+      "role": "commanding general, Manhattan Engineer District",
+      "when": "1942-1946",
+      "where": "Washington / the three sites",
+      "culture": "US Army engineer",
+      "relation": "mobilizer (fused money+industry+secrecy+physics by command; obtained AA-1 priority)",
+      "confidence": 0.95,
+      "carrier_of": [
+        { "wrapper": "sw-mobilization-method", "role": "champions", "strength": 0.9, "when": "1942-45", "confidence": 0.9 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "the US Army Corps of Engineers", "layer": "physical", "role": "operates_in", "strength": 0.95, "when": "1942-", "confidence": 0.95 },
+        { "wrapper": "act-med", "layer": "physical", "role": "operates_in", "strength": 0.97, "when": "1942-46 (commanded it)", "confidence": 0.95 }
+      ]
+    },
+    {
+      "id": "act-bush",
+      "name": "Vannevar Bush",
+      "kind": "individual",
+      "frame_layer": { "layer": "straddle", "physical_membership": 0.75, "latent_membership": 0.6 },
+      "role": "chief institutional welder (OSRD director)",
+      "when": "1940-1945 (then 'Science—The Endless Frontier' Jul 1945)",
+      "where": "Washington",
+      "culture": "American engineer-administrator",
+      "relation": "institutionalizer (the civilian science-mobilization that became Big Science)",
+      "confidence": 0.95,
+      "carrier_of": [
+        { "wrapper": "h-big-science", "role": "founds", "strength": 0.9, "when": "1945 ('Science—The Endless Frontier' -> NSF 1950)", "confidence": 0.9 },
+        { "wrapper": "sw-mobilization-method", "role": "institutionalizes", "strength": 0.95, "when": "1940-45", "confidence": 0.9 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "act-osrd", "layer": "physical", "role": "operates_in", "strength": 0.95, "when": "1941- (created/led it)", "confidence": 0.95 },
+        { "wrapper": "the Top Policy Group / the federal executive", "layer": "physical", "role": "operates_in", "strength": 0.85, "when": "1941-45", "confidence": 0.9 }
+      ]
+    },
+    {
+      "id": "act-conant",
+      "name": "James B. Conant",
+      "kind": "individual",
+      "frame_layer": { "layer": "straddle", "physical_membership": 0.75, "latent_membership": 0.55 },
+      "role": "science administrator (OSRD/NDRC; received the MAUD report 3 Oct 1941)",
+      "when": "1941-1945",
+      "where": "Washington / Harvard",
+      "culture": "American chemist-administrator",
+      "relation": "transmitter / administrator (chemistry-of-the-bomb + the Military Policy Committee)",
+      "confidence": 0.9,
+      "carrier_of": [
+        { "wrapper": "the science-administration / chemistry-of-the-bomb wrapper", "role": "champions", "strength": 0.8, "when": "1941-45", "confidence": 0.85 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "act-osrd", "layer": "physical", "role": "operates_in", "strength": 0.9, "when": "1941-45", "confidence": 0.9 },
+        { "wrapper": "Harvard", "layer": "physical", "role": "works_within", "strength": 0.7, "when": "(president)", "confidence": 0.85 }
+      ]
+    },
+    {
+      "id": "act-fermi",
+      "name": "Enrico Fermi",
+      "kind": "individual",
+      "frame_layer": { "layer": "straddle", "physical_membership": 0.7, "latent_membership": 0.75 },
+      "role": "builder of the first controlled chain reaction",
+      "when": "1942 (CP-1 critical 2 Dec 1942)",
+      "where": "Chicago",
+      "culture": "Italian emigre physicist (fled via his Jewish wife)",
+      "relation": "originator (the proof-of-principle bridge device)",
+      "confidence": 0.95,
+      "carrier_of": [
+        { "wrapper": "sw-criticality", "role": "founds", "strength": 0.95, "when": "1942", "confidence": 0.95 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "the emigre-physics diaspora", "layer": "latent", "role": "lives_in", "strength": 0.9, "when": "1938-", "confidence": 0.9 },
+        { "wrapper": "act-metlab", "layer": "physical", "role": "operates_in", "strength": 0.9, "when": "1942-", "confidence": 0.9 }
+      ]
+    },
+    {
+      "id": "act-fdr",
+      "name": "Franklin D. Roosevelt",
+      "kind": "individual",
+      "frame_layer": { "layer": "physical", "physical_membership": 0.9, "latent_membership": 0.3 },
+      "role": "authorizing political will",
+      "when": "1939-1945 (approved the crash program 17 Jun 1942)",
+      "where": "Washington",
+      "culture": "US President",
+      "relation": "patron / authorizer ('Pa, this requires action!')",
+      "confidence": 0.95,
+      "carrier_of": [
+        { "wrapper": "the political-will-to-authorize wrapper", "role": "champions", "strength": 0.85, "when": "1939-45", "confidence": 0.85 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "the US presidency / the war-state (its apex node)", "layer": "physical", "role": "operates_in", "strength": 0.97, "when": "1933-45", "confidence": 0.95 }
+      ]
+    },
+    {
+      "id": "act-oliphant",
+      "name": "Mark Oliphant",
+      "kind": "individual",
+      "frame_layer": { "layer": "straddle", "physical_membership": 0.7, "latent_membership": 0.6 },
+      "role": "the catalytic carrier of the feasibility-proof",
+      "when": "Aug 1941 (carried MAUD to the US in person)",
+      "where": "Birmingham -> the US",
+      "culture": "Australian physicist on the MAUD Committee",
+      "relation": "transmitter (the catalytic act — found Briggs had safed the report and personally lobbied US scientists)",
+      "confidence": 0.9,
+      "carrier_of": [
+        { "wrapper": "act-maud", "role": "champions", "strength": 0.85, "when": "Aug 1941", "confidence": 0.9 },
+        { "wrapper": "sw-frisch-peierls", "role": "popularizes", "strength": 0.8, "when": "Aug 1941", "confidence": 0.85 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "act-maud", "layer": "physical", "role": "works_within", "strength": 0.85, "when": "1940-41", "confidence": 0.9 },
+        { "wrapper": "Univ. of Birmingham", "layer": "physical", "role": "works_within", "strength": 0.8, "when": "1940-41", "confidence": 0.85 }
+      ]
+    },
+    {
+      "id": "act-fission-discoverers",
+      "name": "Otto Hahn, Lise Meitner, Fritz Strassmann, Otto Frisch",
+      "kind": "individual",
+      "frame_layer": { "layer": "straddle", "physical_membership": 0.55, "latent_membership": 0.85 },
+      "role": "discoverers of fission (the deep physical root of W_A)",
+      "when": "1938-1939",
+      "where": "Berlin (Kaiser Wilhelm Institute) / Stockholm (Meitner in exile) / Copenhagen (Frisch)",
+      "culture": "German + Austrian-Jewish-refugee physicists",
+      "relation": "originator (the discovery) — with Meitner the political-frame root (a Jewish refugee who fled after the Mar 1938 Anschluss)",
+      "confidence": 0.95,
+      "carrier_of": [
+        { "wrapper": "sw-fission-discovery", "role": "founds", "strength": 0.95, "when": "1938-39", "confidence": 0.95 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "the Kaiser Wilhelm Institute (Hahn/Strassmann)", "layer": "physical", "role": "works_within", "strength": 0.85, "when": "1938", "confidence": 0.9 },
+        { "wrapper": "Nazi-era persecution (Meitner, fled to Sweden after the Mar 1938 Anschluss)", "layer": "physical", "role": "lives_in", "strength": 0.9, "when": "1938- (the inverse of inhabiting a safe institution — the political-frame root)", "confidence": 0.9 }
+      ]
+    },
+    {
+      "id": "act-fuchs",
+      "name": "Klaus Fuchs",
+      "kind": "individual",
+      "frame_layer": { "layer": "straddle", "physical_membership": 0.7, "latent_membership": 0.6 },
+      "role": "the leak-conduit actor (seeded the rival child)",
+      "when": "1942-1945 (arrested 1950)",
+      "where": "Los Alamos (British Mission)",
+      "culture": "German-British physicist, secret Soviet agent",
+      "relation": "transmitter-across-a-boundary (implosion-lens secrets to the USSR)",
+      "confidence": 0.9,
+      "carrier_of": [
+        { "wrapper": "sw-implosion", "role": "champions", "strength": 0.7, "when": "1942-45", "note": "the implosion design LEAKED across the secrecy boundary", "confidence": 0.85 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "the British Mission to Los Alamos", "layer": "physical", "role": "works_within", "strength": 0.8, "when": "1944-45", "confidence": 0.9 },
+        { "wrapper": "Soviet intelligence (secret)", "layer": "physical", "role": "operates_in", "strength": 0.8, "when": "1942-49 (a double-inhabitant — which is what makes him a leak)", "confidence": 0.85 }
+      ]
+    },
+    {
+      "id": "act-med",
+      "name": "Manhattan Engineer District (US Army Corps of Engineers)",
+      "kind": "government",
+      "frame_layer": { "layer": "physical", "physical_membership": 0.95, "latent_membership": 0.25 },
+      "role": "the project itself as a directed weapons program",
+      "when": "formed 13 Aug 1942",
+      "where": "the three secret cities + Washington",
+      "culture": "US Army / War Department",
+      "relation": "operator (the realization arm of W_B)",
+      "confidence": 0.95,
+      "carrier_of": [
+        { "wrapper": "child-bomb", "role": "institutionalizes", "strength": 0.95, "when": "1942-45", "confidence": 0.95 },
+        { "wrapper": "sw-industrial-production", "role": "champions", "strength": 0.9, "when": "1942-45", "confidence": 0.9 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "the US Army / War Department / the wartime federal state", "layer": "physical", "role": "operates_in", "strength": 0.95, "when": "1942-46", "confidence": 0.95 }
+      ]
+    },
+    {
+      "id": "act-osrd",
+      "name": "Office of Scientific Research and Development (OSRD) + S-1 Committee",
+      "kind": "government",
+      "frame_layer": { "layer": "physical", "physical_membership": 0.85, "latent_membership": 0.45 },
+      "role": "civilian science-mobilization incubator (before the Army took production)",
+      "when": "EO 8807, 28 Jun 1941",
+      "where": "Washington",
+      "culture": "US federal executive",
+      "relation": "operator / incubator",
+      "confidence": 0.95,
+      "carrier_of": [
+        { "wrapper": "sw-mobilization-method", "role": "founds", "strength": 0.9, "when": "1941-43", "confidence": 0.9 },
+        { "wrapper": "h-big-science", "role": "founds", "strength": 0.7, "when": "(the seed of the postwar model)", "confidence": 0.8 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "the US federal executive", "layer": "physical", "role": "operates_in", "strength": 0.9, "when": "1941-", "confidence": 0.95 }
+      ]
+    },
+    {
+      "id": "act-losalamos",
+      "name": "Los Alamos Laboratory (Project Y)",
+      "kind": "lab",
+      "frame_layer": { "layer": "straddle", "physical_membership": 0.8, "latent_membership": 0.55 },
+      "role": "the bomb-design / weaponization site (the child's birthplace)",
+      "when": "1942-43 established",
+      "where": "the New Mexico mesa",
+      "culture": "academic physics under Army/UC contract",
+      "relation": "operator (where the child was born)",
+      "confidence": 0.95,
+      "carrier_of": [
+        { "wrapper": "child-bomb", "role": "founds", "strength": 0.95, "when": "1943-45", "confidence": 0.95 },
+        { "wrapper": "sw-implosion", "role": "champions", "strength": 0.9, "when": "1943-45", "confidence": 0.9 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "act-med", "layer": "physical", "role": "operates_in", "strength": 0.9, "when": "1943-46", "confidence": 0.9 },
+        { "wrapper": "pf-universities", "layer": "physical", "role": "works_within", "strength": 0.85, "when": "1943-", "note": "operated by the Univ. of California", "confidence": 0.9 }
+      ]
+    },
+    {
+      "id": "act-metlab",
+      "name": "Metallurgical Laboratory (Univ. of Chicago)",
+      "kind": "lab",
+      "frame_layer": { "layer": "straddle", "physical_membership": 0.8, "latent_membership": 0.55 },
+      "role": "the reactor / plutonium site (Fermi's CP-1)",
+      "when": "1942-",
+      "where": "Chicago",
+      "culture": "academic physics under OSRD then MED",
+      "relation": "operator (the plutonium path)",
+      "confidence": 0.95,
+      "carrier_of": [
+        { "wrapper": "sw-criticality", "role": "champions", "strength": 0.9, "when": "1942", "confidence": 0.9 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "the Univ. of Chicago", "layer": "physical", "role": "works_within", "strength": 0.85, "when": "1942-", "confidence": 0.9 },
+        { "wrapper": "act-med", "layer": "physical", "role": "operates_in", "strength": 0.8, "when": "1943-", "confidence": 0.85 }
+      ]
+    },
+    {
+      "id": "act-maud",
+      "name": "MAUD Committee",
+      "kind": "institution",
+      "frame_layer": { "layer": "straddle", "physical_membership": 0.55, "latent_membership": 0.8 },
+      "role": "the feasibility-PROOF instrument (a U-235 bomb is buildable in time, Jul 1941)",
+      "when": "first meeting 10 Apr 1940 (Royal Society); two reports Jul 1941",
+      "where": "UK",
+      "culture": "British wartime science establishment",
+      "relation": "originator (the catalytic British instrument that fired the US weld)",
+      "confidence": 0.92,
+      "carrier_of": [
+        { "wrapper": "sw-frisch-peierls", "role": "institutionalizes", "strength": 0.85, "when": "1940-41", "confidence": 0.9 },
+        { "wrapper": "the feasibility-in-time proof wrapper", "role": "founds", "strength": 0.9, "when": "Jul 1941", "confidence": 0.9 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "the British wartime science establishment (Royal Society origin)", "layer": "physical", "role": "operates_in", "strength": 0.85, "when": "1940-41", "confidence": 0.9 },
+        { "wrapper": "pf-tubealloys", "layer": "physical", "role": "works_within", "strength": 0.7, "when": "1941-", "note": "MAUD spawned Tube Alloys", "confidence": 0.85 }
+      ]
+    },
+    {
+      "id": "act-tubealloys",
+      "name": "Tube Alloys (British nuclear programme) / DSIR",
+      "kind": "government",
+      "frame_layer": { "layer": "straddle", "physical_membership": 0.7, "latent_membership": 0.55 },
+      "role": "the independent-British-bomb lineage that was SQUEEZED/absorbed",
+      "when": "1941-1943 (subordinated at the Quebec Agreement Aug 1943)",
+      "where": "UK",
+      "culture": "UK government (Sir John Anderson; Wallace Akers of ICI)",
+      "relation": "rival-then-absorbed sibling-lineage",
+      "confidence": 0.9,
+      "carrier_of": [
+        { "wrapper": "the independent-British-bomb wrapper", "role": "champions", "strength": 0.8, "when": "1941-43", "confidence": 0.9 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "the UK government", "layer": "physical", "role": "operates_in", "strength": 0.9, "when": "1941-43", "confidence": 0.9 },
+        { "wrapper": "the Manhattan Project (folded in)", "layer": "physical", "role": "works_within", "strength": 0.7, "when": "1943- (after Quebec)", "confidence": 0.85 }
+      ]
+    },
+    {
+      "id": "act-industry",
+      "name": "DuPont / Stone & Webster / Tennessee Eastman",
+      "kind": "company",
+      "frame_layer": { "layer": "physical", "physical_membership": 0.95, "latent_membership": 0.1 },
+      "role": "the industrial-production wrapper made concrete",
+      "when": "1943-1945",
+      "where": "Hanford / Oak Ridge",
+      "culture": "American war-economy corporations",
+      "relation": "operator (the industry leg of W_B)",
+      "confidence": 0.93,
+      "carrier_of": [
+        { "wrapper": "sw-industrial-production", "role": "champions", "strength": 0.9, "when": "1943-45", "confidence": 0.9 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "act-med", "layer": "physical", "role": "works_within", "strength": 0.85, "when": "1943-45", "note": "the MED contract system; DuPont at $1 nominal fee", "confidence": 0.9 },
+        { "wrapper": "the American war economy", "layer": "physical", "role": "operates_in", "strength": 0.9, "when": "1943-45", "confidence": 0.9 }
+      ]
+    },
+    {
+      "id": "act-universities",
+      "name": "Univ. of California & Univ. of Chicago",
+      "kind": "university",
+      "frame_layer": { "layer": "straddle", "physical_membership": 0.7, "latent_membership": 0.6 },
+      "role": "academic-physics-under-government-contract (the new institutional form the weld created)",
+      "when": "1942-1945",
+      "where": "California / Chicago",
+      "culture": "American higher education",
+      "relation": "operator (the contract-research form)",
+      "confidence": 0.92,
+      "carrier_of": [
+        { "wrapper": "the academic-physics-under-contract wrapper (a NEW institutional form)", "role": "founds", "strength": 0.85, "when": "1942-45", "confidence": 0.85 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "act-med", "layer": "physical", "role": "works_within", "strength": 0.8, "when": "1942-45", "note": "the MED contract system", "confidence": 0.9 },
+        { "wrapper": "American higher education", "layer": "physical", "role": "operates_in", "strength": 0.85, "when": "1942-", "confidence": 0.9 }
+      ]
+    },
+    {
+      "id": "act-uranverein",
+      "name": "Uranverein (German nuclear program) / Heisenberg",
+      "kind": "government",
+      "frame_layer": { "layer": "straddle", "physical_membership": 0.7, "latent_membership": 0.55 },
+      "role": "the NEGATIVE CONTROL — same physics under a rival state, never consummated",
+      "when": "16 Sep 1939 meeting -> de-prioritized 1942",
+      "where": "Nazi Germany",
+      "culture": "the Nazi war-state",
+      "relation": "rival (the road not taken / negative control)",
+      "confidence": 0.9,
+      "carrier_of": [
+        { "wrapper": "sw-fission-discovery", "role": "champions", "strength": 0.7, "when": "1939-42", "note": "the SAME physics wrapper, under a rival state", "confidence": 0.85 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "the Nazi war-state (which STARVED rather than pulled it — the inverse external-forcing direction)", "layer": "physical", "role": "operates_in", "strength": 0.85, "when": "1939-45", "confidence": 0.9 }
+      ]
+    },
+    {
+      "id": "act-emigres",
+      "name": "The emigre / refugee physics community",
+      "kind": "movement",
+      "frame_layer": { "layer": "straddle", "physical_membership": 0.5, "latent_membership": 0.85 },
+      "role": "the human substrate W_A actually ran on",
+      "when": "1933-1945",
+      "where": "American & British universities",
+      "culture": "Jewish and anti-Nazi refugees (Szilard, Fermi, Teller, Wigner, Bethe, Frisch, Peierls, Bohr)",
+      "relation": "originator-substrate (the decisive expertise)",
+      "confidence": 0.92,
+      "carrier_of": [
+        { "wrapper": "the decisive fissile-physics expertise", "role": "champions", "strength": 0.9, "when": "1933-45", "confidence": 0.9 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "American & British universities", "layer": "physical", "role": "works_within", "strength": 0.85, "when": "1933-", "confidence": 0.9 },
+        { "wrapper": "the Axis persecution that created them (which it then armed the Allies against — the deepest irony-actor)", "layer": "physical", "role": "lives_in", "strength": 0.85, "when": "1933- ", "confidence": 0.9 }
+      ]
+    },
+    {
+      "id": "act-bulletin",
+      "name": "Bulletin of the Atomic Scientists / Federation of American Scientists",
+      "kind": "movement",
+      "frame_layer": { "layer": "latent", "physical_membership": 0.2, "latent_membership": 0.95 },
+      "role": "the harvest-actor — the makers turned critics",
+      "when": "founded 1945; the Doomsday Clock 1947",
+      "where": "the postwar US scientific community",
+      "culture": "ex-Manhattan-Project scientists",
+      "relation": "popularizer / harvest-originator (the scientists'-responsibility wrapper)",
+      "confidence": 0.9,
+      "carrier_of": [
+        { "wrapper": "h-scientists-responsibility", "role": "founds", "strength": 0.9, "when": "1945-47", "confidence": 0.9 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "the postwar US scientific community", "layer": "latent", "role": "lives_in", "strength": 0.85, "when": "1945-", "confidence": 0.9 },
+        { "wrapper": "child-bomb", "layer": "latent", "role": "works_within", "strength": 0.7, "when": "1945-", "note": "born directly out of the Manhattan Project's own personnel", "confidence": 0.85 }
+      ]
+    },
+    {
+      "id": "act-masslabor",
+      "name": "Calutron Girls / African-American construction workers",
+      "kind": "movement",
+      "frame_layer": { "layer": "physical", "physical_membership": 0.95, "latent_membership": 0.15 },
+      "role": "the compartmentalized-mass-labor wrapper — the PRODUCING inhabitants",
+      "when": "1943-1945",
+      "where": "the three secret cities",
+      "culture": "young women operating Y-12 calutrons + >15,000 African-Americans at Hanford under segregation",
+      "relation": "producer (~130,000 peak workers who built the child WITHOUT knowing what it was)",
+      "confidence": 0.9,
+      "carrier_of": [
+        { "wrapper": "sw-industrial-production", "role": "champions", "strength": 0.6, "when": "1943-45 (they BUILT it but did not champion the idea — a producing not symbolic carrier)", "confidence": 0.8 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "the three secret cities (Oak Ridge, Hanford, Los Alamos)", "layer": "physical", "role": "lives_in", "strength": 0.95, "when": "1943-45", "confidence": 0.9 },
+        { "wrapper": "the wartime security/secrecy regime + Jim-Crow segregation", "layer": "physical", "role": "lives_in", "strength": 0.9, "when": "1943-45", "confidence": 0.9 }
+      ]
+    }
+  ],
+
+  "fuzzy_layer": {
+    "_comment": "The LOD/confidence partition — a DERIVED digest of the per-node memberships (D5). UNLIKE QG (hollow crown, core sunk BELOW the child) and Darwin+Mendel (fuzz climbs INTO the trunk), here the certain core spans the LOWER, MIDDLE AND CROWN of the tree — the consummated case has a solid trunk all the way up. The frontier is narrow and located OFF the main trunk: the deep counterfactual root and the meaning-frame moral valence.",
+    "certain_core": [
+      "W_A = nuclear fission physics (0.97) and W_B = the war-state as a FACT (0.97).",
+      "The seam S is genuine (critical-mass feasibility + industrial production + the German-threat urgency) (0.9).",
+      "The child EXISTS and works — two designs detonated (Trinity, Hiroshima, Nagasaki) (0.95).",
+      "The ~33-month welding tempo and the sub-weld chain (letter -> committee -> MAUD/Pearl Harbor -> MED -> CP-1 -> cities -> Trinity) (0.92-0.98).",
+      "The war was DECISIVE for the TEMPO (physics alone moved at peace-time bureau tempo; the German program with the same physics never consummated) (0.85).",
+      "The hardening into the geopolitical baseline (AEC 1947, the arms race, Big Science) (0.92).",
+      "The institutional decomposition of W_B (~0.95) — even though W_B-as-a-single-parent is only ~0.6."
+    ],
+    "frontier": [
+      "THE DEEP COUNTERFACTUAL ROOT — 'would the bomb have been built WITHOUT WWII, and how much later?' — genuinely unknowable (0.5). The specimen's frontier root.",
+      "W_B as a SINGLE parent (vs the institutional assemblage) — a lossy projection (0.6).",
+      "The VERIDICALITY of the German-threat pull — the fear drove the program (0.9) but was largely misplaced (0.85 that it was a phantom, with honest residual uncertainty about how close Germany 'could' have come).",
+      "The MORAL VALENCE of the consummation — orthodox 'ended the war' vs Alperovitz revisionist 'atomic diplomacy / Japan near surrender' (0.5, observer- and era-relative).",
+      "The CREDIT attribution — popular Einstein/Oppenheimer attribution (0.5) vs the distributed reality incl. Szilard the conceiver + the ~130,000 anonymous workers (0.9)."
+    ],
+    "core_boundary_locus": "The certain-core/frontier boundary does NOT fall horizontally across the trunk (as in QG, where it sinks below the child). Here it runs VERTICALLY ALONGSIDE a solid trunk: the entire main lineage (parents -> seam -> weld -> child -> hardening) is certain core, and the frontier is a thin sheath of (a) the deep COUNTERFACTUAL root beneath the weld and (b) the MEANING-FRAME valence/credit hovering beside the consummated child. The boundary's location is itself the diagnostic: a consummated weld keeps its core all the way up the trunk and pushes the fuzz OUT to the counterfactual root and the moral periphery — the geometric inverse of QG's hollow crown."
+  },
+
+  "discrepancies": [
+    {
+      "_comment": "discrepancy[0] — the central framework-vs-record tension, the INVERSE of QG's. STRONGLY ratifies R1 at institutional scale and adds the temporal-chain refinement.",
+      "what": "The schema renders parents -> ONE child via a weld, but here the welding agent is NEITHER parent — it is a CASCADE of mediating institutions and documents (Einstein-Szilard letter -> Advisory Committee on Uranium -> MAUD/Oliphant -> OSRD/S-1 -> Manhattan Engineer District/Groves), with the human welder (Szilard) sitting a layer up from both the physics and the state. The clean 2-parent diagram cannot name the thing that did the welding.",
+      "sources_in_conflict": ["Wikipedia 'Manhattan Project' (institutional chain)", "Wikipedia 'Einstein-Szilard letter'", "Wikipedia 'MAUD Committee'"],
+      "type": "framework-vs-record-tension",
+      "why_interesting": "STRONGLY ratifies R1 (mediating_wrapper) at INSTITUTIONAL scale — the Darwin+Mendel 'population genetics did the welding' pattern recurs as 'a relay of war-state institutions did the welding'. Confirms the mediating-welder slot is a recurring kind, not a one-off, AND adds that the mediator can be a TEMPORAL CHAIN of hand-offs, not a single node. -> suggests mediating_wrapper may itself need to be an ORDERED SEQUENCE (gaps[0]). Caps nothing on child-confidence (the child is real); raises the specimen's value as a mediator-weld exemplar.",
+      "confidence_impact": "Holds the clean-dyad-welds-itself reading at ~0.3; the mediating-cascade reading at ~0.92. No impact on child.confidence."
+    },
+    {
+      "what": "W_B ('the US war-state') is a single parent slot standing in for ~a dozen distinct institutional actors with different kinds — government (Army/MED, OSRD, the presidency), companies (DuPont, Stone & Webster, Tennessee Eastman), universities (UC, Chicago), labs (Los Alamos, Met Lab), and a foreign program (Tube Alloys, absorbed). The 'parent' is a composite institution, and the actors carry/inhabit DIFFERENT wrappers.",
+      "sources_in_conflict": ["Wikipedia 'Manhattan Project'", "NPS Manhattan Project NHP", "OSTI Manhattan Project History"],
+      "type": "framework-vs-record-tension",
+      "why_interesting": "This is the specimen that FORCES D2 (actors generalized to institutions/governments/companies with carrier vs inhabitant roles): a purely person-based people_0 cannot represent the parent at all, because the parent IS an institutional assemblage. Validates making institution-actors first-class with carrier_of (the latent wrapper they push) vs inhabitant_of (the wrapper they operate inside). -> motivates the generalized actors[] layer (D2).",
+      "confidence_impact": "Holds W_B-as-single-parent at ~0.6 as a projection; the institutional decomposition at ~0.95."
+    },
+    {
+      "what": "COUNTERFACTUAL / contested pre-weld root: would the atomic bomb have been built WITHOUT World War II? The record strongly implies the WAR was load-bearing for the TEMPO (physics alone moved at 'peace-time bureau tempo' 1939-41; the German program had the same physics and never consummated), but whether a bomb would EVER have been built absent the war — and how much later — is genuinely unknowable.",
+      "sources_in_conflict": ["Wikipedia 'Manhattan Project'", "Wikipedia 'German nuclear program during World War II'", "Einstein's 1947 Newsweek regret"],
+      "type": "contested-genealogy",
+      "why_interesting": "The specimen's frontier root and the clearest demonstration that D4 (external pull/squeeze) is a FIRST-CLASS driver, not a backdrop: the weld's consummation is attributed primarily to an EXOGENOUS event (total war) rather than to internal scientific readiness. The mirror of QG, where internal logic could not consummate the weld in 90 years; here exogenous forcing consummated it in 33 months. -> cross-references forcing_events[fe-wwii]. Confidence on 'the war was decisive for tempo' ~0.85; on the deep counterfactual ('no bomb ever without the war') ~0.5 — a genuine frontier.",
+      "confidence_impact": "'War decisive for tempo' ~0.85; deep counterfactual ~0.5 (a genuine frontier root, placed in fuzzy_layer.frontier)."
+    },
+    {
+      "what": "SURPRISE vs CHILD-CONFIDENCE (R9, the OPPOSITE configuration to QG): QG had high surprise_confidence (0.85) and LOW child_confidence (0.40) — fertile but unborn. The Manhattan Project has HIGH child_confidence (0.95) but a SUBTLER surprise: the bomb's physical possibility was implied by fission physics ALONE, so the genuine joint-surprise is not the bomb's existence but its TEMPO/industrializability-in-wartime (~0.8).",
+      "sources_in_conflict": ["this render vs the QG specimen (qm_relativity.json)"],
+      "type": "framework-vs-record-tension",
+      "why_interesting": "Confirms R9's decoupling of surprise_confidence and child_confidence as orthogonal axes AND enriches it: the TWO frontier/antithesis specimens populate OPPOSITE corners of the (surprise x child) plane — QG = high-surprise/low-child (fertile-unborn), Manhattan = high-child/medium-surprise (born-but-the-synergy-is-in-the-tempo-not-the-object). Together they show the plane is genuinely 2-D. -> flags that 'surprise' should distinguish 'surprise that the child EXISTS' from 'surprise at HOW FAST / by-what-means it was born' (gaps[5]).",
+      "confidence_impact": "No impact on child.confidence (0.95). Establishes the second corner of the 2-D (surprise x child) plane."
+    },
+    {
+      "what": "MORAL/DECISION historiography: the orthodox view (the bomb ended the war, saved lives) vs the Alperovitz revisionist view (Japan was near surrender, threatened by Soviet entry; the bomb was dropped partly as 'atomic diplomacy' toward the USSR; the 1946 US Strategic Bombing Survey concluded Japan would have surrendered without it). A live, unresolved historiographic war.",
+      "sources_in_conflict": ["Gar Alperovitz, 'The Decision to Use the Atomic Bomb'", "the 1946 US Strategic Bombing Survey", "orthodox accounts (the bomb ended the war)"],
+      "type": "whig-vs-revisionist",
+      "why_interesting": "Engages the {meaning} frame far more than any physics specimen: this child is a MORAL/POLITICAL object, so its 'status' and even the valence of its consummation are observer- and era-relative — the same meaning-frame relativity QG showed for 'which child is winning', here for 'was the child's use justified'. -> shows frame_of_weld must engage {meaning} for any weld whose child is a weapon/policy object. Does not move child_confidence (the bomb exists and was used).",
+      "confidence_impact": "Child existence/use ~0.97; the VALENCE/justification ~0.5 (observer- and era-relative; placed in fuzzy_layer.frontier)."
+    },
+    {
+      "what": "GERMAN-THREAT illusion: the fear of a Nazi bomb (the chief PULL/justification) was largely groundless — the Uranverein was de-prioritized by Speer in 1942, made a graphite-moderator error, and lost its talent to emigration; Einstein later said he would have 'done nothing' had he known.",
+      "sources_in_conflict": ["Wikipedia 'German nuclear program during World War II'", "Einstein's 1947 Newsweek regret", "arXiv histories (Schwab/Turchetta)"],
+      "type": "framework-vs-record-tension",
+      "why_interesting": "Forces a refinement on D4 external-events: a pull-event can have a REAL acting force (the fear genuinely drove the program) but a FALSE object (the enemy was a phantom). The 'mechanism' and the 'truth of the trigger' are SEPARABLE — an external_event needs to record not just direction+mechanism but whether the motivating belief was VERIDICAL. The most consequential false-belief-as-driver in the batch. -> motivates a forcing_events.veridical flag (gaps[3]).",
+      "confidence_impact": "~0.9 that the fear drove it; ~0.85 that it was misplaced (with honest residual uncertainty about how close Germany 'could' have come)."
+    },
+    {
+      "what": "PRIORITY/CREDIT: the bomb is popularly attributed to Oppenheimer ('father of the atomic bomb') and to Einstein (via the letter), but Einstein did no technical work and called the letter his 'one great mistake'; Szilard conceived the chain reaction, drafted the letter, AND ran the petition against using the bomb; the ~130,000 mostly-anonymous workers (Calutron Girls, segregated Hanford laborers) built it without knowing what it was.",
+      "sources_in_conflict": ["Wikipedia 'Einstein-Szilard letter'", "NPS Manhattan Project NHP (workers)", "Atomic Heritage Foundation (women & African-Americans)"],
+      "type": "priority-dispute",
+      "why_interesting": "A re-attribution/credit tension analogous to Maxwell's 'named after the wrong node': the canonical names (Einstein, Oppenheimer) attach to a symbolic originator and an integrator, not to the conceiver (Szilard) or the mass labor that physically produced the child. -> suggests the actor model needs to distinguish SYMBOLIC carriers from PRODUCING inhabitants — and that compartmentalized mass labor is a genuine actor-class the people_0 layer omits (gaps[6]). Recorded as a credit dispute, NOT a structural reattribution of the object (so weld.reattribution stays empty).",
+      "confidence_impact": "Holds the popular attribution at ~0.5, the distributed reality at ~0.9."
+    },
+    {
+      "what": "DATE/ATTRIBUTION wobble on the letter->action lag: the Einstein-Szilard letter is dated 2 Aug 1939 but was not delivered to FDR until 11 Oct 1939 (by Sachs), and produced only a $6,000 committee that sat largely inert until 1941 — so the popular 'the letter started the Manhattan Project' is a ~2-3 year compression of a slow, near-dormant runway.",
+      "sources_in_conflict": ["Wikipedia 'Einstein-Szilard letter' (dates)", "Wikipedia 'Manhattan Project'", "the popular 'the letter started it' narrative"],
+      "type": "date/attribution-conflict",
+      "why_interesting": "A clean example of the schema's 'when as an interval not a date' (R2) at the conception phase: the gap between when the weld was DRAWN (Aug-Oct 1939) and when it FIRED (late 1941, post-MAUD + post-Pearl-Harbor) is itself diagnostic — a ~2-year drawn-but-not-firing interval (recorded in dormancy_intervals + the lifecycle dormancy phase). Negligible on substance, but a textbook case for interval-dating the conception->firing lag.",
+      "confidence_impact": "Negligible on substance; the ~2-year drawn-but-not-firing interval is recorded at ~0.9."
+    }
+  ],
+
+  "forcing_events": [
+    {
+      "_comment": "(D4) the EXOGENOUS-FORCING 'weather' layer — FIRST-CLASS and LOAD-BEARING here (the antithesis of Maxwell's empty forcing_events). The consummation tempo is attributed MAINLY to these external events. Note the signature D4 finding: a single event (Nazi persecution) has OPPOSITE directions on the two rival lineages, and a pull-event (German-threat fear) can have a real force but a FALSE object.",
+      "id": "fe-wwii",
+      "name": "World War II / total-war mobilization",
+      "kind": "war",
+      "direction": "pull",
+      "acted_on": [
+        { "target": "weld-main", "target_kind": "weld", "effect": "accelerate", "strength": 0.95 },
+        { "target": "child-bomb", "target_kind": "child", "effect": "elevate", "strength": 0.9 }
+      ],
+      "when": "1939-1945",
+      "mechanism": "Total war converted near-unlimited federal money, industrial capacity, secrecy, and conscripted manpower into a single directed goal, collapsing a multi-decade industrialization into ~33 months. The canonical war/PULL event — without it the weld stays in the slow 1939-41 committee phase indefinitely (the German program with the same physics never consummated).",
+      "confidence": 0.95
+    },
+    {
+      "id": "fe-pearl-harbor",
+      "name": "Attack on Pearl Harbor (7 Dec 1941)",
+      "kind": "war",
+      "direction": "pull",
+      "acted_on": [
+        { "target": "sw-maud-pearl", "target_kind": "weld", "effect": "accelerate", "strength": 0.9 },
+        { "target": "weld-main", "target_kind": "weld", "effect": "accelerate", "strength": 0.85 }
+      ],
+      "when": "7 Dec 1941",
+      "mechanism": "US entry into the war converted latent urgency into total commitment; the 18 Dec 1941 S-1 meeting was 'pervaded by an atmosphere of enthusiasm and urgency'. The specific exogenous shock that FIRED the weld (the revival trigger from the drawn-but-not-firing runway).",
+      "confidence": 0.9
+    },
+    {
+      "id": "fe-german-threat",
+      "name": "Fear of a German atomic bomb (the Uranverein threat)",
+      "kind": "politics",
+      "direction": "pull",
+      "acted_on": [
+        { "target": "weld-main", "target_kind": "weld", "effect": "fund", "strength": 0.85 },
+        { "target": "act-emigres", "target_kind": "actor", "effect": "accelerate", "strength": 0.8 }
+      ],
+      "when": "1939-1944",
+      "mechanism": "Belief that Heisenberg's program was ahead converted a physics curiosity into a national-survival imperative; explicitly cited to justify the crash program (17 Jun 1942) and motivated the emigre scientists. CRITICAL framework-vs-record tension: the threat was largely ILLUSORY (Speer shelved the German effort in 1942) — the weld was pulled to consummation by a PHANTOM enemy (Einstein: 'had I known the Germans would not succeed... I would have done nothing'). A pull-event whose acting FORCE was real but whose OBJECT was a mirage.",
+      "confidence": 0.9,
+      "_veridicality_note": "(gaps[3]) ~0.9 that the fear DROVE it; ~0.85 that the fear was MISPLACED. This event demonstrates the need for a forcing_events.veridical flag: direction+mechanism are real, the motivating belief is false."
+    },
+    {
+      "id": "fe-emigre-exodus",
+      "name": "Nazi racial persecution / the emigre exodus (1933 Civil Service Law; 1938 Anschluss)",
+      "kind": "politics",
+      "direction": "both",
+      "acted_on": [
+        { "target": "act-emigres", "target_kind": "actor", "effect": "redirect", "strength": 0.9 },
+        { "target": "pf-fission", "target_kind": "sub_wrapper", "effect": "starve", "strength": 0.6 },
+        { "target": "act-uranverein", "target_kind": "lineage", "effect": "starve", "strength": 0.8 }
+      ],
+      "when": "1933 (Civil Service Law) + Mar 1938 (Anschluss)",
+      "mechanism": "The Law for the Restoration of the Professional Civil Service (1933) and the Anschluss (Mar 1938) expelled Jewish and anti-Nazi physicists (Einstein, Szilard, Fermi via his Jewish wife, Teller, Wigner, Bethe, Frisch, Peierls, Bohr), who became the decisive expertise of the Manhattan Project. The SAME political force that STARVED the German weld FED the American one — a single event with OPPOSITE directions on the two rival lineages. The deepest D4 irony of the specimen.",
+      "confidence": 0.9,
+      "_lineage_relative_note": "(gaps[4]) direction=both because it is LINEAGE-RELATIVE: PULL on the Allied lineage (the emigres became its substrate), SQUEEZE on the Axis lineage (talent exodus). A single event's direction is not global."
+    },
+    {
+      "id": "fe-espionage",
+      "name": "Soviet espionage / Klaus Fuchs leak (1942-1945) -> RDS-1 (Aug 1949)",
+      "kind": "politics",
+      "direction": "both",
+      "acted_on": [
+        { "target": "h-deterrence", "target_kind": "child", "effect": "accelerate", "strength": 0.8 },
+        { "target": "child-bomb", "target_kind": "child", "effect": "redirect", "strength": 0.6 }
+      ],
+      "when": "1942-1949",
+      "mechanism": "Fuchs and others passed implosion-bomb design across the secrecy boundary; Western estimates credit it with accelerating the Soviet bomb by ~18-24 months. PULLED the arms race into being / SQUEEZED the US nuclear monopoly out of existence. The exogenous event that converted a single weapon into a bipolar arms race.",
+      "confidence": 0.9
+    },
+    {
+      "id": "fe-hiroshima",
+      "name": "Hiroshima & Nagasaki (6 & 9 Aug 1945) + the surrender of Japan",
+      "kind": "war",
+      "direction": "pull",
+      "acted_on": [
+        { "target": "child-bomb", "target_kind": "child", "effect": "elevate", "strength": 0.95 }
+      ],
+      "when": "6 & 9 Aug 1945",
+      "mechanism": "Combat use publicly consummated the weld and locked in the nuclear age; also the locus of the largest MORAL discrepancy (orthodox 'ended the war' vs Alperovitz revisionist 'Japan near surrender, bomb aimed at the USSR'). A pull-event for the child's geopolitical hardening.",
+      "confidence": 0.95,
+      "_why_contested_note": "~0.95 on occurrence; the WHY is contested (see discrepancies: moral historiography)."
+    },
+    {
+      "id": "fe-postwar-funding",
+      "name": "Postwar federal-science-funding settlement (Bush 'Science—The Endless Frontier' Jul 1945 -> AEC 1947 -> NSF 1950)",
+      "kind": "funding",
+      "direction": "pull",
+      "acted_on": [
+        { "target": "h-big-science", "target_kind": "child", "effect": "fund", "strength": 0.85 },
+        { "target": "h-national-labs", "target_kind": "child", "effect": "fund", "strength": 0.85 }
+      ],
+      "when": "1945-1950",
+      "mechanism": "The wartime OSRD model was made permanent: sustained government funding PULLED a whole national-laboratory + university-research complex into existence, the template for Cold-War physics patronage. The weld's organizational form outlived its weapon.",
+      "confidence": 0.85
+    }
+  ],
+
+  "sources": [
+    {
+      "name": "Wikipedia, 'Manhattan Project'",
+      "type": "encyclopedia",
+      "url": "https://en.wikipedia.org/wiki/Manhattan_Project",
+      "what_used_for": "institutional chain (Advisory Committee on Uranium->NDRC->OSRD/S-1->Manhattan Engineer District/Groves), dates (MED 13 Aug 1942, Groves 23 Sep 1942, Trinity 16 Jul 1945, Quebec Agreement Aug 1943), scale (~$2bn, ~130,000 peak, three secret cities), contractors (DuPont $1 fee, Stone & Webster), Top Policy Group, Combined Policy Committee.",
+      "reliability": 0.85
+    },
+    {
+      "name": "Wikipedia, 'Discovery of nuclear fission'",
+      "type": "encyclopedia",
+      "url": "https://en.wikipedia.org/wiki/Discovery_of_nuclear_fission",
+      "what_used_for": "the physics lineage (Becquerel 1896, Rutherford 1911, Chadwick neutron 1932, Fermi 1934, Ida Noddack 1934), Hahn-Strassmann Dec 1938, Meitner-Frisch liquid-drop ~200 MeV, Frisch naming 'fission' via biologist W. Arnold, Bohr-Wheeler 1 Sep 1939, U-235/U-238 (Bohr), Meitner's refugee flight after the Mar 1938 Anschluss.",
+      "reliability": 0.85
+    },
+    {
+      "name": "Wikipedia, 'MAUD Committee'",
+      "type": "encyclopedia",
+      "url": "https://en.wikipedia.org/wiki/MAUD_Committee",
+      "what_used_for": "Frisch-Peierls memo Mar 1940, first meeting 10 Apr 1940 Royal Society, the two Jul 1941 reports, the ~25 lb / 1,800 tons-TNT estimate, Oliphant's Aug 1941 visit finding Briggs had safed the report, Conant receiving it 3 Oct 1941, spawning Tube Alloys (Anderson, Akers/ICI).",
+      "reliability": 0.85
+    },
+    {
+      "name": "Wikipedia, 'Einstein-Szilard letter'",
+      "type": "encyclopedia",
+      "url": "https://en.wikipedia.org/wiki/Einstein%E2%80%93Szilard_letter",
+      "what_used_for": "authorship (Szilard w/ Teller & Wigner), signing 2 Aug 1939, delivery by Sachs 11 Oct 1939, the warnings ('extremely powerful bombs of a new type', German uranium/Czechoslovakia), FDR 'Pa, this requires action!', the $6,000 committee, Einstein's Newsweek 1947 regret ('had I known... I would have done nothing').",
+      "reliability": 0.85
+    },
+    {
+      "name": "Atomic Heritage Foundation / Nuclear Museum",
+      "type": "scholarly-history",
+      "url": "https://ahf.nuclearmuseum.org",
+      "what_used_for": "Britain's early input, MAUD report detail, Einstein-Szilard letter, Klaus Fuchs profile, women & African-Americans on the project, atomic culture; corroborates the institutional and personnel facts.",
+      "reliability": 0.85
+    },
+    {
+      "name": "US National Park Service, Manhattan Project National Historical Park",
+      "type": "primary",
+      "url": "https://www.nps.gov/mapr",
+      "what_used_for": "the three secret cities (Oak Ridge, Hanford/Richland, Los Alamos) housing >125,000 by Aug 1945; African-American workers (>15,000 at Hanford, ~7,000 at Oak Ridge under segregation); secret-cities scale.",
+      "reliability": 0.9
+    },
+    {
+      "name": "OSTI Manhattan Project History",
+      "type": "primary",
+      "url": "https://www.osti.gov/opennet/manhattan-project-history",
+      "what_used_for": "establishing Los Alamos 1942-43, the Met Lab organization, site-by-site detail.",
+      "reliability": 0.9
+    },
+    {
+      "name": "Wikipedia, 'German nuclear program during World War II' + arXiv histories (Schwab/Turchetta)",
+      "type": "encyclopedia",
+      "url": "https://en.wikipedia.org/wiki/German_nuclear_program_during_World_War_II",
+      "what_used_for": "the Uranverein's 16 Sep 1939 meeting, Speer's 1942 de-prioritization, the graphite-moderator error, talent exodus, the 'Heisenberg sabotage' theory being unsupported — the negative-control lineage and the German-threat illusion.",
+      "reliability": 0.8
+    },
+    {
+      "name": "Wikipedia, 'Klaus Fuchs' + MI5 history + Smithsonian",
+      "type": "encyclopedia",
+      "url": "https://en.wikipedia.org/wiki/Klaus_Fuchs",
+      "what_used_for": "Fuchs spying from 1942, implosion-lens secrets, Western estimate of ~18-24-month Soviet acceleration, RDS-1 Aug 1949, Venona, 1950 arrest — the espionage/arms-race harvest.",
+      "reliability": 0.85
+    },
+    {
+      "name": "Gar Alperovitz, 'The Decision to Use the Atomic Bomb' + Project MUSE orthodoxy/revisionism review + 1946 US Strategic Bombing Survey",
+      "type": "scholarly-history",
+      "url": "https://muse.jhu.edu/",
+      "what_used_for": "the moral/decision historiography (Japan near surrender, Byrnes/atomic-diplomacy thesis, USSBS 'would have surrendered without it') — the whig-vs-revisionist {meaning}-frame discrepancy.",
+      "reliability": 0.6,
+      "_reliability_note": "medium — partisan/contested by design; carried as the explicit revisionist pole, balanced against orthodox accounts."
+    },
+    {
+      "name": "Bulletin of the Atomic Scientists / Doomsday Clock",
+      "type": "primary",
+      "url": "https://thebulletin.org",
+      "what_used_for": "founded 1945 by ex-Manhattan-Project scientists, Doomsday Clock 1947, FAS Nuclear Notebook — the scientists'-responsibility harvest.",
+      "reliability": 0.9
+    },
+    {
+      "name": "Vannevar Bush, 'Science—The Endless Frontier' (Jul 1945) commentary (issues.org, Physics Today, HBS working paper)",
+      "type": "scholarly-history",
+      "url": "https://www.nsf.gov/od/lpa/nsf50/vbush1945.htm",
+      "what_used_for": "the OSRD->NSF (1950) postwar science-funding settlement and the Big-Science legacy.",
+      "reliability": 0.85
+    },
+    {
+      "name": "Brookings / Restricted Data (Wellerstein, blog.nuclearsecrecy.com) / Statista",
+      "type": "scholarly-history",
+      "url": "https://blog.nuclearsecrecy.com",
+      "what_used_for": "cost (~$1.9bn 1945, ~$30-50bn today; Oak Ridge ~63% of spend; >80% on production plants), ~500,000 total workers across turnover (~1% of US civilian labor force), B-29 cost comparison (~$3bn) — the scale figures cross-checked.",
+      "reliability": 0.85
+    }
+  ]
+}
