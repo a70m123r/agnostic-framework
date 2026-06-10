@@ -1,0 +1,195 @@
+{
+  "_doc": "NARRATION TRACK v0 (R6, presenter-prototype) for specimen 'internet'. Running commentary keyed to year-ranges for the v2 viewer narration bar. DISCIPLINE: every factual claim traces to a substrate fact_id (compiled/internet.compiled.json), a 'specimen:<field>' in specimens/internet.json, or an 'overlay:<key>' in overlays/internet.overlay.json — NO new claims; estimates and disputed values flagged in-line. Written by the Fable narration seat 2026-06-10. NOT ratified data; a presentation layer over the substrate.",
+  "specimen": "internet",
+  "segments": [
+    {
+      "from": 1957,
+      "to": 1963,
+      "title": "Weather first: Sputnik and a ghost",
+      "text": "Before the child, the weather. Sputnik crosses the sky on 4 October 1957 and Washington answers in four months flat — ARPA stands up in February 1958, the first domino in what becomes an eleven-year cascade to a working packet network. Inside the new agency, Licklider takes the IPTO chair in October 1962 and sketches an 'Intergalactic Network' of linked computers, while out at RAND a young Paul Baran is already asking (from 1959) how a network survives a nuclear strike. Keep your eye on that ghost of a network-of-networks: for now it has no engineering, only a vision.",
+      "refs": [
+        "f-internet-e0075",
+        "f-internet-0041",
+        "f-internet-0076",
+        "f-internet-0026",
+        "f-internet-0025",
+        "specimen:weld.surprise_priority",
+        "f-internet-0003"
+      ],
+      "era_kind": "pre-history"
+    },
+    {
+      "from": 1964,
+      "to": 1968,
+      "title": "Two inventors, one packet",
+      "text": "The packet gets invented twice — watch both benches. Baran publishes 'On Distributed Communications' in August 1964, and AT&T waves away its own replacement — 'it can't work, and if it did work, we don't want it' — while the Defense Communications Agency lacks the digital expertise and the project is shelved on Baran's own advice. Independently, Davies at the NPL conceives the same scheme in 1965 and coins the word 'packet' (1965-66); Kleinrock's 1961-64 queueing theory is real and load-bearing, but his claim to the switching concept is contested — historians split the credit roughly 45/45 Baran-Davies (a disclosed estimate, not a measurement). Then in 1966 Taylor gets the ARPANET program moving, and the orphaned technique finally has a customer.",
+      "refs": [
+        "f-internet-e0005",
+        "f-internet-e0006",
+        "f-internet-0007",
+        "f-internet-0008",
+        "f-internet-e0071",
+        "f-internet-0092",
+        "f-internet-0032"
+      ],
+      "era_kind": "roots"
+    },
+    {
+      "from": 1969,
+      "to": 1972,
+      "title": "'lo' — the testbed comes alive",
+      "text": "Deployment, at speed. BBN wins the IMP contract in January 1969 and the first box lands at UCLA by 30 August — about three years from Taylor's funding to a live node; the first message goes out on 29 October and the system crashes after two letters: 'lo'. That same spring a graduate student named Crocker opens RFC 1 (7 April 1969), founding the open-memo culture this whole lineage will run on. The parallel roots sprout fast — Davies' NPL network goes live in January 1970, Pouzin's CYCLADES starts in France in 1971, and by June 1972 the internationals form INWG to try to stitch the strands together.",
+      "refs": [
+        "f-internet-e0073",
+        "f-internet-e0072",
+        "f-internet-0070",
+        "f-internet-e0012",
+        "f-internet-0021",
+        "f-internet-0049"
+      ],
+      "era_kind": "roots"
+    },
+    {
+      "from": 1973,
+      "to": 1974,
+      "title": "The weld is drawn: TCP, May 1974",
+      "text": "Here it is — the weld moment. Kahn poses the open-architecture problem in 1973 — connect independently-owned, dissimilar networks with no internal changes and no central control — and in May 1974 Cerf and Kahn publish 'A Protocol for Packet Network Intercommunication', fusing packet-switching to that principle at the gateway-and-datagram seam. Seven months later, RFC 675 (December 1974) writes the word 'internet' down for the first time. Credit where due: the datagram core rides in from Pouzin's CYCLADES, openly acknowledged — yet historians put roughly a third of the load on the synergy itself, the part neither parent owned (a disclosed estimate, never measured bits).",
+      "refs": [
+        "f-internet-0017",
+        "f-internet-0082",
+        "f-internet-0067",
+        "f-internet-e0034",
+        "specimen:weld.shared_sub_object_S",
+        "f-internet-e0035",
+        "f-internet-0086",
+        "f-internet-e0036",
+        "overlay:theory_dna"
+      ],
+      "era_kind": "weld"
+    },
+    {
+      "from": 1975,
+      "to": 1981,
+      "title": "Paris starves its own pioneer",
+      "text": "Now the fork — and the first casualty. The INWG's 1976 compromise protocol is adopted by neither camp and the group is effectively done that year; the CCITT picks X.25 instead (1976) and ISO begins OSI (1977): the protocol wars are open. Then the cruelest cut — France's PTT defunds CYCLADES in 1978 to back Minitel/Transpac, invoking its state monopoly on data transmission, and the pioneer network goes dark by 1981 (sources differ on whether the kill landed by 1978 or 1981). But watch the idea refuse to die: the datagram is already inside TCP, which splits into TCP+IP in 1978 — the suppressed concept riding out of its patron's funeral and into the narrow waist.",
+      "refs": [
+        "f-internet-e0078",
+        "f-internet-0055",
+        "f-internet-0057",
+        "f-internet-e0024",
+        "f-internet-e0023",
+        "f-internet-0060",
+        "f-internet-0068",
+        "specimen:weld.dormancy_intervals",
+        "specimen:weld.revival"
+      ],
+      "era_kind": "dormancy"
+    },
+    {
+      "from": 1982,
+      "to": 1984,
+      "title": "Flag day: the weld fires",
+      "text": "Consummation, by mandate. The Pentagon declares TCP/IP its official standard in March 1982 and sets a hard deadline; on 1 January 1983 — flag day — the ARPANET cuts over from NCP, roughly nine years after the paper that drew the weld. Respect the friction in that number: ~7.5 years from RFC 675 to the DoD mandate, five more from the 1978 TCP/IP split to the cutover — even a winning weld grinds through institutions slowly. The opposition formalizes too (ISO publishes the seven-layer OSI model in 1984), and in December 1984 a router company called Cisco incorporates to sell the seam itself.",
+      "refs": [
+        "f-internet-e0083",
+        "f-internet-0072",
+        "f-internet-e0039",
+        "f-internet-0058",
+        "f-internet-e0029",
+        "f-internet-0052"
+      ],
+      "era_kind": "hardening"
+    },
+    {
+      "from": 1985,
+      "to": 1988,
+      "title": "The phantom called inevitable",
+      "text": "Feel the weather turn against the winner. In 1985 the US National Research Council recommends migrating FROM TCP/IP TO OSI; GOSIP v1 lands in August 1988 with federal enforcement set for August 1990 — watch the state pull the rival lineage up while squeezing the already-working child, and by 1989 the pundit line is 'OSI is now inevitable' (Metcalfe): a real institutional force aimed, it turns out, at a phantom object. The counter-pull builds quietly — the NSFNET program starts in 1985, its backbone consolidates in 1986, and the IETF holds its first meeting on 16 January 1986: running code accumulating under the mandate's nose. The mandate itself proves largely toothless — there are barely any OSI products to buy, so agencies purchase TCP/IP anyway.",
+      "refs": [
+        "f-internet-e0031",
+        "f-internet-e0032",
+        "specimen:forcing_events",
+        "specimen:weld.surprise",
+        "f-internet-0088",
+        "f-internet-0073",
+        "f-internet-0048"
+      ],
+      "era_kind": "forcing"
+    },
+    {
+      "from": 1989,
+      "to": 1995,
+      "title": "The Web ends the protocol wars",
+      "text": "The killer harvest ends the war. Berners-Lee proposes the Web at CERN on 12 March 1989, CERN releases it royalty-free on 30 April 1993, and the one application everyone suddenly wants runs only on TCP/IP. The old order folds in sequence: the ARPANET is decommissioned in 1990 (the year is corroborated; the exact February date less so), the NSF lifts the commercial-traffic ban in 1991 — the same year Britain's JANET watches IP overtake X.25 — and GOSIP drops the OSI mandate in 1994-95, the 'inevitable' stack's recorded fate reading simply 'faded'. On 30 April 1995 the NSFNET backbone retires, and the child walks out of the government's house for good.",
+      "refs": [
+        "f-internet-0071",
+        "f-internet-e0055",
+        "specimen:forcing_events",
+        "f-internet-0064",
+        "f-internet-e0041",
+        "f-internet-e0043",
+        "f-internet-e0044",
+        "f-internet-0059",
+        "f-internet-0085"
+      ],
+      "era_kind": "harvest"
+    },
+    {
+      "from": 1996,
+      "to": 2005,
+      "title": "Handover: the child goes commercial",
+      "text": "Commerce takes the field. SSL and the first storefronts had unlocked e-commerce in 1994, Amazon and eBay arriving in 1995 right as the backbone privatized — and through the decade the proprietary vendor stacks (IBM's SNA, DEC's DECnet) are absorbed into TCP/IP rather than beaten in the open. Governance scaffolding follows the money: ISOC (founded December 1992) and then ICANN (30 September 1998) take the keys, while the IETF future-proofs the address space with IPv6 (December 1998). X.25 dwindles to niches — ATMs, aviation, telemetry, with BT's service lingering to 2019 — a reminder that rivals don't always die; sometimes they just retire to the countryside.",
+      "refs": [
+        "f-internet-e0079",
+        "overlay:harvest_dates.h-ecommerce",
+        "overlay:rival_fates.rel-proprietary",
+        "f-internet-0053",
+        "f-internet-0054",
+        "f-internet-e0076",
+        "overlay:rival_fates.rel-x25",
+        "f-internet-e0082",
+        "f-internet-e0028"
+      ],
+      "era_kind": "harvest"
+    },
+    {
+      "from": 2006,
+      "to": 2023,
+      "title": "Rivals fall, the substrate hardens",
+      "text": "The child becomes the floor everything stands on. Social platforms emerge 2003-06 and consolidate into billion-user feeds by 2010-12; AWS (2006) and the iPhone (2007) open the cloud-mobile era that puts the network in every pocket. On 30 June 2012 France finally switches off Minitel — the network its PTT chose over CYCLADES, now outlived globally by the very datagram it displaced at home. And on 1 October 2016 the US hands IANA oversight to the global multistakeholder community: the weld's governance, like its packets, ends up with no central owner.",
+      "refs": [
+        "overlay:harvest_dates.h-social",
+        "overlay:harvest_dates.h-cloud-mobile",
+        "f-internet-0061",
+        "f-internet-0062",
+        "specimen:relatives",
+        "f-internet-0074",
+        "f-internet-e0062"
+      ],
+      "era_kind": "harvest"
+    },
+    {
+      "from": 2024,
+      "to": 2024,
+      "title": "Fifty years on, traffic inverts",
+      "text": "The anniversary arrives with a twist. In May 2024 the IEEE dedicates Triple Milestones for the 1974 Cerf-Kahn paper, both welders present to reflect on the weld's birth half a century on. That same year the network's own traffic inverts: automated agents reach 51% of all web traffic (Imperva/Thales) — for the first time, the child's majority occupant isn't human. ICANN, meanwhile, seats a new president and CEO on 5 December 2024 — stewardship changing hands just as the substrate shifts beneath it.",
+      "refs": [
+        "overlay:now_extension",
+        "f-internet-e0068"
+      ],
+      "era_kind": "now"
+    },
+    {
+      "from": 2025,
+      "to": 2026,
+      "title": "New weather at the content layer",
+      "text": "The weather is back, and it has a familiar shape. On 2 January 2025 the Sixth Circuit vacates US net neutrality, ending the two-decade regulatory battle on the deregulatory side; on 1 July 2025 Cloudflare — fronting roughly a fifth of the web — flips the default to block AI crawlers and opens a Pay Per Crawl market: an open-versus-permissioned contest with the protocol wars' exact silhouette, replayed at the content layer. Pew measures AI answer engines halving click-throughs (8% vs 15%) as zero-click searches climb from 56% to 69% — the open web's referral economy decaying in real time. Yet the weld's governance holds: on 17 December 2025 the UN makes the Internet Governance Forum permanent and reaffirms multistakeholder rule, while roughly 570 submarine cable systems keep the physical bedrock growing under it all.",
+      "refs": [
+        "overlay:now_extension",
+        "f-internet-e0064",
+        "f-internet-e0080"
+      ],
+      "era_kind": "now"
+    }
+  ]
+}

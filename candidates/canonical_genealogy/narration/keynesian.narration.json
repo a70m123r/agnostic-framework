@@ -1,0 +1,103 @@
+{
+  "_doc": "Narration track for specimen keynesian — the Olympics-presenter v0 (Pav R6, 2026-06-10). Running commentary segments keyed to year-ranges for the v2 viewer narration bar. DISCIPLINE: every factual claim traces to a substrate fact_id (f-keynesian-*), a specimen field (specimen:<field>), or an overlay entry (overlay:<key>); estimates are flagged in-line; NO new claims. Written by a narration agent operating off the compiled substrate (substrate/compiled/keynesian-economics.compiled.json, generated 2026-06-10), specimens/keynesian.json, and overlays/keynesian.overlay.json.",
+  "specimen": "keynesian",
+  "generated": "2026-06-10",
+  "segments": [
+    {
+      "from": 1820,
+      "to": 1888,
+      "title": "The hundred-year heresy",
+      "text": "Before there is a weld there is a loser: around 1820 — historians put it at roughly that date — Malthus argues a whole economy can fail to buy its own output, and Ricardo's side wins. Say's law, formulated from 1803, becomes canon, and the demand-deficiency idea is exiled as crank territory for a century. Keep one number in your pocket: roughly 107 years will pass between Malthus losing the glut debate and the idea's 1936 vindication.",
+      "refs": ["f-keynesian-0036", "f-keynesian-e0055", "f-keynesian-e0047", "specimen:weld.surprise_priority"],
+      "era_kind": "pre-history"
+    },
+    {
+      "from": 1889,
+      "to": 1928,
+      "title": "Two parents, not yet speaking",
+      "text": "Watch both bloodlines assemble in parallel. On the orthodox side, Marshall's apparatus arrives in 1890 and Wicksell's cumulative process in 1898 — the calculus and the monetary wedge. On the heretic side, Hobson carries underconsumption from 1889 and is scorned for it. Complementary in content, antagonists by status: the orthodoxy spends these decades sneering at the very parent it will one day be welded to.",
+      "refs": ["f-keynesian-0042", "f-keynesian-0047", "f-keynesian-0039", "specimen:weld.lifecycle.pre_weld_relationship"],
+      "era_kind": "roots"
+    },
+    {
+      "from": 1929,
+      "to": 1932,
+      "title": "The squeeze: Depression weather",
+      "text": "Here comes the weather. The Great Depression squeezes the classical order — self-correction visibly failing — and pulls demand for a new theory into existence; the specimen scores this forcing at strength 0.95 on the weld itself. In the workshop, the Cambridge Circus convenes from October 1930, Kahn's multiplier is published in June 1931, and the 'bearishness' notion from Keynes's 1930 Treatise is mutating into liquidity preference. The welding operators are on the bench.",
+      "refs": ["specimen:forcing_events.fe-depression", "f-keynesian-0068", "f-keynesian-e0024", "overlay:entity_lifecycles.sub-liquidity-preference"],
+      "era_kind": "forcing"
+    },
+    {
+      "from": 1933,
+      "to": 1935,
+      "title": "Three welders reach for one seam",
+      "text": "Now the strangest stat in this genealogy: the same weld starts forming in three places at once. Kalecki derives the essentials independently from 1933 — and never presses his priority claim — while the Stockholm School, active from 1930, works the Wicksellian side of the same territory. Keynes, drafting in Cambridge, is simply the welder history will name it after; when the crisis-pull is this strong, the weld is in the air.",
+      "refs": ["f-keynesian-0009", "f-keynesian-0063", "specimen:discrepancies[2]", "specimen:weld.lifecycle.phase_trajectory"],
+      "era_kind": "weld"
+    },
+    {
+      "from": 1936,
+      "to": 1936,
+      "title": "BIRTH-1: the General Theory",
+      "text": "February 1936: contact. The General Theory turns the marginalist apparatus on the heretics' demand-deficiency insight, and out comes the thing neither parent could see — an economy that can settle and STAY below full employment, with the state as residual demand-maker. The specimen's surprise confidence sits at 0.9, well above the child's own 0.72 — a real synergy attached to an unstable child. One asterisk for the replay: the 'classical' opponent Keynes welded against was partly a foil of his own construction, the strawman parent flagged as this specimen's prize discrepancy.",
+      "refs": ["f-keynesian-0003", "f-keynesian-0065", "specimen:weld.surprise", "specimen:weld.surprise_confidence", "specimen:child.confidence", "specimen:discrepancies[0]"],
+      "era_kind": "weld"
+    },
+    {
+      "from": 1937,
+      "to": 1946,
+      "title": "BIRTH-2: re-weld, war, machinery",
+      "text": "The durable object is not Keynes's prose — it is Hicks's IS-LM, consolidated in 1937, with Modigliani's 1944 formalization completing the re-weld; the name stays on Keynes, the taught structure belongs to the synthesizers. Then the war validates it: WWII deficits restore full employment as predicted, and the theory is bolted into permanent machinery — Bretton Woods founds the IMF and World Bank in July 1944, and the US Employment Act follows on 20 February 1946. Total lag from book to standing doctrine: about nine years — crisis compression doing what academic adoption alone never could.",
+      "refs": ["f-keynesian-e0025", "f-keynesian-0050", "specimen:weld.reattribution", "specimen:forcing_events.fe-wwii", "f-keynesian-0030", "f-keynesian-0066", "f-keynesian-e0048"],
+      "era_kind": "hardening"
+    },
+    {
+      "from": 1947,
+      "to": 1972,
+      "title": "Golden Age — with friction burns",
+      "text": "The harvest era — but watch the friction decide WHICH Keynesianism survives. In 1947 McCarthyist groups attack Tarshis's Keynesian textbook, donors withhold funding, and the book is largely withdrawn — clearing the lane for Samuelson's politically safer 1948 'Economics', which runs 19 editions and over 4 million copies, the bandwidth channel for a generation. The Phillips curve lands in 1958 as the policy menu, Robinson brands the synthesis 'bastard Keynesianism' in 1962, and by 1966 Friedman can quip 'in one sense, we are all Keynesians now; in another, nobody is any longer a Keynesian'. Inside the triumph, the rival is already growing: monetarism, conceived 1956, consolidates with Friedman's 1968 natural-rate address.",
+      "refs": ["f-keynesian-e0046", "f-keynesian-e0060", "f-keynesian-e0028", "f-keynesian-e0058", "f-keynesian-e0071", "f-keynesian-0067", "f-keynesian-e0029"],
+      "era_kind": "harvest"
+    },
+    {
+      "from": 1973,
+      "to": 1981,
+      "title": "Stagflation: the kill-shot decade",
+      "text": "The weather flips. Stagflation arrives in 1973 — inflation AND unemployment together — falsifying the naive Phillips-curve form the theory had been reduced to; the substrate's own low-confidence estimate splits the kill roughly 50/50 between Friedman's theoretical strikes and the stagflation facts themselves. Lucas delivers the formal critique in 1976, then Thatcher (1979) and Reagan (1981) make the burial political — by the early 1980s both major English-speaking democracies have abandoned demand-management as official doctrine. Even the mediator defects: in 1980 Hicks repudiates his own IS-LM as a classroom gadget that suppressed Keynes's core uncertainty insight.",
+      "refs": ["f-keynesian-e0037", "f-keynesian-e0061", "f-keynesian-e0030", "f-keynesian-e0072", "f-keynesian-e0036", "f-keynesian-e0045"],
+      "era_kind": "dormancy"
+    },
+    {
+      "from": 1982,
+      "to": 2007,
+      "title": "Eclipse — and the rivals' fates",
+      "text": "Dormancy, but never death — the specimen scores this eclipse at 0.8, not 1.0, because the child survives inside the very synthesis that domesticated it. Now track the rival fates: monetarism's money-targeting is abandoned by the early 1990s, its natural-rate core absorbed into inflation-targeting central banking, on the overlay's reading; the Austrians settle into a persistent niche; and new-classical economics is itself absorbed when New Keynesians rebuild Keynesian conclusions ON its microfoundations. By 2003 the hybrid DSGE models are standard forecasting tools at the Federal Reserve and the Bank of England — the buried theory is quietly running the machines.",
+      "refs": ["specimen:weld.lifecycle.phase_trajectory", "overlay:rival_fates.rel-monetarism", "f-keynesian-e0040", "f-keynesian-e0041", "f-keynesian-e0070", "f-keynesian-e0049"],
+      "era_kind": "dormancy"
+    },
+    {
+      "from": 2008,
+      "to": 2019,
+      "title": "Revival #1: exhumed by the GFC",
+      "text": "Crisis-pull, take two — and it is near-instant. China announces a RMB 4 trillion (US$586bn) stimulus on 9 November 2008, the G20's Washington summit commits to coordinated stimulus six days later, and the $787bn ARRA is signed on 17 February 2009 — a roughly 35-year dormancy ends inside months, with Krugman leading the public charge from 2008. But check the jersey: what wakes is the New-Keynesian DSGE object, microfounded and equilibrium-framed, closer in method to Keynes's old opponents than to Keynes. Revived, yes; the same child, no.",
+      "refs": ["f-keynesian-e0050", "f-keynesian-0073", "f-keynesian-e0034", "f-keynesian-0072", "specimen:discrepancies[6]", "specimen:weld.revival"],
+      "era_kind": "revival"
+    },
+    {
+      "from": 2020,
+      "to": 2023,
+      "title": "Revival #2: COVID and the MMT flirt",
+      "text": "A pandemic delivers the largest peacetime fiscal expansion in history: the $2.2 trillion CARES Act is signed on 27 March 2020, and the heterodox MMT variant — still scored as a persisting school — gets its moment in the policy conversation. Then the old ghost walks: post-pandemic inflation across 2021-2023 re-opens the stagflation-era critique of demand management almost beat for beat. And an era closes — Robert Lucas, author of the kill-shot critique, dies on 15 May 2023.",
+      "refs": ["f-keynesian-e0035", "specimen:forcing_events.fe-covid", "f-keynesian-e0043", "f-keynesian-e0051", "f-keynesian-e0053"],
+      "era_kind": "revival"
+    },
+    {
+      "from": 2024,
+      "to": 2026,
+      "title": "NOW: still contested at 90",
+      "text": "The present is a split screen. Pull side: the UK rewrites its fiscal rules to unlock roughly £70bn of investment borrowing (October 2024), and Germany cracks open its debt brake in March 2025 — a 512-206 Bundestag vote plus a borrowing-financed €500bn infrastructure fund. Squeeze side: the IMF warns global public debt will pass US$100 trillion in 2024, Milei's Argentine 'chainsaw' buys fiscal surpluses at the cost of poverty near 53%, and Washington decouples deficits from doctrine entirely — DOGE's record workforce cuts cannot stop spending rising, while the $3.4tn-deficit OBBBA passes anyway. As the General Theory turns 90 in February 2026, commemorations and anti-Keynesian retrospectives run simultaneously: the weld is still actively contested, live at NOW.",
+      "refs": ["overlay:now_extension[3]", "overlay:now_extension[5]", "overlay:now_extension[2]", "overlay:now_extension[1]", "overlay:now_extension[4]", "overlay:now_extension[6]", "overlay:now_extension[7]"],
+      "era_kind": "now"
+    }
+  ]
+}

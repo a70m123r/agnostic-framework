@@ -1,0 +1,103 @@
+{
+  "_doc": "Running-narrative track for specimen darwin_mendel — the presenter-prototype seat (Fable). Per-era commentary segments keyed to year-ranges, surfaced in the viewer_v2 narration bar as the timeline scrubs. DISCIPLINE: every factual claim traces to a substrate fact_id (f-darwin-mendel-* / f-dm-*), a specimen field (specimen:<path>), or an overlay entry (overlay:<key>). NO new claims introduced here. Estimates flagged in-line. Voice: sports-commentator-meets-documentarian.",
+  "specimen": "darwin_mendel",
+  "_now_anchor": "2026-06",
+  "segments": [
+    {
+      "from": 1798,
+      "to": 1838,
+      "title": "Pre-history: the roots before the seed",
+      "text": "Before either parent exists, watch the soil being laid: Malthus formulates the struggle-for-existence in 1798, the pressure cooker every later selection argument runs on. Decades later a young naturalist named Charles Darwin, born 1809, reads Malthus and the selection idea is conceived in his notebooks in 1838 — no theory yet, just a barely-there smear of an idea with no published core. This is the ghost phase: the engine is imagined long before it is built.",
+      "refs": ["f-dm-0085", "f-dm-0005", "f-darwin-mendel-0012", "overlay:entity_lifecycles.Charles Darwin.conceived"],
+      "era_kind": "pre-history"
+    },
+    {
+      "from": 1856,
+      "to": 1866,
+      "title": "Two roots, working blind",
+      "text": "Now both deep roots go to work — and neither knows the other matters. In a Brno monastery garden Mendel begins his pea experiments around 1856 and formulates the segregation laws by 1865, published 1866 as 'Versuche ueber Pflanzen-Hybriden'. Meanwhile Darwin publishes natural selection in 1859. The cruel gap: Darwin has the mechanism of change but no mechanism of inheritance — the very thing Mendel is quietly nailing down 800 miles away. Two halves of one answer, never introduced.",
+      "refs": ["f-darwin-mendel-0009", "f-dm-0004", "f-dm-0007", "specimen:weld.parents", "specimen:weld.shared_sub_object_S"],
+      "era_kind": "roots"
+    },
+    {
+      "from": 1867,
+      "to": 1884,
+      "title": "The friction that buries both",
+      "text": "Here is the squeeze — watch two careers get strangled by friction. In June 1867 Fleeming Jenkin's review argues blending inheritance would halve any favorable variant every generation, a genuinely fatal objection Darwin never solves; his 1868 pangenesis fix is disproved by Galton's transfusions by 1871. On Mendel's side the gatekeeping is brutal: Naegeli steers him to apomictic hawkweed, whose anomalous results corrode his own confidence; he is elected abbot in 1868 and administration ends his science; and after his death in 1884 the succeeding abbot burns his papers to close tax disputes.",
+      "refs": ["f-darwin-mendel-0013", "f-darwin-mendel-0014", "f-darwin-mendel-0007", "f-darwin-mendel-0005", "f-darwin-mendel-0006"],
+      "era_kind": "forcing"
+    },
+    {
+      "from": 1866,
+      "to": 1900,
+      "title": "Dormancy: cited three times",
+      "text": "This is the long sleep that defines this whole specimen. Mendel's 1866 paper is cited roughly three times in thirty-four years. Historians flag the cause as misreading — he was taken to be doing species-hybridization, not heredity — and the revisionists (Olby, Brannigan) argue it was less 'neglect' than 'not yet the same question', so treat the tidy 'ignored genius' narrative as contested even as the three-citations fact holds firm. Either way, the missing piece sits dormant in plain sight.",
+      "refs": ["f-darwin-mendel-0008", "specimen:weld.dormancy_intervals", "specimen:discrepancies"],
+      "era_kind": "dormancy"
+    },
+    {
+      "from": 1900,
+      "to": 1915,
+      "title": "Revival — and the parents go to war",
+      "text": "1900: the wake-up. de Vries, Correns and Tschermak independently rediscover Mendel's laws — though it is a contested three-way priority scrum, with de Vries publishing without citing Mendel and Tschermak's grasp of segregation disputed down toward a two-way event. But here is the twist nobody scripts: the rediscovered Mendelism arrives as anti-Darwinian mutationism. For about fifteen years the two future parents are enemies, the biometrician-versus-Mendelian war raging before anyone welds them.",
+      "refs": ["f-darwin-mendel-0038", "specimen:discrepancies", "f-darwin-mendel-0027", "f-darwin-mendel-0030"],
+      "era_kind": "revival"
+    },
+    {
+      "from": 1908,
+      "to": 1917,
+      "title": "The seam gets built underneath",
+      "text": "Watch the floor being poured before the building goes up. Hardy-Weinberg (1908) supplies the conservation law — the allele-frequency equilibrium that turns 'heritable variation' into something you can actually count. Morgan's fly room around 1910 pins Mendelian factors onto chromosomes, making the gene physical and legible. The shared object the synthesis will need — population genetics — is being assembled before the famous weld even has a date.",
+      "refs": ["f-dm-0068", "f-darwin-mendel-0019", "f-darwin-mendel-0037", "specimen:roots.sub_wrappers"],
+      "era_kind": "roots"
+    },
+    {
+      "from": 1918,
+      "to": 1932,
+      "title": "THE WELD: Fisher fuses the halves",
+      "text": "This is the moment — the weld itself. In 1918 R.A. Fisher's paper shows continuous, smooth biometric variation IS just many Mendelian loci of small effect summing together, dissolving the biometrician-Mendelian war in one stroke. Note the friction even here: the Royal Society referees, Pearson and Punnett, reject it, and it runs in Edinburgh only with Leonard Darwin's money. Haldane (1924-32) and Wright (1931-32) build out the population-genetics calculus around it. The two warring halves are now one mathematical object.",
+      "refs": ["f-darwin-mendel-0018", "f-darwin-mendel-0028", "f-darwin-mendel-0017", "f-darwin-mendel-0062", "f-darwin-mendel-0061"],
+      "era_kind": "weld"
+    },
+    {
+      "from": 1937,
+      "to": 1950,
+      "title": "Naming it, spreading it",
+      "text": "The math now needs translators, and they arrive on cue. Dobzhansky's 1937 'Genetics and the Origin of Species' carries the population-genetic math to working naturalists — often dated as the synthesis's true start. Mayr (1942) adds the biological species concept, Huxley names the whole thing 'the modern synthesis' in 1942, Simpson welds in paleontology (1944) and Stebbins botany (1950). Watch one warning flag, though: the proximate parents were never really 'Darwin plus Mendel' — they were Darwinism-inherited and Mendelism-mathematized, fused by population genetics. The popular two-parent story is a simplification.",
+      "refs": ["f-darwin-mendel-0023", "f-dm-0065", "f-darwin-mendel-0024", "f-darwin-mendel-0025", "specimen:discrepancies"],
+      "era_kind": "hardening"
+    },
+    {
+      "from": 1950,
+      "to": 1968,
+      "title": "Hardening — and the rivals' fates",
+      "text": "Now the synthesis stiffens. Through the 1950s, historians (Gould, Provine) argue it 'hardens' from a pluralist 1930s view into rigid pan-selectionism — the object at 1959 is not the object at 1937, so what 'the modern synthesis' even means becomes time-indexed. Meanwhile the rivals are buried: Lamarckism fades through the 1930s-40s under Weismann's hard heredity, and saltationist mutationism is absorbed around 1915, its discrete-factor core kept, its 'new species in one jump' dropped.",
+      "refs": ["f-darwin-mendel-0033", "f-darwin-mendel-0029", "f-darwin-mendel-0030", "specimen:discrepancies"],
+      "era_kind": "hardening"
+    },
+    {
+      "from": 1964,
+      "to": 1983,
+      "title": "Harvest: the children pour out",
+      "text": "Watch the canopy fruit. Hamilton's kin-selection math (1964) and Dawkins' gene-centered view (1976) spin off a whole optimization branch; Wilson's sociobiology (1975) extends selection to behavior. Then a partial counter-child: Kimura's neutral theory (1968, consolidated 1983) re-opens the drift question the hardened synthesis had closed. And Holland's 1975 genetic algorithms carry the population-genetics math straight into computer science — the lineage that links this specimen to the BES convergence in the wider DB.",
+      "refs": ["f-darwin-mendel-0047", "f-darwin-mendel-0048", "f-darwin-mendel-0049", "f-darwin-mendel-0044", "f-darwin-mendel-0058"],
+      "era_kind": "harvest"
+    },
+    {
+      "from": 1883,
+      "to": 1945,
+      "title": "The dark harvest",
+      "text": "Not every child is benign — this beat runs alongside the rest. Galton coins 'eugenics' in 1883 from his half-cousin Darwin's work; Fisher's own 1930 book carried eugenic chapters. The selection-on-variation kernel spills into US compulsory-sterilization law from 1907, upheld by Buck v. Bell in 1927, with tens of thousands sterilized and the Nazi state adopting the US model. The synthesis's most consequential and most harmful cultural fruit, disclosed plainly.",
+      "refs": ["f-darwin-mendel-0054", "f-darwin-mendel-0055", "specimen:harvest.cultural_harvest", "overlay:harvest_dates.EUGENICS (cultural_harvest, domain other)"],
+      "era_kind": "harvest"
+    },
+    {
+      "from": 2007,
+      "to": 2026,
+      "title": "NOW: still contested, still harvesting",
+      "text": "Bring it to the present — the weld is not closed, it is live. The Extended Evolutionary Synthesis (2007, Royal Society meeting 2016) presses that the parent theory is insufficient, and through 2024-26 the philosophers map it as distinct-but-not-incommensurable while a 2025 'survival of the luckiest' critique pushes back on the selection-centric core. The 1918 infinitesimal model is still working: GWAS marks twenty years in 2025 (even as 23andMe files for bankruptcy that March) and ancient-DNA polygenic-selection studies extend Fisher into deep time. And epigenetics keeps the once-defeated Lamarckian rival in a narrow, mechanistically-bounded revival.",
+      "refs": ["f-darwin-mendel-0050", "f-darwin-mendel-0026", "f-darwin-mendel-0051", "f-darwin-mendel-0053", "overlay:now_extension"],
+      "era_kind": "now"
+    }
+  ]
+}

@@ -8,7 +8,8 @@
     "specimens_with_facts": 7,
     "validation_errors": 0,
     "validation_flags": 1,
-    "disputed_best_values": 22
+    "disputed_best_values": 11,
+    "best_values_with_disputed_alternatives": 22
   },
   "per_specimen": {
     "darwin-mendel-modern-synthesis": {

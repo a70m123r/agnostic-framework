@@ -792,3 +792,132 @@ LOW-priority cleanups, all now folded in:
 
 No ratified files were touched; only `viewer_v1.html`, this addendum, and (deletion only) the stray
 `__script_*.js` temps. `node --check` still passes after the fixes. Review-fold date: 2026-06-10.
+
+---
+
+# v2 addendum (first-pass round) — Fable seat, 2026-06-10
+
+Built `viewer_v2.html` (1.07 MB self-contained, vanilla JS, no CDN) **from** `viewer_v1.html`:
+the v1 app script and embedded specimen+overlay JSON were reused; the script was refactored for
+orientation + extended with the new systems; the 7 narration JSONs and the 7 compiled-substrate
+exports (slimmed to the fields R5 needs — ~227 KB) were embedded as new `application/json` blocks.
+`viewer_v0.html` and `viewer_v1.html` are **untouched** (lineage preserved). No ratified files
+(SCHEMA_v2, specimens/*, overlays/*, Cowork's files, frame_lock_data) were modified — the embedded
+copies are read verbatim from source at assemble time.
+
+The extracted app script passes `node --check`, both standalone and **as embedded in the final
+HTML**. All 28 embedded JSON blocks parse. Verified live in a browser (static server): zero console
+errors across single/vertical/weather/click-detail/loop/global; ratio bar, narration track,
+theory-DNA bar, weather tooltips, click-detail provenance, orientation flip, panel collapse, and the
+7-lane global view all confirmed rendering with real data.
+
+## Asks -> built
+
+- **(R1) CRASH FIX — done.** Diagnosis confirmed the v1 long-session degrade was GC/DOM-churn driven
+  (not a hard leak). Fixes:
+  - **Pause when hidden** — `frame()` early-returns on `document.hidden` and does not reschedule;
+    a `visibilitychange` listener re-kicks the loop and resets `frame._last`. (Verified: in the
+    headless preview `document.hidden===true`, the loop correctly halted after one frame.)
+  - **Sprite cache** — node blobs pre-render to offscreen canvases keyed by bucketed
+    (color, radius, fuzz, glow); the hot loop does `drawImage` + `globalAlpha`. Eliminates the
+    per-node `createRadialGradient` + the rgba()-string churn from `drawNodes`/`drawAbsorption`.
+    Sprites rebuild only when a key bucket changes (about once per node-style; cache cleared on
+    theme/DPR change), not per frame.
+  - **Per-frame panel DOM writes removed** — `drawTheoryDNABar()`/`updateRatio()` are **out** of the
+    render loop. Theory-DNA is built once per specimen (static). Ratio + narration update on a ~5 Hz
+    throttle gated by a cheap signature `{round(year),layer,depth,observer}` — no `innerHTML` churn
+    when nothing changed.
+  - **Band/flash gradients cached** — the 3 band gradients build once and rebuild only when `H`
+    changes; weld-flash radial is already window-gated.
+  - **Frame-time guard / quality ladder** — smoothed `emaDt`; above ~40 ms it drops to `low`:
+    skips feedback arcs, drops sprite glow, and disables the O(n^2) separation passes (node + actor);
+    recovers at <24 ms.
+  - **De-O(n^2) physics** — visible set is built **once** per `step` (was `visibleNode()` called
+    ~n^2 inside separation); `mass()` is memoized per node and recomputed only when `magK` changes
+    (was `Math.pow` x2 per pair).
+  - **DPR capped at 1.5** (was 2).
+  - **rgba() memoized** — hex->[r,g,b] parse cached (was 3x `parseInt` per call).
+  - **Allocations per frame, before -> after** (about 100 visible nodes, steady state, not hidden):
+    radial-gradient objects ~50–100/frame -> **0** (sprite blits; the only remaining gradients are
+    the window-gated weld-flash and the <=4 absorption lobes during the brief weld-fire ramp);
+    rgba() strings ~500–1500/frame -> **a few dozen** (memoized parse, sprites pre-baked);
+    panel `innerHTML` rebuilds 2/frame (~120/s) -> **<=10/s** (throttled + signature-gated, DNA
+    static); `visibleNode()` calls ~n^2/frame -> **n/frame**; `Math.pow` ~2*n^2/frame -> **0 in the
+    hot loop** (memoized). Net: the "tens of thousands of GC objects/sec" the brief predicted is
+    essentially gone, and an idle/background tab now allocates **nothing** (loop paused).
+
+- **(K1) CONCEIVED SMEAR — done.** Each node carries structured `conceived`/`formulated` (from the
+  overlay lifecycle). Between the two, `nodePhase()==='pre'`: the node renders as a **coreless**,
+  wider, low-alpha (<=0.30) smear via a high-fuzz sprite (no centre dot), label **only on hover**;
+  the node now *appears* at `conceived` (not at the weld). The detail panel shows
+  "LIFECYCLE STATE: conceived — not yet formulated (K1 smear)"; the legend explains the state.
+
+- **(R2) ORIENTATION DIAL + WEATHER — done; loop-view minimal+disclosed.**
+  - **Orientation** toggles horizontal <-> **vertical-growth** (time top->bottom; bands become
+    vertical lanes — physical left, latent-trunk centre, harvest right; stems/edges curve as
+    branches). The coordinate system was generalized (`timeCoord`/`crossCenter`/`nodeTargetXY`);
+    physics springs apply the strong pull along the time axis and soft centering across. Verified
+    rendering in both.
+  - **Weather** (`forcing_events`, R20 per-target): arrows render on each active event's targets,
+    **direction derived per-target from `effect`** — pull (fund/accelerate/elevate) = a single arrow
+    toward the puller; squeeze (suppress/starve/kill) = paired inward arrows pressing the node;
+    redirect = a sideways curve. Strength -> arrow size. An event tag sits at the event's time
+    position; hover shows the event, kind, direction, mechanism, and every `acted_on` row. Present in
+    **both** orientations. (Verified: at DL/2007 the `fe-cifar` glyph reads "pull · fund -> child-dl
+    0.85, fund -> act-hinton 0.80".) The 4 v2 specimens carry weather; maxwell/darwin/qm have none —
+    the layer is simply empty for them (disclosed in-app via absence + legend note).
+  - **Causality LOOP view** = **minimal, implemented + disclosed as such.** A toggleable overlay
+    draws the closed cycle weld -> harvest -> action-space -> physical -> next-roots -> weld with
+    arrows, plus the specimen's sub-welds as the smaller inner loops. The **full nested-loop view**
+    (every sub-weld as a live mini-cycle with weather acting on each, laid out in-graph rather than as
+    a schematic overlay) is **DEFERRED** — it needs a sub-weld-level data pass (most specimens carry
+    sub-weld *names* but not per-sub-weld harvest/action-space edges) and a second layout engine.
+    The overlay says so on screen.
+
+- **(R3) BEDROCK / L0 LAYER — done.** A thin stratum is pinned to the bottom of the stage. Entries
+  (hardened welds = canon, key instruments/technologies) **graduate in** as the scrub passes their
+  hardening date; next-crop roots/parents draw faint dashed anchor lines down to the nearest
+  graduated entry (horizontal mode). In **global** view, each lane plots its bedrock graduates on the
+  lane baseline. The bedrock set is a **curated** L0 list per specimen, each entry disclosing its
+  binding (`ref`: a substrate `proposed:`/fact id, a `sub_wrapper`/`parents_full` instrument id, or
+  an `action_space`) — e.g. internet -> packet-switching, gateway, TCP/IP(1983), WWW(1991), ICANN;
+  deep_learning -> backprop/SGD, CUDA(2007), ImageNet, the 2012 weld, transformer(2017). It is the
+  compiled substrate **made literal**, and is flagged as a curated proxy (not an auto-derived export)
+  in the legend.
+
+- **(R4) DRAGGABLE PANELS — done.** Every floating panel (legend, ratio, theory-DNA, narration,
+  detail) has a drag handle (header, pointer-events + capture) and a collapse/expand chevron; the
+  detail panel also has a close X. Positions persist in-session in a plain `panelPos` object (no
+  localStorage). (Verified: legend collapses/expands; panels drag within the stage.)
+
+- **(R5) CLICK DETAIL PANEL — done.** Clicking a node/actor opens a draggable detail panel with the
+  full **untruncated** name/kernel/role text, the lifecycle strip, **all** populated fields, and —
+  where the embedded compiled substrate covers the subject — **substrate provenance**: per fact the
+  predicate, best value, `when`, **certainty**, **verification status** (the substrate `bucket`:
+  corroborated / pending / disputed / unverifiable), and the source title + year + clickable URL +
+  `fact_id`. Lookup matches `proposed:<id>`, then exact subject name, then a contained-name fallback.
+  When no subject matches, the panel says so plainly (no fabricated provenance). (Verified: the
+  "Ampere's circuital law" root resolved to its substrate subject with `f-maxwell-0058`, certainty
+  0.80, verification "pending", Wikipedia 2026-04.)
+
+- **(R6) NARRATION TRACK — done.** The 7 narration JSONs are embedded. A collapsible bottom bar shows
+  the current era segment (title + `[from-to . era_kind]` + text) and updates as the scrub moves;
+  every `ref` renders as a provenance chip — `f-*` resolves against the per-specimen fact index to
+  the subject/predicate/value/bucket/source (hover), `specimen:*` and `overlay:*` chips name the
+  field/key. In **global** view each lane shows its active era title at the current year.
+  **Grounding discipline:** the narration files were authored off the substrate and the viewer only
+  *renders* them — it adds **no** claims; every chip is a back-link to a substrate `fact_id`, a
+  specimen field path, or an overlay key, and an unresolved `f-*` is shown dimmed/"not in compiled
+  export" rather than silently dropped. (Verified: maxwell@1826 -> "The seam appears [1820-1845 .
+  pre-history]" with `f-maxwell-0017/0014/0058` + 2 specimen-field chips; chip hover resolved to
+  "Hans Christian Oersted . conceived=1820 . corroborated — Wikipedia".)
+
+## Disclosure / honest-proxy status (unchanged v1 discipline)
+Solidity = proxy span {kernel, canon, artefact, protocol}; only canon is data-bound. attract/repel
+edges are role-proxy (no a_charge). sharp/fuzzy = agnostic frame-ratio, **not** MDL/gain_v2 bits
+(none exist for these specimens). theory-DNA shares = disclosed historiographic estimates. Bedrock =
+curated L0 graduation set bound to substrate ids (proxy, disclosed). No measured bits are rendered;
+no nodes are invented for unmatched data. Convergence list stays 9; this is a Tier-3 render tool,
+not canon and not a promotion.
+
+`node --check` passes (standalone and embedded). Addendum date: 2026-06-10.

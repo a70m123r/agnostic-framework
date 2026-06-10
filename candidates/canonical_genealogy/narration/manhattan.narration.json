@@ -1,0 +1,213 @@
+{
+  "specimen": "manhattan",
+  "_doc": "Narrative track (R6, presenter-prototype v0) for specimens/manhattan.json. Segments keyed to year-ranges for the timeline scrub bar. DISCIPLINE: every factual claim traces to a substrate fact_id (compiled/manhattan-project.compiled.json), a specimen field (specimen:<path>), or an overlay entry (overlay:<key>); estimates are flagged in-line; NO new claims. Voice: commentator-documentarian. Written 2026-06-10 by the narration seat (Fable). NOT ratified canon; additive artifact, base files untouched.",
+  "generated": "2026-06-10",
+  "segments": [
+    {
+      "from": 1914,
+      "to": 1933,
+      "title": "The name arrives before the physics",
+      "era_kind": "pre-history",
+      "text": "Before there is a project there is only a phrase: H.G. Wells coins 'atomic bomb' in 1914, roughly nineteen years before the physics exists to back it. Then on 12 September 1933 in London, a day after Rutherford publicly calls atomic energy 'moonshine', Leo Szilard conceives the neutron chain reaction. Watch this man — born Budapest 1898 — because he is carrying the whole idea alone, and it will sit inside the physics parent for six more years as a barely-there smear.",
+      "refs": [
+        "overlay:entity_lifecycles.child-bomb",
+        "f-manhattan-e0003",
+        "f-manhattan-0001",
+        "specimen:weld.surprise_priority"
+      ]
+    },
+    {
+      "from": 1933,
+      "to": 1938,
+      "title": "A patent in the Admiralty's safe",
+      "era_kind": "pre-history",
+      "text": "The idea goes quiet but not dead: Szilard files his chain-reaction patent in June 1934 and assigns it to the British Admiralty in 1936 for secrecy — a weapon-shaped thought literally locked in a safe. Meanwhile the weather is already blowing: the 1933 Civil Service Law expulsions, with a second wave at the 1938 Anschluss, start shoving Europe's physics talent west — the refugee exodus that will staff the other side of this story. Nothing here has a core yet; it is a conjecture living inside one parent, waiting.",
+      "refs": [
+        "f-manhattan-0004",
+        "overlay:entity_lifecycles.sw-szilard-concept",
+        "f-manhattan-0076",
+        "overlay:entity_lifecycles.act-emigres",
+        "specimen:forcing_events[fe-emigre-exodus]",
+        "specimen:weld.surprise_priority"
+      ]
+    },
+    {
+      "from": 1938,
+      "to": 1939,
+      "title": "The atom splits; the roots take",
+      "era_kind": "roots",
+      "text": "Berlin, 16-17 December 1938: Hahn and Strassmann's radiochemistry finds barium where uranium should be, and by February 1939 Meitner and Frisch have the liquid-drop interpretation in Nature. Frisch borrows the very word 'fission' from cell biology, via biologist William Arnold. On 1 September 1939 — the day the war itself begins — Bohr and Wheeler publish 'The Mechanism of Nuclear Fission', pinning down which isotope matters. The physics parent is now fully on the field.",
+      "refs": [
+        "f-manhattan-0025",
+        "overlay:entity_lifecycles.sw-fission-discovery",
+        "f-manhattan-0026",
+        "f-manhattan-0056",
+        "f-manhattan-e0053",
+        "specimen:weld.parents[W_A]"
+      ]
+    },
+    {
+      "from": 1939,
+      "to": 1940,
+      "title": "A letter and a $6,000 nap",
+      "era_kind": "dormancy",
+      "text": "Szilard drafts, Einstein signs — 2 August 1939 — and the letter doesn't even reach Roosevelt until 11 October, hand-carried by Alexander Sachs. What it buys is the Advisory Committee on Uranium, founded 21 October 1939, which then sits near-inert into 1941 on a budget of $6,000. The weld is drawn but not firing — the popular story that 'the letter started the Manhattan Project' compresses this two-year nap into an instant.",
+      "refs": [
+        "f-manhattan-0073",
+        "f-manhattan-0068",
+        "f-manhattan-0069",
+        "specimen:weld.dormancy_intervals[0]",
+        "specimen:discrepancies[7]"
+      ]
+    },
+    {
+      "from": 1940,
+      "to": 1942,
+      "title": "The squeeze: MAUD and Pearl Harbor",
+      "era_kind": "forcing",
+      "text": "Now watch the squeeze from the war push these two parents together. Two refugees at Birmingham — Frisch and Peierls, February-March 1940 — calculate that pounds, not tons, of U-235 make a buildable bomb, and Britain's MAUD Committee (first meeting 10 April 1940) turns that memo into a feasibility verdict. In August 1941 Oliphant flies to America to shake the sleeping committee awake in person, and on 7 December Pearl Harbor supplies total war: a double trigger, knowledge plus crisis, firing the weld at last. The fear pulling everyone forward is a German bomb — a fear the record later shows was largely a phantom.",
+      "refs": [
+        "f-manhattan-0038",
+        "f-manhattan-e0052",
+        "specimen:roots.sub_wrappers[sw-frisch-peierls]",
+        "f-manhattan-e0029",
+        "f-manhattan-0024",
+        "specimen:weld.sub_welds[sw-maud-pearl]",
+        "specimen:forcing_events[fe-pearl-harbor]",
+        "specimen:forcing_events[fe-german-threat]",
+        "specimen:discrepancies[5]"
+      ]
+    },
+    {
+      "from": 1942,
+      "to": 1943,
+      "title": "The weld fires: Groves takes command",
+      "era_kind": "weld",
+      "text": "This is the weld moment — the two parents fuse into one machine. Roosevelt authorizes the crash program on 17 June 1942; the Manhattan Engineer District stands up 13 August; Groves takes command 23 September — from the MAUD-plus-Pearl-Harbor trigger to a directed Army program in about eight months. On 2 December 1942 Fermi's Chicago Pile-1 goes critical, the first self-sustaining chain reaction — the bridge from blackboard to industry — and by January 1943 Los Alamos exists.",
+      "refs": [
+        "f-manhattan-0074",
+        "f-manhattan-0042",
+        "f-manhattan-0010",
+        "f-manhattan-e0056",
+        "f-manhattan-0019",
+        "f-manhattan-e0046",
+        "f-manhattan-e0060",
+        "specimen:weld.sub_welds[sw-med-groves]"
+      ]
+    },
+    {
+      "from": 1943,
+      "to": 1945,
+      "title": "An industry built in the dark",
+      "era_kind": "weld",
+      "text": "The state's half of the bargain is scale. From late 1943 the production complex runs at full industrial tilt: more than 80% of a total bill of roughly $1.9 billion in 1945 dollars — about $36 billion in today's money — goes to the Oak Ridge and Hanford plants, with some 130,000 workers at peak and roughly half a million across turnover, near 1% of the wartime civilian labor force. At Los Alamos, implosion goes to crash priority after the Thin Man gun design fails for plutonium in 1944. And quietly, at Quebec on 19 August 1943, the British program is absorbed — the sibling lineage subordinated into the American machine.",
+      "refs": [
+        "f-manhattan-e0061",
+        "f-manhattan-e0055",
+        "f-manhattan-0080",
+        "overlay:entity_lifecycles.sw-implosion",
+        "f-manhattan-0079",
+        "f-manhattan-0075"
+      ]
+    },
+    {
+      "from": 1945,
+      "to": 1945,
+      "title": "Trinity: the weld consummates",
+      "era_kind": "weld",
+      "text": "16 July 1945, Trinity: the weld consummates, and weeks later Hiroshima (6 August) and Nagasaki (9 August) make it public. Roosevelt never sees it — he died 12 April, three months short of the child he authorized. And here is the friction the highlight reels skip: in July 1945 Szilard's petition, carrying 70 scientist signatures, is blocked by Groves, never reaches Truman, and stays classified until 1961. The man who conceived the chain reaction could not get a letter through the machine he started.",
+      "refs": [
+        "f-manhattan-e0047",
+        "f-manhattan-0067",
+        "f-manhattan-0021",
+        "overlay:entity_lifecycles.act-fdr",
+        "f-manhattan-e0057"
+      ]
+    },
+    {
+      "from": 1945,
+      "to": 1950,
+      "title": "Hardening, and the rivals' fates",
+      "era_kind": "hardening",
+      "text": "The child hardens fast. The Smyth Report appears within a week of Hiroshima, yet the 1946 Atomic Energy Act turns postwar nuclear science into 'a program for the control of scientific and technical information' — not the open science the builders expected. The civilian AEC is founded 1 August 1946 and takes over from the dissolving MED on 1 January 1947; Argonne becomes the first formal national laboratory in July 1946, and Bush's 'Endless Frontier' road reaches the NSF in May 1950. As for the rivals: the Uranverein simply fades — seized in 1945, never revived — while absorbed Tube Alloys re-emerges independently in 1947 and gets Britain its own bomb at the Hurricane test in October 1952.",
+      "refs": [
+        "f-manhattan-e0058",
+        "f-manhattan-0063",
+        "f-manhattan-e0028",
+        "f-manhattan-0071",
+        "f-manhattan-0062",
+        "f-manhattan-e0041",
+        "f-manhattan-e0035",
+        "f-manhattan-0078",
+        "overlay:rival_fates.rel-uranverein",
+        "overlay:rival_fates.rel-tubealloys"
+      ]
+    },
+    {
+      "from": 1949,
+      "to": 1957,
+      "title": "The harvest turns on its makers",
+      "era_kind": "harvest",
+      "text": "29 August 1949: the Soviet RDS-1 fires, and the record's best estimate — flagged as an estimate — is that Fuchs's espionage bought Moscow roughly 18 to 24 months. The blowback is friction at home: Fuchs is arrested 2 February 1950 and sentenced to 14 years; Oppenheimer's clearance is revoked 27 May 1954, one day before his contract would simply have expired, by a 2-1 board that found him loyal — a verdict the substrate still marks disputed. Meanwhile the harvest spreads: EBR-I makes the first nuclear electricity in December 1951, civilian power consolidates around 1956, and Gojira — the Bomb given skin and scales — rises in November 1954. The makers turn critics too: the Bulletin, founded December 1945, starts its Doomsday Clock in June 1947 at seven minutes to midnight.",
+      "refs": [
+        "f-manhattan-0070",
+        "f-manhattan-e0020",
+        "f-manhattan-e0008",
+        "overlay:harvest_dates.h-nuclear-power",
+        "f-manhattan-e0044",
+        "overlay:harvest_dates.cultural_harvest[scifi]",
+        "specimen:harvest.cultural_harvest[scifi]",
+        "f-manhattan-e0036",
+        "f-manhattan-0052"
+      ]
+    },
+    {
+      "from": 1957,
+      "to": 2022,
+      "title": "The long template era",
+      "era_kind": "harvest",
+      "text": "The longest stretch belongs to the template: 'a Manhattan Project for ___' enters policy speech in the 1950s and Apollo cements it across 1961-69 — the weld's organizational form outliving its weapon — while deterrence doctrine consolidates in the McNamara 1960s and Pugwash internationalizes the conscience wing from 1957. The story itself becomes heritage: the Manhattan Project National Historical Park is founded 10 November 2015. And one old wound closes — on 16 December 2022 the DOE formally vacates Oppenheimer's 1954 clearance revocation, finding the process flawed under the AEC's own regulations.",
+      "refs": [
+        "overlay:harvest_dates.cultural_harvest[other]",
+        "overlay:harvest_dates.h-deterrence",
+        "overlay:harvest_dates.h-scientists-responsibility",
+        "f-manhattan-e0050",
+        "f-manhattan-e0009"
+      ]
+    },
+    {
+      "from": 2023,
+      "to": 2025,
+      "title": "Revival: the atom rides the AI boom",
+      "era_kind": "revival",
+      "text": "Eighty years on, the genealogy is suddenly live again. Nolan's 'Oppenheimer' (July 2023) grosses $975 million and takes 7 Oscars in March 2024; in October 2024 the Nobel Peace Prize goes to Nihon Hidankyo, the hibakusha witnesses of Hiroshima and Nagasaki. Then the revival proper: Microsoft signs a 20-year deal in September 2024 to restart Three Mile Island Unit 1 for AI datacenters, backed by a $1bn DOE loan in November 2025, while global nuclear generation sets an all-time record of 2,667 TWh in 2024 with 70 reactors under construction. Even the name re-fires — a congressional commission recommends a 'Manhattan Project-like' AGI program in November 2024, and DOE itself frames the moment as 'Manhattan Project 2.0'.",
+      "refs": [
+        "f-manhattan-e0049",
+        "f-manhattan-e0063",
+        "overlay:now_extension[0]",
+        "overlay:now_extension[2]",
+        "overlay:now_extension[1]",
+        "f-manhattan-e0045",
+        "overlay:now_extension[3]",
+        "overlay:now_extension[4]"
+      ]
+    },
+    {
+      "from": 2025,
+      "to": 2026,
+      "title": "Now: 85 seconds to midnight",
+      "era_kind": "now",
+      "text": "And the dark limb decays in parallel. On 30 October 2025 Trump orders the Pentagon to resume nuclear testing — the first move against a 33-year moratorium — with Putin ordering counter-proposals within weeks. On 27 January 2026 the Bulletin, the project's own conscience founded in December 1945, sets the Doomsday Clock to 85 seconds to midnight, the closest ever; nine days later New START expires with no successor, ending roughly sixty years of US-Russia arms-limitation continuity. The weld of 1942 is still the operating baseline of 2026 — keep your eye on it.",
+      "refs": [
+        "overlay:now_extension[6]",
+        "overlay:now_extension[7]",
+        "f-manhattan-e0038",
+        "f-manhattan-e0036",
+        "overlay:now_extension[8]",
+        "f-manhattan-e0062",
+        "f-manhattan-e0040",
+        "specimen:weld.lifecycle.phase_trajectory[hardening]"
+      ]
+    }
+  ]
+}

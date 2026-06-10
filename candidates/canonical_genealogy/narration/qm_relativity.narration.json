@@ -1,0 +1,206 @@
+{
+  "specimen": "qm_relativity",
+  "_doc": "Narration track (R6 — Olympics presenter v0) for specimens/qm_relativity.json. Segments are running commentary keyed to year-ranges for the v2 viewer narration bar. DISCIPLINE: every factual claim traces to a substrate fact_id (compiled/quantum-gravity.compiled.json), a specimen field, or an overlay key — NO new claims. Estimates and disputed values are flagged in-line. Voice: commentator-documentarian. Written by the Fable presenter seat, 2026-06-10.",
+  "_base_specimen_id": "quantum-gravity",
+  "generated": "2026-06-10",
+  "segments": [
+    {
+      "from": 1854,
+      "to": 1915,
+      "title": "Two parents, forged in separate shops",
+      "era_kind": "pre-history",
+      "text": "Before any collision, two engines are being built in separate shops. Riemann lays down curved geometry in 1854, Planck strikes the quantum in 1900, and Einstein lands special relativity in September 1905, then rides his 1907 'happiest thought' all the way to the field equations of November 1915. Even the senior parent starts slow — the substrate logs roughly twenty years to full mainstream adoption. One parent will own space and time, the other knowledge — keep your eye on the frames, because they will not agree.",
+      "refs": [
+        "f-qg-0067",
+        "overlay:entity_lifecycles[Quantum Mechanics / Quantum Field Theory (1925-26 QM; QED/QFT 1927-1950s)]",
+        "f-qg-0050",
+        "overlay:entity_lifecycles[General Relativity (Einstein 1915)]",
+        "f-qg-0048",
+        "f-qm-relativity-0047",
+        "specimen:weld.parents"
+      ]
+    },
+    {
+      "from": 1916,
+      "to": 1933,
+      "title": "Einstein draws the seam first",
+      "era_kind": "roots",
+      "text": "Here is the wild opening move: Einstein flags the seam in 1916 — quantum effects must modify general relativity — nine years before the second parent is even fully formulated (matrix mechanics arrives July 1925). Klein points at it again in 1927, and in Leningrad, Gamow, Ivanenko and Landau frame the cGh 'cube of theories' in 1928 — the corner where all three constants meet. Rosenfeld files the first technical papers: submitted September 26, 1930, in print only in 1932 — a two-year customs delay at the journal border, the substrate's first friction fact on this seam.",
+      "refs": [
+        "specimen:weld.when",
+        "overlay:entity_lifecycles[Quantum gravity (sought / conjectured — NO settled child yet)]",
+        "f-qg-0051",
+        "specimen:roots.people_0[1]",
+        "f-qg-0070",
+        "specimen:weld.shared_sub_object_S",
+        "f-qm-relativity-0011"
+      ]
+    },
+    {
+      "from": 1934,
+      "to": 1936,
+      "title": "The weld drawn — not consummated",
+      "era_kind": "weld",
+      "text": "Freeze the frame: this is the weld moment — except watch closely, because in this specimen the weld is DRAWN, never consummated. The quantum of gravity gets its name — 'graviton', coined 1934 — and then Bronstein in Leningrad quantizes weak gravity in 1935-36 and sees the deeper truth: this quantization cannot live on a fixed background. From here the substrate clocks the program at roughly ninety years open with no consolidated child — the longest-running unconsummated weld in the dataset.",
+      "refs": [
+        "specimen:child.status",
+        "specimen:weld._comment",
+        "f-qg-0052",
+        "f-qm-relativity-0053",
+        "overlay:entity_lifecycles[Quantum gravity (sought / conjectured — NO settled child yet)]",
+        "f-qm-relativity-0010",
+        "specimen:roots.people_0[4]",
+        "f-qm-relativity-0055"
+      ]
+    },
+    {
+      "from": 1937,
+      "to": 1948,
+      "title": "Weather: the purge severs a root",
+      "era_kind": "forcing",
+      "text": "Now watch the weather — and here it is not a metaphor, it is a purge. Bronstein is arrested by the NKVD in August 1937 at the height of the Great Terror and executed on February 18, 1938, barely into his thirties; his work goes dark for what the substrate logs as a ~58-year propagation gap, until the Gorelik-Frenkel reconstruction surfaces it in 1994. That is an external, physical-frame squeeze severing a root — the schema's cleanest case of weather killing a lineage rather than an idea failing. Meanwhile in Zurich, Fierz and Pauli formalize linearized gravity as a massless spin-2 field (1939) — the graviton stub every future candidate child will inherit.",
+      "refs": [
+        "f-qm-relativity-0009",
+        "f-qg-0008",
+        "f-qg-0007",
+        "f-qm-relativity-0010",
+        "specimen:discrepancies[3]",
+        "specimen:roots.people_0[3]",
+        "specimen:weld.survived"
+      ]
+    },
+    {
+      "from": 1949,
+      "to": 1969,
+      "title": "Two machine shops, one mountain",
+      "era_kind": "roots",
+      "text": "Two machine shops open on opposite faces of the same mountain. Dirac and Bergmann build the canonical, constrained-Hamiltonian line (1949-59); Feynman and DeWitt build the covariant graviton-rules line (1962-67). The canonical keystone is written in 1966 and published August 1967 — then spends two decades without a settled name, DeWitt crediting Wheeler, Wheeler crediting DeWitt, until 'Wheeler-DeWitt equation' finally sticks at the Osgood Hill conference in 1988. And in the margins, around 1964, Penrose doodles spin networks in a handwritten manuscript — published 1971, then shelved to wait for a host.",
+      "refs": [
+        "specimen:roots.people_0[6]",
+        "specimen:roots.people_0[8]",
+        "f-qg-0056",
+        "f-qm-relativity-0045",
+        "f-qg-0057",
+        "f-qm-relativity-0022",
+        "specimen:weld.dormancy_intervals[1]"
+      ]
+    },
+    {
+      "from": 1970,
+      "to": 1983,
+      "title": "The Middle Ages — embers in the gloom",
+      "era_kind": "dormancy",
+      "text": "The field enters what Rovelli's periodization calls the Middle Ages, 1970-83: 'the landscape of quantum gravity is gloomy.' 't Hooft and Veltman show gravity-plus-matter non-renormalizable at one loop (announced 1973, printed 1974), closing the naive perturbative road. But the embers are extraordinary: Bekenstein gives black holes entropy (thesis 1972, published April 1973), Hawking makes them radiate (1974), and that same year a theory built for hadrons is caught carrying a massless spin-2 graviton in its spectrum — gravity arriving whether anyone ordered it or not. The seam deepens precisely while the field sleeps.",
+      "refs": [
+        "specimen:weld.dormancy_intervals[0]",
+        "f-qm-relativity-0012",
+        "f-qm-relativity-0054",
+        "f-qm-relativity-0002",
+        "f-qm-relativity-0001",
+        "f-qg-0059",
+        "f-qm-relativity-0017",
+        "f-qg-0063",
+        "specimen:weld.surprise"
+      ]
+    },
+    {
+      "from": 1984,
+      "to": 1990,
+      "title": "Renaissance: one seam, two children",
+      "era_kind": "revival",
+      "text": "The Renaissance — and note carefully, it is a fork, not a fusion. Green and Schwarz cancel the anomaly on December 13, 1984, and the covariant line roars back as string theory; Goroff and Sagnotti hammer the two-loop nail into perturbative pure gravity (1985); Ashtekar's new variables (1986) raise the canonical program from the dead, and Penrose's orphaned spin networks return 1988-90 as its basis states. The sum-over-histories line is running too — Hartle-Hawking's wave function of the universe (December 1983), causal sets (1987). Same two parents, same seam — and now rival children, each calling the others the wrong question.",
+      "refs": [
+        "specimen:weld.revival",
+        "f-qm-relativity-0018",
+        "f-qm-relativity-0054",
+        "f-qm-relativity-0020",
+        "f-qm-relativity-0023",
+        "f-qm-relativity-0024",
+        "f-qm-relativity-0049",
+        "specimen:discrepancies[0]"
+      ]
+    },
+    {
+      "from": 1991,
+      "to": 1997,
+      "title": "Rivals harden, holography ignites",
+      "era_kind": "hardening",
+      "text": "The rival children harden into programs — and the seam throws off its richest spark yet. Loop quantum gravity derives discrete area and volume spectra in 1994-95: space itself comes out granular, with a smallest possible area. Donoghue's effective field theory of gravity (September 1994) quietly becomes the one corner of the weld every camp accepts, M-theory unifies the five strings in 1995, and the holographic principle (conceived 1993) detonates into Maldacena's AdS/CFT in November 1997. That same year quantum-gravity phenomenology is born — the bid to make the Planck scale answer to telescopes.",
+      "refs": [
+        "f-qg-0065",
+        "f-qm-relativity-0021",
+        "f-qm-relativity-0040",
+        "specimen:harvest.descendants[0]",
+        "f-qg-0060",
+        "f-qm-relativity-0014",
+        "f-qm-relativity-0057"
+      ]
+    },
+    {
+      "from": 1998,
+      "to": 2014,
+      "title": "The grandchild outgrows the child",
+      "era_kind": "harvest",
+      "text": "Here is the inversion that makes this specimen the dataset's frontier case: the canopy grows lush while the trunk stays hollow. Maldacena's paper climbs past 20,000 citations, and Ryu-Takayanagi (2006) turns entanglement-equals-geometry into a working toolkit. That same year the counter-narrative lands in hardcover — Smolin's 'The Trouble with Physics' and Woit's 'Not Even Wrong' — and when the LHC delivers the Higgs (July 2012) but no SUSY, the string planet becomes, in Rovelli's words, 'infinitely less arrogant.' By 2014 the seam's wormholes are starring in Interstellar, the black-hole render doubling as a physics paper.",
+      "refs": [
+        "specimen:harvest._comment",
+        "f-qm-relativity-0014",
+        "overlay:harvest_dates[Holographic principle -> AdS/CFT -> 'spacetime emergent from entanglement' (THE richest grandchild)]",
+        "f-qm-relativity-0048",
+        "f-qm-relativity-0046",
+        "f-qm-relativity-0033",
+        "overlay:harvest_dates[cultural_harvest[0]]"
+      ]
+    },
+    {
+      "from": 2015,
+      "to": 2023,
+      "title": "The seam goes empirical",
+      "era_kind": "harvest",
+      "text": "The parents flex while the child stays unborn. LIGO hears GW150914 on September 14, 2015 — general relativity confirmed in the strong field — and Penrose takes the 2020 Nobel for proving black holes are GR's robust prediction. On the quantum side of the seam, Bose-Marletto-Vedral (2017) put gravitational entanglement on the tabletop agenda, and the island formula and replica wormholes (2019-20) finally recover Hawking radiation's Page curve. Then, December 2023, the oldest heresy returns in testable clothes: Oppenheim's postquantum classical gravity — Rosenfeld's no-weld-needed dissent, revived.",
+      "refs": [
+        "f-qm-relativity-0037",
+        "f-qm-relativity-0036",
+        "f-qm-relativity-0027",
+        "f-qm-relativity-0034",
+        "overlay:now_extension[3]",
+        "f-qm-relativity-0030",
+        "specimen:relatives.edges[3]"
+      ]
+    },
+    {
+      "from": 2024,
+      "to": 2025,
+      "title": "Gravitons, LISA, and a centenary",
+      "era_kind": "now",
+      "text": "The now-extension, and the empirical arena keeps widening: ESA formally adopts LISA in January 2024; LHAASO's GRB 221009A photons push linear Lorentz-violation bounds past ten times the Planck energy — the 1997 phenomenology bet finally paying out in super-Planckian constraints; and a 2024 Nature Communications analysis argues single-graviton detection is feasible with quantum sensing. Then the anniversaries land like gong strikes: quantum mechanics turns 100 in Paris, February 2025; general relativity turns 110 that November — and the weld between them is still open.",
+      "refs": [
+        "overlay:now_extension[0]",
+        "overlay:now_extension[1]",
+        "overlay:now_extension[2]",
+        "overlay:now_extension[4]",
+        "overlay:now_extension[5]"
+      ]
+    },
+    {
+      "from": 2026,
+      "to": 2026,
+      "title": "Scoreboard 2026: no winner yet",
+      "era_kind": "now",
+      "text": "Final scoreboard — call it ninety years open from Bronstein's formulation, a hundred and ten from Einstein's first remark; historians date the start either way. No rival has faded by defeat, because the weld never hardened: string persists, loop quantum gravity persists, causal sets persist, asymptotic safety persists, and the semiclassical dissent persists — newly testable — while twistors were absorbed into the amplitudes program and noncommutative geometry holds its niche. The grandchild keeps outgrowing the unborn child: celestial-holography results and the Durham black-hole-horizons workshop headline the 2026 calendar. The seam is real, the synergy is real — and the child remains a specification of a target, not a thing.",
+      "refs": [
+        "f-qm-relativity-0055",
+        "overlay:now_extension[5]",
+        "overlay:rival_fates",
+        "f-qm-relativity-0051",
+        "f-qm-relativity-0052",
+        "f-qm-relativity-0050",
+        "f-qm-relativity-0029",
+        "f-qm-relativity-0030",
+        "overlay:now_extension[7]",
+        "specimen:child.kernel",
+        "specimen:weld.surprise"
+      ]
+    }
+  ]
+}

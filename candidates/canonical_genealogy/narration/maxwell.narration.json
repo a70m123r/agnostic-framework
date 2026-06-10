@@ -1,0 +1,104 @@
+{
+  "_doc": "Per-era running narration for specimen maxwell-electromagnetism — the presenter-prototype track (R6). Segments key to year-ranges and display in a narration bar as the timeline scrubs. DISCIPLINE: every factual claim traces to a substrate fact_id (f-maxwell-*), a specimen field (specimen:<path>), or an overlay key (overlay:<path>). No new claims. Estimates flagged in-line. Written off the substrate at D:/PlatformOperator/research/pav/candidates/canonical_genealogy/substrate/compiled/maxwell-electromagnetism.compiled.json + specimens/maxwell.json + overlays/maxwell.overlay.json.",
+  "specimen": "maxwell",
+  "voice": "sports-commentator-meets-documentarian — compress, explain, point at what to watch",
+  "generated": "2026-06-10",
+  "segments": [
+    {
+      "from": 1820,
+      "to": 1845,
+      "title": "The seam appears",
+      "text": "Watch the field take its first breath. In 1820 Oersted lays a compass beside a live wire and the needle swings — current bends magnetism, the founding observation of the electricity-magnetism seam. Within months Ampere in France turns that wonder into a force law, the quantitative parent's first brick. Two warring schools are now circling the same crack in nature without knowing it yet.",
+      "refs": ["f-maxwell-0017", "f-maxwell-0014", "f-maxwell-0058", "specimen:weld.shared_sub_object_S", "specimen:roots.people_0"],
+      "era_kind": "pre-history"
+    },
+    {
+      "from": 1831,
+      "to": 1845,
+      "title": "Faraday closes the half-loop",
+      "text": "Now the experimental parent makes its move. On 29 August 1831 Michael Faraday — a self-taught ex-bookbinder with almost no mathematics — discovers electromagnetic induction: a changing magnetic field stirs a current. He formulates it that November. This is half the wave-loop already on the table; the man who has it cannot write the equation, and the men who can the equation cannot yet see the field.",
+      "refs": ["f-maxwell-e0022", "f-maxwell-e0023", "f-maxwell-0010", "specimen:roots.sub_wrappers", "specimen:roots.people_0"],
+      "era_kind": "roots"
+    },
+    {
+      "from": 1846,
+      "to": 1855,
+      "title": "The conjecture that sleeps",
+      "text": "Here is the ghost beat to watch. In April 1846 Faraday floats 'Thoughts on Ray-Vibrations' — light, he guesses, is a vibration of the lines of force. But it is speed-less, unconfirmable, a weld drawn but never welded. Historians put it at fifteen dormant years: zero propagation bandwidth until a velocity arrives. The surprise of this whole story is born here, as a barely-there smear with no core.",
+      "refs": ["f-maxwell-e0053", "f-maxwell-e0068", "f-maxwell-0011", "specimen:weld.dormancy_intervals", "specimen:discrepancies"],
+      "era_kind": "dormancy"
+    },
+    {
+      "from": 1855,
+      "to": 1856,
+      "title": "A number on a bench",
+      "text": "Don't blink — the most load-bearing number in the story arrives now. Around 1855 Weber and Kohlrausch weigh charges and currents and extract a pure laboratory ratio of electromagnetic to electrostatic units. Sources wobble between 1855 and 1856 on the date. Nobody yet realises this bench ratio is, within experimental error, the speed of light itself. Meanwhile a young Maxwell takes up Faraday's lines in his first paper, read in early 1856.",
+      "refs": ["f-maxwell-0027", "f-maxwell-e0021", "f-maxwell-e0054", "f-maxwell-0064", "specimen:discrepancies"],
+      "era_kind": "forcing"
+    },
+    {
+      "from": 1861,
+      "to": 1862,
+      "title": "The weld — displacement current",
+      "text": "This is the merge. Building a creaking scaffold of molecular vortices and idle wheels in 'On Physical Lines of Force', Maxwell adds the keystone in neither parent: the displacement current, conceived in 1861. It closes the induction loop, and the equations cough up a self-propagating transverse wave whose speed IS the Weber-Kohlrausch ratio. An entire third science — optics — falls out of a synthesis built only from electricity and magnetism. Watch closely: the weld fires only through time, because the displacement current is literally a time-derivative term.",
+      "refs": ["f-maxwell-e0025", "f-maxwell-e0026", "f-maxwell-e0061", "specimen:weld.surprise", "specimen:weld.frame_of_weld"],
+      "era_kind": "weld"
+    },
+    {
+      "from": 1864,
+      "to": 1873,
+      "title": "Read to the Society, half-finished",
+      "text": "On 8 December 1864 Maxwell reads 'A Dynamical Theory of the Electromagnetic Field' to the Royal Society, coining the term 'electromagnetic field'; the paper waits roughly seven and a half months to print. Then the friction sets in. His 1873 Treatise leaves twenty coupled equations in twenty unknowns, idiosyncratically arranged and notoriously hard to read — a gatekeeping object that throttles its own adoption. Fertile, but half-finished.",
+      "refs": ["f-maxwell-0006", "f-maxwell-e0028", "f-maxwell-e0032", "specimen:weld.dormancy_intervals", "overlay:entity_lifecycles"],
+      "era_kind": "hardening"
+    },
+    {
+      "from": 1865,
+      "to": 1879,
+      "title": "Three readers and a death",
+      "text": "Here is the D6 friction fact to sit with: before 1880, only three researchers on Earth engage seriously with Maxwell's theory — Oliver Heaviside, Oliver Lodge, and George FitzGerald. The full lag from the 1865 paper to general acceptance runs about twenty-three years. Maxwell dies on 5 November 1879 with the theory uncosolidated, rivals still credible, the child unborn in its usable form.",
+      "refs": ["f-maxwell-e0034", "f-maxwell-e0031", "f-maxwell-0002", "specimen:weld.dormancy_intervals", "specimen:roots.people_0"],
+      "era_kind": "dormancy"
+    },
+    {
+      "from": 1881,
+      "to": 1888,
+      "title": "The second birth",
+      "text": "Now the resurrection — and a twist most textbooks hide. The Maxwellians forge the modern theory their dead leader never wrote: Gibbs and Heaviside build vector calculus, and from 1884-85 Heaviside throws out the potentials and recasts twenty equations as four. Then in November 1887 Hertz sparks a receiver gap a metre and a half from his transmitter — the first detection of a free-space electromagnetic wave, published in Annalen der Physik through 1888. The contested math becomes confirmed physics. The equations we call 'Maxwell's' are largely theirs.",
+      "refs": ["f-maxwell-e0029", "f-maxwell-e0036", "f-maxwell-e0039", "f-maxwell-e0040", "specimen:discrepancies"],
+      "era_kind": "revival"
+    },
+    {
+      "from": 1888,
+      "to": 1905,
+      "title": "Rivals fall, light flies free",
+      "text": "Watch the bracket clear. Weber's action-at-a-distance electrodynamics — the serious continental rival that also predicted a characteristic velocity — loses the field and slips to niche status by 1905. The luminiferous ether, assumed real for a century, dissolves as ontology in 1905. And the frame-independence of c, sitting unseen inside the equations, becomes Einstein's founding postulate: special relativity is formulated 30 June 1905, the title itself naming electrodynamics.",
+      "refs": ["f-maxwell-0053", "f-maxwell-0051", "f-maxwell-e0043", "specimen:harvest.descendants", "overlay:rival_fates"],
+      "era_kind": "harvest"
+    },
+    {
+      "from": 1896,
+      "to": 1954,
+      "title": "The technosphere switches on",
+      "text": "The cultural harvest is the loudest in the set. Hertz's waves become Marconi's wireless; the first transatlantic signal crosses on 12 December 1901, opening the whole electromagnetic-spectrum technosphere — radio, radar, television, microwave. Then the theory recurses into physics itself: Maxwell's is the first U(1) gauge theory, and Yang-Mills generalises it in October 1954, the seed of the Standard Model. The unifier becomes the template for unification.",
+      "refs": ["f-maxwell-e0050", "f-maxwell-e0049", "f-maxwell-e0045", "specimen:child.utility", "specimen:harvest.cultural_harvest"],
+      "era_kind": "harvest"
+    },
+    {
+      "from": 1965,
+      "to": 1983,
+      "title": "The merge move, recursing",
+      "text": "The 'merge two forces' move runs again, one level up. Quantized Maxwell becomes QED, crowned by the 1965 Nobel; then Glashow, Salam and Weinberg re-fuse electromagnetism with the weak force, formulated 1967 and consolidated by the 1979 Nobel after CERN bottles the W and Z bosons. The child has become a parent of further welds — exactly the affordance the specimen flagged as the move worth copying.",
+      "refs": ["f-maxwell-e0046", "f-maxwell-e0047", "f-maxwell-e0048", "specimen:harvest.descendants", "specimen:child.utility"],
+      "era_kind": "harvest"
+    },
+    {
+      "from": 2022,
+      "to": 2026,
+      "title": "Now — still expanding",
+      "text": "And it is still alive on the timeline's leading edge. In 2025 UNESCO runs the International Year of Quantum Science, publicly re-canonizing the quantum lineage of Maxwell's field. In June 2025 the 6G study phase opens under Release 20, pushing the technosphere into sub-terahertz bands, while 2025-26 brings photonic AI chips that compute with light itself. Even the defeated rival stirs: Weber electrodynamics persists as a niche research revival into 2023. The weld that turned a bench number into the speed of light is not finished compiling.",
+      "refs": ["overlay:now_extension", "f-maxwell-e0058", "f-maxwell-e0042", "f-maxwell-e0060", "f-maxwell-e0050"],
+      "era_kind": "now"
+    }
+  ]
+}

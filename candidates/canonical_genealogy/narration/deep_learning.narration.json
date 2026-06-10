@@ -1,0 +1,112 @@
+{
+  "_doc": "Per-era running narration for specimen deep_learning — the presenter-prototype track (R6). Segments key to year-ranges and display in a narration bar as the timeline scrubs. DISCIPLINE: every factual claim traces to a substrate fact_id (f-deep-learning-*), a specimen field (specimen:<path>), or an overlay key (overlay:<path>). No new claims. Estimates flagged in-line. Written off the substrate at D:/PlatformOperator/research/pav/candidates/canonical_genealogy/substrate/compiled/deep-learning.compiled.json + specimens/deep_learning.json + overlays/deep_learning.overlay.json. The headline beats per the writer-brief: the 2012 weld moment, the rival fates (symbolic AI), and at least one D6 friction fact each get a beat.",
+  "specimen": "deep_learning",
+  "voice": "sports-commentator-meets-documentarian — compress, explain, point at what to watch",
+  "generated": "2026-06-10",
+  "segments": [
+    {
+      "from": 1943,
+      "to": 1958,
+      "title": "Two cells fire, the substrate forms",
+      "text": "Watch the substrate take its first breath. In 1943 Warren McCulloch and Walter Pitts publish the logical-calculus neuron — a brain cell rebuilt as a threshold logic unit, the root abstraction of everything that follows. Donald Hebb hands it a learning rule in 1949: cells that fire together wire together. The idea is conceived here as a barely-there smear — no working machine yet, just the conviction that intelligence might be a network of simple adjustable parts.",
+      "refs": ["f-deep-learning-e0038", "f-deep-learning-e0039", "f-deep-learning-e0003", "f-deep-learning-e0005", "overlay:entity_lifecycles.sw-mcculloch-pitts", "specimen:roots.sub_wrappers"],
+      "era_kind": "pre-history"
+    },
+    {
+      "from": 1958,
+      "to": 1965,
+      "title": "Rosenblatt's bold machine",
+      "text": "Now the conjecture gets a body. In 1958 Frank Rosenblatt builds the perceptron — the first learnable single-layer neural net — and makes loud public predictions about thinking machines. This is the connectionist parent W_A walking onto the field with swagger. Watch the optimism: Rosenblatt is forty-three years from the vindication and will not live to see it, dying in 1971.",
+      "refs": ["f-deep-learning-e0028", "f-deep-learning-e0001", "f-deep-learning-e0002", "specimen:weld.parents", "specimen:actors"],
+      "era_kind": "roots"
+    },
+    {
+      "from": 1965,
+      "to": 1974,
+      "title": "The deep root nobody credits",
+      "text": "Here is the disputed deepest root — watch the credit, because it will be fought over for sixty years. In 1965 Alexey Ivakhnenko and Valentin Lapa, in Soviet Kyiv cybernetics, train the first deep multilayer nets via GMDH, reaching an eight-layer net by 1971. The optimization parent W_B firms up beside it: Paul Werbos applies reverse-mode automatic differentiation — the chain rule that becomes backpropagation — to nets in 1974. Both will be canonically overlooked when the Western prizes are handed out.",
+      "refs": ["f-deep-learning-e0042", "f-deep-learning-e0041", "f-deep-learning-e0017", "f-deep-learning-0024", "overlay:entity_lifecycles.sw-gmdh", "specimen:weld.reattribution"],
+      "era_kind": "roots"
+    },
+    {
+      "from": 1969,
+      "to": 1974,
+      "title": "The squeeze — and the funding capture",
+      "text": "Watch the squeeze that freezes the program. In 1969 Marvin Minsky and Seymour Papert publish 'Perceptrons', proving a single layer cannot even compute XOR; amplified by MIT prestige it redirects fashion and money away from neural nets. The same year the Mansfield Amendment forces DARPA toward mission-oriented research, and in 1974 the CMU speech-understanding contract is cancelled. The connectionist parent is starved before it can grow up — winter number one begins.",
+      "refs": ["f-deep-learning-e0029", "f-deep-learning-e0007", "f-deep-learning-e0044", "specimen:weld.dormancy_intervals", "specimen:forcing_events"],
+      "era_kind": "forcing"
+    },
+    {
+      "from": 1973,
+      "to": 1980,
+      "title": "The broad winter deepens",
+      "text": "The chill spreads past the neural-net camp. In 1973 the Lighthill Report tells UK Parliament that AI has failed its grandiose objectives, ending government funding at all but two universities. Note the nuance the timeline insists on: this squeeze lands mostly on symbolic AI, not the neural-net program directly — historians like Haigh argue the single clean 'AI winter' story flattens at least three differently-caused downturns. Meanwhile Fukushima quietly ships the Neocognitron in 1980, the CNN blueprint, almost unnoticed.",
+      "refs": ["f-deep-learning-e0045", "f-deep-learning-e0040", "specimen:discrepancies", "specimen:fuzzy_layer.frontier"],
+      "era_kind": "dormancy"
+    },
+    {
+      "from": 1982,
+      "to": 1989,
+      "title": "The weld is drawn — and demonstrated",
+      "text": "This is the idea-weld firing. In 1982 John Hopfield's spin-glass network makes nets respectable to physicists; in October 1986 Rumelhart, Hinton and Williams popularize backprop for multi-layer nets — the mediating welder that recognizes weights and differentiable variables are the same object. Then watch the proof: in 1989 Yann LeCun's LeNet reads real handwritten digits, the synergy demonstrated working on a bench. The weld is welded — but it is about to sit unfired for decades.",
+      "refs": ["f-deep-learning-e0068", "f-deep-learning-e0030", "f-deep-learning-e0031", "f-deep-learning-e0013", "specimen:weld.mediating_wrapper", "specimen:weld.surprise"],
+      "era_kind": "weld"
+    },
+    {
+      "from": 1989,
+      "to": 1996,
+      "title": "Demonstrated, deployed, ignored",
+      "text": "Here is the D6 friction fact to sit with — the most extreme proof-versus-adoption gap in the whole set. LeNet is not a toy: by June 1996 it is deployed reading bank cheques in production. And yet deep learning does not become the dominant paradigm until 2012 — roughly a twenty-three-year lag from working demonstration to paradigm adoption. The thing worked; the field simply lacked the compute and data to scale it, so it waited.",
+      "refs": ["f-deep-learning-0064", "specimen:weld.surprise_priority", "specimen:_schema_gaps_in_record"],
+      "era_kind": "dormancy"
+    },
+    {
+      "from": 1987,
+      "to": 1994,
+      "title": "The rival collapses",
+      "text": "Now watch the rival paradigm fall — and how its collapse is connectionism's opening. In 1987 the Lisp-machine market evaporates as cheap workstations catch up: Symbolics revenue craters from $101.6M in FY1986 to $55.6M by FY1988, and DARPA's Jack Schwarz cuts AI funding 'deeply and brutally'. Japan's Fifth Generation state bet — roughly US$320M on logic-programming AI, not the commonly cited $850M — ends with a whimper, formally over by 1994. Symbolic AI's fate: faded.",
+      "refs": ["f-deep-learning-e0047", "f-deep-learning-e0046", "f-deep-learning-e0077", "f-deep-learning-e0078", "f-deep-learning-0061", "overlay:rival_fates.rel-symbolic"],
+      "era_kind": "forcing"
+    },
+    {
+      "from": 1995,
+      "to": 2006,
+      "title": "Hinton's dark ages, CIFAR carries",
+      "text": "Watch winter number two — a fashion squeeze this time, not a theorem. From 1995 support vector machines and kernel methods have cleaner theory and beat nets on the era's small data, marginalizing connectionism. But a state-backed flame-keeper steps in: CIFAR's Neural Computation program from 2004 networks Hinton in Toronto, Bengio in Montreal and LeCun at NYU straight through the dormancy. The wrapper is kept alive on purpose until the instruments can catch up.",
+      "refs": ["f-deep-learning-e0070", "f-deep-learning-e0048", "f-deep-learning-e0024", "specimen:weld.dormancy_intervals", "specimen:actors"],
+      "era_kind": "dormancy"
+    },
+    {
+      "from": 2006,
+      "to": 2011,
+      "title": "Deep again — and the instruments arrive",
+      "text": "The revival, reinterpreted: the object that comes back is not the one that went dormant. In 2006 Hinton's deep belief nets make deep training practical again. And crucially the two missing instrument-parents finally land — NVIDIA ships CUDA 1.0 on 23 June 2007, putting massive parallel compute on a gaming card, while Fei-Fei Li's ImageNet, conceived in 2007 and labeled by 14M-plus images via Amazon Mechanical Turk, supplies the supervised signal. The algorithm waited twenty-three years for exactly this apparatus.",
+      "refs": ["f-deep-learning-e0032", "f-deep-learning-e0050", "f-deep-learning-e0035", "f-deep-learning-e0074", "specimen:weld.parents_full", "specimen:weld.lifecycle"],
+      "era_kind": "revival"
+    },
+    {
+      "from": 2012,
+      "to": 2016,
+      "title": "The weld fires — AlexNet",
+      "text": "This is the consummation — don't blink. On 30 September 2012 AlexNet, from Krizhevsky, Sutskever and Hinton's Toronto lab, fires the three-element weld: deep CNN plus GPU compute plus ImageNet data converging for the first time. The margin is the story — top-5 error drops to 15.3% against the best prior 28.2%, a 10.8-point landslide that ends the argument overnight. The seventy-year conjecture has finally risen into a working, dominant child.",
+      "refs": ["f-deep-learning-e0033", "f-deep-learning-e0074", "specimen:weld.shared_sub_object_S", "specimen:child", "specimen:weld.sub_welds"],
+      "era_kind": "weld"
+    },
+    {
+      "from": 2017,
+      "to": 2023,
+      "title": "Hegemony — transformers to ChatGPT",
+      "text": "Now the child hardens into hegemony. On 12 June 2017 Google Brain publishes the transformer; in 2020 Kaplan's scaling laws turn capability into a predictable power-law in compute, data and parameters. The consumer consummation arrives 30 November 2022 with ChatGPT, which reaches 100 million monthly users in roughly sixty days — the fastest consumer-app adoption in history at the time. GPT-3 in 2020, GPT-4 in March 2023: the harvest is now reshaping the whole economy.",
+      "refs": ["f-deep-learning-e0034", "f-deep-learning-e0060", "f-deep-learning-e0054", "f-deep-learning-e0075", "f-deep-learning-e0076", "specimen:harvest.descendants"],
+      "era_kind": "harvest"
+    },
+    {
+      "from": 2023,
+      "to": 2026,
+      "title": "Now — canonized and contested",
+      "text": "And it is still compiling on the leading edge. In May 2023 Geoffrey Hinton quits Google to warn about AI risk; on 8 October 2024 he and Hopfield take the Nobel Prize in Physics — reigniting Schmidhuber's 'rewards plagiarism' priority dispute that the specimen flagged. The harvest keeps branching: OpenAI's o1 reasoning model in September 2024, open-weight DeepSeek-R1 in January 2025, the original AlexNet source code opened in March 2025. Even the defeated rival stirs — symbolic AI returns in 2024-25 as a niche neuro-symbolic complement bolted onto LLMs, not a competing paradigm.",
+      "refs": ["f-deep-learning-e0061", "f-deep-learning-e0069", "overlay:now_extension", "overlay:rival_fates.rel-symbolic", "specimen:weld.reattribution"],
+      "era_kind": "now"
+    }
+  ]
+}

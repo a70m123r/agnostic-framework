@@ -466,7 +466,14 @@ def write_summary(best_rows, facts, verifs, errors, flags, generated):
             "specimens_with_facts": len(per_spec),
             "validation_errors": len(errors),
             "validation_flags": len(flags),
-            "disputed_best_values": len(disputed_list),
+            # disputed_best_values = best-values whose CHOSEN bucket is 'disputed' (the literal reading
+            # of the field name). best_values_with_disputed_alternatives = best-values carrying >=1
+            # contradicting alternative (the dispute-RECORD count, == len(summary["disputes"])). These
+            # differ: an alternative can be flagged disputed while the best value's own bucket stays
+            # 'pending'. The old single field conflated the two (reported the 22 record-count under the
+            # best-values name); split per Opus review data-hygiene finding.
+            "disputed_best_values": sum(1 for b in best_rows if b.get("bucket") == "disputed"),
+            "best_values_with_disputed_alternatives": len(disputed_list),
         },
         "per_specimen": specimens,
         "disputes": disputed_list,
@@ -567,7 +574,9 @@ def main():
     print(f"best values:          {len(best_rows)}")
     print(f"validation errors:    {len(errors)}")
     print(f"validation flags:     {len(flags)}")
-    print(f"disputed best values: {summary['totals']['disputed_best_values']}")
+    print(f"disputed best values: {summary['totals']['disputed_best_values']}"
+          f"  (best-values with disputed alternatives / dispute records: "
+          f"{summary['totals']['best_values_with_disputed_alternatives']})")
     if not args.no_db:
         print(f"db written:           {DB_PATH.name}")
     print(f"exports written:      {', '.join(written) if written else '(none)'}")
