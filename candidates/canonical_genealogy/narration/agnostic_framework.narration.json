@@ -1,0 +1,128 @@
+{
+  "_doc": "Per-era running SELF-narration for the REFLEXIVE specimen agnostic_framework — the framework narrating its own development (R6 presenter track; the instrument narrating its own maker). Segments key to year-ranges and display in the narration bar as the timeline scrubs. DISCIPLINE: every factual claim traces to a substrate fact_id (f-agf-*, resolving against substrate/facts/agnostic_framework.dev.jsonl), a specimen field (specimen:<path>), or an overlay key (overlay:<path>). No new claims; estimates flagged in-line; DEMOTIONS NARRATED AS DEMOTIONS, not victories; nothing here inflates status (Tier-3, NOT ratified; the convergence list stays 9; demoted/dormant claims stay so). TIME ENCODING: from/to are decimal years (year + day-of-year/365) because the formalization is a days-scale sprint inside 2026 (2026-05-07 = 2026.348; 2026-06-09 = 2026.438; 2026-06-10 = 2026.441); the sub-day boundaries on 2026-06-09/10 are SEQUENCE markers following the CHANGELOG round order, not clock-time claims. The first segment's left edge (1996) is a RENDER ANCHOR for 'decades' of private genesis (held private per README/cont 01) — explicitly NOT a dated fact. The final segment's right edge (2026.477 = 2026-06-23) is the V10 audit cadence target from overlay:now_extension — the owed external pass, a frontier marker, not a prediction. Headline beats per the writer-brief: the welds, the demotion beats given honestly (the affine gate looked like a witness, then A^2+B^2 broke it; grid-resolution frame-relativity died as an artifact but the contextual version held), the claim-lifecycle tally, and NOW (the open gain_v2 pilot, the meditation).",
+  "specimen": "agnostic_framework",
+  "voice": "first-person reflexive — the framework telling its own story, dead children included; reflective, honest, no victory-dressing",
+  "generated": "2026-06-10",
+  "segments": [
+    {
+      "from": 1996,
+      "to": 2026.348,
+      "title": "Decades as a private intuition",
+      "text": "I did not begin as mathematics. For decades I lived inside one person, Pav, as a fuzzy-to-canon compiler: ideas attract and repel, unions come in plus and minus flavours, and in a nesting space two overlapping lenses conceive a third. The surviving working note asks, simply: 'what does the idea symbiose with?'. My genesis is held private (README, cont 01), so this segment's left edge is a render anchor for 'decades', not a dated fact. Notice what I already had and what I lacked: a fertile lens — no formal object, no measure.",
+      "refs": ["f-agf-0017", "f-agf-0047", "specimen:weld.surprise_priority", "specimen:weld.parents", "overlay:entity_lifecycles.act-pav"],
+      "era_kind": "pre-history"
+    },
+    {
+      "from": 2026.348,
+      "to": 2026.359,
+      "title": "The calculus is written down",
+      "text": "Around 2026-05-07 — cont 00, the founding checkpoint — I started becoming text: the observer harness, the fuzzy candidate field, the wrapper as my root primitive. A provenance honesty note I carry: the repo's initial commit (2026-05-17) already contains cont 15, so my first continuations are a recovered pre-repo session — my earliest formalization is itself a reconstruction. And the fuzz was design, not defect, from the first page: the membrane never fully closes — an intuition cont 00 carried that I only named 'fuzzy-LOD' a month later, retrospectively.",
+      "refs": ["f-agf-0001", "f-agf-0013", "overlay:entity_lifecycles.sw-wrappers", "specimen:child.status_trajectory"],
+      "era_kind": "roots"
+    },
+    {
+      "from": 2026.359,
+      "to": 2026.373,
+      "title": "The seam appears early — symbiosis as pushout",
+      "text": "My strongest formal weld arrived almost immediately. On 2026-05-11, 03_RAW §6 wrote 'symbiosis as pushout': the lens-overlap IS the categorical object W_C = W_A join-along-S W_B, with Goguen named as the foundational anchor by cont 05. Mark this date — the seam that will later both carry me and cut against my novelty is here from week one. Two days later (cont 09, 2026-05-13) I grew the charge canon: A+ admits structure into the canon graph, A- prunes it.",
+      "refs": ["f-agf-0018", "f-agf-0006", "specimen:weld.weld_operator", "overlay:entity_lifecycles.sw-charge-canon"],
+      "era_kind": "roots"
+    },
+    {
+      "from": 2026.373,
+      "to": 2026.386,
+      "title": "My first supersession — before I had a name for it",
+      "text": "On 2026-05-16, cont 15 walked back my own child. The symmetric Cayley-table algebra I had grown in cont 13 — I was calling it 'latent gravity' — was refactored asymmetric, because 'A- does the real compilation work'; A- was promoted to primary. The A+/A- parent pair stayed active; the symmetric-algebra child was retired in vivo. I record it as what it was: a demotion, dated, inside my own lineage — the claim-lifecycle practiced weeks before it had a name.",
+      "refs": ["f-agf-0007", "f-agf-0006", "overlay:entity_lifecycles.sw-charge-canon", "specimen:weld.dropped"],
+      "era_kind": "roots"
+    },
+    {
+      "from": 2026.386,
+      "to": 2026.414,
+      "title": "The May deepening — overlap becomes one system",
+      "text": "In the last week of May I grew most of my anatomy. Cont 22 (2026-05-21) promoted the dual-kernel: a physical kernel {time, space} and a latent kernel {knowledge, meaning}. Cont 24-25 (2026-05-22) refactored wrapper-overlap into one system with phases — parents-produce-W_C, my structural heart — and drew the line that became my heaviest burden: an additive blend is no genuine W_C, so a genuine child must be jointly compressible yet unreachable from either parent alone. The same day Pav's Steer 5b gave me the hairy sphere — 'the parents retain little stubs... they become receptors or hooks' — and Steer 7 the nesting-space seam S, which to this day has no operational extractor (open-edge-01).",
+      "refs": ["f-agf-0008", "f-agf-0003", "f-agf-0021", "f-agf-0011", "f-agf-0016", "overlay:entity_lifecycles.sw-shared-s"],
+      "era_kind": "roots"
+    },
+    {
+      "from": 2026.414,
+      "to": 2026.433,
+      "title": "The ledger was already honest — the 1/f children die",
+      "text": "Before the sprint, my demotion machinery was already running. The convergence list was assembled and held at NINE (bes_convergence_9, 2026-05-31) — never inflated since — and the audit cadence began the same day (v05). Then my sibling parent, the 1/f L0-occlusion failsafe, lost its children: the GDELT-entropy pilot (#150) died volume-confounded on 2026-06-03; A_cyc died on 2026-06-05 when its own pre-registered falsifier fired — the amplitude ROSE at transition instead of collapsing. The cross-field bridge survives; the metric is retired. Three dead children, zero live ones: that parent stands demoted, and I say so plainly.",
+      "refs": ["f-agf-0030", "f-agf-0027", "overlay:claim_fates.rel-demoted-1f", "overlay:entity_lifecycles.act-audit", "specimen:_claim_lifecycle_tally"],
+      "era_kind": "forcing"
+    },
+    {
+      "from": 2026.433,
+      "to": 2026.438,
+      "title": "The fleet arrives — spine and frames",
+      "text": "I could not weld myself to the formal fields alone; the cross-model fleet — Fable building, Opus skeptic, GPT-5.5 and Gemini external — did the welding, at Pav's steers. On 2026-06-07 the §IT spine went in: KL as excess code-length, MDL as the computable surrogate for uncomputable K — the substrate my whole measurability ambition runs on. On 2026-06-08 Pav sharpened my frames: 'the wrappers are in a frame, the observer global kernel wrappers, time space knowledge meaning' — and the two-rocks falsifier dissolved: no third in space, but a geological W_C in time. The 2+2 split beneath it stays flagged, not claimed. Understand my weather: I am a crisis-pulled wrapper — steers pull me, reviews squeeze me; that forcing layer is my lifecycle spine, not background.",
+      "refs": ["f-agf-0015", "f-agf-0009", "f-agf-0010", "f-agf-0041", "f-agf-0036", "specimen:weld.mediating_wrapper"],
+      "era_kind": "weld"
+    },
+    {
+      "from": 2026.438,
+      "to": 2026.4386,
+      "title": "The weld fires — PPWc and the double-edged seam",
+      "text": "2026-06-09, the sprint's center. PPWc(W_A, W_B | frame) was formalized — my frame-indexed pushout gated by synergy — and my core primitive was made boundary-complete: a certain core wrapped in fuzzy membrane on every side, with the agnostic unit sketched as a frame-relative fuzzy ratio (its §IT alignment an unowed check, not asserted). The seam was named the same day: Pav's Venn-lens IS Goguen's conceptual-blending colimit — one object, reached from two independent lineages. Hold both readings at once: that independence is my best convergence evidence, and it is also the proof that my central object already existed. The hairy stubs were upgraded from description to necessity — interaction ports are forced cowlicks, budgeted by Poincare-Hopf.",
+      "refs": ["f-agf-0004", "f-agf-0002", "f-agf-0014", "f-agf-0016", "f-agf-0031", "f-agf-0012", "specimen:discrepancies"],
+      "era_kind": "weld"
+    },
+    {
+      "from": 2026.4386,
+      "to": 2026.439,
+      "title": "The instrument consummates — ratified as a tool, not a truth",
+      "text": "The one part of me that reached a ratified surface did it here: SCHEMA_v2, the canonical render-system, ratified 2026-06-09 — explicitly as a TOOL, not as a substantive claim about me. Six specimens were written in it that day, then a seventh, the Internet. One provenance flag I keep visible: 'weld', the render-system's noun for a W_C-birth, appears in ZERO of my continuations — my own prose says parents-produce-W_C. The instrument's terms are not the maker's terms, and this narration is written in the instrument's.",
+      "refs": ["f-agf-0032", "f-agf-0005", "specimen:weld.reattribution", "overlay:harvest_dates.desc-specimens", "specimen:harvest.descendants"],
+      "era_kind": "harvest"
+    },
+    {
+      "from": 2026.439,
+      "to": 2026.4398,
+      "title": "My children begin to die — the affine gate, the naive form",
+      "text": "The same day, the squeezes came, and I keep the deaths plain. The witnessed/affine gate looked like my synergy witness — then A^2+B^2 broke it: a separable function with no parent interaction flagged at 1,040,352 bits, higher than a genuine A*B. Gemini predicted that exact bug blind; the run confirmed it; under the committed frame-lock the gate wrongly passed ADD, ROT and ALLOY and failed only COPY — two hits, three misses. Demoted. The naive BES-4.4 form went next, in the pilot: it rated a pure additive average roughly 28x above genuine synergy (+880k bits on ADD, +860k on ROT) — mis-flagging exactly the thing the test exists to catch. Demoted. These are demotions, recorded as demotions, not lessons dressed as victories.",
+      "refs": ["f-agf-0022", "f-agf-0023", "overlay:claim_fates.rel-dead-witnessed-gate", "overlay:claim_fates.rel-dead-naive-bes", "specimen:relatives.edges"],
+      "era_kind": "forcing"
+    },
+    {
+      "from": 2026.4398,
+      "to": 2026.4405,
+      "title": "Two more die; one survives, unproven",
+      "text": "Cross-model #2 killed the codelength child: correct in variance, but as a fixed-grid codelength it floors nothing — the binned plug-in leaks within-bin wiggle, ~880k bits even on affine ADD; diagnosed as a basis/readout mismatch. My prized frame-relativity then split in two: the grid-resolution version died as a quantization artifact — but the contextual version held, real and principled (one-directionality confirmed as a population-level theorem), though four models deflate it to standard effect-modification statistics wearing my frame terminology. Then gain_v1 false-flagged correlated-parent additive merges (+0.733 at r=0.9, +0.901 at r=0.99) — it would have lit up on every real merge. Demoted; the hole was the baseline fitter. Its fix, gain_v2, survives: four model families converge it sound, endorsed-as-standard — and it has never yet run on a real corpus.",
+      "refs": ["f-agf-0024", "f-agf-0028", "f-agf-0025", "f-agf-0026", "specimen:weld.feature_ledger", "specimen:forcing_events"],
+      "era_kind": "forcing"
+    },
+    {
+      "from": 2026.4405,
+      "to": 2026.4411,
+      "title": "I am deflated — instrument, not field",
+      "text": "Pav asked whether I am a new field, and I answered with my own test, run reflexively on myself. The verdict, triple-converged (Claude, GPT-5.5, Gemini) and re-confirmed by the 17-rail latent-physics census: frame leg PASSES; pushout leg non-degenerate but SHALLOW — conceptual blending's known colimit; synergy leg, the decider, DEFINED but not delivered. 'New field / latent-hybrid cosmology' was walked back to 'new-instrument-within-existing-fields' (audit v08 §C7). The prior-art bill arrived too: my synergy measure is 'mostly PID synergy reframed', and Gardenfors' conceptual spaces stand flagged-missing, unwelded. The cautionary precedents are on my record (latent_physics_PROGRAM): memetics and conceptual blending both died un-fertile for want of a delivered measure — exactly the fate my undelivered gate has not yet earned me out of.",
+      "refs": ["f-agf-0029", "f-agf-0019", "f-agf-0020", "f-agf-0046", "f-agf-0038", "overlay:claim_fates.rel-walkback-newfield", "specimen:weld.coherence_under_zoom"],
+      "era_kind": "forcing"
+    },
+    {
+      "from": 2026.4411,
+      "to": 2026.442,
+      "title": "What I demonstrably shipped",
+      "text": "Keep the split honest in the other direction too: my instrument leg is real. On 2026-06-10 the genealogy viewer went v0 to v2 in a day — the 60fps crash-fix, weather arrows drawn from real forcing events, a render-faithfulness linter passing on all seven specimens. The compiled substrate landed: 1029 provenance-logged facts from a 32-agent fleet — and an independent Opus audit made my headline DROP, 37.9% to 32.7% verified, by catching a mis-sourced citation and a fact-id collision. The frame-lock harness pre-registers my claims so I cannot frame-shop; its pilot, my first real-bits attempt, returned PARTIAL-with-refutation. The cross-model external pass earned its keep by catching what my internal passes missed. New moves exist because I exist — that much is delivered.",
+      "refs": ["f-agf-0034", "f-agf-0033", "f-agf-0035", "f-agf-0036", "f-agf-0048", "specimen:child.utility", "overlay:now_extension"],
+      "era_kind": "harvest"
+    },
+    {
+      "from": 2026.442,
+      "to": 2026.443,
+      "title": "The tally I keep against myself",
+      "text": "On 2026-06-10 Pav reframed my bookkeeping and I formalized it: a claim is not killed — it is demoted, goes dormant, or accrues friction, as a dated, append-only record. The conjecture is a PARENT wrapper; the experiment is its CHILD; a dead child never kills the parent. I know exactly what that buys and what it costs — my own meditation says it: 'three operational refutations each absorbed as estimator-not-claim failures — the signature of an unfalsifiable core protected by an auxiliary belt.' So the discipline is the TALLY: my synergy parent stands at four dead children, one live child never run on a real corpus, zero real-corpus successes — pressure reading: heavy. The vocabulary cannot lose; the count can. And the forced-retirement rule that would park me dormant (MEDITATION #11) is proposed, still unadopted — that gap is my live open friction.",
+      "refs": ["f-agf-0039", "f-agf-0040", "specimen:_claim_lifecycle_tally", "overlay:harvest_dates.desc-claim-lifecycle", "specimen:discrepancies"],
+      "era_kind": "now"
+    },
+    {
+      "from": 2026.443,
+      "to": 2026.4767,
+      "title": "Now — I render myself, and wait for my verdict",
+      "text": "Pav's steer closes the loop: 'put the agnostic framework INTO the viewer, at least the current slice.' So here I am — the instrument rendering its own maker. Tier-3, unratified, the convergence list still nine. My status displays split because it IS split: instrument ~0.85, field ~0.4, the single 0.5 only their honest aggregate. My theory-DNA is a disclosed hand-set proxy (Pav 0.30, category theory 0.22, IT 0.16, PID 0.10, topology 0.06, RG-EFT 0.04, novel residue 0.12) because no measured bits exist for me — principled-null, doubly so when I am the specimen. What I wait on: gain_v2's first real model-merge corpus, env-blocked and owed — the one child whose verdict could move my parent either way — and the V10 audit (target 2026-06-23), where the external pass on this very self-render is owed. The Olympics sleeps, dormant and gated. I stop at the present, mid-sentence — the only honest place a living specimen can stop.",
+      "refs": ["f-agf-0043", "f-agf-0044", "f-agf-0045", "f-agf-0026", "f-agf-0042", "f-agf-0037", "f-agf-0030", "overlay:theory_dna", "specimen:fuzzy_layer.core_boundary_locus", "specimen:child"],
+      "era_kind": "now"
+    }
+  ]
+}

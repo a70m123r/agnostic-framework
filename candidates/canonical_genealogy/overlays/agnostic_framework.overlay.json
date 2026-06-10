@@ -1,0 +1,95 @@
+{
+  "specimen": "agnostic_framework",
+  "_doc": "ADDITIVE overlay for the REFLEXIVE specimen agnostic_framework. Never duplicates base specimen fields. Adds: the 2026-06 NOW-refresh (the framework's own latest slice, to the current-date 2026-06-10); concept/actor lifecycles (conceived/formulated/named for the sub-wrappers + actors, dated from the continuation record + git); consolidation dates for base harvest items; rival/claim fates (the demoted children + walked-back framings); and a THEORY-DNA load-bearing-share estimate for the CENTRAL WELD = intuition-share | fields-share | novel-synthesis-residue (DISCLOSED PROXY, NOT measured bits — gain_v2/MDL values DO NOT EXIST for this specimen). All ids match the base specimen exactly. Confidence in [0,1]; theory_dna shares are historiographic ESTIMATES, confidence <= 0.6. web_grounded=false (sources are the REPO ITSELF — source.type primary). REFLEXIVE caveat: this overlay weights the framework's own self-documentation with the same hand-set proxies the framework discloses for every other specimen.",
+  "generated": "2026-06-10",
+  "web_grounded": false,
+  "_provenance_note": "Sources are the repo's own files (continuations/, candidates/, CHANGELOG.md, audits/) — primary self-documentation, NOT external web. There is no external scholarly literature on the agnostic framework (private, in-sprint). Dates are from continuations.json + git log + Tier-3 candidate-file headers.",
+
+  "now_extension": [
+    { "when": "2026-06-07", "what": "The §IT spine dated (adversarial_substrate_dynamics_BAR_A_SKETCH §IT C-IT-1..6) — the information-theoretic backbone (KL=excess code-length, MDL surrogate) on which the whole quantification is meant to run.", "kind": "event", "confidence": 0.8 },
+    { "when": "2026-06-08", "what": "Frame sharpening (observer frame-kernels {time,space,knowledge,meaning}) + the Latent Olympics design-sketch + Phase-1 25-record wrapper-class DB; Pav steer 'make it canonical' begins the render-system round.", "kind": "harvest", "confidence": 0.8 },
+    { "when": "2026-06-09", "what": "THE BIG SPRINT DAY: PPWc frame-indexed pushout formalization; the synergy benchmark (synergy_vs_pid) with three cross-model reviews demoting the affine gate + the codelength gate and endorsing gain_v2-but-standard; SCHEMA v1 -> SCHEMA_v2 RATIFIED (as a tool); 6 specimens + frame-lock protocol + pilot (PARTIAL-with-refutation); the reflexive 'new field -> new instrument' walk-back (triple-converged); audit v09 ratified.", "kind": "harvest", "confidence": 0.85 },
+    { "when": "2026-06-10", "what": "Viewer v0 -> v1 -> v2 built (60fps crash-fix, weather arrows, bedrock L0, narration-off-substrate, render-faithfulness linter); the 1029-fact compiled substrate (32-agent fleet) with the Opus de-leak dropping verified% 37.9 -> 32.7; the latent-physics 17-rail census re-confirming instrument-not-field; the MEDITATION (incl. #1 'vocabulary that cannot lose' + #11 forced-retirement rule).", "kind": "harvest", "confidence": 0.85 },
+    { "when": "2026-06-10", "what": "Pav's claim-lifecycle reframe articulated (demote/dormant/friction not kill; conjecture=PARENT wrapper, experiment=CHILD operationalization; dead-children tally as the falsification-pressure gauge) -> CLAIM_LIFECYCLE.md design.", "kind": "event", "confidence": 0.85 },
+    { "when": "2026-06-10", "what": "Pav steer 'put the agnostic framework INTO the viewer, at least the current slice' -> THIS reflexive self-specimen (the instrument renders its own maker). Tier-3, NOT ratified; field-claim held open-conjecture, instrument-candidate held.", "kind": "event", "confidence": 0.9 },
+    { "when": "2026-06-23", "what": "V10 audit cadence target (or earlier if ship density warrants) — the next scheduled register-correction + ratification gate; the external A- on this self-specimen is OWED before any finding hardens.", "kind": "frontier", "confidence": 0.7 }
+  ],
+
+  "entity_lifecycles": {
+    "act-pav":            { "active_from": "pre-2026 (decades, private genesis per README cont 01)", "named": "Pav / 'the agnostic framework'", "confidence": 0.85, "_note": "the creative/intuitive source; formalization runs downstream and is translated back to him." },
+    "act-fleet":          { "active_from": "2026-06-07 (first live cross-model use)", "named": "the cross-model external-A- pass ('four model families touch each round')", "confidence": 0.8, "_note": "Fable build / Opus skeptic / GPT-5.5 + Gemini external; run via local Codex/Gemini CLIs." },
+    "act-formal-fields":  { "active_from": "pre-existing (established disciplines)", "named": "category theory / IT / topology / PID / RG-EFT / Gardenfors", "confidence": 0.9 },
+    "act-audit":          { "active_from": "2026-05-31 (audit v05)", "named": "audit cadence v05-v09; V10 target 2026-06-23", "confidence": 0.8 },
+    "sw-wrappers":        { "conceived": "~2026-05-07 (cont 00 founding checkpoint)", "named": "1958-equivalent? no — 'wrapper' from cont 00/02; sharpened 2026-06-09", "confidence": 0.8 },
+    "sw-welds-ppwc":      { "conceived": "2026-05-22 (cont 24-25 wrapper-overlap)", "formulated": "2026-06-09 (frame-indexed pushout)", "named": "'parents-produce-W_C' (prose) / 'weld' (render-system, 2026-06-09)", "confidence": 0.7 },
+    "sw-frame-kernels-root": { "conceived": "2026-05-21 (cont 22 dual-kernel) / 2026-06-08 (four-kernel sharpening)", "named": "'observer frame-kernels'", "confidence": 0.7 },
+    "sw-frame-relativity":{ "conceived": "2026-06-08", "formulated": "2026-06-09 (PPWc; synergy_vs_pid contextual test)", "named": "'frame-relativity'", "confidence": 0.6, "_note": "1 demoted child (grid-zoom artifact) + 1 deflated-to-standard child (contextual)." },
+    "sw-fuzzy-lod":       { "conceived": "~2026-05 (cont 00 fuzz/observer-compression)", "named": "'fuzzy-LOD principle' (named retrospectively 2026-06-09)", "confidence": 0.65 },
+    "sw-hairy-membrane":  { "conceived": "2026-05-22 (cont 25 §5, Pav Steer 5b)", "formulated": "2026-06-09 (hairy-ball necessity)", "named": "'hairy-sphere' / 'receptor-hooks'", "confidence": 0.7 },
+    "sw-agnostic-units":  { "conceived": "2026-06-09 (agnostic_units sketch)", "named": "'agnostic unit' / 'frame-relative fuzzy ratio'", "confidence": 0.6, "_note": "the §IT-alignment is an UNOWED ratification check, not asserted." },
+    "sw-synergy-gate-root": { "conceived": "2026-05-22 (cont 25 additive-blend distinction)", "formulated": "2026-06-09 (PPWc §1.B MDL surrogate)", "named": "'synergy gate' / 'non-reducibility gate'", "confidence": 0.5, "_note": "FRICTION — 4 dead children + 1 unrun survivor." },
+    "sw-charge-canon":    { "conceived": "cont 09 (A+/A- operators)", "formulated": "cont 13 (Cayley algebra) -> cont 15 (asymmetry refactor, 2026-05-16)", "named": "'A+/A- charge canon' / 'latent gravity'", "confidence": 0.75, "_note": "in-vivo SUPERSESSION: symmetric Cayley child walked back, A- promoted primary." },
+    "sw-it-spine-root":   { "conceived": "2026-06-07 (BAR_A_SKETCH §IT)", "named": "'the §IT spine'", "confidence": 0.85 },
+    "sw-render-system-root": { "conceived": "2026-06-09 (SCHEMA v1)", "formulated": "2026-06-09 (SCHEMA_v2 RATIFIED)", "named": "'canonical wrapper-genealogy / render system'", "confidence": 0.85, "_note": "the ONE sub-wrapper at a ratified surface (as a TOOL)." },
+    "sw-shared-s":        { "conceived": "2026-05-22 (cont 25 §2-4, Pav Steer 7 nesting-space)", "formulated": "2026-06-09 (SCHEMA_v2 §2.2.b + FORMALIZATION §1.A)", "named": "'nesting space' / 'Venn-lens' / 'the seam S'", "confidence": 0.65, "_note": "HONEST HOLE: no operational extractor (open-edge-01)." },
+    "sw-dual-kernel":     { "conceived": "2026-05-21 (cont 22 §2)", "formulated": "2026-06-08 (observer_frame_kernels_DRAFT)", "named": "'dual kernel' / 'L0 global kernel canon'", "confidence": 0.65, "_note": "the 2+2 split is FLAGGED-not-claimed (open for Cowork)." },
+    "child-agnostic-framework": { "conceived": "pre-2026 (Pav-intuition, decades)", "formulated": "2026-06-09 (PPWc + SCHEMA_v2)", "named": "'the agnostic framework' (README) / 'the calculus of wrappers'", "confidence": 0.7, "_note": "consummated as an INSTRUMENT 2026-06-09; UNCONSUMMATED as a field (open-conjecture)." }
+  },
+
+  "harvest_dates": {
+    "desc-render-system": { "emerged": "2026-06-09 (SCHEMA v1)", "consolidated": "2026-06-09 (SCHEMA_v2 RATIFIED as a tool)", "confidence": 0.85 },
+    "desc-specimens":     { "emerged": "2026-06-09 (6 specimens) -> 2026-06-09 (Internet, 7th)", "consolidated": "2026-06-10 (+ this reflexive 8th, Tier-3 not ratified)", "confidence": 0.85 },
+    "desc-substrate":     { "emerged": "2026-06-10 (1029 facts, 32-agent fleet)", "consolidated": "2026-06-10 (Opus de-leak -> 32.7% verified; compiled JSON shipped)", "confidence": 0.82 },
+    "desc-viewer":        { "emerged": "2026-06-10 (v0)", "consolidated": "2026-06-10 (v2; render-faithfulness linter PASSx7)", "confidence": 0.85 },
+    "desc-frame-lock":    { "emerged": "2026-06-09 (DRAFT + pilot)", "consolidated": "PENDING (cross-model review on the protocol itself still owed)", "confidence": 0.75 },
+    "desc-cross-model":   { "emerged": "2026-06-09 (first live use)", "consolidated": "standing (the framework's only real external A-)", "confidence": 0.8 },
+    "desc-claim-lifecycle": { "emerged": "2026-06-10 (Pav reframe)", "consolidated": "PROPOSED (CLAIM_LIFECYCLE.md design; forced-retirement rule unadopted)", "confidence": 0.75 },
+    "desc-olympics":      { "emerged": "2026-06-08 (design sketch + Phase-1 spec + 25-record DB)", "consolidated": "DORMANT/gated (governance of the rating function un-defended; defensible v0 = internal closed exhibition)", "confidence": 0.6 },
+    "cultural_harvest.method":  { "emerged": "2026-06-10 (claim-lifecycle + honest-proxy discipline)", "consolidated": "in-use (the program's epistemic method)", "confidence": 0.7 },
+    "cultural_harvest.reflexive": { "emerged": "2026-06-10 (this self-specimen)", "consolidated": "in-progress (self-hosting: the render machinery rendering its own maker)", "confidence": 0.8 }
+  },
+
+  "claim_fates": {
+    "_doc": "The framework's own demoted/dormant/friction/walked-back CLAIMS, with fate + date (the relatives[] claim-nodes). fate vocabulary: demoted | dormant | friction | walked-back | open-conjecture. Mirrors rival_fates in the other overlays but for the framework's OWN internal claims (reflexive). The dead-children tally is the structured form in the base specimen's _claim_lifecycle_tally.",
+    "rel-walkback-newfield":        { "fate": "walked-back", "when": "2026-06-09 (triple-converged; audit v08 §C7)", "to": "instrument-not-field", "confidence": 0.8 },
+    "rel-dead-witnessed-gate":      { "fate": "demoted", "when": "2026-06-09 (cross-model #1 + separable_falsification_test)", "to": "retired (identity broke; non-affinity != interaction)", "confidence": 0.75 },
+    "rel-dead-naive-bes":           { "fate": "demoted", "when": "2026-06-09 (frame-lock pilot)", "to": "retired (inverted on additive blends)", "confidence": 0.75 },
+    "rel-dead-codelength":          { "fate": "demoted", "when": "2026-06-09 (cross-model #2)", "to": "retired (basis/readout mismatch; cannot live as a codelength)", "confidence": 0.75 },
+    "rel-dead-gain-v1":             { "fate": "demoted", "when": "2026-06-09 (Fable second-pass)", "to": "fixed by gain_v2 (false-flagged correlated-parent additive merges)", "confidence": 0.75 },
+    "rel-live-gain-v2":             { "fate": "open-conjecture", "when": "2026-06-09 (adopted, controlled-only)", "to": "endorsed-but-STANDARD; real model-merge OWED (env-blocked)", "confidence": 0.55 },
+    "rel-demoted-1f":               { "fate": "demoted", "when": "2026-06-03 (#150) / 2026-06-05 (A_cyc)", "to": "bridge survives, metric retired (per cont 27 §3)", "confidence": 0.6 },
+    "rel-demoted-misc":             { "fate": "demoted", "when": "2026-06-04..05 (cont 32 §3/§7; grid-zoom artifact)", "to": "rule-of-three -> heuristic; §5.1-R -> internal-replication-only; grid-zoom -> artifact", "confidence": 0.6 },
+    "rel-pid":                      { "fate": "friction", "when": "2026-06-09 (missed prior-art added)", "to": "the synergy measure is largely PID; novelty narrows to frame-relativity + genealogy", "confidence": 0.7 },
+    "rel-gardenfors":               { "fate": "open-conjecture", "when": "2026-06-09 (flagged-missing)", "to": "UNWELDED prior art owed before the field-claim can stand", "confidence": 0.6 },
+    "rel-convergence-9":            { "fate": "held", "when": "standing (every round)", "to": "stays 9 (never inflated); base-rate census owed (MEDITATION #7)", "confidence": 0.7 }
+  },
+
+  "theory_dna": {
+    "_basis_note": "ESTIMATES of the load-bearing share of the CENTRAL WELD (the framework-as-W_C) across its honest parent set + the novel-synthesis residue. DISCLOSED PROXY from the repo's own framing of which parent does which work (the reflexive self-test's leg-by-leg verdict) — NOT measured bits, NOT gain_v2 (which DOES NOT EXIST for this specimen; the one real-bits attempt came back PARTIAL-with-refutation). Shares sum to ~1.0 by construction. Confidence capped at 0.6. REFLEXIVE: this is the framework estimating its own composition with the same hand-set proxy discipline (PROXY_SPEC.md) it applies to every other specimen. The headline reading: the parents (Pav-intuition + the established fields) carry the overwhelming majority of the load; the NOVEL-SYNTHESIS RESIDUE is small AND defined-not-delivered — the quantitative signature of a non-degenerate-but-SHALLOW pushout (instrument-not-field).",
+    "parents": {
+      "par-pav-intuition":    { "load_bearing_share": 0.30, "basis": "the content source — the fuzzy-to-canon compiler, the nesting-space intuition, the frame-relativity instinct, the whole 'agnostic' framing. The W_A everything is welded onto; decades-developed. Large share because it is the GENERATIVE source, but it is intuition (un-operationalized) without the fields." },
+      "par-category-theory":  { "load_bearing_share": 0.22, "basis": "the central algebraic OBJECT (the pushout/colimit W_C=W_A ⊔_S W_B). Heavily load-bearing AND the reason the object is not novel — it is Goguen conceptual blending's known colimit, reached independently." },
+      "par-information-theory": { "load_bearing_share": 0.16, "basis": "the §IT/MDL-KL spine — the (intended) measurement substrate the synergy gate runs on. Load-bearing for the MEASURABILITY ambition, but the measure is undelivered, so weighted below the object." },
+      "par-pid":              { "load_bearing_share": 0.10, "basis": "PID — the synergy MEASURE the framework's gate is 'mostly reframed' from; a missed prior-art parent that carries much of the actual measurement load the framework claims as its own." },
+      "par-topology":         { "load_bearing_share": 0.06, "basis": "hairy-ball + Poincare-Hopf — the membrane/interaction-port necessity; a real but secondary structural import." },
+      "par-rg-eft":           { "load_bearing_share": 0.04, "basis": "RG/EFT + effect-modification — grounds the divergent-rule-sets/spectrum + the frame-relativity-as-standard-statistics reading; secondary." }
+    },
+    "novel_residue": {
+      "share": 0.12,
+      "basis": "The synthesis surplus neither parent has alone: a MEASURABLE, FRAME-RELATIVE, non-degenerate weld/synergy gate bound to a genealogy render-system across a physical/latent hybrid. SMALL (0.12) AND defined-not-delivered: the measure is largely PID, the surplus narrows to frame-relativity-as-first-class-parameter + the genealogy operationalization, and no real-corpus synergy value exists. Rendered as a disclosed proxy from the reflexive self-test's 'new-instrument-not-new-field' verdict + surprise_confidence (0.5) discounted to a soft share — NEVER as measured bits.",
+      "confidence": 0.45
+    },
+    "_residue_split_note": "Of the 0.12 residue, the honest reflexive breakdown is: ~0.07 = the genealogy RENDER-SYSTEM operationalization (real, shipped, the instrument that consummated); ~0.05 = the frame-relativity-as-first-class-estimand + observer-relative-solidity (real-but-deflated-to-standard-statistics, and the synergy-measure novelty within it is defined-not-delivered). The instrument part delivered; the field-novelty part did not.",
+    "confidence": 0.5
+  },
+
+  "sources": [
+    { "name": "continuations/ (00-32) + continuations.json (dating)", "url": "D:/PlatformOperator/research/pav/continuations/", "year": 2026, "used_for": "concept lifecycles (conceived/formulated/named); the in-vivo charge-canon supersession; dual-kernel; the W_A intuition", "type": "primary" },
+    { "name": "candidates/synergy_vs_pid/ + frame_lock_pilot_RESULTS.md", "url": "D:/PlatformOperator/research/pav/candidates/synergy_vs_pid/", "year": 2026, "used_for": "the dead synergy children + gain_v2 + cross-model squeezes; claim_fates dates", "type": "primary" },
+    { "name": "candidates/latent_cosmology_EXPLORATION.md + latent_physics_PROGRAM.md", "url": "D:/PlatformOperator/research/pav/candidates/latent_cosmology_EXPLORATION.md", "year": 2026, "used_for": "the reflexive 'new field -> new instrument' verdict; theory_dna leg-by-leg basis; novel-residue share", "type": "primary" },
+    { "name": "candidates/parents_produce_WC_FORMALIZATION_DRAFT.md", "url": "D:/PlatformOperator/research/pav/candidates/parents_produce_WC_FORMALIZATION_DRAFT.md", "year": 2026, "used_for": "PPWc formalization date; the synergy-in-bits surrogate; the bar-to-promote", "type": "primary" },
+    { "name": "candidates/canonical_genealogy/SCHEMA_v2.md + PROXY_SPEC.md + substrate/SUBSTRATE_REPORT.md", "url": "D:/PlatformOperator/research/pav/candidates/canonical_genealogy/SCHEMA_v2.md", "year": 2026, "used_for": "render-system consolidation; the hand-weighted proxy discipline; the Opus de-leak (37.9->32.7)", "type": "primary" },
+    { "name": "candidates/MEDITATION_QUESTIONS.md + CLAIM_LIFECYCLE.md", "url": "D:/PlatformOperator/research/pav/candidates/MEDITATION_QUESTIONS.md", "year": 2026, "used_for": "the 'vocabulary that cannot lose' + forced-retirement rule; the claim-lifecycle parent/child + tally", "type": "primary" },
+    { "name": "CHANGELOG.md + HANDOFF.md + audits/v05-v09.md", "url": "D:/PlatformOperator/research/pav/CHANGELOG.md", "year": 2026, "used_for": "NOW-extension dating (commit hashes + headers); held-at-9 footers; the walk-backs; V10 cadence target", "type": "primary" }
+  ]
+}

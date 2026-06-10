@@ -1,0 +1,1204 @@
+{
+  "_template_doc": "CANONICAL WRAPPER-GENEALOGY SPECIMEN — v2 — one merge event rendered as a rooted genealogy graph that STOPS AT THE PRESENT. Spec: ../SCHEMA_v2.md. Tier-3 exploratory data-harvest for Cowork+Pav ratification — NOT canon, NOT a promotion, convergence list stays 9. THIS SPECIMEN IS THE REFLEXIVE / SELF-REFERENTIAL CASE: the instrument rendering its own maker. The child W_C is the agnostic framework itself (current slice, 2026-06-10); the weld is Pav-intuition fused with a bundle of borrowed formal fields; the harvest is the render-system/substrate/viewer/Olympics/frame-lock the framework seeded; the relatives are its own demoted/dormant/friction CLAIMS with dead-children tallies. It is the parents-produce-W_C test run reflexively ON the framework — and the verdict is DEFLATIONARY (new-instrument-within-existing-fields, NOT a new field). Sources are the REPO ITSELF (source.type 'primary' = continuations / candidates / CHANGELOG / HANDOFF / audits). Every node/edge carries confidence in [0,1] + a zoom/LOD depth + a frame_layer; graded membership is the pervasive default (D5). bits_note QUALITATIVE/principled-null ONLY (gain_v2/MDL synergy values DO NOT EXIST for this specimen). discrepancies[] carries the framework-vs-record tensions (incl. the 'vocabulary that cannot lose' tension) as dated rows per SCHEMA_v2 §2.8.",
+
+  "schema_version": "0.2-canonical-genealogy",
+  "specimen_id": "agnostic-framework",
+  "_status": "Tier-3 WORKING specimen — exploratory data-harvest, surfaced for Cowork+Pav ratification. NOT canon, NOT a tier promotion, does NOT grow the convergence list (stays 9). REFLEXIVE: this specimen IS the agnostic framework rendering itself as a specimen in its own genealogy viewer (Pav steer 2026-06-10: 'put the agnostic framework INTO the viewer, at least the current slice'). All confidences are SOFT scores in [0,1]; bits are qualitative/principled-null only. Framework status rendered HONESTLY: a 9-item convergence list (held), a central pushout that is non-degenerate-but-shallow (= already conceptual blending's colimit, reached independently), a synergy leg that is DEFINED-NOT-DELIVERED, and many demoted children — the verdict is instrument-not-field. This specimen does NOT inflate any of that.",
+  "_reflexive_flag": "SELF-REFERENTIAL SPECIMEN. The render system here IS rendering the framework that produced the render system. Two honest consequences carried throughout: (1) the proxy-disclosure discipline applies DOUBLY — every weight here is a hand-set historiographic proxy of the framework's own self-documentation, NOT a measured quantity (no gain_v2/MDL bits exist for this case); (2) the 'a vocabulary that cannot lose' tension (MEDITATION #1) is the specimen's own subject — encoded as the dead-children tally in relatives[] + _claim_lifecycle_tally, the falsification-pressure gauge made visible rather than hidden.",
+  "extends": {
+    "_comment": "Linkage back to the Phase-1 wrapper CLASS this merge-event specimen instantiates (SCHEMA_v2.md §5). Same graph, deeper zoom. The framework-as-W_C is the META-wrapper of the whole Phase-1 census: every wrapper_classes[] row is an instance the framework's own parents-produce-W_C machinery generated/scored. This specimen renders the GENERATOR of the DB as itself a row.",
+    "phase1_file": "../latent_olympics_data/wrapper_classes_phase1.json",
+    "phase1_class_name": "(reflexive) — the agnostic framework is the wrapper-overlap dynamics primitive (Latent-Olympics utility top, ~0.95) viewed as a merge event in its own right: the calculus-of-wrappers that produced the convergence list, not one of the 9 entries. Nearest single kin: convergence #5 conceptual blending (whose Goguen colimit IS the framework's central object, reached from a second lineage).",
+    "relation_note": "Where each Phase-1 row renders one substrate's wrapper-overlap, this specimen renders the FRAMEWORK ITSELF as the parents-produce-W_C event {Pav-intuition x borrowed-formal-fields}. It is NOT a 10th convergence (the list stays 9); it is the reflexive self-render of the instrument. Its harvest (render-system/substrate/viewer) is the very machinery these specimens are written in — i.e. the rendered subject and the render machinery coincide (self-hosting)."
+  },
+  "generated": "2026-06-10",
+  "frames_present": ["time", "space", "knowledge", "meaning"],
+  "layers_present": ["physical", "latent"],
+  "_layers_present_comment": "(D3) Both layers populated but the balance is unusual: the LATENT layer (the framework's concepts) is overwhelmingly dominant — this is a theory-about-theories — while the PHYSICAL layer is thin and recent (one person, Pav, decades; a fleet of model-agents over a 3-day sprint 2026-06-08..10; the repo as the physical substrate). The actors are the bridge: Pav and the model-agents push the latent wrappers UP.",
+  "overall_confidence": 0.55,
+  "_overall_confidence_comment": "~0.55 is a SPLIT aggregate, NOT a flat scalar (read with fuzzy_layer): HIGH (~0.9) on the borrowed formal fields (mature, established — they FOLD) and on the FACT that a real INSTRUMENT shipped (the ratified SCHEMA_v2 render-system, the viewer, the 1029-fact substrate); MODERATE (~0.6-0.7) on the structural parents-produce-W_C claim and the held-at-9 convergence; LOW / FRONTIER (~0.4-0.5) on the field-claim (deflated to instrument-not-field), the synergy MEASURE (defined-not-delivered, largely PID), and the novelty of the central pushout (already conceptual blending's colimit). The child EXISTS as an instrument but is UNCONSUMMATED as a field — overall_confidence sits low precisely because the load-bearing synergy leg is an open frontier with a tally of dead children.",
+
+  "schema_capabilities": {
+    "_comment": "(D3+D5) Declared render capabilities. Static block — announces what a v2 render supports.",
+    "layer_filter": {
+      "_comment": "(D3) The render is FILTERABLE on the physical/latent axis; actors are the bridge.",
+      "supported": true,
+      "axes": ["physical", "latent"],
+      "bridge_via": "actors",
+      "note": "PHYSICAL view = Pav, the model-agents (Fable/Opus/GPT-5.5/Gemini), the repo, the 3-day sprint. LATENT view = wrappers, welds, frame-kernels, the synergy gate, the IT spine, the render system. Every node declares frame_layer; the actors (Pav + the model fleet) straddle and connect the two. This specimen's PHYSICAL layer is deliberately sparse and honest — a framework with one human source and a recent agent-fleet, not an institution."
+    },
+    "graded_membership": {
+      "_comment": "(D5) Fuzzy edges by design — graded membership is the pervasive default.",
+      "supported": true,
+      "default": "graded",
+      "applies_to": [
+        "node membership", "weld extent (sub_welds)", "actor role-strength (carrier/inhabitant)",
+        "forcing-event influence (acted_on.strength)", "frame-layer straddle (physical/latent membership)",
+        "lifecycle phase membership", "weld_type weight"
+      ],
+      "note": "Every boundary is a membership/confidence in [0,1]; the certain core is just where membership ~1.0. Here the framework's OWN core primitive (the wrapper = certain core + fuzzy membrane on every side) is the schema's design principle — the specimen is fuzzy by the same law it describes (reflexive)."
+    }
+  },
+
+  "child": {
+    "_comment": "W_C — the emergent wrapper born in this merge: THE AGNOSTIC FRAMEWORK (current slice, 2026-06-10). The trunk node. A calculus of wrappers compiling fuzzy candidate-space into continuity-preserving canon, with a parents-produce-W_C structural test, a frame-relative synergy gate, and a genealogy render-system. Honest status: a REAL INSTRUMENT, an UNCONSUMMATED FIELD — the reflexive self-test returns non-degenerate-but-shallow pushout + defined-not-delivered synergy = new-instrument-within-existing-fields.",
+    "id": "child-agnostic-framework",
+    "name": "The agnostic framework (the calculus of wrappers / parents-produce-W_C + genealogy render-system)",
+    "kernel": "Reality is rendered by an observer at a fuzzy level-of-detail as WRAPPERS (a certain core wrapped in a fuzzy membrane on every side). Two parent wrappers that overlap in a Venn-lens nesting-space inside an observer frame-kernel {time,space,knowledge,meaning} can conceive a persistent third wrapper W_C of the same kind (parents-produce-W_C); the parents persist as hairy-membrane stubs/receptor-hooks; the merge is the categorical pushout W_C = W_A ⊔_S W_B along a shared seam S; a genuine W_C is distinguished from an additive blend by a frame-relative SYNERGY gate (compressible jointly, unreachable from either parent alone). The whole apparatus is rendered as a rooted genealogy specimen (DOWN to people-roots, UP to latent/cultural harvest, WIDE to relatives). Net product: an INSTRUMENT for detecting and rendering cross-substrate emergence — NOT (per the reflexive self-test) a new field. CRUCIAL contrast with deep-learning's consummated child: this child's load-bearing SYNERGY leg is DEFINED but NOT DELIVERED — the criterion is specified, the real-corpus measurement is owed and has never run successfully.",
+    "frame": ["knowledge", "meaning", "time", "space"],
+    "_frame_note": "knowledge primary (parents-produce-W_C lives in the knowledge frame — it is a theory of how structures-of-knowledge merge); meaning (the framework is a meaning-frame stance on what emergence/solidity IS — observer-relative); time (the whole development is a 2026-05..06 sprint atop a decades-long intuition, and the lifecycle vocabulary risen->dormant->resurrected is intrinsic); space enters as the latent nesting-space / pushout geometry the overlap is evaluated in.",
+    "frame_layer": {
+      "_comment": "(D3) An idea-framework child — latent ~1.0.",
+      "layer": "latent",
+      "physical_membership": 0.05,
+      "latent_membership": 1.0
+    },
+    "status": "open-conjecture",
+    "_status_enum": "open-conjecture / live-unconsummated-weld (R5). The framework AS AN INSTRUMENT is active/shipped (render-system ratified, viewer built); but the FIELD-CLAIM is walked-back to instrument-not-field and the central synergy weld never produced a settled real-corpus child — so the honest enum on the load-bearing claim is open-conjecture, not risen. The single enum is lossy; see status_trajectory.",
+    "status_trajectory": [
+      {
+        "_comment": "(R5) the child as a TRAJECTORY of states. The decades-long intuition predates the repo; the formalization is a recent sprint; the reflexive self-test then DEFLATED the field-claim.",
+        "state": "intuition (decades) — fuzzy-to-canon compiler latent in Pav's private work (ideas attract/repel, +/- unions, nesting-space conceives a third, fidelity continually upgrading)",
+        "when": "pre-2026 (decades; genesis held private per README continuation 01)",
+        "by": "Pav",
+        "confidence": 0.7
+      },
+      {
+        "state": "formalized (the calculus written down) — wrappers, A+/A-, charge canon, dual-kernel, wrapper-overlap one-system-with-phases, hairy-sphere",
+        "when": "~early-May 2026 (cont 00-25; repo initial commit 2026-05-17 already holds cont 15)",
+        "by": "Pav + the continuation record",
+        "confidence": 0.75
+      },
+      {
+        "state": "operationalized + cross-modeled (PPWc frame-indexed pushout + synergy gate; render-system; external A- pass) — the field-claim raised",
+        "when": "2026-06-07..09",
+        "by": "the model fleet (Fable build / Opus skeptic / GPT-5.5 + Gemini external) at Pav's steers",
+        "confidence": 0.7
+      },
+      {
+        "state": "DEFLATED reflexively — 'new field / latent-hybrid cosmology' WALKED BACK to 'new-instrument-within-existing-fields' (triple-converged); synergy leg defined-not-delivered",
+        "when": "2026-06-09 (latent_cosmology_EXPLORATION; re-confirmed latent_physics_PROGRAM §3; audit v08 §C7)",
+        "by": "the framework's own PPWc test run on itself + Claude/GPT-5.5/Gemini",
+        "confidence": 0.8
+      },
+      {
+        "state": "reflexively self-rendered (this specimen) — the instrument renders its own maker; field-claim held open-conjecture, instrument-candidate held",
+        "when": "2026-06-10",
+        "by": "Pav steer 'put the agnostic framework INTO the viewer'",
+        "confidence": 0.85
+      }
+    ],
+    "confidence": 0.5,
+    "_confidence_comment": "0.5 = confidence the child is a real, DISTINCT emergent FIELD (not a relabel of its parents / not a pile). DELIBERATELY MODERATE-LOW and split: as an INSTRUMENT the framework is real (~0.85 — a render-system shipped and was ratified as a tool); as a FIELD it is open-conjecture (~0.4 — the reflexive verdict is instrument-not-field, the central pushout is conceptual blending's known colimit, the synergy surplus is defined-not-delivered). (R9) INDEPENDENT of surprise_confidence — the seam is fertile (a measurable frame-relative weld test is a real idea) but the child-as-field is unconsummated. Contrast deep-learning's 0.95 (a consummated dominant child); this 0.5 is the honest reading of a non-degenerate-but-shallow pushout.",
+    "utility": {
+      "_comment": "Pav's three utility legs. Honestly graded: the UNIFIER leg is real (the framework's distinctive move); the COMPRESSOR leg is the contested synergy claim; action-spaces are the new moves the instrument enabled.",
+      "unifier": "PARTIAL: the framework unifies cross-substrate emergence under ONE structural test (parents-produce-W_C / the synergy-gated pushout) and renders any theory-merge in ONE genealogy schema — the convergence-9 list (LCAO, cell fusion, symbiogenesis, creole genesis, conceptual blending, model merging, ACMP, cymatics-candidate, BES) is the unification evidence. HONEST DOUBLE-EDGE: the unifying OBJECT (the pushout) is already conceptual blending's Goguen colimit, reached independently — so the unification is REAL but the object is NOT NOVEL (convergence-by-independence cuts both ways). passesW_CTest as an instrument: yes (~0.7); as a new unifying field: no (deflated).",
+      "compressor": "CONTESTED / DEFINED-NOT-DELIVERED: the claim is that a genuine W_C compresses jointly-but-not-from-either-parent (synergy = MDL/bits surplus). This is the framework's load-bearing compressor claim AND its heaviest friction: the measure is largely PID; its children keep dying (witnessed/affine gate, naive BES-4.4 form, fixed-grid functional-ANOVA codelength, gain_v1 — all demoted); the surviving child gain_v2 is endorsed-but-standard and has NEVER run on a real corpus; the first real-bits attempt came back PARTIAL-with-refutation. NO numeric bit value asserted (principled-null). See bits_note + relatives[] dead-children tally.",
+      "action_spaces_unlocked": [
+        "Render ANY theory-merge as a rooted genealogy specimen (DOWN people-roots, UP latent/cultural harvest, WIDE relatives) — the render-system + the 7 specimens + this reflexive one.",
+        "Frame-relativity as a FIRST-CLASS parameter: evaluate emergence relative to an observer kernel {time,space,knowledge,meaning} (the most-interesting surviving novelty per the reflexive test) — though deflated to 'standard effect-modification statistics with frame terminology'.",
+        "The parent-conjecture / child-experiment CLAIM-LIFECYCLE with a dead-children TALLY as a falsification-pressure gauge (demote-not-kill, dated, append-only) — Pav's reframe, formalized in CLAIM_LIFECYCLE.md.",
+        "A synergy-GATED weld test (parent-count -> pushout non-degeneracy -> synergy-across-a-locked-frame), pre-registered via the frame-lock protocol so it is not frame-shoppable.",
+        "A provenance-logged COMPILED SUBSTRATE (1029 facts, source freshness + certainty + verification; append-only JSONL -> SQLite + compiled JSON) that scales — honest-proxy discipline, no fabrication.",
+        "Reflexive self-hosting: the instrument renders its own maker (this specimen) — a granular self-audit that surfaces the framework's own friction (the dead-children tally, the held-at-9 list, the walked-back field-claim)."
+      ]
+    }
+  },
+
+  "weld": {
+    "_comment": "The merge: parents -> child. THE HEART OF THE SPECIMEN and the locus of the reflexive parents-produce-W_C test. parent W_A = Pav's decades-long fuzzy-to-canon intuition (CONTENT); parent W_B = a BUNDLE of mature formal fields (category-theory pushouts / IT-MDL / hairy-ball topology / PID / RG-EFT / + the unwelded Gardenfors) reached from a SECOND lineage. The binary {Pav-intuition x formal-fields} is a defensible but lossy 2-projection of the N-ary set in parents_full. The shared seam S is the pushout-over-a-seam ITSELF — Pav's intuitive Venn-lens IS structurally Goguen's already-formalized conceptual-blending colimit. The SYNERGY is a measurable frame-relative weld gate bound to a render-system — but DEFINED-NOT-DELIVERED.",
+    "id": "weld-main",
+
+    "parents": [
+      {
+        "_role": "W_A",
+        "name": "Pav-intuition — the decades-long fuzzy-to-canon compiler (the creative source)",
+        "kernel": "Ideas attract and repel (conflict/union); +/- unions of various flavours; phases of change; a 'nesting space' where overlapping parents conceive a third; the substrate as a fidelity-upgrading garden ('it all started out as nothing and a point... the fidelity is continually upgrading as the substrate evolves'). Independently developed over decades; the continuation record is its primary self-documentation. frame {knowledge,meaning}.",
+        "frame": ["knowledge", "meaning"],
+        "confidence": 0.85,
+        "parent_kind": "content",
+        "_parent_kind_enum": "(R4) content — the substantive idea-source the formal machinery is welded ONTO. Pav is the creative/intuitive source; formalization runs downstream and is translated back to him (feedback_translate_formalization_for_pav)."
+      },
+      {
+        "_role": "W_B",
+        "name": "The borrowed formal-fields bundle (category theory / IT / topology / PID / RG-EFT)",
+        "kernel": "A bundle of mature disciplines the framework borrows its formal machinery from and generalizes the FORM of: category-theory pushouts/colimits (Goguen conceptual blending), information-theory MDL/KL (the IT spine), hairy-ball topology + Poincare-Hopf, Partial Information Decomposition (synergy), Renormalization-Group/Effective-Field-Theory + effect-modification. Each rail is a mature existing field, so each piece FOLDS — only the binding/synthesis is candidate-new. frame {knowledge,space}.",
+        "frame": ["knowledge", "space"],
+        "confidence": 0.9,
+        "parent_kind": "method",
+        "_parent_kind_enum": "(R4) method/instrument — the formal apparatus, not content. Reached from a SECOND lineage independent of Pav's intuition, which is why convergence-by-independence applies (and cuts against novelty of the shared object)."
+      }
+    ],
+    "_parents_comment": "(v1, kept) The clean BINARY projection: {Pav-intuition x borrowed-formal-fields}. The framework's canonical visualization. ALWAYS present — but here explicitly a LOSSY 2-projection of the N-ary set in parents_full (the formal bundle is really ~5 distinct fields, one of them, Gardenfors, still UNWELDED).",
+
+    "parents_full": [
+      {
+        "_comment": "(R1) the honest N-ary parent set: 1 content parent (Pav-intuition) + ~5 method/instrument field-parents, one of which (Gardenfors) is FLAGGED-MISSING / not yet welded. parents[] is the 2-projection that folds the 5 fields into one bundle.",
+        "id": "par-pav-intuition",
+        "name": "Pav-intuition (content)",
+        "kernel": "The fuzzy-to-canon compiler: attract/repel, +/- unions, nesting-space conceives a third, fidelity-upgrading garden. Decades, private genesis.",
+        "frame": ["knowledge", "meaning"],
+        "confidence": 0.85,
+        "parent_kind": "content",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.15, "latent_membership": 1.0 }
+      },
+      {
+        "id": "par-category-theory",
+        "name": "Category theory — pushouts / colimits (Goguen conceptual blending)",
+        "kernel": "Symbiosis-as-pushout: W_C = W_A ⊔_S W_B along a shared sub-object S. The framework's central algebraic object — AND already conceptual blending's formalized colimit-over-a-generic-space (Goguen), reached here from a different lineage. The earliest and strongest formal weld.",
+        "frame": ["knowledge"],
+        "confidence": 0.9,
+        "parent_kind": "method",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.05, "latent_membership": 1.0 }
+      },
+      {
+        "id": "par-information-theory",
+        "name": "Information theory — MDL / KL (the §IT spine)",
+        "kernel": "KL = excess code-length (Cover & Thomas), Kraft-McMillan emit-cost, Landauer kT ln2 floor, MDL as the computable surrogate for uncomputable Kolmogorov K. The measurement substrate the synergy gate runs on. Carries the K-uncomputability + estimator-dependence caveat.",
+        "frame": ["knowledge"],
+        "confidence": 0.9,
+        "parent_kind": "instrument",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.05, "latent_membership": 1.0 }
+      },
+      {
+        "id": "par-topology",
+        "name": "Hairy-ball theorem + Poincare-Hopf topology",
+        "kernel": "A smooth sealed interaction-free wrapper boundary is topologically impossible — interaction ports are forced cowlicks; Poincare-Hopf budgets the ports (indices sum to the Euler characteristic). Upgrades the hairy-sphere picture from description to NECESSITY. Established topology; the contribution is the synthesis, not the components.",
+        "frame": ["space", "knowledge"],
+        "confidence": 0.88,
+        "parent_kind": "method",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.1, "latent_membership": 1.0 }
+      },
+      {
+        "id": "par-pid",
+        "name": "Partial Information Decomposition (Williams-Beer / Barrett) — the field that threatens to subsume the synergy gate",
+        "kernel": "Synergy/redundancy decomposition of multivariate information. The cross-model pass found the framework's prized synergy gate is 'mostly PID synergy reframed.' A MISSED prior-art omission added 2026-06-09. The synergy MEASURE is largely PID; the genuine novelty narrows to its frame-relative + genealogy-situated application.",
+        "frame": ["knowledge"],
+        "confidence": 0.85,
+        "parent_kind": "instrument",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.05, "latent_membership": 1.0 }
+      },
+      {
+        "id": "par-rg-eft",
+        "name": "Renormalization-Group / Effective-Field-Theory + effect-modification",
+        "kernel": "Pav's 'divergent rule-sets (quantum vs GR), enough slices -> spectrum + gradient' maps to EFT-per-regime + RG-flow + Anderson emergence. Frame-relativity of synergy reads as STANDARD effect-modification statistics. Load-bearing caveat: the RG semigroup is irreversible — 'enough slices -> recover the deep micro law' is the ill-posed inverse, NOT guaranteed.",
+        "frame": ["knowledge", "space"],
+        "confidence": 0.85,
+        "parent_kind": "method",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.1, "latent_membership": 1.0 }
+      },
+      {
+        "id": "par-gardenfors",
+        "name": "Gardenfors conceptual spaces (UNWELDED — flagged-missing prior art)",
+        "kernel": "Geometric concept theory: ideas living in a latent space with frames — exactly the framework's own picture. Flagged by Gemini as MISSED prior art the parent-bundle census omitted. A parent-field the framework SHOULD weld but currently has NOT. Load-bearing prior art owed before the field-claim can stand.",
+        "frame": ["knowledge", "space"],
+        "confidence": 0.6,
+        "parent_kind": "method",
+        "_parent_kind_note": "(R4) method — but UNWELDED: included in parents_full as an HONEST GAP (an open-conjecture parent-edge), not a consummated weld. Its presence here records the missing prior art, not a claim.",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.05, "latent_membership": 1.0 }
+      }
+    ],
+
+    "mediating_wrapper": {
+      "_comment": "(R1) the agent that PERFORMED the weld — a layer up from the parents. Pav alone could not weld his intuition to category theory + IT + topology; the cross-model agent fleet (Fable build / Opus skeptic / GPT-5.5 + Gemini external) did the operationalization, the prior-art census, and the deflation. The fleet is the population-genetics-analogue welder of THIS specimen.",
+      "name": "The cross-model agent fleet (Fable / Opus / GPT-5.5 / Gemini) + the workflow/council that operationalized and stress-tested the weld",
+      "kernel": "The standing external-A- discipline: load-bearing claims go to GPT-5.5 + Gemini (blind, independent) after the in-workflow Fable build + Opus skeptic — 'four model families touch each round.' This fleet welded Pav-intuition to the formal fields (the PPWc formalization, the render-system, the synergy benchmark) AND delivered the squeezes that demoted the children and deflated the field-claim. It is the welder, not one of the ancestral parents.",
+      "who_or_what": "Pav (steers) + Fable (build) + Opus (skeptic/audit) + GPT-5.5 + Gemini (external A-); run via local Codex/Gemini CLIs",
+      "confidence": 0.8
+    },
+
+    "shared_sub_object_S": "S = the pushout-over-a-seam ITSELF — the nesting-space / Venn-lens / overlap-integral. THE load-bearing coincidence of the whole specimen: Pav's intuitive 'lens overlap that conceives a third' IS structurally Goguen's already-formalized conceptual-blending colimit over a generic space — the SAME categorical object reached from two independent lineages. This is why the framework can claim convergence-by-independence AND why the object is NOT novel. Concretely S is the shared sub-object the two parents fuse along: the operational commitment {two wrappers overlap in a frame, conceive a persistent third of the same kind}. HONEST HOLE: S has no operational extractor — the framework reads S retrospectively; the morphisms i: S->W_A, j: S->W_B are named but not pinned per kernel (open-edge-01).",
+    "S_structure": {
+      "_comment": "(R12) S is NON-UNITARY / CONTESTED — agreed:false. The pushout OBJECT is agreed to be what the parents fuse along, but two fractures sit inside it: (1) the convergence-by-independence reading cuts AGAINST the novelty of the object (two lineages on the same KNOWN colimit); (2) the missed prior art (PID, Gardenfors, category-theoretic semiotics) means the seam was not fully mapped when first claimed. So the seam is real but its NOVELTY is fractured-and-contested.",
+      "components": [
+        "the pushout / colimit object (Goguen conceptual blending) — agreed to BE the object",
+        "the nesting-space / Venn-lens (Pav's intuitive form) — the same object from the second lineage",
+        "the operational commitment {overlap in a frame -> persistent third of the same kind}",
+        "(contested) the NOVELTY of the object — convergence-by-independence reads against it"
+      ],
+      "internal_conflict": "The seam's NOVELTY is contested, not its existence: two independent lineages landing on the same KNOWN categorical object (the pushout) means the object is not new, so the very convergence-by-independence the framework prizes cuts against the novelty of S. Compounded by the missed prior-art homes (PID for the synergy measure; Gardenfors for the latent-space picture; category-theoretic semiotics) that were not in the census when S was first claimed.",
+      "agreed": false
+    },
+
+    "surprise": "The synergy neither parent has alone (the decider leg): a MEASURABLE, FRAME-RELATIVE, non-degenerate weld/synergy gate bound to a genealogy render-system across a physical/latent hybrid. Neither parent alone reaches it: conceptual blending (the formal pushout) has NO falsifiable measure (the Gibbs critique — which is why memetics and blending 'died/un-fertile'); Uzzi/recombinant-innovation has combination-counting but no joint-only criterion; PID has synergy but no frame-index; Pav-intuition alone has the fertile lens but no operationalization. ONLY the welded framework proposes a synergy gate (Syn = min[K(W_C|W_A),K(W_C|W_B)] - K(W_C|W_A,W_B) > 0) that is frame-indexed and genealogy-situated. HONEST GRADE (the reflexive deflation): the measure is largely PID; the genuine surplus narrows to frame-relativity-as-a-first-class-parameter + the genealogy operationalization; and it is DEFINED-NOT-DELIVERED — the criterion is specified, but the one real-bits computation (frame-lock pilot) came back PARTIAL-with-refutation, and no successful real-corpus synergy value exists. The surprise is a real IDEA with a tally of dead operationalizations, not a delivered result.",
+    "surprise_confidence": 0.5,
+    "_surprise_confidence_comment": "(v1, R9) MODERATE (0.5): the surprise is a real, principled idea (a measurable frame-relative weld test IS something neither parent had) but it is UNDELIVERED and its measure is largely PID. ORTHOGONAL to child.confidence — the seam is fertile-as-an-idea (this is the most-interesting surviving novelty) while the child-as-field is unconsummated. Held at 0.5 (not higher) precisely because of the dead-children tally: ~4-8 demoted operationalizations and zero successful real-corpus one. Synergy assessed QUALITATIVELY only; NO bits fabricated (none exist).",
+
+    "surprise_priority": {
+      "_comment": "(R15) the CONJECTURE-IN-A-PARENT: the framework's central intuition (overlapping lenses conceive a third; ideas symbiose) pre-existed the categorical/PPWc formalization by DECADES inside Pav — a low-confidence intuitive guess long predating the quantitative weld. The Faraday-light-guess analogue, but at decades-scale.",
+      "first_conjectured_by": "Pav (the nesting-space / symbiosis intuition; '03_RAW: what does the idea symbiose with?')",
+      "when": "pre-2026 (decades; intuition) vs 2026-06-09 (PPWc frame-indexed pushout formalization)",
+      "dormant_interval": "the intuitive lens long predates the categorical formalization (decades private -> formalized only in the 2026-05/06 sprint)",
+      "confidence": 0.7
+    },
+
+    "bits_note": "QUALITATIVE / NEAR-PRINCIPLED-NULL ONLY (R16). The framework's whole quantification is SUPPOSED to run on the §IT spine (KL = excess code-length; MDL surrogate; synergy in bits ΔL = [L(W_C|W_A) ∧ L(W_C|W_B)] - L(W_C|W_A,W_B)). BUT for THIS reflexive specimen NO numeric bit value exists or is asserted: (a) gain_v2/MDL synergy numbers DO NOT EXIST for the framework-as-W_C (the real-corpus run is owed and unrun); (b) the one real-bits attempt (frame-lock pilot) came back PARTIAL-with-refutation (2 hits / 3 misses on known answers); (c) the measure is decidable only on instrumented frames and the framework-as-specimen lives on the meaning/knowledge frame where it is order-of-magnitude at best; (d) K is uncomputable and the surrogate is estimator-dependent. So bits_note = principled-null: the compression surplus is DEFINED but NOT computable here. NO bit values fabricated.",
+
+    "survived": [
+      "The wrapper primitive (certain core + fuzzy membrane) — survived from Pav-intuition as the root abstraction; became the schema's design law.",
+      "The pushout/colimit object — survived from category theory (Goguen) as the central algebraic form W_C = W_A ⊔_S W_B.",
+      "The MDL/KL spine — survived from information theory as the (intended) measurement substrate.",
+      "The hairy-membrane / receptor-hooks — survived from Pav Steer 5b, upgraded by hairy-ball topology to a necessity.",
+      "Frame-relativity (observer kernels {time,space,knowledge,meaning}) — survived as the most-interesting novelty (the dual-kernel cont 22 -> four kernels).",
+      "The claim-lifecycle vocabulary (risen->active->dormant->resurrected; D6 friction; revival) — survived and self-applies (the framework's own concepts exhibit it)."
+    ],
+    "dropped": [
+      "Frame-FREE quantification — dropped: there is no outside-L0 vantage, so PPWc is frame-relative by construction (no frame-free synergy number).",
+      "The 'new field / latent-hybrid cosmology' framing — DROPPED (walked back to instrument-not-field per audit v08 §C7).",
+      "The symmetric charge Cayley-table algebra (cont 13) — DROPPED in the asymmetric refactor (cont 15), A- promoted to primary (an in-vivo supersession).",
+      "Novelty of the central pushout — effectively dropped: convergence-by-independence shows it is conceptual blending's known colimit.",
+      "Grid/quantization-zoom frame-relativity — DROPPED as a quantization artifact (cross-model).",
+      "Several synergy operationalizations (witnessed/affine gate, naive BES-4.4 form, fixed-grid functional-ANOVA codelength, gain_v1) — DROPPED/demoted (see relatives[] dead-children)."
+    ],
+    "feature_ledger": [
+      {
+        "_comment": "(R7) the contested feature: the SYNERGY MEASURE. Different operationalizations (children) kept/dropped different things; the ledger shows the parent-conjecture surviving while children drop the measure's specifics. This is the reflexive instantiation of the claim-lifecycle.",
+        "feature": "a measurable, novel (more-than-PID) synergy gate distinguishing a genuine W_C from an additive blend",
+        "kept_by": ["the PARENT conjecture (parents-produce-W_C / a measurable weld) — held open-conjecture, not killed", "gain_v2 (the surviving child — but endorsed-as-STANDARD, functional-ANOVA-adjacent, never run on a real corpus)"],
+        "dropped_by": ["the witnessed/affine-residual gate (false-positive on separable nonlinearity — demoted)", "the naive BES-4.4/PID form (inverted on additive blends — demoted)", "the fixed-grid functional-ANOVA codelength (leaks within-bin wiggle — demoted)", "gain_v1 (false-flags correlated-parent additive merges — demoted)"]
+      }
+    ],
+
+    "frame_of_weld": ["knowledge", "meaning", "time"],
+    "_frame_of_weld_note": "knowledge (the weld is the identity 'Pav's nesting-space = the categorical pushout' — a knowledge-frame coincidence) + meaning (the framework is a meaning-frame stance on what emergence/solidity IS, observer-relative) are where the weld holds. time is load-bearing: the weld is a PROCESS spanning decades of intuition + a recent formalization sprint, and the field-claim never CONSUMMATED in time (the synergy leg is owed). space enters only weakly (the latent nesting-space geometry).",
+    "weld_operator": "The PUSHOUT / colimit-over-a-seam — the active ingredient that fuses Pav's intuitive lens to the formal bundle is the recognition that 'overlapping lenses conceive a third' IS the categorical pushout W_C = W_A ⊔_S W_B. Static Pav-intuition (a fertile lens with no formal object) + static category theory (a known colimit with no idea-genealogy application) make nothing; the identity-recognition (the pushout AS the nesting-space) is what welds them — and is also exactly why the object is not novel (the operator IS a known construction).",
+
+    "lod_scale": "Holds at the coarse grain ('Pav-intuition + formal-fields -> a calculus of wrappers + render-system'). CONFIRMED by its sub-structure for the INSTRUMENT build-chain (pushout -> IT spine -> hairy-ball -> frame-kernels -> PPWc -> render-system -> viewer, each building on the last). BUT CONTRADICTED by its sub-structure on the SYNERGY-MEASURE leg: zoom into the load-bearing synergy gate and it SHATTERS into a chain of mutually-superseding-then-dying operationalizations (witnessed gate -> naive form -> functional-ANOVA codelength -> gain_v1 -> gain_v2), none delivered on a real corpus. So the weld is CONFIRMED as an instrument-build and CONTRADICTED as a field-claim — the honest split that defines 'instrument-not-field'.",
+    "sub_welds": [
+      {
+        "_comment": "(R3) the ordered chain of sub-welds (the formal welds that built the instrument). coherence_under_zoom = confirms for THIS chain; the synergy leg (sw-synergy-gate) is the one that contradicts.",
+        "id": "sw-pushout",
+        "name": "Symbiosis-as-pushout / colimit (Goguen) — the earliest, strongest formal weld",
+        "when": "2026-05-11 (cont 03_RAW §6) -> 2026-05-13/17 (cont 09 §3.1)",
+        "confidence": 0.85
+      },
+      {
+        "id": "sw-it-spine",
+        "name": "The §IT spine (KL = excess code-length; MDL surrogate) — the measurement substrate",
+        "when": "2026-06-07 (BAR_A_SKETCH §IT) -> 2026-06-09 (FORMALIZATION §1.B)",
+        "confidence": 0.85
+      },
+      {
+        "id": "sw-frame-kernels",
+        "name": "Observer frame-kernels {time,space,knowledge,meaning} — dissolves the 'two rocks' falsifier",
+        "when": "2026-06-08 (frame sharpening; grounds in cont 22 dual-kernel + cont 25 §12)",
+        "confidence": 0.8
+      },
+      {
+        "id": "sw-hairy-ball",
+        "name": "Hairy-ball + Poincare-Hopf — interaction ports forced, hairy-sphere upgraded to necessity",
+        "when": "2026-06-09 (agnostic_units_hairy_membrane_SKETCH §3-5; from cont 25 §5)",
+        "confidence": 0.8
+      },
+      {
+        "id": "sw-ppwc",
+        "name": "PPWc(W_A,W_B|frame) — the frame-indexed pushout gated by synergy (the formal central claim)",
+        "when": "2026-06-09 (parents_produce_WC_FORMALIZATION_DRAFT §1)",
+        "confidence": 0.75
+      },
+      {
+        "id": "sw-synergy-gate",
+        "name": "The synergy gate operationalization chain — SHATTERS under zoom (the contradicting sub-weld)",
+        "when": "2026-06-08..10 (synergy_vs_pid/ + frame_lock_pilot)",
+        "confidence": 0.45,
+        "_confidence_note": "Low confidence BY DESIGN — this is the sub-weld that CONTRADICTS under zoom: a chain of dying children (witnessed gate / naive form / functional-ANOVA codelength / gain_v1 -> gain_v2), none delivered on a real corpus."
+      },
+      {
+        "id": "sw-render-system",
+        "name": "The canonical render-system (SCHEMA_v2 ratified) + viewer v0-v2 + 1029-fact substrate — the instrument that shipped",
+        "when": "2026-06-09 (SCHEMA_v2 RATIFIED) -> 2026-06-10 (viewer v2; substrate)",
+        "confidence": 0.85
+      }
+    ],
+    "coherence_under_zoom": "contradicts",
+    "_coherence_under_zoom_note": "(R3) SPLIT verdict, recorded as CONTRADICTS on the load-bearing leg. The INSTRUMENT build-chain (pushout -> IT -> frame-kernels -> hairy-ball -> render-system -> viewer) is internally coherent and CONFIRMS. But the FIELD-claim's decider — the synergy gate (sw-synergy-gate) — CONTRADICTS: it shatters into mutually-superseding-then-dying operationalizations with no delivered real-corpus child. Marked 'contradicts' (not 'confirms') because the framework's field-status routes through the synergy leg, and that leg is the one that fails under zoom — the diagnostic signature of an unconsummated weld (an instrument, not a field).",
+
+    "when": {
+      "_comment": "(R2) a PROCESS with a duration and an OPEN ('to': null) end — the field-claim is unconsummated (the synergy leg is owed). The intuition is decades; the formalization is a recent sprint; the instrument shipped; the field never consummated.",
+      "from": "pre-2026 (decades; Pav-intuition) / ~2026-05-07 (cont 00 founding checkpoint) / 2026-06-09 (PPWc formalization — the idea-weld)",
+      "to": null,
+      "_to_note": "NULL = open/unconsummated as a FIELD (the synergy leg is defined-not-delivered; the real-corpus child is owed). The INSTRUMENT, by contrast, consummated 2026-06-09 (SCHEMA_v2 ratified) -> 2026-06-10 (viewer). The null marks the field-claim's open frontier and is itself diagnostic (cf. QG's 1916->present).",
+      "defensible_dates": [
+        "pre-2026 (Pav-intuition — the conjecture, decades)",
+        "~2026-05-07 (cont 00 founding checkpoint — the calculus written down)",
+        "2026-06-09 (PPWc formalization + SCHEMA_v2 ratified — the idea-weld + the instrument)",
+        "2026-06-09 (reflexive deflation: 'new field' walked back to 'new instrument')",
+        "2026-06-10 (viewer v2 + this reflexive self-render)"
+      ]
+    },
+
+    "dormancy_intervals": [],
+    "_dormancy_intervals_comment": "(R11) EMPTY for the MAIN weld — the framework itself never went dormant (it is in an ACTIVE 2026-05..06 sprint). Dormancy/friction lives at the CHILD-experiment level (the demoted synergy operationalizations in relatives[]) and at the parent-conjecture level as accruing FRICTION, not dormancy. Per the claim-lifecycle reframe: the PARENT conjecture (parents-produce-W_C / the measurable weld) is held open-conjecture/friction-logged, awaiting a better child — it is not parked-dormant yet (the proposed forced-retirement trigger that WOULD park it is unadopted, MEDITATION #11).",
+    "revival": {
+      "_comment": "(v1, R10) EMPTY headline — no dormancy, no revival of the main weld. (The CHARGE-CANON sub-wrapper has an in-vivo supersession, and the synergy-gate child-chain has serial demotion-and-replacement, but those are recorded at sub_wrapper / relatives level, not as a main-weld revival.)",
+      "when": "",
+      "by": "",
+      "trigger": "",
+      "kind": "same"
+    },
+    "reattribution": {
+      "_comment": "(R10) a SOFT reattribution nuance: the render-system term 'weld' for a W_C-birth event is RENDER-SYSTEM-ONLY vocabulary (zero continuations) — the NAME post-dates and renames the underlying cont-25 concept. Not a credit dispute, a vocabulary-provenance note.",
+      "named_after": "'weld' (coined as render-system vocabulary in SCHEMA v1, 2026-06-09)",
+      "actually_produced_by": "the underlying parents-produce-W_C / wrapper-overlap concept (cont 24-25, 2026-05-22) — 'weld' appears in ZERO continuations",
+      "why": "The render-system needed a noun for a W_C-birth event; 'weld' was coined for the schema/viewer and never appears in the framework's own prose. A render-vocabulary-vs-framework-prose provenance gap, flagged for honesty (the specimen uses 'weld' throughout but the framework calls it parents-produce-W_C)."
+    },
+    "weld_chain": [],
+    "_weld_chain_comment": "(R10) EMPTY — single-birth weld (not a chained re-weld). The instrument build-chain is captured in sub_welds; the synergy-gate child-replacement chain is in relatives[]/_claim_lifecycle_tally, not here.",
+
+    "candidate_children": [],
+    "_candidate_children_comment": "(R6) EMPTY — this weld is NOT a QG-style family of mutually-rejecting candidate children with no winner. It produced ONE child (the framework-as-instrument). The dying SYNERGY operationalizations are NOT candidate children of the framework; they are dead CHILDREN of the framework's own internal parent-conjecture (parents-produce-W_C) — recorded in relatives[] as first-class demoted claims + the _claim_lifecycle_tally, per the claim-lifecycle design. unresolved=false at the instrument level; the field-leg is open-conjecture (captured in child.status + coherence_under_zoom), not a candidate-child contest.",
+    "unresolved": false,
+    "contest_axis": "",
+    "weld_necessity_confidence": 0.55,
+    "_weld_necessity_confidence_comment": "(R8) ~0.55 — 'is a third even NEEDED?' is genuinely IN DOUBT here, which is why this is filled (<1) rather than left at the design-law default. As an INSTRUMENT a third (the render-system) clearly emerged (~0.85). As a FIELD the reflexive verdict is that the apex is ASSEMBLED FROM PARTS each with a mature home (category theory, IT, topology, PID, RG) and its central object is already conceptual blending's colimit — so 'the framework is a genuine new third' vs 'the framework is a re-description / new arrangement of existing fields' is exactly the contested question. The ~0.45 residual is the live possibility (triple-converged in the reflexive test) that there is NO new field-level third — only a new instrument within existing fields.",
+
+    "lifecycle": {
+      "_comment": "(D1) the weld's GRADED LIFE. Per R33 this is a CRISIS-PULLED wrapper: the forcing_events layer (Pav steers + cross-model squeezes) IS the lifecycle spine, not background. The arc: independence (decades) -> conception (intuition) -> formalization sprint -> reflexive deflation -> instrument-consummated / field-open. weld_type is weighted across instrument-enabled, mediator-welded, crisis-pulled, and never-consummated-frontier (the field leg).",
+      "phase_trajectory": [
+        {
+          "_comment": "(D1) graded phases; membership = weight. pre_weld INDEPENDENCE strength lives in pre_weld_relationship; this entry marks only WHEN.",
+          "phase": "pre_weld:independence",
+          "membership": 0.85,
+          "from": "pre-2026",
+          "to": "2026-05",
+          "note": "Pav-intuition developed independently of the formal fields for decades; the two lineages reached the same pushout object separately (convergence-by-independence)."
+        },
+        {
+          "phase": "conception/first_conjecture",
+          "membership": 0.85,
+          "from": "~2026-05-07",
+          "to": "2026-05-22",
+          "note": "The calculus written down (cont 00-25): wrappers, charge canon, dual-kernel, wrapper-overlap one-system-with-phases, hairy-sphere."
+        },
+        {
+          "phase": "welding/process",
+          "membership": 0.8,
+          "from": "2026-06-07",
+          "to": "2026-06-09",
+          "note": "Operationalization sprint: §IT spine, frame-kernels, hairy-ball necessity, PPWc frame-indexed pushout, the synergy benchmark, the render-system — the formal fields welded onto the intuition by the agent fleet."
+        },
+        {
+          "phase": "consolidation",
+          "membership": 0.85,
+          "from": "2026-06-09",
+          "to": null,
+          "note": "INSTRUMENT consolidated: SCHEMA_v2 RATIFIED (as a tool), viewer v0-v2 built, 1029-fact substrate compiled. This leg is REAL and ongoing."
+        },
+        {
+          "phase": "never_born_frontier",
+          "membership": 0.7,
+          "from": "2026-06-09",
+          "to": null,
+          "note": "FIELD-claim leg UNCONSUMMATED: 'new field' walked back to 'new instrument' (triple-converged); the synergy decider is defined-not-delivered with a tally of dead children. The two legs run in parallel — consolidated-as-instrument, never-born-as-field."
+        }
+      ],
+      "pre_weld_relationship": {
+        "_comment": "(R14) the SINGLE HOME for the parents' pre-weld relationship. INDEPENDENCE (not antagonism): Pav-intuition and the formal fields were developed in separate lineages with zero cross-citation, and reached the same pushout object independently. This independence is the convergence-by-independence signal the framework prizes — and the same independence that cuts against the object's novelty.",
+        "kind": "independence",
+        "membership": 0.85,
+        "note": "Pav's decades-long intuitive lens and Goguen's conceptual-blending colimit are the SAME categorical object reached from two independent lineages. Independence is load-bearing both ways: it is the convergence evidence AND the reason the object is not novel."
+      },
+      "weld_type": [
+        {
+          "_comment": "(D1) WEIGHTED classification — several types at once. ALL from the core 8-vocabulary (no new term proposed — avoids over-claiming).",
+          "type": "instrument-enabled-weld",
+          "weight": 0.8,
+          "note": "PRIMARY for the consummated leg: the framework's child that actually SHIPPED is the render-system/viewer/substrate INSTRUMENT — the apparatus, not a new field. The reflexive verdict (instrument-not-field) IS this type."
+        },
+        {
+          "type": "mediator-welded",
+          "weight": 0.8,
+          "note": "The cross-model agent fleet (the mediating_wrapper) did the welding, not the ancestral parents — Pav alone could not weld his intuition to category theory + IT + topology; the fleet operationalized and stress-tested it."
+        },
+        {
+          "type": "crisis-pulled-weld",
+          "weight": 0.85,
+          "note": "Per R33: the forcing_events (Pav steers as PULLS + cross-model reviews as SQUEEZES + audit cadence) ARE the lifecycle spine. Every phase was crisis-pulled by an exogenous steer or squeeze, not by the idea's own internal logic alone."
+        },
+        {
+          "type": "never-consummated-frontier-weld",
+          "weight": 0.7,
+          "note": "For the FIELD-claim leg: the synergy decider is defined-not-delivered; 'new field' walked back to 'new instrument'; the central pushout is conceptual blending's known colimit — a high-fertility seam whose field-level child never consummated."
+        }
+      ]
+    }
+  },
+
+  "roots": {
+    "_comment": "DOWN. For a theory-about-theories the 'roots' are the CONCEPT SUB-WRAPPERS — the framework's own load-bearing parts, each with its micro-lifecycle (conceived/formulated/named via who_called_it) mined from continuations/00-32 + candidates/. These are LATENT-leaning (a theory's parts are ideas), with the IT spine / pushout as METHOD roots and the render-system as an INSTRUMENT root. The PHYSICAL people-roots live in actors[] (Pav + the model fleet). depth = levels below the framework-as-W_C.",
+    "sub_wrappers": [
+      {
+        "id": "sw-wrappers",
+        "name": "Wrappers (the core primitive)",
+        "kernel": "A wrapper = a certain core (confidence ~1) wrapped in a fuzzy membrane on every side; the observer/harness is itself a wrapper. The root concept every other one hangs off — the framework is a calculus of wrappers.",
+        "frame": ["knowledge", "meaning"],
+        "depth": 1,
+        "confidence": 0.85,
+        "who_called_it": "Pav (cont 00/02; 'observer harness', 'membrane projection boundary'); sharpened to 'certain core + fuzzy membrane on every side' in the 2026-06-09 agnostic-units sketch. CONCEIVED cont 00 founding checkpoint (~early-mid May 2026), NAMED 'wrapper' from cont 00/02.",
+        "parent_kind": "content",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.1, "latent_membership": 1.0 }
+      },
+      {
+        "id": "sw-welds-ppwc",
+        "name": "Welds / parents-produce-W_C",
+        "kernel": "Two parent wrappers overlap in a Venn-lens nesting-space and conceive a third persistent wrapper of the same kind. THE structural test behind the convergence-9 list. 'Weld' is render-system-only vocabulary (zero continuations); the concept is cont 25.",
+        "frame": ["knowledge"],
+        "depth": 1,
+        "confidence": 0.7,
+        "who_called_it": "Pav (cont 24-25, 2026-05-22: wrapper-overlap dynamics, three outcomes -> one lifecycle); FORMULATED cont 25 §2 + bes_convergence_9 §2 five-condition test + frame-indexed pushout 2026-06-09; NAMED 'parents-produce-W_C' (prose) / 'weld' (render-system, SCHEMA v1).",
+        "parent_kind": "content",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.05, "latent_membership": 1.0 }
+      },
+      {
+        "id": "sw-frame-kernels-root",
+        "name": "Observer frame-kernels {time, space, knowledge, meaning}",
+        "kernel": "Wrappers are always rendered INSIDE a frame = the observer's global kernels {time,space,knowledge,meaning}. A wrapper-overlap is evaluated relative to which kernel(s) the parents inhabit. Dissolves the 'two rocks touching, no W_C' falsifier (rocks make no third in space, but a geological W_C in time).",
+        "frame": ["time", "space", "knowledge", "meaning"],
+        "depth": 1,
+        "confidence": 0.75,
+        "who_called_it": "Pav (2026-06-08 frame sharpening; verbatim: 'the wrappers are in a frame, the observer global kernel wrappers, time space knowledge meaning'); grounds in cont 25 §12 (L0 global kernel) + cont 22 §2 dual-kernel (2026-05-21). FORMULATED observer_frame_kernels_DRAFT 2026-06-08.",
+        "parent_kind": "content",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.1, "latent_membership": 1.0 }
+      },
+      {
+        "id": "sw-frame-relativity",
+        "name": "Frame-relativity of W_C emergence",
+        "kernel": "PPWc(W_A,W_B|frame) — the same two parents can emerge a W_C in one kernel-frame and nothing in another. The most-interesting surviving novelty per the reflexive test. PARENT stays active; one child DEMOTED (grid-zoom = quantization artifact), one child confirmed-but-DEFLATED (contextual = standard effect-modification stats).",
+        "frame": ["knowledge", "space"],
+        "depth": 2,
+        "confidence": 0.6,
+        "who_called_it": "Pav (2026-06-08 frame sharpening); operationalized via PPWc 2026-06-09; tested in synergy_vs_pid/. NAMED 'frame-relativity' / 'PPWc frame argument'.",
+        "parent_kind": "content",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.05, "latent_membership": 1.0 }
+      },
+      {
+        "id": "sw-fuzzy-lod",
+        "name": "Fuzzy-LOD (fuzzy level-of-detail)",
+        "kernel": "The observer renders reality at a level-of-detail and there is ALWAYS some fuzz by design — the membrane never fully closes. Each added frame is a question answered (conditioning, H(X|more)<=H(X)) but never to zero. A recently-NAMED packaging of the cont-00 fuzz/observer-compression intuition.",
+        "frame": ["knowledge", "meaning"],
+        "depth": 2,
+        "confidence": 0.7,
+        "who_called_it": "Pav (cont 00 fuzzy candidate-field / observer as local compression, ~mid-May 2026); made boundary-complete + NAMED 'fuzzy-LOD principle' retrospectively in the 2026-06-09 agnostic_units sketch.",
+        "parent_kind": "content",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.1, "latent_membership": 1.0 }
+      },
+      {
+        "id": "sw-hairy-membrane",
+        "name": "The hairy membrane + receptor-hooks",
+        "kernel": "When W_C emerges it overlaps its parents (hairy-sphere topology); the parents' uncovered regions persist as stubs / procedural roots / receptor-hooks adjacent wrappers connect onto. Sharpened from description to NECESSITY via the hairy-ball theorem (interaction ports are forced cowlicks) + a Poincare-Hopf budget.",
+        "frame": ["space", "knowledge"],
+        "depth": 2,
+        "confidence": 0.7,
+        "who_called_it": "Pav Steer 5b (cont 25 §5, 2026-05-22: 'like the hairy sphere the parents retain little stubs... receptors or hooks'); topological-necessity extension in agnostic_units sketch (Tier-3, 2026-06-09). NAMED 'hairy-sphere' / 'receptor-hooks'.",
+        "parent_kind": "content",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.1, "latent_membership": 1.0 }
+      },
+      {
+        "id": "sw-agnostic-units",
+        "name": "Agnostic units (frame-relative fuzzy ratios)",
+        "kernel": "The agnostic unit is a dimensionless RATIO within [min,max] of a frame, so it travels across substrates (a molecule's bits and an idea's bits aren't comparable, but fraction-of-frame-capacity is). Because both ends are fuzzy it's a fuzzy ratio (an interval/smear); the denominator is alive (max grows as more is mapped, compresses when a W_C folds many into one).",
+        "frame": ["knowledge"],
+        "depth": 2,
+        "confidence": 0.6,
+        "who_called_it": "Pav (agnostic_units_hairy_membrane_SKETCH, 2026-06-09); grounded in established info-theory (relative entropy is the portable quantity). The §IT-alignment is explicitly an UNOWED ratification check, NOT asserted.",
+        "parent_kind": "content",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.05, "latent_membership": 1.0 }
+      },
+      {
+        "id": "sw-synergy-gate-root",
+        "name": "The synergy gate (non-reducibility)",
+        "kernel": "The measurable gate distinguishing a genuine W_C from an additive blend: W_C compressible JOINTLY but unreachable from EITHER parent alone (Syn = min[K(W_C|W_A),K(W_C|W_B)] - K(W_C|W_A,W_B) > 0). The framework's load-bearing AND heaviest-friction concept — parent active, children keep dying.",
+        "frame": ["knowledge"],
+        "depth": 1,
+        "confidence": 0.5,
+        "who_called_it": "Pav (cont 25: additive blend = no genuine W_C, 2026-05-22); formal grounding borrowed from BES Theorem 4.4 (cont 29); FORMULATED PPWc §1.B (MDL/KL surrogate, 2026-06-09); tested witnessed-gate -> gain_v2. STATUS friction (dead-children tally).",
+        "parent_kind": "content",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.05, "latent_membership": 1.0 }
+      },
+      {
+        "id": "sw-charge-canon",
+        "name": "Charge canon A+/A-",
+        "kernel": "A+ admits structure into the canon graph, A- prunes it; canon stays viable only with slack between them. Contains a clean in-vivo SUPERSESSION: symmetric Cayley-table algebra (cont 13) WALKED BACK to ASYMMETRIC (cont 15), A- promoted to primary. The pair is active foundational; the symmetric-algebra sub-claim is the superseded child.",
+        "frame": ["knowledge"],
+        "depth": 2,
+        "confidence": 0.75,
+        "who_called_it": "Pav (cont 09 A+/A- as operators -> cont 13 latent-dimension refactor + Cayley algebra, 'latent gravity' -> cont 15 asymmetry refactor 2026-05-16, A- primary). NAMED 'A+/A- charge canon'.",
+        "parent_kind": "content",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.05, "latent_membership": 1.0 }
+      },
+      {
+        "id": "sw-it-spine-root",
+        "name": "The §IT spine (KL / MDL)",
+        "kernel": "The information-theoretic backbone the quantification runs on: KL = excess code-length (Cover & Thomas, verified exact), Kraft-McMillan emit-cost, Landauer kT ln2 floor, MDL as the computable surrogate for uncomputable Kolmogorov K. What makes welds/synergy/agnostic-units measurable rather than metaphorical.",
+        "frame": ["knowledge"],
+        "depth": 2,
+        "confidence": 0.85,
+        "who_called_it": "Pav + the record (2026-06-07, adversarial BAR_A_SKETCH §IT C-IT-1..6); carries the K-uncomputability caveat. A METHOD root (established info-theory).",
+        "parent_kind": "method",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.05, "latent_membership": 1.0 }
+      },
+      {
+        "id": "sw-render-system-root",
+        "name": "The canonical render system (specimen schema + genealogy viewer)",
+        "kernel": "The instrument that renders a W_C-birth as a rooted directed genealogy specimen: DOWN physical roots -> people-wrappers, UP latent/cultural harvest, WIDE relatives; the weld fires when the timeline crosses it. The ONE sub-wrapper that reached a RATIFIED surface (SCHEMA_v2, as a TOOL). The target the framework is now rendered INTO (this specimen).",
+        "frame": ["knowledge", "space"],
+        "depth": 1,
+        "confidence": 0.85,
+        "who_called_it": "Schema Agent at Pav's steer (SCHEMA v1 2026-06-09 -> SCHEMA_v2 RATIFIED 2026-06-09); viewer v0-v2 (2026-06-10). An INSTRUMENT root. NAMED 'canonical wrapper-genealogy specimen' / 'render system'; the W_C event named 'weld' here.",
+        "parent_kind": "instrument",
+        "frame_layer": { "layer": "straddle", "physical_membership": 0.4, "latent_membership": 0.9 }
+      },
+      {
+        "id": "sw-shared-s",
+        "name": "The shared sub-object S (the fusion seam)",
+        "kernel": "S = the pushout seam / nesting-space / Venn-lens / overlap-integral. The load-bearing coincidence: Pav's intuitive lens IS structurally Goguen's conceptual-blending colimit. May be non-unitary/contested (Darwin+Mendel's S fractured by Fisher-Wright). HONEST HOLE: no operational extractor — the framework reads S retrospectively.",
+        "frame": ["knowledge"],
+        "depth": 2,
+        "confidence": 0.65,
+        "who_called_it": "Pav Steer 7 (cont 25 §2-4, the nesting-space/Venn-lens); FORMULATED SCHEMA_v2 §2.2.b (shared_sub_object_S, S_structure) + FORMALIZATION §1.A; open-hole logged cont 25 §9 open-edge-01.",
+        "parent_kind": "content",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.05, "latent_membership": 1.0 }
+      },
+      {
+        "id": "sw-dual-kernel",
+        "name": "The dual-kernel / L0 global-kernel canon (the frame index)",
+        "kernel": "A frame is an index into L0 = the observer global kernel canon. The dual-kernel makes the basis: physical-kernel {time,space} (force + arrow-of-change) and latent-kernel {knowledge,meaning} (grammar-of-relations + intention). The reflexive corollary: there is NO frame-free PPWc (no outside-L0 vantage). The 2+2 physical/latent split is FLAGGED-not-claimed (open for Cowork).",
+        "frame": ["time", "space", "knowledge", "meaning"],
+        "depth": 2,
+        "confidence": 0.65,
+        "who_called_it": "Pav (dual-kernel promoted to canon cont 22 §2, 2026-05-21); L0 table + reflexive corollary cont 25 §12.1; observer_frame_kernels_DRAFT. NAMED 'dual kernel' / 'L0 global kernel canon'.",
+        "parent_kind": "content",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.1, "latent_membership": 1.0 }
+      }
+    ]
+  },
+
+  "harvest": {
+    "_comment": "UP. What the framework SEEDED in its 2026-06-08..10 sprint (the descendants) + the thin, honest cultural/meaning spill. The descendants ARE the machinery this specimen is written in (reflexive self-hosting). All latent by default (D3).",
+    "descendants": [
+      {
+        "id": "desc-render-system",
+        "name": "The canonical render-system (SCHEMA_v2, RATIFIED as a tool)",
+        "what": "An agnostic render-spec for theory-merges: a wrapper-of-wrappers rooted DOWN in people/institutions, harvesting UP into utility+culture, everything fuzzy LOD. SCHEMA v1 -> SCHEMA_v2 RATIFIED 2026-06-09 (R1-R16 + multi-attested v3 subset folded). The ONLY harvest item that reached a ratified surface — as a TOOL, explicitly NOT a substantive claim.",
+        "frame": ["knowledge", "space"],
+        "confidence": 0.85,
+        "frame_layer": { "layer": "straddle", "physical_membership": 0.3, "latent_membership": 0.95 }
+      },
+      {
+        "id": "desc-specimens",
+        "name": "The 7 ratified specimens (+ this reflexive 8th)",
+        "what": "Web-grounded theory-merge specimens: Maxwell (sharp), Darwin+Mendel (dormant), QM/relativity=QG (open frontier), Manhattan, Keynesian, deep-learning, Internet — each {json+md}, cited, with discrepancy registers. Calibration instruments / worked examples, NOT new convergences. This agnostic_framework specimen is the reflexive 8th (Tier-3, NOT ratified).",
+        "frame": ["knowledge"],
+        "confidence": 0.85,
+        "frame_layer": { "layer": "latent", "physical_membership": 0.1, "latent_membership": 1.0 }
+      },
+      {
+        "id": "desc-substrate",
+        "name": "The compiled substrate (1029-fact provenance-logged store)",
+        "what": "A 32-agent fleet harvested 1029 facts across the 7 specimens, every one with source URL+type+freshness+certainty; 303 verification records; append-only JSONL -> SQLite + compiled JSON (the viewer contract); scales to Postgres. Honest-proxy discipline (no fabrication; disputes keep BOTH values; verified% honestly dropped 37.9->32.7 by an Opus de-leak).",
+        "frame": ["knowledge", "space"],
+        "confidence": 0.82,
+        "frame_layer": { "layer": "straddle", "physical_membership": 0.35, "latent_membership": 0.9 }
+      },
+      {
+        "id": "desc-viewer",
+        "name": "The genealogy viewer (v0 -> v1 -> v2)",
+        "what": "The render-system made to MOVE: v0 (browser-verified; 7 specimens, timeline scrub, welds fire, QG open splat) -> v1 (8 Pav test-drive asks: harvest band, lifecycles, depth dial, agnostic-ratio meter, global view) -> v2 (60fps crash-fix, tree dial, weather pull/squeeze arrows from real forcing_events, bedrock L0, narration-off-substrate, embedded render-faithfulness linter PASSx7). The instrument this specimen is built to be rendered IN.",
+        "frame": ["knowledge", "space"],
+        "confidence": 0.85,
+        "frame_layer": { "layer": "straddle", "physical_membership": 0.4, "latent_membership": 0.9 }
+      },
+      {
+        "id": "desc-frame-lock",
+        "name": "The frame-lock protocol (the falsifiability harness)",
+        "what": "A pre-registration discipline making PPWc non-frame-shoppable: a hash-committed lock.yaml (frame, the span W_A<-S->W_B, coding scheme, a derived resolution band, synergy threshold, a non-additivity witness, a called-shot) as a strict git-ancestor of the first W_C MDL artifact. Three gates in fixed order: parent-count -> pushout non-degeneracy -> synergy. Stress-hardened by an 11-agent red-team. Cross-model review on the protocol itself still PENDING.",
+        "frame": ["knowledge"],
+        "confidence": 0.8,
+        "frame_layer": { "layer": "latent", "physical_membership": 0.1, "latent_membership": 1.0 }
+      },
+      {
+        "id": "desc-cross-model",
+        "name": "The cross-model external-A- methodology",
+        "what": "A standing discipline where load-bearing claims go to GPT-5.5 + Gemini (blind, independent) after the in-workflow Fable build + Opus skeptic — 'four model families touch each round.' The framework's ONLY real external A- (the workflow agent() is Claude-only). Repeatedly EARNED ITS KEEP — caught real bugs the internal passes missed (the synergy-gate squeezes).",
+        "frame": ["knowledge", "meaning"],
+        "confidence": 0.8,
+        "frame_layer": { "layer": "straddle", "physical_membership": 0.3, "latent_membership": 0.9 }
+      },
+      {
+        "id": "desc-claim-lifecycle",
+        "name": "The claim-lifecycle / dead-children-tally discipline (CLAIM_LIFECYCLE.md)",
+        "what": "Pav's reframe formalized: a claim is not KILLED, it is DEMOTED / goes DORMANT / accrues FRICTION, recorded as a dated append-only RECORD; the CONJECTURE is a PARENT wrapper, the EXPERIMENT a CHILD (operationalization); when a child fails it is demoted, the parent at most goes dormant; the TALLY of dead children per parent is the falsification-pressure gauge (the honest answer to 'a vocabulary that cannot lose'). Maps onto SCHEMA_v2's own D6 friction + status_trajectory + revival fields.",
+        "frame": ["knowledge", "meaning"],
+        "confidence": 0.75,
+        "frame_layer": { "layer": "latent", "physical_membership": 0.05, "latent_membership": 1.0 }
+      },
+      {
+        "id": "desc-olympics",
+        "name": "The Latent Olympics (utility-ranked wrapper-class exhibition) — DORMANT/gated",
+        "what": "A git-like submit/AI-panel/issues/appeal exhibition ranking wrapper classes by UTILITY (action-space-unlock + unifier + latent/physical compressor); Phase-1 SPEC + a 25-record DB (utility tops at wrapper-overlap 0.95 / ACMP 0.93; demoted 1/f-failsafe 0.28). DORMANT/CONDITIONAL: governance of the rating function is the one un-defended existential attack; defensible v0 = an internal curated closed exhibition (defers the public goal).",
+        "frame": ["knowledge", "meaning"],
+        "confidence": 0.6,
+        "frame_layer": { "layer": "latent", "physical_membership": 0.1, "latent_membership": 1.0 }
+      }
+    ],
+    "cultural_harvest": [
+      {
+        "domain": "other",
+        "what": "Meaning/epistemic-method: the claim-lifecycle reframe (demote-not-kill; conjecture=parent, experiment=child; dead-children tally as the falsification-pressure gauge) is the framework's most portable contribution OUTSIDE its own substance — a discipline for keeping a hard-to-falsify program honest. PLUS the honest-proxy discipline (no fabricated bits; disclosed proxies; verified% dropped rather than inflated). These are methodological/epistemic spill, not a cultural movement."
+      },
+      {
+        "domain": "other",
+        "what": "Reflexive-self-hosting as a meaning-frame move: the instrument renders its own maker (THIS specimen). A granular self-audit where the framework's own development becomes a genealogy specimen — expected by Pav to bring insight. The deepest self-application loop in the repo."
+      },
+      {
+        "domain": "tech",
+        "what": "The render-system + viewer + provenance-logged compiled substrate are a small reusable TECH artifact (a genealogy-rendering instrument with an append-only fact store that scales). Honest scope: a research-internal tool, not a shipped product."
+      },
+      {
+        "domain": "other",
+        "what": "HONEST ABSENCE (recorded, not fabricated): unlike the deep-learning / Maxwell / Manhattan specimens, the agnostic framework has essentially NO art / scifi / popular-culture spill — it is a private, decades-developed research framework in an active 2026-05/06 sprint with one human source. The cultural canopy is near-empty by truth, not by omission. (The 'emergent garden' cultivation metaphor and the Latent-Olympics public-exhibition VISION are the closest aspirational gestures, and the latter is dormant.)"
+      }
+    ]
+  },
+
+  "relatives": {
+    "_comment": "WIDE edges. For this reflexive specimen the relatives carry (a) the convergence-9 cousins (held at 9), (b) the rival/sibling objects that cut against the framework's novelty (conceptual blending's colimit; PID; the cautionary dead frameworks memetics+blending), (c) the flagged-missing prior art (Gardenfors), and CRUCIALLY (d) the framework's OWN demoted/dormant/friction CLAIMS + dead synergy-children as first-class nodes (status per the claim-lifecycle design) — with the dead-children TALLY summarized in note and structured in the top-level _claim_lifecycle_tally. This is where 'a vocabulary that cannot lose' is rendered honestly.",
+    "edges": [
+      {
+        "id": "rel-convergence-9",
+        "name": "The cross-substrate convergence list (9 — held)",
+        "relation": "cousin",
+        "frame": ["knowledge"],
+        "confidence": 0.7,
+        "note": "The 9 substrates where parents-produce-W_C independently appears with ZERO cross-citation: LCAO, cell fusion, symbiogenesis, creole genesis, conceptual blending, model merging, ACMP, cymatics (candidate, substrate-adjacent), BES (load-bearing — Thm 4.4 = the synergy clause as a theorem). The independence evidence that S is real. HONEST DOUBLE-EDGE: read straight, two independent lineages on the same KNOWN object (the pushout) cut AGAINST novelty. STAYS 9 — never inflated; cymatics stays substrate-adjacent; demoted/candidate items stay so. NOTE (MEDITATION #7): the list was assembled by HUNTING named instances — the neutral-sample base-rate census is owed, so it cannot yet distinguish a deep law from a pattern generic to any two-parent process.",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.1, "latent_membership": 1.0 }
+      },
+      {
+        "id": "rel-conceptual-blending",
+        "name": "Conceptual blending's Goguen colimit (the object reached independently)",
+        "relation": "rival",
+        "frame": ["knowledge"],
+        "confidence": 0.85,
+        "note": "Convergence #5 ALSO formalizes the blend as a categorical colimit / generalized pushout (Goguen) — the SAME algebraic object as the framework's W_C = W_A ⊔_S W_B, reached from a different lineage. Listed as a RIVAL-to-novelty (not a defeated rival): its prior existence is the strongest single argument that the framework's central object is not new. Cautionary: conceptual blending itself 'died/un-fertile' for want of a falsifiable measure (the Gibbs critique) — exactly the gap the synergy gate is meant to fill, and exactly the gap that is still open.",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.05, "latent_membership": 1.0 }
+      },
+      {
+        "id": "rel-pid",
+        "name": "Partial Information Decomposition (threatens to subsume the synergy measure)",
+        "relation": "rival",
+        "frame": ["knowledge"],
+        "confidence": 0.75,
+        "note": "FRICTION rival. The cross-model pass found the synergy gate is 'mostly PID synergy reframed.' On controlled ground truth the witnessed/affine gate DOES differ from a calibrated PID (it fails pure additive blends ADD/ROT where PID flags them synergistic — opposite verdicts), but the differentiation on a REAL substrate is owed and env-blocked, and fixing the affine bug makes the corrected gate CLOSER to PID. Net: the synergy MEASURE is largely PID; novelty narrows to frame-relativity + genealogy-situation. A MISSED prior-art omission added 2026-06-09.",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.05, "latent_membership": 1.0 }
+      },
+      {
+        "id": "rel-gardenfors",
+        "name": "Gardenfors conceptual spaces (flagged-missing prior art, UNWELDED)",
+        "relation": "influence",
+        "frame": ["knowledge", "space"],
+        "confidence": 0.6,
+        "note": "OPEN-CONJECTURE relative: geometric concept theory (ideas in a latent space with frames) is exactly the framework's own picture, flagged by Gemini as MISSED prior art the parent-bundle census omitted. A parent-field the framework SHOULD weld but currently has NOT — load-bearing prior art owed before the field-claim can stand. Listed with category-theoretic semiotics (GPT) and PID as the three omitted homes.",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.05, "latent_membership": 1.0 }
+      },
+      {
+        "id": "rel-walkback-newfield",
+        "name": "[WALKED-BACK CLAIM] 'new field / latent-hybrid cosmology' -> instrument-not-field",
+        "relation": "rival",
+        "frame": ["knowledge", "meaning"],
+        "confidence": 0.8,
+        "note": "FIRST-CLASS WALKED-BACK CLAIM node. The framing 'the agnostic framework is a new field — a cosmology of the latent-physical-hybrid idea-universe' was WALKED BACK to 'new-instrument-within-existing-fields' (triple-converged Claude+GPT-5.5+Gemini; re-confirmed by the 17-rail latent-physics census where each rail FOLDS; audit v08 §C7). claim_status: walked-back. Cautionary precedents named: memetics + conceptual blending both died for want of a falsifiable measure. The instrument-candidate is held; the field-framing is retired.",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.05, "latent_membership": 1.0 }
+      },
+      {
+        "id": "rel-dead-witnessed-gate",
+        "name": "[DEAD CHILD] witnessed / affine-residual synergy gate",
+        "relation": "sibling",
+        "frame": ["knowledge"],
+        "confidence": 0.7,
+        "note": "DEAD CHILD #1 of the synergy-gate parent. Measures NON-AFFINITY not interaction: M=A^2+B^2 (separable, no parent interaction) flags at 1,040,352 bits — HIGHER than a genuine A*B (Gemini PREDICTED the bug; the run CONFIRMED it). Run faithfully under the committed frame-lock, ADD/ROT/ALLOY wrongly PASS, only COPY fails (2 hits / 3 misses). claim_status: demoted, identity broke. killed_by: cross-model review #1 + separable_falsification_test, 2026-06-09.",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.05, "latent_membership": 1.0 }
+      },
+      {
+        "id": "rel-dead-naive-bes",
+        "name": "[DEAD CHILD] naive BES-4.4 / PID synergy form min[K(M|A),K(M|B)]-K(M|A,B)",
+        "relation": "sibling",
+        "frame": ["knowledge"],
+        "confidence": 0.7,
+        "note": "DEAD CHILD #2. FALSIFIED on controlled ground-truth: strongly MIS-FLAGS a pure additive average (ADD, +880k bits) and a pure rotation (ROT, +860k bits) as 'synergistic' — fails on a KNOWN additive blend, rates a pure average ~28x above genuine synergy. claim_status: demoted. killed_by: the frame-lock pilot, 2026-06-09.",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.05, "latent_membership": 1.0 }
+      },
+      {
+        "id": "rel-dead-codelength",
+        "name": "[DEAD CHILD] fixed-grid functional-ANOVA / polynomial-quotient codelength",
+        "relation": "sibling",
+        "frame": ["knowledge"],
+        "confidence": 0.7,
+        "note": "DEAD CHILD #3. Correct in VARIANCE (floors separable f(A)+g(B), flags A*B/XOR) but as a fixed-grid CODELENGTH floors NOTHING — the binned plug-in leaks a within-bin wiggle that swamps the readout (even affine ADD leaks ~880k bits); the polynomial-quotient variant recurs the bug on |A|+|B|. Diagnosed as a general 'basis/readout mismatch in codelength emergence gates' — established the synergy gate cannot live as a codelength. claim_status: demoted. killed_by: cross-model review #2, 2026-06-09.",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.05, "latent_membership": 1.0 }
+      },
+      {
+        "id": "rel-dead-gain-v1",
+        "name": "[DEAD CHILD] gain_v1 (predictive gain, marginal-means baseline)",
+        "relation": "sibling",
+        "frame": ["knowledge"],
+        "confidence": 0.7,
+        "note": "DEAD CHILD #4. The marginal-means additive baseline FALSE-FLAGS pure-additive merges of CORRELATED parents — 0.5A+0.5Bc reads +0.733 at r=0.9, +0.901 at r=0.99 (verbatim results row: '+0.73335 at r=0.9 and +0.90116 at r=0.99', synergy_vs_pid/EMERGENCE_CANDIDATES_AND_FRAME.md, 'Correlated parents (probe P4 -> fix P6)'; substrate f-agf-0025). Since REAL model-merge parents are highly correlated, v1 would flag EVERY real merge. The hole was the baseline fitter, not the design. claim_status: demoted -> fixed by gain_v2. killed_by: Fable second-pass, 2026-06-09.",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.05, "latent_membership": 1.0 }
+      },
+      {
+        "id": "rel-live-gain-v2",
+        "name": "[LIVE-BUT-UNDELIVERED CHILD] gain_v2 (held-out R2[joint]-R2[additive], joint-LS baseline)",
+        "relation": "sibling",
+        "frame": ["knowledge"],
+        "confidence": 0.55,
+        "note": "The SURVIVING child of the synergy-gate parent. Floors A^2+B^2, does not count noise as interaction, does not false-flag correlated-parent additive merges; 4 models converge it sound. BUT honestly graded NOT NOVEL (held-out nested-model CV / functional-ANOVA / PID-adjacent — 'does not transcend the standard toolkit') and the real model-merge run (TIES/DARE checkpoints) is STILL OWED and env-blocked. claim_status: open-conjecture / pending real-corpus. The parent stays open-conjecture pending its verdict.",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.05, "latent_membership": 1.0 }
+      },
+      {
+        "id": "rel-demoted-1f",
+        "name": "[DORMANT/DEMOTED CLAIM] 1/f L0-occlusion failsafe signature (separate parent)",
+        "relation": "cousin",
+        "frame": ["knowledge", "meaning"],
+        "confidence": 0.6,
+        "note": "A SEPARATE parent conjecture (cont 26 §3) with its OWN dead children: (1) GDELT-entropy operationalization — H1 not supported, volume-confounded null; (2) cycling/rolling-amplitude metric (A_cyc) — DEMOTED 2026-06-05 after its pre-registered falsifier fired (A_cyc rose during transition instead of collapsing); (3) IAAFT surrogate beta-null — demoted to diagnostic. The cross-field BRIDGE survives; only the METRIC is demoted. Dead-children tally for this parent: 2-3. claim_status: demoted (per cont 27 §3 narrow-before-demote).",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.05, "latent_membership": 1.0 }
+      },
+      {
+        "id": "rel-demoted-misc",
+        "name": "[DEMOTED CLAIMS] rule-of-three ladder + §5.1-R + grid-zoom frame-relativity",
+        "relation": "cousin",
+        "frame": ["knowledge"],
+        "confidence": 0.6,
+        "note": "Self-imposed demotions (no external pressure): the '1/2/3/4+ ladder' demoted from 'structural argument for why three' to 'abstract methodological heuristic' (cont 32 §3, with a counter-census that the framework's OWN structures don't uniformly support 'three'); §5.1-R demoted from 'strongest independent case' to 'internal-replication-only' (cont 32 §7); the grid/quantization-ZOOM frame-relativity confirmed a QUANTIZATION ARTIFACT (cross-model). Plus older precedents: cont 17 demoted Spiral/Compile-capacity/Monopole; cont 28 §2 carries a pre-committed 5-year demotion trigger. claim_status: demoted — the demotion machinery is real and dated.",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.05, "latent_membership": 1.0 }
+      },
+      {
+        "id": "rel-cautionary-dead-frameworks",
+        "name": "Memetics + conceptual blending (cautionary precedents — frameworks that died un-fertile)",
+        "relation": "cousin",
+        "frame": ["knowledge", "meaning"],
+        "confidence": 0.7,
+        "note": "Named cautionary precedents (latent_physics_PROGRAM): both memetics and conceptual blending 'died/un-fertile' for want of a falsifiable measure — classified frameworks, not fields. They are the explicit warning the framework holds against itself: an idea-genealogy theory WITHOUT a delivered measure is exactly what these were. The synergy gate is the thing meant to avoid this fate; it is not yet delivered.",
+        "frame_layer": { "layer": "latent", "physical_membership": 0.05, "latent_membership": 1.0 }
+      }
+    ]
+  },
+
+  "_claim_lifecycle_tally": {
+    "_comment": "PROPOSED-not-promoted Tier-3 EXTENSION (collapses to plain open-conjecture if ratification rejects it). The structured dead-children TALLY per parent conjecture — the falsification-pressure gauge that answers MEDITATION #1's 'a vocabulary that cannot lose'. REUSES the SCHEMA_v2 D6 substrate (each dead child is the bookkeeping twin of a D6a opposes[] row; revisit_trigger reuses revival.trigger). The claim cannot be killed by one result, but the tally can rise without bound, and a high tally with no live child is the visible, dated, public statement that the claim is LOSING. Per CLAIM_LIFECYCLE.md. ANTI-GAMING: demotions are append-only + dated; a reinterpreted revival does NOT reset the dead count; 'refine the estimator again' is allowed but COSTS +1 dead child every time.",
+    "parents": [
+      {
+        "parent": "parents-produce-W_C / the measurable synergy gate (the load-bearing conjecture)",
+        "frame": "knowledge",
+        "status": "open-conjecture / friction-logged",
+        "dead_children": [
+          { "child": "witnessed/affine-residual gate", "what_it_operationalized": "synergy = codelength of the affine-fit residual (quantize-first)", "killed_by": "cross-model review #1 + separable_falsification_test (A^2+B^2 flags above A*B)", "when": "2026-06-09", "identity_break": true },
+          { "child": "naive BES-4.4/PID form min[K(M|A),K(M|B)]-K(M|A,B)", "what_it_operationalized": "synergy as min-single-parent minus joint codelength", "killed_by": "frame-lock pilot (mis-flags ADD/ROT additive blends ~28x)", "when": "2026-06-09", "identity_break": true },
+          { "child": "fixed-grid functional-ANOVA / polynomial-quotient codelength", "what_it_operationalized": "interaction term as bits on a fixed grid", "killed_by": "cross-model review #2 (binned plug-in leaks within-bin wiggle; basis/readout mismatch)", "when": "2026-06-09", "identity_break": true },
+          { "child": "gain_v1 (marginal-means additive baseline)", "what_it_operationalized": "R2_oos(joint) - R2_oos(additive via marginal means)", "killed_by": "Fable second-pass (false-flags correlated-parent additive merges)", "when": "2026-06-09", "identity_break": false }
+        ],
+        "dead_count": 4,
+        "live_children": [
+          { "child": "gain_v2 (joint-LS/backfit additive baseline)", "status": "endorsed-but-standard, NEVER run on a real corpus (real model-merge owed, env-blocked)" }
+        ],
+        "live_count": 1,
+        "best_result_so_far": "validated on controlled ground truth only (4 models converge gain_v2 sound); ZERO successful real-corpus synergy value; first real-bits attempt (frame-lock pilot) returned PARTIAL-with-refutation",
+        "revisit_trigger": "a delivered real model-merge (TIES/DARE weight-space) synergy value using gain_v2 that discriminates a known weld from a known blend; or a new instrument/substrate if gain_v2 also fails its first real corpus",
+        "pressure_reading": "heavy",
+        "_pressure_reading_enum": "none | normal | accumulating | heavy | critical. HEAVY = 4 dead children + 1 live-but-undelivered + 0 successful real-corpus child; a stalled high-water mark. NOT 'critical' yet only because gain_v2's real-corpus verdict has not been run (its failure would push to critical -> park the parent dormant per the proposed forced-retirement trigger, MEDITATION #11, which is UNADOPTED).",
+        "honest_reading": "parents-produce-W_C is a parent with multiple dead children and zero successful real-corpus child — correctly NOT-killed (no single experiment refutes a parent), but the reframe does NOT rescue it; it makes its weak standing LEGIBLE. The dead-children count IS the disconfirming evidence, so 'an unfalsifiable core protected by an auxiliary belt' (MEDITATION #1) is here MEASURED, not merely alleged."
+      },
+      {
+        "parent": "the 1/f L0-occlusion failsafe signature (separate conjecture)",
+        "frame": "knowledge/meaning",
+        "status": "demoted (bridge survives, metric demoted)",
+        "dead_children": [
+          { "child": "GDELT-entropy operationalization (Pilot #150)", "what_it_operationalized": "1/f signature via news-entropy", "killed_by": "volume-confounded null (source-volume confound)", "when": "2026-06-03", "identity_break": false },
+          { "child": "cycling/rolling-amplitude A_cyc (Pilot 2)", "what_it_operationalized": "rolling cycling-amplitude collapse at transition", "killed_by": "pre-registered falsifier fired (A_cyc ROSE instead of collapsing)", "when": "2026-06-05", "identity_break": true },
+          { "child": "IAAFT surrogate beta-null", "what_it_operationalized": "expected clean beta-null surrogate", "killed_by": "turned out non-null -> demoted to diagnostic", "when": "2026-06-05", "identity_break": false }
+        ],
+        "dead_count": 3,
+        "live_children": [],
+        "live_count": 0,
+        "best_result_so_far": "the cross-field BRIDGE (two literatures describing the same phenomenon, barely cross-citing) survives; no surviving METRIC",
+        "revisit_trigger": "any future operationalization starts FRESH pre-registration (per cont 27 §3 narrow-before-demote)",
+        "pressure_reading": "accumulating",
+        "honest_reading": "the parent went DEMOTED (not killed): 3 dead children, bridge survives, metric retired. A cleaner closure than the synergy gate because the parent was willing to demote rather than keep re-childing indefinitely."
+      }
+    ],
+    "_meditation_link": "This block IS the encoding of Pav's claim-lifecycle reframe and the honest answer to MEDITATION #1 ('a vocabulary that cannot lose') + #11 ('a forced-retirement rule'). The framework already STATES the tension (MEDITATION #1: 'three operational refutations have each been absorbed as estimator-not-claim failures — the signature of an unfalsifiable core protected by an auxiliary belt') and PROPOSES the fix (#11: a Tier-2 candidate that fails its named bar twice is demoted to illustrative) but has NOT ADOPTED it (status: needs-decision). The unadopted forced-retirement rule is itself the live open friction the reframe should formalize — the refined Q1 (per CLAIM_LIFECYCLE.md): stop asking the EXPERIMENT to kill the CONJECTURE (a category error), and instead have the conjecture name the dead_count + stalled-high-water-mark at which it PARKS itself dormant, publicly, tally attached."
+  },
+
+  "actors": [
+    {
+      "_comment": "(D2) the ground kernel '(0)'. For a theory-about-theories with one human source and a recent agent-fleet, the actor list is short and honest: Pav (the creative source, kind:individual), the model-agents (the mediating welders + external A-), and the borrowed FIELDS as kind:field actors that the framework inhabits/draws from. carrier_of = pushes latent wrappers UP; inhabitant_of = operates WITHIN.",
+      "id": "act-pav",
+      "name": "Pav (Pavlos)",
+      "kind": "individual",
+      "frame_layer": { "layer": "physical", "physical_membership": 1.0, "latent_membership": 0.3 },
+      "role": "The creative/intuitive SOURCE of the whole framework — decades of private development; the steers that set the program's tempo and direction (formalization runs downstream and is translated back to him)",
+      "when": "pre-2026 (decades) - present",
+      "where": "the repo D:/PlatformOperator/research/pav; the Room-Zero council",
+      "culture": "independent multi-decade theory development; building a multi-agent Slack council",
+      "relation": "originator / creative source / steerer",
+      "confidence": 0.95,
+      "carrier_of": [
+        { "wrapper": "par-pav-intuition", "role": "founds", "strength": 0.98, "when": "pre-2026-present", "confidence": 0.95 },
+        { "wrapper": "child-agnostic-framework", "role": "champions", "strength": 0.95, "when": "pre-2026-present", "confidence": 0.95 },
+        { "wrapper": "weld-main", "role": "champions", "strength": 0.9, "when": "2026-05-06", "confidence": 0.9 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "the Room-Zero council / the repo", "layer": "physical", "role": "operates_in", "strength": 0.9, "when": "2026", "confidence": 0.9 }
+      ]
+    },
+    {
+      "id": "act-fleet",
+      "name": "The cross-model agent fleet (Fable / Opus / GPT-5.5 / Gemini)",
+      "kind": "lab",
+      "frame_layer": { "layer": "straddle", "physical_membership": 0.6, "latent_membership": 0.6 },
+      "role": "The mediating welder + external A-: Fable builds, Opus skeptic/audits, GPT-5.5 + Gemini external-pass (blind, independent). Operationalized the framework AND delivered the squeezes that demoted the children and deflated the field-claim",
+      "when": "2026-06-07 - present",
+      "where": "the workflow (Claude-only agent() + local Codex/Gemini CLIs)",
+      "culture": "the standing external-A- discipline ('four model families touch each round')",
+      "relation": "mediating-welder / external-critic",
+      "confidence": 0.85,
+      "carrier_of": [
+        { "wrapper": "weld-main", "role": "champions", "strength": 0.85, "when": "2026-06-07-09", "confidence": 0.85 },
+        { "wrapper": "desc-render-system", "role": "founds", "strength": 0.85, "when": "2026-06-09", "confidence": 0.85 },
+        { "wrapper": "desc-cross-model", "role": "institutionalizes", "strength": 0.9, "when": "2026-06-09", "confidence": 0.85 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "child-agnostic-framework", "layer": "latent", "role": "works_within", "strength": 0.7, "when": "2026-06", "confidence": 0.8 }
+      ]
+    },
+    {
+      "id": "act-formal-fields",
+      "name": "The borrowed formal fields (category theory / IT / topology / PID / RG-EFT / Gardenfors)",
+      "kind": "field",
+      "frame_layer": { "layer": "latent", "physical_membership": 0.2, "latent_membership": 1.0 },
+      "role": "The mature disciplines the framework borrows its formal machinery from and generalizes the FORM of — parent W_B as a standing field-actor; each rail FOLDS, only the binding is candidate-new",
+      "when": "pre-existing (decades-centuries of established work)",
+      "where": "the mathematical/scientific literature",
+      "culture": "established formal science",
+      "relation": "field-parent / source-discipline",
+      "confidence": 0.9,
+      "carrier_of": [
+        { "wrapper": "par-category-theory", "role": "founds", "strength": 0.9, "when": "pre-existing", "confidence": 0.9 },
+        { "wrapper": "par-information-theory", "role": "founds", "strength": 0.9, "when": "pre-existing", "confidence": 0.9 },
+        { "wrapper": "par-pid", "role": "founds", "strength": 0.85, "when": "pre-existing", "confidence": 0.85 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "the mathematical/scientific literature", "layer": "latent", "role": "lives_in", "strength": 0.95, "when": "pre-existing", "confidence": 0.9 }
+      ]
+    },
+    {
+      "id": "act-audit",
+      "name": "The audit cadence (Opus self-audit, v05-v09)",
+      "kind": "institution",
+      "frame_layer": { "layer": "straddle", "physical_membership": 0.5, "latent_membership": 0.6 },
+      "role": "The recurring register-correction + ratification mechanism — the audit cadence (v09 ratified 2026-06-09, V10 target 2026-06-23) that catches celebratory over-closure and holds the convergence list at 9; the framework's own gatekeeper acting on itself",
+      "when": "standing (v05 2026-05-31 - v09 2026-06-09)",
+      "where": "the repo audits/",
+      "culture": "Claude-Code-on-Claude-Code self-audit (the caveat: external A- owed before any finding hardens)",
+      "relation": "internal-gatekeeper / register-corrector",
+      "confidence": 0.8,
+      "carrier_of": [
+        { "wrapper": "rel-walkback-newfield", "role": "institutionalizes", "strength": 0.8, "when": "2026-06-09 (v08 §C7)", "confidence": 0.8 }
+      ],
+      "inhabitant_of": [
+        { "wrapper": "child-agnostic-framework", "layer": "latent", "role": "operates_in", "strength": 0.7, "when": "2026-05-06", "confidence": 0.8 }
+      ]
+    }
+  ],
+
+  "fuzzy_layer": {
+    "_comment": "The trunk/frontier partition — a DERIVED digest of the per-node memberships (D5). The signature of THIS specimen: the CERTAIN CORE is the borrowed fields + the held-at-9 list + the shipped INSTRUMENT; the FRONTIER is the FIELD-claim + the synergy MEASURE + the novelty. The fulcrum SINKS BELOW the child: the imports are solid and the instrument shipped, but the whole 'new field / new synergy measure' crown is frontier — exactly the instrument-not-field signature (cf. QG, where the core also sinks below the child).",
+    "certain_core": [
+      "The borrowed FORMAL FIELDS (category-theory pushout/colimit, IT/MDL-KL spine, hairy-ball topology + Poincare-Hopf, PID, RG/EFT) — mature and established; each one FOLDS (~0.9).",
+      "The cross-substrate CONVERGENCE LIST = 9 (held) — the independence signal; never inflated (~0.7, with the base-rate-census caveat).",
+      "The shipped INSTRUMENT: the render-system SCHEMA_v2 (RATIFIED as a tool), viewer v0-v2, the 1029-fact provenance-logged substrate (~0.85).",
+      "The claim-lifecycle MACHINERY exists and is dated: wrapper lifecycle (risen->active->dormant->resurrected), narrow-before-demote (cont 27 §3), append-only dated demotions, the dead-children tally (~0.8).",
+      "The in-vivo SUPERSESSION (symmetric Cayley-table -> asymmetric, cont 13->15) — a real, dated lifecycle event in the framework's own history (~0.8).",
+      "The reflexive verdict ITSELF: 'new-instrument-within-existing-fields' (triple-converged Claude+GPT-5.5+Gemini) — a high-confidence DEFLATIONARY finding (~0.8)."
+    ],
+    "frontier": [
+      "The FIELD-claim: whether the framework is a new field — DEFLATED to instrument-not-field; the genuinely-novel residue (synthesis instrument; observer-relative solidity; frame-as-first-class-estimand) is DEFINED, not delivered (~0.4-0.5).",
+      "The SYNERGY MEASURE: a more-than-PID, frame-relative, falsifiable synergy gate — DEFINED-NOT-DELIVERED, measure largely PID, ~4 dead children + 1 unrun survivor, first real-bits PARTIAL-with-refutation (~0.4).",
+      "NOVELTY of the central pushout — convergence-by-independence shows it is conceptual blending's KNOWN colimit (~0.45; the OBJECT is solid, its novelty is frontier).",
+      "Frame-relativity as a NOVEL measure — the phenomenon is real-and-principled (one-directionality control) but four models deflate it to 'standard effect-modification statistics with frame terminology' (~0.5).",
+      "The 2+2 physical/latent kernel split (dual-kernel -> four kernels) — FLAGGED-not-claimed, an OPEN conjecture for Cowork (~0.5).",
+      "The FORCED-RETIREMENT rule (MEDITATION #11) — PROPOSED, not adopted (needs-decision); the auto-tally/auto-park rule is unwired (~0.5).",
+      "Gardenfors conceptual spaces (+ category-theoretic semiotics) — UNWELDED flagged-missing prior art the field-claim owes (~0.5).",
+      "The substrate's 32.7%-verified ECHO question — 76.6% English-Wikipedia; is 32.7% triangulation or echo? (provenance-disjoint test never run) (~0.5).",
+      "Bits / MDL synergy values for the framework-as-W_C — a principled-null (do not exist; cannot be computed here)."
+    ],
+    "core_boundary_locus": "(R3-adjacent) The fulcrum SINKS BELOW THE CHILD — the signature of an instrument-not-field. Everything DOWNWARD of the framework (the borrowed fields, the IT spine, the pushout machinery, the render-system instrument) is certain core; everything UPWARD that constitutes the framework AS A FIELD (the new synergy measure, the novelty of the central object, the field-claim) is frontier. The core does NOT reach the field-level child: the framework is a real arrangement of solid imported parts (core) whose claimed emergent field-level surplus (synergy, novelty) is unconsummated (frontier). Unlike deep-learning (fuzz in two LATERAL pockets that don't touch a solid trunk), here the fuzz is the CROWN itself — the field-claim — which is exactly why the reflexive verdict is instrument-not-field."
+  },
+
+  "discrepancies": [
+    {
+      "_comment": "THE central framework-vs-record tension — the reflexive novelty deflation.",
+      "what": "CONVERGENCE-BY-INDEPENDENCE CUTS AGAINST NOVELTY. The framework prizes the zero-cross-citation appearance of parents-produce-W_C across 9 substrates as its independence signal. But its central algebraic object (the pushout W_C = W_A ⊔_S W_B) is ALSO conceptual blending's already-formalized Goguen colimit, reached from a different lineage — so two independent lineages landing on the same KNOWN object means the object is NOT new. The very independence that is the framework's strongest evidence is also the strongest argument against the novelty of its central object.",
+      "sources_in_conflict": ["the convergence-9 list (independence as a novelty signal)", "conceptual blending / Goguen colimit (the object already exists)", "latent_cosmology_EXPLORATION §1[A] (the reflexive deflation)"],
+      "type": "framework-vs-record-tension",
+      "why_interesting": "The single biggest reflexive signal: the framework's own prized evidence (convergence-by-independence) double-edges against its novelty claim. -> motivates the instrument-not-field verdict (child.status open-conjecture; weld_necessity_confidence 0.55; weld_type never-consummated-frontier). Triple-converged. PROVES the central pushout is not the field-level novelty.",
+      "confidence_impact": "Does not lower the INSTRUMENT confidence (the render-system is real); LOWERS the FIELD-claim and the novelty of the central object. Forces the honest split aggregate in overall_confidence."
+    },
+    {
+      "_comment": "The 'vocabulary that cannot lose' tension — the specimen's own subject.",
+      "what": "A VOCABULARY THAT CANNOT LOSE (the unfalsifiability tension). Under the claim-lifecycle reframe a CONJECTURE (parent) is never killed — only its EXPERIMENTS (children) are demoted, the parent at most goes dormant/accrues friction. This is EXACTLY what makes a parent conjecture hard to falsify. MEDITATION #1 self-diagnoses it: 'three operational refutations have each been absorbed as estimator-not-claim failures — the signature of an unfalsifiable core protected by an auxiliary belt.' The framework states the tension AND proposes the fix (MEDITATION #11 forced-retirement rule) but has NOT adopted it (needs-decision).",
+      "sources_in_conflict": ["the claim-lifecycle reframe (parent survives child deaths)", "MEDITATION #1 (the unfalsifiable-core diagnosis)", "MEDITATION #11 (the unadopted forced-retirement rule)"],
+      "type": "framework-vs-record-tension",
+      "why_interesting": "The reflexive heart of the task. The honest answer is the DEAD-CHILDREN TALLY (_claim_lifecycle_tally + relatives[]): the claim cannot be killed by one result, but the count of dead children with no live success is the visible, dated, public falsification-pressure gauge — so the 'unfalsifiable core' becomes MEASURED not alleged. The discipline against laundering: append-only dated demotions; a reinterpreted revival does not reset the count; 're-childing' costs +1 dead child. -> motivates _claim_lifecycle_tally + the refined Q1 (have the conjecture name the friction threshold at which it parks itself).",
+      "confidence_impact": "No effect on any single fact's confidence; it is the META-discipline that keeps the friction visible. The tally (4 dead + 1 unrun on the synergy parent) IS the disconfirming evidence."
+    },
+    {
+      "_comment": "Render-vocabulary vs framework-prose provenance gap.",
+      "what": "'WELD' IS RENDER-SYSTEM-ONLY VOCABULARY. The noun 'weld' for a W_C-birth event was coined for the SCHEMA/viewer (2026-06-09) and appears in ZERO continuations — the framework's own prose calls it parents-produce-W_C / wrapper-overlap (cont 24-25). This specimen uses 'weld' throughout (it is written in the render vocabulary) but the underlying concept predates and is named differently in the framework itself.",
+      "sources_in_conflict": ["SCHEMA_v2 (weld.* fields)", "continuations 24-25 (parents-produce-W_C / wrapper-overlap — no 'weld')"],
+      "type": "date/attribution-conflict",
+      "why_interesting": "A vocabulary-provenance honesty note: the render-system imposes a term ('weld') the framework never used, so a reader must not mistake render-vocabulary for framework-vocabulary. Recorded in weld.reattribution{}. Minor but load-bearing for a reflexive specimen (the instrument's own terms are not the maker's terms).",
+      "confidence_impact": "No confidence change; a naming-provenance flag only."
+    },
+    {
+      "_comment": "Reflexive proxy-disclosure — doubled because the specimen IS the framework.",
+      "what": "NO MEASURED BITS EXIST FOR THIS SPECIMEN (reflexive proxy-disclosure). Every quantitative readout in this specimen (confidences, weights, theory-DNA shares in the overlay) is a HAND-SET historiographic proxy of the framework's own self-documentation — NOT a measured quantity. The gain_v2/MDL synergy numbers that the framework's whole quantification is SUPPOSED to produce DO NOT EXIST for the framework-as-W_C (the real-corpus run is owed; the one real-bits attempt came back PARTIAL-with-refutation). The proxy-disclosure discipline therefore applies DOUBLY here: the instrument is rendering its own maker with the same hand-weighted proxies it discloses for every other specimen.",
+      "sources_in_conflict": ["the framework's §IT-spine ambition (synergy in bits)", "the actual state (no real-corpus synergy value; bits_note = principled-null)", "PROXY_SPEC.md (hand-weighted list-length proxies, versioned)"],
+      "type": "framework-vs-record-tension",
+      "why_interesting": "The deepest honesty requirement of a reflexive specimen: the framework claims a measurable spine but cannot measure ITSELF on it. -> motivates bits_note = principled-null + the overlay theory_dna confidence cap (<=0.6) + this whole _reflexive_flag. When the framework is the specimen, the no-fabrication discipline is the load-bearing constraint.",
+      "confidence_impact": "Caps the overlay theory_dna confidence; keeps every bits-claim qualitative; underwrites the moderate-low overall_confidence."
+    },
+    {
+      "_comment": "The 2+2 kernel split — flagged-not-claimed.",
+      "what": "THE 2+2 PHYSICAL/LATENT KERNEL SPLIT IS FLAGGED-NOT-CLAIMED. The 'four kernels = the dual-kernel (cont 22: physical {time,space} + latent {knowledge,meaning}) resolved 2+2' is an OPEN CONJECTURE flagged for Cowork, NOT a claim. The frame-kernel basis is the most-interesting surviving novelty, but its specific 2+2 structure is unresolved.",
+      "sources_in_conflict": ["cont 22 §2 dual-kernel (physical 2 + latent 2)", "observer_frame_kernels_DRAFT §4 (flagged as open conjecture, not claimed)"],
+      "type": "framework-vs-record-tension",
+      "why_interesting": "Keeps the frame-kernel basis honestly partial: the basis is load-bearing but its 2+2 derivation is owed. -> kept as a frontier item + an open-conjecture sub_wrapper (sw-dual-kernel) rather than asserted.",
+      "confidence_impact": "Holds sw-dual-kernel + sw-frame-kernels-root at moderate confidence (~0.65); does not inflate to a claim."
+    }
+  ],
+
+  "forcing_events": [
+    {
+      "_comment": "(D4) the EXOGENOUS-FORCING 'weather' layer. Per R33 this CRISIS-PULLED wrapper's forcing layer IS its lifecycle spine. Two driver types: Pav STEERS (pulls — the dominant exogenous redirects) and cross-model SQUEEZES (the reviews that demoted claims). Plus the chronic standing pressures (external-A- owed / list-stays-9, audit cadence).",
+      "id": "fe-pav-steers",
+      "name": "Pav steers (the dominant exogenous PULLS)",
+      "kind": "cultural-focus",
+      "_kind_note": "the creative source's directional pulls — each spawned a harvest round; the program's tempo and direction.",
+      "direction": "pull",
+      "acted_on": [
+        { "target": "child-agnostic-framework", "target_kind": "child", "effect": "accelerate", "strength": 0.95 },
+        { "target": "desc-render-system", "target_kind": "child", "effect": "elevate", "strength": 0.9 },
+        { "target": "weld-main", "target_kind": "weld", "effect": "accelerate", "strength": 0.85 }
+      ],
+      "when": "2026-06-08 - 2026-06-10",
+      "mechanism": "The sequence of Pav steer-pulls, each spawning a round: 'make it canonical' (-> render system); 'spin up loads of sonnet models... compiled substrate' (-> 1029-fact store); the force-spectrum/solidity/'is there a physics for the latent' steer (-> latent-physics + viewer v0); the v1 test-drive asks (-> harvest band + 7 more); the v2 round + 'what questions should we be asking' (-> the MEDITATION); the claim-lifecycle reframe (demote/dormant/friction; conjecture=parent, experiment=child); and 'put the agnostic framework INTO the viewer, at least the current slice' (-> THIS reflexive specimen). Pav is the creative SOURCE; these pulls set tempo and direction.",
+      "confidence": 0.9
+    },
+    {
+      "id": "fe-squeeze-affine",
+      "name": "Cross-model SQUEEZE #1 — the affine-quotient child refuted",
+      "kind": "fashion",
+      "_kind_note": "intellectual-rigor squeeze (a blind external review that demoted a claim).",
+      "direction": "squeeze",
+      "acted_on": [
+        { "target": "rel-dead-witnessed-gate", "target_kind": "lineage", "effect": "kill", "strength": 0.9 },
+        { "target": "sw-synergy-gate-root", "target_kind": "sub_wrapper", "effect": "suppress", "strength": 0.7 }
+      ],
+      "when": "2026-06-09",
+      "mechanism": "GPT-5.5 + Gemini run blind on the 'more-than-PID' conclusion. Both confirmed the gate is genuinely NOT PID but flagged circularity; Gemini named a SPECIFIC falsifiable bug (M=A^2+B^2). Run immediately: A^2+B^2 (separable, no interaction) flags at 1,040,352 bits — HIGHER than genuine A*B. The gate measures NON-AFFINITY, not interaction. Bar revised to NOT DISCHARGED. The cross-model pass caught a measure that would otherwise have hardened wrong.",
+      "confidence": 0.88
+    },
+    {
+      "id": "fe-squeeze-frame-artifact",
+      "name": "Cross-model SQUEEZE #2 — frame-relativity is mostly a quantization artifact",
+      "kind": "fashion",
+      "direction": "squeeze",
+      "acted_on": [
+        { "target": "rel-dead-codelength", "target_kind": "lineage", "effect": "kill", "strength": 0.85 },
+        { "target": "sw-frame-relativity", "target_kind": "sub_wrapper", "effect": "suppress", "strength": 0.6 }
+      ],
+      "when": "2026-06-09",
+      "mechanism": "Cross-model #2 on the reformulated functional-ANOVA gate walked back MORE than the bug: the fixed-grid codelength floors NOTHING (binned plug-in leaks a within-bin wiggle; even affine ADD leaks ~880k bits); the resolution-dependent 'frame-relativity' kept as the surviving PID-differentiator is MOSTLY A QUANTIZATION ARTIFACT. The more-than-PID claim does NOT survive as a property of the measure. NET: the genuine contribution is the FRAMING + the genealogy render-system, NOT a new synergy measure.",
+      "confidence": 0.85
+    },
+    {
+      "id": "fe-pull-gain-v2",
+      "name": "Cross-model PULL #3 — gain_v2 endorsed + CONTEXTUAL frame-relativity vindicated (but standard)",
+      "kind": "fashion",
+      "direction": "pull",
+      "acted_on": [
+        { "target": "rel-live-gain-v2", "target_kind": "child", "effect": "elevate", "strength": 0.7 },
+        { "target": "sw-frame-relativity", "target_kind": "sub_wrapper", "effect": "elevate", "strength": 0.6 }
+      ],
+      "when": "2026-06-09",
+      "mechanism": "Cross-model #3 ENDORSED gain_v2 (joint-LS the right additive baseline; regularize at high parent correlation) and confirmed one-directionality as a population-level theorem; CONTEXTUAL frame-relativity (changing which RANGE is in frame flips interactive->additive) is REAL and principled, distinct from the killed grid artifact (vindicated by equal-n / irrelevant-axis / Taylor-law / one-directionality controls). BUT framing judged 'standard EFFECT-MODIFICATION statistics with frame-relativity terminology, NOT a new phenomenon.' Four models converge. The real-substrate merge still owed (must use gain_v2).",
+      "confidence": 0.85
+    },
+    {
+      "id": "fe-squeeze-solidity",
+      "name": "Latent-physics cross-model SQUEEZE — observer-relative solidity downgraded",
+      "kind": "fashion",
+      "direction": "squeeze",
+      "acted_on": [
+        { "target": "child-agnostic-framework", "target_kind": "child", "effect": "redirect", "strength": 0.7 },
+        { "target": "rel-walkback-newfield", "target_kind": "lineage", "effect": "suppress", "strength": 0.7 }
+      ],
+      "when": "2026-06-10",
+      "mechanism": "GPT-5.5 + Gemini on the latent-physics program: 'fragments-on-solid-rails' confirmed (no unified physics-of-the-latent; the recursive loop = data assimilation; divergent-rules+spectrum = EFT+RG with the RG-semigroup caveat). The ONE real correction: observer-relative SOLIDITY novelty DOWNGRADED — 'partly covered' by perspectival realism + Bayesian credence + active inference + QBism; correct form is narrower (new only as a first-class INSTRUMENT parameter). Shared BIGGEST_RISK (both models): idea-space has NO conserved Hamiltonian/metric, so without formal operators/observables/validation the physics mapping is 'metaphorical and non-predictive' until the gain_v2 pilot runs.",
+      "confidence": 0.85
+    },
+    {
+      "id": "fe-squeeze-reflexive",
+      "name": "Reflexive W_C SQUEEZE — 'new field' walked back to 'new instrument'",
+      "kind": "fashion",
+      "direction": "squeeze",
+      "acted_on": [
+        { "target": "child-agnostic-framework", "target_kind": "child", "effect": "redirect", "strength": 0.85 },
+        { "target": "rel-walkback-newfield", "target_kind": "lineage", "effect": "kill", "strength": 0.8 }
+      ],
+      "when": "2026-06-09",
+      "mechanism": "The instrument squeezes its maker: Pav asked 'is the agnostic framework a new field — a cosmology in the latent hybrid?' Answered by running the framework's OWN PPWc test reflexively. Verdict: NEW INSTRUMENT / sub-field within existing fields, NOT a new field. Frame leg PASSES (the real novelty); pushout leg non-degenerate-but-SHALLOW (= conceptual blending's colimit, reached independently — cuts AGAINST novelty); synergy leg = the decider = DEFINED-but-not-delivered (frame-lock pilot PARTIAL-with-refutation). 'New field/new cosmology' framing WALKED BACK (audit v08 §C7). Cautionary precedents bite: memetics + conceptual blending died for want of a measure.",
+      "confidence": 0.85
+    },
+    {
+      "id": "fe-external-a-owed",
+      "name": "Standing 'external A- owed' + list-stays-9 discipline (chronic SQUEEZE)",
+      "kind": "politics",
+      "_kind_note": "a chronic governance/gatekeeping pressure on promotion (the framework's own D6b acting on itself).",
+      "direction": "squeeze",
+      "acted_on": [
+        { "target": "rel-convergence-9", "target_kind": "lineage", "effect": "starve", "strength": 0.7 },
+        { "target": "child-agnostic-framework", "target_kind": "child", "effect": "starve", "strength": 0.6 }
+      ],
+      "when": "standing (every round; audit v09 ratified 2026-06-09)",
+      "mechanism": "Nothing hardens to canon until an external (cross-model) pass clears it — the self-audit caveat (Claude-Code-on-Claude-Code) persists; 'external A- owed before any v09 finding hardens.' Visible effect: the convergence list STAYS 9 across every round (never inflated; demoted/dormant claims stay so); the render-system/substrate/viewers + all new couplings are explicitly Tier-3 'list stays 9; nothing promoted.' The chronic squeeze that keeps the framework's status honest.",
+      "confidence": 0.85
+    },
+    {
+      "id": "fe-opus-deleak",
+      "name": "Opus substrate de-leak — verified% honestly dropped 37.9 -> 32.7",
+      "kind": "technology",
+      "direction": "squeeze",
+      "acted_on": [
+        { "target": "desc-substrate", "target_kind": "child", "effect": "redirect", "strength": 0.7 }
+      ],
+      "when": "2026-06-10",
+      "mechanism": "An independent Opus audit fetched cited sources and caught (a) a real provenance failure (a QG birth-date citing an unrelated 2009 Fermi paper -> re-sourced append-only to Amelino-Camelia 1998) and (b) a cross-file fact_id collision leaking verifications. The fix forced the headline verified% DOWN 37.9 -> 32.7 (honest ceiling); the compiler now hard-fails on the collision class. The meditation then sharpened the open friction: 76.6% English-Wikipedia — is 32.7% triangulation or an ECHO? (provenance-disjoint test never run). A squeeze-on-the-harvest that LOWERED a headline rather than inflating it.",
+      "confidence": 0.85
+    },
+    {
+      "id": "fe-audit-cadence",
+      "name": "Audit-cadence deadlines (the forcing rhythm)",
+      "kind": "cultural-focus",
+      "direction": "both",
+      "acted_on": [
+        { "target": "child-agnostic-framework", "target_kind": "child", "effect": "redirect", "strength": 0.6 },
+        { "target": "rel-walkback-newfield", "target_kind": "lineage", "effect": "suppress", "strength": 0.6 }
+      ],
+      "when": "v09 ratified 2026-06-09; V10 target 2026-06-23",
+      "mechanism": "The audit cadence sets the program's heartbeat (V10 target 2026-06-23, accelerable if ship density warrants). It is the recurring register-correction mechanism — catching celebratory 'framework grew up' narration (v07/v08/v09 each walked back) AND the exogenous deadline under which the sprint was paced. A both-direction event: a pull (it forces shipping) and a squeeze (it forces register down-tuning).",
+      "confidence": 0.8
+    }
+  ],
+
+  "sources": [
+    {
+      "_comment": "Citation backbone. For this REFLEXIVE specimen the primary sources are THE REPO ITSELF (source.type 'primary' = the framework's own self-documentation: continuations, candidates, CHANGELOG, HANDOFF, audits). These are primary in the strict sense — the framework documenting its own development. Reliability bands reflect Tier (continuations = primary record; Tier-3 sketches = working/unratified; SCHEMA_v2 = ratified-as-tool).",
+      "name": "continuations/00_checkpoint.md ... 32.md (the primary self-documentation record)",
+      "type": "primary",
+      "url": "D:/PlatformOperator/research/pav/continuations/",
+      "what_used_for": "Concept lifecycles (wrappers cont 00; charge canon cont 09/13/15; dual-kernel cont 22; wrapper-overlap/hairy-sphere cont 24-25; demotions cont 17/28/32); dating via continuations.json; the parent W_A intuition (03_RAW).",
+      "reliability": 0.9,
+      "_reliability_comment": "primary — the framework's own continuation record; HIGH for what the framework SAID/DID, neutral on whether the claims hold."
+    },
+    {
+      "name": "candidates/parents_produce_WC_FORMALIZATION_DRAFT.md",
+      "type": "primary",
+      "url": "D:/PlatformOperator/research/pav/candidates/parents_produce_WC_FORMALIZATION_DRAFT.md",
+      "what_used_for": "PPWc(W_A,W_B|frame) = frame-indexed pushout gated by synergy (§1.A-F); the MDL/bits surrogate leg (§1.B); the bar-to-promote + operational-existence falsifier (§5); the S core-holes (§3).",
+      "reliability": 0.7,
+      "_reliability_comment": "Tier-3 DRAFT (surfaced-for-ratification, not compiled)."
+    },
+    {
+      "name": "candidates/synergy_vs_pid/ (RESULTS, CROSS_MODEL_REVIEW 1/2/3, EMERGENCE_CANDIDATES_AND_FRAME, RATIO/CONTEXTUAL_FRAME_TEST)",
+      "type": "primary",
+      "url": "D:/PlatformOperator/research/pav/candidates/synergy_vs_pid/",
+      "what_used_for": "The dead synergy children (witnessed/affine gate, naive form, functional-ANOVA codelength, gain_v1) + the surviving gain_v2; the cross-model squeezes #1-3; grid-zoom-artifact vs contextual-frame-relativity; the more-than-PID walk-back.",
+      "reliability": 0.7,
+      "_reliability_comment": "Tier-3 working results + cross-model reviews; the headline-walk-back banners are load-bearing honesty."
+    },
+    {
+      "name": "candidates/frame_lock_pilot_RESULTS.md + frame_lock_protocol_DRAFT.md + frame_lock_data/frame_lock_calibration_finding.md",
+      "type": "primary",
+      "url": "D:/PlatformOperator/research/pav/candidates/frame_lock_pilot_RESULTS.md",
+      "what_used_for": "The frame-lock falsifiability harness; the pilot's 2-hits/3-misses called-shot refutation; the PARTIAL-with-refutation first real-bits attempt. (frame_lock_data/ NEVER edited, read-only.)",
+      "reliability": 0.7
+    },
+    {
+      "name": "candidates/latent_cosmology_EXPLORATION.md + latent_physics_PROGRAM.md + latent_physics_CROSS_MODEL_REVIEW.md",
+      "type": "primary",
+      "url": "D:/PlatformOperator/research/pav/candidates/latent_cosmology_EXPLORATION.md",
+      "what_used_for": "The reflexive W_C adjudication (verdict by leg §1; honest name §3; external A- §6.5); the 17-rail field census + instrument-not-field re-confirmation; the observer-relative-solidity downgrade; memetics/blending cautionary precedents.",
+      "reliability": 0.75
+    },
+    {
+      "name": "candidates/agnostic_units_hairy_membrane_SKETCH.md + observer_frame_kernels_DRAFT.md",
+      "type": "primary",
+      "url": "D:/PlatformOperator/research/pav/candidates/agnostic_units_hairy_membrane_SKETCH.md",
+      "what_used_for": "Fuzzy-LOD, agnostic units, the hairy-ball necessity + Poincare-Hopf budget, the §6 ratio re-test; the observer frame-kernels {time,space,knowledge,meaning} + the corrected 'two rocks' falsifier + the flagged-not-claimed 2+2 split.",
+      "reliability": 0.7,
+      "_reliability_comment": "Tier-3 sketches/drafts."
+    },
+    {
+      "name": "candidates/canonical_genealogy/SCHEMA_v2.md (RATIFIED) + VIEWER_SPEC.md + PROXY_SPEC.md + BATCH_FINDINGS(_v2).md",
+      "type": "primary",
+      "url": "D:/PlatformOperator/research/pav/candidates/canonical_genealogy/SCHEMA_v2.md",
+      "what_used_for": "The render-system the framework seeded (RATIFIED as a TOOL, not a claim); the weld/sub_wrapper/relatives/forcing fields this specimen is written in; the hand-weighted proxy discipline (PROXY_SPEC); the deepest correction (R9 surprise vs consolidated-child orthogonal). NEVER edited (ratified).",
+      "reliability": 0.85,
+      "_reliability_comment": "RATIFIED as a render-spec/tool (the ONE harvest item at a ratified surface); reliability HIGH as a tool-spec, neutral on substantive claims."
+    },
+    {
+      "name": "candidates/canonical_genealogy/substrate/SUBSTRATE_REPORT.md + SUBSTRATE_SPEC.md + compiled/*.json",
+      "type": "primary",
+      "url": "D:/PlatformOperator/research/pav/candidates/canonical_genealogy/substrate/",
+      "what_used_for": "The 1029-fact compiled substrate; the Opus de-leak (37.9->32.7% verified §10); the provenance-disjoint ECHO question; the honest-proxy / no-fabrication discipline.",
+      "reliability": 0.8
+    },
+    {
+      "name": "candidates/MEDITATION_QUESTIONS.md + CLAIM_LIFECYCLE.md",
+      "type": "primary",
+      "url": "D:/PlatformOperator/research/pav/candidates/MEDITATION_QUESTIONS.md",
+      "what_used_for": "The 'vocabulary that cannot lose' tension (#1 unfalsifiable-core); the forced-retirement rule (#11, needs-decision); the base-rate-census gap (#7); the provenance-disjoint test (#2). CLAIM_LIFECYCLE.md = the parent/child + dead-children-tally formalization mapped onto SCHEMA_v2 fields.",
+      "reliability": 0.75,
+      "_reliability_comment": "MEDITATION_QUESTIONS is the framework's own self-diagnosis; CLAIM_LIFECYCLE.md is the new design doc this specimen instantiates."
+    },
+    {
+      "name": "CHANGELOG.md + HANDOFF.md + audits/v05-v09.md + readings/ + bes_convergence_9.md",
+      "type": "primary",
+      "url": "D:/PlatformOperator/research/pav/CHANGELOG.md",
+      "what_used_for": "Dating (commit hashes + reverse-chron headers); the held-at-9 list footers; the walk-backs (v07 F2 / v08 §C7 celebratory-closure); the convergence canon #1-9 (cont 25 §7 + Reading 03 ACMP + Reading 06 cymatics-narrowed + bes_convergence_9 BES); the V10 cadence target; the external-A- owed discipline.",
+      "reliability": 0.85,
+      "_reliability_comment": "primary process-record; HIGH for the dated sequence of ships/demotions/audits."
+    },
+    {
+      "name": "C:/Users/Admin/.claude/.../memory (feedback_* + project_* notes)",
+      "type": "primary",
+      "url": "C:/Users/Admin/.claude/projects/D--/memory/",
+      "what_used_for": "Pav = creative/intuitive source (formalization translated back to him); the cross-model external-A- discipline; the frame-insight + parents-produce-W_C-frame-relative note; the council/infra context.",
+      "reliability": 0.8,
+      "_reliability_comment": "primary auto-memory (the working relationship + program context)."
+    }
+  ],
+
+  "_schema_gaps_in_record": [
+    "REFLEXIVE PROXY-DISCLOSURE (doubled): the framework claims a measurable §IT spine but NO real-corpus synergy/MDL value exists for the framework-as-W_C — every quantitative readout here is a hand-set proxy of the framework's own self-documentation. Worked around via bits_note=principled-null + the overlay theory_dna cap (<=0.6) + _reflexive_flag. The no-fabrication discipline is the load-bearing constraint of a self-render.",
+    "CLAIM-LIFECYCLE TALLY has no native SCHEMA_v2 slot: the dead-children TALLY per parent (the falsification-pressure gauge) is a PROPOSED-not-promoted _claim_lifecycle_tally block (REUSES D6 opposes[]/lag + revival.trigger; adds only the count + rollup). Collapses to plain open-conjecture if ratification rejects it. This is the central deliverable of Pav's reframe and the honest answer to 'a vocabulary that cannot lose'.",
+    "PARENT-DORMANT-PENDING-CHILD vs externally-squeezed dormancy: the schema's why_frame cannot distinguish an internally-caused dormancy (the child experiment failed) from an externally-caused one (a forcing event squeezed it). CLAIM_LIFECYCLE.md proposes a why_frame:operational value (PROPOSED, pending a 2nd instance). Worked around in _claim_lifecycle_tally.pressure_reading + the relatives[] dead-children notes.",
+    "INSTRUMENT-NOT-FIELD as a child STATUS: the framework is consummated-as-instrument AND never-born-as-field SIMULTANEOUSLY — two lifecycle legs running in parallel. Worked around via TWO phase_trajectory entries (consolidation + never_born_frontier) + the split overall_confidence + coherence_under_zoom=contradicts. A single child.status enum cannot hold a thing that is a real instrument and an open-conjecture field at once.",
+    "CONVERGENCE-CUTS-BOTH-WAYS: no field expresses that the SAME evidence (convergence-by-independence) is BOTH the strongest novelty signal AND the strongest argument against the central object's novelty. Worked around via discrepancies[0] + S_structure.agreed=false + relatives[rel-conceptual-blending].relation=rival.",
+    "BASE-RATE CENSUS owed (MEDITATION #7): the convergence-9 list was assembled by HUNTING named instances; a neutral-sample base-rate census (does parents-produce-W_C appear in RANDOM two-parent processes too?) has never been run, so the list cannot yet distinguish a deep law from a pattern generic to any two-parent process. Recorded in relatives[rel-convergence-9].note + fuzzy_layer.frontier.",
+    "UNADOPTED FORCED-RETIREMENT RULE (MEDITATION #11): the framework states the unfalsifiability tension and PROPOSES the fix (a Tier-2 candidate failing its named bar twice is demoted to illustrative) but has NOT wired it (needs-decision). The unwired gap is itself the live open friction the reframe should formalize. Recorded in _claim_lifecycle_tally._meditation_link + discrepancies[1].",
+    "SOURCING CAVEAT: all sources here are the REPO ITSELF (source.type primary = the framework's self-documentation) — there is no external scholarly literature on the agnostic framework because it is a private, decades-developed, in-sprint research framework. Reliability bands reflect Tier (continuations/CHANGELOG = primary process-record ~0.85-0.9; Tier-3 sketches ~0.7; SCHEMA_v2 = ratified-as-tool ~0.85). The framework's OWN cross-model external-A- pass (GPT-5.5+Gemini) is the closest thing to an external check, and it is itself a harvest node (desc-cross-model)."
+  ]
+}

@@ -921,3 +921,117 @@ no nodes are invented for unmatched data. Convergence list stays 9; this is a Ti
 not canon and not a promotion.
 
 `node --check` passes (standalone and embedded). Addendum date: 2026-06-10.
+
+---
+
+# v3 addendum (self-specimen) — Fable seat, 2026-06-10
+
+Built `viewer_v3.html` (1.28 MB self-contained, vanilla JS, no CDN) **from** `viewer_v2.html`:
+the v2 app script + all 28 embedded JSON blocks were reused verbatim; the app script was extracted,
+surgically extended, and re-embedded; **four NEW JSON blocks** were added for the reflexive
+self-specimen. `viewer_v0/v1/v2.html` are **untouched** (lineage preserved). No ratified files
+(`SCHEMA_v2.md`, `specimens/*`, the 7 overlays/narration/substrate of the base specimens, Cowork's
+files, `frame_lock_data/`) were modified — the embedded copies are read verbatim from source at
+assemble time. The new specimen, its overlay, its narration, and `CLAIM_LIFECYCLE.md` are
+sibling-authored inputs under `candidates/canonical_genealogy/` and `candidates/`; this seat only
+**wired them into the viewer** and authored the substrate slim-export.
+
+**Convergence list stays 9.** This is a Tier-3 render tool, **not canon and not a promotion**; the
+self-specimen is rendered with its status **deflated, not inflated** (instrument-not-field).
+
+## Asks → built
+
+- **(1) 8th SPECIMEN — the agnostic framework renders ITSELF.** Four blocks embedded, matching the
+  v2 block contract (`id` / `data-key` / `data-kind`), so the existing loader ingests them with **zero
+  loader changes** (the loader already scans every `script[type="application/json"]`):
+  - `spec-agnostic_framework` — `specimens/agnostic_framework.json` (the SCHEMA_v2 specimen: child =
+    the framework-as-W_C, 7-ary `parents_full`, 13 sub-wrappers, 13 `relatives.edges` claim-nodes,
+    4 actors, 9 forcing events, `_claim_lifecycle_tally`).
+  - `ovr-agnostic_framework` — `overlays/agnostic_framework.overlay.json` (adds `claim_fates{}` — the
+    per-claim lifecycle map — plus `entity_lifecycles`, `harvest_dates`, `theory_dna`, `now_extension`).
+  - `narr-agnostic_framework` — `narration/agnostic_framework.narration.json` (15 fractional-year
+    segments tracing the framework's own development; every claim back-links to an `f-agf-*` fact id,
+    a `specimen:` field path, or an `overlay:` key; demotions narrated **as demotions**, not victories).
+  - `subs-agnostic_framework` — the **slim substrate export** compiled from
+    `substrate/facts/agnostic_framework.dev.jsonl` (48 dated self-documentation facts → the
+    `{specimen,subjects:{<subject_id>:[{p,v,w,b,c,f,st,sy,su,st2}]}}` shape R5/R6 consume). NOTE: the
+    self-specimen's substrate is the **dev-facts** of the framework's OWN development (continuations,
+    candidates, CHANGELOG, audits), distinct in kind from the entity/event substrate of the 7 base
+    specimens — disclosed as such. The chip auto-appears **8th** ("Framework (self)") from `ORDER`;
+    `LABELS` got the one new entry. All 53 narration `f-agf-*` refs resolve in the embedded export.
+
+- **(2) CLAIM-LIFECYCLE RENDER STATES.** Pav's reframe (a claim is **demoted / dormant / friction**,
+  recorded as a dated record, periodically revisited; the **conjecture is a PARENT wrapper**, the
+  **experiment its CHILD**; a dead child never kills the parent) is rendered as per-node marks, bound
+  to **real fields** (no fabrication): per-node `fate` ← `overlay.claim_fates` (read through an extended
+  `ovlRivalFate`, which now merges `claim_fates` over `rival_fates`); the dead-children **TALLY** ←
+  `specimen._claim_lifecycle_tally`. Render treatments (`drawLifeMark` + a `lifeFade` opacity
+  multiplier):
+  - **demoted** → dimmed (×0.5) + a **down-chevron ▾** above the node (a retired child experiment;
+    the parent survives). 6 nodes (the 4 dead synergy-gate children + the 1/f failsafe + the misc-demoted
+    bundle).
+  - **walked-back** → demoted-style + a "walked back" tag (the field-claim `'new field' → 'new
+    instrument'`). 1 node.
+  - **dormant** → low-alpha (×0.34) **dashed ring** (parked, awaiting a better child).
+  - **friction** → **D6 friction styling** (a warn-colour ring + radial hatch ticks) + a small
+    **dead-children TALLY badge** `✗N[/✔M]`, **coloured by `pressure_reading`** (none/normal/
+    accumulating/heavy/critical). 2 nodes carry it: `sw-synergy-gate-root` (**✗4**, 1 live-but-unrun,
+    pressure **heavy** — parents-produce-W_C's synergy gate) and `rel-pid` (the PID prior-art friction);
+    `rel-demoted-1f` carries both a demote ▾ **and** a **✗3** badge (pressure accumulating).
+  - **open-conjecture** → teal **dashed ring**, not dimmed (live but unconsummated — e.g. `gain_v2`,
+    never run on a real corpus; Gardenfors, unwelded). 2 nodes.
+  - **held** → a solid ring (the **convergence list, stays 9** — never inflated). 1 node.
+  - **revival** → a brightening halo (supported for completeness; the main weld has no revival, the
+    charge-canon supersession is recorded at sub-wrapper level).
+  A **CLAIM LIFECYCLE legend block** (rendered only when the specimen carries lifecycle-bearing nodes,
+  i.e. the self-specimen) explains all of the above and discloses the binding + proxy status. The
+  click-detail panel gains a **CLAIM LIFECYCLE** section (fate, `→ to`, the full dead/live children
+  list with what each operationalized + what killed it, the revisit trigger). The hover tooltip shows
+  the state + `✗N` count. **Design-law parity:** a sharp claim leaves `lifeState`/`tally` null → the
+  7 base specimens render exactly as in v2 (their `rival_fates` enum `faded|niche|absorbed|persists`
+  does not map to a lifecycle state, so there is **zero visual regression**).
+  **The honest tension, encoded not hidden:** the tally **is** the falsification-pressure gauge — the
+  claim cannot be killed by one result, but the count of dead children rises without bound, and a high
+  count with no live success (synergy gate: 4 dead, 0 real-corpus success, pressure heavy) is the
+  visible, dated answer to the meditation's *"a vocabulary that cannot lose."* The tally-to-node map is
+  a small **name heuristic** (the tally rows carry no `node_ref`), disclosed here as a proxy.
+
+- **(3) REFLEXIVE MARKER.** Selecting the framework specimen shows a banner (created dynamically, shown
+  **only** for `agnostic_framework`; hidden in global view and for all base specimens): **"⟲ THE
+  FRAMEWORK RENDERING ITSELF — Tier-3, self-referential."** It states the honest split (a real
+  instrument ~0.85 but an unconsummated **field ~0.4 → instrument, not field**), that the **convergence
+  list stays 9 (never inflated)**, the live dead-children gauge pulled from the specimen
+  (`synergy gate: 4 dead children, 1 live (never run on a real corpus) — pressure heavy`), and that **no
+  measured gain_v2/MDL bits exist** for this case (theory-DNA + solidity are disclosed hand-set proxies,
+  **doubly** so when the framework is its own specimen).
+
+## Disclosure / honest-proxy status (v2 discipline retained + doubled)
+All v2 disclosures carry unchanged (solidity = proxy span, only canon data-bound; attract/repel edges
+role-proxy; sharp/fuzzy = agnostic frame-ratio NOT MDL/`gain_v2` bits; theory-DNA = historiographic
+estimates; bedrock = curated L0 proxy). NEW for the self-specimen: its theory-DNA (Pav 0.30,
+category-theory 0.22, IT 0.16, PID 0.10, topology 0.06, RG-EFT 0.04, novel-residue 0.12) and solidity
+are the framework estimating its **own** composition with the same proxy discipline (PROXY_SPEC.md) it
+applies to every other specimen — principled-null on bits, no real-corpus synergy value exists. The
+self-specimen has **no curated bedrock set** (degrades gracefully to none) and its timeline compresses
+decades of private intuition + a ~2-month formalization sprint into the visible window — an honest
+shape, not a defect. No measured bits are rendered; no nodes are invented for unmatched data;
+demoted/dormant claims stay demoted/dormant.
+
+## Build / verification
+- Encoding handled byte-accurately: extracted the v2 app script via Python (UTF-8, LF, no BOM —
+  PowerShell's `Get-Content`/`Set-Content` round-trip was found to **double-encode** non-ASCII and was
+  abandoned); `viewer_v3.html` is UTF-8 / LF / no BOM, **no mojibake** (✓ on `→ × ▾ ✗ ✔`). The 4 new
+  blocks are ASCII-escaped compact JSON with `</` → `<\/` guarding so no value can prematurely close
+  a `<script>` tag.
+- `node --check` passes on the extracted app script **standalone AND as embedded** in the final HTML.
+- All **32** embedded `application/json` blocks parse (28 base + 4 self-specimen).
+- Every binding resolves (verified, not assumed): 11 `claim_fates` keys ↔ `relatives.edges` ids;
+  2 `_claim_lifecycle_tally` parents → render nodes (`sw-synergy-gate-root`, `rel-demoted-1f`);
+  53 narration `f-agf-*` refs → embedded substrate; 18 `entity_lifecycles` → node/actor ids (no orphans).
+- A focused runtime harness exercised the new render functions (`lifeFade` / `drawLifeMark` /
+  `lifeDetailHTML`) against the real specimen+overlay data: 12 nodes, 44 draw ops, **0 errors**.
+- **Recommended external pass:** a live browser test-drive (boot → select the "Framework (self)" chip →
+  scrub → click the demoted/friction nodes) is the owed gold-standard check, consistent with the repo's
+  cross-model/external-A− discipline; this seat verified at the `node`/data-binding level.
+
+`node --check` passes (standalone and embedded). Convergence list stays 9. Addendum date: 2026-06-10.
