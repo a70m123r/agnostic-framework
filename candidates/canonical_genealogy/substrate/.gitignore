@@ -1,0 +1,6 @@
+# Compiled SQLite artifact — rebuilt from facts/*.jsonl + verifications/*.jsonl on every run.
+# Source of truth is the append-only JSONL logs; the .db is disposable, never committed.
+substrate.db
+substrate.db-journal
+substrate.db-wal
+substrate.db-shm

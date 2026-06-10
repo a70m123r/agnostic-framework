@@ -8,6 +8,16 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-06-10 — the COMPILED SUBSTRATE: Sonnet-fleet data harvest + provenance-logged fact store (32 agents: Sonnet harvest/verify, Fable QC/compile, Opus audit)
+
+Pav steer: "spin up loads of sonnet models to look for aggregates of data online... populate the missing bits... with log for source freshness and certainty and verification, setup a data base that scales as compiled substrate." Built at `candidates/canonical_genealogy/substrate/`: SUBSTRATE_SPEC.md (fact schema, certainty rubric, verification state machine, scale story), compile_substrate.py (stdlib-only; JSONL→SQLite+compiled JSON; best-value resolution corroborated>pending>disputed then certainty then freshness, full history kept; fatal HAZARD guard on cross-group fact_id reuse), facts/*.jsonl (append-only source of truth), verifications/*.jsonl, compiled/*.json (the viewer contract). Tier-3 infra; list stays 9.
+- **1,029 facts** across all 7 specimens, every one with source URL+type, freshness, retrieved_at, rubric certainty; **303 verification records** from independent re-sourcing (different source than original); **32.7% corroborated**, 22 genuine disputes retained with BOTH values (never overwritten); skips logged (what couldn't be sourced stays visible).
+- **Gap coverage from zero:** entity lifecycles 771 facts; harvest consolidation 77; 2024–26 now-refresh 54; rival fates 31; **D6 friction 74 (first data ever for the ratified D6 cluster)**; theory-DNA share bases 22 (all certainty ≤0.6, estimate-capped).
+- **The audit chain worked end-to-end:** Opus fetched cited sources and caught ONE real provenance failure (a QG-phenomenology birth-date citing an unrelated 2009 Fermi paper — re-sourced append-only to Amelino-Camelia 1998 Nature with a retraction record) + a structural fact_id collision leaking verifications across files (renumbered; compiler now hard-fails on the class; headline verified% honestly revised DOWN 37.9→32.7 after de-leak).
+- Scale path: new specimens = new fact files; re-harvest = append (fresher+corroborated wins); overlay ingestion planned; SQLite lifts to Postgres if needed. substrate.db not committed (gitignored); compiled exports are.
+
+---
+
 ## 2026-06-10 — latent-physics program (fragments-on-solid-rails) + genealogy VIEWER v0 BUILT (Fable work / Opus skeptic / GPT-5.5 + Gemini external)
 
 Pav steer: force-spectrum (taps/pushes/tastes) + mass-magnified attraction/repulsion + solidity-as-span/mirage + "is there a physics-equivalent for the latent space?" (recursive focus-the-fuzzy simulation; divergent rule-sets per frame → spectrum/gradient). 12-agent workflow: 4 covered-ground audits, 3 web-grounded census agents, viewer spec + BUILD, Opus second pass, synthesis. New: `candidates/latent_physics_PROGRAM.md` + `latent_physics_CROSS_MODEL_REVIEW.md`, `candidates/canonical_genealogy/VIEWER_SPEC.md` + `viewer_v0.html`. Tier-3; list stays 9.
