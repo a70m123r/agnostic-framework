@@ -1,0 +1,224 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Adaptive Time Axis — toy</title>
+<style>
+  :root{--bg:#0c0f16;--fg:#e8edf6;--mut:#8e98ad;--hint:#5a6275;--brd:#2a3142;--accent:#d8794a;--green:#1d9e75;}
+  html,body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.5 'Segoe UI',system-ui,sans-serif;}
+  .wrap{max-width:1180px;margin:0 auto;padding:16px 20px 40px;}
+  h1{font-size:17px;font-weight:600;margin:0 0 2px;} .sub{color:var(--mut);font-size:12px;margin:0 0 14px;}
+  .row{display:flex;align-items:center;gap:10px;margin:7px 0;flex-wrap:wrap;}
+  .row label{color:var(--mut);font-size:12px;min-width:128px;}
+  input[type=range]{flex:1;min-width:160px;accent-color:var(--accent);}
+  .val{font-size:12px;font-weight:600;min-width:46px;text-align:right;}
+  .chips{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0;}
+  button{background:transparent;color:var(--fg);border:1px solid var(--brd);border-radius:7px;padding:5px 11px;font-size:12px;cursor:pointer;}
+  button.on{background:#16324a;border-color:#2f6a9a;color:#cfe6ff;}
+  button:active{transform:scale(.98);}
+  .read{display:flex;gap:10px;align-items:baseline;margin:10px 0 4px;flex-wrap:wrap;}
+  .read .d{font-size:16px;font-weight:600;} .read .g{color:var(--mut);font-size:12px;}
+  canvas{width:100%;height:340px;display:block;cursor:ew-resize;border-radius:8px;}
+  .note{color:var(--hint);font-size:11px;margin:7px 0 0;}
+  select{background:#10141d;color:var(--fg);border:1px solid var(--brd);border-radius:7px;padding:5px 9px;font-size:12px;}
+</style></head>
+<body><div class="wrap">
+<h1>Adaptive time axis <span style="color:var(--mut);font-weight:400;">— toy / test-drive</span></h1>
+<p class="sub">The framework's development is decades sparse, then ~25 days holding 90% of events (some minutes apart). One linear axis can't show that. Drag the strip to scrub.</p>
+
+<div class="row"><label>specimen</label>
+  <select id="spec"><option value="framework">Agnostic framework (real git timestamps)</option><option value="maxwell">Maxwell EM (sparse, historical)</option></select>
+  <span style="flex:1"></span>
+</div>
+<div class="row"><label>calendar ↔ order</label><input type="range" id="lam" min="0" max="100" value="40"><span class="val" id="lamV">40%</span></div>
+<div class="row"><label>scrub lens strength</label><input type="range" id="fish" min="0" max="60" value="28"><span class="val" id="fishV">2.8×</span></div>
+<div class="chips">
+  <button id="bLens" class="on">lens follows playhead</button>
+  <button id="bStrip" class="on">truth strip</button>
+  <button id="bFold" class="on">fold texture</button>
+  <button id="bFuzz" class="on">fuzzy-date halos</button>
+  <button id="bPlay">▶ play</button>
+</div>
+<div class="read"><span class="g">at playhead:</span><span class="d" id="dOut">—</span><span class="g" id="gOut">—</span></div>
+<canvas id="cv"></canvas>
+<p class="note">lower band = true calendar density (never warped). fuzzy = approximate pre-repo dates (decades of undated intuition); precise events = git commit timestamps. order is never reordered — only re-spaced.</p>
+</div>
+<script>
+(function(){
+var DATA={
+framework:[
+ ["~1990",0,"intuition seed",1,"decades of pre-repo thinking"],
+ ["~2006",0,"wrapper intuition",0,"forming, undated"],
+ ["~2018",0,"latent-space dynamics",0,"undated"],
+ ["2022",0,"LLMs arrive",0,"context shift"],
+ ["2024-06",0,"council era",0,"approx"],
+ ["2026-05-17T02:19",1,"repo init (cont 15)",1,""],
+ ["2026-05-18T01:39",1,"cont 16 squeeze",0,""],
+ ["2026-05-18T22:34",1,"cont 18 procedural lineage",0,""],
+ ["2026-05-20T11:48",1,"cont 20 canon dormancy",0,""],
+ ["2026-05-21T12:30",1,"atlas: sight/sound registers",0,""],
+ ["2026-05-24T04:37",1,"cont 24 wrapper overlap",0,""],
+ ["2026-05-25T15:21",1,"cont 25 hairy sphere",1,""],
+ ["2026-05-26T10:45",1,"cont 25 L0 kernel",0,""],
+ ["2026-05-28T04:08",1,"cont 27 energy-floor",0,""],
+ ["2026-05-31T00:40",1,"convergence-9 era",1,""],
+ ["2026-06-08T13:17",1,"frame kernels (Pav steer)",1,""],
+ ["2026-06-09T00:14",1,"parents-produce-W_C",1,""],
+ ["2026-06-09T02:12",1,"frame-lock protocol",0,""],
+ ["2026-06-09T03:29",1,"frame-lock pilot",0,""],
+ ["2026-06-09T12:53",1,"genealogy render system",1,""],
+ ["2026-06-09T13:14",1,"SCHEMA v2 ratified",1,""],
+ ["2026-06-09T14:42",1,"cosmology verdict",0,""],
+ ["2026-06-09T19:28",1,"cross-model pass",0,""],
+ ["2026-06-09T20:34",1,"synergy reformulation",0,""],
+ ["2026-06-09T21:47",1,"agnostic units sketch",0,""],
+ ["2026-06-09T23:06",1,"contextual frame REAL",1,""],
+ ["2026-06-10T01:41",1,"latent-physics program",0,""],
+ ["2026-06-10T04:22",1,"substrate 1029 facts",1,""],
+ ["2026-06-10T04:47",1,"viewer v1",0,""],
+ ["2026-06-10T17:01",1,"viewer v2 + meditation",0,""],
+ ["2026-06-10T19:45",1,"self-specimen + lifecycle",1,""]
+],
+maxwell:[
+ ["1820",0,"Oersted: current→magnetism",1,""],
+ ["1831",0,"Faraday induction",1,""],
+ ["1845",0,"Faraday rotation",0,""],
+ ["1855",0,"Maxwell: On Faraday's Lines",0,""],
+ ["1861",0,"displacement current",1,""],
+ ["1865",0,"Dynamical Theory (the eqns)",1,""],
+ ["1873",0,"Treatise",0,""],
+ ["1887",0,"Hertz: EM waves",1,""],
+ ["1888",0,"Hertz confirmation",0,""],
+ ["1905",0,"special relativity",1,"harvest"],
+ ["1916",0,"general relativity",0,"harvest"],
+ ["1948",0,"QED",0,"harvest"]
+]};
+function decYear(s){
+ if(s.charAt(0)==='~') s=s.slice(1);
+ var m=s.match(/^(\d{4})(?:-(\d{2}))?(?:-(\d{2}))?(?:T(\d{2}):(\d{2}))?/);
+ if(!m) return 2000;
+ var y=+m[1], mo=m[2]?+m[2]-1:0, d=m[3]?+m[3]-1:0, hh=m[4]?+m[4]:0, mm=m[5]?+m[5]:0;
+ var base=Date.UTC(y,0,1), t=Date.UTC(y,mo,1+d,hh,mm), end=Date.UTC(y+1,0,1);
+ return y+(t-base)/(end-base);
+}
+var cv=document.getElementById('cv'),ctx=cv.getContext('2d');
+var lam=0.40,fstr=2.8,opt={lens:true,strip:true,fold:true,fuzz:true};
+var EV=[],T0=0,T1=0,N=0,pf=0.92,playing=false,specKey='framework';
+function load(k){
+ specKey=k;
+ EV=DATA[k].map(function(r){return {t:decYear(r[0]),raw:r[0],precise:r[1]===1,label:r[2],big:r[3]===1,note:r[4]};});
+ EV.sort(function(a,b){return a.t-b.t;});
+ N=EV.length;T0=EV[0].t-(EV[N-1].t-EV[0].t)*0.03;T1=EV[N-1].t+(EV[N-1].t-EV[0].t)*0.03;
+ buildAnchors();
+}
+var AN=[];
+function buildAnchors(){
+ AN=[];
+ for(var i=0;i<N;i++){var cal=(EV[i].t-T0)/(T1-T0),ord=(i+0.5)/N;AN.push([EV[i].t,(1-lam)*cal+lam*ord]);}
+ AN.unshift([T0,0]);AN.push([T1,(1-lam)*1+lam*1]);
+ for(var k=1;k<AN.length;k++) if(AN[k][1]<=AN[k-1][1]) AN[k][1]=AN[k-1][1]+1e-6;
+ var mx=AN[AN.length-1][1]; for(k=0;k<AN.length;k++) AN[k][1]/=mx;
+}
+function uBase(t){
+ if(t<=AN[0][0])return 0;
+ for(var k=1;k<AN.length;k++){if(t<=AN[k][0]){var a=AN[k-1],b=AN[k];return a[1]+(b[1]-a[1])*((t-a[0])/(b[0]-a[0]||1e-9));}}
+ return 1;
+}
+function tOfU(u){
+ if(u<=0)return AN[0][0];
+ for(var k=1;k<AN.length;k++){if(u<=AN[k][1]){var a=AN[k-1],b=AN[k];return a[0]+(b[0]-a[0])*((u-a[1])/(b[1]-a[1]||1e-9));}}
+ return T1;
+}
+function fish(u){ // Furnas 1D fisheye, focus=pf, distortion=d; identity at d=0, order-preserving
+ if(!opt.lens||fstr<=0.01)return u;
+ var d=fstr,f=pf;
+ if(u===f)return f;
+ if(u<f){var n=(f-u)/f, T=((d+1)*n)/(d*n+1); return f-T*f;}
+ var n2=(u-f)/(1-f), T2=((d+1)*n2)/(d*n2+1); return f+T2*(1-f);
+}
+function fmt(t){
+ var y=Math.floor(t),fr=t-y,base=Date.UTC(y,0,1),end=Date.UTC(y+1,0,1);
+ var dt=new Date(base+fr*(end-base)),mo=dt.toLocaleString('en',{month:'short',timeZone:'UTC'});
+ if(t>=2026.36)return mo+' '+dt.getUTCDate()+', '+String(dt.getUTCHours()).padStart(2,'0')+':'+String(dt.getUTCMinutes()).padStart(2,'0');
+ if(t>=2025)return mo+' '+y;
+ return (t<2025.5&&Math.abs(fr-0.5)<0.01?'~':'')+y;
+}
+function draw(){
+ var W=cv.clientWidth,H=340,dpr=Math.min(2,window.devicePixelRatio||1);
+ if(cv.width!==Math.round(W*dpr)){cv.width=Math.round(W*dpr);cv.height=Math.round(H*dpr);}
+ ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,W,H);
+ var pad=16,IW=W-pad*2,axY=210;
+ function X(t){return pad+fish(uBase(t))*IW;}
+ // fold texture: where calendar is compressed (screen-dx << calendar-dx), hatch the gap
+ if(opt.fold){
+  ctx.strokeStyle='#1b2230';ctx.lineWidth=1;
+  for(var s=0;s<IW;s+=7){var uu=s/IW; // compare local screen density to calendar density
+   var tt=tOfU(/*approx*/ Math.max(0,Math.min(1,uu)));
+   var calLocal=1/(T1-T0); var t2=tOfU(Math.min(1,uu+0.01)),t1=tOfU(Math.max(0,uu-0.01));
+   var compress=(t2-t1)/( (0.02)*(T1-T0) ); // >1 => time folded here
+   if(compress>1.6){ctx.globalAlpha=Math.min(.5,(compress-1.6)*0.12);ctx.beginPath();ctx.moveTo(pad+s,axY-150);ctx.lineTo(pad+s+10,axY+8);ctx.stroke();}
+  }
+  ctx.globalAlpha=1;
+ }
+ // axis
+ ctx.strokeStyle=getC('--brd');ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(pad,axY);ctx.lineTo(W-pad,axY);ctx.stroke();
+ // ticks (real calendar marks; spacing shows the warp)
+ var ticks=specKey==='framework'?[1990,2000,2010,2020,2024,2025,2026,2026.37,2026.435,2026.44,2026.445]:[1820,1840,1860,1880,1900,1920,1940];
+ ctx.font='10px Segoe UI';ctx.textAlign='center';var lastx=-99;
+ for(var i=0;i<ticks.length;i++){if(ticks[i]<T0||ticks[i]>T1)continue;var x=X(ticks[i]);ctx.strokeStyle=getC('--brd');ctx.beginPath();ctx.moveTo(x,axY);ctx.lineTo(x,axY+5);ctx.stroke();if(x-lastx>40){ctx.fillStyle=getC('--hint');ctx.fillText(fmt(ticks[i]),x,axY+16);lastx=x;}}
+ // events — priority order: big first, then closeness to playhead
+ var px=pad+pf*IW, ord=EV.map(function(e,ix){return ix;});
+ ord.sort(function(a,b){var ea=EV[a],eb=EV[b];var pa=(ea.big?2:0)-Math.abs(X(ea.t)-px)/300;var pb=(eb.big?2:0)-Math.abs(X(eb.t)-px)/300;return pb-pa;});
+ var placed=[],rows=[axY-24,axY-42,axY-60,axY-78,axY-96,axY-114,axY-132,axY-150];
+ ctx.textAlign='left';
+ for(var oi=0;oi<ord.length;oi++){var e=EV[ord[oi]],x=X(e.t);
+  // dot
+  if(e.precise){ctx.fillStyle=e.big?getC('--green'):getC('--mut');}else{ctx.fillStyle=getC('--hint');}
+  if(!e.precise&&opt.fuzz){ctx.globalAlpha=0.5;ctx.beginPath();ctx.arc(x,axY,9,0,7);ctx.fill();ctx.globalAlpha=1;}
+  ctx.beginPath();ctx.arc(x,axY,e.big?4.5:3,0,7);ctx.fill();
+  // label with collision avoidance
+  ctx.font=(e.big?'11px':'10px')+' Segoe UI';var tw=ctx.measureText(e.label).width,done=false;
+  for(var r=0;r<rows.length&&!done;r++){var ok=true;for(var p2=0;p2<placed.length;p2++){var pb=placed[p2];if(pb[2]===r&&!(x+tw+8<pb[0]||x>pb[1]+8)){ok=false;break;}}
+   if(ok){ctx.strokeStyle=getC('--brd');ctx.beginPath();ctx.moveTo(x,axY-6);ctx.lineTo(x,rows[r]+3);ctx.stroke();
+    ctx.fillStyle=e.big?getC('--fg'):getC('--mut');if(!e.precise)ctx.fillStyle=getC('--hint');
+    ctx.fillText(e.label,x+2,rows[r]);placed.push([x,x+tw,r]);done=true;}}
+ }
+ // playhead
+ ctx.strokeStyle=getC('--accent');ctx.lineWidth=1.5;ctx.beginPath();ctx.moveTo(px,46);ctx.lineTo(px,axY+22);ctx.stroke();
+ if(opt.lens&&fstr>0.01){var lx0=pad+fish(Math.max(0,pf-0.18))*IW,lx1=pad+fish(Math.min(1,pf+0.18))*IW;ctx.globalAlpha=0.3;ctx.setLineDash([3,3]);ctx.beginPath();ctx.moveTo(lx0,axY+20);ctx.lineTo(lx0,axY+27);ctx.lineTo(lx1,axY+27);ctx.lineTo(lx1,axY+20);ctx.stroke();ctx.setLineDash([]);ctx.globalAlpha=1;}
+ // truth strip
+ if(opt.strip){
+  var sy=262,sh=20;ctx.fillStyle=getC('--brd');ctx.globalAlpha=0.22;ctx.fillRect(pad,sy,IW,sh);ctx.globalAlpha=1;
+  var bins=160,h=new Array(bins).fill(0);
+  for(i=0;i<N;i++){var b=Math.min(bins-1,Math.floor((EV[i].t-T0)/(T1-T0)*bins));h[b]++;}
+  for(b=0;b<bins;b++){if(!h[b])continue;ctx.fillStyle=getC('--green');ctx.globalAlpha=Math.min(1,0.28+h[b]*0.2);ctx.fillRect(pad+b/bins*IW,sy,Math.max(2,IW/bins),sh);}
+  ctx.globalAlpha=1;
+  var pt=tOfU(pf),cpx=pad+(pt-T0)/(T1-T0)*IW;ctx.strokeStyle=getC('--accent');ctx.beginPath();ctx.moveTo(cpx,sy-3);ctx.lineTo(cpx,sy+sh+3);ctx.stroke();
+  ctx.fillStyle=getC('--hint');ctx.font='10px Segoe UI';ctx.textAlign='left';ctx.fillText('true calendar — '+(specKey==='framework'?'decades empty, the spike is ~25 days':'evenly spread across a century'),pad,sy+sh+13);
+ }
+ // readout
+ var ptv=tOfU(pf);
+ var dx=Math.abs(X(ptv+0.0006849)-X(ptv-0.0006849)); // px per ~half-day window (0.00137yr=0.5day each side)
+ var ppd=dx/2/0.0006849/365.25*0.0006849; // px per day approx
+ var pxPerDay=dx/ (2*0.0006849*365.25);
+ var grain=pxPerDay>26?'hour-level visible':pxPerDay>3.5?'day-level':pxPerDay>0.3?'week / month':'year level';
+ document.getElementById('dOut').textContent=fmt(ptv);
+ document.getElementById('gOut').textContent='· local grain: '+grain;
+}
+var probe=document.createElement('div');probe.style.display='none';document.body.appendChild(probe);
+var cache={};
+function getC(v){if(cache[v])return cache[v];probe.style.color='var('+v+')';var c=getComputedStyle(probe).color;cache[v]=c;return c;}
+// controls
+function bind(id,k){var b=document.getElementById(id);b.addEventListener('click',function(){opt[k]=!opt[k];b.classList.toggle('on',opt[k]);draw();});}
+bind('bLens','lens');bind('bStrip','strip');bind('bFold','fold');bind('bFuzz','fuzz');
+document.getElementById('lam').addEventListener('input',function(e){lam=e.target.value/100;document.getElementById('lamV').textContent=e.target.value+'%';buildAnchors();draw();});
+document.getElementById('fish').addEventListener('input',function(e){fstr=e.target.value/10;document.getElementById('fishV').textContent=fstr.toFixed(1)+'×';draw();});
+document.getElementById('spec').addEventListener('change',function(e){load(e.target.value);pf=0.92;draw();});
+var bp=document.getElementById('bPlay');
+bp.addEventListener('click',function(){playing=!playing;bp.classList.toggle('on',playing);bp.textContent=playing?'❚❚ pause':'▶ play';if(playing)tick();});
+function tick(){if(!playing)return;pf+=0.0016;if(pf>=1){pf=1;playing=false;bp.classList.remove('on');bp.textContent='▶ play';}draw();requestAnimationFrame(tick);}
+var drag=false;
+function setP(ev){var r=cv.getBoundingClientRect(),pad=16;pf=Math.max(0,Math.min(1,(ev.clientX-r.left-pad)/(r.width-pad*2)));draw();}
+cv.addEventListener('pointerdown',function(e){drag=true;playing=false;bp.classList.remove('on');bp.textContent='▶ play';cv.setPointerCapture(e.pointerId);setP(e);});
+cv.addEventListener('pointermove',function(e){if(drag)setP(e);});
+cv.addEventListener('pointerup',function(){drag=false;});
+window.addEventListener('resize',draw);
+load('framework');draw();
+})();
+</script></body></html>
