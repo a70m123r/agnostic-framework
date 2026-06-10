@@ -1,0 +1,102 @@
+{
+  "specimen": "internet",
+  "_overlay_doc": "ADDITIVE v1 overlay for specimens/internet.json (never duplicates base data). Web-grounded 2026-06-10. All ids match base specimen ids exactly. theory_dna shares are DISCLOSED ESTIMATES (historiographic consensus), never measured bits; confidence capped at 0.5. Lifecycle dates: Baran/Davies/Pouzin spot-verified by web; remaining dates are standard biographical/institutional record (Wikipedia-grade), confidence set accordingly.",
+
+  "now_extension": [
+    { "when": "2024-05-17/20", "what": "TCP/IP at 50: IEEE Triple Milestone dedications (SRI/PARC + Computer History Museum) for the May 1974 Cerf-Kahn paper; Cerf and Kahn reflect publicly on the weld's birth.", "kind": "event", "confidence": 0.9 },
+    { "when": "2024 (reported 2025-04)", "what": "Automated traffic surpasses human traffic for the first time (51% of all web traffic, Imperva/Thales 2025 Bad Bot Report) - AI crawlers and bots become the network's majority occupant; the child's traffic mix inverts.", "kind": "event", "confidence": 0.85 },
+    { "when": "2025-01-02", "what": "US net neutrality struck down: the Sixth Circuit (applying Loper Bright, post-Chevron) vacates the FCC's 2024 Title II open-internet order - the two-decade US regulatory battle over the end-to-end/meaning-frame governance of the child ends deregulatory, absent Congress.", "kind": "event", "confidence": 0.92 },
+    { "when": "2025-07-01", "what": "Cloudflare (serving ~20% of the web) flips the open-crawl DEFAULT: AI crawlers blocked unless permitted, plus a Pay Per Crawl marketplace ('Content Independence Day') - the open-architecture default contested at the content layer; a protocol-wars-shaped open-vs-permissioned contest reopens.", "kind": "event", "confidence": 0.9 },
+    { "when": "2025-07-22", "what": "Pew: Google AI Overviews halve click-through (8% vs 15%); zero-click searches rise 56%->69% (May 2024->May 2025) - the open web's referral/traffic economic model decays as AI answer engines intermediate the harvest layer.", "kind": "decay", "confidence": 0.85 },
+    { "when": "2025-12-17", "what": "UNGA adopts the WSIS+20 outcome document: the Internet Governance Forum made a PERMANENT UN forum; multistakeholder governance reaffirmed over state-centric/multilateral alternatives - the h-governance lineage consolidates a 20-year contest.", "kind": "harvest", "confidence": 0.9 }
+  ],
+
+  "entity_lifecycles": {
+    "act-baran": { "born": "1926-04-29", "died": "2011-03-26", "confidence": 0.95 },
+    "act-davies": { "born": "1924-06-07", "died": "2000-05-28", "confidence": 0.95 },
+    "act-kleinrock": { "born": "1934-06-13", "confidence": 0.9 },
+    "act-cerf": { "born": "1943-06-23", "confidence": 0.95 },
+    "act-kahn": { "born": "1938-12-23", "confidence": 0.9 },
+    "act-pouzin": { "born": "1931-04-20", "confidence": 0.9 },
+    "act-licklider": { "born": "1915-03-11", "died": "1990-06-26", "confidence": 0.9 },
+    "act-roberts-taylor": { "born": "1932-02-10 (Taylor) / 1937-12-21 (Roberts)", "died": "2017-04-13 (Taylor) / 2018-12-26 (Roberts)", "confidence": 0.85 },
+    "act-crocker": { "born": "1944-10-15", "confidence": 0.85 },
+    "act-clark": { "born": "1944-04-07", "confidence": 0.8 },
+    "act-berners-lee": { "born": "1955-06-08", "confidence": 0.95 },
+    "act-darpa": { "founded": "1958-02-07", "confidence": 0.95 },
+    "act-ipto": { "founded": "1962", "dissolved": "1986 (folded into DARPA's ISTO)", "confidence": 0.85 },
+    "act-bbn": { "founded": "1948", "dissolved": "2009 (acquired by Raytheon; brand absorbed)", "confidence": 0.85 },
+    "act-npl": { "founded": "1900", "confidence": 0.9 },
+    "act-cyclades": { "founded": "1971", "dissolved": "1981 (network offline after 1978 defunding)", "confidence": 0.9 },
+    "act-nsf": { "founded": "1950 (NSF); NSFNET operated 1986-1995", "confidence": 0.9 },
+    "act-iab-ietf": { "founded": "1979 (ICCB; renamed IAB 1984); IETF first meeting 1986-01-16", "confidence": 0.85 },
+    "act-inwg": { "founded": "1972", "dissolved": "~1976 (effectively bypassed after the rejected compromise; lived on as IFIP WG 6.1)", "confidence": 0.8 },
+    "act-iso-ccitt": { "founded": "1947 (ISO); 1956 (CCITT, renamed ITU-T 1993)", "confidence": 0.9 },
+    "act-ptts": { "founded": "19th-20th c. national monopolies; broken up/privatized 1980s-1990s (deregulation era)", "confidence": 0.7 },
+    "act-cern": { "founded": "1954-09-29", "confidence": 0.95 },
+    "act-cisco": { "founded": "1984-12", "confidence": 0.9 },
+    "act-stanford": { "founded": "1826 (UCL) / 1885 (Stanford) / 1919 (UCLA)", "confidence": 0.85 },
+    "act-isoc": { "founded": "1992 (ISOC); 1998-09 (ICANN)", "confidence": 0.9 },
+    "child-internet": { "conceived": "1973 (Kahn's open-architecture problem)", "formulated": "1974-05 (Cerf-Kahn paper)", "named": "1974-12 (RFC 675 uses 'internet')", "confidence": 0.95 },
+    "sw-packet-concept": { "conceived": "1961-1964 (Baran's message blocks)", "formulated": "1964-1966 (Baran's On Distributed Communications; Davies' NPL design)", "named": "1965-66 ('packet' coined by Davies)", "confidence": 0.9 },
+    "sw-distributed-survivable": { "conceived": "1959-1962 (RAND survivability studies)", "formulated": "1964 (On Distributed Communications, RM-3420)", "confidence": 0.9 },
+    "sw-queueing": { "conceived": "1961 (Kleinrock MIT thesis proposal)", "formulated": "1964 (Communication Nets book)", "confidence": 0.85 },
+    "sw-datagram-root": { "conceived": "1971-72 (CYCLADES design)", "named": "~1973 ('datagram' coined by Pouzin)", "confidence": 0.85 },
+    "sw-openarch-root": { "conceived": "1972-73 (the multi-network problem: ARPANET+SATNET+PRNET)", "formulated": "1973 (Kahn's four ground rules)", "named": "retrospectively ('open architecture' fixed by Leiner et al. 1997 'Brief History')", "confidence": 0.8 },
+    "sw-e2e-root": { "conceived": "early 1970s (practiced in CYCLADES/TCP)", "formulated": "1981 (Saltzer-Reed-Clark; journal 1984)", "named": "1981 ('end-to-end arguments')", "confidence": 0.85 },
+    "sw-rfc-method": { "born": "1969-04-07 (RFC 1)", "named": "1992 ('rough consensus and running code' - Clark)", "confidence": 0.9 },
+    "sw-gateway": { "conceived": "1973-74 (Cerf-Kahn gateway concept)", "named": "'router' displaces 'gateway' from the mid-1980s; commercial product 1984- (Cisco)", "confidence": 0.85 }
+  },
+
+  "harvest_dates": {
+    "h-web": { "emerged": "1989-1991 (proposal -> info.cern.ch 1991-08)", "consolidated": "1993-1995 (CERN public domain 1993-04-30; Mosaic 1993; Netscape 1994)", "confidence": 0.9 },
+    "h-ecommerce": { "emerged": "1994-1995 (SSL 1994; Amazon + eBay 1995)", "consolidated": "early-mid 2000s (post-dot-com platform economy)", "confidence": 0.85 },
+    "h-social": { "emerged": "2003-2006 (Facebook 2004; Twitter 2006)", "consolidated": "2010-2012 (billion-user platforms; mobile feeds)", "confidence": 0.85 },
+    "h-cloud-mobile": { "emerged": "2006-2008 (AWS 2006; iPhone 2007; App Store 2008)", "consolidated": "2012-2015 (cloud-first/mobile-first norm)", "confidence": 0.85 },
+    "h-governance": { "emerged": "1998-2005 (ICANN 1998; WSIS 2003-05; IGF 2005)", "consolidated": "2013-2016 (Snowden 2013; IANA transition 2016); re-consolidated 2025-12 (WSIS+20: IGF permanent)", "confidence": 0.85 },
+    "action_spaces_unlocked[0]": { "emerged": "1991 (the Web public)", "consolidated": "1995 (mass adoption begins)", "confidence": 0.9 },
+    "action_spaces_unlocked[1]": { "emerged": "1995 (commercial Internet opens)", "consolidated": "2000s (platform economy)", "confidence": 0.85 },
+    "action_spaces_unlocked[2]": { "emerged": "1971-73 (ARPANET email, Tomlinson)", "consolidated": "1996-2003 (webmail 1996; Skype/VoIP 2003)", "confidence": 0.8 },
+    "action_spaces_unlocked[3]": { "emerged": "2006-2008 (cloud + smartphone)", "consolidated": "2010s (streaming/mobile-app norm)", "confidence": 0.85 },
+    "action_spaces_unlocked[4]": { "emerged": "2004-2006 (social platforms)", "consolidated": "2010-2016 (the networked public sphere + its pathologies)", "confidence": 0.85 },
+    "action_spaces_unlocked[5]": { "emerged": "2007-2010 (Estonia 2007; Stuxnet 2010)", "consolidated": "2013-2022 (Snowden 2013; sovereign-internet/splinternet laws)", "confidence": 0.8 },
+    "cultural_harvest[0]": { "emerged": "1990s ('cyberspace'/'information superhighway' go mainstream)", "consolidated": "2000s (networked life the default)", "confidence": 0.75 },
+    "cultural_harvest[1]": { "emerged": "1984 (Neuromancer coins 'cyberspace')", "consolidated": "1999 (The Matrix) -> 2020s (metaverse discourse)", "confidence": 0.8 },
+    "cultural_harvest[2]": { "emerged": "1969-1992 (RFC 1 -> Clark's credo)", "consolidated": "1998-2000s (open-source movement adopts the template; later 'decentralization' discourse)", "confidence": 0.75 }
+  },
+
+  "rival_fates": {
+    "rel-osi": { "fate": "faded", "when": "1994-1996 (GOSIP drops the OSI mandate 1994-95); residues absorbed into Internet practice (X.509 certificates, IS-IS routing)", "confidence": 0.85 },
+    "rel-x25": { "fate": "niche", "when": "decline from 1991 (JANET IP overtakes); legacy niches (ATMs, aviation, telemetry) into the 2000s-2010s; Transpac closed 2012", "confidence": 0.8 },
+    "rel-minitel": { "fate": "faded", "when": "2012-06-30 (service shut down, displaced by the Internet)", "confidence": 0.95 },
+    "rel-proprietary": { "fate": "absorbed", "when": "1990s (IBM/DEC adopt TCP/IP; SNA/DECnet retreat to legacy enclaves)", "confidence": 0.85 },
+    "rel-arpanet": { "fate": "absorbed", "when": "1990-02-28 (decommissioned; sites migrated into the Internet) - relation:influence in base, included for fade rendering", "confidence": 0.95 }
+  },
+
+  "theory_dna": {
+    "_basis_doc": "Shares are ESTIMATES of load-bearing contribution to child-internet, basis = historiographic consensus on component contributions (Leiner et al. 1997; Russell; Abbate-grade record; base specimen weld reading). NOT measured bits; gain_v2 numbers do not exist for this specimen. Shares sum to 1.0 with novel_residue. Confidence 0.5 (cap honored).",
+    "confidence": 0.5,
+    "parents": {
+      "pf-baran": { "load_bearing_share": 0.12, "basis": "one of two independent packet-switching roots (distributed/survivable routing); co-credited with Davies by historians + Inventors Hall of Fame" },
+      "pf-davies": { "load_bearing_share": 0.1, "basis": "independent invention + the term 'packet'; NPL design reached ARPANET via Roberts/Scantlebury" },
+      "pf-kleinrock": { "load_bearing_share": 0.04, "basis": "queueing analysis load-bearing for network performance; ORIGIN claim contested - kept low per base discrepancy[1]" },
+      "pf-kahn-openarch": { "load_bearing_share": 0.18, "basis": "the four ground rules define the child's federation architecture - the largest single architectural input" },
+      "pf-datagram": { "load_bearing_share": 0.14, "basis": "connectionless IP core IS CYCLADES' datagram carried forward (Cerf-Kahn 1974 acknowledgment)" },
+      "pf-e2e": { "load_bearing_share": 0.1, "basis": "the thin-waist/host-intelligence design spine (practiced in CYCLADES/TCP; articulated Saltzer-Reed-Clark 1981)" }
+    },
+    "novel_residue": { "share": 0.32, "basis": "the internetworking synergy itself: gateway architecture + TCP/IP engineering + federation-without-central-control, unreachable from any parent alone (the base weld's joint-surprise). Conceptually the gain_v2 quantity, rendered ONLY as a disclosed estimate" }
+  },
+
+  "sources": [
+    { "name": "Wikipedia 'Paul Baran' / Britannica 'Donald Davies'", "year": 2026, "what_used_for": "Baran 1926-2011, Davies 1924-2000 (web-verified)", "url": "https://en.wikipedia.org/wiki/Paul_Baran" },
+    { "name": "Wikipedia 'Louis Pouzin' (accessed 2026; page current to 2026-01)", "year": 2026, "what_used_for": "Pouzin b. 1931-04-20, living", "url": "https://en.wikipedia.org/wiki/Louis_Pouzin" },
+    { "name": "IEEE Region 6 / The New Stack - TCP/IP 50th anniversary Triple Milestone events", "year": 2024, "what_used_for": "now_extension 2024-05 anniversary event", "url": "https://ieee-region6.org/2024/ieee-triple-milestone-event-50th-anniversary-internet-tcp-ip/" },
+    { "name": "NPR / Sixth Circuit, In re MCP No. 185 (Open Internet Rule)", "year": 2025, "what_used_for": "net neutrality vacated 2025-01-02 (Loper Bright applied)", "url": "https://www.npr.org/2025/01/03/nx-s1-5247840/net-neutrality-fcc-struck" },
+    { "name": "Cloudflare press release + Nieman Lab - AI crawlers blocked by default, Pay Per Crawl", "year": 2025, "what_used_for": "now_extension 2025-07-01 open-crawl default flip", "url": "https://blog.cloudflare.com/content-independence-day-no-ai-crawl-without-compensation/" },
+    { "name": "Imperva/Thales 2025 Bad Bot Report", "year": 2025, "what_used_for": "automated traffic 51% of web traffic in 2024 (first majority)", "url": "https://cpl.thalesgroup.com/about-us/newsroom/2025-imperva-bad-bot-report-ai-internet-traffic" },
+    { "name": "Pew Research Center - Google users less likely to click with AI summaries", "year": 2025, "what_used_for": "AI Overviews halve click-through; zero-click rise 56%->69%", "url": "https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/" },
+    { "name": "Internet Society blog + ICANN blog - WSIS+20 outcome adopted by UNGA", "year": 2025, "what_used_for": "2025-12-17 adoption; IGF made permanent; multistakeholder reaffirmed", "url": "https://www.internetsociety.org/blog/2025/12/wsis20-reaffirms-multistakeholder-governance-and-a-lasting-igf/" },
+    { "name": "Base specimen sources (Wikipedia 'Protocol Wars', 'CYCLADES', 'Minitel'; Russell IEEE Spectrum) - already web-checked in specimens/internet.json", "year": 2026, "what_used_for": "rival-fate dates (GOSIP drop 1994-95; JANET 1991; Minitel shutdown 2012; ARPANET decommission 1990)", "url": "https://en.wikipedia.org/wiki/Protocol_Wars" },
+    { "name": "Standard biographical/institutional record (Wikipedia biography + institution pages; training-grounded, three anchors spot-verified by web)", "year": 2026, "what_used_for": "remaining entity_lifecycles dates (Kleinrock, Cerf, Kahn, Licklider, Taylor/Roberts, Crocker, Clark, Berners-Lee; DARPA/IPTO/BBN/NPL/CERN/Cisco/ISOC/ICANN/IETF founding dates); confidences set 0.7-0.95 accordingly", "url": "https://en.wikipedia.org/wiki/History_of_the_Internet" }
+  ]
+}

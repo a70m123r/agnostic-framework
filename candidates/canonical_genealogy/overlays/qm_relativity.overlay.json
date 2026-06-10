@@ -1,0 +1,89 @@
+{
+  "specimen": "qm_relativity",
+  "_base_specimen_id": "quantum-gravity",
+  "_comment": "ADDITIVE overlay for specimens/qm_relativity.json — web-grounded 2024-2026 NOW refresh, entity lifecycles, harvest consolidation dates, rival fates, theory-DNA estimates. NEVER duplicates base data. All shares/fates are DISCLOSED ESTIMATES, not measured bits. Keys match base specimen identifiers exactly (people_0[].who, weld.parents[].name, harvest.descendants[].name, relatives.edges[].name; indexed arrays keyed as field[i]).",
+  "generated": "2026-06-10",
+
+  "now_extension": [
+    {"when": "2024-01-25", "what": "ESA formally ADOPTS the LISA mission (launch ~2035, Ariane 6): the mHz gravitational-wave window — massive-black-hole mergers across cosmic history — moves from concept to funded construction. The seam's empirical arena keeps growing.", "kind": "event", "confidence": 0.9},
+    {"when": "2024-04", "what": "LHAASO GRB 221009A Lorentz-invariance-violation constraints published (JCAP 04(2024)060; arXiv:2402.06009): linear-LIV quantum-gravity energy scale bounded ABOVE ~10x the Planck energy — QG phenomenology (the ~1997 action-space) now delivering real super-Planckian bounds.", "kind": "harvest", "confidence": 0.85},
+    {"when": "2024-08", "what": "Tobar-Manikandan-Beitel-Pikovski (Nature Communications 2024): single-GRAVITON detection via quantum sensing (acoustic resonator + superfluid He, gravito-phononic ground state) argued feasible in near-future experiments — face (1) of the seam S edges toward the lab.", "kind": "event", "confidence": 0.85},
+    {"when": "2024", "what": "Oppenheim's 'postquantum theory of classical gravity' (PRX 13, 041040, Dec 2023) mainstreams through 2024 (APS Physics viewpoint; PBS Spacetime Aug 2024): consistent CLASSICAL spacetime + quantum matter via stochastic metric fluctuations, with a decoherence-vs-diffusion experimental trade-off — the Rosenfeld semiclassical DISSENT line revived as a testable rival.", "kind": "revival", "confidence": 0.8},
+    {"when": "2025-02", "what": "UN/UNESCO International Year of Quantum Science and Technology opens in Paris (4-5 Feb 2025): the W_B parent's CENTENARY (Heisenberg's 1925 Umdeutung) — parent turns 100 with the weld still unconsummated.", "kind": "event", "confidence": 0.95},
+    {"when": "2025-11", "what": "General Relativity turns 110 (Nov 1915 field equations): the W_A parent's anniversary anchor — the seam first noticed 1916 is now ~109-110 years open, the longest-running unconsummated weld in the dataset.", "kind": "event", "confidence": 0.9},
+    {"when": "2025-12", "what": "Laser-interferometric proposal to measure graviton-scale energy exchange between light and the gravitational field (phys.org Dec 2025): a second independent route to single-graviton signatures.", "kind": "event", "confidence": 0.6},
+    {"when": "2026", "what": "Holography canopy stays the most active growth: celestial-holography results (Nordita 2026) and the 'Black Hole Horizons and Beyond' workshop (Durham, July 2026) on singularities/interiors via dual QFTs — the grandchild keeps outgrowing the unborn child.", "kind": "harvest", "confidence": 0.7}
+  ],
+
+  "entity_lifecycles": {
+    "Albert Einstein": {"born": 1879, "died": 1955, "confidence": 0.98},
+    "Oskar Klein": {"born": 1894, "died": 1977, "confidence": 0.92},
+    "Leon Rosenfeld": {"born": 1904, "died": 1974, "confidence": 0.92},
+    "Markus Fierz & Wolfgang Pauli": {"born": 1900, "died": 2006, "confidence": 0.85, "_note": "Group envelope: Pauli 1900-1958; Fierz 1912-2006."},
+    "Matvei Petrovich Bronstein": {"born": 1906, "died": 1938, "confidence": 0.95, "_note": "Executed by NKVD Feb 1938 (base discrepancies[3])."},
+    "George Gamow, Dmitri Ivanenko, Lev Landau": {"born": 1904, "died": 1994, "confidence": 0.8, "_note": "Group envelope: Gamow 1904-1968; Ivanenko 1904-1994; Landau 1908-1968."},
+    "Peter Bergmann & Paul Dirac": {"born": 1902, "died": 2002, "confidence": 0.85, "_note": "Group envelope: Dirac 1902-1984; Bergmann 1915-2002."},
+    "Bryce DeWitt & John Archibald Wheeler": {"born": 1911, "died": 2008, "confidence": 0.9, "_note": "Group envelope: Wheeler 1911-2008; DeWitt 1923-2004."},
+    "Richard Feynman & Bryce DeWitt": {"born": 1918, "died": 2004, "confidence": 0.9, "_note": "Group envelope: Feynman 1918-1988; DeWitt 1923-2004."},
+    "Roger Penrose": {"born": 1931, "confidence": 0.95, "_note": "Living (Nobel 2020). No died date."},
+    "Gerard 't Hooft & Martinus Veltman": {"born": 1931, "confidence": 0.9, "_note": "Group envelope: Veltman 1931-2021; 't Hooft b.1946, living — group died omitted."},
+    "Jacob Bekenstein & Stephen Hawking": {"born": 1942, "died": 2018, "confidence": 0.92, "_note": "Group envelope: Hawking 1942-2018; Bekenstein 1947-2015."},
+    "John Schwarz, Joel Scherk, Tamiaki Yoneya, Michael Green": {"born": 1941, "confidence": 0.8, "_note": "Group envelope: Schwarz b.1941, Scherk 1946-1980, Green b.1946, Yoneya b.1947; three living — group died omitted."},
+    "Amitabha Sen, Abhay Ashtekar, Ted Jacobson, Carlo Rovelli, Lee Smolin": {"born": 1949, "confidence": 0.75, "_note": "Group envelope: Ashtekar b.1949, Jacobson b.1954, Smolin b.1955, Rovelli b.1956; Sen's birth year not reliably sourced. All living."},
+    "Juan Maldacena & Leonard Susskind": {"born": 1940, "confidence": 0.85, "_note": "Group envelope: Susskind b.1940, Maldacena b.1968. Both living."},
+    "Quantum gravity (sought / conjectured — NO settled child yet)": {"conceived": 1916, "formulated": 1935, "named": 1934, "confidence": 0.8, "_note": "Conceived = Einstein's 1916 quantum-effects-must-modify-GR remark; formulated = Bronstein 1935-36 first background-aware quantization; named = 'graviton' coined 1934 (Blokhintsev-Galperin, per base); the field-name 'quantum gravity' settled into routine use only ~1950s-60s."},
+    "General Relativity (Einstein 1915)": {"conceived": 1907, "formulated": 1915, "named": 1916, "confidence": 0.95, "_note": "Conceived = equivalence principle ('happiest thought') 1907; formulated = field equations Nov 1915; named = 'allgemeine Relativitaetstheorie' in Einstein's 1916 review."},
+    "Quantum Mechanics / Quantum Field Theory (1925-26 QM; QED/QFT 1927-1950s)": {"conceived": 1900, "formulated": 1925, "named": 1924, "confidence": 0.9, "_note": "Conceived = Planck's quantum 1900; formulated = matrix mechanics 1925 / wave mechanics 1926; named = 'Quantenmechanik' coined by Born (1924)."},
+    "Special Relativity (Einstein 1905; Lorentz-Poincare lineage)": {"conceived": 1905, "formulated": 1905, "named": 1906, "confidence": 0.8, "_note": "Named = Planck's 'Relativtheorie' 1906, 'theory of relativity' common by 1907; Minkowski geometry 1908."},
+    "Penrose spin networks / SU(2) recoupling (tooling sub-wrapper, became load-bearing in LQG)": {"conceived": 1964, "formulated": 1971, "named": 1971, "confidence": 0.85, "_note": "Drawn ~1964 (manuscript), published+named 1971; revival 1988-90 already in base dormancy/revival."}
+  },
+
+  "harvest_dates": {
+    "String theory -> superstrings -> M-theory": {"emerged": 1974, "consolidated": 1984, "confidence": 0.85, "_note": "Emerged = graviton-in-spectrum reinterpretation; consolidated = first superstring revolution (Green-Schwarz); M-theory 1995."},
+    "Loop quantum gravity -> spin foam models + loop quantum cosmology": {"emerged": 1986, "consolidated": 1995, "confidence": 0.8, "_note": "Emerged = Ashtekar variables; consolidated = discrete area/volume spectra 1994-95; LQC bounce ~2001."},
+    "Sum-over-histories line: causal dynamical triangulations (CDT), causal set theory, Euclidean / Hartle-Hawking quantum cosmology": {"emerged": 1983, "consolidated": 1998, "confidence": 0.7, "_note": "Emerged = no-boundary proposal 1983 (causal sets 1987); consolidated = CDT program late 1990s."},
+    "Holographic principle -> AdS/CFT -> 'spacetime emergent from entanglement' (THE richest grandchild)": {"emerged": 1993, "consolidated": 2006, "confidence": 0.85, "_note": "Emerged = 't Hooft 1993/Susskind 1995; Maldacena 1997; consolidated = Ryu-Takayanagi 2006 makes entanglement-geometry a working toolkit; islands/replica wormholes 2019-22 extend it."},
+    "Effective field theory of gravity (Donoghue) — the modest, AGREED descendant": {"emerged": 1994, "consolidated": 2017, "confidence": 0.75, "_note": "Emerged = Donoghue 1994; consolidated = settled review-canon/textbook status by late 2010s (soft date)."},
+    "Quantum-gravity phenomenology (adjacent field seeded, born ~1997)": {"emerged": 1997, "consolidated": 2024, "confidence": 0.7, "_note": "Emerged = Amelino-Camelia et al. 1997-98; consolidated = LHAASO GRB 221009A bounds (2024) push linear-LIV scale past 10x Planck energy — the field now produces decisive super-Planckian constraints."},
+    "action_spaces_unlocked[0]": {"emerged": 1936, "consolidated": 1957, "confidence": 0.6, "_note": "Planck-scale regime addressable: Bronstein 1935-36; consolidated around Wheeler's foam / canonical Planck-units framing late 1950s."},
+    "action_spaces_unlocked[1]": {"emerged": 1973, "consolidated": 1996, "confidence": 0.75, "_note": "BH thermodynamics/information: Bekenstein 1973-Hawking 1974; consolidated = Strominger-Vafa microstate count 1996; renewed by islands 2019-."},
+    "action_spaces_unlocked[2]": {"emerged": 1993, "consolidated": 2006, "confidence": 0.8, "_note": "Holography action-space; same dating as the AdS/CFT descendant."},
+    "action_spaces_unlocked[3]": {"emerged": 1997, "consolidated": 2017, "confidence": 0.7, "_note": "QG phenomenology: emerged 1997; consolidated = Bose-Marletto-Vedral tabletop proposals 2017 give it a lab program; 2024 graviton-sensing proposals extend it."},
+    "action_spaces_unlocked[4]": {"emerged": 1967, "consolidated": 1983, "confidence": 0.7, "_note": "Quantum cosmology: Wheeler-DeWitt 1967; consolidated = Hartle-Hawking no-boundary 1983; LQC bounces ~2001."},
+    "action_spaces_unlocked[5]": {"emerged": 1994, "consolidated": 2017, "confidence": 0.7, "_note": "EFT of gravity: same dating as the Donoghue descendant."},
+    "cultural_harvest[0]": {"emerged": 1985, "consolidated": 2014, "confidence": 0.85, "_note": "Wormholes in fiction: Contact (novel, 1985, Thorne consulting); consolidated = Interstellar (2014, Gargantua render -> physics paper)."},
+    "cultural_harvest[1]": {"emerged": 1997, "consolidated": 2011, "confidence": 0.5, "_note": "Holographic-universe trope diffused post-AdS/CFT; mainstream pop-science by ~2010s. Soft dates."},
+    "cultural_harvest[2]": {"emerged": 1955, "consolidated": 2005, "confidence": 0.5, "_note": "Quantum-foam/granular-space imagery: Wheeler's foam 1955; sci-art/museum shorthand by ~2000s. Soft dates."},
+    "cultural_harvest[3]": {"emerged": 1986, "consolidated": 2014, "confidence": 0.75, "_note": "'Theory of Everything' phrase: physics-popular usage mid-1980s (Ellis, Nature 1986); consolidated = the 2014 film."}
+  },
+
+  "rival_fates": {
+    "_note": "HONEST INVERSION of the rival-fade rule: because this weld never hardened (no settled W_C), NO rival has faded by defeat — the frontier keeps all rivals alive. The viewer's decay law should read these fates, not apply the settled-weld default decay.",
+    "Asymptotic safety (Weinberg's program)": {"fate": "persists", "when": 1976, "confidence": 0.7, "_note": "Conjectured 1976-79; active FRG community through the 2020s. Unresolved candidate, not defeated."},
+    "Twistor theory (Penrose)": {"fate": "absorbed", "when": 2004, "confidence": 0.55, "_note": "Largely absorbed into the scattering-amplitudes program (twistor strings 2004; amplituhedron 2013); persists as a tool-lineage more than a rival child."},
+    "Noncommutative geometry (Connes)": {"fate": "niche", "when": 1994, "confidence": 0.55, "_note": "Steady small program since the 1990s; neither growing into a candidate child nor dying."},
+    "Semiclassical gravity (Rosenfeld -> Mattingly)": {"fate": "persists", "when": 2023, "confidence": 0.7, "_note": "REVIVED, not faded: Oppenheim's postquantum classical gravity (PRX Dec 2023) + decoherence-vs-diffusion test makes the no-weld-needed dissent newly testable. Cross-ref now_extension[3]."}
+  },
+
+  "theory_dna": {
+    "_note": "FRONTIER CAVEAT: the child is UNCONSUMMATED, so this DNA is for the SOUGHT child, averaged over rival candidates — the rivals weight the parents differently (string/covariant: QFT-heavy ~0.45/0.25; LQG/canonical: GR-heavy ~0.45/0.25). Shares are historiographic ESTIMATES (confidence ~0.5, never >0.6), conceptually the gain_v2 quantity but NOT measured bits — no gain_v2 numbers exist for this specimen.",
+    "parents": {
+      "General Relativity (Einstein 1915)": {"load_bearing_share": 0.35, "basis": "Estimate (confidence 0.5): every candidate must reproduce GR as the IR limit (base survived[]), and GR's background-independence is the canonical line's primary commitment; historiographic consensus that the geometric kernel is one of two co-equal load-bearing halves."},
+      "Quantum Mechanics / Quantum Field Theory (1925-26 QM; QED/QFT 1927-1950s)": {"load_bearing_share": 0.35, "basis": "Estimate (confidence 0.5): mirror requirement — exact QFT recovery in the flat/no-gravity limit, operator/probabilistic kernel, and the covariant line's entire perturbative machinery; co-equal with GR by the same consensus."}
+    },
+    "novel_residue": {"share": 0.30, "basis": "Estimate (confidence 0.5): the joint-only products neither parent contains — problem of time, S=A/4 area-law compression, discrete area/volume spectra, spacetime-from-entanglement holography. PROSPECTIVE residue: it measures what the search has surfaced, since the child itself is unborn; disclosed proxy, not measured synergy bits."}
+  },
+
+  "sources": [
+    {"name": "NASA Science — 'LISA Formally Adopted by European Space Agency'", "year": 2024, "url": "https://science.nasa.gov/astrophysics/programs/physics-of-the-cosmos/community/lisa-formally-adopted-by-european-space-agency/", "used_for": "now_extension[0]"},
+    {"name": "Yi et al. / LHAASO, 'Stringent Tests of Lorentz Invariance Violation from LHAASO Observations of GRB 221009A' (arXiv:2402.06009; JCAP 04(2024)060)", "year": 2024, "url": "https://arxiv.org/abs/2402.06009", "used_for": "now_extension[1]; harvest_dates QG-phenomenology consolidation"},
+    {"name": "Stevens Institute news — Tobar, Manikandan, Beitel, Pikovski single-graviton detection (Nature Communications)", "year": 2024, "url": "https://www.stevens.edu/news/new-research-suggests-a-way-to-capture-physicists-most-wanted-particle", "used_for": "now_extension[2]"},
+    {"name": "Oppenheim, 'A Postquantum Theory of Classical Gravity?', Phys. Rev. X 13, 041040", "year": 2023, "url": "https://link.aps.org/doi/10.1103/PhysRevX.13.041040", "used_for": "now_extension[3]; rival_fates semiclassical revival"},
+    {"name": "APS Physics viewpoint — 'Might There Be No Quantum Gravity After All?'", "year": 2023, "url": "https://physics.aps.org/articles/v16/203", "used_for": "now_extension[3] framing"},
+    {"name": "UNESCO — International Year of Quantum Science and Technology 2025 (UN proclamation 7 Jun 2024; Paris opening 4-5 Feb 2025)", "year": 2025, "url": "https://www.unesco.org/en/years/quantum-science-technology", "used_for": "now_extension[4]"},
+    {"name": "phys.org — 'Laser light and the quantum nature of gravity' (graviton energy-exchange proposal)", "year": 2025, "url": "https://phys.org/news/2025-12-laser-quantum-nature-gravity-graviton.html", "used_for": "now_extension[6]"},
+    {"name": "Nordita news — 'New insights into quantum gravity through celestial holography'", "year": 2026, "url": "https://nordita.org/news-archive/news-2026/new-insights-into-quantum-gravity-through-celestial-holography/", "used_for": "now_extension[7]"},
+    {"name": "Indico Global — 'Black Hole Horizons and Beyond: New Frontiers in Gravity and Holography' (Durham, 15-17 Jul 2026)", "year": 2026, "url": "https://indico.global/event/17195/", "used_for": "now_extension[7]"},
+    {"name": "Biographical/lifecycle dates — standard reference values (Wikipedia/encyclopedic canon), NOT individually re-fetched this pass", "year": 2026, "url": "https://en.wikipedia.org/wiki/Quantum_gravity", "used_for": "entity_lifecycles; singles held at 0.92-0.98, group envelopes 0.75-0.9, soft cultural dates 0.5 — disclosed honestly per entry"}
+  ]
+}

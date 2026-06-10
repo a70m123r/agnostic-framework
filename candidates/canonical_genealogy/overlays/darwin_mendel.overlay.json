@@ -1,0 +1,62 @@
+{
+  "_doc": "ADDITIVE overlay for specimen darwin_mendel (base: ../specimens/darwin_mendel.json). Adds NOW-refresh (2024-2026) events, web-grounded entity lifecycle dates incl. idea conception/formulation/naming, consolidation dates for harvest/action-space items, rival fates, and DISCLOSED-PROXY theory_dna shares. NEVER duplicates base fields. Keys match base ids EXACTLY (roots.people_0[].who, weld.parents[].name, relatives.edges[].name, harvest.*.name/domain). theory_dna shares are ESTIMATES (historiographic consensus), not measured bits; all confidences SOFT in [0,1].",
+  "specimen": "darwin_mendel",
+  "web_grounded": true,
+  "_now_anchor": "2026-06",
+
+  "now_extension": [
+    {"when": "2022-2024", "what": "Mendel bicentennial (b. 20 Jul 1822) drove a wave of reappraisal scholarship — PNAS 'Mendel and Darwin' / 'Lock and Key in Evolutionary Biology' series and Frontiers bicentennial editorials reframing Mendel as the inheritance mechanism Darwin lacked; revives the dormancy/role-reframing question in this specimen.", "kind": "event", "confidence": 0.85},
+    {"when": "2024", "what": "Extended Evolutionary Synthesis (EES) debate consolidated philosophically — Shan 2024 (Philosophy Compass) maps the EES-vs-Modern-Synthesis dispute across three domains (empirical epigenetics, historical characterization, conceptual) and argues they are distinct but NOT incommensurable paradigms. Keeps W_C 'active-contested', not closed.", "kind": "event", "confidence": 0.8},
+    {"when": "2025", "what": "A 'survival of the luckiest' framework (2025) critiques BOTH the Modern and Extended syntheses for under-weighting additional randomness/contingency beyond drift — a new contesting child pressing on the selection-centric core.", "kind": "event", "confidence": 0.65},
+    {"when": "2024-2025", "what": "Ancient-DNA polygenic-score studies (e.g. directional selection on polygenic traits in eastern Eurasia; allelic-turnover effects on PRS accuracy, Am J Hum Genet 2025) extend Fisher's 1918 infinitesimal model into deep-time selection inference — the action_space 'GWAS/quantitative genetics' lineage actively harvesting in 2024-26.", "kind": "harvest", "confidence": 0.8},
+    {"when": "2024-2026", "what": "Epigenetic / transgenerational-inheritance results keep the once-dropped Lamarckian rival in partial, mechanistically-bounded revival via the EES (niche construction, developmental plasticity, epigenetic inheritance) — a disclosed niche persistence of a defeated rival, not a return of soft heredity.", "kind": "revival", "confidence": 0.6}
+  ],
+
+  "entity_lifecycles": {
+    "Gregor (Johann) Mendel": {"born": "1822-07-20", "formulated": "1856-1863 (pea experiments)", "named": "1865-02-08/1865-03-08 presented; 1866 published 'Versuche ueber Pflanzen-Hybriden'", "died": "1884-01-06", "confidence": 0.97},
+    "Charles Darwin": {"born": "1809-02-12", "conceived": "1838 (reads Malthus; selection idea)", "formulated": "1842/1844 essays", "named": "1859-11-24 ('natural selection' published in On the Origin of Species)", "died": "1882-04-19", "confidence": 0.98},
+    "Alfred Russel Wallace": {"born": "1823-01-08", "formulated": "1858 (Ternate essay)", "named": "1858-07-01 (joint Darwin-Wallace announcement)", "died": "1913-11-07", "confidence": 0.92},
+    "Carl von Naegeli": {"born": "1817-03-27", "died": "1891-05-10", "confidence": 0.85},
+    "R.A. Fisher (1890-1962, England), J.B.S. Haldane (1892-1964, England), Sewall Wright (1889-1988, USA)": {"born": "Fisher 1890-02-17 / Haldane 1892-11-05 / Wright 1889-12-21", "formulated": "Fisher 1918 (reconciliation paper); Fisher 1930, Haldane 1924-32, Wright 1931-32 (population genetics)", "died": "Fisher 1962-07-29 / Haldane 1964-12-01 / Wright 1988-03-03", "confidence": 0.9},
+    "Theodosius Dobzhansky (1900-75, Ukraine->USA), Ernst Mayr (1904-2005, Germany->USA), George Gaylord Simpson (1902-84, USA), G. Ledyard Stebbins (1906-2000, USA), Julian Huxley (1887-1975, England), E.B. Ford (England)": {"formulated": "Dobzhansky 1937; Mayr 1942; Simpson 1944; Stebbins 1950", "named": "Huxley 1942 coined 'modern synthesis' / 'evolutionary synthesis' (Evolution: The Modern Synthesis)", "confidence": 0.9},
+    "The Modern Synthesis (neo-Darwinian synthesis / synthetic theory of evolution / 'evolutionary synthesis')": {"conceived": "1918 (Fisher mathematical origin)", "formulated": "1930-1937 (pop-genetics trio; Dobzhansky 1937)", "named": "1942 (Huxley)", "confidence": 0.92},
+    "Mendelian genetics / particulate inheritance": {"conceived": "1865-1866 (Mendel)", "formulated": "1900 (rediscovery; de Vries/Correns/Tschermak)", "named": "1905 ('genetics' coined by William Bateson); 'gene' coined by Johannsen 1909", "confidence": 0.85}
+  },
+
+  "harvest_dates": {
+    "The biological species concept (Mayr 1942)": {"emerged": "1942", "consolidated": "1942-1963 (Mayr, Animal Species and Evolution 1963)", "confidence": 0.9},
+    "Molecular-clock and neutral tests (Kimura 1968 onward)": {"emerged": "1968", "consolidated": "1968-1983 (Kimura, The Neutral Theory of Molecular Evolution, 1983)", "confidence": 0.85},
+    "Quantitative prediction of selection response (breeder's equation, heritability h^2)": {"emerged": "1918 (Fisher infinitesimal model)", "consolidated": "1930s-1960s (Lush animal breeding; Falconer 1960)", "confidence": 0.85},
+    "GWAS / quantitative + medical genetics": {"emerged": "2005-2007 (first GWAS)", "consolidated": "2007-2020s; actively extended 2024-2025 by ancient-DNA polygenic-selection studies", "confidence": 0.8},
+    "Evolutionary/genetic algorithms in computer science (Holland 1975)": {"emerged": "1975 (Holland, Adaptation in Natural and Artificial Systems)", "consolidated": "1975-1992 (Holland 1992; Goldberg 1989); the BES convergence #9 lineage", "confidence": 0.8},
+    "Neutral theory of molecular evolution": {"emerged": "1968 (Kimura)", "consolidated": "1969-1983 (King & Jukes 1969; Kimura 1983)", "confidence": 0.85},
+    "Extended Evolutionary Synthesis (EES)": {"emerged": "2007 (Pigliucci & Mueller)", "consolidated": "2015-2024 (Laland et al. 2015; Shan 2024 philosophical mapping); still open", "confidence": 0.8},
+    "EUGENICS (cultural_harvest, domain other)": {"emerged": "1883 (Galton coins 'eugenics')", "consolidated": "1900s-1940s (Fisher 1930 eugenic chapters; state sterilization/Nazi programs); discredited post-1945", "confidence": 0.85}
+  },
+
+  "rival_fates": {
+    "Lamarckism / neo-Lamarckism (inheritance of acquired characters)": {"fate": "niche", "when": "defeated ~1900-1950 (Weismann's hard heredity); partial mechanistically-bounded niche revival via epigenetics/EES 2007-2026", "confidence": 0.8},
+    "Mendel-Fisher controversy (Fisher 1936: 'too good to be true' data)": {"fate": "persists", "when": "1936-2026 (live historiographic dispute; not resolved)", "confidence": 0.7},
+    "Symbiogenesis / endosymbiotic theory (convergence #3 in the Phase-1 DB)": {"fate": "absorbed", "when": "vindicated 1967-1981 (Margulis); now canonical, a cousin not a rival", "confidence": 0.85},
+    "Mutationism (de Vries's mutation theory; Bateson's discontinuous variation)": {"fate": "faded", "when": "saltationist mechanism faded ~1918-1942 (Fisher weld); discrete-factor core absorbed into S", "confidence": 0.8}
+  },
+
+  "theory_dna": {
+    "_basis_note": "DISCLOSED PROXY. Shares are ESTIMATES of load-bearing contribution to W_C's kernel, grounded in historiographic consensus that the proximate weld was BUILT by population genetics (Fisher/Haldane/Wright) on Darwin+Mendel deep roots — NOT measured gain_v2 bits (no real-corpus pilot exists for this specimen). Shares sum to 1.0 across parents+residue by construction; confidence <= 0.6.",
+    "parents": {
+      "Darwinian evolution by natural selection": {"load_bearing_share": 0.40, "basis": "Supplies the SELECTION mechanism + descent-with-modification frame; the explanatory engine W_C inherits whole (Provine; Wikipedia 'Modern synthesis'). Estimate, not measured."},
+      "Mendelian genetics / particulate inheritance": {"load_bearing_share": 0.35, "basis": "Supplies the DISCRETE, non-blending inheritance that rescues selection from the Jenkin blending objection; the conserved variation selection acts on. Estimate from historiographic consensus."}
+    },
+    "novel_residue": {"share": 0.25, "basis": "The SYNERGY byproduct reachable from neither parent alone: Fisher 1918's many-small-loci-sum-to-continuous-variation bridge + Hardy-Weinberg conservation law + the redefinition of 'evolution' as allele-frequency change. Conceptually the gain_v2 quantity; rendered as a disclosed proxy from surprise_confidence (0.9) and the unreachable-reconciliation surprise term, never as measured bits.", "confidence": 0.55}
+  },
+
+  "sources": [
+    {"name": "Shan, 'The extended evolutionary synthesis: an integrated historical and philosophical examination', Philosophy Compass 2024", "url": "https://compass.onlinelibrary.wiley.com/doi/10.1111/phc3.13002", "year": 2024, "used_for": "NOW EES debate consolidation; distinct-but-not-incommensurable framing"},
+    {"name": "'The Extended vs. The Modern Synthesis of Evolutionary Theory', MDPI Philosophies 2025; 'survival of the luckiest' critique", "url": "https://www.mdpi.com/2409-9287/10/3/58", "year": 2025, "used_for": "NOW 2025 contesting child; added-randomness critique"},
+    {"name": "'Natural selection acting on complex traits hampers PRS accuracy in ancient samples', Am J Hum Genet 2025 (bioRxiv 2024)", "url": "https://www.sciencedirect.com/science/article/pii/S0002929725001909", "year": 2025, "used_for": "NOW ancient-DNA polygenic-selection harvest extending Fisher 1918"},
+    {"name": "'Directional Selection and Evolution of Polygenic Traits in Eastern Eurasia: Insights from Ancient DNA', Twin Research & Human Genetics", "url": "https://www.cambridge.org/core/journals/twin-research-and-human-genetics/article/10AE9628ED6E7F2B4B1E72F30D64D4AA", "year": 2024, "used_for": "NOW deep-time polygenic-score selection (action_space GWAS lineage)"},
+    {"name": "PNAS Mendel-bicentennial series ('Mendel and Darwin'; 'Lock and Key in Evolutionary Biology'; Gregor Mendel & modern evolutionary biology)", "url": "https://www.pnas.org/doi/10.1073/pnas.2122144119", "year": 2022, "used_for": "Mendel 200th-anniversary NOW reappraisal; lifecycle date 1822-07-20"},
+    {"name": "Wikipedia, 'Natural selection' / 'Modern synthesis (20th century)' / 'Infinitesimal model'", "url": "https://en.wikipedia.org/wiki/Modern_synthesis_(20th_century)", "year": 2026, "used_for": "Coinage dates (natural selection 1859; modern synthesis Huxley 1942; biological species concept Mayr 1942); Fisher 1918 infinitesimal model"},
+    {"name": "Wikipedia, 'Gregor Mendel' / 'Charles Darwin' / 'Alfred Russel Wallace' / 'Carl von Naegeli'", "url": "https://en.wikipedia.org/wiki/Gregor_Mendel", "year": 2026, "used_for": "Actor born/died dates; 'genetics' (Bateson 1905) and 'gene' (Johannsen 1909) coinage"}
+  ]
+}

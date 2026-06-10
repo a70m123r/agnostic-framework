@@ -8,6 +8,18 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-06-10 — genealogy VIEWER v1: all 8 of Pav's test-drive asks (harvest band, lifecycles, depth dial, NOW, agnostic-ratio meter, global view, rival fade + connection fix, encompass/theory-DNA)
+
+Pav's v0 test-drive feedback built as `candidates/canonical_genealogy/viewer_v1.html` + 7 web-grounded `overlays/*.overlay.json` (additive; ratified specimens untouched) + VIEWER_SPEC.md v1 addendum. 12-agent workflow (Fable work / Opus skeptic, which scored all 8 asks MET from the code); browser-verified. Tier-3 render tool; list stays 9.
+- **Harvest band** (the missing latent→physical net outcome): descendants, art/sci-fi/tech spill, action_spaces_unlocked render above the latent band with feedback arcs back into the physical (the action-space-expanding loop); data was already in the schema, unrendered.
+- **Entity lifecycles** (web-grounded overlay dates): actors/ideas fade in at conceived/born/founded, formulate→named transitions, deceased fade to outline; hover lifecycle strip.
+- **Depth/context dial**; **opens at NOW (2026-06)** with 2024–26 refresh events + NOW marker; **rival fade** per researched fates (faded/absorbed/persists/niche); **parent→unifier connection fix** (brightness-floor weld edges + spark at fire — the v0 Maxwell bug).
+- **Encompass/absorption + THEORY DNA**: at weld-fire parents are drawn into the child membrane as lobes scaled by load-bearing-share estimates, receptor-hook stubs poke out, novel residue = the rest; per-child DNA bar (parent shares | novel) tagged "estimate · not measured bits".
+- **Honest math answers in the spec**: blobs are gaussian splats not wavelets; v0 meter was certain-core mass, NOT MDL/gain_v2 (no such numbers exist yet — pilot owed); v1 meter rewired to the agnostic-units frame-relative ratio, disclosed; wavelets noted as the principled multi-resolution future basis. **Normalization**: global view normalizes sizes/confidences per-specimen to agnostic ratios (dates were already absolute).
+- Robustness fold after live verification: NaN-safe blob gate + terminal opacity zero-snap (occluded-window rAF throttling freezes fades mid-decay between automation actions — environment, not code; verified animating when foregrounded).
+
+---
+
 ## 2026-06-10 — the COMPILED SUBSTRATE: Sonnet-fleet data harvest + provenance-logged fact store (32 agents: Sonnet harvest/verify, Fable QC/compile, Opus audit)
 
 Pav steer: "spin up loads of sonnet models to look for aggregates of data online... populate the missing bits... with log for source freshness and certainty and verification, setup a data base that scales as compiled substrate." Built at `candidates/canonical_genealogy/substrate/`: SUBSTRATE_SPEC.md (fact schema, certainty rubric, verification state machine, scale story), compile_substrate.py (stdlib-only; JSONL→SQLite+compiled JSON; best-value resolution corroborated>pending>disputed then certainty then freshness, full history kept; fatal HAZARD guard on cross-group fact_id reuse), facts/*.jsonl (append-only source of truth), verifications/*.jsonl, compiled/*.json (the viewer contract). Tier-3 infra; list stays 9.

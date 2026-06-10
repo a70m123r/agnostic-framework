@@ -1,0 +1,83 @@
+{
+  "specimen": "deep_learning",
+  "_doc": "ADDITIVE overlay for specimen deep_learning. Never duplicates base specimen fields. Adds: 2024-2026 NOW-refresh events; web-grounded entity lifecycles (born/died/founded; idea conceived/formulated/named); consolidation dates for base harvest items; rival fates; and a THEORY-DNA load-bearing-share estimate (DISCLOSED PROXY, not measured bits). All ids match base specimen exactly. Confidence in [0,1]; theory_dna shares are historiographic ESTIMATES, confidence <= 0.6. web_grounded = true.",
+  "generated": "2026-06-10",
+  "web_grounded": true,
+
+  "now_extension": [
+    { "when": "2024-10-08", "what": "Nobel Prize in Physics to Hopfield + Hinton 'for foundational discoveries... that enable machine learning with artificial neural networks' — the consecration the base specimen anticipated, now dated; reignited the Schmidhuber 'rewards plagiarism' re-attribution dispute.", "kind": "event", "confidence": 0.95 },
+    { "when": "2024-09-12", "what": "OpenAI o1 (o1-preview) ships — first commercial reasoning model with internalized chain-of-thought trained via large-scale RL; opens the test-time-compute scaling axis as a new harvest of the child.", "kind": "harvest", "confidence": 0.9 },
+    { "when": "2025-01-20", "what": "DeepSeek-R1 released (open-weight, MIT) — reasoning incentivized by pure RL, published in Nature; proves the reasoning-model harvest is reproducible in the open, a new descendant branch off the transformer line.", "kind": "harvest", "confidence": 0.88 },
+    { "when": "2025-03-20", "what": "Computer History Museum + Google release the original AlexNet source code on GitHub after a 5-year effort (team led by David Bieber) — the 2012 consummation artefact preserved/opened.", "kind": "event", "confidence": 0.92 },
+    { "when": "2025-08", "what": "OpenAI GPT-5 (unified reasoning+chat) ships; the 2025-2026 cadence (Gemini 3 2025-11, Claude Opus 4.5 2025-11, GPT-5.2 2025-12, Claude Opus 4.8 2026-05) pushes the child into agentic-AI hegemony.", "kind": "harvest", "confidence": 0.82 },
+    { "when": "2024-2025", "what": "Neuro-symbolic AI resurgence (publications peaking 2023-2024; Amazon applying NeSy in 2025 to Vulcan robots + Rufus) — the defeated symbolic rival returns as a NICHE complement bolted onto LLMs to fix hallucination/reasoning, not as a competing paradigm.", "kind": "revival", "confidence": 0.7 }
+  ],
+
+  "entity_lifecycles": {
+    "act-rosenblatt":     { "born": "1928", "died": "1971-07-11", "named": "1958 (perceptron)", "confidence": 0.9, "_note": "died in a boating accident at 43." },
+    "act-minsky-papert":  { "born": "Minsky 1927 / Papert 1928", "died": "Minsky 2016-01-24 / Papert 2016-07-31", "named": "1969 ('Perceptrons')", "confidence": 0.9 },
+    "act-mcculloch-pitts":{ "born": "McCulloch 1898 / Pitts 1923-04-23", "died": "both 1969 (McCulloch 1969-09-24 / Pitts 1969-05-14)", "formulated": "1943 (logical-calculus neuron)", "confidence": 0.88 },
+    "act-pdp":            { "founded": "1981-1986 (UCSD PDP Research Group; PDP volumes 1986)", "named": "1986", "confidence": 0.85 },
+    "act-hinton":         { "born": "1947-12-06", "named": "Turing Award 2018; Nobel Physics 2024-10-08", "confidence": 0.92, "_note": "quit Google 2023-05 to warn on AI risk; still active 2026." },
+    "act-lecun":          { "born": "1960-07-08", "named": "LeNet 1989; Turing Award 2018", "confidence": 0.9 },
+    "act-bengio":         { "born": "1964-03-05", "named": "Turing Award 2018", "confidence": 0.88 },
+    "act-schmidhuber":    { "born": "1963-01-17", "formulated": "LSTM 1997; priority reports 2010s-2020s", "confidence": 0.85 },
+    "act-ivakhnenko":     { "born": "1913-03-30", "died": "2007-10-16", "named": "GMDH 1965-1971", "confidence": 0.85, "_note": "Soviet/Kyiv cybernetics; the politically-marginalized deep root." },
+    "act-fukushima":      { "born": "1936-03-16", "named": "Neocognitron 1980", "confidence": 0.85 },
+    "act-hopfield":       { "born": "1933-07-15", "named": "Hopfield network 1982; Nobel Physics 2024-10-08", "confidence": 0.9 },
+    "act-feifei":         { "born": "1976", "named": "ImageNet conceived 2007, released 2009", "confidence": 0.85 },
+    "act-alexnet-team":   { "founded": "2012 ('team SuperVision'); Krizhevsky b. ~1986, Sutskever b. 1986-12-08", "named": "AlexNet 2012", "confidence": 0.82 },
+    "act-darpa":          { "founded": "1958 (as ARPA)", "confidence": 0.9 },
+    "act-cifar":          { "founded": "1982 (CIFAR); NCAP program 2004", "confidence": 0.85 },
+    "act-nvidia":         { "founded": "1993-04-05; CUDA 2007", "confidence": 0.88 },
+    "act-symbolics":      { "founded": "1980", "dissolved": "1987 (market collapse; bankruptcy filings later)", "confidence": 0.82 },
+    "act-miti":           { "founded": "Fifth Generation project 1981", "dissolved": "1992 (ended having missed goals)", "confidence": 0.82 },
+    "act-google":         { "founded": "Google 1998; Google Brain 2011; DeepMind acq. 2014", "named": "Transformer 2017", "confidence": 0.88 },
+    "act-openai":         { "founded": "2015-12-11", "named": "GPT 2018; ChatGPT 2022-11-30; o1 2024-09", "confidence": 0.9 },
+    "sw-mcculloch-pitts": { "conceived": "1943", "named": "1943 (logical-calculus neuron)", "confidence": 0.88 },
+    "sw-gmdh":            { "conceived": "1965", "formulated": "1971 (8-layer net)", "named": "GMDH", "confidence": 0.8 },
+    "child-dl":           { "conceived": "1965 (Ivakhnenko) / 1986 (backprop idea-weld)", "formulated": "2012 (AlexNet consummation)", "named": "'deep learning' coined for ML by Rina Dechter 1986; applied to artificial neural nets by Igor Aizenberg et al. 2000", "confidence": 0.8 }
+  },
+
+  "harvest_dates": {
+    "desc-transformer":   { "emerged": "2017 (Attention Is All You Need)", "consolidated": "2022-11-30 (ChatGPT) -> 2024-2025 reasoning models (o1/o3/R1)", "confidence": 0.9 },
+    "desc-scaling":       { "emerged": "2020 (Kaplan)", "consolidated": "2022 (Chinchilla); 2024-25 test-time-compute scaling extends the law to inference", "confidence": 0.82 },
+    "desc-crossdomain":   { "emerged": "2014-2018 (GANs 2014; AlphaGo 2016; AlphaFold 2018)", "consolidated": "2020-2022 (diffusion models; AlphaFold2 2021)", "confidence": 0.83 },
+    "desc-phase1":        { "emerged": "2022-2024 (TIES/DARE/mergekit; ACMP; BES)", "consolidated": "2024-2025", "confidence": 0.8 },
+    "cultural_harvest.tech":   { "emerged": "2012", "consolidated": "2023-2025 (NVIDIA trillion-dollar+ valuation; AI capex boom)", "confidence": 0.82 },
+    "cultural_harvest.art":    { "emerged": "2022 (diffusion image boom)", "consolidated": "2023-2025 (mainstream gen-art + deepfake debates)", "confidence": 0.78 },
+    "cultural_harvest.prizes": { "emerged": "2018 (Turing)", "consolidated": "2024-10-08 (Nobel Physics)", "confidence": 0.9 },
+    "cultural_harvest.safety": { "emerged": "2015-2018 (AI-safety/x-risk discourse)", "consolidated": "2023-2025 (Hinton quits Google 2023; EU AI Act; global AI-safety summits)", "confidence": 0.8 }
+  },
+
+  "rival_fates": {
+    "rel-symbolic":   { "fate": "niche", "when": "displaced 1987-2012; returns 2024-2025 as neuro-symbolic complement to LLMs (hallucination/reasoning guardrails), not as a competing paradigm", "confidence": 0.72 },
+    "rel-cybernetics":{ "fate": "absorbed", "when": "1950s-1980s; absorbed into connectionism/control theory, name faded", "confidence": 0.7 },
+    "act-symbolics":  { "fate": "faded", "when": "1987 market collapse", "confidence": 0.82 },
+    "act-miti":       { "fate": "faded", "when": "1992 (Fifth Generation ended missing goals)", "confidence": 0.8 }
+  },
+
+  "theory_dna": {
+    "_basis_note": "ESTIMATES of load-bearing share of the consummated child (deep learning) across its honest 5-parent set (parents_full). DISCLOSED PROXY from historiographic consensus on component contributions + the base specimen's own framing of which parent gated the firing — NOT measured bits, NOT gain_v2 (which does not exist for this specimen). Shares sum to ~1.0 by construction. Confidence capped at 0.6.",
+    "parents": {
+      "par-substrate":    { "load_bearing_share": 0.30, "basis": "the trained object itself (the adjustable-weight net) — content parent; the atomic building block every deep net is made of." },
+      "par-optimization": { "load_bearing_share": 0.25, "basis": "gradient descent + chain rule (backprop) — the method parent; the universal training procedure, the active weld_operator." },
+      "par-compute":      { "load_bearing_share": 0.18, "basis": "GPU/CUDA — gating instrument; base specimen names it rate-limiting (algorithm waited ~23 years), so weighted as a load-bearing enabler not mere backdrop." },
+      "par-data":         { "load_bearing_share": 0.15, "basis": "ImageNet large-scale labeled data — the second gating instrument supplying the supervised signal needed to generalize." }
+    },
+    "novel_residue": { "share": 0.12, "basis": "emergent representation learning + scaling-law predictability — the synergy neither parent predicts alone (the network learns WHAT to represent; loss is a power law in scale). The conceptual gain_v2 quantity, rendered as a disclosed proxy from surprise_confidence (0.9) discounted to a soft share, NEVER as measured bits.", "confidence": 0.5 },
+    "confidence": 0.55
+  },
+
+  "sources": [
+    { "name": "NobelPrize.org — Physics 2024 press release", "url": "https://www.nobelprize.org/prizes/physics/2024/press-release/", "year": 2024, "used_for": "Hopfield+Hinton Nobel date/citation; now_extension + lifecycles" },
+    { "name": "CHM — AlexNet source code release", "url": "https://computerhistory.org/press-releases/chm-makes-alexnet-source-code-available-to-the-public/", "year": 2025, "used_for": "AlexNet code release 2025-03-20 (David Bieber team)" },
+    { "name": "Reasoning-models timeline (o1 2024-09; o3 / DeepSeek-R1 2025-01; test-time compute)", "url": "https://synthesis.ai/2025/02/25/large-reasoning-models-how-o1-replications-turned-into-real-competition/", "year": 2025, "used_for": "now_extension reasoning-model harvest dates" },
+    { "name": "AI model release timeline 2025-2026 (GPT-5, Gemini 3, Claude Opus 4.x)", "url": "https://aiflashreport.com/model-releases.html", "year": 2026, "used_for": "2025-26 agentic-AI hegemony cadence" },
+    { "name": "Wikipedia — Deep learning (term coinage: Dechter 1986, Aizenberg 2000)", "url": "https://en.wikipedia.org/wiki/Deep_learning", "year": 2026, "used_for": "child-dl naming lineage" },
+    { "name": "Wikipedia — John Hopfield; Kunihiko Fukushima (birth dates)", "url": "https://en.wikipedia.org/wiki/John_Hopfield", "year": 2026, "used_for": "actor lifecycle dates" },
+    { "name": "Neural-net pioneer bios (Rosenblatt 1928-1971; Minsky 1927-2016; Rumelhart 1942-2011; Ivakhnenko 1913-2007)", "url": "https://aidata.science/neural-networks-from-perceptrons-to-gpt/", "year": 2025, "used_for": "actor born/died dates" },
+    { "name": "Wikipedia — Walter Pitts (1923-1969); McCulloch/Hebb/Werbos/Linnainmaa bios", "url": "https://en.wikipedia.org/wiki/Walter_Pitts", "year": 2026, "used_for": "root-actor lifecycle dates" },
+    { "name": "Neuro-symbolic AI resurgence 2024-2025 (Amazon NeSy; publication peak)", "url": "https://arxiv.org/pdf/2508.13678", "year": 2025, "used_for": "rel-symbolic rival fate = niche/revival" }
+  ]
+}

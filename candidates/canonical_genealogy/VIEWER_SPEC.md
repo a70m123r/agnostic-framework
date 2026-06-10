@@ -612,3 +612,183 @@ corrections. Folding them in here, honesty first:
 instinct-mappings **as-is** (the RG-semigroup caveat on instinct (3) was called a "genuine catch").
 See that file's own review addendum for detail. Nothing here promotes anything; **convergence list
 stays 9.** Addendum date: 2026-06-10.
+
+---
+
+# v1 addendum (Pav test-drive round)
+
+**What this is.** `viewer_v1.html` is a NEW file built by COPYING `viewer_v0.html` as the base
+(`viewer_v0.html` stays as-is, for lineage) and implementing all eight asks Pav raised on the v1
+test-drive (2026-06-10). It inline-embeds all 7 base specimens (verbatim, unchanged) **and** all 7
+NEW additive overlays from `overlays/*.overlay.json`, so it is fully self-contained (no CDN, vanilla
+JS). The overlays are read at load via a second class of `<script type="application/json"
+data-kind="overlay">` blocks. Convergence list stays 9; nothing here is canon (Tier-3 render tool).
+
+## The 8 asks → what was built
+
+1. **NET OUTCOME latent→physical (the harvest band).** A THIRD band now sits ABOVE latent:
+   `HARVEST ↑`. It renders the previously-unrendered schema arrays as nodes — `harvest.descendants[]`
+   (new theories seeded), `harvest.cultural_harvest[]` (icon + colour by `art|scifi|tech|prizes|
+   safety|other`), and `child.utility.action_spaces_unlocked[]` (the new affordances). Each appears
+   at its overlay `harvest_dates` `emerged` year (disclosed-default post-weld stagger when absent),
+   connected to the child by harvest edges. A subtle dashed **feedback arc** runs from each
+   action-space node back DOWN into the physical band with an arrowhead — the "function utilised →
+   expanding the action space" loop Pav named (theories → kernel canon → feedback loop). In v0 these
+   arrays were dropped on the floor (cultural_harvest used only as a boolean; action_spaces only
+   counted into a size scalar). The harvest band binds DIRECTLY to existing populated base data.
+
+2. **Entity lifecycles.** Actors and ideas now carry web-grounded lifecycle dates from the overlay
+   `entity_lifecycles{}` (people: born/died; institutions: founded/dissolved; ideas:
+   conceived→formulated→named). Actors fade IN at born/founded, and after `died`/`dissolved` fade to
+   an **outline glyph** (death dim, ~12y to a 0.30 floor). Ideas use conceived→formulated as their
+   render-birth. Hover shows a **lifecycle strip** (`conceived → born → founded → formulated → named
+   → died → dissolved`) plus the overlay `_note`. Matching is by actor `id` first (v2 specimens:
+   `act-*`), then by name (maxwell/darwin/qm use `people_0[].who` name strings) — graceful when an
+   actor has no overlay entry (falls back to the base `when` year).
+
+3. **Depth/context dial.** A `Depth/context` slider (0–100%) controls render depth along
+   roots↔child↔harvest: at low depth only the child shows; raising it admits parents, then
+   harvest, then roots/actors (outermost). The SAME dial doubles as the relevance cutoff — as depth
+   drops, low-confidence nodes drop FIRST (`conf < (1−depth)·0.85`). This is Pav's contextual-scale
+   dial (zoom a fixed frame, or contextually scale by adjusting it). It applies in both single and
+   GLOBAL views.
+
+4. **Stale data + NOW.** The time range now ALWAYS extends to `NOW = 2026.5`, and every specimen
+   **opens at NOW** (`year = NOW` on select; a `⟲ NOW` footer button re-jumps there). Overlay
+   `now_extension[]` (2024–2026 events, coloured by `harvest|event|revival|decay`) render as diamond
+   ticks near NOW; a dashed teal **NOW 2026-06 marker line** is always drawn. So the timeline no
+   longer dead-ends at ~2024.
+
+5. **Math (honest answer — wired + disclosed).** The sharp/fuzzy meter is **relabelled and
+   recomputed** as the AGNOSTIC-UNITS frame-relative ratio: each node's confidence and size are
+   normalized to a ratio in its own specimen's `[min,max]` frame, and the meter reports
+   `Σ(ratioMass·ratioConf) / Σ ratioMass` as "% agnostic-ratio certain-mass". Its tooltip discloses
+   exactly what it is and is NOT. **Honest truths, as Pav asked:**
+   - v0's blobs were (and v1's still are) **gaussian radial-gradient splats — NOT wavelets**
+     (`createRadialGradient`, spread `= r·(1+fuzz·1.4)`).
+   - v0's sharp/fuzzy meter was **certain-core mass fraction** (a `confidence ≥ 0.8` threshold on a
+     size proxy), **NOT** the MDL / `gain_v2` machinery. v1 rewires it to the agnostic frame-ratio
+     and relabels it honestly.
+   - **`gain_v2` / MDL-in-bits numbers DO NOT EXIST for these specimens** (the real-corpus pilot is
+     owed; the frame-lock pilot only validated the synergy metric on synthetic ground truth, not
+     these merges). The viewer **never renders fake bits** — every quantitative readout is either a
+     real base field or a disclosed proxy/estimate.
+   - **The honest resonance:** wavelets ARE the multi-resolution / level-of-detail idea, and gaussian
+     splatting is the graphics cousin — a principled FUTURE rendering basis (gaussian-mixture /
+     wavelet LOD over the depth dial), not what v0/v1 use today.
+
+6. **Global view.** A `GLOBAL` button shows all 7 specimens as swimlanes on one shared
+   **absolute-year** axis (dates are absolute years → directly comparable, no normalization needed).
+   Per-specimen **on/off chips** toggle lanes; the observer select and the depth dial apply globally.
+   **Cross-specimen normalization:** node **size and opacity are normalized per-specimen to the
+   agnostic [min,max] frame-ratio** so the per-specimen proxies (sizes, confidences) become
+   comparable across specimens — disclosed in the GLOBAL legend. A NOW line and per-specimen weld-span
+   bars + now-extension ticks are drawn per lane.
+
+7. **Rival fade + connection fix.**
+   - **Rival fade:** defeated rivals now DECAY as the weld hardens. The decay reads overlay
+     `rival_fates{}` (`faded` → ~15y to a 0.10 ghost; `niche` → ~25y to 0.32; `absorbed` → ~18y to
+     0.22; `persists` → slow to a 0.55 floor) and falls back to a **disclosed default** (fade to
+     ghost over ~15y after hardening) when no fate is present. Faded rivals get a dashed ghost
+     outline. Honest inversion respected: for OPEN welds (qm_relativity) rivals do **not** fade — the
+     frontier keeps all rivals alive (per the qm overlay's `rival_fates._note`).
+   - **Parent→unifier connection (the diagnosed v0 bug):** in v0 the parent→child edge was a
+     near-invisible 1px muted-blue thread gated on the child's still-ramping opacity
+     (`if(a.op<=0.05||b.op<=0.05) return;`), and for maxwell the prose `weld.when` parsed
+     `weldStart=1861 / weldFire=1888` (text-order years) leaving a 27-year column gap so the line was
+     absent exactly when the weld fired. v1 draws `kind:'parent'` edges with a **brightness floor
+     through the weld-fire window** (`near = 1−|year−weldFire|/8`), thickening to a bright `#bfe0ff`
+     weld line with a white spark at fire — so parents VISIBLY connect at the moment the unifier hits
+     the timeline, in maxwell and all specimens. (The v2 specimens additionally now ingest ALL
+     `parents_full` granular lobes, not just `instrument` ones, fixing the v0 ingestion gap.)
+
+8. **Encompass / absorption + Theory DNA.** At weld-fire, parents are **drawn INTO the child
+   membrane** (`absorbT` ramps 0→1 over ~4y after fire): each parent becomes an internal **lobe**
+   whose size is scaled by its `theory_dna.load_bearing_share`, with a **stub** (receptor-hook spike
+   in the parent's frame-colour, length scaled by share) poking OUT through the child's membrane ring
+   — the cont-25 Steer-5b "parents persist as procedural-root stubs" reading. The free parent blob
+   dissolves as its lobe forms. A **THEORY DNA bar** (bottom-left) renders per-child:
+   `parent-A share | parent-B share | … | novel residue` segments, each labelled with its share % and
+   `confidence`, tagged **"estimate · not measured bits"**, with a disclosure line that load-bearing
+   shares are historiographic ESTIMATES (conceptually the `gain_v2` synergy quantity) and that no
+   `gain_v2` bits exist for these specimens. The novel residue is the child-coloured remainder (the
+   synergy share).
+
+## The MATH answer (verbatim honest)
+
+We are **not** using the MDL / `gain_v2` machinery under the hood for these renders, and we never
+fabricate it. The blobs are **gaussian radial-gradient splats, not wavelets**. The sharp/fuzzy meter
+in v0 was a **certain-core mass fraction** (a confidence threshold on a size proxy), NOT MDL; v1
+**rewires it to the agnostic-units frame-relative ratio** (per-specimen `[min,max]` normalized
+certain-mass) and discloses precisely that in its tooltip. **`gain_v2`/MDL-in-bits numbers do not
+exist for these specimens** — the real-corpus pilot is owed — so the THEORY-DNA shares and the
+novel-residue/synergy figure are rendered ONLY as **disclosed historiographic estimates** (overlay
+`theory_dna`, confidence ≤ 0.6), never as measured bits. The principled future basis is exactly the
+wavelet / gaussian-mixture multi-resolution idea (gaussian splatting is its graphics cousin), which
+would sit naturally under the depth dial as a real LOD spine — a future, not a present claim.
+
+## The NORMALIZATION answer
+
+**Is the dataset normalized?** Dates are **absolute years → already cross-specimen comparable** (the
+GLOBAL view plots all 7 on one absolute-year axis with no date normalization). Sizes and
+confidences are **per-specimen proxies** and are therefore NOT directly comparable — so v1 maps each
+specimen's values to a **ratio of its own frame `[min,max]`** (the agnostic-units dimensionless
+fraction-of-frame, per `agnostic_units_hairy_membrane_SKETCH.md`). This per-specimen ratio drives
+both the sharp/fuzzy meter and the GLOBAL-view node size/opacity, and it is **disclosed** in the
+legend and the GLOBAL legend. It is a frame-relative ratio with fog attached, not a measured
+absolute.
+
+## Overlay-data provenance note
+
+The seven `overlays/*.overlay.json` files are **ADDITIVE and web-grounded** (`web_grounded:true`),
+authored 2026-06-10. They never duplicate or mutate base specimen fields and never touch ratified
+files. Each carries: `now_extension[]` (2024–2026 events, with `sources[]` URLs), `entity_lifecycles{}`
+(born/died/founded + idea conceived/formulated/named — structured dates the base lacks),
+`harvest_dates{}` (emerged/consolidated dating for harvest + action-space items), `rival_fates{}`
+(decay/absorption fates for the fade law), and `theory_dna{}` (load-bearing-share ESTIMATES, capped
+confidence ≤ 0.6). Lifecycle and rival-fate keys match base ids exactly where ids exist (`act-*`,
+`rel-*`, `pf-*`/`par-*`, `child-*`) and fall back to exact name strings for the v1 specimens
+(maxwell/darwin/qm) whose roots/parents/rivals are name-keyed. Where a base entry has no overlay
+match, the viewer degrades gracefully to the base `when` year and omits the missing strip — nothing
+is invented. Binding was verified across all 7 specimens (every theory-DNA parent and every rival
+fate matched; lifecycles matched all `act-*` actors and the overlay-covered `people_0` subset).
+
+**Build/quality:** vanilla JS, no CDN; `node --check` passes on the extracted app script; all 14
+embedded JSON blocks parse; per-frame pairwise work is capped and absorbed parents are skipped to
+hold ~60fps with ~100 nodes; all proxies disclosed in the legend / ratio tooltip / DNA tag.
+Convergence list stays 9. Addendum date: 2026-06-10.
+
+## Opus review fold (corrections applied 2026-06-10)
+
+An Opus review scored all 8 v1 asks as MET from the extracted app code (not from claims) and both
+v0 bugs as genuinely fixed (parent→unifier brightness-floor connection at weld-fire; rival fade by
+overlay `fate` enum, with open welds correctly held alive). Recommendation was **ACCEPT** with four
+LOW-priority cleanups, all now folded in:
+
+- **(a) Debris removed.** The 15 `__script_0.js … __script_14.js` extraction temps a prior build
+  left in the `canonical_genealogy/` dir were deleted — they were never referenced by the viewer
+  (which embeds its JSON inline) and must not be committed.
+- **(b) Depth label tracks the real gate.** The `depthVal` readout thresholds were
+  `<0.2 child / <0.5 +parents / <0.85 +harvest`, which lagged the actual `depthVisible` gates
+  (parents un-gate at 0.34, harvest at 0.7, roots at 0.85). Relabelled to
+  `<0.34 child / <0.7 +parents / <0.85 +harvest / full` so the readout matches what is rendered.
+  Gating logic itself was already correct and is unchanged.
+- **(c) `fracYear` rejects range-style strings.** A `now_extension` `when` like `"2022-2025"`
+  mis-parsed: the month group captured `20`, landing the marker tick at ~2023.58. Added a guard —
+  if the parsed month `>12` (or day `>31`) it falls back to the year start. Affected only the
+  x-position of a couple of marker ticks (never shown as a date), now corrected.
+- **(d) Inert rival-fate entries wired, not deleted.** The review noted several `rival_fates` keys
+  target nodes that are not `relation:'rival'` edges (e.g. maxwell *Luminiferous ether* / *molecular
+  vortex*, darwin *Symbiogenesis* / *Mendel-Fisher* / *Mutationism*, deep_learning *rel-cybernetics*
+  + the `act-*` actor ids, keynesian *stockholm/kaleckian/marginalist*, manhattan *tube-alloys/qg/
+  apollo*, internet *arpanet*) and so drove no render. Rather than discard this web-grounded,
+  disclosed research, the hover tooltip now surfaces the fate for **any** relative that has one,
+  tagged `(not a rival — no opacity decay)` so the distinction stays honest. The opacity/decay law is
+  unchanged — only genuine rivals fade — so there is **zero visual regression**, and the one true
+  rival per specimen still fades by its overlay fate exactly as before. The handful of fate keys that
+  match **no** node at all (ether / vortex / mutationism / `act-*` actor ids) are retained as
+  documented research and remain unrendered **by design** — no nodes are invented for them, per the
+  never-fabricate discipline.
+
+No ratified files were touched; only `viewer_v1.html`, this addendum, and (deletion only) the stray
+`__script_*.js` temps. `node --check` still passes after the fixes. Review-fold date: 2026-06-10.
