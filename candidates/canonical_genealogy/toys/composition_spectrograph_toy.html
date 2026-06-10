@@ -1,0 +1,202 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Wrapper Composition Spectrograph — toy</title>
+<style>
+  :root{--bg:#0c0f16;--fg:#e8edf6;--mut:#8e98ad;--hint:#5a6275;--brd:#2a3142;--accent:#d8794a;}
+  html,body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.5 'Segoe UI',system-ui,sans-serif;}
+  .wrap{max-width:1180px;margin:0 auto;padding:16px 20px 40px;}
+  h1{font-size:17px;font-weight:600;margin:0 0 2px;} .sub{color:var(--mut);font-size:12px;margin:0 0 12px;max-width:880px;}
+  .row{display:flex;align-items:center;gap:10px;margin:7px 0;flex-wrap:wrap;}
+  .row label{color:var(--mut);font-size:12px;min-width:120px;}
+  input[type=range]{flex:1;min-width:150px;accent-color:var(--accent);max-width:420px;}
+  .val{font-size:12px;font-weight:600;min-width:46px;text-align:right;}
+  .chips{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0;}
+  button{background:transparent;color:var(--fg);border:1px solid var(--brd);border-radius:7px;padding:5px 11px;font-size:12px;cursor:pointer;}
+  button.on{background:#16324a;border-color:#2f6a9a;color:#cfe6ff;}
+  button:active{transform:scale(.98);}
+  select{background:#10141d;color:var(--fg);border:1px solid var(--brd);border-radius:7px;padding:5px 9px;font-size:12px;}
+  canvas{width:100%;height:330px;display:block;cursor:crosshair;border-radius:8px;}
+  .legend{display:flex;gap:14px;flex-wrap:wrap;margin:10px 0 0;font-size:12px;}
+  .legend span{display:inline-flex;align-items:center;gap:6px;color:var(--mut);}
+  .sw{width:22px;height:12px;border-radius:2px;display:inline-block;}
+  .read{font-size:13px;color:var(--mut);margin:10px 0 0;min-height:20px;}
+  .read b{color:var(--fg);font-weight:600;}
+  .note{color:var(--hint);font-size:11px;margin:8px 0 0;max-width:900px;}
+  .badge{display:inline-block;background:#3a2a12;color:#f0b75e;border:1px solid #5a4420;border-radius:5px;padding:1px 7px;font-size:11px;margin-left:8px;}
+</style></head>
+<body><div class="wrap">
+<h1>Wrapper composition spectrograph <span style="color:var(--mut);font-weight:400;">— toy / test-drive</span><span class="badge">MODELLED shape — not measured shares</span></h1>
+<p class="sub">The old "theory-DNA" bar was frozen and one-colour. This is the same makeup unfrozen: parent contributions + novel-synthesis residue as bands over the wrapper's life, riding the adaptive time axis so the dense weeks spread out. Patterns separate same-colour parents. Drag the reveal playhead; hover for the makeup at any moment.</p>
+
+<div class="row"><label>specimen</label>
+  <select id="spec">
+    <option value="framework">Agnostic framework (self-specimen — semi-grounded)</option>
+    <option value="maxwell">Maxwell EM (historical)</option>
+  </select><span style="flex:1"></span></div>
+<div class="row"><label>calendar ↔ order</label><input type="range" id="lam" min="0" max="100" value="55"><span class="val" id="lamV">55%</span></div>
+
+<div class="chips">
+  <button id="bView">view: expression spectrum</button>
+  <button id="bPat" class="on">patterns: on</button>
+  <button id="bConf" class="on">pattern density = certainty</button>
+  <button id="bDemo" class="on">mark demotions</button>
+</div>
+
+<canvas id="cv"></canvas>
+<div class="legend" id="leg"></div>
+<div class="read" id="rd">hover the spectrum — each vertical slice is the wrapper’s makeup at that moment · drag to move the reveal playhead</div>
+<p class="note"><b>Honest framing:</b> the band <i>shapes</i> are a MODEL of development (intuition thins as borrowed fields weld in; the novel residue dips when cross-model deflated it to "mostly PID / standard effect-modification"; Gärdenfors stays a thin dotted sliver because it is an <i>unwelded</i> parent — a known gap). Phase points sit at real commit dates. No per-era share was measured — this communicates the shape of composition, not numbers. "Conception DNA" view = the frozen inheritance at the weld (DNA = genotype); "expression spectrum" = how it manifests over development (the phenotype view).</p>
+</div>
+<script>
+(function(){
+var SPECS={
+ framework:{
+  T0:1989,T1:2026.45,
+  unit:"intuition → commits",
+  // phase points at real-ish dates; shares are MODELLED (sum normalized at draw)
+  phases:[
+   {d:1990.0,  label:"conception",  s:[.95,.00,.00,.00,.00,.05]},
+   {d:2026.374,label:"wrappers",    s:[.80,.00,.05,.04,.00,.11]},
+   {d:2026.398,label:"overlap",     s:[.66,.00,.11,.08,.05,.10]},
+   {d:2026.4356,label:"formalize",  s:[.50,.02,.18,.14,.06,.10]},
+   {d:2026.4373,label:"welds·schema",s:[.42,.03,.22,.16,.07,.10]},
+   {d:2026.4380,label:"cross-model",s:[.40,.03,.25,.18,.08,.06]},
+   {d:2026.4452,label:"now",        s:[.30,.03,.27,.18,.10,.12]}
+  ],
+  demotions:[{d:2026.4380,t:"‘mostly PID / standard effect-modification’ — novel residue thinned"}]
+ },
+ maxwell:{
+  T0:1815,T1:1955,unit:"years",
+  phases:[
+   {d:1820,label:"Oersted",    s:[.70,.00,.00,.30]},
+   {d:1831,label:"Faraday",    s:[.55,.10,.05,.30]},
+   {d:1861,label:"displacement",s:[.32,.30,.16,.22]},
+   {d:1865,label:"the eqns",   s:[.25,.34,.20,.21]},
+   {d:1887,label:"Hertz waves",s:[.22,.36,.22,.20]},
+   {d:1905,label:"harvest→SR", s:[.20,.36,.24,.20]}
+  ],
+  demotions:[]
+ }
+};
+var BANDS={
+ framework:[
+  {name:"Pav intuition",        col:"#1D9E75",pat:"solid",conf:.7},
+  {name:"Gärdenfors (UNWELDED)",col:"#1D9E75",pat:"dots", conf:.35},
+  {name:"Category theory / pushout",col:"#378ADD",pat:"hatch",conf:.6},
+  {name:"Info theory / MDL",    col:"#EF9F27",pat:"solid",conf:.65},
+  {name:"Topology (hairy-ball)",col:"#7F77DD",pat:"hatch",conf:.55},
+  {name:"Novel synthesis residue",col:"#D85A30",pat:"cross",conf:.45}
+ ],
+ maxwell:[
+  {name:"Faraday (field intuition)",col:"#1D9E75",pat:"solid",conf:.8},
+  {name:"Maxwell (math apparatus)",col:"#378ADD",pat:"hatch",conf:.8},
+  {name:"experimental confirmation",col:"#EF9F27",pat:"solid",conf:.7},
+  {name:"novel synthesis residue",col:"#D85A30",pat:"cross",conf:.6}
+ ]
+};
+var cv=document.getElementById('cv'),ctx=cv.getContext('2d');
+var specKey='framework',lam=.55,view=1,pat=1,confDens=1,demo=1,playhead=1,hoverX=-1;
+var probe=document.createElement('div');probe.style.display='none';document.body.appendChild(probe);var cc={};
+function C(v){if(cc[v])return cc[v];probe.style.color='var('+v+')';cc[v]=getComputedStyle(probe).color;return cc[v];}
+function S(){return SPECS[specKey];}
+function B(){return BANDS[specKey];}
+function norm(arr){var s=0,i;for(i=0;i<arr.length;i++)s+=arr[i];s=s||1;return arr.map(function(v){return v/s;});}
+function px(i){ // warped x-fraction for phase i: blend calendar position and even order
+ var P=S().phases,n=P.length,cal=(P[i].d-S().T0)/(S().T1-S().T0),ord=n>1?i/(n-1):0;
+ return (1-lam)*cal+lam*ord;
+}
+function rgba(h,a){var n=parseInt(h.slice(1),16);return'rgba('+(n>>16&255)+','+(n>>8&255)+','+(n&255)+','+a+')';}
+function darker(h){var n=parseInt(h.slice(1),16);return'rgb('+Math.round((n>>16&255)*.4)+','+Math.round((n>>8&255)*.4)+','+Math.round((n&255)*.4)+')';}
+function fmt(t){var y=Math.floor(t);if(specKey==='maxwell')return''+y;if(t>=2026.36){var fr=t-y,base=Date.UTC(y,0,1),end=Date.UTC(y+1,0,1),dt=new Date(base+fr*(end-base));return dt.toLocaleString('en',{month:'short',timeZone:'UTC'})+' '+dt.getUTCDate();}return(t<2025?'~':'')+y;}
+function patFill(kind,col,x0,y0,w,h,conf){
+ ctx.save();ctx.beginPath();ctx.rect(x0,y0,w,h);ctx.clip();
+ var dens=confDens?(0.4+conf*0.6):1; var step=Math.round(8/dens); if(step<4)step=4;
+ ctx.strokeStyle=darker(col);ctx.fillStyle=darker(col);
+ ctx.globalAlpha=0.5;ctx.lineWidth=1;
+ var x,y;
+ if(kind==='hatch'){for(x=x0-h;x<x0+w;x+=step){ctx.beginPath();ctx.moveTo(x,y0+h);ctx.lineTo(x+h,y0);ctx.stroke();}}
+ else if(kind==='cross'){for(x=x0-h;x<x0+w;x+=step){ctx.beginPath();ctx.moveTo(x,y0+h);ctx.lineTo(x+h,y0);ctx.stroke();}for(x=x0;x<x0+w+h;x+=step){ctx.beginPath();ctx.moveTo(x,y0);ctx.lineTo(x+h,y0+h);ctx.stroke();}}
+ else if(kind==='dots'){for(y=y0+4;y<y0+h;y+=step+1)for(x=x0+4;x<x0+w;x+=step+1){ctx.beginPath();ctx.arc(x,y,1.3,0,7);ctx.fill();}}
+ ctx.restore();
+}
+function draw(){
+ var W=cv.clientWidth,H=330,dpr=Math.min(2,window.devicePixelRatio||1);
+ if(cv.width!==Math.round(W*dpr)){cv.width=Math.round(W*dpr);cv.height=Math.round(H*dpr);}
+ ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,W,H);
+ var padL=14,padR=14,padT=18,padB=44,IW=W-padL-padR,IH=H-padT-padB;
+ var P=S().phases,n=P.length,bands=B();
+ // precompute screen x per phase + normalized cumulative tops (stack bottom->top)
+ var xs=[],cum=[];
+ for(var i=0;i<n;i++){xs.push(padL+px(i)*IW);var nn=norm(P[i].s),c=[],acc=0;for(var b=0;b<bands.length;b++){acc+=nn[b];c.push(acc);}cum.push(c);}
+ function colMode(){return view===0;}
+ if(colMode()){ // FROZEN conception-DNA bar (genotype at the weld = the formalize/weld column)
+  var fi=Math.min(n-1,4),nn=norm(P[fi].s),bw=140,cx=padL+IW/2,acc=0;
+  for(var b2=0;b2<bands.length;b2++){var hgt=nn[b2]*IH,yT=padT+(1-(acc+nn[b2]))*IH;
+   ctx.fillStyle=rgba(bands[b2].col,0.82);ctx.fillRect(cx-bw/2,yT,bw,hgt);
+   if(pat&&bands[b2].pat!=='solid')patFill(bands[b2].pat,bands[b2].col,cx-bw/2,yT,bw,hgt,bands[b2].conf);
+   ctx.strokeStyle=rgba(bands[b2].col,1);ctx.lineWidth=.8;ctx.strokeRect(cx-bw/2,yT,bw,hgt);
+   if(nn[b2]>0.04){ctx.fillStyle='#0c0f16';ctx.font='10px Segoe UI';ctx.textAlign='center';ctx.fillText(Math.round(nn[b2]*100)+'%',cx,yT+hgt/2+3);}
+   acc+=nn[b2];}
+  ctx.fillStyle=C('--hint');ctx.font='11px Segoe UI';ctx.textAlign='center';ctx.fillText('conception DNA — frozen inheritance at the weld (genotype). toggle view for the expression spectrum.',cx,padT+IH+22);
+  drawLegend(bands);return;
+ }
+ // EXPRESSION SPECTRUM: stacked areas across warped time
+ for(var bb=0;bb<bands.length;bb++){
+  ctx.beginPath();
+  for(i=0;i<n;i++){var yTop=padT+(1-cum[i][bb])*IH;if(i===0)ctx.moveTo(xs[i],yTop);else ctx.lineTo(xs[i],yTop);}
+  for(i=n-1;i>=0;i--){var below=cum[i][bb]-norm(P[i].s)[bb],yBot=padT+(1-below)*IH;ctx.lineTo(xs[i],yBot);}
+  ctx.closePath();
+  ctx.fillStyle=rgba(bands[bb].col,0.8);ctx.fill();
+  if(pat&&bands[bb].pat!=='solid'){ctx.save();ctx.clip();patFill(bands[bb].pat,bands[bb].col,padL,padT,IW,IH,bands[bb].conf);ctx.restore();}
+  ctx.strokeStyle=rgba(bands[bb].col,0.9);ctx.lineWidth=.7;ctx.stroke();
+ }
+ // future dimming right of playhead
+ var phx=padL+playhead*IW;
+ if(playhead<1){ctx.fillStyle=rgba('#0c0f16',0.62);ctx.fillRect(phx,padT,padL+IW-phx,IH);}
+ // phase ticks + labels
+ ctx.font='10px Segoe UI';ctx.textAlign='center';
+ for(i=0;i<n;i++){ctx.strokeStyle=C('--brd');ctx.globalAlpha=.5;ctx.beginPath();ctx.moveTo(xs[i],padT);ctx.lineTo(xs[i],padT+IH);ctx.stroke();ctx.globalAlpha=1;
+  ctx.fillStyle=C('--hint');ctx.fillText(P[i].label,xs[i],padT+IH+15);ctx.fillStyle=C('--brd');ctx.fillText(fmt(P[i].d),xs[i],padT+IH+27);}
+ // demotion markers
+ if(demo)S().demotions.forEach(function(dm){var dx=padL+(function(){for(var k=0;k<n;k++)if(Math.abs(P[k].d-dm.d)<1e-3)return px(k);return 0;})()*IW;
+  ctx.strokeStyle=C('--accent');ctx.setLineDash([4,3]);ctx.beginPath();ctx.moveTo(dx,padT-2);ctx.lineTo(dx,padT+IH);ctx.stroke();ctx.setLineDash([]);
+  ctx.fillStyle=C('--accent');ctx.font='9px Segoe UI';ctx.textAlign='left';ctx.save();ctx.translate(dx+3,padT+10);ctx.fillText('▼ demotion',0,0);ctx.restore();});
+ // playhead
+ ctx.strokeStyle=C('--accent');ctx.lineWidth=1.5;ctx.beginPath();ctx.moveTo(phx,padT-4);ctx.lineTo(phx,padT+IH+4);ctx.stroke();
+ // hover guide + readout
+ if(hoverX>=0){ctx.strokeStyle=C('--mut');ctx.globalAlpha=.4;ctx.beginPath();ctx.moveTo(hoverX,padT);ctx.lineTo(hoverX,padT+IH);ctx.stroke();ctx.globalAlpha=1;}
+ drawLegend(bands);
+}
+function interpShares(frac){ // shares at warped x-fraction frac (0..1), interpolating between phases by their warped positions
+ var P=S().phases,n=P.length;var prev=0;
+ for(var i=0;i<n;i++){var xi=px(i);if(frac<=xi||i===n-1){var lo=Math.max(0,i-1),xa=px(lo),xb=px(i),tt=xb>xa?(frac-xa)/(xb-xa):0;tt=Math.max(0,Math.min(1,tt));
+  var a=norm(P[lo].s),b=norm(P[i].s),out=[];for(var k=0;k<a.length;k++)out.push(a[k]+(b[k]-a[k])*tt);return{shares:norm(out),i:i,tt:tt,t:P[lo].d+(P[i].d-P[lo].d)*tt};}}
+ return{shares:norm(P[n-1].s),i:n-1,tt:0,t:P[n-1].d};
+}
+function drawLegend(bands){
+ var leg=document.getElementById('leg');if(leg.childElementCount===bands.length+0&&leg.dataset.k===specKey)return;
+ leg.dataset.k=specKey;leg.innerHTML='';
+ bands.forEach(function(bd){var s=document.createElement('span');var sw='<span class="sw" style="background:'+rgba(bd.col,.8)+';position:relative;overflow:hidden">'+(bd.pat!=='solid'?'<span style="position:absolute;inset:0;background-image:'+patCss(bd.pat,bd.col)+'"></span>':'')+'</span>';s.innerHTML=sw+bd.name;leg.appendChild(s);});
+}
+function patCss(kind,col){var d=darker(col);if(kind==='hatch')return'repeating-linear-gradient(45deg,'+d+' 0 1px,transparent 1px 4px)';if(kind==='cross')return'repeating-linear-gradient(45deg,'+d+' 0 1px,transparent 1px 4px),repeating-linear-gradient(-45deg,'+d+' 0 1px,transparent 1px 4px)';return'radial-gradient('+d+' 0.8px,transparent 0.9px)';if(kind==='dots');}
+// controls
+document.getElementById('spec').addEventListener('change',function(e){specKey=e.target.value;document.getElementById('leg').dataset.k='';playhead=1;draw();});
+document.getElementById('lam').addEventListener('input',function(e){lam=e.target.value/100;document.getElementById('lamV').textContent=e.target.value+'%';draw();});
+var bView=document.getElementById('bView');bView.addEventListener('click',function(){view=view?0:1;bView.textContent='view: '+(view?'expression spectrum':'conception DNA (frozen)');bView.classList.toggle('on',view===0);draw();});
+function tog(id,set){var b=document.getElementById(id);b.addEventListener('click',function(){set(b);draw();});}
+tog('bPat',function(b){pat=!pat;b.textContent='patterns: '+(pat?'on':'off');b.classList.toggle('on',pat);});
+tog('bConf',function(b){confDens=!confDens;b.textContent='pattern density = certainty'+(confDens?'':' (off)');b.classList.toggle('on',confDens);});
+tog('bDemo',function(b){demo=!demo;b.textContent='mark demotions'+(demo?'':' (off)');b.classList.toggle('on',demo);});
+var drag=false;
+function move(ev){var r=cv.getBoundingClientRect(),padL=14,IW=r.width-28;hoverX=ev.clientX-r.left;var frac=Math.max(0,Math.min(1,(hoverX-padL)/IW));
+ if(drag){playhead=frac;}
+ var info=interpShares(frac),bands=B();
+ var parts=bands.map(function(bd,k){return bd.name.split(' ')[0]+' '+Math.round(info.shares[k]*100)+'%';});
+ document.getElementById('rd').innerHTML='<b>'+fmt(info.t)+'</b> · '+parts.join(' · ');
+ draw();}
+cv.addEventListener('pointerdown',function(e){drag=true;cv.setPointerCapture(e.pointerId);move(e);});
+cv.addEventListener('pointermove',move);
+cv.addEventListener('pointerup',function(){drag=false;});
+cv.addEventListener('pointerleave',function(){hoverX=-1;document.getElementById('rd').innerHTML='hover the spectrum — each vertical slice is the wrapper’s makeup at that moment · drag to move the reveal playhead';draw();});
+window.addEventListener('resize',draw);
+draw();
+})();
+</script></body></html>
