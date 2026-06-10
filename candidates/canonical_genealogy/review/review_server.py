@@ -14,13 +14,33 @@ of the page state, and POSTed back to /save, which writes:
 
 Open the SAME pages through the plain preview server (8741) to use them clean, with no overlay.
 """
-import http.server, socketserver, os, json, datetime, base64
+import http.server, socketserver, os, json, datetime, base64, threading
+from urllib.parse import urlparse, parse_qs
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))  # canonical_genealogy/
 REVIEWS = os.path.join(ROOT, 'reviews')
 os.makedirs(REVIEWS, exist_ok=True)
 PORT = 8742
 INJECT = '<script src="/review/review_layer.js"></script>'
+PINS_FILE = os.path.join(REVIEWS, 'pins.json')
+PINS_LOCK = threading.Lock()
+
+
+def load_pins():
+    try:
+        with open(PINS_FILE, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except Exception:
+        return []
+
+
+def append_pin(rec):
+    with PINS_LOCK:
+        pins = load_pins()
+        pins.append(rec)
+        with open(PINS_FILE, 'w', encoding='utf-8') as f:
+            json.dump(pins, f, indent=2, ensure_ascii=False)
+    return rec
 
 class Handler(http.server.SimpleHTTPRequestHandler):
     def __init__(self, *a, **k):
@@ -35,6 +55,17 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 
     def do_GET(self):
         path = self.path.split('?')[0]
+        if path == '/pins':
+            q = parse_qs(urlparse(self.path).query)
+            page = (q.get('page') or [''])[0]
+            pins = [p for p in load_pins() if p.get('page') == page] if page else load_pins()
+            body = json.dumps({'pins': pins}).encode()
+            self.send_response(200)
+            self.send_header('Content-Type', 'application/json')
+            self.send_header('Content-Length', str(len(body)))
+            self.end_headers()
+            self.wfile.write(body)
+            return
         if path.endswith('.html'):
             fs = os.path.join(ROOT, path.lstrip('/').replace('/', os.sep))
             if os.path.isfile(fs):
@@ -87,9 +118,27 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         with open(os.path.join(REVIEWS, base + '.review.json'), 'w', encoding='utf-8') as f:
             json.dump(payload, f, indent=2, ensure_ascii=False)
         n = len(payload.get('annotations', []) or [])
-        print('[review] saved reviews/%s.review.json  (%d annotations, page %s)'
-              % (base, n, payload['meta'].get('source_page')))
-        body = json.dumps({'ok': True, 'path': 'reviews/%s.review.json' % base, 'png': png_rel}).encode()
+        # permanent pin registry: one gold pin per saved review session
+        pin_rec = None
+        pin_meta = payload['meta'].get('pin')
+        if pin_meta:
+            pin_rec = {
+                'id': base,
+                'page': payload['meta'].get('source_page'),
+                'x': pin_meta.get('x'), 'y': pin_meta.get('y'),
+                'nx': pin_meta.get('nx'), 'ny': pin_meta.get('ny'),
+                'comment': pin_meta.get('comment', ''),
+                'savedAt': payload['meta'].get('savedAt'),
+                'annotations': n,
+                'review': base + '.review.json',
+                'png': png_rel,
+            }
+            append_pin(pin_rec)
+        print('[review] saved reviews/%s.review.json  (%d annotations, page %s%s)'
+              % (base, n, payload['meta'].get('source_page'),
+                 ', pin registered' if pin_rec else ''))
+        body = json.dumps({'ok': True, 'path': 'reviews/%s.review.json' % base,
+                           'png': png_rel, 'pin': pin_rec}).encode()
         self.send_response(200)
         self.send_header('Content-Type', 'application/json')
         self.send_header('Access-Control-Allow-Origin', '*')

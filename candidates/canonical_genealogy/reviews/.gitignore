@@ -2,3 +2,4 @@
 # keep the dir + README + format tracked; ignore the volatile captures.
 *.review.json
 *.png
+pins.json

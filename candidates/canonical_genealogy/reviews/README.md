@@ -9,16 +9,30 @@ page state behind it, so a comment is replayable in context rather than floating
    python candidates/canonical_genealogy/review/review_server.py
    ```
 2. Open a page **through it**: `http://localhost:8742/viewer_v3.html`
-   (or `viewer_v2.html`, `toys/time_axis_toy.html`, etc.) The bottom toolbar appears.
+   (or `viewer_v2.html`, `toys/time_axis_toy.html`, etc.)
    Opening the same page through the plain preview server (8741) stays clean — no overlay.
-3. Tools: **comment** (numbered pin + note), **pen**, **arrow**, **box**, **mark** (highlight),
-   **text** (typed label); colour swatches; undo; clear; hide (`h` key); **save**.
-4. **Save** → writes here:
-   - `<timestamp>-<name>.review.json` — the structured capture (below)
-   - `<timestamp>-<name>.png` — composite screengrab (viewer canvases + your annotations)
+3. **LONG-PRESS anywhere** (hold ~half a second; a gold progress ring shows the press) →
+   a **radial menu** appears around the cursor. Keep holding and release over a segment
+   (marking-menu style), or release and click a segment. Right-click also opens it.
+   Segments: **comment** (pin + note) · **pen** · **arrow** · **box** · **mark** · **text**
+   · **save** · **discard** · **use viewer**. Long-press again any time to switch tool or
+   save/discard. (A bottom toolbar mirrors everything; `h` hides the overlay; Esc closes.)
+4. **Save** (radial or toolbar) → the whole session (drawings + comments + page state + a
+   composite PNG) is written here, and collapses into ONE **permanent gold pin** at your
+   first comment-pin's spot:
+   - `<timestamp>-<comment-slug>.review.json` — the structured capture (below)
+   - `<timestamp>-<comment-slug>.png` — composite screengrab
+   - a record in `pins.json` — the permanent pin registry
 
    If no save-server is listening (page opened via 8741), Save falls back to a browser
-   **download** — move the two files into this folder.
+   **download** — move the files into this folder.
+
+## Permanent pins (the compare loop)
+Gold pins **persist across sessions and iterations** — every time the page loads through
+:8742, its saved pins render. Click a pin →  popup with the comment, the **old capture
+thumbnail**, and **"go to frame"**, which REPLAYS the saved page state (specimen, year,
+view, toggles, sliders) on the CURRENT build — so you see the updated iteration in the
+exact frame the feedback was left on, with the old capture right there for comparison.
 
 ## What's in a `.review.json`
 ```jsonc
