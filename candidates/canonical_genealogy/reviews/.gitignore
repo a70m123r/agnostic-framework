@@ -1,0 +1,4 @@
+# review outputs are transient working artifacts — processed here, then spent.
+# keep the dir + README + format tracked; ignore the volatile captures.
+*.review.json
+*.png
