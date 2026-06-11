@@ -4,6 +4,8 @@
 **Next session:** Pav steer required. Three viable paths: **(P1)** Brief 2 (Stage 2 outcome-blind base-rate census — the bounded-claim's real Bar A test; the discipline-honest next move per audit v08+v09 load-bearing logic). **(P2)** Cowork+Pav deliberation on the three new structural drafts (`observer_frame_kernels_DRAFT.md` proposes amending cont 25's rocks-falsifier resolution via frame-relativity + flags a dual-kernel-resolved-2+2 hypothesis for cont 22; `parents_produce_WC_FORMALIZATION_DRAFT.md` formalizes the cont 25 convergence-test as a frame-indexed pushout-gated-by-synergy; `frame_lock_protocol_DRAFT.md` adds the pre-registration discipline that makes PPWc falsifiable — 11-agent workflow, 5/5 adversarial leaks patched, anchors preserved by mechanism, cross-model PENDING; all are Tier-3 surfaced-for-ratification, the first two GPT-5.5+Gemini cross-modeled). **(P3)** Continue Latent Olympics build (Phase 2 — was started by Claude Code per Pav's mid-session steer; Phase-1 spec + 25-record DB exist; Phase 2 would build the narrow internal v0 per design-sketch §6 verdict; gated on solving rating-function governance). Cowork recommendation per discipline-honest framing: **P1 first** (the bounded claim's Bar A test is the work owed); P2 + P3 reasonable parallel deliberation. Other open items: BES PDF gap-fill + Yilun Du outreach drafts still pending (tasks #163, #164, #168); Kanon/Ina refactor still in_progress (task #102); straggler sweep still pending (task #157).
 **Pinned task:** Pav steers next direction (P1 / P2 / P3). Brief 2 (Stage 2 census) remains the next-Claude-Code-task if Pav picks P1. V10 cadence target: 2026-06-23 (or earlier if ship density warrants — P1 + either P2 ratification or P3 Phase 2 would justify pulling forward).
 
+**Brief 2 methodological upgrades folded 2026-06-11 (line-level, no scope expansion):** (a) "Why this is the right next empirical move" now explicitly names Brief 2 as one of TWO outcome-blind base-rate censuses the framework owes (sibling = convergence-9 list census, flagged in `specimens/agnostic_framework.json` discrepancies[] + MEDITATION #7); (b) Step 1 upgraded with the **SHA-hashed lock-file mechanic** per `frame_lock_protocol_DRAFT.md` §7 — lock file on its own commit, hash recorded in the markdown header, `git merge-base --is-ancestor` verified at result-commit; (c) if-FAILS guardrail now references **CLAIM_LIFECYCLE.md** parent-stays / child-dies / +1-tally discipline (§5.1-R parent goes to PARKED; this census's operational instantiation dies as the child; bounded claim's text stays frozen). Files-to-read list extended to cover all three upgrades. The brief's substantive subject is unchanged.
+
 ---
 
 ## Pav's read of the 2026-06-07 round (the calibration Cowork should match)
@@ -108,15 +110,25 @@ The §5.1-R bounded claim — *"every substrate that supports heritable fitness 
 
 This is the bounded claim's Stage 2 — the substantive empirical test that would move it past "falsifiable conjecture earning no tier advance" toward Bar A satisfaction. Same discipline pattern as Pilot 2 ground-truth validation: lock pre-registration BEFORE data examined; run; report verdict per pre-committed falsifier.
 
+**Sibling census flagged for honest scope-naming (2026-06-10):** Brief 2 satisfies **one of two outcome-blind base-rate censuses the framework owes**. The other = the **convergence-9 list census** (the 9-item convergence list was assembled by *hunting named instances*, carrying the same survivorship + named-search confound as §5.1-R's adversarial-niche corpus; flagged in `candidates/canonical_genealogy/specimens/agnostic_framework.json` `discrepancies[]` + `MEDITATION_QUESTIONS.md` #7). Brief 2 = the §5.1-R adversarial-niche census; the convergence-9 census is a separate later brief. Naming this explicitly here so Brief 2 isn't over-positioned as "the" census the framework owes; it satisfies one of two.
+
 ### Stage 2 deliverables (Brief 2 session)
 
-**Step 1: Lock pre-registration (~3 hours).** Write `pilots/adversarial_bar_a/PILOT_outcome_blind_basrate_census_PRE_REGISTRATION.md` with:
+**Step 1: Lock pre-registration (~3 hours).** Write `pilots/adversarial_bar_a/PILOT_outcome_blind_basrate_census_PRE_REGISTRATION.md` **and** a parallel SHA-hashed lock file `pilots/adversarial_bar_a/lock_brief_2.yaml` (or .json) containing every decision that would otherwise be made after data examination. The markdown is the human-readable record; the YAML/JSON is the tamper-evident anchor. Both contain:
 - Operational definitions of substrate / unit-of-selection / heredity-bearing-vs-not / beneficiary-bearing-adversarial-niche / "the first opportunity"
 - Sampling frame for the census (exogenous detection proxies — what counts as "we tried to find a beneficiary-bearing niche here and didn't, vs we didn't look hard")
 - Chao1-style unseen-class estimator implementation (or alternative; justify choice)
 - Heredity-stratified prediction structure
 - Pre-committed falsifier thresholds: under what numerical result does the bounded claim FAIL? Under what does it PASS? Under what is the result confounded/inconclusive?
+- **Called shots per heredity stratum** — for each substrate stratum, the bounded claim's binary predicted verdict (niche-present / niche-absent / undecided-at-this-detection-effort) recorded BEFORE any run
 - §11 cold-derivation note (you may use the Stage 1 sketch + dataset, but the falsifier is locked BEFORE any census run)
+
+**Lock mechanic** (refines Pilot 2's pre-reg discipline per `frame_lock_protocol_DRAFT.md` §7, demonstrated working in `frame_lock_pilot_RESULTS.md` 2026-06-09):
+1. Write the lock file. Compute `sha256sum lock_brief_2.yaml` and record the hash in the markdown header + the lock commit message.
+2. Commit the lock file to git ON ITS OWN COMMIT (no other changes in the same commit). Note the commit hash.
+3. Run the census in subsequent commits.
+4. At result-commit (Step 3): re-compute the lock file's SHA256, verify it matches the recorded hash, and verify `git merge-base --is-ancestor <lock_commit> HEAD` returns true (the lock is a strict ancestor of the result-commit — tamper-evident at the commit-graph layer, stronger than the frame-lock pilot's content-hash-only anchor since this repo has git).
+5. Realized numbers checked against locked thresholds; verdict per the pre-committed rule.
 
 **Step 2: Run the census (~6-8 hours).** Pull data, compute, report.
 
@@ -129,7 +141,7 @@ This is the bounded claim's Stage 2 — the substantive empirical test that woul
 - **Three adversarial skeptics + independent re-run** before result-commit (Pilot 2 pattern).
 - **NO Latent Olympics work in Stage 2 session.** That's Brief 3.
 - **NO new continuation written.** Result-commit + sketch-update + HANDOFF + CHANGELOG.
-- **If census FAILS the bounded claim** — apply cont 27 §3 narrow-before-demote per Pilot 2 pattern. Cycling-amplitude metric was rejected cleanly; if bounded claim fails, what survives narrows further (perhaps to: adversarial niches appear in *some* heredity-bearing substrates but not all; conditional sub-claims survive).
+- **If census FAILS the bounded claim** — apply cont 27 §3 narrow-before-demote per Pilot 2 pattern + the `candidates/CLAIM_LIFECYCLE.md` parent-stays / child-dies / +1-tally discipline (2026-06-10): the **§5.1-R parent conjecture goes to PARKED** with a friction-logged dated record + revisit trigger (the parent is *not killed*; it survives as a wrapper awaiting a better child); **this census's specific operational instantiation** (the chosen detection proxies, the chosen Chao1 implementation, the specific "first opportunity" threshold) **is the dead child** — retired with the dated reason; the **bounded claim's text stays frozen** (CLAIM_LIFECYCLE.md §2.1 anti-gaming: "refine the estimator again" costs +1 dead child rather than resetting the count); the dead-children tally for §5.1-R increments by 1 (the bounded §5.1-R successor itself was already a "narrowed survivor" of the §5.1 strong full-spectrum reading — that prior narrowing was the surviving-parent's prior child-retirement at the §5.1 level, see SKETCH §5.1-R; if this census FAILS, that's the second narrowing of the same parent's lineage). Cycling-amplitude metric was rejected cleanly (in a different lineage — 1/f-as-L0-failsafe-signature, not adversarial-substrate-dynamics — but the same pattern); if bounded claim fails, what survives narrows further (perhaps to: adversarial niches appear in *some* heredity-bearing substrates but not all; conditional sub-claims survive).
 - **If census PASSES the bounded claim at Bar A** — the candidate advances to Tier 2 (ontological-candidate) per cont 27 §2. Surface to Cowork for canon-side integration; do NOT promote to Tier 1 in same session.
 
 ### Files to read (for Brief 2)
@@ -137,7 +149,11 @@ This is the bounded claim's Stage 2 — the substantive empirical test that woul
 - `candidates/adversarial_substrate_dynamics_BAR_A_SKETCH.md` (specifically §5.1, §5.1-R, §5.4 census tests, §5.6 internet correlation)
 - `pilots/1f_failsafe_cycling/results_groundtruth/discussion.md` + `confounds_groundtruth.md` (Pilot 2 result + adversarial-skeptic pattern as exemplar)
 - `pilots/1f_failsafe_cycling/PILOT_groundtruth_validation_PRE_REGISTRATION.md` (Pilot 2 pre-reg as template — same locking discipline)
-- `audits/v09.md` (whatever v09 produces — Tier-1 fixes Cowork applies must be honored)
+- `audits/v09.md` (the ratified verdict — V9-F1..F7 Tier-1 fixes Cowork has applied must be honored)
+- `candidates/frame_lock_protocol_DRAFT.md` §7 (SHA-hash + git-ancestor lock mechanic — the pre-reg discipline upgrade Brief 2 adopts)
+- `candidates/frame_lock_data/lock_pilot.yaml` + `candidates/frame_lock_pilot_RESULTS.md` (worked example of the lock mechanic on controlled ground truth — what a real lock file looks like, what called-shots look like, how the recompute-and-match step is reported)
+- `candidates/CLAIM_LIFECYCLE.md` (the parent-conjecture-stays / child-experiment-dies / dated-tally vocabulary Brief 2's PASS or FAIL gets recorded against)
+- `candidates/canonical_genealogy/specimens/agnostic_framework.json` `discrepancies[]` (the sibling-census-owed flag — why Brief 2 is half of what's owed, not all)
 
 ---
 
