@@ -65,9 +65,27 @@ Each pin carries the framework's claim-lifecycle shape:
   on the pin shows how many.
 
 **Edit / delete:** the popup has **edit** (ask comment), **+ note** (follow-up),
-**↪ give** (response), and **delete**. Delete is a **retire** — the pin's record stays
-in `pins.json` (`status:retired`, `retired:true`) and its `.review.json` / `.png` are
-kept on disk. **Records are never destroyed.**
+**◉ sub-pin** (threaded annotation session), **↪ give** (response), and **delete**.
+Delete is a **retire** — the pin's record stays in `pins.json` (`status:retired`,
+`retired:true`) and its `.review.json` / `.png` are kept on disk. **Records are never
+destroyed.**
+
+### Threads (follow-ups with annotations)
+The follow-up flow: **click the parent pin → its popup → choose:**
+- **+ note** — a quick text follow-up appended to the pin's thread, or
+- **◉ sub-pin** — a full annotation session attached to the parent: the popup closes,
+  you're in pin mode; pin + draw + comment as usual, then **save** — it lands as a
+  **sub-pin** (small circle labelled `2.1`, `2.2`, …) with its own capture, state, and
+  ask/give lifecycle, threaded under the parent. The parent popup lists the THREAD
+  (click any entry to open the sub-pin; sub-pin popups link back to the parent).
+  The parent pin's badge counts notes + sub-pins.
+
+### Popup behavior (fixed after first field test)
+The pin popup is never cropped — it measures itself, clamps fully on-screen (and re-fits
+as the thumbnail loads), scrolls internally when taller than the viewport, and **drags by
+its header**. While a comment editor has unsaved text the popup refuses to be silently
+replaced (a toast warns instead) — a draft can no longer vanish mid-typing. The radial
+menu renders **above** the popup.
 
 Server endpoints: `PATCH /pins/<id>` (comment / status / give / add_note / retired) and
 `DELETE /pins/<id>` (retire). Existing pins with no status field load as `open`.

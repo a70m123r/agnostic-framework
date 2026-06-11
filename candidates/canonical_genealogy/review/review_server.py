@@ -73,6 +73,15 @@ def update_pin(pin_id, patch):
             p['comment'] = patch['comment']
         if isinstance(patch.get('annotations'), int):
             p['annotations'] = patch['annotations']
+        # threading: re-parent (or detach with parent=None); parent must exist and not be itself
+        if 'parent' in patch:
+            par = patch['parent']
+            if par is None:
+                p.pop('parent', None)
+            elif isinstance(par, str) and par != pin_id and any(q.get('id') == par for q in pins):
+                p['parent'] = par
+        if not p.get('status'):
+            p['status'] = 'open'   # heal records saved before the status default existed
         give = patch.get('give')
         if isinstance(give, dict):
             g = dict(p.get('give') or {})
@@ -245,7 +254,14 @@ class Handler(http.server.SimpleHTTPRequestHandler):
                 'annotations': n,
                 'review': base + '.review.json',
                 'png': png_rel,
+                'status': 'open',          # every ask starts open
+                'history': [],
+                'notes': [],
             }
+            # threading: a sub-pin carries its parent pin's id (must exist)
+            parent = pin_meta.get('parent')
+            if parent and any(p.get('id') == parent for p in load_pins()):
+                pin_rec['parent'] = parent
             append_pin(pin_rec)
         print('[review] saved reviews/%s.review.json  (%d annotations, page %s%s)'
               % (base, n, payload['meta'].get('source_page'),

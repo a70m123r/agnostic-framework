@@ -46,14 +46,16 @@
     permPins.forEach(function(p,i){
       var b=document.createElement('button');
       b.className='__rv_pin';
-      var st=pinStatus(p);
-      b.title=(p.comment||'').slice(0,120)+'  ['+st+']';
-      b.textContent=String(i+1);
+      var st=pinStatus(p), isSub=!!p.parent;
+      var lbl=(typeof pinLabel==='function')?pinLabel(p):String(i+1);
+      b.title=(isSub?'sub-pin ':'')+lbl+': '+(p.comment||'').slice(0,120)+'  ['+st+']';
+      b.textContent=lbl;
       var col=statusColor(p), retired=(st==='retired');
       var ring=(st==='verified')?'box-shadow:0 0 0 2px #bfffd0,0 2px 8px rgba(0,0,0,.5);':'box-shadow:0 2px 8px rgba(0,0,0,.5);';
-      b.setAttribute('style','position:absolute;width:24px;height:24px;border-radius:50% 50% 50% 4px;background:'+col+';color:#1a1206;border:2px solid #0c0f16;font:700 12px "Segoe UI";cursor:pointer;pointer-events:auto;transform:translate(-12px,-12px) rotate(0deg);'+ring+(retired?'opacity:.5;':''));
-      var nNotes=((p.notes&&p.notes.length)||0);
-      if(nNotes>0){ var badge=document.createElement('span'); badge.textContent=String(nNotes);
+      var sz=isSub?19:24, fnt=isSub?'700 9px':'700 12px', shape=isSub?'50%':'50% 50% 50% 4px';
+      b.setAttribute('style','position:absolute;min-width:'+sz+'px;height:'+sz+'px;padding:0 2px;border-radius:'+shape+';background:'+col+';color:#1a1206;border:2px solid #0c0f16;font:'+fnt+' "Segoe UI";cursor:pointer;pointer-events:auto;transform:translate(-'+(sz/2)+'px,-'+(sz/2)+'px);'+ring+(retired?'opacity:.5;':''));
+      var nNotes=((p.notes&&p.notes.length)||0)+(typeof pinChildren==='function'?pinChildren(p).length:0);
+      if(nNotes>0&&!isSub){ var badge=document.createElement('span'); badge.textContent=String(nNotes);
         badge.setAttribute('style','position:absolute;top:-6px;right:-6px;min-width:14px;height:14px;padding:0 3px;border-radius:8px;background:#16324a;color:#cfe6ff;border:1px solid #2f6a9a;font:700 9px "Segoe UI";display:flex;align-items:center;justify-content:center;');
         b.appendChild(badge); }
       b.onclick=function(ev){ ev.stopPropagation(); openPermPopup(p,i); };
@@ -158,7 +160,7 @@
     x=Math.max(R+6,Math.min(innerWidth-R-6,x)); y=Math.max(R+6,Math.min(innerHeight-R-6,y));
     radial=document.createElement('div');
     radial.id='__rv_radial'; radial._cx=x; radial._cy=y; radial._R=R; radial._r0=r0;
-    radial.setAttribute('style','position:fixed;left:'+(x-R-4)+'px;top:'+(y-R-4)+'px;width:'+size+'px;height:'+size+'px;z-index:2147483500;');
+    radial.setAttribute('style','position:fixed;left:'+(x-R-4)+'px;top:'+(y-R-4)+'px;width:'+size+'px;height:'+size+'px;z-index:2147483650;');
     var s=document.createElementNS(NS,'svg'); s.setAttribute('width',size); s.setAttribute('height',size);
     var cx=R+4, cy=R+4;
     radial._segs=[];
@@ -261,7 +263,7 @@
     anns.push(a); return a;
   }
   function undo(){ anns.pop(); render(); }
-  function discard(){ if(anns.length&&!confirm('Discard '+anns.length+' unsaved notes?')) return; anns=[]; cur=null; setTool('off'); render(); }
+  function discard(){ if(anns.length&&!confirm('Discard '+anns.length+' unsaved notes?')) return; anns=[]; cur=null; sessionParent=null; setTool('off'); render(); }
 
   function hitContext(x,y){
     if(x==null||y==null) return null;
@@ -298,32 +300,66 @@
   function el(tag,attrs){ var e=document.createElementNS(NS,tag); for(var k in attrs) e.setAttribute(k,attrs[k]); return e; }
 
   // ================= popups =================
+  // Pav popup fixes: (a) never cropped — measured + clamped fully on-screen, internal scroll
+  // when taller than the viewport; (b) never silently replaced — opening a NEW popup while an
+  // editor has unsaved text is blocked with a toast instead of destroying the draft.
   function popup(x,y,w){
-    closePopup();
+    if(!closePopup()) return null;
     var d=document.createElement('div');
     d.id='__rv_pop';
-    d.setAttribute('style','position:fixed;left:'+Math.min(x,innerWidth-(w||260)-12)+'px;top:'+Math.min(y,innerHeight-170)+'px;z-index:2147483600;background:#10141d;border:1px solid #2f6a9a;border-radius:8px;padding:8px;box-shadow:0 6px 24px rgba(0,0,0,.6);max-width:'+((w||260))+'px;');
-    document.body.appendChild(d); return d;
+    d.setAttribute('style','position:fixed;left:'+Math.min(x,innerWidth-(w||260)-12)+'px;top:'+Math.min(y,Math.max(8,innerHeight-220))+'px;z-index:2147483600;background:#10141d;border:1px solid #2f6a9a;border-radius:8px;padding:8px;box-shadow:0 6px 24px rgba(0,0,0,.6);max-width:'+((w||260))+'px;max-height:calc(100vh - 16px);overflow-y:auto;overscroll-behavior:contain;');
+    document.body.appendChild(d);
+    d._fit=function(){ var r=d.getBoundingClientRect();
+      var nt=Math.max(8,Math.min(parseFloat(d.style.top),innerHeight-r.height-8));
+      var nl=Math.max(8,Math.min(parseFloat(d.style.left),innerWidth-r.width-8));
+      d.style.top=nt+'px'; d.style.left=nl+'px'; };
+    requestAnimationFrame(d._fit);
+    // content grows async (thumbnail load, editors) — keep the popup on-screen as it grows
+    if(window.ResizeObserver){ var ro=new ResizeObserver(function(){ d._fit(); }); ro.observe(d); d._ro=ro; }
+    return d;
   }
-  function closePopup(){ var p=document.getElementById('__rv_pop'); if(p) p.remove(); }
+  function popupDirty(){
+    var p=document.getElementById('__rv_pop'); if(!p) return false;
+    var eds=p.querySelectorAll('textarea,input');
+    for(var i=0;i<eds.length;i++){ if((eds[i].value||'').trim() && eds[i].dataset.initial!==eds[i].value) return true; }
+    return false;
+  }
+  function closePopup(force){
+    var p=document.getElementById('__rv_pop'); if(!p) return true;
+    if(!force && popupDirty()){ toast('unsaved comment in the open popup — save or cancel it first'); return false; }
+    p.remove(); return true;
+  }
+  // drag handle for popups: hold the header to move it (consistent with the panel philosophy)
+  function makeDraggable(d,handle){
+    handle.style.cursor='move'; handle.title='drag to move';
+    handle.addEventListener('pointerdown',function(e){
+      if(e.target.tagName==='BUTTON') return;
+      e.preventDefault(); handle.setPointerCapture(e.pointerId);
+      var r=d.getBoundingClientRect(), ox=e.clientX-r.left, oy=e.clientY-r.top;
+      function mv(ev){ d.style.left=Math.max(4,Math.min(innerWidth-60,ev.clientX-ox))+'px';
+        d.style.top=Math.max(4,Math.min(innerHeight-40,ev.clientY-oy))+'px'; }
+      function up(){ handle.removeEventListener('pointermove',mv); handle.removeEventListener('pointerup',up); }
+      handle.addEventListener('pointermove',mv); handle.addEventListener('pointerup',up);
+    });
+  }
   function openComment(a){
-    var d=popup(a.x+16,a.y);
-    var ta=document.createElement('textarea'); ta.value=a.text||''; ta.placeholder='comment on pin #'+a.n+'…';
+    var d=popup(a.x+16,a.y); if(!d) return;
+    var ta=document.createElement('textarea'); ta.value=a.text||''; ta.dataset.initial=ta.value; ta.placeholder='comment on pin #'+a.n+'…';
     ta.setAttribute('style','width:230px;height:64px;background:#0c0f16;color:#e8edf6;border:1px solid #2a3142;border-radius:6px;padding:6px;font:13px "Segoe UI";resize:vertical;');
     d.appendChild(ta); ta.focus();
     var row=document.createElement('div'); row.style.cssText='display:flex;gap:6px;margin-top:6px;justify-content:flex-end;';
-    var del=mkBtn('\u{1F5D1} delete'); del.onclick=function(){ anns=anns.filter(function(z){return z!==a;}); renumber(); closePopup(); render(); };
-    var ok=mkBtn('✓ keep'); ok.onclick=function(){ a.text=ta.value.trim(); closePopup(); render(); };
+    var del=mkBtn('\u{1F5D1} delete'); del.onclick=function(){ anns=anns.filter(function(z){return z!==a;}); renumber(); closePopup(true); render(); };
+    var ok=mkBtn('✓ keep'); ok.onclick=function(){ a.text=ta.value.trim(); closePopup(true); render(); };
     row.appendChild(del); row.appendChild(ok); d.appendChild(row);
     ta.addEventListener('keydown',function(e){ if(e.key==='Enter'&&(e.metaKey||e.ctrlKey)) ok.onclick(); });
   }
   function openText(a){
-    var d=popup(a.x,a.y-40);
-    var inp=document.createElement('input'); inp.value=a.text||''; inp.placeholder='type label…';
+    var d=popup(a.x,a.y-40); if(!d) return;
+    var inp=document.createElement('input'); inp.value=a.text||''; inp.dataset.initial=inp.value; inp.placeholder='type label…';
     inp.setAttribute('style','width:220px;background:#0c0f16;color:#e8edf6;border:1px solid #2a3142;border-radius:6px;padding:6px;font:14px "Segoe UI";');
     d.appendChild(inp); inp.focus();
-    function commit(){ a.text=inp.value.trim(); if(!a.text) anns=anns.filter(function(z){return z!==a;}); closePopup(); render(); }
-    inp.addEventListener('keydown',function(e){ if(e.key==='Enter') commit(); if(e.key==='Escape'){ if(!a.text) anns=anns.filter(function(z){return z!==a;}); closePopup(); render(); } });
+    function commit(){ a.text=inp.value.trim(); if(!a.text) anns=anns.filter(function(z){return z!==a;}); closePopup(true); render(); }
+    inp.addEventListener('keydown',function(e){ if(e.key==='Enter') commit(); if(e.key==='Escape'){ if(!a.text) anns=anns.filter(function(z){return z!==a;}); closePopup(true); render(); } });
     inp.addEventListener('blur',commit);
   }
   function renumber(){ var k=0; anns.forEach(function(a){ if(a.type==='pin') a.n=++k; }); }
@@ -349,15 +385,36 @@
     s.textContent=text; s.setAttribute('style','display:inline-block;font:700 10px "Segoe UI";color:#0c0f16;background:'+col+';border-radius:5px;padding:2px 7px;');
     return s; }
 
+  // ---- threading (Pav follow-up flow): pins can have a parent -> sub-pins; labels 1, 2, 2.1, 2.2 ...
+  var sessionParent=null;
+  function pinById(id){ for(var i=0;i<permPins.length;i++) if(permPins[i].id===id) return permPins[i]; return null; }
+  function pinChildren(p){ return permPins.filter(function(c){ return c.parent===p.id; }); }
+  function pinLabel(p){
+    var parents=permPins.filter(function(q){ return !q.parent; });
+    if(!p.parent) return String(parents.indexOf(p)+1);
+    var par=pinById(p.parent);
+    if(!par) return '?.'+(permPins.indexOf(p)+1);
+    return (parents.indexOf(par)+1)+'.'+(pinChildren(par).indexOf(p)+1);
+  }
+
   function openPermPopup(p,i){
     var x=(p.nx!=null?p.nx*innerWidth:p.x), y=(p.ny!=null?p.ny*innerHeight:p.y);
-    var d=popup(x+18,y-10,320);
+    var d=popup(x+18,y-10,320); if(!d) return;
     var st=pinStatus(p);
-    // header: pin number + status chip + timestamp
-    var h=document.createElement('div'); h.style.cssText='display:flex;align-items:center;gap:6px;margin-bottom:5px;';
+    // header: pin number + status chip + close — DRAG HANDLE (hold to move the popup)
+    var h=document.createElement('div'); h.style.cssText='display:flex;align-items:center;gap:6px;margin-bottom:5px;position:sticky;top:-8px;background:#10141d;padding:4px 0;';
     var ht=document.createElement('span'); ht.style.cssText='font:600 13px "Segoe UI";color:#f0b75e;flex:1;';
-    ht.textContent='◉ pin '+(i+1)+' — '+new Date(p.savedAt||Date.now()).toLocaleString();
-    h.appendChild(ht); h.appendChild(chip(st.toUpperCase(), statusColor(p))); d.appendChild(h);
+    ht.textContent=(p.parent?'↳ sub-pin '+pinLabel(p):'◉ pin '+pinLabel(p))+' — '+new Date(p.savedAt||Date.now()).toLocaleString();
+    var hx=mkBtn('✕'); hx.title='close'; hx.style.cssText+=';padding:2px 7px;'; hx.onclick=function(){ closePopup(true); };
+    h.appendChild(ht); h.appendChild(chip(st.toUpperCase(), statusColor(p))); h.appendChild(hx); d.appendChild(h);
+    makeDraggable(d,h);
+    if(p.parent){
+      var par=pinById(p.parent);
+      if(par){ var pl=document.createElement('div'); pl.style.cssText='font:11px "Segoe UI";color:#8e98ad;margin-bottom:5px;cursor:pointer;text-decoration:underline;';
+        pl.textContent='part of the pin '+pinLabel(par)+' thread — open parent';
+        pl.onclick=function(){ closePopup(true); openPermPopup(par, permPins.indexOf(par)); };
+        d.appendChild(pl); }
+    }
 
     // ASK (the reviewer's comment) — editable
     var askHdr=document.createElement('div'); askHdr.style.cssText='font:600 9px "Segoe UI";color:#8e98ad;letter-spacing:.5px;margin:2px 0;'; askHdr.textContent='ASK'; d.appendChild(askHdr);
@@ -395,6 +452,20 @@
       img.onclick=function(){ window.open('/reviews/'+p.png,'_blank'); };
       d.appendChild(img); }
 
+    // ----- THREAD: this pin's sub-pins -----
+    var kids=pinChildren(p);
+    if(kids.length){
+      var tHdr=document.createElement('div'); tHdr.style.cssText='font:600 9px "Segoe UI";color:#f0b75e;letter-spacing:.5px;margin:2px 0;'; tHdr.textContent='THREAD ('+kids.length+' sub-pin'+(kids.length>1?'s':'')+')'; d.appendChild(tHdr);
+      var tl=document.createElement('div'); tl.style.cssText='font:11px "Segoe UI";color:#c3ccdd;margin-bottom:6px;max-height:90px;overflow:auto;';
+      kids.forEach(function(k){ var r=document.createElement('div');
+        r.style.cssText='margin:2px 0;border-left:2px solid '+statusColor(k)+';padding-left:6px;cursor:pointer;';
+        r.textContent=pinLabel(k)+' ['+pinStatus(k)+']  '+(k.comment||'').slice(0,52);
+        r.title='open sub-pin';
+        r.onclick=function(ev){ ev.stopPropagation(); closePopup(true); openPermPopup(k, permPins.indexOf(k)); };
+        tl.appendChild(r); });
+      d.appendChild(tl);
+    }
+
     // ----- action row 1: replay + status advance -----
     var row=document.createElement('div'); row.style.cssText='display:flex;gap:6px;flex-wrap:wrap;margin-bottom:5px;';
     var go=mkBtn('↦ go to frame'); go.style.cssText+=';background:#16324a;border-color:#2f6a9a;color:#cfe6ff;';
@@ -410,58 +481,64 @@
     if(st!=='retired' && cur>=0 && cur<STATUS_FLOW.length-1){
       var nextSt=STATUS_FLOW[cur+1];
       var adv=mkBtn('✓ '+nextSt); adv.title='advance status to '+nextSt;
-      adv.onclick=function(){ patchPin(p,{status:nextSt},function(){ closePopup(); }); };
+      adv.onclick=function(){ patchPin(p,{status:nextSt},function(){ closePopup(true); }); };
       row.appendChild(adv);
     }
     d.appendChild(row);
 
-    // ----- action row 2: edit / add note / give / delete -----
+    // ----- action row 2: edit / add note / sub-pin / give / delete -----
     var row2=document.createElement('div'); row2.style.cssText='display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end;';
     var edit=mkBtn('✎ edit'); edit.title='edit the ask comment';
     edit.onclick=function(){ pinEditComment(p,d); };
-    var note=mkBtn('+ note'); note.title='append a follow-up';
+    var note=mkBtn('+ note'); note.title='append a follow-up note to this pin';
     note.onclick=function(){ pinAddNote(p,d); };
+    var sub=mkBtn('◉ sub-pin'); sub.title='annotate the page and save a sub-pin attached to this pin';
+    sub.onclick=function(){ sessionParent=p.id; closePopup(true); setTool('pin');
+      toast('sub-pin mode — pin + annotate, then SAVE: it attaches to pin '+pinLabel(p)+' (discard cancels)'); };
     var giveB=mkBtn('↪ give'); giveB.title='record the response/change (text + commit)';
     giveB.onclick=function(){ pinEditGive(p,d); };
     var del=mkBtn('\u{1F5D1} delete'); del.title='retire this pin (record kept on disk)';
-    del.onclick=function(){ if(!confirm('Retire pin #'+(i+1)+'? The record stays on disk (status -> retired), it just stops showing as active.')) return;
-      deletePin(p,function(){ closePopup(); toast('pin retired (record kept)'); }); };
-    var cl=mkBtn('✕ close'); cl.onclick=closePopup;
-    row2.appendChild(edit); row2.appendChild(note); row2.appendChild(giveB); row2.appendChild(del); row2.appendChild(cl);
+    del.onclick=function(){ if(!confirm('Retire pin '+pinLabel(p)+'? The record stays on disk (status -> retired), it just stops showing as active.')) return;
+      deletePin(p,function(){ closePopup(true); toast('pin retired (record kept)'); }); };
+    row2.appendChild(edit); row2.appendChild(note); row2.appendChild(sub); row2.appendChild(giveB); row2.appendChild(del);
     d.appendChild(row2);
+    requestAnimationFrame(d._fit);
   }
 
-  // inline editors reuse the same popup surface
+  // inline editors reuse the same popup surface; they scroll themselves into view (the popup
+  // is scrollable now) and force-close on success so the dirty-guard never traps a saved edit.
+  function edSection(d){ var ed=document.createElement('div'); ed.style.cssText='margin-top:6px;border-top:1px solid #2a3142;padding-top:6px;';
+    d.appendChild(ed); requestAnimationFrame(function(){ ed.scrollIntoView({block:'nearest'}); if(d._fit)d._fit(); }); return ed; }
   function pinEditComment(p,d){
-    var ed=document.createElement('div'); ed.style.cssText='margin-top:6px;border-top:1px solid #2a3142;padding-top:6px;';
-    var ta=document.createElement('textarea'); ta.value=p.comment||'';
+    var ed=edSection(d);
+    var ta=document.createElement('textarea'); ta.value=p.comment||''; ta.dataset.initial=ta.value;
     ta.setAttribute('style','width:300px;height:60px;background:#0c0f16;color:#e8edf6;border:1px solid #2a3142;border-radius:6px;padding:6px;font:13px "Segoe UI";resize:vertical;');
     ed.appendChild(ta); var r=document.createElement('div'); r.style.cssText='display:flex;gap:6px;justify-content:flex-end;margin-top:5px;';
-    var ok=mkBtn('✓ save'); ok.onclick=function(){ patchPin(p,{comment:ta.value.trim()},function(){ closePopup(); }); };
+    var ok=mkBtn('✓ save'); ok.onclick=function(){ patchPin(p,{comment:ta.value.trim()},function(){ closePopup(true); }); };
     var ca=mkBtn('cancel'); ca.onclick=function(){ ed.remove(); };
-    r.appendChild(ca); r.appendChild(ok); ed.appendChild(r); d.appendChild(ed); ta.focus();
+    r.appendChild(ca); r.appendChild(ok); ed.appendChild(r); ta.focus();
   }
   function pinAddNote(p,d){
-    var ed=document.createElement('div'); ed.style.cssText='margin-top:6px;border-top:1px solid #2a3142;padding-top:6px;';
-    var ta=document.createElement('textarea'); ta.placeholder='follow-up note…';
+    var ed=edSection(d);
+    var ta=document.createElement('textarea'); ta.placeholder='follow-up note…'; ta.dataset.initial='';
     ta.setAttribute('style','width:300px;height:50px;background:#0c0f16;color:#e8edf6;border:1px solid #2a3142;border-radius:6px;padding:6px;font:13px "Segoe UI";resize:vertical;');
     ed.appendChild(ta); var r=document.createElement('div'); r.style.cssText='display:flex;gap:6px;justify-content:flex-end;margin-top:5px;';
-    var ok=mkBtn('✓ add'); ok.onclick=function(){ var t=ta.value.trim(); if(!t){ ed.remove(); return; } patchPin(p,{add_note:{text:t,by:'reviewer'}},function(){ closePopup(); }); };
+    var ok=mkBtn('✓ add'); ok.onclick=function(){ var t=ta.value.trim(); if(!t){ ed.remove(); return; } patchPin(p,{add_note:{text:t,by:'reviewer'}},function(){ closePopup(true); }); };
     var ca=mkBtn('cancel'); ca.onclick=function(){ ed.remove(); };
-    r.appendChild(ca); r.appendChild(ok); ed.appendChild(r); d.appendChild(ed); ta.focus();
+    r.appendChild(ca); r.appendChild(ok); ed.appendChild(r); ta.focus();
   }
   function pinEditGive(p,d){
-    var ed=document.createElement('div'); ed.style.cssText='margin-top:6px;border-top:1px solid #2a3142;padding-top:6px;';
-    var ta=document.createElement('textarea'); ta.value=(p.give&&p.give.text)||''; ta.placeholder='what was done (the give)…';
+    var ed=edSection(d);
+    var ta=document.createElement('textarea'); ta.value=(p.give&&p.give.text)||''; ta.dataset.initial=ta.value; ta.placeholder='what was done (the give)…';
     ta.setAttribute('style','width:300px;height:50px;background:#0c0f16;color:#e8edf6;border:1px solid #2a3142;border-radius:6px;padding:6px;font:13px "Segoe UI";resize:vertical;margin-bottom:5px;');
-    var ci=document.createElement('input'); ci.value=(p.give&&p.give.commit)||''; ci.placeholder='commit ref (optional)';
+    var ci=document.createElement('input'); ci.value=(p.give&&p.give.commit)||''; ci.dataset.initial=ci.value; ci.placeholder='commit ref (optional)';
     ci.setAttribute('style','width:300px;background:#0c0f16;color:#e8edf6;border:1px solid #2a3142;border-radius:6px;padding:6px;font:12px "Segoe UI";');
     ed.appendChild(ta); ed.appendChild(ci);
     var r=document.createElement('div'); r.style.cssText='display:flex;gap:6px;justify-content:flex-end;margin-top:5px;';
     var ok=mkBtn('✓ record give'); ok.title='also moves status to applied';
-    ok.onclick=function(){ patchPin(p,{give:{text:ta.value.trim(),commit:ci.value.trim(),by:'reviewer'},status:'applied'},function(){ closePopup(); }); };
+    ok.onclick=function(){ patchPin(p,{give:{text:ta.value.trim(),commit:ci.value.trim(),by:'reviewer'},status:'applied'},function(){ closePopup(true); }); };
     var ca=mkBtn('cancel'); ca.onclick=function(){ ed.remove(); };
-    r.appendChild(ca); r.appendChild(ok); ed.appendChild(r); d.appendChild(ed); ta.focus();
+    r.appendChild(ca); r.appendChild(ok); ed.appendChild(r); ta.focus();
   }
 
   // ================= state scrape + replay =================
@@ -605,15 +682,17 @@
     else if(lastRadialPos){ px=lastRadialPos.x; py=lastRadialPos.y; }
     else { var sx=0,sy=0,sn=0; anns.forEach(function(a){ var ax=a.x!=null?a.x:(a.pts?a.pts[0].x:a.x1); var ay=a.y!=null?a.y:(a.pts?a.pts[0].y:a.y1); if(ax!=null){sx+=ax;sy+=ay;sn++;} }); px=sn?sx/sn:innerWidth/2; py=sn?sy/sn:innerHeight/2; }
     composite(function(png){
-      var payload={ meta:{ name:slug(comment)||'review', tool:'review_layer v2', savedAt:new Date().toISOString(),
-          pin:{ x:px, y:py, nx:+(px/innerWidth).toFixed(4), ny:+(py/innerHeight).toFixed(4), comment:comment } },
+      var pinMeta={ x:px, y:py, nx:+(px/innerWidth).toFixed(4), ny:+(py/innerHeight).toFixed(4), comment:comment };
+      if(sessionParent){ pinMeta.parent=sessionParent; }
+      var payload={ meta:{ name:slug(comment)||'review', tool:'review_layer v3', savedAt:new Date().toISOString(), pin:pinMeta },
         state:scrapeState(), annotations:anns.map(stripFns), png:png };
       fetch(location.origin+'/save',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})
         .then(function(r){ return r.ok?r.json():Promise.reject(r.status); })
         .then(function(j){
+          var wasSub=!!sessionParent; sessionParent=null;
           if(j.pin){ permPins.push(j.pin); renderPins(); }
           anns=[]; cur=null; setTool('off'); render();
-          toast('saved → '+j.path+' · pin #'+permPins.length+' placed');
+          toast('saved → '+j.path+(j.pin?(' · '+(wasSub?'sub-pin '+pinLabel(j.pin)+' attached':'pin '+pinLabel(j.pin)+' placed')):''));
         })
         .catch(function(){
           var stamp=new Date().toISOString().replace(/[:.]/g,'-').slice(0,19);
