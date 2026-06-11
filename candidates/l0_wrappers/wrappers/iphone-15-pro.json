@@ -1,0 +1,194 @@
+{
+  "_template_doc": "L0 WRAPPER — hand-assembled view for sweep-1. Spec: L0_WRAPPER_SPEC.md. Every populated field carries real fact_refs. hand_assembled:true per spec §2.9.2 — l0_compile_wrappers.py must reproduce this view byte-for-byte modulo 'generated' once built.",
+  "schema_version": "0.1-l0-wrapper",
+  "wrapper_id": "l0:iphone-15-pro",
+  "_status": "Tier-3 WORKING wrapper view — exploratory, surfaced for Cowork+Pav ratification. NOT canon, NOT a tier promotion, does NOT grow the convergence list (stays 9).",
+  "kind": "device-model",
+
+  "names": {
+    "canonical": "iPhone 15 Pro",
+    "aka": ["iPhone 15 Pro (base)", "A17 Pro iPhone"],
+    "fact_refs": ["l0-iphone-15-pro-0001"]
+  },
+
+  "abstraction": {
+    "_comment": "Three-rung ladder: smartphone (generic) > proposed:iphone (class) > iPhone 15 Pro (instance). The intermediate class rung 'iPhone' is proposed — seeds sweep-2. Dialing from instance up to 'iPhone' is a REFRAME (you are now talking about the line, not the model); dialing further to 'smartphone' is another reframe (the generic category). No ladder edge exists without a backing fact.",
+    "level": "instance",
+    "ladder": {
+      "generalizes_to": "proposed:iphone",
+      "_generalizes_to_note": "Direct class rung: the iPhone product line (proposed entity). The iPhone line is itself a subclass of smartphone. Two-hop: iphone-15-pro -[instance-of]-> proposed:iphone -[subclass-of]-> l0:smartphone.",
+      "specializes_to": []
+    },
+    "level_by_scope": {},
+    "fact_refs": ["l0-iphone-15-pro-0018", "l0-iphone-15-pro-r0001"]
+  },
+
+  "kernel": {
+    "_comment": "Admission rule: bucket=corroborated AND certainty>=0.7 AND no ESTIMATE:/PROXY: tag. All facts are pending at sweep-1 emit — NO facts yet pass the corroborated gate. Kernel is EMPTY at this sweep. This is correct signal: kernel hardens in sweep-2+ when independent verification routes land.",
+    "statement": "EMPTY — kernel gates require corroborated bucket; all sweep-1 facts are pending. Kernel will populate in sweep-2 once independent verification sources are fetched.",
+    "facts": []
+  },
+
+  "membrane": {
+    "_comment": "Fuzzy frontier — all sweep-1 facts are pending (bucket=pending). Render as fuzzy/dashed segments per spec §3.1. Hardness h = B(bucket) x certainty = 0.55 x certainty for pending facts (l0-membrane-proxy-v0.1 — RENDER PROXY, disclose wherever drawn).",
+
+    "corroborated_soft": [],
+
+    "pending": [
+      {"fact_id": "l0-iphone-15-pro-0001", "predicate": "canonical_name", "value": "iPhone 15 Pro", "bucket": "pending", "certainty": 0.95},
+      {"fact_id": "l0-iphone-15-pro-0003", "predicate": "announced", "value": "2023-09-12", "bucket": "pending", "certainty": 0.95},
+      {"fact_id": "l0-iphone-15-pro-0004", "predicate": "released", "value": "2023-09-22", "bucket": "pending", "certainty": 0.95},
+      {"fact_id": "l0-iphone-15-pro-0013", "predicate": "launch_price_usd", "value": 999, "bucket": "pending", "certainty": 0.95},
+      {"fact_id": "l0-iphone-15-pro-0007", "predicate": "chip_name", "value": "Apple A17 Pro", "bucket": "pending", "certainty": 0.95},
+      {"fact_id": "l0-iphone-15-pro-0014", "predicate": "action_button", "value": "customizable Action Button (replaced mute/ring switch)", "bucket": "pending", "certainty": 0.90},
+      {"fact_id": "l0-iphone-15-pro-0002", "predicate": "kind", "value": "device-model", "bucket": "pending", "certainty": 0.90},
+      {"fact_id": "l0-iphone-15-pro-0018", "predicate": "abstraction_level", "value": "instance", "bucket": "pending", "certainty": 0.90},
+      {"fact_id": "l0-iphone-15-pro-0020", "predicate": "predecessor", "value": "iPhone 14 Pro", "bucket": "pending", "certainty": 0.90},
+      {"fact_id": "l0-iphone-15-pro-0021", "predicate": "successor", "value": "iPhone 16 Pro", "bucket": "pending", "certainty": 0.90},
+      {"fact_id": "l0-iphone-15-pro-0015", "predicate": "mass_grams", "value": 187, "bucket": "pending", "certainty": 0.85},
+      {"fact_id": "l0-iphone-15-pro-0008", "predicate": "chip_process_node", "value": "3nm (TSMC N3)", "bucket": "pending", "certainty": 0.85},
+      {"fact_id": "l0-iphone-15-pro-0009", "predicate": "frame_material", "value": "Grade 5 titanium (Ti-6Al-4V)", "bucket": "pending", "certainty": 0.85},
+      {"fact_id": "l0-iphone-15-pro-0011", "predicate": "connector_type", "value": "USB-C (USB 3.2 Gen 2, 10 Gbps)", "bucket": "pending", "certainty": 0.85},
+      {"fact_id": "l0-iphone-15-pro-0012", "predicate": "main_camera_mp", "value": 48, "bucket": "pending", "certainty": 0.85},
+      {"fact_id": "l0-iphone-15-pro-0016", "predicate": "os_at_launch", "value": "iOS 17", "bucket": "pending", "certainty": 0.85},
+      {"fact_id": "l0-iphone-15-pro-0019", "predicate": "storage_options_gb", "value": [128, 256, 512, 1024], "bucket": "pending", "certainty": 0.85},
+      {"fact_id": "l0-iphone-15-pro-0010", "predicate": "display_size_inches", "value": 6.1, "bucket": "pending", "certainty": 0.85},
+      {"fact_id": "l0-iphone-15-pro-0005", "predicate": "discontinued", "value": "2024-09-09", "bucket": "pending", "certainty": 0.85},
+      {"fact_id": "l0-iphone-15-pro-0006", "predicate": "superseded_when", "value": "2024-09-09", "bucket": "pending", "certainty": 0.85},
+      {"fact_id": "l0-iphone-15-pro-0017", "predicate": "prores_external_recording", "value": "ProRes 4K 60fps recording to external USB-C SSD", "bucket": "pending", "certainty": 0.80}
+    ],
+
+    "unverifiable": [],
+    "disputed": [],
+    "scars": [],
+
+    "open_questions": [
+      {
+        "question": "Is Claude (the AI model, l0:claude) available-on iPhone 15 Pro specifically, or does the Claude iOS app target a broader iOS/iPhone range?",
+        "candidate_edge": {"type": "available-on", "target": "l0:iphone-15-pro", "direction": "claude -> iphone-15-pro", "verification_route": "Fetch App Store listing for Claude app (id6473753684) for minimum iOS version and device compatibility; confirm iPhone 15 Pro runs the required iOS version."},
+        "proposed_route": "App Store fetched 2026-06-11 shows iOS 18.0+ requirement. iPhone 15 Pro supports iOS 18 (per Wikidata). Therefore Claude IS available-on iPhone 15 Pro. Convert to fact in sweep-2 with App Store URL + iOS compatibility source as independent second route. The available-on edge belongs on the claude wrapper (claude -[available-on]-> iphone-15-pro), not on this wrapper's relations[] — not yet backed by a relation fact in l0_catalog.relations.jsonl."
+      },
+      {
+        "question": "Does the 'first 3nm smartphone chip' claim (A17 Pro) hold as a kernel fact? Any competitor released a 3nm chip before September 2023?",
+        "candidate_edge": null,
+        "proposed_route": "Multiple sources (Apple Newsroom, PhoneArena, 9to5Mac) assert first commercially-released 3nm smartphone chip. Sweep-2: check Qualcomm Snapdragon 8 Gen 3 release date and process node to confirm no prior competitor claim. This is a membrane-hardening priority because the 'first' claim is a kernel candidate once corroborated."
+      },
+      {
+        "question": "Was the iPhone 15 Pro the very first iPhone with USB-C (vs. first with USB 3 speeds via USB-C)?",
+        "candidate_edge": null,
+        "proposed_route": "The entire iPhone 15 lineup (not just Pro) moved from Lightning to USB-C in 2023. iPhone 15 Pro was first with USB 3.0/3.2 speeds; iPhone 15 (non-Pro) got USB-C at USB 2.0 speeds. Fetch Apple's iPhone 15 (non-Pro) specs page to confirm. Distinctions matter for the connector_type fact's notes."
+      },
+      {
+        "question": "Relation to l0:alan-turing: Is there any sourced direct link between Alan Turing and the iPhone 15 Pro (e.g. via stored-program computer lineage)?",
+        "candidate_edge": {"type": "influenced", "target": "l0:alan-turing", "direction": "alan-turing -[conceptual-ancestor-of]-> iphone-15-pro (multi-hop via stored-program computer)", "verification_route": "No direct source attests this edge. It is a multi-hop inferred lineage (Turing machine -> von Neumann architecture -> microprocessor -> smartphone). Per spec §5 note, this multi-hop stays a candidate edge in the membrane unless a source attests it directly."},
+        "proposed_route": "Skip unless a textbook or encyclopedia explicitly traces this lineage to consumer smartphones."
+      },
+      {
+        "question": "Relation to l0:turing-enigma-hodges (book): Any direct source linking the Hodges biography to iPhone 15 Pro?",
+        "candidate_edge": null,
+        "proposed_route": "No plausible direct edge. Indirect two-hop (Hodges book -> Turing -> AI -> Claude -> iPhone 15 Pro) is too many hops to be a first-class relation. Skip."
+      },
+      {
+        "question": "Relation to l0:acetylsalicylic-acid: Any direct source?",
+        "candidate_edge": null,
+        "proposed_route": "No sourced edge between iPhone 15 Pro and aspirin. Skip. These two samples share no direct relation in the six-sample set."
+      }
+    ]
+  },
+
+  "frames": {
+    "_comment": "Observer-global-kernel relevance weights — AUTHORED RENDER ESTIMATES in [0,1], not measured quantities. Disclosure mandatory wherever rendered (UI_GUIDELINES §5).",
+    "time": 0.75,
+    "space": 0.60,
+    "knowledge": 0.50,
+    "meaning": 0.45,
+    "_estimate_note": "MANDATORY DISCLOSURE: these weights are AUTHORED RENDER ESTIMATES, not measured quantities and not substrate facts. time=0.75: annual product cycle + discontinuation event are strong time anchors. space=0.60: physical device with geographic market availability, manufactured/assembled in specific locations. knowledge=0.50: carries intelligence (AI models) but is itself a delivery medium, not a knowledge entity. meaning=0.45: cultural significance as consumer technology, but meaning is more in the brand/ecosystem than this specific model instance. Any toy/viewer rendering these owes an adjacent estimate/proxy disclosure."
+  },
+
+  "lifecycle": [
+    {
+      "event": "announced",
+      "when": "2023-09-12",
+      "fact_refs": ["l0-iphone-15-pro-0003"]
+    },
+    {
+      "event": "released",
+      "when": "2023-09-22",
+      "fact_refs": ["l0-iphone-15-pro-0004"]
+    },
+    {
+      "event": "discontinued",
+      "when": "2024-09-09",
+      "fact_refs": ["l0-iphone-15-pro-0005"]
+    },
+    {
+      "event": "superseded_when",
+      "when": "2024-09-09",
+      "fact_refs": ["l0-iphone-15-pro-0006"]
+    }
+  ],
+
+  "relations": [
+    {
+      "type": "instance-of",
+      "target": "l0:smartphone",
+      "fact_refs": ["l0-iphone-15-pro-r0001"],
+      "bucket": "pending",
+      "certainty": 0.90,
+      "_note": "Wikidata 'instance of: smartphone model'. Intermediate class rung proposed:iphone documented in abstraction.ladder.generalizes_to."
+    },
+    {
+      "type": "made-by",
+      "target": "proposed:apple",
+      "fact_refs": ["l0-iphone-15-pro-r0002"],
+      "bucket": "pending",
+      "certainty": 0.95,
+      "_note": "Apple Inc. — manufacturer. Seeds proposed:apple for sweep-2."
+    },
+    {
+      "type": "successor-of",
+      "target": "proposed:iphone-14-pro",
+      "fact_refs": ["l0-iphone-15-pro-r0004"],
+      "bucket": "pending",
+      "certainty": 0.90,
+      "_note": "Direct annual succession: iPhone 14 Pro (2022) -> iPhone 15 Pro (2023)."
+    }
+  ],
+
+  "_relations_note": "Relations to other five L0 samples: (1) l0:smartphone — covered above via instance-of. (2) l0:claude — the Claude iOS app (launched 2024-05-01, iOS 18.0+ required) runs on iPhone 15 Pro; the available-on edge belongs on the claude wrapper (claude -[available-on]-> iphone-15-pro), not here; it is a candidate in membrane.open_questions pending a relation fact in l0_catalog.relations.jsonl from the claude slug. (3) l0:alan-turing — no direct source; multi-hop conceptual-ancestor candidate stays in membrane. (4) l0:acetylsalicylic-acid — no sourced edge; skipped. (5) l0:turing-enigma-hodges — no sourced edge; skipped.",
+
+  "frame_layer": {
+    "_comment": "D3 shape reused verbatim from SCHEMA_v2. iPhone 15 Pro is a physical artifact (device you hold) but also a delivery substrate for latent digital content (apps, AI models, data). Strong physical anchor; non-trivial latent membership as a platform.",
+    "layer": "straddle",
+    "physical_membership": 0.85,
+    "latent_membership": 0.60,
+    "_estimate_note": "Authored analytic estimate, not a substrate fact. physical=0.85: it is primarily a manufactured physical device. latent=0.60: as a computing platform hosting apps, AI assistants, and data, it carries significant latent-layer participation."
+  },
+
+  "specimen_refs": [
+    {
+      "specimen": "internet",
+      "subject_id": "h-cloud-mobile",
+      "relation": "implicit-in",
+      "note": "The internet specimen's harvest node h-cloud-mobile ('the smartphone/app ecosystem') implicitly contains l0:iphone-15-pro as a member instance. Convergence path per L0_WRAPPER_SPEC.md §6 — no byte changed in frozen internet.json."
+    }
+  ],
+
+  "substrate_binding": {
+    "specimen": "l0-catalog",
+    "facts_files": [
+      "../canonical_genealogy/substrate/facts/l0_catalog.entities.jsonl",
+      "../canonical_genealogy/substrate/facts/l0_catalog.relations.jsonl"
+    ],
+    "_facts_note": "Facts for this wrapper are currently in candidates/l0_wrappers/facts/iphone-15-pro.jsonl (sweep-1 staging location). Migration to canonical_genealogy/substrate/facts/l0_catalog.*.jsonl is a sweep-2 task pending Pav/Cowork nod on the catalog anchor (L0_WRAPPER_SPEC.md §2.9.4).",
+    "verifications_file": "../canonical_genealogy/substrate/verifications/l0_catalog.jsonl",
+    "compiled_from": "../canonical_genealogy/substrate/compiled/l0-catalog.compiled.json",
+    "fact_id_namespaces": {
+      "entities": "l0-iphone-15-pro-NNNN",
+      "relations": "l0-iphone-15-pro-rNNNN"
+    },
+    "generated": "2026-06-11T12:05:24Z",
+    "compiler": "tools/l0_compile_wrappers.py (not yet built — sweep-1)",
+    "hand_assembled": true
+  }
+}

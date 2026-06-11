@@ -1,0 +1,210 @@
+{
+  "_doc": "L0 Wrapper — Alan Turing (person, instance). Hand-assembled sweep-1 view per L0_WRAPPER_SPEC.md §2.9. Tier-3 exploratory, NOT canon, NOT a tier promotion, convergence list stays 9. Every populated field carries real fact_refs to alan-turing.jsonl. The builder (l0_compile_wrappers.py) must reproduce this view byte-for-byte modulo 'generated' when it is built. Kernel is empty at sweep-1 (all facts verification:pending — no fact yet meets the corroborated+certainty>=0.7 admission rule; this is correct signal, not a gap). Membrane holds the full sweep-1 harvest.",
+  "schema_version": "0.1-l0-wrapper",
+  "wrapper_id": "l0:alan-turing",
+  "_status": "Tier-3 WORKING wrapper view — exploratory, surfaced for Cowork+Pav ratification. NOT canon, NOT a tier promotion, does NOT grow the convergence list (stays 9).",
+  "kind": "person",
+
+  "names": {
+    "canonical": "Alan Mathison Turing",
+    "aka": ["Alan Turing", "Alan M. Turing", "A. M. Turing"],
+    "fact_refs": ["l0-alan-turing-0001", "l0-alan-turing-0002"]
+  },
+
+  "abstraction": {
+    "_comment": "Alan Turing is a specific historical individual — instance-level on the person ladder. No specializes_to (he is already the most specific rung for himself). generalizes_to proposed:person (the generic kind). Level is instance by construction (one unique individual, not a class or generic category).",
+    "level": "instance",
+    "ladder": {
+      "generalizes_to": "proposed:person",
+      "specializes_to": []
+    },
+    "level_by_scope": {},
+    "fact_refs": ["l0-alan-turing-0021", "l0-alan-turing-r0001"]
+  },
+
+  "kernel": {
+    "_comment": "EMPTY at sweep-1. Kernel admission rule (spec §2.3): bucket=corroborated AND certainty>=0.7 AND no ESTIMATE:/PROXY: tag. All sweep-1 facts are verification:pending — no fact has survived an independent verification route yet. The kernel will populate in sweep-2 when verification records arrive for the high-certainty entity facts (0003/0005 birth/death dates, 0013/0014 publications, etc.). An empty kernel at sweep-1 is correct signal, not a defect.",
+    "statement": "",
+    "facts": []
+  },
+
+  "membrane": {
+    "_comment": "Full sweep-1 harvest. All facts are pending. Render as fuzzy segments per spec §3.1. Hardness proxy l0-membrane-proxy-v0.1: h = B(pending=0.55) * certainty — a RENDER PROXY, disclose wherever drawn.",
+
+    "corroborated_soft": [],
+
+    "pending": [
+      {"fact_id": "l0-alan-turing-0001", "predicate": "canonical_name", "value": "Alan Mathison Turing", "bucket": "pending", "certainty": 0.95},
+      {"fact_id": "l0-alan-turing-0002", "predicate": "aka", "value": ["Alan Turing", "Alan M. Turing", "A. M. Turing"], "bucket": "pending", "certainty": 0.9},
+      {"fact_id": "l0-alan-turing-0003", "predicate": "born", "value": "1912-06-23", "bucket": "pending", "certainty": 0.95},
+      {"fact_id": "l0-alan-turing-0004", "predicate": "born_place", "value": "Maida Vale, London, United Kingdom", "bucket": "pending", "certainty": 0.9},
+      {"fact_id": "l0-alan-turing-0005", "predicate": "died", "value": "1954-06-07", "bucket": "pending", "certainty": 0.95},
+      {"fact_id": "l0-alan-turing-0006", "predicate": "died_place", "value": "Wilmslow, Cheshire, England", "bucket": "pending", "certainty": 0.9},
+      {"fact_id": "l0-alan-turing-0008", "predicate": "educated_at", "value": "King's College, Cambridge (Mathematics, 1931–1934)", "bucket": "pending", "certainty": 0.9},
+      {"fact_id": "l0-alan-turing-0009", "predicate": "educated_at_doctoral", "value": "Princeton University (PhD, 1938; supervisor Alonzo Church)", "bucket": "pending", "certainty": 0.9},
+      {"fact_id": "l0-alan-turing-0010", "predicate": "affiliation", "value": "Government Code and Cypher School / Bletchley Park (1939–1945)", "bucket": "pending", "certainty": 0.9},
+      {"fact_id": "l0-alan-turing-0011", "predicate": "affiliation", "value": "National Physical Laboratory (1945–1947)", "bucket": "pending", "certainty": 0.85},
+      {"fact_id": "l0-alan-turing-0012", "predicate": "affiliation", "value": "University of Manchester (1948–1954)", "bucket": "pending", "certainty": 0.9},
+      {"fact_id": "l0-alan-turing-0013", "predicate": "key_publication", "value": "On Computable Numbers… (1936, PLMS) — universal Turing machine", "bucket": "pending", "certainty": 0.9},
+      {"fact_id": "l0-alan-turing-0014", "predicate": "key_publication", "value": "Computing Machinery and Intelligence (Mind, October 1950) — Turing test / imitation game", "bucket": "pending", "certainty": 0.9},
+      {"fact_id": "l0-alan-turing-0015", "predicate": "key_contribution_bombe", "value": "Designed Bombe specification; first installation Bletchley Park March 1940", "bucket": "pending", "certainty": 0.85},
+      {"fact_id": "l0-alan-turing-0016", "predicate": "award", "value": "OBE 1946-06-24 for wartime codebreaking", "bucket": "pending", "certainty": 0.9},
+      {"fact_id": "l0-alan-turing-0017", "predicate": "award", "value": "Fellow of the Royal Society 1951-03-15", "bucket": "pending", "certainty": 0.9},
+      {"fact_id": "l0-alan-turing-0018", "predicate": "conviction_and_pardon", "value": "Convicted of gross indecency 1952; royal pardon 2013-12-24", "bucket": "pending", "certainty": 0.9},
+      {"fact_id": "l0-alan-turing-0019", "predicate": "morphogenesis_paper", "value": "The Chemical Basis of Morphogenesis (Phil. Trans. R. Soc. B, 1952)", "bucket": "pending", "certainty": 0.85},
+      {"fact_id": "l0-alan-turing-0020", "predicate": "legacy_banknote", "value": "Bank of England £50 note portrait, issued 2021-06-23", "bucket": "pending", "certainty": 0.85},
+      {"fact_id": "l0-alan-turing-0021", "predicate": "abstraction_level", "value": "instance", "bucket": "pending", "certainty": 0.95},
+      {"fact_id": "l0-alan-turing-0022", "predicate": "fields", "value": ["computer science", "mathematics", "cryptanalysis", "artificial intelligence", "mathematical biology"], "bucket": "pending", "certainty": 0.9},
+      {"fact_id": "l0-alan-turing-0023", "predicate": "turing_award_namesake", "value": "ACM A. M. Turing Award named after him; 2018 recipients Hinton/Bengio/LeCun (two-hop into deep_learning specimen)", "bucket": "pending", "certainty": 0.95},
+      {"fact_id": "l0-alan-turing-0025", "predicate": "doctoral_students", "value": ["Robin Gandy", "Beatrice Helen Worsley"], "bucket": "pending", "certainty": 0.85},
+      {"fact_id": "l0-alan-turing-r0002", "predicate": "rel:conceptual-ancestor-of:claude", "value": {"target": "claude", "chain": "1950 imitation-game paper -> AI benchmark tradition -> LLM evaluation"}, "bucket": "pending", "certainty": 0.65},
+      {"fact_id": "l0-alan-turing-r0003", "predicate": "rel:about:turing-enigma-hodges", "value": {"target": "turing-enigma-hodges"}, "bucket": "pending", "certainty": 0.95},
+      {"fact_id": "l0-alan-turing-r0004", "predicate": "rel:named-after:turing-award", "value": {"target": "proposed:turing-award"}, "bucket": "pending", "certainty": 0.95},
+      {"fact_id": "l0-alan-turing-r0001", "predicate": "rel:instance-of:person", "value": {"target": "person"}, "bucket": "pending", "certainty": 0.99}
+    ],
+
+    "unverifiable": [],
+
+    "disputed": [
+      {
+        "fact_id": "l0-alan-turing-0007",
+        "predicate": "cause_of_death",
+        "value": "cyanide poisoning; officially ruled suicide by inquest",
+        "bucket": "pending",
+        "certainty": 0.7,
+        "disputed_alternatives": [
+          "accidental cyanide inhalation from electroplating experiment (alternative theory; nephew Dermot Turing and some historians dispute the suicide interpretation, noting chemical experiments in the home and that the hormone treatment had ended in 1953)",
+          "possible deliberate re-enactment of the Snow White poisoned-apple scene (popular claim; not forensically established)"
+        ],
+        "_note": "Placed in disputed section at sweep-1 because the manner_of_death is contested despite the official verdict. Wikidata marks manner as 'probably suicide'. The certainty 0.7 reflects the coroner's ruling against two named alternative accounts. This is a FRONTIER fact — the membrane is under conceptual attack even without a formal verification record yet."
+      }
+    ],
+
+    "scars": [],
+
+    "open_questions": [
+      {
+        "question": "Direct attestation linking Alan Turing specifically to the smartphone/iPhone lineage (universal-machine -> stored-program-computer -> personal-computer -> smartphone). The multi-hop claim is plausible but not directly attested in an academic or primary source.",
+        "candidate_edge": {
+          "type": "influenced",
+          "target": "l0:smartphone",
+          "verification_route": "Search for a computer-history academic source (e.g., ACM Computing Surveys, IEEE Annals of the History of Computing) that explicitly traces the smartphone's computational architecture to the Turing machine abstraction."
+        },
+        "proposed_route": "ACM/IEEE history-of-computing literature; textbooks on computer architecture often draw the Turing->von Neumann->stored-program-computer lineage."
+      },
+      {
+        "question": "Does any Anthropic primary source (model card, research paper, blog post) explicitly cite Alan Turing or the Turing test in relation to Claude's design goals or evaluation methodology? If yes, the rel:conceptual-ancestor-of:claude edge upgrades from indirect-lineage (certainty 0.65) to directly-attested.",
+        "candidate_edge": {
+          "type": "conceptual-ancestor-of",
+          "target": "l0:claude",
+          "verification_route": "Search Anthropic's published model cards, the Constitutional AI paper, and the Claude technical report for explicit Turing test citations."
+        },
+        "proposed_route": "Anthropic.com model cards and papers; search 'Turing' in Anthropic research publications."
+      },
+      {
+        "question": "The rel:influenced:iphone-15-pro edge (l0-alan-turing-r0005) is emitted at certainty 0.3 / ESTIMATE. It should remain in the membrane until a direct-attesting academic source is found or the edge is formally demoted to open_question only.",
+        "candidate_edge": null,
+        "proposed_route": "This is not a candidate edge for next sweep — it is better understood as a candidate for the generic 'influenced l0:smartphone' edge above; the iPhone-specific link is even more attenuated."
+      }
+    ]
+  },
+
+  "frames": {
+    "_comment": "Observer-global-kernel relevance weights — authored render estimates in [0,1], NOT measured quantities. Basis: Alan Turing has strong time-frame relevance (clean birth/death lifecycle for timeline rendering), strong knowledge-frame relevance (foundational computer science, AI, cryptography), strong meaning-frame relevance (Turing test, legacy, cultural impact), moderate space-frame relevance (UK-based work; not primarily a spatial/geographic entity).",
+    "time": 0.9,
+    "space": 0.3,
+    "knowledge": 0.95,
+    "meaning": 0.85,
+    "_estimate_note": "MANDATORY DISCLOSURE: these weights are AUTHORED RENDER ESTIMATES, not measured quantities and not substrate facts. Any toy or viewer rendering them owes an adjacent estimate/proxy disclosure (UI_GUIDELINES §5). Proxy label: l0-frame-weight-proxy-v0.1-alan-turing."
+  },
+
+  "lifecycle": [
+    {
+      "event": "born",
+      "when": "1912-06-23",
+      "fact_refs": ["l0-alan-turing-0003", "l0-alan-turing-0004"]
+    },
+    {
+      "event": "active_from",
+      "when": "1931",
+      "fact_refs": ["l0-alan-turing-0008"]
+    },
+    {
+      "event": "died",
+      "when": "1954-06-07",
+      "fact_refs": ["l0-alan-turing-0005", "l0-alan-turing-0006"]
+    }
+  ],
+
+  "relations": [
+    {
+      "type": "instance-of",
+      "target": "proposed:person",
+      "fact_refs": ["l0-alan-turing-r0001"],
+      "bucket": "pending",
+      "certainty": 0.99
+    },
+    {
+      "type": "about",
+      "target": "l0:turing-enigma-hodges",
+      "_target_reading": "The book 'Alan Turing: The Enigma' is about this entity — the relation is turing-enigma-hodges about alan-turing; read from this entity's side as: alan-turing is-subject-of turing-enigma-hodges.",
+      "fact_refs": ["l0-alan-turing-r0003"],
+      "bucket": "pending",
+      "certainty": 0.95
+    },
+    {
+      "type": "conceptual-ancestor-of",
+      "target": "l0:claude",
+      "_target_reading": "Turing's 1950 imitation-game paper is the conceptual origin of the Turing test, the benchmark tradition in which AI systems like Claude are situated. Edge is at certainty 0.65 (indirect lineage; no primary Anthropic source yet attests the specific link). Stays in membrane.pending.",
+      "fact_refs": ["l0-alan-turing-r0002"],
+      "bucket": "pending",
+      "certainty": 0.65
+    },
+    {
+      "type": "named-after",
+      "target": "proposed:turing-award",
+      "_target_reading": "The ACM A. M. Turing Award is named after Alan Turing. Two-hop into the FROZEN deep_learning specimen: the 2018 award went to Hinton/Bengio/LeCun, who are nodes in that specimen.",
+      "fact_refs": ["l0-alan-turing-r0004"],
+      "bucket": "pending",
+      "certainty": 0.95
+    }
+  ],
+
+  "frame_layer": {
+    "_comment": "Alan Turing is a historical person: primarily physical (a human being in spacetime, physical_membership=1.0) but also carries significant latent wrapper presence — his ideas, reputation, conceptual lineage, and the named constructs (Turing machine, Turing test, Turing patterns, Turing Award) persist as latent entities. The straddle classification reflects this.",
+    "layer": "straddle",
+    "physical_membership": 1.0,
+    "latent_membership": 0.6,
+    "_estimate_note": "authored analytic estimate, not a substrate fact. The latent_membership 0.6 is a proxy for the weight of named latent constructs deriving from this person.",
+    "fact_refs": ["l0-alan-turing-0024"]
+  },
+
+  "specimen_refs": [
+    {
+      "specimen": "deep_learning",
+      "subject_id": "2018 Turing Award",
+      "relation": "implicit-in",
+      "note": "The FROZEN deep_learning specimen's '2018 Turing Award' nodes (Hinton/Bengio/LeCun) reference the award that is named after Alan Turing (l0-alan-turing-0023, l0-alan-turing-r0004). Two-hop connection: alan-turing -> named-after -> turing-award -> 2018-recipients -> deep_learning specimen nodes."
+    }
+  ],
+
+  "substrate_binding": {
+    "specimen": "l0-catalog",
+    "facts_files": [
+      "../canonical_genealogy/substrate/facts/l0_catalog.entities.jsonl",
+      "../canonical_genealogy/substrate/facts/l0_catalog.relations.jsonl"
+    ],
+    "_actual_facts_file_this_sweep": "candidates/l0_wrappers/facts/alan-turing.jsonl",
+    "_actual_file_note": "Sweep-1 facts are in alan-turing.jsonl in the l0_wrappers/facts/ directory (the new-files-only zone per spec §7.3). They will be moved/referenced to the canonical substrate paths when the catalog grows and the l0_catalog.entities.jsonl / l0_catalog.relations.jsonl files are created.",
+    "verifications_file": "../canonical_genealogy/substrate/verifications/l0_catalog.jsonl",
+    "compiled_from": "../canonical_genealogy/substrate/compiled/l0-catalog.compiled.json",
+    "fact_id_namespaces": {
+      "entities": "l0-alan-turing-NNNN",
+      "relations": "l0-alan-turing-rNNNN"
+    },
+    "generated": "2026-06-11T12:04:10Z",
+    "compiler": "tools/l0_compile_wrappers.py (not yet built — sweep-1 builder target)",
+    "hand_assembled": true,
+    "_hand_assembled_note": "Hand-assembled per spec §2.9.2: hand_assembled:true allowed until builder lands; every populated field carries real fact_refs; builder must reproduce byte-for-byte modulo 'generated'."
+  }
+}

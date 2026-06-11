@@ -1,0 +1,219 @@
+{
+  "_template_doc": "L0 WRAPPER — compiled view for turing-enigma-hodges. Spec: L0_WRAPPER_SPEC.md. Tier-3 exploratory, NOT canon, convergence list stays 9. Hand-assembled per spec §2.9.2 (builder not yet built). Every populated field carries real fact_refs to facts in facts/turing-enigma-hodges.jsonl and facts/turing-enigma-hodges.relations.jsonl. All pending verification at this sweep — kernel empty, all facts in membrane.pending. Kernel admission (spec §2.3): bucket=corroborated AND certainty>=0.7 AND no ESTIMATE/PROXY tag — NO facts have yet been corroborated by an independent verification record, so kernel is empty at sweep-1 (correct signal). NO fabrication: every value traces to a real fetched source.",
+  "schema_version": "0.1-l0-wrapper",
+  "wrapper_id": "l0:turing-enigma-hodges",
+  "kind": "book",
+  "_status": "Tier-3 WORKING wrapper view — exploratory, surfaced for Cowork+Pav ratification. NOT canon, NOT a tier promotion, does NOT grow the convergence list (stays 9).",
+
+  "names": {
+    "canonical": "Alan Turing: The Enigma",
+    "aka": [
+      "Alan Turing: The Enigma of Intelligence",
+      "The Enigma (informal short title)",
+      "The book that inspired The Imitation Game"
+    ],
+    "fact_refs": ["l0-turing-enigma-hodges-0001"]
+  },
+
+  "abstraction": {
+    "_comment": "instance-level on the book/work ladder. Ladder: this instance -> subclass-of biography (class) -> biography subclass-of book (generic). Level derived from ladder position: has subclass-of out-edge -> instance rung. No specializations_to edges (no known sub-editions warranting separate catalog entries at this sweep).",
+    "level": "instance",
+    "ladder": {
+      "generalizes_to": "proposed:biography",
+      "specializes_to": []
+    },
+    "level_by_scope": {},
+    "fact_refs": ["l0-turing-enigma-hodges-0016", "l0-turing-enigma-hodges-r0005"]
+  },
+
+  "kernel": {
+    "_comment": "EMPTY at sweep-1. Kernel admission (spec §2.3): bucket=corroborated AND certainty>=0.7 AND no ESTIMATE/PROXY tag. No verification records have yet been appended to verify any fact — all facts are bucket=pending. The kernel will populate in sweep-2 once independent corroboration records land. Shrinkage and emptiness are honest signal.",
+    "statement": "",
+    "facts": []
+  },
+
+  "membrane": {
+    "_comment": "All facts are pending at this sweep. ESTIMATE/PROXY-tagged facts (frames weights, frame_layer) are in pending rather than corroborated_soft because no verification records exist yet. Hardness h = B(bucket) x certainty (l0-membrane-proxy-v0.1); pending B=0.55; ESTIMATE/PROXY-tagged additionally capped at h<=0.5. MANDATORY PROXY DISCLOSURE: these hardness values are render estimates, not measurements.",
+
+    "corroborated_soft": [],
+
+    "pending": [
+      {"fact_id": "l0-turing-enigma-hodges-0001", "predicate": "canonical_name", "value": "Alan Turing: The Enigma", "bucket": "pending", "certainty": 0.95},
+      {"fact_id": "l0-turing-enigma-hodges-0002", "predicate": "kind", "value": "book", "bucket": "pending", "certainty": 0.95},
+      {"fact_id": "l0-turing-enigma-hodges-0003", "predicate": "published", "value": "1983", "bucket": "pending", "certainty": 0.9},
+      {"fact_id": "l0-turing-enigma-hodges-0004", "predicate": "publisher_first_uk", "value": "Burnett Books in association with Hutchinson Publishing Group, London", "bucket": "pending", "certainty": 0.85},
+      {"fact_id": "l0-turing-enigma-hodges-0005", "predicate": "publisher_first_us", "value": "Simon & Schuster, New York", "bucket": "pending", "certainty": 0.8},
+      {"fact_id": "l0-turing-enigma-hodges-0006", "predicate": "isbn_first_us", "value": "0-671-49207-1", "bucket": "pending", "certainty": 0.8},
+      {"fact_id": "l0-turing-enigma-hodges-0007", "predicate": "pages_first_edition", "value": 587, "bucket": "pending", "certainty": 0.7},
+      {"fact_id": "l0-turing-enigma-hodges-0008", "predicate": "subject_person", "value": "Alan Turing (1912-1954)", "bucket": "pending", "certainty": 0.95},
+      {"fact_id": "l0-turing-enigma-hodges-0009", "predicate": "genre", "value": "biography", "bucket": "pending", "certainty": 0.95},
+      {"fact_id": "l0-turing-enigma-hodges-0010", "predicate": "language", "value": "English", "bucket": "pending", "certainty": 0.95},
+      {"fact_id": "l0-turing-enigma-hodges-0011", "predicate": "adapted_imitation_game", "value": "The Imitation Game (2014 film)", "bucket": "pending", "certainty": 0.9},
+      {"fact_id": "l0-turing-enigma-hodges-0012", "predicate": "adapted_breaking_the_code", "value": "Breaking the Code (1986 stage play, Hugh Whitemore)", "bucket": "pending", "certainty": 0.85},
+      {"fact_id": "l0-turing-enigma-hodges-0013", "predicate": "centenary_edition", "value": "Princeton University Press centenary edition (2012)", "bucket": "pending", "certainty": 0.8},
+      {"fact_id": "l0-turing-enigma-hodges-0014", "predicate": "updated_edition_2014", "value": "Princeton University Press updated edition (2014-11-10, 768pp, ISBN 9780691164724)", "bucket": "pending", "certainty": 0.9},
+      {"fact_id": "l0-turing-enigma-hodges-0015", "predicate": "reception_guardian_essential_2002", "value": "Listed among 50 essential books in print, The Guardian, 1 June 2002", "bucket": "pending", "certainty": 0.75},
+      {"fact_id": "l0-turing-enigma-hodges-0016", "predicate": "abstraction_level", "value": "instance", "bucket": "pending", "certainty": 0.9},
+      {"fact_id": "l0-turing-enigma-hodges-0022", "predicate": "written", "value": "1977-1983 (approx writing interval)", "bucket": "pending", "certainty": 0.8},
+      {"fact_id": "l0-turing-enigma-hodges-0023", "predicate": "ny_times_bestseller", "value": "New York Times bestseller 2014-2015", "bucket": "pending", "certainty": 0.8},
+      {"fact_id": "l0-turing-enigma-hodges-0017", "predicate": "frame_layer", "value": {"layer": "straddle", "physical_membership": 0.6, "latent_membership": 0.8}, "bucket": "pending", "certainty": 0.5, "note": "ESTIMATE/PROXY: analytic estimate per spec §2.8 — hardness h capped at 0.5"},
+      {"fact_id": "l0-turing-enigma-hodges-0018", "predicate": "frames_time", "value": 0.85, "bucket": "pending", "certainty": 0.3, "note": "ESTIMATE/PROXY: authored render weight — NOT measured"},
+      {"fact_id": "l0-turing-enigma-hodges-0019", "predicate": "frames_knowledge", "value": 0.9, "bucket": "pending", "certainty": 0.3, "note": "ESTIMATE/PROXY: authored render weight — NOT measured"},
+      {"fact_id": "l0-turing-enigma-hodges-0020", "predicate": "frames_meaning", "value": 0.8, "bucket": "pending", "certainty": 0.3, "note": "ESTIMATE/PROXY: authored render weight — NOT measured"},
+      {"fact_id": "l0-turing-enigma-hodges-0021", "predicate": "frames_space", "value": 0.3, "bucket": "pending", "certainty": 0.3, "note": "ESTIMATE/PROXY: authored render weight — NOT measured"}
+    ],
+
+    "unverifiable": [],
+    "disputed": [],
+    "scars": [],
+
+    "open_questions": [
+      {
+        "question": "Exact first-edition publication month/day in 1983. Wikipedia and turing.org.uk give the year only; October or November 1983 is mentioned in passing but no primary source directly fetched.",
+        "candidate_edge": null,
+        "proposed_route": "Fetch the British Library catalogue entry or the original UK publisher's records for the exact publication date of the Burnett Books/Hutchinson edition."
+      },
+      {
+        "question": "Did 'Alan Turing: The Enigma' win the Premio Giovanni Comisso in 1992? turing.org.uk lists this, but the Premio Comisso website's 1992 winners list does not appear to name Hodges. The claim may refer to the Italian translation ('Alan Turing, Storia di un Enigma', Bollati Boringhieri) rather than the English original.",
+        "candidate_edge": null,
+        "proposed_route": "Fetch the Premio Comisso winners page directly (premiocomisso.it/i-vincitori/) and cross-check against the year 1992 and the Italian edition publication date."
+      },
+      {
+        "question": "First-edition UK page count: 587 or 576? Wikipedia says 587; some bookseller records say 576. These could reflect the same printing with/without front matter counted differently.",
+        "candidate_edge": null,
+        "proposed_route": "Fetch the British Library catalogue record (bl.uk) or Internet Archive scan for the 1983 Burnett Books first edition to read the physical page count."
+      },
+      {
+        "question": "Does the Turing-test conceptual lineage (alan-turing -> conceptual-ancestor-of -> claude) pass through this book as a relay node? Hodges documents Turing's 1950 'Computing Machinery and Intelligence' paper in the biography. No source directly attests the book as a relay in the lineage, so this is not a fact-backed edge.",
+        "candidate_edge": {"type": "enabled", "target": "l0:claude", "verification_route": "Find a source explicitly citing the Hodges biography as having influenced AI researchers at Anthropic, or any primary Anthropic/Claude model card citing it."},
+        "proposed_route": "Search Anthropic research papers or Claude model cards for any citation of Hodges or the Turing biography."
+      },
+      {
+        "question": "Are there formal awards beyond the Guardian list (2002) and NY Times bestseller (2014)? turing.org.uk mentions the Premio Comisso claim (disputed above) and 'New Statesman Ten Essential Books on Technology (2009)'. The 2009 New Statesman claim was not directly fetched.",
+        "candidate_edge": null,
+        "proposed_route": "Fetch the New Statesman 2009 article directly or search their archive for the technology books list."
+      }
+    ]
+  },
+
+  "frames": {
+    "_comment": "Observer-global-kernel relevance weights — authored render estimates, NOT substrate facts. Mandatory disclosure: these weights are ESTIMATE proxies (l0-membrane-proxy-v0.1) and must be labelled as such wherever rendered (UI_GUIDELINES §5). All four weights are ESTIMATE/PROXY-tagged in the substrate and capped at h<=0.5 per the proxy rule.",
+    "time": 0.85,
+    "space": 0.3,
+    "knowledge": 0.9,
+    "meaning": 0.8,
+    "_estimate_note": "MANDATORY DISCLOSURE: these weights are AUTHORED RENDER ESTIMATES, not measured quantities and not substrate facts. Any toy/viewer rendering them owes an adjacent estimate/proxy disclosure (UI_GUIDELINES §5). Fact refs: l0-turing-enigma-hodges-0018 (time), l0-turing-enigma-hodges-0021 (space), l0-turing-enigma-hodges-0019 (knowledge), l0-turing-enigma-hodges-0020 (meaning)."
+  },
+
+  "lifecycle": [
+    {
+      "event": "written",
+      "when": "1977-1983",
+      "fact_refs": ["l0-turing-enigma-hodges-0022"]
+    },
+    {
+      "event": "published",
+      "when": "1983",
+      "fact_refs": ["l0-turing-enigma-hodges-0003", "l0-turing-enigma-hodges-0004", "l0-turing-enigma-hodges-0005"]
+    },
+    {
+      "event": "adapted",
+      "when": "1986",
+      "fact_refs": ["l0-turing-enigma-hodges-0012"],
+      "_note": "Breaking the Code stage play, Hugh Whitemore, Theatre Royal Haymarket, London, 21 October 1986"
+    },
+    {
+      "event": "adapted",
+      "when": "2014",
+      "fact_refs": ["l0-turing-enigma-hodges-0011"],
+      "_note": "The Imitation Game film, dir. Morten Tyldum; US theatrical release 14 November 2014"
+    },
+    {
+      "event": "published",
+      "when": "2012",
+      "fact_refs": ["l0-turing-enigma-hodges-0013"],
+      "_note": "Princeton University Press centenary edition (Turing's 100th birth anniversary)"
+    },
+    {
+      "event": "published",
+      "when": "2014-11-10",
+      "fact_refs": ["l0-turing-enigma-hodges-0014"],
+      "_note": "Princeton University Press updated edition with preface on 2013 royal pardon, 768 pages"
+    }
+  ],
+
+  "relations": [
+    {
+      "type": "authored-by",
+      "target": "proposed:andrew-hodges",
+      "fact_refs": ["l0-turing-enigma-hodges-r0001"],
+      "bucket": "pending",
+      "certainty": 0.95
+    },
+    {
+      "type": "about",
+      "target": "l0:alan-turing",
+      "fact_refs": ["l0-turing-enigma-hodges-r0002"],
+      "bucket": "pending",
+      "certainty": 0.95
+    },
+    {
+      "type": "adapted-into",
+      "target": "proposed:imitation-game",
+      "fact_refs": ["l0-turing-enigma-hodges-r0003"],
+      "bucket": "pending",
+      "certainty": 0.9
+    },
+    {
+      "type": "adapted-into",
+      "target": "proposed:breaking-the-code-play",
+      "fact_refs": ["l0-turing-enigma-hodges-r0004"],
+      "bucket": "pending",
+      "certainty": 0.8
+    },
+    {
+      "type": "subclass-of",
+      "target": "proposed:biography",
+      "fact_refs": ["l0-turing-enigma-hodges-r0005"],
+      "bucket": "pending",
+      "certainty": 0.9
+    }
+  ],
+
+  "frame_layer": {
+    "_comment": "D3 shape, reused verbatim from SCHEMA_v2. layer=straddle: the physical codex (paper/ink) is the physical stratum; the text and ideas it carries are the latent stratum. Memberships are authored analytic estimates — not substrate facts.",
+    "layer": "straddle",
+    "physical_membership": 0.6,
+    "latent_membership": 0.8,
+    "_estimate_note": "authored analytic estimate, not a substrate fact. Fact ref: l0-turing-enigma-hodges-0017."
+  },
+
+  "specimen_refs": [
+    {
+      "_comment": "Convergence path (spec §6): the deep_learning specimen references Turing implicitly via the '2018 Turing Award' nodes (named-after Turing). The book about Turing is two hops from that reference.",
+      "specimen": "deep_learning",
+      "subject_id": "proposed:turing-award-2018",
+      "relation": "implicit-in",
+      "note": "deep_learning.json actor roster includes '2018 Turing Award' nodes named-after Alan Turing (Q7251). This book is the primary biography of Turing; the link is two hops (book -> about -> person -> named-after -> award) and therefore lives here as a note, not a direct specimen binding."
+    }
+  ],
+
+  "substrate_binding": {
+    "specimen": "l0-catalog",
+    "facts_files": [
+      "../canonical_genealogy/substrate/facts/l0_catalog.entities.jsonl",
+      "../canonical_genealogy/substrate/facts/l0_catalog.relations.jsonl"
+    ],
+    "_facts_files_note": "At sweep-1, entity facts are stored in facts/turing-enigma-hodges.jsonl and relation facts in facts/turing-enigma-hodges.relations.jsonl under candidates/l0_wrappers/. These are NOT yet in the canonical substrate path. A future sweep will either (a) copy/move them to the canonical path or (b) confirm these files ARE the canonical path by updating the file map in L0_WRAPPER_SPEC.md §1.1.",
+    "verifications_file": "../canonical_genealogy/substrate/verifications/l0_catalog.jsonl",
+    "compiled_from": "../canonical_genealogy/substrate/compiled/l0-catalog.compiled.json",
+    "fact_id_namespaces": {
+      "entities": "l0-turing-enigma-hodges-NNNN",
+      "relations": "l0-turing-enigma-hodges-rNNNN"
+    },
+    "generated": "2026-06-11T12:05:15Z",
+    "compiler": "tools/l0_compile_wrappers.py (not yet built — sweep-1 placeholder)",
+    "hand_assembled": true,
+    "_hand_assembled_note": "hand_assembled=true per spec §2.9.2 — builder not yet built at sweep-1. Every populated field carries real fact_refs; the builder must reproduce this view byte-for-byte modulo 'generated' once it lands."
+  }
+}

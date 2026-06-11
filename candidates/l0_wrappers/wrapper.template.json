@@ -1,0 +1,132 @@
+{
+  "_template_doc": "L0 WRAPPER — fill template for ONE entity-layer wrapper view. Spec: L0_WRAPPER_SPEC.md (same dir). Tier-3 exploratory instrument for Cowork+Pav ratification — NOT canon, NOT a promotion, convergence list stays 9. THE WRAPPER IS A COMPILED VIEW over substrate facts (../canonical_genealogy/substrate/facts/l0_catalog.*.jsonl resolved by compile_substrate.py) — NOT a second source of truth. AUTHORING ORDER: fetch source -> append fact -> recompile -> rebuild this view. Every populated field carries fact_refs to real fact_ids; a field with no backing fact stays EMPTY (empty is correct signal; data-absent = draw nothing). NO fabrication: real fetched source URL or skip. KERNEL admission (spec 2.3): bucket=corroborated AND certainty>=0.7 AND not ESTIMATE/PROXY-tagged — estimates never enter the kernel. MEMBRANE = the fuzzy frontier; facts are micro-wrappers whose membrane hardness = verification bucket x certainty (spec 3, proxy l0-membrane-proxy-v0.1, ALWAYS disclosed as a render proxy). Abstraction ladder = the contextual-scale dial on the semantic axis; dialing a rung is a REFRAME, not a zoom; level may be frame-relative by scope (aspirin genericide pattern). Each array below holds ONE empty exemplar element showing the shape; duplicate or delete as needed.",
+
+  "schema_version": "0.1-l0-wrapper",
+  "wrapper_id": "",
+  "_wrapper_id_comment": "l0:<slug> — kebab slug, stable, unique across the catalog.",
+  "kind": "",
+  "_kind_enum": "object | device-model | ai-model | person | compound | book | idea | institution | place | work | event — extending requires a PROPOSED entry in SWEEP_LOG.md before first use.",
+  "_status": "Tier-3 WORKING wrapper view — exploratory, surfaced for Cowork+Pav ratification. NOT canon, NOT a tier promotion, does NOT grow the convergence list (stays 9).",
+
+  "names": {
+    "canonical": "",
+    "aka": [],
+    "fact_refs": []
+  },
+
+  "abstraction": {
+    "_comment": "The contextual-scale dial (spec 2.2). Ladder edges are COMPILED from rel:instance-of / rel:subclass-of / rel:brand-of facts — no rung without a backing fact. level is derived from ladder position by default; level_by_scope only where scope-suffixed abstraction_level:<scope> facts exist (frame-relative level, e.g. genericide by jurisdiction).",
+    "level": "",
+    "_level_enum": "generic | class | instance",
+    "ladder": {
+      "generalizes_to": null,
+      "specializes_to": []
+    },
+    "level_by_scope": {},
+    "fact_refs": []
+  },
+
+  "kernel": {
+    "_comment": "The certain core — ONLY facts passing the admission rule (bucket=corroborated AND certainty>=0.7 AND no ESTIMATE:/PROXY: tag). Recomputed every sweep; it may shrink — shrinkage is honest signal.",
+    "statement": "",
+    "facts": [
+      {
+        "fact_id": "",
+        "predicate": "",
+        "value": null,
+        "battle_count": 0,
+        "_battle_count_comment": "number of INDEPENDENT corroborating verification routes — battle-tested = corroborated against independent routes."
+      }
+    ]
+  },
+
+  "membrane": {
+    "_comment": "The fuzzy frontier — a population of fact-micro-wrappers at various hardening stages (spec 3). Render per spec 3.1: corroborated_soft/pending fuzzy, disputed under-attack (BOTH values shown), unverifiable soft spot, scars permanent notches. Hardness h = B(bucket) x certainty (l0-membrane-proxy-v0.1) — a RENDER PROXY, disclose wherever drawn.",
+    "corroborated_soft": [
+      { "fact_id": "", "predicate": "", "value": null, "bucket": "corroborated", "certainty": null, "battle_count": 0, "note": "corroborated but certainty<0.7 or ESTIMATE/PROXY-tagged — battle-tested model is still a model" }
+    ],
+    "pending": [
+      { "fact_id": "", "predicate": "", "value": null, "bucket": "pending", "certainty": null }
+    ],
+    "unverifiable": [
+      { "fact_id": "", "predicate": "", "value": null, "bucket": "unverifiable", "certainty": null }
+    ],
+    "disputed": [
+      { "fact_id": "", "predicate": "", "value": null, "bucket": "disputed", "certainty": null, "disputed_alternatives": [] }
+    ],
+    "scars": [
+      { "fact_id": "", "predicate": "", "value": null, "retraction_note": "", "_comment": "retracted per SUBSTRATE gotcha 10 (unverifiable + provenance-failure note + re-sourced successor fact) — demoted, visible, NEVER deleted." }
+    ],
+    "open_questions": [
+      { "question": "", "candidate_edge": null, "_candidate_edge_comment": "OPTIONAL { type, target, verification_route } — an edge believed but not yet fact-backed lives HERE, never in relations[].", "proposed_route": "" }
+    ]
+  },
+
+  "frames": {
+    "_comment": "Observer-global-kernel relevance weights {time,space,knowledge,meaning} in [0,1] — drive prominence/layout in group renders (spec 4).",
+    "time": null,
+    "space": null,
+    "knowledge": null,
+    "meaning": null,
+    "_estimate_note": "MANDATORY DISCLOSURE: these weights are AUTHORED RENDER ESTIMATES, not measured quantities and not substrate facts. Any toy/viewer rendering them owes an adjacent estimate/proxy disclosure (UI_GUIDELINES 5)."
+  },
+
+  "lifecycle": [
+    {
+      "event": "",
+      "_event_comment": "kind-appropriate predicate per spec 2.6 table (person: born/died/active_from/active_to; device-model: announced/released/discontinued/superseded_when; ai-model: announced/released/deprecated/trained; compound: first_synthesized/first_marketed/genericized/named; book: written/published/adapted; object: named/emerged/mass_adoption; institution: founded/dissolved). Partial-precision dates allowed — fuzziness goes in the fact's notes + lower certainty, never invented precision.",
+      "when": "",
+      "fact_refs": []
+    }
+  ],
+
+  "relations": [
+    {
+      "type": "",
+      "_type_enum": "instance-of | subclass-of | brand-of | part-of | made-by | authored-by | about | conceptual-ancestor-of | influenced | enabled | available-on | measures | treats | adapted-into | named-after | successor-of — extend via SWEEP_LOG proposal before use.",
+      "target": "",
+      "_target_comment": "l0:<slug> for a catalog entity, or proposed:<slug> for a not-yet-cataloged target (which thereby joins the next sweep's frontier).",
+      "fact_refs": [],
+      "_fact_refs_comment": "HARD RULE: >=1 backing fact_id (l0-<slug>-rNNNN; predicate rel:<type>:<target-slug> in facts/l0_catalog.relations.jsonl) or the edge does not belong in relations[] — unbacked candidate edges live in membrane.open_questions.",
+      "bucket": "",
+      "certainty": null
+    }
+  ],
+
+  "frame_layer": {
+    "_comment": "(D3 shape, reused verbatim from SCHEMA_v2) layer in {physical|latent|straddle}; memberships graded in [0,1]; crisp is the special case (D5).",
+    "layer": "",
+    "physical_membership": null,
+    "latent_membership": null,
+    "_estimate_note": "authored analytic estimate, not a substrate fact"
+  },
+
+  "specimen_refs": [
+    {
+      "_comment": "Convergence path (spec 6) — OPTIONAL cross-ref to a merge-event specimen node this entity is implicitly named by. Lives ONLY on the L0 side; SCHEMA_v2 and the frozen specimens stay untouched.",
+      "specimen": "",
+      "subject_id": "",
+      "relation": "implicit-in",
+      "note": ""
+    }
+  ],
+
+  "substrate_binding": {
+    "specimen": "l0-catalog",
+    "facts_files": [
+      "../canonical_genealogy/substrate/facts/l0_catalog.entities.jsonl",
+      "../canonical_genealogy/substrate/facts/l0_catalog.relations.jsonl"
+    ],
+    "verifications_file": "../canonical_genealogy/substrate/verifications/l0_catalog.jsonl",
+    "compiled_from": "../canonical_genealogy/substrate/compiled/l0-catalog.compiled.json",
+    "fact_id_namespaces": {
+      "entities": "l0-<slug>-NNNN",
+      "relations": "l0-<slug>-rNNNN"
+    },
+    "_namespace_comment": "Disjoint namespaces keep compile_substrate.py's HAZARD guard (fatal, exit 2) quiet — never reuse an id across different (specimen, subject_id, predicate) groups; check the existing max NNNN per slug before emitting.",
+    "generated": "",
+    "compiler": "tools/l0_compile_wrappers.py (sweep-1 build; stdlib-only)",
+    "hand_assembled": false,
+    "_hand_assembled_comment": "true allowed ONLY until the builder lands, and every populated field must still carry real fact_refs; the builder must then reproduce the view byte-for-byte modulo 'generated'."
+  }
+}

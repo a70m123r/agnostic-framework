@@ -1,4 +1,4 @@
-# Changelog
+﻿# Changelog
 
 Material changes to the agnostic-framework repo. Granular enough to find what changed; not so granular that it duplicates git log. Entries are reverse-chronological (newest first).
 
@@ -8,6 +8,16 @@ For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/C
 
 ---
 
+## 2026-06-11 - L0 UNIVERSAL WRAPPERS sweep 1: the instrument wraps ANYTHING (spec + 6 interconnected samples + the constellation toy; facts render as battle-hardened membranes)
+
+Pav steer: "the instrument should be able to frame wrap anything... and then frame them together as a group" - the L0 scope, populated recursively sweep by sweep. Plus the convergence he called: "facts are wrappers with hardened and battle tested membranes" - made literal. 10-agent round (Fable design/build/finalize, 6 Sonnet harvest scouts, Opus skeptic). New: `candidates/l0_wrappers/` (L0_WRAPPER_SPEC.md - a SIBLING spec binding to the existing substrate machinery, zero SCHEMA_v2 edits, Opus-verified; wrapper.template.json; 6 compiled wrapper views; SWEEP_LOG.md), substrate gains `facts/l0_catalog.{entities,relations}.jsonl` + `verifications/l0_catalog.jsonl` (166 facts, append-only), `toys/l0_constellation_toy.html`. Tier-3, surfaced for ratification; list stays 9.
+- **The six samples** (chosen for real interconnection, exactly Pav's list): smartphone (generic) / iPhone 15 Pro (instance-of, 3-rung ladder) / Claude (AI model, deliberately mid-ladder) / Alan Turing (person, the hub) / acetylsalicylic acid (compound - whose **genericide makes abstraction level jurisdiction-relative**: Aspirin is generic in the US, a trademark in Germany/Canada - frame-relative identity IN the data) / "Alan Turing: The Enigma" (book, about-edge locking person+book).
+- **Honesty held under pressure:** scouts SKIPPED unreal edges (aspirin-smartphone: none; multi-hop Turing-to-smartphone demoted to membrane candidate); Opus fetched 8/8 spot-checked sources - ZERO fabrication; finalize fixed a compile split-brain (1/6 -> 6/6 samples), re-banded 2 over-certain estimates, and retired 7 reversed/candidate edges via append-only retraction records (+1 corrected). Sweep-1 truth: 152 pending / 7 unverifiable / **0 corroborated** - every kernel renders EMPTY because battle-testing has not happened yet; the empty cores are signal, not gap.
+- **Facts-as-wrappers rendered:** each entity blob = kernel core (sized by corroborated count) + a membrane ring of per-fact arc segments - pending fuzzy, corroborated hardened, disputed jagged, retracted a scar; hover a segment for the fact + source + battles survived (proxy weights versioned as l0-membrane-proxy-v0.1 with a falsification target).
+- **The toy** (browser-verified): three saved group-frame configs (constellation / Turing-lineage timeline / abstraction ladders), observer-kernel dial, LOD slider, frontier ghosts (the 13 proposed: entities sweep-1 minted - apple, anthropic, bayer, hodges...), candidate-edges toggle (off by default), and the **abstraction dial: generic end absorbs instances into their class, specific end individuates** - the validated contextual-scale distinction on the semantic axis (spec carries the by-analogy caveat).
+- **Sweep-2 runbook** in the spec (cold-start: harden pending facts with independent sources - the highest-value move; fill membranes; promote frontier entities; recompile). The convergence path noted, not built: specimen parents/actors resolve into the L0 catalog later.
+
+---
 ## 2026-06-11 — SMART REVIEW PIPELINE Stage 1: wiki + UI law + framework lens + review tool v3 (full-slice capture, exact replay, ask/give tickets) — the pipeline processed its own first ticket
 
 Pav steer: expand the review tool into an agent-driven review→update pipeline (codebase wiki, UI guidelines, framework POV, scouts, gap analysis) + his first real pin exposed the capture gap (DOM bars missing from the PNG). 11-agent workflow (5 Sonnet wiki scouts / Fable docs+build+finalize / Opus skeptic). Tier-3; list stays 9.
