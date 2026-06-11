@@ -30,8 +30,21 @@
     box-shadow:0 6px 24px rgba(0,0,0,.5)}
   #tip b{color:var(--accent)}
   #tip .k{color:var(--muted);font-size:10.5px;margin-top:3px}
-  footer{display:flex;align-items:center;gap:12px;padding:8px 14px;background:var(--panel);
-    border-top:1px solid var(--line);flex-wrap:wrap}
+  footer{background:var(--panel);border-top:1px solid var(--line)}
+  /* docked default: head is a thin grip strip, body is the inline transport row */
+  #barpanel .barhead{display:flex;align-items:center;gap:6px;padding:2px 14px;cursor:move;
+    border-bottom:1px solid var(--line);user-select:none;background:rgba(27,35,51,.5);touch-action:none}
+  #barpanel .barhead .pgrip{color:var(--muted);font-size:10px;letter-spacing:-2px;cursor:move}
+  #barpanel .barhead .ptitle{flex:1;color:#cdd6e8;font-weight:600;font-size:10px;letter-spacing:.4px}
+  #barpanel .barhead .pchev{cursor:pointer;color:var(--muted);font-size:12px;padding:0 3px;border-radius:4px}
+  #barpanel .barhead .pchev:hover{color:var(--ink);background:rgba(127,179,255,.15)}
+  #barpanel .barbody{display:flex;align-items:center;gap:12px;padding:8px 14px;flex-wrap:wrap}
+  #barpanel.collapsed .barbody{display:none}
+  /* undocked: floats over the stage like the other panels, position from panelPos */
+  #barpanel.floating{position:absolute;flex:none;width:min(760px,92vw);border:1px solid var(--line);
+    border-top:1px solid var(--line);border-radius:8px;z-index:6;box-shadow:0 4px 18px rgba(0,0,0,.45);
+    overflow:hidden}
+  #barpanel.floating .barhead{border-radius:8px 8px 0 0}
   #scrub{flex:1;min-width:200px}
   #yr{font-variant-numeric:tabular-nums;font-weight:600;min-width:54px;text-align:center;color:var(--time)}
   input[type=range]{accent-color:var(--accent)}
@@ -148,14 +161,17 @@
     </div>
   </div>
 
-  <footer>
-    <button class="tog" id="play">&#9654; Play</button>
-    <button class="tog" id="nowBtn" title="jump to 2026-06">&#8634; NOW</button>
-    <span id="yr">&mdash;</span>
-    <input type="range" id="scrub" min="0" max="100" value="0" step="0.25">
-    <span class="mini">mass&rarr;force <input type="range" id="mag" min="0" max="100" value="55"></span>
-    <span class="mini">mirage <input type="range" id="mir" min="0" max="100" value="62"></span>
-    <span class="note" id="phase">&nbsp;</span>
+  <footer id="barpanel">
+    <div class="phead barhead"><span class="pgrip" title="drag to undock">&#8942;&#8942;</span><span class="ptitle">TRANSPORT</span><span class="pchev">&#9662;</span></div>
+    <div class="pbody barbody">
+      <button class="tog" id="play">&#9654; Play</button>
+      <button class="tog" id="nowBtn" title="jump to 2026-06">&#8634; NOW</button>
+      <span id="yr">&mdash;</span>
+      <input type="range" id="scrub" min="0" max="100" value="0" step="0.25">
+      <span class="mini">mass&rarr;force <input type="range" id="mag" min="0" max="100" value="55"></span>
+      <span class="mini">mirage <input type="range" id="mir" min="0" max="100" value="62"></span>
+      <span class="note" id="phase">&nbsp;</span>
+    </div>
   </footer>
 </div>
 
@@ -2249,11 +2265,17 @@
 
   // ---------- R4: draggable + collapsible panels ----------
   var panelPos={};   // in-session memory: id -> {left,top}
-  function setupPanel(id){
+  // pin #1 (Pav): the bottom transport bar is a managed panel. It defaults DOCKED at the
+  // bottom (undock===true) and only floats over the stage once the user drags it, so nothing
+  // changes visually until then. Its position + collapsed state are captured/replayed via the hooks.
+  function setupPanel(id, undock){
     var p=document.getElementById(id); if(!p) return;
     var handle=p.querySelector('.phead');
     var chev=p.querySelector('.pchev');
-    if(panelPos[id]){ p.style.left=panelPos[id].left+'px'; p.style.top=panelPos[id].top+'px'; p.style.right='auto'; p.style.bottom='auto'; }
+    var stageEl=document.getElementById('stage');
+    if(undock && !p.__dockParent){ p.__dockParent=p.parentNode; p.__dockNext=p.nextElementSibling; }  // remember home so a docked snapshot can re-dock exactly
+    function applyFloat(){ p.classList.add('floating'); if(p.parentNode!==stageEl) stageEl.appendChild(p); }
+    if(panelPos[id]){ if(undock) applyFloat(); p.style.left=panelPos[id].left+'px'; p.style.top=panelPos[id].top+'px'; p.style.right='auto'; p.style.bottom='auto'; }
     if(chev){ chev.addEventListener('click', function(e){ e.stopPropagation(); p.classList.toggle('collapsed');
       chev.textContent = p.classList.contains('collapsed')?'▸':'▾'; }); }
     var closeBtn=p.querySelector('.pclose');
@@ -2262,13 +2284,19 @@
     var dragging=false, ox=0, oy=0;
     handle.addEventListener('pointerdown', function(e){
       if(e.target.classList && (e.target.classList.contains('pchev')||e.target.classList.contains('pclose'))) return;
-      dragging=true; var rect=p.getBoundingClientRect(); var stage=document.getElementById('stage').getBoundingClientRect();
-      ox=e.clientX-rect.left; oy=e.clientY-rect.top; p.style.right='auto'; p.style.bottom='auto';
+      dragging=true;
+      if(undock && !p.classList.contains('floating')){           // first drag of the docked bar: pop it out in place
+        var pr=p.getBoundingClientRect(); applyFloat();
+        var st0=stageEl.getBoundingClientRect();
+        p.style.left=(pr.left-st0.left)+'px'; p.style.top=(pr.top-st0.top)+'px';
+      }
+      var rect=p.getBoundingClientRect(); ox=e.clientX-rect.left; oy=e.clientY-rect.top;
+      p.style.right='auto'; p.style.bottom='auto';
       handle.setPointerCapture(e.pointerId);
     });
     handle.addEventListener('pointermove', function(e){
       if(!dragging) return;
-      var stage=document.getElementById('stage').getBoundingClientRect();
+      var stage=stageEl.getBoundingClientRect();
       var left=clamp(e.clientX-stage.left-ox, 0, stage.width-40);
       var top=clamp(e.clientY-stage.top-oy, 0, stage.height-24);
       p.style.left=left+'px'; p.style.top=top+'px';
@@ -2327,9 +2355,84 @@
     document.getElementById('narrBtn').classList.add('on');
   })();
 
+  // ---------- review exact-replay hooks (Pav bug #2): capture + restore the precise slice ----------
+  // Used by review_layer.js scrapeState()/applyState(). Captures specimen, year, all dials/toggles,
+  // and every managed panel's position + collapsed/visible state; __applyReviewState restores ALL of it.
+  var PANEL_IDS=['legend','ratio','dna','narration','detail','barpanel'];
+  function panelLayout(){
+    var lay={};
+    PANEL_IDS.forEach(function(id){ var p=document.getElementById(id); if(!p) return;
+      var pos=panelPos[id]||null;
+      lay[id]={ left:pos?pos.left:null, top:pos?pos.top:null,
+        collapsed:p.classList.contains('collapsed'),
+        floating:p.classList.contains('floating'),
+        hidden:(p.style.display==='none') };
+    });
+    return lay;
+  }
+  window.__getReviewState=function(){
+    return {
+      v:1,
+      specimen:(M&&M.key)||null,
+      mode:mode,
+      year:year, playing:playing,
+      orient:orient, layerFilter:layerFilter, observer:observer,
+      depth:depth, magK:magK, mirThresh:mirThresh,
+      toggles:{ weather:showWeather, loop:showLoop, bedrock:showBedrock, narrate:narrOn },
+      selected:(selected&&selected.id)||null,
+      panels:panelLayout(),
+      scroll:{ x:window.scrollX||0, y:window.scrollY||0 }
+    };
+  };
+  window.__applyReviewState=function(s){
+    if(!s||typeof s!=='object') return;
+    try{
+      // 1) specimen / mode first (rebuilds the model + panels)
+      if(s.mode==='global'){ if(mode!=='global') enterGlobal(); }
+      else if(s.specimen && ORDER.indexOf(s.specimen)>=0){ if(!M||M.key!==s.specimen||mode!=='single') selectSpecimen(s.specimen); }
+      // 2) dials/toggles -> drive the SAME controls so UI + state stay consistent
+      if(typeof s.orient==='string' && s.orient!==orient){ document.getElementById('orientBtn').click(); }
+      if(s.toggles){
+        if(typeof s.toggles.weather==='boolean' && s.toggles.weather!==showWeather) document.getElementById('weatherBtn').click();
+        if(typeof s.toggles.loop==='boolean' && s.toggles.loop!==showLoop) document.getElementById('loopBtn').click();
+        if(typeof s.toggles.bedrock==='boolean' && s.toggles.bedrock!==showBedrock) document.getElementById('bedrockBtn').click();
+        if(typeof s.toggles.narrate==='boolean' && s.toggles.narrate!==narrOn) document.getElementById('narrBtn').click();
+      }
+      if(typeof s.layerFilter==='string'){ var lb=document.querySelector('header .tog[data-layer="'+s.layerFilter+'"]'); if(lb && layerFilter!==s.layerFilter) lb.click(); }
+      if(typeof s.observer==='string'){ var ob=document.getElementById('observer'); if(ob){ ob.value=s.observer; observer=s.observer; } }
+      if(isFinite(s.depth)){ depth=clamp(+s.depth,0,1); var de=document.getElementById('depth'); if(de){ de.value=Math.round(depth*100);
+        document.getElementById('depthVal').textContent=(depth<0.34?'child':depth<0.7?'+parents':depth<0.85?'+harvest':'full')+' ('+Math.round(depth*100)+'%)'; } }
+      if(isFinite(s.magK)){ magK=+s.magK; var mge=document.getElementById('mag'); if(mge) mge.value=Math.round(magK*100); }
+      if(isFinite(s.mirThresh)){ mirThresh=+s.mirThresh; var mre=document.getElementById('mir'); if(mre) mre.value=Math.round(mirThresh*100); }
+      // 3) year + transport (after model exists)
+      if(isFinite(s.year) && M){ year=+s.year; syncScrub(); }
+      if(typeof s.playing==='boolean' && playing!==s.playing){ togglePlay(s.playing); }
+      // 4) panel layout: position, collapse, float, visibility
+      if(s.panels){ Object.keys(s.panels).forEach(function(id){
+        var p=document.getElementById(id); var d=s.panels[id]; if(!p||!d) return;
+        var stageEl=document.getElementById('stage');
+        if(d.floating===true && !p.classList.contains('floating')){ p.classList.add('floating'); if(p.parentNode!==stageEl) stageEl.appendChild(p); }
+        else if(d.floating===false && p.classList.contains('floating')){
+          // re-dock (review fix): a docked snapshot must restore the dock, not leave the panel floating
+          p.classList.remove('floating');
+          var home=p.__dockParent||document.getElementById('app');
+          try{ home.insertBefore(p, p.__dockNext||null); }catch(_e){ home.appendChild(p); }
+          p.style.left=''; p.style.top=''; p.style.right=''; p.style.bottom='';
+          delete panelPos[id];
+        }
+        if(d.left!=null && d.top!=null){ p.style.left=d.left+'px'; p.style.top=d.top+'px'; p.style.right='auto'; p.style.bottom='auto'; panelPos[id]={left:d.left, top:d.top}; }
+        var chev=p.querySelector('.pchev');
+        if(typeof d.collapsed==='boolean' && p.classList.contains('collapsed')!==d.collapsed){ p.classList.toggle('collapsed', d.collapsed); if(chev) chev.textContent=d.collapsed?'▸':'▾'; }
+        if(typeof d.hidden==='boolean'){ p.style.display=d.hidden?'none':(id==='detail'?'block':''); }
+      }); }
+      if(s.scroll){ try{ window.scrollTo(s.scroll.x||0, s.scroll.y||0); }catch(e){} }
+    }catch(e){ console.warn('[viewer __applyReviewState]', e); }
+  };
+
   function boot(){
     resize();
-    ['legend','ratio','dna','narration','detail'].forEach(setupPanel);
+    ['legend','ratio','dna','narration','detail'].forEach(function(id){ setupPanel(id); });
+    setupPanel('barpanel', true);   // pin #1: transport bar is a managed panel (docked by default, undocks on drag)
     if(ORDER.length && !M){ selectSpecimen(ORDER.indexOf('maxwell')>=0?'maxwell':ORDER[0]); }
     document.getElementById('depthVal').textContent='full (100%)';
     requestAnimationFrame(frame);

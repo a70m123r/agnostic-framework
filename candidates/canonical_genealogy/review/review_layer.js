@@ -36,14 +36,26 @@
   var pinsDiv=document.createElement('div');
   pinsDiv.id='__rv_pins';
   pinsDiv.setAttribute('style','position:fixed;inset:0;z-index:2147482400;pointer-events:none;');
+  // Pav ask #4: status lifecycle on the pin itself (color + a tiny follow-up tally badge).
+  var STATUS_COLORS={ open:'#f0b75e', acknowledged:'#3cc8ff', answered:'#39d3c0',
+    applied:'#5dffa0', verified:'#bfffd0', retired:'#6b7280' };
+  function pinStatus(p){ return (p&&p.status) || 'open'; }
+  function statusColor(p){ return STATUS_COLORS[pinStatus(p)] || '#f0b75e'; }
   function renderPins(){
     pinsDiv.innerHTML='';
     permPins.forEach(function(p,i){
       var b=document.createElement('button');
       b.className='__rv_pin';
-      b.title=(p.comment||'').slice(0,120);
+      var st=pinStatus(p);
+      b.title=(p.comment||'').slice(0,120)+'  ['+st+']';
       b.textContent=String(i+1);
-      b.setAttribute('style','position:absolute;width:24px;height:24px;border-radius:50% 50% 50% 4px;background:#f0b75e;color:#1a1206;border:2px solid #0c0f16;font:700 12px "Segoe UI";cursor:pointer;pointer-events:auto;transform:translate(-12px,-12px) rotate(0deg);box-shadow:0 2px 8px rgba(0,0,0,.5);');
+      var col=statusColor(p), retired=(st==='retired');
+      var ring=(st==='verified')?'box-shadow:0 0 0 2px #bfffd0,0 2px 8px rgba(0,0,0,.5);':'box-shadow:0 2px 8px rgba(0,0,0,.5);';
+      b.setAttribute('style','position:absolute;width:24px;height:24px;border-radius:50% 50% 50% 4px;background:'+col+';color:#1a1206;border:2px solid #0c0f16;font:700 12px "Segoe UI";cursor:pointer;pointer-events:auto;transform:translate(-12px,-12px) rotate(0deg);'+ring+(retired?'opacity:.5;':''));
+      var nNotes=((p.notes&&p.notes.length)||0);
+      if(nNotes>0){ var badge=document.createElement('span'); badge.textContent=String(nNotes);
+        badge.setAttribute('style','position:absolute;top:-6px;right:-6px;min-width:14px;height:14px;padding:0 3px;border-radius:8px;background:#16324a;color:#cfe6ff;border:1px solid #2f6a9a;font:700 9px "Segoe UI";display:flex;align-items:center;justify-content:center;');
+        b.appendChild(badge); }
       b.onclick=function(ev){ ev.stopPropagation(); openPermPopup(p,i); };
       pinsDiv.appendChild(b);
     });
@@ -316,21 +328,75 @@
   }
   function renumber(){ var k=0; anns.forEach(function(a){ if(a.type==='pin') a.n=++k; }); }
 
+  // ---- pin lifecycle server calls (Pav asks 3+4) ----
+  function patchPin(p,patch,cb){
+    fetch(location.origin+'/pins/'+encodeURIComponent(p.id),{method:'PATCH',
+      headers:{'Content-Type':'application/json'},body:JSON.stringify(patch)})
+      .then(function(r){ return r.ok?r.json():Promise.reject(r.status); })
+      .then(function(j){ if(j&&j.pin){ mergePin(j.pin); } if(cb) cb(j); })
+      .catch(function(e){ toast('pin update failed ('+e+')'); if(cb) cb(null); });
+  }
+  function deletePin(p,cb){
+    fetch(location.origin+'/pins/'+encodeURIComponent(p.id),{method:'DELETE'})
+      .then(function(r){ return r.ok?r.json():Promise.reject(r.status); })
+      .then(function(j){ if(j&&j.pin){ mergePin(j.pin); } if(cb) cb(j); })
+      .catch(function(e){ toast('pin retire failed ('+e+')'); if(cb) cb(null); });
+  }
+  function mergePin(rec){ for(var i=0;i<permPins.length;i++){ if(permPins[i].id===rec.id){ permPins[i]=rec; break; } } renderPins(); }
+
+  var STATUS_FLOW=['open','acknowledged','answered','applied','verified'];
+  function chip(text,col){ var s=document.createElement('span');
+    s.textContent=text; s.setAttribute('style','display:inline-block;font:700 10px "Segoe UI";color:#0c0f16;background:'+col+';border-radius:5px;padding:2px 7px;');
+    return s; }
+
   function openPermPopup(p,i){
     var x=(p.nx!=null?p.nx*innerWidth:p.x), y=(p.ny!=null?p.ny*innerHeight:p.y);
-    var d=popup(x+18,y-10,300);
-    var h=document.createElement('div'); h.style.cssText='font:600 13px "Segoe UI";color:#f0b75e;margin-bottom:4px;';
-    h.textContent='◉ pin '+(i+1)+' — '+new Date(p.savedAt||Date.now()).toLocaleString();
-    d.appendChild(h);
-    var c=document.createElement('div'); c.style.cssText='font:13px "Segoe UI";color:#e8edf6;white-space:pre-wrap;margin-bottom:6px;max-height:120px;overflow:auto;';
-    c.textContent=p.comment||'(no comment)';
-    d.appendChild(c);
+    var d=popup(x+18,y-10,320);
+    var st=pinStatus(p);
+    // header: pin number + status chip + timestamp
+    var h=document.createElement('div'); h.style.cssText='display:flex;align-items:center;gap:6px;margin-bottom:5px;';
+    var ht=document.createElement('span'); ht.style.cssText='font:600 13px "Segoe UI";color:#f0b75e;flex:1;';
+    ht.textContent='◉ pin '+(i+1)+' — '+new Date(p.savedAt||Date.now()).toLocaleString();
+    h.appendChild(ht); h.appendChild(chip(st.toUpperCase(), statusColor(p))); d.appendChild(h);
+
+    // ASK (the reviewer's comment) — editable
+    var askHdr=document.createElement('div'); askHdr.style.cssText='font:600 9px "Segoe UI";color:#8e98ad;letter-spacing:.5px;margin:2px 0;'; askHdr.textContent='ASK'; d.appendChild(askHdr);
+    var c=document.createElement('div'); c.style.cssText='font:13px "Segoe UI";color:#e8edf6;white-space:pre-wrap;margin-bottom:6px;max-height:110px;overflow:auto;';
+    c.textContent=p.comment||'(no comment)'; d.appendChild(c);
+
+    // GIVE (the response/change) — text + by + commit + at
+    if(p.give&&(p.give.text||p.give.commit)){
+      var gHdr=document.createElement('div'); gHdr.style.cssText='font:600 9px "Segoe UI";color:#5dffa0;letter-spacing:.5px;margin:2px 0;'; gHdr.textContent='GIVE'; d.appendChild(gHdr);
+      var g=document.createElement('div'); g.style.cssText='font:12px "Segoe UI";color:#cfe6cf;white-space:pre-wrap;background:rgba(93,255,160,.07);border:1px solid #244a36;border-radius:6px;padding:5px 7px;margin-bottom:6px;';
+      var gt=(p.give.text||''); if(p.give.commit) gt+=(gt?'\n':'')+'commit: '+p.give.commit;
+      var meta=[]; if(p.give.by) meta.push(p.give.by); if(p.give.at) meta.push(new Date(p.give.at).toLocaleString());
+      if(meta.length) gt+='\n— '+meta.join(' · ');
+      g.textContent=gt; d.appendChild(g);
+    }
+
+    // status history list
+    if(p.history&&p.history.length){
+      var hist=document.createElement('div'); hist.style.cssText='font:10px "Segoe UI";color:#8e98ad;margin-bottom:6px;border-left:2px solid #2a3650;padding-left:6px;max-height:74px;overflow:auto;';
+      p.history.forEach(function(ev){ var r=document.createElement('div'); r.textContent=(ev.from||'?')+' → '+ev.to+'  ('+new Date(ev.at).toLocaleDateString()+')'; hist.appendChild(r); });
+      d.appendChild(hist);
+    }
+    // follow-up notes
+    if(p.notes&&p.notes.length){
+      var nHdr=document.createElement('div'); nHdr.style.cssText='font:600 9px "Segoe UI";color:#8e98ad;letter-spacing:.5px;margin:2px 0;'; nHdr.textContent='FOLLOW-UPS ('+p.notes.length+')'; d.appendChild(nHdr);
+      var nl=document.createElement('div'); nl.style.cssText='font:11px "Segoe UI";color:#c3ccdd;margin-bottom:6px;max-height:90px;overflow:auto;';
+      p.notes.forEach(function(nt){ var r=document.createElement('div'); r.style.cssText='margin:2px 0;border-left:2px solid #2a3650;padding-left:6px;';
+        r.textContent=nt.text+'  — '+(nt.by||'')+' · '+new Date(nt.at).toLocaleDateString(); nl.appendChild(r); });
+      d.appendChild(nl);
+    }
+
     if(p.png){ var img=document.createElement('img'); img.src='/reviews/'+p.png; img.loading='lazy';
-      img.setAttribute('style','width:280px;border:1px solid #2a3142;border-radius:6px;cursor:zoom-in;display:block;margin-bottom:6px;');
+      img.setAttribute('style','width:300px;border:1px solid #2a3142;border-radius:6px;cursor:zoom-in;display:block;margin-bottom:6px;');
       img.title='the capture as it looked when the feedback was left — compare with the live view behind';
       img.onclick=function(){ window.open('/reviews/'+p.png,'_blank'); };
       d.appendChild(img); }
-    var row=document.createElement('div'); row.style.cssText='display:flex;gap:6px;justify-content:flex-end;';
+
+    // ----- action row 1: replay + status advance -----
+    var row=document.createElement('div'); row.style.cssText='display:flex;gap:6px;flex-wrap:wrap;margin-bottom:5px;';
     var go=mkBtn('↦ go to frame'); go.style.cssText+=';background:#16324a;border-color:#2f6a9a;color:#cfe6ff;';
     go.onclick=function(){
       go.textContent='↦ replaying…';
@@ -338,15 +404,87 @@
         applyState(j.state||{},function(rep){ go.textContent='↦ go to frame'; toast('frame replayed — '+rep.length+' settings applied · compare with the thumbnail'); });
       }).catch(function(){ toast('could not load saved state'); go.textContent='↦ go to frame'; });
     };
+    row.appendChild(go);
+    // advance to next status in the flow (open->...->verified)
+    var cur=STATUS_FLOW.indexOf(st);
+    if(st!=='retired' && cur>=0 && cur<STATUS_FLOW.length-1){
+      var nextSt=STATUS_FLOW[cur+1];
+      var adv=mkBtn('✓ '+nextSt); adv.title='advance status to '+nextSt;
+      adv.onclick=function(){ patchPin(p,{status:nextSt},function(){ closePopup(); }); };
+      row.appendChild(adv);
+    }
+    d.appendChild(row);
+
+    // ----- action row 2: edit / add note / give / delete -----
+    var row2=document.createElement('div'); row2.style.cssText='display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end;';
+    var edit=mkBtn('✎ edit'); edit.title='edit the ask comment';
+    edit.onclick=function(){ pinEditComment(p,d); };
+    var note=mkBtn('+ note'); note.title='append a follow-up';
+    note.onclick=function(){ pinAddNote(p,d); };
+    var giveB=mkBtn('↪ give'); giveB.title='record the response/change (text + commit)';
+    giveB.onclick=function(){ pinEditGive(p,d); };
+    var del=mkBtn('\u{1F5D1} delete'); del.title='retire this pin (record kept on disk)';
+    del.onclick=function(){ if(!confirm('Retire pin #'+(i+1)+'? The record stays on disk (status -> retired), it just stops showing as active.')) return;
+      deletePin(p,function(){ closePopup(); toast('pin retired (record kept)'); }); };
     var cl=mkBtn('✕ close'); cl.onclick=closePopup;
-    row.appendChild(go); row.appendChild(cl); d.appendChild(row);
+    row2.appendChild(edit); row2.appendChild(note); row2.appendChild(giveB); row2.appendChild(del); row2.appendChild(cl);
+    d.appendChild(row2);
+  }
+
+  // inline editors reuse the same popup surface
+  function pinEditComment(p,d){
+    var ed=document.createElement('div'); ed.style.cssText='margin-top:6px;border-top:1px solid #2a3142;padding-top:6px;';
+    var ta=document.createElement('textarea'); ta.value=p.comment||'';
+    ta.setAttribute('style','width:300px;height:60px;background:#0c0f16;color:#e8edf6;border:1px solid #2a3142;border-radius:6px;padding:6px;font:13px "Segoe UI";resize:vertical;');
+    ed.appendChild(ta); var r=document.createElement('div'); r.style.cssText='display:flex;gap:6px;justify-content:flex-end;margin-top:5px;';
+    var ok=mkBtn('✓ save'); ok.onclick=function(){ patchPin(p,{comment:ta.value.trim()},function(){ closePopup(); }); };
+    var ca=mkBtn('cancel'); ca.onclick=function(){ ed.remove(); };
+    r.appendChild(ca); r.appendChild(ok); ed.appendChild(r); d.appendChild(ed); ta.focus();
+  }
+  function pinAddNote(p,d){
+    var ed=document.createElement('div'); ed.style.cssText='margin-top:6px;border-top:1px solid #2a3142;padding-top:6px;';
+    var ta=document.createElement('textarea'); ta.placeholder='follow-up note…';
+    ta.setAttribute('style','width:300px;height:50px;background:#0c0f16;color:#e8edf6;border:1px solid #2a3142;border-radius:6px;padding:6px;font:13px "Segoe UI";resize:vertical;');
+    ed.appendChild(ta); var r=document.createElement('div'); r.style.cssText='display:flex;gap:6px;justify-content:flex-end;margin-top:5px;';
+    var ok=mkBtn('✓ add'); ok.onclick=function(){ var t=ta.value.trim(); if(!t){ ed.remove(); return; } patchPin(p,{add_note:{text:t,by:'reviewer'}},function(){ closePopup(); }); };
+    var ca=mkBtn('cancel'); ca.onclick=function(){ ed.remove(); };
+    r.appendChild(ca); r.appendChild(ok); ed.appendChild(r); d.appendChild(ed); ta.focus();
+  }
+  function pinEditGive(p,d){
+    var ed=document.createElement('div'); ed.style.cssText='margin-top:6px;border-top:1px solid #2a3142;padding-top:6px;';
+    var ta=document.createElement('textarea'); ta.value=(p.give&&p.give.text)||''; ta.placeholder='what was done (the give)…';
+    ta.setAttribute('style','width:300px;height:50px;background:#0c0f16;color:#e8edf6;border:1px solid #2a3142;border-radius:6px;padding:6px;font:13px "Segoe UI";resize:vertical;margin-bottom:5px;');
+    var ci=document.createElement('input'); ci.value=(p.give&&p.give.commit)||''; ci.placeholder='commit ref (optional)';
+    ci.setAttribute('style','width:300px;background:#0c0f16;color:#e8edf6;border:1px solid #2a3142;border-radius:6px;padding:6px;font:12px "Segoe UI";');
+    ed.appendChild(ta); ed.appendChild(ci);
+    var r=document.createElement('div'); r.style.cssText='display:flex;gap:6px;justify-content:flex-end;margin-top:5px;';
+    var ok=mkBtn('✓ record give'); ok.title='also moves status to applied';
+    ok.onclick=function(){ patchPin(p,{give:{text:ta.value.trim(),commit:ci.value.trim(),by:'reviewer'},status:'applied'},function(){ closePopup(); }); };
+    var ca=mkBtn('cancel'); ca.onclick=function(){ ed.remove(); };
+    r.appendChild(ca); r.appendChild(ok); ed.appendChild(r); d.appendChild(ed); ta.focus();
   }
 
   // ================= state scrape + replay =================
+  // Pav bug #2: capture the EXACT slice. We store window.__getReviewState() at state.viewer for
+  // exact replay, and ALSO record a heuristic panel-layout fallback (bounding rects + collapsed
+  // state of the page's draggable panels) so the slice survives even on viewers without the hook.
+  function panelLayoutFallback(){
+    var lay={};
+    document.querySelectorAll('.panel,footer,[data-review-capture]').forEach(function(p){
+      if(isOurs(p)) return; var id=p.id||null; if(!id) return;
+      var r=p.getBoundingClientRect();
+      lay[id]={ left:Math.round(r.left), top:Math.round(r.top), w:Math.round(r.width), h:Math.round(r.height),
+        collapsed:/(^|\s)collapsed(\s|$)/.test(p.className||''),
+        hidden:(getComputedStyle(p).display==='none') };
+    });
+    return lay;
+  }
   function scrapeState(){
     var s={ url:location.href, path:location.pathname, title:document.title, ts:new Date().toISOString(),
-      viewport:{w:innerWidth,h:innerHeight,dpr:window.devicePixelRatio} };
+      viewport:{w:innerWidth,h:innerHeight,dpr:window.devicePixelRatio},
+      scroll:{x:window.scrollX||0,y:window.scrollY||0} };
     if(typeof window.__getReviewState==='function'){ try{ s.viewer=window.__getReviewState(); }catch(e){ s.viewerError=String(e); } }
+    s.panelsFallback=panelLayoutFallback();
     s.inputs={}; document.querySelectorAll('input,select').forEach(function(elm,i){ var k=elm.id||elm.name||(elm.tagName.toLowerCase()+i); s.inputs[k]={value:elm.value, type:elm.type||elm.tagName.toLowerCase()}; });
     s.activeControls=[]; document.querySelectorAll('button,.chip,[role=tab]').forEach(function(b){ if(/(^|\s)(on|active|selected)(\s|$)/.test(b.className||'')) s.activeControls.push((b.textContent||'').trim()); });
     return s;
@@ -367,24 +505,91 @@
           if(elm&&('value' in elm)&&!isOurs(elm)){ elm.value=inp[k].value;
             elm.dispatchEvent(new Event('input',{bubbles:true})); elm.dispatchEvent(new Event('change',{bubbles:true}));
             report.push(k+'='+inp[k].value); } });
+        if(st.scroll){ try{ window.scrollTo(st.scroll.x||0, st.scroll.y||0); }catch(e){} }
         if(done) done(report);
       },380);
     }catch(e){ if(done) done(['error: '+e.message]); }
   }
 
   // ================= composite png =================
+  // Pav bug #1: the composite used to raster ONLY <canvas>, so DOM panels/bars (e.g. the
+  // bottom transport bar he commented on) were missing. We now also rasterize the page's DOM
+  // UI — fixed/absolute panels, the footer/header, and anything tagged [data-review-capture] —
+  // via the standard same-origin SVG<foreignObject> trick: clone each element, inline its
+  // computed styles, wrap in an <svg><foreignObject> at its bounding rect, and draw it in
+  // z-order (canvases first, DOM panels next, session annotations last). Within the DOM layer,
+  // elements are drawn in computed z-index order (stable: equal z keeps document order) so an
+  // overlapping floated panel stacks like on screen. Review chrome (toolbar/pins/popups) is META
+  // and is EXCLUDED from the capture — it must never occlude the subject being reviewed.
+  // Best-effort + disclosed: cross-origin images and some webfonts may degrade (reviews/README.md);
+  // window.__review.lastCapture lists what was rastered, so capture gaps are inspectable.
+  var CAPTURE_SEL='footer, header, .panel, [data-review-capture]';
+  var STYLE_PROPS=['display','position','box-sizing','width','height','margin','padding',
+    'border','border-radius','background','background-color','background-image','color','font','accent-color',
+    'font-family','font-size','font-weight','font-style','line-height','letter-spacing','text-align',
+    'text-transform','white-space','opacity','box-shadow','flex','flex-direction','flex-wrap',
+    'align-items','justify-content','gap','overflow','vertical-align','min-width','max-width',
+    'min-height','max-height','text-overflow','fill','stroke','transform'];
+  function inlineStyles(src,dst){
+    var cs=getComputedStyle(src);
+    var decl='';
+    for(var i=0;i<STYLE_PROPS.length;i++){ var v=cs.getPropertyValue(STYLE_PROPS[i]); if(v) decl+=STYLE_PROPS[i]+':'+v+';'; }
+    dst.setAttribute('style',decl);
+    var sk=src.children, dk=dst.children;
+    for(var j=0;j<sk.length&&j<dk.length;j++) inlineStyles(sk[j],dk[j]);
+  }
+  function domToImage(el,rect,cb){
+    try{
+      var clone=el.cloneNode(true);
+      inlineStyles(el,clone);
+      // strip our own children if any slipped in; neutralize inputs to their current value
+      var rng=clone.querySelectorAll('input[type=range]'); for(var i=0;i<rng.length;i++){ rng[i].setAttribute('value',rng[i].value); }
+      var w=Math.max(1,Math.ceil(rect.width)), h=Math.max(1,Math.ceil(rect.height));
+      var data='<svg xmlns="http://www.w3.org/2000/svg" width="'+w+'" height="'+h+'">'+
+        '<foreignObject width="100%" height="100%">'+
+        '<div xmlns="http://www.w3.org/1999/xhtml" style="width:'+w+'px;height:'+h+'px;">'+
+        new XMLSerializer().serializeToString(clone)+'</div></foreignObject></svg>';
+      var img=new Image();
+      img.onload=function(){ cb(img); };
+      img.onerror=function(){ cb(null); };
+      img.src='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(data);
+    }catch(e){ cb(null); }
+  }
+  function captureDOM(o,cb){
+    var els=[];
+    document.querySelectorAll(CAPTURE_SEL).forEach(function(el){
+      if(isOurs(el)) return;                                     // review chrome is meta — never part of the captured frame
+      var r=el.getBoundingClientRect();
+      if(r.width<2||r.height<2) return;
+      if(getComputedStyle(el).display==='none'||getComputedStyle(el).visibility==='hidden') return;
+      var z=parseInt(getComputedStyle(el).zIndex,10);
+      els.push({el:el,r:r,z:isNaN(z)?0:z});
+    });
+    els.sort(function(a,b){ return a.z-b.z; });                  // stable: equal z keeps document order (paint-order approximation, disclosed)
+    try{ window.__review.lastCapture=els.map(function(e){ return e.el.id||e.el.tagName.toLowerCase(); }); }catch(_e){}
+    var i=0;
+    (function next(){
+      if(i>=els.length){ cb(els.length); return; }
+      var e=els[i++];
+      domToImage(e.el,e.r,function(img){ if(img){ try{ o.drawImage(img,e.r.left,e.r.top,e.r.width,e.r.height); }catch(_e){} } next(); });
+    })();
+  }
   function composite(cb){
     try{
       var W=innerWidth,H=innerHeight,out=document.createElement('canvas'); out.width=W; out.height=H;
       var o=out.getContext('2d');
       o.fillStyle=getComputedStyle(document.body).backgroundColor||'#0c0f16'; o.fillRect(0,0,W,H);
+      // 1) canvases (the graph itself)
       document.querySelectorAll('canvas').forEach(function(c){ if(c.closest&&isOurs(c)) return; var r=c.getBoundingClientRect(); if(r.width<2||r.height<2) return; try{ o.drawImage(c,r.left,r.top,r.width,r.height); }catch(e){} });
-      var xml=new XMLSerializer().serializeToString(svg);
-      var img=new Image();
-      img.onload=function(){ try{ o.drawImage(img,0,0,W,H); }catch(e){} done(); };
-      img.onerror=done;
-      function done(){ try{ cb(out.toDataURL('image/png')); }catch(e){ cb(null); } }
-      img.src='data:image/svg+xml;base64,'+btoa(unescape(encodeURIComponent(xml)));
+      // 2) DOM panels/bars (best-effort foreignObject raster) -> then the session-annotation SVG on top
+      captureDOM(o,function(){
+        var xml=new XMLSerializer().serializeToString(svg);
+        var img=new Image();
+        img.onload=function(){ try{ o.drawImage(img,0,0,W,H); }catch(e){} done(); };
+        img.onerror=done;
+        function done(){ try{ cb(out.toDataURL('image/png')); }catch(e){ cb(null); } }
+        img.src='data:image/svg+xml;base64,'+btoa(unescape(encodeURIComponent(xml)));
+      });
     }catch(e){ cb(null); }
   }
 
@@ -432,5 +637,5 @@
     resize(); setTool('off'); paintSwatches(); render(); loadPins();
   });
   window.__review={ get annotations(){return anns;}, get pins(){return permPins;}, state:scrapeState, apply:applyState,
-    save:save, openRadial:openRadial, setTool:setTool, add:function(a){ anns.push(a); render(); } };
+    save:save, composite:composite, openRadial:openRadial, setTool:setTool, add:function(a){ anns.push(a); render(); } };
 })();

@@ -28,11 +28,49 @@ page state behind it, so a comment is replayable in context rather than floating
    **download** — move the files into this folder.
 
 ## Permanent pins (the compare loop)
-Gold pins **persist across sessions and iterations** — every time the page loads through
-:8742, its saved pins render. Click a pin →  popup with the comment, the **old capture
-thumbnail**, and **"go to frame"**, which REPLAYS the saved page state (specimen, year,
-view, toggles, sliders) on the CURRENT build — so you see the updated iteration in the
-exact frame the feedback was left on, with the old capture right there for comparison.
+Pins **persist across sessions and iterations** — every time the page loads through
+:8742, its saved pins render. Click a pin → popup with the comment, the **old capture
+thumbnail**, and **"go to frame"**, which REPLAYS the saved page state on the CURRENT
+build — so you see the updated iteration in the exact frame the feedback was left on,
+with the old capture right there for comparison.
+
+### Exact-slice replay (not heuristic)
+"Go to frame" now restores the **precise slice** the pin was made on, when the viewer
+exposes the replay hooks (`viewer_v3.html` does):
+
+- **`window.__getReviewState()`** captures specimen, year, play state, orient, layer
+  filter, observer, depth, mass→force, mirage, every toggle (weather / loop / bedrock /
+  narrate), the selected node, **and every draggable panel's position + collapsed /
+  floating / hidden state** (legend, ratio, dna, narration, detail, and the transport
+  bar) plus scroll position.
+- **`window.__applyReviewState(s)`** restores all of it exactly — selecting the specimen,
+  driving the same dials/toggles the user used, seeking the year, and replacing each
+  panel at its saved position and collapse state.
+
+Viewers without the hooks fall back to the older heuristic (match toggles/chips by label,
+replay slider/select values) plus a measured panel-layout snapshot (`state.panelsFallback`:
+bounding rects + collapsed flags of each `#id` panel), so the slice is still approximated.
+
+### Ask / give / status lifecycle
+Each pin carries the framework's claim-lifecycle shape:
+
+- **ASK** — the reviewer's comment (the request). Editable in the popup (**✎ edit**).
+- **GIVE** — the response/change: `{ text, by, commit, at }`. Recorded via **↪ give**
+  (which also moves the pin to `applied`), shown in a green block in the popup.
+- **STATUS** — `open → acknowledged → answered → applied → verified` (plus `retired`).
+  The pin's **color** encodes status (open=gold, acknowledged=blue, answered=teal,
+  applied=green, verified=bright-green ring, retired=grey); the popup shows a status
+  **chip**, the **history** of transitions, and a **✓ <next>** button to advance.
+- **FOLLOW-UPS** — append a note to the pin thread with **+ note**; a small tally badge
+  on the pin shows how many.
+
+**Edit / delete:** the popup has **edit** (ask comment), **+ note** (follow-up),
+**↪ give** (response), and **delete**. Delete is a **retire** — the pin's record stays
+in `pins.json` (`status:retired`, `retired:true`) and its `.review.json` / `.png` are
+kept on disk. **Records are never destroyed.**
+
+Server endpoints: `PATCH /pins/<id>` (comment / status / give / add_note / retired) and
+`DELETE /pins/<id>` (retire). Existing pins with no status field load as `open`.
 
 ## What's in a `.review.json`
 ```jsonc
@@ -40,9 +78,15 @@ exact frame the feedback was left on, with the old capture right there for compa
   "meta":  { "name": "...", "savedAt": "...", "png": "<file>.png", "source_page": "/viewer_v3.html" },
   "state": {
     "url": "...", "path": "/viewer_v3.html", "title": "...", "viewport": {"w","h","dpr"},
-    "viewer": { ... },          // rich state IF the page exposes window.__getReviewState() (future hook)
-    "inputs": { "scrub": {"value"}, "lam": {"value"}, ... },   // every slider/select value
-    "activeControls": ["Agnostic Framework", "Bedrock", "Narrate", ...]  // which chips/toggles were on
+    "scroll": {"x","y"},
+    "viewer": {                 // EXACT state when the page exposes window.__getReviewState()
+      "specimen","mode","year","playing","orient","layerFilter","observer",
+      "depth","magK","mirThresh","toggles":{"weather","loop","bedrock","narrate"},
+      "selected", "panels": { "<id>": {"left","top","collapsed","floating","hidden"} }
+    },
+    "panelsFallback": { "<id>": {"left","top","w","h","collapsed","hidden"} },  // measured rects (hookless fallback)
+    "inputs": { "scrub": {"value"}, "mag": {"value"}, ... },   // every slider/select value
+    "activeControls": ["Maxwell EM", "Bedrock", "Narrate", ...]  // which chips/toggles were on
   },
   "annotations": [
     { "id", "type": "pin|pen|arrow|rect|hi|text", "color", "t",
@@ -62,8 +106,35 @@ in order with its `text` and `context`, and turn them into a worklist of changes
 my visual reference; the structured `state`+`context` is what makes each note actionable without
 guessing what you were looking at.
 
-**v0 scope / honest limits:** annotation geometry is viewport-pixel (with normalized `nx,ny` for
-resize tolerance) — not yet anchored to specific graph nodes (that needs a `window.__reviewHitTest`
-hook in the viewer; `context` captures the element under the point as a stand-in). The composite
-PNG rasters the viewer **canvases** + your drawings; DOM panels (narration text, legend) aren't in
-the raster but their content is captured in `state`. Both are noted upgrades.
+## Full-slice capture (DOM panels + bars in the PNG)
+The composite PNG now includes the page's **DOM panels and bars**, not just the canvases.
+After drawing the graph canvases, the layer rasterizes every panel/bar — anything matching
+`footer, header, .panel, [data-review-capture]` — using the standard same-origin
+**SVG `<foreignObject>`** trick (clone the element, inline its computed styles, draw it at its
+bounding rect), then lays your annotations on top. So a comment left on the bottom
+transport bar (or the legend / narration / DNA panels) now appears in the screenshot.
+The review layer's own chrome (toolbar, pin markers, popups) is **meta and excluded** from the
+capture, so it can never occlude the thing being reviewed.
+
+**Best-effort + disclosed:** `<foreignObject>` rasterization is same-origin and tainted-canvas
+safe, but **cross-origin images and some webfonts may degrade** (a webfont not yet loaded can
+fall back to a system face; a cross-origin `<img>` may be skipped). Within the DOM layer,
+elements are drawn in **computed z-index order** (stable — equal z keeps document order); panels
+in different CSS stacking contexts can in rare overlap cases stack slightly differently than on
+screen. The graph canvases and your drawings are always exact; the DOM chrome is a faithful
+best-effort. After each capture, `window.__review.lastCapture` lists exactly which elements were
+rastered, so a capture gap is inspectable rather than silent. To force-include any extra element,
+add the `data-review-capture` attribute to it.
+
+**Honest limits:** annotation geometry is viewport-pixel (with normalized `nx,ny` for resize
+tolerance) — not yet anchored to specific graph nodes OR to UI elements (that needs a
+`window.__reviewHitTest` hook in the viewer, still absent; `context` captures the element under
+the point as a stand-in). This applies to panels too: a pin left on the transport bar stays at
+the viewport spot where it was made — if the bar is later dragged elsewhere, the pin does not
+follow it (replaying the pin's frame restores the layout it was commented on, which is the
+honest workaround until hit-test anchoring exists).
+
+**Server posture:** the review server is **unauthenticated** and must stay bound to
+`127.0.0.1` (it is — `ThreadingTCPServer(('127.0.0.1', PORT))`). Any local page could call
+`PATCH`/`DELETE /pins/<id>`; that is accepted for this single-reviewer localhost tool. Do not
+bind it to a public interface.
