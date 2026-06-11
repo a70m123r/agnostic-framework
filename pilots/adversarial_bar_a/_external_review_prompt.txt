@@ -1,0 +1,26 @@
+You are an EXTERNAL, cross-model reviewer. You are NOT a Claude model. You are the independent adversarial check on a research design that has so far been reviewed ONLY by Claude-family models, which share systematic blind spots. Your unique value is catching what a Claude panel structurally cannot. Be rigorous, specific, and skeptical; cite file + section for every substantive claim. Begin your report by identifying your model name and version.
+
+CONTEXT
+A research repo proposes an "adversarial Bar-A census" to test a bounded conjecture, §5.1-R: every substrate that supports heritable fitness (a genuine Darwinian unit of selection = variation + differential persistence + HEREDITY as the operative gate) grows a beneficiary-bearing adversarial niche, essentially at the first opportunity; below the heredity line it does not.
+
+The owner reframed "heredity" as NOT a fact a substrate has, but a frame-relative CLASSIFIER read under {plane, observer, frame} settings — a dial/toggle you switch, examine, compare and evaluate. Two instruments were specced in that form:
+- Heredity: dial Q = transmission fidelity; toggle = Q vs the Eigen error threshold Q_c = 1/a -> ABOVE / BELOW / UNDEFINED gate.
+- Niche-presence: dial E = extraction strength (a leverage ratio n*KL / -log a(s)); toggle = PRESENT / ABSENT / UNDEFINED, requiring a nameable beneficiary AND a nameable externalized cost.
+§5.1-R is tested by whether the two toggles CO-VARY across a locked grid of settings, read at MATCHED settings. A workflow protocol binds the instruments to an existing substrate/viewer system (an append-only fact-log + compiler + a JSON render schema "SCHEMA_v2"). The design uses pre-registration with a SHA + git-ancestor "frame-lock", and a CLAIM_LIFECYCLE discipline (on FAIL the parent conjecture is PARKED, the experiment dies as a "dead child" with +1 to a tally, the claim text is frozen).
+
+READ THESE FILES IN FULL (absolute paths):
+- D:\PlatformOperator\research\pav\pilots\adversarial_bar_a\heredity_classifier_section_DRAFT.md
+- D:\PlatformOperator\research\pav\pilots\adversarial_bar_a\niche_presence_classifier_section_DRAFT.md
+- D:\PlatformOperator\research\pav\pilots\adversarial_bar_a\WORKFLOW_PROTOCOL_DRAFT.md
+- D:\PlatformOperator\research\pav\pilots\adversarial_bar_a\REVISION_v1_upstream_DRAFT.md   (two proposed fixes)
+- D:\PlatformOperator\research\pav\pilots\adversarial_bar_a\REVIEW_v1.md   (the Claude/"Fable" internal panel's findings — auditing THIS is part of your job)
+For the claim itself: search "5.1-R" in D:\PlatformOperator\research\pav\candidates\adversarial_substrate_dynamics_BAR_A_SKETCH.md and read ONLY that section (the file is ~216KB — do not read all of it).
+
+YOUR TASKS (structured markdown report):
+1. INDEPENDENT VERDICT. Is this design sound? Is it lockable / runnable as written? Be blunt.
+2. AUDIT THE CLAUDE PANEL (REVIEW_v1.md). For each of its three BLOCKING faults — B1 (the PASS/FAIL concordance statistic is structurally starved of FAIL outcomes), B2 (the two instruments are calibrated on one shared anchor, RNA-world Eigen parasites, where heredity-ABOVE and niche-PRESENT are the same quasispecies physics), B3 (the compiled JSON the instruments are told to read lacks the structural fields the dial axes map to) — state CONFIRM / PARTIALLY CONFIRM / REFUTE with reasoning. Did the panel overstate or understate anything? Were any of its findings wrong?
+3. WHAT THE CLAUDE PANEL MISSED (your highest-value section). Findings a non-Claude reviewer sees that a Claude panel would not: hidden assumptions, a flawed framing, a statistics / biology / information-theory / epistemology error, a category mistake, an over-fit to the framework's own vocabulary. Be concrete.
+4. EVALUATE THE TWO PROPOSED FIXES in REVISION_v1: (a) the scoring statistic recast as a conditional contrast delta = P(niche-present | heredity-ABOVE) - P(niche-present | heredity-BELOW) over DEFINED cells with a permutation null; (b) dropping SCHEMA_v2-specimen conformance in favor of a native census-substrate record. Are these the right fixes? Are there better alternatives? Do they introduce new problems?
+5. THE SINGLE MOST IMPORTANT THING the team should do next.
+
+Do NOT modify, create, or delete any files. Output only the report.
