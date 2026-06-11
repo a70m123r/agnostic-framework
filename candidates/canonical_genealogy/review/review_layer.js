@@ -98,7 +98,7 @@
   function paintSwatches(){ bar.querySelectorAll('button[data-c]').forEach(function(s){ s.setAttribute('style',swStyle(s.dataset.c, s.dataset.c===color)); }); }
   function setTool(t){ tool=t; Object.keys(btns).forEach(function(k){ btns[k].style.background=(k===t?'#16324a':'transparent'); btns[k].style.borderColor=(k===t?'#2f6a9a':'#2a3142'); btns[k].style.color=(k===t?'#cfe6ff':'#e8edf6'); }); svg.style.pointerEvents=(t==='off'?'none':'auto'); svg.style.cursor=(t==='text'||t==='pin'?'text':'crosshair'); }
 
-  function toggleHide(){ hidden=!hidden; svg.style.display=hidden?'none':'block'; pinsDiv.style.display=hidden?'none':'block'; bHide.textContent=hidden?'⤢ show':'⤳ hide'; }
+  function toggleHide(){ hidden=!hidden; svg.style.display=hidden?'none':'block'; pinsDiv.style.display=hidden?'none':'block'; bar.style.display=hidden?'none':'flex'; bHide.textContent=hidden?'⤢ show':'⤳ hide'; if(hidden) toast('overlay hidden — press h to bring it back (chrome stays out of captures while hidden)'); }
   addEventListener('keydown',function(e){ if(e.key==='h'&&!/input|textarea/i.test((e.target.tagName||''))) toggleHide(); if(e.key==='Escape'){ closeRadial(); if(cur){ anns.pop(); cur=null; render(); } } });
 
   // ================= long-press -> radial marking menu =================
@@ -389,12 +389,13 @@
   var sessionParent=null;
   function pinById(id){ for(var i=0;i<permPins.length;i++) if(permPins[i].id===id) return permPins[i]; return null; }
   function pinChildren(p){ return permPins.filter(function(c){ return c.parent===p.id; }); }
-  function pinLabel(p){
-    var parents=permPins.filter(function(q){ return !q.parent; });
-    if(!p.parent) return String(parents.indexOf(p)+1);
+  function pinLabel(p,depth){
+    depth=depth||0;
+    if(depth>6) return '?';                              // cycle guard
+    if(!p.parent){ var parents=permPins.filter(function(q){ return !q.parent; }); return String(parents.indexOf(p)+1); }
     var par=pinById(p.parent);
     if(!par) return '?.'+(permPins.indexOf(p)+1);
-    return (parents.indexOf(par)+1)+'.'+(pinChildren(par).indexOf(p)+1);
+    return pinLabel(par,depth+1)+'.'+(pinChildren(par).indexOf(p)+1);   // recursive: 1 -> 1.1 -> 1.1.1 ...
   }
 
   function openPermPopup(p,i){
@@ -596,11 +597,18 @@
   // computed styles, wrap in an <svg><foreignObject> at its bounding rect, and draw it in
   // z-order (canvases first, DOM panels next, session annotations last). Within the DOM layer,
   // elements are drawn in computed z-index order (stable: equal z keeps document order) so an
-  // overlapping floated panel stacks like on screen. Review chrome (toolbar/pins/popups) is META
-  // and is EXCLUDED from the capture — it must never occlude the subject being reviewed.
+  // overlapping floated panel stacks like on screen. CAPTURE = WHAT YOU SEE (Pav field test 2):
+  // the review toolbar and permanent pin markers ARE captured at their true stacking position —
+  // a reviewer must be able to review the review UI itself; press h (hide) before save to keep
+  // chrome out of a shot. Only TRANSIENT overlays stay excluded (popup, radial, press-ring,
+  // toasts) — they would occlude half the frame and are open at save-time only incidentally.
   // Best-effort + disclosed: cross-origin images and some webfonts may degrade (reviews/README.md);
   // window.__review.lastCapture lists what was rastered, so capture gaps are inspectable.
-  var CAPTURE_SEL='footer, header, .panel, [data-review-capture]';
+  var CAPTURE_SEL='footer, header, .panel, [data-review-capture], #__rv_bar, .__rv_pin';
+  function captureExcluded(el){
+    if(!el.closest) return false;
+    return !!el.closest('#__rv_pop,#__rv_radial');             // transient overlays only
+  }
   var STYLE_PROPS=['display','position','box-sizing','width','height','margin','padding',
     'border','border-radius','background','background-color','background-image','color','font','accent-color',
     'font-family','font-size','font-weight','font-style','line-height','letter-spacing','text-align',
@@ -635,7 +643,7 @@
   function captureDOM(o,cb){
     var els=[];
     document.querySelectorAll(CAPTURE_SEL).forEach(function(el){
-      if(isOurs(el)) return;                                     // review chrome is meta — never part of the captured frame
+      if(captureExcluded(el)) return;                            // only transient overlays (popup/radial) stay out
       var r=el.getBoundingClientRect();
       if(r.width<2||r.height<2) return;
       if(getComputedStyle(el).display==='none'||getComputedStyle(el).visibility==='hidden') return;

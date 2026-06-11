@@ -131,8 +131,12 @@ After drawing the graph canvases, the layer rasterizes every panel/bar — anyth
 **SVG `<foreignObject>`** trick (clone the element, inline its computed styles, draw it at its
 bounding rect), then lays your annotations on top. So a comment left on the bottom
 transport bar (or the legend / narration / DNA panels) now appears in the screenshot.
-The review layer's own chrome (toolbar, pin markers, popups) is **meta and excluded** from the
-capture, so it can never occlude the thing being reviewed.
+**The capture is what you see** (changed after field test 2, where the panel under review was
+the review toolbar itself): the toolbar and permanent pin markers ARE captured at their true
+stacking position, so the review UI is itself reviewable. Only **transient overlays** (the pin
+popup, the radial menu) stay excluded — they'd occlude half the frame. To keep chrome out of a
+shot, press **`h`** (hide — now hides the toolbar too) before saving via the long-press radial,
+then `h` again.
 
 **Best-effort + disclosed:** `<foreignObject>` rasterization is same-origin and tainted-canvas
 safe, but **cross-origin images and some webfonts may degrade** (a webfont not yet loaded can
