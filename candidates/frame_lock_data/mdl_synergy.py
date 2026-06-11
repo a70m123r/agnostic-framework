@@ -244,6 +244,66 @@ def syn_pid(A, B, M, b, compressor=PINNED):
 
 
 # ----------------------------------------------------------------------------
+# CORRECTED witness  (Tier-3 pilot calibration finding; see
+# frame_lock_calibration_finding.md).  The ORIGINAL syn_wit above quantizes the
+# parents FIRST and fits on the integer codes; for an affine-span M this leaves
+# a non-vanishing ROUNDING-COMMUTATOR PEDESTAL (~1.6 bits/elem for ADD/ROT --
+# round(.) does not commute with a*Aq+b*Bq+c), and at the coarse ceiling the raw
+# codelength is dominated by M's value-distribution compressibility, INVERTING
+# the witness (the should-PASS SYN scores FEWER bits than the should-FAIL ADD).
+# That pedestal+inversion is the calibration defect.
+#
+# Syn_wit* fits the affine model on the FLOATS (exact for any M in the affine
+# span => residual is identically 0 => no pedestal) and codes the float residual
+# on the CHILD M's own b-bit grid -- so a small interaction is still quantized
+# away (driven sub-LSB) at coarse b, PRESERVING the P3b amplitude-annihilation
+# the protocol relies on. The NULL is the all-zeros floor L0(b) (what an exactly
+# affine-span M scores), NOT the degenerate COPY case.
+# ----------------------------------------------------------------------------
+
+def affine_residual_float(M, *parents):
+    """Least-squares affine fit of M on the FLOATS (not the quantized codes).
+
+    Returns the float residual R = M - (sum_k a_k*P_k + c), flattened to 1-D.
+    For any M genuinely in the affine span of the parents this is ~0 to float
+    precision -- which is exactly why it carries NO quantize-first rounding
+    pedestal, unlike affine_residual() above (which fits on integer codes).
+    """
+    Mf = np.asarray(M, dtype=np.float64).ravel()
+    cols = [np.asarray(p, dtype=np.float64).ravel() for p in parents]
+    cols.append(np.ones_like(Mf))
+    design = np.stack(cols, axis=1)
+    coef, *_ = np.linalg.lstsq(design, Mf, rcond=None)
+    return Mf - design @ coef
+
+
+def zeros_floor_bits(n_elem, compressor=PINNED):
+    """L0 = codelength (bits) of an all-zeros residual of n_elem codes.
+
+    This is the corrected NULL: what an exactly-affine-span M (ADD/ROT) scores
+    under syn_wit_star at ANY b. It is pure compressor overhead (no structure).
+    """
+    return codelength_bits(np.zeros(int(n_elem), dtype=np.int64), compressor=compressor)
+
+
+def syn_wit_star(A, B, M, b, compressor=PINNED):
+    """CORRECTED witnessed synergy: Syn_wit*(b) = L_b( round(R_float / step_M) ).
+
+    R_float = M - float-lstsq affine fit of M on (A, B);  step_M = M's b-bit LSB.
+    Affine-span M => R_float ~ 0 => all-zeros => L0 floor (FAIL side, no pedestal).
+    Genuine non-affine structure (A*B) => real bits, decaying as b coarsens and
+    the interaction is driven sub-LSB on M's grid (P3b annihilation preserved).
+    """
+    rfl = affine_residual_float(M, A, B)
+    step, lo = _grid_step(M, b)
+    if step is None:
+        return 0
+    codes = np.rint(rfl / step).astype(np.int64)
+    codes = codes - codes.min()
+    return codelength_bits(codes.astype(np.int64), compressor=compressor)
+
+
+# ----------------------------------------------------------------------------
 # Band sweep
 # ----------------------------------------------------------------------------
 
@@ -351,6 +411,56 @@ def verdict_from_band(rows, tau_eff):
     per_b = [(r.b, r.syn_wit, r.syn_wit >= tau_eff) for r in rows]
     passes = all(ok for _, _, ok in per_b)
     return passes, per_b
+
+
+# ----------------------------------------------------------------------------
+# CORRECTED null + verdict (Tier-3 pilot calibration finding)
+# ----------------------------------------------------------------------------
+
+def compute_tau_star(M_size, b, margin=2000, compressor=PINNED):
+    """Corrected threshold: tau* = L0(b) + margin, anchored on the AFFINE-SPAN
+    all-zeros floor L0 (NOT the degenerate COPY).
+
+    The affine-span null is deterministic (R_float==0 => identical all-zeros
+    bytes => identical codelength => bootstrap sigma == 0), so the COPY-style
+    '+3*sigma' band collapses; the margin instead just has to clear the
+    compressor's near-floor noise. The lzma verdict is robust for margin in
+    [2000, 10000] because the should-FAIL cases sit AT L0 by annihilation, not
+    merely near a threshold (see frame_lock_calibration_finding.md).
+    """
+    L0 = zeros_floor_bits(M_size, compressor=compressor)
+    return L0 + float(margin), L0
+
+
+def band_sweep_star(A, B, M, band, compressor=PINNED):
+    """Corrected witness across a band. Returns [(b, syn_wit_star), ...]."""
+    return [(b, syn_wit_star(A, B, M, b, compressor)) for b in band]
+
+
+def verdict_star_from_band(rows_star, M_size, band, r_top, margin=2000,
+                           compressor=PINNED):
+    """Verdict under the corrected witness + affine-span null.
+
+    rows_star : [(b, syn_wit_star)] over `band` (any order; matched by b).
+    r_top     : the child-anchored ceiling (coarsest grid point evaluated).
+    Returns (verdict, detail) where verdict in {PASS, FAIL@r_top, FAIL} and
+    detail has the per-b excess-over-floor and pass flags. PASS iff
+    Syn_wit*(b) >= tau* at EVERY b from r_floor down to AND INCLUDING r_top.
+    """
+    tau, L0 = compute_tau_star(M_size, r_top, margin=margin, compressor=compressor)
+    by_b = dict(rows_star)
+    grid = [b for b in band if b >= r_top]
+    per_b = [(b, by_b[b], by_b[b] - L0, by_b[b] >= tau) for b in grid]
+    all_ok = all(ok for *_, ok in per_b)
+    fine_ok = per_b[0][3]
+    rtop_ok = per_b[-1][3]
+    if all_ok:
+        verdict = "PASS"
+    elif fine_ok and not rtop_ok:
+        verdict = "FAIL@r_top"
+    else:
+        verdict = "FAIL"
+    return verdict, {"tau_star": tau, "L0": L0, "per_b": per_b}
 
 
 # ----------------------------------------------------------------------------

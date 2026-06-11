@@ -1,10 +1,27 @@
-﻿# Changelog
+# Changelog
 
 Material changes to the agnostic-framework repo. Granular enough to find what changed; not so granular that it duplicates git log. Entries are reverse-chronological (newest first).
 
 For finer-grained provenance, see the relevant `continuations/NN.md` file — the continuations are the framework's primary self-documentation. This changelog is a navigation aid for repo visitors.
 
 For diagram-specific iteration history, see [`diagrams/CHANGELOG.md`](diagrams/CHANGELOG.md).
+
+---
+
+## 2026-06-11 — Frame-lock witness calibration finding (Tier-3 pilot post-mortem) + protocol DRAFT folds the corrections
+
+Follow-up to the 2026-06-09 frame-lock pilot RESULTS (2-hits / 3-misses against the locked rule, with the misses diagnosed as a calibration defect, not noise). Four `recalib_*.py` experiments isolated the defect mechanism; `frame_lock_calibration_finding.md` documents it; `frame_lock_protocol_DRAFT.md` §5d + §6 + §7 folds the corrections in. **Tier-3 pilot finding for Cowork+Pav ratification; promotes nothing; convergence list stays 9.**
+
+- `candidates/frame_lock_data/frame_lock_calibration_finding.md` (21KB) — three corrections the witnessed-synergy estimator needs:
+  - **(i) Affine fit on the FLOATS, not on quantize-first integer codes.** `round(·)` does not commute with affine combination, so quantize-first leaves a ~1.6-bits/elem rounding-commutator pedestal on pure affine ADD/ROT, *flat across the whole band* — at the coarse ceiling the raw codelength inverts (the should-PASS SYN scores *fewer* bits than the should-FAIL ADD). Fix: fit the affine model on the floats (`R_float = M − (a·A+b·B+c)`, identically 0 for affine-span ⇒ no pedestal); code `R_float` on the *child's* b-bit grid (small interactions still driven sub-LSB at coarse b — P3b annihilation preserved). The quantize-FIRST emphasis in 7f is load-bearing only for the coding step, not for the fit.
+  - **(ii) Null = affine-span all-zeros floor, not a degenerate COPY case.** The COPY-anchored `τ_eff = 5729 bits` sits ~18× *below* the affine pedestal, so every affine-span blend (ADD/ROT/ALLOY) clears it spuriously. A degenerate copy is NULL by the parent-count gate (upstream) and must not calibrate the synergy floor — the corrected null is `τ* = L0 + margin` where L0 is what an exactly-affine-span M scores.
+  - **(iii) `r_top` = the child's sub-LSB annihilation grain**, not a ceiling chosen by fiat. A reviewer-recomputable function of the committed W_C; closes the alloy exploit *more* tightly because the pedestal had been masking the surviving bump. Under all three fixes the 5 ground-truth called shots land exactly (SYN PASS, ADD/ROT FAIL, COPY NULL, ALLOY FAIL@r_top), robustly on the pinned lzma coder. Sibling coders matter at boundary: zlib left a 2,104-bit near-floor residual where lzma/bz2 read ~0 — coder must be pinned + siblings reported.
+
+- `candidates/frame_lock_data/recalib_confirm.py` + `recalib_experiment.py` + `recalib_crossover.py` + `recalib_robustness.py` — the experimental drivers. Stdlib + numpy + pinned lzma; reproducible. Each targets one diagnostic axis (rounding-commutator confirmation, span-vs-degenerate-null crossover, r_top robustness, ALLOY/SYN crossover).
+- `candidates/frame_lock_data/mdl_synergy.py` — estimator code updated to the float-fit witness + affine-span null + child-anchored `r_top` rule.
+- `candidates/frame_lock_protocol_DRAFT.md` — **§5d** adds the calibration-finding callout with the three corrections inlined as a blockquote; **§6** residual-holes-flagged adds the "pipeline order is itself a load-bearing estimator choice" + coder-sensitivity-at-boundary concrete instance; **§7** bar-to-promote prepends item (0) "validate the corrected metric on controlled ground truth FIRST (cf. Pilot-2)" — marked done for pilot cases, requires ratification of the corrected estimator before (1); item (2) notes the pilot lock **cannot be retrofitted** with the corrected metric (that would be the post-data band/threshold change §4 INVALIDATES) — a fresh lock for the TIES/DARE real-corpus step is required.
+
+Discipline-honest reading: the pilot's 3 misses surfaced a real defect, the recalib experiments isolated the mechanism in three named ways, the protocol DRAFT folds them in *without* changing the original pilot lock (per §4 post-data-change invalidation rule). The protocol's status moves from "DEFINED, not yet DEMONSTRATED" to "DEFINED, metric validated on controlled ground truth, real-corpus still owed". Single-agent surface — external A− owed before the corrected estimator hardens. The standing CLAIM_LIFECYCLE accounting: the original quantize-first witness + COPY-anchored null + fiat r_top = three retired children of the parents-produce-W_C parent; the corrected float-fit + affine-span-null + child-grain witness is a new live child awaiting the real-corpus test.
 
 ---
 
