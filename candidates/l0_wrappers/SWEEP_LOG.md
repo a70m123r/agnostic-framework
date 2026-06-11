@@ -74,3 +74,58 @@ All corrections are **append-only** (new lines / verification records / one new 
 **Harden, don't broaden.** Verify standing `pending` facts: fetch an INDEPENDENT second source per fact, append `corroborated`/`disputed` verification records (a second source from the SAME harvest seat does not count as independent, §7.3). Sweep-1 has **zero corroborated facts**, so every kernel is empty — the first corroborations are what light up the kernel-core render and prove the facts-as-wrappers hardening loop with real data. A sweep that only verifies and disputes — adding zero entities — can be the best sweep of the year (§7.4).
 
 ---
+
+## Sweep 1.1 — 2026-06-11 (builder landed: `tools/l0_compile_wrappers.py v1`)
+
+**Seat:** `l0-sweep-01b-builder` (Fable). **Closes the §9 LIMITS gap** "the wrapper-view builder is unbuilt": the six `wrappers/<slug>.json` files and the constellation toy's inline data were hand-assembled / hand-transcribed snapshots that drift on re-harvest. They are now **GENERATED** from `compiled/l0-catalog.compiled.json`.
+**No substrate change:** zero edits to `facts/*.jsonl`, `verifications/*.jsonl`, `SCHEMA_v2.md`, the 7 base specimens, or `frame_lock_data/` (append-only doctrine honoured). `compile_substrate.py` re-run after the build: **validation errors 0, exit 0** — no regression.
+**Dials locked this sweep** (frame-lock §7.3): kind vocab + 16-term relation vocab + kernel-admission rule + membrane proxy `l0-membrane-proxy-v0.1`, all per spec as authored.
+
+### What was built
+- **`tools/l0_compile_wrappers.py` v1** — STDLIB-ONLY (json, argparse, re, pathlib, datetime, difflib), same constraint as `compile_substrate.py`. Modes: `--check` (semantic diff vs hand wrappers), `--write` (regenerate wrappers + toy data block + group configs), `--substrate` override, `--no-toy`/`--no-groups`. Resolves all paths repo-relative.
+- **Derivation (substrate-faithful, fact-backed):** names, abstraction (level / ladder via outgoing subclass-of|instance-of + INVERSE instance-of|subclass-of|brand-of edges + `generalizes_to`/`specializes_to` facts / level_by_scope from scoped `abstraction_level:<scope>` facts), the whole membrane partition (kernel / corroborated_soft / pending / unverifiable / disputed / scars — mechanical from bucket+certainty+estimate-tag), lifecycle (date-valued lifecycle predicates only), relations (outgoing pending/corroborated `rel:*`; the 7 retired `unverifiable` edges land in `membrane.unverifiable`, never `relations[]`), specimen_refs (from `specimen_ref`/`specimen_convergence_ref` facts).
+- **Authored render-estimate fields** (spec §2.5 frame weights, §2.8 frame-layer memberships are NOT substrate facts): derived from frame-weight/frame-layer facts WHERE they exist (turing-enigma-hodges has 4 `frames_*` facts; smartphone/aspirin/turing/tueh have structured frame-layer facts), else carried as disclosed compiler constants so group renders keep working. Toy node positions / proposed-node labels / ladder titles are likewise display-only config in the builder, not substrate.
+
+### Check results (compiled substrate vs the 6 hand wrappers)
+**145 content diffs found pre-write**, every one categorized — and per doctrine the **substrate value/bucket/predicate wins; the builder never adopts a hand value over the substrate**. After `--write` the wrappers ARE the builder output: re-running `--check` gives **0 diffs (byte-stable / idempotent)**, confirmed again after the substrate recompile.
+
+Diffs by category (all resolved as documented hand-assembly drift / hand-enrichment-beyond-substrate):
+1. **Value-snippet transcription drift (~28)** — hand snapshots abbreviated/destructured the substrate value; the substrate (fuller/canonical) value now wins. E.g. `l0-claude-0006` description, `l0-claude-0010` training_method, `l0-alan-turing-0013/0018/0019` (structured dicts flattened by hand), `l0-smartphone-0011/0012` (dropped sub-fields), `l0-acetylsalicylic-acid` aka 3rd element (`acetyl salicylic acid` ← substrate, not the hand's IUPAC `2-acetyloxybenzoic acid`).
+2. **Stale certainty not propagated (1)** — `l0-smartphone-0005` hand wrapper still showed `0.82`; substrate was re-banded to `0.45` in the sweep-1 finalize (the finalize updated the TOY but not the hand wrapper JSON). Substrate `0.45` wins.
+3. **Predicate-name drift (3)** — hand appended descriptive suffixes (`adapted_imitation_game`, `updated_edition_2014`, `reception_guardian_essential_2002`); the substrate's canonical predicate (`adapted`, `updated_edition`, `reception_guardian_essential`) wins.
+4. **7 retired edges moved to `membrane.unverifiable`, out of `relations[]` (~12)** — the sweep-1 finalize demoted 7 reversed/multi-hop edges to `unverifiable`; the hand wrappers still carried some in `relations[]`/`pending` at `pending`. Now: `smartphone-r0002/r0003/r0004`, `alan-turing-r0003/r0004/r0005`, `claude-r0008` are in `membrane.unverifiable`; `relations[]` carries only the pending/corroborated outgoing edges.
+5. **Phantom ladder rung dropped + ladder corrected (3)** — `proposed:iphone` had **no backing fact** (spec §2.2: "no ladder edge without a backing fact"), so it is gone: `iphone-15-pro.generalizes_to` = `l0:smartphone` (substrate `rel:instance-of:smartphone`); `smartphone.generalizes_to` = `proposed:device-category` (substrate `rel:instance-of:device-category r0001`, which the hand had dropped).
+6. **Bucket correction (2)** — `l0-claude-0021` parameter_count: substrate bucket is `pending` (the hand had pre-classified it `unverifiable` out-of-band). Substrate `pending` wins.
+7. **Disputed→pending (3 facts, ~6 diffs)** — `l0-smartphone-0021`, `l0-alan-turing-0007`, `l0-acetylsalicylic-acid-0021` are `bucket=pending` in the compiled view with **no disputed VERIFICATION record** (the `disputed_alternatives` prose lived in the harvest `notes`, which the compiler drops). The substrate-faithful view keeps them in `pending`; a disputed-section appears only when a verifier records a contradiction. (The fact VALUE matches the substrate.)
+8. **Membrane completeness (~30)** — the builder lists EVERY pending non-relation fact in the membrane (the full micro-wrapper population, §3); the hand wrappers had selectively omitted meta facts (`kind`, `abstraction_level`, `frame_layer_*`, `iupac_name`, `drug_class`, `term_precursor_1985`, `frontier_replacement_vector`, `specializes_to`, `specimen_ref`, …). Substrate-faithful superset.
+9. **Lifecycle date-only (~25)** — the builder emits lifecycle rows only for lifecycle predicates whose VALUE is date-like (event = substrate predicate, when = value, one fact_ref). Hand enrichment dropped: derived `active_from` (no fact), event renames (`claude_first_trained`→`trained`), descriptive-value events parsed into dates by hand (`adapted`/`centenary_edition`/`named "Aspirin"`→`1899-01`), multi-fact_ref groupings, and `description` fields. A future sweep should emit dedicated date facts for the descriptive lifecycle events rather than hand-parsing prose (UI law §5.4: no invented precision).
+10. **Hand enrichment with no substrate backing, emptied (~12)** — `membrane.open_questions` (hand-authored candidate-edge prose), unbacked `names.aka` entries (`iphone-15-pro` and `turing-enigma-hodges` have NO `aka` fact), `acetylsalicylic-acid.skipped_relations` (prose block), and `specimen_refs` not backed by a `specimen_ref` fact (`alan-turing`, `turing-enigma-hodges`, `iphone-15-pro`). Builder emits empty (data-absent = nothing).
+11. **frame_layer.layer correction (1)** — `alan-turing` hand `straddle` vs substrate fact `l0-alan-turing-0024` `physical`. Substrate fact wins.
+12. **fact_refs derivation + cosmetic (~14)** — abstraction/names/frame_layer fact_refs now follow the builder's derivation rule (frame_layer gains fact_refs where a fact backs it); `substrate_binding.fact_id_namespaces` uses the clean template form (hand had appended a parenthetical range).
+
+### Toy regenerated
+`../canonical_genealogy/toys/l0_constellation_toy.html`: the inline data region (W / EDGES / CANDS / PLAB / LADDERS) is now wrapped in `/* GENERATED L0 DATA (do not hand-edit — l0_compile_wrappers.py) */ … /* END GENERATED L0 DATA */` (mirrors the `_reembed_agnostic.js` marker/idempotent pattern) and regenerated from the compiled view: per-fact membrane segments (bucket / certainty / predicate / value-snippet / fact_id / source note), the **17 solid fact-backed EDGES**, the **7 retired/inverse edges as CANDS ghosts** (`(retired/inverse)`, never in the solid list — preserving the sweep-1 retired-edge semantics), ladder links, frame weights, and lifecycle events. The render logic below the markers is preserved unchanged. Splice is idempotent (single marker pair on re-run). `node --check` on the extracted `<script>` (to `%TEMP%`): **PASS**.
+
+### Group configs emitted (spec §4)
+`group_configs/grp-six-sample-constellation.json` (constellation, depth 1, kernel+membrane, frontier ghosts), `grp-turing-lineage-timeline.json` (timeline, person→book→ai-model→device, `lam` 0.45), `grp-two-ladders.json` (abstraction-ladder, scope toggle global/US/DE, the genericide dial) — first-class JSONs, parameters lifted from the toy's config definitions.
+
+### Spec discrepancy resolved
+`L0_WRAPPER_SPEC.md` §1.1 file-map wrote `wrappers/<slug>.wrapper.json` on one line, but every shipped view, the template's `substrate_binding`, the toy embed comment, and the sweep-1 log use the bare `wrappers/<slug>.json` form. **Kept the existing `<slug>.json` naming** (the de-facto convention) and corrected the spec file-map line to match (one-line edit), noted in the builder docstring.
+
+### Verification (this sweep)
+- `python tools/l0_compile_wrappers.py --check` → **exit 0, 0 content diffs** (post-write, idempotent; re-confirmed after substrate recompile).
+- `python tools/l0_compile_wrappers.py --write` then `--check` → **byte-stable** (0 diffs).
+- `node --check` on the toy's extracted script → **PASS**.
+- `python ../canonical_genealogy/substrate/compile_substrate.py` → **validation errors 0, exit 0** (no-regression; substrate untouched).
+- Open-file sanity: all 6 regenerated wrappers parse; every populated field carries `fact_refs`; `hand_assembled: false`, `compiler: "tools/l0_compile_wrappers.py v1"` on every wrapper. Bucket roll-up matches the substrate (pending 21/21/25/21/23/22; unverifiable 3/0/1/3/0/0; disputed 0 across the board — the 3 hand-disputed facts now sit in `pending`, faithful to the substrate).
+
+### NOT done (deliberately — gated / out of scope)
+- **Subject-index anchor (`specimens/l0_catalog.json`, §2.9.4) still NOT created** — remains Pav/Cowork-gated; the 26 expected `specimen 'l0-catalog' not found` flags stay expected-and-honest.
+- **No new entities / facts / verifications** — this sweep is tooling only; hardening `pending→corroborated` remains sweep-2's first job (every kernel is still empty, correctly).
+- **Lifecycle descriptive-date facts** — the builder intentionally does not hand-parse dates out of prose values; a future sweep should emit dedicated date facts (e.g. for `adapted`, `centenary_edition`, the aspirin `named` event) so those lifecycle rows regenerate from the substrate.
+
+### Proposed vocabulary queue (apply from next sweep after a nod)
+- **`generated`/`compiler`/`hand_assembled` are the only stamp fields** the wrapper-view check ignores (plus `_`-prefixed prose and the render-helper keys `note`/`hardness_proxy`/`statement`). Lock this as the wrapper-diff contract.
+- Carry forward the sweep-1 proposed dials (relation-direction discipline; proposed-subject edge namespacing) — both are now exercised by the builder and ready to ratify.
+
+---

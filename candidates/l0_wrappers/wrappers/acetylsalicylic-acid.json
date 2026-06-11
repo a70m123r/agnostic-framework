@@ -1,293 +1,305 @@
 {
-  "_template_doc": "Hand-assembled L0 wrapper view per L0_WRAPPER_SPEC.md §2.9.2 (hand_assembled:true). Every populated field carries real fact_refs to l0_catalog.entities.jsonl or l0_catalog.relations.jsonl. Spec §2.9.2: 'a wrapper view may be hand-assembled ONLY with hand_assembled:true and with every populated field still carrying real fact_refs.' The compile tool (tools/l0_compile_wrappers.py, sweep-1 build) must reproduce this byte-for-byte modulo 'generated' when it lands.",
+  "_doc": "L0 wrapper — GENERATED compiled view (do not hand-edit). Built by tools/l0_compile_wrappers.py v1 from the compiled substrate. The wrapper JSON is a compiled view over substrate facts, never a second source of truth (L0_WRAPPER_SPEC.md §2.9). Edit facts/*.jsonl + recompile, then rerun this builder. Kernel is empty whenever no fact is corroborated+cert>=0.7.",
+  "_status": "Tier-3 WORKING wrapper view — exploratory, surfaced for Cowork+Pav ratification. NOT canon, NOT a tier promotion, convergence list stays 9.",
   "schema_version": "0.1-l0-wrapper",
   "wrapper_id": "l0:acetylsalicylic-acid",
   "kind": "compound",
-  "_status": "Tier-3 WORKING wrapper view — exploratory, surfaced for Cowork+Pav ratification. NOT canon, NOT a tier promotion, does NOT grow the convergence list (stays 9).",
-
   "names": {
     "canonical": "acetylsalicylic acid",
-    "aka": ["aspirin", "ASA", "2-acetyloxybenzoic acid"],
-    "fact_refs": ["l0-acetylsalicylic-acid-0001", "l0-acetylsalicylic-acid-0002", "l0-acetylsalicylic-acid-0003"],
-    "_aka_note": "'aspirin' is a generic name in US/UK/France; a registered Bayer trademark in Germany, Canada, Mexico, 80+ countries (frame-relative identity by space-scope). 'ASA' is the Canadian generic name because the trademark persists there. '2-acetyloxybenzoic acid' is the IUPAC systematic name."
+    "aka": [
+      "aspirin",
+      "ASA",
+      "acetyl salicylic acid"
+    ],
+    "fact_refs": [
+      "l0-acetylsalicylic-acid-0001",
+      "l0-acetylsalicylic-acid-0003"
+    ]
   },
-
   "abstraction": {
-    "_comment": "Contextual-scale dial (spec §2.2). acetylsalicylic acid is the GENERIC compound rung. Above it: no cataloged parent yet (organic acid / salicylate class would be the next rung up — sweep-2 candidate). Below it: proposed:bayer-aspirin (brand-of relation). The abstraction LEVEL is frame-relative by jurisdiction: the compound name 'aspirin' is generic (no trademark) in the US, but the name 'Aspirin' is a branded instance rung in Germany/Canada/Mexico. This is the genericide pattern — the abstraction dial reads differently under different space-frame settings.",
     "level": "generic",
-    "_level_derivation": "No instance-of or brand-of out-edge from this entity; proposed:bayer-aspirin has brand-of IN-edge toward this entity. Default level = generic (no out-edge up). Overridden by scope in level_by_scope.",
     "ladder": {
       "generalizes_to": null,
-      "_generalizes_to_note": "No catalog entry yet for the parent class (salicylate, or organic acid). Proposed sweep-2 candidate: proposed:salicylate-class.",
-      "specializes_to": ["proposed:bayer-aspirin"],
-      "_specializes_to_note": "proposed:bayer-aspirin is the branded specific (brand-of relation backed by l0-acetylsalicylic-acid-r0002). Additional branded generics (e.g. Ecotrin, Bufferin) are not yet cataloged — sweep-2 candidates."
+      "specializes_to": [
+        "proposed:bayer-aspirin"
+      ]
     },
     "level_by_scope": {
-      "us": "generic",
-      "de": "instance",
       "ca": "instance",
-      "_scope_note": "US: 'aspirin' is a generic name since 1921 Learned Hand ruling (Bayer Co. v. United Drug Co., 272 F.505). DE/CA: 'Aspirin' is Bayer's registered trademark; the compound is the generic underneath, but the NAME is an instance rung. This is the abstraction dial demonstrated in a second kind (brand-of as jurisdiction-relative): the level of the NAME changes under different space-frame readings while the compound itself is invariant. The contextual-scale dial is not dialed by knowledge or time here, but by the space-frame (jurisdiction)."
+      "de": "instance",
+      "us": "generic"
     },
-    "fact_refs": ["l0-acetylsalicylic-acid-0011", "l0-acetylsalicylic-acid-0012", "l0-acetylsalicylic-acid-0013", "l0-acetylsalicylic-acid-0014", "l0-acetylsalicylic-acid-r0002"]
+    "fact_refs": [
+      "l0-acetylsalicylic-acid-0014",
+      "l0-acetylsalicylic-acid-0013",
+      "l0-acetylsalicylic-acid-0012",
+      "l0-acetylsalicylic-acid-r0002"
+    ]
   },
-
   "kernel": {
-    "_comment": "Kernel admission rule (spec §2.3): bucket=corroborated AND certainty>=0.7 AND no ESTIMATE/PROXY tag. All facts are currently pending (sweep-1 emit; no verifications yet). NO facts qualify for the kernel yet — kernel is empty at sweep-1 emit, which is correct and honest signal. The membrane holds all facts pending battle. Kernel will grow as verifications land in sweep-2.",
     "statement": "",
-    "facts": [],
-    "_empty_kernel_note": "All facts are verification:pending at sweep-1 emit. Kernel admission requires bucket=corroborated (at least one independent verification). Empty kernel = unbattled membrane, not a data gap. See membrane.pending for the full pending population."
+    "facts": []
   },
-
   "membrane": {
-    "_comment": "The fuzzy frontier — facts at various hardening stages. All are pending at sweep-1. Hardness proxy: h = B(bucket) x certainty where B(pending)=0.55. Render as fuzzy/translucent per spec §3.1. DISCLOSURE: l0-membrane-proxy-v0.1 is a RENDER PROXY, not a measurement — disclose wherever drawn.",
-
     "corroborated_soft": [],
-
     "pending": [
+      {
+        "fact_id": "l0-acetylsalicylic-acid-0014",
+        "predicate": "abstraction_level:ca",
+        "value": "instance",
+        "bucket": "pending",
+        "certainty": 0.85
+      },
+      {
+        "fact_id": "l0-acetylsalicylic-acid-0013",
+        "predicate": "abstraction_level:de",
+        "value": "instance",
+        "bucket": "pending",
+        "certainty": 0.85
+      },
+      {
+        "fact_id": "l0-acetylsalicylic-acid-0012",
+        "predicate": "abstraction_level:us",
+        "value": "generic",
+        "bucket": "pending",
+        "certainty": 0.9
+      },
+      {
+        "fact_id": "l0-acetylsalicylic-acid-0003",
+        "predicate": "aka",
+        "value": [
+          "aspirin",
+          "ASA",
+          "acetyl salicylic acid"
+        ],
+        "bucket": "pending",
+        "certainty": 0.9
+      },
       {
         "fact_id": "l0-acetylsalicylic-acid-0001",
         "predicate": "canonical_name",
         "value": "acetylsalicylic acid",
         "bucket": "pending",
-        "certainty": 0.95,
-        "_h_proxy": 0.52,
-        "_h_note": "h = 0.55 x 0.95 = 0.52 (l0-membrane-proxy-v0.1, RENDER PROXY only)"
+        "certainty": 0.95
       },
       {
         "fact_id": "l0-acetylsalicylic-acid-0004",
         "predicate": "cas_number",
         "value": "50-78-2",
         "bucket": "pending",
-        "certainty": 0.95,
-        "_h_proxy": 0.52
+        "certainty": 0.95
       },
       {
-        "fact_id": "l0-acetylsalicylic-acid-0005",
-        "predicate": "molecular_formula",
-        "value": "C9H8O4",
+        "fact_id": "l0-acetylsalicylic-acid-0019",
+        "predicate": "drug_class",
+        "value": [
+          "NSAID",
+          "analgesic",
+          "antipyretic",
+          "antiplatelet agent"
+        ],
         "bucket": "pending",
-        "certainty": 0.95,
-        "_h_proxy": 0.52
-      },
-      {
-        "fact_id": "l0-acetylsalicylic-acid-0007",
-        "predicate": "first_synthesized",
-        "value": "1853",
-        "bucket": "pending",
-        "certainty": 0.8,
-        "_h_proxy": 0.44,
-        "_h_note": "h = 0.55 x 0.8 = 0.44"
-      },
-      {
-        "fact_id": "l0-acetylsalicylic-acid-0008",
-        "predicate": "first_synthesized_pure_stable_form",
-        "value": "1897 (Felix Hoffmann at Bayer, August 10)",
-        "bucket": "pending",
-        "certainty": 0.85,
-        "_h_proxy": 0.47,
-        "_dispute_flag": "Attribution between Hoffmann and Eichengrün is actively disputed — see membrane.disputed"
+        "certainty": 0.9
       },
       {
         "fact_id": "l0-acetylsalicylic-acid-0009",
         "predicate": "first_marketed",
         "value": "1899",
         "bucket": "pending",
-        "certainty": 0.9,
-        "_h_proxy": 0.5
+        "certainty": 0.9
       },
       {
-        "fact_id": "l0-acetylsalicylic-acid-0010",
-        "predicate": "named",
-        "value": "Aspirin",
+        "fact_id": "l0-acetylsalicylic-acid-0007",
+        "predicate": "first_synthesized",
+        "value": "1853",
         "bucket": "pending",
-        "certainty": 0.85,
-        "_h_proxy": 0.47
+        "certainty": 0.8
+      },
+      {
+        "fact_id": "l0-acetylsalicylic-acid-0008",
+        "predicate": "first_synthesized_pure_stable_form",
+        "value": "1897",
+        "bucket": "pending",
+        "certainty": 0.85
+      },
+      {
+        "fact_id": "l0-acetylsalicylic-acid-0023",
+        "predicate": "frame_layer_assessment",
+        "value": {
+          "layer": "straddle",
+          "physical_membership": 0.8,
+          "latent_membership": 0.5
+        },
+        "bucket": "pending",
+        "certainty": 0.5
       },
       {
         "fact_id": "l0-acetylsalicylic-acid-0011",
         "predicate": "genericized",
-        "value": "1921 (US only — Bayer Co. v. United Drug Co., S.D.N.Y., Judge Learned Hand)",
+        "value": "1921",
         "bucket": "pending",
-        "certainty": 0.9,
-        "_h_proxy": 0.5
+        "certainty": 0.9
       },
       {
-        "fact_id": "l0-acetylsalicylic-acid-0015",
-        "predicate": "mechanism_of_action",
-        "value": "irreversible COX-1/COX-2 inhibition via serine acetylation; suppresses prostaglandin and thromboxane synthesis",
+        "fact_id": "l0-acetylsalicylic-acid-0002",
+        "predicate": "iupac_name",
+        "value": "2-acetyloxybenzoic acid",
         "bucket": "pending",
-        "certainty": 0.9,
-        "_h_proxy": 0.5
+        "certainty": 0.9
+      },
+      {
+        "fact_id": "l0-acetylsalicylic-acid-0020",
+        "predicate": "kind",
+        "value": "compound",
+        "bucket": "pending",
+        "certainty": 0.95
       },
       {
         "fact_id": "l0-acetylsalicylic-acid-0016",
         "predicate": "mechanism_discovery_year",
         "value": "1971",
         "bucket": "pending",
-        "certainty": 0.85,
-        "_h_proxy": 0.47
+        "certainty": 0.85
+      },
+      {
+        "fact_id": "l0-acetylsalicylic-acid-0015",
+        "predicate": "mechanism_of_action",
+        "value": "irreversible inhibition of cyclooxygenase (COX-1 and COX-2) via acetylation of serine residue; suppresses prostaglandin and thromboxane synthesis",
+        "bucket": "pending",
+        "certainty": 0.9
+      },
+      {
+        "fact_id": "l0-acetylsalicylic-acid-0005",
+        "predicate": "molecular_formula",
+        "value": "C9H8O4",
+        "bucket": "pending",
+        "certainty": 0.95
+      },
+      {
+        "fact_id": "l0-acetylsalicylic-acid-0006",
+        "predicate": "molecular_weight_g_per_mol",
+        "value": 180.159,
+        "bucket": "pending",
+        "certainty": 0.85
+      },
+      {
+        "fact_id": "l0-acetylsalicylic-acid-0010",
+        "predicate": "named",
+        "value": "Aspirin",
+        "bucket": "pending",
+        "certainty": 0.85
+      },
+      {
+        "fact_id": "l0-acetylsalicylic-acid-0021",
+        "predicate": "synthesized_by_1897",
+        "value": "Felix Hoffmann (disputed: Arthur Eichengrün claims direction)",
+        "bucket": "pending",
+        "certainty": 0.7
+      },
+      {
+        "fact_id": "l0-acetylsalicylic-acid-0022",
+        "predicate": "trademark_retained_jurisdictions",
+        "value": [
+          "Germany",
+          "Canada",
+          "Mexico",
+          "80+ other countries"
+        ],
+        "bucket": "pending",
+        "certainty": 0.85
       },
       {
         "fact_id": "l0-acetylsalicylic-acid-0017",
         "predicate": "treats",
-        "value": ["pain", "fever", "inflammation", "cardiovascular disease prevention (antiplatelet)", "rheumatoid arthritis"],
+        "value": [
+          "pain",
+          "fever",
+          "inflammation",
+          "cardiovascular disease prevention (antiplatelet)",
+          "rheumatoid arthritis",
+          "acute myocardial infarction (secondary prevention)"
+        ],
         "bucket": "pending",
-        "certainty": 0.9,
-        "_h_proxy": 0.5
+        "certainty": 0.9
       },
       {
         "fact_id": "l0-acetylsalicylic-acid-0018",
         "predicate": "who_essential_medicine",
         "value": true,
         "bucket": "pending",
-        "certainty": 0.85,
-        "_h_proxy": 0.47
-      },
-      {
-        "fact_id": "l0-acetylsalicylic-acid-0022",
-        "predicate": "trademark_retained_jurisdictions",
-        "value": ["Germany", "Canada", "Mexico", "80+ other countries"],
-        "bucket": "pending",
-        "certainty": 0.85,
-        "_h_proxy": 0.47
-      },
-      {
-        "fact_id": "l0-acetylsalicylic-acid-r0001",
-        "predicate": "rel:made-by:proposed:bayer",
-        "value": {"target": "proposed:bayer"},
-        "bucket": "pending",
-        "certainty": 0.9,
-        "_h_proxy": 0.5
+        "certainty": 0.85
       }
     ],
-
     "unverifiable": [],
-
-    "disputed": [
-      {
-        "fact_id": "l0-acetylsalicylic-acid-0021",
-        "predicate": "synthesized_by_1897",
-        "value": "Felix Hoffmann (lab notebooks August 10, 1897; Bayer's credited account)",
-        "bucket": "pending",
-        "certainty": 0.7,
-        "_h_proxy": 0.38,
-        "disputed_alternatives": [
-          {
-            "claimed_by": "Arthur Eichengrün (1949 paper in Pharmazie; supported by Walter Sneader 1999)",
-            "alternative_value": "Arthur Eichengrün directed the synthesis; Hoffmann merely executed lab work without knowing the purpose",
-            "notes": "Eichengrün first raised claim in 1944 letter from Theresienstadt concentration camp; published 1949. Walter Sneader reappraisal (1999) found Eichengrün's account 'convincing and correct.' Bayer maintains Hoffmann's credit citing lab notebooks. No consensus as of knowledge cutoff. This is a genuine scholarly dispute — BOTH values carried at the membrane."
-          }
-        ],
-        "_render_note": "Render as membrane-under-attack (warn-color accents per spec §3.1). Both values visible on hover."
-      }
-    ],
-
+    "disputed": [],
     "scars": [],
-
-    "open_questions": [
-      {
-        "question": "Was acetylsalicylic acid (aspirin) on the original 1977 WHO Essential Medicines List at its founding, or added in a subsequent edition?",
-        "candidate_edge": null,
-        "proposed_route": "Fetch the actual 1977 WHO Technical Report Series No. 615 (first EML) from the WHO IRIS archive (https://iris.who.int/handle/10665/41400) and check the list contents directly. The Wikidata entry says 'since 1977' but no primary WHO document was verified in sweep-1."
-      },
-      {
-        "question": "Exact date of Gerhardt's 1853 synthesis — was it a specific month/publication, and what journal?",
-        "candidate_edge": null,
-        "proposed_route": "Check Gerhardt's original 1853 publication. Wikipedia Charles Frédéric Gerhardt article references 'Clarification on publications concerning the synthesis of acetylsalicylic acid' (Lafont, 1996) in Revue d'Histoire de la Pharmacie — fetch this for the primary publication citation."
-      },
-      {
-        "question": "Do relations exist between acetylsalicylic-acid and any of the other five sweep-1 samples (smartphone, iphone-15-pro, claude, alan-turing, turing-enigma-hodges) beyond the institutional-web sweep-2 path?",
-        "candidate_edge": null,
-        "proposed_route": "No direct factual relation found in sweep-1 between ASA and the other five entities. The honest report: cross-links are absent at this level. Sweep-2 will pull in proposed:bayer as an institution node beside proposed:apple and proposed:anthropic — that is the institutional-web connection path noted in the spec §5 entity description. The edges do NOT exist at the compound level in sweep-1; they will appear at the institution level in sweep-2."
-      },
-      {
-        "question": "Current cardiovascular guidelines tension: is aspirin's antiplatelet use for primary prevention now affirmatively contra-indicated or merely not recommended for 60+?",
-        "candidate_edge": null,
-        "proposed_route": "Fetch the 2022 USPSTF final recommendation statement on aspirin use for primary prevention (https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/aspirin-use-to-prevent-cardiovascular-disease-preventive-medication) for the precise recommendation language and age thresholds."
-      }
-    ]
+    "open_questions": []
   },
-
   "frames": {
     "time": 0.6,
     "space": 0.8,
     "knowledge": 0.7,
     "meaning": 0.5,
-    "_estimate_note": "MANDATORY DISCLOSURE: these weights are AUTHORED RENDER ESTIMATES, not measured quantities and not substrate facts. time=0.6: lifecycle span ~170 years (1853-present), moderate temporal depth. space=0.8: the genericide creates a strong space-frame (jurisdiction) dependency — the compound's abstraction LEVEL changes by geography, making space the most distinctive frame for this entity. knowledge=0.7: mechanism of action discovered 1971 (COX), clinical guidelines actively evolving, notable knowledge-frame relevance. meaning=0.5: moderate — the brand/generic tension carries cultural meaning (Bayer, WWI, genericide), but lower than purely cultural entities. Any toy/viewer rendering these weights owes an adjacent estimate/proxy disclosure (UI_GUIDELINES §5)."
+    "_estimate_note": "MANDATORY DISCLOSURE: observer-global-kernel relevance weights are AUTHORED RENDER ESTIMATES in [0,1], not measured quantities and not substrate facts (spec §2.5). Any toy/viewer rendering them owes an adjacent estimate/proxy disclosure (UI_GUIDELINES §5). No frames_<channel> facts exist for this subject in the substrate; values are the instrument author's disclosed estimate (carried by the builder as an authored constant, not a substrate fact)."
   },
-
   "lifecycle": [
     {
       "event": "first_synthesized",
       "when": "1853",
-      "description": "Charles Frédéric Gerhardt synthesized acetylsalicylic acid for the first time (impure, unstable form)",
-      "fact_refs": ["l0-acetylsalicylic-acid-0007"]
+      "fact_refs": [
+        "l0-acetylsalicylic-acid-0007"
+      ]
     },
     {
       "event": "first_synthesized_pure_stable_form",
-      "when": "1897-08-10",
-      "description": "Pure, stable form synthesized at Bayer (attributed to Felix Hoffmann; disputed by Eichengrün)",
-      "fact_refs": ["l0-acetylsalicylic-acid-0008", "l0-acetylsalicylic-acid-0021"]
-    },
-    {
-      "event": "named",
-      "when": "1899-01",
-      "description": "Bayer settled on 'Aspirin' as the trade name",
-      "fact_refs": ["l0-acetylsalicylic-acid-0010"]
+      "when": "1897",
+      "fact_refs": [
+        "l0-acetylsalicylic-acid-0008"
+      ]
     },
     {
       "event": "first_marketed",
       "when": "1899",
-      "description": "Bayer began selling Aspirin globally",
-      "fact_refs": ["l0-acetylsalicylic-acid-0009"]
+      "fact_refs": [
+        "l0-acetylsalicylic-acid-0009"
+      ]
     },
     {
       "event": "genericized",
       "when": "1921",
-      "description": "US genericide: Bayer Co. v. United Drug Co. (272 F.505, S.D.N.Y.), Judge Learned Hand rules 'aspirin' generic for consumers in US",
-      "fact_refs": ["l0-acetylsalicylic-acid-0011"],
-      "_scope": "us",
-      "_scope_note": "Genericide is US-specific. Germany/Canada/Mexico trademark retained. Use scope field when rendering lifecycle in abstraction-ladder layout with scope toggle."
+      "fact_refs": [
+        "l0-acetylsalicylic-acid-0011"
+      ]
     },
     {
-      "event": "mechanism_discovery",
+      "event": "mechanism_discovery_year",
       "when": "1971",
-      "description": "John Vane publishes COX-inhibition mechanism of action (1982 Nobel Prize)",
-      "fact_refs": ["l0-acetylsalicylic-acid-0016"]
+      "fact_refs": [
+        "l0-acetylsalicylic-acid-0016"
+      ]
     }
   ],
-
   "relations": [
     {
       "type": "made-by",
       "target": "proposed:bayer",
-      "fact_refs": ["l0-acetylsalicylic-acid-r0001"],
+      "fact_refs": [
+        "l0-acetylsalicylic-acid-r0001"
+      ],
       "bucket": "pending",
-      "certainty": 0.9,
-      "_note": "Bayer AG — proposed:bayer is a sweep-2 entity candidate (institution kind). Also connects to proposed:apple and proposed:anthropic at the same institutional rung in the group constellation."
+      "certainty": 0.9
     }
   ],
-
   "frame_layer": {
-    "_comment": "D3 shape per SCHEMA_v2, reused verbatim. Analytic estimate — not a substrate fact.",
     "layer": "straddle",
     "physical_membership": 0.8,
     "latent_membership": 0.5,
-    "_estimate_note": "AUTHORED ANALYTIC ESTIMATE, not a substrate fact. Physical: the compound is a molecular substance — it is manufactured, has measurable mass, melting point, formula. Physical membership high (0.8). Latent: the 'Aspirin' brand/concept exists as a latent wrapper whose abstraction level varies by jurisdiction — the genericide pattern is a latent phenomenon (legal/cultural, not physical). Latent membership moderate (0.5). Straddle classification. Proxy-disclosure mandatory wherever rendered."
+    "_estimate_note": "authored analytic estimate, not a substrate fact (spec §2.8). Memberships from frame-layer fact(s) l0-acetylsalicylic-acid-0023.",
+    "fact_refs": [
+      "l0-acetylsalicylic-acid-0023"
+    ]
   },
-
   "specimen_refs": [],
-
-  "skipped_relations": {
-    "_note": "The following CANDIDATE edges to the other five sweep-1 samples were investigated and found to have NO directly sourceable fact at this level of analysis in sweep-1. They are explicitly not in relations[] per the hard rule (spec §2.7). They are reported here for sweep-2 planning and membrane.open_questions.",
-    "smartphone": "No direct factual relation between acetylsalicylic acid and the generic smartphone category found. Possible thematic link (pharma apps, drug delivery tech) but no attested edge.",
-    "iphone-15-pro": "No direct factual relation found. No source attests a meaningful edge.",
-    "claude": "No direct factual relation found. Possible future: AI drug discovery, but no source attests edge to Claude specifically.",
-    "alan-turing": "No direct factual relation found.",
-    "turing-enigma-hodges": "No direct factual relation found.",
-    "_sweep2_path": "All five gaps close indirectly through the institution layer in sweep-2: proposed:bayer (made-by ASA) sits alongside proposed:apple (made-by iPhone 15 Pro) and proposed:anthropic (made-by Claude) as institutional nodes in the constellation. The institutional web exists at sweep-2 depth, not at the compound level."
-  },
-
   "substrate_binding": {
     "specimen": "l0-catalog",
     "facts_files": [
@@ -300,10 +312,8 @@
       "entities": "l0-acetylsalicylic-acid-NNNN",
       "relations": "l0-acetylsalicylic-acid-rNNNN"
     },
-    "generated": "2026-06-11T12:05:30Z",
-    "compiler": "tools/l0_compile_wrappers.py (not yet built; sweep-1 hand-assembled per spec §2.9.2)",
-    "hand_assembled": true,
-    "_hand_assembled_note": "Hand-assembled per spec §2.9.2 because l0_compile_wrappers.py does not yet exist. Every populated field carries real fact_refs. The builder, when built, must reproduce this view byte-for-byte modulo 'generated'.",
-    "_expected_compiler_flag": "compile_substrate.py will flag 'specimen l0-catalog not found among ../specimens/*.json' — this is the expected, honest non-fatal flag documented in spec §2.9.3. No l0_catalog.json anchor file exists yet (pending Pav/Cowork nod per spec §2.9.4)."
+    "generated": "2026-06-11T14:10:19.477280Z",
+    "compiler": "tools/l0_compile_wrappers.py v1",
+    "hand_assembled": false
   }
 }

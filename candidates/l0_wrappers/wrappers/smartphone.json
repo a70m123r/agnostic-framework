@@ -1,288 +1,337 @@
 {
-  "_template_doc": "L0 WRAPPER — compiled view for l0:smartphone. Spec: L0_WRAPPER_SPEC.md. Tier-3 exploratory instrument for Cowork+Pav ratification. NOT canon, NOT a promotion, convergence list stays 9. Hand-assembled (hand_assembled: true) pending tools/l0_compile_wrappers.py; every field carries real fact_refs. NO fabrication — all facts in facts/smartphone.jsonl carry real fetched source URLs.",
+  "_doc": "L0 wrapper — GENERATED compiled view (do not hand-edit). Built by tools/l0_compile_wrappers.py v1 from the compiled substrate. The wrapper JSON is a compiled view over substrate facts, never a second source of truth (L0_WRAPPER_SPEC.md §2.9). Edit facts/*.jsonl + recompile, then rerun this builder. Kernel is empty whenever no fact is corroborated+cert>=0.7.",
+  "_status": "Tier-3 WORKING wrapper view — exploratory, surfaced for Cowork+Pav ratification. NOT canon, NOT a tier promotion, convergence list stays 9.",
   "schema_version": "0.1-l0-wrapper",
   "wrapper_id": "l0:smartphone",
   "kind": "object",
-  "_status": "Tier-3 WORKING wrapper view — exploratory, surfaced for Cowork+Pav ratification. NOT canon, NOT a tier promotion, does NOT grow the convergence list (stays 9).",
-
   "names": {
     "canonical": "smartphone",
-    "aka": ["smart phone", "SmartPhone"],
-    "fact_refs": ["l0-smartphone-0001", "l0-smartphone-0002"]
+    "aka": [
+      "smart phone",
+      "SmartPhone"
+    ],
+    "fact_refs": [
+      "l0-smartphone-0001",
+      "l0-smartphone-0002"
+    ]
   },
-
   "abstraction": {
-    "_comment": "The contextual-scale dial (spec 2.2). Smartphone is the generic top rung of the three-rung demonstration ladder: smartphone (generic) -> proposed:iphone (class) -> l0:iphone-15-pro (instance). No out-edge upward: generalizes_to null. Ladder edges compiled from relation facts.",
     "level": "generic",
     "ladder": {
-      "generalizes_to": null,
-      "specializes_to": ["proposed:iphone", "l0:iphone-15-pro"]
+      "generalizes_to": "proposed:device-category",
+      "specializes_to": [
+        "l0:iphone-15-pro"
+      ]
     },
     "level_by_scope": {},
-    "fact_refs": ["l0-smartphone-0008", "l0-smartphone-r0001"]
+    "fact_refs": [
+      "l0-smartphone-0008",
+      "l0-smartphone-r0001",
+      "l0-iphone-15-pro-r0001"
+    ]
   },
-
   "kernel": {
-    "_comment": "Kernel admission: bucket=corroborated AND certainty>=0.7 AND no ESTIMATE:/PROXY: tag. Sweep-1 facts are all pending, so kernel is empty at this sweep. This is correct signal — the kernel is computed fresh after sweep-2 hardening. An empty kernel is not a gap; it is the honest starting state before battle-testing.",
-    "statement": "PENDING HARDENING: The kernel will populate when sweep-2 verification corroborates the definitional and named facts (l0-smartphone-0001, 0003, 0006, 0007) from independent sources. Candidates: definition of smartphone as mobile computing device with mobile OS + touchscreen + app ecosystem (fact 0006, certainty 0.90); the 1997 Ericsson coinage of the one-word lowercase term (fact 0003, certainty 0.88); global category existence (facts 0009/0014).",
+    "statement": "",
     "facts": []
   },
-
   "membrane": {
-    "_comment": "All sweep-1 facts are pending (bucket=pending, awaiting verification). Hardness h = B(bucket) x certainty, B(pending)=0.55. Proxy l0-membrane-proxy-v0.1. DISCLOSE wherever rendered.",
     "corroborated_soft": [],
     "pending": [
+      {
+        "fact_id": "l0-smartphone-0008",
+        "predicate": "abstraction_level",
+        "value": "generic",
+        "bucket": "pending",
+        "certainty": 0.95
+      },
+      {
+        "fact_id": "l0-smartphone-0002",
+        "predicate": "aka",
+        "value": [
+          "smart phone",
+          "SmartPhone"
+        ],
+        "bucket": "pending",
+        "certainty": 0.88
+      },
+      {
+        "fact_id": "l0-smartphone-0014",
+        "predicate": "annual_sales_2014",
+        "value": {
+          "count_billion": 1,
+          "year": 2014
+        },
+        "bucket": "pending",
+        "certainty": 0.8
+      },
       {
         "fact_id": "l0-smartphone-0001",
         "predicate": "canonical_name",
         "value": "smartphone",
         "bucket": "pending",
-        "certainty": 0.95,
-        "note": "canonical single-word lowercase form; h=0.52"
+        "certainty": 0.95
       },
       {
-        "fact_id": "l0-smartphone-0002",
-        "predicate": "aka",
-        "value": ["smart phone", "SmartPhone"],
+        "fact_id": "l0-smartphone-0006",
+        "predicate": "definition",
+        "value": "A mobile device that combines the functionality of a traditional mobile phone with advanced computing capabilities, typically featuring a touchscreen interface, mobile operating system, app ecosystem, internet access, and sensors.",
         "bucket": "pending",
-        "certainty": 0.88,
-        "note": "precursor capitalisation forms per Wikipedia History article; h=0.48"
+        "certainty": 0.9
       },
       {
-        "fact_id": "l0-smartphone-0003",
-        "predicate": "named",
-        "value": "1997",
+        "fact_id": "l0-smartphone-0021",
+        "predicate": "disputed_first_smartphone",
+        "value": {
+          "claim": "IBM Simon (1994) is the first smartphone",
+          "dispute": "General Magic Magic Cap devices (Sony magic link, Motorola envoy, 1994) and earlier prototypes also qualify; some claim Nokia communicators qualify; boundary of the category is contested"
+        },
         "bucket": "pending",
-        "certainty": 0.88,
-        "note": "1997 Ericsson GS88 coinage of lowercase 'smartphone'; h=0.48"
+        "certainty": 0.55
+      },
+      {
+        "fact_id": "l0-smartphone-0019",
+        "predicate": "dominant_OS_platforms",
+        "value": [
+          "Android",
+          "iOS"
+        ],
+        "bucket": "pending",
+        "certainty": 0.9
       },
       {
         "fact_id": "l0-smartphone-0004",
         "predicate": "emerged",
         "value": "1992-1994",
         "bucket": "pending",
-        "certainty": 0.85,
-        "note": "IBM Simon prototype 1992 / commercial release 1994; h=0.47"
+        "certainty": 0.85
+      },
+      {
+        "fact_id": "l0-smartphone-0012",
+        "predicate": "first_commercial_prototype",
+        "value": {
+          "device": "IBM Simon Personal Communicator (prototype: Angler)",
+          "demonstrator": "Frank Canova (IBM)",
+          "event": "COMDEX",
+          "date": "1992-11"
+        },
+        "bucket": "pending",
+        "certainty": 0.85
+      },
+      {
+        "fact_id": "l0-smartphone-0011",
+        "predicate": "first_named_device",
+        "value": {
+          "device": "Ericsson GS88 (codenamed Penelope)",
+          "manufacturer": "Ericsson",
+          "year": 1997
+        },
+        "bucket": "pending",
+        "certainty": 0.82
+      },
+      {
+        "fact_id": "l0-smartphone-0016",
+        "predicate": "frame_layer_latent_membership",
+        "value": 0.65,
+        "bucket": "pending",
+        "certainty": 0.4
+      },
+      {
+        "fact_id": "l0-smartphone-0015",
+        "predicate": "frame_layer_physical_membership",
+        "value": 0.85,
+        "bucket": "pending",
+        "certainty": 0.4
+      },
+      {
+        "fact_id": "l0-smartphone-0020",
+        "predicate": "frontier_replacement_vector",
+        "value": "Smartphones have largely replaced PDAs, handheld PCs, portable media players, point-and-shoot cameras, camcorders, and to lesser degree handheld consoles, e-readers, calculators, GPS units.",
+        "bucket": "pending",
+        "certainty": 0.88
+      },
+      {
+        "fact_id": "l0-smartphone-0010",
+        "predicate": "global_subscriptions_2025",
+        "value": {
+          "count_billions": 7.3,
+          "year": 2025
+        },
+        "bucket": "pending",
+        "certainty": 0.72
+      },
+      {
+        "fact_id": "l0-smartphone-0009",
+        "predicate": "global_users_2024",
+        "value": {
+          "count_billions": 4.88,
+          "pct_world_population": 60.42,
+          "year": 2024
+        },
+        "bucket": "pending",
+        "certainty": 0.75
+      },
+      {
+        "fact_id": "l0-smartphone-0013",
+        "predicate": "iphone_inflection",
+        "value": {
+          "event": "Apple iPhone introduced",
+          "date": "2007-01"
+        },
+        "bucket": "pending",
+        "certainty": 0.9
+      },
+      {
+        "fact_id": "l0-smartphone-0007",
+        "predicate": "kind",
+        "value": "object (generic)",
+        "bucket": "pending",
+        "certainty": 0.95
       },
       {
         "fact_id": "l0-smartphone-0005",
         "predicate": "mass_adoption",
         "value": "2007-2012",
         "bucket": "pending",
-        "certainty": 0.82,
-        "note": "ESTIMATE: iPhone Jan 2007 inflection point; crossing to mass adoption is contested; h=0.45"
+        "certainty": 0.45
       },
       {
-        "fact_id": "l0-smartphone-0006",
-        "predicate": "definition",
-        "value": "A mobile device combining traditional phone functionality with advanced computing: touchscreen, mobile OS, app ecosystem, internet access, sensors.",
+        "fact_id": "l0-smartphone-0003",
+        "predicate": "named",
+        "value": "1997",
         "bucket": "pending",
-        "certainty": 0.90,
-        "note": "Wikipedia lede synthesis; high certainty but pending independent corroboration; h=0.50"
-      },
-      {
-        "fact_id": "l0-smartphone-0009",
-        "predicate": "global_users_2024",
-        "value": {"count_billions": 4.88, "pct_world_population": 60.42, "year": 2024},
-        "bucket": "pending",
-        "certainty": 0.75,
-        "note": "BankMyCell 2026 citing 2024 data; aggregator-sourced; h=0.41"
-      },
-      {
-        "fact_id": "l0-smartphone-0010",
-        "predicate": "global_subscriptions_2025",
-        "value": {"count_billions": 7.3, "year": 2025},
-        "bucket": "pending",
-        "certainty": 0.72,
-        "note": "Statista snippet; subscriptions (includes multi-SIM), distinct from user count; h=0.40"
-      },
-      {
-        "fact_id": "l0-smartphone-0011",
-        "predicate": "first_named_device",
-        "value": {"device": "Ericsson GS88 (Penelope)", "year": 1997},
-        "bucket": "pending",
-        "certainty": 0.82,
-        "note": "~200 units manufactured; term-coinage event; h=0.45"
-      },
-      {
-        "fact_id": "l0-smartphone-0012",
-        "predicate": "first_commercial_prototype",
-        "value": {"device": "IBM Simon (Angler prototype)", "date": "1992-11"},
-        "bucket": "pending",
-        "certainty": 0.85,
-        "note": "COMDEX November 1992 demo; h=0.47"
-      },
-      {
-        "fact_id": "l0-smartphone-0013",
-        "predicate": "iphone_inflection",
-        "value": {"event": "Apple iPhone introduced", "date": "2007-01"},
-        "bucket": "pending",
-        "certainty": 0.90,
-        "note": "January 2007 iPhone: modern smartphone form factor established; h=0.50"
-      },
-      {
-        "fact_id": "l0-smartphone-0014",
-        "predicate": "annual_sales_2014",
-        "value": {"count_billion": 1, "year": 2014},
-        "bucket": "pending",
-        "certainty": 0.80,
-        "note": "Wikipedia: >1B sold annually by 2014; h=0.44"
-      },
-      {
-        "fact_id": "l0-smartphone-0019",
-        "predicate": "dominant_OS_platforms",
-        "value": ["Android", "iOS"],
-        "bucket": "pending",
-        "certainty": 0.90,
-        "note": "Post-2012 duopoly; h=0.50"
+        "certainty": 0.88
       },
       {
         "fact_id": "l0-smartphone-0017",
         "predicate": "specimen_convergence_ref",
-        "value": "internet.json h-cloud-mobile: 'the smartphone/app ecosystem'",
+        "value": {
+          "specimen": "internet",
+          "subject_id": "h-cloud-mobile",
+          "note": "harvest.descendants[3] of internet.json reads: 'Cloud infrastructure, the smartphone/app ecosystem, streaming media — the Internet as a utility delivered to billions of pocket devices.'"
+        },
         "bucket": "pending",
-        "certainty": 0.95,
-        "note": "Verified by filesystem read; convergence path per spec §6; h=0.52"
+        "certainty": 0.95
       },
+      {
+        "fact_id": "l0-smartphone-0018",
+        "predicate": "term_precursor_1985",
+        "value": "SmartPhone (capitalised compound)",
+        "bucket": "pending",
+        "certainty": 0.7
+      }
+    ],
+    "unverifiable": [
       {
         "fact_id": "l0-smartphone-r0003",
         "predicate": "rel:available-on:claude",
-        "value": "claude",
-        "bucket": "pending",
-        "certainty": 0.82,
-        "note": "Claude iOS app launched 2024-05-02; transitive: claude available-on iphone-15-pro instance-of smartphone; h=0.45"
-      }
-    ],
-    "unverifiable": [],
-    "disputed": [
+        "value": {
+          "target": "claude",
+          "note": "Claude (the AI model) is available-on smartphones via iOS and Android apps. Direct edge from claude -> smartphone (generic) is the transitive form; the specific instance edge is claude available-on iphone-15-pro instance-of smartphone."
+        },
+        "bucket": "unverifiable",
+        "certainty": 0.82
+      },
       {
-        "fact_id": "l0-smartphone-0021",
-        "predicate": "disputed_first_smartphone",
-        "value": "IBM Simon (1994) as first smartphone",
-        "bucket": "disputed",
-        "certainty": 0.55,
-        "disputed_alternatives": [
-          "General Magic Magic Cap devices (Sony magic link, Motorola envoy, 1994) also qualify",
-          "Nokia 9000 Communicator (1996) qualifies under some definitions",
-          "Category boundary (which features are required) is itself contested"
-        ],
-        "note": "Genuine definition dispute: 'first smartphone' depends on which features are considered definitional. Both IBM Simon and General Magic devices cited as co-first in Wikipedia. h=0.14"
+        "fact_id": "l0-smartphone-r0002",
+        "predicate": "rel:available-on:iphone-15-pro",
+        "value": {
+          "target": "iphone-15-pro",
+          "note": "iphone-15-pro is an instance of smartphone (inverse direction: iphone-15-pro instance-of smartphone); Claude is available-on iphone-15-pro which is an instance-of smartphone — transitive available-on path."
+        },
+        "bucket": "unverifiable",
+        "certainty": 0.8
+      },
+      {
+        "fact_id": "l0-smartphone-r0004",
+        "predicate": "rel:conceptual-ancestor-of:claude",
+        "value": {
+          "target": "claude",
+          "note": "Alan Turing's Turing-test lineage and stored-program-computer -> smartphone -> Claude is a multi-hop candidate edge. The direct conceptual-ancestor-of edge from alan-turing to claude is via the Turing test lineage (fetch-verified); the smartphone is an intermediate platform node, not a direct conceptual ancestor of Claude."
+        },
+        "bucket": "unverifiable",
+        "certainty": 0.3
       }
     ],
+    "disputed": [],
     "scars": [],
-    "open_questions": [
-      {
-        "question": "What precise year/quarter did smartphone shipments cross the threshold that could be called 'mass adoption' by a rigorous definition (e.g. >50% of all mobile phone shipments)?",
-        "candidate_edge": null,
-        "proposed_route": "Fetch IDC or Gartner smartphone vs. feature-phone shipment share time series; find crossing year. Wikipedia's 'over a billion sold annually by 2014' is a scale marker, not a share marker."
-      },
-      {
-        "question": "Does the multi-hop Turing -> universal machine -> stored-program computer -> smartphone -> Claude conceptual ancestry chain have a single citable source that attests it directly?",
-        "candidate_edge": {
-          "type": "conceptual-ancestor-of",
-          "from": "l0:alan-turing",
-          "to": "l0:smartphone",
-          "via": "universal-machine lineage",
-          "verification_route": "Search for a published historical or technical source that traces the smartphone's computational architecture explicitly to the stored-program computer and thence to the Turing machine. If none attests it directly, the edge stays a candidate."
-        },
-        "proposed_route": "Fetch Wikipedia 'stored-program computer' and check if it links to Turing machine -> von Neumann architecture -> microprocessor -> mobile CPU -> smartphone. Each hop may be individually sourceable but the direct cross-six-sample edge needs a single attest."
-      },
-      {
-        "question": "Is there a higher generic category label above 'smartphone' that smartphone itself instantiates? (e.g. 'mobile device', 'handheld computer') — which would add a rung above the current ladder.",
-        "candidate_edge": {
-          "type": "subclass-of",
-          "from": "l0:smartphone",
-          "to": "proposed:mobile-device",
-          "verification_route": "Wikipedia Smartphone article calls it 'a mobile device that...' — confirming subclass-of mobile device. Fetch and cite to emit the rung-above fact."
-        },
-        "proposed_route": "Verify from Wikipedia Smartphone article lede ('A smartphone is a mobile device...'). If confirmed, emit l0-smartphone-r0005 with predicate rel:subclass-of:mobile-device, target proposed:mobile-device, adding proposed:mobile-device to the sweep-2 frontier."
-      },
-      {
-        "question": "Does the alan-turing wrapper's conceptual-ancestor-of edge reach smartphone? The 2018 Turing Award nodes in deep_learning.json reference 'named-after' Alan Turing; Alan Turing's work on the universal machine precedes the stored-program computer that precedes modern smartphones. Is there a source directly stating this lineage?",
-        "candidate_edge": null,
-        "proposed_route": "Check deep_learning.json for 2018 Turing Award node; check if any academic history of computing source traces smartphone CPU to Turing machine model directly."
-      }
-    ]
+    "open_questions": []
   },
-
   "frames": {
     "time": 0.5,
     "space": 0.8,
     "knowledge": 0.4,
     "meaning": 0.5,
-    "_estimate_note": "MANDATORY DISCLOSURE: these weights are AUTHORED RENDER ESTIMATES, not measured quantities and not substrate facts. Any toy/viewer rendering them owes an adjacent estimate/proxy disclosure (UI_GUIDELINES §5). Rationale: space=0.8 (smartphone is highly spatially distributed, near-ubiquitous across all geographies); time=0.5 (the category spans ~1992-present, moderate temporal extent); knowledge=0.4 (smartphone mediates knowledge access but is not itself a knowledge-producing entity at the category level); meaning=0.5 (smartphones carry significant cultural meaning but as a generic category, meaning is moderate vs. specific models)."
+    "_estimate_note": "MANDATORY DISCLOSURE: observer-global-kernel relevance weights are AUTHORED RENDER ESTIMATES in [0,1], not measured quantities and not substrate facts (spec §2.5). Any toy/viewer rendering them owes an adjacent estimate/proxy disclosure (UI_GUIDELINES §5). No frames_<channel> facts exist for this subject in the substrate; values are the instrument author's disclosed estimate (carried by the builder as an authored constant, not a substrate fact)."
   },
-
   "lifecycle": [
     {
       "event": "emerged",
       "when": "1992-1994",
-      "fact_refs": ["l0-smartphone-0004", "l0-smartphone-0012"]
+      "fact_refs": [
+        "l0-smartphone-0004"
+      ]
     },
     {
       "event": "named",
       "when": "1997",
-      "fact_refs": ["l0-smartphone-0003", "l0-smartphone-0011"]
+      "fact_refs": [
+        "l0-smartphone-0003"
+      ]
     },
     {
       "event": "mass_adoption",
       "when": "2007-2012",
-      "fact_refs": ["l0-smartphone-0005", "l0-smartphone-0013"]
+      "fact_refs": [
+        "l0-smartphone-0005"
+      ]
     }
   ],
-
   "relations": [
     {
-      "type": "available-on",
-      "target": "l0:iphone-15-pro",
-      "fact_refs": ["l0-smartphone-r0002"],
-      "_note": "iphone-15-pro is an instance of smartphone (the instance-of edge runs from iphone-15-pro to smartphone, not from smartphone to iphone-15-pro; smartphone is the target of instance-of from iphone-15-pro). The available-on edge here records the inverse membership: smartphone as the generic host platform.",
+      "type": "instance-of",
+      "target": "proposed:device-category",
+      "fact_refs": [
+        "l0-smartphone-r0001"
+      ],
       "bucket": "pending",
-      "certainty": 0.80
-    },
-    {
-      "type": "available-on",
-      "target": "l0:claude",
-      "fact_refs": ["l0-smartphone-r0003"],
-      "_note": "Claude AI model is available on smartphones (iOS app launched 2024-05-02; Android confirmed). Transitive: claude available-on iphone-15-pro, and iphone-15-pro instance-of smartphone. The direct claude->smartphone edge is the transitive summary.",
-      "bucket": "pending",
-      "certainty": 0.82
+      "certainty": 0.88
     }
   ],
-
   "frame_layer": {
     "layer": "straddle",
     "physical_membership": 0.85,
     "latent_membership": 0.65,
-    "_estimate_note": "ESTIMATE: authored analytic estimate, not a substrate fact. Smartphones-as-a-category straddle: physical (instances are tangible hardware) and latent (the generic category is a semantic classification / abstraction). The physical membership is high because the prototypical smartphone is a physical object; the latent membership is significant because 'smartphone' as a concept is a definitional frame applied to devices.",
-    "fact_refs": ["l0-smartphone-0015", "l0-smartphone-0016"]
+    "_estimate_note": "authored analytic estimate, not a substrate fact (spec §2.8). Memberships from frame-layer fact(s) l0-smartphone-0015, l0-smartphone-0016.",
+    "fact_refs": [
+      "l0-smartphone-0015",
+      "l0-smartphone-0016"
+    ]
   },
-
   "specimen_refs": [
     {
       "specimen": "internet",
       "subject_id": "h-cloud-mobile",
       "relation": "implicit-in",
-      "note": "internet.json harvest.descendants[3] (h-cloud-mobile): 'Cloud infrastructure, the smartphone/app ecosystem, streaming media — the Internet as a utility delivered to billions of pocket devices.' l0:smartphone is implicitly present as the 'smartphone/app ecosystem' node. Verified by filesystem read 2026-06-11.",
-      "fact_refs": ["l0-smartphone-0017"]
+      "note": "harvest.descendants[3] of internet.json reads: 'Cloud infrastructure, the smartphone/app ecosystem, streaming media — the Internet as a utility delivered to billions of pocket devices.'",
+      "fact_refs": [
+        "l0-smartphone-0017"
+      ]
     }
   ],
-
   "substrate_binding": {
     "specimen": "l0-catalog",
     "facts_files": [
       "../canonical_genealogy/substrate/facts/l0_catalog.entities.jsonl",
       "../canonical_genealogy/substrate/facts/l0_catalog.relations.jsonl"
     ],
-    "_note": "Sweep-1: facts are in candidates/l0_wrappers/facts/smartphone.jsonl. They will be moved/copied to the canonical substrate facts files when the l0-catalog anchor is ratified (L0_WRAPPER_SPEC.md §2.9.4). The fact_id namespaces (l0-smartphone-NNNN for entities, l0-smartphone-rNNNN for relations) are already disjoint.",
     "verifications_file": "../canonical_genealogy/substrate/verifications/l0_catalog.jsonl",
     "compiled_from": "../canonical_genealogy/substrate/compiled/l0-catalog.compiled.json",
     "fact_id_namespaces": {
       "entities": "l0-smartphone-NNNN",
       "relations": "l0-smartphone-rNNNN"
     },
-    "generated": "2026-06-11T12:05:24Z",
-    "compiler": "hand_assembled (sweep-1; tools/l0_compile_wrappers.py not yet built)",
-    "hand_assembled": true
+    "generated": "2026-06-11T14:10:19.477280Z",
+    "compiler": "tools/l0_compile_wrappers.py v1",
+    "hand_assembled": false
   }
 }

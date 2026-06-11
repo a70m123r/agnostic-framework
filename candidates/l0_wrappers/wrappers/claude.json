@@ -1,19 +1,21 @@
 {
-  "_template_doc": "L0 WRAPPER — hand-assembled sweep-1 view per L0_WRAPPER_SPEC.md §2.9.2. hand_assembled:true because l0_compile_wrappers.py has not yet been built. Every populated field carries real fact_refs. The builder, once built, must reproduce this view byte-for-byte modulo 'generated'.",
-  "_status": "Tier-3 WORKING wrapper view — exploratory, surfaced for Cowork+Pav ratification. NOT canon, NOT a tier promotion, does NOT grow the convergence list (stays 9).",
-
+  "_doc": "L0 wrapper — GENERATED compiled view (do not hand-edit). Built by tools/l0_compile_wrappers.py v1 from the compiled substrate. The wrapper JSON is a compiled view over substrate facts, never a second source of truth (L0_WRAPPER_SPEC.md §2.9). Edit facts/*.jsonl + recompile, then rerun this builder. Kernel is empty whenever no fact is corroborated+cert>=0.7.",
+  "_status": "Tier-3 WORKING wrapper view — exploratory, surfaced for Cowork+Pav ratification. NOT canon, NOT a tier promotion, convergence list stays 9.",
   "schema_version": "0.1-l0-wrapper",
   "wrapper_id": "l0:claude",
   "kind": "ai-model",
-
   "names": {
     "canonical": "Claude",
-    "aka": ["Claude AI", "Anthropic Claude"],
-    "fact_refs": ["l0-claude-0001", "l0-claude-0002"]
+    "aka": [
+      "Claude AI",
+      "Anthropic Claude"
+    ],
+    "fact_refs": [
+      "l0-claude-0001",
+      "l0-claude-0002"
+    ]
   },
-
   "abstraction": {
-    "_comment": "Claude sits at the CLASS rung: generalizes_to the LLM category above; specializes_to individual versioned model instances below (Claude 2, Claude 3 Opus/Sonnet/Haiku, Claude 3.5, Claude 4, Claude Fable 5). This is the deliberately mid-ladder anchor demonstrating wrappers can sit on any rung. Dialing the abstraction ladder downward reaches specific versioned models (instances); dialing upward reaches the LLM category (generic/class above). Each dial step is a REFRAME, not a zoom.",
     "level": "class",
     "ladder": {
       "generalizes_to": "proposed:large-language-model",
@@ -27,208 +29,363 @@
       ]
     },
     "level_by_scope": {},
-    "fact_refs": ["l0-claude-0009", "l0-claude-0024", "l0-claude-0025", "l0-claude-r0001", "l0-claude-r0007"]
-  },
-
-  "kernel": {
-    "_comment": "Kernel admission rule (spec 2.3): bucket=corroborated AND certainty>=0.7 AND no ESTIMATE/PROXY tag. ALL facts are pending at sweep-1 emit time — no fact has been independently verified yet. Therefore the kernel is EMPTY at sweep-1. This is correct signal: kernel hardens as verifications land in sweep-2+. The kernel statement below describes what the kernel WILL contain once the highest-certainty facts are corroborated.",
-    "statement": "Claude is a family (class) of large language models developed and operated by Anthropic (founded 2021-01-26); first announced and released 2023-03-14; trained using Constitutional AI methodology; available via claude.ai web, iOS app (App Store ID 6473753684, from 2024-05-01), and Android app (from 2024-07-16); class-level entity on the abstraction ladder between the LLM generic category above and specific versioned models below.",
-    "facts": []
-  },
-
-  "membrane": {
-    "_comment": "All sweep-1 facts are pending (bucket=pending, no verification records yet). The membrane is the full fact population. Hardness h = B(bucket) x certainty per l0-membrane-proxy-v0.1 (disclosed: render proxy, not a measurement). B(pending)=0.55. Corroborated_soft and disputed are empty at sweep-1. Scars: none yet. Open questions carry the honest gaps and candidate edges.",
-
-    "corroborated_soft": [],
-
-    "pending": [
-      {"fact_id": "l0-claude-0001", "predicate": "canonical_name", "value": "Claude", "bucket": "pending", "certainty": 0.95, "hardness_proxy": 0.52},
-      {"fact_id": "l0-claude-0002", "predicate": "aka", "value": ["Claude AI", "Anthropic Claude"], "bucket": "pending", "certainty": 0.80, "hardness_proxy": 0.44},
-      {"fact_id": "l0-claude-0003", "predicate": "kind", "value": "ai-model", "bucket": "pending", "certainty": 0.95, "hardness_proxy": 0.52},
-      {"fact_id": "l0-claude-0004", "predicate": "announced", "value": "2023-03-14", "bucket": "pending", "certainty": 0.95, "hardness_proxy": 0.52},
-      {"fact_id": "l0-claude-0005", "predicate": "released", "value": "2023-03-14", "bucket": "pending", "certainty": 0.90, "hardness_proxy": 0.50},
-      {"fact_id": "l0-claude-0006", "predicate": "description", "value": "A series of large language models developed by Anthropic; AI assistant trained via Constitutional AI (CAI) methodology.", "bucket": "pending", "certainty": 0.90, "hardness_proxy": 0.50},
-      {"fact_id": "l0-claude-0007", "predicate": "made_by", "value": "Anthropic", "bucket": "pending", "certainty": 0.95, "hardness_proxy": 0.52},
-      {"fact_id": "l0-claude-0008", "predicate": "official_website", "value": "https://claude.ai/", "bucket": "pending", "certainty": 0.90, "hardness_proxy": 0.50},
-      {"fact_id": "l0-claude-0009", "predicate": "abstraction_level", "value": "class", "bucket": "pending", "certainty": 0.85, "hardness_proxy": 0.47},
-      {"fact_id": "l0-claude-0010", "predicate": "training_method", "value": "Constitutional AI (CAI) — self-critique/revision + RLAIF", "bucket": "pending", "certainty": 0.85, "hardness_proxy": 0.47},
-      {"fact_id": "l0-claude-0011", "predicate": "context_window_standard", "value": "200000 tokens", "bucket": "pending", "certainty": 0.85, "hardness_proxy": 0.47},
-      {"fact_id": "l0-claude-0012", "predicate": "ios_app_released", "value": "2024-05-01", "bucket": "pending", "certainty": 0.90, "hardness_proxy": 0.50},
-      {"fact_id": "l0-claude-0013", "predicate": "android_app_released", "value": "2024-07-16", "bucket": "pending", "certainty": 0.85, "hardness_proxy": 0.47},
-      {"fact_id": "l0-claude-0014", "predicate": "app_store_id", "value": "6473753684", "bucket": "pending", "certainty": 0.90, "hardness_proxy": 0.50},
-      {"fact_id": "l0-claude-0015", "predicate": "claude3_family_released", "value": "2024-03-04", "bucket": "pending", "certainty": 0.90, "hardness_proxy": 0.50},
-      {"fact_id": "l0-claude-0016", "predicate": "latest_public_model_as_of_2026_06", "value": "Claude Fable 5 (2026-06-09)", "bucket": "pending", "certainty": 0.85, "hardness_proxy": 0.47},
-      {"fact_id": "l0-claude-0022", "predicate": "claude2_released", "value": "2023-07-11", "bucket": "pending", "certainty": 0.85, "hardness_proxy": 0.47},
-      {"fact_id": "l0-claude-0023", "predicate": "claude_first_trained", "value": "2022", "bucket": "pending", "certainty": 0.70, "hardness_proxy": 0.39},
-      {"fact_id": "l0-claude-r0001", "predicate": "rel:subclass-of:proposed:large-language-model", "value": {"target": "proposed:large-language-model"}, "bucket": "pending", "certainty": 0.90, "hardness_proxy": 0.50},
-      {"fact_id": "l0-claude-r0002", "predicate": "rel:made-by:proposed:anthropic", "value": {"target": "proposed:anthropic"}, "bucket": "pending", "certainty": 0.95, "hardness_proxy": 0.52},
-      {"fact_id": "l0-claude-r0003", "predicate": "rel:available-on:iphone-15-pro", "value": {"target": "iphone-15-pro"}, "bucket": "pending", "certainty": 0.90, "hardness_proxy": 0.50},
-      {"fact_id": "l0-claude-r0004", "predicate": "rel:available-on:smartphone", "value": {"target": "smartphone"}, "bucket": "pending", "certainty": 0.85, "hardness_proxy": 0.47},
-      {"fact_id": "l0-claude-0024", "predicate": "generalizes_to", "value": "proposed:large-language-model", "bucket": "pending", "certainty": 0.90, "hardness_proxy": 0.50}
-    ],
-
-    "unverifiable": [
-      {"fact_id": "l0-claude-0021", "predicate": "parameter_count", "value": "not publicly disclosed by Anthropic", "bucket": "unverifiable", "certainty": 0.75, "note": "Anthropic has never published parameter counts; third-party estimates exist (~52B for Claude 2) but are unattested. This is a structural membrane gap — the value is epistemically inaccessible from public sources."}
-    ],
-
-    "disputed": [],
-
-    "scars": [],
-
-    "open_questions": [
-      {
-        "question": "Does Anthropic or Claude documentation directly cite Alan Turing's Turing test as a design influence or conceptual ancestor of Claude specifically (not LLMs as a class)?",
-        "candidate_edge": {
-          "type": "conceptual-ancestor-of",
-          "subject": "l0:alan-turing",
-          "target": "l0:claude",
-          "verification_route": "Search Anthropic model cards, Claude constitution, CEO interviews, and academic papers co-authored by Anthropic researchers for explicit Turing/imitation-game citations; also check whether Claude is evaluated against Turing-test benchmarks in any Anthropic publication."
-        },
-        "proposed_route": "Fetch Anthropic model cards for Claude 3 / Claude 4 / Claude Fable 5; search anthropic.com for 'Turing'; search arXiv for Claude + Turing test. If a Claude-specific source surfaces, promote to rel:conceptual-ancestor-of:claude in the alan-turing wrapper and emit a corroborating relation fact here. If not found after sweep-2, mark l0-claude-0019 and l0-claude-r0005 as unverifiable.",
-        "current_evidence": "Class-level evidence is solid (Jones & Bergen 2025 arXiv 2503.23674; Wikipedia Turing test article; survey arXiv 2406.16937). Claude-specific link is inferred, not sourced. Candidate facts l0-claude-0019, l0-claude-r0005, l0-claude-r0008 hold this as a membrane candidate."
-      },
-      {
-        "question": "What is the exact relation between Claude and the agnostic_framework self-specimen's references to Claude as a cross-model instrument? Is there a specific subject_id in that specimen to cross-link to?",
-        "candidate_edge": null,
-        "proposed_route": "Read specimens/agnostic_framework.json for exact node IDs or name strings referencing Claude; populate specimen_refs accordingly in sweep-2."
-      },
-      {
-        "question": "What is Claude's exact parameter count or architecture scale for any version? Anthropic has never disclosed this publicly.",
-        "candidate_edge": null,
-        "proposed_route": "Monitor Anthropic model cards and technical reports for any architecture disclosure. Until disclosed, l0-claude-0021 stays unverifiable. Third-party parameter estimates (~52B for Claude 2) should NOT be promoted to kernel without an Anthropic primary source."
-      },
-      {
-        "question": "Do any of the six catalog samples have a direct edge to Claude beyond available-on (smartphone/iphone-15-pro) and the Turing lineage candidate? Could acetylsalicylic-acid or turing-enigma-hodges connect directly to Claude?",
-        "candidate_edge": null,
-        "proposed_route": "The six-sample web as designed has: claude available-on iphone-15-pro (real), claude available-on smartphone (real), alan-turing conceptual-ancestor-of claude (candidate). No direct edge to acetylsalicylic-acid or turing-enigma-hodges from claude is expected — these connect via the alan-turing hub. Confirm in sweep-2 that no other edge exists before closing this question."
-      }
+    "fact_refs": [
+      "l0-claude-0009",
+      "l0-claude-0024",
+      "l0-claude-r0007",
+      "l0-claude-0025"
     ]
   },
-
+  "kernel": {
+    "statement": "",
+    "facts": []
+  },
+  "membrane": {
+    "corroborated_soft": [],
+    "pending": [
+      {
+        "fact_id": "l0-claude-0009",
+        "predicate": "abstraction_level",
+        "value": "class",
+        "bucket": "pending",
+        "certainty": 0.85
+      },
+      {
+        "fact_id": "l0-claude-0002",
+        "predicate": "aka",
+        "value": [
+          "Claude AI",
+          "Anthropic Claude"
+        ],
+        "bucket": "pending",
+        "certainty": 0.8
+      },
+      {
+        "fact_id": "l0-claude-0013",
+        "predicate": "android_app_released",
+        "value": "2024-07-16",
+        "bucket": "pending",
+        "certainty": 0.85
+      },
+      {
+        "fact_id": "l0-claude-0004",
+        "predicate": "announced",
+        "value": "2023-03-14",
+        "bucket": "pending",
+        "certainty": 0.95
+      },
+      {
+        "fact_id": "l0-claude-0014",
+        "predicate": "app_store_id",
+        "value": "6473753684",
+        "bucket": "pending",
+        "certainty": 0.9
+      },
+      {
+        "fact_id": "l0-claude-0001",
+        "predicate": "canonical_name",
+        "value": "Claude",
+        "bucket": "pending",
+        "certainty": 0.95
+      },
+      {
+        "fact_id": "l0-claude-0022",
+        "predicate": "claude2_released",
+        "value": "2023-07-11",
+        "bucket": "pending",
+        "certainty": 0.85
+      },
+      {
+        "fact_id": "l0-claude-0015",
+        "predicate": "claude3_family_released",
+        "value": "2024-03-04",
+        "bucket": "pending",
+        "certainty": 0.9
+      },
+      {
+        "fact_id": "l0-claude-0023",
+        "predicate": "claude_first_trained",
+        "value": "2022",
+        "bucket": "pending",
+        "certainty": 0.7
+      },
+      {
+        "fact_id": "l0-claude-0011",
+        "predicate": "context_window_standard",
+        "value": "200000 tokens",
+        "bucket": "pending",
+        "certainty": 0.85
+      },
+      {
+        "fact_id": "l0-claude-0006",
+        "predicate": "description",
+        "value": "A series of large language models developed by Anthropic; an AI assistant based on Anthropic's research into helpful, honest, and harmless AI systems; trained via Constitutional AI (CAI) alignment methodology.",
+        "bucket": "pending",
+        "certainty": 0.9
+      },
+      {
+        "fact_id": "l0-claude-0017",
+        "predicate": "frame_layer",
+        "value": "latent with physical infrastructure membership",
+        "bucket": "pending",
+        "certainty": 0.45
+      },
+      {
+        "fact_id": "l0-claude-0024",
+        "predicate": "generalizes_to",
+        "value": "proposed:large-language-model",
+        "bucket": "pending",
+        "certainty": 0.9
+      },
+      {
+        "fact_id": "l0-claude-0012",
+        "predicate": "ios_app_released",
+        "value": "2024-05-01",
+        "bucket": "pending",
+        "certainty": 0.9
+      },
+      {
+        "fact_id": "l0-claude-0003",
+        "predicate": "kind",
+        "value": "ai-model",
+        "bucket": "pending",
+        "certainty": 0.95
+      },
+      {
+        "fact_id": "l0-claude-0016",
+        "predicate": "latest_public_model_as_of_2026_06",
+        "value": "Claude Fable 5 (released 2026-06-09, generally available)",
+        "bucket": "pending",
+        "certainty": 0.85
+      },
+      {
+        "fact_id": "l0-claude-0020",
+        "predicate": "llm_class_turing_test_pass_2025",
+        "value": "GPT-4.5 (not Claude) passed a controlled three-party Turing test at 73% human-judge rate in a 2025 study; LLaMa-3.1-405B achieved 56%; Claude was not among models tested.",
+        "bucket": "pending",
+        "certainty": 0.85
+      },
+      {
+        "fact_id": "l0-claude-0007",
+        "predicate": "made_by",
+        "value": "Anthropic",
+        "bucket": "pending",
+        "certainty": 0.95
+      },
+      {
+        "fact_id": "l0-claude-0008",
+        "predicate": "official_website",
+        "value": "https://claude.ai/",
+        "bucket": "pending",
+        "certainty": 0.9
+      },
+      {
+        "fact_id": "l0-claude-0021",
+        "predicate": "parameter_count",
+        "value": "not publicly disclosed by Anthropic",
+        "bucket": "pending",
+        "certainty": 0.75
+      },
+      {
+        "fact_id": "l0-claude-0005",
+        "predicate": "released",
+        "value": "2023-03-14",
+        "bucket": "pending",
+        "certainty": 0.9
+      },
+      {
+        "fact_id": "l0-claude-0025",
+        "predicate": "specializes_to",
+        "value": [
+          "claude-3-opus",
+          "claude-3-sonnet",
+          "claude-3-haiku",
+          "claude-3-5-sonnet",
+          "claude-4",
+          "claude-fable-5"
+        ],
+        "bucket": "pending",
+        "certainty": 0.85
+      },
+      {
+        "fact_id": "l0-claude-0018",
+        "predicate": "specimen_ref",
+        "value": {
+          "specimen": "agnostic_framework",
+          "subject_id": "agnostic_framework",
+          "relation": "implicit-in",
+          "note": "The agnostic_framework.json self-specimen references Claude/GPT-5.5/Gemini as cross-model instruments for external adversarial passes; Claude is implicitly an L0 entity named in that frozen specimen."
+        },
+        "bucket": "pending",
+        "certainty": 0.75
+      },
+      {
+        "fact_id": "l0-claude-0010",
+        "predicate": "training_method",
+        "value": "Constitutional AI (CAI) — self-critique and revision against a list of principles; supervised learning + RLAIF (reinforcement learning from AI feedback)",
+        "bucket": "pending",
+        "certainty": 0.85
+      },
+      {
+        "fact_id": "l0-claude-0019",
+        "predicate": "turing_test_lineage_note",
+        "value": "The Turing test (Alan Turing, 1950) set the conceptual agenda for evaluating machine conversational intelligence; LLMs including Claude are the contemporary class of systems that most directly instantiate that agenda — conversational AI systems evaluated for human-indistinguishable language use.",
+        "bucket": "pending",
+        "certainty": 0.5
+      }
+    ],
+    "unverifiable": [
+      {
+        "fact_id": "l0-claude-r0008",
+        "predicate": "rel:influenced:alan-turing",
+        "value": {
+          "target": "alan-turing",
+          "note": "REVERSE of the candidate conceptual-ancestor edge: Claude (as an LLM) is the downstream entity; Turing is the upstream conceptual ancestor. The influenced relation runs the other direction (Turing influenced Claude's lineage). This fact is a separate, weaker framing: Claude's existence and evaluation criteria were shaped by the AI-evaluation tradition Turing inaugurated."
+        },
+        "bucket": "unverifiable",
+        "certainty": 0.4
+      }
+    ],
+    "disputed": [],
+    "scars": [],
+    "open_questions": []
+  },
   "frames": {
-    "_comment": "Observer-global-kernel relevance weights — authored render estimates for group layout/prominence. Disclosed as proxies per L0_WRAPPER_SPEC §2.5 and UI_GUIDELINES §5.",
     "time": 0.6,
     "space": 0.3,
     "knowledge": 0.95,
     "meaning": 0.8,
-    "_estimate_note": "MANDATORY DISCLOSURE: these weights are AUTHORED RENDER ESTIMATES, not measured quantities and not substrate facts. Time 0.6: Claude has a meaningful lifecycle (2022 training, 2023 release, major versioned milestones, ongoing deprecations) but is not primarily a time-indexed artifact. Space 0.3: low — Claude is globally accessible via API/app; no strong geographic constraint. Knowledge 0.95: Claude is fundamentally a knowledge/language entity — its entire purpose is knowledge-frame interaction. Meaning 0.8: high — Claude is a meaning-making system (language, interpretation, values-via-CAI) but its physical substrate grounds it partially outside pure meaning. Any toy rendering these weights owes an adjacent estimate/proxy disclosure (UI_GUIDELINES §5)."
+    "_estimate_note": "MANDATORY DISCLOSURE: observer-global-kernel relevance weights are AUTHORED RENDER ESTIMATES in [0,1], not measured quantities and not substrate facts (spec §2.5). Any toy/viewer rendering them owes an adjacent estimate/proxy disclosure (UI_GUIDELINES §5). No frames_<channel> facts exist for this subject in the substrate; values are the instrument author's disclosed estimate (carried by the builder as an authored constant, not a substrate fact)."
   },
-
   "lifecycle": [
     {
-      "event": "trained",
+      "event": "claude_first_trained",
       "when": "2022",
-      "fact_refs": ["l0-claude-0023"],
-      "_note": "Year-precision only; Britannica single-source. Claude 1 training completed 2022 per Britannica, prior to ChatGPT's public release. Exact date not publicly confirmed."
+      "fact_refs": [
+        "l0-claude-0023"
+      ]
     },
     {
       "event": "announced",
       "when": "2023-03-14",
-      "fact_refs": ["l0-claude-0004"]
+      "fact_refs": [
+        "l0-claude-0004"
+      ]
     },
     {
       "event": "released",
       "when": "2023-03-14",
-      "fact_refs": ["l0-claude-0005"]
+      "fact_refs": [
+        "l0-claude-0005"
+      ]
     },
     {
-      "event": "released",
+      "event": "claude2_released",
       "when": "2023-07-11",
-      "fact_refs": ["l0-claude-0022"],
-      "_note": "Claude 2 released; marks first major generational step."
+      "fact_refs": [
+        "l0-claude-0022"
+      ]
     },
     {
-      "event": "released",
+      "event": "claude3_family_released",
       "when": "2024-03-04",
-      "fact_refs": ["l0-claude-0015"],
-      "_note": "Claude 3 family (Opus/Sonnet/Haiku) announced and released; 200K context window introduced."
+      "fact_refs": [
+        "l0-claude-0015"
+      ]
     },
     {
-      "event": "available-on-ios",
+      "event": "ios_app_released",
       "when": "2024-05-01",
-      "fact_refs": ["l0-claude-0012"]
+      "fact_refs": [
+        "l0-claude-0012"
+      ]
     },
     {
-      "event": "available-on-android",
+      "event": "android_app_released",
       "when": "2024-07-16",
-      "fact_refs": ["l0-claude-0013"]
-    },
-    {
-      "event": "released",
-      "when": "2026-06-09",
-      "fact_refs": ["l0-claude-0016"],
-      "_note": "Claude Fable 5 (generally available); most recent public model milestone as of 2026-06-11."
+      "fact_refs": [
+        "l0-claude-0013"
+      ]
     }
   ],
-
   "relations": [
-    {
-      "type": "subclass-of",
-      "target": "proposed:large-language-model",
-      "fact_refs": ["l0-claude-r0001"],
-      "bucket": "pending",
-      "certainty": 0.90,
-      "_note": "Wikidata P279; ladder rung ABOVE claude on the abstraction axis. Generalizes_to."
-    },
-    {
-      "type": "made-by",
-      "target": "proposed:anthropic",
-      "fact_refs": ["l0-claude-r0002"],
-      "bucket": "pending",
-      "certainty": 0.95,
-      "_note": "Wikidata P178/P127/P137; Anthropic is developer, owner, operator. proposed:anthropic is a sweep-2 frontier institution entity."
-    },
     {
       "type": "available-on",
       "target": "l0:iphone-15-pro",
-      "fact_refs": ["l0-claude-r0003"],
+      "fact_refs": [
+        "l0-claude-r0003"
+      ],
       "bucket": "pending",
-      "certainty": 0.90,
-      "_note": "Claude iOS app (App Store ID 6473753684) launched 2024-05-01; runs on iPhone 15 Pro (iOS 18+). Direct catalog-to-catalog edge; iphone-15-pro is an L0 catalog entity."
+      "certainty": 0.9
     },
     {
       "type": "available-on",
       "target": "l0:smartphone",
-      "fact_refs": ["l0-claude-r0004"],
+      "fact_refs": [
+        "l0-claude-r0004"
+      ],
       "bucket": "pending",
-      "certainty": 0.85,
-      "_note": "Claude available on iOS (May 2024) and Android (July 2024) — covers smartphone generic category. smartphone is an L0 catalog entity."
+      "certainty": 0.85
+    },
+    {
+      "type": "instance-of",
+      "target": "proposed:large-language-model",
+      "fact_refs": [
+        "l0-claude-r0007"
+      ],
+      "bucket": "pending",
+      "certainty": 0.8
+    },
+    {
+      "type": "made-by",
+      "target": "proposed:anthropic",
+      "fact_refs": [
+        "l0-claude-r0002"
+      ],
+      "bucket": "pending",
+      "certainty": 0.95
+    },
+    {
+      "type": "subclass-of",
+      "target": "proposed:large-language-model",
+      "fact_refs": [
+        "l0-claude-r0001"
+      ],
+      "bucket": "pending",
+      "certainty": 0.9
     }
   ],
-
   "frame_layer": {
-    "_comment": "D3 shape per SCHEMA_v2, reused. Claude is a software/latent-space entity — the model weights and capabilities exist in the informational/latent frame. Physical membership derives from inference infrastructure (Anthropic's server hardware). Estimate per L0_WRAPPER_SPEC §2.8.",
     "layer": "straddle",
     "physical_membership": 0.2,
     "latent_membership": 0.95,
-    "_estimate_note": "authored analytic estimate, not a substrate fact. Latent 0.95: Claude IS information — weights, training, language processing, all in the latent/knowledge frame. Physical 0.2: inference runs on physical hardware; the iOS/Android app lives on a physical device. The straddle is genuine but latent-dominant. Fact ref: l0-claude-0017."
+    "_estimate_note": "authored analytic estimate, not a substrate fact (spec §2.8). No structured frame-layer fact for this subject; values are the instrument author's disclosed estimate (builder constant)."
   },
-
   "specimen_refs": [
     {
       "specimen": "agnostic_framework",
       "subject_id": "agnostic_framework",
       "relation": "implicit-in",
-      "note": "The agnostic_framework.json self-specimen references Claude (alongside GPT-5.5 and Gemini) as cross-model external adversarial instruments. Claude is implicitly an L0 entity named in that frozen specimen. See L0_WRAPPER_SPEC §6. Fact ref: l0-claude-0018.",
-      "fact_refs": ["l0-claude-0018"]
+      "note": "The agnostic_framework.json self-specimen references Claude/GPT-5.5/Gemini as cross-model instruments for external adversarial passes; Claude is implicitly an L0 entity named in that frozen specimen.",
+      "fact_refs": [
+        "l0-claude-0018"
+      ]
     }
   ],
-
   "substrate_binding": {
     "specimen": "l0-catalog",
     "facts_files": [
       "../canonical_genealogy/substrate/facts/l0_catalog.entities.jsonl",
       "../canonical_genealogy/substrate/facts/l0_catalog.relations.jsonl"
     ],
-    "_scout_note": "Scout-produced facts are staged in candidates/l0_wrappers/facts/claude.jsonl. Per L0_WRAPPER_SPEC §1.1, the canonical substrate destination is ../canonical_genealogy/substrate/facts/l0_catalog.entities.jsonl and l0_catalog.relations.jsonl. Moving staged facts to canonical substrate is a Pav/Cowork ratification gate — facts should not be appended to canonical substrate until reviewed.",
     "verifications_file": "../canonical_genealogy/substrate/verifications/l0_catalog.jsonl",
     "compiled_from": "../canonical_genealogy/substrate/compiled/l0-catalog.compiled.json",
     "fact_id_namespaces": {
-      "entities": "l0-claude-NNNN (0001-0025 used in this sweep)",
-      "relations": "l0-claude-rNNNN (r0001-r0008 used in this sweep)"
+      "entities": "l0-claude-NNNN",
+      "relations": "l0-claude-rNNNN"
     },
-    "generated": "2026-06-11T12:06:10Z",
-    "compiler": "tools/l0_compile_wrappers.py (not yet built — sweep-1 hand assembly)",
-    "hand_assembled": true
+    "generated": "2026-06-11T14:10:19.477280Z",
+    "compiler": "tools/l0_compile_wrappers.py v1",
+    "hand_assembled": false
   }
 }

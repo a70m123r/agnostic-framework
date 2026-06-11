@@ -36,7 +36,11 @@ An L0 wrapper is **not** a specimen (no weld, no parents, no harvest groups — 
 candidates/l0_wrappers/                      (this spec's home — all NEW files)
   L0_WRAPPER_SPEC.md                         this file
   wrapper.template.json                      fill template for one wrapper view
-  wrappers/<slug>.wrapper.json               compiled wrapper views        (sweep-1+)
+  wrappers/<slug>.json                       compiled wrapper views        (sweep-1+)
+                                             [NAMING RESOLVED 2026-06-11: shipped as <slug>.json,
+                                              NOT <slug>.wrapper.json — the de-facto convention used by
+                                              every view, the template substrate_binding, the toy embed,
+                                              and SWEEP_LOG; tools/l0_compile_wrappers.py keeps it.]
   group_configs/<config_id>.json             saved group-frame render configs (sweep-1+)
   tools/l0_compile_wrappers.py               wrapper-view builder, stdlib-only (sweep-1)
   SWEEP_LOG.md                               append-only sweep record      (sweep-1+)
