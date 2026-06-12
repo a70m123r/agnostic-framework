@@ -161,15 +161,28 @@ def analyze_orbit():
         out[coder] = dict(raw_bits=raw_b, resid_bits=res_b, model_bits=model_b,
                           comp_ratio=raw_b / (res_b + model_b))
     # analytic appearance-entropy (fair common Gaussian instrument), bits/step
-    sig_raw = np.std(R, axis=0).mean()
-    sig_res = np.std(resid, axis=0).mean()
-    H_raw = 3 * gaussian_entropy_bits(sig_raw, Q_POS_KM)      # marginal
-    H_app = 3 * gaussian_entropy_bits(sig_res, Q_POS_KM)      # under the law
-    # per-step NLL (bits) under N(pred, sig_res) -- the appearance entropy series
-    sig = np.std(resid, axis=0)
-    nll = 0.5 * np.sum(np.log2(2 * math.pi * sig ** 2) + (resid ** 2) / (sig ** 2) * LOG2E, axis=1) - 3 * math.log2(Q_POS_KM)
+    # v0.2 (2026-06-13, external-pass fix): SUM per-axis entropies, do NOT take the
+    # mean of the per-axis sigmas and multiply by 3 (Jensen: log is concave, so the
+    # mean-sigma form OVERSTATES the floor). Two sigma-shrink conventions are emitted
+    # NAMED; the per-dimension mean-of-log-ratios is primary (each axis's own shrink).
+    sig_raw_ax = np.std(R, axis=0)            # per-axis (3,)
+    sig_res_ax = np.std(resid, axis=0)        # per-axis (3,)
+    H_raw = float(sum(gaussian_entropy_bits(s, Q_POS_KM) for s in sig_raw_ax))   # per-axis SUM
+    H_app = float(sum(gaussian_entropy_bits(s, Q_POS_KM) for s in sig_res_ax))
+    sigma_shrink = dict(
+        per_dim_mean_of_log_ratios=float(np.mean(np.log2(sig_raw_ax / sig_res_ax))),   # PRIMARY
+        log_of_ratio_of_mean_sigmas=float(math.log2(sig_raw_ax.mean() / sig_res_ax.mean())),  # Jensen-biased convention
+        per_axis_bits=[float(x) for x in np.log2(sig_raw_ax / sig_res_ax)])
+    # per-step NLL (bits) under a DEBIASED Gaussian N(pred + mu_res, sig_res^2) --
+    # v0.2 fix: the residual carries a non-zero per-axis mean (osculating drift); the
+    # v0.1 NLL used uncentered resid^2 against the mean-subtracted sigma (miscentered
+    # by ~0.9 bits). Debias the predictor by mu_res, then the quadratic uses (resid-mu).
+    mu_res = resid.mean(axis=0)
+    sig = sig_res_ax
+    cres = resid - mu_res
+    nll = 0.5 * np.sum(np.log2(2 * math.pi * sig ** 2) + (cres ** 2) / (sig ** 2) * LOG2E, axis=1) - 3 * math.log2(Q_POS_KM)
     rng = np.random.default_rng(0)
-    sample = pred + rng.normal(0, sig, size=pred.shape)       # a draw from the predictive dist
+    sample = pred + mu_res + rng.normal(0, sig, size=pred.shape)   # a draw from the debiased predictive
     return dict(
         n=len(jd), span_days=float(jd[-1] - jd[0]),
         elements=dict(a_km=elem[0], e=elem[1], i_deg=math.degrees(elem[2])),
@@ -180,8 +193,14 @@ def analyze_orbit():
         mdl=out,
         appearance_bits_per_step=H_app, raw_bits_per_step=H_raw,
         bits_saved_per_step=H_raw - H_app,
+        sigma_shrink_bits_per_dim=sigma_shrink,
         nll_bits=dict(mean=float(nll.mean()), p50=float(np.percentile(nll, 50)),
                       p99=float(np.percentile(nll, 99)), max=float(nll.max())),
+        disclosures=["H_raw is an iid-Gaussian marginal proxy (orbit raw is a smooth"
+                      " sinusoid; the real coders beat it -- see mdl). sigmas fit in-sample"
+                      " on the evaluated residual (calibration bits NOT counted) -- exploratory,"
+                      " not confirmatory. Model bits charge only Kepler's 6 elements + mu, NOT the"
+                      " law/program (conditional MDL, not algorithmic probability)."],
         _nll_series=nll, _resid=resid, _truth=R, _pred=pred, _sample=sample,
     )
 
@@ -208,20 +227,29 @@ def analyze_flare():
     sig_raw = float(np.std(lf)); sig_res = float(np.std(resid))
     H_raw = gaussian_entropy_bits(sig_raw, Q_LOGFLUX)
     H_app = gaussian_entropy_bits(sig_res, Q_LOGFLUX)
-    nll = 0.5 * (np.log2(2 * math.pi * sig_res ** 2) + (resid ** 2) / (sig_res ** 2) * LOG2E) - math.log2(Q_LOGFLUX)
+    sigma_shrink = dict(per_dim_mean_of_log_ratios=float(math.log2(sig_raw / sig_res)))
+    # v0.2: debias by the (near-zero) increment mean, matching the orbit treatment
+    mu_res = float(resid.mean()); cres = resid - mu_res
+    nll = 0.5 * (np.log2(2 * math.pi * sig_res ** 2) + (cres ** 2) / (sig_res ** 2) * LOG2E) - math.log2(Q_LOGFLUX)
     rng = np.random.default_rng(0)
-    sample = pred + rng.normal(0, sig_res, size=pred.shape)
+    sample = pred + mu_res + rng.normal(0, sig_res, size=pred.shape)
     # flare census (NOAA classes by long-band flux: C>=1e-6, M>=1e-5, X>=1e-4)
     peak = float(flux.max())
     cls = ("X" if peak >= 1e-4 else "M" if peak >= 1e-5 else "C" if peak >= 1e-6 else "B/A")
     return dict(
         n=len(lf), peak_flux=peak, peak_class=cls,
-        log_flux_std=sig_res,
+        resid_log_flux_std=sig_res,    # v0.2: renamed from log_flux_std (it is the RESIDUAL std)
         mdl=out,
         appearance_bits_per_step=H_app, raw_bits_per_step=H_raw,
         bits_saved_per_step=H_raw - H_app,
+        sigma_shrink_bits_per_dim=sigma_shrink,
         nll_bits=dict(mean=float(nll.mean()), p50=float(np.percentile(nll, 50)),
                       p99=float(np.percentile(nll, 99)), max=float(nll.max())),
+        disclosures=["H_raw models the whole autocorrelated, non-stationary log-flux as a"
+                      " SINGLE iid Gaussian -- a loose marginal proxy that INFLATES bits-saved"
+                      " (a bad model for raw flux flatters the persistence law's gain). Treat"
+                      " raw_bits_per_step as an upper-bound reference, not the entropy rate."
+                      " sigmas fit in-sample; calibration bits not counted (exploratory)."],
         _nll_series=nll, _resid=resid, _truth=lf, _pred=pred, _sample=sample,
     )
 
@@ -239,16 +267,25 @@ def main():
             if k.startswith("_"):
                 del d[k]
     results = dict(
-        probe="cosmic_coin v0.1", coder_primary="lzma-9",
+        probe="cosmic_coin v0.2", coder_primary="lzma-9",
+        v02_corrections="2026-06-13 external-pass fixes: per-axis-SUM entropy (was mean-sigma x3, Jensen); "
+                        "DEBIASED NLL (was uncentered against drift mean); sigma-shrink emitted with NAMED "
+                        "convention (per_dim_mean_of_log_ratios PRIMARY vs log_of_ratio_of_mean_sigmas); "
+                        "disclosures added (flare H_raw iid-proxy inflation; in-sample calibration; conditional MDL). "
+                        "The attack_misspec2 orbit-Student-t Q bug is fixed separately (t is NEUTRAL on orbit, 41.10).",
         quant=dict(pos_km=Q_POS_KM, logflux_dex=Q_LOGFLUX),
         orbit=orb, flare=fla,
         coin_edge=dict(
             orbit_comp_ratio=orb["mdl"]["lzma"]["comp_ratio"],
             flare_comp_ratio=fla["mdl"]["lzma"]["comp_ratio"],
+            separation_comp=orb["mdl"]["lzma"]["comp_ratio"] / fla["mdl"]["lzma"]["comp_ratio"],
+            # PRIMARY cross-phenomenon observable (quant-invariant, dimensionless):
+            orbit_sigma_shrink_per_dim=orb["sigma_shrink_bits_per_dim"]["per_dim_mean_of_log_ratios"],
+            flare_sigma_shrink_per_dim=fla["sigma_shrink_bits_per_dim"]["per_dim_mean_of_log_ratios"],
+            # absolute appearance bits are UNIT-INCOMMENSURATE across phenomena (E-units guard) -- kept only as a within-phenomenon number, NEVER differenced across:
             orbit_appearance_bits=orb["appearance_bits_per_step"],
             flare_appearance_bits=fla["appearance_bits_per_step"],
-            separation_comp=orb["mdl"]["lzma"]["comp_ratio"] / fla["mdl"]["lzma"]["comp_ratio"],
-            separation_bits=fla["appearance_bits_per_step"] - orb["appearance_bits_per_step"],
+            _absolute_bits_gap_DO_NOT_USE=fla["appearance_bits_per_step"] - orb["appearance_bits_per_step"],
         ),
     )
     (HERE / "results.json").write_text(json.dumps(results, indent=2), encoding="utf-8")
@@ -268,8 +305,11 @@ def main():
     print(f"   per-step NLL      : mean {fla['nll_bits']['mean']:.2f}  p99 {fla['nll_bits']['p99']:.2f}  max {fla['nll_bits']['max']:.2f} bits")
     print("-" * 64)
     ce = results["coin_edge"]
-    print(f"COIN EDGE  compression separation {ce['separation_comp']:.1f}x | appearance-entropy gap {ce['separation_bits']:.2f} bits/step")
+    print("-" * 64)
+    print(f"COIN EDGE (dimensionless)  comp-ratio separation {ce['separation_comp']:.2f}x")
+    print(f"   sigma-shrink/dim (PRIMARY, quant-invariant): orbit {ce['orbit_sigma_shrink_per_dim']:.2f} vs flare {ce['flare_sigma_shrink_per_dim']:.2f} bits/dim")
     print(f"   orbit -> {'SHARP/REPLAY' if ce['orbit_comp_ratio']>ce['flare_comp_ratio'] else '??'}  | flare -> {'FUZZY/SIMULATE' if ce['flare_comp_ratio']<ce['orbit_comp_ratio'] else '??'}")
+    print(f"   (absolute appearance-bits are unit-incommensurate -- NOT differenced across phenomena; E-units guard)")
     print("results.json + probe_data/series.npz written")
 
 if __name__ == "__main__":

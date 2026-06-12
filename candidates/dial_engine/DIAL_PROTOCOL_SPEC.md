@@ -34,6 +34,7 @@ Dials internal to the measuring engine: turn one and you are asking the **same q
 | `quantization` | 1 km / 1e-3 dex (cancels exactly only in σ-shrink form) |
 | `null/baseline` + model-bits accounting | "store" floor; model bits counted, never zero |
 | `holdout scheme` | in-sample vs out-of-sample fit |
+| `formalism/accounting` *(named 2026-06-12, Pav: "the formal dressing is the knobs we can turn")* | which MATH is applied and how it counts: probability semantics (predictive-distribution log-loss / coder codelength / algorithmic-probability ideal), cost model (parameter-bits-only vs +program-bits vs +calibration-bits), loop framing (passive MDL vs active acquisition). Each setting has WELL-FORMEDNESS CONDITIONS that travel with the record (p=2^-bits is exact only for a specified prefix code; free-energy applies only with a generative model + policies acting on the data stream) |
 
 ### 1.3 The pair (framed, inferred) — hardness belongs to the QUESTION, not the thing
 The same phenomenon under a different `inferred` is a **different trial subject**: the flare is fuzzy for *"next-minute log-flux"* but plausibly much sharper for *"will this week contain an M-class flare"* (coarse-grain question). Dial position is a property of the **(framed, inferred) pair**. This is the meaning-kernel entering the protocol: what you ask determines what is sharp. No trial record without an explicit `inferred`.
@@ -58,12 +59,14 @@ Pav's genealogical reading, adopted as the definition: **the displayed view is t
 
 When a reading varies under a dial sweep, **which family moved decides what the variance means**:
 
-- **ENGINE-dial variance = instrument calibration.** Report the **band**, never one headline; pin defaults; disclose per PROXY_SPEC (versioned, falsification target). *Measured instance:* the coin margin ~1.17×–2.8× across coder × predictive — a render knob, demoted accordingly (FINDINGS §7 child 3).
+- **ENGINE-dial variance = instrument calibration.** Report the **band**, never one headline; pin defaults; disclose per PROXY_SPEC (versioned, falsification target). *Measured instance:* the coin margin ~1.17×–2.8× across coder × predictive is an **engine-calibration band** (corrected 2026-06-13 — it had been mislabelled "a render knob"; coder and predictive are ENGINE dials, so calling its variance a render artifact violated this very rule — the external pass caught it; FINDINGS dead-child 9).
 - **FRAME-dial variance = frame-relativity, an OBSERVABLE.** Not noise to average away, not a flaw — the solid↔fuzzy reversal under re-framing is signal to investigate (already canon: the contextual-scale dial; the agnostic-instrument register). *Measured instance:* long band 1.27 vs short band 1.02; quiet-sun window 1.21.
 - **Mixed variance** (engine dial behaving differently per frame setting — e.g. Student-t HELPS the flare, HURTS the orbit) is the most informative cell: it localizes *structure* (tail weight is a property of the framed thing, revealed by the engine sweep). Flag it `interaction`.
 - **RENDER-dial variance = presentation-relativity, and the cheapest mirage detector.** A render dial must never alter a recorded number — so any feature of the *view* that appears or dies under a render-dial sweep, with frame and engine untouched, is a **render artifact (mirage candidate), never a finding**. "Wiggle the render before believing the view" is the sharpening test generalized: real structure survives the render sweep; mirage dies with the dial. (The capture-layer incident is the inverse failure on record: a render-layer rule *hid* real structure — render dials can occlude as well as conjure, which is why the sweep goes both ways.)
 
 A sweep's deliverable is therefore a **variance decomposition over the dial grid**, not a number — with three meanings of variance, one per family.
+
+**The formalism corollary (from the 2026-06-12 external pass):** a formalism is a **dial setting, never an identity**. Asserting "the duel IS Solomonoff / IS free energy" is mistaking a dial position for a reading — the same error as quoting one coder's margin as THE margin. The honest form: state the setting's well-formedness conditions, turn it, and report what it CHANGES (held-out bits, decomposition, decisions). A formalism setting that changes nothing measurable is decoration *by measurement* — which converts "is this framing legitimate?" from an opinion into an instrument reading.
 
 ## 3. The trial methodology ("try the top candidates")
 

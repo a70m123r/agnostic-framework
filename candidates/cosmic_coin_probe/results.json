@@ -1,6 +1,7 @@
 {
-  "probe": "cosmic_coin v0.1",
+  "probe": "cosmic_coin v0.2",
   "coder_primary": "lzma-9",
+  "v02_corrections": "2026-06-13 external-pass fixes: per-axis-SUM entropy (was mean-sigma x3, Jensen); DEBIASED NLL (was uncentered against drift mean); sigma-shrink emitted with NAMED convention (per_dim_mean_of_log_ratios PRIMARY vs log_of_ratio_of_mean_sigmas); disclosures added (flare H_raw iid-proxy inflation; in-sample calibration; conditional MDL). The attack_misspec2 orbit-Student-t Q bug is fixed separately (t is NEUTRAL on orbit, 41.10).",
   "quant": {
     "pos_km": 1.0,
     "logflux_dex": 0.001
@@ -41,21 +42,33 @@
         "comp_ratio": 1.9267657992565055
       }
     },
-    "appearance_bits_per_step": 43.30012280024418,
-    "raw_bits_per_step": 85.23517071791309,
-    "bits_saved_per_step": 41.93504791766891,
+    "appearance_bits_per_step": 38.555169820781416,
+    "raw_bits_per_step": 81.87644087513962,
+    "bits_saved_per_step": 43.321271054358206,
+    "sigma_shrink_bits_per_dim": {
+      "per_dim_mean_of_log_ratios": 14.440423684786067,
+      "log_of_ratio_of_mean_sigmas": 13.978349305889639,
+      "per_axis_bits": [
+        12.55524967156296,
+        16.626049771259172,
+        14.13997161153607
+      ]
+    },
     "nll_bits": {
-      "mean": 41.18644382846835,
-      "p50": 40.4346368347402,
-      "p99": 48.84911831572228,
-      "max": 48.85831175062065
-    }
+      "mean": 38.55516982078141,
+      "p50": 38.697275674452214,
+      "p99": 40.21708712302009,
+      "max": 40.22238524560301
+    },
+    "disclosures": [
+      "H_raw is an iid-Gaussian marginal proxy (orbit raw is a smooth sinusoid; the real coders beat it -- see mdl). sigmas fit in-sample on the evaluated residual (calibration bits NOT counted) -- exploratory, not confirmatory. Model bits charge only Kepler's 6 elements + mu, NOT the law/program (conditional MDL, not algorithmic probability)."
+    ]
   },
   "flare": {
     "n": 10078,
     "peak_flux": 1.863967554527335e-05,
     "peak_class": "M",
-    "log_flux_std": 0.0174441199453243,
+    "resid_log_flux_std": 0.0174441199453243,
     "mdl": {
       "lzma": {
         "raw_bits": 72576,
@@ -79,19 +92,27 @@
     "appearance_bits_per_step": 6.171764495568608,
     "raw_bits_per_step": 9.673529180998328,
     "bits_saved_per_step": 3.5017646854297197,
+    "sigma_shrink_bits_per_dim": {
+      "per_dim_mean_of_log_ratios": 3.5017646854297197
+    },
     "nll_bits": {
-      "mean": 6.171765864636694,
-      "p50": 5.481174476435447,
-      "p99": 14.471029699725312,
-      "max": 599.458928995495
-    }
+      "mean": 6.171764495568609,
+      "p50": 5.480931992520786,
+      "p99": 14.478059371774934,
+      "max": 599.5159650240771
+    },
+    "disclosures": [
+      "H_raw models the whole autocorrelated, non-stationary log-flux as a SINGLE iid Gaussian -- a loose marginal proxy that INFLATES bits-saved (a bad model for raw flux flatters the persistence law's gain). Treat raw_bits_per_step as an upper-bound reference, not the entropy rate. sigmas fit in-sample; calibration bits not counted (exploratory)."
+    ]
   },
   "coin_edge": {
     "orbit_comp_ratio": 2.3699731903485253,
     "flare_comp_ratio": 1.2698768197088466,
-    "orbit_appearance_bits": 43.30012280024418,
-    "flare_appearance_bits": 6.171764495568608,
     "separation_comp": 1.8663016393132568,
-    "separation_bits": -37.12835830467557
+    "orbit_sigma_shrink_per_dim": 14.440423684786067,
+    "flare_sigma_shrink_per_dim": 3.5017646854297197,
+    "orbit_appearance_bits": 38.555169820781416,
+    "flare_appearance_bits": 6.171764495568608,
+    "_absolute_bits_gap_DO_NOT_USE": -32.383405325212806
   }
 }
