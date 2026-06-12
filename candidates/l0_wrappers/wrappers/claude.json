@@ -38,7 +38,14 @@
   },
   "kernel": {
     "statement": "",
-    "facts": []
+    "facts": [
+      {
+        "fact_id": "l0-claude-0007",
+        "predicate": "made_by",
+        "value": "Anthropic",
+        "battle_count": 0
+      }
+    ]
   },
   "membrane": {
     "corroborated_soft": [],
@@ -164,13 +171,6 @@
         "value": "GPT-4.5 (not Claude) passed a controlled three-party Turing test at 73% human-judge rate in a 2025 study; LLaMa-3.1-405B achieved 56%; Claude was not among models tested.",
         "bucket": "pending",
         "certainty": 0.85
-      },
-      {
-        "fact_id": "l0-claude-0007",
-        "predicate": "made_by",
-        "value": "Anthropic",
-        "bucket": "pending",
-        "certainty": 0.95
       },
       {
         "fact_id": "l0-claude-0008",
@@ -342,7 +342,7 @@
       "fact_refs": [
         "l0-claude-r0002"
       ],
-      "bucket": "pending",
+      "bucket": "corroborated",
       "certainty": 0.95
     },
     {
@@ -384,7 +384,7 @@
       "entities": "l0-claude-NNNN",
       "relations": "l0-claude-rNNNN"
     },
-    "generated": "2026-06-11T14:10:19.477280Z",
+    "generated": "2026-06-11T14:42:08.861116Z",
     "compiler": "tools/l0_compile_wrappers.py v1",
     "hand_assembled": false
   }

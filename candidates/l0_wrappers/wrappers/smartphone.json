@@ -32,7 +32,31 @@
   },
   "kernel": {
     "statement": "",
-    "facts": []
+    "facts": [
+      {
+        "fact_id": "l0-smartphone-0006",
+        "predicate": "definition",
+        "value": "A mobile device that combines the functionality of a traditional mobile phone with advanced computing capabilities, typically featuring a touchscreen interface, mobile operating system, app ecosystem, internet access, and sensors.",
+        "battle_count": 0
+      },
+      {
+        "fact_id": "l0-smartphone-0004",
+        "predicate": "emerged",
+        "value": "1992-1994",
+        "battle_count": 0
+      },
+      {
+        "fact_id": "l0-smartphone-0012",
+        "predicate": "first_commercial_prototype",
+        "value": {
+          "device": "IBM Simon Personal Communicator (prototype: Angler)",
+          "demonstrator": "Frank Canova (IBM)",
+          "event": "COMDEX",
+          "date": "1992-11"
+        },
+        "battle_count": 0
+      }
+    ]
   },
   "membrane": {
     "corroborated_soft": [],
@@ -72,13 +96,6 @@
         "certainty": 0.95
       },
       {
-        "fact_id": "l0-smartphone-0006",
-        "predicate": "definition",
-        "value": "A mobile device that combines the functionality of a traditional mobile phone with advanced computing capabilities, typically featuring a touchscreen interface, mobile operating system, app ecosystem, internet access, and sensors.",
-        "bucket": "pending",
-        "certainty": 0.9
-      },
-      {
         "fact_id": "l0-smartphone-0021",
         "predicate": "disputed_first_smartphone",
         "value": {
@@ -97,25 +114,6 @@
         ],
         "bucket": "pending",
         "certainty": 0.9
-      },
-      {
-        "fact_id": "l0-smartphone-0004",
-        "predicate": "emerged",
-        "value": "1992-1994",
-        "bucket": "pending",
-        "certainty": 0.85
-      },
-      {
-        "fact_id": "l0-smartphone-0012",
-        "predicate": "first_commercial_prototype",
-        "value": {
-          "device": "IBM Simon Personal Communicator (prototype: Angler)",
-          "demonstrator": "Frank Canova (IBM)",
-          "event": "COMDEX",
-          "date": "1992-11"
-        },
-        "bucket": "pending",
-        "certainty": 0.85
       },
       {
         "fact_id": "l0-smartphone-0011",
@@ -330,7 +328,7 @@
       "entities": "l0-smartphone-NNNN",
       "relations": "l0-smartphone-rNNNN"
     },
-    "generated": "2026-06-11T14:10:19.477280Z",
+    "generated": "2026-06-11T14:42:08.861116Z",
     "compiler": "tools/l0_compile_wrappers.py v1",
     "hand_assembled": false
   }

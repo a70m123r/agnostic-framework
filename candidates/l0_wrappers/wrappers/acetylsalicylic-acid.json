@@ -38,7 +38,38 @@
   },
   "kernel": {
     "statement": "",
-    "facts": []
+    "facts": [
+      {
+        "fact_id": "l0-acetylsalicylic-acid-0001",
+        "predicate": "canonical_name",
+        "value": "acetylsalicylic acid",
+        "battle_count": 0
+      },
+      {
+        "fact_id": "l0-acetylsalicylic-acid-0004",
+        "predicate": "cas_number",
+        "value": "50-78-2",
+        "battle_count": 0
+      },
+      {
+        "fact_id": "l0-acetylsalicylic-acid-0002",
+        "predicate": "iupac_name",
+        "value": "2-acetyloxybenzoic acid",
+        "battle_count": 0
+      },
+      {
+        "fact_id": "l0-acetylsalicylic-acid-0005",
+        "predicate": "molecular_formula",
+        "value": "C9H8O4",
+        "battle_count": 0
+      },
+      {
+        "fact_id": "l0-acetylsalicylic-acid-0006",
+        "predicate": "molecular_weight_g_per_mol",
+        "value": 180.159,
+        "battle_count": 0
+      }
+    ]
   },
   "membrane": {
     "corroborated_soft": [],
@@ -74,20 +105,6 @@
         ],
         "bucket": "pending",
         "certainty": 0.9
-      },
-      {
-        "fact_id": "l0-acetylsalicylic-acid-0001",
-        "predicate": "canonical_name",
-        "value": "acetylsalicylic acid",
-        "bucket": "pending",
-        "certainty": 0.95
-      },
-      {
-        "fact_id": "l0-acetylsalicylic-acid-0004",
-        "predicate": "cas_number",
-        "value": "50-78-2",
-        "bucket": "pending",
-        "certainty": 0.95
       },
       {
         "fact_id": "l0-acetylsalicylic-acid-0019",
@@ -141,13 +158,6 @@
         "certainty": 0.9
       },
       {
-        "fact_id": "l0-acetylsalicylic-acid-0002",
-        "predicate": "iupac_name",
-        "value": "2-acetyloxybenzoic acid",
-        "bucket": "pending",
-        "certainty": 0.9
-      },
-      {
         "fact_id": "l0-acetylsalicylic-acid-0020",
         "predicate": "kind",
         "value": "compound",
@@ -167,20 +177,6 @@
         "value": "irreversible inhibition of cyclooxygenase (COX-1 and COX-2) via acetylation of serine residue; suppresses prostaglandin and thromboxane synthesis",
         "bucket": "pending",
         "certainty": 0.9
-      },
-      {
-        "fact_id": "l0-acetylsalicylic-acid-0005",
-        "predicate": "molecular_formula",
-        "value": "C9H8O4",
-        "bucket": "pending",
-        "certainty": 0.95
-      },
-      {
-        "fact_id": "l0-acetylsalicylic-acid-0006",
-        "predicate": "molecular_weight_g_per_mol",
-        "value": 180.159,
-        "bucket": "pending",
-        "certainty": 0.85
       },
       {
         "fact_id": "l0-acetylsalicylic-acid-0010",
@@ -312,7 +308,7 @@
       "entities": "l0-acetylsalicylic-acid-NNNN",
       "relations": "l0-acetylsalicylic-acid-rNNNN"
     },
-    "generated": "2026-06-11T14:10:19.477280Z",
+    "generated": "2026-06-11T14:42:08.861116Z",
     "compiler": "tools/l0_compile_wrappers.py v1",
     "hand_assembled": false
   }

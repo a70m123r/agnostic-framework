@@ -25,7 +25,14 @@
   },
   "kernel": {
     "statement": "",
-    "facts": []
+    "facts": [
+      {
+        "fact_id": "l0-turing-enigma-hodges-0008",
+        "predicate": "subject_person",
+        "value": "Alan Turing (1912-1954)",
+        "battle_count": 0
+      }
+    ]
   },
   "membrane": {
     "corroborated_soft": [],
@@ -168,13 +175,6 @@
         "certainty": 0.75
       },
       {
-        "fact_id": "l0-turing-enigma-hodges-0008",
-        "predicate": "subject_person",
-        "value": "Alan Turing (1912-1954)",
-        "bucket": "pending",
-        "certainty": 0.95
-      },
-      {
         "fact_id": "l0-turing-enigma-hodges-0014",
         "predicate": "updated_edition",
         "value": "Princeton University Press updated edition with new preface on royal pardon (2014, ISBN 9780691164724, 768 pages)",
@@ -242,7 +242,7 @@
       "fact_refs": [
         "l0-turing-enigma-hodges-r0003"
       ],
-      "bucket": "pending",
+      "bucket": "corroborated",
       "certainty": 0.9
     },
     {
@@ -251,7 +251,7 @@
       "fact_refs": [
         "l0-turing-enigma-hodges-r0001"
       ],
-      "bucket": "pending",
+      "bucket": "corroborated",
       "certainty": 0.95
     },
     {
@@ -286,7 +286,7 @@
       "entities": "l0-turing-enigma-hodges-NNNN",
       "relations": "l0-turing-enigma-hodges-rNNNN"
     },
-    "generated": "2026-06-11T14:10:19.477280Z",
+    "generated": "2026-06-11T14:42:08.861116Z",
     "compiler": "tools/l0_compile_wrappers.py v1",
     "hand_assembled": false
   }

@@ -25,7 +25,32 @@
   },
   "kernel": {
     "statement": "",
-    "facts": []
+    "facts": [
+      {
+        "fact_id": "l0-iphone-15-pro-0003",
+        "predicate": "announced",
+        "value": "2023-09-12",
+        "battle_count": 0
+      },
+      {
+        "fact_id": "l0-iphone-15-pro-0007",
+        "predicate": "chip_name",
+        "value": "Apple A17 Pro",
+        "battle_count": 0
+      },
+      {
+        "fact_id": "l0-iphone-15-pro-0010",
+        "predicate": "display_size_inches",
+        "value": 6.1,
+        "battle_count": 0
+      },
+      {
+        "fact_id": "l0-iphone-15-pro-0015",
+        "predicate": "mass_grams",
+        "value": 187,
+        "battle_count": 0
+      }
+    ]
   },
   "membrane": {
     "corroborated_soft": [],
@@ -45,23 +70,9 @@
         "certainty": 0.9
       },
       {
-        "fact_id": "l0-iphone-15-pro-0003",
-        "predicate": "announced",
-        "value": "2023-09-12",
-        "bucket": "pending",
-        "certainty": 0.95
-      },
-      {
         "fact_id": "l0-iphone-15-pro-0001",
         "predicate": "canonical_name",
         "value": "iPhone 15 Pro",
-        "bucket": "pending",
-        "certainty": 0.95
-      },
-      {
-        "fact_id": "l0-iphone-15-pro-0007",
-        "predicate": "chip_name",
-        "value": "Apple A17 Pro",
         "bucket": "pending",
         "certainty": 0.95
       },
@@ -83,13 +94,6 @@
         "fact_id": "l0-iphone-15-pro-0005",
         "predicate": "discontinued",
         "value": "2024-09-09",
-        "bucket": "pending",
-        "certainty": 0.85
-      },
-      {
-        "fact_id": "l0-iphone-15-pro-0010",
-        "predicate": "display_size_inches",
-        "value": 6.1,
         "bucket": "pending",
         "certainty": 0.85
       },
@@ -118,13 +122,6 @@
         "fact_id": "l0-iphone-15-pro-0012",
         "predicate": "main_camera_mp",
         "value": 48,
-        "bucket": "pending",
-        "certainty": 0.85
-      },
-      {
-        "fact_id": "l0-iphone-15-pro-0015",
-        "predicate": "mass_grams",
-        "value": 187,
         "bucket": "pending",
         "certainty": 0.85
       },
@@ -273,7 +270,7 @@
       "entities": "l0-iphone-15-pro-NNNN",
       "relations": "l0-iphone-15-pro-rNNNN"
     },
-    "generated": "2026-06-11T14:10:19.477280Z",
+    "generated": "2026-06-11T14:42:08.861116Z",
     "compiler": "tools/l0_compile_wrappers.py v1",
     "hand_assembled": false
   }

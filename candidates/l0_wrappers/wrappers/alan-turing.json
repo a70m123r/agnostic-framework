@@ -30,7 +30,51 @@
   },
   "kernel": {
     "statement": "",
-    "facts": []
+    "facts": [
+      {
+        "fact_id": "l0-alan-turing-0003",
+        "predicate": "born",
+        "value": "1912-06-23",
+        "battle_count": 0
+      },
+      {
+        "fact_id": "l0-alan-turing-0005",
+        "predicate": "died",
+        "value": "1954-06-07",
+        "battle_count": 0
+      },
+      {
+        "fact_id": "l0-alan-turing-0008",
+        "predicate": "educated_at",
+        "value": "King's College, Cambridge (Mathematics, first-class honours, 1931–1934)",
+        "battle_count": 0
+      },
+      {
+        "fact_id": "l0-alan-turing-0022",
+        "predicate": "fields",
+        "value": [
+          "computer science",
+          "mathematics",
+          "cryptanalysis",
+          "artificial intelligence",
+          "mathematical biology"
+        ],
+        "battle_count": 0
+      },
+      {
+        "fact_id": "l0-alan-turing-0013",
+        "predicate": "key_publication",
+        "value": {
+          "title": "On Computable Numbers, with an Application to the Entscheidungsproblem",
+          "journal": "Proceedings of the London Mathematical Society",
+          "volume": "s2-42",
+          "year": 1936,
+          "doi": "10.1112/plms/s2-42.1.230",
+          "contribution": "Introduced the universal Turing machine; proved certain decision problems undecidable; laid theoretical foundation of computability"
+        },
+        "battle_count": 0
+      }
+    ]
   },
   "membrane": {
     "corroborated_soft": [],
@@ -68,13 +112,6 @@
         "certainty": 0.9
       },
       {
-        "fact_id": "l0-alan-turing-0003",
-        "predicate": "born",
-        "value": "1912-06-23",
-        "bucket": "pending",
-        "certainty": 0.95
-      },
-      {
         "fact_id": "l0-alan-turing-0004",
         "predicate": "born_place",
         "value": "Maida Vale, London, United Kingdom",
@@ -109,13 +146,6 @@
         "certainty": 0.9
       },
       {
-        "fact_id": "l0-alan-turing-0005",
-        "predicate": "died",
-        "value": "1954-06-07",
-        "bucket": "pending",
-        "certainty": 0.95
-      },
-      {
         "fact_id": "l0-alan-turing-0006",
         "predicate": "died_place",
         "value": "Wilmslow, Cheshire, England",
@@ -133,29 +163,9 @@
         "certainty": 0.85
       },
       {
-        "fact_id": "l0-alan-turing-0008",
-        "predicate": "educated_at",
-        "value": "King's College, Cambridge (Mathematics, first-class honours, 1931–1934)",
-        "bucket": "pending",
-        "certainty": 0.9
-      },
-      {
         "fact_id": "l0-alan-turing-0009",
         "predicate": "educated_at_doctoral",
         "value": "Princeton University (PhD, mathematical logic / ordinal logic, 1938; supervisor Alonzo Church)",
-        "bucket": "pending",
-        "certainty": 0.9
-      },
-      {
-        "fact_id": "l0-alan-turing-0022",
-        "predicate": "fields",
-        "value": [
-          "computer science",
-          "mathematics",
-          "cryptanalysis",
-          "artificial intelligence",
-          "mathematical biology"
-        ],
         "bucket": "pending",
         "certainty": 0.9
       },
@@ -176,20 +186,6 @@
         "value": "Designed specification for the British Bombe electromechanical decryption device used to break Enigma ciphers; first installation at Bletchley Park March 1940",
         "bucket": "pending",
         "certainty": 0.85
-      },
-      {
-        "fact_id": "l0-alan-turing-0013",
-        "predicate": "key_publication",
-        "value": {
-          "title": "On Computable Numbers, with an Application to the Entscheidungsproblem",
-          "journal": "Proceedings of the London Mathematical Society",
-          "volume": "s2-42",
-          "year": 1936,
-          "doi": "10.1112/plms/s2-42.1.230",
-          "contribution": "Introduced the universal Turing machine; proved certain decision problems undecidable; laid theoretical foundation of computability"
-        },
-        "bucket": "pending",
-        "certainty": 0.9
       },
       {
         "fact_id": "l0-alan-turing-0020",
@@ -293,7 +289,7 @@
       "fact_refs": [
         "l0-alan-turing-r0001"
       ],
-      "bucket": "pending",
+      "bucket": "corroborated",
       "certainty": 0.99
     }
   ],
@@ -319,7 +315,7 @@
       "entities": "l0-alan-turing-NNNN",
       "relations": "l0-alan-turing-rNNNN"
     },
-    "generated": "2026-06-11T14:10:19.477280Z",
+    "generated": "2026-06-11T14:42:08.861116Z",
     "compiler": "tools/l0_compile_wrappers.py v1",
     "hand_assembled": false
   }

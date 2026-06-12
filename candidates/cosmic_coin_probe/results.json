@@ -1,0 +1,97 @@
+{
+  "probe": "cosmic_coin v0.1",
+  "coder_primary": "lzma-9",
+  "quant": {
+    "pos_km": 1.0,
+    "logflux_dex": 0.001
+  },
+  "orbit": {
+    "n": 366,
+    "span_days": 365.0,
+    "elements": {
+      "a_km": 227938934.4298894,
+      "e": 0.09329526776397692,
+      "i_deg": 1.8478708516317703
+    },
+    "resid_km": {
+      "mean": 14904.416669035612,
+      "p50": 9643.705178357748,
+      "p99": 37809.33244065283,
+      "max": 37816.13469970179
+    },
+    "orbit_radius_km": 217875089.0938863,
+    "rel_resid": 6.840808066227815e-05,
+    "mdl": {
+      "lzma": {
+        "raw_bits": 28288,
+        "resid_bits": 11488,
+        "model_bits": 448,
+        "comp_ratio": 2.3699731903485253
+      },
+      "zlib": {
+        "raw_bits": 36032,
+        "resid_bits": 18784,
+        "model_bits": 448,
+        "comp_ratio": 1.8735440931780365
+      },
+      "bz2": {
+        "raw_bits": 41464,
+        "resid_bits": 21072,
+        "model_bits": 448,
+        "comp_ratio": 1.9267657992565055
+      }
+    },
+    "appearance_bits_per_step": 43.30012280024418,
+    "raw_bits_per_step": 85.23517071791309,
+    "bits_saved_per_step": 41.93504791766891,
+    "nll_bits": {
+      "mean": 41.18644382846835,
+      "p50": 40.4346368347402,
+      "p99": 48.84911831572228,
+      "max": 48.85831175062065
+    }
+  },
+  "flare": {
+    "n": 10078,
+    "peak_flux": 1.863967554527335e-05,
+    "peak_class": "M",
+    "log_flux_std": 0.0174441199453243,
+    "mdl": {
+      "lzma": {
+        "raw_bits": 72576,
+        "resid_bits": 57088,
+        "model_bits": 64,
+        "comp_ratio": 1.2698768197088466
+      },
+      "zlib": {
+        "raw_bits": 111600,
+        "resid_bits": 77472,
+        "model_bits": 64,
+        "comp_ratio": 1.4393314073462649
+      },
+      "bz2": {
+        "raw_bits": 69720,
+        "resid_bits": 54200,
+        "model_bits": 64,
+        "comp_ratio": 1.284829721362229
+      }
+    },
+    "appearance_bits_per_step": 6.171764495568608,
+    "raw_bits_per_step": 9.673529180998328,
+    "bits_saved_per_step": 3.5017646854297197,
+    "nll_bits": {
+      "mean": 6.171765864636694,
+      "p50": 5.481174476435447,
+      "p99": 14.471029699725312,
+      "max": 599.458928995495
+    }
+  },
+  "coin_edge": {
+    "orbit_comp_ratio": 2.3699731903485253,
+    "flare_comp_ratio": 1.2698768197088466,
+    "orbit_appearance_bits": 43.30012280024418,
+    "flare_appearance_bits": 6.171764495568608,
+    "separation_comp": 1.8663016393132568,
+    "separation_bits": -37.12835830467557
+  }
+}

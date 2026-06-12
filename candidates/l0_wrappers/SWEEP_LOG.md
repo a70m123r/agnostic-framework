@@ -129,3 +129,62 @@ Diffs by category (all resolved as documented hand-assembly drift / hand-enrichm
 - Carry forward the sweep-1 proposed dials (relation-direction discipline; proposed-subject edge namespacing) — both are now exercised by the builder and ready to ratify.
 
 ---
+
+## Sweep 2 — 2026-06-11 (corroboration: first kernels lit)
+
+**Seat:** `l0-sweep-02-corroborate` (Fable). **The highest-value move per §7.2 step 1 / the sweep-1 "harden, don't broaden" directive.** Sweep 1 left **zero corroborated facts** — every kernel empty. This sweep verifies standing `pending` facts against **genuinely independent, provenance-disjoint second sources** and appends `corroborated` verification records. No entities added, no breadth — verification-only, by design (§7.4: "a sweep that only verified and disputed can be the best of the year").
+**No fact edited.** 23 new **append-only** verification records to `../canonical_genealogy/substrate/verifications/l0_catalog.jsonl` (7 → 30 lines). Zero edits to `facts/*.jsonl`, `SCHEMA_v2.md`, the 7 base specimens, or `frame_lock_data/`.
+**Dials locked this sweep** (frame-lock §7.3): kind vocab + 16-term relation vocab + kernel-admission rule (§2.3) + membrane proxy `l0-membrane-proxy-v0.1`, all per spec as authored. Verifier seat ≠ the sweep-1 emitter seat (independence, §7.3/§8 agent-stamp rule).
+
+### What was hardened (23 corroborations across all 6 samples + 1 proposed)
+Each fact verified against a route **provenance-disjoint** from its sweep-1 harvest source (the cross-route discipline — Wikipedia corroborating Wikidata would be testimony-laundering, per `observer_planes_SKETCH.md` C1).
+
+| subject | route used (independent of harvest source) | corroborated | kernel now |
+|---|---|---|---|
+| `acetylsalicylic-acid` | **PubChem PUG REST** (NIH/NLM primary registry) | cas, molecular_formula, molecular_weight, iupac_name, canonical_name (5) | **5 kernel** |
+| `alan-turing` | **Encyclopaedia Britannica** (disjoint from Wikidata/Wikipedia) | born, died, educated_at, key_publication, fields (5 entity) + instance-of:person (1 rel) | **5 kernel + 1 hardened edge** |
+| `iphone-15-pro` | **GSMArena** (disjoint from apple.com + Wikidata) | announced, chip_name, display_size, mass (4) | **4 kernel** |
+| `claude` | **claude.com** (Anthropic primary, disjoint from Wikidata) | made_by (1 entity) + made-by:anthropic (1 rel) | **1 kernel + 1 hardened edge** |
+| `turing-enigma-hodges` | **Princeton University Press** (publisher primary, disjoint) | subject_person (1 entity) + authored-by:andrew-hodges, adapted-into:imitation-game (2 rel) | **1 kernel + 2 hardened edges** |
+| `smartphone` | **Encyclopaedia Britannica** (disjoint from Wikipedia) | definition, emerged, first_commercial_prototype (3) | **3 kernel** |
+
+**Verifications by outcome:** corroborated **23**, disputed **0**, unverifiable **0** (this batch). **Kernel growth: 0 → 19 entity-kernel facts + 4 hardened relation edges** (relations harden in `relations[]` at `bucket=corroborated`, not in `kernel.facts`, which is entity-only — §2.3/§3). Every sample wrapper's kernel went from empty to populated; the kernel-core render lights up for the first time with real battle-tested data.
+
+### Route-character disclosure (the C1 epistemic-route honesty)
+Independence is not uniform, and the records say so per-fact rather than claiming a flat "independent":
+- **Registry-level physical constants** (aspirin CAS / formula / weight): PubChem is the NIH primary, but Wikidata chem data may sync from CAS/PubChem upstream, so strict provenance-disjointness is *weak*. For a measurable molecular constant the relevant hardening is **multi-registry concordance**, not interpretive independence — disclosed in each note. (The IUPAC name is the one genuinely disjoint chem fact: substrate value was Wikipedia prose, PubChem value is the NIH-computed name.)
+- **Provenance-disjoint authority** (Turing dates/publication via Britannica; iPhone specs via GSMArena; book via PUP; smartphone via Britannica): independent editorial line from the harvest source — the strong kind.
+- **Primary-vs-aggregator disjoint** (Claude made_by via claude.com): the developer's own site is a distinct route from the Wikidata-sourced harvest fact.
+- **Semantic vs verbatim**: the smartphone `definition` is concept-level agreement (two encyclopedias phrase it differently but assert the same thing), flagged as semantic — not a verbatim value-match. Date-range corroborations (smartphone `emerged` 1992–1994 ⊇ Britannica's IBM/1993) are flagged as within-range.
+
+This per-fact route tagging is exactly the proposed **C1 epistemic-route tag** (`observer_planes_SKETCH.md` §3) exercised in anger: cross-route agreement is the gold standard, and the notes record *which* route-character each corroboration rests on so a future reader can weight them.
+
+### Why zero disputes — and the queued dispute-probe (honest)
+No disputes is **not** rubber-stamping: this batch deliberately targeted **high-certainty identity facts** (chemical constants, well-attested biographical dates, official product specs, publisher-confirmed authorship) where authoritative independent records agree by construction. The **dispute-likely** facts were *not* probed this sweep and are queued for Sweep 3:
+- `l0-smartphone-0011` first_named_device (Ericsson GS88, 1997) — **cert 0.82 from a single blog** (`ericssoners.wordpress.com`), the weakest-sourced kernel-eligible fact; prime dispute-probe candidate.
+- `l0-smartphone-0003` named (1997) vs the broader "first use of the term smartphone" literature — contested.
+- the population/adoption estimates (`l0-smartphone-0009/0010`, global users/subscriptions) — figures vary by source and date.
+- `l0-iphone-15-pro-0013` launch_price_usd 999 — GSMArena showed a *current street price* ($474.53), which neither corroborates nor disputes the $999 MSRP; needs a launch-day primary. **Left pending, honestly** (not recorded as either).
+
+### NOT done (deliberately — gated / deferred)
+- **Subject-index anchor (`specimens/l0_catalog.json`) still NOT created** — Pav/Cowork-gated; the ~28 expected `specimen 'l0-catalog' not found` flags stay expected-and-honest.
+- **No entities / facts added** — verification-only sweep.
+- **`drug_class`, launch_price, original-1983-publication, predecessor edges** — kernel-eligible but not corroborated this batch (no clean independent route fetched yet); carried to Sweep 3.
+- **Cross-model external pass owed** — this corroboration is Claude-only; a GPT-5.5 + Gemini pass on the route-character calls is owed if the C1 tagging hardens toward canon.
+
+### Proposed vocabulary queue (apply from Sweep 3 after a nod)
+- **Route-character field (PROPOSED):** promote the per-note route disclosure to a structured `route_character ∈ {registry-concordance | provenance-disjoint | primary-vs-aggregator | semantic | within-range}` on the verification record — the operational form of `observer_planes_SKETCH.md` C1. Lets the compiler weight a corroboration by route strength and report a per-route-pair disagreement rate (C3).
+- Carry forward the sweep-1 dials (relation-direction discipline; proposed-subject edge namespacing).
+
+### Frontier for Sweep 3
+1. **Dispute-probe** the four queued contested facts above (the honest other half of hardening).
+2. **Finish the kernel-eligible tail** with clean independent routes: `drug_class` (PubChem MeSH pharm-class), iPhone launch price (launch-day primary), book 1983 first-edition (first publisher / Britannica), the predecessor/successor edges.
+3. Then resume **breadth**: promote the `proposed:` frontier entities (apple, anthropic, large-language-model, bayer, andrew-hodges, imitation-game, turing-award, …) to catalog entities.
+
+### Verification (this sweep)
+- `python compile_substrate.py` (substrate root): **validation errors 0**, no HAZARD, exit 0; facts 1243, verifications 333. The 23 targets resolve `bucket=corroborated`; per-subject corroborated counts 5/6/4/2/3/3.
+- `python tools/l0_compile_wrappers.py --check` pre-write: 42 content diffs, all the expected `membrane.pending → kernel.facts` migration + relation `pending → corroborated`. After `--write`: re-check **0 diffs (idempotent / byte-stable)**.
+- Toy `l0_constellation_toy.html` GENERATED block re-spliced (W=6 EDGES=17 CANDS=7 LADDERS=5); the 3 group configs re-emitted.
+- Every regenerated wrapper carries `_status` Tier-3 stamp; kernel populations match the compiled buckets (entity-only kernel + corroborated edges in `relations[]`).
+
+---
