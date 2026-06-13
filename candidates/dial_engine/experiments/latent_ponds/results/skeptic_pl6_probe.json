@@ -1,0 +1,80 @@
+{
+ "protlog_raw_events": 4954,
+ "unique_edit_protected_titles": 3861,
+ "exclusion_titles": 4323,
+ "trigger_census": {
+  "arbitration": 906,
+  "other": 910,
+  "vandal": 797,
+  "salt": 104,
+  "sock": 390,
+  "disrupt": 739,
+  "persistent": 169,
+  "blp": 274,
+  "move": 333,
+  "protection": 208,
+  "edit war": 109,
+  "spam": 9,
+  "create": 2,
+  "edit-war": 4
+ },
+ "cached_treated_pv_usable": 21,
+ "cached_treated_qualifying_storms": 4,
+ "lag_days": {
+  "median": 0.0,
+  "mean": 2.25,
+  "frac_ge0": 0.5,
+  "frac_0to7": 0.25,
+  "values": [
+   10,
+   -1,
+   -1,
+   1
+  ]
+ },
+ "storm_rows": [
+  {
+   "key": "Mike_Jackson_(footballer,_born_1973)",
+   "peak_date": "2026-04-30",
+   "prot_date": "2026-05-10",
+   "lag": 10,
+   "peak_views": 16361,
+   "baseline": 30,
+   "ratio": 545.4
+  },
+  {
+   "key": "Ben&Ben",
+   "peak_date": "2026-05-10",
+   "prot_date": "2026-05-09",
+   "lag": -1,
+   "peak_views": 19386,
+   "baseline": 152,
+   "ratio": 127.5
+  },
+  {
+   "key": "Japan_Cup",
+   "peak_date": "2026-05-11",
+   "prot_date": "2026-05-10",
+   "lag": -1,
+   "peak_views": 24565,
+   "baseline": 383,
+   "ratio": 64.1
+  },
+  {
+   "key": "Government_of_West_Bengal",
+   "peak_date": "2026-05-09",
+   "prot_date": "2026-05-10",
+   "lag": 1,
+   "peak_views": 50274,
+   "baseline": 344,
+   "ratio": 146.1
+  }
+ ],
+ "control_feasibility_perstorm": [
+  847,
+  827,
+  602,
+  191
+ ],
+ "DESIGN_STATUS": "dataset NOT built; 22/3861 treated pv cached, 0 control screens; no damping coefficient is computable from cache. This probes design only."
+}

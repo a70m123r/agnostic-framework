@@ -1,0 +1,7 @@
+# Re-fetchable raw caches (Wikimedia pageviews / protection logs) — large, regenerable
+# from the documented endpoints in the fetch scripts. Derived results (*.json results,
+# *FINDINGS.md, the scripts) ARE committed.
+data/
+cache/
+__pycache__/
+*.pyc

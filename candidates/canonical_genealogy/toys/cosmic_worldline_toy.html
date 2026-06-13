@@ -1,0 +1,338 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Cosmic Worldline Toy — log2 double-cone + time-scrubber lens</title>
+<!--
+  Path-A toy (Fable's deliberation): worldlines on a log2 double-cone "sphere" + a time
+  scrubber with a fisheye lens. Built to frame an EVENT canonically — the first specimen
+  is the Fable model takedown (a latent worldline that ends), rendered WITH its uncertainty.
+  REGISTER: this is a REPRESENTATION, not a physics simulation. Positions are illustrative
+  (MODELLED); scale is honest log2; uncertain things are drawn fuzzy; testimony-only things
+  are dashed. Never render a fake measured bit. Cosmic positions carry real uncertainty.
+-->
+<style>
+  :root{
+    --bg:#06080d; --ink:#e8edf6; --mut:#8e98ad; --grid:#16202e;
+    --physical:#6fc3ff; --latent:#c08bff; --sub:#7fd6b0; --cosmic:#ffd27f;
+    --warn:#ff6b6b; --hint:#5a6275; --accent:#9fe0ff; --fable:#c08bff;
+  }
+  html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);
+    font:13px/1.5 ui-sans-serif,system-ui,Segoe UI,Roboto,sans-serif;overflow:hidden}
+  #wrap{display:flex;flex-direction:column;height:100vh}
+  header{padding:8px 14px;border-bottom:1px solid var(--grid);display:flex;gap:14px;align-items:baseline;flex-wrap:wrap}
+  header h1{font-size:14px;margin:0;font-weight:600;letter-spacing:.2px}
+  header .disc{color:var(--warn);font-size:11px;border:1px solid #3a1f22;background:#1a0f11;padding:1px 7px;border-radius:10px}
+  header .meta{color:var(--mut);font-size:11px}
+  #stage{flex:1;position:relative}
+  canvas{display:block;width:100%;height:100%}
+  #scrub{height:120px;border-top:1px solid var(--grid);position:relative}
+  #controls{position:absolute;left:14px;top:10px;display:flex;gap:8px;align-items:center;z-index:5}
+  button{background:#10161f;color:var(--ink);border:1px solid var(--grid);border-radius:6px;padding:4px 9px;cursor:pointer;font:inherit}
+  button:hover{border-color:var(--accent)}
+  #hud{position:absolute;right:14px;top:10px;text-align:right;color:var(--mut);font-size:11px;z-index:5;max-width:42%}
+  #hud b{color:var(--ink)} #hud .k{color:var(--accent)}
+  #tip{position:absolute;pointer-events:none;background:#0c1118ee;border:1px solid var(--grid);
+    border-radius:7px;padding:7px 9px;max-width:280px;font-size:12px;display:none;z-index:9}
+  .legend{position:absolute;left:14px;bottom:130px;color:var(--mut);font-size:11px;z-index:5;display:flex;gap:12px;flex-wrap:wrap}
+  .legend i{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:4px;vertical-align:middle}
+</style>
+<div id="wrap">
+  <header>
+    <h1>Cosmic Worldline Toy</h1>
+    <span class="disc">MODELLED — representation, not a simulation</span>
+    <span class="meta">log2 double-cone (observer at center) · time-scrubber fisheye · worldlines = exhaust trails · uncertain = fuzzy · testimony-only = dashed</span>
+  </header>
+  <div id="stage">
+    <div id="controls">
+      <button id="play">▶ play</button>
+      <button id="cone">cone: BOTH</button>
+      <button id="latent">latent: ON</button>
+      <button id="duel">bits: ON</button>
+    </div>
+    <div id="hud"></div>
+    <div class="legend">
+      <span><i style="background:var(--cosmic)"></i>cosmic (outward ×2/ring)</span>
+      <span><i style="background:var(--sub)"></i>sub (inward)</span>
+      <span><i style="background:var(--physical)"></i>physical</span>
+      <span><i style="background:var(--latent)"></i>latent (tethered, confidence=opacity)</span>
+    </div>
+    <canvas id="c"></canvas>
+    <div id="tip"></div>
+  </div>
+  <div id="scrub"><canvas id="tc"></canvas></div>
+</div>
+<script>
+"use strict";
+// ---- scale ladder (REAL anchors; meters & log2(m)). Honest, labelled. ----
+const L2=(m)=>Math.log2(m);
+const SCALE=[
+  {n:"Planck",      m:1.616e-35, side:"sub"},
+  {n:"quark <",     m:1e-18,     side:"sub"},
+  {n:"proton",      m:1e-15,     side:"sub"},
+  {n:"atom",        m:1e-10,     side:"sub"},
+  {n:"DNA width",   m:2e-9,      side:"sub"},
+  {n:"virus",       m:1e-7,      side:"sub"},
+  {n:"cell",        m:1e-5,      side:"sub"},
+  {n:"human",       m:1.7,       side:"obs"},
+  {n:"Earth r",     m:6.371e6,   side:"cos"},
+  {n:"Moon dist",   m:3.84e8,    side:"cos"},
+  {n:"1 AU (Sun)",  m:1.496e11,  side:"cos"},
+  {n:"light-year",  m:9.46e15,   side:"cos"},
+  {n:"Milky Way r", m:4.7e20,    side:"cos"},
+  {n:"Laniakea",    m:2.4e24,    side:"cos"},
+  {n:"horizon",     m:4.4e26,    side:"cos"},
+];
+const OBS_L2 = L2(1.7);                 // observer at human scale = center of the double cone
+const COS_MAX = L2(4.4e26)-OBS_L2;      // ~88 bits outward to the horizon
+const SUB_MAX = OBS_L2-L2(1.616e-35);   // ~116 bits inward to Planck
+// radius on screen: bits-from-observer, each cone normalized to fill the disk (disclosed proxy).
+function ringR(m, Rmax){
+  const b=Math.abs(L2(m)-OBS_L2);
+  const span = (L2(m)>=OBS_L2)?COS_MAX:SUB_MAX;
+  return 0.06*Rmax + 0.90*Rmax*(b/span);
+}
+function sideOf(m){ return L2(m)>=OBS_L2 ? "cos":"sub"; }
+
+// ---- objects (MODELLED positions; orbital periods real where physical). ----
+// born/died are ISO-ish; latent objects tether to a physical anchor with confidence.
+// /* GENERATED EVENT DATA — repopulate the 'fable' specimen from the scout substrate */
+const NOW0 = Date.parse("2026-06-13T00:00:00Z");
+const DAY=864e5, YR=365.25*DAY;
+const OBJ=[
+  // physical, cosmic, cycling (the cycles ARE the geometry):
+  {id:"earth", n:"Earth", plane:"physical", m:1.496e11, ang0:0.0, period:365.25*DAY, kind:"planet", law:"Kepler", lawbits:0.04},
+  {id:"moon",  n:"Moon",  plane:"physical", m:3.84e8,  ang0:1.1, period:27.32*DAY,  kind:"moon",  law:"Kepler+pert", lawbits:0.12},
+  {id:"mars",  n:"Mars",  plane:"physical", m:2.279e11,ang0:2.3, period:686.98*DAY, kind:"planet", law:"Kepler", lawbits:0.05},
+  {id:"sun",   n:"Sun (galactic orbit)", plane:"physical", m:1.0e11, ang0:0.6, period:2.25e8*YR, kind:"star", law:"galactic", lawbits:0.3},
+  // the sub side (no cycle; structural anchors)
+  {id:"atom",  n:"atom", plane:"physical", m:1e-10, ang0:-0.5, period:0, kind:"sub"},
+  {id:"cell",  n:"cell", plane:"physical", m:1e-5,  ang0:0.8,  period:0, kind:"sub"},
+  // latent worldlines, tethered to Earth (the harness anchor), confidence-graded:
+  {id:"agf",   n:"agnostic-framework", plane:"latent", anchor:"earth", conf:0.6, m:6.371e6, ang0:0.3,
+     period:0, born:Date.parse("2026-06-07T00:00:00Z"), died:null, kind:"idea", law:null, lawbits:null, testimony:false,
+     note:"the framework's own development worldline (hourly resolution)."},
+  {id:"fable", n:"Fable 5 (claude-fable-5)", plane:"latent", anchor:"earth", conf:0.97, m:6.371e6, ang0:-1.3,
+     period:0, born:Date.parse("2026-06-09T00:00:00Z"), died:Date.parse("2026-06-12T21:21:00Z"), kind:"ai-model",
+     law:null, lawbits:null, testimony:false, corroborated:true,
+     note:"Claude Fable 5 disabled globally 2026-06-12 17:21 ET under a US Commerce Dept export-control directive (Sec. Lutnick → Amodei); first-ever US federal takedown of a deployed leading model. Launched 2026-06-09 — a 3-DAY worldline. Anthropic disputes the jailbreak rationale. CORROBORATED (Anthropic statement + CNBC/NBC/Bloomberg/9to5Mac/Axios). Route HARDENED this session: testimony-from-above → corroborated. Source: experiments/fable_event/event_records.json"},
+  {id:"mythos", n:"Mythos 5 (claude-mythos-5)", plane:"latent", anchor:"earth", conf:0.97, m:6.371e6, ang0:-1.7,
+     period:0, born:Date.parse("2026-06-09T00:00:00Z"), died:Date.parse("2026-06-12T21:21:00Z"), kind:"ai-model",
+     law:null, lawbits:null, testimony:false, corroborated:true,
+     note:"Suspended in the SAME directive as Fable 5, the same instant — both worldlines cut together (2026-06-12 17:21 ET)."},
+];
+// /* END GENERATED EVENT DATA */
+
+// ---- time window + scrubber (fisheye) ----
+let T0=Date.parse("2025-09-01T00:00:00Z"), T1=Date.parse("2026-09-01T00:00:00Z");
+let now=Date.parse("2026-06-11T00:00:00Z"), playing=false, focusFrac=(now-T0)/(T1-T0);
+let showCone="BOTH", showLatent=true, showDuel=true;
+
+const c=document.getElementById("c"), x=c.getContext("2d");
+const tc=document.getElementById("tc"), tx=tc.getContext("2d");
+const tip=document.getElementById("tip"), hud=document.getElementById("hud");
+let W=0,H=0,cx=0,cy=0,Rmax=0, TW=0,TH=0;
+function resize(){
+  const dpr=Math.min(2,devicePixelRatio||1);
+  W=c.clientWidth;H=c.clientHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0);
+  cx=W*0.5;cy=H*0.52;Rmax=Math.min(W,H)*0.46;
+  TW=tc.clientWidth;TH=tc.clientHeight;tc.width=TW*dpr;tc.height=TH*dpr;tx.setTransform(dpr,0,0,dpr,0,0);
+  draw();
+}
+addEventListener("resize",resize);
+
+// Furnas 1D fisheye: degree-of-interest magnification around the focus point.
+function fisheye(frac, foc, d=4){
+  // map [0,1] -> [0,1] with magnification near foc
+  const s = frac<foc ? -1:1;
+  const n = Math.abs(frac-foc)/Math.max(1e-6, (frac<foc?foc:1-foc));
+  const t = ((d+1)*n)/(d*n+1);
+  return foc + s*t*(frac<foc?foc:1-foc);
+}
+const lerp=(a,b,t)=>a+(b-a)*t;
+
+function objPos(o, tNow){
+  // returns {mx,my, alive, r, ang} at time tNow (screen coords), or null if not yet born
+  if(o.born && tNow<o.born) return null;
+  const alive = !o.died || tNow<=o.died;
+  let ang=o.ang0;
+  if(o.period) ang = o.ang0 + 2*Math.PI*((tNow-NOW0)/o.period);
+  const r=ringR(o.m, Rmax);
+  let X=cx+Math.cos(ang)*r, Y=cy+Math.sin(ang)*r;
+  if(o.plane==="latent"){ Y -= Rmax*0.30; X = lerp(cx,X,0.55); } // latent dome lifts above the physical disk
+  return {mx:X,my:Y,alive,r,ang};
+}
+
+function draw(){
+  x.clearRect(0,0,W,H);
+  // ---- scale rings + labels (the double cone) ----
+  for(const s of SCALE){
+    const cosSide = s.side==="cos", subSide=s.side==="sub";
+    if(s.side==="obs"){ continue; }
+    if(showCone==="COSMIC" && subSide) continue;
+    if(showCone==="SUB" && cosSide) continue;
+    const r=ringR(s.m,Rmax);
+    x.beginPath();
+    if(showCone==="BOTH"){
+      // cosmic = right semicircle, sub = left semicircle (true double cone, face-on)
+      const a0 = cosSide? -Math.PI/2 : Math.PI/2;
+      const a1 = cosSide?  Math.PI/2 : 3*Math.PI/2;
+      x.arc(cx,cy,r,a0,a1);
+    } else { x.arc(cx,cy,r,0,2*Math.PI); }
+    x.strokeStyle=cosSide?"#2a2616":"#16261f"; x.lineWidth=1; x.stroke();
+    // label
+    x.fillStyle="var(--mut)"; x.fillStyle=cosSide?"#6e6442":"#4a6a5c";
+    const lx = cosSide? cx+r+4 : cx-r-4;
+    x.textAlign=cosSide?"left":"right"; x.font="10px ui-sans-serif";
+    x.fillText(s.n, lx, cy-2);
+  }
+  // observer at center
+  x.fillStyle="#cfe6ff"; x.beginPath(); x.arc(cx,cy,3,0,7); x.fill();
+  x.fillStyle="#6e7a90"; x.textAlign="center"; x.font="10px ui-sans-serif";
+  x.fillText("observer · here-now", cx, cy+15);
+  // latent dome hint
+  if(showLatent){
+    x.strokeStyle="#241a33"; x.setLineDash([3,4]);
+    x.beginPath(); x.ellipse(cx, cy-Rmax*0.30, Rmax*0.55, Rmax*0.34, 0, Math.PI, 2*Math.PI); x.stroke();
+    x.setLineDash([]); x.fillStyle="#5b4a78"; x.textAlign="left"; x.font="10px ui-sans-serif";
+    x.fillText("latent stratum (above the physical anchor)", cx-Rmax*0.5, cy-Rmax*0.30-6);
+  }
+
+  // ---- worldlines (exhaust trails) + objects ----
+  const hovered = pick(mouse.x,mouse.y);
+  for(const o of OBJ){
+    if(o.plane==="latent" && !showLatent) continue;
+    const here=objPos(o, now); if(!here) continue;
+    const col = o.plane==="latent" ? "#c08bff" : (sideOf(o.m)==="cos"?"#ffd27f":"#7fd6b0");
+    // trail
+    const TR = o.period ? Math.min(o.period*0.9, (now-(o.born||T0))) : (now-(o.born||T0))*0.0;
+    const steps=o.period?64:1;
+    if(o.period){
+      x.beginPath();
+      for(let i=0;i<=steps;i++){
+        const tt=now - TR*(1-i/steps);
+        const p=objPos(o,tt); if(!p)continue;
+        i?x.lineTo(p.mx,p.my):x.moveTo(p.mx,p.my);
+      }
+      x.strokeStyle=col+"55"; x.lineWidth=1.5; x.stroke();
+    }
+    // latent tether to physical anchor (confidence = opacity)
+    if(o.plane==="latent" && o.anchor){
+      const a=OBJ.find(z=>z.id===o.anchor); const ap=a&&objPos(a,now);
+      if(ap){
+        x.beginPath(); x.moveTo(here.mx,here.my); x.lineTo(ap.mx,ap.my);
+        x.setLineDash([2,3]); x.strokeStyle=col+Math.round(40+o.conf*120).toString(16).padStart(2,"0");
+        x.lineWidth=1; x.stroke(); x.setLineDash([]);
+      }
+    }
+    // the node
+    const dead = o.died && now>o.died;
+    const fuzzy = o.testimony || (o.plane==="latent");
+    if(fuzzy){ // fuzz halo for uncertain / testimony objects
+      const g=x.createRadialGradient(here.mx,here.my,0,here.mx,here.my,14);
+      g.addColorStop(0,col+ (o.testimony?"66":"44")); g.addColorStop(1,col+"00");
+      x.fillStyle=g; x.beginPath(); x.arc(here.mx,here.my,14,0,7); x.fill();
+    }
+    x.beginPath(); x.arc(here.mx,here.my, dead?2.5:4.5, 0,7);
+    x.fillStyle = dead? "#3a2f4a" : col; x.fill();
+    if(o.testimony){ x.strokeStyle=col; x.setLineDash([2,2]); x.lineWidth=1; x.stroke(); x.setLineDash([]); }
+    // terminus burst at death (the worldline ending)
+    if(o.died && Math.abs(now-o.died)<14*DAY && now>=o.died-2*DAY){
+      x.strokeStyle="#ff6b6b"; x.globalAlpha=0.8;
+      for(let k=0;k<8;k++){const a=k/8*7; x.beginPath(); x.moveTo(here.mx,here.my); x.lineTo(here.mx+Math.cos(a)*9,here.my+Math.sin(a)*9); x.stroke();}
+      x.globalAlpha=1;
+    }
+    // label
+    x.fillStyle = (hovered&&hovered.id===o.id)?"#fff":(dead?"#5a4f6a":col);
+    x.textAlign="left"; x.font="11px ui-sans-serif";
+    x.fillText(o.n + (dead?" — cut":""), here.mx+8, here.my+3);
+    if(showDuel && o.lawbits!=null){
+      x.fillStyle="#5a6275"; x.font="9px ui-sans-serif";
+      x.fillText(o.law+" ~"+o.lawbits+" b", here.mx+8, here.my+14);
+    }
+  }
+  drawScrubber();
+  hudText(hovered);
+}
+
+function drawScrubber(){
+  tx.clearRect(0,0,TW,TH);
+  // baseline
+  tx.strokeStyle="#1b2533"; tx.beginPath(); tx.moveTo(0,TH*0.62); tx.lineTo(TW,TH*0.62); tx.stroke();
+  // fisheye-warped year/month ticks around the focus
+  const foc=focusFrac;
+  const span=T1-T0;
+  function fx(frac){ return fisheye(frac,foc,4)*TW; }
+  // month ticks
+  let d=new Date(T0); d.setUTCDate(1);
+  for(let i=0;i<48;i++){
+    const ms=d.getTime(); if(ms<T0){d.setUTCMonth(d.getUTCMonth()+1);continue;} if(ms>T1)break;
+    const fr=(ms-T0)/span, X=fx(fr);
+    const major=(d.getUTCMonth()===0);
+    tx.strokeStyle=major?"#2f3d50":"#1b2533"; tx.beginPath(); tx.moveTo(X,TH*0.62-(major?9:5)); tx.lineTo(X,TH*0.62+(major?9:5)); tx.stroke();
+    if(major||Math.abs(fr-foc)<0.10){ tx.fillStyle="#6e7a90"; tx.textAlign="center"; tx.font="9px ui-sans-serif";
+      tx.fillText(d.toISOString().slice(0,7), X, TH*0.62+20); }
+    d.setUTCMonth(d.getUTCMonth()+1);
+  }
+  // event markers (births/deaths) warped onto the lens
+  for(const o of OBJ){
+    for(const [ms,c2,lab] of [[o.born,"#7fd6b0","born"],[o.died,"#ff6b6b","cut"]]){
+      if(!ms||ms<T0||ms>T1) continue;
+      const X=fx((ms-T0)/span);
+      tx.fillStyle=c2; tx.beginPath(); tx.arc(X,TH*0.30,3,0,7); tx.fill();
+      if(o.id==="fable"){ tx.fillStyle=c2; tx.font="9px ui-sans-serif"; tx.textAlign="center"; tx.fillText("Fable "+lab, X, TH*0.18); }
+    }
+  }
+  // playhead (now)
+  const nx=fx((now-T0)/span);
+  tx.strokeStyle="#9fe0ff"; tx.lineWidth=2; tx.beginPath(); tx.moveTo(nx,4); tx.lineTo(nx,TH-4); tx.stroke();
+  tx.fillStyle="#9fe0ff"; tx.font="10px ui-sans-serif"; tx.textAlign="center";
+  tx.fillText(new Date(now).toISOString().slice(0,10), nx, TH-4);
+  tx.fillStyle="#3f4a5a"; tx.textAlign="left"; tx.font="10px ui-sans-serif";
+  tx.fillText("time scrubber — fisheye lens (drag to scrub; magnifies near the playhead)", 8, 14);
+}
+
+function pick(mx,my){
+  if(mx<0) return null; let best=null,bd=18;
+  for(const o of OBJ){ if(o.plane==="latent"&&!showLatent)continue;
+    const p=objPos(o,now); if(!p)continue;
+    const dd=Math.hypot(p.mx-mx,p.my-my); if(dd<bd){bd=dd;best=o;} }
+  return best;
+}
+function hudText(h){
+  const f=OBJ.find(o=>o.id==="fable");
+  const alive=!f.died||now<=f.died;
+  hud.innerHTML = `<b>now</b> ${new Date(now).toISOString().slice(0,10)} · `+
+    `<span class="k">log2 double-cone</span>: cosmic ${COS_MAX.toFixed(0)} bits → horizon, sub ${SUB_MAX.toFixed(0)} bits → Planck<br>`+
+    `Fable worldline: ${alive?'<b style="color:var(--cosmic)">live</b>':'<b style="color:var(--warn)">cut</b>'} `+
+    `· conf ${f.conf} · <span style="color:var(--latent)">latent</span> · ${f.corroborated?'CORROBORATED (route hardened: testimony→corroborated)':'testimony-from-above'}`;
+}
+
+// ---- interaction ----
+const mouse={x:-1,y:-1};
+c.addEventListener("mousemove",e=>{const r=c.getBoundingClientRect();mouse.x=e.clientX-r.left;mouse.y=e.clientY-r.top;
+  const h=pick(mouse.x,mouse.y);
+  if(h){tip.style.display="block";tip.style.left=(e.clientX+12)+"px";tip.style.top=(e.clientY+12)+"px";
+    tip.innerHTML=`<b>${h.n}</b><br><span style="color:var(--mut)">${h.plane}${h.kind?' · '+h.kind:''}</span>`+
+      (h.note?`<br>${h.note}`:'')+(h.law?`<br>law: ${h.law} (~${h.lawbits} bits)`:'')+
+      (h.testimony?`<br><span style="color:var(--warn)">route: testimony-from-above</span>`:'');
+  } else tip.style.display="none"; draw();});
+c.addEventListener("mouseleave",()=>{mouse.x=-1;tip.style.display="none";draw();});
+// scrubber drag
+let drag=false;
+function scrubAt(clientX){ const r=tc.getBoundingClientRect(); const fr=Math.max(0,Math.min(1,(clientX-r.left)/r.width));
+  // invert the fisheye approximately by sampling
+  let best=0,bd=2; for(let s=0;s<=1;s+=0.002){const X=fisheye(s,focusFrac,4); if(Math.abs(X-fr)<bd){bd=Math.abs(X-fr);best=s;}}
+  focusFrac=best; now=T0+best*(T1-T0); draw(); }
+tc.addEventListener("mousedown",e=>{drag=true;scrubAt(e.clientX);});
+addEventListener("mousemove",e=>{if(drag)scrubAt(e.clientX);});
+addEventListener("mouseup",()=>drag=false);
+// buttons
+play.onclick=()=>{playing=!playing;play.textContent=playing?"⏸ pause":"▶ play"; if(playing)loop();};
+cone.onclick=()=>{showCone=showCone==="BOTH"?"COSMIC":showCone==="COSMIC"?"SUB":"BOTH";cone.textContent="cone: "+showCone;draw();};
+document.getElementById("latent").onclick=function(){showLatent=!showLatent;this.textContent="latent: "+(showLatent?"ON":"OFF");draw();};
+duel.onclick=function(){showDuel=!showDuel;this.textContent="bits: "+(showDuel?"ON":"OFF");draw();};
+let lastT=0;
+function loop(t){ if(!playing)return;
+  now += (T1-T0)*0.0006; if(now>T1){now=T0;} focusFrac=(now-T0)/(T1-T0); draw(); requestAnimationFrame(loop);
+}
+resize(); draw();
+</script>

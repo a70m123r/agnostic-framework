@@ -1,0 +1,15 @@
+== P-L6 fetch stage ==
+pageview daily data available through: 2026-06-11
+-- stage 1: protection log 2026-03-01 .. 2026-05-10 (ns=0, letype=protect)
+  protlog page 1: +500 events (total 500)
+  protlog page 2: +500 events (total 1000)
+  protlog page 3: +500 events (total 1500)
+  protlog page 4: +500 events (total 2000)
+  protlog page 5: +500 events (total 2500)
+  protlog page 6: +500 events (total 3000)
+  protlog page 7: +500 events (total 3500)
+  protlog page 8: +500 events (total 4000)
+  protlog page 9: +500 events (total 4500)
+  protlog page 10: +454 events (total 4954)
+raw log events: 4954 ; protect/modify-with-edit-restriction unique titles: 3861 ; all logged titles (exclusion set): 4323
+-- stage 2: pageviews for 3861 treated candidates (threaded, cached)

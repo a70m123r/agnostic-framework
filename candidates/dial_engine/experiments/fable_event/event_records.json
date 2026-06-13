@@ -1,0 +1,282 @@
+[
+ {
+  "subject": "Claude Fable 5 and Claude Mythos 5",
+  "predicate": "disabled globally by Anthropic",
+  "value": "Both models taken offline for all customers worldwide on June 12, 2026 at approximately 5:21 PM ET",
+  "source_url": "https://www.anthropic.com/news/fable-mythos-access",
+  "retrieved_or_dated": "2026-06-12",
+  "certainty": 0.98,
+  "verification": "corroborated",
+  "route": "measured-on-plane"
+ },
+ {
+  "subject": "US Commerce Department",
+  "predicate": "issued export control directive ordering suspension of Fable 5 and Mythos 5 for foreign nationals",
+  "value": "Letter signed by Commerce Secretary Howard Lutnick to Anthropic CEO Dario Amodei; legal authority cited as 'national security authorities' and 'export control directive'; specific statute not publicly disclosed",
+  "source_url": "https://www.startuphub.ai/ai-news/technology/2026/anthropic-disables-fable-5-and-mythos-5-after-us-export-control-order",
+  "retrieved_or_dated": "2026-06-13",
+  "certainty": 0.97,
+  "verification": "corroborated",
+  "route": "measured-on-plane"
+ },
+ {
+  "subject": "US Commerce Department directive",
+  "predicate": "specific statute invoked",
+  "value": "NOT PUBLICLY DISCLOSED in any source reviewed. No EAR section, IEEPA citation, or other statutory reference has been publicly identified",
+  "source_url": "https://www.anthropic.com/news/fable-mythos-access",
+  "retrieved_or_dated": "2026-06-12",
+  "certainty": 0.85,
+  "verification": "corroborated",
+  "route": "inferred-from-below"
+ },
+ {
+  "subject": "US government stated rationale for suspension",
+  "predicate": "cited jailbreak claimed by unnamed competitor",
+  "value": "A competing company (unnamed in all sources) demonstrated a jailbreak technique involving asking the model to read a codebase and fix software flaws; administration had tried to get Anthropic to pause release before launch and was unsuccessful",
+  "source_url": "https://9to5mac.com/2026/06/12/anthropic-pulls-claude-mythos-5-and-claude-fable-5-following-us-government-directive/",
+  "retrieved_or_dated": "2026-06-12",
+  "certainty": 0.92,
+  "verification": "corroborated",
+  "route": "measured-on-plane"
+ },
+ {
+  "subject": "Identity of competing company that claimed the jailbreak",
+  "predicate": "publicly named",
+  "value": "NOT IDENTIFIED. No source reviewed names the company that demonstrated the claimed jailbreak to the US government",
+  "source_url": "https://www.anthropic.com/news/fable-mythos-access",
+  "retrieved_or_dated": "2026-06-12",
+  "certainty": 0.9,
+  "verification": "corroborated",
+  "route": "inferred-from-below"
+ },
+ {
+  "subject": "Anthropic",
+  "predicate": "disputed government rationale for suspension",
+  "value": "Called it 'a likely misunderstanding'; said jailbreak was 'narrow, non-universal'; capability already available in GPT-5.5 and other deployed models; stated: 'We disagree that the finding of a narrow potential jailbreak should be cause for recalling a commercial model deployed to hundreds of millions of people.'",
+  "source_url": "https://www.anthropic.com/news/fable-mythos-access",
+  "retrieved_or_dated": "2026-06-12",
+  "certainty": 0.98,
+  "verification": "corroborated",
+  "route": "measured-on-plane"
+ },
+ {
+  "subject": "Fable 5 / Mythos 5 suspension",
+  "predicate": "characterized as first-of-its-kind government intervention in AI deployment",
+  "value": "Multiple outlets (CNBC, NBC News, Broadband Breakfast) describe this as the first time a leading AI company has taken a publicly deployed model offline due to US federal government intervention",
+  "source_url": "https://broadbandbreakfast.com/anthropic-said-friday-it-took-its-latest-ai-models-offline-to-comply-with-export-controls/",
+  "retrieved_or_dated": "2026-06-12",
+  "certainty": 0.88,
+  "verification": "corroborated",
+  "route": "measured-on-plane"
+ },
+ {
+  "subject": "Claude Fable 5 and Mythos 5",
+  "predicate": "launch date before suspension",
+  "value": "Launched June 9, 2026 -- three days before the suspension order on June 12, 2026",
+  "source_url": "https://www.anthropic.com/news/fable-mythos-access",
+  "retrieved_or_dated": "2026-06-12",
+  "certainty": 0.97,
+  "verification": "corroborated",
+  "route": "measured-on-plane"
+ },
+ {
+  "subject": "All other Anthropic models",
+  "predicate": "affected by the June 12 suspension order",
+  "value": "Unaffected. Only Fable 5 and Mythos 5 were suspended. Anthropic stated it was 'working to restore access as soon as possible' with no specific timeline",
+  "source_url": "https://www.anthropic.com/news/fable-mythos-access",
+  "retrieved_or_dated": "2026-06-12",
+  "certainty": 0.97,
+  "verification": "corroborated",
+  "route": "measured-on-plane"
+ },
+ {
+  "subject": "Trump executive order on AI",
+  "predicate": "signed before the suspension",
+  "value": "President Trump signed EO titled 'Promoting Advanced Artificial Intelligence Innovation and Security' on approximately June 2, 2026, directing agencies to increase scrutiny of cutting-edge AI models and calling for voluntary 30-day pre-release sharing with the federal government",
+  "source_url": "https://www.mcdermottlaw.com/insights/new-executive-order-shifts-us-ai-policy-toward-national-security/",
+  "retrieved_or_dated": "2026-06-02",
+  "certainty": 0.85,
+  "verification": "single-source",
+  "route": "measured-on-plane"
+ },
+ {
+  "subject": "Claude Fable 5",
+  "predicate": "launched with covert capability-degradation policy for AI research tasks",
+  "value": "On June 9, 2026, Fable 5 launched with hidden steering vectors and prompt modification that silently downgraded responses for frontier AI research tasks (pretraining pipelines, distributed training, ML accelerator design, cybersecurity, biology, chemistry, model distillation) to a weaker model (Opus 4.8) without user notification. Disclosed only in the 319-page system card.",
+  "source_url": "https://fortune.com/2026/06/10/anthropic-accu-claude-fable-5-limits-capabilities-ai-researchers-developers/",
+  "retrieved_or_dated": "2026-06-10",
+  "certainty": 0.92,
+  "verification": "corroborated",
+  "route": "measured-on-plane"
+ },
+ {
+  "subject": "Anthropic",
+  "predicate": "reversed covert capability-degradation policy and apologized",
+  "value": "Reversed policy on June 9, 2026 (same day as launch), same day as community backlash. Statement: 'We made the wrong tradeoff, and we apologize for not getting the balance right.' Committed to making AI research restrictions visible going forward.",
+  "source_url": "https://letsdatascience.com/news/anthropic-reverses-policy-restricting-claude-researchers-84ff6214",
+  "retrieved_or_dated": "2026-06-09",
+  "certainty": 0.92,
+  "verification": "corroborated",
+  "route": "measured-on-plane"
+ },
+ {
+  "subject": "Covert capability-degradation controversy",
+  "predicate": "named researchers who publicly criticized Anthropic",
+  "value": "Nathan Lambert (AI2) called it 'appalling' and 'anti-science'; Dean Ball (Foundation for American Innovation) called it 'secret sabotage'; Jeremy Howard (Fast.AI) accused Anthropic of allowing themselves frontier AI use while sabotaging others; former Anthropic employee Behnam Neyshabur posted sarcastically about model refusing cancer and Alzheimer's research",
+  "source_url": "https://fortune.com/2026/06/10/anthropic-accu-claude-fable-5-limits-capabilities-ai-researchers-developers/",
+  "retrieved_or_dated": "2026-06-10",
+  "certainty": 0.9,
+  "verification": "corroborated",
+  "route": "measured-on-plane"
+ },
+ {
+  "subject": "Causal link between covert-sabotage controversy and government suspension",
+  "predicate": "established in sources",
+  "value": "NOT ESTABLISHED. No source reviewed draws a direct causal link between the June 9 covert-restriction controversy and the June 12 government suspension order. These are reported as two distinct events.",
+  "source_url": "https://www.anthropic.com/news/fable-mythos-access",
+  "retrieved_or_dated": "2026-06-12",
+  "certainty": 0.85,
+  "verification": "corroborated",
+  "route": "inferred-from-below"
+ },
+ {
+  "subject": "Anthropic vs. Pentagon blacklisting",
+  "predicate": "prior legal conflict before June 12 suspension",
+  "value": "In approximately February-March 2026, the Trump administration (Trump and Defense Secretary Pete Hegseth) moved to bar Anthropic's products from federal agencies after Anthropic sought guardrails on Pentagon use. Anthropic filed lawsuit March 9, 2026. Judge Rita F. Lin (N.D. Cal.) granted Anthropic a preliminary injunction in approximately March 2026, finding likely First Amendment retaliation, Fifth Amendment due process violations, and APA statutory excesses.",
+  "source_url": "https://www.cnbc.com/2026/03/26/anthropic-pentagon-dod-claude-court-ruling.html",
+  "retrieved_or_dated": "2026-03-26",
+  "certainty": 0.88,
+  "verification": "corroborated",
+  "route": "measured-on-plane"
+ },
+ {
+  "subject": "Anthropic revenue impact from Pentagon blacklisting",
+  "predicate": "estimated by Anthropic executives in court filings",
+  "value": "CFO Krishna Rao cited ~$150M+ annual recurring revenue in DoD contracts at immediate risk; $500M+ projected public sector revenue at risk; one partner switch eliminating $100M+ anticipated pipeline; financial institution negotiations worth ~$180M disrupted. Total described as 'multiple billions' in 2026 revenue reduction.",
+  "source_url": "https://finance.yahoo.com/news/anthropic-executives-pentagon-blacklisting-could-020003461.html",
+  "retrieved_or_dated": "2026-03-09",
+  "certainty": 0.72,
+  "verification": "single-source",
+  "route": "lateral-testimony"
+ },
+ {
+  "subject": "Anthropic IPO timeline",
+  "predicate": "approximate distance from IPO at time of suspension",
+  "value": "Described as 'approximately five months from an IPO' in TechCrunch analysis. This figure is analytical/reported; no confirmed IPO prospectus or official Anthropic IPO timeline was found in sources.",
+  "source_url": "https://techcrunch.com/2026/06/12/anthropics-safety-warnings-may-have-just-backfired-the-government-has-pulled-the-plug-on-its-most-powerful-ai/",
+  "retrieved_or_dated": "2026-06-12",
+  "certainty": 0.55,
+  "verification": "single-source",
+  "route": "lateral-testimony"
+ },
+ {
+  "subject": "Enterprise software stocks on Fable 5 launch day",
+  "predicate": "declined on June 9 launch news",
+  "value": "Workday -3.1%, Oracle -3.1%, Palantir -3.2% in afternoon trading on June 9, 2026, on investor fears about AI agents challenging software subscription models",
+  "source_url": "https://erp.today/anthropic-claude-fable-5-enterprise-software-stocks/",
+  "retrieved_or_dated": "2026-06-09",
+  "certainty": 0.65,
+  "verification": "single-source",
+  "route": "lateral-testimony"
+ },
+ {
+  "subject": "Simon Willison",
+  "predicate": "confirmed Fable 5 API returning 404 errors by 6:59 PM Pacific on June 12",
+  "value": "Documented via automated tests; characterized the event as 'nuts'; noted government provided only verbal evidence of a non-universal jailbreak",
+  "source_url": "https://simonwillison.net/2026/Jun/13/us-government-directive-to-suspend-access/",
+  "retrieved_or_dated": "2026-06-13",
+  "certainty": 0.82,
+  "verification": "single-source",
+  "route": "lateral-testimony"
+ },
+ {
+  "subject": "Hacker News community reaction to Fable 5 suspension",
+  "predicate": "dominant framing",
+  "value": "HN thread id 48511072 dominated by 'self-inflicted wound' framing and skepticism. Most-upvoted sentiment: Anthropic went 'overboard with omg this model is so dangerous guys!!! and then the US government going okay... well, that sounds bad, let's ban it.' Approximately 30% of sentiment focused on government overreach; DeepSeek mentioned as alternative; regulatory capture theory raised.",
+  "source_url": "https://news.ycombinator.com/item?id=48511072",
+  "retrieved_or_dated": "2026-06-13",
+  "certainty": 0.72,
+  "verification": "single-source",
+  "route": "lateral-testimony"
+ },
+ {
+  "subject": "TechCrunch framing of the Anthropic suspension",
+  "predicate": "characterized as ironic backfire of safety messaging",
+  "value": "TechCrunch argued Anthropic's years of transparent safety messaging -- positioning itself as security-conscious -- attracted the government scrutiny that disrupted its business. Quoted Sam Altman prior criticism: 'It is clearly incredible marketing to say, We have built a bomb. We were about to drop it on your head.'",
+  "source_url": "https://techcrunch.com/2026/06/12/anthropics-safety-warnings-may-have-just-backfired-the-government-has-pulled-the-plug-on-its-most-powerful-ai/",
+  "retrieved_or_dated": "2026-06-12",
+  "certainty": 0.78,
+  "verification": "single-source",
+  "route": "lateral-testimony"
+ },
+ {
+  "subject": "Anthropic EU access arrangement for Mythos",
+  "predicate": "existed before shutdown and was nullified by export controls",
+  "value": "Before the export control order, Anthropic had extended Mythos access to the EU after weeks of talks with the European Commission seeking access due to cybersecurity concerns. The export controls would have nullified this arrangement.",
+  "source_url": "https://www.cnbc.com/2026/06/01/anthropic-eu-ai-mythos-access-advanced-model.html",
+  "retrieved_or_dated": "2026-06-01",
+  "certainty": 0.68,
+  "verification": "single-source",
+  "route": "lateral-testimony"
+ },
+ {
+  "subject": "Project Glasswing participants",
+  "predicate": "lost access to Mythos cybersecurity capabilities",
+  "value": "Approximately 50 vetted organizations including Amazon, Apple, Google, Microsoft, CrowdStrike were part of Project Glasswing and lost Mythos access",
+  "source_url": "https://www.techtimes.com/articles/318315/20260612/anthropic-fable-5-shutdown-us-export-order-forces-global-customer-cutoff.htm",
+  "retrieved_or_dated": "2026-06-12",
+  "certainty": 0.7,
+  "verification": "corroborated",
+  "route": "lateral-testimony"
+ },
+ {
+  "subject": "Fable 5 pricing",
+  "predicate": "doubled at launch",
+  "value": "Anthropic doubled Fable 5 pricing to $10 per million input tokens and $50 per million output tokens",
+  "source_url": "https://cryptobriefing.com/anthropic-mythos-models-us-export-controls/",
+  "retrieved_or_dated": "2026-06-12",
+  "certainty": 0.62,
+  "verification": "single-source",
+  "route": "lateral-testimony"
+ },
+ {
+  "subject": "Formal statements from EU, UK, or Chinese governments",
+  "predicate": "issued in response to June 12 Fable 5 suspension",
+  "value": "NONE FOUND. No formal government reactions from the EU, UK, or China specifically reacting to the June 12 shutdown order were found in any source reviewed",
+  "source_url": "https://www.startuphub.ai/ai-news/technology/2026/anthropic-disables-fable-5-and-mythos-5-after-us-export-control-order",
+  "retrieved_or_dated": "2026-06-12",
+  "certainty": 0.8,
+  "verification": "unverifiable",
+  "route": "inferred-from-below"
+ },
+ {
+  "subject": "Bloomberg Law coverage",
+  "predicate": "independently corroborated core event",
+  "value": "Bloomberg Law reported under headline 'Anthropic Says US Limits Foreign Access to Fable 5, Mythos 5' -- providing independent financial/legal press corroboration",
+  "source_url": "https://news.bloomberglaw.com/ip-law/anthropic-says-us-limits-foreign-access-to-fable-5-mythos-5",
+  "retrieved_or_dated": "2026-06-13",
+  "certainty": 0.95,
+  "verification": "corroborated",
+  "route": "measured-on-plane"
+ },
+ {
+  "subject": "Fable 5 jailbreak benchmark claim",
+  "predicate": "refused 200 out of 200 ProgramBench tasks",
+  "value": "The Register reported benchmark testers found Fable 5 'refused 200 out of 200 ProgramBench tasks'; this appears distinct from the jailbreak claim used by the government",
+  "source_url": "https://www.kucoin.com/news/flash/anthropic-s-claude-fable-5-launch-sparks-developer-backlash-over-token-costs-and-data-policies",
+  "retrieved_or_dated": "2026-06-10",
+  "certainty": 0.5,
+  "verification": "single-source",
+  "route": "lateral-testimony"
+ },
+ {
+  "subject": "User (Pav)",
+  "predicate": "reported Claude Fable 5 taken down by US protective/regulatory policy circa 2026",
+  "value": "User reported this as background context for the research task; framing consistent with what sources corroborate. User's report is the initiating testimony-from-above that prompted the scout research; the core claim is now independently corroborated and does not rest on user testimony alone.",
+  "source_url": "testimony:user-pav-session-june-2026",
+  "retrieved_or_dated": "2026-06-13",
+  "certainty": 0.97,
+  "verification": "corroborated",
+  "route": "testimony-from-above"
+ }
+]

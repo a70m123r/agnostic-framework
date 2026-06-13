@@ -1,0 +1,81 @@
+{
+ "conjecture_id": "CONJ-fable-trajectory-2026-06-13",
+ "register": "speculative-forward; falsifiable-tracking; 0.99-not-Boolean; frame-relative; NOT a prediction endorsed",
+ "provenance": {
+  "originator": "Pav",
+  "seeded": "2026-06-13",
+  "seed_event": "fable_event (corroborated)",
+  "route": "conjecture-from-testimony+corroborated-event"
+ },
+ "parent_C0": "Fable/Mythos takedown = trajectory-altering precedent: frontier-AI access shifts toward state-controlled nationality-gated supply; Pav's bet = relative advantage to actors outside the US control regime + near-term squeeze.",
+ "children": [
+  {
+   "id": "K1",
+   "claim": "precedent generalizes to a 2nd US lab's deployed frontier model",
+   "observable": "federal directive restricting a deployed frontier model",
+   "horizon": "2027-06-13",
+   "state": "pending",
+   "t0": "HN supply-chain-risk theme; no 2nd case"
+  },
+  {
+   "id": "K2",
+   "claim": "nationality-supply-control normalizes as a standing mechanism",
+   "observable": "BIS/Commerce actions, EO sequels, API nationality-gating",
+   "horizon": "2027-06-13",
+   "state": "pending",
+   "t0": "2026-06-02 EO + this directive + chip export-controls"
+  },
+  {
+   "id": "K3",
+   "claim": "China relative advantage (Pav's bet; HIGH uncertainty)",
+   "observable": "RoW market-share/usage of Chinese frontier models; China policy response",
+   "horizon": "2028-06-13",
+   "state": "pending",
+   "t0": "none direct"
+  },
+  {
+   "id": "K4",
+   "claim": "short-term squeeze on US labs + foreign devs (Pav: definitely)",
+   "observable": "Anthropic revenue/usage/IPO, migration, sector stocks, restoration timeline",
+   "horizon": "2026-09-13",
+   "state": "partially-supported-at-t0",
+   "t0": "Pentagon-blacklist multi-billion hit (single-source); enterprise stocks ~-3%; IPO ~5mo out; migration sentiment"
+  },
+  {
+   "id": "K5",
+   "claim": "everything-theorist/governance discourse cites it as a turning point",
+   "observable": "discourse volume, advocacy, policy citation",
+   "horizon": "2026-12-13",
+   "state": "pending",
+   "t0": "TechCrunch ironic-backfire; HN overreach theme"
+  }
+ ],
+ "rivals": [
+  {
+   "id": "R1",
+   "claim": "one-off, reversed in weeks, no precedent"
+  },
+  {
+   "id": "R2",
+   "claim": "US handicap but RoW fragments (EU/open/multi), no clean China win"
+  },
+  {
+   "id": "R3",
+   "claim": "China doesn't net-benefit (own compute/export constraints)"
+  },
+  {
+   "id": "R4",
+   "claim": "decentralization/open-weight wins, not a state"
+  }
+ ],
+ "dead_children_tally": 0,
+ "tracking": {
+  "rescan_horizons": [
+   "2026-09-13",
+   "2026-12-13",
+   "2027-06-13",
+   "2028-06-13"
+  ],
+  "method": "fresh-lit scout; update states; tally dead children"
+ }
+}

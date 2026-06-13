@@ -1,0 +1,48 @@
+{
+ "skeptic": "opus",
+ "probe_execution_state": {
+  "P-L4": "RAN; committed in latent_ponds_results.json; reproduced to 3 decimals by skeptic_pl4_canon.py",
+  "P-L5": "NOT RUN (manifest missing, results/ empty). Fetch interrupted: 23 en series of 240+120 design. Skeptic ran census on the 23 -> 194 avalanches.",
+  "P-L6": "NOT RUN (pl6_dataset.json never built). Fetch interrupted: 22/3861 treated pv cached, 0 control screens. Skeptic probed design on 4 qualifying cached storms.",
+  "anchor_thesis_canon": "matrix RAN inside P-L4; global_events=[] (ZERO); only matrix correlations exist as evidence."
+ },
+ "P-L4_circadian": {
+  "verdict": "survives_as_trivial+one_nontrivial",
+  "trivial": "circadian phase + timezone ordering exactly as pre-registered (ja 8.4h, en 18.9h UTC etc) -- expected, low info",
+  "nontrivial_surviving": "P3 line-spectrum: en-pond rung rho NON-MONOTONE, recovers at 24h(0.94)/168h(0.95) lags -- genuine line spectrum, qualitatively unlike flare monotone collapse. This is a real dial-behavior contrast, not demographics."
+ },
+ "P-L4_canon_radius": {
+  "verdict": "PARTIAL_REVERSAL",
+  "raw_en_es": 0.685,
+  "resid_detrend_deweek_en_es": 0.189,
+  "ar1_whitened_en_es": 0.169,
+  "fraction_shared_lowfreq": "~70-75% of cross-pond corr is shared weekly cycle + monthly trend (the shared-wires/demographics critique)",
+  "residual_survives_phase_null": "YES: meanabs offdiag resid 0.224 vs null 0.107, z=4.67, p<0.0005 -- a real shared day-level component remains",
+  "but_pattern_wrong": "strongest residual pair is de-es 0.457; en-es only 0.189, en-ar 0.293 -- does NOT match the pre-registered Western-canon (en-de-es strong, ja/ar weak) story",
+  "global_events_count": 0,
+  "killer": "global_events=[] -> the headline canon-radius claim (global events correlate, local dont) has ZERO positive instances; untestable as run; effective n~50-80 days, corr SE~0.145 so resid matrix entries are method-fragile and noisy"
+ },
+ "P-L5_powerlaw": {
+  "verdict": "REVERSES_the_criticality_reading",
+  "on_real_23_articles": "194 avalanches; Clauset alpha~1.64 stable across 18/18 sensitivity cells (1.61-1.70)",
+  "vuong": "z=-0.34 p=0.73 -> INDISTINGUISHABLE from lognormal (lognormal marginally better ll)",
+  "alpha_lt_2": "alpha<2 everywhere = infinite-mean regime if literal power law, implausible for bounded peak/baseline ratio",
+  "burstiness": "BP=-0.108 NEGATIVE (more regular than Poisson); q90/q50=2.78<exp-null 3.32 -- OPPOSITE of SOC bursty signature",
+  "sampling_bias": "top-K union selection truncates the small end (disclosed by experimenter); tail-only fit over <2 decades",
+  "criticality_tuned": "NOT supported -- a heavy tail that fails the power-law-vs-lognormal test cannot carry SOC-as-control-target"
+ },
+ "P-L6_damping": {
+  "verdict": "REVERSES_as_operationalized",
+  "selection": "protection triggers: arbitration 906, vandal 797, disrupt 739, sock 390, edit-war only 109, traffic-surge 0 -- protection is for EDITOR conduct, not reader tsunamis",
+  "mechanism_mismatch": "edit-protection blocks EDITORS not READERS; pageview decay is news-cycle death, orthogonal to why article was locked",
+  "lag": "median peak->protection lag = 0d; 50% land at/after peak; one qualifying storm protected +10d after peak (already decaying)",
+  "treated_decay": "4 cached qualifying storms decay lambda~0.17-0.20/d (t_half 3.4-4.1d) = textbook news half-life",
+  "control_feasibility": "matched controls ARE available (median 714 same-magnitude unprotected tops/day) -- magnitude-match critique FAILS, but matching ignores topic-class & news-half-life where the confound lives",
+  "no_control_arm_in_cache": "0 control series fetched -> no damping coefficient computable; the news-cycle decay cannot be subtracted"
+ },
+ "anchor_thesis_operationalization": {
+  "verdict": "relabeled_correlations_not_coupling_coefficients",
+  "finding": "wrapper coupling coefficients are NOT measured; the only quantity is cross-pond Pearson r on daily series, ~70% of which is shared weekly/trend spectrum",
+  "falsifiability_fix": "a falsifiable version needs (a) a registered roster of GLOBAL-canon events (none were found), (b) event-time cross-pond response amplitude per wrapper layer with a pre-set null, (c) language-pair coupling predicted from a wrapper-distance metric and tested out-of-sample -- none done"
+ }
+}

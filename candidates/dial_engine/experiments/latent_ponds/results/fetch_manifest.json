@@ -1,0 +1,2207 @@
+{
+ "fetched_at_utc": "2026-06-13T02:35:59.255788+00:00",
+ "ua": "agnostic-framework-research/0.1 (research instrument)",
+ "top_days": [
+  "2026-03-01",
+  "2026-03-10",
+  "2026-03-19",
+  "2026-03-28",
+  "2026-04-06",
+  "2026-04-15",
+  "2026-04-24",
+  "2026-05-03",
+  "2026-05-12",
+  "2026-05-21",
+  "2026-05-30"
+ ],
+ "series_window": [
+  "20250601",
+  "20260610"
+ ],
+ "endpoints": {
+  "top": "https://wikimedia.org/api/rest_v1/metrics/pageviews/top/{project}/all-access/{y}/{m}/{d}",
+  "per_article": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/{project}/all-access/user/{article}/daily/{s}/{e}"
+ },
+ "projects": {
+  "en.wikipedia": {
+   "union_size_after_filter": 312,
+   "chosen": [
+    "Ali_Khamenei",
+    "Nahui_Ollin",
+    ".xxx",
+    "Dhurandhar:_The_Revenge",
+    "2026_Iran_war",
+    "Kyle_Busch",
+    "Brandon_Clarke",
+    "Backrooms_(film)",
+    "Michael_Jackson",
+    "2026_Israeli–United_States_strikes_on_Iran",
+    "Cockroach_Janta_Party",
+    "Cesar_Chavez",
+    "2026_NFL_draft",
+    "Artemis_II",
+    "Eric_Swalwell",
+    "List_of_highest-grossing_Indian_films",
+    "Obsession_(2025_film)",
+    "The_Devil_Wears_Prada_2",
+    "Eurovision_Song_Contest_2026",
+    "Michael_(2026_film)",
+    "Mojtaba_Khamenei",
+    "Ruhollah_Khomeini",
+    "Andoni_Iraola",
+    "Tiger_Woods",
+    "Dota:_Dragon's_Blood",
+    "Project_Hail_Mary_(film)",
+    "Iran",
+    "List_of_European_Cup_and_UEFA_Champions_League_finals",
+    "Orthohantavirus",
+    "Enhypen",
+    "Deaths_in_2026",
+    "Murder_of_Dominic_Russo_and_Davion_Flanagan",
+    "Assassination_of_Ali_Khamenei",
+    "Spirit_Airlines",
+    "Michael_Malone",
+    "Fernando_Mendoza",
+    "Joe_Kent",
+    "Samrat_Choudhary",
+    "Sheryl_Underwood",
+    ".xyz",
+    "2026_West_Bengal_Legislative_Assembly_election",
+    "Dhurandhar",
+    "The_Drama_(film)",
+    "Survivor_50:_In_the_Hands_of_the_Fans",
+    "James_Tolkan",
+    "The_Boys_season_5",
+    "2026_Tamil_Nadu_Legislative_Assembly_election",
+    "UEFA_Champions_League",
+    "Supreme_Leader_of_Iran",
+    "Shipping_ethics_controversy_in_fanfiction",
+    "Spider-Man:_Brand_New_Day",
+    "Tony_Hinchcliffe",
+    "Alang,_Iran",
+    "War_Machine_(2026_film)",
+    "Jaafar_Jackson",
+    "Vanessa_Trump",
+    "Pete_Hegseth",
+    "Masoud_Pezeshkian",
+    "Luis_Enrique",
+    "Reid_Wiseman",
+    "Afroman",
+    "Hayden_Panettiere",
+    "Dawood_Ibrahim",
+    "Elimination_Chamber_(2026)",
+    "Paris_Saint-Germain_FC",
+    "Raghav_Chadha",
+    "Olivia_Rodrigo",
+    "Vijay_(actor)",
+    "Turing_test",
+    "Jennifer_Runyon",
+    "Neatsville,_Kentucky",
+    "Benjamin_Netanyahu",
+    "The_Boys_(TV_series)",
+    "Something_Very_Bad_Is_Going_to_Happen",
+    "Mohammad_Reza_Pahlavi",
+    "Spider-Noir",
+    "Eileen_Wang",
+    "Jim_Ward_(body_piercer)",
+    "Mahmoud_Ahmadinejad",
+    "Arsenal_F.C.",
+    "Dolores_Huerta",
+    "Alex_Zanardi",
+    "Mary_Ajami",
+    "The_Super_Mario_Galaxy_Movie",
+    "Rick_Pitino",
+    "Ruby_Rose",
+    "2026_World_Baseball_Classic",
+    "Dianna_Russini",
+    "Claude_Lemieux",
+    "The_Devil_Wears_Prada_(film)",
+    "Giorgia_Meloni",
+    "Wade_Wilson_(criminal)",
+    "Johnny_Somali",
+    "Noelia_Castillo_euthanasia_case",
+    "Christina_Koch",
+    "ChatGPT",
+    "2026_FIFA_World_Cup",
+    "Mansoureh_Khojasteh_Bagherzadeh",
+    "RC_Celta_de_Vigo",
+    "Tulsi_Gabbard",
+    "John_Worboys",
+    "Avatar:_Aang,_The_Last_Airbender",
+    "Pilt_Carin_Ersdotter",
+    "Dōtaku",
+    "World_Baseball_Classic",
+    "Donald_Trump",
+    "Project_Hail_Mary",
+    "Alireza_Arafi",
+    "Drishyam_3",
+    "Alexx_Ekubo",
+    "Clavicular_(influencer)",
+    "Antonín_Kinský_(footballer,_born_2003)",
+    "John_F._Kennedy_Jr.",
+    "Euphoria_(American_TV_series)",
+    "Apex_(2026_film)",
+    "Carolyn_Bessette_Kennedy",
+    "One_Battle_After_Another",
+    "Blast_(2026_film)",
+    "Unai_Emery",
+    "Survival_of_the_Sickest_(song)",
+    "Scosthrop",
+    "Strait_of_Hormuz",
+    "Connor_Storrie",
+    "The_Backrooms",
+    "KFIM-LP",
+    "Windsor_Lancers_men's_ice_hockey",
+    "Clavicular_(person)",
+    "Lamar_Odom",
+    "Limonene",
+    "President_of_Iran",
+    "Anthony_Gordon_(footballer)",
+    "D4vd",
+    "Send_Help",
+    "Sinners_(2025_film)",
+    "Michael_Olise",
+    "LARP6",
+    "Itamar_Ben-Gvir",
+    "Off_Campus",
+    "Mostafa_Khamenei",
+    "Kelly_Curtis",
+    "Makai_Lemon",
+    "Raja_Shivaji_(film)",
+    "J._C._D._Prabhakar",
+    "Apollo_13",
+    "Deni_Avdija",
+    "Soham_murders",
+    "Jermaine_Jackson",
+    "The_Mandalorian_and_Grogu",
+    "Reza_Pahlavi",
+    "Puskás_Aréna",
+    "Carlos_Boozer",
+    "Mortal_Kombat_II_(film)",
+    "Asha_Bhosle",
+    "Murder_of_Moriah_Wilson",
+    "South_Pars/North_Dome_Gas-Condensate_field",
+    "Iran–Israel_war",
+    "Matvey_Safonov",
+    "Mike_Vrabel",
+    "Karuppu_(film)",
+    "Chelsea_Handler",
+    "One_Piece_(2023_TV_series)",
+    "Eid_al-Fitr",
+    "Lauren_Betts",
+    "Danhausen_(wrestler)",
+    "Cherie_DeVaux",
+    "MGI_All_Stars_1st_Edition",
+    "MV_Hondius_hantavirus_outbreak",
+    "Bully_(album)",
+    "Stockbridge_Town_Hall,_Hampshire",
+    "Jim_Carrey",
+    "Richard_H._Simpson",
+    "Mikel_Arteta",
+    "Caleb_Downs",
+    "Black_Rose_(Tyrese_album)",
+    "Jason_Collins",
+    "Houthis",
+    "Tommy_DeCarlo",
+    "Port_of_Liverpool",
+    "Victor_Glover",
+    "Sanju_Samson",
+    "WrestleMania_42",
+    "Swakoppoort_Dam",
+    "Zoë_Kravitz",
+    "David_Attenborough",
+    "Victor_Wembanyama",
+    "Legends_(2026_TV_series)",
+    "Markwayne_Mullin",
+    "The_Pitt",
+    "Aditya_Dhar",
+    "2026_UEFA_Champions_League_final",
+    "David_Benavidez",
+    "Péter_Magyar",
+    "Jeremy_Hansen",
+    "Anna's_Archive",
+    "2026_Iranian_Supreme_Leader_election",
+    "Ousmane_Dembélé",
+    "Katherine_Jackson",
+    "Wes_Streeting",
+    "Ty_Simpson",
+    "2026_Hungarian_parliamentary_election",
+    "Caroline_Kennedy",
+    "Atiq_Ahmed",
+    "Masoud_Khamenei",
+    "Joel_Embiid",
+    "Bhooth_Bangla",
+    "The_Odyssey_(2026_film)",
+    "Robert_Harward",
+    "Tal_and_Oren_Alexander",
+    "Lena_Dunham",
+    "Michael_B._Jordan",
+    "Cori_Close",
+    "List_of_The_Boys_episodes",
+    "Neil_Sedaka",
+    "Marcia_Lucas",
+    "Anne_Hathaway",
+    "Clay_Aiken",
+    "Moya_Brennan",
+    "Crimson_Desert",
+    "Ali_Larijani",
+    "Golden_Tempo",
+    "C._Joseph_Vijay",
+    "Charlize_Theron",
+    "N._Marie_Wilson",
+    "Scream_7",
+    "Kai_Havertz",
+    "Debbie_Rowe",
+    "Brad_Delp",
+    "Dillon_Thieneman",
+    "Remarkably_Bright_Creatures_(film)",
+    "Kylie_Minogue",
+    "Zendaya",
+    "2025–26_UEFA_Champions_League",
+    "Iranian_Revolution",
+    "Kimi_Antonelli",
+    "Jeffrey_Epstein",
+    "Keir_Starmer",
+    "David_Wilcock",
+    "Aston_Villa_F.C.",
+    "Wellington_R._Burt",
+    "Brenda_Swinbank"
+   ],
+   "chosen_n": 240,
+   "series_ok": 240,
+   "series_404": 0,
+   "agg_meta": {
+    "Ali_Khamenei": {
+     "days": 2,
+     "best_rank": 2,
+     "views": 4579801
+    },
+    "Nahui_Ollin": {
+     "days": 1,
+     "best_rank": 2,
+     "views": 1123937
+    },
+    ".xxx": {
+     "days": 11,
+     "best_rank": 3,
+     "views": 3241027
+    },
+    "Dhurandhar:_The_Revenge": {
+     "days": 6,
+     "best_rank": 3,
+     "views": 1833631
+    },
+    "2026_Iran_war": {
+     "days": 5,
+     "best_rank": 3,
+     "views": 979684
+    },
+    "Kyle_Busch": {
+     "days": 1,
+     "best_rank": 3,
+     "views": 772735
+    },
+    "Brandon_Clarke": {
+     "days": 1,
+     "best_rank": 3,
+     "views": 582581
+    },
+    "Backrooms_(film)": {
+     "days": 1,
+     "best_rank": 3,
+     "views": 460234
+    },
+    "Michael_Jackson": {
+     "days": 5,
+     "best_rank": 4,
+     "views": 807141
+    },
+    "2026_Israeli–United_States_strikes_on_Iran": {
+     "days": 1,
+     "best_rank": 4,
+     "views": 1056616
+    },
+    "Cockroach_Janta_Party": {
+     "days": 1,
+     "best_rank": 4,
+     "views": 502400
+    },
+    "Cesar_Chavez": {
+     "days": 1,
+     "best_rank": 4,
+     "views": 378399
+    },
+    "2026_NFL_draft": {
+     "days": 1,
+     "best_rank": 4,
+     "views": 366855
+    },
+    "Artemis_II": {
+     "days": 1,
+     "best_rank": 4,
+     "views": 290079
+    },
+    "Eric_Swalwell": {
+     "days": 1,
+     "best_rank": 4,
+     "views": 214002
+    },
+    "List_of_highest-grossing_Indian_films": {
+     "days": 5,
+     "best_rank": 5,
+     "views": 810233
+    },
+    "Obsession_(2025_film)": {
+     "days": 2,
+     "best_rank": 5,
+     "views": 427645
+    },
+    "The_Devil_Wears_Prada_2": {
+     "days": 2,
+     "best_rank": 5,
+     "views": 293464
+    },
+    "Eurovision_Song_Contest_2026": {
+     "days": 1,
+     "best_rank": 5,
+     "views": 195847
+    },
+    "Michael_(2026_film)": {
+     "days": 4,
+     "best_rank": 6,
+     "views": 635444
+    },
+    "Mojtaba_Khamenei": {
+     "days": 2,
+     "best_rank": 6,
+     "views": 555058
+    },
+    "Ruhollah_Khomeini": {
+     "days": 1,
+     "best_rank": 6,
+     "views": 824242
+    },
+    "Andoni_Iraola": {
+     "days": 1,
+     "best_rank": 6,
+     "views": 255170
+    },
+    "Tiger_Woods": {
+     "days": 1,
+     "best_rank": 6,
+     "views": 216971
+    },
+    "Dota:_Dragon's_Blood": {
+     "days": 1,
+     "best_rank": 6,
+     "views": 177104
+    },
+    "Project_Hail_Mary_(film)": {
+     "days": 7,
+     "best_rank": 7,
+     "views": 725209
+    },
+    "Iran": {
+     "days": 2,
+     "best_rank": 7,
+     "views": 865354
+    },
+    "List_of_European_Cup_and_UEFA_Champions_League_finals": {
+     "days": 1,
+     "best_rank": 7,
+     "views": 218735
+    },
+    "Orthohantavirus": {
+     "days": 1,
+     "best_rank": 7,
+     "views": 138880
+    },
+    "Enhypen": {
+     "days": 1,
+     "best_rank": 7,
+     "views": 135437
+    },
+    "Deaths_in_2026": {
+     "days": 11,
+     "best_rank": 8,
+     "views": 1461948
+    },
+    "Murder_of_Dominic_Russo_and_Davion_Flanagan": {
+     "days": 2,
+     "best_rank": 8,
+     "views": 255157
+    },
+    "Assassination_of_Ali_Khamenei": {
+     "days": 1,
+     "best_rank": 8,
+     "views": 655622
+    },
+    "Spirit_Airlines": {
+     "days": 1,
+     "best_rank": 8,
+     "views": 200144
+    },
+    "Michael_Malone": {
+     "days": 1,
+     "best_rank": 8,
+     "views": 198977
+    },
+    "Fernando_Mendoza": {
+     "days": 1,
+     "best_rank": 8,
+     "views": 184559
+    },
+    "Joe_Kent": {
+     "days": 1,
+     "best_rank": 8,
+     "views": 174469
+    },
+    "Samrat_Choudhary": {
+     "days": 1,
+     "best_rank": 8,
+     "views": 146967
+    },
+    "Sheryl_Underwood": {
+     "days": 1,
+     "best_rank": 8,
+     "views": 137434
+    },
+    ".xyz": {
+     "days": 4,
+     "best_rank": 9,
+     "views": 510704
+    },
+    "2026_West_Bengal_Legislative_Assembly_election": {
+     "days": 3,
+     "best_rank": 9,
+     "views": 414894
+    },
+    "Dhurandhar": {
+     "days": 3,
+     "best_rank": 9,
+     "views": 309547
+    },
+    "The_Drama_(film)": {
+     "days": 2,
+     "best_rank": 9,
+     "views": 230140
+    },
+    "Survivor_50:_In_the_Hands_of_the_Fans": {
+     "days": 2,
+     "best_rank": 9,
+     "views": 221968
+    },
+    "James_Tolkan": {
+     "days": 1,
+     "best_rank": 9,
+     "views": 181578
+    },
+    "The_Boys_season_5": {
+     "days": 3,
+     "best_rank": 10,
+     "views": 339769
+    },
+    "2026_Tamil_Nadu_Legislative_Assembly_election": {
+     "days": 2,
+     "best_rank": 10,
+     "views": 272774
+    },
+    "UEFA_Champions_League": {
+     "days": 2,
+     "best_rank": 10,
+     "views": 226092
+    },
+    "Supreme_Leader_of_Iran": {
+     "days": 1,
+     "best_rank": 10,
+     "views": 476731
+    },
+    "Shipping_ethics_controversy_in_fanfiction": {
+     "days": 1,
+     "best_rank": 10,
+     "views": 174791
+    },
+    "Spider-Man:_Brand_New_Day": {
+     "days": 1,
+     "best_rank": 10,
+     "views": 154062
+    },
+    "Tony_Hinchcliffe": {
+     "days": 1,
+     "best_rank": 10,
+     "views": 126526
+    },
+    "Alang,_Iran": {
+     "days": 1,
+     "best_rank": 10,
+     "views": 124874
+    },
+    "War_Machine_(2026_film)": {
+     "days": 1,
+     "best_rank": 10,
+     "views": 117344
+    },
+    "Jaafar_Jackson": {
+     "days": 2,
+     "best_rank": 11,
+     "views": 313813
+    },
+    "Vanessa_Trump": {
+     "days": 2,
+     "best_rank": 11,
+     "views": 236594
+    },
+    "Pete_Hegseth": {
+     "days": 2,
+     "best_rank": 11,
+     "views": 170388
+    },
+    "Masoud_Pezeshkian": {
+     "days": 1,
+     "best_rank": 11,
+     "views": 421324
+    },
+    "Luis_Enrique": {
+     "days": 1,
+     "best_rank": 11,
+     "views": 171390
+    },
+    "Reid_Wiseman": {
+     "days": 1,
+     "best_rank": 11,
+     "views": 160755
+    },
+    "Afroman": {
+     "days": 1,
+     "best_rank": 11,
+     "views": 146558
+    },
+    "Hayden_Panettiere": {
+     "days": 1,
+     "best_rank": 11,
+     "views": 118435
+    },
+    "Dawood_Ibrahim": {
+     "days": 2,
+     "best_rank": 12,
+     "views": 216091
+    },
+    "Elimination_Chamber_(2026)": {
+     "days": 1,
+     "best_rank": 12,
+     "views": 420368
+    },
+    "Paris_Saint-Germain_FC": {
+     "days": 1,
+     "best_rank": 12,
+     "views": 165205
+    },
+    "Raghav_Chadha": {
+     "days": 1,
+     "best_rank": 12,
+     "views": 146735
+    },
+    "Olivia_Rodrigo": {
+     "days": 1,
+     "best_rank": 12,
+     "views": 146565
+    },
+    "Vijay_(actor)": {
+     "days": 1,
+     "best_rank": 12,
+     "views": 117175
+    },
+    "Turing_test": {
+     "days": 1,
+     "best_rank": 12,
+     "views": 112429
+    },
+    "Jennifer_Runyon": {
+     "days": 1,
+     "best_rank": 12,
+     "views": 110098
+    },
+    "Neatsville,_Kentucky": {
+     "days": 10,
+     "best_rank": 13,
+     "views": 943462
+    },
+    "Benjamin_Netanyahu": {
+     "days": 3,
+     "best_rank": 13,
+     "views": 359640
+    },
+    "The_Boys_(TV_series)": {
+     "days": 2,
+     "best_rank": 13,
+     "views": 223908
+    },
+    "Something_Very_Bad_Is_Going_to_Happen": {
+     "days": 2,
+     "best_rank": 13,
+     "views": 186232
+    },
+    "Mohammad_Reza_Pahlavi": {
+     "days": 1,
+     "best_rank": 13,
+     "views": 412515
+    },
+    "Spider-Noir": {
+     "days": 1,
+     "best_rank": 13,
+     "views": 152918
+    },
+    "Eileen_Wang": {
+     "days": 1,
+     "best_rank": 13,
+     "views": 115307
+    },
+    "Jim_Ward_(body_piercer)": {
+     "days": 1,
+     "best_rank": 13,
+     "views": 112279
+    },
+    "Mahmoud_Ahmadinejad": {
+     "days": 1,
+     "best_rank": 14,
+     "views": 370169
+    },
+    "Arsenal_F.C.": {
+     "days": 1,
+     "best_rank": 14,
+     "views": 140470
+    },
+    "Dolores_Huerta": {
+     "days": 1,
+     "best_rank": 14,
+     "views": 135455
+    },
+    "Alex_Zanardi": {
+     "days": 1,
+     "best_rank": 14,
+     "views": 131458
+    },
+    "Mary_Ajami": {
+     "days": 1,
+     "best_rank": 14,
+     "views": 130642
+    },
+    "The_Super_Mario_Galaxy_Movie": {
+     "days": 1,
+     "best_rank": 14,
+     "views": 122082
+    },
+    "Rick_Pitino": {
+     "days": 1,
+     "best_rank": 14,
+     "views": 114530
+    },
+    "Ruby_Rose": {
+     "days": 1,
+     "best_rank": 14,
+     "views": 110922
+    },
+    "2026_World_Baseball_Classic": {
+     "days": 1,
+     "best_rank": 14,
+     "views": 96147
+    },
+    "Dianna_Russini": {
+     "days": 2,
+     "best_rank": 15,
+     "views": 195487
+    },
+    "Claude_Lemieux": {
+     "days": 1,
+     "best_rank": 15,
+     "views": 138700
+    },
+    "The_Devil_Wears_Prada_(film)": {
+     "days": 1,
+     "best_rank": 15,
+     "views": 126954
+    },
+    "Giorgia_Meloni": {
+     "days": 1,
+     "best_rank": 15,
+     "views": 125730
+    },
+    "Wade_Wilson_(criminal)": {
+     "days": 1,
+     "best_rank": 15,
+     "views": 112738
+    },
+    "Johnny_Somali": {
+     "days": 1,
+     "best_rank": 15,
+     "views": 108010
+    },
+    "Noelia_Castillo_euthanasia_case": {
+     "days": 1,
+     "best_rank": 15,
+     "views": 107365
+    },
+    "Christina_Koch": {
+     "days": 1,
+     "best_rank": 15,
+     "views": 102451
+    },
+    "ChatGPT": {
+     "days": 7,
+     "best_rank": 16,
+     "views": 583694
+    },
+    "2026_FIFA_World_Cup": {
+     "days": 5,
+     "best_rank": 16,
+     "views": 411381
+    },
+    "Mansoureh_Khojasteh_Bagherzadeh": {
+     "days": 1,
+     "best_rank": 16,
+     "views": 283351
+    },
+    "RC_Celta_de_Vigo": {
+     "days": 1,
+     "best_rank": 16,
+     "views": 126527
+    },
+    "Tulsi_Gabbard": {
+     "days": 1,
+     "best_rank": 16,
+     "views": 115646
+    },
+    "John_Worboys": {
+     "days": 1,
+     "best_rank": 16,
+     "views": 111619
+    },
+    "Avatar:_Aang,_The_Last_Airbender": {
+     "days": 1,
+     "best_rank": 16,
+     "views": 107508
+    },
+    "Pilt_Carin_Ersdotter": {
+     "days": 1,
+     "best_rank": 16,
+     "views": 103297
+    },
+    "Dōtaku": {
+     "days": 1,
+     "best_rank": 16,
+     "views": 100380
+    },
+    "World_Baseball_Classic": {
+     "days": 1,
+     "best_rank": 16,
+     "views": 88939
+    },
+    "Donald_Trump": {
+     "days": 5,
+     "best_rank": 17,
+     "views": 340808
+    },
+    "Project_Hail_Mary": {
+     "days": 2,
+     "best_rank": 17,
+     "views": 174614
+    },
+    "Alireza_Arafi": {
+     "days": 1,
+     "best_rank": 17,
+     "views": 279309
+    },
+    "Drishyam_3": {
+     "days": 1,
+     "best_rank": 17,
+     "views": 108639
+    },
+    "Alexx_Ekubo": {
+     "days": 1,
+     "best_rank": 17,
+     "views": 105803
+    },
+    "Clavicular_(influencer)": {
+     "days": 1,
+     "best_rank": 17,
+     "views": 105587
+    },
+    "Antonín_Kinský_(footballer,_born_2003)": {
+     "days": 1,
+     "best_rank": 17,
+     "views": 88251
+    },
+    "John_F._Kennedy_Jr.": {
+     "days": 3,
+     "best_rank": 18,
+     "views": 304532
+    },
+    "Euphoria_(American_TV_series)": {
+     "days": 3,
+     "best_rank": 18,
+     "views": 248362
+    },
+    "Apex_(2026_film)": {
+     "days": 2,
+     "best_rank": 18,
+     "views": 240346
+    },
+    "Carolyn_Bessette_Kennedy": {
+     "days": 2,
+     "best_rank": 18,
+     "views": 174148
+    },
+    "One_Battle_After_Another": {
+     "days": 2,
+     "best_rank": 18,
+     "views": 155867
+    },
+    "Blast_(2026_film)": {
+     "days": 1,
+     "best_rank": 18,
+     "views": 125531
+    },
+    "Unai_Emery": {
+     "days": 1,
+     "best_rank": 18,
+     "views": 106424
+    },
+    "Survival_of_the_Sickest_(song)": {
+     "days": 1,
+     "best_rank": 18,
+     "views": 103106
+    },
+    "Scosthrop": {
+     "days": 1,
+     "best_rank": 18,
+     "views": 98942
+    },
+    "Strait_of_Hormuz": {
+     "days": 2,
+     "best_rank": 19,
+     "views": 210286
+    },
+    "Connor_Storrie": {
+     "days": 1,
+     "best_rank": 19,
+     "views": 258578
+    },
+    "The_Backrooms": {
+     "days": 1,
+     "best_rank": 19,
+     "views": 110556
+    },
+    "KFIM-LP": {
+     "days": 1,
+     "best_rank": 19,
+     "views": 108553
+    },
+    "Windsor_Lancers_men's_ice_hockey": {
+     "days": 1,
+     "best_rank": 19,
+     "views": 100809
+    },
+    "Clavicular_(person)": {
+     "days": 1,
+     "best_rank": 19,
+     "views": 99226
+    },
+    "Lamar_Odom": {
+     "days": 1,
+     "best_rank": 19,
+     "views": 94543
+    },
+    "Limonene": {
+     "days": 5,
+     "best_rank": 20,
+     "views": 353332
+    },
+    "President_of_Iran": {
+     "days": 1,
+     "best_rank": 20,
+     "views": 236562
+    },
+    "Anthony_Gordon_(footballer)": {
+     "days": 1,
+     "best_rank": 20,
+     "views": 110404
+    },
+    "D4vd": {
+     "days": 1,
+     "best_rank": 20,
+     "views": 110288
+    },
+    "Send_Help": {
+     "days": 1,
+     "best_rank": 20,
+     "views": 97541
+    },
+    "Sinners_(2025_film)": {
+     "days": 1,
+     "best_rank": 20,
+     "views": 95944
+    },
+    "Michael_Olise": {
+     "days": 1,
+     "best_rank": 20,
+     "views": 91961
+    },
+    "LARP6": {
+     "days": 1,
+     "best_rank": 20,
+     "views": 91395
+    },
+    "Itamar_Ben-Gvir": {
+     "days": 1,
+     "best_rank": 20,
+     "views": 84538
+    },
+    "Off_Campus": {
+     "days": 2,
+     "best_rank": 21,
+     "views": 168384
+    },
+    "Mostafa_Khamenei": {
+     "days": 1,
+     "best_rank": 21,
+     "views": 223343
+    },
+    "Kelly_Curtis": {
+     "days": 1,
+     "best_rank": 21,
+     "views": 109019
+    },
+    "Makai_Lemon": {
+     "days": 1,
+     "best_rank": 21,
+     "views": 108821
+    },
+    "Raja_Shivaji_(film)": {
+     "days": 1,
+     "best_rank": 21,
+     "views": 101102
+    },
+    "J._C._D._Prabhakar": {
+     "days": 1,
+     "best_rank": 21,
+     "views": 95979
+    },
+    "Apollo_13": {
+     "days": 1,
+     "best_rank": 21,
+     "views": 88288
+    },
+    "Deni_Avdija": {
+     "days": 1,
+     "best_rank": 21,
+     "views": 85871
+    },
+    "Soham_murders": {
+     "days": 1,
+     "best_rank": 21,
+     "views": 83896
+    },
+    "Jermaine_Jackson": {
+     "days": 2,
+     "best_rank": 22,
+     "views": 176629
+    },
+    "The_Mandalorian_and_Grogu": {
+     "days": 2,
+     "best_rank": 22,
+     "views": 172112
+    },
+    "Reza_Pahlavi": {
+     "days": 1,
+     "best_rank": 22,
+     "views": 222424
+    },
+    "Puskás_Aréna": {
+     "days": 1,
+     "best_rank": 22,
+     "views": 101825
+    },
+    "Carlos_Boozer": {
+     "days": 1,
+     "best_rank": 22,
+     "views": 92751
+    },
+    "Mortal_Kombat_II_(film)": {
+     "days": 1,
+     "best_rank": 22,
+     "views": 91437
+    },
+    "Asha_Bhosle": {
+     "days": 1,
+     "best_rank": 22,
+     "views": 85027
+    },
+    "Murder_of_Moriah_Wilson": {
+     "days": 1,
+     "best_rank": 22,
+     "views": 84738
+    },
+    "South_Pars/North_Dome_Gas-Condensate_field": {
+     "days": 1,
+     "best_rank": 22,
+     "views": 81864
+    },
+    "Iran–Israel_war": {
+     "days": 1,
+     "best_rank": 23,
+     "views": 209007
+    },
+    "Matvey_Safonov": {
+     "days": 1,
+     "best_rank": 23,
+     "views": 101674
+    },
+    "Mike_Vrabel": {
+     "days": 1,
+     "best_rank": 23,
+     "views": 99040
+    },
+    "Karuppu_(film)": {
+     "days": 1,
+     "best_rank": 23,
+     "views": 93416
+    },
+    "Chelsea_Handler": {
+     "days": 1,
+     "best_rank": 23,
+     "views": 91128
+    },
+    "One_Piece_(2023_TV_series)": {
+     "days": 1,
+     "best_rank": 23,
+     "views": 83430
+    },
+    "Eid_al-Fitr": {
+     "days": 1,
+     "best_rank": 23,
+     "views": 81209
+    },
+    "Lauren_Betts": {
+     "days": 1,
+     "best_rank": 23,
+     "views": 73047
+    },
+    "Danhausen_(wrestler)": {
+     "days": 1,
+     "best_rank": 24,
+     "views": 190289
+    },
+    "Cherie_DeVaux": {
+     "days": 1,
+     "best_rank": 24,
+     "views": 95716
+    },
+    "MGI_All_Stars_1st_Edition": {
+     "days": 1,
+     "best_rank": 24,
+     "views": 95105
+    },
+    "MV_Hondius_hantavirus_outbreak": {
+     "days": 1,
+     "best_rank": 24,
+     "views": 89669
+    },
+    "Bully_(album)": {
+     "days": 1,
+     "best_rank": 24,
+     "views": 85417
+    },
+    "Stockbridge_Town_Hall,_Hampshire": {
+     "days": 1,
+     "best_rank": 24,
+     "views": 76886
+    },
+    "Jim_Carrey": {
+     "days": 1,
+     "best_rank": 25,
+     "views": 178947
+    },
+    "Richard_H._Simpson": {
+     "days": 1,
+     "best_rank": 25,
+     "views": 95466
+    },
+    "Mikel_Arteta": {
+     "days": 1,
+     "best_rank": 25,
+     "views": 94206
+    },
+    "Caleb_Downs": {
+     "days": 1,
+     "best_rank": 25,
+     "views": 92750
+    },
+    "Black_Rose_(Tyrese_album)": {
+     "days": 1,
+     "best_rank": 25,
+     "views": 88912
+    },
+    "Jason_Collins": {
+     "days": 1,
+     "best_rank": 25,
+     "views": 86366
+    },
+    "Houthis": {
+     "days": 1,
+     "best_rank": 25,
+     "views": 84620
+    },
+    "Tommy_DeCarlo": {
+     "days": 1,
+     "best_rank": 25,
+     "views": 80759
+    },
+    "Port_of_Liverpool": {
+     "days": 1,
+     "best_rank": 25,
+     "views": 76750
+    },
+    "Victor_Glover": {
+     "days": 1,
+     "best_rank": 25,
+     "views": 72784
+    },
+    "Sanju_Samson": {
+     "days": 2,
+     "best_rank": 26,
+     "views": 235347
+    },
+    "WrestleMania_42": {
+     "days": 2,
+     "best_rank": 26,
+     "views": 131931
+    },
+    "Swakoppoort_Dam": {
+     "days": 1,
+     "best_rank": 26,
+     "views": 94088
+    },
+    "Zoë_Kravitz": {
+     "days": 1,
+     "best_rank": 26,
+     "views": 90060
+    },
+    "David_Attenborough": {
+     "days": 1,
+     "best_rank": 26,
+     "views": 89033
+    },
+    "Victor_Wembanyama": {
+     "days": 1,
+     "best_rank": 26,
+     "views": 85132
+    },
+    "Legends_(2026_TV_series)": {
+     "days": 1,
+     "best_rank": 26,
+     "views": 83531
+    },
+    "Markwayne_Mullin": {
+     "days": 1,
+     "best_rank": 26,
+     "views": 75908
+    },
+    "The_Pitt": {
+     "days": 2,
+     "best_rank": 27,
+     "views": 138423
+    },
+    "Aditya_Dhar": {
+     "days": 2,
+     "best_rank": 27,
+     "views": 136989
+    },
+    "2026_UEFA_Champions_League_final": {
+     "days": 1,
+     "best_rank": 27,
+     "views": 92131
+    },
+    "David_Benavidez": {
+     "days": 1,
+     "best_rank": 27,
+     "views": 86368
+    },
+    "Péter_Magyar": {
+     "days": 1,
+     "best_rank": 27,
+     "views": 76513
+    },
+    "Jeremy_Hansen": {
+     "days": 1,
+     "best_rank": 27,
+     "views": 64879
+    },
+    "Anna's_Archive": {
+     "days": 6,
+     "best_rank": 28,
+     "views": 371090
+    },
+    "2026_Iranian_Supreme_Leader_election": {
+     "days": 1,
+     "best_rank": 28,
+     "views": 165127
+    },
+    "Ousmane_Dembélé": {
+     "days": 1,
+     "best_rank": 28,
+     "views": 87101
+    },
+    "Katherine_Jackson": {
+     "days": 1,
+     "best_rank": 28,
+     "views": 84452
+    },
+    "Wes_Streeting": {
+     "days": 1,
+     "best_rank": 28,
+     "views": 79662
+    },
+    "Ty_Simpson": {
+     "days": 1,
+     "best_rank": 28,
+     "views": 79599
+    },
+    "2026_Hungarian_parliamentary_election": {
+     "days": 1,
+     "best_rank": 28,
+     "views": 71800
+    },
+    "Caroline_Kennedy": {
+     "days": 1,
+     "best_rank": 28,
+     "views": 71415
+    },
+    "Atiq_Ahmed": {
+     "days": 1,
+     "best_rank": 28,
+     "views": 68605
+    },
+    "Masoud_Khamenei": {
+     "days": 1,
+     "best_rank": 29,
+     "views": 164467
+    },
+    "Joel_Embiid": {
+     "days": 1,
+     "best_rank": 29,
+     "views": 81395
+    },
+    "Bhooth_Bangla": {
+     "days": 1,
+     "best_rank": 29,
+     "views": 79512
+    },
+    "The_Odyssey_(2026_film)": {
+     "days": 1,
+     "best_rank": 29,
+     "views": 79005
+    },
+    "Robert_Harward": {
+     "days": 1,
+     "best_rank": 29,
+     "views": 76870
+    },
+    "Tal_and_Oren_Alexander": {
+     "days": 1,
+     "best_rank": 29,
+     "views": 74500
+    },
+    "Lena_Dunham": {
+     "days": 1,
+     "best_rank": 29,
+     "views": 70697
+    },
+    "Michael_B._Jordan": {
+     "days": 1,
+     "best_rank": 29,
+     "views": 68560
+    },
+    "Cori_Close": {
+     "days": 1,
+     "best_rank": 29,
+     "views": 63555
+    },
+    "List_of_The_Boys_episodes": {
+     "days": 2,
+     "best_rank": 30,
+     "views": 130543
+    },
+    "Neil_Sedaka": {
+     "days": 1,
+     "best_rank": 30,
+     "views": 157408
+    },
+    "Marcia_Lucas": {
+     "days": 1,
+     "best_rank": 30,
+     "views": 85249
+    },
+    "Anne_Hathaway": {
+     "days": 1,
+     "best_rank": 30,
+     "views": 80893
+    },
+    "Clay_Aiken": {
+     "days": 1,
+     "best_rank": 30,
+     "views": 76330
+    },
+    "Moya_Brennan": {
+     "days": 1,
+     "best_rank": 30,
+     "views": 69433
+    },
+    "Crimson_Desert": {
+     "days": 1,
+     "best_rank": 30,
+     "views": 67347
+    },
+    "Ali_Larijani": {
+     "days": 2,
+     "best_rank": 31,
+     "views": 212693
+    },
+    "Golden_Tempo": {
+     "days": 1,
+     "best_rank": 31,
+     "views": 79685
+    },
+    "C._Joseph_Vijay": {
+     "days": 1,
+     "best_rank": 31,
+     "views": 75845
+    },
+    "Charlize_Theron": {
+     "days": 1,
+     "best_rank": 31,
+     "views": 74273
+    },
+    "N._Marie_Wilson": {
+     "days": 1,
+     "best_rank": 31,
+     "views": 68981
+    },
+    "Scream_7": {
+     "days": 1,
+     "best_rank": 32,
+     "views": 153304
+    },
+    "Kai_Havertz": {
+     "days": 1,
+     "best_rank": 32,
+     "views": 83881
+    },
+    "Debbie_Rowe": {
+     "days": 1,
+     "best_rank": 32,
+     "views": 76891
+    },
+    "Brad_Delp": {
+     "days": 1,
+     "best_rank": 32,
+     "views": 73029
+    },
+    "Dillon_Thieneman": {
+     "days": 1,
+     "best_rank": 32,
+     "views": 72383
+    },
+    "Remarkably_Bright_Creatures_(film)": {
+     "days": 1,
+     "best_rank": 32,
+     "views": 72066
+    },
+    "Kylie_Minogue": {
+     "days": 1,
+     "best_rank": 32,
+     "views": 68177
+    },
+    "Zendaya": {
+     "days": 1,
+     "best_rank": 32,
+     "views": 66899
+    },
+    "2025–26_UEFA_Champions_League": {
+     "days": 3,
+     "best_rank": 33,
+     "views": 188058
+    },
+    "Iranian_Revolution": {
+     "days": 1,
+     "best_rank": 33,
+     "views": 148938
+    },
+    "Kimi_Antonelli": {
+     "days": 1,
+     "best_rank": 33,
+     "views": 73795
+    },
+    "Jeffrey_Epstein": {
+     "days": 1,
+     "best_rank": 33,
+     "views": 71038
+    },
+    "Keir_Starmer": {
+     "days": 1,
+     "best_rank": 33,
+     "views": 70413
+    },
+    "David_Wilcock": {
+     "days": 1,
+     "best_rank": 33,
+     "views": 70268
+    },
+    "Aston_Villa_F.C.": {
+     "days": 1,
+     "best_rank": 33,
+     "views": 67861
+    },
+    "Wellington_R._Burt": {
+     "days": 1,
+     "best_rank": 33,
+     "views": 66611
+    },
+    "Brenda_Swinbank": {
+     "days": 1,
+     "best_rank": 33,
+     "views": 59538
+    }
+   }
+  },
+  "ja.wikipedia": {
+   "union_size_after_filter": 250,
+   "chosen": [
+    "細木数子",
+    "小泉八雲",
+    "藤原貴弘",
+    "アリー・ハーメネイー",
+    "橋本甜歌",
+    "トリカブト保険金殺人事件",
+    "プラダを着た悪魔",
+    "周東佑京",
+    "海街diary_(映画)",
+    "豊臣秀長",
+    "九条の大罪",
+    "山本祐大",
+    "警察庁長官狙撃事件",
+    "HIMARI_(ヴァイオリニスト)",
+    "かむながらのみち",
+    "慈雲院_(豊臣秀長室)",
+    "イラン",
+    "アン・ハサウェイ",
+    "海街diary",
+    "三崎優太",
+    "アンジェラ・アキ",
+    "間宮祥太朗",
+    "京都府南丹市小5男児行方不明事件",
+    "M!LK",
+    "出田節子",
+    "坂東龍汰",
+    "足利義昭",
+    "谷原七音",
+    "宮崎麗果",
+    "國村隼",
+    "メリル・ストリープ",
+    "東海林さだお",
+    "山口良治",
+    "井上朋也",
+    "中谷潤人",
+    "東日本大震災",
+    "女子高生コンクリート詰め殺人事件",
+    "こたけ正義感",
+    "ドクターX〜外科医・大門未知子〜",
+    "イチケイのカラス",
+    "盛田幸妃",
+    "北大路魯山人",
+    "日本三國",
+    "バルテュス",
+    "竹中重治",
+    "井上尚弥",
+    "オンドジェイ・サトリア",
+    "出口夏希",
+    "エドウィン・ディアス",
+    "桜井日奈子",
+    "松本純",
+    "広瀬すず",
+    "南丹市",
+    "島倉千代子",
+    "尾形崇斗",
+    "土居志央梨",
+    "The_GazettE",
+    "畑芽育",
+    "川田翔子",
+    "伊藤俊人",
+    "尾上右近_(2代目)",
+    "朝倉海",
+    "松岡俊介",
+    "秋田児童連続殺害事件",
+    "浅井長政",
+    "上坂樹里",
+    "渕上彩夏",
+    "ルーホッラー・ホメイニー",
+    "お市の方",
+    "金丸夢斗",
+    "田中麗奈",
+    "GLIM_SPANKY",
+    "能條愛未",
+    "大山捨松",
+    "藤原季節",
+    "山梨キャンプ場女児失踪事件",
+    "黄泉のツガイ",
+    "髙橋宏斗",
+    "芹沢鴨",
+    "プラダを着た悪魔2",
+    "西田陸浮",
+    "黒木啓司",
+    "風、薫る",
+    "ワールド・ベースボール・クラシック",
+    "五十嵐淳子",
+    "適菜収",
+    "AI_(歌手)",
+    "秋元杏月",
+    "古川琴音",
+    "大宮エリー",
+    "江田憲司",
+    "本宮泰風",
+    "細川ガラシャ",
+    "吉村龍太",
+    "藤堂高虎",
+    "チェコ",
+    "ちるらん_新撰組鎮魂歌",
+    "嵐_(グループ)",
+    "有働由美子",
+    "春分の日",
+    "野村絢",
+    "有村架純",
+    "山本章一",
+    "ENHYPEN",
+    "宮澤エマ",
+    "横宮七海",
+    "中尾ミエ",
+    "清水邦広",
+    "怪談_(小泉八雲)",
+    "北川悠仁",
+    "吉田恭子_(ヴァイオリニスト)",
+    "墨俣城",
+    "國松孝次",
+    "髙橋遥人",
+    "コンスタンティノープルの陥落",
+    "市川染五郎_(8代目)",
+    "佐野勇斗",
+    "岸部一徳",
+    "大椿裕子",
+    "佐々木成三"
+   ],
+   "chosen_n": 120,
+   "series_ok": 120,
+   "series_404": 0,
+   "agg_meta": {
+    "細木数子": {
+     "days": 4,
+     "best_rank": 2,
+     "views": 263474
+    },
+    "小泉八雲": {
+     "days": 3,
+     "best_rank": 2,
+     "views": 134080
+    },
+    "藤原貴弘": {
+     "days": 1,
+     "best_rank": 2,
+     "views": 375914
+    },
+    "アリー・ハーメネイー": {
+     "days": 1,
+     "best_rank": 2,
+     "views": 311911
+    },
+    "橋本甜歌": {
+     "days": 1,
+     "best_rank": 2,
+     "views": 150314
+    },
+    "トリカブト保険金殺人事件": {
+     "days": 1,
+     "best_rank": 2,
+     "views": 145052
+    },
+    "プラダを着た悪魔": {
+     "days": 1,
+     "best_rank": 2,
+     "views": 129225
+    },
+    "周東佑京": {
+     "days": 1,
+     "best_rank": 2,
+     "views": 115634
+    },
+    "海街diary_(映画)": {
+     "days": 1,
+     "best_rank": 2,
+     "views": 61657
+    },
+    "豊臣秀長": {
+     "days": 2,
+     "best_rank": 3,
+     "views": 118466
+    },
+    "九条の大罪": {
+     "days": 2,
+     "best_rank": 3,
+     "views": 55108
+    },
+    "山本祐大": {
+     "days": 1,
+     "best_rank": 3,
+     "views": 127966
+    },
+    "警察庁長官狙撃事件": {
+     "days": 1,
+     "best_rank": 3,
+     "views": 98385
+    },
+    "HIMARI_(ヴァイオリニスト)": {
+     "days": 1,
+     "best_rank": 3,
+     "views": 91715
+    },
+    "かむながらのみち": {
+     "days": 1,
+     "best_rank": 3,
+     "views": 47332
+    },
+    "慈雲院_(豊臣秀長室)": {
+     "days": 2,
+     "best_rank": 4,
+     "views": 89262
+    },
+    "イラン": {
+     "days": 1,
+     "best_rank": 4,
+     "views": 77832
+    },
+    "アン・ハサウェイ": {
+     "days": 1,
+     "best_rank": 4,
+     "views": 62020
+    },
+    "海街diary": {
+     "days": 1,
+     "best_rank": 4,
+     "views": 60202
+    },
+    "三崎優太": {
+     "days": 1,
+     "best_rank": 4,
+     "views": 57831
+    },
+    "アンジェラ・アキ": {
+     "days": 1,
+     "best_rank": 4,
+     "views": 54223
+    },
+    "間宮祥太朗": {
+     "days": 1,
+     "best_rank": 4,
+     "views": 42693
+    },
+    "京都府南丹市小5男児行方不明事件": {
+     "days": 1,
+     "best_rank": 4,
+     "views": 38855
+    },
+    "M!LK": {
+     "days": 6,
+     "best_rank": 5,
+     "views": 119680
+    },
+    "出田節子": {
+     "days": 1,
+     "best_rank": 5,
+     "views": 80223
+    },
+    "坂東龍汰": {
+     "days": 1,
+     "best_rank": 5,
+     "views": 73300
+    },
+    "足利義昭": {
+     "days": 1,
+     "best_rank": 5,
+     "views": 63321
+    },
+    "谷原七音": {
+     "days": 1,
+     "best_rank": 5,
+     "views": 60182
+    },
+    "宮崎麗果": {
+     "days": 1,
+     "best_rank": 5,
+     "views": 43254
+    },
+    "國村隼": {
+     "days": 1,
+     "best_rank": 5,
+     "views": 41246
+    },
+    "メリル・ストリープ": {
+     "days": 1,
+     "best_rank": 5,
+     "views": 36640
+    },
+    "東海林さだお": {
+     "days": 1,
+     "best_rank": 5,
+     "views": 27401
+    },
+    "山口良治": {
+     "days": 1,
+     "best_rank": 5,
+     "views": 27030
+    },
+    "井上朋也": {
+     "days": 1,
+     "best_rank": 6,
+     "views": 75169
+    },
+    "中谷潤人": {
+     "days": 1,
+     "best_rank": 6,
+     "views": 62560
+    },
+    "東日本大震災": {
+     "days": 1,
+     "best_rank": 6,
+     "views": 57853
+    },
+    "女子高生コンクリート詰め殺人事件": {
+     "days": 1,
+     "best_rank": 6,
+     "views": 40947
+    },
+    "こたけ正義感": {
+     "days": 1,
+     "best_rank": 6,
+     "views": 35807
+    },
+    "ドクターX〜外科医・大門未知子〜": {
+     "days": 1,
+     "best_rank": 6,
+     "views": 34372
+    },
+    "イチケイのカラス": {
+     "days": 1,
+     "best_rank": 6,
+     "views": 29715
+    },
+    "盛田幸妃": {
+     "days": 1,
+     "best_rank": 6,
+     "views": 26621
+    },
+    "北大路魯山人": {
+     "days": 1,
+     "best_rank": 6,
+     "views": 25059
+    },
+    "日本三國": {
+     "days": 2,
+     "best_rank": 7,
+     "views": 41425
+    },
+    "バルテュス": {
+     "days": 1,
+     "best_rank": 7,
+     "views": 68067
+    },
+    "竹中重治": {
+     "days": 1,
+     "best_rank": 7,
+     "views": 62782
+    },
+    "井上尚弥": {
+     "days": 1,
+     "best_rank": 7,
+     "views": 56189
+    },
+    "オンドジェイ・サトリア": {
+     "days": 1,
+     "best_rank": 7,
+     "views": 51105
+    },
+    "出口夏希": {
+     "days": 1,
+     "best_rank": 7,
+     "views": 36505
+    },
+    "エドウィン・ディアス": {
+     "days": 1,
+     "best_rank": 7,
+     "views": 36435
+    },
+    "桜井日奈子": {
+     "days": 1,
+     "best_rank": 7,
+     "views": 33024
+    },
+    "松本純": {
+     "days": 1,
+     "best_rank": 7,
+     "views": 31471
+    },
+    "広瀬すず": {
+     "days": 1,
+     "best_rank": 7,
+     "views": 25854
+    },
+    "南丹市": {
+     "days": 1,
+     "best_rank": 7,
+     "views": 23209
+    },
+    "島倉千代子": {
+     "days": 2,
+     "best_rank": 8,
+     "views": 79415
+    },
+    "尾形崇斗": {
+     "days": 1,
+     "best_rank": 8,
+     "views": 63827
+    },
+    "土居志央梨": {
+     "days": 1,
+     "best_rank": 8,
+     "views": 61585
+    },
+    "The_GazettE": {
+     "days": 1,
+     "best_rank": 8,
+     "views": 46430
+    },
+    "畑芽育": {
+     "days": 1,
+     "best_rank": 8,
+     "views": 35256
+    },
+    "川田翔子": {
+     "days": 1,
+     "best_rank": 8,
+     "views": 34528
+    },
+    "伊藤俊人": {
+     "days": 1,
+     "best_rank": 8,
+     "views": 31370
+    },
+    "尾上右近_(2代目)": {
+     "days": 1,
+     "best_rank": 8,
+     "views": 27847
+    },
+    "朝倉海": {
+     "days": 1,
+     "best_rank": 8,
+     "views": 25579
+    },
+    "松岡俊介": {
+     "days": 1,
+     "best_rank": 8,
+     "views": 23967
+    },
+    "秋田児童連続殺害事件": {
+     "days": 1,
+     "best_rank": 8,
+     "views": 21139
+    },
+    "浅井長政": {
+     "days": 2,
+     "best_rank": 9,
+     "views": 76020
+    },
+    "上坂樹里": {
+     "days": 2,
+     "best_rank": 9,
+     "views": 41126
+    },
+    "渕上彩夏": {
+     "days": 1,
+     "best_rank": 9,
+     "views": 62141
+    },
+    "ルーホッラー・ホメイニー": {
+     "days": 1,
+     "best_rank": 9,
+     "views": 61574
+    },
+    "お市の方": {
+     "days": 1,
+     "best_rank": 9,
+     "views": 54566
+    },
+    "金丸夢斗": {
+     "days": 1,
+     "best_rank": 9,
+     "views": 41480
+    },
+    "田中麗奈": {
+     "days": 1,
+     "best_rank": 9,
+     "views": 31864
+    },
+    "GLIM_SPANKY": {
+     "days": 1,
+     "best_rank": 9,
+     "views": 28720
+    },
+    "能條愛未": {
+     "days": 1,
+     "best_rank": 9,
+     "views": 25311
+    },
+    "大山捨松": {
+     "days": 1,
+     "best_rank": 9,
+     "views": 20478
+    },
+    "藤原季節": {
+     "days": 2,
+     "best_rank": 10,
+     "views": 40980
+    },
+    "山梨キャンプ場女児失踪事件": {
+     "days": 2,
+     "best_rank": 10,
+     "views": 38835
+    },
+    "黄泉のツガイ": {
+     "days": 2,
+     "best_rank": 10,
+     "views": 32251
+    },
+    "髙橋宏斗": {
+     "days": 1,
+     "best_rank": 10,
+     "views": 40510
+    },
+    "芹沢鴨": {
+     "days": 1,
+     "best_rank": 10,
+     "views": 29330
+    },
+    "プラダを着た悪魔2": {
+     "days": 1,
+     "best_rank": 10,
+     "views": 27961
+    },
+    "西田陸浮": {
+     "days": 1,
+     "best_rank": 10,
+     "views": 24985
+    },
+    "黒木啓司": {
+     "days": 1,
+     "best_rank": 10,
+     "views": 22765
+    },
+    "風、薫る": {
+     "days": 3,
+     "best_rank": 11,
+     "views": 58124
+    },
+    "ワールド・ベースボール・クラシック": {
+     "days": 2,
+     "best_rank": 11,
+     "views": 70339
+    },
+    "五十嵐淳子": {
+     "days": 1,
+     "best_rank": 11,
+     "views": 49877
+    },
+    "適菜収": {
+     "days": 1,
+     "best_rank": 11,
+     "views": 44819
+    },
+    "AI_(歌手)": {
+     "days": 1,
+     "best_rank": 11,
+     "views": 43172
+    },
+    "秋元杏月": {
+     "days": 1,
+     "best_rank": 11,
+     "views": 28067
+    },
+    "古川琴音": {
+     "days": 1,
+     "best_rank": 11,
+     "views": 24628
+    },
+    "大宮エリー": {
+     "days": 1,
+     "best_rank": 11,
+     "views": 22274
+    },
+    "江田憲司": {
+     "days": 1,
+     "best_rank": 11,
+     "views": 21584
+    },
+    "本宮泰風": {
+     "days": 1,
+     "best_rank": 11,
+     "views": 20701
+    },
+    "細川ガラシャ": {
+     "days": 1,
+     "best_rank": 11,
+     "views": 18576
+    },
+    "吉村龍太": {
+     "days": 1,
+     "best_rank": 12,
+     "views": 46368
+    },
+    "藤堂高虎": {
+     "days": 1,
+     "best_rank": 12,
+     "views": 34916
+    },
+    "チェコ": {
+     "days": 1,
+     "best_rank": 12,
+     "views": 32324
+    },
+    "ちるらん_新撰組鎮魂歌": {
+     "days": 1,
+     "best_rank": 12,
+     "views": 28042
+    },
+    "嵐_(グループ)": {
+     "days": 1,
+     "best_rank": 12,
+     "views": 24320
+    },
+    "有働由美子": {
+     "days": 1,
+     "best_rank": 12,
+     "views": 22014
+    },
+    "春分の日": {
+     "days": 1,
+     "best_rank": 12,
+     "views": 21752
+    },
+    "野村絢": {
+     "days": 1,
+     "best_rank": 12,
+     "views": 21424
+    },
+    "有村架純": {
+     "days": 1,
+     "best_rank": 13,
+     "views": 42216
+    },
+    "山本章一": {
+     "days": 1,
+     "best_rank": 13,
+     "views": 34319
+    },
+    "ENHYPEN": {
+     "days": 1,
+     "best_rank": 13,
+     "views": 31011
+    },
+    "宮澤エマ": {
+     "days": 1,
+     "best_rank": 13,
+     "views": 29193
+    },
+    "横宮七海": {
+     "days": 1,
+     "best_rank": 13,
+     "views": 26538
+    },
+    "中尾ミエ": {
+     "days": 1,
+     "best_rank": 13,
+     "views": 21382
+    },
+    "清水邦広": {
+     "days": 1,
+     "best_rank": 13,
+     "views": 20521
+    },
+    "怪談_(小泉八雲)": {
+     "days": 1,
+     "best_rank": 13,
+     "views": 20068
+    },
+    "北川悠仁": {
+     "days": 1,
+     "best_rank": 13,
+     "views": 16771
+    },
+    "吉田恭子_(ヴァイオリニスト)": {
+     "days": 1,
+     "best_rank": 14,
+     "views": 40545
+    },
+    "墨俣城": {
+     "days": 1,
+     "best_rank": 14,
+     "views": 31691
+    },
+    "國松孝次": {
+     "days": 1,
+     "best_rank": 14,
+     "views": 30870
+    },
+    "髙橋遥人": {
+     "days": 1,
+     "best_rank": 14,
+     "views": 25696
+    },
+    "コンスタンティノープルの陥落": {
+     "days": 1,
+     "best_rank": 14,
+     "views": 22021
+    },
+    "市川染五郎_(8代目)": {
+     "days": 1,
+     "best_rank": 14,
+     "views": 20365
+    },
+    "佐野勇斗": {
+     "days": 1,
+     "best_rank": 14,
+     "views": 20275
+    },
+    "岸部一徳": {
+     "days": 1,
+     "best_rank": 14,
+     "views": 19718
+    },
+    "大椿裕子": {
+     "days": 1,
+     "best_rank": 14,
+     "views": 18360
+    },
+    "佐々木成三": {
+     "days": 1,
+     "best_rank": 14,
+     "views": 16367
+    }
+   }
+  }
+ }
+}
