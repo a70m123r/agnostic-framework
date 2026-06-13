@@ -1,0 +1,1264 @@
+{
+  "probe": "q6_coder_robustness v0.1",
+  "coders": [
+    "lzma-9",
+    "zlib-9",
+    "bz2-9"
+  ],
+  "quant": 0.001,
+  "rungs": [
+    1,
+    2,
+    5,
+    10,
+    30,
+    60
+  ],
+  "n_base": 10078,
+  "law": "persistence",
+  "note": "external-pass robustness on q6_scale_rung: same pins, 3 coders + coder-free sigma-shrink/rho1; controls seeded synthetic; flare real GOES.",
+  "curves": {
+    "flare_REAL": {
+      "mean": {
+        "lzma": [
+          {
+            "rung": 1,
+            "method": "mean",
+            "coder": "lzma",
+            "n": 10078,
+            "comp_ratio": 1.2698768197088466,
+            "sigma_shrink_bits": 3.5017646854297197,
+            "rho1": 0.9961030362212343,
+            "raw_bits": 72576,
+            "resid_bits": 57088
+          },
+          {
+            "rung": 2,
+            "method": "mean",
+            "coder": "lzma",
+            "n": 5039,
+            "comp_ratio": 1.095925297113752,
+            "sigma_shrink_bits": 2.703338722275448,
+            "rho1": 0.9882114797647071,
+            "raw_bits": 41312,
+            "resid_bits": 37632
+          },
+          {
+            "rung": 5,
+            "method": "mean",
+            "coder": "lzma",
+            "n": 2015,
+            "comp_ratio": 1.0016638935108153,
+            "sigma_shrink_bits": 1.8235998203061219,
+            "rho1": 0.9600753314878838,
+            "raw_bits": 19264,
+            "resid_bits": 19168
+          },
+          {
+            "rung": 10,
+            "method": "mean",
+            "coder": "lzma",
+            "n": 1007,
+            "comp_ratio": 0.9594202898550724,
+            "sigma_shrink_bits": 1.333738802337661,
+            "rho1": 0.9212314422894727,
+            "raw_bits": 10592,
+            "resid_bits": 10976
+          },
+          {
+            "rung": 30,
+            "method": "mean",
+            "coder": "lzma",
+            "n": 335,
+            "comp_ratio": 0.9657534246575342,
+            "sigma_shrink_bits": 0.6875373366664294,
+            "rho1": 0.8066304379301349,
+            "raw_bits": 4512,
+            "resid_bits": 4608
+          },
+          {
+            "rung": 60,
+            "method": "mean",
+            "coder": "lzma",
+            "n": 167,
+            "comp_ratio": 0.9666666666666667,
+            "sigma_shrink_bits": 0.35781277571133663,
+            "rho1": 0.6932678333310305,
+            "raw_bits": 2784,
+            "resid_bits": 2816
+          }
+        ],
+        "zlib": [
+          {
+            "rung": 1,
+            "method": "mean",
+            "coder": "zlib",
+            "n": 10078,
+            "comp_ratio": 1.4393314073462649,
+            "sigma_shrink_bits": 3.5017646854297197,
+            "rho1": 0.9961030362212343,
+            "raw_bits": 111600,
+            "resid_bits": 77472
+          },
+          {
+            "rung": 2,
+            "method": "mean",
+            "coder": "zlib",
+            "n": 5039,
+            "comp_ratio": 1.2787698412698412,
+            "sigma_shrink_bits": 2.703338722275448,
+            "rho1": 0.9882114797647071,
+            "raw_bits": 61872,
+            "resid_bits": 48320
+          },
+          {
+            "rung": 5,
+            "method": "mean",
+            "coder": "zlib",
+            "n": 2015,
+            "comp_ratio": 1.1183431952662721,
+            "sigma_shrink_bits": 1.8235998203061219,
+            "rho1": 0.9600753314878838,
+            "raw_bits": 27216,
+            "resid_bits": 24272
+          },
+          {
+            "rung": 10,
+            "method": "mean",
+            "coder": "zlib",
+            "n": 1007,
+            "comp_ratio": 1.05320994794679,
+            "sigma_shrink_bits": 1.333738802337661,
+            "rho1": 0.9212314422894727,
+            "raw_bits": 14568,
+            "resid_bits": 13768
+          },
+          {
+            "rung": 30,
+            "method": "mean",
+            "coder": "zlib",
+            "n": 335,
+            "comp_ratio": 0.9827833572453372,
+            "sigma_shrink_bits": 0.6875373366664294,
+            "rho1": 0.8066304379301349,
+            "raw_bits": 5480,
+            "resid_bits": 5512
+          },
+          {
+            "rung": 60,
+            "method": "mean",
+            "coder": "zlib",
+            "n": 167,
+            "comp_ratio": 0.9420654911838791,
+            "sigma_shrink_bits": 0.35781277571133663,
+            "rho1": 0.6932678333310305,
+            "raw_bits": 2992,
+            "resid_bits": 3112
+          }
+        ],
+        "bz2": [
+          {
+            "rung": 1,
+            "method": "mean",
+            "coder": "bz2",
+            "n": 10078,
+            "comp_ratio": 1.284829721362229,
+            "sigma_shrink_bits": 3.5017646854297197,
+            "rho1": 0.9961030362212343,
+            "raw_bits": 69720,
+            "resid_bits": 54200
+          },
+          {
+            "rung": 2,
+            "method": "mean",
+            "coder": "bz2",
+            "n": 5039,
+            "comp_ratio": 1.2357518883039598,
+            "sigma_shrink_bits": 2.703338722275448,
+            "rho1": 0.9882114797647071,
+            "raw_bits": 43192,
+            "resid_bits": 34888
+          },
+          {
+            "rung": 5,
+            "method": "mean",
+            "coder": "bz2",
+            "n": 2015,
+            "comp_ratio": 1.1507306889352817,
+            "sigma_shrink_bits": 1.8235998203061219,
+            "rho1": 0.9600753314878838,
+            "raw_bits": 22048,
+            "resid_bits": 19096
+          },
+          {
+            "rung": 10,
+            "method": "mean",
+            "coder": "bz2",
+            "n": 1007,
+            "comp_ratio": 1.1029311520109066,
+            "sigma_shrink_bits": 1.333738802337661,
+            "rho1": 0.9212314422894727,
+            "raw_bits": 12944,
+            "resid_bits": 11672
+          },
+          {
+            "rung": 30,
+            "method": "mean",
+            "coder": "bz2",
+            "n": 335,
+            "comp_ratio": 0.9969788519637462,
+            "sigma_shrink_bits": 0.6875373366664294,
+            "rho1": 0.8066304379301349,
+            "raw_bits": 5280,
+            "resid_bits": 5232
+          },
+          {
+            "rung": 60,
+            "method": "mean",
+            "coder": "bz2",
+            "n": 167,
+            "comp_ratio": 0.9352331606217616,
+            "sigma_shrink_bits": 0.35781277571133663,
+            "rho1": 0.6932678333310305,
+            "raw_bits": 2888,
+            "resid_bits": 3024
+          }
+        ]
+      },
+      "decimate": {
+        "lzma": [
+          {
+            "rung": 1,
+            "method": "decimate",
+            "coder": "lzma",
+            "n": 10078,
+            "comp_ratio": 1.2698768197088466,
+            "sigma_shrink_bits": 3.5017646854297197,
+            "rho1": 0.9961030362212343,
+            "raw_bits": 72576,
+            "resid_bits": 57088
+          },
+          {
+            "rung": 2,
+            "method": "decimate",
+            "coder": "lzma",
+            "n": 5039,
+            "comp_ratio": 1.0804403048264184,
+            "sigma_shrink_bits": 2.593707182219567,
+            "rho1": 0.9862764134054511,
+            "raw_bits": 40832,
+            "resid_bits": 37728
+          },
+          {
+            "rung": 5,
+            "method": "decimate",
+            "coder": "lzma",
+            "n": 2015,
+            "comp_ratio": 0.9917627677100495,
+            "sigma_shrink_bits": 1.6067650530941022,
+            "rho1": 0.9460756951994778,
+            "raw_bits": 19264,
+            "resid_bits": 19360
+          },
+          {
+            "rung": 10,
+            "method": "decimate",
+            "coder": "lzma",
+            "n": 1007,
+            "comp_ratio": 0.9660056657223796,
+            "sigma_shrink_bits": 1.0627102708276372,
+            "rho1": 0.885309902454991,
+            "raw_bits": 10912,
+            "resid_bits": 11232
+          },
+          {
+            "rung": 30,
+            "method": "decimate",
+            "coder": "lzma",
+            "n": 335,
+            "comp_ratio": 0.959731543624161,
+            "sigma_shrink_bits": 0.4624458874841482,
+            "rho1": 0.7358238769097439,
+            "raw_bits": 4576,
+            "resid_bits": 4704
+          },
+          {
+            "rung": 60,
+            "method": "decimate",
+            "coder": "lzma",
+            "n": 167,
+            "comp_ratio": 0.9139784946236559,
+            "sigma_shrink_bits": -0.014026560368898815,
+            "rho1": 0.48719779962370763,
+            "raw_bits": 2720,
+            "resid_bits": 2912
+          }
+        ],
+        "zlib": [
+          {
+            "rung": 1,
+            "method": "decimate",
+            "coder": "zlib",
+            "n": 10078,
+            "comp_ratio": 1.4393314073462649,
+            "sigma_shrink_bits": 3.5017646854297197,
+            "rho1": 0.9961030362212343,
+            "raw_bits": 111600,
+            "resid_bits": 77472
+          },
+          {
+            "rung": 2,
+            "method": "decimate",
+            "coder": "zlib",
+            "n": 5039,
+            "comp_ratio": 1.2562805872756933,
+            "sigma_shrink_bits": 2.593707182219567,
+            "rho1": 0.9862764134054511,
+            "raw_bits": 61608,
+            "resid_bits": 48976
+          },
+          {
+            "rung": 5,
+            "method": "decimate",
+            "coder": "zlib",
+            "n": 2015,
+            "comp_ratio": 1.1079766536964981,
+            "sigma_shrink_bits": 1.6067650530941022,
+            "rho1": 0.9460756951994778,
+            "raw_bits": 27336,
+            "resid_bits": 24608
+          },
+          {
+            "rung": 10,
+            "method": "decimate",
+            "coder": "zlib",
+            "n": 1007,
+            "comp_ratio": 1.0358744394618835,
+            "sigma_shrink_bits": 1.0627102708276372,
+            "rho1": 0.885309902454991,
+            "raw_bits": 14784,
+            "resid_bits": 14208
+          },
+          {
+            "rung": 30,
+            "method": "decimate",
+            "coder": "zlib",
+            "n": 335,
+            "comp_ratio": 0.9695290858725761,
+            "sigma_shrink_bits": 0.4624458874841482,
+            "rho1": 0.7358238769097439,
+            "raw_bits": 5600,
+            "resid_bits": 5712
+          },
+          {
+            "rung": 60,
+            "method": "decimate",
+            "coder": "zlib",
+            "n": 167,
+            "comp_ratio": 0.9121140142517815,
+            "sigma_shrink_bits": -0.014026560368898815,
+            "rho1": 0.48719779962370763,
+            "raw_bits": 3072,
+            "resid_bits": 3304
+          }
+        ],
+        "bz2": [
+          {
+            "rung": 1,
+            "method": "decimate",
+            "coder": "bz2",
+            "n": 10078,
+            "comp_ratio": 1.284829721362229,
+            "sigma_shrink_bits": 3.5017646854297197,
+            "rho1": 0.9961030362212343,
+            "raw_bits": 69720,
+            "resid_bits": 54200
+          },
+          {
+            "rung": 2,
+            "method": "decimate",
+            "coder": "bz2",
+            "n": 5039,
+            "comp_ratio": 1.2154052843708016,
+            "sigma_shrink_bits": 2.593707182219567,
+            "rho1": 0.9862764134054511,
+            "raw_bits": 43424,
+            "resid_bits": 35664
+          },
+          {
+            "rung": 5,
+            "method": "decimate",
+            "coder": "bz2",
+            "n": 2015,
+            "comp_ratio": 1.1481481481481481,
+            "sigma_shrink_bits": 1.6067650530941022,
+            "rho1": 0.9460756951994778,
+            "raw_bits": 22072,
+            "resid_bits": 19160
+          },
+          {
+            "rung": 10,
+            "method": "decimate",
+            "coder": "bz2",
+            "n": 1007,
+            "comp_ratio": 1.084377059986816,
+            "sigma_shrink_bits": 1.0627102708276372,
+            "rho1": 0.885309902454991,
+            "raw_bits": 13160,
+            "resid_bits": 12072
+          },
+          {
+            "rung": 30,
+            "method": "decimate",
+            "coder": "bz2",
+            "n": 335,
+            "comp_ratio": 0.9864661654135338,
+            "sigma_shrink_bits": 0.4624458874841482,
+            "rho1": 0.7358238769097439,
+            "raw_bits": 5248,
+            "resid_bits": 5256
+          },
+          {
+            "rung": 60,
+            "method": "decimate",
+            "coder": "bz2",
+            "n": 167,
+            "comp_ratio": 0.85995085995086,
+            "sigma_shrink_bits": -0.014026560368898815,
+            "rho1": 0.48719779962370763,
+            "raw_bits": 2800,
+            "resid_bits": 3192
+          }
+        ]
+      }
+    },
+    "noise_CONTROL_iid": {
+      "mean": {
+        "lzma": [
+          {
+            "rung": 1,
+            "method": "mean",
+            "coder": "lzma",
+            "n": 10078,
+            "comp_ratio": 0.9512129380053909,
+            "sigma_shrink_bits": -0.5008729549931105,
+            "rho1": -0.0013481008902437668,
+            "raw_bits": 112928,
+            "resid_bits": 118656
+          },
+          {
+            "rung": 2,
+            "method": "mean",
+            "coder": "lzma",
+            "n": 5039,
+            "comp_ratio": 0.9614093959731543,
+            "sigma_shrink_bits": -0.47404770985223466,
+            "rho1": 0.03521875671780125,
+            "raw_bits": 55008,
+            "resid_bits": 57152
+          },
+          {
+            "rung": 5,
+            "method": "mean",
+            "coder": "lzma",
+            "n": 2015,
+            "comp_ratio": 0.9700854700854701,
+            "sigma_shrink_bits": -0.4765299044376678,
+            "rho1": 0.03201114643254468,
+            "raw_bits": 21792,
+            "resid_bits": 22400
+          },
+          {
+            "rung": 10,
+            "method": "mean",
+            "coder": "lzma",
+            "n": 1007,
+            "comp_ratio": 0.9774011299435028,
+            "sigma_shrink_bits": -0.45033724728344643,
+            "rho1": 0.0646572180863174,
+            "raw_bits": 11072,
+            "resid_bits": 11264
+          },
+          {
+            "rung": 30,
+            "method": "mean",
+            "coder": "lzma",
+            "n": 335,
+            "comp_ratio": 1.0,
+            "sigma_shrink_bits": -0.48577986484779434,
+            "rho1": 0.01889394172718787,
+            "raw_bits": 4352,
+            "resid_bits": 4288
+          },
+          {
+            "rung": 60,
+            "method": "mean",
+            "coder": "lzma",
+            "n": 167,
+            "comp_ratio": 0.9523809523809523,
+            "sigma_shrink_bits": -0.5084109512982015,
+            "rho1": -0.012753030709933257,
+            "raw_bits": 2560,
+            "resid_bits": 2624
+          }
+        ],
+        "zlib": [
+          {
+            "rung": 1,
+            "method": "mean",
+            "coder": "zlib",
+            "n": 10078,
+            "comp_ratio": 0.949867265672861,
+            "sigma_shrink_bits": -0.5008729549931105,
+            "rho1": -0.0013481008902437668,
+            "raw_bits": 148848,
+            "resid_bits": 156640
+          },
+          {
+            "rung": 2,
+            "method": "mean",
+            "coder": "zlib",
+            "n": 5039,
+            "comp_ratio": 0.9537712895377128,
+            "sigma_shrink_bits": -0.47404770985223466,
+            "rho1": 0.03521875671780125,
+            "raw_bits": 72128,
+            "resid_bits": 75560
+          },
+          {
+            "rung": 5,
+            "method": "mean",
+            "coder": "zlib",
+            "n": 2015,
+            "comp_ratio": 0.9586394557823129,
+            "sigma_shrink_bits": -0.4765299044376678,
+            "rho1": 0.03201114643254468,
+            "raw_bits": 28184,
+            "resid_bits": 29336
+          },
+          {
+            "rung": 10,
+            "method": "mean",
+            "coder": "zlib",
+            "n": 1007,
+            "comp_ratio": 0.961248654467169,
+            "sigma_shrink_bits": -0.45033724728344643,
+            "rho1": 0.0646572180863174,
+            "raw_bits": 14288,
+            "resid_bits": 14800
+          },
+          {
+            "rung": 30,
+            "method": "mean",
+            "coder": "zlib",
+            "n": 335,
+            "comp_ratio": 0.9362962962962963,
+            "sigma_shrink_bits": -0.48577986484779434,
+            "rho1": 0.01889394172718787,
+            "raw_bits": 5056,
+            "resid_bits": 5336
+          },
+          {
+            "rung": 60,
+            "method": "mean",
+            "coder": "zlib",
+            "n": 167,
+            "comp_ratio": 0.9207650273224044,
+            "sigma_shrink_bits": -0.5084109512982015,
+            "rho1": -0.012753030709933257,
+            "raw_bits": 2696,
+            "resid_bits": 2864
+          }
+        ],
+        "bz2": [
+          {
+            "rung": 1,
+            "method": "mean",
+            "coder": "bz2",
+            "n": 10078,
+            "comp_ratio": 0.9533295790511052,
+            "sigma_shrink_bits": -0.5008729549931105,
+            "rho1": -0.0013481008902437668,
+            "raw_bits": 108344,
+            "resid_bits": 113584
+          },
+          {
+            "rung": 2,
+            "method": "mean",
+            "coder": "bz2",
+            "n": 5039,
+            "comp_ratio": 0.9562002275312855,
+            "sigma_shrink_bits": -0.47404770985223466,
+            "rho1": 0.03521875671780125,
+            "raw_bits": 53792,
+            "resid_bits": 56192
+          },
+          {
+            "rung": 5,
+            "method": "mean",
+            "coder": "bz2",
+            "n": 2015,
+            "comp_ratio": 0.9536535859269283,
+            "sigma_shrink_bits": -0.4765299044376678,
+            "rho1": 0.03201114643254468,
+            "raw_bits": 22552,
+            "resid_bits": 23584
+          },
+          {
+            "rung": 10,
+            "method": "mean",
+            "coder": "bz2",
+            "n": 1007,
+            "comp_ratio": 0.9451530612244898,
+            "sigma_shrink_bits": -0.45033724728344643,
+            "rho1": 0.0646572180863174,
+            "raw_bits": 11856,
+            "resid_bits": 12480
+          },
+          {
+            "rung": 30,
+            "method": "mean",
+            "coder": "bz2",
+            "n": 335,
+            "comp_ratio": 0.9111111111111111,
+            "sigma_shrink_bits": -0.48577986484779434,
+            "rho1": 0.01889394172718787,
+            "raw_bits": 4592,
+            "resid_bits": 4976
+          },
+          {
+            "rung": 60,
+            "method": "mean",
+            "coder": "bz2",
+            "n": 167,
+            "comp_ratio": 0.9380804953560371,
+            "sigma_shrink_bits": -0.5084109512982015,
+            "rho1": -0.012753030709933257,
+            "raw_bits": 2424,
+            "resid_bits": 2520
+          }
+        ]
+      },
+      "decimate": {
+        "lzma": [
+          {
+            "rung": 1,
+            "method": "decimate",
+            "coder": "lzma",
+            "n": 10078,
+            "comp_ratio": 0.9512129380053909,
+            "sigma_shrink_bits": -0.5008729549931105,
+            "rho1": -0.0013481008902437668,
+            "raw_bits": 112928,
+            "resid_bits": 118656
+          },
+          {
+            "rung": 2,
+            "method": "decimate",
+            "coder": "lzma",
+            "n": 5039,
+            "comp_ratio": 0.9500260281103592,
+            "sigma_shrink_bits": -0.48106940948882754,
+            "rho1": 0.025899888886782827,
+            "raw_bits": 58400,
+            "resid_bits": 61408
+          },
+          {
+            "rung": 5,
+            "method": "decimate",
+            "coder": "lzma",
+            "n": 2015,
+            "comp_ratio": 0.9498777506112469,
+            "sigma_shrink_bits": -0.5060601161230045,
+            "rho1": -0.008673800677661594,
+            "raw_bits": 24864,
+            "resid_bits": 26112
+          },
+          {
+            "rung": 10,
+            "method": "decimate",
+            "coder": "lzma",
+            "n": 1007,
+            "comp_ratio": 0.9406392694063926,
+            "sigma_shrink_bits": -0.48119853091816533,
+            "rho1": 0.025605115395010914,
+            "raw_bits": 13184,
+            "resid_bits": 13952
+          },
+          {
+            "rung": 30,
+            "method": "decimate",
+            "coder": "lzma",
+            "n": 335,
+            "comp_ratio": 0.9585798816568047,
+            "sigma_shrink_bits": -0.40760431272624625,
+            "rho1": 0.11794252526074281,
+            "raw_bits": 5184,
+            "resid_bits": 5344
+          },
+          {
+            "rung": 60,
+            "method": "decimate",
+            "coder": "lzma",
+            "n": 167,
+            "comp_ratio": 0.8857142857142857,
+            "sigma_shrink_bits": -0.5835138802595858,
+            "rho1": -0.12288128894650395,
+            "raw_bits": 2976,
+            "resid_bits": 3296
+          }
+        ],
+        "zlib": [
+          {
+            "rung": 1,
+            "method": "decimate",
+            "coder": "zlib",
+            "n": 10078,
+            "comp_ratio": 0.949867265672861,
+            "sigma_shrink_bits": -0.5008729549931105,
+            "rho1": -0.0013481008902437668,
+            "raw_bits": 148848,
+            "resid_bits": 156640
+          },
+          {
+            "rung": 2,
+            "method": "decimate",
+            "coder": "zlib",
+            "n": 5039,
+            "comp_ratio": 0.9526409849086577,
+            "sigma_shrink_bits": -0.48106940948882754,
+            "rho1": 0.025899888886782827,
+            "raw_bits": 76760,
+            "resid_bits": 80512
+          },
+          {
+            "rung": 5,
+            "method": "decimate",
+            "coder": "zlib",
+            "n": 2015,
+            "comp_ratio": 0.9466133584195673,
+            "sigma_shrink_bits": -0.5060601161230045,
+            "rho1": -0.008673800677661594,
+            "raw_bits": 32200,
+            "resid_bits": 33952
+          },
+          {
+            "rung": 10,
+            "method": "decimate",
+            "coder": "zlib",
+            "n": 1007,
+            "comp_ratio": 0.9502910882221227,
+            "sigma_shrink_bits": -0.48119853091816533,
+            "rho1": 0.025605115395010914,
+            "raw_bits": 16976,
+            "resid_bits": 17800
+          },
+          {
+            "rung": 30,
+            "method": "decimate",
+            "coder": "zlib",
+            "n": 335,
+            "comp_ratio": 0.957286432160804,
+            "sigma_shrink_bits": -0.40760431272624625,
+            "rho1": 0.11794252526074281,
+            "raw_bits": 6096,
+            "resid_bits": 6304
+          },
+          {
+            "rung": 60,
+            "method": "decimate",
+            "coder": "zlib",
+            "n": 167,
+            "comp_ratio": 0.9334862385321101,
+            "sigma_shrink_bits": -0.5835138802595858,
+            "rho1": -0.12288128894650395,
+            "raw_bits": 3256,
+            "resid_bits": 3424
+          }
+        ],
+        "bz2": [
+          {
+            "rung": 1,
+            "method": "decimate",
+            "coder": "bz2",
+            "n": 10078,
+            "comp_ratio": 0.9533295790511052,
+            "sigma_shrink_bits": -0.5008729549931105,
+            "rho1": -0.0013481008902437668,
+            "raw_bits": 108344,
+            "resid_bits": 113584
+          },
+          {
+            "rung": 2,
+            "method": "decimate",
+            "coder": "bz2",
+            "n": 5039,
+            "comp_ratio": 0.9503030303030303,
+            "sigma_shrink_bits": -0.48106940948882754,
+            "rho1": 0.025899888886782827,
+            "raw_bits": 56448,
+            "resid_bits": 59336
+          },
+          {
+            "rung": 5,
+            "method": "decimate",
+            "coder": "bz2",
+            "n": 2015,
+            "comp_ratio": 0.9466421343146274,
+            "sigma_shrink_bits": -0.5060601161230045,
+            "rho1": -0.008673800677661594,
+            "raw_bits": 24696,
+            "resid_bits": 26024
+          },
+          {
+            "rung": 10,
+            "method": "decimate",
+            "coder": "bz2",
+            "n": 1007,
+            "comp_ratio": 0.9705555555555555,
+            "sigma_shrink_bits": -0.48119853091816533,
+            "rho1": 0.025605115395010914,
+            "raw_bits": 13976,
+            "resid_bits": 14336
+          },
+          {
+            "rung": 30,
+            "method": "decimate",
+            "coder": "bz2",
+            "n": 335,
+            "comp_ratio": 0.9787234042553191,
+            "sigma_shrink_bits": -0.40760431272624625,
+            "rho1": 0.11794252526074281,
+            "raw_bits": 5520,
+            "resid_bits": 5576
+          },
+          {
+            "rung": 60,
+            "method": "decimate",
+            "coder": "bz2",
+            "n": 167,
+            "comp_ratio": 0.9313725490196079,
+            "sigma_shrink_bits": -0.5835138802595858,
+            "rho1": -0.12288128894650395,
+            "raw_bits": 3040,
+            "resid_bits": 3200
+          }
+        ]
+      }
+    },
+    "ar1_CONTROL_memory": {
+      "mean": {
+        "lzma": [
+          {
+            "rung": 1,
+            "method": "mean",
+            "coder": "lzma",
+            "n": 10078,
+            "comp_ratio": 1.0313099041533547,
+            "sigma_shrink_bits": 1.1620573024109533,
+            "rho1": 0.900131849260126,
+            "raw_bits": 103296,
+            "resid_bits": 100096
+          },
+          {
+            "rung": 2,
+            "method": "mean",
+            "coder": "lzma",
+            "n": 5039,
+            "comp_ratio": 1.025030525030525,
+            "sigma_shrink_bits": 0.88432945409475,
+            "rho1": 0.853216293780648,
+            "raw_bits": 53728,
+            "resid_bits": 52352
+          },
+          {
+            "rung": 5,
+            "method": "mean",
+            "coder": "lzma",
+            "n": 2015,
+            "comp_ratio": 1.0,
+            "sigma_shrink_bits": 0.3864953887442802,
+            "rho1": 0.7073429964850633,
+            "raw_bits": 23424,
+            "resid_bits": 23360
+          },
+          {
+            "rung": 10,
+            "method": "mean",
+            "coder": "lzma",
+            "n": 1007,
+            "comp_ratio": 0.9825,
+            "sigma_shrink_bits": 0.06684883587231466,
+            "rho1": 0.5436908448185148,
+            "raw_bits": 12576,
+            "resid_bits": 12736
+          },
+          {
+            "rung": 30,
+            "method": "mean",
+            "coder": "lzma",
+            "n": 335,
+            "comp_ratio": 0.9371069182389937,
+            "sigma_shrink_bits": -0.3116111636372623,
+            "rho1": 0.2291895679616741,
+            "raw_bits": 4768,
+            "resid_bits": 5024
+          },
+          {
+            "rung": 60,
+            "method": "mean",
+            "coder": "lzma",
+            "n": 167,
+            "comp_ratio": 0.9550561797752809,
+            "sigma_shrink_bits": -0.38788058756948396,
+            "rho1": 0.14011994682512174,
+            "raw_bits": 2720,
+            "resid_bits": 2784
+          }
+        ],
+        "zlib": [
+          {
+            "rung": 1,
+            "method": "mean",
+            "coder": "zlib",
+            "n": 10078,
+            "comp_ratio": 1.078855675774803,
+            "sigma_shrink_bits": 1.1620573024109533,
+            "rho1": 0.900131849260126,
+            "raw_bits": 141192,
+            "resid_bits": 130808
+          },
+          {
+            "rung": 2,
+            "method": "mean",
+            "coder": "zlib",
+            "n": 5039,
+            "comp_ratio": 1.0574779377612633,
+            "sigma_shrink_bits": 0.88432945409475,
+            "rho1": 0.853216293780648,
+            "raw_bits": 72856,
+            "resid_bits": 68832
+          },
+          {
+            "rung": 5,
+            "method": "mean",
+            "coder": "zlib",
+            "n": 2015,
+            "comp_ratio": 1.0128879537085744,
+            "sigma_shrink_bits": 0.3864953887442802,
+            "rho1": 0.7073429964850633,
+            "raw_bits": 30808,
+            "resid_bits": 30352
+          },
+          {
+            "rung": 10,
+            "method": "mean",
+            "coder": "zlib",
+            "n": 1007,
+            "comp_ratio": 0.9791363415817564,
+            "sigma_shrink_bits": 0.06684883587231466,
+            "rho1": 0.5436908448185148,
+            "raw_bits": 16144,
+            "resid_bits": 16424
+          },
+          {
+            "rung": 30,
+            "method": "mean",
+            "coder": "zlib",
+            "n": 335,
+            "comp_ratio": 0.944954128440367,
+            "sigma_shrink_bits": -0.3116111636372623,
+            "rho1": 0.2291895679616741,
+            "raw_bits": 5768,
+            "resid_bits": 6040
+          },
+          {
+            "rung": 60,
+            "method": "mean",
+            "coder": "zlib",
+            "n": 167,
+            "comp_ratio": 0.9195121951219513,
+            "sigma_shrink_bits": -0.38788058756948396,
+            "rho1": 0.14011994682512174,
+            "raw_bits": 3016,
+            "resid_bits": 3216
+          }
+        ],
+        "bz2": [
+          {
+            "rung": 1,
+            "method": "mean",
+            "coder": "bz2",
+            "n": 10078,
+            "comp_ratio": 1.08418410041841,
+            "sigma_shrink_bits": 1.1620573024109533,
+            "rho1": 0.900131849260126,
+            "raw_bits": 103648,
+            "resid_bits": 95536
+          },
+          {
+            "rung": 2,
+            "method": "mean",
+            "coder": "bz2",
+            "n": 5039,
+            "comp_ratio": 1.0766480099502487,
+            "sigma_shrink_bits": 0.88432945409475,
+            "rho1": 0.853216293780648,
+            "raw_bits": 55400,
+            "resid_bits": 51392
+          },
+          {
+            "rung": 5,
+            "method": "mean",
+            "coder": "bz2",
+            "n": 2015,
+            "comp_ratio": 1.029126213592233,
+            "sigma_shrink_bits": 0.3864953887442802,
+            "rho1": 0.7073429964850633,
+            "raw_bits": 24592,
+            "resid_bits": 23832
+          },
+          {
+            "rung": 10,
+            "method": "mean",
+            "coder": "bz2",
+            "n": 1007,
+            "comp_ratio": 1.009428403064231,
+            "sigma_shrink_bits": 0.06684883587231466,
+            "rho1": 0.5436908448185148,
+            "raw_bits": 13704,
+            "resid_bits": 13512
+          },
+          {
+            "rung": 30,
+            "method": "mean",
+            "coder": "bz2",
+            "n": 335,
+            "comp_ratio": 0.9172610556348074,
+            "sigma_shrink_bits": -0.3116111636372623,
+            "rho1": 0.2291895679616741,
+            "raw_bits": 5144,
+            "resid_bits": 5544
+          },
+          {
+            "rung": 60,
+            "method": "mean",
+            "coder": "bz2",
+            "n": 167,
+            "comp_ratio": 0.9375,
+            "sigma_shrink_bits": -0.38788058756948396,
+            "rho1": 0.14011994682512174,
+            "raw_bits": 2760,
+            "resid_bits": 2880
+          }
+        ]
+      },
+      "decimate": {
+        "lzma": [
+          {
+            "rung": 1,
+            "method": "decimate",
+            "coder": "lzma",
+            "n": 10078,
+            "comp_ratio": 1.0313099041533547,
+            "sigma_shrink_bits": 1.1620573024109533,
+            "rho1": 0.900131849260126,
+            "raw_bits": 103296,
+            "resid_bits": 100096
+          },
+          {
+            "rung": 2,
+            "method": "decimate",
+            "coder": "lzma",
+            "n": 5039,
+            "comp_ratio": 1.0112692763938316,
+            "sigma_shrink_bits": 0.6910437147839676,
+            "rho1": 0.8081350199977329,
+            "raw_bits": 54560,
+            "resid_bits": 53888
+          },
+          {
+            "rung": 5,
+            "method": "decimate",
+            "coder": "lzma",
+            "n": 2015,
+            "comp_ratio": 0.98046875,
+            "sigma_shrink_bits": 0.12213678635709393,
+            "rho1": 0.5777596620624821,
+            "raw_bits": 24096,
+            "resid_bits": 24512
+          },
+          {
+            "rung": 10,
+            "method": "decimate",
+            "coder": "lzma",
+            "n": 1007,
+            "comp_ratio": 0.9483568075117371,
+            "sigma_shrink_bits": -0.1918871568411694,
+            "rho1": 0.3476161118253859,
+            "raw_bits": 12928,
+            "resid_bits": 13568
+          },
+          {
+            "rung": 30,
+            "method": "decimate",
+            "coder": "lzma",
+            "n": 335,
+            "comp_ratio": 0.9298245614035088,
+            "sigma_shrink_bits": -0.39785869440760463,
+            "rho1": 0.13202781244013284,
+            "raw_bits": 5088,
+            "resid_bits": 5408
+          },
+          {
+            "rung": 60,
+            "method": "decimate",
+            "coder": "lzma",
+            "n": 167,
+            "comp_ratio": 0.9215686274509803,
+            "sigma_shrink_bits": -0.5091966150491757,
+            "rho1": -0.015948763602510675,
+            "raw_bits": 3008,
+            "resid_bits": 3200
+          }
+        ],
+        "zlib": [
+          {
+            "rung": 1,
+            "method": "decimate",
+            "coder": "zlib",
+            "n": 10078,
+            "comp_ratio": 1.078855675774803,
+            "sigma_shrink_bits": 1.1620573024109533,
+            "rho1": 0.900131849260126,
+            "raw_bits": 141192,
+            "resid_bits": 130808
+          },
+          {
+            "rung": 2,
+            "method": "decimate",
+            "coder": "zlib",
+            "n": 5039,
+            "comp_ratio": 1.040818634102216,
+            "sigma_shrink_bits": 0.6910437147839676,
+            "rho1": 0.8081350199977329,
+            "raw_bits": 73640,
+            "resid_bits": 70688
+          },
+          {
+            "rung": 5,
+            "method": "decimate",
+            "coder": "zlib",
+            "n": 2015,
+            "comp_ratio": 0.9922305764411028,
+            "sigma_shrink_bits": 0.12213678635709393,
+            "rho1": 0.5777596620624821,
+            "raw_bits": 31672,
+            "resid_bits": 31856
+          },
+          {
+            "rung": 10,
+            "method": "decimate",
+            "coder": "zlib",
+            "n": 1007,
+            "comp_ratio": 0.9599254426840633,
+            "sigma_shrink_bits": -0.1918871568411694,
+            "rho1": 0.3476161118253859,
+            "raw_bits": 16480,
+            "resid_bits": 17104
+          },
+          {
+            "rung": 30,
+            "method": "decimate",
+            "coder": "zlib",
+            "n": 335,
+            "comp_ratio": 0.9409547738693468,
+            "sigma_shrink_bits": -0.39785869440760463,
+            "rho1": 0.13202781244013284,
+            "raw_bits": 5992,
+            "resid_bits": 6304
+          },
+          {
+            "rung": 60,
+            "method": "decimate",
+            "coder": "zlib",
+            "n": 167,
+            "comp_ratio": 0.9431818181818182,
+            "sigma_shrink_bits": -0.5091966150491757,
+            "rho1": -0.015948763602510675,
+            "raw_bits": 3320,
+            "resid_bits": 3456
+          }
+        ],
+        "bz2": [
+          {
+            "rung": 1,
+            "method": "decimate",
+            "coder": "bz2",
+            "n": 10078,
+            "comp_ratio": 1.08418410041841,
+            "sigma_shrink_bits": 1.1620573024109533,
+            "rho1": 0.900131849260126,
+            "raw_bits": 103648,
+            "resid_bits": 95536
+          },
+          {
+            "rung": 2,
+            "method": "decimate",
+            "coder": "bz2",
+            "n": 5039,
+            "comp_ratio": 1.0591095578179608,
+            "sigma_shrink_bits": 0.6910437147839676,
+            "rho1": 0.8081350199977329,
+            "raw_bits": 55760,
+            "resid_bits": 52584
+          },
+          {
+            "rung": 5,
+            "method": "decimate",
+            "coder": "bz2",
+            "n": 2015,
+            "comp_ratio": 0.9948602634115001,
+            "sigma_shrink_bits": 0.12213678635709393,
+            "rho1": 0.5777596620624821,
+            "raw_bits": 24776,
+            "resid_bits": 24840
+          },
+          {
+            "rung": 10,
+            "method": "decimate",
+            "coder": "bz2",
+            "n": 1007,
+            "comp_ratio": 0.9853521126760564,
+            "sigma_shrink_bits": -0.1918871568411694,
+            "rho1": 0.3476161118253859,
+            "raw_bits": 13992,
+            "resid_bits": 14136
+          },
+          {
+            "rung": 30,
+            "method": "decimate",
+            "coder": "bz2",
+            "n": 335,
+            "comp_ratio": 0.9346938775510204,
+            "sigma_shrink_bits": -0.39785869440760463,
+            "rho1": 0.13202781244013284,
+            "raw_bits": 5496,
+            "resid_bits": 5816
+          },
+          {
+            "rung": 60,
+            "method": "decimate",
+            "coder": "bz2",
+            "n": 167,
+            "comp_ratio": 0.9827586206896551,
+            "sigma_shrink_bits": -0.5091966150491757,
+            "rho1": -0.015948763602510675,
+            "raw_bits": 3192,
+            "resid_bits": 3184
+          }
+        ]
+      }
+    }
+  }
+}

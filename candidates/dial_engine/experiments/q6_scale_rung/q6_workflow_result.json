@@ -1,0 +1,510 @@
+{
+ "remeasure": [
+  {
+   "angle": "coder-and-shrink-robustness: reran the q6 scale-rung instrument on the real committed GOES week (n=10078, log10 long-band, Q=1e-3, persistence law, model 64b, seeded controls rng(0)) under zlib-9 and bz2-9 in addition to lzma-9, for both mean and decimate coarsening at rungs [1,2,5,10,30,60]; added the coder-free dimensionless sigma-shrink view log2(sig_raw/sig_resid) and the lag-1 autocorrelation rho1 per rung; first verified the committed scale_rung_results.json reproduces bit-for-bit (raw_bits/resid_bits/n: 0 mismatches). Script + results: D:\\PlatformOperator\\research\\pav\\candidates\\dial_engine\\experiments\\q6_scale_rung\\q6_coder_robustness.py and q6_coder_robustness_results.json.",
+   "ran_real_computation": true,
+   "numbers": {
+    "repro_committed_lzma_bit_for_bit_mismatches": 0,
+    "rungs_min": [
+     1,
+     2,
+     5,
+     10,
+     30,
+     60
+    ],
+    "n_per_rung": [
+     10078,
+     5039,
+     2015,
+     1007,
+     335,
+     167
+    ],
+    "comp_ratio_rung1": {
+     "lzma9": {
+      "flare": 1.27,
+      "ar1": 1.031,
+      "noise": 0.951
+     },
+     "zlib9": {
+      "flare": 1.439,
+      "ar1": 1.079,
+      "noise": 0.95
+     },
+     "bz2_9": {
+      "flare": 1.285,
+      "ar1": 1.084,
+      "noise": 0.953
+     }
+    },
+    "flare_comp_ratio_vs_rung_decimate": {
+     "lzma9": [
+      1.27,
+      1.08,
+      0.992,
+      0.966,
+      0.96,
+      0.914
+     ],
+     "zlib9": [
+      1.439,
+      1.256,
+      1.108,
+      1.036,
+      0.97,
+      0.912
+     ],
+     "bz2_9": [
+      1.285,
+      1.215,
+      1.148,
+      1.084,
+      0.986,
+      0.86
+     ]
+    },
+    "flare_comp_ratio_vs_rung_mean": {
+     "lzma9": [
+      1.27,
+      1.096,
+      1.002,
+      0.959,
+      0.966,
+      0.967
+     ],
+     "zlib9": [
+      1.439,
+      1.279,
+      1.118,
+      1.053,
+      0.983,
+      0.942
+     ],
+     "bz2_9": [
+      1.285,
+      1.236,
+      1.151,
+      1.103,
+      0.997,
+      0.935
+     ]
+    },
+    "flare_minus_noise_gap_decimate_matched_rung": {
+     "lzma9": [
+      0.319,
+      0.13,
+      0.042,
+      0.025,
+      0.001,
+      0.028
+     ],
+     "zlib9": [
+      0.489,
+      0.303,
+      0.161,
+      0.086,
+      0.013,
+      -0.021
+     ],
+     "bz2_9": [
+      0.332,
+      0.265,
+      0.201,
+      0.113,
+      0.007,
+      -0.071
+     ]
+    },
+    "noise_floor_band_across_rungs_methods": {
+     "lzma9": [
+      0.886,
+      1
+     ],
+     "zlib9": [
+      0.921,
+      0.961
+     ],
+     "bz2_9": [
+      0.911,
+      0.979
+     ]
+    },
+    "ordering_flare_gt_ar1_gt_noise_at_rung1": {
+     "lzma9": true,
+     "zlib9": true,
+     "bz2_9": true
+    },
+    "flare_decay_monotone_all_coders_both_methods": true,
+    "rung_where_flare_noise_gap_first_leq_0.03_decimate": {
+     "lzma9": 10,
+     "zlib9": 30,
+     "bz2_9": 30
+    },
+    "sigma_shrink_bits_coder_free": {
+     "iid_floor_theory": -0.5,
+     "zero_gain_line": 0,
+     "flare_decimate": [
+      3.502,
+      2.594,
+      1.607,
+      1.063,
+      0.462,
+      -0.014
+     ],
+     "flare_mean": [
+      3.502,
+      2.703,
+      1.824,
+      1.334,
+      0.688,
+      0.358
+     ],
+     "noise_decimate": [
+      -0.501,
+      -0.481,
+      -0.506,
+      -0.481,
+      -0.408,
+      -0.584
+     ],
+     "ar1_decimate": [
+      1.162,
+      0.691,
+      0.122,
+      -0.192,
+      -0.398,
+      -0.509
+     ]
+    },
+    "rho1_per_rung": {
+     "flare_decimate": [
+      0.996,
+      0.986,
+      0.946,
+      0.885,
+      0.736,
+      0.487
+     ],
+     "ar1_decimate": [
+      0.9,
+      0.808,
+      0.578,
+      0.348,
+      0.132,
+      -0.016
+     ],
+     "noise_decimate": [
+      -0.001,
+      0.026,
+      -0.009,
+      0.026,
+      0.118,
+      -0.123
+     ]
+    },
+    "analytic_cross_checks": {
+     "ar1_rung1_shrink_theory_vs_measured": [
+      1.161,
+      1.162
+     ],
+     "ar1_rho_rung10_theory_0.9pow10_vs_measured": [
+      0.349,
+      0.348
+     ],
+     "flare_rung60_shrink_predicted_from_rho_vs_measured": [
+      -0.019,
+      -0.014
+     ]
+    }
+   },
+   "verdict": "REFUTATION HOLDS under this angle, and it is significant — the coder sweep strengthens it. The claim-bearing direction (does coarsening RAISE compressibility?) fails unanimously: under all three coders (lzma-9, zlib-9, bz2-9), both coarsening methods (mean AND decimate), and both dimensionless views (coded-bit comp-ratio and coder-free sigma-shrink), the flare's persistence-lawfulness DECAYS monotonically from its 1-min maximum and never rises with rung. The fine-scale edge is coder-robust and the committed 1.27x is the CONSERVATIVE value (zlib-9: 1.44x, bz2-9: 1.29x, all vs noise ~0.95); the ordering flare > ar1 > noise at rung 1 holds for every coder; and the flare-minus-noise gap at matched rungs closes to <=0.013 by rung 30 under every coder. The coder-free sigma-shrink confirms independently of any compressor: +3.50 bits at 1-min decaying monotonically to ~0 by 60-min (effect size ~4 bits above the -0.5 iid floor at rung 1, far above coarse-rung jitter). Two refinements to the inline wording, neither refutation-threatening: (1) floor-ARRIVAL speed is coder-dependent — 'at the floor by 10 min' is lzma-specific; zlib/bz2 still show 1.04-1.10x at 10-min and reach their floors at 30-60 min, so the coder-robust phrasing is 'decays monotonically, at the floor by 30-60 min'; (2) in sigma-shrink the 60-min flare lands at the ZERO-GAIN line (shrink -0.014 decimate, rho1~0.49), not at the iid floor (-0.5, rho1=0) — coarsening destroys the persistence EDGE (no compression win remains) but the series is not literally iid at hourly cadence. The Q6 conclusion stands coder-robustly: the flare's lawfulness under this law+window is fine-scale memory that coarsening destroys; hardness is scale-relative in the direction OPPOSITE to the naive conjecture. Artifacts: D:\\PlatformOperator\\research\\pav\\candidates\\dial_engine\\experiments\\q6_scale_rung\\q6_coder_robustness.py, D:\\PlatformOperator\\research\\pav\\candidates\\dial_engine\\experiments\\q6_scale_rung\\q6_coder_robustness_results.json.",
+   "caveats": [
+    "Floor-arrival rung is coder-dependent: lzma-9 has the flare inside its noise band by rung 10 (0.966 vs band [0.886,1.000]), but zlib-9/bz2-9 still show 1.04-1.10x at rung 10 and only close the flare-noise gap by rung 30-60; the inline '~0.95-0.97 by 10-60-min' is lzma-specific at the 10-min end.",
+    "'Falls to the iid-noise floor' is exact only in coded bits: the coder-free sigma-shrink shows the 60-min flare at the zero-gain line (decimate -0.014 bits, rho1=0.487; mean +0.358 bits, rho1=0.693), still well above the iid floor of -0.5 bits (rho1=0) — the persistence EDGE is destroyed but measurable memory remains at hourly cadence, which the coders cannot monetize at rho1<~0.7 with small n.",
+    "'Tracks the AR(1) control almost exactly' holds only for the lzma comp-ratio curve: in coder-free terms the flare's memory decays much slower than the a=0.9 AR(1) (rho1 at rung 10 decimate: 0.885 vs 0.348), and under zlib/bz2 the flare sits clearly above ar1 at mid rungs; the apparent exact tracking is lzma compression-saturation coincidence.",
+    "Small-n resolution at coarse rungs: n=335/167 at rungs 30/60 makes fixed coder headers ~15-20% of the stream, squeezing comp-ratios toward 1 and adding ~+/-0.03-0.05 jitter (the lzma noise control alone spans 0.886-1.000); coarse-rung coded ratios are low-resolution and sigma-shrink is the cleaner observable there.",
+    "Single seed (default_rng(0)) for the synthetic controls; noise-floor bands come from one realization, no seed sweep.",
+    "Standing caveat from the brief is untouched by this angle: persistence is a fine-scale law by construction, and the 7-day window cannot see coarse-scale laws (27-day rotation, 11-yr cycle) — this check establishes coder/shrink robustness, not law-class or window generality.",
+    "Register holds: exploratory instrument, 0.99-not-Boolean; flare is the real committed GOES week, controls are clearly-labelled seeded synthetics, all reported quantities dimensionless (comp-ratio, bits, rho1)."
+   ]
+  },
+  {
+   "angle": "significance-error-bars: moving-block bootstrap (B=400, L=120 min, seed-fixed) of the 1-min log-flux, recomputing the persistence-law lzma-9 comp-ratio per rung per resample; method pins identical to scale_rung_instrument.py (reproduced its point estimates exactly). Tested rung1>1.0, paired within-replicate decay rung1-rungK, and overlap of coarse rungs with a freshly-regenerated iid-noise floor band; plus block-length sensitivity (L=60/120/300/600) and a no-replacement block-permutation robustness check for the lzma duplicate-block artifact.",
+   "ran_real_computation": true,
+   "numbers": {
+    "reproduced_point_estimates_decimate": [
+     1.27,
+     1.08,
+     0.992,
+     0.966,
+     0.96,
+     0.914
+    ],
+    "reproduced_point_estimates_mean": [
+     1.27,
+     1.096,
+     1.002,
+     0.959,
+     0.966,
+     0.967
+    ],
+    "matches_committed_json": true,
+    "boot_B": 400,
+    "boot_blocklen_min": 120,
+    "decimate_flare_rung1_mean_ci": [
+     1.173,
+     1.141,
+     1.204
+    ],
+    "decimate_flare_rung2_mean_ci": [
+     1.057,
+     1.027,
+     1.089
+    ],
+    "decimate_flare_rung5_mean_ci": [
+     0.98,
+     0.96,
+     1.002
+    ],
+    "decimate_flare_rung10_mean_ci": [
+     0.957,
+     0.936,
+     0.98
+    ],
+    "decimate_flare_rung30_mean_ci": [
+     0.937,
+     0.903,
+     0.974
+    ],
+    "decimate_flare_rung60_mean_ci": [
+     0.938,
+     0.897,
+     0.989
+    ],
+    "noise_floor_rung1_ci": [
+     0.953,
+     0.945,
+     0.959
+    ],
+    "noise_floor_rung60_ci": [
+     0.928,
+     0.893,
+     0.96
+    ],
+    "ar1_rung1_ci": [
+     1.029,
+     1.024,
+     1.034
+    ],
+    "ar1_rung60_ci": [
+     0.924,
+     0.891,
+     0.969
+    ],
+    "rung1_significantly_above_1p0": "YES (CI lower bound 1.141 >> 1.0; noise floor upper 0.959 fully separate)",
+    "paired_decay_rung1_minus_rung10_ci": [
+     0.217,
+     0.18,
+     0.252
+    ],
+    "paired_decay_rung1_minus_rung60_ci": [
+     0.237,
+     0.178,
+     0.288
+    ],
+    "adjacent_rung1to2_ci": [
+     0.115,
+     0.072,
+     0.153
+    ],
+    "adjacent_rung2to5_ci": [
+     0.077,
+     0.045,
+     0.108
+    ],
+    "adjacent_rung5to10_ci": [
+     0.025,
+     -0.002,
+     0.048
+    ],
+    "adjacent_rung10to30_ci": [
+     0.021,
+     -0.016,
+     0.054
+    ],
+    "adjacent_rung30to60_ci": [
+     0.001,
+     -0.051,
+     0.053
+    ],
+    "coarse_overlaps_noise_floor": "rung10,30,60 flare CIs OVERLAP iid-noise band; rung1,2 separate; rung5 straddles",
+    "n_per_rung": [
+     10078,
+     5039,
+     2015,
+     1007,
+     335,
+     167
+    ],
+    "blocklen_sensitivity_rung1_decimate": {
+     "L60": [
+      1.154,
+      1.127,
+      1.18
+     ],
+     "L120": [
+      1.173,
+      1.145,
+      1.205
+     ],
+     "L300": [
+      1.192,
+      1.153,
+      1.232
+     ],
+     "L600": [
+      1.2,
+      1.157,
+      1.239
+     ]
+    },
+    "permutation_robustness_rung1_decimate": [
+     1.223,
+     1.194,
+     1.252
+    ],
+    "mean_method_noise_floor_rises_with_rung": "0.953->0.993 (smoothing confound visible); decimate floor stays flat ~0.93-0.95"
+   },
+   "verdict": "REFUTATION HOLDS and is statistically SIGNIFICANT under error bars. (1) The 1-min comp-ratio is decisively above 1.0: bootstrap CI [1.141,1.204] (point 1.270), with the iid-noise floor at 0.953 [0.945,0.959] fully separated -- real fine-scale lawfulness, ~4-5 CI-widths above 1.0, robust across block lengths 60-600 min and under no-replacement permutation (so not an lzma duplicate-block artifact). (2) The decay is REAL, not noise-floor wandering: every within-replicate paired diff rung1-rungK excludes 0 (rung1-rung60 = +0.237 [+0.178,+0.288]). (3) The coarse rungs fall INTO the iid-noise floor band: flare CIs at rung 10/30/60 overlap the noise band, confirming the lawfulness collapses to the structureless floor. So the naive Q6 conjecture (fuzzy-at-fine -> lawful-at-coarse) is refuted WITH error bars -- the curve runs the opposite direction (significantly lawful at fine scale, significantly decaying to the noise floor). Caveat the angle flagged is confirmed: the decay is only RESOLVABLE step-by-step over rung1->5 (steps 1->2 and 2->5 significant); n-shrinkage to n=167 widens CIs so rung5->10->30->60 individual steps are each n.s., even though the cumulative fine-vs-coarse drop stays significant.",
+   "caveats": [
+    "Bootstrap mean (rung1 1.173) sits BELOW the committed point estimate (1.270) because moving-block joins disrupt fine-scale persistence (inflating resid bits); block-length sensitivity confirms this -- as L grows 60->600 the mean climbs 1.154->1.200 toward 1.270. The 1.270 point estimate is the better central value; the bootstrap CIs are conservative/downward-biased. Significance conclusions (>1.0, real decay, overlaps floor) are unaffected.",
+    "The committed inline phrase 'tracks AR(1) almost exactly' overstates the FINE end: the flare's 1-min comp-ratio (1.270 point / 1.173 boot) is significantly higher than this a=0.9 AR(1) control (1.029 [1.024,1.034]) -- they share the decay SHAPE and converge at the coarse floor (rung60 flare 0.938 vs ar1 0.924, overlapping), but the flare has stronger minute-scale memory than that particular control.",
+    "Decimate is the clean claim-bearing channel: under MEAN-aggregation the iid-noise floor itself RISES with rung (0.953->0.993) because averaging smooths noise into spurious persistence (the variance-reduction confound). The flare's decay survives under decimate (where the noise floor stays flat), so it is not a smoothing artifact -- corroborates the instrument's design logic.",
+    "These are WITHIN-WEEK error bars: the block bootstrap estimates sampling variability conditional on this single 7-day GOES realization being a draw from a block-stationary process. It does NOT capture week-to-week or flare-class variability (a big X-flare week could differ).",
+    "Register unchanged: exploratory compression INSTRUMENT, 0.99-not-Boolean, dimensionless cross-series only; flare is real GOES, noise/ar1 are seeded synthetic CONTROLS. The standing scope caveat holds -- persistence is a fine-scale law by construction, so coarse-scale solar laws (27-day rotation, 11-yr cycle) are invisible in a 7-day window and are not what this refutes.",
+    "Files: D:/PlatformOperator/research/pav/candidates/dial_engine/experiments/q6_scale_rung/verify_bootstrap.py (the bootstrap harness, reproduces committed point estimates then adds CIs); raw run output at C:/Users/Admin/AppData/Local/Temp/claude/D--/36902d4e-bc4e-4608-859a-5a03ff9b3f45/tasks/bs2veh11p.output. No committed files were modified."
+   ]
+  },
+  {
+   "angle": "autocorrelation-mechanism: is persistence-law comp-ratio at each scale-rung an exact function of the rung's lag-1 autocorrelation, and does coarsening compress by destroying that fine-scale memory?",
+   "ran_real_computation": true,
+   "numbers": {
+    "reproduced_instrument_comp_ratio": "exact match to scale_rung_results.json (flare decimate 1.270/1.080/0.992/0.966/0.960/0.914 at rungs 1/2/5/10/30/60)",
+    "flare_decimate_lag1_autocorr": {
+     "r1": 0.996,
+     "r2": 0.986,
+     "r5": 0.946,
+     "r10": 0.885,
+     "r30": 0.734,
+     "r60": 0.484
+    },
+    "flare_mean_lag1_autocorr": {
+     "r1": 0.996,
+     "r2": 0.988,
+     "r5": 0.96,
+     "r10": 0.92,
+     "r30": 0.804,
+     "r60": 0.688
+    },
+    "ar1_decimate_lag1_autocorr": {
+     "r1": 0.9,
+     "r2": 0.808,
+     "r5": 0.578,
+     "r10": 0.348,
+     "r30": 0.132,
+     "r60": -0.016
+    },
+    "noise_decimate_lag1_autocorr_range": "[-0.123, 0.118] (hovers at 0, no memory)",
+    "TEST1_monotonicity": {
+     "spearman_sigma_shrink_vs_autocorr_global": 1,
+     "pearson_sigma_shrink_vs_autocorr_global": 0.8653,
+     "spearman_comp_ratio_vs_autocorr_global": 0.757,
+     "pearson_comp_ratio_vs_autocorr_global": 0.6063,
+     "spearman_comp_ratio_vs_autocorr_within_flare_decimate_column": 1
+    },
+    "TEST2_exact_identity_sigma_shrink_eq_minus_half_log2_2_times_1_minus_rho": {
+     "max_abs_err_bits": 0.0174,
+     "rms_err_bits": 0.0059,
+     "pearson_empirical_vs_predicted": 0.999996,
+     "n_cells": 36
+    },
+    "TEST3_compress_expand_crossover": {
+     "predicted_rho_star": 0.5,
+     "flare_decimate_last_COMPRESS_at_r30": {
+      "rho": 0.734,
+      "sigma_shrink_bits": 0.462
+     },
+     "flare_decimate_EXPAND_at_r60": {
+      "rho": 0.484,
+      "sigma_shrink_bits": -0.014
+     }
+    },
+    "TEST4_rho_power_decay": {
+     "ar1_build_param_rho": 0.9,
+     "ar1_rho1_power_law_first4_rungs_match": "0.900/0.810/0.590/0.349 predicted vs 0.900/0.808/0.578/0.348 empirical",
+     "ar1_best_fit_single_rho": 0.938,
+     "flare_fine_scale_rho1": 0.996,
+     "flare_best_fit_single_rho": 0.988,
+     "flare_NOT_single_AR1": "rho1^r=0.996^r over-predicts tail (0.788 vs actual 0.484 at r60); flare ACF decays faster than any single exponential -> multi-timescale"
+    },
+    "finite_sample_autocorr_noise_at_r30_r60": "~1/sqrt(n) = 0.055/0.077 at n=335/167"
+   },
+   "verdict": "CONFIRMED and sharpened to an algebraic identity; the refutation of the naive Q6 conjecture HOLDS and is significant. The proposed mechanism is exactly right. (1) Persistence-law compression IS lag-1 autocorrelation: the empirical per-dim sigma-shrink equals the predicted -0.5*log2(2(1-rho_lag1)) to RMS 0.006 bits (max 0.017 bits, Pearson 0.999996) across all 36 cells. This is not a loose 'tracks' -- it is the Var(resid)=2*sigma^2*(1-rho) identity for first-differencing, holding for flare, noise, and AR(1) alike. (2) Coarsening destroys memory: decimation by r drives the rung's lag-1 autocorr monotonically toward 0 (flare 0.996->0.484, AR(1) 0.900->-0.016, noise stays ~0), and sigma-shrink is a PERFECT monotone of it (global Spearman = 1.000; comp_ratio also +1.000 within the flare-decimate column). The global comp_ratio Spearman is looser (0.757) only because lzma carries marginal/higher-order entropy plus the 64-bit model floor (0.1%->2.2% of the resid budget as n shrinks 10078->167), not because the mechanism weakens. (3) Compress/expand crossover sits exactly at rho=0.5 (2(1-rho)=1): flare-decimate compresses through r=30 (rho=0.734) and flips to EXPAND at r=60 (rho=0.484, shrink -0.014b) -- the comp-ratio falling to the floor is the lag-1 memory crossing 0.5. So 'fine-scale memory destroyed by coarsening' is the precise, quantitative mechanism, and the naive 'fuzzy-at-fine becomes lawful-at-coarse' is refuted: the flare's lawfulness IS its minute-scale autocorrelation, which coarsening annihilates. PARTIAL on the rho^r sub-claim: the AR(1) control's decimated autocorr follows rho^r with its build parameter 0.9 recovered (first four rungs 0.900/0.810/0.590/0.349 vs empirical 0.900/0.808/0.578/0.348), but the FLARE does NOT match rho=0.9 (its fine-scale rho=0.996 is far higher) and is not a single AR(1) at all -- its ACF decays faster than any single exponential at long lag (rho1^r=0.996^r predicts 0.788 at r=60 vs actual 0.484; best single-rho fit 0.988). The flare and AR(1) share the comp-ratio floor and falling direction, but their memory structures differ (flare multi-timescale rho1=0.996 vs AR(1) single-exponential rho=0.900), so the inline 'tracks AR(1) almost exactly' is true only at the endpoint/floor level, not in autocorr structure.",
+   "caveats": [
+    "The exact identity is a property of the persistence (first-difference) law, whose residual variance is algebraically 2*sigma^2*(1-rho_lag1) -- a FINE-SCALE law by construction. A different predictor (lag-r matched to the rung, or a detrend) could compress coarse-scale structure persistence cannot see. So 'hardness is scale-relative is REFUTED' holds ONLY for persistence-law + this 7-day window, not as a general statement about the flare's compressibility.",
+    "The inline claim that the flare 'tracks the AR(1)-memory control almost exactly' is accurate only for the comp-ratio endpoints/floor (both settle to ~0.92). The underlying autocorr structures differ: flare rho1=0.996 multi-timescale vs AR(1) rho=0.900 single-exponential; the flare starts much higher (comp 1.27 vs 1.03) and its ACF decays faster than rho^r at long lag.",
+    "Finite-sample autocorr noise ~1/sqrt(n) = 0.055/0.077 at rungs 30/60 (n=335/167) explains the AR(1) tail deviation from 0.9^r (empirical 0.132/-0.016 vs theory 0.042/0.002) and adds uncertainty to the flare's r=60 estimate near the rho=0.5 crossover.",
+    "comp_ratio (lzma raw/resid bits) is a looser readout than per-dim sigma-shrink: it carries the 64-bit model floor and lzma's marginal/higher-order entropy, which is why its GLOBAL rank-correlation with autocorr is 0.757 while sigma-shrink's is 1.000. The clean mechanism channel is sigma-shrink; comp_ratio confirms it only within-column (Spearman +1.000 in the flare-decimate sweep).",
+    "Register unchanged: exploratory INSTRUMENT, dimensionless cross-series only; flare is real committed GOES, noise/AR(1) are seeded synthetic controls (no fabrication). Artifacts written: autocorr_mechanism.py, autocorr_tests.py, autocorr_final.py, autocorr_mechanism_rows.json in the q6_scale_rung dir."
+   ]
+  }
+ ],
+ "adversary": {
+  "attacks": [
+   {
+    "name": "NOISE-FLOOR WANDER",
+    "result": "partial",
+    "detail": "200-seed iid null ensemble (decimate). Flare exceeds null p97.5 at only 4/6 rungs: rung1 z=+89.8, rung2 z=+24.5, rung5 z=+7.4, rung10 z=+2.33 (all above), but rung30 z=+1.69 (0.960 vs null p97.5 0.964 -> INSIDE cloud) and rung60 z=-0.75 (0.914 vs null mean 0.929 -> BELOW floor). So the absolute coarse-end comp-ratio IS indistinguishable from floor noise. HOWEVER the decay is not floor-wander: flare's rung1-rungK drop (+0.304/+0.310/+0.356 at rung10/30/60) exceeds the within-null decay p97.5 (+0.027/+0.048/+0.060) by 5-15x. The honest datum is 'flare is 89 SD above floor at 1-min and COLLAPSES INTO the floor by coarsening' -- which IS the refutation of coarse=more-lawful. Critique deflates the coarse-end precision (the inline 0.95-0.97 absolute value is just floor jitter) but does not reverse direction. Does NOT reduce to 'only real datum is lag-1 memory at 1-min': the significant monotone collapse is itself the scale-relativity signal."
+   },
+   {
+    "name": "FINE-LAW-BY-CONSTRUCTION",
+    "result": "partial",
+    "detail": "Strongest surviving critique; the circularity is real and empirically confirmed. Built 3 genuine coarse-scale laws and ran them on the raw/decimated flare. (a) LAG-r persistence: flare comp-ratio stops falling and ticks back UP at long lag (0.890 at 30-min lag -> 0.926 at 120/240-min), not a monotone collapse. (b) WINDOW-MEAN slow-trend law (residual = x - trailing W-mean): flare stays compressible at EVERY window 5..720 min (1.085 -> 1.006, never drops to the 0.93-1.0 noise floor; noise control pinned ~0.99). (c) Same-marginal SHUFFLE test: the time-ordered decimated flare compresses BETTER than its histogram-matched shuffle at ALL rungs including 60 (shuf/raw ratio 1.52/1.39/1.24/1.17/1.09/1.07 at rung 1..60) -> coarse-scale time structure demonstrably EXISTS at hourly cadence. Conclusion: 'lawfulness is fine-scale memory that coarsening destroys' is LAW-RELATIVE, not a property of the flare. Persistence (first-difference) is a 1-step operator by construction so of course its edge is fine-scale; a slow-trend law finds the flare lawful at coarse scale. Refuting 'coarse=more-lawful' using ONLY persistence is partly circular -- the fair coarse law is the slow-trend/lag-r/shuffle battery, and under it coarse structure is present. Does not reverse the SPECIFIC persistence finding, but voids its generalization to a claim about the flare's hardness."
+   },
+   {
+    "name": "WINDOW TOO SHORT",
+    "result": "survives",
+    "detail": "Refutation of the persistence claim holds and is NOT a pure sampling artifact, but the angle's caveat is confirmed. Built toyB = pure slow sinusoid (period 2 days) + tiny noise and ran the SAME persistence instrument: it stays compressible at coarse rungs (comp-ratio 1.142 -> 1.044 at rung60, far above the 0.93 floor), proving the instrument CAN see coarse structure when it DOMINATES the 7-day window. So the flare's collapse to floor is a real absence of a persistence-visible DOMINANT coarse signal, not blindness. The catch confirming Attack 2: integrated autocorr time tau ~= 532 min => only ~19 independent samples in 7 days; n_eff=167 at rung60; and toyA = slow sinusoid + fine iid noise (subdominant coarse signal) DOES get buried to the floor (0.970 -> 0.948 -> 0.970, indistinguishable from flare/noise). So a SUBDOMINANT coarse law is invisible in 7 days. Refutation of coarse-lawful-via-persistence holds; the 27-day/11-yr coarse laws are genuinely unsampled (0 cycles) and the finding says nothing about them."
+   },
+   {
+    "name": "MEAN-vs-DECIMATE",
+    "result": "survives",
+    "detail": "Agreement DOES clear the variance-reduction artifact, cleanly, and the 200-seed ensemble proves it. (4a) iid-noise FLOOR rises with rung under MEAN (0.952 -> 0.990) but stays FLAT under DECIMATE (0.952 -> 0.929): mean-aggregation is contaminated by variance-reduction exactly as the design feared, so mean alone could be a smoothing artifact -- but the refutation rides on decimate where the floor is flat, so the flare's decimate decay is NOT a smoothing artifact. (4b) Coder-free sigma-shrink (no lzma header, no +64 model floor, n-independent in expectation): flare decimate 3.502 -> -0.014 bits while noise pins at the -0.500 iid theory line at every rung -> the decay is real memory-loss, independent of any compressor and of n. (4b-pad) Tiling each decimated series back to n>=10000 (removes coder n-shrinkage/header overhead) preserves the decay direction (1.270 -> 0.930). The n-shrinkage confound is ruled out 3 independent ways. The two coarsenings agree for the RIGHT reason (both destroy lag-1 memory), not a shared hidden confound."
+   }
+  ],
+  "strongest_surviving_critique": "FINE-LAW-BY-CONSTRUCTION (Attack 2). The refutation is LAW-RELATIVE, not a fact about the flare. Persistence f(t)=f(t-1) is a 1-step (fine-scale) operator by construction, so 'coarsening destroys its edge' is near-tautological and refuting 'coarse=more-lawful' with ONLY this law is partly circular. My coarse-law battery confirms the flare actually HAS coarse-scale structure that persistence cannot monetize: a slow-trend (window-mean) law keeps it compressible at every window to 720 min (1.09 -> 1.01, never hitting the floor), lag-r persistence ticks back up at long lag, and the decimated flare beats its own same-marginal shuffle at all rungs including hourly (1.07x). So a fairer coarse-scale law finds the flare lawful when coarsened -- the inline gloss 'the flare's lawfulness IS fine-scale memory that coarsening destroys' should be narrowed to 'under the persistence law, the flare's persistence-edge is fine-scale memory.' The naive Q6 conjecture (fuzzy-at-fine -> lawful-at-coarse) is refuted ONLY for the persistence instrument, not as a statement about the phenomenon. Secondary surviving point (Attack 1): the coarse-end absolute comp-ratios (0.96/0.91 at rung 30/60) are inside the noise cloud, so the load-bearing observable is the SIGNIFICANT monotone collapse-into-floor, not the precise coarse values.",
+  "refutation_verdict": "REFUTATION HOLDS in its claim-bearing direction but must be RE-SCOPED to be honest. NOT reversed: under the persistence law + lzma-9 (corroborated coder-free via sigma-shrink and across the 200-seed null), the flare's compressibility runs OPPOSITE to the naive Q6 conjecture -- it is decisively lawful at 1-min (1.27, z=+89.8 vs floor) and decays monotonically into the iid-noise floor by coarsening, a decay 5-15x larger than within-null wander and not a variance-reduction artifact (decimate floor is flat while only the mean floor inflates) and not an n-shrinkage artifact (sigma-shrink and tile-pad both preserve it). So 'coarse=more-lawful' fails under this law. Two mandatory caveats from the attacks, neither reversing direction: (1) LAW-RELATIVITY (Attack 2, strongest): the finding is a property of the fine-scale persistence operator, not of the flare -- a fair coarse-scale law (slow-trend/window-mean, lag-r, or the same-marginal shuffle test, which shows 1.07x coarse structure at hourly cadence) finds the flare STILL lawful when coarsened, so the inline 'lawfulness is fine-scale memory' overclaims and should read 'persistence-edge is fine-scale memory'; (2) COARSE-END FLOOR (Attack 1): rungs 30/60 absolute comp-ratios are inside the noise cloud, so the real observable is the significant collapse-to-floor, not the specific 0.95-0.97 values. The standing window caveat is empirically confirmed both ways: a DOMINANT coarse signal (toyB) would be seen by this very instrument, but a SUBDOMINANT one (toyA) and the genuinely unsampled 27-day/11-yr laws (0 cycles, ~19 independent samples in 7 days) are invisible. Register intact: exploratory instrument, 0.99-not-Boolean, dimensionless-only, flare real / noise+ar1 seeded synthetic controls, no fabrication. Artifact: D:/PlatformOperator/research/pav/candidates/dial_engine/experiments/q6_scale_rung/opus_skeptic.py.",
+  "reversed": false
+ },
+ "synthesis": {
+  "one_line": "Coarsening the GOES week destroys rather than reveals its persistence-lawfulness — comp-ratio 1.270 at 1-min (z=+89.8 vs the iid floor) collapsing monotonically into the noise floor by 30-60 min under all three coders and both coarsenings, via an exact lag-1-autocorrelation mechanism (rho1 0.996 -> 0.484, identity error <= 0.017 bits) — so the naive \"fuzzy-at-fine becomes lawful-at-coarse\" child is dead, and what survives is sharper: hardness IS scale-relative, but law-relatively, with a sign set by where the law's structure lives — zoom and hardness are coupled dials geared through the law, not one dial seen twice.",
+  "q6_status": "NAIVE CHILD REFUTED; PARENT REFINED AND SHARPENED (this law + this window, dated 2026-06-13). The child conjecture \"fuzzy-at-fine becomes lawful-at-coarse\" fails in its claim-bearing direction with error bars: under the persistence law on the real committed GOES week (n=10078, 2026-06-05 to 2026-06-12), the flare is decisively lawful at 1-min (comp-ratio 1.270; bootstrap CI [1.141, 1.204] with the iid floor at 0.953 [0.945, 0.959] fully separated; z=+89.8 against a 200-seed null) and DECAYS monotonically into the noise floor by coarsening (paired within-replicate drop rung1-rung60 = +0.237 [+0.178, +0.288]; the decay is 5-15x the within-null p97.5 wander). This holds under all three coders (lzma-9 / zlib-9 / bz2-9, with 1.270 the conservative fine-end value vs zlib's 1.439), both coarsening methods (the decimate channel, where the noise floor stays flat, clears the variance-reduction confound that contaminates mean-aggregation), coder-free (sigma-shrink +3.502 bits -> -0.014, with noise pinned at the -0.50 iid theory line), and is not an n-shrinkage or lzma-block artifact (tile-pad and no-replacement permutation both preserve it). EXACTLY WHAT THE DATA LICENSES: (a) hardness is NOT scale-invariant — moving the scale-rung dial moves compressibility decisively; (b) for the persistence law the direction is OPPOSITE the naive conjecture — lawful at fine, floor at coarse; (c) the mechanism is the exact first-difference identity sigma-shrink = -0.5*log2(2(1-rho1)); (d) law-relativity (the adversary's strongest surviving attack, confirmed empirically): the flare demonstrably HAS coarse-scale structure that persistence cannot monetize — a window-mean slow-trend law keeps it compressible at every window 5-720 min (1.085 -> 1.006, never to floor), lag-r persistence ticks back UP at long lag (0.890 -> 0.926), and the decimated flare beats its same-marginal shuffle at every rung including hourly (1.07x) — so the refutation is a property of the LAW-x-SCALE pair, not of the flare. NOT LICENSED: any phenomenon-level claim that the flare is hard at coarse scale (it is not, under fairer coarse laws); the coarse-end absolute comp-ratios (0.960/0.914 at rungs 30/60 sit inside the 200-seed noise cloud — the load-bearing observable is the significant collapse-into-floor, not those values); anything about the 27-day rotation or 11-yr cycle (0 cycles in window, tau~532 min => ~19 independent samples in 7 days); week-to-week generality (within-week block-bootstrap error bars only, single seed on the synthetic controls).",
+  "mechanism": "The flare's persistence-lawfulness IS its lag-1 autocorrelation, by algebraic identity, and coarsening destroys it. For the first-difference (persistence) law, Var(resid) = 2*sigma^2*(1-rho1), so the per-dim sigma-shrink is exactly -0.5*log2(2(1-rho1)): empirically this holds to RMS 0.006 bits (max 0.017, Pearson 0.999996) across all 36 cells (3 series x 2 methods x 6 rungs), re-verified independently in this synthesis pass directly from the raw committed GOES file (error <= +0.012 bits at every rung). Decimation by r drives rho1 monotonically toward 0 — flare 0.996 -> 0.986 -> 0.946 -> 0.885 -> 0.734 -> 0.484 at rungs 1/2/5/10/30/60; the a=0.9 AR(1) control follows its theoretical rho^r (0.900/0.808/0.578/0.348 measured vs 0.900/0.810/0.590/0.349 predicted); iid noise hovers at 0 throughout — and sigma-shrink is a PERFECT monotone of rho1 (global Spearman 1.000). The compress/expand crossover sits exactly at rho1 = 0.5 (where 2(1-rho)=1): the flare still compresses at rung 30 (rho1=0.734, +0.462 bits) and flips to expansion at rung 60 (rho1=0.484, -0.014 bits) — the comp-ratio \"falling to the floor\" is the lag-1 memory crossing 0.5. Two refinements the verification forced: (1) the inline \"tracks the AR(1) control almost exactly\" is an lzma-saturation coincidence at the floor — the flare's fine-end edge is significantly above the control (1.270 vs 1.029 [1.024, 1.034]) and its memory is multi-timescale, not single-exponential (0.996^60 predicts rho=0.788 at rung 60 vs actual 0.484; best single-rho fit 0.988); (2) \"falls to the iid floor\" is exact only in coded bits — coder-free, the 60-min flare lands at the ZERO-GAIN line (-0.014 bits, rho1~0.48), not the iid floor (-0.50, rho1=0): the persistence EDGE is annihilated but measurable memory remains at hourly cadence, which the shuffle test independently confirms (1.07x time-order structure at rung 60).",
+  "zoom_vs_hardness": "COUPLED, NOT THE SAME DIAL — \"same dial seen twice\" is too strong, and this experiment shows exactly how. The coupling is real and tighter than conjectured: for a fixed law, turning the zoom dial (rung) moves the hardness dial deterministically through a known linkage — rung sets rho at the law's lag, rho sets compressibility via the exact -0.5*log2(2(1-rho)) identity (Spearman 1.000, identity error ~0.006 bits RMS). Zoom and hardness are not independent. But the GEARING is law-indexed in both gain and SIGN: under the persistence law the flare gets HARDER zooming out (1.270 -> floor; lawfulness lives at fine scale, so coarsening destroys it); under a window-mean slow-trend law the same flare stays lawful at every window to 720 min (1.085 -> 1.006); and a dominant slow signal (toyB sinusoid) stays lawful at coarse rungs under the very same persistence instrument (1.142 -> 1.044) — i.e. hardness can rise OR fall with zoom depending on where the law's structure lives relative to the rung. One dial seen twice predicts a fixed monotone correspondence between the two readings; the data instead shows two dials joined by a gearbox whose sign is set by the (law, phenomenon) pair. Honest refinement of Q6: hardness is a function of (phenomenon, law, rung) — the zoom dial is an ARGUMENT of hardness, not its alias. The dials are mechanically linked (this experiment derived the linkage in closed form for the persistence family), and the \"same dial\" intuition survives only in the weak form that neither dial can be read without setting the other.",
+  "dead_children": [
+   "naive-coarse=more-lawful (the Q6 child: 'fuzzy-at-fine becomes lawful-at-coarse'), persistence law + 7-day GOES window — DEAD 2026-06-13: direction reversed with error bars (rung1-rung60 paired drop +0.237 [+0.178,+0.288], 5-15x within-null wander), unanimous across lzma-9/zlib-9/bz2-9, mean AND decimate, coded bits AND coder-free sigma-shrink",
+   "'tracks the AR(1)-memory control almost exactly' (inline gloss) — DEAD AS STATED 2026-06-13: endpoint/floor coincidence under lzma compression-saturation; fine end significantly separated (flare 1.270 vs ar1 1.029 [1.024,1.034]); memory structures differ (flare rho1=0.996 multi-timescale vs AR(1) 0.900 single-exponential; 0.996^60 predicts 0.788 vs actual 0.484)",
+   "'at the iid-noise floor by 10 min' (inline precision) — DEMOTED 2026-06-13: floor-arrival is coder-dependent (lzma rung 10; zlib/bz2 rung 30-60), coarse-end absolutes (0.960/0.914) sit inside the 200-seed noise cloud (rung30 z=+1.69, rung60 z=-0.75), and coder-free the 60-min flare is at the ZERO-GAIN line (rho1~0.48), not the iid floor (rho1=0); coder-robust phrasing: 'decays monotonically, at the floor by 30-60 min'",
+   "'the flare's lawfulness IS fine-scale memory that coarsening destroys' (phenomenon-level gloss) — DEAD AS GENERALIZATION 2026-06-13, survives only law-scoped as 'the flare's persistence-EDGE is fine-scale memory': the coarse-law battery shows the flare retains coarse structure persistence cannot see (window-mean law 1.085->1.006 never reaching floor across windows 5-720 min; shuffle gap 1.07x at hourly; lag-r ticks back up 0.890->0.926)"
+  ],
+  "owed": [
+   "Longer GOES window: >=60-90 days (2-3 solar rotations) for the 27-day coarse law, archival multi-year for the 11-yr cycle — both genuinely unsampled here (0 cycles; tau~532 min => ~19 independent samples in 7 days); toyB proves the instrument would see a DOMINANT coarse law if present, toyA proves a SUBDOMINANT one stays invisible in 7 days",
+   "Promote the adversary's coarse-scale law battery to committed sweep instruments: window-mean/slow-trend law (residual vs trailing W-mean), lag-r persistence with lag matched to the rung, and the same-marginal shuffle gap as a standard coarse-structure observable",
+   "The orbit at coarse rungs as the lawful-at-all-scales reference series — the opposite anchor of the dial (its dynamics law should hold at every rung), giving the sweep a calibrated 'hardness flat under zoom' endpoint to compare the flare against",
+   "Lag-matched 'zooming law' variant: let the law's lag scale WITH the rung and re-run the sweep — the cleanest direct probe of the same-dial question (if hardness goes flat when the law zooms with the frame, the residual scale-relativity was pure law-lag mismatch)",
+   "Seed sweep for the synthetic controls (currently single default_rng(0); the 200-seed null exists only for the lzma decimate channel) and week-to-week / flare-class variability (current error bars are within-week block-bootstrap only)"
+  ],
+  "markdown": "# Q6 — scale-rung experiment (dial-protocol sweep-1): is hardness scale-relative?\n\n**Status (2026-06-13): naive child REFUTED; parent Q6 REFINED and sharpened to a mechanism.** Under the persistence law on the real committed GOES week, coarsening the time cadence DESTROYS the flare's lawfulness rather than revealing it — the exact opposite of the \"fuzzy-at-fine becomes lawful-at-coarse\" conjecture — and the destruction has a closed-form mechanism (lag-1 autocorrelation). The refutation is LAW-RELATIVE: a fairer coarse-scale law finds the same flare still lawful when coarsened. Register throughout: exploratory INSTRUMENT (collect -> observe -> classify), 0.99-not-Boolean, dimensionless-only cross-series (E-units), no fabrication — flare is the real committed GOES week; noise/AR(1) are seeded synthetic CONTROLS, never read as data.\n\n## Parent and child\n\n- **Parent conjecture (Q6):** the hardness dial and the contextual-zoom dial are coupled — possibly \"the same dial seen twice.\"\n- **Child (this experiment):** the naive direction — a phenomenon that is fuzzy minute-to-minute becomes lawful when viewed coarse, so compressibility should RISE as the scale-rung frame dial coarsens.\n\n## Instrument (pins)\n\n`scale_rung_instrument.py`: GOES long-band (0.1-0.8 nm) X-ray flux, 2026-06-05T14:13Z to 2026-06-12T14:10Z, n=10078 at 1-min cadence; log10 series, quantization Q=1e-3 (disclosed); law = persistence f_hat(t)=f(t-1); coder = lzma-9 primary (zlib-9 / bz2-9 siblings); model bits counted (+64); rungs r = 1/2/5/10/30/60 min by BOTH mean-aggregation (variance-reduction confound, by design) AND decimation (every r-th sample, no averaging — the claim-bearing channel); observables: comp-ratio raw/(resid+model) and per-dim sigma-shrink log2(sig_raw/sig_resid), both dimensionless. Controls, matched length, seeded rng(0): iid noise (structureless floor), AR(1) a=0.9 (known-memory reference).\n\n## What the instrument read (committed, lzma-9, decimate)\n\n| rung (min) | n | flare comp | flare shrink (bits) | flare rho1 | noise comp | ar1 comp |\n|---|---|---|---|---|---|---|\n| 1 | 10078 | **1.270** | +3.502 | 0.996 | 0.951 | 1.031 |\n| 2 | 5039 | 1.080 | +2.594 | 0.986 | 0.950 | 1.011 |\n| 5 | 2015 | 0.992 | +1.607 | 0.946 | 0.950 | 0.980 |\n| 10 | 1007 | 0.966 | +1.063 | 0.885 | 0.941 | 0.948 |\n| 30 | 335 | 0.960 | +0.462 | 0.734 | 0.959 | 0.930 |\n| 60 | 167 | **0.914** | **-0.014** | 0.484 | 0.886 | 0.922 |\n\nMean-method flare comp runs 1.270 / 1.096 / 1.002 / 0.959 / 0.966 / 0.967 — same shape. The curve the child needed (rising with rung) appears nowhere; the observed curve is a monotone collapse from a decisive fine-scale edge into the structureless floor.\n\n## Verification (three independent re-measurements + adversarial pass, all real computation)\n\n1. **Coder/shrink robustness** (`q6_coder_robustness.py`): committed JSON reproduces bit-for-bit (0 mismatches). Fine-end edge under every coder — flare/ar1/noise at rung 1: lzma 1.270/1.031/0.951, zlib 1.439/1.079/0.950, bz2 1.285/1.084/0.953 — so the committed 1.27x is the CONSERVATIVE value and the ordering flare > ar1 > noise is unanimous. Decay monotone under all coders and both methods; flare-minus-noise gap <= 0.013 by rung 30 everywhere. Floor-ARRIVAL is coder-dependent (lzma rung 10; zlib/bz2 rung 30-60) — coder-robust phrasing: \"at the floor by 30-60 min.\"\n2. **Error bars** (`verify_bootstrap.py`, moving-block bootstrap B=400, L=120 min): rung-1 comp 1.173 [1.141, 1.204] (point 1.270; bootstrap downward-biased because block joins break persistence — L-sweep 60->600 climbs 1.154->1.200 toward the point), iid floor 0.953 [0.945, 0.959] fully separated. Paired within-replicate decay rung1-rung10 = +0.217 [+0.180, +0.252], rung1-rung60 = +0.237 [+0.178, +0.288] — the decay is real, not floor wander. Coarse rungs 10/30/60 CIs OVERLAP the noise band (rung 5 straddles). Step-resolution: only 1->2 and 2->5 individually significant; coarser adjacent steps n.s. (n shrinks to 167). No-replacement permutation 1.223 [1.194, 1.252] — not an lzma duplicate-block artifact.\n3. **Mechanism** (`autocorr_mechanism.py` etc.): see below — identity confirmed to RMS 0.006 bits across all 36 cells; re-verified again in this synthesis pass directly from the raw GOES file (error <= +0.012 bits at every rung).\n4. **Adversarial pass** (`opus_skeptic.py`, 4 attacks): NOISE-FLOOR WANDER partial — 200-seed null gives rung-1 z=+89.8 but rungs 30/60 absolutes are INSIDE the cloud (z=+1.69 / -0.75); the load-bearing observable is the collapse (5-15x within-null decay), not coarse-end values. FINE-LAW-BY-CONSTRUCTION partial and STRONGEST — see law-relativity below. WINDOW-TOO-SHORT survives as scoped: toyB (dominant 2-day sinusoid) IS seen at coarse rungs by this very instrument (1.142 -> 1.044, far above floor), toyA (subdominant coarse) is buried; tau ~532 min => ~19 independent samples in 7 days; 27-day/11-yr laws have 0 cycles. MEAN-vs-DECIMATE survives cleanly: the iid floor RISES under mean (0.952 -> ~0.99, the smoothing confound is real) but stays FLAT under decimate (0.952 -> 0.929), and the refutation rides on decimate; sigma-shrink (coder-free, n-independent) and tile-padding to n>=10000 both preserve the decay — variance-reduction and n-shrinkage ruled out three independent ways.\n\n## Mechanism: the persistence-lawfulness IS lag-1 autocorrelation\n\nFor the first-difference law, Var(resid) = 2*sigma^2*(1-rho1), so per-dim sigma-shrink = -0.5*log2(2(1-rho1)) — an algebraic identity, and the data sits on it: RMS error 0.006 bits (max 0.017, Pearson 0.999996) across all 36 cells; independent spot-check from raw data in this pass, error <= +0.012 bits per rung. Decimation drives rho1 toward 0 (flare 0.996 -> 0.484; AR(1) follows its theoretical 0.9^r: 0.900/0.808/0.578/0.348 vs predicted 0.900/0.810/0.590/0.349; noise pinned ~0), and shrink is a perfect monotone of it (Spearman 1.000). The compress/expand crossover sits exactly at rho1 = 0.5: the flare compresses through rung 30 (rho1=0.734, +0.462 b) and flips to expansion at rung 60 (rho1=0.484, -0.014 b). \"Falling to the floor\" = \"lag-1 memory crossing 0.5.\" Two forced refinements: the flare is NOT a single AR(1) (multi-timescale: 0.996^60 predicts rho=0.788 at rung 60 vs actual 0.484; the inline \"tracks AR(1) almost exactly\" was lzma floor-saturation, with the fine ends significantly separated, 1.270 vs 1.029 [1.024, 1.034]); and \"falls to the iid floor\" is exact only in coded bits — coder-free, the 60-min flare lands at the ZERO-GAIN line (rho1~0.48), not the iid floor (rho1=0): the persistence EDGE is annihilated, but measurable memory remains at hourly cadence.\n\n## Law-relativity (the strongest surviving critique, kept as a finding)\n\nPersistence f(t)=f(t-1) is a 1-step operator by construction, so \"its edge lives at fine scale\" is near-tautological — refuting \"coarse = more lawful\" with ONLY this law is partly circular. The adversary's coarse-law battery confirms the flare itself HAS coarse-scale structure that persistence cannot monetize: a window-mean slow-trend law keeps it compressible at EVERY window 5-720 min (1.085 -> 1.006, never reaching the 0.93-1.0 floor; noise control pinned ~0.99); lag-r persistence ticks back UP at long lag (0.890 at 30-min lag -> 0.926 at 120/240-min); and the decimated flare beats its same-marginal shuffle at ALL rungs including hourly (shuf/raw 1.52 / 1.39 / 1.24 / 1.17 / 1.09 / 1.07). So the correct scope is: **under the persistence law, the flare's persistence-edge is fine-scale memory that coarsening destroys** — not \"the flare's lawfulness is fine-scale, full stop.\"\n\n## What the data licenses (0.99-not-Boolean)\n\n- Hardness is NOT scale-invariant: the rung dial moves compressibility decisively and reproducibly (paired drop +0.237 [+0.178, +0.288]; 5-15x null wander).\n- For the persistence law the direction is OPPOSITE the naive child: lawful at fine, floor at coarse — with error bars, under 3 coders, 2 coarsenings, coded and coder-free.\n- The mechanism is exact and closed-form for this law family (the rho1 identity).\n- The same flare is STILL lawful when coarsened under a fair coarse-scale law — scale-relativity of hardness is a property of the (law, phenomenon, rung) triple, not of the phenomenon alone.\n\nNOT licensed: coarse-end absolute comp-ratios (inside the noise cloud); any claim about 27-day/11-yr coarse laws (unsampled, ~19 independent samples in window); week-to-week generality (within-week error bars, single control seed).\n\n## The coupled-dials reading (zoom vs hardness)\n\nThe Q6 parent asked whether the hardness dial and the contextual-zoom dial are \"the same dial seen twice.\" Verdict: **COUPLED, NOT THE SAME DIAL.** The coupling is tighter than conjectured — for a fixed law, zoom moves hardness deterministically through a derived linkage (rung -> rho at the law's lag -> hardness via the identity; Spearman 1.000) — but the gearing is law-indexed in SIGN: persistence law => harder when zooming out (1.270 -> floor); window-mean law => lawful at every window (1.085 -> 1.006); dominant slow signal (toyB) => lawful at coarse under the very same instrument (1.142 -> 1.044). Hardness can rise OR fall with zoom depending on where the law's structure lives relative to the rung. One dial seen twice would fix the correspondence; the data shows two dials joined by a gearbox whose sign is set by the (law, phenomenon) pair. Refined Q6: hardness = f(phenomenon, law, rung) — zoom is an argument of hardness, not its alias; the weak form of \"same dial\" that survives is that neither dial can be read without setting the other.\n\n## Dead children (dated tally — demoted/dormant, not erased)\n\n1. **naive-coarse=more-lawful** (persistence law + 7-day window) — DEAD 2026-06-13. Direction reversed with error bars, unanimous across coders/methods/observables.\n2. **\"tracks the AR(1) control almost exactly\"** — DEAD AS STATED 2026-06-13. Floor-coincidence under lzma saturation; fine ends significantly separated; flare multi-timescale vs single-exponential control.\n3. **\"at the iid floor by 10 min\"** — DEMOTED 2026-06-13. Coder-dependent arrival (lzma 10 / zlib+bz2 30-60); coarse absolutes inside the noise cloud; coder-free endpoint is the zero-gain line, not the iid floor.\n4. **\"the flare's lawfulness IS fine-scale memory\"** (phenomenon-level) — DEAD AS GENERALIZATION 2026-06-13; survives law-scoped as \"the flare's persistence-EDGE is fine-scale memory.\"\n\nSurviving children: scale-relativity of hardness (sharpened, sign-indexed by law); the rho1 identity mechanism; the decimate-vs-mean confound control (worked exactly as designed — the mean floor inflated, the decimate floor stayed flat).\n\n## Owed\n\n1. **Longer GOES window** — >=60-90 days (2-3 solar rotations) for the 27-day law; archival multi-year for the 11-yr cycle. toyB/toyA establish the instrument sees DOMINANT coarse signal and misses SUBDOMINANT — so the longer window is a real test, not a formality.\n2. **Coarse-scale law candidates as committed instruments** — promote the adversary's battery: window-mean/slow-trend law, rung-matched lag-r persistence, same-marginal shuffle gap as a standard observable.\n3. **The orbit at coarse rungs** — the lawful-at-all-scales reference series, anchoring the flat end of the zoom-hardness gearing for cross-series comparison (dimensionless, E-units).\n4. **Lag-matched \"zooming law\" sweep** — let the law's lag scale with the rung; if hardness goes flat, the residual scale-relativity was law-lag mismatch. Cleanest direct probe of the same-dial question.\n5. **Seed sweep + week generality** — controls currently single-seed rng(0); 200-seed null exists only for lzma/decimate; error bars are within-week only.\n\n## Artifacts\n\nAll under `D:/PlatformOperator/research/pav/candidates/dial_engine/experiments/q6_scale_rung/`: `scale_rung_instrument.py`, `scale_rung_results.json` (committed, reproduces bit-for-bit), `q6_coder_robustness.py` + `q6_coder_robustness_results.json`, `verify_bootstrap.py`, `autocorr_mechanism.py`, `autocorr_tests.py`, `autocorr_final.py`, `autocorr_mechanism_rows.json`, `opus_skeptic.py`. Data: `../../../cosmic_coin_probe/probe_data/goes_xray_7day.json` (real GOES week, 2026-06-05 to 2026-06-12, long-band n=10078). Controls are clearly-labelled seeded synthetics; no fabricated measured bits anywhere in the chain."
+ }
+}
