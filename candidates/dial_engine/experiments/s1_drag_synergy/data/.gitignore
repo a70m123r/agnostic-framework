@@ -1,0 +1,4 @@
+# Raw fetched data -- large + re-downloadable from the documented URLs in s1_provenance.json.
+# The DERIVED aligned product (s1_aligned_hourly.csv) + provenance + READMEs ARE committed.
+*.zip
+omni2_2024.dat

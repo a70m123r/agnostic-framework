@@ -1,0 +1,160 @@
+{
+ "experiment": "s1_drag_synergy / DATA seat",
+ "built_utc": "2026-06-13T01:53:22Z",
+ "window_utc": "2024-03-01T00:00Z .. 2024-07-31T23:00Z inclusive, hourly",
+ "n_hours_grid": 3672,
+ "density": {
+  "source": "TU Delft thermosphere data portal, version_02 GRACE-FO (GRACE C / GRACE-FO 1), accelerometer-derived neutral density v02c",
+  "urls": [
+   "http://thermosphere.tudelft.nl/data/data/version_02/GRACE-FO_data/GC_DNS_ACC_2024_03_v02c.zip",
+   "http://thermosphere.tudelft.nl/data/data/version_02/GRACE-FO_data/GC_DNS_ACC_2024_04_v02c.zip",
+   "http://thermosphere.tudelft.nl/data/data/version_02/GRACE-FO_data/GC_DNS_ACC_2024_05_v02c.zip",
+   "http://thermosphere.tudelft.nl/data/data/version_02/GRACE-FO_data/GC_DNS_ACC_2024_06_v02c.zip",
+   "http://thermosphere.tudelft.nl/data/data/version_02/GRACE-FO_data/GC_DNS_ACC_2024_07_v02c.zip"
+  ],
+  "license": "CC BY 4.0 (header in each file)",
+  "reference": "Siemes et al., J. Space Weather Space Clim. 2023 (CHAMP/GRACE/GRACE-FO v2 density+crosswind datasets); README http://thermosphere.tudelft.nl/data/README.txt",
+  "cadence_native": "10 s",
+  "units": "kg m^-3",
+  "files": {
+   "GC_DNS_ACC_2024_03_v02c.zip": {
+    "sha256": "408681b4710489e241b23b462f9095a256d7cb72531c9ee3f0aef3993afcc27b",
+    "fetched_utc": "2026-06-13T01:48:03Z"
+   },
+   "GC_DNS_ACC_2024_04_v02c.zip": {
+    "sha256": "78dce492bbfb2f3bdd71ed358256cf2786d51d836f32dafae9e8f206c375cebf",
+    "fetched_utc": "2026-06-13T01:48:06Z"
+   },
+   "GC_DNS_ACC_2024_05_v02c.zip": {
+    "sha256": "87b92b98232d9caeb23c912e82dd74b8b3a0704b8e34ad707bd53609c0f773fe",
+    "fetched_utc": "2026-06-13T01:48:07Z"
+   },
+   "GC_DNS_ACC_2024_06_v02c.zip": {
+    "sha256": "86ca65dc06da4f5a3729881dad82fcd73bc194e618d702758164f334f0949726",
+    "fetched_utc": "2026-06-13T01:48:10Z"
+   },
+   "GC_DNS_ACC_2024_07_v02c.zip": {
+    "sha256": "7955458e19c610e91d07cf297c4a28823ed12d5b782e2181330d538d0eab8283",
+    "fetched_utc": "2026-06-13T01:48:11Z"
+   }
+  }
+ },
+ "drivers": {
+  "source": "NASA SPDF OMNI2 hourly (low_res_omni), omni2_2024.dat",
+  "urls": [
+   "https://spdf.gsfc.nasa.gov/pub/data/omni/low_res_omni/omni2_2024.dat",
+   "https://spdf.gsfc.nasa.gov/pub/data/omni/low_res_omni/omni2.text"
+  ],
+  "fields": {
+   "kp10": "word 39 (Kp*10)",
+   "dst_nt": "word 41 (Kyoto Dst, nT)",
+   "ap_nt": "word 50 (ap, nT)",
+   "f107_sfu": "word 51 (F10.7, sfu, daily replicated hourly by source)"
+  },
+  "files": {
+   "omni2_2024.dat": {
+    "sha256": "41f3b5891ce3f1220719d5c1ea808f3014f28a1704557d3363eefb5ee7c249b1",
+    "fetched_utc": "2026-06-13T01:48:57Z"
+   },
+   "omni2_format.txt": {
+    "sha256": "be4aca7bdf030a3eb6ed584fb6960913e3be909d5627b2a69fe93a4765962d7f",
+    "fetched_utc": "2026-06-13T01:48:57Z"
+   }
+  }
+ },
+ "data_notes": [
+  "missing-density blocks (contiguous, UTC): [['2024-07-12T12:00Z', '2024-07-13T11:00Z']] \u2014 single GRACE-FO gap, far from the storm",
+  "F10.7 outlier: 2024-07-30 daily value 412.9 sfu (only day >250 in window) \u2014 consistent with radio-burst contamination of the daily measurement; MODEL seat should cap/log-transform or exclude (known F10.7>200 nonlinearity confound)",
+  "50 days in window have F10.7 > 200 sfu (solar-max saturation regime \u2014 disclosed confound)",
+  "hourly mean of POINT density (secondary col) under-cancels LST/altitude within a bin: 1 h = 0.63 orbit; the ORBIT-AVERAGE channel does not have this problem (each 10-s sample of col 10 is already a full-orbit average)"
+ ],
+ "processing_decisions": [
+  "D1 primary density = hourly mean of the source's running ORBIT-AVERAGE density (col 10, flag==0): one ~94-min orbit sweeps both LST sectors + full along-orbit altitude range, so orbit-averaging is the v0 normalization for the LST/diurnal and along-orbit-altitude confounds; point density (col 9) kept as secondary column",
+  "D2 NO fixed-altitude renormalization (model-free chain); hourly mean altitude kept as covariate column; secular decay + storm-time orbit contraction left to MODEL seat \u2014 disclosed, not solved",
+  "D3 GRACE-FO times are GPS; shifted -18 s to UTC before binning (GPS-UTC=18 s, 2017->present)",
+  "D4 hourly bin = calendar UTC hour; mean over flag==0 samples per channel; empty bins -> empty cells",
+  "D5 OMNI2 F10.7 daily value replicated hourly by the source (verified day 132) = the forward-fill; f107_81d = centered 81-day mean of the daily series (window doy 61..213 fully covered by 2024 file)",
+  "D6 OMNI2 fills (Kp*10=99, Dst=99999, ap=999, F10.7=999.9) -> empty cells, counted",
+  "D7 hourly LST = circular mean (24 h wrap); bimodal for point density (two LST sectors per orbit) \u2014 orbit-average channel is primary partly for this reason",
+  "hemispheric stratification NOT done in v0 (known Gannon N/S asymmetry confound \u2014 disclosed for MODEL/adversary seats; raw 10-s files cached for re-binning)"
+ ],
+ "aligned_csv": "D:\\PlatformOperator\\research\\pav\\candidates\\dial_engine\\experiments\\s1_drag_synergy\\data\\s1_aligned_hourly.csv",
+ "columns": [
+  "datetime_utc",
+  "year",
+  "doy",
+  "hour",
+  "rho_orbit_kgm3",
+  "rho_point_kgm3",
+  "n_dens_samples",
+  "alt_mean_m",
+  "lat_mean_deg",
+  "lst_circmean_h",
+  "f107_sfu",
+  "f107_81d_sfu",
+  "dst_nt",
+  "kp10",
+  "ap_nt"
+ ],
+ "sanity": {
+  "n_hours_grid": 3672,
+  "n_hours_with_density": 3648,
+  "n_hours_density_missing": 24,
+  "grace_rows_parsed": 1312801,
+  "grace_rows_flagged_point": 0,
+  "grace_rows_flagged_orbitavg": 0,
+  "grace_time_systems_seen": [
+   "GPS"
+  ],
+  "omni_fill_counts_full2024": {
+   "kp": 0,
+   "dst": 0,
+   "ap": 0,
+   "f107": 0
+  },
+  "omni2_2024_lines": 8784,
+  "omni2_lines_expected": 8784,
+  "omni2_note": "8784 = 366 days * 24 h (2024 is a leap year)",
+  "dst_min_nt": -406,
+  "dst_min_time": "2024-05-11T02:00:00Z",
+  "n_hours_dst_below_-100": 57,
+  "n_hours_dst_below_-200": 22,
+  "n_hours_dst_below_-300": 12,
+  "n_hours_dst_below_-400": 1,
+  "rho_orbit_max_kgm3": 4.6643347691666655e-12,
+  "rho_orbit_max_time": "2024-05-11T03:00:00Z",
+  "rho_orbit_min_kgm3": 5.2594e-13,
+  "rho_log10_dynamic_range": 0.95,
+  "quiet_median_rho_orbit_MarApr_kgm3": 9.070664064166672e-13,
+  "quiet_median_rho_orbit_strict_kgm3": 7.8042e-13,
+  "quiet_strict_def": "F10.7 < 150 sfu AND |Dst| < 30 nT",
+  "n_hours_quiet_strict": 754,
+  "n_hours_storm_main_phase_dst_lt_-200": 22,
+  "storm_spike_ratio_max_over_quiet_median": 5.14221972743203,
+  "storm_spike_ratio_max_over_quiet_strict_median": 5.98,
+  "rho_peak_minus_dst_min_hours": 1.0,
+  "f107_min_sfu": 111.7,
+  "f107_max_sfu": 412.9,
+  "f107_median_sfu": 180.7,
+  "f107_81d_min_sfu": 154.2,
+  "f107_81d_max_sfu": 227.8,
+  "n_hours_f107_above_200sfu": 1200,
+  "n_days_f107_above_200sfu": 50,
+  "f107_outlier_note": "2024-07-30 = 412.9 sfu only day above 250 sfu; consistent with radio-burst contamination; F10.7_81d on that day = 227.7 sfu (outlier absorption)",
+  "alt_min_m": 479848.1349805557,
+  "alt_max_m": 500305.7906388889,
+  "alt_spread_km": 20.5,
+  "alt_note": "GRACE-FO altitude range 479.8-500.3 km; spread 20.5 km; scale height ~60-70 km at this altitude implies ~30% density variation from altitude alone; orbit-average channel mitigates but does not eliminate",
+  "frame_flip_precheck": {
+   "quiet_window_n_hours": 754,
+   "quiet_f107_range_sfu": [111.7, 149.8],
+   "quiet_dst_range_nt": [-29, 25],
+   "storm_main_phase_n_hours": 22,
+   "storm_f107_range_sfu": [218.0, 227.9],
+   "storm_dst_range_nt": [-406, -203],
+   "note": "F10.7 elevated during storm main phase (solar max SC25); Dst excursion clear and clean; frame-flip observable preserved"
+  },
+  "verified_utc": "2026-06-13T02:15:00Z",
+  "verifier": "DATA seat (claude-sonnet-4-6), full cross-check pass"
+ }
+}
