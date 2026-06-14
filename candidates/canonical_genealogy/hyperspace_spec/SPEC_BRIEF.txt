@@ -1,0 +1,55 @@
+HYPERDIMENSIONAL CANONICAL-SPACE VIEWER — SPEC BRIEF (design only, do NOT build yet)
+
+We are designing (not building) a viewer. Give out-of-the-box thinking + name real math, theories,
+whitepapers, and existing implementations we can build on. Be concrete and cite where you can.
+
+THE VISION (from a hand sketch: a 3D wireframe globe on the left, a flat 2D rectangular map on the
+right, and between them the label LOG TRANSFORM (UV)):
+
+1. ONE hyperdimensional space that contains the canonical PHYSICAL and LATENT dimensions, and renders
+   them as EITHER a 3D globe OR a 2D unfolded map, switched by a continuous DIAL. The 3D-to-2D unfold
+   is a LOG TRANSFORM / UV unwrap (sphere surface to plane).
+
+2. There are N stacked LAYERS, each with a MEMBRANE / WRAPPER (e.g. physical, latent, and more).
+   The PHYSICAL domain is stacked in SCALE (log2, observer-tuned by a frame dial set to the human
+   observer); the LATENT is stacked ABOVE it (a setting: within, or under) forming the stack.
+
+3. EVENTS at coinciding coordinates make two layers/dimensions OVERLAP = exchange energy / an
+   input-output connection between physical and latent (a coupling at contact points).
+
+4. The default frame is EARTH: a rotating globe with a day/night cycle, and the Moon and Sun in
+   their positions. A CAMERA can pan around and zoom in, on BOTH the 3D and the 2D views.
+
+5. THE OBJECTIVE: a hyperdimensional space that holds the canonical physical + latent dimensions,
+   renders them in 3D or 2D via the dial, and MAPS THE SUBSTRATE INTO IT for full projections,
+   like LIGHT HITTING A SENSOR (the substrate facts are the light; the view is the sensor).
+
+CONTEXT (the substrate this projects): a fact-substrate of an event (the 2026 Fable/Mythos AI-model
+takedown) with a cast geo-pinned on Earth, dated beats, certainty/route per fact, and a latent reach
+axis (local -> civilizational). It already renders as: (a) a 3D log2 cosmic double-cone toy, (b) an
+isometric event atlas, (c) a unified globe that flattens-in-log onto the cosmic cone. This new viewer
+generalizes those into the hyperdimensional container above.
+
+QUESTIONS WE WANT ATTACKED (out-of-the-box welcome):
+A. The 3D<->2D dial via a log/UV transform: which conformal/area-preserving sphere-to-plane maps fit
+   (Mercator = log-tangent? stereographic? Lambert? complex log? Riemann sphere?), and how to make the
+   DIAL a smooth continuous morph between the 3D globe and the 2D map (not a cut). Any whitepapers /
+   implementations (d3-geo, three.js, deck.gl, GPU shaders, conformal morphs)?
+B. The N-LAYER MEMBRANE STACK (physical / latent / ...): what existing frameworks model stacked
+   layers with membranes that couple at overlaps and exchange energy? (holographic principle /
+   bulk-boundary, brane cosmology, fiber bundles, sheaves, manifold layers, multiplex networks?)
+   How should within vs under vs above be represented?
+C. The OVERLAP = ENERGY EXCHANGE event: how to render an input-output coupling where physical and
+   latent coordinates coincide (light/flux between layers? a wormhole/portal? a coupling kernel?).
+D. SUBSTRATE-AS-LIGHT-ON-A-SENSOR: rendering-equation / splatting / camera-sensor models for
+   projecting a fact-substrate into the space (Gaussian splatting? light transport? the Solomonoff/MDL
+   render-in-log2 idea where appearance sharpness = bits of compression?).
+E. The hyperdimensional container itself: how to honestly hold >3 dims and project to 3D/2D
+   (hyperbolic/Poincare embeddings for the latent hierarchy? dimensionality-reduction? what keeps it
+   from lying?).
+F. The single most powerful, BUILDABLE (single-file HTML canvas, no heavy libs ideally) approach that
+   delivers this, and the biggest risk.
+
+DELIVER: name the real math + papers + implementations; sketch the architecture; recommend the
+buildable approach; flag the honesty risks (this must never render a fake measured bit; estimates and
+modelled positions must be badged). Spec-level, concrete. No code dump needed, but pseudo-math welcome.

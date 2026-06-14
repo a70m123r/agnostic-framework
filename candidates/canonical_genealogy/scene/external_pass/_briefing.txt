@@ -1,0 +1,73 @@
+ADVERSARIAL EXTERNAL REVIEW REQUEST
+
+You are an external skeptical reviewer. A Claude-based research collaboration built a structured
+representation of a real news event and is asking you to ATTACK it for honesty, over-claiming, and
+method errors. Be adversarial and specific. We WANT you to find what is wrong. Do not be agreeable.
+Do not summarize approvingly. Hunt for the weakest joint.
+
+THE EVENT (real, corroborated):
+On 2026-06-12 about 17:21 ET, Anthropic disabled Claude Fable 5 and Mythos 5 worldwide to comply
+with a US Commerce Department export-control directive (a letter from Secretary Lutnick to CEO
+Amodei). It was the first time a leading AI company took a publicly deployed model offline under US
+federal intervention. The models launched 2026-06-09 (a 3-day worldline). Anthropic disputes the
+rationale (a narrow non-universal jailbreak; the capability already exists in GPT-5.5). The data is a
+28-record scout dossier (Anthropic statement plus CNBC, NBC, Bloomberg Law, 9to5Mac, TechCrunch,
+Fortune, Simon Willison, Hacker News, and others).
+
+WHAT WAS BUILT (three layers):
+
+1. SUBSTRATE (the measured spine). An append-only fact log compiled to best-values. 42 facts, each
+carrying a real source URL, a certainty in the range 0 to 1, and a ROUTE label. 8 cross-source
+corroborations; the rest are honestly pending; 0 disputed. Routes are an epistemics tag:
+  - measured-on-plane: directly reported by sources
+  - inferred-from-below: deduced from absence or indirect evidence
+  - lateral-testimony: single-outlet or second-hand
+  - testimony-from-above: the user-reported seed, now independently corroborated
+Disclosed NULLs are first-class facts (statute-not-disclosed, competitor-unnamed,
+no-causal-link-established, no-foreign-government-reaction-found) so known-unknowns are recorded, not
+omitted.
+
+2. SCENE (derived only from the compiled substrate). A cast of 21 nodes typed by role: 4 actors
+(Commerce, the administration, Anthropic, an unnamed competitor), 9 acted-on at depth 1 to 2 (Fable,
+Mythos, the directive, foreign nationals, the EU arrangement, Project Glasswing of about 50 orgs, the
+IPO runway, revenue, enterprise stocks), 2 stage (the June-2 EO, the prior Pentagon-blacklist
+conflict), 6 audience (Hacker News, TechCrunch, Willison, named critics, the governance discourse,
+the user). A 2-depth acts_on graph (who acts on whom, two hops: Commerce to the directive to {Fable,
+Mythos, foreign nationals, EU, Glasswing}). 16 dated beats form a scrubbable timeline. 7 fuzzy regions
+are the low-certainty facts flagged for follow-up scouting.
+
+3. NARRATOR (substrate-bound). An ordered narration where every line derives from exactly one fact and
+carries that fact certainty plus route. The claim is that it never says more than the substrate holds.
+
+PROJECTIONS (kept OUTSIDE the substrate). 3 forward guesses authored from a separately-seeded
+falsifiable conjecture, each marked PROJECTION with a conjecture-child id, a qualitative likelihood
+band, and a named falsifier. The claim is that measurement and conjecture never blur and no measured
+bit is rendered forward.
+  - SHORT, 3 months, likelihood high: near-term squeeze on Anthropic and foreign developers (revenue,
+    IPO timing, enterprise stocks). Falsifier: rapid restoration plus no measurable effect by 2026-09.
+  - MEDIUM, 6 to 12 months, likelihood medium: the mechanism normalizes or generalizes (EO sequels,
+    nationality-gated access, a second lab restricted). Falsifier: Fable stays the sole case at 12
+    months AND no new nationality-gated actions.
+  - LONG, 12 to 24 months, likelihood low-to-medium, high uncertainty: a rest-of-world shift toward
+    Chinese frontier models (relative China advantage). Falsifier: no measurable shift over 24 months.
+
+THE CLAIMS WE WANT YOU TO ATTACK:
+A. Substrate-bound narration: is the narrator actually bound, or does the role-typing and framing
+   smuggle in interpretation that is not in the facts?
+B. Measurement versus projection separation: is it clean, or do the projections or the scene framing
+   re-import unfalsifiable narrative into something presented as measured?
+C. The route taxonomy: is it coherent and consistently applied, or is it epistemic theater?
+D. The 2-depth actor and acted-on extrapolation: principled, or an arbitrary cut that imposes a
+   causal story the sources do not support?
+E. Confidence calibration: are the certainty numbers defensible, or false precision?
+F. Disclosed-nulls-as-beats and demote-not-kill conjecture: genuine honesty mechanisms, or an
+   unfalsifiable-core-with-protective-belt pattern (a vocabulary that cannot lose)?
+G. The projections: appropriately hedged, or do the falsifiers contain escape hatches that make them
+   impossible to kill?
+H. Anything else wrong, missing, or over-claimed. What single joint is most fragile?
+
+GIVE:
+1. Your top 3 to 5 specific criticisms, ranked by severity.
+2. Any factual or method errors.
+3. The one change that would most improve honesty.
+4. A one-line verdict: honest instrument, or dressed-up storytelling? Be concrete and harsh.

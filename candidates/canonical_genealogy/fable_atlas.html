@@ -1,0 +1,277 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Fable Atlas — isometric event stage (physical floor → latent stack)</title>
+<!--
+  Event-atlas lens (sibling to the cosmic-cone toy). Reads ../scene/fable_takedown.scene.json.
+  STACKED isometric: FLOOR = schematic Earth atlas (physical/space kernel) with the cast geo-placed +
+  acts_on graph pulsing in sync with the scrubber; ABOVE the floor the LATENT stack rises local->
+  national->global->civilizational, and each fact climbs to its penetration-height + ripples across
+  adjacent domains. HONESTY: the measured base is scene.json; geo-locations + penetration-heights are
+  DISCLOSED ESTIMATES rendered up the stack (badged, not measured). Vertical = latent reach, NOT altitude.
+  Narrator is substrate-bound. Never render a fake measured bit.
+-->
+<style>
+  :root{ --bg:#0c0f16; --panel:#141a26; --panel2:#1b2333; --ink:#e8edf6; --muted:#8b97ad; --line:#28324a;
+    --accent:#7fb3ff; --warn:#d2504a; --time:#e0a838; --space:#4a90d2; --knowledge:#46c07a; --meaning:#a06cd5; --est:#c88; }
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font:13px/1.45 "Segoe UI",system-ui,sans-serif;overflow:hidden}
+  #app{display:flex;flex-direction:column;height:100vh}
+  header{display:flex;align-items:baseline;gap:10px;padding:7px 14px;background:var(--panel);border-bottom:1px solid var(--line);flex-wrap:wrap}
+  header h1{font-size:14px;margin:0;font-weight:600} header .sub{color:var(--muted);font-size:11px}
+  header .est{color:var(--est);font-size:10.5px;border:1px solid #5a3a3a;background:#1a1010;padding:1px 7px;border-radius:10px}
+  #stage{position:relative;flex:1;min-height:0}
+  #cv{position:absolute;inset:0;width:100%;height:100%}
+  #tip{position:absolute;pointer-events:none;max-width:320px;background:rgba(10,14,22,.97);border:1px solid var(--line);
+    border-radius:8px;padding:8px 10px;font-size:11.5px;display:none;z-index:8;box-shadow:0 6px 24px rgba(0,0,0,.5)}
+  #tip b{color:var(--accent)} #tip .k{color:var(--muted);font-size:10.5px;margin-top:3px}
+  #tip .estchip{font-style:italic;color:var(--est);border:1px solid #5a3a3a;border-radius:8px;padding:0 5px;font-size:10px}
+  .panel{position:absolute;background:rgba(12,16,24,.92);border:1px solid var(--line);border-radius:8px;font-size:10.5px;color:var(--muted);z-index:6;box-shadow:0 4px 18px rgba(0,0,0,.45)}
+  .panel .phead{display:flex;align-items:center;gap:6px;padding:5px 8px;cursor:move;border-bottom:1px solid var(--line);user-select:none;background:rgba(27,35,51,.6);border-radius:8px 8px 0 0}
+  .panel .phead .ptitle{font-weight:600;color:#cdd6e8;flex:1;letter-spacing:.3px} .panel .phead .pchev{cursor:pointer;color:var(--muted);padding:0 4px}
+  .panel .pbody{padding:8px 10px;max-height:42vh;overflow:auto} .panel.collapsed .pbody{display:none}
+  #legend{right:10px;top:10px;max-width:250px} #narration{left:10px;bottom:60px;max-width:46%}
+  #legend i{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:5px;vertical-align:middle}
+  #legend .epi{color:var(--warn);margin-top:6px;line-height:1.4}
+  #narration .ntext{color:var(--ink);font-size:12px;line-height:1.5} #narration .nmeta{margin-top:4px;font-size:10px}
+  #narration .proj{color:var(--meaning)}
+  footer{background:var(--panel);border-top:1px solid var(--line);padding:6px 14px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+  footer button{background:var(--panel2);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:4px 10px;cursor:pointer;font-size:11.5px}
+  footer button:hover{border-color:var(--accent)} footer button.on{background:var(--time);color:#1a1206;border-color:var(--time);font-weight:600}
+  #scrub{flex:1;min-width:220px;accent-color:var(--accent)} #spd{width:90px;accent-color:var(--accent)}
+  #nowLab{font-variant-numeric:tabular-nums;font-weight:600;color:var(--time);min-width:150px}
+  .mini{color:var(--muted);font-size:10.5px;display:flex;align-items:center;gap:5px}
+</style>
+<div id="app">
+  <header>
+    <h1>Fable Atlas</h1>
+    <span class="sub">isometric event stage · floor = Earth (physical) · vertical = latent reach</span>
+    <span class="est">geo + heights = ESTIMATE overlay · base = substrate · vertical ≠ altitude</span>
+  </header>
+  <div id="stage">
+    <canvas id="cv"></canvas>
+    <div id="tip"></div>
+    <div class="panel" id="legend"><div class="phead"><span class="ptitle">legend</span><span class="pchev">▾</span></div>
+      <div class="pbody" id="legendBody"></div></div>
+    <div class="panel" id="narration"><div class="phead"><span class="ptitle">narrator · substrate-bound</span><span class="pchev">▾</span></div>
+      <div class="pbody"><div class="ntext" id="narrText">scrub to enter the scene…</div><div class="nmeta" id="narrMeta"></div></div></div>
+  </div>
+  <footer>
+    <button id="play">▶ play</button>
+    <button id="cut">⌖ the cut (17:21)</button>
+    <input type="range" id="scrub" min="0" max="1000" value="0">
+    <span id="nowLab"></span>
+    <span class="mini">speed <input type="range" id="spd" min="1" max="20" value="5"></span>
+  </footer>
+</div>
+<script>
+"use strict";
+const COL={actor:"#e0a838",acted_on:"#4a90d2",stage:"#a06cd5",audience:"#46c07a"};
+const DOMAINS=[{k:"economic",c:"#e0a838"},{k:"legal",c:"#4a90d2"},{k:"geopolitical",c:"#46c07a"},{k:"technical",c:"#a06cd5"},{k:"cultural",c:"#d2504a"}];
+const PEN_LABEL=["LOCAL","NATIONAL","GLOBAL","CIVILIZATIONAL"];
+
+// ---------- ESTIMATE overlay (interpretive render layer; NOT substrate) ----------
+const GEO={
+ "act-commerce":{lat:38.89,lon:-77.03,pen:3,basis:"known: Commerce Dept DC"},
+ "act-admin":{lat:38.90,lon:-77.04,pen:3,basis:"known: White House DC"},
+ "act-anthropic":{lat:37.77,lon:-122.40,pen:3,basis:"known: Anthropic HQ SF"},
+ "act-competitor":{lat:0,lon:-30,pen:2,basis:"UNKNOWN: identity not disclosed",unknown:true},
+ "ent-fable5":{lat:37.76,lon:-122.41,pen:3,basis:"virtual: anchored to SF HQ"},
+ "ent-mythos5":{lat:37.77,lon:-122.42,pen:3,basis:"virtual: anchored to SF HQ"},
+ "ent-directive":{lat:38.88,lon:-77.02,pen:3,basis:"known: Commerce Dept DC"},
+ "aud-foreign-nationals":{lat:0,lon:0,pen:3,basis:"distributed: global class",ring:true},
+ "ent-eu-arrangement":{lat:50.85,lon:4.35,pen:2,basis:"est: Brussels (EU institutions)"},
+ "ent-glasswing":{lat:37.50,lon:-122.00,pen:2,basis:"est: Silicon Valley centroid"},
+ "ent-ipo":{lat:37.78,lon:-122.39,pen:1,basis:"virtual: anchored to SF HQ"},
+ "ent-revenue":{lat:37.79,lon:-122.38,pen:1,basis:"virtual: anchored to SF HQ"},
+ "ent-stocks":{lat:40.71,lon:-74.01,pen:1,basis:"known: NYSE area NYC"},
+ "stage-eo":{lat:38.91,lon:-77.05,pen:3,basis:"known: White House DC"},
+ "stage-pentagon":{lat:38.87,lon:-77.06,pen:2,basis:"known: Pentagon DC"},
+ "aud-hn":{lat:37.75,lon:-122.43,pen:0,basis:"est: SF (HN tech media)"},
+ "aud-techcrunch":{lat:37.76,lon:-122.44,pen:1,basis:"est: SF (TechCrunch HQ)"},
+ "aud-willison":{lat:-33.87,lon:151.21,pen:0,basis:"est: Sydney AU (public info)"},
+ "aud-critics":{lat:47.61,lon:-122.33,pen:1,basis:"est: distributed US researchers"},
+ "aud-everything-theorists":{lat:48.85,lon:2.35,pen:2,basis:"est: Paris centroid"},
+ "aud-pav":{lat:-25.27,lon:133.78,pen:0,basis:"est: Australia"},
+ "ent-openai":{lat:37.80,lon:-122.42,pen:2,basis:"known: OpenAI HQ SF"},
+ "aud-global-developers":{lat:0,lon:30,pen:2,basis:"distributed: developer centroid",cluster:true},
+ "aud-eu-policymakers":{lat:48.86,lon:2.34,pen:3,basis:"est: Paris/Brussels cluster"},
+ "aud-enterprise-non-us":{lat:-33.88,lon:151.20,pen:1,basis:"known: Isaacus Sydney AU"},
+};
+const BEAT_DOMAINS={ "gatekeeping_event":["legal","geopolitical","technical"], "propagation_fact":["economic","technical"],
+ "reaction":["cultural","geopolitical"], "expansion-event":["technical","geopolitical"], "now_refresh_event":["technical","economic"],
+ "compliance":["legal","geopolitical","economic"], "restore_pending":["legal","technical"], "reversed":["legal","technical"],
+ "attributed":["cultural","legal"], "disclosed_null":[], "role":[],
+ "french-presidential-campaign-sovereignty-flashpoint":["geopolitical","cultural"], "isaacus-self-hosting-pivot":["economic","technical"],
+ "openrouter-chinese-model-shift-driver":["economic","technical","geopolitical"], "techzine-diffusion-inevitability-editorial":["geopolitical","cultural"],
+ "court-revenue-exposure-quantification":["economic","legal"] };
+const CONTINENTS=[
+ [[-165,62],[-120,68],[-70,60],[-58,47],[-80,25],[-105,15],[-120,30],[-140,58]],
+ [[-78,8],[-55,2],[-35,-8],[-55,-50],[-72,-52],[-80,-15]],
+ [[-9,55],[28,60],[40,48],[28,40],[-5,36],[-9,43]],
+ [[-16,33],[10,36],[32,30],[50,12],[40,-12],[20,-34],[10,-22],[-16,12]],
+ [[30,48],[60,70],[140,72],[170,65],[140,35],[120,12],[95,8],[60,25],[40,42]],
+ [[114,-12],[135,-12],[152,-25],[148,-38],[118,-34],[114,-22]],
+];
+const CLUSTERS={ DC:["act-commerce","act-admin","stage-eo","stage-pentagon","ent-directive"],
+ SF:["act-anthropic","ent-fable5","ent-mythos5","ent-openai","ent-ipo","ent-revenue","aud-hn","aud-techcrunch","ent-glasswing"] };
+
+let SCENE=null, CAST={}, EDGES=[], BEATS=[], PROJ=[], NARR=[];
+const T0=Date.parse("2026-04-14T00:00:00Z"), TEND=Date.parse("2026-06-13T23:59:59Z");
+const CUT=Date.parse("2026-06-12T21:21:00Z");
+let nowMs=CUT, prevNowMs=T0, playing=false, speed=5, lastTs=0, _stamp=0;
+let firedBeats=new Set(), castPulse={}, arcPulse={}, domainAct={}, ripples=[], jitter={}, needAnim=false;
+
+const cv=document.getElementById("cv"), ctx=cv.getContext("2d"), tip=document.getElementById("tip");
+let W=0,H=0,CX=0,CY=0,S=0,UNIT_H=0;
+function resize(){ const dpr=Math.min(2,devicePixelRatio||1); const st=document.getElementById("stage");
+  W=st.clientWidth;H=st.clientHeight; cv.width=W*dpr;cv.height=H*dpr; ctx.setTransform(dpr,0,0,dpr,0,0);
+  CX=W*0.46; CY=H*0.72; S=Math.min(W*0.40,H*0.60); UNIT_H=H*0.115; render(); }
+addEventListener("resize",resize);
+
+function iso(lat,lon,h){ const u=lon/360,v=lat/180; const wx=u*S, wy=-v*S;
+  return {x:CX+wx-wy, y:CY+(wx+wy)*0.5 - (h||0)*UNIT_H}; }
+function nodeScreen(id,h){ const g=GEO[id]; if(!g) return null; const p=iso(g.lat,g.lon,h||0); const j=jitter[id]; if(j){p.x+=j.dx;p.y+=j.dy;} return p; }
+function roleCol(id){ const c=CAST[id]; return c?(COL[c.role]||"#8b97ad"):"#8b97ad"; }
+function nowReal(){ return playing? performance.now() : _stamp; }
+
+fetch("scene/fable_takedown.scene.json").then(r=>r.json()).then(s=>init(s)).catch(()=>init(null));
+function init(s){
+  SCENE=s||{cast:[],graph_2depth:[],beats:[],projections:[],narration:[]};
+  for(const c of (SCENE.cast||[])) CAST[c.id]=c;
+  EDGES=SCENE.graph_2depth||[]; PROJ=SCENE.projections||[]; NARR=SCENE.narration||[];
+  BEATS=(SCENE.beats||[]).map(b=>({...b, ms:Date.parse((b.when||"").length<=10?(b.when+"T00:00:00Z"):b.when)})).filter(b=>!isNaN(b.ms)).sort((a,b)=>a.ms-b.ms);
+  for(const ids of Object.values(CLUSTERS)){ const n=ids.length; ids.forEach((id,i)=>{ const a=2*Math.PI*i/n, r=(CAST[id]&&CAST[id].role==="actor")?22:14; jitter[id]={dx:r*Math.cos(a),dy:r*Math.sin(a)}; }); }
+  buildLegend(); prevNowMs=CUT+1; scrubToMs(CUT); document.getElementById("scrub").value=Math.round((CUT-T0)/(TEND-T0)*1000); resize();
+}
+
+function render(){ ctx.clearRect(0,0,W,H); drawHeightPlanes(); drawFloorMap(); drawArcs(); drawRipples(); drawRisersAndNodes(); drawDomains(); drawHonesty(); }
+
+function drawHeightPlanes(){
+  for(let lvl=0;lvl<4;lvl++){ const col=[COL.audience,COL.actor,COL.acted_on,COL.stage][lvl];
+    const c=[iso(-82,-179,lvl),iso(-82,179,lvl),iso(82,179,lvl),iso(82,-179,lvl)];
+    ctx.beginPath(); ctx.moveTo(c[0].x,c[0].y); for(let i=1;i<4;i++)ctx.lineTo(c[i].x,c[i].y); ctx.closePath();
+    ctx.strokeStyle=col+"20"; ctx.lineWidth=1; ctx.setLineDash([3,7]); ctx.stroke(); ctx.setLineDash([]);
+    const lab=iso(80,-179,lvl); ctx.fillStyle=col+"aa"; ctx.font="9px ui-sans-serif"; ctx.textAlign="right"; ctx.fillText(PEN_LABEL[lvl],lab.x-6,lab.y+3); }
+  const pz=iso(80,-179,3.7); ctx.fillStyle="#a06cd577"; ctx.font="9px ui-sans-serif"; ctx.textAlign="right"; ctx.fillText("PROJECTION",pz.x-6,pz.y+3);
+}
+function drawFloorMap(){
+  const c=[iso(-82,-179,0),iso(-82,179,0),iso(82,179,0),iso(82,-179,0)];
+  ctx.beginPath(); ctx.moveTo(c[0].x,c[0].y); for(let i=1;i<4;i++)ctx.lineTo(c[i].x,c[i].y); ctx.closePath();
+  ctx.fillStyle="#0a1420"; ctx.fill(); ctx.strokeStyle="#1d2c44"; ctx.lineWidth=1; ctx.stroke();
+  ctx.strokeStyle="rgba(74,144,210,0.13)"; ctx.lineWidth=1; ctx.setLineDash([3,6]);
+  for(let lon=-150;lon<=150;lon+=30){ const a=iso(-82,lon,0),b=iso(82,lon,0); ctx.beginPath(); ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y); ctx.stroke(); }
+  for(let lat=-60;lat<=60;lat+=30){ const a=iso(lat,-179,0),b=iso(lat,179,0); ctx.beginPath(); ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y); ctx.stroke(); }
+  ctx.setLineDash([]);
+  for(const poly of CONTINENTS){ ctx.beginPath(); poly.forEach((pt,i)=>{ const p=iso(pt[1],pt[0],0); i?ctx.lineTo(p.x,p.y):ctx.moveTo(p.x,p.y); }); ctx.closePath();
+    ctx.fillStyle="rgba(42,64,96,0.55)"; ctx.fill(); ctx.strokeStyle="rgba(74,144,210,0.3)"; ctx.stroke(); }
+  const fl=iso(-80,179,0); ctx.fillStyle="rgba(74,144,210,0.45)"; ctx.font="9px ui-sans-serif"; ctx.textAlign="right"; ctx.fillText("FLOOR — physical / space kernel (schematic Earth)",fl.x,fl.y+12);
+}
+function drawArcs(){
+  for(const e of EDGES){ const a=nodeScreen(e.from,0), b=nodeScreen(e.to,0); if(!a||!b)continue;
+    const mx=(a.x+b.x)/2, my=(a.y+b.y)/2 - Math.hypot(b.x-a.x,b.y-a.y)*0.16;
+    const pulse=arcPulse[e.from]?Math.max(0,1-(nowReal()-arcPulse[e.from])/600):0;
+    ctx.beginPath(); ctx.moveTo(a.x,a.y); ctx.quadraticCurveTo(mx,my,b.x,b.y);
+    ctx.strokeStyle=roleCol(e.from)+(pulse>0?"ee":"40"); ctx.lineWidth=1.1+pulse*2.6; ctx.stroke(); }
+}
+function drawRisersAndNodes(){
+  for(const id in GEO){ const g=GEO[id]; const fp=nodeScreen(id,0); if(!fp)continue;
+    const fired=BEATS.some(b=>b.subject===id&&firedBeats.has(b.best_fact_id));
+    if(fired && g.pen>0 && !g.ring && !g.cluster){ const tp=nodeScreen(id,g.pen);
+      ctx.beginPath(); ctx.moveTo(fp.x,fp.y); ctx.lineTo(tp.x,tp.y); ctx.setLineDash([2,4]); ctx.strokeStyle="#a06cd566"; ctx.lineWidth=1; ctx.stroke(); ctx.setLineDash([]);
+      ctx.beginPath(); ctx.arc(tp.x,tp.y,4,0,7); ctx.fillStyle="#a06cd5"; ctx.fill();
+      ctx.fillStyle="#a06cd5aa"; ctx.font="8px ui-sans-serif"; ctx.textAlign="left"; ctx.fillText(PEN_LABEL[g.pen][0],tp.x+6,tp.y+3); }
+  }
+  for(const id in GEO){ const g=GEO[id], c=CAST[id]; const p=nodeScreen(id,0); if(!p)continue;
+    const col=roleCol(id); const pulse=castPulse[id]||0; const baseR=(c&&c.role==="actor"?8:c&&c.role==="acted_on"?6:5)+g.pen*2.0;
+    if(g.unknown){ ctx.beginPath(); ctx.arc(p.x,p.y,8,0,7); ctx.setLineDash([2,3]); ctx.strokeStyle="#b07a3a"; ctx.lineWidth=1.4; ctx.stroke(); ctx.setLineDash([]);
+      ctx.fillStyle="#b07a3a"; ctx.font="bold 11px ui-sans-serif"; ctx.textAlign="center"; ctx.fillText("?",p.x,p.y+4); }
+    else if(g.ring){ ctx.beginPath(); for(let lon=-179;lon<=179;lon+=8){ const q=iso(2,lon,0); lon===-179?ctx.moveTo(q.x,q.y):ctx.lineTo(q.x,q.y); }
+      ctx.setLineDash([3,5]); ctx.strokeStyle=col+"99"; ctx.lineWidth=1.2; ctx.stroke(); ctx.setLineDash([]); }
+    else if(g.cluster){ const pts=[[-100,40],[-90,35],[10,50],[25,48],[105,30],[120,22]]; ctx.fillStyle=col+"cc";
+      pts.forEach(pt=>{ const q=iso(pt[1],pt[0],0); ctx.beginPath(); ctx.arc(q.x,q.y,2.5,0,7); ctx.fill(); }); }
+    else{
+      if(pulse>0){ ctx.beginPath(); ctx.arc(p.x,p.y,baseR+4+pulse*20,0,7); ctx.strokeStyle=col+Math.round(pulse*160).toString(16).padStart(2,"0"); ctx.lineWidth=2; ctx.stroke(); }
+      const cert=c&&c.headline_certainty; if(cert!=null&&cert<0.75){ ctx.beginPath(); ctx.arc(p.x,p.y,baseR+3,0,7); ctx.setLineDash([2,3]); ctx.strokeStyle=col+"88"; ctx.lineWidth=1; ctx.stroke(); ctx.setLineDash([]); }
+      ctx.beginPath(); ctx.arc(p.x,p.y,baseR,0,7); ctx.fillStyle=col; ctx.fill();
+    }
+    if(c){ ctx.fillStyle=(c.role==="actor")?"#e8edf6":col; ctx.font=(c.role==="actor"?"bold ":"")+"9px ui-sans-serif"; ctx.textAlign="center";
+      ctx.fillText(c.name.length>18?c.name.slice(0,17)+"…":c.name, p.x, p.y+baseR+11); }
+  }
+}
+function drawRipples(){ const t=nowReal();
+  for(let i=ripples.length-1;i>=0;i--){ const r=ripples[i]; const age=(t-r.startMs)/900; if(age>1){ripples.splice(i,1);continue;}
+    ctx.beginPath(); ctx.arc(r.x,r.y,age*38,0,7); ctx.strokeStyle=r.color; ctx.globalAlpha=(1-age)*0.55; ctx.lineWidth=2; ctx.stroke(); ctx.globalAlpha=1; }
+}
+function drawDomains(){ const y=H-16, x0=W-225; ctx.font="8px ui-sans-serif"; ctx.textAlign="center";
+  DOMAINS.forEach((d,i)=>{ const x=x0+i*44; const a=domainAct[d.k]||0; ctx.beginPath(); ctx.arc(x,y,9+a*6,0,7);
+    ctx.fillStyle=d.c+Math.round((0.18+a*0.5)*255).toString(16).padStart(2,"0"); ctx.fill(); ctx.strokeStyle=d.c+"99"; ctx.lineWidth=1; ctx.stroke();
+    ctx.fillStyle=d.c+"cc"; ctx.fillText(d.k.slice(0,4),x,y+16); });
+  ctx.fillStyle="#8b97ad"; ctx.textAlign="right"; ctx.font="9px ui-sans-serif"; ctx.fillText("ripples → domains",x0-10,y+2);
+}
+function drawHonesty(){ ctx.fillStyle="#a06cd5aa"; ctx.font="9px ui-sans-serif"; ctx.textAlign="left";
+  ctx.fillText("↑ vertical = latent penetration (local→civilizational) · ESTIMATE, not altitude", 12, 16); }
+
+function fireBeat(b){ firedBeats.add(b.best_fact_id); castPulse[b.subject]=1.0; arcPulse[b.subject]=performance.now();
+  const doms=BEAT_DOMAINS[b.predicate]||["technical"]; for(const d of doms) domainAct[d]=Math.min(1,(domainAct[d]||0)+0.7);
+  const g=GEO[b.subject]; if(g&&!g.unknown&&!g.ring&&!g.cluster){ const p=nodeScreen(b.subject,0); if(p) ripples.push({x:p.x,y:p.y,startMs:performance.now(),color:roleCol(b.subject)}); }
+  kick();
+}
+function scrubToMs(ms){ ms=Math.max(T0,Math.min(TEND,ms));
+  if(ms<prevNowMs){ firedBeats=new Set(); castPulse={}; arcPulse={}; domainAct={}; ripples=[]; for(const b of BEATS) if(b.ms<=ms) firedBeats.add(b.best_fact_id); }
+  else { for(const b of BEATS) if(b.ms>prevNowMs && b.ms<=ms) fireBeat(b); }
+  prevNowMs=ms; nowMs=ms; _stamp=performance.now(); updateNarration(ms); updateNowLab(); render();
+}
+function updateNowLab(){ document.getElementById("nowLab").textContent=new Date(nowMs).toISOString().slice(0,16).replace("T"," ")+" UTC"; }
+function activeProj(ms){ if(ms<=CUT)return null; const mo=(ms-CUT)/(30.4*864e5); if(mo<=3)return PROJ.find(p=>p.horizon==="short"); if(mo<=12)return PROJ.find(p=>p.horizon==="medium"); return PROJ.find(p=>p.horizon==="long"); }
+function updateNarration(ms){
+  if(ms>CUT){ const ap=activeProj(ms); if(ap){ document.getElementById("narrText").innerHTML=ap.modal_guess;
+    document.getElementById("narrMeta").innerHTML=`<span class="proj">▷ PROJECTION ${ap.horizon} · ${ap.window} · ${ap.conjecture_child} · likelihood ${ap.likelihood_band} — conjecture, not measurement</span>`; return; } }
+  const firedNarr=NARR.filter(n=>n.kind==="beat"&&firedBeats.has(n.derived_from));
+  let pick=firedNarr.length?firedNarr[firedNarr.length-1]:NARR.find(n=>n.kind==="frame");
+  if(!pick){ document.getElementById("narrText").textContent="scrub forward to enter the scene…"; document.getElementById("narrMeta").textContent=""; return; }
+  const raw=pick.text||""; const txt=(raw.startsWith("BEAT")&&raw.includes(":"))?raw.slice(raw.indexOf(":")+1).trim():raw;
+  document.getElementById("narrText").textContent=txt;
+  document.getElementById("narrMeta").innerHTML = pick.kind==="beat"
+    ? `conf ${pick.certainty} · ${pick.bucket||"pending"} · route ${pick.route||"—"} · <b style="color:var(--accent)">${pick.entailment||"?"}</b>` : "frame";
+}
+
+function animTick(){ const t=performance.now(); let live=false;
+  for(const k in castPulse){ castPulse[k]=Math.max(0,castPulse[k]-0.02); if(castPulse[k]>0)live=true; }
+  for(const k in domainAct){ domainAct[k]=Math.max(0,domainAct[k]-0.015); if(domainAct[k]>0)live=true; }
+  if(ripples.length)live=true;
+  if(playing){ const dt=t-lastTs; lastTs=t; nowMs+=dt*((TEND-T0)/1000/60*speed);
+    if(nowMs>=TEND){nowMs=TEND;playing=false;const pb=document.getElementById("play");pb.textContent="▶ play";pb.classList.remove("on");}
+    scrubToMs(nowMs); document.getElementById("scrub").value=Math.round((nowMs-T0)/(TEND-T0)*1000); live=true; }
+  else { _stamp=t; render(); }
+  needAnim=live; if(live) requestAnimationFrame(animTick);
+}
+function kick(){ if(!needAnim){ needAnim=true; lastTs=performance.now(); requestAnimationFrame(animTick); } }
+
+document.getElementById("play").onclick=function(){ playing=!playing; this.textContent=playing?"⏸ pause":"▶ play"; this.classList.toggle("on",playing); if(playing){lastTs=performance.now(); kick();} };
+document.getElementById("cut").onclick=()=>{ prevNowMs=CUT+1; scrubToMs(CUT); document.getElementById("scrub").value=Math.round((CUT-T0)/(TEND-T0)*1000); };
+document.getElementById("scrub").oninput=function(){ scrubToMs(T0+(+this.value)/1000*(TEND-T0)); };
+document.getElementById("spd").oninput=function(){ speed=+this.value; };
+
+cv.addEventListener("mousemove",e=>{ const r=cv.getBoundingClientRect(); const mx=e.clientX-r.left,my=e.clientY-r.top; let hit=null;
+  for(const id in GEO){ const p=nodeScreen(id,0); if(!p)continue; if(Math.hypot(p.x-mx,p.y-my)<14){hit=id;break;} }
+  if(hit){ const g=GEO[hit],c=CAST[hit]; tip.style.display="block"; tip.style.left=(e.clientX+12)+"px"; tip.style.top=(e.clientY+12)+"px";
+    tip.innerHTML=`<b>${c?c.name:hit}</b> <span class="k">${c?c.role:""}</span>`+(c&&c.gloss?`<div class="k">${c.gloss}</div>`:"")+
+      `<div class="k"><span class="estchip">geo ~est: ${g.basis}</span></div><div class="k"><span class="estchip">pen=${g.pen} ${PEN_LABEL[g.pen]} ~est</span></div>`;
+  } else tip.style.display="none"; });
+cv.addEventListener("mouseleave",()=>tip.style.display="none");
+
+document.querySelectorAll(".panel").forEach(pan=>{ const head=pan.querySelector(".phead"); const chev=pan.querySelector(".pchev");
+  chev.onclick=e=>{ e.stopPropagation(); pan.classList.toggle("collapsed"); chev.textContent=pan.classList.contains("collapsed")?"▸":"▾"; };
+  let dr=false,ox=0,oy=0; head.onmousedown=e=>{ dr=true; ox=e.clientX-pan.offsetLeft; oy=e.clientY-pan.offsetTop; e.preventDefault(); };
+  addEventListener("mousemove",e=>{ if(!dr)return; pan.style.left=(e.clientX-ox)+"px"; pan.style.top=(e.clientY-oy)+"px"; pan.style.right="auto"; pan.style.bottom="auto"; });
+  addEventListener("mouseup",()=>dr=false); });
+
+function buildLegend(){ const roleK=Object.entries(COL).map(([r,c])=>`<span><i style="background:${c}"></i>${r}</span>`).join(" ");
+  const domK=DOMAINS.map(d=>`<span><i style="background:${d.c}"></i>${d.k}</span>`).join(" ");
+  document.getElementById("legendBody").innerHTML=
+    `<div>roles: ${roleK}</div>`+
+    `<div style="margin-top:5px">stack: LOCAL → NATIONAL → GLOBAL → CIVILIZATIONAL (a fact rises to its reach)</div>`+
+    `<div style="margin-top:5px">domains: ${domK}</div>`+
+    `<div class="epi">geo-positions + penetration-heights are ANALYST ESTIMATES — an interpretive render overlay. Only scene.json (certainty/route/entailment) is the evidence record. Vertical = latent reach, NOT physical altitude. Narrator speaks substrate only.</div>`;
+}
+</script>

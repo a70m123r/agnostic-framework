@@ -1,0 +1,152 @@
+{
+  "pete-hegseth": {
+    "lat": 38.87,
+    "lon": -77.06,
+    "pen": 2
+  },
+  "dario-amodei": {
+    "lat": 37.77,
+    "lon": -122.42,
+    "pen": 2
+  },
+  "daniela-amodei": {
+    "lat": 37.77,
+    "lon": -122.42,
+    "pen": 1
+  },
+  "lutnick": {
+    "lat": 38.9,
+    "lon": -77.03,
+    "pen": 2
+  },
+  "kessler-bis": {
+    "lat": 38.9,
+    "lon": -77.03,
+    "pen": 2
+  },
+  "bis": {
+    "lat": 38.9,
+    "lon": -77.03,
+    "pen": 1
+  },
+  "liz-huston": {
+    "lat": 38.9,
+    "lon": -77.04,
+    "pen": 1
+  },
+  "bessent": {
+    "lat": 38.9,
+    "lon": -77.03,
+    "pen": 1
+  },
+  "jassy-amazon": {
+    "lat": 47.61,
+    "lon": -122.33,
+    "pen": 2
+  },
+  "emil-michael": {
+    "lat": 38.87,
+    "lon": -77.06,
+    "pen": 2
+  },
+  "sacks": {
+    "lat": 38.9,
+    "lon": -77.04,
+    "pen": 2
+  },
+  "altman-openai": {
+    "lat": 37.77,
+    "lon": -122.42,
+    "pen": 2
+  },
+  "judge-rita-lin": {
+    "lat": 37.77,
+    "lon": -122.42,
+    "pen": 2
+  },
+  "dc-circuit-panel": {
+    "lat": 38.9,
+    "lon": -77.03,
+    "pen": 1
+  },
+  "alan-rozenshtein": {
+    "lat": 44.98,
+    "lon": -93.27,
+    "pen": 2
+  },
+  "michael-endrias": {
+    "lat": 38.9,
+    "lon": -77.03,
+    "pen": 1
+  },
+  "peter-harrell": {
+    "lat": 38.9,
+    "lon": -77.03,
+    "pen": 2
+  },
+  "chris-mcguire": {
+    "lat": 38.9,
+    "lon": -77.03,
+    "pen": 2
+  },
+  "kevin-frazier": {
+    "lat": 38.9,
+    "lon": -77.03,
+    "pen": 1
+  },
+  "jessica-tillipman": {
+    "lat": 38.9,
+    "lon": -77.03,
+    "pen": 1
+  },
+  "katie-moussouris": {
+    "lat": 38.9,
+    "lon": -77.03,
+    "pen": 2
+  },
+  "nathan-lambert": {
+    "lat": 38.9,
+    "lon": -77.03,
+    "pen": 1
+  },
+  "dean-ball": {
+    "lat": 38.9,
+    "lon": -77.03,
+    "pen": 1
+  },
+  "jeremy-howard": {
+    "lat": -25.27,
+    "lon": 133.78,
+    "pen": 1
+  },
+  "behnam-neyshabur": {
+    "lat": 38.9,
+    "lon": -77.03,
+    "pen": 1
+  },
+  "will-brown": {
+    "lat": 38.9,
+    "lon": -77.03,
+    "pen": 1
+  },
+  "pliny-liberator": {
+    "lat": 38.9,
+    "lon": -77.03,
+    "pen": 1
+  },
+  "lisan-al-gaib": {
+    "lat": 38.9,
+    "lon": -77.03,
+    "pen": 1
+  },
+  "christine-lagarde": {
+    "lat": 38.9,
+    "lon": -77.03,
+    "pen": 1
+  },
+  "gary-marcus": {
+    "lat": 38.9,
+    "lon": -77.03,
+    "pen": 1
+  }
+}

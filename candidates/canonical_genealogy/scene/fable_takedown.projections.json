@@ -1,0 +1,47 @@
+{
+  "_doc": "PROJECTIONS for the Fable-takedown scene — the 3 short/medium/long 'guesses' (the anticipation build-up). These are CONJECTURE, NOT measurement. They live OUTSIDE the substrate (compiled/ holds only measured facts) and are rendered as fuzzy forward-arcs, clearly marked PROJECTION. Authored from candidates/dial_engine/experiments/fable_event/CONJECTURE_trajectory.md (parent C0 + children K1-K5 + rivals R1-R4). Likelihood bands are QUALITATIVE and conjectural — never a measured probability, never a bit. Frame-relative valence: 'good/bad' is observer-indexed (national wrapper). Re-scan at horizons; demote-not-kill; dead-children tally is the honest gauge.",
+  "t0": "2026-06-13",
+  "anchor_worldline": "fable-takedown (the cut at 2026-06-12T21:21:00Z)",
+  "parent_conjecture": "C0 — the takedown is a trajectory-altering precedent: frontier-AI access shifts from a roughly-open market toward state-controlled, nationality-gated supply.",
+  "projections": [
+    {
+      "id": "P-short",
+      "horizon": "short",
+      "window": "now .. 2026-09 (3 months)",
+      "modal_guess": "Near-term squeeze on Anthropic and foreign developers continues — revenue/reach drag, IPO-timing pressure, developer migration, ecosystem uncertainty.",
+      "conjecture_child": "K4 (Pav: 'definitely')",
+      "likelihood_band": "high",
+      "likelihood_basis": "ALREADY VISIBLE at t0 — the squeeze is not a forecast so much as an extrapolation of live beats.",
+      "drivers_from_beats": ["f-fbt-n0024", "f-fbt-n0013", "f-fbt-e0006", "f-fbt-e0010", "f-fbt-e0014"],
+      "also_live": ["R1 one-off (rapid reversal — Anthropic is 'working to restore', dispute pressure is real)"],
+      "falsifier": "Fable/Mythos access fully restored within 30 days (by 2026-07-12) AND no Anthropic public-sector or enterprise revenue-guidance reduction attributable to the event AND no sustained (>2 trading-day) >2% move in the named enterprise stocks (Workday/Oracle/Palantir) attributable to it, all observed by 2026-09-13.",
+      "marked": "PROJECTION — conjecture, not measurement."
+    },
+    {
+      "id": "P-medium",
+      "horizon": "medium",
+      "window": "2026-09 .. 2027-06 (6-12 months)",
+      "modal_guess": "The mechanism normalizes / generalizes — nationality-gated frontier-model access becomes a standing tool (EO sequels, BIS/Commerce actions, KYC-by-nationality), and/or a second US lab's deployed model draws a comparable restriction; the governance discourse cites this as a turning point.",
+      "conjecture_child": "K1 (generalizes) + K2 (normalizes) + K5 (cultural validation)",
+      "likelihood_band": "medium",
+      "likelihood_basis": "Seeded by the June-2 EO + existing chip export-controls; but no 2nd case yet and reversal pressure is live.",
+      "drivers_from_beats": ["f-fbt-e0001", "f-fbt-n0017", "f-fbt-e0007", "f-fbt-e0013"],
+      "also_live": ["R1 one-off (stays a single legal event)", "R4 decentralization (demand routes to open-weight/local, not to a state)"],
+      "falsifier": "NO non-Anthropic deployed frontier model named in a US Commerce/BIS export-control or nationality-gating action by 2027-06-13 AND no new EO/BIS rule conditioning frontier-model API access on user nationality in that window.",
+      "marked": "PROJECTION — conjecture, not measurement."
+    },
+    {
+      "id": "P-long",
+      "horizon": "long",
+      "window": "2027-06 .. 2028-06 (12-24 months)",
+      "modal_guess": "Contested. Pav's bet: a measurable rest-of-world shift toward Chinese frontier models where US models become unavailable to foreign nationals (relative China advantage). Heavily confounded; rivals strongly in play.",
+      "conjecture_child": "K3 (China relative advantage — Pav's directional bet)",
+      "likelihood_band": "low-to-medium (HIGH uncertainty, heavy confounds)",
+      "likelihood_basis": "No direct t0 evidence yet; the disclosed_null 'no foreign-gov reaction found' is exactly the fuzzy region a scout must sharpen before this can move.",
+      "drivers_from_beats": ["f-fbt-e0016", "f-fbt-n0010", "f-fbt-n0011"],
+      "also_live": ["R2 US-handicap-without-clean-China-win (RoW fragments across EU/open-weight)", "R3 China-doesn't-net-benefit (its own compute/export constraints)", "R4 decentralization-wins (open-weight, not a state)"],
+      "falsifier": "rest-of-world usage/API share of Chinese frontier models (vs US frontier models) does NOT rise by >5 percentage points over 24 months (by 2028-06-13) on a named public proxy (e.g. OpenRouter model-usage rankings or an equivalent aggregator), OR China's own compute/export constraints demonstrably neutralize any gap.",
+      "marked": "PROJECTION — conjecture, not measurement."
+    }
+  ]
+}

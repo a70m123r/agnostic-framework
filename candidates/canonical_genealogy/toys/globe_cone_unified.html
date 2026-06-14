@@ -87,6 +87,9 @@
         <option value="custom">glasses: custom…</option>
       </select>
       <button id="glassesMode">mode: prominence</button>
+      <span style="color:var(--mut);font-size:11px;display:flex;align-items:center;gap:4px">log-zoom <input type="range" id="zoomR" min="0" max="1" step="0.005" value="0" style="width:90px"></span>
+      <button id="bLocal">LOCAL</button>
+      <button id="bCosmic">COSMIC</button>
     </div>
     <div id="controls2">
       <label>scale focus <input type="range" id="slfoc" min="0" max="1" step="0.01" value="0.5" style="width:110px"><span id="slfocV">50%</span></label>
@@ -343,6 +346,7 @@ function draw(){
     x.fillText(o.n+(dead?" — cut":""), here.mx+8, here.my+3);
     if(showDuel && o.lawbits!=null){ x.fillStyle="#5a6275"; x.font="9px ui-sans-serif"; x.fillText(o.law+" ~"+o.lawbits+" b", here.mx+8, here.my+14); }
   }
+  if(LAND.rings.length){ const G=globeFrame(B); drawGlobe(B,G); if(G.R<14) drawEarthHelix(B,G); drawGlobeEvent(B,G); }
   if(showScene) drawProjections(B);
   drawScrubber();
   hudText(hovered);
@@ -404,6 +408,9 @@ function hudText(h){
 }
 function updateBadges(){
   const el=document.getElementById("badges"); let h="";
+  if(z<0.92){ h+=`<div class="badge lens">GLOBE skin — Natural Earth 110m (public domain, schematic)</div>`;
+    h+=`<div class="badge frame">GEO-PINS + REACH = DISCLOSED ESTIMATE (overlay, not substrate)</div>`; }
+  if(z>0.30){ h+=`<div class="badge mutate">COSMIC positions MODELLED · EARTH helix ILLUSTRATIVE, not to scale</div>`; }
   if(glassesMode==="warp") h+=`<div class="badge mutate">⚠ MUTATE — node positions warped by glasses, NOT the measured base</div>`;
   if(dialPreset!=="agnostic") h+=`<div class="badge frame">FRAME: ${dialPreset} — prominence = salience, not scale</div>`;
   if(lensDepth>1.001) h+=`<div class="badge lens">scale lens ${lensDepth.toFixed(1)}× @ ${nearestScaleName(lensCenter)} — labels show true log2*</div>`;
@@ -492,6 +499,116 @@ function buildCastPanel(s){ const el=document.getElementById("cast"); if(!el)ret
   el.innerHTML=html; el.style.display=showCast?"block":"none"; }
 document.getElementById("sceneBtn").onclick=function(){ showScene=!showScene; this.textContent="scene: "+(showScene?"ON":"OFF"); document.getElementById("narr").style.display=showScene?"block":"none"; draw(); };
 document.getElementById("castBtn").onclick=function(){ showCast=!showCast; this.textContent="cast: "+(showCast?"ON":"OFF"); document.getElementById("cast").style.display=showCast?"block":"none"; };
+
+// ================= GLOBE-IN-LOG LAYER (unified viewer) =================
+// A 3D Earth globe (world_land.json skin) that flattens in log onto Earth's cone dot.
+// z=0: globe fills the stage, the event plays LOCAL on its surface. z=1: globe shrinks to
+// Earth's objPos dot on the log2 cone (SPACE frame: cone + orbits + Earth worldline helix).
+// FUSION: globe world-center = Pe*smooth01(z) (0=screen center, 1=Earth's cone pos); Rg big->2px.
+let z=0, spinYaw=0, LAND={rings:[]};
+const D2R=Math.PI/180;
+const smooth01 = t => { const cc=Math.max(0,Math.min(1,t)); return cc*cc*(3-2*cc); };
+const EARTH = OBJ.find(o=>o.id==="earth");
+const COLROLE={actor:"#e0a838",acted_on:"#4a90d2",stage:"#a06cd5",audience:"#46c07a"};
+const DOMS=[{k:"economic",c:"#e0a838"},{k:"legal",c:"#4a90d2"},{k:"geopolitical",c:"#46c07a"},{k:"technical",c:"#a06cd5"},{k:"cultural",c:"#d2504a"}];
+const BEAT_DOMAINS={gatekeeping_event:["legal","geopolitical","technical"],propagation_fact:["economic","technical"],reaction:["cultural","geopolitical"],"expansion-event":["technical","geopolitical"],now_refresh_event:["technical","economic"],compliance:["legal","geopolitical","economic"],restore_pending:["legal","technical"],reversed:["legal","technical"],attributed:["cultural","legal"],disclosed_null:[],role:[]};
+// estimate overlay (geo lives HERE, not in scene.json) — ported from fable_atlas
+const GEO={
+ "act-commerce":{lat:38.89,lon:-77.03,pen:3},"act-admin":{lat:38.90,lon:-77.04,pen:3},
+ "act-anthropic":{lat:37.77,lon:-122.40,pen:3},"act-competitor":{lat:0,lon:-30,pen:2,unknown:true},
+ "ent-fable5":{lat:37.76,lon:-122.41,pen:3},"ent-mythos5":{lat:37.77,lon:-122.42,pen:3},
+ "ent-directive":{lat:38.88,lon:-77.02,pen:3},"aud-foreign-nationals":{lat:0,lon:0,pen:3},
+ "ent-eu-arrangement":{lat:50.85,lon:4.35,pen:2},"ent-glasswing":{lat:37.50,lon:-122.00,pen:2},
+ "ent-ipo":{lat:37.78,lon:-122.39,pen:1},"ent-revenue":{lat:37.79,lon:-122.38,pen:1},
+ "ent-stocks":{lat:40.71,lon:-74.01,pen:1},"stage-eo":{lat:38.91,lon:-77.05,pen:3},
+ "stage-pentagon":{lat:38.87,lon:-77.06,pen:2},"aud-hn":{lat:37.75,lon:-122.43,pen:0},
+ "aud-techcrunch":{lat:37.76,lon:-122.44,pen:1},"aud-willison":{lat:-33.87,lon:151.21,pen:0},
+ "aud-critics":{lat:47.61,lon:-122.33,pen:1},"aud-everything-theorists":{lat:48.85,lon:2.35,pen:2},
+ "aud-pav":{lat:-25.27,lon:133.78,pen:0},"ent-openai":{lat:37.80,lon:-122.42,pen:2},
+ "aud-global-developers":{lat:0,lon:30,pen:2},"aud-eu-policymakers":{lat:48.86,lon:2.34,pen:3},
+ "aud-enterprise-non-us":{lat:-33.88,lon:151.20,pen:1},
+};
+fetch("../world_land.json").then(r=>r.json()).then(d=>{LAND=d;draw();}).catch(()=>{});
+
+function roleCol(id){ const cc=SCENE&&SCENE.cast&&SCENE.cast.find(n=>n.id===id); return COLROLE[cc?cc.role:"audience"]||"#8b97ad"; }
+function castName(id){ const cc=SCENE&&SCENE.cast&&SCENE.cast.find(n=>n.id===id); return cc?cc.name:id; }
+function unitLL(lat,lon){ const la=lat*D2R, lo=lon*D2R+spinYaw, cl=Math.cos(la); return {x:cl*Math.sin(lo), y:Math.sin(la), z:cl*Math.cos(lo)}; }
+function nearSide(n,B){ return (n.x*B.f.x+n.y*B.f.y+n.z*B.f.z) < 0.02; }
+function Rg(){ const R0=0.92*Rmax; return Math.max(2, R0*Math.exp(-Math.log(R0/2)*smooth01(z))); }
+function globeFrame(B){ const Pe=objPos(EARTH,now,B); const s=smooth01(z);
+  return {cw:{x:Pe.wx*s,y:Pe.wy*s,z:Pe.wz*s}, R:Rg(), s, Pe:{x:Pe.wx,y:Pe.wy,z:Pe.wz}}; }
+function surfW(n,G){ return {wx:G.cw.x+G.R*n.x, wy:G.cw.y+G.R*n.y, wz:G.cw.z+G.R*n.z}; }
+function slerp(a,b,t){ let d=a.x*b.x+a.y*b.y+a.z*b.z; d=Math.max(-1,Math.min(1,d)); const th=Math.acos(d);
+  if(th<1e-4) return a; const s=Math.sin(th), w1=Math.sin((1-t)*th)/s, w2=Math.sin(t*th)/s;
+  return {x:a.x*w1+b.x*w2,y:a.y*w1+b.y*w2,z:a.z*w1+b.z*w2}; }
+function limbCross(n0,n1,B){ let a=n0,b=n1; for(let it=0;it<10;it++){ let m={x:(a.x+b.x)/2,y:(a.y+b.y)/2,z:(a.z+b.z)/2};
+  const L=Math.hypot(m.x,m.y,m.z)||1; m={x:m.x/L,y:m.y/L,z:m.z/L}; (m.x*B.f.x+m.y*B.f.y+m.z*B.f.z<0)?(a=m):(b=m); } return a; }
+
+function drawGlobe(B,G){ const R=G.R; const c=project(G.cw.x,G.cw.y,G.cw.z,B);
+  const g=x.createRadialGradient(c.sx-R*0.3,c.sy-R*0.3,R*0.1,c.sx,c.sy,R); g.addColorStop(0,"#16314f"); g.addColorStop(1,"#081420");
+  x.fillStyle=g; x.beginPath(); x.arc(c.sx,c.sy,R,0,7); x.fill();
+  x.strokeStyle="#6fc3ff22"; x.beginPath(); x.arc(c.sx,c.sy,R*1.03,0,7); x.stroke();
+  if(R<6) return;
+  const gs=z<0.4?30:15; x.strokeStyle="#16202e"; x.lineWidth=1;
+  for(let lon=-180;lon<=180;lon+=gs){ let pen=false; x.beginPath();
+    for(let lat=-80;lat<=80;lat+=5){ const n=unitLL(lat,lon); if(!nearSide(n,B)){pen=false;continue;} const s=project(G.cw.x+R*n.x,G.cw.y+R*n.y,G.cw.z+R*n.z,B); pen?x.lineTo(s.sx,s.sy):x.moveTo(s.sx,s.sy); pen=true; } x.stroke(); }
+  for(let lat=-60;lat<=60;lat+=gs){ let pen=false; x.beginPath();
+    for(let lon=-180;lon<=180;lon+=5){ const n=unitLL(lat,lon); if(!nearSide(n,B)){pen=false;continue;} const s=project(G.cw.x+R*n.x,G.cw.y+R*n.y,G.cw.z+R*n.z,B); pen?x.lineTo(s.sx,s.sy):x.moveTo(s.sx,s.sy); pen=true; } x.stroke(); }
+  const stride=z<0.55?1:2; x.fillStyle="#2f4a38cc"; x.strokeStyle="#46603f"; x.lineWidth=0.7;
+  for(const ring of LAND.rings){ const segs=[]; let run=[]; let prev=null,prevIn=false;
+    for(let i=0;i<ring.length;i+=stride){ const lon=ring[i][0],lat=ring[i][1]; const n=unitLL(lat,lon); const inn=nearSide(n,B);
+      if(prev){ const dLon=Math.abs(lon-prev.lon);
+        if(dLon>180){ if(run.length){segs.push(run);run=[];} }
+        else if(inn!==prevIn){ const m=limbCross(prev.n,n,B); const sm=project(G.cw.x+R*m.x,G.cw.y+R*m.y,G.cw.z+R*m.z,B); run.push(sm); } }
+      if(inn){ const s=project(G.cw.x+R*n.x,G.cw.y+R*n.y,G.cw.z+R*n.z,B); run.push(s); } else { if(run.length){segs.push(run);run=[];} }
+      prev={lon,lat,n}; prevIn=inn; }
+    if(run.length)segs.push(run);
+    for(const sg of segs){ if(sg.length<2)continue; x.beginPath(); x.moveTo(sg[0].sx,sg[0].sy); for(let k=1;k<sg.length;k++)x.lineTo(sg[k].sx,sg[k].sy); x.fill(); x.stroke(); } }
+  x.fillStyle="rgba(74,144,210,0.4)"; x.font="9px ui-sans-serif"; x.textAlign="center"; x.fillText("Earth (schematic · Natural Earth)", c.sx, c.sy+R+12);
+}
+function drawEarthHelix(B,G){ if(z<0.3)return; const N=120, span=3*YR*lerp(0.5,1.4,z), galAmp=0.5*Rmax, rLoop=lerp(0,0.10*Rmax,z), lift=0.05*Rmax;
+  x.globalAlpha=smooth01((z-0.3)/0.5)*0.8; x.strokeStyle="#ffd27f"; x.lineWidth=1.4; x.beginPath();
+  for(let i=0;i<=N;i++){ const t=now-span*(1-i/N); const aE=2*Math.PI*((t-NOW0)/(365.25*DAY)), aS=2*Math.PI*((t-NOW0)/(2.25e8*YR));
+    const w={x:galAmp*Math.cos(aS)+rLoop*Math.cos(aE), y:lift*Math.sin(aE), z:galAmp*Math.sin(aS)+rLoop*Math.sin(aE)};
+    const p=project(w.x,w.y,w.z,B); i?x.lineTo(p.sx,p.sy):x.moveTo(p.sx,p.sy); } x.stroke(); x.globalAlpha=1; }
+
+function beatRecency(id){ let r=0; for(const b of BEATS){ const ms=beatMs(b); if(isNaN(ms)||ms>now||b.subject!==id)continue; r=Math.max(r, Math.max(0,1-(now-ms)/(3*DAY))); } return r; }
+function domainActivity(){ const act={}; for(const b of BEATS){ const ms=beatMs(b); if(isNaN(ms)||ms>now)continue; const rec=Math.max(0,1-(now-ms)/(5*DAY)); for(const d of (BEAT_DOMAINS[b.predicate]||["technical"])) act[d]=Math.max(act[d]||0,rec); } return act; }
+
+function drawGlobeEvent(B,G){ const R=G.R; const pinA=1-smooth01((z-0.4)/0.5);
+  const rl=Math.hypot(G.Pe.x,G.Pe.y,G.Pe.z)||1; const rhat={x:G.Pe.x/rl,y:G.Pe.y/rl,z:G.Pe.z/rl};
+  if(pinA>0.05 && SCENE&&SCENE.graph_2depth){ for(const e of SCENE.graph_2depth){ const A=GEO[e.from],Bn=GEO[e.to]; if(!A||!Bn)continue;
+    const na=unitLL(A.lat,A.lon), nb=unitLL(Bn.lat,Bn.lon); if(!nearSide(na,B)&&!nearSide(nb,B))continue;
+    x.globalAlpha=pinA; x.beginPath(); for(let k=0;k<=16;k++){ const m=slerp(na,nb,k/16); const p=project(G.cw.x+R*1.01*m.x,G.cw.y+R*1.01*m.y,G.cw.z+R*1.01*m.z,B); k?x.lineTo(p.sx,p.sy):x.moveTo(p.sx,p.sy); }
+    const pulse=Math.max(beatRecency(e.from),beatRecency(e.to)); x.strokeStyle=roleCol(e.from)+(pulse>0.1?"ee":"40"); x.lineWidth=1+pulse*2.5; x.stroke(); x.globalAlpha=1; } }
+  if(pinA>0.02){ for(const id in GEO){ const gp=GEO[id]; const n=unitLL(gp.lat,gp.lon); if(!nearSide(n,B))continue;
+    const sw=surfW(n,G); const base=project(sw.wx,sw.wy,sw.wz,B); const col=roleCol(id); const pulse=beatRecency(id);
+    x.globalAlpha=pinA;
+    if(gp.pen>0){ const dir=slerp(n,rhat,smooth01(z)); const Lw=R*(0.05+0.10*gp.pen)+(z>0.2?(0.90*Rmax/COS_MAX)*1.87*gp.pen*smooth01(z):0);
+      const tp=project(sw.wx+dir.x*Lw,sw.wy+dir.y*Lw,sw.wz+dir.z*Lw,B);
+      x.setLineDash([2,4]); x.strokeStyle=col+"88"; x.beginPath(); x.moveTo(base.sx,base.sy); x.lineTo(tp.sx,tp.sy); x.stroke(); x.setLineDash([]);
+      x.fillStyle=col; x.beginPath(); x.arc(tp.sx,tp.sy,2.5,0,7); x.fill(); }
+    if(gp.unknown){ x.setLineDash([2,3]); x.strokeStyle="#b07a3a"; x.beginPath(); x.arc(base.sx,base.sy,7,0,7); x.stroke(); x.setLineDash([]); x.fillStyle="#b07a3a"; x.font="bold 10px ui-sans-serif"; x.textAlign="center"; x.fillText("?",base.sx,base.sy+3); }
+    else{ if(pulse>0.05){ x.strokeStyle=col+"cc"; x.lineWidth=1.5; x.beginPath(); x.arc(base.sx,base.sy,7+pulse*16,0,7); x.stroke(); }
+      x.fillStyle=col; x.beginPath(); x.arc(base.sx,base.sy,(col===COLROLE.actor?5:3.5)+gp.pen*0.8,0,7); x.fill(); }
+    if(R>40){ x.fillStyle=col; x.font="9px ui-sans-serif"; x.textAlign="center"; x.fillText(castName(id).slice(0,16), base.sx, base.sy-9); }
+    x.globalAlpha=1; } }
+  const act=domainActivity(); const dy=H-20, dx0=W-160; x.font="8px ui-sans-serif"; x.textAlign="center";
+  DOMS.forEach((d,i)=>{ const px=dx0+i*30, a=act[d.k]||0; x.beginPath(); x.arc(px,dy,7+a*6,0,7);
+    x.fillStyle=d.c+Math.round((0.18+a*0.55)*255).toString(16).padStart(2,"0"); x.fill(); x.strokeStyle=d.c+"88"; x.lineWidth=1; x.stroke(); });
+  x.fillStyle="#8e98ad"; x.textAlign="right"; x.font="9px ui-sans-serif"; x.fillText("ripples → domains",dx0-10,dy+2);
+}
+
+// z controls
+document.getElementById("zoomR").oninput=function(){ z=+this.value; draw(); };
+function tweenZ(to){ const from=z, t0=performance.now(); (function step(){ const k=Math.min(1,(performance.now()-t0)/600); z=lerp(from,to,smooth01(k)); document.getElementById("zoomR").value=z; draw(); if(k<1)requestAnimationFrame(step); })(); }
+document.getElementById("bLocal").onclick=()=>tweenZ(0);
+document.getElementById("bCosmic").onclick=()=>tweenZ(1);
+c.addEventListener("wheel",e=>{ e.preventDefault(); z=Math.max(0,Math.min(1,z+(e.deltaY>0?0.05:-0.05))); document.getElementById("zoomR").value=z; draw(); },{passive:false});
+let spinDrag=false,spx=0;
+c.addEventListener("mousedown",e=>{ if(!e.shiftKey){ spinDrag=true; spx=e.clientX; } });
+addEventListener("mousemove",e=>{ if(spinDrag){ spinYaw+=(e.clientX-spx)*0.008; spx=e.clientX; draw(); } });
+addEventListener("mouseup",()=>{spinDrag=false;});
 
 resize(); draw();
 </script>

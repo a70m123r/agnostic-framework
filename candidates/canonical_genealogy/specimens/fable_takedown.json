@@ -1,0 +1,552 @@
+{
+  "specimen_id": "fable-takedown",
+  "kind": "l0-event",
+  "tier": 3,
+  "ratified": false,
+  "_doc": "Tier-3 BROAD-STROKES scene skeleton for the Fable 5 / Mythos 5 takedown (2026-06-12). NOT a wrapper-genealogy specimen (no parents/weld/child), NOT ratified, does NOT grow the convergence-9 list. This file is the SCENE SKELETON the renderer reads: the cast (actors / acted-on / stage / audience), each node's depth (0=prime mover, 1=directly acted-on, 2=acted-on-by-depth-1), and the 2-depth acts_on graph. Lifecycle + repercussion + beat FACTS (with per-fact source/certainty/route) live in facts/fable_takedown.{entities,events}.jsonl and resolve through compile_substrate.py. Every node id here is defined so those facts validate clean. Revisable v0 — sharpen with targeted scouts (the fuzzy-LOD refine phase). Honest discipline: disclosed nulls are facts (predicate disclosed_null), never silent; projections are NOT in the substrate (they live in scene/, marked PROJECTION).",
+  "title": "The Fable 5 / Mythos 5 takedown",
+  "t0": "2026-06-12T21:21:00Z",
+  "terminus": "open (Anthropic 'working to restore'; no timeline)",
+  "roles_legend": {
+    "actor": "prime mover (does)",
+    "acted_on": "directly acted upon",
+    "stage": "standing backdrop the scene plays on",
+    "audience": "observer / reactor"
+  },
+  "nodes": [
+    {
+      "id": "act-commerce",
+      "name": "US Commerce Department",
+      "role": "actor",
+      "depth": 0,
+      "acts_on": [
+        "ent-directive",
+        "act-anthropic"
+      ],
+      "gloss": "Issued the export-control directive; letter signed by Sec. Howard Lutnick to Dario Amodei.",
+      "basis": "event_records[1][2]"
+    },
+    {
+      "id": "act-admin",
+      "name": "Trump administration",
+      "role": "actor",
+      "depth": 0,
+      "acts_on": [
+        "act-commerce",
+        "act-anthropic",
+        "stage-eo"
+      ],
+      "gloss": "Set the policy stage (June-2 EO) and the prior Pentagon-blacklist conflict.",
+      "basis": "event_records[9][14]"
+    },
+    {
+      "id": "act-anthropic",
+      "name": "Anthropic",
+      "role": "actor",
+      "depth": 0,
+      "acts_on": [
+        "ent-fable5",
+        "ent-mythos5",
+        "ent-eu-arrangement",
+        "ent-glasswing"
+      ],
+      "gloss": "Deployer; disputed the rationale; reversed its own covert capability-degradation; 'working to restore'. The WORLDWIDE shutoff was Anthropic's compliance choice — unable to separate foreign nationals from its user base in real time, it cut access for ALL customers; the EU + Glasswing losses flow from THIS compliance act, not from the directive's foreign-national scope.",
+      "basis": "event_records[5][8][11]; verified WebSearch 2026-06-13"
+    },
+    {
+      "id": "act-competitor",
+      "name": "Unnamed competitor",
+      "role": "actor",
+      "depth": 0,
+      "acts_on": [
+        "act-commerce"
+      ],
+      "gloss": "Demonstrated the claimed jailbreak to the government. Identity NOT publicly disclosed (disclosed_null).",
+      "basis": "event_records[3][4]"
+    },
+    {
+      "id": "ent-fable5",
+      "name": "Claude Fable 5",
+      "role": "acted_on",
+      "depth": 1,
+      "acts_on": [],
+      "gloss": "Suspended worldline. Launched 2026-06-09; cut 2026-06-12 17:21 ET. A 3-day worldline.",
+      "basis": "event_records[0][7][10][23][26]"
+    },
+    {
+      "id": "ent-mythos5",
+      "name": "Claude Mythos 5",
+      "role": "acted_on",
+      "depth": 1,
+      "acts_on": [
+        "ent-glasswing",
+        "ent-eu-arrangement"
+      ],
+      "gloss": "Suspended in the same directive, the same instant. Carried the cybersecurity (Glasswing/EU) load.",
+      "basis": "event_records[0][7][22][21]"
+    },
+    {
+      "id": "ent-directive",
+      "name": "Export-control directive",
+      "role": "acted_on",
+      "depth": 1,
+      "acts_on": [
+        "aud-foreign-nationals",
+        "ent-fable5",
+        "ent-mythos5"
+      ],
+      "gloss": "The instrument: orders suspension of Fable 5 / Mythos 5 access for ALL foreign nationals (inside or outside the US, incl. foreign-national Anthropic staff). The WORLDWIDE cut was Anthropic's compliance act (see act-anthropic / e0018), NOT the directive's scope. Specific statute NOT disclosed (disclosed_null).",
+      "basis": "event_records[1][2]; verified WebSearch 2026-06-13"
+    },
+    {
+      "id": "aud-foreign-nationals",
+      "name": "Foreign nationals / developers",
+      "role": "acted_on",
+      "depth": 2,
+      "acts_on": [],
+      "gloss": "The class the directive targets; lost access worldwide.",
+      "basis": "event_records[0][1]"
+    },
+    {
+      "id": "ent-eu-arrangement",
+      "name": "EU / Mythos access arrangement",
+      "role": "acted_on",
+      "depth": 2,
+      "acts_on": [],
+      "gloss": "Negotiated with the European Commission over weeks; nullified by the export controls.",
+      "basis": "event_records[21]"
+    },
+    {
+      "id": "ent-glasswing",
+      "name": "Project Glasswing (~50 orgs)",
+      "role": "acted_on",
+      "depth": 2,
+      "acts_on": [],
+      "gloss": "~50 vetted orgs (Amazon, Apple, Google, Microsoft, CrowdStrike) lost Mythos cyber capabilities.",
+      "basis": "event_records[22]"
+    },
+    {
+      "id": "ent-ipo",
+      "name": "Anthropic IPO runway",
+      "role": "acted_on",
+      "depth": 2,
+      "acts_on": [],
+      "gloss": "Reported ~5 months from IPO at the time of suspension (analytical estimate).",
+      "basis": "event_records[16]"
+    },
+    {
+      "id": "ent-revenue",
+      "name": "Anthropic revenue",
+      "role": "acted_on",
+      "depth": 2,
+      "acts_on": [],
+      "gloss": "'Multiple billions' of 2026 revenue cited at risk (Pentagon-blacklist filings; single-source).",
+      "basis": "event_records[15]"
+    },
+    {
+      "id": "ent-stocks",
+      "name": "Enterprise-software stocks",
+      "role": "acted_on",
+      "depth": 2,
+      "acts_on": [],
+      "gloss": "Workday/Oracle/Palantir ~-3% on the 06-09 launch (agent-displacement fears).",
+      "basis": "event_records[17]"
+    },
+    {
+      "id": "stage-eo",
+      "name": "June-2 EO + export-control regime",
+      "role": "stage",
+      "depth": 0,
+      "acts_on": [],
+      "gloss": "'Promoting Advanced AI Innovation and Security' (~2026-06-02): scrutiny + voluntary 30-day pre-release sharing.",
+      "basis": "event_records[9]"
+    },
+    {
+      "id": "stage-pentagon",
+      "name": "Pentagon-blacklist precedent",
+      "role": "stage",
+      "depth": 0,
+      "acts_on": [],
+      "gloss": "Feb-Mar 2026: administration barred Anthropic from federal agencies; lawsuit 03-09; Judge Lin preliminary injunction (1A/5A/APA).",
+      "basis": "event_records[14]"
+    },
+    {
+      "id": "aud-hn",
+      "name": "Hacker News community",
+      "role": "audience",
+      "depth": 0,
+      "acts_on": [],
+      "gloss": "Thread 48511072: dominant 'self-inflicted wound' framing; ~30% overreach; DeepSeek raised as alternative.",
+      "basis": "event_records[19]"
+    },
+    {
+      "id": "aud-techcrunch",
+      "name": "TechCrunch",
+      "role": "audience",
+      "depth": 0,
+      "acts_on": [],
+      "gloss": "Framed it as the 'ironic backfire' of Anthropic's safety messaging.",
+      "basis": "event_records[20]"
+    },
+    {
+      "id": "aud-willison",
+      "name": "Simon Willison",
+      "role": "audience",
+      "depth": 0,
+      "acts_on": [],
+      "gloss": "Confirmed the API 404ing by 6:59pm Pacific 06-12 via automated tests; called it 'nuts'.",
+      "basis": "event_records[18]"
+    },
+    {
+      "id": "aud-critics",
+      "name": "Covert-degradation critics",
+      "role": "audience",
+      "depth": 0,
+      "acts_on": [],
+      "gloss": "Lambert ('appalling','anti-science'), Ball ('secret sabotage'), Howard, Neyshabur — re the 06-09 covert policy.",
+      "basis": "event_records[12]"
+    },
+    {
+      "id": "aud-everything-theorists",
+      "name": "AI-governance / safety discourse",
+      "role": "audience",
+      "depth": 0,
+      "acts_on": [],
+      "gloss": "The 'everything-theorists' Pav names; the discourse that reads this as a turning point.",
+      "basis": "event_records[6][20]"
+    },
+    {
+      "id": "aud-pav",
+      "name": "Pav (initiating testimony)",
+      "role": "audience",
+      "depth": 0,
+      "acts_on": [],
+      "gloss": "user-seed-origin that initiated the scout; the core claim is now independently corroborated.",
+      "basis": "event_records[27]"
+    },
+    {
+      "id": "ent-openai",
+      "name": "OpenAI (parallel access-gating)",
+      "role": "actor",
+      "depth": 0,
+      "acts_on": [],
+      "gloss": "GROWTH: comparator actor — voluntary Verified-Organization ID-gating (Apr 2025) + tiered cyber-model access (Apr 2026); company-driven nationality-adjacent gating predating the gov directive (P-medium normalization).",
+      "basis": "growth n0034/e0021"
+    },
+    {
+      "id": "aud-global-developers",
+      "name": "Global developers (OpenRouter)",
+      "role": "audience",
+      "depth": 0,
+      "acts_on": [],
+      "gloss": "GROWTH: the developer market — Chinese-model share on OpenRouter is COST-driven (~$0.30 vs ~$5/M) and predates the suspension, cutting against the naive China-advantage story (P-long).",
+      "basis": "growth e0022"
+    },
+    {
+      "id": "aud-eu-policymakers",
+      "name": "EU policymakers / sovereignty discourse",
+      "role": "audience",
+      "depth": 0,
+      "acts_on": [],
+      "gloss": "GROWTH: French presidential-campaign sovereignty flashpoint + EU competitive pressure; Mistral-shift not yet measured (P-long, political-signal-only).",
+      "basis": "growth e0023/e0027/oq004"
+    },
+    {
+      "id": "aud-enterprise-non-us",
+      "name": "Non-US enterprise (e.g. Isaacus)",
+      "role": "audience",
+      "depth": 0,
+      "acts_on": [],
+      "gloss": "GROWTH: early self-hosting / air-gap pivot driven by sovereignty (not price) — first concrete enterprise defection signal (P-long).",
+      "basis": "growth e0024"
+    },
+    {
+      "id": "pete-hegseth",
+      "name": "Pete Hegseth",
+      "role": "actor",
+      "depth": 1,
+      "acts_on": [],
+      "gloss": "US Defense Secretary (styled 'Secretary of War' in some 2026 sources). Personally issued the Feb 27 / early-Mar 2026 FASCSA 'supply-chain risk' designation against Anthropic after contract talks collapsed over Anthropic's red lines (mass surveillance, autonomous lethal weapons); lead named defendant in Anthropic's March 9 2026 suit. First US company ever given the label. Central antagonist of the Pentagon-prior conflict the export order sits atop.",
+      "basis": "depth-2 growth 2026-06-14"
+    },
+    {
+      "id": "dario-amodei",
+      "name": "Dario Amodei",
+      "role": "actor",
+      "depth": 1,
+      "acts_on": [],
+      "gloss": "Co-founder and CEO of Anthropic, ex-OpenAI VP of Research; recipient of Sec. Lutnick's June 12 2026 export-control letter; public face of the comply-but-dispute stance and the defense red lines. Refused the DoD 'all lawful purposes' demand.",
+      "basis": "depth-2 growth 2026-06-14"
+    },
+    {
+      "id": "daniela-amodei",
+      "name": "Daniela Amodei",
+      "role": "actor",
+      "depth": 2,
+      "acts_on": [],
+      "gloss": "Co-founder and President of Anthropic, ex-OpenAI VP of Safety & Policy and Dario's sister; co-architect of the safety-first corporate vision.",
+      "basis": "depth-2 growth 2026-06-14"
+    },
+    {
+      "id": "lutnick",
+      "name": "Howard Lutnick",
+      "role": "actor",
+      "depth": 1,
+      "acts_on": [],
+      "gloss": "US Commerce Secretary; signed the emergency export-control letter to CEO Amodei (June 12 2026, 5:21pm ET) ordering suspension of Fable 5/Mythos 5 for foreign nationals, drafted with BIS help. Usual posture is AI-export promotion (loosened chip controls to China, 'fourth best chip' framing), making the restriction a notable reversal.",
+      "basis": "depth-2 growth 2026-06-14"
+    },
+    {
+      "id": "kessler-bis",
+      "name": "Jeffrey Kessler",
+      "role": "actor",
+      "depth": 1,
+      "acts_on": [],
+      "gloss": "Under Secretary of Commerce for Industry and Security; head of BIS, the bureau that produced the technical basis for the Anthropic directive. Subordinate to Lutnick.",
+      "basis": "depth-2 growth 2026-06-14"
+    },
+    {
+      "id": "bis",
+      "name": "Bureau of Industry and Security (BIS)",
+      "role": "actor",
+      "depth": 2,
+      "acts_on": [],
+      "gloss": "Commerce sub-agency administering the EAR and AI/chip export controls; co-author of the Lutnick directive; built the chip-control regime from Oct 2022 and is extending controls to closed-weight model weights (ECCN 4E091). Operational engine of US AI export control.",
+      "basis": "depth-2 growth 2026-06-14"
+    },
+    {
+      "id": "liz-huston",
+      "name": "Liz Huston",
+      "role": "actor",
+      "depth": 2,
+      "acts_on": [],
+      "gloss": "White House spokeswoman who defended the crackdown, framing Anthropic as a 'radical left, woke company' and asserting the military answers to the Constitution, not an AI company's terms.",
+      "basis": "depth-2 growth 2026-06-14"
+    },
+    {
+      "id": "bessent",
+      "name": "Scott Bessent",
+      "role": "actor",
+      "depth": 2,
+      "acts_on": [],
+      "gloss": "US Treasury Secretary; Treasury discontinued Anthropic products after the Feb 2026 cease-use directive, and Bessent is named (per WSJ) as a recipient of Amazon CEO Jassy's concerns that Fable 5 yielded cyberattack-usable info before the crackdown.",
+      "basis": "depth-2 growth 2026-06-14"
+    },
+    {
+      "id": "jassy-amazon",
+      "name": "Andy Jassy",
+      "role": "actor",
+      "depth": 1,
+      "acts_on": [],
+      "gloss": "CEO of Amazon, Anthropic's largest investor ($5B committed, $100B cloud-spend pledge). Per WSJ, told Treasury Sec. Bessent and other officials that Amazon researchers used Fable 5 to obtain cyberattack-usable info, reportedly raising the concern that fed the government crackdown.",
+      "basis": "depth-2 growth 2026-06-14"
+    },
+    {
+      "id": "emil-michael",
+      "name": "Emil Michael",
+      "role": "actor",
+      "depth": 1,
+      "acts_on": [],
+      "gloss": "Undersecretary of Defense / Pentagon CTO (also styled Under Secretary of War for Research and Engineering). Defied Judge Lin's injunction on X ('dozens of factual errors'), asserting the designation stood under Title 41 Sec. 4713; framed the NSA-Mythos arrangement as 'a separate national security moment.'",
+      "basis": "depth-2 growth 2026-06-14"
+    },
+    {
+      "id": "sacks",
+      "name": "David Sacks",
+      "role": "actor",
+      "depth": 1,
+      "acts_on": [],
+      "gloss": "Trump administration AI/crypto czar, PCAST co-chair (not full-time WH). Public administration voice on the suspension June 13: a 'highly credible, trusted partner' found a Fable jailbreak, the admin asked Amodei to fix or de-deploy, and 'Anthropic prioritized the continued offering of the consumer model over safety.' Explicitly separated the action from the prior DoW dispute. Pushed the June-2 EO toward a voluntary 30-day window.",
+      "basis": "depth-2 growth 2026-06-14"
+    },
+    {
+      "id": "altman-openai",
+      "name": "Sam Altman",
+      "role": "actor",
+      "depth": 1,
+      "acts_on": [],
+      "gloss": "OpenAI CEO; in April 2026 (Ashlee Vance podcast) derided Anthropic's Mythos posture as 'fear-based marketing' (bomb/bomb-shelter analogy). OpenAI's GPT-5.5 was the comparable still-online model Anthropic named when disputing the directive.",
+      "basis": "depth-2 growth 2026-06-14"
+    },
+    {
+      "id": "judge-rita-lin",
+      "name": "Judge Rita Lin",
+      "role": "actor",
+      "depth": 1,
+      "acts_on": [],
+      "gloss": "US District Judge, N.D. Cal. (Biden appointee). Granted Anthropic's preliminary injunction (Mar 26 2026, 43/48-page order) against the Pentagon supply-chain-risk designation, finding it pretextual and 'classic First Amendment retaliation,' coining the 'Orwellian notion' line, barring 17 agencies and restoring federal Claude access; imposed a 7-day stay.",
+      "basis": "depth-2 growth 2026-06-14"
+    },
+    {
+      "id": "dc-circuit-panel",
+      "name": "D.C. Circuit panel (Henderson, Katsas, Rao)",
+      "role": "actor",
+      "depth": 2,
+      "acts_on": [],
+      "gloss": "Three-judge D.C. Circuit panel (Karen LeCraft Henderson, Gregory Katsas, Neomi Rao) that on Apr 8 2026 denied Anthropic's emergency stay but expedited a merits hearing; at May 19 oral argument appeared skeptical of the Pentagon's authority and 'remote kill switch' claim.",
+      "basis": "depth-2 growth 2026-06-14"
+    },
+    {
+      "id": "alan-rozenshtein",
+      "name": "Alan Z. Rozenshtein",
+      "role": "actor",
+      "depth": 1,
+      "acts_on": [],
+      "gloss": "Assoc. Professor of Law, U. Minnesota; Lawfare Research Director/Senior Editor; Brookings nonresident senior fellow. Co-authored Lawfare's 'Pentagon's Anthropic Designation Won't Survive First Contact' and 'The Right Remedy in the Anthropic Case,' filed an amicus, predicted the Commerce ban could be 'the first big First Amendment AI case,' and cautioned against treating all AI output as protected speech.",
+      "basis": "depth-2 growth 2026-06-14"
+    },
+    {
+      "id": "michael-endrias",
+      "name": "Michael Endrias",
+      "role": "actor",
+      "depth": 2,
+      "acts_on": [],
+      "gloss": "J.D. candidate, Howard University School of Law; co-author with Rozenshtein of the Lawfare piece arguing the Pentagon designation exceeds 10 U.S.C. 3252 and violates due process and the First Amendment.",
+      "basis": "depth-2 growth 2026-06-14"
+    },
+    {
+      "id": "peter-harrell",
+      "name": "Peter E. Harrell",
+      "role": "actor",
+      "depth": 1,
+      "acts_on": [],
+      "gloss": "Carnegie Endowment nonresident fellow; former White House senior director for international economics (2021-2022); Georgetown Law visiting scholar; export-control expert. Called the foreign-national ban 'ridiculous and un-American' and argued the Pentagon designation is legally limited to DoD-contract use, with Hegseth overstating its reach.",
+      "basis": "depth-2 growth 2026-06-14"
+    },
+    {
+      "id": "chris-mcguire",
+      "name": "Chris McGuire",
+      "role": "actor",
+      "depth": 1,
+      "acts_on": [],
+      "gloss": "Senior Fellow for China & Emerging Technologies, Council on Foreign Relations. Supports targeted controls but called the blanket single-model control 'highly questionable,' the deemed-export restriction 'absurd,' and Commerce's strategy 'incoherent and self-defeating'; urged BIS personnel changes. Also: prior subsidiary-loophole activity 'was legal' and is now 'illegal again.'",
+      "basis": "depth-2 growth 2026-06-14"
+    },
+    {
+      "id": "kevin-frazier",
+      "name": "Kevin T. Frazier",
+      "role": "actor",
+      "depth": 2,
+      "acts_on": [],
+      "gloss": "Cato Institute scholar who argued the Commerce export action breaches rule-of-law tenets (publicity, prospectivity, legality/generality) since other labs with comparable models got no letters.",
+      "basis": "depth-2 growth 2026-06-14"
+    },
+    {
+      "id": "jessica-tillipman",
+      "name": "Jessica Tillipman",
+      "role": "actor",
+      "depth": 2,
+      "acts_on": [],
+      "gloss": "Procurement-law scholar (George Washington Law); called the Anthropic exclusion a back-filled 'corporate death penalty' lacking required FAR 9.4 safeguards (notice, hearing, insulated officials).",
+      "basis": "depth-2 growth 2026-06-14"
+    },
+    {
+      "id": "katie-moussouris",
+      "name": "Katie Moussouris",
+      "role": "actor",
+      "depth": 1,
+      "acts_on": [],
+      "gloss": "CEO of Luta Security, veteran vulnerability-disclosure expert. Reviewed the underlying paper and argued it is not a jailbreak but 'Defense Oriented Prompting (DOP), capabilities defenders need,' calling the export action a national-security 'own goal' and saying researchers found bugs 'by asking questions normal defenders would ask.'",
+      "basis": "depth-2 growth 2026-06-14"
+    },
+    {
+      "id": "nathan-lambert",
+      "name": "Nathan Lambert",
+      "role": "audience",
+      "depth": 2,
+      "acts_on": [],
+      "gloss": "Open-model AI researcher (most recently led work at Allen Institute for AI / AI2). Led the silent-degradation critique, calling covert Fable 5 degradation 'appalling' and 'anti-science, anti-progress, anti-safety,' and framing it within a pattern of Anthropic antagonism toward China, open-weight models, and open AI research.",
+      "basis": "depth-2 growth 2026-06-14"
+    },
+    {
+      "id": "dean-ball",
+      "name": "Dean Ball",
+      "role": "audience",
+      "depth": 2,
+      "acts_on": [],
+      "gloss": "Senior Fellow, Foundation for American Innovation; ex-White House OSTP advisor who helped write the 2025 AI Action Plan. Called covert Fable 5 degradation 'secret sabotage' (boosts the 'safety is hype for monopoly' argument), called the export order 'cartoonish,' flagged the citizenship-verification problem, and separately defended Anthropic against the Pentagon as 'corporate murder.'",
+      "basis": "depth-2 growth 2026-06-14"
+    },
+    {
+      "id": "jeremy-howard",
+      "name": "Jeremy Howard",
+      "role": "audience",
+      "depth": 2,
+      "acts_on": [],
+      "gloss": "Head of Fast.ai, co-founder Answer.AI. Argued Anthropic took 'the opposite of the safe path' by reserving frontier-AI capability for itself while sabotaging outside researchers; proposed the top lab should bar ITSELF (not others) from frontier-AI use. Also 'HOW DID ANTHROPIC NOT SEE THIS COMING?'",
+      "basis": "depth-2 growth 2026-06-14"
+    },
+    {
+      "id": "behnam-neyshabur",
+      "name": "Behnam Neyshabur",
+      "role": "audience",
+      "depth": 2,
+      "acts_on": [],
+      "gloss": "Former Anthropic employee who co-led the AI-scientist effort. Satirized covert degradation ('Working on AI for cancer? Sorry, I can't help you...') and argued concentrating these capabilities slows scientific progress and is net negative for humanity.",
+      "basis": "depth-2 growth 2026-06-14"
+    },
+    {
+      "id": "will-brown",
+      "name": "Will Brown",
+      "role": "audience",
+      "depth": 3,
+      "acts_on": [],
+      "gloss": "Research lead at Prime Intellect; said Anthropic is 'starting to pull the ladder up behind them' and warned covert degradation could sabotage third-party safety verification.",
+      "basis": "depth-2 growth 2026-06-14"
+    },
+    {
+      "id": "pliny-liberator",
+      "name": "Pliny the Liberator (@elder_plinius)",
+      "role": "actor",
+      "depth": 2,
+      "acts_on": [],
+      "gloss": "Independent AI red-teamer/jailbreaker who claimed to bypass Fable 5 classifiers within ~48-72h of launch via a multi-agent 'pack hunt' (Unicode/homoglyph/Cyrillic obfuscation + decomposition-recomposition + long-context tracking), posted x86 stack-exploit screenshots, and leaked the ~120k-char Fable 5 system prompt to GitHub repo CL4R1T4S.",
+      "basis": "depth-2 growth 2026-06-14"
+    },
+    {
+      "id": "lisan-al-gaib",
+      "name": "Lisan al Gaib (@scaling01)",
+      "role": "audience",
+      "depth": 2,
+      "acts_on": [],
+      "gloss": "AI commentator on X whose post 'Fable 5 refused 200 out of 200 ProgramBench tasks lmao' (with screenshot) became the canonical evidence of Fable 5 over-refusal on legitimate engineering work.",
+      "basis": "depth-2 growth 2026-06-14"
+    },
+    {
+      "id": "christine-lagarde",
+      "name": "Christine Lagarde",
+      "role": "audience",
+      "depth": 2,
+      "acts_on": [],
+      "gloss": "President of the European Central Bank; in April 2026 praised Anthropic for limiting Mythos's release and called for greater AI safeguards ('a responsible company...if it falls in the wrong hands, it could be really bad'). The allied-policymaker counterpoint to the US clampdown.",
+      "basis": "depth-2 growth 2026-06-14"
+    },
+    {
+      "id": "gary-marcus",
+      "name": "Gary Marcus",
+      "role": "audience",
+      "depth": 2,
+      "acts_on": [],
+      "gloss": "AI industry critic; predicted the foreign-national directive will push Chinese-born researchers back to China and spook investors on the safety/viability of American AI firms.",
+      "basis": "depth-2 growth 2026-06-14"
+    },
+    {
+      "id": "ent-caisi",
+      "name": "CAISI (Center for AI Standards & Innovation)",
+      "role": "stage",
+      "depth": 2,
+      "acts_on": [],
+      "gloss": "Commerce body for voluntary pre-deployment AI evaluation; the program Google/Microsoft/xAI joined alongside OpenAI/Anthropic.",
+      "basis": "depth-2 growth 2026-06-14"
+    },
+    {
+      "id": "ent-eo-30day",
+      "name": "EO 30-day pre-release sharing",
+      "role": "stage",
+      "depth": 1,
+      "acts_on": [],
+      "gloss": "The June-2 EO voluntary 30-day pre-release model-sharing provision with the federal government.",
+      "basis": "depth-2 growth 2026-06-14"
+    }
+  ]
+}
