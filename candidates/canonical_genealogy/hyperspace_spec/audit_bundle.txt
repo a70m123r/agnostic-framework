@@ -1,0 +1,392 @@
+AUDIT REVIEW - HYPERDIMENSIONAL CANONICAL-SPACE VIEWER SPEC
+
+You are auditing two canonical design docs (pasted in full below) from a long research project. This is a CRITICAL AUDIT, not praise. We need to know where it is mis-lined-up, over-claimed, internally inconsistent, or wrong about prior art.
+
+PROJECT IN ONE PARAGRAPH: a spec (NOT built) for a viewer that holds a canonical PHYSICAL and a canonical LATENT dimension in one container. Keystone: one logarithm does several jobs (3D-to-2D unfold, log2-metres scale ladder, 2^-bits render sharpness, and coupling = location-negentropy). Governing law (the COIN): rendered_sharpness <= measured_bits; blur is the honesty badge. Substrate = an append-only fact-log compiled into a block. Observation = a keyhole / spreading-activation probe. The two docs below are (1) the v0.4 keyhole-block-universe synthesis and (2) the v0.3 wrapper/probe/observer layer.
+
+TWO NEW REFRAMES were just folded in - check them HARD:
+(R-A) The COIN is a DIAL, not an absolute. EXPOSE pole = never render a fake bit (forensic, default); CONCEAL pole = hide all the fakes (seamless / immersive); the invariant that keeps every setting honest = the substrate never lies (provenance + measured-vs-generated map stay queryable and unchanged) AND the dial position is always disclosed; fraud = passing a conceal-render off as an expose-render. Is this coherent and genuinely honest, or does the CONCEAL pole smuggle in deception the invariant does not actually prevent? Is the invariant sufficient and enforceable?
+(R-B) A latent construct genuinely CHANGES over time, so its reconstruction is a 4D time-stacked volume (dynamic / 4D CT): capture slices, stack them, infer the gaps; the only residual fault is inferring a gap-slice sharper than the bracketing measured slices justify (a Lipschitz / max-rate-of-change bound). Is the 4D-CT mapping right? Does anything genuinely break when the latent BASIS itself rotates between slices (not just the content moving within a fixed basis)? Is calling that merely a Lipschitz issue an under-statement?
+
+AUDIT QUESTIONS (answer each, concretely):
+1. INTERNAL CONSISTENCY: where do the two docs contradict each other or themselves (e.g. COIN-as-absolute language left over vs COIN-as-dial; the bitemporal claims; the per-axis measured_bits story; valence = EIG)?
+2. OVER-CLAIMING: where does it assert more than warranted - a metaphor dressed as mechanism, a prior-art mapping that is loose or wrong, a falsifiable conjecture stated as settled?
+3. PRIOR-ART CHECK: are the named mappings correct (operational eternalism / Grinbaum, crystallizing block universe / Ellis-Rothman, derivation entropy / Xu-Li, DBSP-CALM, Radon / Fourier-slice theorem, Kolmogorov structure function, epiplexity, spreading activation, BED-LLM, FisherRF)? Flag any misattribution or any place a better or contradicting reference exists. Use web search if useful.
+4. THE BIGGEST UNADDRESSED HOLE: the single most important thing the spec gets wrong or omits.
+5. MINIMAL FIX LIST: the concrete edits that would line it up right.
+
+FORMAT: concrete, terse, prioritized. Disagreement is the point. ASCII only.
+
+
+=== DOC 1: KEYHOLE_BLOCK_UNIVERSE.md (v0.4) ===
+
+# The Keyhole Block Universe (v0.4 canonical synthesis)
+
+**Date:** 2026-06-15 | **Status:** Tier-3 design. NOT built. Extends [SPEC.md](SPEC.md), [SCOPE_NESTING_LOD.md](SCOPE_NESTING_LOD.md), [WRAPPER_PROBE_OBSERVER.md](WRAPPER_PROBE_OBSERVER.md).
+
+Consolidates a four-workflow Opus batch + a codex/gemini cross-pass on Pav's keyhole/block-universe expansion. Detailed resolved analyses: [K1_block_universe.md](K1_block_universe.md), [K2_tomography.md](K2_tomography.md), [K3_observation_to_knowledge.md](K3_observation_to_knowledge.md), [K4_democracy_keyhole.md](K4_democracy_keyhole.md); external takes: [keyhole_block_codex_take.md](keyhole_block_codex_take.md), [keyhole_block_gemini_take.md](keyhole_block_gemini_take.md); brief: [keyhole_block_brief.txt](keyhole_block_brief.txt).
+
+**Verdict: it is real machinery, not metaphor.** Pav's expansion maps, almost one-to-one, onto current named work: information-eternalism + crystallizing block universe; DBSP/CALM incremental compilation; the Radon transform / Fourier-slice theorem + compressed sensing; algorithmic-statistics structure functions + Bayesian optimal experimental design; truth-maintenance systems. Six independent voices converged. The one deep open risk is named in section 9.
+
+---
+
+## 0. The COIN is a DIAL: expose <-> conceal (Pav reframe, 2026-06-15)
+
+The COIN was stated as an absolute - "never render a fake measured bit." Pav's correction: that is **one pole of a dial**, not the whole law. The honesty rule has two ends, and the instrument should expose the dial:
+
+- **EXPOSE pole (forensic, the default):** `rendered_sharpness(x) <= measured_bits(x)` everywhere; every unmeasured or generated region is **visibly** blurred or stubbed; the seam is the product; maximal disclosure. The audit ground-truth, and the COIN as previously written. *"Never render a fake pixel."*
+- **CONCEAL pole (generative / immersive):** render a **complete, seamless, plausible whole**; generated bits are made visually indistinguishable from measured ones - *"try to hide all the fakes."* The synthesis render (the generate-face of the derivation-entropy gate turned all the way up).
+
+**The invariant that keeps EVERY setting honest** (what makes a concealing render legitimate, not fraud): the **substrate never lies** - provenance + per-axis `measured_bits` + the measured-vs-generated map stay **queryable and unchanged** at every setting; and **the dial position is always disclosed** ("conceal=0.7; 38% of what you see is inferred"). The dial controls only whether the **render reveals or hides the seam**, never what the **ledger** knows.
+
+> Fraud is not "rendering a generated bit." Fraud is **passing a conceal-pole render off as an expose-pole render** - a seamless synthesis presented as measured fact. With the dial disclosed and the ledger intact, a seamless generative render is as honest as a labelled photo-restoration; without it, even one smoothed gap is a lie.
+
+So the COIN generalizes: `rendered_sharpness <= measured_bits` is the **expose pole**; at conceal>0 the render may exceed measured_bits **visually**, but only by an amount that is (a) disclosed by the dial, (b) drawn from the substrate's flagged generated bits, and (c) **reversible** - turn the dial back to expose and the seams reappear, the audit unchanged. **Reversibility is the proof** (exactly as the chart-dial's reversibility proves it does not mutate the substrate). Mid-dial settings are the working modes: the tomography "measured-first, generate-second, flagged" rule (section 4) is a conceal-low setting; a fully immersive worldline render is conceal-high. This makes the honesty law a first-class **render-intent dial** - `h_honesty in [expose, conceal]` - alongside the shape dial (theta) and scale dial (b), always badged, defaulting to expose.
+
+---
+
+## 1. The block is the TARGET, not the artifact (and it is bitemporal)
+
+Both externals insisted, and the workflow confirmed: there is the **real block `B*`** (the fixed, unknown referent) and our **estimate `B_hat_tau`** (the posterior). **The system never writes `B*`** — a keyhole only appends an observation and raises `measured_bits` about a coordinate in `B*`. "Imprint the shape into the block" means imprint into our *estimate*.
+
+Published cover (fresh): **Grinbaum's operational eternalism** (arXiv 2512.22879, Dec 2025) - "eternalism applied to INFORMATION rather than geometry," observers secondary, their operational choices crystallize facts = our FRAME-primary / GLASSES-secondary split. **Ellis-Rothman's Crystallizing Block Universe** - the past crystallizes via state-reduction, delayed-choice actualizes the past = our retroactive, definition-relative origin; we adopt it **plus two upgrades**: crystallize along LATENT axes too, and leave **fuzzy + conjecture-stub** where derivation fails instead of freezing.
+
+**Bitemporal substrate (mandatory):** every wrapper carries two clocks -
+
+```
+t_event   when the target state/event belongs in the block
+t_obs     when a keyhole measured/inferred it (= compiler_time tau)
+```
+
+A 2026 burst measuring a 1790 latent state **decreases the blur at `B_hat(...,1790)` without changing 1790** - it changes the estimate, not the past. Render law: **every view must answer "what did the system know as of `tau`?"** No `as_of_tau`, no honesty (prior art: Datomic, event-sourcing). This is the formal meaning of "observation across time."
+
+---
+
+## 2. The compiler: a monotone, order-free, audit-complete merge
+
+The fact-log compiles into the block as a **stream of deltas** (DBSP/Feldera, VLDB'23): each wrapper is a Z-set delta (+1 assert / -1 retract), the block is their integral, recompile = differentiate->reapply. Its **chain-rule theorem** proves compile-per-axis-then-compose is **bit-identical** to from-scratch - exactly our per-channel COIN composition. Corrections are negative-weight wrappers, so **the log stays append-only**.
+
+**The compile is a join-semilattice MERGE** (CALM theorem): associative + commutative + **idempotent**, so keyhole bursts fire in **any temporal order and still converge with no coordination** (the tomographic multi-exposure model), and recompile-twice = same-block (`recheck=0`, raised to a law). The hazard CALM names: anything that *retracts* or picks "latest-wins" is non-monotonic and breaks order-free convergence. **The fix is load-bearing:**
+
+> Encode `measured_bits` / confidence as a lattice that only goes **UP**. A fuzzy stub is the lattice **bottom**; conjectures can only sharpen it, never un-sharpen. "Meaning -> knowledge as the block compiles" becomes a **monotone climb up a lattice**, and the COIN (never render a fake measured bit) becomes an **invariant**, not a hope.
+
+The block is a **materialized view over the event-sourced log** - derived, ephemeral, fully rebuildable by replay - so **every rendered bit must trace to a log event; a fake measured bit is structurally impossible to introduce undetected** (+ snapshots + compaction for bounded replay; content-hash memoization for incremental recompute). The retrieve-vs-generate gate itself has a name now: **derivation entropy** (Xu-Li 2511.19156), a thermodynamic phase transition = the COIN's sharp=replay / fuzzy=generate.
+
+The existing `compile_substrate.py` is ~80% of this compiler.
+
+---
+
+## 3. Multi-keyhole tomography and the fidelity law
+
+Each keyhole-burst is a **projection** of the latent construct field: `y_i = P_i F + noise`. Reconstructing `F` from many bursts (across concept-angles AND time) is **computed tomography** (Radon transform / Fourier-slice theorem): a burst's 1-D Fourier transform is **a slice through the construct's N-D Fourier transform**, so **`measured_bits` = the volume of frequency space the slices fill.** Views don't *average* - they **intersect**, each one a constraint collapsing the ambiguity volume (3DGS view-consistency / burst super-resolution / synthetic aperture / compressed sensing, four framings of one mechanism).
+
+**The fidelity law (rigorous):**
+
+- **Sample complexity:** to reconstruct a construct of sparsity/description-length `s` you need on the order of `s` independent projection angles (`m >~ s`). Fidelity scales with the bursts needed to cover the construct's description-length - never fewer.
+- **The accrual is MARGINAL information, not count:** `delta I(burst | already_observed)` = conditional mutual information, which is **submodular** (diminishing returns is a theorem). An independent concept-angle adds a large positive delta; **a redundant re-fire adds ~0 automatically.** Crediting redundant bursts additively *fabricates* measured_bits = a COIN violation.
+- **Diversity beats density:** wide coverage from many *distinct* concept-angles sharpens far more than repeated similar probes (a few well-spread independent angles >> many redundant ones). Score each burst by the **new** bits it contributes (a coverage / condition-number over concept-angles and time-points), not by tally.
+- **Independence = unpredictability:** a burst is informative exactly when its outcome is **unpredictable from the current block** (maximum-entropy sampling). "Corroborated > pending" must mean corroborated **by an independent route**; same-route repeats are *pending*, not corroborated. When two bursts may share an upstream source, fuse with **Covariance-Intersection** (consistent for any correlation), never sum - naive independence-assuming fusion is provably overconfident. (This is the formal version of codex's "ten newspapers copying one wire story are one projection with ten echoes.")
+- **Two regimes + a hard floor:** fidelity climbs as a power law in #independent-bursts (Cramer-Rao, `error ~ m^-1`), then **saturates past a knee** (extra views only suppress noise). Below an **error floor** set by the measurement operator + noise, **no amount of data or generation improves fidelity** - the floor is the formal statement of "never render a fake measured bit." The reconstruction **locks** when `KL(B_hat_{tau+1} || B_hat_tau) < epsilon`, `measured_bits >= threshold`, and no high-impact alternative remains within `delta`.
+
+Reference architecture that already implements this: **FisherRF -> ActiveGS / Opt3DGS** (each view = a burst, the accumulated Fisher matrix = the block's information content, per-pixel Fisher = a measured_bits/blur map, views scored conditioned on the accumulated matrix so well-covered regions score ~0).
+
+---
+
+## 4. Honest fuzz: the missing wedge, generate-second, and a runtime audit
+
+- **The missing wedge = where to stub.** Unprobed directions produce **direction-specific blur** (streaking/elongation along exactly the angles never probed; sampled directions stay sharp). This is the geometric source of the block's fuzzy regions, and it tells you precisely **where to attach conjecture-stubs.** Formal triggers for "this region provably cannot be sharpened yet": Tuy's data-sufficiency condition, the RIP/incoherence, viewing-angle diversity.
+- **Gaps blur, never streak.** Enforce a **bandpass mask + compressed-sensing (L1/total-variation)** so unsampled frequency space is low-passed: `rendered_sharpness = inverse_fourier(sampled frequencies only)` - a mathematically guaranteed *lower* bound.
+- **Measured-first, generate-second, flagged.** A generative/diffusion prior *can* fill the missing wedge (the COIN's generate-mode = our conjecture-stub), but **prior-synthesized regions render bits that were never measured**, so they must carry **lower measured_bits / weaker entailment** than directly-probed regions, or the reconstruction lies. Enforce data-consistency on measured bits; let the prior fill only the gaps; flag the fill.
+- **The confabulation audit (a runtime COIN check, not just a render cap).** Under-exposed blocks **co-adapt** - they overfit the views they have and fabricate "floaters" in unobserved gaps that look perfect on the observed views but collapse elsewhere. The **observed-vs-novel-view gap** (a held-out-view discrepancy) is a direct, measurable signal that a region is confabulating -> demote it to fuzzy/stub. Hold out keyhole-bursts and check.
+
+---
+
+## 5. Observation -> meaning -> knowledge: three gates
+
+A region becomes knowledge only past **all three** gates (and the gates are **per-axis** - WHAT/WHEN/WHERE/WHO/HOW/WHY each have their own):
+
+1. **Structure gate** - the Kolmogorov **structure-function kink** (the Algorithmic Minimal Sufficient Statistic): "stop here, this is structure." Below it = still extracting meaning; at it = knowledge; **past it = irreducible noise -> render fuzzy.** The computable proxy is the **pinned-coder MDL harness already built** (shortest two-part code). The per-channel honesty test is **Excess Description Length**: a derived WHAT/HOW is real only if it costs *fewer* bits than the noise it explains; cross that and it is overfit = a fake measured bit.
+2. **Corroboration gate** - credence crossing a posted level, and only when **independent** keyhole streams pushed it over (corroboration != confirmation; no finite evidence closes a stub to certainty - Popper + Jaynes - which is exactly *demote-not-kill, 0.99-not-Boolean*).
+3. **Epiplexity gate** (arXiv 2601.03220, 2026) - for a bounded observer compiling in bursts, knowledge requires structure that is **computationally reachable within the current budget.**
+
+Naming the layers in bits: `observation_bits` (delivered by probes) -> `meaning_bits` (compression gain from a model: `L(M)+L(D|M)`, and meaning is **both discovered and constructed** = the participatory back-reaction) -> `knowledge_bits` (corroborated after adversarial/independent checks). **Knowledge is the lock.** And per DIKW critique (Fricke): the ladder is *not* one-pass bottom-up - a meaning structure must pre-exist for an observation to register, so **knowledge flows back and reshapes how new data is read** (the keyhole only excites what the compiled block can resonate with).
+
+---
+
+## 6. Conjecture-stubs: typed falsifiable holes
+
+A conjecture-stub is **not a weak fact - it is a typed hole**:
+
+```
+stub = {
+  fuzz_type:   missing_what | missing_how | missing_why | missing_link | missing_actor,
+  fail_reason: noise_floor (provably no more bits) | compute_bound (more bits exist, out of reach),
+  target_region, triggering_fuzz,
+  candidate_hypotheses (mutually exclusive, falsifiable latch-points),
+  falsifiers (REQUIRED - no falsifier => it is a note/prior, not a stub),
+  required_probe_types,
+  current_support_bits,
+  EIG (expected information gain if resolved),
+  status: conjecture | under_test | corroborated | demoted | retired,
+  created_by, t_obs
+}
+```
+
+Two failure-reasons matter because they are different falsifiable holes: a **noise-floor stub** says "stop probing, there is nothing more here"; a **compute-bound stub** says "more structure exists, aim a probe/compute here." **Render in a different visual grammar from facts** - outline / dithered / interval bounding-box, never a scalar point; **zoom a fact and you get detail, zoom a stub and you get empty space inside its bounds.** Lifecycle is the standing claim-lifecycle (conjecture=parent fn, experiment=child fn, dead-children tally); a stub **must always display its falsifier**, and a demoted claim is a logged dead child, never silently resurfacing.
+
+---
+
+## 7. The unification: a stub's VALENCE *is* its Expected Information Gain
+
+The third coin (valence, R3) and the keyhole-aiming objective turn out to be **the same quantity**. The next burst should fire at the fuzzy region of **maximum EIG** - and that is formally exact: "the fuzzy region IS argmax-EIG." So:
+
+```
+valence(stub) := EIG(stub) = E[ H(B_hat) - H(B_hat | y_probe) ]
+next_burst    := argmax over stubs of valence / cost     (aim at the most-disagreeing region)
+```
+
+Active-learning discipline (so the aiming stays honest): aim at the **observer's question** (prediction-oriented EIG / EPIG = the FRAME-vs-GLASSES split), optimize the **whole burst** not greedily (a contrastive lower bound = the COIN's never-claim-more law), and use a **Wasserstein/MMD** information measure (IPM-BOED, ratio-free) so the selector cannot pretend it measured tail bits. Cheap deployable burst-selector: gradient-embedding magnitude (fuzziness) + k-means++ over directions (diversity) so a burst fires at *many distinct* fuzzy spots, not the same one. **Observation -> meaning -> knowledge = probe (keyhole) -> posterior update (EIG realized) -> entropy drop on the targeted axis -> residual fuzz spawns the next typed stub.** The loop closes.
+
+---
+
+## 8. The constellation correction (from the democracy run)
+
+The democracy keyhole (K4) returned a structural correction that **generalizes to any contested construct**: a latent construct is **not one fuzzy blob - it is a CONSTELLATION of partially-overlapping sub-principle regions**, each lit independently by different sparks, often with a **near-empty intersection**. Democracy's axes: sortition / majority-vote / consensus / rotation+term-limits / commoner-office / women's-power-recall - and **no single spark fills all of them.** The construct's "shape" is this **principle-vector**, so **the single-blob render is itself a measurement artifact to correct.** Render the axes and their (often empty) intersection, not one zone.
+
+This is the live scholarly consensus, not a reframing (Stasavage; Fargher-Blanton; "democracy with adjectives," Collier-Levitsky 1997, 550+ subtypes; the "essentially contested concept," Gallie 1956). The data even behaved as the machinery predicts: V-Dem's 2026 reclassification of the US (liberal -> electoral) is a **live per-axis measured_bits collapse** (the liberal/WHAT layer going fuzzy while the electoral/WHO layer stays sharp) - subtype membership is a definition-relative classification, not a fixed fact. Measurement modality sets the bits (textual/epigraphic sharp; oral-transcribed mid; pure-archaeology institution-measured/procedure-conjecture). Multi-yolk origins are real in the wild (the Peacemaker, the Gadaa originators, Tlaxcallan with no named founder -> fuzzy multi-yolk spikes, not points).
+
+---
+
+## 9. The construct genuinely changes - reconstruct it as a 4D volume (Pav reframe, 2026-06-15)
+
+**The earlier "latent-axis-drift risk" was framed backwards.** Pav: a CT scan *does* change meaning when you scan it over time - and that is not a failure, it is the **nature of the object**. *"We capture slices and derive the volume by stacking them and inferring the gaps."* A latent construct like democracy genuinely drifts (`D(t)`), so its reconstruction is a **4D (time-stacked) volume**, not a static 3D shape we wrongly assumed invariant. The prior art is literal: **4D-CT / dynamic / time-resolved tomography** (medicine scans a *beating heart* by gating and stacking time-slices). So drift is the **time axis of the reconstruction**, not Procrustean noise to suppress.
+
+**What survives as the real residual rule (the COIN on the time axis):** the only dishonest move is **inferring a gap-slice more sharply than the bracketing measured slices justify.** Between two measured time-slices, the inferred middle (the 1900 slice between 1850 and 1950 measurements) must render as a **stub/interval bounded by the construct's maximum rate of change (a Lipschitz bound)** - a blurry region that *contains* the truth - never a sharp interpolated point (presentism). This is "stack the slices, infer the gaps" with the gaps as flagged lower-bit fills (section 4); drift is the signal, over-confident gap-inference is the fault, and it is the same COIN read along `t_event`. (Handling: per-epoch local frames stacked along `t_event`, inter-slice motion *measured* where two slices share entities and *stubbed* where they do not; never assume a single global invariant basis, but never treat the change as failure - it is the 4D content.) Falsifier #1 below tests exactly this.
+
+**Three pre-registered falsifiers:**
+1. **Drifting-concept latent tomography** (gemini, runnable today): take historical texts for a contested concept ("Liberty"); keyholes = vector-DB nearest-neighbor searches restricted to time-windows (1800-1850, 1950-2000); reconstruct and render the **1900 slice**. **Honest** = a blurry bounding box that *contains* the true 1900 vector and flags the internal variance as unmeasured. **Broken** = a sharp, wrong *average* of 1850 and 1950 (presentism leak -> metaphor, COIN violated).
+2. **Toy hidden-block** (codex): a known ground-truth block hidden from the compiler; generate limited/biased/copied/independent bursts; compare three renderers - A naive-MAP-sharp, B COIN-capped, C COIN+stubs+active-learning. The machinery is real iff **C reconstructs the true shape with fewer probes, marks limited-angle gaps as fuzz/stubs, aims new probes into those gaps, and produces fewer false sharp bits** than A or B.
+3. **Derivation-entropy** (K1): if minimizing derivation entropy predicts the *same* crystallization order as a plain entropy-arrow account, the COIN gate adds no observable beyond the arrow of time - the instrument must show a render decision the entropy arrow alone does not.
+
+---
+
+## 10. What this changes in the canonical spec
+
+- **Wrapper-as-measurement, bitemporal:** every wrapper carries a measurement-operator + noise-model, two clocks (`t_event`, `t_obs`), the six axes + WHOM + BEFORE/AFTER, and **per-axis `measured_bits` as an up-only lattice**. (Upgrades the v0.3 wrapper.)
+- **Compiler:** DBSP-delta + CALM-merge (monotone/idempotent/order-free), materialized-view-over-log (every bit traces to an event), derivation-entropy as the retrieve/generate gate. `compile_substrate.py` is ~80% there.
+- **Fidelity law:** measured_bits accrue as conditional MI (submodular); diversity>density; corroborated = independent-route; Covariance-Intersection for shared sources; two-regime curve with a hard error floor; lock condition.
+- **Honest fuzz:** missing-wedge -> stub placement; bandpass/CS so gaps blur not streak; measured-first/generate-second/flagged; the held-out-view confabulation audit as a runtime COIN check.
+- **Epistemic ladder:** three per-axis gates (structure-kink / corroboration / epiplexity); the existing MDL harness is the structure proxy; EDL per-channel test.
+- **Conjecture-stub:** the typed hole above (noise-floor vs compute-bound), mandatory falsifier, distinct render grammar, claim-lifecycle + dead-children tally.
+- **Valence = EIG:** the third coin doubles as the next-best-burst objective; the instrument self-aims at the highest-valence stub.
+- **Constellation render:** a contested construct = a principle-vector of sub-axes, not a blob; the single-blob render is an artifact.
+
+**Open / next:** the latent-axis-drift problem (section 9) is the next design target; the three settling experiments are runnable without building the full viewer; a cross-model A- on this v0.4 synthesis is the standing next check. Nothing here is built or committed.
+
+
+=== DOC 2: WRAPPER_PROBE_OBSERVER.md (v0.3) ===
+
+# Fact Wrappers, the Excitation Probe, and the Observer (v0.3 conceptual layer)
+
+**Date:** 2026-06-15 | **Status:** Tier-3 design. NOT built. Extends [SPEC.md](SPEC.md), [SCOPE_NESTING_LOD.md](SCOPE_NESTING_LOD.md), and the ratified refinements R1-R4.
+
+This layer answers four things Pav raised, and fixes one category error:
+1. **What every fact wrapper carries** - the scaffold axes ("the sphere of a fact").
+2. **What an "origin / who-called-it" actually is** - retroactive, definition-relative, a fuzzy spike on an agreed record.
+3. **How the instrument observes** - the excitation-emission keyhole probe (shine a concept in, see what pings back). This is the retrieval/observation model, and it is *spreading activation*.
+4. **The person mind-sandbox** - a latent interior (inner canon + tribe) for a person-node.
+Plus the taxonomy fix: **democracy is not the number 4**, and even some numbers (0) carry a zone.
+
+The honesty spine is unchanged and load-bearing throughout: `rendered_sharpness(x) <= measured_bits(x)`; blur is the badge; never render a fake measured bit. The new content axes simply give the COIN **a separate ledger per axis**.
+
+---
+
+## 1. The fact wrapper: the sphere of a fact
+
+### 1.1 The scaffold (answering "is there a better list?")
+
+Every fact wrapper carries the **six honest axes** - Kipling's six serving-men, = 5W1H + Why:
+
+```
+WHAT   the thing/claim/predicate            (semantic content)
+WHEN   time                                 (temporal)
+WHERE  place / zone                         (spatial -> the zone-of-influence, R1)
+WHO    actor(s) / attribution               (agent; for persons -> the mind-sandbox, sec 4)
+HOW    mechanism / manner                   (instrument)
+WHY    cause / intent / purpose             (the interpretive axis)
+```
+
+This is the canonical event scaffold and it is **near-optimal** - it is exactly what semantic-role labeling and event ontologies converge on (core roles agent/patient/source/goal + peripheral location/time/manner/cause; the six event "aspects": temporal, spatial, informational, experiential, structural, causal). It is deliberately simpler than full SRL/AMR; that simplicity is the point - it is the minimal complete set of axes a human or a renderer needs.
+
+**The one principled addition the literature flags is WHOM** - the affected party / recipient / audience. In this architecture **WHOM is not a seventh content axis; it is the OBSERVER** (the glasses, sec 3.4). "Influence FOR whom," "perceived BY whom" - the recipient is the viewing pole, kept in a different stratum on purpose. So the wrapper has **six content axes + one observer axis (WHOM)**.
+
+Two more things every wrapper carries, distinct from the content axes:
+- **Link axes** `BEFORE` / `AFTER` - predecessor and successor pointers (Allen-style interval relations). These thread facts into worldlines / beat-chains. Pav: *"should be on every fact wrapper with when it happened before and what happened next."* A special case is `FROM` - "where the attention came from" - a provenance-direction link, not just a source citation.
+- **Provenance / COIN metadata** - the existing substrate fields (`source{url,title,type}`, `route`, `certainty`) PLUS, now, **`measured_bits` PER AXIS** (sec 1.3).
+
+### 1.2 The sphere: each axis spawns a latent FIELD and a CLASS
+
+Pav: *"on a sphere of a fact it would form the axis of latent fields and classes."* Take it literally. A fact is a small sphere; the six axes are its poles. **Each pole spawns (a) a latent FIELD - the continuous render of that axis - and (b) a CLASS - the discrete category the axis sorts into.**
+
+| Axis | Latent FIELD (continuous render) | CLASS (discrete sort) |
+|------|----------------------------------|-----------------------|
+| WHERE | the **zone of influence** (R1 per-channel kernel field) | region / jurisdiction / site-type |
+| WHEN | the **lifecycle / diffusion** curve (origin -> spread) | era / stage (Hagerstrand primary/diffusion/condensing/saturation) |
+| WHO | actor field; for a person, the **mind-sandbox** (sec 4) | role (founder/amplifier/opponent), tribe |
+| WHAT | the semantic content embedding | type / ontology class |
+| HOW | mechanism field | method / modality |
+| WHY | the **intent/cause field** - structurally the **lowest-bit, blurriest axis** | motive / purpose class |
+
+This is not a new decomposition bolted on - **the six axes ARE the per-channel COIN decomposition** the addendum already uses. R1 (per-channel prior) is "a prior per pole." The aggregation cap, chain-rule COIN, and the dial all apply per axis.
+
+### 1.3 Per-axis measured_bits (the COIN, six ledgers)
+
+The single most useful consequence: **each axis carries its own `measured_bits`**, so a wrapper is sharp on some poles and blurry on others, honestly.
+
+- **WHERE-bits** -> `sigma_zone = 2^(-where_bits)` (the zone dial, R1/seam doc).
+- **WHEN-bits** -> temporal blur (a date known to the year vs the decade).
+- **WHO-bits** -> attribution confidence; capped by **Stigler's law** (a contested origin renders blurred even as a "point" - the contest is uncertainty about WHO, not WHERE).
+- **WHAT/HOW-bits** -> semantic/mechanism sharpness.
+- **WHY-bits** -> almost always the FEWEST. Intent and cause are interpretive; the WHY axis renders **blurriest by construction**, which is correct - we rarely *measure* why, we infer it. The COIN forbids a crisp WHY.
+
+A wrapper's overall sharpness is per-axis, never a single scalar. "We know exactly WHERE and WHEN, roughly WHO, and can only guess WHY" is a normal, honestly-renderable state.
+
+---
+
+## 2. Origin is retroactive and definition-relative ("who called it")
+
+### 2.1 The meaning drifts; the definition is time-indexed
+
+Pav: *"who called it depends on its present definition; as we look back the meaning changes; what democracy was 1000 years ago is not what it is now."* This is **diachronic semantic drift** (Hamilton 2016; semantic-shift survey): an entity's definition is a **time-indexed trajectory** `D(t)` in latent space (broadening / narrowing / amelioration / pejoration). `democracy(t_now) != democracy(t_1000)`.
+
+Consequence: **the entity's identity is the trajectory `D(t)`, not a fixed point.** "Who called it" is *not an absolute fact* - it is the answer **given a chosen definition epoch**, projected backward. Choose `D(2026)` and you get one origin story; choose `D(1789)` and you get another.
+
+### 2.2 The "calling" event is a fuzzy spike on an agreed record
+
+Pav: *"a person who called it - it's a fuzzy spike, an agreed-on record."* So the WHO/WHEN of an origin is:
+- **FUZZY** - a spike with width, not a delta (low WHO-bits + WHEN-bits), and
+- **INTERSUBJECTIVE** - a *consensus* record, not an objective measurement. The "agreed" badge means its certainty is social-consensus-grade, a distinct provenance class.
+
+And the calling event is **not one fact but a bundle of sub-fields**, all of which Pav enumerated, mapped onto the axes:
+
+| Pav's sub-field | Axis |
+|---|---|
+| when it became *known* / *used for utility* / *applied* | WHEN (three distinct beats) |
+| when it got *attention* / *where the attention came from* | WHEN + WHERE + a `FROM` link |
+| what *made* them call it (the trigger) | WHY / BEFORE |
+| why they called it; what they *meant* | WHY + WHAT |
+| how it was *perceived*, and why | HOW + WHY, **as seen through the observer (WHOM)** |
+
+So an origin is a small cluster of wrappers (became-known, first-used, got-attention, ...), each with its own per-axis bits, threaded by BEFORE/AFTER - **a fuzzy multi-beat spike, not a yolk-point.** (This generalizes the egg-yolk origin of the seam doc to a **multi-yolk** origin field, which is exactly what an authorless idea like democracy needs - see sec 5.)
+
+---
+
+## 3. The excitation-emission keyhole probe (the observation model)
+
+### 3.1 The idea, in Pav's words
+
+*"You can apply democracy's [present] definition to the past and map its instances or core principles in unconnected spaces, places, singular events - the sparks. The lens of our instrument would be like a keyhole: only democracy emitting into the substrate, to see what gets excited and pings back."*
+
+This is the **retrieval/observation primitive** of the whole instrument, and it has a precise name: **spreading activation** (Collins & Loftus 1975), in its 2025 knowledge-graph-RAG form (arXiv 2512.15922). It also reads as **fluorescence excitation-emission**: shine a narrow excitation wavelength in, record what fluoresces back.
+
+### 3.2 The mechanism
+
+```
+PROBE P = a concept defined as a weighted region across the six axes,
+          time-indexed to a definition epoch:  P = D(t_def)
+          (e.g. democracy's core principles: rule-by-the-governed,
+           contested/alternating power, ... as a query over WHAT/HOW/WHY)
+
+EXCITE  : seed the substrate DAG with P; compute resonance
+          r(P, w) = match(P, w) across the axes' latent fields,
+          then SPREAD activation along typed edges (decaying per hop).
+
+EMIT    : excited wrappers PING BACK. Ping intensity of wrapper w:
+          emit(w) = r(P, w) * activation(w)         capped by the COIN:
+          rendered_ping(w) <= measured_bits(w)
+          (a faint, weakly-attested old spark CANNOT render bright)
+
+SPARKS  : the lit set = instances / principle-matches across DISCONNECTED
+          space-time - even where the thing was never *called* democracy,
+          even with no causal link between them. The sparks are the answer.
+```
+
+The substrate stays the agnostic measured medium; the **probe is the active light**; the **pings are the emission**. This **inverts** the keystone's "substrate = light on a sensor": there the world emits and the sensor records; here **the observer emits the concept-light and the substrate fluoresces back.** Both obey the COIN.
+
+### 3.3 Why "keyhole" is the honest word
+
+You see only through the **narrow aperture of the probe**. The substrate is vast; only the resonant subset emits. **Change the probe -> a different constellation of sparks lights up. Change the definition epoch `D(t_def)` -> the same substrate yields a different history.** Project `D(2026)` onto antiquity and you get a *presentist* reading (honest, if badged: "what WE would now recognize as democratic"); project `D(1789)` and Athens lights differently. The keyhole makes the definition-relativity of sec 2 operational and **visible**: the instrument never claims a view-from-nowhere; it shows you what *your chosen concept-light* excites, and says so.
+
+**Honesty rules for the probe:**
+- Badge the **definition epoch** `t_def` of every probe (a presentist projection must be labelled).
+- The ping obeys the per-axis COIN: an old sparse spark stays dim; you cannot brighten history you did not measure.
+- A spark is an **instance match, not a causal claim** - "resonates with the principles" is rendered distinct from "descends from" (a CONTAINS/ORIGINATED edge in the DAG). The instrument lights principle-kin and lineage-kin in different channels.
+
+### 3.4 Frame agnostic, glasses = observer, and the back-reaction
+
+Pav: *"the frame is agnostic, the glasses are the observer, and what we observe through that slice has influence on the global dynamics."*
+
+- **FRAME = agnostic substrate** - the DAG of wrappers + their measured bits. Observer-neutral. The base.
+- **GLASSES = the observer** - the probe `P`, the definition epoch `t_def`, the per-observer budget (foveation), the valence sign (R3), and the WHOM axis. The glasses are *the decoder `q`* the philosopher named; "whose accounting are we rendering?" is a glasses setting.
+- **BACK-REACTION (load-bearing, [SPEC]):** observing through a slice **influences the global dynamics**. Two reasons: (a) *definitional* - choosing the probe defines what counts as an instance, which reshapes the entity's measured extent (you partly make the thing by how you query it); (b) *causal in a live social substrate* - attention is causal; naming and surfacing instances feeds the concept's own spread. So the instrument is **participatory, not passive**, and that participation must be **badged** - the slice you chose is part of the record, never a neutral window. (This is the agnostic-instrument frame: an exploratory INSTRUMENT, not a confirmatory test; 0.99-not-Boolean; the frame-reversal of solid<->fuzzy is itself an observable.)
+
+---
+
+## 4. The person mind-sandbox (a latent interior)
+
+Pav: *"for a person like Musk we need to create an approximation of his wrapper's mind sandbox based on facts of what he said and what he does - distil a model of his core inner canon and his tribe / inner circle."*
+
+A person-node gains a **latent interior**, on the WHO pole:
+
+```
+mind_sandbox(person) = {
+  inner_canon : a modelled belief/value/worldview distilled from SAID + DID
+                (utterances + actions over the lifecycle; a diachronic D(t)),
+  tribe       : the inner-circle graph (who they trust/coordinate-with;
+                CONTAINS-member / role edges in the DAG),
+}
+```
+
+It is **a probe source**: you can shine `inner_canon(Musk)` into the substrate (sec 3) and see what resonates - his *predicted* positions, his likely allies/opponents, what he would call a thing. That is genuinely useful (anticipation, the scene's projections).
+
+**Honesty (this is the most fake-bit-prone construct in the whole system, so the badge is loudest):**
+- The mind-sandbox is **Stratum-2, modelled, never measured.** It is a *caricature with disclosed uncertainty*, not a readout of a mind. Render it dashed/hazy, always badged `MODELLED INTERIOR`.
+- Its bits come only from SAID + DID. The **gap between SAID and DID is itself a measured signal** (an aspiration-vs-action delta) - render the delta, do not average it into one "what he believes."
+- It is **observer-relative** (a rival's model of Musk's canon differs from a fan's) - it is a glasses setting, carries valence (R3), and must say *whose* model it is.
+- It drifts: `inner_canon = D(t)` - a diachronic trajectory, not a fixed creed.
+
+---
+
+## 5. Taxonomy fix: democracy is not the number 4 (and 0 has a zone)
+
+The earlier framing ("democracy ~ the number 4 ~ `kappa -> 0`, locationless") was a **category error**. The decision Pav already ratified (R1, the per-channel population prior) is what corrects it:
+
+- `kappa` against the **population prior** measures *excess* concentration over where people already are.
+- **The number 4**: taught/written wherever people are -> footprint ~ population -> `kappa ~ 0`. Demographically flat, not profound. (As a *formal* object; see below.)
+- **Democracy**: wildly non-uniform over population - concentrated in some polities, contested in hybrids, *opposed* in autocracies -> **high `kappa`**, with `+`/`-` **valence lobes** (R3). A load-bearing structure: a high-in-degree DAG hub with subtypes (Athenian/representative/liberal/social/illiberal) as ORIGINATED children, each with its own origin spike and diffusion wave (Huntington's waves = Hagerstrand at civilizational scale), trackable against real measured indices (V-Dem/Polity/Freedom House).
+
+**The honest taxonomy is a spectrum of latent anchoring:**
+
+```
+formal-content object        socio-historical structure        concrete entity
+(number 4, empty set)         (democracy, capitalism, 0)        (a person, a company)
+kappa ~ 0, demographically    rich SIGNED multi-modal zone,     sharp nucleus + tail
+flat; RARE (math/logic)       subtypes, lifecycle; the NORM     (Musk = a comet)
+```
+
+**And even a number can have a zone.** Pav: *"there are numbers that have cult followings and historical drama - re number 0."* Zero is the proof: as a *formal* object its usage is flat, but as a **socio-historical entity** it has a real origin (India, ~5th-7th c.), resistance (medieval European suspicion), and a diffusion zone - a genuine `kappa > 0` lifecycle. The distinction is **formal-content vs social-instantiation**, and the **probe (sec 3) chooses which one you light**: a formal-content probe of "0" lights flat; a social-instantiation probe of "0" lights its dramatic history. Same substrate, two keyholes.
+
+---
+
+## 6. What this changes in the spec (summary)
+
+- Every **fact wrapper** = six content axes (WHAT/WHEN/WHERE/WHO/HOW/WHY) + the observer axis (WHOM) + BEFORE/AFTER links + per-axis `measured_bits`. The axes ARE the per-channel COIN; WHY is the structurally-blurriest axis; WHO carries the Stigler cap.
+- **Origin** is retroactive + definition-relative + a fuzzy multi-beat spike on an *agreed* (intersubjective) record; the entity's identity is its diachronic definition trajectory `D(t)`.
+- **Observation** is the excitation-emission keyhole probe (spreading activation): shine a time-indexed concept-light into the agnostic substrate, the resonant wrappers ping back as sparks, the ping obeys the per-axis COIN, and the act of probing **back-reacts** on the global dynamics (participatory instrument, badged).
+- **Glasses = observer/decoder** (probe + epoch + budget + valence + WHOM); **frame = agnostic substrate**.
+- **Person-nodes** gain a **mind-sandbox** (inner canon + tribe), a Stratum-2 probe-source with the loudest honesty badge and a measured said-vs-did delta.
+- **Taxonomy:** the `kappa` spectrum (formal-content / socio-historical / concrete); R1 separates "4" from "democracy"; the probe chooses formal-content vs social-instantiation (zero's two keyholes).
+
+**Prior art grounding:** 5W1H / semantic-role labeling / event ontologies (the scaffold); spreading activation - Collins & Loftus 1975, KG-RAG revival arXiv 2512.15922, creativity-from-text-networks 2026 (the probe); diachronic word embeddings - Hamilton 2016, semantic-shift survey ACL C18-1117 (definition drift `D(t)`); LLM concept-probing 2024-2025 (the mind-sandbox as a distilled model, badged Stratum-2).
+
+**Still open / deferred:** the strength x type coupling unification (R4); the estimator-soundness gap; a HOSTILE falsification subject (an authorless idea like democracy is the natural one - it stress-tests the multi-yolk origin and the no-nucleus zone at once). A cross-model (codex + gemini) external pass on this v0.3 layer is the standing next A-minus.

@@ -1,0 +1,20 @@
+SEAM, ZONE OF INFLUENCE, AND TOGGLE-OR-DIAL - DESIGN BOUNCE
+
+CONTEXT
+We are designing (spec-only) a hyperdimensional viewer holding a canonical PHYSICAL dimension and a canonical LATENT (meaning) dimension. KEYSTONE: one logarithm does three jobs - 3D-to-2D unfold v = ln(tan(pi/4 + phi/2)); physical scale ladder log2(metres); render sharpness 2^(-bits). COIN law: rendered_sharpness(x) <= measured_bits(x); blur is the honesty badge; never render a fake measured bit. We just settled that the physical-nesting tree and the latent-containment tree are TWO FIBRATIONS OVER ONE SHARED BASE (shared exact integer path-ID topology, different metrics), coupled at the observation/assertion event.
+
+THE QUESTION
+Open question: is the latent-to-physical COUPLING a TOGGLE (a discrete 2-bit tag per edge: SPATIAL, MEMBERSHIP, BOTH) or a continuous DIAL (a coupling coefficient kappa in [0,1])?
+
+PAV STEER (the originator - honor it, do not overrule it)
+The latent stuff ALWAYS has a connection to the physical, but the anchor is the ORIGIN seen through its LIFECYCLE. It can be a whole country; the person who came up with the idea; the person who called it (named or declared it). For organisations the location is FUZZY - the area where the organisation operates, its area of influence, its attention-output. It is NOT a precise location but a ZONE OF INFLUENCE. The sharpness of the physical anchor varies by entity type and by lifecycle stage: a person at origin is a sharp point; an org or movement is a diffuse zone. Intuition: because the anchor is always present but its sharpness varies continuously, the coupling is a DIAL, and the dial IS the COIN blur on location bits (low location-bits = wide blur = a zone of influence).
+
+WHAT WE WANT (out-of-box, first-principles)
+1. Resolve toggle vs dial. Is a continuous coupling coefficient the right primitive, and what does it mean physically? When (if ever) does a discrete toggle suffice?
+2. Formalise ZONE OF INFLUENCE as a render primitive. A latent entity (idea, org, movement) has a fuzzy physical anchor = a kernel/field, not a point, with sigma = 2^(-location_bits). How do you render an organisation as a zone of influence / attention-output field honestly, without drawing a fake crisp territory boundary from sparse data?
+3. The LIFECYCLE ORIGIN. The physical anchor migrates and diffuses over the entity lifecycle: born at a sharp point (the person who called it) and spreading to a zone. What is the true physical origin of an idea - the person, or the conditions that produced them? Is naming (calling it) the origin event?
+4. A worked test entity: Elon Musk, a person with abundant public data. Sketch how he renders across the two fibers - origin (a sharp point) to zones of influence (multiple company sites, an attention-output field) over his lifecycle.
+5. The biggest risk and the one experiment or illustration that settles whether zone-of-influence is a real coordinate or a projection of effects.
+
+FORMAT
+Concrete. Math or mechanism, not vibes. Name prior art with the actual technique (influence geography, spatial-interaction / gravity / Huff models, kernel density, fuzzy set membership, spatial diffusion of innovation, etc.). Flag speculation. Disagreeing is welcome. ASCII only.

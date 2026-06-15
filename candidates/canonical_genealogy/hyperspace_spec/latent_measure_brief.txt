@@ -1,0 +1,29 @@
+LATENT MEASUREMENT CANDIDATES - DESIGN BOUNCE
+
+CONTEXT
+We are designing (spec-only) a hyperdimensional canonical-space viewer. Governing law (the COIN): rendered_sharpness(x) <= measured_bits(x); blur is the honesty badge; never render a fake measured bit. A cross-model audit just found the LOAD-BEARING HOLE: measured_bits is UNDEFINED for latent constructs. On the WHAT/WHO/WHY axes it is currently just a BADGE - no coding scheme, no unit scale, no estimator, no uncertainty interval, no source-dependency model, no per-axis calibration. Without a real latent measurement model the COIN cannot be enforced, the tomography does not apply, EIG is not meaningful, and conceal/expose cannot be audited. We need to DERIVE CANDIDATE UNITS for measuring the latent content of a wrapper (an idea, a concept, an entity in latent space).
+
+REQUIREMENTS FOR A SOUND UNIT (from the audit)
+(a) ideally a ONE-SIDED UPPER BOUND on true content, so blur can only ever be honest (it can over-state cost, never under-state it).
+(b) computable under a pinned, disclosed estimator.
+(c) a stated uncertainty interval.
+(d) a source-dependency / independence model (so redundant evidence does not fabricate bits).
+(e) composes with the settled PHYSICAL unit (entropy-coded bits-to-reproduce, e.g. EntropyGS / a pinned-coder MDL harness, which already exists for the physical/text axes).
+
+PAV CANDIDATE DIMENSIONS (the originator - treat each as a candidate UNIT to formalize, and EACH MUST BECOME A DIAL we can turn to watch how the system reacts)
+1. COMPRESSION / EXPANSION - how much the idea can compress or expand (description length / compressibility).
+2. PERCENT OF THE FRAMES CONTENT - the unit as a relative share of the current frames total content (a contextual / relative measure, not absolute).
+3. THE KERNEL CANON - the irreducible canonical core of the idea (its sufficient-statistic kernel; how much is canon vs periphery).
+4. CONNECTIVITY - how connected it is (graph centrality / load-bearing position in the network).
+5. THE ZOO UNIT - if the latent space were a ZOO of specimens, what unit would you measure each by (diversity / rarity / taxonomic distinctness / biomass - measurement-by-analogy for a heterogeneous menagerie).
+6. DEADWEIGHT vs SUPPORTING STONE - when a wrapper is deleted, does it become DEADWEIGHT (removable, no loss) or a STONE THAT SUPPORTS (load-bearing, its removal collapses the arch)? An ablation / leave-one-out / counterfactual-importance unit.
+
+WHAT WE WANT (out-of-box, first-principles)
+1. For each of the six families, the best concrete UNIT: definition, estimator, uncertainty interval, dependency model, whether it is a one-sided upper bound, and how it composes with the physical entropy-coded unit.
+2. The ZOO question answered concretely: if the latent space is a zoo, what is the unit (a Hill number, taxonomic distinctness, rarity, biomass-analog)? Make it real, not cute.
+3. The DEADWEIGHT vs STONE unit: how do you compute a wrappers load-bearing-ness cheaply (leave-one-out, Shapley, influence functions, k-core), and how does it render?
+4. INTRINSIC vs RELATIONAL: which candidates measure the THING and which measure the OBSERVERs RELATION to it (percent-of-frame is observer-relative; connectivity is graph-relative; compression is coder-relative)? Is there an intrinsic latent measure at all, or is every latent unit constitutively relational?
+5. Which single candidate (or combination) best CLOSES the hole (a real measurement model, ideally a one-sided bound), how to make it a DIAL, and the ONE experiment that would validate it on real data.
+
+FORMAT
+Concrete. Math or mechanism, not vibes. Name prior art with the actual technique (MDL / Kolmogorov / LLM-as-compressor, pointwise mutual information, minimal sufficient statistics / sparse coding, graph centrality / k-core, Shapley / influence functions / leave-one-out, Hill numbers / diversity indices). Flag where you speculate. Disagreeing with the framing is welcome. ASCII only.
