@@ -1,0 +1,20 @@
+EXTERNAL PASS -- session-arc self-capture + digestion-dynamics harden (2026-06-16)
+
+Read these two UTF-8 markdown files in this directory:
+  ARC_DIGEST.md           -- a tomographic self-capture of ~6 days of AI-research work, compiled as an append-only "substrate" (acts + arcs) with provenance and a verification pass.
+  ../DIGESTION_DYNAMICS.md -- a spec: "compression as digestion". measured_bits = the residue that RESISTS an observer's compression pressure. INSTANT-CRUSH (single-pass NLL = Shannon) vs SLOW-DIGESTION (reasoning/test-time-compute that derives a short program = Kolmogorov program-search). A conjugate "digestion-trace" (attempts/tokens/strategy/resistance-curve). A VERIFIED-DISSOLVE gate (a derivation discounts bits only if it EXACTLY reconstructs the target). A universal residue = resist-the-best-mind. Section 11 is a fresh-literature-scan harden with a citation map.
+
+Answer TWO questions. Be terse, concrete, skeptical. Name papers with arXiv IDs. Flag anything over-claimed.
+
+(1) DIGESTION-DYNAMICS HARDEN (DIGESTION_DYNAMICS.md section 11).
+    Claims: slow-digestion + verified-dissolve gate == The KoLMogorov Test (arXiv:2503.13992, ICLR 2025); residue == epiplexity / time-bounded entropy (arXiv:2601.03220) + predictive V-information / PVI (Xu 2020 arXiv:2002.10689; Ethayarajh 2022 arXiv:2110.08420); instant-crush == Language-Modeling-Is-Compression (DeepMind ICLR 2024); resistance-curve == prequential MDL / Excess-Description-Length (arXiv:2601.04728).
+    Two fixes applied: (a) split measured_bits into aleatoric_floor (truly random, never dissolvable) vs epistemic_dissolvable, define hardness on logical depth / effective complexity (Bennett; Gell-Mann-Lloyd) NOT raw Kolmogorov residue, to dodge the "random string is the hardest concept" trap; (b) read the resistance-curve against the verified-dissolve gate (bits actually reconstructed), never raw token-count (overthinking is non-monotone; length tracks human-imitation).
+    - Is the citation map correct and complete? Any load-bearing prior art we missed, especially 2025-2026?
+    - Are the two fixes sufficient, or is there a third failure mode?
+    - Is the claimed-novel part ("conjugate digestion-trace as a process-valued object + one observer-indexed measured_bits law where trace is the dual of the residue" + binding verifier-guided TTC-search to the exact-reconstruction gate) genuinely novel, or already published?
+
+(2) THE SELF-CAPTURE METHOD (ARC_DIGEST.md).
+    We extracted a ~3073-event narrative spine from a session transcript, cut it into 19 OVERLAPPING tiles, had agents extract acts+arcs per tile, STITCHED (dedup via the overlap seams), then VERIFIED each arc against the real files on disk, then compiled to an append-only substrate with a COIN render-cap: rendered_sharpness <= verified_support; any arc claim with no backing artifact is flagged as a candidate "fake bit". Result: 42/43 arcs corroborated against artifacts, 10 over-claim flags surfaced, 1 arc unverifiable.
+    - Is tomographic chunk -> stitch -> verify -> compile a SOUND provenance-capture method, or does it have a systematic fabrication risk (e.g. the stitch inventing connective tissue the tiles do not support; the overlap dedup merging distinct acts; verification that only checks file-existence not claim-content)?
+    - The verify caught the capture over-stating its OWN event count (claimed 4452, disk holds 3073). What other self-capture failure modes should we guard against?
+    - One-line verdict: is this a trustworthy way to turn a work-session into a provenance-bearing record?

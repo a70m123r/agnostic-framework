@@ -1,0 +1,326 @@
+[
+  {
+    "angle": "concept-hardness",
+    "findings": [
+      {
+        "claim": "The KoLMogorov Test (KT) presents a model with a data sequence at inference time and asks it to generate the SHORTEST PROGRAM that EXACTLY reproduces it, treating program-search compression as an intelligence measure. The metric (compression ratio with lossless reconstruction) 'cannot be gamed' and is contamination-proof; GPT-4o and Llama-3.1-405B both struggle because the task 'requires reasoning, planning and search beyond current models.' This is a near-exact instantiation of our SLOW-DIGESTION axis (test-time program-search = Kolmogorov) AND our VERIFIED-DISSOLVE gate (only an exactly-reconstructing program counts).",
+        "source": "The KoLMogorov Test: Compression by Code Generation (Meta AI / ICLR 2025)",
+        "url": "https://arxiv.org/abs/2503.13992",
+        "year": "2025",
+        "bearing": "supports — strongest single prior art for the slow-digestion/program-search axis + the verified-reconstruction gate; we should cite it as the canonical reference and frame our 'measured_bits' residue as the KT compression gap that resists best-available search"
+      },
+      {
+        "claim": "RoundTripCodeEval (RTCE) defines 'round-trip self-consistency': a prediction is valid ONLY IF its logical inverse reconstructs the original input exactly (dec(enc(x)) = x, binary exact-match check x = x'). It is explicitly an 'execution-free, exact-match assessment of bijection fidelity.' Models pass forward/backward steps individually but fail the combined round-trip, exposing that forward correctness was 'template matching, not mechanistic reasoning.'",
+        "source": "Can LLMs Compress (and Decompress)? Evaluating Code Understanding and Execution via Invertibility (RTCE)",
+        "url": "https://arxiv.org/html/2601.13398",
+        "year": "2026",
+        "bearing": "supports — formalizes our VERIFIED-DISSOLVE gate exactly: a derivation only discounts bits if it losslessly reconstructs the target. 'Round-trip self-consistency' / 'lossless round-trip constraint' is the established term; we are reinventing it and should adopt or cite it"
+      },
+      {
+        "claim": "Tracking mutual information between intermediate reasoning representations and the correct answer over generative steps reveals 'MI peaks' — sudden spikes where prediction-error probability drops, concentrated at 'thinking tokens' ('Hmm', 'Wait', 'Therefore'). The reasoning trajectory is thus a measurable information-accumulation curve over test-time compute.",
+        "source": "Demystifying Reasoning Dynamics with Mutual Information: Thinking Tokens are Information Peaks in LLM Reasoning (NeurIPS 2025)",
+        "url": "https://arxiv.org/abs/2506.02867",
+        "year": "2025",
+        "bearing": "supports — direct empirical grounding for our conjugate 'digestion trace / resistance-curve': MI-vs-step IS the resistance curve, and MI-peaks are the points where the target dissolves. We should cite this as the instrument that makes the trace measurable and adopt 'information peaks' as the marker for dissolve events"
+      },
+      {
+        "claim": "Problem difficulty is operationalized two complementary ways in 2025-26 test-time-compute work: (1) self-consistency (agreement across sampled reasoning paths) is a 'principled proxy for thinking necessity' — harder queries show lower self-consistency; (2) token-savings: questions where the model converges fast are easy, minimal-savings questions are hard and need 'full-depth deliberation.' Difficulty is formally defined to depend BOTH on P(correct) and on the LENGTH of reasoning needed.",
+        "source": "Reasoning on a Budget survey + Thought Calibration + Art of Scaling Test-Time Compute (2025-2026)",
+        "url": "https://arxiv.org/abs/2505.18404",
+        "year": "2025",
+        "bearing": "extends — gives us off-the-shelf, validated proxies for the resistance curve's summary statistics (attempts, tokens, convergence rate). Our 'digestion trace' should log self-consistency-decay and token-to-converge alongside the bit residue; this is prior art we should align our trace schema with"
+      },
+      {
+        "claim": "Algorithmic-information theory already names the residue we call 'measured_bits': Bennett's LOGICAL DEPTH (time/compute to reproduce from the shortest description), Gell-Mann & Lloyd's EFFECTIVE COMPLEXITY (information in the regularities, excluding random noise), and SOPHISTICATION (structured/meaningful information). Crucially, incompressible (random) strings are 'effectively simple' / shallow — depth and effective complexity assign LOW value to both random AND trivial strings, peaking only on structured-but-hard objects.",
+        "source": "Effective Complexity and its Relation to Logical Depth (Ay, Müller, Szkoła) + Bennett logical depth / Koppel sophistication",
+        "url": "https://arxiv.org/abs/0810.5663",
+        "year": "2008 (foundational; still the canonical framing)",
+        "bearing": "challenges + extends — our 'universal residue = resist-the-best-mind' must distinguish HARD-because-structured from HARD-because-random. Raw Kolmogorov residue is maximal for noise, which we do NOT want to call a deep concept. Logical depth / effective complexity is exactly the correction; we are partly reinventing sophistication and should cite these to avoid the random-string trap"
+      },
+      {
+        "claim": "There is an irreducible-loss / Bayes-error / aleatoric floor in next-token prediction: even a perfect model cannot drive per-token loss to zero because text has intrinsic unpredictability; this floor is model-independent (depends only on the true data-generating process). Information-theoretic scaling laws ('First Law of Information Capacity') relate stored model information to data entropy and achieved cross-entropy. CoT uncertainty concentrates in a few high-entropy 'forking tokens.'",
+        "source": "From Risk to Uncertainty / Reexamining Aleatoric-Epistemic Dichotomy (ICLR 2025) + information-capacity scaling-law work",
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2025/file/e6f32e64b9c27d153b46c94f0fe22b56-Paper-Conference.pdf",
+        "year": "2025",
+        "bearing": "supports + challenges — supports our INSTANT-CRUSH axis (single-pass NLL = Shannon residue), but challenges the universality claim: the Shannon residue conflates aleatoric (truly random, never dissolvable) with epistemic (dissolvable by a better mind). Our spec's whole point — that slow-digestion can melt epistemic-but-not-aleatoric bits — IS the aleatoric/epistemic split; we should cite this literature and name our residue's two layers accordingly"
+      },
+      {
+        "claim": "Compression quality linearly predicts LLM benchmark performance (Huang et al. 2024, r ≈ -0.93); LLM training provably approximates Solomonoff induction (Wan & Mei 2025); LLMs as 'computable approximations' embody Occam's razor since shorter programs dominate the measure (arXiv:2505.15784). DeepMind showed LLMs are strong lossless general-purpose compressors of images/audio. MDL-based evaluation is contamination-proof because it 'punishes a pure memorizer.'",
+        "source": "Language Models as Computable Solomonoff Induction + DeepMind Language-Modeling-Is-Compression line",
+        "url": "https://arxiv.org/abs/2505.15784",
+        "year": "2025",
+        "bearing": "supports — anchors the prediction=compression equivalence underlying our INSTANT-CRUSH = single-pass NLL = Shannon claim, and the Solomonoff p = 2^-bits link already in your COIN memory. Cite as the theoretical bridge between the Shannon axis and the Kolmogorov axis (both are 'derive a short program,' differing only in search budget)"
+      },
+      {
+        "claim": "An automated Occam's-razor metric was built to score whether LLM hypotheses are minimal (parsimonious) explanations in joint inductive+abductive reasoning; SOTA models do simple cases but fail to produce minimal high-quality hypotheses on complex world-models, even with RLVR. This is the 'derive a SHORT program' requirement applied to natural-language reasoning rather than code.",
+        "source": "Do Language Models Follow Occam's Razor? An Evaluation of Parsimony in Inductive and Abductive Reasoning (Sun & Saparov)",
+        "url": "https://arxiv.org/abs/2509.03345",
+        "year": "2025",
+        "bearing": "extends — generalizes the KT 'shortest program' criterion beyond executable code to NL hypotheses, which matters because your spec applies to concepts/ideas, not just sequences. Their parsimony metric is a candidate operationalization of 'short derivation' for the non-code case; worth citing when we argue digestion applies to abstract concepts"
+      }
+    ],
+    "bottom_line": "The framing HOLDS UP well — the two-axis structure (instant-crush single-pass NLL = Shannon vs slow-digestion test-time program-search = Kolmogorov) maps cleanly onto a now-mature 2025-26 literature, and several pieces of the spec are independently validated rather than novel. Strongest prior art to cite, in priority order: (1) **The KoLMogorov Test (ICLR 2025, arXiv:2503.13992)** — the canonical reference for program-search-compression-as-intelligence with an exact-reconstruction requirement; effectively our slow-digestion axis + verified-dissolve gate in one paper, and it confirms current best minds leave large residue (good for 'resist-the-best-mind'). (2) **RoundTripCodeEval / round-trip self-consistency (arXiv:2601.13398, 2026)** for the VERIFIED-DISSOLVE gate. (3) **MI-Peaks (NeurIPS 2025, arXiv:2506.02867)** for the digestion-trace/resistance-curve. Terms we are REINVENTING and should adopt instead of coining: 'round-trip self-consistency' / 'lossless round-trip constraint' (= our verified-dissolve gate); 'information peaks' (= our dissolve events on the resistance curve); 'logical depth' and 'effective complexity / sophistication' (= our structured-residue, NOT raw bits). Two CHALLENGES to harden against before publishing: (a) the universal-residue claim must split the residue into aleatoric (truly random — high single-pass NLL AND high raw Kolmogorov, but NOT a deep concept) vs epistemic (dissolvable by a better mind) — cite the ICLR-2025 aleatoric/epistemic and irreducible-loss work; raw 'bits that resist compression' is maximized by NOISE, so 'resist-the-best-mind' should be defined on logical depth / effective complexity, not Kolmogorov residue, or you'll rank a random string as the hardest 'concept.' (b) Kolmogorov complexity is uncomputable, so 'resist-the-BEST-mind' is only ever an empirical upper bound relative to a fixed search budget (the KT framing) — state the residue as budget-relative and monotone-decreasing as the digesting mind improves, which is consistent with your COIN p = 2^-bits = render-in-log2 axis (Solomonoff link already in memory, now backstopped by Wan & Mei 2025 'LLM training approximates Solomonoff induction'). Net: keep the spec, re-label the gate and trace markers to the established terms, and bifurcate the residue into aleatoric-floor vs epistemic-dissolvable to survive the 'random string is hardest' falsifier."
+  },
+  {
+    "angle": "ttc-difficulty",
+    "findings": [
+      {
+        "claim": "Direct prior art for the SLOW-DIGESTION half: the 'KoLMogorov Test' (KT) operationalizes Kolmogorov complexity for LLMs as 'present a data sequence, ask the model to generate the SHORTEST PROGRAM that produces it.' The generated program must LOSSLESSLY and exactly reconstruct the target (output the original data and halt) before its length counts — this IS our VERIFIED-DISSOLVE gate. KT explicitly frames the task as requiring reasoning/planning/search beyond single-pass models, and flagship models (GPT-4o, Llama-3.1-405B) perform poorly. The metric (program length) is called un-gameable and the instance pool effectively infinite over varying difficulty.",
+        "source": "The KoLMogorov Test: Compression by Code Generation (Meta AI; ICLR 2025)",
+        "url": "https://arxiv.org/abs/2503.13992",
+        "year": "2025",
+        "bearing": "SUPPORTS — this is the strongest, most exact prior art. Our SLOW-DIGESTION = KT program-search; our VERIFIED-DISSOLVE gate = KT's lossless exact-reconstruction requirement. We should anchor the spec to KT and frame digestion-dynamics as KT-plus-a-conjugate-trace."
+      },
+      {
+        "claim": "Direct prior art for the INSTANT-CRUSH half: language modeling is provably equivalent to lossless compression — a Transformer minimizing expected code length is maximizing log-likelihood, so single-pass NLL = arithmetic-coding bits = Shannon code length. 'Compression Represents Intelligence Linearly' shows benchmark ability scales linearly with this single-pass compression rate across models.",
+        "source": "Compression Represents Intelligence Linearly (Huang et al.)",
+        "url": "https://arxiv.org/html/2404.09937v2",
+        "year": "2024",
+        "bearing": "SUPPORTS — confirms INSTANT-CRUSH (single-pass NLL = Shannon code length) is a settled, citeable identity, not a novel claim. The novelty in our spec is the CONTRAST between this and slow-digestion program-search, not the instant-crush leg itself."
+      },
+      {
+        "claim": "The closest prior art to the WHOLE digestion-dynamics framing: 'epiplexity' is a compute-aware measure of structural information — explicitly what a COMPUTATIONALLY BOUNDED observer can extract — that sits between Shannon entropy and Kolmogorov complexity (both of which assume unbounded compute). It separates extractable structure from 'time-bounded entropy' (the residual random/chaotic/PRNG content no bounded process can compress), depends on data ordering, and shows 'how information can be created with computation.' Authored by Finzi, Qiu, Jiang, Izmailov, Kolter, Wilson.",
+        "source": "From Entropy to Epiplexity: Rethinking Information for Computationally Bounded Intelligence",
+        "url": "https://arxiv.org/abs/2601.03220",
+        "year": "2026",
+        "bearing": "EXTENDS / CHALLENGES — strongest conceptual prior art for measured_bits-as-resistance and the universal residue. 'Time-bounded entropy' = our 'resist-the-best-mind residue'; epiplexity = bits a bounded mind CAN dissolve. This is the term we are partly reinventing. We must cite it and position digestion-dynamics as the OPERATIONAL/per-instance, trace-instrumented version of epiplexity (which is a population/measure-theoretic quantity)."
+      },
+      {
+        "claim": "Direct prior art for the CONJUGATE DIGESTION-TRACE (attempts/tokens/resistance-curve): LLMs have an internal difficulty-perception mechanism — they estimate problem difficulty upfront and allocate reasoning tokens accordingly, spending more tokens on problems they internally recognize as harder. Reasoning length correlates with perceived difficulty.",
+        "source": "Probing the Difficulty Perception Mechanism of Large Language Models",
+        "url": "https://arxiv.org/pdf/2510.05969",
+        "year": "2025",
+        "bearing": "SUPPORTS — grounds the trace's token-count axis: the model's own token allocation IS a difficulty readout, so a digestion-trace is reading a real internal signal, not an artifact."
+      },
+      {
+        "claim": "CHALLENGES the naive resistance-curve = monotone-difficulty assumption: in test-time scaling, marginal utility of extra reasoning turns NEGATIVE past a threshold (≈12k tokens on AIME/R1-32B; net negative answer-flips start ≈7k tokens). Optimal thinking length is difficulty-dependent (easy problems peak ≈1.5k tokens, hard ≈8k — a 7.5x spread), and 'overthinking' = abandoning a previously-correct answer. So token-count is a NON-monotone, capacity-confounded difficulty proxy.",
+        "source": "When More Thinking Hurts: Overthinking in LLM Test-Time Compute Scaling",
+        "url": "https://arxiv.org/html/2604.10739v1",
+        "year": "2026",
+        "bearing": "CHALLENGES — our resistance-curve must be defined against the VERIFIED-DISSOLVE gate (did bits actually get reconstructed), not raw token count, otherwise overthinking inflates apparent resistance. This is the key calibration fix the spec needs."
+      },
+      {
+        "claim": "Reasoning length is a confounded difficulty signal in a second way: it tracks HUMAN-perceived difficulty more than model uncertainty. CoT length predicts human reaction times both within and across tasks, and 'generation length increasingly reflects human-aligned difficulty as reasoning budget grows.' Separately, models trained on long-but-EASY traces match models trained on hard problems — i.e., trace LENGTH, not intrinsic hardness, drives the behavior.",
+        "source": "The cost of thinking is similar between large reasoning models and humans (PNAS); 'Long Is More Important Than Difficult for Training Reasoning Models'",
+        "url": "https://www.pnas.org/doi/10.1073/pnas.2520077122",
+        "year": "2026",
+        "bearing": "CHALLENGES — token-count conflates intrinsic Kolmogorov-hardness with imitated human effort. The spec must distinguish 'resistance to THIS observer's compression pressure' (what we want) from 'length learned by imitation' (a confound)."
+      },
+      {
+        "claim": "Reasoning models on harder problems don't just emit MORE tokens — their hidden-state trajectories move DIFFERENTLY. After residualizing trajectory geometry on length, difficulty stays coupled to corrected trajectory shape; harder problems give more-direct trajectories / less curvature in reasoning-trained models, co-occurring with strategy shifts and uncertainty monitoring. Relatedly, 'thinking tokens are information peaks' — mutual information spikes at specific reasoning steps.",
+        "source": "Reasoning Models Don't Just Think Longer, They Move Differently",
+        "url": "https://arxiv.org/abs/2605.15454",
+        "year": "2026",
+        "bearing": "EXTENDS — argues the digestion-trace should be richer than scalar token-count: a trajectory/strategy/information-gain-per-token curve. Supports our 'strategy/resistance-curve' trace fields and suggests an information-peak readout for where dissolution actually happens."
+      },
+      {
+        "claim": "Prior art for using PER-PROBLEM success probability as the canonical hardness signal: pass@k scaling is governed by the shape of the per-problem difficulty distribution near p=0; hard problems (low single-attempt p) show the steepest gains as attempts k grow, while easy ones saturate. Predictable from limited samples. CAVEAT the authors flag: pass@k with large k under a small length budget can make solvable problems look artificially hard.",
+        "source": "Efficient Prediction of Pass@k Scaling in Large Language Models (Kazdan et al.)",
+        "url": "https://arxiv.org/pdf/2510.05197",
+        "year": "2025",
+        "bearing": "SUPPORTS / EXTENDS — validates 'number-of-attempts' as a legitimate hardness axis in the digestion-trace, and the near-zero tail = our universal-residue (problems that resist even at high k). The budget-confound caveat is a concrete calibration requirement for our attempts-axis."
+      },
+      {
+        "claim": "Prior art for the UNCOMPUTABLE-ideal / un-saturable-benchmark stance: Kolmogorov complexity is the length of the shortest program outputting a sequence and is uncomputable, so the search for better computable upper bounds is 'a benchmark for intelligence that by definition cannot saturate.' Pass@k difficulty defined via short length-budgets can mislabel solvable problems as hard.",
+        "source": "The KoLMogorov Test (ICLR 2025 proceedings version)",
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2025/file/db1d69ee01c2b42554f8e14e6f8ca8b6-Paper-Conference.pdf",
+        "year": "2025",
+        "bearing": "SUPPORTS — our 'resist-the-best-mind' universal residue is exactly the always-positive gap to uncomputable K. Frames the residue as principled (never zero, never gameable), not a measurement failure."
+      },
+      {
+        "claim": "Prior art for the slow-digestion MEASUREMENT MACHINERY (NLL accumulated under a learning/search process as a description length): prequential / MDL coding encodes a sequence as the running sum of single-step NLLs while the model updates, giving a description length that shrinks as the process 'digests' the data — bridging single-pass likelihood and a compute-extended compressor. 'Prechastic coding' (2025) generalizes the prefix constraint.",
+        "source": "The Description Length of Deep Learning Models (Blier & Ollivier); Prechastic Coding (2025)",
+        "url": "https://arxiv.org/pdf/1802.07044",
+        "year": "2018",
+        "bearing": "EXTENDS — gives a rigorous, citeable formalism for our SLOW-DIGESTION trace as a description-length-shrinking-under-compute process, and a continuum between INSTANT-CRUSH (1 pass) and full program-search. Worth adopting as the formal backbone of the resistance-curve."
+      }
+    ],
+    "bottom_line": "The framing HOLDS and is well-supported, but two of its components are being independently reinvented and must be cited rather than claimed as novel. (1) The INSTANT-CRUSH = single-pass NLL = Shannon code length identity is settled (Compression-Represents-Intelligence-Linearly 2024). (2) The SLOW-DIGESTION = Kolmogorov-program-search half, INCLUDING our VERIFIED-DISSOLVE gate (a derivation only discounts bits if the program EXACTLY/losslessly reconstructs the target), is almost exactly the KoLMogorov Test (arXiv:2503.13992, ICLR 2025) — this is the single strongest prior art to cite and to anchor the spec on. (3) Most importantly, the entire 'measured_bits = residue that resists a bounded mind's compression pressure / universal resist-the-best-mind residue' is the thesis of 'epiplexity' (arXiv:2601.03220, Jan 2026): a compute-aware information measure strictly between Shannon entropy and Kolmogorov complexity, with 'time-bounded entropy' as the incompressible residual. We are reinventing 'epiplexity'/'time-bounded entropy' and should adopt or explicitly differentiate from those terms — positioning digestion-dynamics as the per-instance, trace-instrumented, verified-reconstruction operationalization of epiplexity (which is population/measure-level and has no exact-reconstruction gate or conjugate trace). The CONJUGATE DIGESTION-TRACE is novel as a packaged object but each axis has prior art: token-count (difficulty-perception mechanism, 2510.05969), number-of-attempts/pass@k near-zero tail (2510.05197), and trajectory/strategy geometry (2605.15454). The one real CHALLENGE to harden against: raw reasoning-length/token-count is a non-monotone, capacity- and human-imitation-confounded difficulty proxy (overthinking flips correct→incorrect past ~7-12k tokens, 2604.10739; length tracks human effort not model uncertainty, PNAS 2026; length-not-difficulty drives training behavior). Fix: define the resistance-curve strictly against the VERIFIED-DISSOLVE gate (bits actually reconstructed), never against raw trace length, and disclose the attempts-budget confound (pass@k under short budgets mislabels solvable problems as hard). Strongest citation stack to lead with: KoLMogorov Test (2025) for slow-digestion + verified-dissolve; epiplexity (2026) for the residue/bounded-observer thesis; Compression-Represents-Intelligence (2024) for instant-crush; prequential/MDL description length (Blier-Ollivier 2018) as the formal backbone connecting the two ends."
+  },
+  {
+    "angle": "lmic-kolmogorov",
+    "findings": [
+      {
+        "claim": "The KoLMogorov Test (KT) operationalizes our INSTANT-CRUSH vs SLOW-DIGESTION split AND our VERIFIED-DISSOLVE gate almost exactly: a model sees a sequence at inference time and must emit the SHORTEST PROGRAM that outputs it (= Kolmogorov program-search, our slow digestion). Verification is execution + exact-match: the accuracy is an indicator 1{[rho]=x} that is 1 only when the program's output exactly equals the target sequence; in their coding cost E_q[-log p(rho) - log p(x|rho)] the data term is +infinity whenever x is NOT the program's output and 0 when it is. So a derivation discounts bits ONLY if it losslessly reconstructs the target -- this IS our VERIFIED-DISSOLVE gate, already formalized and published. The encoded length counts the PROGRAM, not the data.",
+        "source": "The KoLMogorov Test: Compression by Code Generation (Meta AI / FAIR; Heinrich et al.), ICLR 2025",
+        "url": "https://arxiv.org/abs/2503.13992",
+        "year": "2025",
+        "bearing": "SUPPORTS (and is the strongest prior art for VERIFIED-DISSOLVE + program-search digestion)"
+      },
+      {
+        "claim": "KT empirically separates the two digestion modes and shows program-search is HARD: 'Kolmogorov compression is uncomputable, and code-generating LLMs struggle to approximate this theoretical ideal' (it 'requires reasoning, planning and search beyond current models'). Flagship models (GPT-4o, Llama-3.1-405B) score WORSE than a trivial repeat baseline (precision ~1.33-3.17 vs baseline 1.0 = they produce programs LONGER than the raw data), while gzip 'remains a strong baseline, especially for long or repetitive sequences.' A trained SeqCoder-8B reaches 0.38 compression on synthetic data but 'gains on synthetic data generalize poorly to real data.' This is direct evidence for our 'universal residue = resist-the-best-mind': even the best minds today fail to find the short program for most real sequences, so the bits persist.",
+        "source": "The KoLMogorov Test: Compression by Code Generation (ICLR 2025)",
+        "url": "https://arxiv.org/abs/2503.13992",
+        "year": "2025",
+        "bearing": "SUPPORTS (residue resists current best minds; quantifies the slow-digestion failure)"
+      },
+      {
+        "claim": "Formal grounding for treating single-pass NLL as the Shannon/INSTANT-CRUSH bound AND for the slow-digestion=program-search limit: standard LLM training (next-token log-loss minimization) is proven to be a COMPUTABLE APPROXIMATION TO SOLOMONOFF INDUCTION, with 'loss minimization interpreted as program-length optimization' -- i.e., the cross-entropy you pay IS an estimate of the shortest-program codelength, and the irreducible NLL floor is the AIT residue. Gives a single algorithmic-information lens unifying in-context learning, few-shot, and scaling laws. Caveat for us: it says NLL already approximates Solomonoff (the Kolmogorov limit), which slightly blurs our sharp INSTANT-CRUSH(=Shannon) vs SLOW-DIGESTION(=Kolmogorov) dichotomy -- the gap we exploit is the COMPUTABLE-vs-uncomputable gap, not Shannon-vs-Kolmogorov in principle.",
+        "source": "Large Language Models as Computable Approximations to Solomonoff Induction (arXiv:2505.15784; submitted ICLR 2026)",
+        "url": "https://arxiv.org/abs/2505.15784",
+        "year": "2025",
+        "bearing": "SUPPORTS, with a CHALLENGE to the clean Shannon/Kolmogorov framing of the two modes"
+      },
+      {
+        "claim": "Prequential MDL and a new quantity, Excess Description Length (EDL), give the canonical name + math for our 'digestion-trace' / 'resistance-curve.' Prequential MDL = sum_i loss(theta_{i-1}; x_i,y_i): the total bits to transmit labels sequentially using the EVOLVING model, predicting before updating. EDL = MDL - n*L_test(theta*) = sum_i [loss(theta_{i-1}) - L_test(theta*)] = the accumulated PER-EXAMPLE EXCESS LOSS = information absorbed from data into parameters as you digest it. This per-step excess-loss series is precisely a resistance-curve over a digestion trace. They prove EDL >= 0 for population-monotonic learners and that it bounds generalization. Term we are reinventing: 'resistance-curve' ~ the prequential/EDL codelength curve.",
+        "source": "Excess Description Length of Learning Generalizable Predictors (Donoway, Joren, Roger, Leike), arXiv:2601.04728",
+        "url": "https://arxiv.org/html/2601.04728",
+        "year": "2026",
+        "bearing": "EXTENDS (gives our digestion-trace/resistance-curve a published name: prequential MDL / EDL)"
+      },
+      {
+        "claim": "Direct theoretical support for 'measured_bits = the residue that RESISTS compression' as a UNIVERSAL (not model-specific) floor: finite-capacity models must commit IRREDUCIBLE ERROR on incompressible / long-tail facts -- 'finite description length enforces compression error' and 'long-tail factual knowledge requires prohibitive sample complexity.' Hallucination is derived as INTRINSIC via computability theory: 'diagonalization guarantees inputs on which some model must fail' and undecidable (halting-style) queries 'induce infinite failure sets for all computable predictors.' These are mathematical limits, not engineering gaps -- exactly our 'resist-the-best-mind' residue, generalized from one observer to ALL computable observers.",
+        "source": "On the Fundamental Limits of LLMs at Scale (Mohsin et al.), arXiv:2511.12869",
+        "url": "https://arxiv.org/abs/2511.12869",
+        "year": "2025",
+        "bearing": "SUPPORTS (universal residue: irreducible error floor for all finite/computable minds)"
+      },
+      {
+        "claim": "The compression-as-intelligence thesis our spec sits on is now an active 2025-26 program with deployable artifacts, not just theory: LLM-as-lossless-compressor (arithmetic coding driven by next-token probs) doubles classical lossless rates across text/image/audio/video, and compressing LLM-generated text via next-token prediction exceeds 20x vs gzip's ~3x. The arithmetic-coder pipeline is the canonical instantiation of 'single-pass NLL = Shannon codelength' (INSTANT-CRUSH). Caveat: these are the Shannon/coding half only -- none of them attempt program-search or a verified-dissolve gate, which is exactly the gap our spec adds on top.",
+        "source": "Algorithm based on LLMs doubles lossless data compression rates (TechXplore, on DeepMind/Tsinghua work) + Lossless Compression of LLM-Generated Text via Next-Token Prediction (arXiv:2505.06297)",
+        "url": "https://arxiv.org/abs/2505.06297",
+        "year": "2025",
+        "bearing": "SUPPORTS the INSTANT-CRUSH=Shannon leg; the program-search/verified-dissolve leg remains our novel contribution"
+      },
+      {
+        "claim": "Test-time-compute (reasoning budgets, verifier-guided MCTS / adaptive branching search) is the mechanism that our SLOW-DIGESTION leg names, and it is now a surveyed field: models 'decompose complex problems into intermediate steps or explore multiple solution paths in parallel,' with explicit, controllable thinking-token budgets (Claude 3.7's thinking budget, o1 thinking modes). This is the literal apparatus for 'spend more compute to derive a shorter program.' Gap worth citing: the KT paper notes current systems generate ONE program per sequence with NO multi-sample search -- so coupling verifier-guided TTC search to the verified-dissolve gate is an open, fundable move our spec could claim.",
+        "source": "Reasoning on a Budget: A Survey of Adaptive and Controllable Test-Time Compute in LLMs (arXiv:2507.02076)",
+        "url": "https://arxiv.org/html/2507.02076v1",
+        "year": "2025",
+        "bearing": "EXTENDS (names the slow-digestion engine; flags an open gap: TTC-search + verified-dissolve)"
+      }
+    ],
+    "bottom_line": "The framing HOLDS and is well-supported, but it is NOT virgin territory -- two of its load-bearing moves already exist in the literature under other names, and you should cite them rather than reinvent. (1) Strongest prior art to cite, front and center: The KoLMogorov Test (ICLR 2025, arXiv:2503.13992). It independently implements our VERIFIED-DISSOLVE gate and our slow-digestion=program-search idea almost verbatim: emit the shortest program, EXECUTE it, exact-match indicator 1{[rho]=x}, codelength = program length, and a coding cost that is +infinity whenever the program does not reproduce the target. If we publish 'a derivation discounts bits only if it exactly reconstructs the target,' a reviewer will point straight here. Our differentiator is the CONJUGATE DIGESTION-TRACE (attempts/tokens/strategy/resistance-curve as a first-class object) and binding TTC-search to the gate -- KT itself notes it does single-shot generation with no test-time search, so that coupling is genuinely open. (2) Terms we are reinventing: our 'resistance-curve / digestion-trace' is the PREQUENTIAL MDL codelength curve, and the per-step version is EXCESS DESCRIPTION LENGTH (EDL) (arXiv:2601.04728, Jan 2026) -- adopt 'prequential codelength' and 'EDL' as the formal names. 'measured_bits = residue resisting the best mind' is, at the universal limit, the algorithmic-randomness / irreducible-error floor formalized by 'On the Fundamental Limits of LLMs at Scale' (arXiv:2511.12869) -- cite it for the 'resist-the-best-mind' universality. (3) One framing wrinkle to fix: the Solomonoff-surrogate paper (arXiv:2505.15784) argues single-pass NLL ALREADY approximates Solomonoff/Kolmogorov, so our crisp 'INSTANT-CRUSH = Shannon vs SLOW-DIGESTION = Kolmogorov' dichotomy is better stated as COMPUTABLE-single-pass (cheap, leaves residue) vs COMPUTE-BOUNDED-program-search (expensive, dissolves verifiable residue) -- both approximate the same uncomputable ideal; the dial is compute spent, not Shannon-vs-Kolmogorov in principle. Net: keep the spec, rename the trace to prequential-MDL/EDL, lead citations with the Kolmogorov Test, and stake the novel claim on the conjugate digestion-trace + verifier-guided-TTC-dissolve loop, which the literature has set up but not closed."
+  },
+  {
+    "angle": "verified-reasoning",
+    "findings": [
+      {
+        "claim": "The KoLMogorov Test reframes intelligence as compression-by-code-generation: a model is shown a data sequence and must 'generate the shortest program that produces the sequence,' treating code-generating LLMs as upper bounds on Kolmogorov complexity. It explicitly requires 'reasoning, planning and search capabilities' (program-search), not single-pass prediction. This IS your SLOW-DIGESTION axis under a different name, and confirms the instant-crush (Shannon/NLL) vs slow-digestion (Kolmogorov program-search) split is the established compression-vs-code-generation duality. Flagship models perform poorly (GPT-4o fails 45% synthetic, 95% natural audio; Llama-3.1-405B fails 66%), which empirically grounds your 'universal residue = resist-the-best-mind': even the best minds leave large incompressible residue on natural data.",
+        "source": "The KoLMogorov Test: Compression by Code Generation (Yoran, Zheng, Gloeckle, Gehring, Synnaeve, Cohen; Meta FAIR / Tel Aviv)",
+        "url": "https://arxiv.org/abs/2503.13992",
+        "year": "2025",
+        "bearing": "SUPPORTS (strongest prior art for the slow-digestion = Kolmogorov-program-search axis; provides the canonical citation and the resist-the-best-mind residue evidence). Term we are reinventing: SLOW-DIGESTION ≈ 'compression by code generation' / KT."
+      },
+      {
+        "claim": "LLM compression is formalized as a TWO-PART CODE via the Kolmogorov Structure Function: K(M) (description of the model/program) plus L_M(X) (the data-to-model code), with an irreducible entropy term H(P_phi) — 'the extra code length beyond H(P_phi)' is named redundancy, and H(P_phi) captures 'pure randomness... incompressible noise... information the model cannot compress due to capacity constraints.' This is an exact, citable formalization of your measured_bits = the residue that resists compression after a program is paid for. The structure-function two-part split (model vs residual) is precisely your INSTANT-CRUSH (single-pass NLL, the L_M term) vs the program one pays for (the K(M) term).",
+        "source": "Understanding LLM Behaviors via Compression: Data Generation, Knowledge Acquisition and Scaling Laws (Pan, Wang, Liao, Li; Tsinghua / Beihang)",
+        "url": "https://arxiv.org/abs/2504.09597",
+        "year": "2025",
+        "bearing": "SUPPORTS / EXTENDS (gives the rigorous Kolmogorov-Structure-Function backbone for measured_bits as residual; the H(P_phi) 'incompressible residue' is your universal residue made precise). Term we are reinventing: measured_bits ≈ the structure-function residual / redundancy beyond H(P_phi)."
+      },
+      {
+        "claim": "Verifying Chain-of-Thought via its computational graph: a reasoning step 'counts as genuinely derived only if it demonstrates causal influence on subsequent outputs — not merely if it appears plausible.' They build computational dependency graphs and ask whether a step is 'computationally reconstructed as necessary, or guessed/added post-hoc.' This is a mechanistic implementation of your VERIFIED-DISSOLVE gate: a derivation only discounts bits if it genuinely reconstructs/produces the target, not if it merely looks like a plausible explanation. It supplies a concrete falsifier for hallucinated derivations.",
+        "source": "Verifying Chain-of-Thought Reasoning via Its Computational Graph (Zhao, Koishekenov, Yang, Murray, Cancedda; Meta)",
+        "url": "https://arxiv.org/abs/2510.09312",
+        "year": "2025",
+        "bearing": "SUPPORTS (mechanistic prior art for the verified-dissolve gate — 'derived' must mean causally-reconstructed, not post-hoc plausible). Term we are reinventing: VERIFIED-DISSOLVE gate ≈ computational-graph faithfulness / 'mechanistically necessary' verification."
+      },
+      {
+        "claim": "Anthropic's faithfulness work establishes that reasoning models 'don't always say what they think' — verbalized CoT can be unfaithful/post-hoc rationalization rather than the actual computation. This is the threat your verified-dissolve gate must defend against: a plausible-looking derivation that does NOT reconstruct the target should not be allowed to discount measured_bits. It motivates requiring EXACT reconstruction (execute-verify) rather than trusting a derivation narrative.",
+        "source": "Reasoning Models Don't Always Say What They Think (Anthropic) + Chain-of-Thought Reasoning in the Wild Is Not Always Faithful",
+        "url": "https://www.anthropic.com/research/reasoning-models-dont-say-think",
+        "year": "2025",
+        "bearing": "SUPPORTS / CHALLENGES (supports the NEED for a gate; challenges any version of the spec that would discount bits on an unverified derivation trace — the gate must be execute-verify, not read-the-CoT)."
+      },
+      {
+        "claim": "Joint evaluation of answer- and reasoning-consistency for hallucination detection in large reasoning models, plus streaming hallucination detection in long CoT, operationalize catching a derivation that diverges from a verifiable target. They check that the reasoning is consistent with (reconstructs) the answer, mirroring your gate's 'discount only if it exactly reconstructs the target.' Streaming detection over a long trace is an empirical analog of your RESISTANCE-CURVE / digestion-trace (where in the trace the derivation breaks).",
+        "source": "Joint Evaluation of Answer and Reasoning Consistency for Hallucination Detection in Large Reasoning Models; Streaming Hallucination Detection in Long Chain-of-Thought Reasoning",
+        "url": "https://arxiv.org/abs/2506.04832",
+        "year": "2025",
+        "bearing": "SUPPORTS / EXTENDS (answer↔reasoning consistency = a practical verified-dissolve check; streaming detection extends the digestion-trace into a per-step resistance signal)."
+      },
+      {
+        "claim": "Probabilistic Soundness Guarantees in LLM Reasoning Chains assigns calibrated soundness probabilities to each step of a derivation, giving a graded (non-Boolean) verification rather than a single pass/fail. This directly supports a softened verified-dissolve gate: instead of binary 'exactly reconstructs,' a derivation earns a soundness-weighted bit-discount — compatible with your agnostic 0.99-not-Boolean instrument stance.",
+        "source": "Probabilistic Soundness Guarantees in LLM Reasoning Chains",
+        "url": "https://arxiv.org/abs/2507.12948",
+        "year": "2025",
+        "bearing": "EXTENDS (offers a probabilistic version of the gate so VERIFIED-DISSOLVE can be graded, matching your agnostic-instrument framing rather than a hard Boolean)."
+      },
+      {
+        "claim": "'Think Deep, Not Just Long' introduces deep-thinking tokens to measure reasoning EFFORT per problem rather than raw token count, distinguishing 'problems requiring extensive working-through (high reasoning effort)' from 'problems solvable more directly.' Companion 2025-2026 work predicts per-query reasoning length/difficulty and adapts compute (2-4x savings), and derives reasoning-quality signals from internal token distributions / entropy trajectories. Together these are the literature's version of your conjugate DIGESTION-TRACE (attempts/tokens/strategy) and RESISTANCE-CURVE: difficulty-of-derivation is measured by how much test-time compute the target extracts.",
+        "source": "Think Deep, Not Just Long: Measuring LLM Reasoning Effort via Deep-Thinking Tokens (Chen et al.); + Entropy trajectory shape predicts LLM reasoning reliability; + difficulty-adaptive self-consistency",
+        "url": "https://arxiv.org/abs/2602.13517",
+        "year": "2026",
+        "bearing": "SUPPORTS / EXTENDS (effort-per-problem and entropy-trajectory shape are direct analogs of the digestion-trace and resistance-curve — measured_bits as 'how hard the best mind has to work'). Term we are reinventing: resistance-curve ≈ reasoning-effort / entropy-trajectory profile; digestion-trace ≈ deep-thinking-token / per-query difficulty signal."
+      },
+      {
+        "claim": "Verifier-free inference-time scaling via self-consistency (CISC, Reliability-Aware ASC) shows agreement/confidence across sampled derivations is itself a usable difficulty/correctness signal, with 40-80% compute savings by early-halting on easy (low-resistance) items. Self-consistency dispersion is a verifier-free proxy for derivation difficulty: items where many independent program-searches converge are 'easily digested'; items with high dispersion resist. This supports using self-consistency as a CHEAP resistance estimate when the exact-reconstruction gate is unavailable.",
+        "source": "Confidence-Informed Self-Consistency (CISC); Reliability-Aware Adaptive Self-Consistency (ReASC); A Theoretical Study on Bridging Internal Probability and Self-Consistency",
+        "url": "https://arxiv.org/abs/2510.15444",
+        "year": "2025",
+        "bearing": "EXTENDS / partially CHALLENGES (self-consistency is a verifier-FREE difficulty proxy — useful, but CHALLENGES strict verified-dissolve because convergence ≠ exact reconstruction; convergent-but-wrong derivations exist, so self-consistency can over-discount bits without an execution check)."
+      },
+      {
+        "claim": "Vericoding / formally-verified program synthesis benchmarks require a generated program to pass a formal specification (Dafny/Verus proof), i.e. an executable EXACT-reconstruction gate on synthesized programs. This is the engineering instantiation of VERIFIED-DISSOLVE for the program-search (slow-digestion) side: a candidate short program only counts if it provably produces the target spec. It also flags the scaling limit you should cite — current verified-synthesis benchmarks are small (<10^3, often single-function), so the gate is real but not yet at natural-data scale.",
+        "source": "A Benchmark for Vericoding: Formally Verified Program Synthesis",
+        "url": "https://arxiv.org/abs/2509.22908",
+        "year": "2025",
+        "bearing": "SUPPORTS (formal verify-gate on synthesized programs = the execute-verify half of verified-dissolve on the Kolmogorov side; also a caution on scale)."
+      }
+    ],
+    "bottom_line": "The framing holds and is, in fact, the convergent direction of the 2025-2026 literature — but almost every term is being independently reinvented, so the priority move is to cite rather than coin. (1) INSTANT-CRUSH vs SLOW-DIGESTION is exactly the Shannon/NLL-vs-Kolmogorov-program-search duality; the two strongest citations are the KoLMogorov Test (Yoran et al., 2503.13992, 2025 — slow-digestion = 'shortest program that produces the sequence,' and its poor model scores empirically support 'resist-the-best-mind') and the Kolmogorov-Structure-Function two-part coding paper (Pan et al., 2504.09597, 2025), which gives measured_bits a rigorous home as the residual/redundancy beyond H(P_phi). Lead with these two. (2) The VERIFIED-DISSOLVE gate is well-supported and should be hardened to execute-verify, not read-the-trace: cite CoT-computational-graph verification (Zhao et al., 2510.09312, 'derived only if causally necessary') and the Anthropic faithfulness results (CoT is often post-hoc) as the threat model, with Vericoding (2509.22908) as the formal/executable instantiation on the program side. (3) The conjugate DIGESTION-TRACE / RESISTANCE-CURVE already exists as reasoning-effort metrics ('Think Deep, Not Just Long,' 2602.13517, 2026) and entropy-trajectory / per-query-difficulty work — adopt 'reasoning effort' / 'entropy trajectory' as the established vocabulary. Terms we are reinventing: SLOW-DIGESTION ≈ compression-by-code-generation (KT); measured_bits ≈ structure-function residual / H(P_phi); VERIFIED-DISSOLVE ≈ computational-graph faithfulness / formal verify-gate; resistance-curve ≈ reasoning-effort / entropy-trajectory; universal-residue (resist-the-best-mind) ≈ Kolmogorov upper-bound gap on natural data. One genuine tension to flag in the spec: self-consistency (CISC/ReASC) is a cheap verifier-FREE difficulty proxy but is NOT a sound substitute for the exact-reconstruction gate — convergent-but-wrong derivations can over-discount bits, so the spec should keep self-consistency strictly as a resistance ESTIMATE and reserve bit-discounting for execution-verified reconstructions (optionally probabilistically softened per 2507.12948 to match the agnostic 0.99-not-Boolean instrument stance). The novel contribution that is NOT yet in the literature, and worth keeping as your own: unifying these into a single conjugate pair where the digestion-trace is the observer-relative dual of the residue, and asserting a UNIVERSAL residue against the best available mind — the field has each piece (KT residue, structure-function residual, faithfulness gate, effort metric) but has not fused them into one observer-indexed measured_bits law."
+  },
+  {
+    "angle": "decoder-relative-info",
+    "findings": [
+      {
+        "claim": "Predictive V-information: a variational generalization of Shannon information that explicitly relativizes information content to an observer/decoder with bounded modeling power and compute. When the predictor family V is unrestricted (all functions), it reduces exactly to Shannon mutual information; when V is bounded, usable information is strictly less. CRITICAL for our spec: unlike Shannon MI, V-information VIOLATES the data processing inequality — it can be CREATED through computation. This is the precise formal precedent for SLOW-DIGESTION: a reasoning/search process that derives structure legitimately raises the decoder's usable information (lowers the residue), where a single forward pass could not.",
+        "source": "A Theory of Usable Information Under Computational Constraints (Xu, Zhao, Song, Stewart, Ermon)",
+        "url": "https://arxiv.org/abs/2002.10689",
+        "year": "2020",
+        "bearing": "SUPPORTS — this is the strongest and most direct prior art for the entire 'decoder-relative residue' framing; 'measured_bits = what resists an observer's compression' is essentially the complement of V-usable information for that observer. We are reinventing 'V-usable information' / 'predictive V-information'. The DPI-violation result formally licenses our INSTANT-CRUSH vs SLOW-DIGESTION split."
+      },
+      {
+        "claim": "V-usable information operationalized as dataset/instance difficulty, with Pointwise V-Information (PVI) giving a per-instance score: how much usable information a fixed model V can extract about the label from one input. Higher PVI = easier instance for that decoder; low/negative PVI = the instance resists that model. Computed via the gap between conditional and unconditional V-entropy (model NLL with vs without the input).",
+        "source": "Understanding Dataset Difficulty with V-Usable Information (Ethayarajh, Choi, Swayamdipta), ICML 2022",
+        "url": "https://arxiv.org/abs/2110.08420",
+        "year": "2021",
+        "bearing": "SUPPORTS/EXTENDS — PVI is the per-item analogue of our per-target residue; our 'resistance-curve' is a richer, trace-valued generalization of the scalar PVI. Cite as the canonical instance-level decoder-relative difficulty metric. We are reinventing PVI's scalar; our conjugate digestion-trace EXTENDS it from a scalar to a process."
+      },
+      {
+        "claim": "Language Modeling Is Compression: log-loss minimization for next-token prediction is provably equivalent to a lossless compression objective; the optimal code length of a token is its negative log-likelihood (Shannon source coding). LLMs are therefore general-purpose single-pass compressors, beating PNG/FLAC on some modalities via arithmetic coding over the model's predictions.",
+        "source": "Language Modeling Is Compression (Delétang, Ruoss, et al., DeepMind), ICLR 2024",
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2024/file/3cbf627fa24fb6cb576e04e689b9428b-Paper-Conference.pdf",
+        "year": "2024",
+        "bearing": "SUPPORTS — this is the exact formal grounding of our INSTANT-CRUSH leg: single-pass NLL = Shannon coding length. It pins the 'instant-crush = Shannon' identity to a peer-reviewed result. Term we lean on: 'log-loss = expected code length'."
+      },
+      {
+        "claim": "The KoLMogorov Test (KT): present a model a data sequence and ask it to emit the SHORTEST PROGRAM that, when executed, outputs that sequence and halts — an explicit, computable approximation to Kolmogorov complexity (shortest-program search). Programs are EXECUTED and must reproduce the target; the score is program length. Models compress far better by generating executable code than by direct sequence compression. Because K is uncomputable (halting problem), the benchmark is non-saturating — a 'never-ending challenge' / benchmark that by definition cannot be maxed out.",
+        "source": "The KoLMogorov Test: Compression by Code Generation (Meta AI / FAIR), ICLR 2025",
+        "url": "https://arxiv.org/abs/2503.13992",
+        "year": "2025",
+        "bearing": "SUPPORTS — near-perfect match for THREE of our pillars at once: (a) SLOW-DIGESTION = derive-a-short-program = program search, exactly KT's task; (b) our VERIFIED-DISSOLVE gate = KT's execute-and-check that the program reconstructs the target (they enforce exact reproduction, the bits only count if the decode is correct); (c) our 'universal residue / resist-the-best-mind' = KT's uncomputable, non-saturating Kolmogorov ideal. Strongest single paper to cite for the program-search half. We are reinventing 'compression by code generation' and the K-complexity residue."
+      },
+      {
+        "claim": "Incompressibility / Kolmogorov randomness: the overwhelming majority of strings are 'incompressible' (K(x) >= |x|) — no program shorter than the string itself reproduces it; such strings are the irreducible residue that resists ALL effective compression. Randomness is measured by the gap |x| - K(x).",
+        "source": "Kolmogorov Complexity in Perspective (Ferbus-Zanda & Grigorieff); classical Li & Vitányi result",
+        "url": "https://arxiv.org/pdf/1010.3201",
+        "year": "2010",
+        "bearing": "SUPPORTS — formal backbone of our 'universal residue = resist-the-best-mind': the incompressible core is exactly what survives even the optimal (universal) decoder. Caveat to flag in the spec: K is uncomputable AND machine-dependent up to an additive constant, so the 'universal' residue is only defined up to a fixed constant / choice of universal machine — our 'best mind' is necessarily a CONCRETE approximator (an LLM-class searcher), not literally U."
+      },
+      {
+        "claim": "Stepwise Informativeness Assumption: each chain-of-thought step is modeled as a progressive information-refinement operation that incrementally reduces uncertainty about the final answer; entropy dynamics across the reasoning trace correlate with reasoning quality, and 'true' (load-bearing) steps are distinguishable from decorative ones by their entropy signature.",
+        "source": "The Stepwise Informativeness Assumption: Why are Entropy Dynamics and Reasoning Correlated in LLMs? (Gonzàlez i Català, Sáez de Ocáriz Borde, Montañez, Liò)",
+        "url": "https://arxiv.org/pdf/2604.06192",
+        "year": "2026",
+        "bearing": "EXTENDS — direct support for our conjugate DIGESTION-TRACE and RESISTANCE-CURVE: a reasoning trajectory IS an information-gain curve, step-by-step, and per-step informativeness is measurable. Lets us ground 'attempts/tokens/strategy/resistance-curve' in a measurable per-step entropy-reduction signal rather than treating the trace as opaque. Also relevant: 'Let Me Think! A Long CoT Can Be Worth Exponentially Many Short Ones' (arXiv 2505.21825) for why digestion depth can pay off super-linearly."
+      },
+      {
+        "claim": "V-usable-information machinery has migrated INTO LLM internals in 2024-2025: it is used to score which layers/hidden states carry usable information toward the answer (V-usable Information based Layer Enhancement; conditional probing 'beyond a baseline'; layer-wise information deficiency for hallucination detection). I.e., the decoder-relative-information measure is now a live, applied instrument, not just theory.",
+        "source": "Exploiting Contextual Knowledge in LLMs through V-usable Information based Layer Enhancement; Conditional probing (Hewitt et al.)",
+        "url": "https://arxiv.org/pdf/2504.15630",
+        "year": "2025",
+        "bearing": "SUPPORTS — shows the field already treats 'usable information relative to a specific decoder/probe' as a standard, deployable measurement. Strengthens the case that our residue is measurable in practice. 'Conditional probing: measuring usable information beyond a baseline' is the term to adopt if we want a BASELINE-RELATIVE residue (residue = bits left AFTER a cheap baseline decoder), which maps onto INSTANT-CRUSH (baseline) vs SLOW-DIGESTION (enhanced decoder)."
+      },
+      {
+        "claim": "Agentic / pragmatic information theory: information content is defined only relative to an agent's control structure (an 'emulation mapping' / semantic interpretation), distinguishing dynamics-defined Shannon information from agent-relative pragmatic information; meaning arises from the tension between an event's representation at different levels and how it updates the agent's anticipation.",
+        "source": "Agentic Information Theory: Ergodicity and Intrinsic Semantics of Information Processes; Kolchinsky & Wolpert 'Semantic information, autonomous agency and non-equilibrium statistical physics' (Royal Society)",
+        "url": "https://arxiv.org/pdf/2505.19275",
+        "year": "2025",
+        "bearing": "SUPPORTS (philosophical flank) — independent, physics/agency-side confirmation that 'information is relative to the observer/agent, not intrinsic to the substrate.' Useful to cite for the 'agent-relative bits' framing and to connect to your broader observer-global-kernel frame work, but it is value/semantics-flavored rather than compression-operationalized, so it is a supporting flank, not the load-bearing citation."
+      }
+    ],
+    "bottom_line": "The framing HOLDS and is well-positioned — almost every pillar of 'digestion dynamics' has an exact, citable formal precedent, which is good news (you are on solid ground) and a caution (several core terms are being reinvented). Map of the spec onto prior art: (1) INSTANT-CRUSH = single-pass NLL = Shannon coding length is locked by 'Language Modeling Is Compression' (ICLR 2024). (2) SLOW-DIGESTION = derive-a-short-program = Kolmogorov program search is the literal task of 'The KoLMogorov Test' (ICLR 2025), which also already implements your VERIFIED-DISSOLVE gate (programs are executed and must losslessly reproduce the target before their length counts) and your non-saturating universal-residue intuition (K is uncomputable). (3) The deepest and most important prior art is predictive V-information (Xu et al., ICLR 2020) + Pointwise V-Information (Ethayarajh et al., ICML 2022): 'measured_bits = residue that resists an observer's compression' is precisely the complement of V-usable information for that observer, and Xu's result that V-information VIOLATES the data-processing inequality (it can be CREATED by computation) is the formal license for letting reasoning/test-time-compute legitimately discount bits. STRONGEST PRIOR ART TO CITE, in order: Xu et al. 2020 (the relativization theorem), Ethayarajh et al. 2022 (per-instance PVI), The KoLMogorov Test 2025 (program-search + exact-decode gate + uncomputable residue), Language Modeling Is Compression 2024 (the Shannon=NLL leg). TERMS YOU ARE REINVENTING — rename or explicitly position against them or reviewers will flag it: your 'resist-the-observer's-compression residue' = V-usable information's complement; your per-target difficulty = PVI; your 'derive a short program' = compression-by-code-generation; your 'universal residue / resist-the-best-mind' = Kolmogorov-randomness / incompressibility (with the standard caveat: K is uncomputable and machine-dependent up to an additive constant, so 'best mind' must be a concrete approximator, not literally the universal machine U). GENUINELY NOVEL CONTRIBUTION (defensible as new): the CONJUGATE DIGESTION-TRACE — treating the resistance-curve (attempts/tokens/strategy/per-step information gain) as a first-class, measurable object rather than a scalar. PVI is a scalar; the Stepwise Informativeness work (2026) measures per-step entropy reduction but does not tie it to a compression-residue ledger. Your trace = PVI made process-valued and gated by verified-dissolve. That is the part worth foregrounding. One framing fix: adopt 'conditional probing beyond a baseline' (Hewitt et al.) language to make INSTANT-CRUSH the baseline decoder and SLOW-DIGESTION the enhanced decoder, which gives you a clean, already-accepted operationalization of 'residue = bits left after the cheap decoder gives up.'"
+  }
+]
