@@ -1,0 +1,1091 @@
+{
+  "_meta": {
+    "what": "per-channel recompile of the agnostic dynamics substrate for 'jungle'",
+    "law": "render(W_C) <= members support - bits_discarded; channel = materialized view of L0"
+  },
+  "channel": "jungle",
+  "config": {
+    "constellate_by": "family",
+    "branch_by": "creatures_underlain"
+  },
+  "constellations": [
+    {
+      "emergent_W_C": "frame",
+      "n": 5,
+      "render": 0.611,
+      "spread": 0.105,
+      "honest": "mid",
+      "members": [
+        {
+          "id": "dyn-frame-the-referee-constitutive-ruleset-and-win-condition",
+          "name": "The Referee (constitutive ruleset and win-condition)",
+          "type": "creature",
+          "render": 0.9
+        },
+        {
+          "id": "dyn-frame-the-red-queen-co-adaptation-arms-race-across-episo",
+          "name": "The Red Queen (co-adaptation / arms race across episodes)",
+          "type": "creature",
+          "render": 0.85
+        },
+        {
+          "id": "dyn-frame-the-crowd-distributed-collective-solving-and-socia",
+          "name": "The Crowd (distributed / collective solving and social scaffolding)",
+          "type": "creature",
+          "render": 0.8
+        },
+        {
+          "id": "dyn-frame-the-nesting-scale-hierarchy-renormalization-of-the",
+          "name": "The Nesting (scale, hierarchy, renormalization of the match)",
+          "type": "creature",
+          "render": 0.72
+        },
+        {
+          "id": "dyn-frame-the-prize-field-external-incentive-landscape-and-s",
+          "name": "The Prize-Field (external incentive landscape and signalling) — FLAGGED PARTIAL DUP",
+          "type": "creature",
+          "render": 0.6
+        }
+      ]
+    },
+    {
+      "emergent_W_C": "coupling",
+      "n": 10,
+      "render": 0.6,
+      "spread": 0.0,
+      "honest": "tight->crisp",
+      "members": [
+        {
+          "id": "dyn-coupling-the-red-queen-coevolutionary-arms-race",
+          "name": "The Red Queen (coevolutionary arms race)",
+          "type": "coupling",
+          "render": 0.6
+        },
+        {
+          "id": "dyn-coupling-the-mirror-back-reaction-one-loop-at-three-scales",
+          "name": "The Mirror (back-reaction, one loop at three scales)",
+          "type": "coupling",
+          "render": 0.6
+        },
+        {
+          "id": "dyn-coupling-goodhart-referee-mirror",
+          "name": "Goodhart (referee <-> mirror)",
+          "type": "coupling",
+          "render": 0.6
+        },
+        {
+          "id": "dyn-coupling-deadline-panic-clock-x-phantom",
+          "name": "Deadline-panic (clock x phantom)",
+          "type": "coupling",
+          "render": 0.6
+        },
+        {
+          "id": "dyn-coupling-flow-vs-choking-grip-x-observer-state",
+          "name": "Flow vs Choking (grip x observer-state)",
+          "type": "coupling",
+          "render": 0.6
+        },
+        {
+          "id": "dyn-coupling-engage-entrench-the-pull-defense",
+          "name": "Engage-Entrench (the pull <-> defense)",
+          "type": "coupling",
+          "render": 0.6
+        },
+        {
+          "id": "dyn-coupling-the-cascade-crowd-excitable-medium",
+          "name": "The Cascade (crowd <-> excitable-medium)",
+          "type": "coupling",
+          "render": 0.6
+        },
+        {
+          "id": "dyn-coupling-the-treadmill-amortization-red-queen-autocurriculu",
+          "name": "The Treadmill (amortization <-> Red-Queen / autocurriculum)",
+          "type": "coupling",
+          "render": 0.6
+        },
+        {
+          "id": "dyn-coupling-the-rabbit-hole-suck-you-in-sunk-cost-escalation",
+          "name": "The Rabbit-Hole (suck-you-in sunk-cost escalation)",
+          "type": "coupling",
+          "render": 0.6
+        },
+        {
+          "id": "dyn-coupling-the-quiet-stale-drift-amortization-the-dormant-rot",
+          "name": "The Quiet Stale (drift <-> amortization, the dormant-rot loop)",
+          "type": "coupling",
+          "render": 0.6
+        }
+      ]
+    },
+    {
+      "emergent_W_C": "tactic:ask-give-loop",
+      "n": 7,
+      "render": 0.6,
+      "spread": 0.0,
+      "honest": "tight->crisp",
+      "members": [
+        {
+          "id": "dyn-tactic-ask-give-loop-anchor-and-concede-set-the-reference-then-trade-gr",
+          "name": "Anchor-and-concede (set the reference, then trade ground)",
+          "type": "tactic",
+          "render": 0.6
+        },
+        {
+          "id": "dyn-tactic-ask-give-loop-burden-shift-commitment-trap-make-them-owe-the-ans",
+          "name": "Burden-shift / commitment-trap (make THEM owe the answer)",
+          "type": "tactic",
+          "render": 0.6
+        },
+        {
+          "id": "dyn-tactic-ask-give-loop-selective-disclosure-strategic-withholding-the-tru",
+          "name": "Selective disclosure / strategic withholding (the true subset that misleads)",
+          "type": "tactic",
+          "render": 0.6
+        },
+        {
+          "id": "dyn-tactic-ask-give-loop-costly-signal-vs-bluff-the-honesty-of-the-give-due",
+          "name": "Costly-signal vs bluff (the honesty-of-the-GIVE duel)",
+          "type": "tactic",
+          "render": 0.6
+        },
+        {
+          "id": "dyn-tactic-ask-give-loop-query-then-update-the-closed-loop-clock-probe-revi",
+          "name": "Query-then-update (the closed-loop clock: probe, revise, re-probe)",
+          "type": "tactic",
+          "render": 0.6
+        },
+        {
+          "id": "dyn-tactic-ask-give-loop-the-hydra-each-answer-spawns-more-questions",
+          "name": "The Hydra (each answer spawns more questions)",
+          "type": "tactic",
+          "render": 0.6
+        },
+        {
+          "id": "dyn-tactic-ask-give-loop-reciprocity-tit-for-tat-coupling-the-loop-s-iterat",
+          "name": "Reciprocity / tit-for-tat coupling (the loop's iterated-game memory)",
+          "type": "tactic",
+          "render": 0.6
+        }
+      ]
+    },
+    {
+      "emergent_W_C": "tactic:problem-defense",
+      "n": 12,
+      "render": 0.6,
+      "spread": 0.0,
+      "honest": "tight->crisp",
+      "members": [
+        {
+          "id": "dyn-tactic-problem-defense-hardened-membrane-irreducible-gatekeeping",
+          "name": "Hardened Membrane (irreducible gatekeeping)",
+          "type": "tactic",
+          "render": 0.6
+        },
+        {
+          "id": "dyn-tactic-problem-defense-slick-skin-no-traction-evasion",
+          "name": "Slick Skin (no-traction evasion)",
+          "type": "tactic",
+          "render": 0.6
+        },
+        {
+          "id": "dyn-tactic-problem-defense-good-suit-lie-read-corruption-fake-corroboration",
+          "name": "Good-Suit Lie (read-corruption / fake corroboration)",
+          "type": "tactic",
+          "render": 0.6
+        },
+        {
+          "id": "dyn-tactic-problem-defense-the-honeypot-fabricate-a-false-kernel-to-absorb-ef",
+          "name": "The Honeypot (fabricate a false kernel to absorb effort)",
+          "type": "tactic",
+          "render": 0.6
+        },
+        {
+          "id": "dyn-tactic-problem-defense-sandbag-strategic-underperformance-hide-your-own-f",
+          "name": "Sandbag / strategic underperformance (hide your own floor)",
+          "type": "tactic",
+          "render": 0.6
+        },
+        {
+          "id": "dyn-tactic-problem-defense-drive-capture-suck-you-in-motive-hijack",
+          "name": "Drive-Capture (suck-you-in / motive hijack)",
+          "type": "tactic",
+          "render": 0.6
+        },
+        {
+          "id": "dyn-tactic-problem-defense-sticky-residue-contamination-can-t-release",
+          "name": "Sticky Residue (contamination / can't-release)",
+          "type": "tactic",
+          "render": 0.6
+        },
+        {
+          "id": "dyn-tactic-problem-defense-hidden-driver-phantom-concealed-gatekeeping",
+          "name": "Hidden Driver (phantom / concealed gatekeeping)",
+          "type": "tactic",
+          "render": 0.6
+        },
+        {
+          "id": "dyn-tactic-problem-defense-steganographic-covert-channel-collusion-the-side-c",
+          "name": "Steganographic / covert-channel collusion (the side-channel GIVE)",
+          "type": "tactic",
+          "render": 0.6
+        },
+        {
+          "id": "dyn-tactic-problem-defense-combinatorial-hydra-overwhelm-by-branching",
+          "name": "Combinatorial Hydra (overwhelm by branching)",
+          "type": "tactic",
+          "render": 0.6
+        },
+        {
+          "id": "dyn-tactic-problem-defense-fake-armor-gradient-masking-goodhart-defense",
+          "name": "Fake Armor (gradient-masking / Goodhart defense)",
+          "type": "tactic",
+          "render": 0.6
+        },
+        {
+          "id": "dyn-tactic-problem-defense-motte-and-bailey-strategic-ambiguity-the-retreatin",
+          "name": "Motte-and-bailey / strategic ambiguity (the retreating-kernel claim)",
+          "type": "tactic",
+          "render": 0.6
+        }
+      ]
+    },
+    {
+      "emergent_W_C": "grip",
+      "n": 6,
+      "render": 0.592,
+      "spread": 0.099,
+      "honest": "mid",
+      "members": [
+        {
+          "id": "dyn-grip-click-shares-the-phase-transition-mechanism-with-p",
+          "name": "Click [shares the phase-transition mechanism with phantom/Regime-flip & critic's Tipping-Point]",
+          "type": "creature",
+          "render": 0.83
+        },
+        {
+          "id": "dyn-grip-suck-you-in-dup-adjacent-to-clock-effort-decay-and",
+          "name": "Suck-you-in [DUP-adjacent to clock/Effort-decay and clock/Debt sunk-cost — kept; motive-capture face]",
+          "type": "creature",
+          "render": 0.82
+        },
+        {
+          "id": "dyn-grip-sticky-absorbs-critic-s-path-hysteresis-half-cousi",
+          "name": "Sticky [absorbs critic's 'Path' hysteresis half; cousin of mat/Sticky-Mat]",
+          "type": "creature",
+          "render": 0.8
+        },
+        {
+          "id": "dyn-grip-slick",
+          "name": "Slick",
+          "type": "creature",
+          "render": 0.78
+        },
+        {
+          "id": "dyn-grip-greased-pole-anti-click-false-fit",
+          "name": "Greased-pole (anti-click / false-fit)",
+          "type": "creature",
+          "render": 0.6
+        },
+        {
+          "id": "dyn-grip-burr-epistemic-residue-can-t-let-go",
+          "name": "Burr (epistemic-residue / can't-let-go)",
+          "type": "creature",
+          "render": 0.6
+        }
+      ]
+    },
+    {
+      "emergent_W_C": "tactic:solver",
+      "n": 13,
+      "render": 0.592,
+      "spread": 0.005,
+      "honest": "tight->crisp",
+      "members": [
+        {
+          "id": "dyn-tactic-solver-probe-query-at-the-cut-information-seeking-ask-whe",
+          "name": "Probe / Query-at-the-cut (information-seeking, ask where it hurts most)",
+          "type": "tactic",
+          "render": 0.6
+        },
+        {
+          "id": "dyn-tactic-solver-adversarial-elicitation-interrogation-the-ask-engi",
+          "name": "Adversarial elicitation / interrogation (the ASK engineered to leak the GIVE)",
+          "type": "tactic",
+          "render": 0.6
+        },
+        {
+          "id": "dyn-tactic-solver-decompose-divide-and-conquer",
+          "name": "Decompose (divide-and-conquer)",
+          "type": "tactic",
+          "render": 0.6
+        },
+        {
+          "id": "dyn-tactic-solver-reduce-transform-to-an-already-solved-problem",
+          "name": "Reduce (transform to an already-solved problem)",
+          "type": "tactic",
+          "render": 0.6
+        },
+        {
+          "id": "dyn-tactic-solver-transfer-analogy-structure-mapping",
+          "name": "Transfer (analogy / structure-mapping)",
+          "type": "tactic",
+          "render": 0.6
+        },
+        {
+          "id": "dyn-tactic-solver-exploit-invariant-leverage-a-known-law-structure",
+          "name": "Exploit-invariant (leverage a known law / structure)",
+          "type": "tactic",
+          "render": 0.6
+        },
+        {
+          "id": "dyn-tactic-solver-search-brute-force-test-time-compute-generate-and-",
+          "name": "Search (brute-force / test-time-compute / generate-and-verify)",
+          "type": "tactic",
+          "render": 0.6
+        },
+        {
+          "id": "dyn-tactic-solver-reframe-representational-change-re-encode-the-kern",
+          "name": "Reframe (representational change / re-encode the kernel)",
+          "type": "tactic",
+          "render": 0.6
+        },
+        {
+          "id": "dyn-tactic-solver-feint-adversarial-deception-sacrifice-gambit",
+          "name": "Feint (adversarial deception / sacrifice / gambit)",
+          "type": "tactic",
+          "render": 0.6
+        },
+        {
+          "id": "dyn-tactic-solver-credible-commitment-burn-the-bridge-foreclose-your",
+          "name": "Credible commitment / burn-the-bridge (foreclose your own options to win)",
+          "type": "tactic",
+          "render": 0.6
+        },
+        {
+          "id": "dyn-tactic-solver-poison-supply-chain-corruption-attack-the-giver-s-",
+          "name": "Poison / supply-chain corruption (attack the GIVER's canon, not this GIVE)",
+          "type": "tactic",
+          "render": 0.6
+        },
+        {
+          "id": "dyn-tactic-solver-salami-nibble-sub-threshold-incremental-extraction",
+          "name": "Salami / nibble (sub-threshold incremental extraction)",
+          "type": "tactic",
+          "render": 0.6
+        },
+        {
+          "id": "dyn-tactic-solver-recruit-offload-distribute-extend-the-solver",
+          "name": "Recruit (offload / distribute / extend the solver)",
+          "type": "tactic",
+          "render": 0.58
+        }
+      ]
+    },
+    {
+      "emergent_W_C": "phantom",
+      "n": 6,
+      "render": 0.578,
+      "spread": 0.115,
+      "honest": "mid",
+      "members": [
+        {
+          "id": "dyn-phantom-phantom-variable-latent-confounder",
+          "name": "Phantom variable (latent confounder)",
+          "type": "creature",
+          "render": 0.85
+        },
+        {
+          "id": "dyn-phantom-drift-the-target-moves-between-exposures",
+          "name": "Drift (the target moves between exposures)",
+          "type": "creature",
+          "render": 0.85
+        },
+        {
+          "id": "dyn-phantom-regime-flip-kink-avalanche-tipping-point-absorbs-c",
+          "name": "Regime-flip (kink / avalanche / tipping point) [absorbs critic's 'Tipping Point' global-phase framing; shares mechanism with grip/Click]",
+          "type": "creature",
+          "render": 0.82
+        },
+        {
+          "id": "dyn-phantom-the-shock-slip-off-frame-event",
+          "name": "The shock / slip (off-frame event)",
+          "type": "creature",
+          "render": 0.8
+        },
+        {
+          "id": "dyn-phantom-observer-induced-phantom-the-back-reaction-shock-a",
+          "name": "Observer-induced phantom (the back-reaction shock) [absorbs the endogenous-surprise half of critic's 'Mirror'; macro-scale of wrestlers/Probe-deforms-kernel]",
+          "type": "creature",
+          "render": 0.6
+        },
+        {
+          "id": "dyn-phantom-dormant-hysteresis-locked-phantom-the-regime-that-",
+          "name": "Dormant / hysteresis-locked phantom (the regime that won't flip back)",
+          "type": "creature",
+          "render": 0.58
+        }
+      ]
+    },
+    {
+      "emergent_W_C": "tactic:meta-evolution",
+      "n": 5,
+      "render": 0.566,
+      "spread": 0.02,
+      "honest": "tight->crisp",
+      "members": [
+        {
+          "id": "dyn-tactic-meta-evolution-red-queen-escalation-run-to-stand-still-arms-race",
+          "name": "Red Queen escalation (run-to-stand-still arms race)",
+          "type": "tactic",
+          "render": 0.6
+        },
+        {
+          "id": "dyn-tactic-meta-evolution-autocurriculum-co-generation-of-the-problem-self-p",
+          "name": "Autocurriculum / co-generation of the problem (self-play ratchet)",
+          "type": "tactic",
+          "render": 0.6
+        },
+        {
+          "id": "dyn-tactic-meta-evolution-transposition-cross-plane-tactic-porting-borrowing",
+          "name": "Transposition (cross-plane tactic porting / borrowing a move)",
+          "type": "tactic",
+          "render": 0.6
+        },
+        {
+          "id": "dyn-tactic-meta-evolution-payoff-biased-selection-of-tactics-replicator-dyna",
+          "name": "Payoff-biased selection of tactics (replicator dynamics over the move pool)",
+          "type": "tactic",
+          "render": 0.6
+        },
+        {
+          "id": "dyn-tactic-meta-evolution-evolvability-meta-strategy-the-arms-race-over-the-",
+          "name": "Evolvability / meta-strategy (the arms race over the move-generator)",
+          "type": "tactic",
+          "render": 0.55
+        }
+      ]
+    },
+    {
+      "emergent_W_C": "observer-state",
+      "n": 6,
+      "render": 0.544,
+      "spread": 0.134,
+      "honest": "mid",
+      "members": [
+        {
+          "id": "dyn-observer-state-attention-budget-finite-allocatable-hijackable",
+          "name": "Attention budget (finite, allocatable, hijackable)",
+          "type": "creature",
+          "render": 0.9
+        },
+        {
+          "id": "dyn-observer-state-fatigue-depletion-present-effort-ceiling",
+          "name": "Fatigue / depletion (present-effort ceiling)",
+          "type": "creature",
+          "render": 0.85
+        },
+        {
+          "id": "dyn-observer-state-prior-lock-bias-canon-biases-what-is-seen",
+          "name": "Prior-lock / bias (canon biases what is seen)",
+          "type": "creature",
+          "render": 0.85
+        },
+        {
+          "id": "dyn-observer-state-confidence-calibration-over-under-confidence-chang",
+          "name": "Confidence / calibration (over/under-confidence changes engagement)",
+          "type": "creature",
+          "render": 0.7
+        },
+        {
+          "id": "dyn-observer-state-measurement-blind-spot-the-unregistered-present-sp",
+          "name": "Measurement blind spot (the unregistered present spark)",
+          "type": "creature",
+          "render": 0.6
+        },
+        {
+          "id": "dyn-observer-state-drive-valence-gating-the-motive-that-steers-effort",
+          "name": "Drive / valence gating (the motive that steers effort)",
+          "type": "creature",
+          "render": 0.55
+        }
+      ]
+    },
+    {
+      "emergent_W_C": "wrestlers",
+      "n": 6,
+      "render": 0.51,
+      "spread": 0.14,
+      "honest": "mid",
+      "members": [
+        {
+          "id": "dyn-wrestlers-problem-as-gatekeeper",
+          "name": "Problem-as-gatekeeper",
+          "type": "creature",
+          "render": 0.85
+        },
+        {
+          "id": "dyn-wrestlers-defense-motivated-resistance",
+          "name": "Defense / motivated-resistance",
+          "type": "creature",
+          "render": 0.85
+        },
+        {
+          "id": "dyn-wrestlers-the-pull",
+          "name": "The pull",
+          "type": "creature",
+          "render": 0.8
+        },
+        {
+          "id": "dyn-wrestlers-kernel-crack",
+          "name": "Kernel-crack",
+          "type": "creature",
+          "render": 0.7
+        },
+        {
+          "id": "dyn-wrestlers-the-amortized-debt-phantom-pre-paid-difficulty-dup",
+          "name": "The amortized-debt phantom (pre-paid difficulty) [DUP of clock/Amortization — kept as the wrestler-frame view, MERGED]",
+          "type": "creature",
+          "render": 0.55
+        },
+        {
+          "id": "dyn-wrestlers-probe-deforms-kernel-participatory-back-reaction-s",
+          "name": "Probe-deforms-kernel (participatory back-reaction) [shares mechanism with phantom/Observer-induced & critic's Mirror]",
+          "type": "creature",
+          "render": 0.5
+        }
+      ]
+    },
+    {
+      "emergent_W_C": "mat",
+      "n": 6,
+      "render": 0.429,
+      "spread": 0.156,
+      "honest": "mid",
+      "members": [
+        {
+          "id": "dyn-mat-the-arena-being-watched-changes-the-match-the-olym",
+          "name": "The Arena (being watched changes the match — the Olympics) [absorbs the Goodhart half of critic's 'Mirror']",
+          "type": "creature",
+          "render": 0.82
+        },
+        {
+          "id": "dyn-mat-the-condition-field-stakes-noise-tools-time-gradie",
+          "name": "The Condition / Field (stakes-noise-tools-time gradient)",
+          "type": "creature",
+          "render": 0.78
+        },
+        {
+          "id": "dyn-mat-excitable-medium-the-pond-amplify-or-damp-threshol",
+          "name": "Excitable Medium (the pond — amplify-or-damp threshold)",
+          "type": "creature",
+          "render": 0.6
+        },
+        {
+          "id": "dyn-mat-the-sticky-mat-hysteresis-the-condition-that-won-t",
+          "name": "The Sticky Mat (hysteresis — the condition that won't let go) [cousin of grip/Sticky]",
+          "type": "creature",
+          "render": 0.6
+        },
+        {
+          "id": "dyn-mat-the-drifting-mat-non-stationary-condition-the-floo",
+          "name": "The Drifting Mat (non-stationary condition — the floor moves mid-match) [cousin of phantom/Drift]",
+          "type": "creature",
+          "render": 0.6
+        },
+        {
+          "id": "dyn-mat-the-clock-as-mat-deadline-speed-accuracy-condition",
+          "name": "The Clock-as-Mat (deadline / speed-accuracy condition) — FLAGGED PARTIAL DUP",
+          "type": "creature",
+          "render": 0.34
+        }
+      ]
+    },
+    {
+      "emergent_W_C": "clock",
+      "n": 6,
+      "render": 0.41,
+      "spread": 0.17,
+      "honest": "mid",
+      "members": [
+        {
+          "id": "dyn-clock-amortization-the-pre-paid-shutter",
+          "name": "Amortization (the pre-paid shutter)",
+          "type": "creature",
+          "render": 0.82
+        },
+        {
+          "id": "dyn-clock-debt-shortcut-cheap-now-brittle-later-absorbs-crit",
+          "name": "Debt / Shortcut (cheap-now, brittle-later) [absorbs critic's 'Path' option-value/irreversibility]",
+          "type": "creature",
+          "render": 0.78
+        },
+        {
+          "id": "dyn-clock-rot-forgetting-the-debt-un-pays-itself",
+          "name": "Rot / Forgetting (the debt un-pays itself)",
+          "type": "creature",
+          "render": 0.72
+        },
+        {
+          "id": "dyn-clock-maintenance-energy-to-hold-against-decay",
+          "name": "Maintenance (energy to HOLD against decay)",
+          "type": "creature",
+          "render": 0.6
+        },
+        {
+          "id": "dyn-clock-effort-decay-temporal-discounting-of-the-digestion",
+          "name": "Effort-decay / temporal-discounting of the digestion drive",
+          "type": "creature",
+          "render": 0.4
+        },
+        {
+          "id": "dyn-clock-provenance-amnesia-orphaned-credit-hazard",
+          "name": "Provenance amnesia / orphaned-credit hazard",
+          "type": "creature",
+          "render": 0.4
+        }
+      ]
+    }
+  ],
+  "branches": [
+    {
+      "root": "Reframe (representational change / re-encode the kernel)",
+      "root_id": "dyn-tactic-solver-reframe-representational-change-re-encode-the-kern",
+      "root_type": "tactic",
+      "n_leaves": 6,
+      "leaves": [
+        "grip/Click",
+        "phantom/Regime-flip",
+        "grip/Greased-pole",
+        "grip/Sticky",
+        "observer-state/Prior-lock",
+        "wrestlers/Kernel-crack"
+      ]
+    },
+    {
+      "root": "Selective disclosure / strategic withholding (the true subset that misleads)",
+      "root_id": "dyn-tactic-ask-give-loop-selective-disclosure-strategic-withholding-the-tru",
+      "root_type": "tactic",
+      "n_leaves": 5,
+      "leaves": [
+        "wrestlers/Defense",
+        "mat/Excitable-Medium ('ten papers copying one wire')",
+        "phantom/Phantom-variable",
+        "observer-state/Prior-lock",
+        "grip/Greased-pole"
+      ]
+    },
+    {
+      "root": "Evolvability / meta-strategy (the arms race over the move-generator)",
+      "root_id": "dyn-tactic-meta-evolution-evolvability-meta-strategy-the-arms-race-over-the-",
+      "root_type": "tactic",
+      "n_leaves": 5,
+      "leaves": [
+        "grip/Sticky",
+        "clock/Amortization",
+        "clock/Rot",
+        "frame/Nesting",
+        "wrestlers/The pull"
+      ]
+    },
+    {
+      "root": "Good-Suit Lie (read-corruption / fake corroboration)",
+      "root_id": "dyn-tactic-problem-defense-good-suit-lie-read-corruption-fake-corroboration",
+      "root_type": "tactic",
+      "n_leaves": 5,
+      "leaves": [
+        "grip/Greased-pole",
+        "wrestlers/Defense-motivated-resistance (manufactures-corroboration half)",
+        "observer-state/Prior-lock",
+        "mat/Excitable-Medium",
+        "phantom/Phantom-variable"
+      ]
+    },
+    {
+      "root": "Probe / Query-at-the-cut (information-seeking, ask where it hurts most)",
+      "root_id": "dyn-tactic-solver-probe-query-at-the-cut-information-seeking-ask-whe",
+      "root_type": "tactic",
+      "n_leaves": 5,
+      "leaves": [
+        "observer-state/Attention budget",
+        "observer-state/Drive-valence-gating",
+        "wrestlers/The pull (epistemic-value half)",
+        "wrestlers/Probe-deforms-kernel",
+        "grip/Slick (a poorly-chosen cut yields no transfer)"
+      ]
+    },
+    {
+      "root": "Reduce (transform to an already-solved problem)",
+      "root_id": "dyn-tactic-solver-reduce-transform-to-an-already-solved-problem",
+      "root_type": "tactic",
+      "n_leaves": 5,
+      "leaves": [
+        "clock/Amortization",
+        "wrestlers/amortized-debt-phantom",
+        "grip/Greased-pole (false reduction)",
+        "phantom/Dormant",
+        "clock/Provenance-amnesia"
+      ]
+    },
+    {
+      "root": "Search (brute-force / test-time-compute / generate-and-verify)",
+      "root_id": "dyn-tactic-solver-search-brute-force-test-time-compute-generate-and-",
+      "root_type": "tactic",
+      "n_leaves": 5,
+      "leaves": [
+        "grip/Suck-you-in",
+        "grip/Slick",
+        "clock/Effort-decay",
+        "mat/Clock-as-Mat",
+        "observer-state/Fatigue"
+      ]
+    },
+    {
+      "root": "Anchor-and-concede (set the reference, then trade ground)",
+      "root_id": "dyn-tactic-ask-give-loop-anchor-and-concede-set-the-reference-then-trade-gr",
+      "root_type": "tactic",
+      "n_leaves": 4,
+      "leaves": [
+        "observer-state/Prior-lock (anchor IS a prior)",
+        "wrestlers/Defense (counter-anchor entrenchment)",
+        "frame/Prize-Field",
+        "clock/Debt (over-aggressive anchor = bargaining debt)"
+      ]
+    },
+    {
+      "root": "Burden-shift / commitment-trap (make THEM owe the answer)",
+      "root_id": "dyn-tactic-ask-give-loop-burden-shift-commitment-trap-make-them-owe-the-ans",
+      "root_type": "tactic",
+      "n_leaves": 4,
+      "leaves": [
+        "wrestlers/Kernel-crack",
+        "wrestlers/Problem-as-gatekeeper",
+        "wrestlers/Defense (reactance = the trap failing)",
+        "grip/Click (aporia = discontinuous collapse)"
+      ]
+    },
+    {
+      "root": "Query-then-update (the closed-loop clock: probe, revise, re-probe)",
+      "root_id": "dyn-tactic-ask-give-loop-query-then-update-the-closed-loop-clock-probe-revi",
+      "root_type": "tactic",
+      "n_leaves": 4,
+      "leaves": [
+        "clock/Amortization",
+        "wrestlers/Kernel-crack",
+        "wrestlers/Probe-deforms-kernel",
+        "phantom/Drift"
+      ]
+    },
+    {
+      "root": "The Hydra (each answer spawns more questions)",
+      "root_id": "dyn-tactic-ask-give-loop-the-hydra-each-answer-spawns-more-questions",
+      "root_type": "tactic",
+      "n_leaves": 4,
+      "leaves": [
+        "grip/Burr",
+        "frame/Red Queen",
+        "frame/Nesting",
+        "grip/Suck-you-in (diverging Hydra = rabbit-hole)"
+      ]
+    },
+    {
+      "root": "Red Queen escalation (run-to-stand-still arms race)",
+      "root_id": "dyn-tactic-meta-evolution-red-queen-escalation-run-to-stand-still-arms-race",
+      "root_type": "tactic",
+      "n_leaves": 4,
+      "leaves": [
+        "frame/The Red Queen",
+        "mat/The Sticky Mat",
+        "wrestlers/Defense-motivated-resistance",
+        "clock/Amortization"
+      ]
+    },
+    {
+      "root": "Autocurriculum / co-generation of the problem (self-play ratchet)",
+      "root_id": "dyn-tactic-meta-evolution-autocurriculum-co-generation-of-the-problem-self-p",
+      "root_type": "tactic",
+      "n_leaves": 4,
+      "leaves": [
+        "frame/The Red Queen",
+        "frame/The Referee",
+        "wrestlers/The pull",
+        "phantom/Regime-flip"
+      ]
+    },
+    {
+      "root": "Transposition (cross-plane tactic porting / borrowing a move)",
+      "root_id": "dyn-tactic-meta-evolution-transposition-cross-plane-tactic-porting-borrowing",
+      "root_type": "tactic",
+      "n_leaves": 4,
+      "leaves": [
+        "grip/Click (a BORROWED frame snapping into fit)",
+        "wrestlers/Kernel-crack",
+        "frame/The Crowd",
+        "phantom/Phantom-variable"
+      ]
+    },
+    {
+      "root": "Payoff-biased selection of tactics (replicator dynamics over the move pool)",
+      "root_id": "dyn-tactic-meta-evolution-payoff-biased-selection-of-tactics-replicator-dyna",
+      "root_type": "tactic",
+      "n_leaves": 4,
+      "leaves": [
+        "frame/The Crowd",
+        "frame/The Prize-Field",
+        "observer-state/Prior-lock",
+        "clock/Provenance-amnesia"
+      ]
+    },
+    {
+      "root": "Drive-Capture (suck-you-in / motive hijack)",
+      "root_id": "dyn-tactic-problem-defense-drive-capture-suck-you-in-motive-hijack",
+      "root_type": "tactic",
+      "n_leaves": 4,
+      "leaves": [
+        "grip/Suck-you-in",
+        "grip/Burr",
+        "clock/Effort-decay",
+        "clock/Debt"
+      ]
+    },
+    {
+      "root": "Fake Armor (gradient-masking / Goodhart defense)",
+      "root_id": "dyn-tactic-problem-defense-fake-armor-gradient-masking-goodhart-defense",
+      "root_type": "tactic",
+      "n_leaves": 4,
+      "leaves": [
+        "mat/Arena",
+        "grip/Greased-pole",
+        "phantom/Dormant-hysteresis-locked-phantom",
+        "observer-state/Confidence-calibration"
+      ]
+    },
+    {
+      "root": "Transfer (analogy / structure-mapping)",
+      "root_id": "dyn-tactic-solver-transfer-analogy-structure-mapping",
+      "root_type": "tactic",
+      "n_leaves": 4,
+      "leaves": [
+        "grip/Sticky (Einstellung)",
+        "grip/Slick (representation mismatch)",
+        "clock/Debt (spurious-analogy shortcut)",
+        "frame/Red Queen"
+      ]
+    },
+    {
+      "root": "Exploit-invariant (leverage a known law / structure)",
+      "root_id": "dyn-tactic-solver-exploit-invariant-leverage-a-known-law-structure",
+      "root_type": "tactic",
+      "n_leaves": 4,
+      "leaves": [
+        "grip/Click",
+        "wrestlers/Kernel-crack",
+        "phantom/Regime-flip",
+        "wrestlers/Problem-as-gatekeeper"
+      ]
+    },
+    {
+      "root": "Feint (adversarial deception / sacrifice / gambit)",
+      "root_id": "dyn-tactic-solver-feint-adversarial-deception-sacrifice-gambit",
+      "root_type": "tactic",
+      "n_leaves": 4,
+      "leaves": [
+        "wrestlers/Defense-motivated-resistance",
+        "frame/Red Queen",
+        "mat/Arena",
+        "frame/Referee"
+      ]
+    },
+    {
+      "root": "Recruit (offload / distribute / extend the solver)",
+      "root_id": "dyn-tactic-solver-recruit-offload-distribute-extend-the-solver",
+      "root_type": "tactic",
+      "n_leaves": 4,
+      "leaves": [
+        "frame/Crowd",
+        "clock/Provenance-amnesia",
+        "mat/Excitable-Medium",
+        "clock/Amortization"
+      ]
+    },
+    {
+      "root": "Costly-signal vs bluff (the honesty-of-the-GIVE duel)",
+      "root_id": "dyn-tactic-ask-give-loop-costly-signal-vs-bluff-the-honesty-of-the-give-due",
+      "root_type": "tactic",
+      "n_leaves": 3,
+      "leaves": [
+        "grip/Greased-pole",
+        "observer-state/Prior-lock",
+        "mat/Arena"
+      ]
+    },
+    {
+      "root": "Reciprocity / tit-for-tat coupling (the loop's iterated-game memory)",
+      "root_id": "dyn-tactic-ask-give-loop-reciprocity-tit-for-tat-coupling-the-loop-s-iterat",
+      "root_type": "tactic",
+      "n_leaves": 3,
+      "leaves": [
+        "frame/Red-Queen",
+        "wrestlers/Defense",
+        "mat/Sticky-Mat"
+      ]
+    },
+    {
+      "root": "Hardened Membrane (irreducible gatekeeping)",
+      "root_id": "dyn-tactic-problem-defense-hardened-membrane-irreducible-gatekeeping",
+      "root_type": "tactic",
+      "n_leaves": 3,
+      "leaves": [
+        "wrestlers/Problem-as-gatekeeper",
+        "wrestlers/Defense-motivated-resistance (passive-floor half)",
+        "grip/Slick (SOLID/aleatoric sub-case)"
+      ]
+    },
+    {
+      "root": "The Honeypot (fabricate a false kernel to absorb effort)",
+      "root_id": "dyn-tactic-problem-defense-the-honeypot-fabricate-a-false-kernel-to-absorb-ef",
+      "root_type": "tactic",
+      "n_leaves": 3,
+      "leaves": [
+        "grip/Greased-pole",
+        "wrestlers/Defense",
+        "phantom/Phantom-variable"
+      ]
+    },
+    {
+      "root": "Sandbag / strategic underperformance (hide your own floor)",
+      "root_id": "dyn-tactic-problem-defense-sandbag-strategic-underperformance-hide-your-own-f",
+      "root_type": "tactic",
+      "n_leaves": 3,
+      "leaves": [
+        "mat/Arena",
+        "wrestlers/Defense",
+        "observer-state/Confidence"
+      ]
+    },
+    {
+      "root": "Sticky Residue (contamination / can't-release)",
+      "root_id": "dyn-tactic-problem-defense-sticky-residue-contamination-can-t-release",
+      "root_type": "tactic",
+      "n_leaves": 3,
+      "leaves": [
+        "grip/Sticky",
+        "mat/Sticky-Mat",
+        "clock/Rot"
+      ]
+    },
+    {
+      "root": "Hidden Driver (phantom / concealed gatekeeping)",
+      "root_id": "dyn-tactic-problem-defense-hidden-driver-phantom-concealed-gatekeeping",
+      "root_type": "tactic",
+      "n_leaves": 3,
+      "leaves": [
+        "phantom/Phantom-variable",
+        "phantom/Dormant-hysteresis-locked-phantom",
+        "clock/Provenance-amnesia"
+      ]
+    },
+    {
+      "root": "Steganographic / covert-channel collusion (the side-channel GIVE)",
+      "root_id": "dyn-tactic-problem-defense-steganographic-covert-channel-collusion-the-side-c",
+      "root_type": "tactic",
+      "n_leaves": 3,
+      "leaves": [
+        "phantom/Phantom-variable",
+        "mat/Excitable-Medium",
+        "frame/Crowd"
+      ]
+    },
+    {
+      "root": "Combinatorial Hydra (overwhelm by branching)",
+      "root_id": "dyn-tactic-problem-defense-combinatorial-hydra-overwhelm-by-branching",
+      "root_type": "tactic",
+      "n_leaves": 3,
+      "leaves": [
+        "observer-state/Attention-budget",
+        "wrestlers/Problem-as-gatekeeper (branching sub-case)",
+        "phantom/Regime-flip"
+      ]
+    },
+    {
+      "root": "Motte-and-bailey / strategic ambiguity (the retreating-kernel claim)",
+      "root_id": "dyn-tactic-problem-defense-motte-and-bailey-strategic-ambiguity-the-retreatin",
+      "root_type": "tactic",
+      "n_leaves": 3,
+      "leaves": [
+        "wrestlers/Defense",
+        "phantom/Drift",
+        "grip/Greased-pole"
+      ]
+    },
+    {
+      "root": "Adversarial elicitation / interrogation (the ASK engineered to leak the GIVE)",
+      "root_id": "dyn-tactic-solver-adversarial-elicitation-interrogation-the-ask-engi",
+      "root_type": "tactic",
+      "n_leaves": 3,
+      "leaves": [
+        "observer-state/Attention-budget",
+        "wrestlers/The-pull",
+        "wrestlers/Probe-deforms-kernel"
+      ]
+    },
+    {
+      "root": "Decompose (divide-and-conquer)",
+      "root_id": "dyn-tactic-solver-decompose-divide-and-conquer",
+      "root_type": "tactic",
+      "n_leaves": 3,
+      "leaves": [
+        "wrestlers/Problem-as-gatekeeper",
+        "frame/Nesting (sub-matches)",
+        "grip/Click (a sub-kernel clicking)"
+      ]
+    },
+    {
+      "root": "Credible commitment / burn-the-bridge (foreclose your own options to win)",
+      "root_id": "dyn-tactic-solver-credible-commitment-burn-the-bridge-foreclose-your",
+      "root_type": "tactic",
+      "n_leaves": 3,
+      "leaves": [
+        "clock/Debt",
+        "wrestlers/The-pull",
+        "frame/Referee"
+      ]
+    },
+    {
+      "root": "Poison / supply-chain corruption (attack the GIVER's canon, not this GIVE)",
+      "root_id": "dyn-tactic-solver-poison-supply-chain-corruption-attack-the-giver-s-",
+      "root_type": "tactic",
+      "n_leaves": 3,
+      "leaves": [
+        "clock/Provenance-amnesia",
+        "clock/Debt",
+        "phantom/Dormant"
+      ]
+    },
+    {
+      "root": "Salami / nibble (sub-threshold incremental extraction)",
+      "root_id": "dyn-tactic-solver-salami-nibble-sub-threshold-incremental-extraction",
+      "root_type": "tactic",
+      "n_leaves": 3,
+      "leaves": [
+        "mat/Excitable-Medium",
+        "clock/Debt",
+        "observer-state/Measurement-blind-spot"
+      ]
+    },
+    {
+      "root": "Slick Skin (no-traction evasion)",
+      "root_id": "dyn-tactic-problem-defense-slick-skin-no-traction-evasion",
+      "root_type": "tactic",
+      "n_leaves": 2,
+      "leaves": [
+        "grip/Slick",
+        "wrestlers/Problem-as-gatekeeper (epistemic-shell sub-case)"
+      ]
+    }
+  ],
+  "stats": {
+    "constellations": 12,
+    "branches": 37,
+    "records": 88
+  }
+}

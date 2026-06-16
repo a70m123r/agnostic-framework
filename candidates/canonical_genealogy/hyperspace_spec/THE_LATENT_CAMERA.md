@@ -19,6 +19,24 @@ What a generative model does is paint the upper half straight onto the plane. Th
 
 ---
 
+## AGNOSTIC + X — the chameleon architecture (Pav, 2026-06-16)
+
+The apparatus splits in two. **AGNOSTIC is the first part — the core:** neutral, uncommitted, frame-less; the measurement discipline ONLY (`render <= measured`, 0.99-not-Boolean, no intrinsic measure — the pinned relational bit). It picks no lens. **X is the second part — the OBSERVER (frame + glass / decoder):** which features count (the frame) + the capability / epoch / skepticism dials (the glass). X is a **CHAMELEON** — the agnostic core can *simulate any X* (any persona, epoch, adversary, lens), taking its colour, while the core itself stays agnostic.
+
+This is the structural answer to the external-pass critique *"doesn't 'agnostic' presuppose an adversarial framing?"* — **it does not. The adversarial / wrestling lens is one chosen X** (one chameleon-skin), not the core. The whole tactics catalogue is the view *through* an adversarial X; the agnostic substrate underneath holds it without committing. The `irreducible_residue` (the dynamics that are NOT adversarial moves — thermodynamic amortization, stochastic resonance) is exactly **where that X-skin stops fitting and the agnostic core shows through**. Swap X — a cooperative lens, an ecological lens, a thermodynamic lens — and the *same* substrate renders a different view. The controller-LLM / mind-sandbox is the chameleon mechanism: it dials in an X and simulates its view (Stratum-2, badged). So: **agnostic core = the film + the law; X = the glasses you put on it.** "Agnostic X" is not one thing — it is the neutral core plus whichever observer the chameleon is currently wearing.
+
+---
+
+## X·n — channels as procedural recompiles of L0 (constellations + branches) (Pav, 2026-06-16)
+
+X is not one observer — it is **X·n**: the apparatus renders **n wrappers at once**, and from that constellation an **emergent canonical wrapper W_C** appears, which the observer FRAMES. (n parents -> a child W_C; n sub-principles -> "democracy"; n creatures -> an organ — the constellation's center is the emergent.)
+
+**A channel is a PROCEDURAL RECOMPILE of the agnostic L0 substrate, tuned for that channel's consumption — forming CONSTELLATIONS (the emergent-W_C clusters) and BRANCHES (lineage / genealogy trees from the emergent down to the surface wrappers).** The agnostic core stays ONE; each channel recompiles a *materialized view* of it. Different channels recompile different configs (Guess-Who -> observable-signature constellations; Ticker -> active-now branches; the jungle -> family constellations). This is the L0 wrappers + group-configs + the constellation-correction + W_C + X·n unified into one mechanism.
+
+**THE HONESTY (the aggregation seam — the most leak-prone place, per the scope/nesting audit):** the emergent W_C can NEVER render sharper than its members support — `rendered_bits(W_C) <= measured_bits(members) - bits_discarded` (the aggregation-faithfulness inequality + the spread-of-means term). A TIGHT constellation (members agree) earns a crisp W_C; a LOOSE one (members disagree) yields a FUZZY emergent. This forbids the fake centroid (a broadcaster + an audience cannot be averaged into a sharp fake canonical). So the per-channel recompile is COIN-true by construction: **L0 is the source of truth; the channel is a derived materialized view; every emergent renders only as sharp as its constituency.** (v0: `dynamics/recompile_channel.py`.)
+
+---
+
 ## The three honest laws (Pav, 2026-06-16) — the strict form of the COIN
 
 ### Law 1 — FIDELITY, not truth (honest collect != true collect)
