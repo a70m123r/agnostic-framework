@@ -53,21 +53,30 @@ This keeps the slow regime one-sided: a strong mind cannot fake-dissolve by *rew
 
 ---
 
-## 3. The coder (why classical can't, LLM can)
+## 3. Two instruments, not one (corrected 2026-06-16 by the P1 test - demote-not-kill)
 
-Classical coders see only verbatim overlap (proven surface-bound above). The **LLM coder** gives `cond` up to paraphrase/entailment because next-token probability conditions on *meaning*: a paraphrase of the prior context is high-probability -> low codelength. This is the syntactic->semantic upgrade `LLM_CODER_SCOPING.md` scoped. Paths unchanged: **P1** OpenAI Completions echo+logprobs (immediate, small spend + external call), **P2** local transformers+gpt2 (free/offline, ~GB install). The coder is pinned + disclosed (the pinned relational bit), so `canon` is relative to a declared decoder - which is the whole framework's honest standard, not a flaw.
+The original hope - that one LLM-codelength coder does both the bits AND the equivalence - was **tested and falsified** (`tests/canonicalizer_validate_p1.py`, `CANONICALIZER_P1_RESULTS.md`). Codelength and semantic-equivalence are **different measurements needing different instruments:**
+
+- **`residual_surface_bits` <- CODELENGTH** (the bits instrument). LLM echo+logprobs gives codelength (input logprobs = arithmetic-coding bits). Right tool for the cost/bits side.
+- **`canon(W)` / the `~=_canon` relation <- a MEANING instrument** (embedding cosine, or NLI entailment). Codelength FAILS at equivalence: a paraphrase uses different tokens, so prefix-conditioning - even paraphrase-primed - doesn't make it cheap (mean discount -0.10 naive / +0.09 primed on davinci-002, no clean separation), AND the only OpenAI models exposing echo+logprobs are weak base models (instruct models reject `echo`+`logprobs`, HTTP 400). **Embeddings separate paraphrase from distinct cleanly** (sec 4), so the equivalence is an embedding/NLI judgement, not a codelength one.
+
+The lesson: don't ask the bits-coder to also be the meaning-comparator. Both instruments are pinned + disclosed (the relational-bit discipline is unchanged).
 
 ---
 
-## 4. Validation (the pending step - needs the LLM coder)
+## 4. Validation result (2026-06-16, P1 OpenAI on the synthetic corpus)
 
-Re-run `tests/canonicalizer_tests.py` with the LLM coder added as a 4th provider. **Pass conditions:**
-1. **Paraphrase recognised:** `paraphrase_discount` goes HIGH (>~0.7) under the LLM coder - it discounts the reworded concept the classical coders couldn't.
-2. **Negative control holds:** Distinct pairs stay LOW (`cond_LLM(D|S)` not discounted) - the canonicalizer isn't collapsing everything.
-3. **Entailment, not just paraphrase:** add an *entailed* target (a logical consequence of S) - the LLM coder should partially discount it (it's derivable), the classical coders shouldn't.
-4. **Surface split is stable:** `residual_surface_bits` for two paraphrases of one concept should be comparable and small relative to `semantic_dissolve` for a genuinely hard concept.
+`tests/canonicalizer_validate_p1.py` -> `CANONICALIZER_P1_RESULTS.md`:
 
-Pass -> the digestion unit measures **concepts**, not surface form, and `measured_bits` is semantic. This also retires the `LLM_CODER_SCOPING.md` "honest but syntactic" caveat.
+| instrument | mean(paraphrase) | mean(distinct) | separation | verdict |
+|---|---|---|---|---|
+| classical LZ (gzip/bz2/lzma) | discount 0.13-0.20 | - | - | surface-bound (the trap) |
+| echo-codelength (davinci-002, primed) | discount +0.09 | - | - | **NOT validated** (codelength is the wrong instrument; base models weak, instruct reject echo) |
+| **embedding cosine (text-embedding-3-small)** | **cos 0.684** | **cos 0.062** | **0.622** | **VALIDATED** (clean across all 5 concepts) |
+
+The canon equivalence relation **is real and cleanly detectable** - by a meaning instrument, not a bits instrument. The negative control holds (distinct cosine ~0.06, not collapsed). The honest dead-child: "one LLM-codelength coder does semantic equivalence too." The corrected mechanism: `~=_canon` via embedding cosine (threshold-gated, symmetric, distinct-must-fail) + codelength for `residual_surface_bits`.
+
+**Still to wire into the live unit:** the embedding gate as `~=_canon`; an NLI entailment check for the asymmetric (derivable, not just reworded) case; and the per-instance fold into `measured_bits = min(cost_ub, evidence_lcb)` so the digestion unit measures **concepts**, not surface form. That retires the `LLM_CODER_SCOPING.md` "honest but syntactic" caveat on the equivalence side.
 
 ---
 
