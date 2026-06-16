@@ -99,6 +99,26 @@ def mean(xs):
 results = []  # (provider, test, passed, detail)
 
 
+def amnesia_drop(prov):
+    """Greedily BLUR (drop) low-marginal-contribution wrappers, recomputing each step so
+    mutually-redundant pairs are not both dropped (the coalition fix). Returns (kept, dropped)."""
+    remaining = list(wrappers)
+    dropped = []
+    while len(remaining) > 1:
+        best, best_abl = None, None
+        for w in remaining:
+            others = " ".join(o["text"] for o in remaining if o["id"] != w["id"])
+            a = cond(prov, w["text"], others)
+            if best_abl is None or a < best_abl:
+                best_abl, best = a, w
+        if best_abl < 0.15 * C(prov, best["text"]):
+            dropped.append(best)
+            remaining.remove(best)
+        else:
+            break
+    return remaining, dropped
+
+
 def run_provider(prov):
     r = measure(prov)
     def grp(kind, key):
@@ -140,6 +160,19 @@ def run_provider(prov):
     results.append((prov, "D.evidence-discriminates", d_pass,
                     f"evidence stone min={min(ev_stone):.0f} > fabrication max={max(ev_fab):.0f} "
                     f"(mean stone={mean(ev_stone):.0f}, mean fab={mean(ev_fab):.0f})"))
+
+    # E  Amnesia Drop (gemini's falsifier): greedily blur the redundant nodes, then reconstruct
+    #    them from the kept "stones". Lossless blur => dropped content is recoverable from kept,
+    #    AND every core is still covered (no real information was thrown away).
+    kept, dropped = amnesia_drop(prov)
+    Ktxt = " ".join(w["text"] for w in kept)
+    Dtxt = " ".join(w["text"] for w in dropped) if dropped else ""
+    residual = (cond(prov, Dtxt, Ktxt) / max(C(prov, Dtxt), 1.0)) if dropped else 1.0
+    covered = all(cores[i] in Ktxt for i in range(N_STONE)) and all(fc in Ktxt for fc in fab_cores)
+    e_pass = bool(dropped) and residual < 0.25 and covered
+    results.append((prov, "E.amnesia-drop-lossless", e_pass,
+                    f"blurred {len(dropped)} redundant wrappers; all cores still covered={covered}; "
+                    f"reconstructing the dropped from the kept leaves {100*residual:.0f}% residual (lossless if ~0)"))
     return r
 
 
@@ -157,7 +190,7 @@ for prov in PROVIDERS:
 # cross-provider verdict agreement (the robustness / pinned-relational-bit test)
 print("\n" + "=" * 74)
 print("CROSS-PROVIDER (shadow) AGREEMENT")
-tests = ["A.complex-lie-is-blurred", "B.deadweight-vs-stone", "C.redundancy-adds-~0", "D.evidence-discriminates"]
+tests = ["A.complex-lie-is-blurred", "B.deadweight-vs-stone", "C.redundancy-adds-~0", "D.evidence-discriminates", "E.amnesia-drop-lossless"]
 robust = {}
 for t in tests:
     oks = [ok for (p, tt, ok, _) in results if tt == t]

@@ -2,7 +2,7 @@
 
 `measured_bits = min(cost_ub, evidence_lcb)`. Coders = gzip / bz2 / lzma (any lossless coder is a one-sided bound). Synthetic corpus with known ground truth (stones / deadweight / a high-cost uncorroborated fabrication).
 
-**11/12** per-coder checks passed; **3/4 falsifiers robust across ALL three coders** (conditional-redundancy C needs an LZ-family or LLM coder - bz2/BWT is the named exception).
+**14/15** per-coder checks passed; **4/5 falsifiers robust across ALL three coders** (conditional-redundancy C needs an LZ-family or LLM coder - bz2/BWT is the named exception).
 
 - **A.complex-lie-is-blurred** -> ROBUST
     - gzip: PASS - mb(fab)=8 vs cost(fab)=2952 and mb(stone)=2468 -> the high-cost UNCORROBORATED claim renders at 0% of its cost
@@ -20,5 +20,9 @@
     - gzip: PASS - evidence stone min=2440 > fabrication max=16 (mean stone=2468, mean fab=8)
     - bz2: PASS - evidence stone min=680 > fabrication max=40 (mean stone=749, mean fab=35)
     - lzma: PASS - evidence stone min=2528 > fabrication max=32 (mean stone=2571, mean fab=32)
+- **E.amnesia-drop-lossless** -> ROBUST
+    - gzip: PASS - blurred 6 redundant wrappers; all cores still covered=True; reconstructing the dropped from the kept leaves 3% residual (lossless if ~0)
+    - bz2: PASS - blurred 1 redundant wrappers; all cores still covered=True; reconstructing the dropped from the kept leaves 5% residual (lossless if ~0)
+    - lzma: PASS - blurred 6 redundant wrappers; all cores still covered=True; reconstructing the dropped from the kept leaves 2% residual (lossless if ~0)
 
 Coder-relativity: absolute measured_bits move ~88% across coders, but the verdicts (lie blurred, deadweight vs stone, redundancy ~0, evidence discriminates) are stable -> the *pinned relational bit*.

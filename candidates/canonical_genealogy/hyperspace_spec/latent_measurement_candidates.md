@@ -2,6 +2,18 @@
 
 *Provenance: a 13-agent Opus workflow (`latent-measurement-candidates`) + cross-model passes from GPT-5.5 ([latent_measure_codex.md](latent_measure_codex.md)) and Gemini ([latent_measure_gemini.md](latent_measure_gemini.md)); brief [latent_measure_brief.txt](latent_measure_brief.txt). 2026-06-15. Closes the load-bearing hole the audit named: latent `measured_bits` was undefined.*
 
+## CANONICAL DEFINITION (ratified 2026-06-15, tested)
+
+> **Latent `measured_bits(W) = min( cost_ub(W), evidence_lcb(W) )`.**
+> - `cost_ub(W)` = **prequential codelength** of W under a **pinned, disclosed coder** (`Sum_t -log2 P_M(x_t | x_<t, frame)`) - a sound **one-sided upper bound** on content, the *same unit* as the physical bits-to-reproduce (composes by the chain rule). The coder MUST be **LZ-family or an LLM**, never BWT/bz2 (the run showed BWT fails the conditional measures).
+> - `evidence_lcb(W)` = a **conservative lower bound on independent supporting evidence**, measured **baseline-relative** (`cond(W | null) - cond(W | independent_holdout)`, so a strong coder's spurious compressibility cancels) and **dependency-corrected** (conditional codelength `cond(new | existing)`, so redundant sources add ~0 - **independence is an OUTPUT, not an assumption**).
+> - **Render:** sharpness from `measured_bits` (the lower end of the interval); blur = `unpaid = max(0, cost_ub - evidence_lcb)`. **Never render `cost_ub` alone as entitlement** - a complex lie has high cost, ~0 evidence.
+> - **Dials:** four of Pav's six (compress / %-of-frame / kernel-canon / deadweight-vs-stone) are views of this one codelength family; connectivity + zoo are honest diagnostics, not bounds.
+> - **The observer is the glass, and it has dials (Pav, 2026-06-16):** `evidence_lcb` is itself a dial - the observer's **skepticism** (how much independent corroboration it demands before rendering sharp). The coder/observer is a **configurable glass** (knowledge-epoch, persona, skepticism) that a **controller LLM** can dial in to **simulate a chosen observer-view** (Stratum-2, badged). And the unit has a *conjugate*: see the **digestion-dynamics** extension (memory; forthcoming spec) - compression is an *active* process (the observer applies its apparatus as pressure; what *maps* dissolves, what *resists* is the content), and the process itself (attempts / tokens / strategy / resistance) is a richer measurement of latent dynamics. NOT yet specced/tested - conceptual.
+> - **Status: the *pinned relational bit*** - relational by necessity (there is no intrinsic latent measure), honest under a *declared measurement contract*. **VALIDATED** ([tests/latent_measure_tests.py](tests/latent_measure_tests.py)): the complex lie blurs (0-1% of its cost), evidence discriminates, redundancy -> 0, deadweight separates - **verdicts coder-invariant** though absolute bits move ~88% across coders. This **CLOSES the audit's load-bearing hole** (latent `measured_bits` was a badge).
+
+---
+
 ## Convergent recommendation (all three sources agree)
 
 **THE UNIT.** Latent `measured_bits` = **prequential codelength under a pinned, disclosed coder**: `L = sum_t -log2 P_M(x_t | x_<t, frame)`. This is a **sound one-sided upper bound** on Kolmogorov complexity (`K(x) <= |C(x)| + c_C` for ANY model - a worse model only spends MORE bits, never under-counts), it needs **no model-complexity penalty** (the model is never transmitted), and it is the **same unit as the settled physical bits-to-reproduce** (composes by the chain rule). This IS Pav's dial #1.
