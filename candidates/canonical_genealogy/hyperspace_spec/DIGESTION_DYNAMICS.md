@@ -200,3 +200,24 @@ Both non-Claude models CONVERGED ([[feedback_cross_model_external_pass]]; raw in
 3. **Novelty demoted to a SYNTHESIS/HYPOTHESIS, not new math.** KT already owns "short program + exact reconstruction"; verifier-guided-TTC-search is execution-based program synthesis (AlphaCode/AlphaGeometry); the conjugate-trace is Levin-search + EDL/loss-curves repackaged. **The only defensible-novel claim is the *unified observer-indexed law where the digestion-trace is the conjugate dual of the residue* - and it is flagged a synthesis to test, not established mathematics.** (Also: tighten "residue == epiplexity" to "relates to" - epiplexity is bounded *structural* content; the aleatoric floor of 11.2 stays separate.)
 
 Net: the spec is stronger and smaller-claiming. The one new build item is the **canonicalizer** (semantic equivalence-class) - without it, verified-dissolve only measures surface form on non-canonical targets.
+
+---
+
+## 12. The amortization principle - difficulty is conserved, shifted in time (Pav, 2026-06-16)
+
+The whole spec measures **present effort** (the resistance curve: tokens / attempts / compute-to-crack-it-*now*). Pav's correction: that is only the visible tip. **To crunch a problem you need knowledge + strategy + compute + time - and for an easy ("low-entropy") read, the compute and time were already spent in the PAST.** The expense is shifted into the journey that built the observer's prior + tools: the training run, the education, the centuries of deriving the laws/methods that compressed the problem's structure into the prior. "Easy" does not mean cheap - it means **pre-paid**. The energy is conserved; it was spent upstream and stored as the **negentropy of the prior**, and the instant-crush just cashes it in.
+
+So every dissolution runs on **two clocks**: PRESENT effort (the shutter - what you spend at solve-time) and AMORTIZED past effort (the film's ISO - the sensitivity you arrived with; cf [THE_LATENT_CAMERA.md](THE_LATENT_CAMERA.md) - a fast exposure resolves the image only because the film was pre-sensitized).
+
+**This is already named in the anchors (re-derived from the cost side):**
+- **Prequential MDL / EDL** IS this: codelength is paid as the model *learns* across the sequence - early items expensive, late items cheap (paid already). The Excess Description Length = the learning debt; "expense in the past" = the prequential code already spent.
+- **Logical depth** (Bennett): a deep object's shortest program takes a long time to *run* = the derivation cost; once the output is cached (weights, a theorem) reproducing it is shallow. **The depth lives in the history, not the lookup.** Easy-now = deep-then.
+- **Amortized inference** (distillation / meta-learning / caching): pay one large training cost to make every future inference cheap - moving cost from the present clock to the past clock.
+
+**It dissolves "entropy depends on the observer":** the entropy reading IS the observer's **position on its own learning curve** - how much of the debt it has settled. Novice (high-entropy) vs expert (low-entropy) on the *same* problem = unpaid vs paid. A 1789 mind and a 2026 mind read the same fact at different sharpness because one paid the derivation and one did not (the diachronic decoder `D(t)`, now with a price tag). Observer-relativity = **whose debt is already settled**, not fuzz.
+
+**The measurement consequence (two honest instruments):**
+1. **how-hard-for-THIS-mind-now** = the present resistance tip, against a **pinned observer** (this is *why* `measured_bits` must pin the decoder - difficulty is undefined until you declare whose paid-up budget you measure against).
+2. **INTRINSIC hardness** = **sum the debt** = present effort + amortized derivation cost (the logical depth / compute-to-build-the-tools). Present-effort alone **systematically under-counts the deep, structured problems** - the very ones that look easy because civilization already paid for them.
+
+**Thermo tie (closes `e-units-weld`):** the bits you read for free now were **Joules spent then**; difficulty is a **stored potential, conserved across the time-shift** - Landauer with a memory of how it got cheap. This is a COST-law, and it sits alongside the render-laws of [[project_latent_camera]]: the render-laws (fidelity / sharpness<1 / generate-above) govern what the film *shows*; the amortization principle governs what the exposure *cost* - most of it paid before the shutter opened.

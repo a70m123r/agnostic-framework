@@ -2,7 +2,7 @@
   "_meta": {
     "what": "session-arc capture: the 2026-06-11..06-16 milestone work, compiled as substrate",
     "discipline": "SUBSTRATE_SPEC (append-only+provenance+certainty+verify) + bitemporal + COIN (render<=support)",
-    "t_obs": "2026-06-16T10:22:09Z",
+    "t_obs": "2026-06-16T13:08:16Z",
     "window": {
       "start": "2026-06-11T00:04:46",
       "end": "2026-06-16T00:19:55"
@@ -1585,7 +1585,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.9,
       "blurred": false
     },
@@ -1606,7 +1606,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.9,
       "blurred": false
     },
@@ -1626,7 +1626,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.9,
       "blurred": false
     },
@@ -1647,7 +1647,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.78,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.78,
       "blurred": false
     },
@@ -1665,7 +1665,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.8,
       "blurred": false
     },
@@ -1685,7 +1685,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.78,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.78,
       "blurred": false
     },
@@ -1705,7 +1705,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.85,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.7,
       "blurred": false
     },
@@ -1726,7 +1726,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.9,
       "blurred": false
     },
@@ -1746,7 +1746,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.85,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.7,
       "blurred": false
     },
@@ -1764,7 +1764,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.6,
       "blurred": false
     },
@@ -1785,7 +1785,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.85,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.6,
       "blurred": false
     },
@@ -1805,7 +1805,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.85,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.7,
       "blurred": false
     },
@@ -1826,7 +1826,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.75,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.75,
       "blurred": false
     },
@@ -1847,7 +1847,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.85,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.7,
       "blurred": false
     },
@@ -1865,7 +1865,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.9,
       "blurred": false
     },
@@ -1883,7 +1883,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.82,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.82,
       "blurred": false
     },
@@ -1904,7 +1904,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.82,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.7,
       "blurred": false
     },
@@ -1924,7 +1924,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.82,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.7,
       "blurred": false
     },
@@ -1944,7 +1944,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.85,
       "blurred": false
     },
@@ -1962,7 +1962,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.75,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.45,
       "blurred": false
     },
@@ -1984,7 +1984,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.9,
       "blurred": false
     },
@@ -2005,7 +2005,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.6,
       "blurred": false
     },
@@ -2026,7 +2026,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.9,
       "blurred": false
     },
@@ -2046,7 +2046,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.85,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.6,
       "blurred": false
     },
@@ -2064,7 +2064,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.82,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.6,
       "blurred": false
     },
@@ -2084,7 +2084,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.85,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.6,
       "blurred": false
     },
@@ -2104,7 +2104,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.78,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.6,
       "blurred": false
     },
@@ -2122,7 +2122,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.9,
       "blurred": false
     },
@@ -2140,7 +2140,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.75,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.75,
       "blurred": false
     },
@@ -2158,7 +2158,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.9,
       "blurred": false
     },
@@ -2178,7 +2178,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.85,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.85,
       "blurred": false
     },
@@ -2196,7 +2196,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.88,
       "blurred": false
     },
@@ -2217,7 +2217,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.85,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.85,
       "blurred": false
     },
@@ -2238,7 +2238,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.85,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.85,
       "blurred": false
     },
@@ -2258,7 +2258,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.88,
       "blurred": false
     },
@@ -2278,7 +2278,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.9,
       "blurred": false
     },
@@ -2299,7 +2299,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.85,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.85,
       "blurred": false
     },
@@ -2319,7 +2319,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.9,
       "blurred": false
     },
@@ -2339,7 +2339,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.9,
       "blurred": false
     },
@@ -2359,7 +2359,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.9,
       "blurred": false
     },
@@ -2379,7 +2379,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.9,
       "blurred": false
     },
@@ -2400,7 +2400,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.9,
       "blurred": false
     },
@@ -2420,7 +2420,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.82,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.82,
       "blurred": false
     },
@@ -2441,7 +2441,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.82,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.82,
       "blurred": false
     },
@@ -2461,7 +2461,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.72,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.72,
       "blurred": false
     },
@@ -2481,7 +2481,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.85,
       "blurred": false
     },
@@ -2501,7 +2501,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.72,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.72,
       "blurred": false
     },
@@ -2519,7 +2519,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.78,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.78,
       "blurred": false
     },
@@ -2539,7 +2539,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.9,
       "blurred": false
     },
@@ -2560,7 +2560,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.78,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.78,
       "blurred": false
     },
@@ -2581,7 +2581,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.78,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.78,
       "blurred": false
     },
@@ -2602,7 +2602,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.72,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.72,
       "blurred": false
     },
@@ -2623,7 +2623,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.9,
       "blurred": false
     },
@@ -2643,7 +2643,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.85,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.85,
       "blurred": false
     },
@@ -2664,7 +2664,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.9,
       "blurred": false
     },
@@ -2685,7 +2685,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.85,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.85,
       "blurred": false
     },
@@ -2705,7 +2705,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.9,
       "blurred": false
     },
@@ -2725,7 +2725,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.9,
       "blurred": false
     },
@@ -2745,7 +2745,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.85,
       "blurred": false
     },
@@ -2765,7 +2765,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.8,
       "blurred": false
     },
@@ -2785,7 +2785,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.8,
       "blurred": false
     },
@@ -2805,7 +2805,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.82,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.82,
       "blurred": false
     },
@@ -2823,7 +2823,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.8,
       "blurred": false
     },
@@ -2843,7 +2843,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.78,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.78,
       "blurred": false
     },
@@ -2863,7 +2863,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.85,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.8,
       "blurred": false
     },
@@ -2881,7 +2881,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.78,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.78,
       "blurred": false
     },
@@ -2899,7 +2899,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.9,
       "blurred": false
     },
@@ -2917,7 +2917,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.75,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.75,
       "blurred": false
     },
@@ -2937,7 +2937,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.85,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.85,
       "blurred": false
     },
@@ -2955,7 +2955,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.85,
       "blurred": false
     },
@@ -2976,7 +2976,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.9,
       "blurred": false
     },
@@ -2997,7 +2997,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.85,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.85,
       "blurred": false
     },
@@ -3017,7 +3017,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.82,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.82,
       "blurred": false
     },
@@ -3037,7 +3037,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.8,
       "blurred": false
     },
@@ -3058,7 +3058,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.85,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.8,
       "blurred": false
     },
@@ -3078,7 +3078,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.82,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.82,
       "blurred": false
     },
@@ -3099,7 +3099,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.85,
       "blurred": false
     },
@@ -3119,7 +3119,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.9,
       "blurred": false
     },
@@ -3137,7 +3137,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.9,
       "blurred": false
     },
@@ -3159,7 +3159,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.85,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.85,
       "blurred": false
     },
@@ -3181,7 +3181,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.85,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.85,
       "blurred": false
     },
@@ -3199,7 +3199,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.9,
       "blurred": false
     },
@@ -3219,7 +3219,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.85,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.85,
       "blurred": false
     },
@@ -3240,7 +3240,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.82,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.82,
       "blurred": false
     },
@@ -3258,7 +3258,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.9,
       "blurred": false
     },
@@ -3279,7 +3279,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.72,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.72,
       "blurred": false
     },
@@ -3299,7 +3299,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.85,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.85,
       "blurred": false
     },
@@ -3319,7 +3319,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.9,
       "blurred": false
     },
@@ -3337,7 +3337,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.9,
       "blurred": false
     },
@@ -3357,7 +3357,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.82,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.82,
       "blurred": false
     },
@@ -3377,7 +3377,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.85,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.85,
       "blurred": false
     },
@@ -3397,7 +3397,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.9,
       "blurred": false
     },
@@ -3418,7 +3418,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.9,
       "blurred": false
     },
@@ -3438,7 +3438,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.9,
       "blurred": false
     },
@@ -3459,7 +3459,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.82,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.82,
       "blurred": false
     },
@@ -3480,7 +3480,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.85,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.85,
       "blurred": false
     },
@@ -3500,7 +3500,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.9,
       "blurred": false
     },
@@ -3520,7 +3520,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.85,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.85,
       "blurred": false
     },
@@ -3542,7 +3542,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.85,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.85,
       "blurred": false
     },
@@ -3562,7 +3562,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.78,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.78,
       "blurred": false
     },
@@ -3582,7 +3582,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.85,
       "blurred": false
     },
@@ -3603,7 +3603,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.88,
       "blurred": false
     },
@@ -3623,7 +3623,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.85,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.85,
       "blurred": false
     },
@@ -3643,7 +3643,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.85,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.85,
       "blurred": false
     },
@@ -3663,7 +3663,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.85,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.85,
       "blurred": false
     },
@@ -3684,7 +3684,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.85,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.85,
       "blurred": false
     },
@@ -3704,7 +3704,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.9,
       "blurred": false
     },
@@ -3725,7 +3725,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.85,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.85,
       "blurred": false
     },
@@ -3746,7 +3746,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.72,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.72,
       "blurred": false
     },
@@ -3766,7 +3766,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.9,
       "blurred": false
     },
@@ -3788,7 +3788,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.82,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.82,
       "blurred": false
     },
@@ -3808,7 +3808,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.9,
       "blurred": false
     },
@@ -3829,7 +3829,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.85,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.85,
       "blurred": false
     },
@@ -3850,7 +3850,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.78,
       "blurred": false
     },
@@ -3871,7 +3871,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.85,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.85,
       "blurred": false
     },
@@ -3889,7 +3889,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.75,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.75,
       "blurred": false
     },
@@ -3909,7 +3909,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.8,
       "blurred": false
     },
@@ -3929,7 +3929,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.8,
       "blurred": false
     },
@@ -3949,7 +3949,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.9,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.65,
       "blurred": false
     },
@@ -3970,7 +3970,7 @@
         "session": "36902d4e+a56c2d06+b3ca98aa"
       },
       "certainty": 0.85,
-      "t_obs": "2026-06-16T10:22:09Z",
+      "t_obs": "2026-06-16T13:08:16Z",
       "render": 0.65,
       "blurred": false
     }
