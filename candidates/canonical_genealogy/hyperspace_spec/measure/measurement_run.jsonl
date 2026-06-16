@@ -1,0 +1,16 @@
+{"target": "common", "kind": "epistemic", "depth": 0, "context_chars": 0, "residue_bits": 34.94}
+{"target": "common", "kind": "epistemic", "depth": 1, "context_chars": 41, "residue_bits": 24.35}
+{"target": "common", "kind": "epistemic", "depth": 2, "context_chars": 97, "residue_bits": 17.68}
+{"target": "common", "kind": "epistemic", "two_clock_present": 34.94, "two_clock_amortized": 17.68, "two_clock_gap": 17.25, "dissolved_frac": 0.494}
+{"target": "arithmetic", "kind": "epistemic", "depth": 0, "context_chars": 0, "residue_bits": 27.97}
+{"target": "arithmetic", "kind": "epistemic", "depth": 1, "context_chars": 27, "residue_bits": 25.77}
+{"target": "arithmetic", "kind": "epistemic", "depth": 2, "context_chars": 87, "residue_bits": 10.27}
+{"target": "arithmetic", "kind": "epistemic", "two_clock_present": 27.97, "two_clock_amortized": 10.27, "two_clock_gap": 17.7, "dissolved_frac": 0.633}
+{"target": "specific", "kind": "mixed", "depth": 0, "context_chars": 0, "residue_bits": 88.08}
+{"target": "specific", "kind": "mixed", "depth": 1, "context_chars": 44, "residue_bits": 71.68}
+{"target": "specific", "kind": "mixed", "depth": 2, "context_chars": 83, "residue_bits": 26.0}
+{"target": "specific", "kind": "mixed", "two_clock_present": 88.08, "two_clock_amortized": 26.0, "two_clock_gap": 62.09, "dissolved_frac": 0.705}
+{"target": "random", "kind": "aleatoric", "depth": 0, "context_chars": 0, "residue_bits": 188.13}
+{"target": "random", "kind": "aleatoric", "depth": 1, "context_chars": 30, "residue_bits": 186.19}
+{"target": "random", "kind": "aleatoric", "depth": 2, "context_chars": 76, "residue_bits": 184.63}
+{"target": "random", "kind": "aleatoric", "two_clock_present": 188.13, "two_clock_amortized": 184.63, "two_clock_gap": 3.5, "dissolved_frac": 0.019}

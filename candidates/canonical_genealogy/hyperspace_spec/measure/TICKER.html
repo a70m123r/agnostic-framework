@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Latent Dynamics Ticker — live digestion stream</title>
+<style>
+  :root{ --bg:#070a0f; --ink:#d7e0ee; --dim:#7e8aa0; --line:#1d2632; --acc:#43d17a; --amber:#ffce5a; --red:#ff5d6c; }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--ink);font:13px/1.4 ui-monospace,Menlo,Consolas,monospace}
+  header{padding:10px 16px;border-bottom:1px solid var(--line)}
+  h1{margin:0;font-size:14px}
+  .sub{color:var(--dim);font-size:11px}
+  /* scrolling tape */
+  .tape{overflow:hidden;white-space:nowrap;border-bottom:1px solid var(--line);background:#0b0f16;padding:7px 0}
+  .tape .run{display:inline-block;padding-left:100%;animation:scroll 26s linear infinite}
+  @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-100%)}}
+  .tk{margin:0 22px;font-size:13px}
+  .tk b{color:#fff}
+  .up{color:var(--acc)} .floor{color:var(--red)} .mid{color:var(--amber)}
+  .grid{display:flex;flex-wrap:wrap;gap:12px;padding:16px}
+  .card{width:300px;border:1px solid var(--line);border-radius:8px;padding:12px;background:#0b0f16}
+  .card h2{margin:0 0 2px;font-size:13px}
+  .badge{font-size:9.5px;padding:1px 6px;border-radius:8px;border:1px solid var(--line);margin-left:6px}
+  .row{display:flex;justify-content:space-between;font-size:11px;color:var(--dim);margin-top:7px}
+  .row b{color:var(--ink)}
+  .dial{height:6px;background:#141b27;border-radius:3px;overflow:hidden;margin-top:3px}
+  .dial > i{display:block;height:100%}
+  .floorflag{color:var(--red);font-weight:bold;font-size:10px}
+  .dark{padding:12px 16px;border-top:1px solid var(--line);color:var(--dim);font-size:11px}
+  .dark .g{display:inline-block;border:1px dashed #2a3545;border-radius:5px;padding:2px 8px;margin:3px;color:#55617a}
+</style>
+</head>
+<body>
+<header>
+  <h1>Latent Dynamics Ticker <span class="sub">— live digestion stream · every value measured via echo-codelength · nothing fabricated</span></h1>
+</header>
+<div class="tape"><div class="run" id="run"></div></div>
+<div class="grid" id="grid"></div>
+<div class="dark" id="dark"></div>
+<script id="tk-data">window.TK_DATA = {"targets": [{"id": "common", "kind": "epistemic", "rho": [34.94, 24.35, 17.68], "present": 34.94, "amortized": 17.68, "gap": 17.25, "dissolved": 0.494}, {"id": "arithmetic", "kind": "epistemic", "rho": [27.97, 25.77, 10.27], "present": 27.97, "amortized": 10.27, "gap": 17.7, "dissolved": 0.633}, {"id": "specific", "kind": "mixed", "rho": [88.08, 71.68, 26.0], "present": 88.08, "amortized": 26.0, "gap": 62.09, "dissolved": 0.705}, {"id": "random", "kind": "aleatoric", "rho": [188.13, 186.19, 184.63], "present": 188.13, "amortized": 184.63, "gap": 3.5, "dissolved": 0.019}], "n": 4};</script>
+<script>
+const D = (window.TK_DATA && window.TK_DATA.targets) || [];
+const KC = {epistemic:"var(--acc)", aleatoric:"var(--red)", mixed:"var(--amber)"};
+const fmt = x => (x==null?"—":x.toFixed(1));
+
+// scrolling tape
+const run = document.getElementById("run");
+function arrow(t){ const d=t.dissolved||0; const cls = d<0.25?"floor":(d<0.55?"mid":"up");
+  return `<span class="tk"><b>${t.id.toUpperCase()}</b> <span class="${cls}">▼${Math.round(d*100)}%</span> `+
+    `<span class="sub">ρ ${fmt(t.present)}→${fmt(t.amortized)}</span>${d<0.25?' <span class="floor">FLOOR</span>':''}</span>`; }
+run.innerHTML = (D.map(arrow).join("") + " · ").repeat(3);
+
+// cards with rho sparkline + twin-clock dials
+const grid = document.getElementById("grid");
+const maxR = Math.max(1, ...D.flatMap(t=>t.rho||[]));
+D.forEach(t=>{
+  const col = KC[t.kind]||"#9fb0c8";
+  const pts = (t.rho||[]).map((r,i)=>{const x=10+i*(280/Math.max(1,(t.rho.length-1)));const y=70-(r/maxR)*58;return `${x},${y}`;}).join(" ");
+  const c = document.createElement("div"); c.className="card";
+  c.innerHTML =
+    `<h2>${t.id} <span class="badge" style="color:${col};border-color:${col}">${t.kind}</span></h2>`+
+    `<div class="sub">ρ(prior-depth) — residue dissolving as prior is handed over</div>`+
+    `<svg viewBox="0 0 300 80" width="100%" height="78">`+
+      `<line x1="10" y1="70" x2="290" y2="70" stroke="#1d2632"/>`+
+      `<polyline points="${pts}" fill="none" stroke="${col}" stroke-width="2"/>`+
+      (t.rho||[]).map((r,i)=>{const x=10+i*(280/Math.max(1,(t.rho.length-1)));const y=70-(r/maxR)*58;return `<circle cx="${x}" cy="${y}" r="2.6" fill="${col}"/>`;}).join("")+
+      `<text x="10" y="14" fill="${col}" font-size="10">${fmt(t.present)} bits cold</text>`+
+    `</svg>`+
+    `<div class="row"><span>present clock</span><b>${fmt(t.present)} bits</b></div><div class="dial"><i style="width:100%;background:var(--dim)"></i></div>`+
+    `<div class="row"><span>amortized clock</span><b>${fmt(t.amortized)} bits</b></div><div class="dial"><i style="width:${Math.round(100*(t.amortized/Math.max(1,t.present)))}%;background:${col}"></i></div>`+
+    `<div class="row"><span>dissolved (the digestion)</span><b>${Math.round((t.dissolved||0)*100)}%</b>${(t.dissolved||0)<0.25?' <span class="floorflag">⟂ ALEATORIC FLOOR</span>':''}</div>`;
+  grid.appendChild(c);
+});
+
+// honest dark gauges — measured-or-dark (the channel rule)
+document.getElementById("dark").innerHTML =
+  `<b>measured:</b> ρ(prior-depth), two-clock (present vs amortized), dissolved-fraction, the aleatoric floor. `+
+  `<b style="color:#55617a">dark (no stream yet — would fabricate):</b> `+
+  `<span class="g">EDL per-tick</span><span class="g">Goodhart gap</span><span class="g">knee alarm</span>`+
+  `<span class="g">crack spikes</span><span class="g">slowing-down LEDs</span> `+
+  `<span class="sub">— these light up only when a real per-tick measurement run emits them (no observable, no needle).</span>`;
+if(!D.length){ grid.innerHTML = '<div class="sub">no data — run digestion_measure.py then build_ticker.py</div>'; }
+</script>
+</body>
+</html>
