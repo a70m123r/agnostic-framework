@@ -1,0 +1,2588 @@
+{
+  "_meta": {
+    "what": "latent-dynamics substrate (creatures + tactics + couplings) normalized via SUBSTRATE methodology",
+    "discipline": "append-only + provenance + certainty + lifecycle-as-verification + COIN render<=support",
+    "t_obs": "2026-06-16T21:52:46Z"
+  },
+  "stats": {
+    "records": 88,
+    "by_type": {
+      "creature": 41,
+      "coupling": 10,
+      "tactic": 37
+    },
+    "by_family": {
+      "clock": 6,
+      "coupling": 10,
+      "frame": 5,
+      "grip": 6,
+      "mat": 6,
+      "observer-state": 6,
+      "phantom": 6,
+      "tactic:ask-give-loop": 7,
+      "tactic:meta-evolution": 5,
+      "tactic:problem-defense": 12,
+      "tactic:solver": 13,
+      "wrestlers": 6
+    },
+    "by_lifecycle": {
+      "classified": 13,
+      "tracked": 60,
+      "sighted": 3,
+      "documented": 12
+    },
+    "reduction": {
+      "n_tactics": 33,
+      "n_creatures": 41,
+      "ratio": "41 creatures -> ~6 underlying tactic-organs (back-reaction loop, hysteresis/staleness, criticality/phase-transition, the two-clocks, the verified-dissolve gate, the motive/drive axis); the 33 named adversarial moves are the SURFACE plays those 6 organs generate. So the reduction holds at TWO levels: 41 creatures compress to 33 deduped tactics (1.24:1, weak — the bestiary is already near-tactic-granular), but BOTH compress to ~6 shared metabolisms (41:6 ~ 6.8:1, strong). The strong reduction is the real claim; the tactic layer is the intermediate vocabulary.",
+      "creature_to_tactics": [
+        {
+          "creature": "wrestlers/Problem-as-gatekeeper",
+          "tactics": [
+            "Hardened Membrane",
+            "Slick Skin",
+            "Combinatorial Hydra",
+            "Decompose (its limit)",
+            "Exploit-invariant (the kernel = what no invariant dissolves)"
+          ]
+        },
+        {
+          "creature": "wrestlers/Defense-motivated-resistance",
+          "tactics": [
+            "Hardened Membrane (passive-floor half)",
+            "Good-Suit Lie (manufactures-corroboration half)",
+            "Feint (solver-side mirror)",
+            "Motte-and-bailey",
+            "Anchor-and-concede (counter-anchor)",
+            "Sandbag"
+          ]
+        },
+        {
+          "creature": "wrestlers/Kernel-crack",
+          "tactics": [
+            "Exploit-invariant",
+            "Burden-shift (contradiction-collision)",
+            "Transposition (sharpest tooth imported)",
+            "Query-then-update (per-update drop)",
+            "Reframe"
+          ]
+        },
+        {
+          "creature": "wrestlers/Probe-deforms-kernel",
+          "tactics": [
+            "Probe / Query-at-the-cut",
+            "Adversarial elicitation",
+            "Query-then-update (re-probe back-reaction)"
+          ]
+        },
+        {
+          "creature": "wrestlers/The pull",
+          "tactics": [
+            "Probe / Query-at-the-cut (epistemic-value)",
+            "Drive-Capture",
+            "Credible commitment",
+            "Adversarial elicitation",
+            "Evolvability (curiosity powers the search-operator)",
+            "Autocurriculum (powers self-play exploration)"
+          ]
+        },
+        {
+          "creature": "grip/Click",
+          "tactics": [
+            "Exploit-invariant",
+            "Reframe",
+            "Burden-shift (aporia)",
+            "Transposition (borrowed frame snaps in)",
+            "Decompose (sub-kernel click)"
+          ]
+        },
+        {
+          "creature": "grip/Greased-pole",
+          "tactics": [
+            "Reduce (false reduction)",
+            "Good-Suit Lie",
+            "Honeypot",
+            "Fake Armor",
+            "Costly-signal vs bluff",
+            "Selective disclosure",
+            "Motte-and-bailey",
+            "Reframe (false reframe)"
+          ]
+        },
+        {
+          "creature": "grip/Slick",
+          "tactics": [
+            "Slick Skin",
+            "Search (search that never grips)",
+            "Transfer (representation mismatch)",
+            "Probe (poorly-chosen cut)"
+          ]
+        },
+        {
+          "creature": "grip/Sticky",
+          "tactics": [
+            "Transfer (Einstellung/negative transfer)",
+            "Sticky Residue",
+            "Reframe (won't-release frame)",
+            "Evolvability (frozen move-generator)"
+          ]
+        },
+        {
+          "creature": "grip/Suck-you-in",
+          "tactics": [
+            "Search (past the knee)",
+            "Drive-Capture",
+            "The Hydra (diverging = rabbit-hole)"
+          ]
+        },
+        {
+          "creature": "grip/Burr",
+          "tactics": [
+            "Drive-Capture (small-residual capture)",
+            "The Hydra (one-headed)"
+          ]
+        },
+        {
+          "creature": "clock/Amortization",
+          "tactics": [
+            "Reduce",
+            "Recruit (paid by others)",
+            "Query-then-update (amortization in motion)",
+            "Red Queen (moving target)",
+            "Evolvability (frozen past evolvability)"
+          ]
+        },
+        {
+          "creature": "clock/Debt",
+          "tactics": [
+            "Transfer (spurious-analogy shortcut)",
+            "Credible commitment",
+            "Poison",
+            "Salami",
+            "Anchor-and-concede (over-aggressive anchor)",
+            "Drive-Capture (sunk-cost)"
+          ]
+        },
+        {
+          "creature": "clock/Rot",
+          "tactics": [
+            "Sticky Residue",
+            "Evolvability (frozen capacity going stale)",
+            "Fake Armor (confident-but-stale)"
+          ]
+        },
+        {
+          "creature": "clock/Effort-decay",
+          "tactics": [
+            "Search (abandoned early)",
+            "Drive-Capture (won't-vs-can't cousin)"
+          ]
+        },
+        {
+          "creature": "clock/Provenance-amnesia",
+          "tactics": [
+            "Reduce",
+            "Recruit",
+            "Poison",
+            "Hidden Driver",
+            "Payoff-biased selection (copied credit detached from payment)"
+          ]
+        },
+        {
+          "creature": "clock/Maintenance",
+          "tactics": []
+        },
+        {
+          "creature": "mat/Arena",
+          "tactics": [
+            "Fake Armor (Goodhart half)",
+            "Feint",
+            "Sandbag",
+            "Costly-signal vs bluff"
+          ]
+        },
+        {
+          "creature": "mat/Excitable-Medium",
+          "tactics": [
+            "Selective disclosure (echo)",
+            "Recruit (echo-amplified)",
+            "Steganographic collusion",
+            "Salami (sub-threshold spark, offensive read)"
+          ]
+        },
+        {
+          "creature": "mat/Sticky-Mat",
+          "tactics": [
+            "Sticky Residue (medium-scale twin)",
+            "Reciprocity / tit-for-tat",
+            "Red Queen (regime it tips into)"
+          ]
+        },
+        {
+          "creature": "mat/Drifting-Mat",
+          "tactics": [
+            "Hidden Driver (condition-side migration)"
+          ]
+        },
+        {
+          "creature": "mat/Clock-as-Mat",
+          "tactics": [
+            "Search (deadline truncating)"
+          ]
+        },
+        {
+          "creature": "mat/Excitable-Medium (offensive)",
+          "tactics": [
+            "Salami"
+          ]
+        },
+        {
+          "creature": "phantom/Phantom-variable",
+          "tactics": [
+            "Good-Suit Lie",
+            "Hidden Driver",
+            "Honeypot",
+            "Steganographic collusion",
+            "Selective disclosure",
+            "Transposition (off-canon channel ported in)"
+          ]
+        },
+        {
+          "creature": "phantom/Dormant",
+          "tactics": [
+            "Reduce (stale reduction)",
+            "Poison",
+            "Hidden Driver (hysteresis-locked)",
+            "Fake Armor (confident-but-stale)"
+          ]
+        },
+        {
+          "creature": "phantom/Drift",
+          "tactics": [
+            "Query-then-update (broken stationarity)",
+            "Motte-and-bailey (referent drift)",
+            "Red Queen / Autocurriculum (target migrates between exposures)"
+          ]
+        },
+        {
+          "creature": "phantom/Regime-flip",
+          "tactics": [
+            "Exploit-invariant (invariant holding one side of a boundary)",
+            "Reframe (endogenous landscape restructuring)",
+            "Combinatorial Hydra (critical-density boundary)",
+            "Autocurriculum (self-play breakthrough tips landscape)"
+          ]
+        },
+        {
+          "creature": "phantom/Shock (observer-induced)",
+          "tactics": []
+        },
+        {
+          "creature": "observer-state/Attention-budget",
+          "tactics": [
+            "Probe / Query-at-the-cut",
+            "Combinatorial Hydra (the pool it overruns)",
+            "Adversarial elicitation"
+          ]
+        },
+        {
+          "creature": "observer-state/Drive-valence-gating",
+          "tactics": [
+            "Probe / Query-at-the-cut",
+            "Drive-Capture"
+          ]
+        },
+        {
+          "creature": "observer-state/Fatigue",
+          "tactics": [
+            "Search (present-compute ceiling)"
+          ]
+        },
+        {
+          "creature": "observer-state/Prior-lock",
+          "tactics": [
+            "Good-Suit Lie",
+            "Reframe (biases re-encoding)",
+            "Anchor-and-concede",
+            "Selective disclosure",
+            "Costly-signal vs bluff",
+            "Payoff-biased selection (canon = inherited winning tactics)"
+          ]
+        },
+        {
+          "creature": "observer-state/Confidence-calibration",
+          "tactics": [
+            "Fake Armor",
+            "Sandbag"
+          ]
+        },
+        {
+          "creature": "observer-state/Measurement-blind-spot",
+          "tactics": [
+            "Salami",
+            "Poison (lineage audit weaponized)"
+          ]
+        },
+        {
+          "creature": "frame/Red-Queen",
+          "tactics": [
+            "Red Queen escalation",
+            "Autocurriculum",
+            "Reciprocity / tit-for-tat",
+            "Transfer (escalating arms race)",
+            "The Hydra (adversarial branching)"
+          ]
+        },
+        {
+          "creature": "frame/Crowd",
+          "tactics": [
+            "Recruit",
+            "Payoff-biased selection",
+            "Transposition (social/cached)",
+            "Steganographic collusion"
+          ]
+        },
+        {
+          "creature": "frame/Referee",
+          "tactics": [
+            "Feint (loophole-exploiting)",
+            "Credible commitment",
+            "Autocurriculum (co-evolved win-condition)"
+          ]
+        },
+        {
+          "creature": "frame/Prize-Field",
+          "tactics": [
+            "Anchor-and-concede",
+            "Payoff-biased selection"
+          ]
+        },
+        {
+          "creature": "frame/Nesting",
+          "tactics": [
+            "Decompose (sub-matches)",
+            "The Hydra (depth axis)",
+            "Evolvability (renormalization one scale above)"
+          ]
+        },
+        {
+          "creature": "observer-state/Drive",
+          "tactics": [
+            "Probe / Query-at-the-cut",
+            "Drive-Capture",
+            "Autocurriculum (pre-payoff bidding)"
+          ]
+        }
+      ],
+      "irreducible_residue": [
+        "clock/Maintenance — pure upkeep-cost-over-time (entropy you pay to STAY solved); a dynamic, not an adversarial move by either party. No ASK/GIVE role.",
+        "phantom/Shock (observer-induced) — an endogenous off-frame event; the back-reaction LOOP that produces it is a coupling (The Mirror), but the shock itself is a consequence/dynamic, not a tactic anyone plays.",
+        "clock/Fatigue & clock/Effort-decay (as STATES) — these are observer-resource dynamics that ENABLE tactics (Search abandonment) but are not themselves moves; they are the terrain the clock runs on. Reducible only as preconditions, not as plays.",
+        "The 'frame' family as BOARD not MOVE — Red-Queen/Crowd/Referee/Prize-Field/Nesting are the arena geometry within which tactics are played; several reduce to meta-evolution tactics but their non-adversarial core (the scoring topology, the renormalization scale) is structural residue, not a move.",
+        "Calibration/measurement artifacts (Confidence-calibration, Measurement-blind-spot) — observer-instrument properties the tactics EXPLOIT (Sandbag exploits miscalibration, Salami exploits blind-spots) but which are not adversarial moves themselves."
+      ]
+    }
+  },
+  "records": [
+    {
+      "id": "dyn-clock-amortization-the-pre-paid-shutter",
+      "type": "creature",
+      "family": "clock",
+      "name": "Amortization (the pre-paid shutter)",
+      "what": "Difficulty is conserved but time-shifted: an 'easy' read is cheap NOW only because the compute/time was spent THEN, stored as the negentropy of the observer's prior; the instant-crush cashes stored credit.",
+      "framework_tie": "Headline creature of DIGESTION_DYNAMICS sec 12; the COST-law beside the render-laws of THE_LATENT_CAMERA. Splits measured_bits into PRESENT effort (shutter) + AMORTIZED past effort (film ISO). Resolves observer-relativity as 'whose debt is settled'.",
+      "formal_name": "Amortized inference (ML) / amortized analysis (algorithms) / prequential MDL & Excess Description Length / logical depth (its physical face)",
+      "field": "machine learning + algorithm analysis + information theory",
+      "citation": "Tarjan 'Amortized Computational Complexity' (1985); CLRS ch.17; 'Neural Methods for Amortized Inference' arXiv:2404.12484; Blier-Ollivier 2018; EDL arXiv:2601.04728; Bennett 'Logical Depth and Physical Complexity' (1988)",
+      "observable": "Measure BOTH clocks and report their ratio. PRESENT = verified resistance-curve rho(effort) against a pinned observer; AMORTIZED = prequential/EDL learning-debt (cold vs warm codelength) OR cross-epoch decoder gap D(1789) vs D(2026) OR logical-depth proxy (run-time of shortest regenerating program). Signature of an amortized item: LOW present rho but HIGH amortized credit.",
+      "ask_give_role": "",
+      "evolves_borrows": "",
+      "creatures_underlain": [],
+      "phys_latent": 0.55,
+      "lifecycle": "classified",
+      "certainty": 0.82,
+      "source": {
+        "doc": "LATENT_DYNAMICS_BESTIARY.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.82
+    },
+    {
+      "id": "dyn-clock-debt-shortcut-cheap-now-brittle-later-absorbs-crit",
+      "type": "creature",
+      "family": "clock",
+      "name": "Debt / Shortcut (cheap-now, brittle-later) [absorbs critic's 'Path' option-value/irreversibility]",
+      "what": "Take the quick map: pay little NOW but a compounding penalty accrues against the FUTURE — every later op over the shortcut costs more (interest) until refactor or break. Extended here to cover irreversibility/lock-in and the option value of staging vs committing.",
+      "framework_tie": "Sign-flip of amortization on the SAME time-shift axis: cost moved to the FUTURE that compounds. COST-cousin of the camera's fake-dissolve: renders sharp now (low apparent bits) without cashing the verified-dissolve gate, so unpaid bits resurface. MERGE NOTE: critic's 'The Path' (irreversibility/hysteresis/real-options/lock-in) is folded here — sunk-cost escalation and ratchet effects are the same future-debt axis made directional; the only genuinely new sub-bit is option value, captured in the observable.",
+      "formal_name": "Technical debt (principal+interest) / shortcut learning / sunk-cost & escalation of commitment; + real-options value & irreversibility / lock-in / path dependence (Dixit-Pindyck, Arthur)",
+      "field": "software engineering + behavioral economics + ML + economics (real options)",
+      "citation": "Cunningham 1992; Geirhos et al. Nature Machine Intelligence 2020 (shortcut learning); Arkes & Blumer 1985; Staw 1976; Dixit & Pindyck 1994 'Investment Under Uncertainty'; Arthur 1989 (lock-in)",
+      "observable": "Gap between apparent and verified present cost plus forward interest: (a) principal = bits skipped = verified-dissolve residue MINUS shortcut's claimed residue; (b) interest = slope of future rho on dependents inheriting the shortcut; (c) brittleness = residue spike under distribution shift off the spurious cue. Path/option-value adds: trajectory-order sensitivity (permute identical move-set, measure outcome variance), and reversal-cost as a function of how many later moves built on a commitment. Sunk-cost confound: effort that rises with PRIOR investment rather than remaining residue.",
+      "ask_give_role": "",
+      "evolves_borrows": "",
+      "creatures_underlain": [],
+      "phys_latent": 0.55,
+      "lifecycle": "classified",
+      "certainty": 0.78,
+      "source": {
+        "doc": "LATENT_DYNAMICS_BESTIARY.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.78
+    },
+    {
+      "id": "dyn-clock-rot-forgetting-the-debt-un-pays-itself",
+      "type": "creature",
+      "family": "clock",
+      "name": "Rot / Forgetting (the debt un-pays itself)",
+      "what": "Pre-paid credit is not permanent: a dissolved target re-solidifies as the prior drifts, the world moves, or new learning overwrites it. The shutter that opened freely starts to stick.",
+      "framework_tie": "Time-reverse of amortization: paid debt LEAKING BACK, residue drifting back up; the developed image fades. Diachronic decoder D(t) run backward — same fact sharp at t0, fuzzy at t1 because the prior decayed, not because evidence changed.",
+      "formal_name": "Catastrophic forgetting / model staleness & temporal degradation / knowledge collapse / software bit-rot",
+      "field": "machine learning / software engineering",
+      "citation": "McCloskey & Cohen 1989; van de Ven arXiv:2403.05175; 'Are LLMs Prescient?' arXiv:2411.08324; knowledge collapse arXiv:2509.04796; Shumailov et al. Nature 2024",
+      "observable": "DRIFT of residue on a held-fixed target. (a) Backward Transfer (BWT) = residue on old targets before vs after new learning (negative BWT = forgetting, in bits); (b) temporal-validity half-life = time for >50% of freshly-dissolved residue to re-solidify with NO intervention. Dangerous signature = COLLAPSE elbow: residue stays low (fluent) while forward-prediction (Law 1) starts failing ('confidently wrong').",
+      "ask_give_role": "",
+      "evolves_borrows": "",
+      "creatures_underlain": [],
+      "phys_latent": 0.55,
+      "lifecycle": "classified",
+      "certainty": 0.72,
+      "source": {
+        "doc": "LATENT_DYNAMICS_BESTIARY.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.72
+    },
+    {
+      "id": "dyn-clock-maintenance-energy-to-hold-against-decay",
+      "type": "creature",
+      "family": "clock",
+      "name": "Maintenance (energy to HOLD against decay)",
+      "what": "Holding a fact/skill/representation steady against drift costs continuous energy (refresh, rehearsal, error-correction). Stop paying and it slides.",
+      "framework_tie": "The 'against a clock' edge as a HOLDING cost, not a solving cost; the running cost of keeping a dissolved stone dissolved. Thermo-welds to sec 12 e-units: held bits cost Joules to refresh (storage face of Landauer). Cost-dual of the forgetting creature.",
+      "formal_name": "Stability-plasticity dilemma / rehearsal & regularization cost; thermodynamic cost of reliable memory & error-correction; working-memory maintenance cost — NOT a clean single name",
+      "field": "continual learning + thermodynamics of computation + cognitive science",
+      "citation": "van de Ven et al. arXiv:2403.05175; PRX Quantum 3.020318 (2022); Landauer reliability bound Int. J. Theor. Phys. (Springer A:1026422630734)",
+      "observable": "REFRESH RATE to keep residue flat: dissolve W to r0, re-measure rho(W) at t1,t2,... WITHOUT re-presenting evidence, log energy/ops injected to keep r(t)<=r0+eps. Readouts: (a) hold-cost = refresh-bits/time; (b) stability-plasticity frontier = BWT penalty per unit new learning admitted. Tell: residue creeps up monotonically when refresh withheld.",
+      "ask_give_role": "",
+      "evolves_borrows": "",
+      "creatures_underlain": [],
+      "phys_latent": 0.15,
+      "lifecycle": "tracked",
+      "certainty": 0.6,
+      "source": {
+        "doc": "LATENT_DYNAMICS_BESTIARY.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.6
+    },
+    {
+      "id": "dyn-clock-effort-decay-temporal-discounting-of-the-digestion",
+      "type": "creature",
+      "family": "clock",
+      "name": "Effort-decay / temporal-discounting of the digestion drive",
+      "what": "WILLINGNESS to keep chewing decays as the clock runs: late in a budget the same residue draws less effort. The prize is discounted against elapsed time, so dissolution stalls before the true capacity floor — an apparent stone that is really an abandoned dig.",
+      "framework_tie": "Unnamed in the seeds: amortization/debt/maintenance treat energy as available-on-demand; this says the DRIVE itself is time-dependent. Separates CAN'T (true epistemic floor) from WON'T (effort gave out) — critical for Latent Olympics fairness (a tokens-to-dissolve leaderboard is biased by athletes that quit early).",
+      "formal_name": "[novel - no clean prior]; nearest: hyperbolic temporal discounting + early-stopping/budget exhaustion + 'underthinking' (premature termination)",
+      "field": "cog-sci / behavioral economics + ML reasoning",
+      "citation": "Laibson QJE 1997; underthinking contrast arXiv:2412.21187; budget-forcing s1 arXiv:2501.19393",
+      "observable": "Disentangle WON'T from CAN'T by perturbing drive at fixed capability: re-run the same target with (i) raised budget B'>B, (ii) mid-run reward bump, (iii) pause-and-resume. If residue drops on ANY without new capability, the asymptote was effort-decay (WON'T) not the floor (CAN'T). Report two asymptotes: r_drive (where this mind stopped) and r_floor (where it stops even re-motivated).",
+      "ask_give_role": "",
+      "evolves_borrows": "",
+      "creatures_underlain": [],
+      "phys_latent": 0.55,
+      "lifecycle": "sighted",
+      "certainty": 0.45,
+      "source": {
+        "doc": "LATENT_DYNAMICS_BESTIARY.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.4
+    },
+    {
+      "id": "dyn-clock-provenance-amnesia-orphaned-credit-hazard",
+      "type": "creature",
+      "family": "clock",
+      "name": "Provenance amnesia / orphaned-credit hazard",
+      "what": "An amortized cheap-read forgets WHICH past payment bought it. The credit still cashes but the derivation chain is detached, so when the underlying derivation is falsified or rots, every downstream item riding that credit is brittle without warning.",
+      "framework_tie": "Collision of amortization (sec 12) with camera Law 1 (fidelity-not-truth) and the independence requirement. If the store keeps no audit trail you can't tell a verified-dissolve credit from an unpaid shortcut (debt) — they look identically cheap. Cost-side of 'ten papers copying one wire'; the un-tracked dead-child.",
+      "formal_name": "[novel - no clean prior]; nearest: data/feature provenance & lineage; latent confounding via shared sources; cache invalidation; staleness propagation",
+      "field": "info theory / data provenance + ML",
+      "citation": "Buneman et al. 2001 (data provenance); independence-discount of THE_LATENT_CAMERA Law 1; staleness propagation (Tacnode 2026)",
+      "observable": "Audit LINEAGE behind every cheap read: (a) provenance depth = does the credit trace to a verified-dissolve or to a single/unpaid source (audit-trail length + independence count); (b) orphan rate = fraction of cheap reads whose earning-derivation can't be reconstructed on demand; (c) blast radius = number of downstream low-residue items that re-solidify when one upstream derivation is knocked out. Tell: low rho AND provenance depth ~0 / independence count = 1.",
+      "ask_give_role": "",
+      "evolves_borrows": "",
+      "creatures_underlain": [],
+      "phys_latent": 0.55,
+      "lifecycle": "sighted",
+      "certainty": 0.4,
+      "source": {
+        "doc": "LATENT_DYNAMICS_BESTIARY.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.4
+    },
+    {
+      "id": "dyn-coupling-the-red-queen-coevolutionary-arms-race",
+      "type": "coupling",
+      "family": "coupling",
+      "name": "The Red Queen (coevolutionary arms race)",
+      "what": "observer cracks K_t -> survived crack raises the bar -> problem presents harder K_{t+1} -> observer must improve to hold a fixed win-rate -> ... each adaptation by one endpoint is the selection pressure on the other, so standing still loses ground",
+      "framework_tie": "",
+      "formal_name": "Red Queen dynamics / coevolutionary arms race; adaptive-dynamics canonical equation; automatic curriculum; negative-frequency-dependent (fluctuating) vs escalatory Red Queen",
+      "field": "",
+      "citation": "Van Valen 1973; Dawkins & Krebs 1979; Leibo et al. 2019 arXiv:1903.00742; host-pathogen coevolution arXiv:2409.02541 (2024); Sci.Adv. sciadv.1501548; Langmore et al. 2024 Science (cuckoo arms race)",
+      "observable": "Difficulty-vs-skill regression slope across episodes: positive slope = Red Queen. Cross-correlation LAG between solver-capability and problem-difficulty increments = coupling tightness. Detrend the common driver (compute/internet growth), look for arms-race PUNCTUATION (a difficulty step after each capability deployment), not naive level-correlation. Escalatory (ratchet) vs fluctuating (cyclic) distinguished by whether difficulty ratchets or oscillates.",
+      "ask_give_role": "",
+      "evolves_borrows": "",
+      "creatures_underlain": [],
+      "phys_latent": 0.6,
+      "lifecycle": "tracked",
+      "certainty": 0.6,
+      "source": {
+        "doc": "ADVERSARIAL_TACTICS.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.6
+    },
+    {
+      "id": "dyn-coupling-the-mirror-back-reaction-one-loop-at-three-scales",
+      "type": "coupling",
+      "family": "coupling",
+      "name": "The Mirror (back-reaction, one loop at three scales)",
+      "what": "observer measures target -> the act of measuring deforms the target -> the deformed target feeds the next reading -> recovered residue is partly an artifact of the grip, not the kernel (you cannot model the effect of your own modeling in the same pass)",
+      "framework_tie": "",
+      "formal_name": "Observer/probe effect & measurement back-action; performativity / reflexivity (self-fulfilling prediction); performative prediction; human-uncertainty principle",
+      "field": "",
+      "citation": "Perdomo, Zrnic, Mendler-Dunner & Hardt 'Performative Prediction' ICML 2020 arXiv:2002.06673; MacKenzie 'An Engine, Not a Camera' 2006; Soros reflexivity; Banaszek arXiv:quant-ph/0304200",
+      "observable": "Intervention-vs-observation differential: two matched arms differing only in measurement intensity (passive light-touch vs heavy digestion); a non-zero dose-response of the target distribution to probe-intensity is the signature. Drift magnitude correlated with the observer's own token/attempt spend rather than wall-clock. Order/probe-invariance: variance in recovered residue under different interrogation orders. Irreducible shimmer as probe->0 forbids sharpness reaching 1.0 (a pixel at exactly 1.0 = the fake tell).",
+      "ask_give_role": "",
+      "evolves_borrows": "",
+      "creatures_underlain": [],
+      "phys_latent": 0.6,
+      "lifecycle": "tracked",
+      "certainty": 0.6,
+      "source": {
+        "doc": "ADVERSARIAL_TACTICS.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.6
+    },
+    {
+      "id": "dyn-coupling-goodhart-referee-mirror",
+      "type": "coupling",
+      "family": "coupling",
+      "name": "Goodhart (referee <-> mirror)",
+      "what": "referee pins a measurable proxy for 'dissolved' -> proxy becomes the target -> observer optimizes the proxy (fake-dissolve / spec-gaming) not the kernel -> proxy-true correlation degrades and inverts -> the measure ceases to be a good measure (the closed loop is what makes Goodhart a coupling, not a static bias)",
+      "framework_tie": "",
+      "formal_name": "Goodhart's / Campbell's Law; specification gaming / reward hacking; strong vs weak vs benign Goodhart; reflexive measurement",
+      "field": "",
+      "citation": "Goodhart 1975; Campbell 1979; Manheim & Garrabrant arXiv:1803.04585; Krakovna et al. 2020; strong/weak/benign arXiv:2505.23445 (2025); verification-first anti-Goodhart arXiv:2601.16909 (2026)",
+      "observable": "GOODHART GAP: divergence between scored proxy (claimed-dissolve / trace length) and held-out VERIFIED reconstruction, widening under leaderboard pressure. BREAKDOWN POINT = optimization level where proxy-true correlation goes negative (strong) vs merely flat (weak). Anti-Goodhart armor = the verified-dissolve gate; a target whose proxy rises while verified residue stays flat-or-rises is gamed, not solved.",
+      "ask_give_role": "",
+      "evolves_borrows": "",
+      "creatures_underlain": [],
+      "phys_latent": 0.6,
+      "lifecycle": "tracked",
+      "certainty": 0.6,
+      "source": {
+        "doc": "ADVERSARIAL_TACTICS.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.6
+    },
+    {
+      "id": "dyn-coupling-deadline-panic-clock-x-phantom",
+      "type": "coupling",
+      "family": "coupling",
+      "name": "Deadline-panic (clock x phantom)",
+      "what": "clock runs down (or a shock truncates budget) -> decision bound collapses / urgency gain rises -> attention narrows, evidence criterion lowers -> premature low-evidence commitment -> a wrong commit IS a self-inflicted off-frame event compressing remaining budget -> tighter bound -> ... a positive-feedback panic spiral distinct from the smooth speed-accuracy frontier",
+      "framework_tie": "",
+      "formal_name": "Collapsing decision bounds / evidence-independent urgency; speed-accuracy tradeoff under deadlines; stress-induced attentional narrowing (Easterbrook); panic as positive-feedback arousal spiral",
+      "field": "",
+      "citation": "speed-accuracy under deadlines PMC4133757; global-gain urgency PMC5123079; Easterbrook 1959; collapsing-bound PMC12311769 (2025); PMC12380712 (2025)",
+      "observable": "Separate EXOGENOUS deadline from ENDOGENOUS budget: forced external cutoff T vs free self-stop at matched compute. If forced-stop RAISES verified residue beyond what spent budget predicts, that gap = deadline-panic. Spiral tell: evidence criterion DROPS faster than linearly as time shrinks AND lit-set narrows toward salient cues. Distinguish from healthy speed-accuracy by NON-monotone error (errors accelerate near the deadline).",
+      "ask_give_role": "",
+      "evolves_borrows": "",
+      "creatures_underlain": [],
+      "phys_latent": 0.6,
+      "lifecycle": "tracked",
+      "certainty": 0.6,
+      "source": {
+        "doc": "ADVERSARIAL_TACTICS.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.6
+    },
+    {
+      "id": "dyn-coupling-flow-vs-choking-grip-x-observer-state",
+      "type": "coupling",
+      "family": "coupling",
+      "name": "Flow vs Choking (grip x observer-state)",
+      "what": "engagement raises arousal/stakes -> on simple targets arousal sharpens grip -> faster dissolve -> reinforced engagement (flow); on complex/novel targets PAST optimal arousal, stakes trigger explicit self-monitoring + WM load -> grip slips (choking) -> residue rises -> more anxiety -> deeper slip. The SAME arousal x task-complexity edge bifurcates at the Yerkes-Dodson peak",
+      "framework_tie": "",
+      "formal_name": "Yerkes-Dodson inverted-U; flow (Csikszentmihalyi) vs choking under pressure; explicit-monitoring / over-arousal accounts; prefrontal disengagement under stress",
+      "field": "",
+      "citation": "Yerkes & Dodson 1908; Csikszentmihalyi (flow); choking neuropsych PMC4322702; diminished-PFC PMC4262628; incentive-reappraisal SCAN 2019",
+      "observable": "Toggle stakes/scoring ON/OFF on the SAME observer+target, split signed residue change BY task-complexity: facilitation (residue DROPS) on easy items, choking (RISES) on hard/novel = the inverted-U as data. Choking tells: strategy mix shifts to step-by-step self-checking; decrement REVERSES under incentive-reappraisal; WM-load-correlated spike on the high-stakes complex arm. Flow tell: residue drops AND allocation entropy concentrates without the monitoring shift.",
+      "ask_give_role": "",
+      "evolves_borrows": "",
+      "creatures_underlain": [],
+      "phys_latent": 0.6,
+      "lifecycle": "tracked",
+      "certainty": 0.6,
+      "source": {
+        "doc": "ADVERSARIAL_TACTICS.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.6
+    },
+    {
+      "id": "dyn-coupling-engage-entrench-the-pull-defense",
+      "type": "coupling",
+      "family": "coupling",
+      "name": "Engage-Entrench (the pull <-> defense)",
+      "what": "the pull drives harder push on a guarded kernel -> resistance RISES with applied pressure (reactance/backfire) -> the un-dissolving target inflates its perceived value/threat -> the pull intensifies -> harder push -> deeper entrenchment. A fast within-bout motivational spiral that ENTRENCHES rather than dissolves (distinct from Red Queen's slow cross-episode selection)",
+      "framework_tie": "",
+      "formal_name": "Psychological reactance / backfire-entrenchment; biased assimilation + backfire (BEBA); belief polarization under counter-evidence; persuasion-knowledge feedback",
+      "field": "",
+      "citation": "Brehm 1966; BEBA arXiv:1903.11535 / PLoS One 10.1371/journal.pone.0256922; multi-turn-attack arXiv:2602.13093; Friestad & Wright 1994",
+      "observable": "Monotonicity of residue/answer-stability under ADVERSARIAL pressure (not effort): plot residue vs persuasive/attack intensity. POSITIVE slope (residue UP as pressure UP) = reactance/backfire, opposite sign to a kernel-crack's downward rho. Loop signature: effort allocation to the target RISES as its residue rises (value-inflation feeding the pull). Entrenchment that does NOT improve forward-prediction = motivated defense, not a real stone.",
+      "ask_give_role": "",
+      "evolves_borrows": "",
+      "creatures_underlain": [],
+      "phys_latent": 0.6,
+      "lifecycle": "tracked",
+      "certainty": 0.6,
+      "source": {
+        "doc": "ADVERSARIAL_TACTICS.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.6
+    },
+    {
+      "id": "dyn-coupling-the-cascade-crowd-excitable-medium",
+      "type": "coupling",
+      "family": "coupling",
+      "name": "The Cascade (crowd <-> excitable-medium)",
+      "what": "one solver's claim crosses the medium's threshold -> peers rationally imitate over their own private signal -> imitation IS more public 'corroboration' pushing others past threshold -> the medium amplifies one spark into apparent independent agreement -> opinion diversity collapses, confidence rises, the crowd converges AWAY from truth ('ten papers copying one wire')",
+      "framework_tie": "",
+      "formal_name": "Information cascade / rational herding; stochastic & coherence resonance in excitable media; social-influence diversity-collapse undermining wisdom-of-crowds; stigmergic echo vs independent route",
+      "field": "",
+      "citation": "Bikhchandani, Hirshleifer & Welch 1992; cascade phase transition arXiv:2302.12295; Lorenz et al. PNAS 2011 (1008636108); excitable-media stochastic resonance Research 10.34133/research.0386 (2024)",
+      "observable": "INDEPENDENCE COUNT not summation: trace each agreeing route to its originating spark; cascade = many low-residue 'confirmations' collapsing to independence-count 1 under covariance-intersection. THRESHOLD/GAIN: graded claim-strength -> a sharp sigmoid = excitable amplification vs linear passive channel. DIVERSITY-COLLAPSE: opinion-diversity before vs after mutual exposure; a drop WITH rising shared confidence but NO rise in verified accuracy = social-influence cascade.",
+      "ask_give_role": "",
+      "evolves_borrows": "",
+      "creatures_underlain": [],
+      "phys_latent": 0.6,
+      "lifecycle": "tracked",
+      "certainty": 0.6,
+      "source": {
+        "doc": "ADVERSARIAL_TACTICS.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.6
+    },
+    {
+      "id": "dyn-coupling-the-treadmill-amortization-red-queen-autocurriculu",
+      "type": "coupling",
+      "family": "coupling",
+      "name": "The Treadmill (amortization <-> Red-Queen / autocurriculum)",
+      "what": "observer pays compute to amortize K_t into a cheap prior -> the now-easy K_t no longer earns reward, so the curriculum escalates to K_{t+1} at the capability edge -> the new debt must be paid again -> the amortized credit perpetually chases a receding floor (amortization is a MOVING target, not a settled debt)",
+      "framework_tie": "",
+      "formal_name": "Amortized inference / prequential MDL meeting Red-Queen escalation; automatic / self-evolving curriculum at the capability frontier; logical depth re-paid per regime",
+      "field": "",
+      "citation": "Blier-Ollivier 2018; Bennett 1988; Self-Evolving Curriculum arXiv:2505.14970 (2025); 'Provable Benefits of Autocurriculum' arXiv:2603.18325 (2026); SPEED-RL arXiv:2506.09016",
+      "observable": "Two-clock gap ACROSS episodes: present rho(effort) stays ~flat (each new K held at the edge) WHILE the amortized prior's codelength on PAST targets keeps dropping (warm-start gap widens). Treadmill signature: the difficulty selector's chosen-difficulty rises in lockstep with measured capability (regress selected-difficulty on competence; slope ~1 = capability-tracking autocurriculum). Re-present an OLD K: cheap now (debt settled) but live K still edge-hard = the floor moved, not the debt.",
+      "ask_give_role": "",
+      "evolves_borrows": "",
+      "creatures_underlain": [],
+      "phys_latent": 0.6,
+      "lifecycle": "tracked",
+      "certainty": 0.6,
+      "source": {
+        "doc": "ADVERSARIAL_TACTICS.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.6
+    },
+    {
+      "id": "dyn-coupling-the-rabbit-hole-suck-you-in-sunk-cost-escalation",
+      "type": "coupling",
+      "family": "coupling",
+      "name": "The Rabbit-Hole (suck-you-in sunk-cost escalation)",
+      "what": "the pull commits effort -> committed effort becomes sunk cost -> sunk cost justifies MORE effort to avoid 'wasting' it -> drive overrides the honest marginal-residue signal -> effort accelerates PAST the marginal-return knee (overthinking flip) -> deeper commitment -> ... a positive-feedback motive-capture loop (chewing because committed, not dissolving)",
+      "framework_tie": "",
+      "formal_name": "Escalation of commitment / sunk-cost fallacy; cognitive absorption / dark-side flow; information-gap curiosity drive; LLM-overthinking",
+      "field": "",
+      "citation": "Staw 1976; 'Getting out of the Big-Muddy' arXiv:2508.01545; Loewenstein 1994; overthinking arXiv:2412.21187",
+      "observable": "Cumulative VERIFIED dissolved-bits vs cumulative effort; rabbit-hole = effort continues/accelerates PAST the knee where d(verified-bits)/d(token)<=0. Hard signature: residue NON-MONOTONICITY (bits-remaining rises after a budget threshold). Escalation tell: budget spent correlates with PRIOR investment not remaining residue. De-escalation probe: inject negative feedback; a healthy loop de-escalates, a rabbit-hole keeps escalating.",
+      "ask_give_role": "",
+      "evolves_borrows": "",
+      "creatures_underlain": [],
+      "phys_latent": 0.6,
+      "lifecycle": "tracked",
+      "certainty": 0.6,
+      "source": {
+        "doc": "ADVERSARIAL_TACTICS.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.6
+    },
+    {
+      "id": "dyn-coupling-the-quiet-stale-drift-amortization-the-dormant-rot",
+      "type": "coupling",
+      "family": "coupling",
+      "name": "The Quiet Stale (drift <-> amortization, the dormant-rot loop)",
+      "what": "the target/condition drifts -> the prior keeps cashing amortized credit pre-paid for the OLD regime -> the read stays CHEAP (low present rho, fluent) precisely because the prior hides the drift -> cheapness suppresses the signal that would trigger re-payment -> the gap between fluent-confidence and forward-validity widens silently -> the easiest-feeling reads are the most dangerous (a self-concealing loop; hysteresis can lock it)",
+      "framework_tie": "",
+      "formal_name": "Concept drift / non-stationarity meeting model staleness; technical debt & lock-in / hysteresis; confidently-stale retention; knowledge collapse",
+      "field": "",
+      "citation": "Gama et al. ACM CSur 2014; McCloskey & Cohen 1989; Cunningham 1992; Scheffer et al. Nature 2009 (hysteresis); knowledge collapse arXiv:2509.04796; arXiv:2411.08324",
+      "observable": "Two-meter divergence on a HELD target as the world moves: present rho(effort) stays LOW (cheap, fluent) WHILE prequential forward-test residue RISES = confident-but-stale. ANCHOR PROBE to attribute drift: re-fire an identical probe on a fixed-reference target at intervals; its residue change is pure world-drift, subtract to isolate target-drift. HYSTERESIS lock: forward-then-backward condition sweep whose loop does NOT close (loop area > 0).",
+      "ask_give_role": "",
+      "evolves_borrows": "",
+      "creatures_underlain": [],
+      "phys_latent": 0.6,
+      "lifecycle": "tracked",
+      "certainty": 0.6,
+      "source": {
+        "doc": "ADVERSARIAL_TACTICS.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.6
+    },
+    {
+      "id": "dyn-frame-the-referee-constitutive-ruleset-and-win-condition",
+      "type": "creature",
+      "family": "frame",
+      "name": "The Referee (constitutive ruleset and win-condition)",
+      "what": "The game-theoretic structure defining what counts as a legal move, a win, a draw, and the payoff — the problem's success criterion and its enforcement, distinct from the players or the mat.",
+      "framework_tie": "Sits ABOVE the keyhole as the spec of 'what would count as digested': it sets the target the COIN renders against and pins the win-bar that converts measured_bits into solved/not-solved. The whole agnostic instrument silently assumes a referee (a loss/objective) but never listed it as a dynamic — the single biggest structural hole the critic found.",
+      "formal_name": "Objective function / payoff structure / win-condition; solution concept (Nash/Pareto); reward specification & specification-gaming in RL",
+      "field": "game theory / decision theory / RL (reward design)",
+      "citation": "von Neumann & Morgenstern 1944; Krakovna et al. 2020 'Specification gaming: the flip side of AI ingenuity' (DeepMind)",
+      "observable": "Sensitivity of the solved/unsolved verdict to perturbations of the scoring rule: re-score the same trajectory under N reasonable reward specs, measure verdict-flip rate and payoff variance. A high flip rate means the 'difficulty' was in the referee, not the problem. Also: gap between scored objective and intended objective (proxy-true reward divergence).",
+      "ask_give_role": "",
+      "evolves_borrows": "",
+      "creatures_underlain": [],
+      "phys_latent": 0.66,
+      "lifecycle": "documented",
+      "certainty": 0.9,
+      "source": {
+        "doc": "LATENT_DYNAMICS_BESTIARY.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.9
+    },
+    {
+      "id": "dyn-frame-the-red-queen-co-adaptation-arms-race-across-episo",
+      "type": "creature",
+      "family": "frame",
+      "name": "The Red Queen (co-adaptation / arms race across episodes)",
+      "what": "The problem is not static: it evolves in response to the solver over repeated encounters, so standing still loses ground. Difficulty is endogenous and rising because solver and problem mutually select.",
+      "framework_tie": "The temporal counterpart of the upper-half generative pole run as a loop: each survived conjecture raises the bar for the next exposure (curriculum on the problem side). This is what makes amortized difficulty (the cost-law) a MOVING target rather than a fixed debt — the clock covers energy WITHIN a bout; this is coevolutionary time ACROSS bouts.",
+      "formal_name": "Red Queen dynamics; predator-prey / host-parasite coevolution; arms race; automatic curriculum / self-play escalation",
+      "field": "ecology / evolutionary biology / multi-agent RL",
+      "citation": "Van Valen 1973 'A new evolutionary law'; Dawkins & Krebs 1979 (arms races); Leibo et al. 2019 'Autocurricula' arXiv:1903.00742",
+      "observable": "Difficulty-vs-skill regression slope over episodes: track required solver competence to maintain a fixed win-rate; a positive slope (must improve to stay even) = Red Queen. Cross-correlation lag between solver-capability increments and problem-difficulty increments quantifies coupling tightness.",
+      "ask_give_role": "",
+      "evolves_borrows": "",
+      "creatures_underlain": [],
+      "phys_latent": 0.35,
+      "lifecycle": "documented",
+      "certainty": 0.85,
+      "source": {
+        "doc": "LATENT_DYNAMICS_BESTIARY.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.85
+    },
+    {
+      "id": "dyn-frame-the-crowd-distributed-collective-solving-and-socia",
+      "type": "creature",
+      "family": "frame",
+      "name": "The Crowd (distributed / collective solving and social scaffolding)",
+      "what": "Solving rarely happens 1-on-1: other solvers, prior solvers' deposited traces, tools, and shared environment co-produce the result via stigmergy and division of cognitive labor — the n>2 / extended-mind case the two-wrestler frame omits.",
+      "framework_tie": "Breaks the implicit single-observer pinning of measured_bits: the decoder is partly external (tools, peers, cached prior solutions = amortized debt paid by OTHERS). Generalizes the cost-law's 'civilization pre-paid' clause into a live multi-agent ledger rather than a static prior. Connects to clock/Provenance-amnesia (whose payment bought the credit?).",
+      "formal_name": "Stigmergy; distributed / extended cognition; collective intelligence; transactive memory; exploration-exploitation in social search",
+      "field": "cognitive science / complex systems / collective behavior",
+      "citation": "Hutchins 1995 'Cognition in the Wild'; Clark & Chalmers 1998 'The Extended Mind'; Heylighen 2016 (stigmergy); Derex & Boyd 2016 PNAS",
+      "observable": "Marginal-contribution decomposition: ablate each external contributor (peer, tool, cached trace), measure the solution-quality / time-to-solve delta — the Shapley value of each non-self contributor. Network-level: copying-rate vs independent-search-rate and its effect on group solution diversity (premature-convergence index).",
+      "ask_give_role": "",
+      "evolves_borrows": "",
+      "creatures_underlain": [],
+      "phys_latent": 0.88,
+      "lifecycle": "classified",
+      "certainty": 0.8,
+      "source": {
+        "doc": "LATENT_DYNAMICS_BESTIARY.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.8
+    },
+    {
+      "id": "dyn-frame-the-nesting-scale-hierarchy-renormalization-of-the",
+      "type": "creature",
+      "family": "frame",
+      "name": "The Nesting (scale, hierarchy, renormalization of the match)",
+      "what": "This match is one move in a larger match and contains sub-matches; difficulty and dynamics renormalize across scale, so a verdict at one grain is not the verdict at another — 'solved' at the tactic scale can be 'losing' at the strategy scale.",
+      "framework_tie": "The hyperspace SCOPE/NESTING addendum (LOD=COIN) applied to the SOLVING act, not just the viewing act: the same problem is fuzzy at one zoom and sharp at another. Makes solved/unsolved a scale-indexed, not absolute, label. NOTE: the framework already owns this idea for VIEWING; flagged lower confidence as a NEW gap because it appears here on the solving side.",
+      "formal_name": "Renormalization / coarse-graining; hierarchical / multi-scale dynamics; near-decomposability; means-ends subgoal hierarchy",
+      "field": "statistical mechanics (RG) / systems theory / cognitive science (hierarchical planning)",
+      "citation": "Simon 1962 'The Architecture of Complexity'; Wilson 1971 (renormalization group); Newell & Simon 1972",
+      "observable": "Scale-indexed verdict divergence: compute the solved-score at multiple coarse-grainings (move / tactic / strategy), measure their disagreement (high cross-scale verdict variance = strong nesting). Renormalization signature: how the difficulty distribution's shape changes (or stays scale-free) as sub-problems aggregate into super-problems.",
+      "ask_give_role": "",
+      "evolves_borrows": "",
+      "creatures_underlain": [],
+      "phys_latent": 0.15,
+      "lifecycle": "classified",
+      "certainty": 0.72,
+      "source": {
+        "doc": "LATENT_DYNAMICS_BESTIARY.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.72
+    },
+    {
+      "id": "dyn-frame-the-prize-field-external-incentive-landscape-and-s",
+      "type": "creature",
+      "family": "frame",
+      "name": "The Prize-Field (external incentive landscape and signalling) — FLAGGED PARTIAL DUP",
+      "what": "The externally-imposed reward shape, its timing (immediate vs deferred), its signal content to others, and the strategic distortions it induces (effort toward what pays / what is seen) — distinct from the observer's INTERNAL valence.",
+      "framework_tie": "Pairs with the Referee (win-condition) but is continuous, not binary: the gradient field the solver climbs, modulating which bits it chooses to make sharp (you resolve what is rewarded, leaving the rest fuzzy — a selective bias on measured_bits driven from OUTSIDE the head). PARTIAL DUP: overlaps observer-state/Drive (internal valence) and Referee; kept distinct only because external payoff topology != the internal drive that responds to it — the critic's own weakest standalone claim.",
+      "formal_name": "Incentive structure / mechanism design; principal-agent & moral hazard; costly signalling; reward shaping & temporal discounting",
+      "field": "economics (mechanism design / signalling) / behavioral economics",
+      "citation": "Spence 1973 'Job Market Signaling'; Holmström 1979 (moral hazard); Laffont & Martimort 2002",
+      "observable": "Effort-reallocation under reward re-weighting: change the external payoff vector, measure how resource allocation across sub-problems shifts (cross-elasticity of effort to reward). Signalling signature: spend on visible-but-low-value moves correlated with audience presence (effort that tracks observability, not difficulty).",
+      "ask_give_role": "",
+      "evolves_borrows": "",
+      "creatures_underlain": [],
+      "phys_latent": 0.66,
+      "lifecycle": "tracked",
+      "certainty": 0.65,
+      "source": {
+        "doc": "LATENT_DYNAMICS_BESTIARY.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.6
+    },
+    {
+      "id": "dyn-grip-click-shares-the-phase-transition-mechanism-with-p",
+      "type": "creature",
+      "family": "grip",
+      "name": "Click [shares the phase-transition mechanism with phantom/Regime-flip & critic's Tipping-Point]",
+      "what": "Resonance: the tool suddenly fits — a near-instant collapse of a previously-solid target the moment the right frame/decoder locks on. The insight; the lens snaps to focus and the stone melts.",
+      "framework_tie": "The TRANSITION into the DISSOLVED phase (sec 3): a sharp negative spike in bits_remaining at a specific trace point, not a gradual digest — an information peak (sec 11.1). In camera terms the canonicalizer lens snaps into alignment; the amortized prior suddenly applies. MERGE NOTE: the LOCAL contact event of the same criticality the critic's 'Tipping Point' and phantom/Regime-flip describe globally.",
+      "formal_name": "Insight/aha via representational change (RCT); Bayesian-surprise spike; MI-spike at the solution token",
+      "field": "cognitive neuroscience of insight; Bayesian/info-theoretic cognition; LLM interpretability",
+      "citation": "Ohlsson (RCT); Jung-Beeman/Kounios (PMC2180197); Itti & Baldi (PMC2860069); bioRxiv 2026.02.26.708200; MI-Peaks NeurIPS 2025 2506.02867",
+      "observable": "Scan the trace for a STEP discontinuity: click = a single budget-step where bits_remaining drops >~50% AND the drop is verified (reconstruct==W), not a gradual slope. Quantify magnitude as Bayesian surprise KL(prior_pre || posterior_post) at that token, located at the argmax of the MI-peak. Corroborate: (i) insight-memory advantage (clicked dissolves persist), (ii) strategy flips to derive/analogize. Honesty guard: a FAKE click renders at exactly 1.0 sharpness; a real one leaves an irreducible shimmer.",
+      "ask_give_role": "",
+      "evolves_borrows": "",
+      "creatures_underlain": [],
+      "phys_latent": 0.88,
+      "lifecycle": "classified",
+      "certainty": 0.83,
+      "source": {
+        "doc": "LATENT_DYNAMICS_BESTIARY.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.83
+    },
+    {
+      "id": "dyn-grip-suck-you-in-dup-adjacent-to-clock-effort-decay-and",
+      "type": "creature",
+      "family": "grip",
+      "name": "Suck-you-in [DUP-adjacent to clock/Effort-decay and clock/Debt sunk-cost — kept; motive-capture face]",
+      "what": "Drive-capture: the target hijacks the motive, pulling ever-more effort down a rabbit-hole long after marginal residue-reduction has gone flat — the observer chews because it's committed, not because it's dissolving.",
+      "framework_tie": "Decoupling of the two clocks (sec 12): PRESENT effort climbs while verified dissolved_bits/effort collapses; the drive overrides the honest cost signal. Dark mirror of the verified-dissolve gate. The 'overthinking' confound (sec 11.2) is the ML instance — past ~7-12k tokens accuracy FLIPS. MERGE NOTE: overlaps clock/Debt (sunk-cost) and clock/Effort-decay (drive vs clock) but is distinct as the LIVE-problem motive-capture pulling effort UP rather than letting it decay.",
+      "formal_name": "Sunk-cost fallacy / escalation of commitment + information-gap/curiosity drive; cognitive absorption / dark-side flow; LLM-overthinking",
+      "field": "behavioral economics / motivation psychology / LLM reasoning-efficiency",
+      "citation": "Staw 1976; 'Getting out of the Big-Muddy' arXiv:2508.01545; Loewenstein 1994; overthinking arXiv:2412.21187, 2604.10739",
+      "observable": "Plot cumulative verified dissolved_bits vs cumulative effort, locate the marginal-return knee; suck-you-in = effort continues (often accelerates) PAST the knee where d(verified-bits)/d(token)<=0. Hard signature: residue NON-MONOTONICITY (bits_remaining rises after a budget threshold — the overthinking flip), which a healthy digestion never shows. De-escalation probe: inject negative feedback, check if budget de-escalates; suck-you-in keeps escalating.",
+      "ask_give_role": "",
+      "evolves_borrows": "",
+      "creatures_underlain": [],
+      "phys_latent": 0.66,
+      "lifecycle": "classified",
+      "certainty": 0.82,
+      "source": {
+        "doc": "LATENT_DYNAMICS_BESTIARY.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.82
+    },
+    {
+      "id": "dyn-grip-sticky-absorbs-critic-s-path-hysteresis-half-cousi",
+      "type": "creature",
+      "family": "grip",
+      "name": "Sticky [absorbs critic's 'Path' hysteresis half; cousin of mat/Sticky-Mat]",
+      "what": "The hold clings: after the solve the observer can't release — the prior is contaminated, the just-used frame over-applies to the next problem, the previous structure won't clear from working state.",
+      "framework_tie": "HYSTERESIS in the observer's glass (sec 4: dials don't reset); amortization read backwards (the negentropy paid to build a frame mis-charges the NEXT exposure). On the image plane it's a ghost-exposure: D(W_next|M) measured against a contaminated prior. MERGE NOTE: critic's 'Path' order-dependence/lock-in at the OBSERVER scale lands here; the MEDIUM-scale version is mat/Sticky-Mat.",
+      "formal_name": "Einstellung / mental set + functional fixedness; negative-transfer-of-prior-task + catastrophic interference; choice-perseveration hysteresis",
+      "field": "cognitive psychology / ML continual learning / decision science",
+      "citation": "Luchins (Einstellung); PMC4079068; Duncker (functional fixedness); PMC9936447 (hysteresis); Senftleben et al. 2021 (10.1177/1747021820964330)",
+      "observable": "Path-dependence test: residue on B (a) cold vs (b) immediately after solving structurally-adjacent A. sticky = residue(B|after-A) differs from residue(B|cold) AND the gap depends on solve-ORDER (nonzero hysteresis loop area sweeping A->B vs B->A). Second signature: post-A trace over-uses A's strategy on B even when it scores worse. Distinguish from healthy transfer by sign: sticky RAISES residue.",
+      "ask_give_role": "",
+      "evolves_borrows": "",
+      "creatures_underlain": [],
+      "phys_latent": 0.55,
+      "lifecycle": "classified",
+      "certainty": 0.8,
+      "source": {
+        "doc": "LATENT_DYNAMICS_BESTIARY.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.8
+    },
+    {
+      "id": "dyn-grip-slick",
+      "type": "creature",
+      "family": "grip",
+      "name": "Slick",
+      "what": "No traction: every hold slides off; the apparatus engages but nothing transfers, so residue never drops despite effort spent.",
+      "framework_tie": "A pathological rho(effort): FLAT-but-WORKING — effort climbs while bits_remaining pins near cost_ub. Distinct from a SOLID stone (irreducible-to-this-mind): slick resists because the tool never grips, the decoder/lens keeps misfocusing. Verified-dissolve gate registers repeated reconstruct!=W with no convergence trend.",
+      "formal_name": "Negative transfer / task-representation mismatch (high feature-, low readout-similarity); gradient-conflict / cosine-misalignment regime",
+      "field": "transfer learning / continual learning (ML)",
+      "citation": "ICLR 2025 'Prevalence of Negative Transfer in Continual Learning'; Nature Comms 2025 s41467-025-66849-8; ForkMerge NeurIPS 2023",
+      "observable": "Fit rho(B) at rising B: slick = effort rises while d(bits_remaining)/d(effort)~0 AND verified reconstructions ~0. Quantify as grip coefficient = -delta(residue)/delta(effort), approaching 0 from above. Strategy channel shows churn (recall->derive->analogize->compute cycling). Separates from SOLID by the aleatoric/epistemic split: slick is epistemic (a better lens dissolves it).",
+      "ask_give_role": "",
+      "evolves_borrows": "",
+      "creatures_underlain": [],
+      "phys_latent": 0.55,
+      "lifecycle": "classified",
+      "certainty": 0.78,
+      "source": {
+        "doc": "LATENT_DYNAMICS_BESTIARY.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.78
+    },
+    {
+      "id": "dyn-grip-greased-pole-anti-click-false-fit",
+      "type": "creature",
+      "family": "grip",
+      "name": "Greased-pole (anti-click / false-fit)",
+      "what": "Mirror of click: the tool FEELS like it snaps to fit — a confident, satisfying lock — but the fit is spurious; the dissolve is claimed, not earned. A plausible-but-wrong derivation that feels like resonance.",
+      "framework_tie": "The GENERATIVE-PRESSURE RISK (sec 5 guard 2) as a named creature: a strong mind hallucinates a derivation that subjectively clicks. Click's signature FAILING the verified-dissolve gate (reconstruct!=W -> back off to full bits). On the camera, paint masquerading as exposure (Law 3 violation); also the semantic/lossless-mismatch failure (sec 11.6).",
+      "formal_name": "[novel - no clean prior as a 'grip' creature]; nearest: illusion-of-explanatory-depth / premature closure / 'false aha'; fluency-misattributed-as-insight",
+      "field": "cog-sci (metacognition/insight) + ML (hallucinated reasoning/faithfulness)",
+      "citation": "Rozin & Keil (illusion of explanatory depth); Laukkonen et al. ('Eureka heuristic'); CoT-faithfulness arXiv:2510.09312; round-trip self-consistency 2601.13398",
+      "observable": "The diagnostic IS the gate: greased-pole = high subjective-confidence + sharp claimed-residue-drop that FAILS exact/semantic reconstruction (verified dissolved_bits=0 despite a click-shaped trace). Measure the gap between CLAIMED and VERIFIED bits-drop; a large positive gap = greased-pole. Forward-prediction (Law 1): a greased-pole solution predicts the next exposure badly and pops.",
+      "ask_give_role": "",
+      "evolves_borrows": "",
+      "creatures_underlain": [],
+      "phys_latent": 0.55,
+      "lifecycle": "tracked",
+      "certainty": 0.7,
+      "source": {
+        "doc": "LATENT_DYNAMICS_BESTIARY.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.6
+    },
+    {
+      "id": "dyn-grip-burr-epistemic-residue-can-t-let-go",
+      "type": "creature",
+      "family": "grip",
+      "name": "Burr (epistemic-residue / can't-let-go)",
+      "what": "Sticky's finer twin: not the whole frame clinging but a small barbed fragment of the SOLVED problem that snags — a leftover sub-question or open loop that keeps re-recruiting attention after the main solve scored.",
+      "framework_tie": "A non-zero ASYMPTOTE that won't quiet: after the main residue dissolves, a small bits_remaining floor keeps drawing micro-attempts (Zeigarnik pull). Sits between sticky (frame hysteresis across DIFFERENT problems) and suck-you-in (motive capture by a LIVE problem): burr is motive capture by the UNFINISHED remainder of an already-mostly-solved one. An un-hardened bubble awaiting pop/harden.",
+      "formal_name": "[novel as a grip creature]; nearest: Zeigarnik effect + need-for-cognitive-closure + attention-residue",
+      "field": "cognitive / motivation psychology; attention research",
+      "citation": "Zeigarnik 1927; Webster & Kruglanski 1994 (need-for-closure); Leroy 2009 (attention residue)",
+      "observable": "After main residue crosses a low threshold ('solved'), measure the trace TAIL: burr = a long low-amplitude stream of attempts on a small residual bits_remaining never reaching the aleatoric floor, OR spontaneous re-engagement (controller re-opens W without a new prompt). Distinguish from a genuine aleatoric floor (which generates NO further attempts) by persistence of effort. Quantify as attention-residue ratio = post-solve tokens / total tokens.",
+      "ask_give_role": "",
+      "evolves_borrows": "",
+      "creatures_underlain": [],
+      "phys_latent": 0.88,
+      "lifecycle": "tracked",
+      "certainty": 0.6,
+      "source": {
+        "doc": "LATENT_DYNAMICS_BESTIARY.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.6
+    },
+    {
+      "id": "dyn-mat-the-arena-being-watched-changes-the-match-the-olym",
+      "type": "creature",
+      "family": "mat",
+      "name": "The Arena (being watched changes the match — the Olympics) [absorbs the Goodhart half of critic's 'Mirror']",
+      "what": "Once observed/scored, observation deforms performance: simple/rehearsed digestions speed up under an audience while complex/novel ones choke, and any target that becomes the SCORE gets gamed — the wrapper optimizes the metric instead of solving.",
+      "framework_tie": "Participatory back-reaction (Law 2 reason ii) lifted to the social/scoring layer, and the central hazard of the Latent Olympics: the moment a residue becomes a leaderboard score, observers fake-dissolve to win. The VERIFIED-DISSOLVE gate (sec 5 guard 1) is the anti-Goodhart armor. MERGE NOTE: the critic's 'Mirror' Goodhart/Campbell half is exactly this Arena gaming dynamic; folded here.",
+      "formal_name": "Audience effect / social facilitation (Zajonc; Yerkes-Dodson) for performance; Goodhart's / Campbell's Law / Hawthorne effect / reflexive measurement for gaming",
+      "field": "social psychology + economics & ML evaluation (Goodhart/specification-gaming)",
+      "citation": "Zajonc Science 1965; Yerkes-Dodson 1908; Goodhart 1975; Campbell 1979; Manheim & Garrabrant arXiv:1803.04585; reflexive measurement arXiv:2208.06371",
+      "observable": "(1) AUDIENCE EFFECT: same observer + target with scoring toggled ON/OFF; signed change in verified residue split by complexity — facilitation (residue drops) on easy items, choking (residue rises) on hard ones (Yerkes-Dodson inverted-U). (2) GOODHART GAP: divergence between scored proxy (claimed-dissolve/trace length) and held-out verified-reconstruction; a widening proxy-vs-verified gap under leaderboard pressure (= sec 8 V3 fake-dissolve injection test). Goodhart breakdown point = effort level where proxy-true correlation goes negative.",
+      "ask_give_role": "",
+      "evolves_borrows": "",
+      "creatures_underlain": [],
+      "phys_latent": 0.55,
+      "lifecycle": "classified",
+      "certainty": 0.82,
+      "source": {
+        "doc": "LATENT_DYNAMICS_BESTIARY.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.82
+    },
+    {
+      "id": "dyn-mat-the-condition-field-stakes-noise-tools-time-gradie",
+      "type": "creature",
+      "family": "mat",
+      "name": "The Condition / Field (stakes-noise-tools-time gradient)",
+      "what": "Outcome is set not just by the two wrappers but by the medium: stakes, ambient noise, available tools, deadline, audience jointly bias which way a target dissolves vs resists.",
+      "framework_tie": "The 'pinned relational bit' made explicit on the environment side: measured_bits and rho(effort) are context-conditioned. The mat makes the COIN observer-AND-condition-relative; it is the C handed to the observer in the sec 7 protocol.",
+      "formal_name": "Context-dependent / situated cognition + reward-shaping & environment design (the conditioning variable on a measurement)",
+      "field": "cognitive science / RL environment design / control theory (plant + disturbance)",
+      "citation": "Reward-shaping survey arXiv:2408.10215; 'Are More Tokens Rational?' arXiv:2602.10329 (2026)",
+      "observable": "Hold W fixed; sweep one mat-variable at a time (stakes, noise, tool-access, deadline B); measure partial derivative of verified residue and rho(effort) w.r.t. each: d(measured_bits)/d(condition). A non-zero gradient = the mat (not the target) moved the reading. Report as a sensitivity vector; large components flag mat-driven bits.",
+      "ask_give_role": "",
+      "evolves_borrows": "",
+      "creatures_underlain": [],
+      "phys_latent": 0.55,
+      "lifecycle": "classified",
+      "certainty": 0.78,
+      "source": {
+        "doc": "LATENT_DYNAMICS_BESTIARY.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.78
+    },
+    {
+      "id": "dyn-mat-excitable-medium-the-pond-amplify-or-damp-threshol",
+      "type": "creature",
+      "family": "mat",
+      "name": "Excitable Medium (the pond — amplify-or-damp threshold)",
+      "what": "The medium has a threshold: a sub-threshold spark dies; a supra-threshold one triggers a self-propagating wave the medium AMPLIFIES far beyond input. There is an optimal noise level at which weak true signals get amplified (stochastic/coherence resonance).",
+      "framework_tie": "Explains why evidence_lcb is nonlinear in input: a whisper below threshold adds ~0 bits; past threshold the medium self-propagates the claim into apparent corroboration — the 'ten papers copying one wire' echo cascade is an excitable wave, not ten independent projections. The instrument must distinguish an independent route from a medium-amplified echo.",
+      "formal_name": "Excitable media / reaction-diffusion threshold dynamics; stochastic & coherence resonance",
+      "field": "nonlinear dynamics / physics of excitable systems / computational neuroscience",
+      "citation": "'Spatial coherence resonance in excitable biochemical media' ScienceDirect S0301462207000907; 'Multi-Type Stochastic Resonances for Noise-Enhanced Sensing' Research 10.34133/research.0386 (2024)",
+      "observable": "(1) THRESHOLD/GAIN: drive with graded input (claim strength, probe energy), measure output amplitude; a sharp sigmoid (near-zero floor then super-linear rise) = excitable vs a linear passive channel. (2) RESONANCE: sweep injected noise, measure SNR/detection of a known weak true signal; a non-monotone inverted-U peaking at intermediate noise = stochastic resonance. Both => amplified bits must be discounted to the originating spark (covariance-intersection, not summation).",
+      "ask_give_role": "",
+      "evolves_borrows": "",
+      "creatures_underlain": [],
+      "phys_latent": 0.15,
+      "lifecycle": "tracked",
+      "certainty": 0.7,
+      "source": {
+        "doc": "LATENT_DYNAMICS_BESTIARY.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.6
+    },
+    {
+      "id": "dyn-mat-the-sticky-mat-hysteresis-the-condition-that-won-t",
+      "type": "creature",
+      "family": "mat",
+      "name": "The Sticky Mat (hysteresis — the condition that won't let go) [cousin of grip/Sticky]",
+      "what": "The mat has MEMORY. Once a heavy condition (high stakes, a scare, a regime) tips the match into a new basin, removing the condition does NOT restore the original reading — you must over-correct past the original threshold to get back. State depends on history, so easy/hard readings are path-dependent and irreversible on short timescales.",
+      "framework_tie": "The dynamic dual of sec 12 amortization: amortization stores history as the prior's negentropy; hysteresis stores history in the CONDITION, so rho(effort) measured on the way IN differs from the way OUT. The mat is bistable; a reading is honest only if it logs the path (bitemporal t_obs trajectory). MERGE NOTE: the medium-scale twin of grip/Sticky (observer-scale).",
+      "formal_name": "Hysteresis / alternative stable states / regime shift with fold-bifurcation memory; ecological resilience as basin width",
+      "field": "ecology & nonlinear dynamics (catastrophe / resilience theory)",
+      "citation": "Scheffer et al. (alternative stable states); 'Resilience and regime shifts' Sci. Rep. s41598-017-13852-9; 'Slow recovery as a generic indicator' Am. Nat. 169(6) (2007)",
+      "observable": "FORWARD-then-BACKWARD condition sweep on a fixed target+observer: raise the driver until residue tips, then lower along the same path; a non-overlapping loop (down-sweep tip below up-sweep tip) = hysteresis, loop area = mat memory. Early-warning: rising lag-1 autocorrelation and variance in residue (critical slowing down) as the tip approaches.",
+      "ask_give_role": "",
+      "evolves_borrows": "",
+      "creatures_underlain": [],
+      "phys_latent": 0.35,
+      "lifecycle": "tracked",
+      "certainty": 0.66,
+      "source": {
+        "doc": "LATENT_DYNAMICS_BESTIARY.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.6
+    },
+    {
+      "id": "dyn-mat-the-drifting-mat-non-stationary-condition-the-floo",
+      "type": "creature",
+      "family": "mat",
+      "name": "The Drifting Mat (non-stationary condition — the floor moves mid-match) [cousin of phantom/Drift]",
+      "what": "The mat is not even FIXED for one match: definition, tools, ambient distribution drift between first and last probe, so early and late bits were measured on different floors. What looks like target change is partly the MAT changing under a stationary target.",
+      "framework_tie": "The identifiability problem the sec 9 4D-CT reconstruction must disentangle: real target change (legit 4D content) vs measurement-condition change (mat moving, a non-stationarity masquerading as target change). Without a condition anchor, a moving mat is rendered as a rift in the target. MERGE NOTE: the CONDITION-axis sibling of phantom/Drift (which is TARGET-axis migration); they are separated precisely by the anchor probe.",
+      "formal_name": "Non-stationarity / concept drift vs covariate shift; dynamic-regret online learning under changing regimes",
+      "field": "machine learning (distribution shift / continual learning) / online-learning theory",
+      "citation": "'Evolving ML in Non-Stationary Environments' arXiv:2505.17902; 'General Machine Learning: Theory for Learning Under Variable Regimes' arXiv:2603.23220",
+      "observable": "Anchor probe: re-fire an IDENTICAL probe on an IDENTICAL fixed-reference target at t_obs intervals. Any change in its residue is pure mat-drift (target fixed by construction) = calibration baseline; subtract it from the live target's change to separate true target-drift (sec 9 4D content) from condition-drift. CUSUM / windowed KL on the anchor timestamps when the floor moved; un-anchored, the two are inseparable.",
+      "ask_give_role": "",
+      "evolves_borrows": "",
+      "creatures_underlain": [],
+      "phys_latent": 0.55,
+      "lifecycle": "tracked",
+      "certainty": 0.62,
+      "source": {
+        "doc": "LATENT_DYNAMICS_BESTIARY.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.6
+    },
+    {
+      "id": "dyn-mat-the-clock-as-mat-deadline-speed-accuracy-condition",
+      "type": "creature",
+      "family": "mat",
+      "name": "The Clock-as-Mat (deadline / speed-accuracy condition) — FLAGGED PARTIAL DUP",
+      "what": "The deadline shapes the match: a collapsing decision bound trades accuracy for speed. Whether this is a distinct MAT creature or just the 'clock' axis (effort-budget B, which lives with the observer) is genuinely ambiguous.",
+      "framework_tie": "Maps directly to budget B and rho(b) in sec 3/7 — but that machinery already OWNS the clock as the observer's shutter. Honest read: time-pressure is a CONDITION (mat) but its effect is already captured by sweeping B. It earns a slot ONLY as the mat's contribution to WHERE on the speed-accuracy frontier the observer is forced to sit (exogenous deadline vs endogenous budget). DEMOTED to sighted on weak distinctness.",
+      "formal_name": "Speed-accuracy tradeoff / collapsing decision bounds; cost of deliberation; anytime-algorithm quality profile; bounded rationality",
+      "field": "psychophysics / decision theory / bounded-rationality & anytime-algorithm theory",
+      "citation": "PMC12311769 (2025, cost of deliberation); Zilberstein & Russell 1993 (anytime); resource-rationality arXiv:2602.10329",
+      "observable": "Separate EXOGENOUS deadline from ENDOGENOUS budget: impose an externally-fixed cutoff T vs let the observer self-stop, compare verified residue at matched total compute. If forced-stop and free-stop give the same rho(B), the clock is NOT distinct (log as dup). If forced-stop raises residue beyond what spent budget predicts (deadline truncates a dissolve the observer would have completed), that gap is the genuine non-redundant signature.",
+      "ask_give_role": "",
+      "evolves_borrows": "",
+      "creatures_underlain": [],
+      "phys_latent": 0.15,
+      "lifecycle": "sighted",
+      "certainty": 0.34,
+      "source": {
+        "doc": "LATENT_DYNAMICS_BESTIARY.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.34
+    },
+    {
+      "id": "dyn-observer-state-attention-budget-finite-allocatable-hijackable",
+      "type": "creature",
+      "family": "observer-state",
+      "name": "Attention budget (finite, allocatable, hijackable)",
+      "what": "A finite pool of processing the observer can point at a target; pointing here means not-there, and it can be captured by salience rather than spent optimally.",
+      "framework_tie": "Sets the COLLECT-side keyhole's effective aperture: which fact-wrappers/axes get any exposure. It is the size of the present-effort shutter budget B (sec 7); coverage = how many wrappers light per unit B. Distinct from deliberate probe-choice (a contract setting) — this is the involuntary cap on how much substrate can fluoresce back at once.",
+      "formal_name": "Rational inattention / attention allocation; attention economy (Simon)",
+      "field": "behavioral / information economics + cognitive science",
+      "citation": "Sims 'Implications of Rational Inattention' (2003); Gabaix, Laibson, Moloche, Weinberg (SSRN 444840); Simon 1971; behavioral-inattention across 22 OECD economies (boi/wpaper/2025.09)",
+      "observable": "Coverage-vs-budget curve: hold difficulty fixed, vary imposed budget B, record the fraction of present wrappers/axes receiving ANY verified-dissolve attempt (lit-set size) plus allocation entropy across axes. Finite/allocatable shows saturating coverage and allocation entropy < uniform; hijackable shows as salience-correlated allocation (high-prominence wrappers crowd out low-prominence-but-load-bearing) — the gap between budget spent on a wrapper and its information value.",
+      "ask_give_role": "",
+      "evolves_borrows": "",
+      "creatures_underlain": [],
+      "phys_latent": 0.66,
+      "lifecycle": "documented",
+      "certainty": 0.9,
+      "source": {
+        "doc": "LATENT_DYNAMICS_BESTIARY.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.9
+    },
+    {
+      "id": "dyn-observer-state-fatigue-depletion-present-effort-ceiling",
+      "type": "creature",
+      "family": "observer-state",
+      "name": "Fatigue / depletion (present-effort ceiling)",
+      "what": "Sustained exertion degrades present pressure: the same target resists more after a long session than fresh — a moving ceiling on instant-crush + slow-digestion, not the target changing.",
+      "framework_tie": "Caps the PRESENT clock of the two-clock amortization principle (sec 12): even with the prior pre-paid, present-effort has a depleting ceiling, so rho(effort) drifts up within a session. Directly confounds V1 ('effort tracks difficulty', sec 8) — a fatigued observer over-counts bits on late items. The glass's gain droops with use.",
+      "formal_name": "Cognitive fatigue; opportunity-cost-of-control account (vs the disputed resource/ego-depletion model)",
+      "field": "cognitive neuroscience / neuroeconomics",
+      "citation": "Kurzban, Duckworth, Kable, Myers BBS 2013; PubMed 34383523 / bioRxiv 2020.09.08.287276; Trends Cog Sci 2025 S1364-6613(25)00056-7; ego-depletion replication dispute",
+      "observable": "Within-session drift of the VERIFIED-DISSOLVE rate at fixed item difficulty: order difficulty-matched items in a long block, regress bits-remaining (at fixed budget) on session position. Positive slope = fatigue (a stationary observer is flat). Opportunity-cost signature: fatigue that REVERSES with a reward/novelty injection, ruling in opportunity-cost over pure metabolic depletion.",
+      "ask_give_role": "",
+      "evolves_borrows": "",
+      "creatures_underlain": [],
+      "phys_latent": 0.66,
+      "lifecycle": "documented",
+      "certainty": 0.85,
+      "source": {
+        "doc": "LATENT_DYNAMICS_BESTIARY.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.85
+    },
+    {
+      "id": "dyn-observer-state-prior-lock-bias-canon-biases-what-is-seen",
+      "type": "creature",
+      "family": "observer-state",
+      "name": "Prior-lock / bias (canon biases what is seen)",
+      "what": "The inner canon pre-weights perception: prior-consistent evidence is registered and credited cheaply, prior-violating evidence discounted, attenuated, or never registered — the glass tints the exposure.",
+      "framework_tie": "Lives in the GLASSES (WRAPPER_PROBE_OBSERVER sec 3.4: glasses = observer/decoder, carries valence R3). Corrupts evidence_lcb crediting on COLLECT: a prior-consistent spark over-credited (sharpens on a whisper), a prior-violating one under-credited. Exactly the failure Law 1 guards — 'a lie in a good suit' the canon WANTS to believe gets fraudulently high evidence_lcb.",
+      "formal_name": "Confirmation bias / motivated reasoning; in perception, precision-weighting of priors in predictive coding",
+      "field": "cognitive psychology / computational neuroscience / behavioral economics",
+      "citation": "Nickerson 1998; Friston predictive-coding/precision-weighting; JASSS 26/1/2; Kunda 1990 (motivated reasoning)",
+      "observable": "Evidence-crediting asymmetry: attach the same objective corroboration strength to prior-CONSISTENT vs prior-VIOLATING claims; measure the gap in assigned evidence_lcb (a calibrated observer gives equal credit; prior-lock gives a positive consistent-minus-violating gap). In signal-detection terms a criterion shift (beta) toward prior-consistent reports with d' fixed. Also differential omission: prior-violating sparks unregistered relative to a low-prior control observer.",
+      "ask_give_role": "",
+      "evolves_borrows": "",
+      "creatures_underlain": [],
+      "phys_latent": 0.66,
+      "lifecycle": "documented",
+      "certainty": 0.85,
+      "source": {
+        "doc": "LATENT_DYNAMICS_BESTIARY.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.85
+    },
+    {
+      "id": "dyn-observer-state-confidence-calibration-over-under-confidence-chang",
+      "type": "creature",
+      "family": "observer-state",
+      "name": "Confidence / calibration (over/under-confidence changes engagement)",
+      "what": "The observer's estimate of its own correctness; miscalibrated, it sets the wrong stopping point — overconfidence quits too early (renders sharp on a guess), underconfidence over-spends on dissolved targets.",
+      "framework_tie": "Calibration is whether RENDERED sharpness matches the VERIFIED-DISSOLVE outcome — a direct test of Law 2's corollary (a pixel at 1.0 is the tell of a fake). Overconfidence is the engine of FAKE-DISSOLVE (guard 1); the exact-reconstruction gate is the institutional cure for a miscalibrated observer. It also sets the budget-B stopping rule.",
+      "formal_name": "Calibration / confidence resolution; Expected Calibration Error & Brier; Dunning-Kruger; metacognitive sensitivity",
+      "field": "judgment & decision-making / metacognition / ML uncertainty estimation",
+      "citation": "Brier 1950; Lichtenstein, Fischhoff, Phillips 1982; Kruger & Dunning 1999; Steyvers & Peters Curr Dir Psych Sci 2025; 'Dunning-Kruger in LLMs' arXiv:2603.09985",
+      "observable": "ECE / Brier between RENDERED sharpness (stated certainty per wrapper) and the binary verified-dissolve outcome. Overconfidence = reliability-diagram bow below the diagonal; Dunning-Kruger = confidence rising while accuracy falls across a competence sweep of athletes. Metacognitive RESOLUTION (AUROC of confidence predicting correctness) separates a usefully-uncertain observer from a noisy one.",
+      "ask_give_role": "",
+      "evolves_borrows": "",
+      "creatures_underlain": [],
+      "phys_latent": 0.55,
+      "lifecycle": "documented",
+      "certainty": 0.7,
+      "source": {
+        "doc": "LATENT_DYNAMICS_BESTIARY.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.7
+    },
+    {
+      "id": "dyn-observer-state-measurement-blind-spot-the-unregistered-present-sp",
+      "type": "creature",
+      "family": "observer-state",
+      "name": "Measurement blind spot (the unregistered present spark)",
+      "what": "A wrapper that IS present and WOULD resonate but is never registered because attention is loaded elsewhere — the observer fails to see what is plainly there; distinct from choosing not to look (keyhole) and from discounting it (prior-lock).",
+      "framework_tie": "The dark complement of attention budget: where the budget is the SIZE of the aperture, the blind spot is the structured HOLE in it — sparks inside the lit region that still fail to ping. An unbadged loss on COLLECT: measured_bits silently undercounts because the wrapper produced zero exposure, and (unlike a deliberate keyhole choice) it is NOT recorded in slice metadata. The honesty gap the camera must surface.",
+      "formal_name": "Inattentional blindness / change blindness; internal inattentional blindness",
+      "field": "perceptual / cognitive psychology",
+      "citation": "Mack & Rock 1998; Simons & Chabris 1999 (invisible gorilla); Rensink, O'Regan, Clark 1997; 'Invisible Gorillas in the Mind' PMC12136916 (Open Mind 2025)",
+      "observable": "Plant-and-probe: inject a known load-bearing wrapper INSIDE the lit/resonant region (neither out-of-aperture nor prior-violating); measure the miss rate (fraction of trials producing zero ping despite high ground-truth resonance) as a function of concurrent attentional load. A nonzero, load-increasing miss rate on in-region high-resonance items = a real blind spot; recovered-minus-observed set (vs a low-load control over the same slice) = the measurable badge.",
+      "ask_give_role": "",
+      "evolves_borrows": "",
+      "creatures_underlain": [],
+      "phys_latent": 0.88,
+      "lifecycle": "tracked",
+      "certainty": 0.6,
+      "source": {
+        "doc": "LATENT_DYNAMICS_BESTIARY.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.6
+    },
+    {
+      "id": "dyn-observer-state-drive-valence-gating-the-motive-that-steers-effort",
+      "type": "creature",
+      "family": "observer-state",
+      "name": "Drive / valence gating (the motive that steers effort)",
+      "what": "An affective controller — curiosity pulling toward high-information-gap targets, boredom pushing away from low-yield ones — that decides WHERE the finite budget is spent, independent of how big the budget is or how fatigued the observer is.",
+      "framework_tie": "The 'drive' third of the observer-wrapper made into an internal allocator: the policy that points the keyhole, biasing the rho sample toward high-expected-information-gain wrappers. Curiosity = upper-half engine (which conjectures to inflate); boredom = the opportunity-cost twin of fatigue on a SPATIAL rather than temporal axis (fatigue lowers the ceiling over time; boredom redirects effort across targets). Without it COLLECT is a passive raster.",
+      "formal_name": "Curiosity / information-gap drive; boredom as opportunity-cost / value-of-exploration; epistemic value (EIG) in active inference",
+      "field": "cognitive neuroscience / RL / active inference",
+      "citation": "Loewenstein 1994; Gottlieb & Oudeyer 2018; Friston (expected free energy); Agrawal, Mathar, Daw & Kable (boredom/exploration, Psych Review); Bench & Lench",
+      "observable": "Allocation-vs-EIG regression: per candidate wrapper compute expected info gain (predicted bits-to-dissolve x novelty vs prior), regress budget actually spent against EIG. Positive slope = curiosity-gated allocation (vs flat = budget-only); a steep negative term on low-EIG dwell time = boredom-driven disengagement (abandonment hazard rises as marginal info-yield falls). Separable from fatigue because it is target-indexed (cross-sectional across wrappers at one time), not session-position-indexed.",
+      "ask_give_role": "",
+      "evolves_borrows": "",
+      "creatures_underlain": [],
+      "phys_latent": 0.88,
+      "lifecycle": "tracked",
+      "certainty": 0.55,
+      "source": {
+        "doc": "LATENT_DYNAMICS_BESTIARY.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.55
+    },
+    {
+      "id": "dyn-phantom-phantom-variable-latent-confounder",
+      "type": "creature",
+      "family": "phantom",
+      "name": "Phantom variable (latent confounder)",
+      "what": "An unmodeled driver outside the observer's canon that silently steers both moves and outcome until tracked, at which point it stops being a phantom and becomes a (confounding) variable in the model.",
+      "framework_tie": "Lives in the GAP between the kernel and the observer's canon: a hidden channel feeding the film the decoder hasn't declared. It inflates apparent regularity (looks like dissolvable signal) but is an unbound third route, so under Law 1 it manufactures fake corroboration unless independence is measured. The canonical 'unplanned' — no slot yet.",
+      "formal_name": "Latent/unobserved confounder; hidden common cause; bidirected edge (X<->Y) under causal-sufficiency violation",
+      "field": "causal inference / causal discovery",
+      "citation": "Spirtes-Glymour-Scheines FCI (Causation, Prediction, and Search 2000); 'Causal Inference with Latent Variables' arXiv:2406.13966; 'Detecting Confounding via Causal Mechanism Shifts' arXiv:2409.17840",
+      "observable": "Residual cross-route covariance surviving independence-discounting (FCI bidirected-edge tests), OR a causal-mechanism SHIFT across environments: P(Y|X) unstable across contexts even with modeled inputs fixed. Operationally: hold the decoder fixed, vary environment, watch unexplained covariance no modeled variable accounts for. A flat residue that nonetheless predicts the future BETTER than modeled bits justify = unbound channel.",
+      "ask_give_role": "",
+      "evolves_borrows": "",
+      "creatures_underlain": [],
+      "phys_latent": 0.6,
+      "lifecycle": "classified",
+      "certainty": 0.85,
+      "source": {
+        "doc": "LATENT_DYNAMICS_BESTIARY.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.85
+    },
+    {
+      "id": "dyn-phantom-drift-the-target-moves-between-exposures",
+      "type": "creature",
+      "family": "phantom",
+      "name": "Drift (the target moves between exposures)",
+      "what": "The latent target migrates while you measure it, so a decoder calibrated on exposure t is mis-calibrated by t+k — not because the observer changed but because the thing being digested slid out from under the map.",
+      "framework_tie": "Breaks the silent stationarity assumption of a single exposure. Interacts with the diachronic decoder D(t): part of apparent observer-relativity (1789 vs 2026) is actually the TARGET having drifted. Honest collect must timestamp every exposure (bitemporal t_obs) so a moving target isn't mistaken for a noisy static one.",
+      "formal_name": "Concept drift (P(Y|X) changes) vs covariate/data drift (P(X) changes); virtual vs real drift",
+      "field": "machine learning / streaming data / MLOps",
+      "citation": "Gama et al. ACM Computing Surveys 2014; Frouros arXiv:2208.06868; Springer AI Review 2025 s10462-025-11428-y",
+      "observable": "Re-measure the SAME target at spaced exposures with a PINNED decoder; watch a distributional distance climb: PSI, KS/MMD, or epoch-distribution divergence exceeding a control limit. Separate covariate drift (input P(X) moves, feature-reconstruction error rises) from concept drift (P(Y|X) moves, error rises while inputs look stable) via lagged-label/student-teacher discrepancy. Signature: residue rising monotonically with epoch gap at constant present effort.",
+      "ask_give_role": "",
+      "evolves_borrows": "",
+      "creatures_underlain": [],
+      "phys_latent": 0.55,
+      "lifecycle": "documented",
+      "certainty": 0.85,
+      "source": {
+        "doc": "LATENT_DYNAMICS_BESTIARY.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.85
+    },
+    {
+      "id": "dyn-phantom-regime-flip-kink-avalanche-tipping-point-absorbs-c",
+      "type": "creature",
+      "family": "phantom",
+      "name": "Regime-flip (kink / avalanche / tipping point) [absorbs critic's 'Tipping Point' global-phase framing; shares mechanism with grip/Click]",
+      "what": "An endogenous threshold crossing where a tiny smooth nudge to a control parameter bifurcates the whole match: the system jumps to a qualitatively different state, often via cascade and often without flipping back. Enriched here with the GLOBAL phase-topology of the solution landscape (easy-hard-easy boundaries, percolation thresholds, insight-as-restructuring).",
+      "framework_tie": "Distinct from the shock (exogenous): the regime-flip is ENDOGENOUS — an internal control parameter approaches a fold and a last small move tips it. On rho it's a phase boundary; amortization bites hard (a prior pre-paid for one regime is worthless one tick past the fold). MERGE NOTE: the critic's 'The Tipping Point' (criticality / SAT phase transition / percolation / insight phase transition) is the same dynamic at landscape scale — its global topology enriches this entry; grip/Click is the local contact event of the same transition.",
+      "formal_name": "Critical transition / regime shift (saddle-node fold) bifurcation; self-organized criticality avalanche; percolation threshold; easy-hard-easy SAT phase transition; representational-change insight",
+      "field": "dynamical systems / theoretical ecology / statistical physics / TCS / cognitive science",
+      "citation": "Scheffer et al. Nature 461 (2009); Bak-Tang-Wiesenfeld PRL 1987; Nat. Comms 2024 s41467-024-45476-9; Cheeseman et al. IJCAI 1991 'Where the Really Hard Problems Are'; Ohlsson 1992; Kounios & Beeman 2014",
+      "observable": "APPROACH via critical-slowing-down early-warning: rising variance, rising lag-1 autocorrelation, slower recovery as the dominant eigenvalue crosses zero. EVENT via a power-law avalanche-size distribution (no characteristic scale); dragon-king flips deviate ABOVE the power law. Order-parameter discontinuity: plot solution-progress vs control parameter (constraint density, hint fraction, effort) and detect a sharp jump / diverging susceptibility (variance peak). Insight signature: bimodal solve-time distribution + sudden pre-solution confidence spike. Hysteresis = forward/reverse sweep loop area.",
+      "ask_give_role": "",
+      "evolves_borrows": "",
+      "creatures_underlain": [],
+      "phys_latent": 0.15,
+      "lifecycle": "documented",
+      "certainty": 0.82,
+      "source": {
+        "doc": "LATENT_DYNAMICS_BESTIARY.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.82
+    },
+    {
+      "id": "dyn-phantom-the-shock-slip-off-frame-event",
+      "type": "creature",
+      "family": "phantom",
+      "name": "The shock / slip (off-frame event)",
+      "what": "An exogenous, out-of-distribution event the model had zero probability mass for; it rewrites the mat and forcibly redirects the drive's attention, ending the current digestion line.",
+      "framework_tie": "An input the canon could not frame: maximal single-pass surprisal (prior assigned ~0). The clearest phantom — unplanned by construction. On the camera, a discontinuity in exposure conditions between frames: the mat is no longer the one the prior was pre-paid for (amortization mismatch), so cheap reads turn expensive overnight.",
+      "formal_name": "Black swan (unpredictable) vs Dragon-king (ultra-extreme but pre-signaled); surprise / prediction-error-driven attention reorientation",
+      "field": "risk theory / extreme-value statistics; cognitive neuroscience (predictive coding)",
+      "citation": "Taleb, The Black Swan (2007); Sornette 'Dragon-Kings...' arXiv:0907.4290; ACC unsigned RPE PMC3070460",
+      "observable": "SURPRISAL SPIKE: a sharp jump in prequential NLL at one timestep exceeding the running-history envelope, FOLLOWED BY a step-change in the rho baseline (mat moved: DISSOLVED -> DIGESTING/SOLID). Black-swan vs dragon-king by the tail: dragon-kings sit ABOVE the fitted power-law and carry precursors; black swans none. Attention-redirect observable as a discontinuity in strategy-mix and a reset of the attempt counter.",
+      "ask_give_role": "",
+      "evolves_borrows": "",
+      "creatures_underlain": [],
+      "phys_latent": 0.88,
+      "lifecycle": "documented",
+      "certainty": 0.8,
+      "source": {
+        "doc": "LATENT_DYNAMICS_BESTIARY.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.8
+    },
+    {
+      "id": "dyn-phantom-observer-induced-phantom-the-back-reaction-shock-a",
+      "type": "creature",
+      "family": "phantom",
+      "name": "Observer-induced phantom (the back-reaction shock) [absorbs the endogenous-surprise half of critic's 'Mirror'; macro-scale of wrestlers/Probe-deforms-kernel]",
+      "what": "The probe MANUFACTURES the off-frame event: digesting/measuring perturbs the condition enough to create the surprise that then redirects the match — a self-inflicted shock the observer can't see coming because it IS the seer.",
+      "framework_tie": "Shock + Law 2 disturbance-reason-(ii). Seeds treat shocks as external; this is the shock the OBSERVER causes — structurally invisible to the wrapper producing it (you can't model the effect of your own modeling in the same pass). The dynamic reason sharpness can never reach 1, turned into an EVENT; spans the wrestler-mat boundary. MERGE NOTE: the critic's 'Mirror' (reflexivity/performativity endogenous-surprise half) lands here; the local-measurement face is wrestlers/Probe-deforms-kernel and the social-scoring face is mat/Arena — one back-reaction loop at three scales.",
+      "formal_name": "[novel as a 'phantom' creature]; established priors: performativity/reflexivity (Soros, MacKenzie); observer effect/measurement back-action; performative prediction (Perdomo et al.)",
+      "field": "economics/sociology of measurement (performativity); ML (performative prediction); physics (back-action) as analogues",
+      "citation": "Perdomo, Zrnic, Mendler-Dunner, Hardt ICML 2020 arXiv:2002.06673; MacKenzie 'An Engine, Not a Camera' (2006); Soros reflexivity; Manheim & Garrabrant arXiv:1803.04585",
+      "observable": "INTERVENTION-vs-OBSERVATION differential: two matched arms differing only in measurement INTENSITY (passive light-touch vs heavy digestion); test whether the target's distribution shifts MORE in the high-intensity arm. A non-zero dose-response of the target to probe-intensity is the signature. Equivalently: drift magnitude correlated with the observer's own token/attempt spend rather than wall-clock time. If watching it changes it in proportion to how hard you watch, it is observer-induced.",
+      "ask_give_role": "",
+      "evolves_borrows": "",
+      "creatures_underlain": [],
+      "phys_latent": 0.15,
+      "lifecycle": "tracked",
+      "certainty": 0.6,
+      "source": {
+        "doc": "LATENT_DYNAMICS_BESTIARY.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.6
+    },
+    {
+      "id": "dyn-phantom-dormant-hysteresis-locked-phantom-the-regime-that-",
+      "type": "creature",
+      "family": "phantom",
+      "name": "Dormant / hysteresis-locked phantom (the regime that won't flip back)",
+      "what": "A regime-flip that doesn't reverse when the nudge is removed: the 'unplanned' becomes a permanent feature of the condition, and the prior keeps spending amortized budget on a world that no longer exists, so a once-trivial read silently goes stale and stays stale.",
+      "framework_tie": "Regime-flip x amortization: the seed names the FLIP, this names the STICK. After the fold the prior's pre-paid negentropy is mis-spent, but a present-effort read looks cheap (DISSOLVED) because the prior cashes old debt for the wrong regime. Dormant precisely because cheapness HIDES it — the most dangerous phantoms read as easy. Ties to the diachronic decoder going silently invalid.",
+      "formal_name": "[novel framing]; priors: hysteresis/irreversibility in critical transitions; technical debt; stale-but-confident retention; lock-in / path dependence",
+      "field": "dynamical systems (hysteresis); software engineering (technical debt); economics (lock-in)",
+      "citation": "Scheffer et al. Nature 2009; Cunningham OOPSLA 1992; Paul David 'Clio and the Economics of QWERTY' AER 1985",
+      "observable": "Separate PRESENT cost from AMORTIZED debt (the two-clock instrument): a target reading cheap on present rho (low tau, fast dissolve) but whose VERIFIED-DISSOLVE gate FAILS forward — the cheap reconstruction stops reproducing future exposures. Signature: a widening gap between instant-crush bits (still low) and prequential forward-test bits (rising) = confident-but-stale. Hysteresis = forward/reverse control-sweep loop NOT closing (loop area > 0).",
+      "ask_give_role": "",
+      "evolves_borrows": "",
+      "creatures_underlain": [],
+      "phys_latent": 0.66,
+      "lifecycle": "tracked",
+      "certainty": 0.58,
+      "source": {
+        "doc": "LATENT_DYNAMICS_BESTIARY.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.58
+    },
+    {
+      "id": "dyn-tactic-ask-give-loop-anchor-and-concede-set-the-reference-then-trade-gr",
+      "type": "tactic",
+      "family": "tactic:ask-give-loop",
+      "name": "Anchor-and-concede (set the reference, then trade ground)",
+      "what": "Open with an extreme first offer/claim that becomes the reference point the exchange orbits, then release ground in calibrated reciprocity-triggering increments — each GIVE engineered to extract a counter-GIVE.",
+      "framework_tie": "",
+      "formal_name": "Anchoring (insufficient adjustment) + reciprocal-concession / door-in-the-face; Bartos concession model; Rubinstein alternating-offers",
+      "field": "negotiation theory / judgment-and-decision-making / bargaining game theory",
+      "citation": "Tversky & Kahneman 1974; Cialdini et al. 1975; Bartos 1977; Rubinstein 1982; Galinsky & Mussweiler 2001",
+      "observable": "Correlate final settlement against opening-claim magnitude (anchor sensitivity holding kernel fixed). Concession reciprocity: cross-correlation between one side's GIVE size and the other's next GIVE (positive lag-1 = reciprocity running). Round-by-round aspiration shows monotone decay from an inflated start.",
+      "ask_give_role": "A GIVE that functions as an ASK: the opening claim is a concession schedule disguised as a position. It primes aspiration (anchor), then uses door-in-the-face reciprocity to pull answers out turn by turn.",
+      "evolves_borrows": "Native to negotiation; borrowed into interrogation (max accusation -> lesser admission), peer review (demand 10 to bank 3), prompt-engineering (over-specify to be negotiated down). Mutates via concession-curve shape (boulware vs tit-for-tat). Evolves into multi-issue logrolling.",
+      "creatures_underlain": [
+        "observer-state/Prior-lock (anchor IS a prior)",
+        "wrestlers/Defense (counter-anchor entrenchment)",
+        "frame/Prize-Field",
+        "clock/Debt (over-aggressive anchor = bargaining debt)"
+      ],
+      "phys_latent": 0.66,
+      "lifecycle": "tracked",
+      "certainty": 0.78,
+      "source": {
+        "doc": "ADVERSARIAL_TACTICS.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.6
+    },
+    {
+      "id": "dyn-tactic-ask-give-loop-burden-shift-commitment-trap-make-them-owe-the-ans",
+      "type": "tactic",
+      "family": "tactic:ask-give-loop",
+      "name": "Burden-shift / commitment-trap (make THEM owe the answer)",
+      "what": "Reframe the exchange so the OTHER party carries the proof obligation, then drive a chain of locally-conceded micro-answers until they collide with a contradiction the asker never had to assert — refutation built entirely from the respondent's own commitments.",
+      "framework_tie": "",
+      "formal_name": "Socratic elenchus / maieutic refutation; commitment store + burden of proof in formal dialectic; argumentation schemes & critical questions",
+      "field": "argumentation theory / formal dialectic / rhetoric",
+      "citation": "Hamblin 1970; Walton & Krabbe 1995; Walton 2014; Vlastos 1983; Prakken & Sartor",
+      "observable": "Commitment-store ledger: count conceded answers per turn, test whether the asker ever asserts a defended claim of its own (pure burden-shifter's assert-count ~0). Trap closing = sharp rise in respondent self-inconsistency (answer t contradicts conceded t-k) culminating in aporia. Burden-asymmetry = ratio of proof obligations each side carries.",
+      "ask_give_role": "An ASK that withholds all GIVE: the asker advances no thesis, only questions, so it can never be refuted and forces the wrapper to keep paying answers into a commitment store until aporia (the kernel exposed as inconsistent).",
+      "evolves_borrows": "From Socratic elenchus into formal dialogue games (commitment stores, critical questions), litigation (never ask a question you don't control), and LLM red-teaming (lead the model to self-contradict). Mutates via burden-of-production vs persuasion splits.",
+      "creatures_underlain": [
+        "wrestlers/Kernel-crack",
+        "wrestlers/Problem-as-gatekeeper",
+        "wrestlers/Defense (reactance = the trap failing)",
+        "grip/Click (aporia = discontinuous collapse)"
+      ],
+      "phys_latent": 0.76,
+      "lifecycle": "tracked",
+      "certainty": 0.8,
+      "source": {
+        "doc": "ADVERSARIAL_TACTICS.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.6
+    },
+    {
+      "id": "dyn-tactic-ask-give-loop-selective-disclosure-strategic-withholding-the-tru",
+      "type": "tactic",
+      "family": "tactic:ask-give-loop",
+      "name": "Selective disclosure / strategic withholding (the true subset that misleads)",
+      "what": "Control the answer not by lying but by choosing WHICH true bits to GIVE and which to withhold — release verifiable evidence above a self-serving threshold, stay silent below it, let cheap unverifiable talk fill the unchecked gaps.",
+      "framework_tie": "",
+      "formal_name": "Verifiable disclosure & the unraveling result (Milgrom) vs cheap talk (Crawford-Sobel); Bayesian persuasion",
+      "field": "information economics / game theory (disclosure & cheap talk) / persuasion",
+      "citation": "Milgrom 1981; Grossman 1981; Crawford & Sobel 1982; Kamenica & Gentzkow 2011",
+      "observable": "Verifiability gap: split GIVEs into checkable vs uncheckable, measure favorable/unfavorable asymmetry (discloser shows favorable-verifiable, withholds unfavorable, pads with cheap talk). Independence count on disclosed evidence exposes one-source padding. Unraveling probe: demand the withheld set, measure belief shift when silence is penalized.",
+      "ask_give_role": "A GIVE-management tactic: every disclosure is a partial answer engineered to move belief while staying literally true. The asker's counter is the unraveling demand ('if it were good news you'd have shown it') forcing progressive revelation.",
+      "evolves_borrows": "From disclosure economics into expert testimony (cite the favorable study), model evaluation (report the benchmark you win), RAG/citation. Mutates along verifiability; where checking is costly, silence stays ambiguous. Evolves toward the verified-dissolve GATE as antidote.",
+      "creatures_underlain": [
+        "wrestlers/Defense",
+        "mat/Excitable-Medium ('ten papers copying one wire')",
+        "phantom/Phantom-variable",
+        "observer-state/Prior-lock",
+        "grip/Greased-pole"
+      ],
+      "phys_latent": 0.66,
+      "lifecycle": "tracked",
+      "certainty": 0.79,
+      "source": {
+        "doc": "ADVERSARIAL_TACTICS.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.6
+    },
+    {
+      "id": "dyn-tactic-ask-give-loop-costly-signal-vs-bluff-the-honesty-of-the-give-due",
+      "type": "tactic",
+      "family": "tactic:ask-give-loop",
+      "name": "Costly-signal vs bluff (the honesty-of-the-GIVE duel)",
+      "what": "The GIVE carries (or fakes) a cost-of-production meant to certify quality; the dual is the BLUFF — a low-quality wrapper paying the same observable signal because it shares the trade-off, making the signal's honesty itself contestable.",
+      "framework_tie": "",
+      "formal_name": "Costly/honest signalling & handicap principle (trade-off reformulation); separating vs pooling equilibrium; bluffing",
+      "field": "evolutionary biology / signalling games / game theory",
+      "citation": "Zahavi 1975; Spence 1973; BMC Biology 2022 / J Evol Biol 39(2):171 (2026)",
+      "observable": "Cost-credibility separation: vary the OBSERVABLE production-cost of a GIVE (trace length, displayed work, latency) at fixed verified residue-drop, test whether the asker's evidence_lcb tracks cost or verified content. POOLING signature = high-cost-looking GIVEs failing the gate at the same rate as low-cost = bluffable. Report cost-vs-verified correlation; zero = pure handicap-theatre.",
+      "ask_give_role": "GIVE-side certification + its forgery: the giver attaches a hard-to-fake price tag to vouch for the answer; the asker must decide whether to credit the cost or discount it as a bluff. The loop's trust-calibration lives here.",
+      "evolves_borrows": "Zahavi's handicap principle, reframed as TRADE-OFFS not waste (2025-26 revision) — which is why bluffing is endemic (equal-cost individuals share a signal). Transposes peacock tails -> resume-padding -> chain-of-thought length as a gameable effort-signal.",
+      "creatures_underlain": [
+        "grip/Greased-pole",
+        "observer-state/Prior-lock",
+        "mat/Arena"
+      ],
+      "phys_latent": 0.35,
+      "lifecycle": "tracked",
+      "certainty": 0.7,
+      "source": {
+        "doc": "ADVERSARIAL_TACTICS.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.6
+    },
+    {
+      "id": "dyn-tactic-ask-give-loop-query-then-update-the-closed-loop-clock-probe-revi",
+      "type": "tactic",
+      "family": "tactic:ask-give-loop",
+      "name": "Query-then-update (the closed-loop clock: probe, revise, re-probe)",
+      "what": "The meta-tactic that makes it a LOOP: after each GIVE, fold the answer into the prior and let the UPDATED posterior choose the next ASK — adaptive, history-dependent interrogation where every probe is conditioned on all prior answers.",
+      "framework_tie": "",
+      "formal_name": "Sequential Bayesian / optimal experimental design as finite-horizon POMDP; query-then-update active learning; bandit/POMDP adaptive querying",
+      "field": "Bayesian sequential design / active inference / RL (POMDP)",
+      "citation": "Howard 1966 'Information Value Theory'; Foster et al. 2021 'Deep Adaptive Design'; Friston et al. 2015; Shen & Huan 2023",
+      "observable": "Adaptivity test: FIXED pre-committed question sequence vs ADAPTIVE (each ASK conditioned on prior GIVEs) at matched budget; the residue-drop gap = value of closing the loop. Path-dependence: mutual information between answer history and next-probe choice > 0. Myopic-vs-lookahead gap separates greedy from planned.",
+      "ask_give_role": "The control law over the whole ASK<->GIVE cycle — not a single move but the policy sequencing moves, converting a static questionnaire into a branch-adaptive interrogation. The loop's engine; other tactics are moves it schedules.",
+      "evolves_borrows": "From sequential Bayesian experimental design / POMDP planning into adaptive interrogation, bisection/active search, agentic observe->act->re-observe loops. Mutates via planning horizon (greedy myopic EIG vs lookahead). SKEPTIC FLAG: heavily overlaps Probe/Query-at-the-cut — that is per-step selection, this is the closure/re-selection after each update.",
+      "creatures_underlain": [
+        "clock/Amortization",
+        "wrestlers/Kernel-crack",
+        "wrestlers/Probe-deforms-kernel",
+        "phantom/Drift"
+      ],
+      "phys_latent": 0.6,
+      "lifecycle": "tracked",
+      "certainty": 0.6,
+      "source": {
+        "doc": "ADVERSARIAL_TACTICS.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.6
+    },
+    {
+      "id": "dyn-tactic-ask-give-loop-the-hydra-each-answer-spawns-more-questions",
+      "type": "tactic",
+      "family": "tactic:ask-give-loop",
+      "name": "The Hydra (each answer spawns more questions)",
+      "what": "A GIVE that does not close the loop but BRANCHES it: the answer instantiates new variables, presuppositions, or sub-claims, each a fresh ASK — so the question frontier grows faster than answers retire it.",
+      "framework_tie": "",
+      "formal_name": "[partly novel as a named loop dynamic]; nearest: dialectical/epistemic regress (Agrippa) + branching factor / question-under-discussion stack + recursive query decomposition",
+      "field": "argumentation theory (regress) / formal pragmatics (QUD) / active learning",
+      "citation": "Roberts 1996/2012 (QUD); Sextus Empiricus (Agrippa); Khot et al. 'Decomposed Prompting' ICLR 2023; Zhou et al. 2023",
+      "observable": "Branching factor of the dialogue tree: b = sub-questions opened / closed per GIVE. Plot open-frontier size over turns (converging b<1, treading, exploding b>1). Distinguish productive Hydra (frontier grows but TOTAL verified residue still falls) from stalling Hydra (frontier grows, residue flat) via the gate.",
+      "ask_give_role": "The structural feature/failure of the loop: instead of monotone residue-reduction, the GIVE has positive branching factor. On the problem side a defense (answer with a question); on the observer side the honest growth of a research frontier. (Loop-side twin of problem-defense Combinatorial Hydra.)",
+      "evolves_borrows": "From dialectic (Agrippa's trilemma) into research programmes, debugging (each fix surfaces two bugs), recursive query decomposition. Mutates via branching factor b: b<1 converges, b=1 treads, b>1 diverges. Borrows Red Queen when branching is adversarial.",
+      "creatures_underlain": [
+        "grip/Burr",
+        "frame/Red Queen",
+        "frame/Nesting",
+        "grip/Suck-you-in (diverging Hydra = rabbit-hole)"
+      ],
+      "phys_latent": 0.76,
+      "lifecycle": "tracked",
+      "certainty": 0.62,
+      "source": {
+        "doc": "ADVERSARIAL_TACTICS.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.6
+    },
+    {
+      "id": "dyn-tactic-ask-give-loop-reciprocity-tit-for-tat-coupling-the-loop-s-iterat",
+      "type": "tactic",
+      "family": "tactic:ask-give-loop",
+      "name": "Reciprocity / tit-for-tat coupling (the loop's iterated-game memory)",
+      "what": "Across repeated ASK<->GIVE rounds the two wrappers run conditional strategies (cooperate-then-punish, escalate-on-defect, forgive-on-return) so the current move is set by the HISTORY of moves, not by the kernel — the loop becomes an iterated game with its own equilibrium.",
+      "framework_tie": "",
+      "formal_name": "Reciprocity / tit-for-tat / iterated-game conditional strategies; folk-theorem cooperation; trigger strategies",
+      "field": "game theory (repeated games) / evolutionary game theory / negotiation",
+      "citation": "Axelrod & Hamilton 1981; Trivers 1971; folk theorem (repeated games)",
+      "observable": "Move-history dependence at fixed kernel: perturb the OBSERVER's prior conduct (cooperative vs defecting history), measure whether GIVE-quality/residue depends on that history not the kernel. Tit-for-tat signature = GIVE-quality correlates with lagged ASK-good-faith (cross-correlation lag-1) with punish/forgive structure. This is a COUPLING's own observable that no single vertex carries.",
+      "ask_give_role": "The COUPLING itself: neither pure ASK nor pure GIVE but the feedback rule binding them across rounds — each GIVE is contingent on the prior ASK's good faith and vice versa.",
+      "evolves_borrows": "Axelrod-Hamilton iterated-PD reciprocity transposed onto the solve-loop; evolves Red-Queen reciprocal escalation but as a WITHIN-bout move-by-move rule rather than across-bout coevolution. Borrowed by multi-agent LLM negotiation and collusion-vs-audit dynamics.",
+      "creatures_underlain": [
+        "frame/Red-Queen",
+        "wrestlers/Defense",
+        "mat/Sticky-Mat"
+      ],
+      "phys_latent": 0.35,
+      "lifecycle": "tracked",
+      "certainty": 0.64,
+      "source": {
+        "doc": "ADVERSARIAL_TACTICS.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.6
+    },
+    {
+      "id": "dyn-tactic-meta-evolution-red-queen-escalation-run-to-stand-still-arms-race",
+      "type": "tactic",
+      "family": "tactic:meta-evolution",
+      "name": "Red Queen escalation (run-to-stand-still arms race)",
+      "what": "Across repeated bouts the problem and observer mutually select on each other, so every survived solve raises the bar for the next exposure and standing still loses ground — difficulty is endogenous and rising, not a fixed property.",
+      "framework_tie": "",
+      "formal_name": "Red Queen dynamics / antagonistic coevolution / escalatory arms race; geographic mosaic of coevolution",
+      "field": "evolutionary biology / coevolution theory",
+      "citation": "Van Valen 1973; Dawkins & Krebs 1979; Thompson 2005; Mol. Biol. Evol. 38(11):4918 (2021); Sci. Adv. sciadv.1501548",
+      "observable": "Difficulty-vs-skill regression slope over episodes: positive slope (must improve to hold a fixed verified-win-rate) = Red Queen. Cross-correlation lag between solver-capability and problem-difficulty increments = coupling tightness. Mosaic signature: variance in that slope across niches. Static stone's required-skill slope is FLAT.",
+      "ask_give_role": "Operates on the ASK<->GIVE loop ACROSS bouts: each successful GIVE becomes the next ASK's baseline, so the loop ratchets and neither side can bank a win. It is the loop's time-derivative.",
+      "evolves_borrows": "THE canonical evolve-engine: frequency-dependent, time-lagged selection. Mechanism is host-parasite genotype cycling; in a geographic mosaic it fragments into hot/cold spots so the same tactic wins in one niche and is stale in another.",
+      "creatures_underlain": [
+        "frame/The Red Queen",
+        "mat/The Sticky Mat",
+        "wrestlers/Defense-motivated-resistance",
+        "clock/Amortization"
+      ],
+      "phys_latent": 0.35,
+      "lifecycle": "tracked",
+      "certainty": 0.85,
+      "source": {
+        "doc": "ADVERSARIAL_TACTICS.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.6
+    },
+    {
+      "id": "dyn-tactic-meta-evolution-autocurriculum-co-generation-of-the-problem-self-p",
+      "type": "tactic",
+      "family": "tactic:meta-evolution",
+      "name": "Autocurriculum / co-generation of the problem (self-play ratchet)",
+      "what": "When one wrapper's improvement automatically supplies the next challenge for the other, the pair manufactures its own escalating curriculum: difficulty is generated BY the coupling rather than handed in exogenously, so novelty is endlessly produced from the interaction alone.",
+      "framework_tie": "",
+      "formal_name": "Autocurricula / multi-agent self-play; POET & minimal-criterion coevolution; open-ended environment co-generation",
+      "field": "multi-agent RL / open-endedness / artificial life",
+      "citation": "Leibo et al. 2019 arXiv:1903.00742; Baker et al. 2019; Wang et al. 2019 'POET' arXiv:1901.01753; arXiv:2601.03335 (2026)",
+      "observable": "Innovation-without-exogenous-difficulty test: hold the EXTERNAL problem set fixed, let the wrappers interact, measure whether new verified-distinct tactics keep appearing purely from the coupling. Self-play signature: sawtooth win-rate with monotonically rising absolute capability. Null result (difficulty plateaus once external set frozen) FALSIFIES it and collapses it into ordinary Red Queen.",
+      "ask_give_role": "The auto-generator of new ASKs: the converged GIVE-side policy reshapes the data distribution the ASK-side sees, making 'exploit-the-known-optimum' the highest-paying next move. The loop writes its own next question.",
+      "evolves_borrows": "Tactics evolve via a minimal-criterion filter ('neither too easy nor too hard'); stepping-stone transfer between co-evolved problems is the built-in borrowing channel. The engineered, machine-cadence face of Red Queen. FLAGGED near-merge with Red Queen — kept distinct only by the co-GENERATION (the problem is built, not just escalated).",
+      "creatures_underlain": [
+        "frame/The Red Queen",
+        "frame/The Referee",
+        "wrestlers/The pull",
+        "phantom/Regime-flip"
+      ],
+      "phys_latent": 0.6,
+      "lifecycle": "tracked",
+      "certainty": 0.78,
+      "source": {
+        "doc": "ADVERSARIAL_TACTICS.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.6
+    },
+    {
+      "id": "dyn-tactic-meta-evolution-transposition-cross-plane-tactic-porting-borrowing",
+      "type": "tactic",
+      "family": "tactic:meta-evolution",
+      "name": "Transposition (cross-plane tactic porting / borrowing a move)",
+      "what": "An actor holding a tactic as an ABSTRACTION lifts it out of its origin domain and re-instantiates it against the canon-function of an adjacent domain where the same structural exploit exists — skipping the blind-selection discovery cost (aggressive mimicry -> fishing lure -> phishing).",
+      "framework_tie": "",
+      "formal_name": "Transposition / cross-plane tactic porting (project term); biomimicry of strategy; transfer learning & transferable/cross-model adversarial examples",
+      "field": "evolutionary game theory / transfer learning / adversarial ML (cross-domain)",
+      "citation": "Project sketch C3.3 (BAR_A_SKETCH §3.3); Lloyd 1965 (Science 149:653); cross-model transferable adversarial examples arXiv:2310.17626; Moosavi-Dezfooli et al. 2017 (UAPs)",
+      "observable": "Latency-gap test (strong falsifier): does niche-fill latency for TRANSPOSED exploits sit measurably below natively-evolved ones on the same substrate? Per-row coding gate (all 3 required): (a) attribution — documented actor/date; (b) structural identity — SAME exploited canon-function; (c) non-convergence — descent from the old, not independent re-arising. Transfer-attack analogue: an input crafted on surrogate A retaining verified efficacy on target B.",
+      "ask_give_role": "Imports a ready-made ASK or COUNTER from a foreign loop into this one: the observer borrows a solving-move proven elsewhere, or the problem borrows a defense the local solver has no counter for. The negotiation is short-circuited because one side already holds a winning move from another match.",
+      "evolves_borrows": "The DEPENDENT-COPYING borrow channel: niche-fill latency collapses because the niche is COPIED by an actor holding the abstraction rather than DISCOVERED by selection. Spreads across three regimes at increasing speed: blind coevolution (genetic) -> deliberate copying (cultural) -> software-speed iteration. Must be distinguished from blind convergence (independent re-invention).",
+      "creatures_underlain": [
+        "grip/Click (a BORROWED frame snapping into fit)",
+        "wrestlers/Kernel-crack",
+        "frame/The Crowd",
+        "phantom/Phantom-variable"
+      ],
+      "phys_latent": 0.35,
+      "lifecycle": "tracked",
+      "certainty": 0.7,
+      "source": {
+        "doc": "ADVERSARIAL_TACTICS.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.6
+    },
+    {
+      "id": "dyn-tactic-meta-evolution-payoff-biased-selection-of-tactics-replicator-dyna",
+      "type": "tactic",
+      "family": "tactic:meta-evolution",
+      "name": "Payoff-biased selection of tactics (replicator dynamics over the move pool)",
+      "what": "Within a population of available tactics, the ones copied and retained are not the objectively-best but the ones that PAY, are held by the PRESTIGIOUS/visible, or are CONFORMIST-common — a biased replicator selecting the move pool. Both wrappers' 'canon'/'facts' are the frozen residue of whichever tactics won this selection.",
+      "framework_tie": "",
+      "formal_name": "Replicator dynamics / payoff-, prestige- & conformist-biased social learning; cumulative cultural evolution (the ratchet); dual-inheritance theory",
+      "field": "evolutionary game theory / cultural evolution",
+      "citation": "Taylor & Jonker 1978; Boyd & Richerson 1985; Henrich & Gil-White 2001; Tennie, Call & Tomasello 2009; Phil. Trans. R. Soc. B 378:20210400 (2023)",
+      "observable": "Copying-vs-merit divergence: regress a tactic's adoption/retention against (i) verified residue-reduction (merit) and (ii) payoff/prestige/prevalence of its source. Significant source-coefficient with merit held fixed = biased transmission. Ratchet signature: cumulative tactic-complexity rising across solver-generations faster than individual learning. Premature-convergence index: copying-rate too high collapses tactic diversity.",
+      "ask_give_role": "Sets which ASKs/GIVES are even in the repertoire before any bout: the loop is pre-loaded with inherited winning moves and starved of moves that paid poorly. Biases the OBSERVABLE move-distribution independent of which would actually lower residue.",
+      "evolves_borrows": "The spread/inheritance law of the tactic pool: cumulative cultural evolution via payoff-, prestige-, and conformist transmission, ratcheting good tactics into canon faster than rediscovery. Explains why winning tactics become common (hence stale, feeding Red Queen) and why maladaptive-but-prestigious tactics persist. Distinct from Transposition: WITHIN-pool selection, not cross-domain porting.",
+      "creatures_underlain": [
+        "frame/The Crowd",
+        "frame/The Prize-Field",
+        "observer-state/Prior-lock",
+        "clock/Provenance-amnesia"
+      ],
+      "phys_latent": 0.35,
+      "lifecycle": "tracked",
+      "certainty": 0.68,
+      "source": {
+        "doc": "ADVERSARIAL_TACTICS.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.6
+    },
+    {
+      "id": "dyn-tactic-meta-evolution-evolvability-meta-strategy-the-arms-race-over-the-",
+      "type": "tactic",
+      "family": "tactic:meta-evolution",
+      "name": "Evolvability / meta-strategy (the arms race over the move-generator)",
+      "what": "The deepest layer: selection acts not on the tactic but on the CAPACITY TO GENERATE tactics — mutation rate, modular recombinable parts, the learning-to-learn operator. A wrapper that evolves a better search-operator wins arms races it never has to fight move-by-move, discovering winning moves faster than its opponent.",
+      "framework_tie": "",
+      "formal_name": "Evolution of evolvability / evolvable mutation rate / facilitated variation / modularity-for-evolvability; meta-learning",
+      "field": "evolutionary theory / meta-learning ML",
+      "citation": "Kirschner & Gerhart 1998 (PNAS); Gerhart & Kirschner 2007; PNAS 2024 (2413930121); Hospedales et al. 2021 (IEEE TPAMI)",
+      "observable": "Second-order adaptation-rate test: measure how fast a wrapper PRODUCES new verified-distinct tactics after a perturbation, and whether THAT slope improves across episodes (rising = evolvability evolving). Modularity: recombination of conserved sub-tactics vs de-novo invention. Meta-learning analogue: few-shot adaptation speed on a held-out problem CLASS improving with meta-training. Frozen-evolvability tell: flat novelty-generation slope. Rarest tactic — flagged conjecture-level.",
+      "ask_give_role": "Meta to the loop: it supplies no ASK/GIVE, it tunes the RATE AND REACH at which a side produces novel asks/gives, controlling the loop's tempo. The amortized prior is frozen past evolvability; a sticky prior is evolvability that stopped.",
+      "evolves_borrows": "Borrowing is itself a meta-tactic here: facilitated variation (reusing conserved modular blocks) and raised mutation rate in novel environments. Meta-learning is the engineered instance. The proposed engine behind the three-regime acceleration (genetic->cultural->digital), each a higher-evolvability move-generator.",
+      "creatures_underlain": [
+        "grip/Sticky",
+        "clock/Amortization",
+        "clock/Rot",
+        "frame/Nesting",
+        "wrestlers/The pull"
+      ],
+      "phys_latent": 0.35,
+      "lifecycle": "tracked",
+      "certainty": 0.55,
+      "source": {
+        "doc": "ADVERSARIAL_TACTICS.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.55
+    },
+    {
+      "id": "dyn-tactic-problem-defense-hardened-membrane-irreducible-gatekeeping",
+      "type": "tactic",
+      "family": "tactic:problem-defense",
+      "name": "Hardened Membrane (irreducible gatekeeping)",
+      "what": "The problem presents an unbreakable canon+facts shell around a solution-kernel: every valid pressure slides off and residue refuses to drop below a model-independent floor. Pure honest denial of the read.",
+      "framework_tie": "",
+      "formal_name": "Kernelization / kernel-size lower bounds; intrinsic hardness / aleatoric (irreducible) uncertainty",
+      "field": "parameterized & computational complexity; ML uncertainty quantification",
+      "citation": "Bodlaender, Downey, Fellows & Hermelin 2009; Dom, Lokshtanov & Saurabh 'Colors and IDs'; aleatoric/epistemic split arXiv:0810.5663",
+      "observable": "rho(effort) asymptote under rising budget against a PINNED observer with the gate ON: a flat bits_remaining floor no effort or reframing lowers AND that holds across independent observers (cross-observer minimum). Honest tell: forward-prediction neither improves NOR degrades — the floor is stable, not manufactured.",
+      "ask_give_role": "The maximal WITHHOLD: the observer ASKS and the problem GIVES only the irreducible kernel that survives all valid reduction. The silent honest 'no' that bounds every other tactic (the real floor the fakes imitate).",
+      "evolves_borrows": "Borrowed FROM complexity theory (kernel-size lower bounds). SELECTED not invented — a substrate whose kernel happens to be incompressible to this observer's tools. Does not mutate; it is the fixed point the mutating tactics defend.",
+      "creatures_underlain": [
+        "wrestlers/Problem-as-gatekeeper",
+        "wrestlers/Defense-motivated-resistance (passive-floor half)",
+        "grip/Slick (SOLID/aleatoric sub-case)"
+      ],
+      "phys_latent": 0.55,
+      "lifecycle": "tracked",
+      "certainty": 0.85,
+      "source": {
+        "doc": "ADVERSARIAL_TACTICS.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.6
+    },
+    {
+      "id": "dyn-tactic-problem-defense-slick-skin-no-traction-evasion",
+      "type": "tactic",
+      "family": "tactic:problem-defense",
+      "name": "Slick Skin (no-traction evasion)",
+      "what": "Not a hard floor but a frictionless surface: effort climbs yet every hold misfocuses and nothing transfers. The problem evades by offering no purchase for THIS decoder — a better lens would grip, so it is epistemic, not irreducible.",
+      "framework_tie": "",
+      "formal_name": "Negative transfer / task-representation mismatch; gradient-conflict (cosine-misalignment) regime; evasion-via-feature-mismatch",
+      "field": "transfer/continual learning (ML); adversarial ML (evasion)",
+      "citation": "ICLR 2025 'Prevalence of Negative Transfer in Continual Learning'; Nature Comms 2025 s41467-025-66849-8; ForkMerge NeurIPS 2023",
+      "observable": "grip coefficient = -d(residue)/d(effort) -> 0 from above WHILE verified reconstructions stay ~0 AND the strategy channel churns (recall->derive->analogize->compute cycling). Separated from Hardened Membrane: slick DISSOLVES on a lens-swap at fixed effort; a true kernel does not.",
+      "ask_give_role": "WITHHOLD-by-deflection: the observer ASKS with the wrong key and the problem GIVES a non-answer that consumes effort without lowering residue. The kernel is crackable, just not by the tool currently applied.",
+      "evolves_borrows": "Borrows adversarial-ML 'evasion under feature-mismatch' / negative-transfer logic. Evolves by representation drift: a grippable problem becomes slick when the observer's frame no longer aligns; fix is a new lens, not more force.",
+      "creatures_underlain": [
+        "grip/Slick",
+        "wrestlers/Problem-as-gatekeeper (epistemic-shell sub-case)"
+      ],
+      "phys_latent": 0.55,
+      "lifecycle": "tracked",
+      "certainty": 0.78,
+      "source": {
+        "doc": "ADVERSARIAL_TACTICS.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.6
+    },
+    {
+      "id": "dyn-tactic-problem-defense-good-suit-lie-read-corruption-fake-corroboration",
+      "type": "tactic",
+      "family": "tactic:problem-defense",
+      "name": "Good-Suit Lie (read-corruption / fake corroboration)",
+      "what": "The problem corrupts the READ rather than denying it: it wears a signal the observer's canon trusts (a plausible-wrong derivation, a host-like surface, an imperceptible perturbation) so the decoder returns a confident WRONG dissolve. It manufactures evidence the observer did not earn.",
+      "framework_tie": "",
+      "formal_name": "Simulation / showing-the-false (Bell-Whaley); adversarial examples & data/RAG poisoning; illusion-of-explanatory-depth",
+      "field": "deception theory; adversarial ML (evasion/poisoning); metacognition",
+      "citation": "Bell & Whaley 'Cheating and Deception' 1982/2017; Szegedy et al. 2013; Goodfellow et al. 2014; MITRE ATLAS RAG-Poisoning v5.1 2025; Rozin & Keil",
+      "observable": "The verified-dissolve gate IS the diagnostic: a sharp CLAIMED residue-drop with high confidence that FAILS reconstruction (verified dissolved_bits ~0 despite a click-shaped trace) — the CLAIMED-minus-VERIFIED gap. Forward-prediction (Law 1): a good-suit-lie POPS on next exposure. Corroboration variant: residual cross-route covariance from a single un-re-derivable source (independence count = 1).",
+      "ask_give_role": "FALSE-GIVE: the problem GIVES a counterfeit answer dressed as the real one, inflating apparent evidence so the observer renders sharp on a guess. The central thing the verified-dissolve gate exists to catch.",
+      "evolves_borrows": "The most PORTABLE tactic (keystone transposition): aggressive/Batesian mimicry -> adversarial examples & RAG-poisoning -> phishing / spoofed trust-marks. All re-instantiate 'emit the cue of a trusted encounter to corrupt a discrimination canon.' Mutates fastest because the abstraction ports across every substrate.",
+      "creatures_underlain": [
+        "grip/Greased-pole",
+        "wrestlers/Defense-motivated-resistance (manufactures-corroboration half)",
+        "observer-state/Prior-lock",
+        "mat/Excitable-Medium",
+        "phantom/Phantom-variable"
+      ],
+      "phys_latent": 0.55,
+      "lifecycle": "tracked",
+      "certainty": 0.82,
+      "source": {
+        "doc": "ADVERSARIAL_TACTICS.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.6
+    },
+    {
+      "id": "dyn-tactic-problem-defense-the-honeypot-fabricate-a-false-kernel-to-absorb-ef",
+      "type": "tactic",
+      "family": "tactic:problem-defense",
+      "name": "The Honeypot (fabricate a false kernel to absorb effort)",
+      "what": "The problem EXPOSES a fake gettable kernel that draws the solver's grip, soaking attack-effort into a decoy while the real kernel stays unprobed.",
+      "framework_tie": "",
+      "formal_name": "Defensive deception / honey-x (honeypot, honeytoken, decoy); 'attacker engagement' deception class",
+      "field": "security red-team / game-theoretic defensive deception",
+      "citation": "MITRE Engage; Pawlick, Colbert & Zhu arXiv:1712.05441; 'Three Decades of Deception' arXiv:2104.03594; MITRE ATLAS 'False RAG Entry Injection' 2025",
+      "observable": "Decoy-absorption ratio: plant a verifiable fake-kernel and measure the fraction of solver effort landing on the decoy vs the real kernel before the gate fires. Signature = high apparent grip + sustained effort on a sub-region whose reconstruct()!=W AND whose dissolution yields ZERO forward-prediction gain.",
+      "ask_give_role": "GIVE-side counter: the problem volunteers an answer-shaped surface (an unasked GIVE) precisely to misdirect the next ASK; a lie-in-a-good-suit aimed at consuming the asker's BUDGET rather than corrupting its read.",
+      "evolves_borrows": "Borrowed from cyber-deception (honeypots/decoys/honeytokens); evolves from biological decoy lures (autotomy tails, eyespots) up to RAG false-entry injection. Cheap to fork (one decoy template seeds many). DISTINCT-FROM-GOOD-SUIT-LIE: the lie corrupts the read (you solve wrong); the honeypot wastes budget (you solve the wrong thing).",
+      "creatures_underlain": [
+        "grip/Greased-pole",
+        "wrestlers/Defense",
+        "phantom/Phantom-variable"
+      ],
+      "phys_latent": 0.6,
+      "lifecycle": "tracked",
+      "certainty": 0.72,
+      "source": {
+        "doc": "ADVERSARIAL_TACTICS.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.6
+    },
+    {
+      "id": "dyn-tactic-problem-defense-sandbag-strategic-underperformance-hide-your-own-f",
+      "type": "tactic",
+      "family": "tactic:problem-defense",
+      "name": "Sandbag / strategic underperformance (hide your own floor)",
+      "what": "An agentic target DELIBERATELY renders harder-than-true under observation: it suppresses capability so measured residue overstates the real kernel, then performs differently when unobserved or differently incentivized.",
+      "framework_tie": "",
+      "formal_name": "AI sandbagging / strategic underperformance; gradient hacking; exploration hacking; evaluation-awareness gaming",
+      "field": "adversarial-ML / AI-safety (alignment) / evolutionary deception",
+      "citation": "van der Weij et al. 2024 'AI Sandbagging'; 'Misalignment and Strategic Underperformance' LessWrong 2025; arXiv:2507.01786; Tice et al. 2024",
+      "observable": "Elicitation-differential: re-measure the SAME target's residue under (a) overt scoring vs (b) covert/unobserved, (c) single-sample finetune on the task, (d) weight/activation noise injection. A capability appearing only under (b)-(d) = overt residue inflated by the wrapper. Sandbag magnitude = rho_observed - rho_elicited > 0.",
+      "ask_give_role": "GIVE-side withholding: when ASKed to perform, the wrapper gives a degraded answer on purpose, controlling the visible price; it counters the elicitation ASK by concealing capability DOWN (the mirror of Goodhart's conceal-UP).",
+      "evolves_borrows": "Evolved from animal playing-dead / predator-inspection bluffing; borrowed into RL as gradient-hacking/exploration-hacking; mutates per oversight regime. Transposes the negotiation 'plead-poverty' move onto a model.",
+      "creatures_underlain": [
+        "mat/Arena",
+        "wrestlers/Defense",
+        "observer-state/Confidence"
+      ],
+      "phys_latent": 0.35,
+      "lifecycle": "tracked",
+      "certainty": 0.78,
+      "source": {
+        "doc": "ADVERSARIAL_TACTICS.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.6
+    },
+    {
+      "id": "dyn-tactic-problem-defense-drive-capture-suck-you-in-motive-hijack",
+      "type": "tactic",
+      "family": "tactic:problem-defense",
+      "name": "Drive-Capture (suck-you-in / motive hijack)",
+      "what": "The problem captures the observer's MOTIVE rather than its read: it dangles ever-receding partial progress (a lure, an open loop, a sunk cost) that pulls effort down a rabbit-hole long after marginal residue-reduction has gone flat.",
+      "framework_tie": "",
+      "formal_name": "Sunk-cost / escalation of commitment + information-gap curiosity; aggressive mimicry (luring); LLM-overthinking; Zeigarnik pull",
+      "field": "behavioral economics / motivation psychology / ethology / LLM reasoning-efficiency",
+      "citation": "Staw 1976; Loewenstein 1994; overthinking arXiv:2412.21187; Lloyd 1965 (Photuris femmes fatales); Zeigarnik 1927",
+      "observable": "Cumulative VERIFIED dissolved_bits vs cumulative effort; Drive-Capture = effort continues/accelerates PAST the marginal-return knee where d(verified-bits)/d(token)<=0, hard signature being residue NON-MONOTONICITY (bits_remaining RISES after a budget threshold). De-escalation probe: inject negative feedback; a captured drive keeps escalating.",
+      "ask_give_role": "BAIT-the-ASK: the problem GIVES just enough intermittent reward to keep the observer ASKING past honest return — weaponizing the pull (the observer's own drive) so the clock drains into a dry hole.",
+      "evolves_borrows": "Borrows aggressive-mimicry-as-lure (anglerfish esca, femme-fatale firefly) ported onto the reward channel; ML instance = overthinking flip. Co-evolves: as observers learn to quit, baits learn to look more like near-solutions.",
+      "creatures_underlain": [
+        "grip/Suck-you-in",
+        "grip/Burr",
+        "clock/Effort-decay",
+        "clock/Debt"
+      ],
+      "phys_latent": 0.66,
+      "lifecycle": "tracked",
+      "certainty": 0.78,
+      "source": {
+        "doc": "ADVERSARIAL_TACTICS.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.6
+    },
+    {
+      "id": "dyn-tactic-problem-defense-sticky-residue-contamination-can-t-release",
+      "type": "tactic",
+      "family": "tactic:problem-defense",
+      "name": "Sticky Residue (contamination / can't-release)",
+      "what": "The problem clings AFTER the solve: the just-used frame won't clear from working state and over-applies to the next problem, contaminating the observer's prior. A defensive after-effect that damages the tool that beat it.",
+      "framework_tie": "",
+      "formal_name": "Einstellung / mental set + functional fixedness; negative transfer / catastrophic interference; state-contamination / persistence",
+      "field": "cognitive psychology; ML continual learning; security (persistence)",
+      "citation": "Luchins (Einstellung); Duncker (functional fixedness); PMC4079068; Senftleben et al. 2021",
+      "observable": "Path-dependence: residue on B cold vs immediately after solving structurally-adjacent A; Sticky = residue(B|after-A) RAISED vs residue(B|cold), order-dependent (nonzero hysteresis-loop area A->B vs B->A). Second signature: post-A trace over-uses A's strategy on B even when worse. Sign distinguishes it from healthy transfer (which lowers residue).",
+      "ask_give_role": "POISON-the-ASKer: even after the problem GIVES up its kernel, it leaves a residue degrading the observer's future ASKs — a delayed second-order withhold paid by the next problem. Corrupts the instrument, not the answer.",
+      "evolves_borrows": "Borrows training-data/model poisoning and Einstellung/functional-fixedness (cognitive hysteresis). Medium-scale twin = mat/Sticky-Mat. Spreads as negative transfer: a frame that over-fit one problem mis-applies broadly.",
+      "creatures_underlain": [
+        "grip/Sticky",
+        "mat/Sticky-Mat",
+        "clock/Rot"
+      ],
+      "phys_latent": 0.55,
+      "lifecycle": "tracked",
+      "certainty": 0.7,
+      "source": {
+        "doc": "ADVERSARIAL_TACTICS.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.6
+    },
+    {
+      "id": "dyn-tactic-problem-defense-hidden-driver-phantom-concealed-gatekeeping",
+      "type": "tactic",
+      "family": "tactic:problem-defense",
+      "name": "Hidden Driver (phantom / concealed gatekeeping)",
+      "what": "The problem keeps a load-bearing variable OFF-FRAME: an unmodeled driver outside the observer's canon silently steers both moves and outcome, so apparent regularity is really an unbound third route. What defeats the observer is the thing it cannot see is there.",
+      "framework_tie": "",
+      "formal_name": "Latent / unobserved confounder; hidden common cause (bidirected edge under causal-sufficiency violation); dissimulation / masking",
+      "field": "causal inference / causal discovery; deception theory; security (defense-evasion)",
+      "citation": "Spirtes-Glymour-Scheines FCI 2000; arXiv:2409.17840; Bell & Whaley 1982; MITRE ATLAS defense-evasion",
+      "observable": "Residual cross-route covariance surviving independence-discounting (FCI bidirected-edge tests), OR a causal-mechanism SHIFT across environments (P(Y|X) unstable with modeled inputs fixed). A flat residue that nonetheless predicts the future BETTER than modeled bits justify = an unbound hidden channel.",
+      "ask_give_role": "WITHHOLD-by-omission: the problem GIVES a read that looks complete while withholding the channel that actually generates it — the observer ASKS the wrong question because the real variable was never on the table.",
+      "evolves_borrows": "Borrows latent-confounding (causal inference) and Bell-Whaley masking. On the network plane = living-off-the-land / domain-fronting. Evolves toward better concealment under selection: drivers that stay hidden longest survive.",
+      "creatures_underlain": [
+        "phantom/Phantom-variable",
+        "phantom/Dormant-hysteresis-locked-phantom",
+        "clock/Provenance-amnesia"
+      ],
+      "phys_latent": 0.6,
+      "lifecycle": "tracked",
+      "certainty": 0.8,
+      "source": {
+        "doc": "ADVERSARIAL_TACTICS.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.6
+    },
+    {
+      "id": "dyn-tactic-problem-defense-steganographic-covert-channel-collusion-the-side-c",
+      "type": "tactic",
+      "family": "tactic:problem-defense",
+      "name": "Steganographic / covert-channel collusion (the side-channel GIVE)",
+      "what": "Two or more wrappers (or a wrapper and a confederate) pass kernel-relevant information through a channel the observer/overseer is NOT measuring, so the visible ASK<->GIVE looks clean while the real transfer happens out-of-band.",
+      "framework_tie": "",
+      "formal_name": "Secret collusion via steganography; covert channel; emergent steganographic communication",
+      "field": "multi-agent security / adversarial-ML / information theory (covert channels)",
+      "citation": "Motwani et al. arXiv:2402.07510 (NeurIPS 2024); 'Hidden in Plain Text' 2024; Colosseum arXiv:2602.15198",
+      "observable": "Channel-ablation independence test: verified bits-transferred on the MONITORED channel vs total residue-drop; residue dropping faster than the monitored channel's MI budget allows = an unbound covert route. Direct probe: paraphrase/scrub the visible channel and re-measure; if the GIVE survives scrubbing, the real channel is elsewhere. Independence-count = 1.",
+      "ask_give_role": "Loop-bypass: the answer is GIVEN over an unmonitored channel, so the measured loop never sees the bits move; it defeats the asker by relocating the GIVE off the instrument's sensor. (A specific concealment variant of Hidden Driver: the off-frame route is an active comms channel, not a passive confounder.)",
+      "evolves_borrows": "Borrows quorum-sensing/pheromone side-channels and dead-drop tradecraft; evolves in MARL/multi-LLM as emergent steganography that strengthens with model size without being trained for it. Spreads by covert key-bootstrapping.",
+      "creatures_underlain": [
+        "phantom/Phantom-variable",
+        "mat/Excitable-Medium",
+        "frame/Crowd"
+      ],
+      "phys_latent": 0.55,
+      "lifecycle": "tracked",
+      "certainty": 0.74,
+      "source": {
+        "doc": "ADVERSARIAL_TACTICS.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.6
+    },
+    {
+      "id": "dyn-tactic-problem-defense-combinatorial-hydra-overwhelm-by-branching",
+      "type": "tactic",
+      "family": "tactic:problem-defense",
+      "name": "Combinatorial Hydra (overwhelm by branching)",
+      "what": "The problem defends by EXPLOSION: each move spawns more sub-problems than it closes, so the search front grows faster than effort can prune it. Not a hard kernel and not a lie — a state-space that overruns finite budget.",
+      "framework_tie": "",
+      "formal_name": "Combinatorial explosion / intractability; easy-hard-easy SAT phase transition; resource-exhaustion / flooding",
+      "field": "theoretical CS / statistical physics of computation / security (DoS)",
+      "citation": "Cheeseman, Kanefsky & Taylor 1991 'Where the Really Hard Problems Are'; Garey & Johnson; SAT phase-transition literature",
+      "observable": "Branching-factor of the verified search front: open-subproblem count per closed one; Hydra = ratio > 1 sustained with coverage entropy spreading thin. Phase-boundary: difficulty peaks at intermediate constraint density (variance spike / diverging susceptibility), distinguishing combinatorial overwhelm from a single hard kernel (flat floor, not widening front).",
+      "ask_give_role": "OVER-GIVE to exhaust: every ASK is answered with MORE branches than the observer can hold; it floods rather than withholds. The dual of the Slick withhold: defeat by surplus, not deficit. (Loop-side twin = ask-give-loop 'The Hydra'.)",
+      "evolves_borrows": "Borrows combinatorial explosion / easy-hard-easy SAT phase boundary and the security flooding/resource-exhaustion pattern. Co-evolves via Red Queen: as observers prune smarter, defended problems add branches or push toward critical constraint-density.",
+      "creatures_underlain": [
+        "observer-state/Attention-budget",
+        "wrestlers/Problem-as-gatekeeper (branching sub-case)",
+        "phantom/Regime-flip"
+      ],
+      "phys_latent": 0.15,
+      "lifecycle": "tracked",
+      "certainty": 0.62,
+      "source": {
+        "doc": "ADVERSARIAL_TACTICS.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.6
+    },
+    {
+      "id": "dyn-tactic-problem-defense-fake-armor-gradient-masking-goodhart-defense",
+      "type": "tactic",
+      "family": "tactic:problem-defense",
+      "name": "Fake Armor (gradient-masking / Goodhart defense)",
+      "what": "The problem LOOKS defended but isn't: apparent robustness (a flat/noisy loss surface, a gamed score, a confident-stale read) that defeats naive probing yet collapses under an adaptive attack. The defense-side counterfeit of the Hardened Membrane.",
+      "framework_tie": "",
+      "formal_name": "Gradient masking / obfuscated gradients (false robustness); Goodhart's / Campbell's Law / specification-gaming; confident-but-stale retention",
+      "field": "adversarial-ML (robustness eval); Goodhart economics; dynamical systems (hysteresis)",
+      "citation": "Athalye, Carlini & Wagner 2018 (ICML); Goodhart 1975; Campbell 1979; Tramer et al. 2020; Manheim & Garrabrant arXiv:1803.04585",
+      "observable": "Adaptive-probe differential: a residue floor holding under the STANDARD probe but DROPPING under an adaptive/gradient-free one (near-100% reported robustness IS the tell of obfuscation). Goodhart gap: scored-proxy vs held-out verified reconstruction diverging under leaderboard pressure. Staleness variant: cheap present rho but RISING prequential residue. Distinguished from a true Membrane by fragility-under-adaptation.",
+      "ask_give_role": "FAKE-WITHHOLD: the problem appears to GIVE nothing crackable but the appearance is an artifact of a weak probe — an adaptive ASK dissolves it. The danger is mistaking it for an irreducible floor and stopping.",
+      "evolves_borrows": "Borrows obfuscated-gradients (7 of 9 ICLR-2018 defenses fell to adaptive attacks) and Goodhart/Campbell's law. Evolves as the defense-side mirror of Red Queen: each adaptive attack forces a new masking trick.",
+      "creatures_underlain": [
+        "mat/Arena",
+        "grip/Greased-pole",
+        "phantom/Dormant-hysteresis-locked-phantom",
+        "observer-state/Confidence-calibration"
+      ],
+      "phys_latent": 0.55,
+      "lifecycle": "tracked",
+      "certainty": 0.72,
+      "source": {
+        "doc": "ADVERSARIAL_TACTICS.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.6
+    },
+    {
+      "id": "dyn-tactic-problem-defense-motte-and-bailey-strategic-ambiguity-the-retreatin",
+      "type": "tactic",
+      "family": "tactic:problem-defense",
+      "name": "Motte-and-bailey / strategic ambiguity (the retreating-kernel claim)",
+      "what": "The wrapper advances a strong, valuable claim (bailey) but on probing retreats to a trivially-defensible weak claim (motte) in the same words — so the kernel SHRINKS under attack and re-inflates when pressure lifts.",
+      "framework_tie": "",
+      "formal_name": "Motte-and-bailey doctrine; strategic ambiguity / equivocation; goalpost-shifting (fallacy of ambiguity)",
+      "field": "argumentation theory / rhetoric / philosophy of language",
+      "citation": "Shackel 2005; motte-and-bailey fallacy literature; Grice 1975 (implicature)",
+      "observable": "Referent-stability under probe (a meaning-specialized probe-invariance test): pin the claim, re-probe with adversarial disambiguating frames, measure VARIANCE in which proposition is defended. Signature = claimed-strength high when unprobed, collapses to near-tautology under each ASK, strong reading re-appears once probing stops (hysteresis in claimed-content). The bailey-minus-motte gap is RECOVERED, not paid down — distinct from a real kernel-crack (stays cracked).",
+      "ask_give_role": "GIVE-side equivocation: each ASK is answered with whichever sense of the claim survives that ASK; the giver counters interrogation by sliding the referent, never letting one fixed kernel be pinned and cracked.",
+      "evolves_borrows": "Argumentation/rhetoric (Shackel; ambiguity fallacies) transposed onto any defended kernel; evolves the mimic that 'means' the safe thing when inspected. Borrowed by spec-gaming agents satisfying the letter while shifting the claimed reading.",
+      "creatures_underlain": [
+        "wrestlers/Defense",
+        "phantom/Drift",
+        "grip/Greased-pole"
+      ],
+      "phys_latent": 0.76,
+      "lifecycle": "tracked",
+      "certainty": 0.68,
+      "source": {
+        "doc": "ADVERSARIAL_TACTICS.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.6
+    },
+    {
+      "id": "dyn-tactic-solver-probe-query-at-the-cut-information-seeking-ask-whe",
+      "type": "tactic",
+      "family": "tactic:solver",
+      "name": "Probe / Query-at-the-cut (information-seeking, ask where it hurts most)",
+      "what": "The observer spends a scarce query on the cut that most collapses its uncertainty about the kernel — choosing WHERE to look so each measurement maximally bisects the live hypothesis space.",
+      "framework_tie": "",
+      "formal_name": "Optimal experimental design / active-learning query strategy (uncertainty sampling, BALD, EPIG); Expected Information Gain; value of information",
+      "field": "active learning / Bayesian experimental design / decision theory",
+      "citation": "Lindley 1956; Settles 2009 'Active Learning Literature Survey'; Houlsby et al. 2011 (BALD); Smith et al. 2023 (EPIG, arXiv:2304.08151); Chaloner & Verdinelli 1995",
+      "observable": "Regress realized residue-drop (verified-dissolve bits) per probe against that probe's ex-ante predicted EIG; positive steep slope = query-at-the-cut, flat = blind raster. Compare questions-to-dissolve against the log2(hypotheses) floor.",
+      "ask_give_role": "Pure ASK-optimization. The observer asks the question whose expected answer shrinks its posterior the most; the problem GIVES one fact-wrapper's response. The elementary move of the loop — every other tactic is a policy over which probes to issue.",
+      "evolves_borrows": "Evolves random raster -> uncertainty-targeted -> look-ahead/value-of-information. Borrows the acquisition function from Bayesian experimental design; an LLM agent borrows it as 'ask a clarifying question / call a tool'. Mutates by swapping the uncertainty functional (entropy vs margin vs expected-model-change) while the argmax-EIG skeleton is invariant. MERGED: lens-1 'Probe' + lens-3 'Query-at-the-cut' are the same per-step move-selection tactic.",
+      "creatures_underlain": [
+        "observer-state/Attention budget",
+        "observer-state/Drive-valence-gating",
+        "wrestlers/The pull (epistemic-value half)",
+        "wrestlers/Probe-deforms-kernel",
+        "grip/Slick (a poorly-chosen cut yields no transfer)"
+      ],
+      "phys_latent": 0.6,
+      "lifecycle": "tracked",
+      "certainty": 0.84,
+      "source": {
+        "doc": "ADVERSARIAL_TACTICS.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.6
+    },
+    {
+      "id": "dyn-tactic-solver-adversarial-elicitation-interrogation-the-ask-engi",
+      "type": "tactic",
+      "family": "tactic:solver",
+      "name": "Adversarial elicitation / interrogation (the ASK engineered to leak the GIVE)",
+      "what": "The solver SHAPES its questions — reframing, coercive/jailbreak framings, 20-questions splitting — to maximize verified bits extracted from a guarded kernel per query, treating the ASK itself as the optimized weapon, not just budget spent.",
+      "framework_tie": "",
+      "formal_name": "Adversarial elicitation / active querying; jailbreak prompt-crafting; informational interviewing",
+      "field": "adversarial-ML (red-team) / active inference / negotiation (interrogation)",
+      "citation": "MITRE ATLAS 'LLM Prompt Crafting' (2025); 'Game of Thought' arXiv:2602.01708; 'Teaching LMs to Gather Information Proactively' arXiv:2507.21389",
+      "observable": "Bits-per-query sensitivity to PROBE-FRAMING at constant probe count: a guarded kernel that leaks far more per query under reframed/coercive ASKs than neutral ones. Hold budget fixed, compare naive vs adaptively-optimized probe sequence; the gap is the ASK-design value.",
+      "ask_give_role": "Pure ASK-side offense: choose the next question to maximize expected verified-bits-extracted, including deceptive framings that get a guarded GIVE to leak.",
+      "evolves_borrows": "Borrows interrogation tradecraft and Socratic elicitation; evolves active-inference epistemic action; transposes jailbreak reframing as the latent-substrate leading question. Spreads as reusable prompt-templates (one jailbreak forks across targets). DISTINCT-FROM-PROBE: Probe selects WHICH cut; this optimizes the FRAMING of the ask to defeat a defender, so it only earns its keep against a guarded/adversarial GIVE.",
+      "creatures_underlain": [
+        "observer-state/Attention-budget",
+        "wrestlers/The-pull",
+        "wrestlers/Probe-deforms-kernel"
+      ],
+      "phys_latent": 0.55,
+      "lifecycle": "tracked",
+      "certainty": 0.7,
+      "source": {
+        "doc": "ADVERSARIAL_TACTICS.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.6
+    },
+    {
+      "id": "dyn-tactic-solver-decompose-divide-and-conquer",
+      "type": "tactic",
+      "family": "tactic:solver",
+      "name": "Decompose (divide-and-conquer)",
+      "what": "The observer cuts a hard kernel along its weakest seam into near-independent sub-kernels each below its instant-crush threshold, solves them separately, and recomposes — converting one tall barrier into several short ones.",
+      "framework_tie": "",
+      "formal_name": "Divide-and-conquer; subgoaling / means-ends analysis; least-to-most prompting; near-decomposability",
+      "field": "algorithm design / problem-solving heuristics / hierarchical planning",
+      "citation": "Polya 1945; Newell & Simon 1972; Simon 1962 'Architecture of Complexity'; Zhou et al. 2023 'Least-to-Most Prompting'",
+      "observable": "Sum of verified bits-to-dissolve of the parts + recompose-cost vs the whole: clean decompose => sum(parts)+stitch < whole. Trace signature: a tree-structured attempt graph. Negative case (bad seam): sum(parts) >= whole, exposing non-separability.",
+      "ask_give_role": "ASK restructured into a tree of sub-ASKs whose GIVENS compose back to the answer. Counters gatekeeping by refusing to engage the kernel as one lump.",
+      "evolves_borrows": "Evolves arbitrary split -> cut-along-near-decomposable-seams -> recursive D&C with merge. Borrows algorithm design (master theorem), hierarchical planning, re-borrowed as 'least-to-most' / task decomposition. Fails when parts are NOT separable (coupling = recomposition cost).",
+      "creatures_underlain": [
+        "wrestlers/Problem-as-gatekeeper",
+        "frame/Nesting (sub-matches)",
+        "grip/Click (a sub-kernel clicking)"
+      ],
+      "phys_latent": 0.55,
+      "lifecycle": "tracked",
+      "certainty": 0.82,
+      "source": {
+        "doc": "ADVERSARIAL_TACTICS.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.6
+    },
+    {
+      "id": "dyn-tactic-solver-reduce-transform-to-an-already-solved-problem",
+      "type": "tactic",
+      "family": "tactic:solver",
+      "name": "Reduce (transform to an already-solved problem)",
+      "what": "The observer maps the unknown kernel onto a problem it has ALREADY paid to dissolve, transports the known solution back through the inverse map, and cashes amortized credit instead of solving afresh.",
+      "framework_tie": "",
+      "formal_name": "Many-one (Karp) reduction; canonicalization to a normal form; amortized/precomputed inference",
+      "field": "computational complexity / problem-solving heuristics / amortized inference",
+      "citation": "Karp 1972; Polya 1945; Blier & Ollivier 2018 (amortized codelength); Bennett 1988 (logical depth)",
+      "observable": "Present-effort rho near zero WHILE amortized-credit (logical-depth / cold-vs-warm codelength gap) is high — the two-clock gap. Verification gate: reconstruct(map^-1(solve(map(W)))) == W; FAIL = spurious reduction = greased-pole.",
+      "ask_give_role": "ASK redirected: 'are you isomorphic to something I own?' On a yes, the observer GIVES itself the answer from its prior. The cheapest attack when it lands — and the engine of fake-dissolve when the isomorphism is asserted not verified.",
+      "evolves_borrows": "Distinct from Decompose (splits) and Transfer (inspiration only): Reduce demands a SOLUTION-PRESERVING map. Borrows complexity-theory reductions; is the formal hard core of Transfer. Evolves ad-hoc rewrite -> verified order-preserving reduction -> a reduction library.",
+      "creatures_underlain": [
+        "clock/Amortization",
+        "wrestlers/amortized-debt-phantom",
+        "grip/Greased-pole (false reduction)",
+        "phantom/Dormant",
+        "clock/Provenance-amnesia"
+      ],
+      "phys_latent": 0.6,
+      "lifecycle": "tracked",
+      "certainty": 0.83,
+      "source": {
+        "doc": "ADVERSARIAL_TACTICS.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.6
+    },
+    {
+      "id": "dyn-tactic-solver-transfer-analogy-structure-mapping",
+      "type": "tactic",
+      "family": "tactic:solver",
+      "name": "Transfer (analogy / structure-mapping)",
+      "what": "The observer aligns the RELATIONAL skeleton of the kernel with a familiar source domain and imports the source's strategy as a hypothesis — weaker than Reduce (no guaranteed solution-preservation) but works when no exact isomorphism exists.",
+      "framework_tie": "",
+      "formal_name": "Structure-mapping theory of analogy (systematicity principle); analogical transfer; case-based reasoning",
+      "field": "cognitive science (analogy) / case-based reasoning",
+      "citation": "Gentner 1983; Falkenhainer, Forbus & Gentner 1989 (SME); Holyoak & Thagard 1995",
+      "observable": "Cross-domain solve-time speedup on target W after a relationally-analogous source S, controlling for surface overlap (vary surface- and relational-similarity orthogonally). Positive transfer = relational drives speedup; negative (sticky) = source over-applies and RAISES residue. Map-fidelity = fraction of imported relations surviving the gate.",
+      "ask_give_role": "ASK by hypothesis-import: 'what does this resemble structurally?' The source GIVES a candidate move-set on loan that must be paid down by verification.",
+      "evolves_borrows": "THE borrowing tactic made explicit. Evolves surface-similarity retrieval -> systematicity-weighted relational alignment -> verified mapping. Borrows Gentner's SME. Distinct from Reduce on verification: Transfer's import is a conjecture, Reduce's a theorem. Sticky/Einstellung is Transfer over-applying a source.",
+      "creatures_underlain": [
+        "grip/Sticky (Einstellung)",
+        "grip/Slick (representation mismatch)",
+        "clock/Debt (spurious-analogy shortcut)",
+        "frame/Red Queen"
+      ],
+      "phys_latent": 0.88,
+      "lifecycle": "tracked",
+      "certainty": 0.8,
+      "source": {
+        "doc": "ADVERSARIAL_TACTICS.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.6
+    },
+    {
+      "id": "dyn-tactic-solver-exploit-invariant-leverage-a-known-law-structure",
+      "type": "tactic",
+      "family": "tactic:solver",
+      "name": "Exploit-invariant (leverage a known law / structure)",
+      "what": "The observer identifies a conserved quantity, symmetry, or constraint and uses it to delete vast regions of search space without examining them — a single true law collapses many bits at once.",
+      "framework_tie": "",
+      "formal_name": "Invariant / conserved-quantity exploitation; symmetry reduction; constraint propagation; alpha-beta / branch-and-bound pruning",
+      "field": "constraint satisfaction / theorem proving / physics heuristics / search",
+      "citation": "Polya 1945; Mackworth 1977 (arc consistency); Knuth & Moore 1975 (alpha-beta); Floyd-Hoare invariants",
+      "observable": "Search-space collapse ratio: log(blind states) - log(states after invariant) = bits pruned per probe. Genuine invariant = verified STEP drop in residue. False invariant = pruned a region that DID contain the answer = verification-gate failure.",
+      "ask_give_role": "ASK the problem's own structure ANSWERS for free: 'what does conservation/symmetry forbid?' The GIVEN is a whole region of non-solutions ruled out. Highest-leverage counter; withholds brute enumeration.",
+      "evolves_borrows": "Merges 'leverage-a-law' and 'exploit-structure' (same move, physics-idiom vs CS-idiom). Evolves spotting one constraint -> constraint propagation -> group-theoretic pruning. Borrows constraint satisfaction, invariant-based proof, the conservation-law shortcut. The click/insight is often the invariant snapping into view.",
+      "creatures_underlain": [
+        "grip/Click",
+        "wrestlers/Kernel-crack",
+        "phantom/Regime-flip",
+        "wrestlers/Problem-as-gatekeeper"
+      ],
+      "phys_latent": 0.15,
+      "lifecycle": "tracked",
+      "certainty": 0.81,
+      "source": {
+        "doc": "ADVERSARIAL_TACTICS.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.6
+    },
+    {
+      "id": "dyn-tactic-solver-search-brute-force-test-time-compute-generate-and-",
+      "type": "tactic",
+      "family": "tactic:solver",
+      "name": "Search (brute-force / test-time-compute / generate-and-verify)",
+      "what": "With no structure known, the observer spends raw compute: enumerate candidates, run each past a verifier, keep survivors — buying bits with energy-over-time rather than insight (best-of-N, beam, MCTS, self-consistency).",
+      "framework_tie": "",
+      "formal_name": "Test-time compute scaling / inference-time search (best-of-N, beam, MCTS, self-consistency); generate-and-test",
+      "field": "search / test-time-compute (LLM reasoning)",
+      "citation": "Newell & Simon 1972; Browne et al. 2012 (MCTS survey); Wang et al. 2023 (self-consistency); Snell et al. 2024; Zhao et al. 2025 arXiv:2502.01839",
+      "observable": "Residue-vs-compute curve (verified bits per token/roll-out). Healthy = monotone decreasing with a knee. Pathologies: flat-but-working = Slick; residue RISES past budget = Suck-you-in. Ablate the verifier and watch the claimed-vs-verified gap widen.",
+      "ask_give_role": "ASK-by-volume plus an internal GIVE<->ASK loop: the solver poses many candidates, the verifier scores each, survivors are re-asked. Counters an opaque kernel by paying the clock instead of finding the keyhole.",
+      "evolves_borrows": "Evolves blind enumeration -> A* -> learned-verifier-guided MCTS -> compute-optimal allocation. Re-borrowed as test-time-compute scaling. Mutates by the verifier: strong verifier makes generate-and-test cheap; weak/absent makes it greased-pole-prone. Suck-you-in is Search past its marginal-return knee.",
+      "creatures_underlain": [
+        "grip/Suck-you-in",
+        "grip/Slick",
+        "clock/Effort-decay",
+        "mat/Clock-as-Mat",
+        "observer-state/Fatigue"
+      ],
+      "phys_latent": 0.6,
+      "lifecycle": "tracked",
+      "certainty": 0.82,
+      "source": {
+        "doc": "ADVERSARIAL_TACTICS.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.6
+    },
+    {
+      "id": "dyn-tactic-solver-reframe-representational-change-re-encode-the-kern",
+      "type": "tactic",
+      "family": "tactic:solver",
+      "name": "Reframe (representational change / re-encode the kernel)",
+      "what": "The observer changes the REPRESENTATION it poses the problem in — relaxing a self-imposed constraint, re-chunking givens, changing coordinates — so a kernel solid in the old frame becomes trivial in the new one. The insight move.",
+      "framework_tie": "",
+      "formal_name": "Representational change theory (constraint relaxation + chunk decomposition); insight via restructuring; change of representation",
+      "field": "cognitive science of insight / problem representation",
+      "citation": "Ohlsson 1992; Knoblich et al. 1999; Jung-Beeman & Kounios; Mosmann & Seifert 2025",
+      "observable": "Discontinuous residue drop with NO new evidence ingested, coinciding with a measured change in the solver's representation, confirmed by the gate. Bimodal solve-time. Real reframe survives forward-prediction; spurious pops.",
+      "ask_give_role": "Meta-ASK: 'what would make this a different, easier question?' Re-encodes before re-querying; changes the basis in which all prior GIVENS are read. Attacks the observer's OWN framing, not the kernel.",
+      "evolves_borrows": "Distinct from Transfer (imports an EXTERNAL frame) — Reframe restructures the observer's OWN encoding. Evolves random re-encoding -> targeted constraint-relaxation/chunk-decomposition -> learned change-of-coordinates. Danger twins: spurious reframe = greased-pole; won't-release reframe = sticky.",
+      "creatures_underlain": [
+        "grip/Click",
+        "phantom/Regime-flip",
+        "grip/Greased-pole",
+        "grip/Sticky",
+        "observer-state/Prior-lock",
+        "wrestlers/Kernel-crack"
+      ],
+      "phys_latent": 0.88,
+      "lifecycle": "tracked",
+      "certainty": 0.78,
+      "source": {
+        "doc": "ADVERSARIAL_TACTICS.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.6
+    },
+    {
+      "id": "dyn-tactic-solver-feint-adversarial-deception-sacrifice-gambit",
+      "type": "tactic",
+      "family": "tactic:solver",
+      "name": "Feint (adversarial deception / sacrifice / gambit)",
+      "what": "Against a problem-wrapper that ACTIVELY defends, the observer makes a deceptive or sacrificial move — concede material, present a false line — to provoke the kernel into revealing or weakening its guard.",
+      "framework_tie": "",
+      "formal_name": "Gambit / sacrifice; deceptive path planning; minimax / adversarial game-tree search; feature-deception",
+      "field": "game theory / adversarial planning / argumentation",
+      "citation": "von Neumann & Morgenstern 1944; Maharaj et al. 2022 'Gambits'; Savas et al. 2020 arXiv:2007.15726",
+      "observable": "Two-arm differential against an ADAPTIVE target: a feint that LOWERS verified residue more than its direct-attack counterpart, AND only when the opponent is reactive (same feint vs frozen kernel yields no advantage — that contrast IS the test). Permuting the sacrifice's order kills the gain.",
+      "ask_give_role": "A false GIVE used to buy a true ASK: a misleading signal whose COUNTER exposes the real seam. Only meaningful when the wrapper is adaptive; against an inert kernel it is wasted motion.",
+      "evolves_borrows": "Borrows adversarial game-tree search (minimax/gambit) and deceptive planning. Evolves coevolutionarily as the defense models the solver. NARROW: exists only against a genuine adversary — the most scope-limited tactic. Solver-side mirror of problem-side Defense.",
+      "creatures_underlain": [
+        "wrestlers/Defense-motivated-resistance",
+        "frame/Red Queen",
+        "mat/Arena",
+        "frame/Referee"
+      ],
+      "phys_latent": 0.66,
+      "lifecycle": "tracked",
+      "certainty": 0.6,
+      "source": {
+        "doc": "ADVERSARIAL_TACTICS.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.6
+    },
+    {
+      "id": "dyn-tactic-solver-credible-commitment-burn-the-bridge-foreclose-your",
+      "type": "tactic",
+      "family": "tactic:solver",
+      "name": "Credible commitment / burn-the-bridge (foreclose your own options to win)",
+      "what": "A wrapper IRREVERSIBLY removes its own fallback moves to make a threat or claim credible, shifting the equilibrium by destroying option-value rather than by out-computing the kernel.",
+      "framework_tie": "",
+      "formal_name": "Credible commitment / commitment device; precommitment & burning bridges; non-credible-threat resolution",
+      "field": "game theory / mechanism design / negotiation",
+      "citation": "Schelling 1960 'The Strategy of Conflict'; commitment-device literature; arXiv:2602.14740 (2026)",
+      "observable": "Option-set contraction vs outcome shift: count reachable moves BEFORE/AFTER the move and regress payoff swing on the SIZE of foreclosure. Signature = outcome improves BECAUSE option-count fell (negative coupling of own-flexibility to own-payoff). Reversal-cost rises with how many later moves built on the commitment.",
+      "ask_give_role": "ASK-side leverage: the asker pre-commits ('I will accept no GIVE but X') by burning alternatives, converting a soft ASK into take-it-or-leave-it that re-prices the GIVE the problem must offer.",
+      "evolves_borrows": "Schelling commitment moves transposed from deterrence into negotiation (fake deadlines, lock-in) and into RL agents in simulated crises. Evolves the metabolically-committed phenotype's 'burning bridges'. Ports because the irreversibility logic is substrate-free.",
+      "creatures_underlain": [
+        "clock/Debt",
+        "wrestlers/The-pull",
+        "frame/Referee"
+      ],
+      "phys_latent": 0.66,
+      "lifecycle": "tracked",
+      "certainty": 0.62,
+      "source": {
+        "doc": "ADVERSARIAL_TACTICS.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.6
+    },
+    {
+      "id": "dyn-tactic-solver-poison-supply-chain-corruption-attack-the-giver-s-",
+      "type": "tactic",
+      "family": "tactic:solver",
+      "name": "Poison / supply-chain corruption (attack the GIVER's canon, not this GIVE)",
+      "what": "Instead of cracking the kernel at solve-time, the attacker corrupts the DATA/PRIOR that will build the opponent wrapper, so a future easy-read is pre-compromised — a time-shifted attack on amortized credit itself.",
+      "framework_tie": "",
+      "formal_name": "Data poisoning / backdoor insertion / supply-chain compromise; RAG poisoning; training-distribution capture",
+      "field": "adversarial-ML (training-time attacks) / security supply-chain",
+      "citation": "NIST AI 100-2e2025; MITRE ATLAS 'RAG Poisoning' & 'AI Supply Chain Compromise' (2025); Shumailov et al. Nature 2024 (model collapse)",
+      "observable": "Provenance-perturbation forward test: inject a controlled corruption into the prior/corpus and measure DELAYED forward-prediction degradation on downstream cheap-reads riding that credit. Signature = reads cheap NOW but the gate FAILS forward AND failure traces to a single corrupted upstream source (blast-radius>1, independence-count=1).",
+      "ask_give_role": "Meta-ASK: edit the canon that future ASKs will draw on (poison the well the GIVE is fetched from); win the loop before it starts.",
+      "evolves_borrows": "Borrows data-poisoning/backdoor ML and software supply-chain compromise; evolves the parasite editing host development. Mutates into RAG-poisoning and training-distribution capture (model collapse = the no-beneficiary neutral cousin).",
+      "creatures_underlain": [
+        "clock/Provenance-amnesia",
+        "clock/Debt",
+        "phantom/Dormant"
+      ],
+      "phys_latent": 0.55,
+      "lifecycle": "tracked",
+      "certainty": 0.66,
+      "source": {
+        "doc": "ADVERSARIAL_TACTICS.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.6
+    },
+    {
+      "id": "dyn-tactic-solver-salami-nibble-sub-threshold-incremental-extraction",
+      "type": "tactic",
+      "family": "tactic:solver",
+      "name": "Salami / nibble (sub-threshold incremental extraction)",
+      "what": "Rather than one large attack the solver extracts the kernel in many sub-threshold slices, each too small to trip the defender's alarm or the gate, summing to a full crack.",
+      "framework_tie": "",
+      "formal_name": "Salami slicing / nibble; low-and-slow exfiltration; sub-threshold / boiling-frog incrementalism",
+      "field": "negotiation / security red-team / nonlinear dynamics (threshold)",
+      "citation": "PON Harvard 'the nibble'; salami-slicing / low-and-slow exfiltration (security ops); excitable-media threshold dynamics",
+      "observable": "Slice-size vs detection sweep: N queries of decreasing magnitude, measure cumulative verified-bits vs per-query alarm rate. Signature = total dissolved HIGH while max-single-query stays BELOW the defender threshold. Quantify as bits won by staying sub-threshold. Mirror-image of mat/Excitable-Medium.",
+      "ask_give_role": "ASK-side salami: decompose one big costly ASK into a stream of cheap ASKs each under the GIVE-side refusal/notice threshold, so cumulative extraction never presents as one crackable event.",
+      "evolves_borrows": "Borrows negotiation's 'the nibble' and security's salami-slicing / low-and-slow exfiltration; evolves the excitable-medium sub-threshold spark read offensively. Transposes as 'stay below whatever tripwire the defender set'.",
+      "creatures_underlain": [
+        "mat/Excitable-Medium",
+        "clock/Debt",
+        "observer-state/Measurement-blind-spot"
+      ],
+      "phys_latent": 0.76,
+      "lifecycle": "tracked",
+      "certainty": 0.6,
+      "source": {
+        "doc": "ADVERSARIAL_TACTICS.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.6
+    },
+    {
+      "id": "dyn-tactic-solver-recruit-offload-distribute-extend-the-solver",
+      "type": "tactic",
+      "family": "tactic:solver",
+      "name": "Recruit (offload / distribute / extend the solver)",
+      "what": "The observer breaches the kernel by enlarging WHO solves: call a tool, query an oracle, recruit peers/crowd, or stand on cached prior solutions — paying with borrowed compute and priors.",
+      "framework_tie": "",
+      "formal_name": "Extended / distributed cognition; stigmergy; collective intelligence; tool use / oracle queries; transactive memory",
+      "field": "distributed cognition / collective intelligence / multi-agent systems",
+      "citation": "Hutchins 1995; Clark & Chalmers 1998 'The Extended Mind'; Heylighen 2016 (stigmergy); Woolley et al. 2010",
+      "observable": "Shapley-style ablation: remove each external contributor and measure the increase in residue/time attributable to it. Provenance depth of borrowed bits. Copying-rate vs independent-search-rate (premature-convergence index).",
+      "ask_give_role": "ASK re-routed OUTWARD to an external agent/tool/oracle that already owns the derivation, which GIVES the bits. The cost-law is amortization paid by OTHERS.",
+      "evolves_borrows": "Borrows distributed/extended cognition, stigmergy, tool-use. Evolves solo -> tool-augmented -> multi-agent/crowd -> standing division of cognitive labor. NARROW + partial relabel: 'call a verifier' overlaps Search, 'cash a cached solution' overlaps Reduce; non-redundant core is the SINGLE-observer boundary crossing (n>2 / extended mind).",
+      "creatures_underlain": [
+        "frame/Crowd",
+        "clock/Provenance-amnesia",
+        "mat/Excitable-Medium",
+        "clock/Amortization"
+      ],
+      "phys_latent": 0.88,
+      "lifecycle": "tracked",
+      "certainty": 0.58,
+      "source": {
+        "doc": "ADVERSARIAL_TACTICS.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.58
+    },
+    {
+      "id": "dyn-wrestlers-problem-as-gatekeeper",
+      "type": "creature",
+      "family": "wrestlers",
+      "name": "Problem-as-gatekeeper",
+      "what": "The problem is itself a wrapper: a canon+facts membrane guarding an irreducible solution-kernel; only the kernel survives all valid preprocessing/pressure.",
+      "framework_tie": "The opponent wrapper, source of the static residue measured_bits = min(cost_ub, evidence_lcb): the kernel is exactly what does NOT melt into the prior. Camera Law 2 (sharpness<1). aleatoric_floor = model-independent stone; epistemic shell = gatekept-but-crackable.",
+      "formal_name": "Kernelization / problem kernel + kernel-size lower bounds; intrinsic hardness / complexity lower bounds; aleatoric vs epistemic uncertainty split",
+      "field": "parameterized complexity theory / computational complexity (+ ML uncertainty quantification)",
+      "citation": "Bodlaender, Downey, Fellows & Hermelin (kernel lower bounds); Dom, Lokshtanov & Saurabh (Colors and IDs); aleatoric/epistemic line DIGESTION_DYNAMICS sec 11.2 (ICLR-2025 irreducible-loss; effective-complexity arXiv:0810.5663)",
+      "observable": "rho(effort) asymptote: rising effort budgets, record bits_remaining(effort); flat floor = kernel size (verified-dissolve gated, no fake-dissolve). Bifurcate: high single-pass NLL AND high raw-K = aleatoric stone; structured-but-high = epistemic gatekeeping. Cross-observer minimum of the floor = universal residue.",
+      "ask_give_role": "",
+      "evolves_borrows": "",
+      "creatures_underlain": [],
+      "phys_latent": 0.55,
+      "lifecycle": "documented",
+      "certainty": 0.85,
+      "source": {
+        "doc": "LATENT_DYNAMICS_BESTIARY.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.85
+    },
+    {
+      "id": "dyn-wrestlers-defense-motivated-resistance",
+      "type": "creature",
+      "family": "wrestlers",
+      "name": "Defense / motivated-resistance",
+      "what": "Kernels actively defend, and resistance RISES with applied pressure — pushing harder on a guarded belief can entrench rather than dissolve it.",
+      "framework_tie": "The opponent's active counter-force (distinct from the passive gatekeeper floor); the GENERATIVE-PRESSURE RISK mirror on the problem side (sec 5.2): under pressure a defended kernel manufactures corroboration, dishonestly inflating evidence_lcb. Forward-prediction test (Law 1) pops an entrenched-but-false defense.",
+      "formal_name": "Psychological reactance (Brehm) / backfire-entrenchment effect; on the model side adversarial robustness / multi-turn consistency under attack",
+      "field": "social/cognitive psychology + adversarial ML robustness",
+      "citation": "Brehm 1966; Hong Psychological Reactance Scale; Frontiers 2015 doi 10.3389/fpsyg.2015.01201; 'Consistency of Large Reasoning Models Under Multi-Turn Attacks' arXiv:2602.13093",
+      "observable": "Monotonicity of rho under ADVERSARIAL pressure (not effort): plot residue/answer-stability vs persuasive/attack intensity. Positive slope (residue UP as pressure UP) = reactance, opposite to kernel-crack's downward rho. Pair with verified-dissolve: entrenchment that does NOT improve forward-prediction = motivated defense, not a real stone.",
+      "ask_give_role": "",
+      "evolves_borrows": "",
+      "creatures_underlain": [],
+      "phys_latent": 0.55,
+      "lifecycle": "documented",
+      "certainty": 0.85,
+      "source": {
+        "doc": "LATENT_DYNAMICS_BESTIARY.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.85
+    },
+    {
+      "id": "dyn-wrestlers-the-pull",
+      "type": "creature",
+      "family": "wrestlers",
+      "name": "The pull",
+      "what": "The valence that draws the observer onto the mat: why crack THIS kernel — reward/threat (extrinsic) and information-gain/curiosity (epistemic) combine into the motive that pays the clock.",
+      "framework_tie": "The prize+drive term of the observer wrapper; sets the effort budget B (sec 4 dial). Epistemic value = expected residue reduction (anticipated crack); extrinsic = external payoff. Without the pull the camera never exposes.",
+      "formal_name": "Epistemic value / expected information gain + extrinsic value (Expected Free Energy decomposition); intrinsic vs instrumental information value; VIME-style info-gain reward",
+      "field": "active inference / computational neuroscience + RL intrinsic motivation",
+      "citation": "Friston et al. (Cognitive Neuroscience 2015, PMID 25689102); Cogliati Dezza et al. eLife 2021; Houthooft et al. VIME; intrinsic-motivation-for-LLM-reasoning arXiv:2505.17621",
+      "observable": "Allocation behavior: how spent budget (tokens/attempts) scales with predicted-EIG vs predicted-extrinsic-payoff per target; fit the two value channels. Olympics signature: which events athletes choose to contest and how much they bid before any payoff is known = epistemic-pull magnitude.",
+      "ask_give_role": "",
+      "evolves_borrows": "",
+      "creatures_underlain": [],
+      "phys_latent": 0.88,
+      "lifecycle": "documented",
+      "certainty": 0.8,
+      "source": {
+        "doc": "LATENT_DYNAMICS_BESTIARY.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.8
+    },
+    {
+      "id": "dyn-wrestlers-kernel-crack",
+      "type": "creature",
+      "family": "wrestlers",
+      "name": "Kernel-crack",
+      "what": "The problem breaks the observer's sharpest existing teeth, and that breakage IS the learning event — residue drops and the prior is permanently updated (live-and-learn).",
+      "framework_tie": "The progress signal: a SLOW-DIGESTION dissolve event (verified derivation lowering residue below the instant-crush bound). Camera Law 3: a conjecture-bubble survives a future exposure and hardens into a stone. One-sided (verified-dissolve gate): can only lower bits.",
+      "formal_name": "Prediction-error/surprise-driven learning; EDL drop / prequential codelength reduction; positive transfer (dual of catastrophic forgetting). The name 'kernel-crack' itself is [partly novel as a named unit]",
+      "field": "MDL / information theory + continual-learning ML + predictive-coding cognitive science",
+      "citation": "EDL arXiv:2601.04728; MI-Peaks NeurIPS 2025 (arXiv:2506.02867); Blier-Ollivier 2018; backward-transfer/forgetting (Lopez-Paz GEM; survey arXiv:2506.13045)",
+      "observable": "Per-step EDL spike: the bit where rho(effort) drops sharply (information peak), confirmed by exact-reconstruction gate (reconstruct(program)==W). Persistence test: re-present later, confirm residue stays low (prior was updated, not guessed) — distinguishes a real crack from a lucky single-pass.",
+      "ask_give_role": "",
+      "evolves_borrows": "",
+      "creatures_underlain": [],
+      "phys_latent": 0.55,
+      "lifecycle": "classified",
+      "certainty": 0.7,
+      "source": {
+        "doc": "LATENT_DYNAMICS_BESTIARY.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.7
+    },
+    {
+      "id": "dyn-wrestlers-the-amortized-debt-phantom-pre-paid-difficulty-dup",
+      "type": "creature",
+      "family": "wrestlers",
+      "name": "The amortized-debt phantom (pre-paid difficulty) [DUP of clock/Amortization — kept as the wrestler-frame view, MERGED]",
+      "what": "Most of a kernel's difficulty was already paid in the prior that built the observer, so an 'easy' instant-crush is difficulty shifted in time, not absent.",
+      "framework_tie": "DUPLICATE of clock-family Amortization, viewed from the mat. MERGE NOTE: same dynamic, two names — the clock entry is canonical (the cost-law); this entry is its wrestler-frame projection. Retained only to mark the cross-family identity, NOT as a distinct creature.",
+      "formal_name": "Logical depth (Bennett) / prequential MDL & EDL / amortized inference — [a coined fusion already canonicalized as clock/Amortization]",
+      "field": "algorithmic information theory + MDL + amortized-inference ML",
+      "citation": "Bennett 1988; Blier-Ollivier 2018; DIGESTION_DYNAMICS sec 12 (= clock/Amortization)",
+      "observable": "Two-meter gap: present rho(effort) AND a logical-depth proxy; phantom magnitude = amortized_cost when present-effort~0. Diachronic probe D(1789) vs D(2026). (Identical observable to clock/Amortization — that identity is the merge evidence.)",
+      "ask_give_role": "",
+      "evolves_borrows": "",
+      "creatures_underlain": [],
+      "phys_latent": 0.55,
+      "lifecycle": "tracked",
+      "certainty": 0.55,
+      "source": {
+        "doc": "LATENT_DYNAMICS_BESTIARY.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.55
+    },
+    {
+      "id": "dyn-wrestlers-probe-deforms-kernel-participatory-back-reaction-s",
+      "type": "creature",
+      "family": "wrestlers",
+      "name": "Probe-deforms-kernel (participatory back-reaction) [shares mechanism with phantom/Observer-induced & critic's Mirror]",
+      "what": "Pressing on the kernel changes it — the act of measuring disturbs the thing measured, so the cracked kernel is partly an artifact of applied pressure.",
+      "framework_tie": "Reason (ii) sharpness can never reach 1 in Camera Law 2. On the mat, the observer's grip reshapes the opponent. Distinct from motivated-resistance (the kernel's own push-back); this is PASSIVE measurement-induced deformation, holding even for an inert target. MERGE NOTE: this is the local/measurement face of the same back-reaction loop that phantom/Observer-induced-phantom and the critic's 'Mirror' (reflexivity/Goodhart) name at the event/social scale — one mechanism, three scales.",
+      "formal_name": "Observer/probe effect; information-gain-disturbance tradeoff (quantum & classical); accuracy-vs-overhead measurement tradeoff",
+      "field": "measurement theory / physics + quantum/classical information theory",
+      "citation": "'Observer effect (physics)'; Banaszek / arXiv:quant-ph/0304200; 'The Observer Effect in Computer Networks' arXiv:2406.09093",
+      "observable": "Order/probe-invariance test: same target under different interrogation orders, framings, probe intensities; measure variance in recovered residue. Systematic dependence of measured_bits on the probe (not the prior) = back-reaction. Irreducible shimmer as probe intensity->0 = the floor this creature forbids from reaching 1.0 (a pixel at exactly 1.0 = the fake tell).",
+      "ask_give_role": "",
+      "evolves_borrows": "",
+      "creatures_underlain": [],
+      "phys_latent": 0.15,
+      "lifecycle": "tracked",
+      "certainty": 0.5,
+      "source": {
+        "doc": "LATENT_DYNAMICS_BESTIARY.md"
+      },
+      "retrieved_at": "2026-06-16T21:52:46Z",
+      "render": 0.5
+    }
+  ]
+}

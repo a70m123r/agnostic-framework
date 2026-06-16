@@ -1,0 +1,20 @@
+EXTERNAL PASS -- adversarial-tactics catalogue + the 6-organ reduction (2026-06-16)
+
+Read these UTF-8 markdown files in this directory:
+  ADVERSARIAL_TACTICS.md        -- 37 adversarial tactics (the ask<->give loop moves the observer & problem deploy), 10 couplings (feedback-loop edges), 5 prism/broadcast channels, + the REDUCTION.
+  LATENT_DYNAMICS_BESTIARY.md   -- the 41 "creatures" (dynamics of latent problem-solving) the tactics distill from (context).
+  dynamics/compiled/dynamics.compiled.json -- the 88 normalized dynamics-substrate records (creatures + tactics + couplings) if you want the structured form.
+
+CONTEXT. Framework: solving a latent problem = a wrestling match between two wrappers (observer: canon+tools+drive; problem: canon+facts gatekeeping its kernel) on a mat (medium), against a clock (energy over time), with a phantom (unplanned), for a prize (motive). Instrument = the "latent camera" / agnostic metrology (render<=measured; blur is the badge; instrument-not-test, 0.99 not Boolean; cite-don't-coin). Pav's hypothesis: the creatures are SURFACE manifestations of a smaller set of underlying adversarial TACTICS the players evolve/borrow/apply in their ask<->give loops.
+
+Answer, terse + skeptical, cite arXiv IDs, flag over-claims:
+
+(1) THE REDUCTION. We claim: 41 creatures -> 33 deduped tactics (weak, 1.24:1) -> ~6 shared "tactic-organs" (back-reaction loop; hysteresis/staleness; criticality/phase-transition; the two-clocks [present effort vs amortized past]; the verified-dissolve gate; the motive/drive axis), a strong 6.8:1.
+    - Is the ~6-organ reduction a REAL compression, or post-hoc clustering that would not replicate? What would falsify it?
+    - Are those 6 the right organs, or is one a dup / one missing?
+
+(2) THE TACTICS. Spot the strongest grounding errors or missing load-bearing prior art (esp. adversarial-ML / red-team taxonomies like MITRE ATLAS, active learning / EIG, game theory, argumentation, evolutionary game theory). Which tactic's formal_name or observable is shakiest? Any tactic that is really two, or two that are one?
+
+(3) METHOD + CHANNELS. Is normalizing these dynamics into "substrate wrappers" (provenance + certainty + lifecycle-as-verification + a COIN render cap) methodologically sound, or a category error? And: do the prism/broadcast CHANNELS (jungle / battlefield / guess-who / ticker) actually make the latent action legible without dumbing it down, or are they decoration?
+
+One-line verdict each on (1),(2),(3).
