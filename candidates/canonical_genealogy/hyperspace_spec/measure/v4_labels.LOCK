@@ -1,0 +1,19 @@
+{
+  "sha256": "195eed4ab3f257f5f27338c690c14e67480a226347cb210f6614e758168acdcc",
+  "n_items": 180,
+  "seeds": 12,
+  "E_bands": [
+    2,
+    4,
+    6,
+    8,
+    10
+  ],
+  "T_levels": [
+    12,
+    16,
+    20
+  ],
+  "tier_preregistered": "high",
+  "note": "factorial E _|_ T; binds full stimulus+answer; tier locked; primary estimand = partial-Spearman(effort, E | display_ops) on solved items"
+}
