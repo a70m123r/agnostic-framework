@@ -13,3 +13,6 @@
 {"provider": "gpt-5.5", "target": "s1_random", "difficulty": 5, "kind": "random-floor", "effort": "low", "reasoning_tokens": 512, "answer": 83, "correct": null, "effort_exhausted": false}
 {"provider": "gpt-5.5", "target": "s1_random", "difficulty": 5, "kind": "random-floor", "effort": "medium", "reasoning_tokens": 512, "answer": 85, "correct": null, "effort_exhausted": false}
 {"provider": "gpt-5.5", "target": "s1_random", "difficulty": 5, "kind": "random-floor", "effort": "high", "reasoning_tokens": 512, "answer": 85, "correct": null, "effort_exhausted": false}
+{"provider": "qwen3.5", "target": "g3_batball", "difficulty": 4, "kind": "hard-trap", "effort": "single", "reasoning_tokens": 900, "answer": null, "correct": false}
+{"provider": "qwen3.5", "target": "d1_seq", "difficulty": 3, "kind": "deep-structured", "effort": "single", "reasoning_tokens": 900, "answer": null, "correct": false}
+{"provider": "qwen3.5", "target": "s1_random", "difficulty": 5, "kind": "random-floor", "effort": "single", "reasoning_tokens": 900, "answer": null, "correct": null}

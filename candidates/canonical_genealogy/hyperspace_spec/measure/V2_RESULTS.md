@@ -27,9 +27,15 @@ A target dissolves only if the answer == ground truth (exact integer match). The
    - **epistemic-deep** (d1_seq, g3): dissolves, but costs real reasoning.
    - **aleatoric** (s1_random): never dissolves under prior OR effort — and *costs the most* trying. The true floor.
 
-## The Latent Olympics
-- GPT-5.5 dissolved: g1, g2, g3, d1_seq. Resisted by GPT-5.5: **s1_random** (the universal-residue candidate).
-- **qwen3.5 cross-check (running):** does the local model fall for the bat-and-ball trap (cross-provider difficulty), and does the random stone resist it too (confirming the UNIVERSAL RESIDUE = resists every athlete = the near-objective hard content)? + rank agreement = the pinned relational bit on the reasoning axis. [folded when it lands]
+## The Latent Olympics (2 athletes)
+- **GPT-5.5** dissolved g1, g2, g3, d1_seq; resisted by it: **s1_random**.
+- **qwen3.5:27b-q4 (local)** on the subset {g3_batball, d1_seq, s1_random}: dissolved **NONE** — all three returned `tokens=900 (budget cap), answer=None`, i.e. its reasoning consumed the full 900-token budget **without terminating to a final answer**.
+
+**Honest verdict (demote-not-kill on my own measurement):** the cross-provider **rank-agreement test is INCONCLUSIVE** — qwen3.5's "resistance" on g3/d1 is a **CONFOUND** (a weaker q4-quantized local model + a 900-token budget cap that truncated its chain-of-thought before it emitted an answer + answer-extraction that found no final integer), NOT evidence those targets are universally hard. The clean takeaways that DO survive:
+1. **GPT-5.5 wins the Olympics decisively** — it dissolves every structured target cheaply; qwen3.5-as-configured cannot reach an answer within budget. A real, if lopsided, leaderboard.
+2. **s1_random is the UNIVERSAL-RESIDUE candidate** — it resisted BOTH athletes (GPT-5.5 fabricated a guess at 512t; qwen3.5 never answered at 900t). Neither *verify-dissolved* it. (Caveat: qwen's resistance is budget-confounded, but a no-ground-truth random target floors any athlete by construction.)
+
+**The fix for a clean rank-agreement test:** a properly-configured second athlete — a much larger reasoning budget for qwen (it did not terminate), OR read ollama's separate `thinking` field instead of `response`, OR a stronger second provider. As-is, qwen3.5-q4-local is too weak/truncated to *rank* difficulty; it can only confirm the floor.
 
 ## Honest limits
 - Small battery (5 targets); `reasoning_tokens` is GPT-5.5's internal count (provider-specific magnitude — the Olympics compares RANKINGS across providers, not raw token counts = the pinned relational bit).
