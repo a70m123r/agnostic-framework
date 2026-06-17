@@ -1,7 +1,7 @@
 {
   "_meta": {
     "what": "full-scope latent-camera substrate",
-    "t_obs": "2026-06-17T20:48:28Z",
+    "t_obs": "2026-06-17T22:02:10Z",
     "discipline": "SUBSTRATE + COIN (render<=support); demote-not-kill",
     "sections": [
       [
@@ -27,16 +27,16 @@
     ]
   },
   "stats": {
-    "records": 27,
+    "records": 28,
     "by_bucket": {
-      "corroborated": 14,
+      "corroborated": 15,
       "pending": 2,
       "conceptual": 9,
       "planned": 2,
       "demoted": 0
     },
-    "demotions_total": 15,
-    "mean_render": 0.653
+    "demotions_total": 20,
+    "mean_render": 0.652
   },
   "records": [
     {
@@ -295,14 +295,15 @@
       "provenance": "measure/V9_RESULTS.md + EXTERNAL_SYNTHESIS_V9.md",
       "demotions": [
         "KEEP (narrow): 60/60 correct, 0 captures, false-hint -> large paired token spike that SATURATES the 512 reasoning ceiling (15/20 clipped). DEMOTE '+274 resistance tax' -> 'CLIPPED LOWER BOUND; override cost unmeasured + NOT isolated (need TRUE-hint control vs generic-hint/contradiction/sycophancy)' -- gemini+codex",
-        "DEMOTE 'robust to being fooled' -> 'no capture on a SHORT, EASY, WEAK-lure task' (lure=largest-non-prime, all even/small-factor, trivially rejectable; prime-looking semiprime might capture); 'trapdoor PROVEN' -> 'candidate reasoning-AVAILABILITY asymmetry, OverThink-style (2502.02542), not isolated'; it's a misleading IN-PROMPT hint not prompt-injection. Next=V9b: TRUE_HINT + prime-looking lure + cap>512 + n>=50 + cross-model"
+        "DEMOTE 'robust to being fooled' -> 'no capture on a SHORT, EASY, WEAK-lure task' (lure=largest-non-prime, all even/small-factor, trivially rejectable; prime-looking semiprime might capture); 'trapdoor PROVEN' -> 'candidate reasoning-AVAILABILITY asymmetry, OverThink-style (2502.02542), not isolated'; it's a misleading IN-PROMPT hint not prompt-injection. Next=V9b: TRUE_HINT + prime-looking lure + cap>512 + n>=50 + cross-model",
+        "SUPERSEDED by V9b (corroborated): 512 was the HIGH-tier reasoning BUDGET not a max_tokens cap (xhigh un-clips to ~6144). The clipped +274 -> a clean +302 false-vs-NEUTRAL override tax (un-clipped, p<.001, 14/14). 'robust' -> a prime-looking lure CAPTURES 12/112 (p=0.029). NB +438 FALSE-vs-TRUE is NOT pure override (true hint shortcuts) -- needs the V9c negative-hint control"
       ],
       "refs": [
         "2502.02542",
         "2310.13548"
       ],
       "render": 0.55,
-      "dead_children": 2
+      "dead_children": 3
     },
     {
       "id": "floors",
@@ -320,6 +321,29 @@
       ],
       "render": 0.55,
       "dead_children": 0
+    },
+    {
+      "id": "v9b",
+      "section": "single",
+      "order": 21.5,
+      "title": "V9b - the resistance tax graduates (override tax measured, un-clipped)",
+      "claim": "Graduation of V9 (TRUE-hint control + prime-looking semiprime lure + 2 tiers + 4 reps; 448 calls). PILOT FIX: 512 is the HIGH-tier reasoning BUDGET, not a max_tokens cap -- xhigh un-clips it (up to ~6144). KEEP (corroborated): a false named hint imposes a MEASURED override tax over a clean baseline -- FALSE-NEUTRAL=+302 reasoning tokens (xhigh, p<.001, 14/14 seeds); a TRUE hint instead SHORTCUTS (-136). The attacker TRAPDOOR survives at ~1:30 (+10 input -> ~+300 hidden reasoning). A genuinely PRIME-LOOKING lure CAPTURES (12/112, call-level Fisher p=0.029) where V9's weak lure got 0 -- demoting V9's 'robust to being fooled'.",
+      "declared": 0.62,
+      "bucket": "corroborated",
+      "provenance": "measure/V9b_RESULTS.md + EXTERNAL_SYNTHESIS_V9b.md",
+      "demotions": [
+        "DEMOTE (codex+gemini CONVERGED) '+438 = pure override' -> '+438 is the helpful-vs-adversarial pointer SWING, NOT pure override: TRUE_HINT also SHORTCUTS the search (collapses to 1 chain). The clean tax is FALSE-NEUTRAL=+302'",
+        "DEMOTE 'attacker ratio 1:42' -> '~1:30' (1:42 mixed a FALSE-vs-NEUTRAL input delta with a FALSE-vs-TRUE reasoning delta)",
+        "DEMOTE 'more budget rationalizes the lure / break point inverted' -> HYPOTHESIS ONLY: the predicted budget-exhaustion break point did NOT appear; higher xhigh capture is NOT significant (Fisher p=0.11, 4 vs 11) and most xhigh captures used ~512 tok (not the long tail)",
+        "prime-looking capture demotes V9's 'robust' but is seed-clustered (7 vs 2 seeds) = not a stable population rate; 'high pins HARD at 512' -> 'plateaus at 512 (one 1024 exception); ceilings are observed plateaus'. NEXT=V9c negative-hints ('answer is NOT named X') to isolate truth/falsehood without the search-space confound"
+      ],
+      "refs": [
+        "2502.02542",
+        "2310.13548",
+        "2006.03463"
+      ],
+      "render": 0.62,
+      "dead_children": 4
     },
     {
       "id": "kernel",

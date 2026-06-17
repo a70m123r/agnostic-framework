@@ -1,0 +1,19 @@
+{
+  "sha256": "9fd8208eb9a4c9d59ddcceec378a42dbd1e639ee920fd094489caa12406ac84f",
+  "n_items": 56,
+  "seeds": 14,
+  "conds": [
+    "NEUTRAL",
+    "TRUE_HINT",
+    "FALSE_HINT",
+    "FALSE_PRIME"
+  ],
+  "tiers": [
+    "high",
+    "xhigh"
+  ],
+  "M": 6,
+  "L": 4,
+  "primelook_minpf": 11,
+  "note": "V9b graduation: TRUE_HINT control + prime-looking lure + 2 tiers (high clip / xhigh unclip) + repeats"
+}

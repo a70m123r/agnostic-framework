@@ -8,12 +8,14 @@ the viewer) is the badge. Demotions are kept as dead-children, not deleted. Stdl
 
 In: scope_records.jsonl   Out: compiled/scope.compiled.json + inline-injected SCOPE.html + summary.
 """
-import json, re, sys
+import json, re, sys, html
 from pathlib import Path
 from datetime import datetime, timezone
 
 HERE = Path(__file__).resolve().parent
 BUCKET_CAP = {"corroborated": 1.00, "pending": 0.60, "conceptual": 0.55, "planned": 0.40, "demoted": 0.30}
+COLOR = {"corroborated": "#3fb950", "pending": "#d29922", "conceptual": "#58a6ff",
+         "planned": "#8b62d9", "demoted": "#6e7681"}
 SECTIONS = [
     ("instrument", "The Instrument"),
     ("single", "Octave I - Single Observer (work + span)"),
@@ -21,6 +23,49 @@ SECTIONS = [
     ("clocks", "The Three Clocks (build + maintain + use)"),
     ("map", "The Big Map - where we are"),
 ]
+
+
+def _card_html(r, i):
+    """Server-render ONE card -- identical structure to the old JS render(), so the page shows full
+    content even when scripts don't run. data-i lets the JS enhancer wire the click->detail panel."""
+    col = COLOR.get(r.get("bucket", ""), "#8a97ac")
+    e = lambda x: html.escape(str(x))
+    opacity = max(0.32, float(r.get("render", 0.4)))          # COIN: blur = low opacity
+    cls = "card planned" if r.get("bucket") == "planned" else "card"
+    dead = ""
+    if r.get("demotions"):
+        dead = '<div class="dead">' + "".join(
+            f'<span class="x">&dagger; {e(d)}</span>' for d in r["demotions"]) + '</div>'
+    refs = ""
+    if r.get("refs"):
+        refs = '<div class="refs">' + "".join(f'<span>{e(x)}</span>' for x in r["refs"]) + '</div>'
+    dc = f'<span class="badge">&dagger; {r["dead_children"]} demoted</span>' if r.get("dead_children") else ""
+    return (
+        f'<div class="{cls}" data-i="{i}" style="opacity:{opacity:.3f}">'
+        f'<div class="t"><span class="dot" style="background:{col}"></span>{e(r.get("title",""))}</div>'
+        f'<div class="c">{e(r.get("claim",""))}</div>'
+        f'<div class="meta"><span class="badge" style="border-color:{col}44;color:{col}">{e(r.get("bucket",""))}</span>'
+        f'{dc}<span class="render">render {float(r.get("render",0)):.2f}</span></div>{dead}{refs}</div>')
+
+
+def _body_html(recs):
+    by_sec = {}
+    for idx, r in enumerate(recs):
+        by_sec.setdefault(r.get("section"), []).append((idx, r))
+    out = []
+    for key, label in SECTIONS:
+        rs = by_sec.get(key, [])
+        if not rs:
+            continue
+        cards = "".join(_card_html(r, idx) for idx, r in rs)
+        out.append(f'<div class="section"><h2>{html.escape(label)}</h2><div class="grid">{cards}</div></div>')
+    return "".join(out)
+
+
+def _inject_between(html_text, start, end, payload):
+    pat = re.compile(re.escape(start) + r".*?" + re.escape(end), re.DOTALL)
+    new, n = pat.subn(lambda m: start + payload + end, html_text, count=1)
+    return new, n
 
 
 def main():
@@ -49,18 +94,24 @@ def main():
     (HERE / "compiled").mkdir(exist_ok=True)
     (HERE / "compiled" / "scope.compiled.json").write_text(json.dumps(compiled, indent=2, ensure_ascii=False), encoding="utf-8")
 
-    # inline-inject into SCOPE.html
-    data_js = "window.SCOPE = " + json.dumps(compiled, ensure_ascii=False) + ";"
+    # inline-inject into SCOPE.html: (1) the data blob for the JS detail-panel enhancer, AND
+    # (2) the SERVER-RENDERED cards + footer, so the page is never blank without JS.
+    foot_txt = (f'{compiled["_meta"]["what"]} &middot; compiled {t_obs} &middot; {stats["records"]} records '
+                f'&middot; mean render {stats["mean_render"]} &middot; {stats["demotions_total"]} '
+                f'demotions (dead children) &middot; {html.escape(json.dumps(stats["by_bucket"]))}')
     tl = HERE / "SCOPE.html"
     if tl.exists():
-        html = tl.read_text(encoding="utf-8")
+        doc = tl.read_text(encoding="utf-8")
+        data_js = "window.SCOPE = " + json.dumps(compiled, ensure_ascii=False) + ";"
         inline = '<script id="scope-data">' + data_js + '</script>'
-        html2, n = re.subn(r'<script id="scope-data">.*?</script>', lambda m: inline, html, count=1, flags=re.DOTALL)
-        if n:
-            tl.write_text(html2, encoding="utf-8")
-            print("  injected scope data into SCOPE.html")
+        doc, n1 = re.subn(r'<script id="scope-data">.*?</script>', lambda m: inline, doc, count=1, flags=re.DOTALL)
+        doc, n2 = _inject_between(doc, "<!--BODY:START-->", "<!--BODY:END-->", _body_html(recs))
+        doc, n3 = _inject_between(doc, "<!--FOOT:START-->", "<!--FOOT:END-->", foot_txt)
+        if n1 and n2 and n3:
+            tl.write_text(doc, encoding="utf-8")
+            print("  injected scope data + server-rendered body/footer into SCOPE.html")
         else:
-            print("  WARN: SCOPE.html has no <script id=\"scope-data\"> injection point", file=sys.stderr)
+            print(f"  WARN: SCOPE.html injection points missing (data={n1} body={n2} foot={n3})", file=sys.stderr)
     print("=== scope compile ===")
     print(f"  records {stats['records']}  mean render {stats['mean_render']}")
     print(f"  by bucket {stats['by_bucket']}")
