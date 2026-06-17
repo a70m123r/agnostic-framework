@@ -1,0 +1,15 @@
+{
+  "sha256": "4b1a10c4cfe9b05c250c1539c3a35e3d8aa00f7f9735f8250d959100e0661faa",
+  "n_items": 48,
+  "seeds": 12,
+  "E_levels": [
+    0,
+    3
+  ],
+  "D_levels": [
+    4,
+    12
+  ],
+  "tier_preregistered": "high",
+  "note": "Sternberg additive-factors; primary = interaction(encode x depth) on reasoning_tokens; additive(I~0)=separable serial stages"
+}

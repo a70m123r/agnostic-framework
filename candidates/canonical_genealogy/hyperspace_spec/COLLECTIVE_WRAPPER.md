@@ -131,3 +131,59 @@ externalize memory, drown f) that **re-canonizes the kernel** (band→firm→M-f
 dissolving a costly wrapper-membrane into the next atom — but **two floors never dissolve: Brent's span
 (you can't beat the critical path) and the Data Processing Inequality (a handoff can only lose the truth,
 never make it) — which is our camera's honesty law, lifted to the collective.**
+
+---
+
+## The other side of the equation — BUILD (CAPEX, the eons) + MAINTAIN (OPEX, against decay)
+
+*(Pav's completion — the per-use cost above is only the visible tip; underneath are two more terms with
+different time-signatures.)* The full cost-functional has **three terms on three clocks:**
+
+> **Total = USE(now)  +  MAINTAIN(continuous)  +  BUILD(amortized over eons)**
+> = [Σ Workᵢ + Span + C(N)]  +  [standing dissipation to hold the structure against decay]  +  [the resource + compute frozen into the infrastructure]
+
+- **BUILD = Bennett's logical depth** ([Bennett, *Logical Depth and Physical Complexity*](https://web.cs.ucdavis.edu/~doty/papers/LogicalDepthAndPhysicalComplexity.pdf)).
+  Logical depth = the *running time to unfold a structure from its shortest description* — "decompression
+  time," not "compression length." It is **literally the eons of build-cost**, and it has a theorem attached:
+  the **Slow-Growth Law** — *logical depth cannot increase quickly; organized structure (biological,
+  cultural, technological) can only be accumulated over time, never fast-forwarded.* That is why "the cost
+  paid over the eons" is irreducible: depth ≠ description; you cannot shortcut the build. (Note: random AND
+  trivial objects both have *low* depth — only *organized* structure is deep. The infrastructure is the deep
+  thing.)
+- **MAINTAIN = the rent against the second law.** A low-entropy structure (a brain, a firm, a trained model)
+  decays without continuous energy input; maintenance is the standing dissipation that holds it. In biology
+  this is metabolism: the body's maintenance scales *sublinearly* (Kleiber M^¾ — the same economy-of-scale
+  as Bettencourt's β≈0.83 infrastructure), but **the brain scales *linearly*** (fixed energy budget *per
+  neuron*; 2% of human mass, 20% of its energy) — the expensive organ is the one that computes. ([COCO,
+  bioRxiv 2025](https://www.biorxiv.org/content/10.1101/2025.06.18.660368v2.full): the energy cost of
+  non-equilibrium computation.)
+- **USE = what the camera measures** (V4 work, V5 span, C(N) coordination) — the *marginal* present cost.
+
+**The amortization principle, exactly.** Your *"easy = pre-paid"* is this: the **USE cost is low because the
+BUILD cost was paid.** A problem reads as "low-entropy / easy" precisely when its difficulty was **amortized
+into the infrastructure** — the trained weights, the evolved circuits, the institutional routines. In COIN
+terms, the build cost *is* the pre-rendered `measured_bits`; cheap inference is just **replay** of a structure
+whose sharpness was bought, once, slowly. Difficulty is conserved — it was shifted into the deep clock.
+
+**The substrate sets which term dominates — and it can flip.**
+- *Biology:* BUILD ≫ everything — ~hundreds of My of selection vs ~20 W of present metabolism. The eons dwarf
+  the use.
+- *A frontier LLM:* the flip. **Inference (maintain+use) is ~80–90% of lifetime compute, training (build)
+  only ~10–20%** ([Stanford HAI; AI training-vs-inference economics](https://telnyx.com/resources/ai-training-vs-inference)):
+  GPT-4 training ≈ $100M one-time vs ChatGPT inference ≈ $700k/**day**. For a heavily-used model the **OPEX
+  exceeds the CAPEX** — the opposite of biology. (And the 280× inference-cost drop 2022→2024 = the maintenance
+  term falling fast.)
+
+**This closes the kernel-canon loop.** A kernel *crystallizes* when its BUILD cost has been amortized enough
+that its USE cost drops below the coordination cost of re-assembling it from parts (the firm, the model, the
+institution = a frozen amortized structure). It *persists* while MAINTAIN < the value of the USE it enables.
+It *dissolves* when maintenance exceeds that value (decay, obsolescence, a cheaper substrate) — the kernel
+breathes on the **(build-amortization) / (maintenance-rent)** ratio, not just on c/f. And the optimistic city
+(super-linear β≈1.15 output on sublinear β≈0.83 infrastructure) is exactly **a cheap marginal USE riding on a
+heavily-amortized BUILD** — scale pays when the eons subsidize the present.
+
+**The open instrument question this raises:** our cost-camera currently photographs only the USE term (marginal
+reasoning_tokens). Can it be made to read the **amortized** terms — e.g., a *prequential / MDL* read where the
+"easy" present cost is scored against the build that pre-paid it (Bennett depth as the hidden axis behind V4's
+work-slope)? That is the camera pointed *backward in time* — measuring not what a digestion costs now, but what
+was paid to make it cheap.
