@@ -1,7 +1,7 @@
 {
   "_meta": {
     "what": "full-scope latent-camera substrate",
-    "t_obs": "2026-06-17T15:27:08Z",
+    "t_obs": "2026-06-17T15:57:25Z",
     "discipline": "SUBSTRATE + COIN (render<=support); demote-not-kill",
     "sections": [
       [
@@ -27,16 +27,16 @@
     ]
   },
   "stats": {
-    "records": 22,
+    "records": 23,
     "by_bucket": {
-      "corroborated": 9,
+      "corroborated": 10,
       "pending": 2,
       "conceptual": 9,
       "planned": 2,
       "demoted": 0
     },
-    "demotions_total": 6,
-    "mean_render": 0.657
+    "demotions_total": 8,
+    "mean_render": 0.659
   },
   "records": [
     {
@@ -184,6 +184,26 @@
         "McClelland 1979"
       ],
       "render": 0.45,
+      "dead_children": 2
+    },
+    {
+      "id": "v6b",
+      "section": "single",
+      "order": 17,
+      "title": "V6b - compute vs transcription (control)",
+      "claim": "Irrelevant-expression control (E0 / E3dead-text-present-ignored / E3live-must-compute): text-cost +5.5 vs compute-cost +14.5 tok (both p<.001, n=32, gemini-verified, conservative lower bound). CORE (both reviewers): reasoning_tokens are NOT pure literal transcription for the encode factor -- showing the expr DEAD does not induce the cost of EVALUATING it. The worry that dogged V4-V6 is rejected on the encode axis.",
+      "declared": 0.7,
+      "bucket": "corroborated",
+      "provenance": "measure/V6b_RESULTS.md + EXTERNAL_SYNTHESIS_V6b_RESULTS.md",
+      "demotions": [
+        "'~73% compute' is a within-design DESCRIPTIVE split, not a mechanistic constant (codex); E3live-E3dead bundles evaluation + assignment-vs-comment semantics + the instruction",
+        "only PARTIALLY rehabilitates V4's work-slope; says NOTHING about V5's span (needs its own dead-chain control); single model/tier/n=16"
+      ],
+      "refs": [
+        "codex control design",
+        "Sternberg 1969"
+      ],
+      "render": 0.7,
       "dead_children": 2
     },
     {

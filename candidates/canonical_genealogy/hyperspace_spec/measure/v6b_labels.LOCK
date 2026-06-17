@@ -1,0 +1,16 @@
+{
+  "sha256": "3cd4589ee099d155a9a95892b4ec9073209011ec98ead1fc98b02433b98c2080",
+  "n_items": 96,
+  "seeds": 16,
+  "E_levels": [
+    "E0",
+    "E3dead",
+    "E3live"
+  ],
+  "D_levels": [
+    4,
+    12
+  ],
+  "tier_preregistered": "high",
+  "note": "irrelevant-expression control; text-cost=E3dead-E0, compute-cost=E3live-E3dead"
+}
