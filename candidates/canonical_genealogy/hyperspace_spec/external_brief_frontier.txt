@@ -1,0 +1,13 @@
+EXTERNAL PASS -- the frontier plan (2026-06-17)
+
+Read FRONTIER_PLAN.md in this directory: the open-frontier experiments for an honest "latent camera" / agnostic metrology project, designed by a workflow. CONTEXT: we measure the dissolve-residue of targets under a VERIFIED-DISSOLVE gate (answer==ground-truth, or 0 discount). V1 = rho(PRIOR) via OpenAI echo-codelength (davinci-002, exact bits). V2 = rho(EFFORT) via gpt-5.5 reasoning_tokens. The ALEATORIC/EPISTEMIC floor (a random string never dissolves under prior OR effort; structure does) is confirmed on BOTH axes; cross-provider gpt-5.5 and Claude AGREE on which targets dissolve and both floor the random stone.
+
+Answer, terse + skeptical, cite arXiv/sources where relevant, flag over-claims:
+
+(1) PRIORITIZATION: the plan runs the V4 GRADED SINGLE-RUNNER BENCHMARK first (rho(effort) vs ground-truth difficulty, ~20-30 targets, Spearman correlation), BEFORE the multi-runner. Is that the right order, or is something more valuable cheaper? Is Spearman rho(effort, difficulty) on ~25 targets a meaningful test, or is it circular (the model's own effort defining difficulty)?
+
+(2) THE PREDICT-HALF DESIGN (the "sealed conjecture-bubble": a runner PLANTS a forward prediction from a strict prior-cut C, we SEAL it with a t_obs stamp BEFORE revealing the held-out target T, then SCORE via the verified-dissolve/canonicalizer gate; the deciding observable is the RELIABILITY CURVE (declared sharpness s vs realized verified-hit-rate); planted-lie bubbles are the honesty probe). Is it sound, or does it have a fatal flaw -- e.g. the prior-cut C leaking T, the reliability curve being uninformative, or "declared sharpness" being un-elicitable honestly from a model?
+
+(3) MEASUREMENT FLAWS: the plan flags that Claude's output_tokens is a FLAT effort signal (~6 tokens, not reasoning effort) so the cross-provider effort-rank needs Claude's thinking-trace length instead. Is that the right fix? Any OTHER measurement flaw in the four designs (predict-half / measured-coupling / graded-benchmark / canonicalizer-at-scale)?
+
+One-line verdict each on (1),(2),(3).

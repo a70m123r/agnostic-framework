@@ -1,0 +1,9 @@
+﻿I will start by reading `external_brief_frontier.txt` to identify the three questions and then read `FRONTIER_PLAN.md` to find the answers.
+(1) **PRIORITIZATION:** The V4 single-runner spine (GPT-5.5) is the correct first move because the V3 multi-runner "broke on contact" (Claude flat-effort at 6 tokens, Gemini null/0.0s) (`FRONTIER_PLAN.md` §Priority critic). Spearman $\rho$(effort, difficulty) is a meaningful calibration check *only* if targets are exogenous (e.g., AIME/MATH-500 integer-answers); otherwise, it risks circularity where the model merely mirrors the author's prompt complexity (the "2604.10739 risk").
+*Verdict: Correct sequencing to de-risk broken multi-runner plumbing, provided difficulty labels are truly exogenous.*
+
+(2) **PREDICT-HALF:** The "sealed conjecture-bubble" with $t_{obs}$ stamps (`FRONTIER_PLAN.md` §4) is sound for preventing post-hoc fabrication, but v0's "information-blindness" (withheld context) is vulnerable to leakage/memorization ("already-a-stone" control). Self-declared sharpness $s$ is likely uncalibrated fiction; the plan’s admission that it may require logprob or reasoning-token calibration is more realistic than the "elicited sharpness" over-claim.
+*Verdict: Sound bitemporal protocol, but "elicited sharpness" is an over-claim likely to fail the reliability-curve test.*
+
+(3) **MEASUREMENT FLAWS:** Claude's thinking-trace length is a better proxy than the flat `output_tokens=6`, but still an uncalibrated proxy, not a "bits" measurement. Major flaws: (a) the Canonicalizer's embedding-cosine gate is a "known-WEAK instrument" for entailment vs. topicality ($C2$) and likely to fail the REL hard-negative; (b) the Mirror dose-response is "fiddly" and prone to confounds where "back-reaction" is just ordinary V2 digestion of a recovered correct answer.
+*Verdict: Thinking-trace is a necessary patch, but the embedding-gate canonicalizer is the design's structural weak point.*

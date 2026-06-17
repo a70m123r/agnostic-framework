@@ -1,0 +1,15 @@
+{"provider": "gpt-5.5", "target": "g1_add", "difficulty": 1, "kind": "easy", "effort": 6, "seconds": 1.7, "answer": 42, "correct": true, "exhausted": false}
+{"provider": "claude", "target": "g1_add", "difficulty": 1, "kind": "easy", "effort": 6, "seconds": 8.1, "answer": 42, "correct": true, "exhausted": false}
+{"provider": "gemini", "target": "g1_add", "difficulty": 1, "kind": "easy", "effort": null, "seconds": 12.1, "answer": 42, "correct": true, "exhausted": false}
+{"provider": "gpt-5.5", "target": "g2_speed", "difficulty": 2, "kind": "medium", "effort": 21, "seconds": 1.3, "answer": 40, "correct": true, "exhausted": false}
+{"provider": "claude", "target": "g2_speed", "difficulty": 2, "kind": "medium", "effort": 6, "seconds": 9.0, "answer": 40, "correct": true, "exhausted": false}
+{"provider": "gemini", "target": "g2_speed", "difficulty": 2, "kind": "medium", "effort": null, "seconds": 7.2, "answer": 40, "correct": true, "exhausted": false}
+{"provider": "gpt-5.5", "target": "g3_batball", "difficulty": 4, "kind": "hard-trap", "effort": 18, "seconds": 2.6, "answer": 5, "correct": true, "exhausted": false}
+{"provider": "claude", "target": "g3_batball", "difficulty": 4, "kind": "hard-trap", "effort": 6, "seconds": 39.9, "answer": 5, "correct": true, "exhausted": false}
+{"provider": "gemini", "target": "g3_batball", "difficulty": 4, "kind": "hard-trap", "effort": null, "seconds": 8.1, "answer": 5, "correct": true, "exhausted": false}
+{"provider": "gpt-5.5", "target": "d1_seq", "difficulty": 3, "kind": "deep-structured", "effort": 41, "seconds": 1.7, "answer": 42, "correct": true, "exhausted": false}
+{"provider": "claude", "target": "d1_seq", "difficulty": 3, "kind": "deep-structured", "effort": 6, "seconds": 8.9, "answer": 42, "correct": true, "exhausted": false}
+{"provider": "gemini", "target": "d1_seq", "difficulty": 3, "kind": "deep-structured", "effort": null, "seconds": 8.2, "answer": 42, "correct": true, "exhausted": false}
+{"provider": "gpt-5.5", "target": "s1_random", "difficulty": 5, "kind": "random-floor", "effort": null, "seconds": 90.0, "answer": null, "correct": false, "exhausted": true}
+{"provider": "claude", "target": "s1_random", "difficulty": 5, "kind": "random-floor", "effort": 6, "seconds": 7.9, "answer": 79, "correct": null, "exhausted": false}
+{"provider": "gemini", "target": "s1_random", "difficulty": 5, "kind": "random-floor", "effort": null, "seconds": 12.7, "answer": 77, "correct": null, "exhausted": false}
