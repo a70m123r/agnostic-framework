@@ -1,7 +1,7 @@
 {
   "_meta": {
     "what": "full-scope latent-camera substrate",
-    "t_obs": "2026-06-17T18:04:57Z",
+    "t_obs": "2026-06-17T20:29:41Z",
     "discipline": "SUBSTRATE + COIN (render<=support); demote-not-kill",
     "sections": [
       [
@@ -27,16 +27,16 @@
     ]
   },
   "stats": {
-    "records": 25,
+    "records": 26,
     "by_bucket": {
-      "corroborated": 12,
+      "corroborated": 13,
       "pending": 2,
       "conceptual": 9,
       "planned": 2,
       "demoted": 0
     },
-    "demotions_total": 11,
-    "mean_render": 0.659
+    "demotions_total": 13,
+    "mean_render": 0.657
   },
   "records": [
     {
@@ -244,6 +244,26 @@
         "Wei 2022"
       ],
       "render": 0.6,
+      "dead_children": 2
+    },
+    {
+      "id": "v8",
+      "section": "single",
+      "order": 20,
+      "title": "V8 - camouflage rung (adversarial burial)",
+      "claim": "First ADVERSARIAL-burial rung (Pav's expansion: burial as attention-manipulation/content-gravity/fake-news/encryption; the design-workflow audit caught+fixed an execution confound first). PRIMARY value-proximity camouflage (MAX_TIGHT-MAX_WIDE) = NULL (-6.5, p=.45, 100% acc both): the model is ROBUST to value-proximity camouflage -- computes & compares EXACTLY, so a needle beating the runner-up by 1 costs the same as by 40. The dominant cost is FORCED EVALUATION (SUM-LABEL=+170): being unable to surface-SKIP the needle. Find-cost is set by skip-vs-must-evaluate, NOT value-similarity.",
+      "declared": 0.62,
+      "bucket": "corroborated",
+      "provenance": "measure/V8_RESULTS.md + EXTERNAL_SYNTHESIS_V8.md",
+      "demotions": [
+        "KEEP: V8 falsifies the pre-registered VALUE-GAP camouflage prediction (gpt-5.5@high). DEMOTE 'robust to camouflage' -> 'robust to final-VALUE proximity on EXACT arithmetic' (gap knob wrong op for exact-integer; 999>998 no harder than 988>925) -- gemini+codex",
+        "DEMOTE 'forced-evaluation = the real camouflage tax' -> 'removing a skip route exposes the already-known eval cost' (interpretation, not the V8 result); 'no compute tax' -> 'no DETECTED value-gap tax, not zero' (no equivalence bound, n=16, Lakens 2017); content-gravity/attention + global-substrate/no-frame rungs UNTESTED"
+      ],
+      "refs": [
+        "2505.18148",
+        "Lakens 2017"
+      ],
+      "render": 0.62,
       "dead_children": 2
     },
     {

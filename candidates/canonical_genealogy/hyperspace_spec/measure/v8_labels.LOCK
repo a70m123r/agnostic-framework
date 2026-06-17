@@ -1,0 +1,15 @@
+{
+  "sha256": "4c0258ed581a049d2d27300120879ed2e69e62ee5fa5682fd54d07b63648737e",
+  "n_items": 64,
+  "seeds": 16,
+  "conds": [
+    "LABEL",
+    "SUM",
+    "MAX_WIDE",
+    "MAX_TIGHT"
+  ],
+  "M": 6,
+  "L": 4,
+  "tier_preregistered": "high",
+  "note": "camouflage rung; PRIMARY camouflage=MAX_TIGHT-MAX_WIDE (eval fixed, disambiguation varied)"
+}
