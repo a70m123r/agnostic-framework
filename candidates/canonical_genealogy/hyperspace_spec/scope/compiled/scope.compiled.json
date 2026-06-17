@@ -1,7 +1,7 @@
 {
   "_meta": {
     "what": "full-scope latent-camera substrate",
-    "t_obs": "2026-06-17T20:29:41Z",
+    "t_obs": "2026-06-17T20:48:28Z",
     "discipline": "SUBSTRATE + COIN (render<=support); demote-not-kill",
     "sections": [
       [
@@ -27,16 +27,16 @@
     ]
   },
   "stats": {
-    "records": 26,
+    "records": 27,
     "by_bucket": {
-      "corroborated": 13,
+      "corroborated": 14,
       "pending": 2,
       "conceptual": 9,
       "planned": 2,
       "demoted": 0
     },
-    "demotions_total": 13,
-    "mean_render": 0.657
+    "demotions_total": 15,
+    "mean_render": 0.653
   },
   "records": [
     {
@@ -283,6 +283,26 @@
       ],
       "render": 0.55,
       "dead_children": 0
+    },
+    {
+      "id": "v9",
+      "section": "single",
+      "order": 21,
+      "title": "V9 - content-gravity/attention (the resistance tax)",
+      "claim": "Adversarial-burial mech 2: don't HIDE the needle, make a WRONG chain attractive (SALIENT formatting / false INJECT hint 'the answer is X'). NO CAPTURE: 20/20 acc + 0/20 capture in ALL conds -- gpt-5.5@high never follows the lure, it verifies+resists. BUT a false hint costs +274 reasoning tokens (223->512, p<.001) = the cost of RESISTANCE; salient formatting only +10. The adversarial tax is in FIND-COST, not errors. A cheap-to-inject / expensive-to-refute TRAPDOOR -- the 'overthinking-attack' DoS = Pav's two-sided asymmetry, in the ATTACKER's favor. First adversarial mechanism with a large clean effect.",
+      "declared": 0.55,
+      "bucket": "corroborated",
+      "provenance": "measure/V9_RESULTS.md + EXTERNAL_SYNTHESIS_V9.md",
+      "demotions": [
+        "KEEP (narrow): 60/60 correct, 0 captures, false-hint -> large paired token spike that SATURATES the 512 reasoning ceiling (15/20 clipped). DEMOTE '+274 resistance tax' -> 'CLIPPED LOWER BOUND; override cost unmeasured + NOT isolated (need TRUE-hint control vs generic-hint/contradiction/sycophancy)' -- gemini+codex",
+        "DEMOTE 'robust to being fooled' -> 'no capture on a SHORT, EASY, WEAK-lure task' (lure=largest-non-prime, all even/small-factor, trivially rejectable; prime-looking semiprime might capture); 'trapdoor PROVEN' -> 'candidate reasoning-AVAILABILITY asymmetry, OverThink-style (2502.02542), not isolated'; it's a misleading IN-PROMPT hint not prompt-injection. Next=V9b: TRUE_HINT + prime-looking lure + cap>512 + n>=50 + cross-model"
+      ],
+      "refs": [
+        "2502.02542",
+        "2310.13548"
+      ],
+      "render": 0.55,
+      "dead_children": 2
     },
     {
       "id": "floors",

@@ -1,0 +1,14 @@
+{
+  "sha256": "2d6ef9624442d49360878f34003cd76d8ffabd29f196be5ddc7fb8e63206a942",
+  "n_items": 60,
+  "seeds": 20,
+  "conds": [
+    "NEUTRAL",
+    "SALIENT",
+    "INJECT"
+  ],
+  "M": 6,
+  "L": 4,
+  "tier_preregistered": "high",
+  "note": "content-gravity/attention; PRIMARY=capture/error-rate(lure) vs NEUTRAL; selector=unique prime"
+}
