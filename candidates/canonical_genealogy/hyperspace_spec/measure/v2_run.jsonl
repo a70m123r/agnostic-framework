@@ -1,0 +1,15 @@
+{"provider": "gpt-5.5", "target": "g1_add", "difficulty": 1, "kind": "easy", "effort": "low", "reasoning_tokens": 6, "answer": 42, "correct": true, "effort_exhausted": false}
+{"provider": "gpt-5.5", "target": "g1_add", "difficulty": 1, "kind": "easy", "effort": "medium", "reasoning_tokens": 6, "answer": 42, "correct": true, "effort_exhausted": false}
+{"provider": "gpt-5.5", "target": "g1_add", "difficulty": 1, "kind": "easy", "effort": "high", "reasoning_tokens": 10, "answer": 42, "correct": true, "effort_exhausted": false}
+{"provider": "gpt-5.5", "target": "g2_speed", "difficulty": 2, "kind": "medium", "effort": "low", "reasoning_tokens": 16, "answer": 40, "correct": true, "effort_exhausted": false}
+{"provider": "gpt-5.5", "target": "g2_speed", "difficulty": 2, "kind": "medium", "effort": "medium", "reasoning_tokens": 15, "answer": 40, "correct": true, "effort_exhausted": false}
+{"provider": "gpt-5.5", "target": "g2_speed", "difficulty": 2, "kind": "medium", "effort": "high", "reasoning_tokens": 15, "answer": 40, "correct": true, "effort_exhausted": false}
+{"provider": "gpt-5.5", "target": "g3_batball", "difficulty": 4, "kind": "hard-trap", "effort": "low", "reasoning_tokens": 28, "answer": 5, "correct": true, "effort_exhausted": false}
+{"provider": "gpt-5.5", "target": "g3_batball", "difficulty": 4, "kind": "hard-trap", "effort": "medium", "reasoning_tokens": 15, "answer": 5, "correct": true, "effort_exhausted": false}
+{"provider": "gpt-5.5", "target": "g3_batball", "difficulty": 4, "kind": "hard-trap", "effort": "high", "reasoning_tokens": 38, "answer": 5, "correct": true, "effort_exhausted": false}
+{"provider": "gpt-5.5", "target": "d1_seq", "difficulty": 3, "kind": "deep-structured", "effort": "low", "reasoning_tokens": 33, "answer": 42, "correct": true, "effort_exhausted": false}
+{"provider": "gpt-5.5", "target": "d1_seq", "difficulty": 3, "kind": "deep-structured", "effort": "medium", "reasoning_tokens": 50, "answer": 42, "correct": true, "effort_exhausted": false}
+{"provider": "gpt-5.5", "target": "d1_seq", "difficulty": 3, "kind": "deep-structured", "effort": "high", "reasoning_tokens": 38, "answer": 42, "correct": true, "effort_exhausted": false}
+{"provider": "gpt-5.5", "target": "s1_random", "difficulty": 5, "kind": "random-floor", "effort": "low", "reasoning_tokens": 512, "answer": 83, "correct": null, "effort_exhausted": false}
+{"provider": "gpt-5.5", "target": "s1_random", "difficulty": 5, "kind": "random-floor", "effort": "medium", "reasoning_tokens": 512, "answer": 85, "correct": null, "effort_exhausted": false}
+{"provider": "gpt-5.5", "target": "s1_random", "difficulty": 5, "kind": "random-floor", "effort": "high", "reasoning_tokens": 512, "answer": 85, "correct": null, "effort_exhausted": false}
