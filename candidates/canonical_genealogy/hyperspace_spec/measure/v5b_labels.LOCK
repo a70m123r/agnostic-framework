@@ -1,0 +1,16 @@
+{
+  "sha256": "b0c85bda1f2f0bebf8122b7035dbf5b50bfd8f74667b8512d5f7575624a0f13b",
+  "n_items": 96,
+  "seeds": 16,
+  "arms": [
+    "base",
+    "dead",
+    "live"
+  ],
+  "D_levels": [
+    4,
+    12
+  ],
+  "tier_preregistered": "high",
+  "note": "dead-chain control; text=dead-base, compute=live-dead"
+}

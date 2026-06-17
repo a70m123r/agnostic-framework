@@ -1,7 +1,7 @@
 {
   "_meta": {
     "what": "full-scope latent-camera substrate",
-    "t_obs": "2026-06-17T15:57:25Z",
+    "t_obs": "2026-06-17T18:04:57Z",
     "discipline": "SUBSTRATE + COIN (render<=support); demote-not-kill",
     "sections": [
       [
@@ -27,15 +27,15 @@
     ]
   },
   "stats": {
-    "records": 23,
+    "records": 25,
     "by_bucket": {
-      "corroborated": 10,
+      "corroborated": 12,
       "pending": 2,
       "conceptual": 9,
       "planned": 2,
       "demoted": 0
     },
-    "demotions_total": 8,
+    "demotions_total": 11,
     "mean_render": 0.659
   },
   "records": [
@@ -204,6 +204,46 @@
         "Sternberg 1969"
       ],
       "render": 0.7,
+      "dead_children": 2
+    },
+    {
+      "id": "v5b",
+      "section": "single",
+      "order": 18,
+      "title": "V5b - dead-chain: span IS compute",
+      "claim": "Dead-chain control (base/dead/live x D): chain-text-cost ~FLAT (+13-16 regardless of depth) but chain-compute-cost SCALES with depth (+12@D4 -> +63.5@D12, p<.001). Executing the serial chain is real computation scaling with the critical path -> V5's span surcharge is NOT transcription. Robust (live is the SHORTER prompt than dead). WITH V6b: reasoning_tokens respond to required EXECUTION on BOTH the encode AND span axes -- the pure INPUT-text/prompt-copy account rejected across the single-observer octave.",
+      "declared": 0.72,
+      "bucket": "corroborated",
+      "provenance": "measure/V5b_RESULTS.md + EXTERNAL_SYNTHESIS_V5b_V7.md",
+      "demotions": [
+        "'transcription-proof' DEMOTED (codex): V5b rejects INPUT-text transcription but does NOT exclude hidden EXECUTION-TRACE transcription (one latent line per step shows the same depth slope); honest claim = reasoning_tokens scale with required serial WORK not input text; 'compute vs writing-it-down' may be the same act for an autoregressive model"
+      ],
+      "refs": [
+        "2504.01935",
+        "Brent 1974",
+        "Lanham 2023"
+      ],
+      "render": 0.72,
+      "dead_children": 1
+    },
+    {
+      "id": "v7",
+      "section": "single",
+      "order": 19,
+      "title": "V7 - burial gradient (Pav): reading not compute",
+      "claim": "Burial gradient (fixed core + k labelled distractors): burying the needle costs MORE reasoning tokens (k0=48 -> 66) and climbs with k -- but it's a READING/attention tax (inert-k0 climbs +12->+16.5), NOT a compute tax (ops~inert, p=.6; the model IGNORES labelled distractors). reasoning_tokens = compute-on-the-required-path + a reading overhead proportional to total material. Pav's 'the more you bury it, the more compute?' = yes-more-reading (k0->k6), not-more-compute.",
+      "declared": 0.6,
+      "bucket": "corroborated",
+      "provenance": "measure/V7_RESULTS.md + EXTERNAL_SYNTHESIS_V5b_V7.md",
+      "demotions": [
+        "'no compute tax' -> 'no DETECTABLE compute tax' for LABELLED, length-confounded distractors; camouflaged burial untested (easy-mode, 'track only s')",
+        "the VOLUME dose-response is WEAK (codex): inert12-inert6 median +4, p~.45 -- only the k0->k6 jump is solid; 'climbs with how much you bury it' not established k6->k12"
+      ],
+      "refs": [
+        "lost-in-the-middle",
+        "Wei 2022"
+      ],
+      "render": 0.6,
       "dead_children": 2
     },
     {

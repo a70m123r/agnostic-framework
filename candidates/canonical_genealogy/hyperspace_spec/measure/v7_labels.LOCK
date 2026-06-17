@@ -1,0 +1,15 @@
+{
+  "sha256": "94cc4a72b7999dcb885a7f57f52810bf284f68213abe2571e0088d3ddeee1b92",
+  "n_items": 80,
+  "seeds": 16,
+  "conds": [
+    "k0",
+    "inert6",
+    "ops6",
+    "inert12",
+    "ops12"
+  ],
+  "Dcore": 6,
+  "tier_preregistered": "high",
+  "note": "burial gradient; reading=inert(k)-k0, burial-of-computation=ops(k)-inert(k)"
+}
