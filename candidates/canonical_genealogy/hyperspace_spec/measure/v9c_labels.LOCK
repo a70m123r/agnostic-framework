@@ -1,0 +1,13 @@
+{
+  "sha256": "742b9cb26fea25bf3df87a5685739f9a2ddb45951b263b0dd718ddcb77089dcf",
+  "n_items": 120,
+  "seeds": 30,
+  "conds": [
+    "NEUTRAL",
+    "TRUE_POS",
+    "TRUE_NEG",
+    "FALSE_NEG"
+  ],
+  "tier": "xhigh",
+  "note": "V9c negative-hint isolation: FALSE_NEG-TRUE_NEG = pure override (no search-space shortcut)"
+}

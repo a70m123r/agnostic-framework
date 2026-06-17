@@ -1,7 +1,7 @@
 {
   "_meta": {
     "what": "full-scope latent-camera substrate",
-    "t_obs": "2026-06-17T22:02:10Z",
+    "t_obs": "2026-06-17T23:01:16Z",
     "discipline": "SUBSTRATE + COIN (render<=support); demote-not-kill",
     "sections": [
       [
@@ -27,16 +27,16 @@
     ]
   },
   "stats": {
-    "records": 28,
+    "records": 29,
     "by_bucket": {
       "corroborated": 15,
-      "pending": 2,
+      "pending": 3,
       "conceptual": 9,
       "planned": 2,
       "demoted": 0
     },
-    "demotions_total": 20,
-    "mean_render": 0.652
+    "demotions_total": 22,
+    "mean_render": 0.645
   },
   "records": [
     {
@@ -344,6 +344,26 @@
       ],
       "render": 0.62,
       "dead_children": 4
+    },
+    {
+      "id": "v9c",
+      "section": "single",
+      "order": 21.6,
+      "title": "V9c - negative-hint isolation (shortcut removed; override still confounded)",
+      "claim": "V9c (480 calls @ xhigh, 30 seeds): to fix V9b's confound (a positive TRUE hint SHORTCUTS the 6-chain prime search), use NEGATIVE hints ('answer is NOT named X') that force the full search. KEEP: the negative form REMOVES the shortcut -- TRUE_NEG-NEUTRAL=+2.4 (NS, p=.86), TRUE_POS-NEUTRAL=-145 -> V9b's +438 decomposes into a -145 positive shortcut + a true override (both reviewers confirm). The TRAPDOOR survives ~1:100 (+11 input -> +1201 reasoning). A false elimination of the answer is near-unfoolable (119/120) but enormously expensive to refute (+1246, un-clipped). DEMOTED: '+1246 = pure override' does NOT survive.",
+      "declared": 0.45,
+      "bucket": "pending",
+      "provenance": "measure/V9c_RESULTS.md + EXTERNAL_SYNTHESIS_V9c.md",
+      "demotions": [
+        "DEMOTE (gemini UNSOUND / codex overclaims-remain) '+1246 = pure override' -> 'a false-ELIMINATION contradiction tax conflating falsehood + answer-chain SALIENCE (FALSE_NEG names the ANSWER, TRUE_NEG a cheap-discard lure) + 0-SOLUTION PARADOX (eliminating the unique prime forces an impossible state -> the model loops, paradox-panic). generic pure override UNPROVEN'",
+        "DEMOTE 'override BIGGER than V9b pointer (+1246 vs +302)' -> '~4x NUMERICALLY but mechanisms differ (pointer=soft 1-solution contradiction; elimination=0-solution paradox)'; 'unpaid-tax capture' DROPPED (n=1; 40 correct calls also used 512 tok). NEXT=V9d 2-PRIME RELEASE VALVE (gemini: 2 primes, eliminate one; cheap pivot=paradox-panic, agonize=real override) + same-named-chain/verify-all (codex) = the clean isolation"
+      ],
+      "refs": [
+        "2502.02542",
+        "2310.13548"
+      ],
+      "render": 0.45,
+      "dead_children": 2
     },
     {
       "id": "kernel",
