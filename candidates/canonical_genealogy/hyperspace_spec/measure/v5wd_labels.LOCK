@@ -1,0 +1,17 @@
+{
+  "sha256": "3a08d9180ea2446375f8225383daec88829c0d6492994fa3711789e49f831b55",
+  "n_items": 32,
+  "seeds": 8,
+  "cells": [
+    [
+      4,
+      4
+    ],
+    [
+      2,
+      6
+    ]
+  ],
+  "tier_preregistered": "high",
+  "note": "matched DEEP/WIDE pairs; per-pair words/lines/vars/work/digits equal, only span differs; primary = paired median(tokens DEEP-WIDE)"
+}

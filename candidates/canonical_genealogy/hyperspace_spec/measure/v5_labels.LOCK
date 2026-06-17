@@ -1,0 +1,18 @@
+{
+  "sha256": "92056a366e6b077bb03ca5c7b96ad633684e81a6232ac24ef6b4c40ad87d9554",
+  "n_items": 72,
+  "seeds": 12,
+  "which": "full",
+  "W_levels": [
+    14,
+    29
+  ],
+  "widths": [
+    1,
+    3,
+    5
+  ],
+  "tier_preregistered": "high",
+  "primary_estimand": "partial-Spearman(reasoning_tokens, span | work_ops, display_lines, ans_digits, prompt_words) on solved items",
+  "note": "WORK held fixed (op-count matched deep/wide); SPAN varies; binds full stimulus+tier"
+}
