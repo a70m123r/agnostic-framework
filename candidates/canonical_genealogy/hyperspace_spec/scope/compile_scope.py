@@ -18,6 +18,8 @@ COLOR = {"corroborated": "#3fb950", "pending": "#d29922", "conceptual": "#58a6ff
          "planned": "#8b62d9", "demoted": "#6e7681"}
 SECTIONS = [
     ("instrument", "The Instrument"),
+    ("spectrum", "The Wrapper Spectrum - the cost of every missing frame"),
+    ("stack", "The Model Cost Stack - the BUILD iceberg"),
     ("single", "Octave I - Single Observer (work + span)"),
     ("collective", "Octave II - Collective (+ coordination)"),
     ("clocks", "The Three Clocks (build + maintain + use)"),

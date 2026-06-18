@@ -1,12 +1,20 @@
 {
   "_meta": {
     "what": "full-scope latent-camera substrate",
-    "t_obs": "2026-06-18T00:32:52Z",
+    "t_obs": "2026-06-18T21:40:27Z",
     "discipline": "SUBSTRATE + COIN (render<=support); demote-not-kill",
     "sections": [
       [
         "instrument",
         "The Instrument"
+      ],
+      [
+        "spectrum",
+        "The Wrapper Spectrum - the cost of every missing frame"
+      ],
+      [
+        "stack",
+        "The Model Cost Stack - the BUILD iceberg"
       ],
       [
         "single",
@@ -27,16 +35,16 @@
     ]
   },
   "stats": {
-    "records": 30,
+    "records": 36,
     "by_bucket": {
       "corroborated": 16,
       "pending": 3,
-      "conceptual": 9,
-      "planned": 2,
+      "conceptual": 13,
+      "planned": 4,
       "demoted": 0
     },
-    "demotions_total": 24,
-    "mean_render": 0.642
+    "demotions_total": 30,
+    "mean_render": 0.616
   },
   "records": [
     {
@@ -70,6 +78,77 @@
       ],
       "render": 0.55,
       "dead_children": 1
+    },
+    {
+      "id": "wrapper-spectrum",
+      "section": "spectrum",
+      "order": 5,
+      "title": "The Wrapper Spectrum (the organizing map)",
+      "claim": "The organizing 2-D map for the no-frame / adversarial-burial ladder. A frame is amortized (pre-paid) structure -- a wrapper that packages the task once, up front, so per-use cost is cheap (replay). Remove or degrade a wrapper and the camera reads the cost of the model RE-PAYING it: the cost of the missing frame is not one number but a spectrum indexed by two axes -- WHICH wrapper-service is removed x HOW it is degraded. The whole burial ladder (V4 floor / V7 / V8 / V9 family / V10) is one slice through this space; the spectrum is the instrument's coordinate system, dimensionalizing the COIN + amortization principle so the white space (un-run experiments) is visible.",
+      "declared": 0.55,
+      "bucket": "conceptual",
+      "provenance": "candidates/canonical_genealogy/hyperspace_spec/WRAPPER_SPECTRUM.md",
+      "demotions": [
+        "This is a MAP/framework, not a measured result: capped conceptual. The individual dots carry their own buckets (per the doc's 'Status of the dots': corroborated V4 floor/V7/V8/V9b/V9d; pending V9c; in-flight V10; proposed white-space induction-cost / task-identity-absence / meaning-knowledge column)."
+      ],
+      "refs": [
+        "lost-in-the-middle",
+        "2502.02542",
+        "Bennett logical depth"
+      ],
+      "render": 0.55,
+      "dead_children": 1
+    },
+    {
+      "id": "wrapper-axes",
+      "section": "spectrum",
+      "order": 6,
+      "title": "The two axes + the white space (service x mode)",
+      "claim": "Axis 1 = wrapper SERVICES surface->deep: FORMAT, LOCUS/INDEX, SEGMENTATION/UNITS, SELECTION RULE, TASK IDENTITY, MEANING/KNOWLEDGE, SUBSTRATE STRUCTURE (a descent through Pav's observer-global-kernel frames: space -> knowledge -> semantics -> raw environment). Axis 2 = removal MODES: INTACT(floor)/OBSCURED/CORRUPTED/DETACHED/ABSENT/LATENT (INTACT->OBSCURED->DETACHED->ABSENT is a dissolution gradient; CORRUPTED gives wrong help, LATENT implicit help). Re-reading the findings: obscuring a still-usable wrapper is cheap/free (V7 reading tax; V8 null); CORRUPTING is where the big costs live (V9-V9d +300..+1200 override tokens); DETACHING/dissolving the locus (V10) is the open question; LATENT (induction) is replay-vs-decompression in pure form. What we have photographed clusters in two rows (LOCUS, SELECTION RULE) x four modes -- a real but narrow corner; the deep columns (MEANING/KNOWLEDGE, TASK-IDENTITY absence) and the LATENT mode are the exposed white space = the experiment menu.",
+      "declared": 0.5,
+      "bucket": "conceptual",
+      "provenance": "candidates/canonical_genealogy/hyperspace_spec/WRAPPER_SPECTRUM.md",
+      "demotions": [
+        "Conceptual coordinate system, not a measured grid: capped conceptual. White-space cells (FORMAT x ABSENT, SEGMENTATION x CORRUPTED, TASK-IDENTITY x ABSENT, the whole MEANING/KNOWLEDGE column, the LATENT row beyond the proposed induction-cost sibling) are UN-RUN proposals, not results -- the map names them but the COIN forbids rendering them as photographed."
+      ],
+      "refs": [
+        "lost-in-the-middle",
+        "2502.02542",
+        "Wei 2022"
+      ],
+      "render": 0.5,
+      "dead_children": 1
+    },
+    {
+      "id": "cost-stack",
+      "section": "stack",
+      "order": 7,
+      "title": "The Model Cost Stack (17-layer BUILD iceberg)",
+      "claim": "The wrapper spectrum pointed at the MODEL: the reasoning_tokens the camera reads are the TIP (L1, USE) of a 17-layer amortized-BUILD iceberg descending to the Big Bang (L17). A measurable crust (L1-L7: inference compute, node draw, facility/PUE, grid carbon, weights, hardware-vs-Landauer gap, training compute) thins through a PARTIAL mid-body (L8-L12: failed runs, RLHF/human-supervision now the dominant cost, corpus+distillation, algorithms, fab) to pure narration at the cosmic floor (L13-L17: civilization, evolved brain, Landauer floor, nucleosynthesis, Big Bang). Cheap USE is cheap BECAUSE all of it was paid once (amortization = COIN replay = Bennett logical depth). The COIN law throughout: read a number only where a layer honestly mints one; elsewhere name the layer, mint no bit. An organizing FRAMEWORK with an externally-grounded measurable crust but a conceptual whole-stack claim.",
+      "declared": 0.55,
+      "bucket": "conceptual",
+      "provenance": "candidates/canonical_genealogy/hyperspace_spec/MODEL_COST_STACK.md",
+      "demotions": [
+        "The 'all the way down to the Big Bang' narration is honest AS NARRATION only; L13-L17 are named-never-numbered (COIN bites hardest) -- minting a per-inference bit for civilization/brain/supernova/Big Bang is forbidden",
+        "L9 human-supervision is the single biggest 2026 correction Pav's original list didn't name (data-labor out-costs compute up to 28x) but it is aggregate-$ only -- a huge number at the BUILD scale, ZERO at the USE scale (not attributable to one inference)"
+      ],
+      "refs": [
+        "DeepSeek V3 training: 2.788M H800-hr = $5.576M",
+        "frontier training 1e26-1e27 FLOP / $200-500M",
+        "algo efficiency-doubling ~7.6-8 mo (2403.05812)",
+        "kT*ln2 = 2.8e-21 J/bit @300K",
+        "data-labeling surged 88x vs compute 1.3x (2023-24), labor exceeds compute up to 28x",
+        "Llama-3.1 post-train >$50M / ~200 people",
+        "arXiv 2601.22076 (node-J/token)",
+        "arXiv 2304.03271 (datacenter water)",
+        "arXiv 2312.08595 (CMOS Landauers/op)",
+        "Bennett logical depth",
+        "PNAS 2021 (cortex 0.1W compute vs 3.5W communication)",
+        "TSMC 2nm ~$30k/wafer; high-NA EUV ~$380M",
+        "arXiv 2601.04728 / 2403.04045 (resource-bounded depth surrogates)"
+      ],
+      "render": 0.55,
+      "dead_children": 2
     },
     {
       "id": "v1",
@@ -404,6 +483,25 @@
       "dead_children": 0
     },
     {
+      "id": "v10-framestrip",
+      "section": "single",
+      "order": 22,
+      "title": "V10 frame-strip (LOCUS detach/absent rung)",
+      "claim": "Frame-dissolution gradient rung for the wrapper spectrum's LOCUS x {DETACHED, ABSENT} cell. Every prior rung handed the model a pre-digested frame supplying the INDEX, SEGMENTATION, and GOAL; V10 dissolves that frame in steps (F3_FRAMED contiguous indexed block -> FP_POINTED scattered-with-pointer -> F2_DEINDEXED de-pointered log -> F1_S/M/L no-header scattered into a raw prose+filler substrate of growing size ~1x/2.5x/5x, instruction moved to a trailing line) while splicing the 6 task-chains (one prime needle + 5 non-prime distractors) BYTE-IDENTICAL across conditions, so arms differ only in the wrapper, not the substrate. It reads, in reasoning_tokens, the cost of the model RE-SUPPLYING the missing wrapper -- ORIENTING/locating structure in raw substrate. Headline delta D_frame=e(F1_S)-e(F2_DEINDEXED) is length-matched. The size axis (F1_M-F1_S, F1_L-F1_M) is the global-substrate search-curve signature. DECISIVE FALSIFIER: compute-free F0 arms (F0_DEINDEXED, F0_DISSOLVED) give every line's final inline (=> V, zero chain-compute, length matched); if D_frame_NOCOMPUTE=e(F0_DISSOLVED)-e(F0_DEINDEXED) survives WITHOUT compute the cost is genuinely ORIENTING, if it vanishes the rung was just 'harder-to-compute-once-buried' and is a NULL. gpt-5.5 @ xhigh, synthetic authorized data. STATUS: harness built, selftest 8/8 conditions pass (byte-identical needle, one prime line per arm, length-drift check), labels LOCKED via sha256 digest -- NOT RUN (OpenAI quota exhausted; no V10 results file exists); cross-model cheap-spectrum re-run planned via OpenRouter, cost-estimate-before-run discipline.",
+      "declared": 0.4,
+      "bucket": "planned",
+      "provenance": "candidates/canonical_genealogy/hyperspace_spec/measure/v10_framestrip.py (harness, built+selftest+locked, NOT run); imports v9b_resistance.py; lock artifacts measure/v10fs_labels.jsonl + measure/v10fs_labels.LOCK",
+      "demotions": [],
+      "refs": [
+        "3-design adversarial design workflow (winning skeleton Design 1 + grafts: size curve, anti-V7 flank, byte-identical splice)",
+        "NIAH (needle-in-a-haystack)",
+        "lost-in-the-middle",
+        "V7 reading-tax rung (prior single-rung result)"
+      ],
+      "render": 0.4,
+      "dead_children": 0
+    },
+    {
       "id": "invert",
       "section": "collective",
       "order": 23,
@@ -415,6 +513,24 @@
       "demotions": [],
       "refs": [],
       "render": 0.55,
+      "dead_children": 0
+    },
+    {
+      "id": "v11-deamortize",
+      "section": "single",
+      "order": 23,
+      "title": "V11 de-amortize (MEANING/KNOWLEDGE rung)",
+      "claim": "Deepest column of the wrapper spectrum and the first rung to touch the BUILD clock: it reads the cost of RE-PAYING a selection concept the frame used to supply pre-paid (amortized from training). Per seed the needle is BOTH the unique prime AND the unique line whose zero-padded 3-digit sum equals a target S, so 'prime' (known) and 'digit-sum==S' (novel) pick the IDENTICAL singleton and the answer integer is the same in every arm -- ONLY the selection concept's amortization moves (LOCUS/SEGMENTATION/FORMAT/TASK-IDENTITY held pristine as a clean contiguous 6-line framed block). Arms: NAMED_BARE (prime fully amortized), NAMED_DEF (+ length-matched definition of the KNOWN concept), RENAMED_PRIME (same primality predicate under nonce name FLONK -- de-amortize the NAME only), NOVEL_RULE (made-up predicate ZILP = digit-sum==S, no pre-paid concept, must be held+applied in working memory). Primary contrasts (paired by seed, correct calls, @ xhigh): (1) HEADLINE e(NOVEL_RULE)-e(NAMED_DEF) = cost of an un-amortized concept; (2) NAME-only e(RENAMED_PRIME)-e(NAMED_DEF); (3) DEFINITION-presence e(NAMED_DEF)-e(NAMED_BARE) ~ reading tax. FALSIFIER: compute-free verdict-table arms F0_NAMED_DEF and F0_NOVEL_RULE (finals + PASS/fail given inline, differ only in the now-vestigial definition word, length-matched); if e(F0_NOVEL_RULE)-e(F0_NAMED_DEF) VANISHES while headline (1)>0, the delta is genuine concept-APPLICATION de-amortization (the missing MEANING wrapper); if it SURVIVES the headline was definition-READING confound and demotes. gpt-5.5 @ xhigh, synthetic authorized data. STATUS: harness built, selftest 12/12 checks pass (isomorphism prime==digit-sum singleton, byte-identical needle across compute arms, one PASS line per F0 arm, def-block word-drift <=3), labels LOCKED via sha256 digest -- NOT RUN (OpenAI quota exhausted; no V11 results file exists); cross-model cheap-spectrum re-run planned via OpenRouter, cost-estimate-before-run discipline.",
+      "declared": 0.4,
+      "bucket": "planned",
+      "provenance": "candidates/canonical_genealogy/hyperspace_spec/measure/v11_deamortize.py (harness, built+selftest+locked, NOT run); imports v9b_resistance.py + v10_framestrip._line0; lock artifacts measure/v11_labels.jsonl + measure/v11_labels.LOCK",
+      "demotions": [],
+      "refs": [
+        "white-space design workflow (build-first winner Cell A)",
+        "OverThink (arXiv 2502.02542) -- reasoning-effort manipulation",
+        "the amortization principle"
+      ],
+      "render": 0.4,
       "dead_children": 0
     },
     {
@@ -509,6 +625,30 @@
       "refs": [],
       "render": 0.4,
       "dead_children": 0
+    },
+    {
+      "id": "backward-instr",
+      "section": "clocks",
+      "order": 34.5,
+      "title": "Backward-camera instrumentation (cost-in-Landauers + EDL surrogate + amortization ratio)",
+      "claim": "The concrete build for the planned 'backward' camera (extends the clocks BUILD term): per (model x prompt) the cross-model run emits a row (model, reasoning_tokens, $/answer, cost-in-Landauers, EDL-replay-fraction, anchored-to-public-BUILD-$). (1) USE tip fully instrumented: reasoning_tokens + $ -> J/tok x PUE x gCO2 normalized to cost-in-Landauers (real J / kT*ln2), putting all models on one axis above the shared L15 zero-point. (2) Back-projection: the tip height doesn't read the iceberg -- the cross-model SPREAD does, via a prequential-MDL / excess-description-length (EDL) surrogate (fully computable from held-out competence) scoring how much of each cheap USE is REPLAY of pre-paid structure vs re-derivation at inference. This EDL read is the honest COMPUTABLE surrogate for the UNCOMPUTABLE Bennett depth -- never claim to have measured true depth. (3) Anchor the surrogate to L7's published BUILD-$ and the train-inference crossover (1 train ~ 1e12 inferences) to state a real amortization ratio. (4) Honest stop: read L1-L7 as numbers, back-project L8-L10 as flagged-undercount + EDL surrogate, refuse to recover annotator-hours/evolutionary-bits/stellar-joules from the token stream. Designed and grounded in real numbers but NOT YET RUN (cross-model harness fold pending; cheap-spectrum plan: DeepSeek V4 Flash / Gemini Flash-Lite / Qwen3.5 / gpt-5.5 via OpenRouter, with cost-estimate-before-run discipline).",
+      "declared": 0.5,
+      "bucket": "conceptual",
+      "provenance": "candidates/canonical_genealogy/hyperspace_spec/MODEL_COST_STACK.md",
+      "demotions": [
+        "Relates to / concretizes the existing 'backward' (order 34, planned) record: that handle is now given a specific instrumentation design (cost-in-Landauers + EDL + amortization ratio). Still NOT run, so the per-run row remains a DESIGN, not a result -- buckets conceptual not corroborated; the cross-model run is the instrument that would graduate it",
+        "COIN guard carried forward: the EDL/prequential read is explicitly the resource-bounded surrogate (2403.04045), NOT a measurement of true (uncomputable) Bennett depth (2601.04728); the back-projection rests on the cross-model SPREAD, not the absolute tip height"
+      ],
+      "refs": [
+        "arXiv 2601.04728 (prequential-MDL/EDL surrogate, computable; also the uncomputable-depth cite)",
+        "arXiv 2403.04045 (resource-bounded depth surrogate)",
+        "kT*ln2 = 2.8e-21 J/bit @300K (cost-in-Landauers denominator)",
+        "DeepSeek V3 published $5.576M vs frontier $200-500M (L7 anchor)",
+        "train-inference crossover: 1 train ~ 1e12 inferences",
+        "DeepSeek V4 Flash $0.14/$0.28 Mtok (cheap-spectrum plan via OpenRouter)"
+      ],
+      "render": 0.5,
+      "dead_children": 2
     },
     {
       "id": "rerun",

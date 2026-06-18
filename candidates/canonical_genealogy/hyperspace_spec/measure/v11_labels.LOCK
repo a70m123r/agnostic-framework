@@ -1,0 +1,15 @@
+{
+  "sha256": "b790f43a813ec9c40b7ae62bd3df47cfded8bc684acab05444626bd02e42f75e",
+  "n_items": 168,
+  "seeds": 28,
+  "conds": [
+    "NAMED_BARE",
+    "NAMED_DEF",
+    "RENAMED_PRIME",
+    "NOVEL_RULE",
+    "F0_NAMED_DEF",
+    "F0_NOVEL_RULE"
+  ],
+  "tier": "xhigh",
+  "note": "V11 de-amortization; headline e(NOVEL_RULE)-e(NAMED_DEF); falsifier e(F0_NOVEL)-e(F0_NAMED) (compute-free)"
+}

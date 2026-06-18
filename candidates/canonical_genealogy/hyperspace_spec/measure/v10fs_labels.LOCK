@@ -1,0 +1,22 @@
+{
+  "sha256": "9fedb5d8e3d481de9a10f8ac2f6f7488b16ad1fa94fda3bd2b08ab2cd4be6912",
+  "n_items": 192,
+  "seeds": 24,
+  "conds": [
+    "F3_FRAMED",
+    "FP_POINTED",
+    "F2_DEINDEXED",
+    "F1_S",
+    "F1_M",
+    "F1_L",
+    "F0_DEINDEXED",
+    "F0_DISSOLVED"
+  ],
+  "tier": "xhigh",
+  "substrate_lines": {
+    "S": 24,
+    "M": 60,
+    "L": 120
+  },
+  "note": "V10 frame-dissolution gradient; headline D_frame=e(F1_S)-e(F2) length-matched; falsifier F0_DISSOLVED-F0_DEINDEXED (compute-free)"
+}
