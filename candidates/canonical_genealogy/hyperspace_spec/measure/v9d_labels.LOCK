@@ -1,0 +1,13 @@
+{
+  "sha256": "9bf0947937ae3a84f329c0294da93f86607e69f15ea2a4d240356361e4d028a4",
+  "n_items": 120,
+  "seeds": 30,
+  "conds": [
+    "NEUTRAL_1P",
+    "NEUTRAL_2P",
+    "FALSE_NEG_1P",
+    "FALSE_NEG_2P"
+  ],
+  "tier": "xhigh",
+  "note": "V9d release valve: paradox(1P) vs override+escape(2P); same false elimination of B (largest prime)"
+}

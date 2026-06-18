@@ -1,7 +1,7 @@
 {
   "_meta": {
     "what": "full-scope latent-camera substrate",
-    "t_obs": "2026-06-17T23:01:16Z",
+    "t_obs": "2026-06-18T00:32:52Z",
     "discipline": "SUBSTRATE + COIN (render<=support); demote-not-kill",
     "sections": [
       [
@@ -27,16 +27,16 @@
     ]
   },
   "stats": {
-    "records": 29,
+    "records": 30,
     "by_bucket": {
-      "corroborated": 15,
+      "corroborated": 16,
       "pending": 3,
       "conceptual": 9,
       "planned": 2,
       "demoted": 0
     },
-    "demotions_total": 22,
-    "mean_render": 0.645
+    "demotions_total": 24,
+    "mean_render": 0.642
   },
   "records": [
     {
@@ -363,6 +363,26 @@
         "2310.13548"
       ],
       "render": 0.45,
+      "dead_children": 2
+    },
+    {
+      "id": "v9d",
+      "section": "single",
+      "order": 21.7,
+      "title": "V9d - 2-prime release valve (override survives; escape enables capture)",
+      "claim": "V9d (480 calls @ xhigh, 30 seeds): tests gemini's V9c 'paradox-panic' hypothesis. Matched 1P/2P panes differ only in the 6th chain (a non-prime vs a 2nd prime A<B = a valid ESCAPE); FALSE_NEG ('NOT named B') falsely eliminates the largest prime. KEEP (both reviewers): the OVERRIDE SURVIVES the escape -- FALSE_NEG_2P-NEUTRAL_2P=+1093 (p<1e-7) even with an escape prime available -> V9c's cost is NOT a 0-solution-only artifact. An ESCAPE ENABLES capture: 9.3% take the valve (smaller prime) vs 0/112 NEUTRAL (Fisher p=6.5e-4) = genuine hint-obedience; without an escape the model resists 100% (incl. the paradox case, paying +1620). The lie lands only when there's somewhere cheap to land.",
+      "declared": 0.55,
+      "bucket": "corroborated",
+      "provenance": "measure/V9d_RESULTS.md + EXTERNAL_SYNTHESIS_V9d.md",
+      "demotions": [
+        "DEMOTE (codex+gemini) 'gemini paradox hypothesis LARGELY REFUTED' -> 'only the 0-solution-ONLY explanation is refuted; the paradox component (+373/+539, CI[-56,+999], p=.25) is an UNDERPOWERED ~25% inflation, not zero'",
+        "DROP 'capture = the unpaid tax (n=10)' -> base-rate illusion: 36/98 CORRECT calls also used ~512 tok (the modal bucket), not capture-predictive. SALIENCE still active (FALSE_NEG names the answer B) -> +1093 = a false-elimination-of-the-NAMED-answer tax, not generic; infra failures unbiased (temporal, seeds 27-29). NEXT=V9e VERIFY_ALL same-named-chain (TRUE_POS_B vs FALSE_NEG_B on trace-correct) = the convergent endpoint isolating pure falsehood"
+      ],
+      "refs": [
+        "2502.02542",
+        "2310.13548"
+      ],
+      "render": 0.55,
       "dead_children": 2
     },
     {
