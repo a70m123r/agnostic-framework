@@ -38,11 +38,12 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
-from v9b_resistance import _chain, _is_prime, _line, solve, _last_int, paired, MOD
+from v9b_resistance import _chain, _is_prime, _line, _last_int, paired, MOD
 from v10_framestrip import _line0
+from providers import solve, estimate_table, MODELS, CHEAP3
 
-KEY = os.environ.get("OPENAI_API_KEY", "")
-TIER = "xhigh"
+TIER = "high"            # OpenRouter cheap models cap reasoning at 'high'
+MODEL = "deepseek"       # set via --model {deepseek|qwen|gemini|gpt5}
 TASK_NAMES = ["alpha", "bravo", "cosmo", "delta", "echo", "foxy", "gamma", "hotel", "indi", "juno"]
 CONDS = ["NAMED_BARE", "NAMED_DEF", "RENAMED_PRIME", "NOVEL_RULE", "F0_NAMED_DEF", "F0_NOVEL_RULE"]
 
@@ -192,7 +193,7 @@ def run(seeds, repeats, workers):
         sys.exit("LOCK MISMATCH")
     use = [it for it in items if it["seed"] < seeds]
     jobs = [(it, rep) for it in use for rep in range(repeats)]
-    print(f"=== V11 de-amortize: {len(use)} items x {repeats} reps = {len(jobs)} calls @ '{TIER}' ({workers} workers) ===")
+    print(f"=== V11 de-amortize: {len(use)} items x {repeats} reps = {len(jobs)} calls on '{MODEL}' ({workers} workers) ===")
     base = lambda it: {k: it[k] for k in ("item_id", "cond", "seed", "compute_free", "prompt_words", "truth")}
 
     def work(job):
@@ -200,12 +201,12 @@ def run(seeds, repeats, workers):
         err = None
         for attempt in range(3):
             try:
-                r = solve(it["prompt"], TIER); got = _last_int(r["content"])
-                return {**base(it), "tier": TIER, "rep": rep, "got": got,
+                r = solve(it["prompt"], model=MODEL); got = _last_int(r["content"])
+                return {**base(it), "model": MODEL, "rep": rep, "got": got,
                         "correct": (got == it["truth"]), "exhausted": False, **r}
             except Exception as e:
                 err = e; time.sleep(1.5 * (attempt + 1))
-        return {**base(it), "tier": TIER, "rep": rep, "got": None, "correct": False, "exhausted": True,
+        return {**base(it), "model": MODEL, "rep": rep, "got": None, "correct": False, "exhausted": True,
                 "content": "", "finish": f"ERR:{type(err).__name__}", "reasoning_tokens": None,
                 "completion_tokens": None, "prompt_tokens": None, "seconds": None}
 
@@ -216,7 +217,7 @@ def run(seeds, repeats, workers):
             stream.append(f.result())
             if i % 40 == 0 or i == len(jobs):
                 print(f"   ...{i}/{len(jobs)} done ({time.time()-t0:.0f}s)")
-    (HERE / "v11_run.jsonl").write_text("\n".join(json.dumps(s, ensure_ascii=False) for s in stream) + "\n", encoding="utf-8")
+    (HERE / f"v11_run.{MODEL}.jsonl").write_text("\n".join(json.dumps(s, ensure_ascii=False) for s in stream) + "\n", encoding="utf-8")
     analyze(stream, seeds, repeats)
 
 
@@ -251,7 +252,7 @@ def analyze(stream, seeds, repeats):
     delta("F0_NOVEL_RULE", "F0_NAMED_DEF", "vanishes (CI~0) => headline was concept-APPLICATION not def-reading")
     print("\n  VERDICT logic: (1)>0 AND falsifier~0 AND gradient NAMED<=RENAMED<NOVEL => the camera reads a real "
           "MEANING-wrapper de-amortization (the cost of NOT having the concept pre-paid). Nulls demote per kill-criteria.")
-    print(f"  wrote v11_run.jsonl ({len(stream)} records)")
+    print(f"  wrote v11_run.{MODEL}.jsonl ({len(stream)} records)")
 
 
 if __name__ == "__main__":
@@ -260,13 +261,20 @@ if __name__ == "__main__":
     ap.add_argument("--run", action="store_true"); ap.add_argument("--reanalyze", action="store_true")
     ap.add_argument("--seeds", type=int, default=28); ap.add_argument("--repeats", type=int, default=4)
     ap.add_argument("--workers", type=int, default=6)
+    ap.add_argument("--model", default="deepseek", choices=list(MODELS))
+    ap.add_argument("--estimate", action="store_true")
     a = ap.parse_args()
+    MODEL = a.model
     if a.selftest: selftest(a.seeds)
     elif a.lock: write_lock(a.seeds)
+    elif a.estimate:
+        prompts = [it["prompt"] for it in build_grid(a.seeds)]
+        estimate_table(prompts, a.repeats)
     elif a.run:
-        if not KEY: sys.exit("OPENAI_API_KEY not set")
+        from providers import _key
+        if not _key(): sys.exit("OPENROUTER_API_KEY not set (and no .openrouter_key file)")
         run(a.seeds, a.repeats, a.workers)
     elif a.reanalyze:
-        stream = [json.loads(l) for l in (HERE / "v11_run.jsonl").read_text(encoding="utf-8").splitlines() if l.strip()]
+        stream = [json.loads(l) for l in (HERE / f"v11_run.{MODEL}.jsonl").read_text(encoding="utf-8").splitlines() if l.strip()]
         analyze(stream, a.seeds, a.repeats)
-    else: print("use --selftest --seeds N | --lock --seeds N | --run --seeds N --repeats R | --reanalyze")
+    else: print("use --selftest --seeds N | --lock --seeds N | --estimate --seeds N | --run --model M --seeds N | --reanalyze --model M")

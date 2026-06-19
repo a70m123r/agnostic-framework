@@ -1,7 +1,7 @@
 {
   "_meta": {
     "what": "full-scope latent-camera substrate",
-    "t_obs": "2026-06-18T21:40:27Z",
+    "t_obs": "2026-06-19T01:02:35Z",
     "discipline": "SUBSTRATE + COIN (render<=support); demote-not-kill",
     "sections": [
       [
@@ -38,12 +38,12 @@
     "records": 36,
     "by_bucket": {
       "corroborated": 16,
-      "pending": 3,
+      "pending": 4,
       "conceptual": 13,
-      "planned": 4,
-      "demoted": 0
+      "planned": 2,
+      "demoted": 1
     },
-    "demotions_total": 30,
+    "demotions_total": 33,
     "mean_render": 0.616
   },
   "records": [
@@ -486,20 +486,23 @@
       "id": "v10-framestrip",
       "section": "single",
       "order": 22,
-      "title": "V10 frame-strip (LOCUS detach/absent rung)",
-      "claim": "Frame-dissolution gradient rung for the wrapper spectrum's LOCUS x {DETACHED, ABSENT} cell. Every prior rung handed the model a pre-digested frame supplying the INDEX, SEGMENTATION, and GOAL; V10 dissolves that frame in steps (F3_FRAMED contiguous indexed block -> FP_POINTED scattered-with-pointer -> F2_DEINDEXED de-pointered log -> F1_S/M/L no-header scattered into a raw prose+filler substrate of growing size ~1x/2.5x/5x, instruction moved to a trailing line) while splicing the 6 task-chains (one prime needle + 5 non-prime distractors) BYTE-IDENTICAL across conditions, so arms differ only in the wrapper, not the substrate. It reads, in reasoning_tokens, the cost of the model RE-SUPPLYING the missing wrapper -- ORIENTING/locating structure in raw substrate. Headline delta D_frame=e(F1_S)-e(F2_DEINDEXED) is length-matched. The size axis (F1_M-F1_S, F1_L-F1_M) is the global-substrate search-curve signature. DECISIVE FALSIFIER: compute-free F0 arms (F0_DEINDEXED, F0_DISSOLVED) give every line's final inline (=> V, zero chain-compute, length matched); if D_frame_NOCOMPUTE=e(F0_DISSOLVED)-e(F0_DEINDEXED) survives WITHOUT compute the cost is genuinely ORIENTING, if it vanishes the rung was just 'harder-to-compute-once-buried' and is a NULL. gpt-5.5 @ xhigh, synthetic authorized data. STATUS: harness built, selftest 8/8 conditions pass (byte-identical needle, one prime line per arm, length-drift check), labels LOCKED via sha256 digest -- NOT RUN (OpenAI quota exhausted; no V10 results file exists); cross-model cheap-spectrum re-run planned via OpenRouter, cost-estimate-before-run discipline.",
-      "declared": 0.4,
-      "bucket": "planned",
+      "title": "V10 frame-strip (LOCUS dissolve) - cross-model: a real compute-free frame-cost, model-dependent",
+      "claim": "V10 run across 3 cheap models (deepseek-v4-flash/qwen3-thinking/gemini-2.5-flash-lite via OpenRouter; 14 seeds x 4 reps). codex's staging audit caught a real F0 bug (filler arithmetic lacked given finals -> F0 not truly compute-free); FIXED + re-locked cb7ecfdd + re-run, which FLIPPED deepseek's falsifier -47(buggy)->+149(clean). CLEAN RESULT (both subscription audits converge, CLAIM HOLDS): a real COMPUTE-FREE residual frame-cost -- dissolving the frame costs reasoning even with arithmetic removed -- gemini +2303(14/14,p<.001) rock-solid, deepseek +149(p=.057) borderline, qwen +376(NS) => MODEL-DEPENDENT not universal. NOT reading-volume (audits refuted: F0_DISSOLVED is SHORTER yet costs MORE; ==> line counts identical across arms). A SEPARATE universal reading-volume cost (size axis +2578/+4377/+3068, all sig). The two axes dissociate.",
+      "declared": 0.5,
+      "bucket": "pending",
       "provenance": "candidates/canonical_genealogy/hyperspace_spec/measure/v10_framestrip.py (harness, built+selftest+locked, NOT run); imports v9b_resistance.py; lock artifacts measure/v10fs_labels.jsonl + measure/v10fs_labels.LOCK",
-      "demotions": [],
-      "refs": [
-        "3-design adversarial design workflow (winning skeleton Design 1 + grafts: size curve, anti-V7 flank, byte-identical splice)",
-        "NIAH (needle-in-a-haystack)",
-        "lost-in-the-middle",
-        "V7 reading-tax rung (prior single-rung result)"
+      "demotions": [
+        "DEMOTE 'orienting is free' (the buggy-F0 deepseek null) -> ARTIFACT of the F0 bug; clean F0 is POSITIVE. The bug-fix (codex catch) rescued a real compute-free cost from the null.",
+        "DEMOTE 'orienting cost universal' -> MODEL-DEPENDENT (gemini strong, deepseek borderline, qwen null). RESIDUAL CONFOUND (codex+Claude-subagent both): F0_DISSOLVED also moves the selector to TRAILING, so the cost may be late-instruction RESCAN not pure missing-frame orienting. NEXT=V10b compute-free 2x2 {header present/absent} x {instruction leading/trailing} to separate them."
       ],
-      "render": 0.4,
-      "dead_children": 0
+      "refs": [
+        "OpenRouter cross-model",
+        "lost-in-the-middle",
+        "2502.02542",
+        "codex+Claude-subagent audits (session_arc/)"
+      ],
+      "render": 0.5,
+      "dead_children": 2
     },
     {
       "id": "invert",
@@ -519,19 +522,20 @@
       "id": "v11-deamortize",
       "section": "single",
       "order": 23,
-      "title": "V11 de-amortize (MEANING/KNOWLEDGE rung)",
-      "claim": "Deepest column of the wrapper spectrum and the first rung to touch the BUILD clock: it reads the cost of RE-PAYING a selection concept the frame used to supply pre-paid (amortized from training). Per seed the needle is BOTH the unique prime AND the unique line whose zero-padded 3-digit sum equals a target S, so 'prime' (known) and 'digit-sum==S' (novel) pick the IDENTICAL singleton and the answer integer is the same in every arm -- ONLY the selection concept's amortization moves (LOCUS/SEGMENTATION/FORMAT/TASK-IDENTITY held pristine as a clean contiguous 6-line framed block). Arms: NAMED_BARE (prime fully amortized), NAMED_DEF (+ length-matched definition of the KNOWN concept), RENAMED_PRIME (same primality predicate under nonce name FLONK -- de-amortize the NAME only), NOVEL_RULE (made-up predicate ZILP = digit-sum==S, no pre-paid concept, must be held+applied in working memory). Primary contrasts (paired by seed, correct calls, @ xhigh): (1) HEADLINE e(NOVEL_RULE)-e(NAMED_DEF) = cost of an un-amortized concept; (2) NAME-only e(RENAMED_PRIME)-e(NAMED_DEF); (3) DEFINITION-presence e(NAMED_DEF)-e(NAMED_BARE) ~ reading tax. FALSIFIER: compute-free verdict-table arms F0_NAMED_DEF and F0_NOVEL_RULE (finals + PASS/fail given inline, differ only in the now-vestigial definition word, length-matched); if e(F0_NOVEL_RULE)-e(F0_NAMED_DEF) VANISHES while headline (1)>0, the delta is genuine concept-APPLICATION de-amortization (the missing MEANING wrapper); if it SURVIVES the headline was definition-READING confound and demotes. gpt-5.5 @ xhigh, synthetic authorized data. STATUS: harness built, selftest 12/12 checks pass (isomorphism prime==digit-sum singleton, byte-identical needle across compute arms, one PASS line per F0 arm, def-block word-drift <=3), labels LOCKED via sha256 digest -- NOT RUN (OpenAI quota exhausted; no V11 results file exists); cross-model cheap-spectrum re-run planned via OpenRouter, cost-estimate-before-run discipline.",
-      "declared": 0.4,
-      "bucket": "planned",
+      "title": "V11 de-amortize (MEANING) - invalid-as-designed (predicate-difficulty confound, all models)",
+      "claim": "V11 run across the same 3 cheap models. HEADLINE NOVEL_RULE-NAMED_DEF is NEGATIVE on ALL THREE (-70/-234/-196, all NS): the novel 'digit-sum==S' predicate is INTRINSICALLY CHEAPER to apply than primality, so predicate-DIFFICULTY swamps any de-amortization signal. The de-amortization (BUILD-clock) question is NOT isolable with this design -- robustly invalid across architectures, not a one-model fluke. (A real def-reading tax DOES show: NAMED_DEF-NAMED_BARE +174/+1040/+352.)",
+      "declared": 0.3,
+      "bucket": "demoted",
       "provenance": "candidates/canonical_genealogy/hyperspace_spec/measure/v11_deamortize.py (harness, built+selftest+locked, NOT run); imports v9b_resistance.py + v10_framestrip._line0; lock artifacts measure/v11_labels.jsonl + measure/v11_labels.LOCK",
-      "demotions": [],
-      "refs": [
-        "white-space design workflow (build-first winner Cell A)",
-        "OverThink (arXiv 2502.02542) -- reasoning-effort manipulation",
-        "the amortization principle"
+      "demotions": [
+        "DEMOTE the V11 de-amortization design -> INVALID-AS-DESIGNED: novel predicate not compute-matched to primality (digit-sum is ~easier), so the headline is a predicate-difficulty artifact (negative), not a null de-amortization. Confound replicates on all 3 models. NEXT=V11b a novel predicate COMPUTE-MATCHED to primality (~sqrt(n) trial-division-equivalent steps) selecting the same needle."
       ],
-      "render": 0.4,
-      "dead_children": 0
+      "refs": [
+        "OpenRouter cross-model",
+        "codex+Claude-subagent audits"
+      ],
+      "render": 0.3,
+      "dead_children": 1
     },
     {
       "id": "collectiveV5",

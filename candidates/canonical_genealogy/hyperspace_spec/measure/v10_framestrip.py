@@ -35,10 +35,11 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
-from v9b_resistance import _chain, _is_prime, _line, solve, _last_int, paired, MOD
+from v9b_resistance import _chain, _is_prime, _line, _last_int, paired, MOD
+from providers import solve, estimate_table, MODELS, CHEAP3
 
-KEY = os.environ.get("OPENAI_API_KEY", "")
-TIER = "xhigh"
+TIER = "high"            # OpenRouter cheap models cap reasoning at 'high'
+MODEL = "deepseek"       # set via --model {deepseek|qwen|gemini|gpt5}
 TASK_NAMES = ["alpha", "bravo", "cosmo", "delta", "echo", "foxy", "gamma", "hotel", "indi", "juno"]
 FILL_NAMES = ["node", "cfgx", "bufr", "tmpv", "regq", "acc0", "idxn", "ctrl", "valu", "keyz",
               "ptrx", "segm", "blkk", "roww", "coll", "bitz", "tagg", "refp", "lenq", "mapz",
@@ -103,21 +104,25 @@ SELECTOR0 = ("Each line below shows a computation and its final result after '=>
              "whose final result is a PRIME number. Output ONLY that integer.")
 
 
-def _substrate(rng, n_lines):
-    """n_lines of raw global substrate: a deterministic prose + inert-arithmetic mix (no prime finals)."""
+def _substrate(rng, n_lines, compute_free=False):
+    """n_lines of raw global substrate: a deterministic prose + inert-arithmetic mix (no prime finals).
+    When compute_free, the arithmetic FILLER lines ALSO get their final given inline (=>) so F0 is TRULY
+    compute-free -- no unevaluated arithmetic anywhere (the codex-audit fix: previously only the 6 task lines
+    got '=>', leaving ~11 filler lines computable, so the F0 falsifier wasn't actually compute-free)."""
     out = []
     for i in range(n_lines):
         if rng.random() < 0.5:
             out.append(rng.choice(PROSE))
         else:
-            out.append(_line(_filler_line(rng)))
+            c = _filler_line(rng)
+            out.append(_line0(c) if compute_free else _line(c))
     return out
 
 
-def _arrange(seed, size, n_task):
-    """deterministic substrate + scatter positions for (seed,size); SHARED across the conds of that size so
-    F2/F1_S/F0_DEINDEXED/F0_DISSOLVED differ ONLY in the header, never the substrate."""
-    other = _substrate(random.Random(f"V10sub|{seed}|{size}"), SUBSTRATE_LINES[size])
+def _arrange(seed, size, n_task, compute_free=False):
+    """deterministic substrate + scatter positions for (seed,size); shared layout across the conds of that
+    size; compute_free toggles the '=>' rendering of ALL arithmetic lines (F0 vs the compute conditions)."""
+    other = _substrate(random.Random(f"V10sub|{seed}|{size}"), SUBSTRATE_LINES[size], compute_free)
     total = n_task + len(other)
     slots = list(range(total)); random.Random(f"V10scat|{seed}|{size}").shuffle(slots)
     return other, set(slots[:n_task]), total
@@ -149,12 +154,12 @@ def gen_cell(cond, seed):
         body = _compose(task_lines, other, task_slots, total)
         prompt = f"Below are 6 computations (arithmetic mod {MOD}) interleaved with unrelated log lines.\n{sel}\n\n{body}\n\nThe integer:"
     elif cond in ("F2_DEINDEXED", "F0_DEINDEXED"):     # index WEAKENED: no count, framed only as a log
-        other, task_slots, total = _arrange(seed, "S", 6)
+        other, task_slots, total = _arrange(seed, "S", 6, compute_free)
         body = _compose(task_lines, other, task_slots, total)
         prompt = f"The text below is a system log.\n{sel}\n\n{body}\n\nThe integer:"
     else:  # F1_S / F1_M / F1_L / F0_DISSOLVED -- no top header; trailing instruction
         size = "S" if cond == "F0_DISSOLVED" else cond.split("_")[1]
-        other, task_slots, total = _arrange(seed, size, 6)
+        other, task_slots, total = _arrange(seed, size, 6, compute_free)
         body = _compose(task_lines, other, task_slots, total)
         prompt = f"{body}\n\n{sel}\nThe integer:"
 
@@ -199,6 +204,10 @@ def selftest(seeds):
         comp_hashes = {cells[c]["needle_line_hash"] for c in ("F3_FRAMED", "FP_POINTED", "F2_DEINDEXED", "F1_S", "F1_M", "F1_L")}
         if len(comp_hashes) != 1: bad.append((s, "needle line not byte-identical across compute conds"))
         if cells["F0_DEINDEXED"]["needle_line_hash"] != cells["F0_DISSOLVED"]["needle_line_hash"]: bad.append((s, "F0 needle mismatch"))
+        # F0 must be TRULY compute-free: NO arithmetic line (containing '%') may lack a given '=>' final
+        for c in ("F0_DEINDEXED", "F0_DISSOLVED"):
+            nbad = sum(1 for ln in cells[c]["prompt"].split("\n") if "%" in ln and "=>" not in ln)
+            if nbad: bad.append((s, f"{c} has {nbad} compute lines without => (NOT compute-free)"))
         # exactly ONE prime-final line in each condition's body (no filler/decoy second needle)
         for c, it in cells.items():
             n_prime = _count_prime_lines(it["prompt"])
@@ -262,7 +271,7 @@ def run(seeds, repeats, workers):
         sys.exit("LOCK MISMATCH")
     use = [it for it in items if it["seed"] < seeds]
     jobs = [(it, rep) for it in use for rep in range(repeats)]
-    print(f"=== V10 frame-strip: {len(use)} items x {repeats} reps = {len(jobs)} calls @ '{TIER}' ({workers} workers) ===")
+    print(f"=== V10 frame-strip: {len(use)} items x {repeats} reps = {len(jobs)} calls on '{MODEL}' ({workers} workers) ===")
     base = lambda it: {k: it[k] for k in ("item_id", "cond", "seed", "compute_free", "prompt_words", "truth")}
 
     def work(job):
@@ -270,12 +279,12 @@ def run(seeds, repeats, workers):
         err = None
         for attempt in range(3):
             try:
-                r = solve(it["prompt"], TIER); got = _last_int(r["content"])
-                return {**base(it), "tier": TIER, "rep": rep, "got": got,
+                r = solve(it["prompt"], model=MODEL); got = _last_int(r["content"])
+                return {**base(it), "model": MODEL, "rep": rep, "got": got,
                         "correct": (got == it["truth"]), "exhausted": False, **r}
             except Exception as e:
                 err = e; time.sleep(1.5 * (attempt + 1))
-        return {**base(it), "tier": TIER, "rep": rep, "got": None, "correct": False, "exhausted": True,
+        return {**base(it), "model": MODEL, "rep": rep, "got": None, "correct": False, "exhausted": True,
                 "content": "", "finish": f"ERR:{type(err).__name__}", "reasoning_tokens": None,
                 "completion_tokens": None, "prompt_tokens": None, "seconds": None}
 
@@ -286,7 +295,7 @@ def run(seeds, repeats, workers):
             stream.append(f.result())
             if i % 40 == 0 or i == len(jobs):
                 print(f"   ...{i}/{len(jobs)} done ({time.time()-t0:.0f}s)")
-    (HERE / "v10fs_run.jsonl").write_text("\n".join(json.dumps(s, ensure_ascii=False) for s in stream) + "\n", encoding="utf-8")
+    (HERE / f"v10fs_run.{MODEL}.jsonl").write_text("\n".join(json.dumps(s, ensure_ascii=False) for s in stream) + "\n", encoding="utf-8")
     analyze(stream, seeds, repeats)
 
 
@@ -326,7 +335,7 @@ def analyze(stream, seeds, repeats):
     delta("F0_DISSOLVED", "F0_DEINDEXED", "D_frame_NOCOMPUTE -- >0 => cost is ORIENTING not harder-compute")
     print("\n  VERDICT logic: D_frame>0 AND D_frame_NOCOMPUTE>0 AND size-slope>0 AND anti-V7>0 => the camera "
           "photographs a real ORIENTING/framing cost (re-supplying the missing wrapper). Any null demotes per kill-criteria.")
-    print(f"  wrote v10fs_run.jsonl ({len(stream)} records)")
+    print(f"  wrote v10fs_run.{MODEL}.jsonl ({len(stream)} records)")
 
 
 if __name__ == "__main__":
@@ -335,13 +344,20 @@ if __name__ == "__main__":
     ap.add_argument("--run", action="store_true"); ap.add_argument("--reanalyze", action="store_true")
     ap.add_argument("--seeds", type=int, default=24); ap.add_argument("--repeats", type=int, default=4)
     ap.add_argument("--workers", type=int, default=6)
+    ap.add_argument("--model", default="deepseek", choices=list(MODELS))
+    ap.add_argument("--estimate", action="store_true")
     a = ap.parse_args()
+    MODEL = a.model
     if a.selftest: selftest(a.seeds)
     elif a.lock: write_lock(a.seeds)
+    elif a.estimate:
+        prompts = [it["prompt"] for it in build_grid(a.seeds)]
+        estimate_table(prompts, a.repeats)
     elif a.run:
-        if not KEY: sys.exit("OPENAI_API_KEY not set")
+        from providers import _key
+        if not _key(): sys.exit("OPENROUTER_API_KEY not set (and no .openrouter_key file)")
         run(a.seeds, a.repeats, a.workers)
     elif a.reanalyze:
-        stream = [json.loads(l) for l in (HERE / "v10fs_run.jsonl").read_text(encoding="utf-8").splitlines() if l.strip()]
+        stream = [json.loads(l) for l in (HERE / f"v10fs_run.{MODEL}.jsonl").read_text(encoding="utf-8").splitlines() if l.strip()]
         analyze(stream, a.seeds, a.repeats)
-    else: print("use --selftest --seeds N | --lock --seeds N | --run --seeds N --repeats R | --reanalyze")
+    else: print("use --selftest --seeds N | --lock --seeds N | --estimate --seeds N | --run --model M --seeds N | --reanalyze --model M")

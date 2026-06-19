@@ -41,3 +41,7 @@ __pycache__/
 pilots/1f_failsafe_cycling/data_groundtruth/
 # dev scratch from the synthetic-validation build (the committed pipeline reproduces results)
 pilots/1f_failsafe_cycling/synthetic_validation/_*.py
+.openrouter_key
+*.key
+.env
+secrets.*

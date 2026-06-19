@@ -1,0 +1,40 @@
+You are a senior experimental-design critic with Deep Think. Read the real files in this workspace, then
+adversarially critique + improve the TWO next-iteration controls for the "latent camera" project. Be
+concrete and quantitative; propose the cleanest buildable design with pre-registered kill-criteria.
+
+READ (in measure/ and ../):
+  - measure/CROSS_MODEL_RUNCARD.md   (exact models + params + the F0 bug/fix)
+  - measure/v10_framestrip.py        (V10 generator + conditions + analysis)
+  - measure/v11_deamortize.py        (V11 generator + conditions + analysis)
+  - ../session_arc/codex_v10v11_audit.md and ../session_arc/gemini_or_v10v11_audit.md  (the staging audits)
+  - ../WRAPPER_SPECTRUM.md and ../MODEL_COST_STACK.md  (the framing)
+
+WHAT WE FOUND (cross-model, DeepSeek V4 Flash / Qwen3-thinking / Gemini-2.5-flash-lite, via OpenRouter,
+reasoning effort=high, 14 seeds x 4 reps, paired bootstrap + sign test):
+- V10 (frame-strip): the framing-dissolution cost D_frame = F1_S - F2 is REAL on 2 of 3 models (Gemini +1162
+  p=.002, Qwen +537 p=.013) and NULL on DeepSeek (+289). The substrate-SIZE/reading cost is UNIVERSAL + huge
+  (+2025..+4538 per size step). BUT the F0 "compute-free" falsifier was BUGGY (filler arithmetic lacked given
+  finals) and is being re-run clean; even so, the audits warn F0's '=>' crutch makes locating trivial, so F0
+  may not isolate ORIENTING from reading. So the open question: of the real D_frame effect, how much is
+  ORIENTING (re-supplying the missing frame) vs READING-VOLUME?
+- V11 (de-amortize): the headline NOVEL_RULE - NAMED_DEF is NEGATIVE on ALL 3 models -- the novel 'digit-sum
+  ==S' predicate is INTRINSICALLY CHEAPER to apply than 'primality', so predicate-DIFFICULTY confounds (swamps)
+  any de-amortization signal. The design as-is cannot isolate "cost of an un-amortized concept".
+
+THE TWO NEXT-ITERATION CONTROLS TO CRITIQUE + IMPROVE:
+1. V10b -- the IRRELEVANT-TASK control (to separate distributed-computation from reading-volume): re-run the
+   dissolved condition F1_S but swap the task from "find the prime computation" to a task that requires
+   SCANNING the same substrate WITHOUT arithmetic-on-the-path (e.g. "report how many lines contain the word
+   'is'"). Then D = rt(F1_S, prime-task) - rt(F1_S, irrelevant-scan-task) isolates the cost of distributed
+   computation while holding reading-volume + dissolution constant. Critique: is this clean? does the
+   irrelevant task match the reading/scanning load of the prime task? what confounds remain (e.g. the scan
+   task may be easier/harder to read)? propose the exact matched irrelevant task + any further controls.
+2. V11b -- a COMPUTE-MATCHED novel predicate (to isolate de-amortization from predicate-difficulty): replace
+   'digit-sum==S' with a NOVEL predicate whose application cost is matched to primality (e.g. a made-up rule
+   that requires roughly the same number of trial-division-like steps), co-designed to select the SAME unique
+   needle as 'prime'. Critique: how do you compute-match a novel predicate to primality (which costs ~sqrt(n)
+   trial divisions)? propose a concrete novel predicate + how to verify the match + the kill-criteria.
+
+DELIVER for EACH: (a) the sharpest residual flaw, (b) the cleanest concrete buildable design (conditions +
+generator sketch + the exact reasoning-token contrast), (c) pre-registered kill-criteria (what result would
+demote it to NULL honestly), (d) which is higher-value to build first and why. Cite where it sharpens a point.
