@@ -1,0 +1,15 @@
+{
+  "sha256": "fc58989277e9dc16d590bb2d23fb73b6cc066d49baf1cdbfe84bd9df5d6d46b1",
+  "n_items": 240,
+  "seeds": 40,
+  "conds": [
+    "H_LEAD",
+    "H_TRAIL",
+    "N_LEAD",
+    "N_TRAIL",
+    "Z_LEAD",
+    "Z_TRAIL"
+  ],
+  "tier": "high",
+  "note": "V10c selector-position 2x2 (header x position), neutral marker, byte-identical body; POSITION perfectly length-matched"
+}
