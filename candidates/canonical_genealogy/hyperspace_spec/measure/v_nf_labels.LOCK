@@ -1,0 +1,14 @@
+{
+  "sha256": "354d7d5ea68fb4fba01ab9d5fd22797ef73e4b26c336939803e61f28659000d7",
+  "n_items": 300,
+  "seeds": 60,
+  "conds": [
+    "TRIV_PLAIN",
+    "TRIV_NONCE",
+    "HARD_PLAIN",
+    "HARD_NONCE",
+    "HARD_WORD"
+  ],
+  "tier": "high",
+  "note": "NF label x compute 2x2 (+WORD bridge); headline TRIV_NONCE-TRIV_PLAIN = pure label-binding, no translation"
+}

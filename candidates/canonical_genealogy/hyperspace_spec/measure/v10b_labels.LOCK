@@ -1,0 +1,15 @@
+{
+  "sha256": "1c0071d0b47401d137e072df8952ae32f90d7754ec2e9404758b6d68c613bdb9",
+  "n_items": 144,
+  "seeds": 24,
+  "conds": [
+    "F3_FRAMED",
+    "FP_POINTED",
+    "F2_DEINDEXED",
+    "F1_S",
+    "F1_M",
+    "F1_L"
+  ],
+  "tier": "high",
+  "note": "V10b irrelevant-task lookup control; isolates compute cost from search/reading volume"
+}

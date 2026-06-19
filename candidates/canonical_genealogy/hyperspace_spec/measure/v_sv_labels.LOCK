@@ -1,0 +1,15 @@
+{
+  "sha256": "9093531815ab69c333e870baf56f2ae2235897998b94f4b4753c214e2bea945e",
+  "n_items": 144,
+  "seeds": 24,
+  "conds": [
+    "F3_FRAMED",
+    "FP_POINTED",
+    "F2_DEINDEXED",
+    "F1_S",
+    "F1_M",
+    "F1_L"
+  ],
+  "tier": "high",
+  "note": "SV same-task application-free verdict control; D_application = V10 prime - SV verdict (task held fixed)"
+}

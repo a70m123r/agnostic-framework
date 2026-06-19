@@ -1,0 +1,15 @@
+{
+  "sha256": "d394534f3512141a9f76dfeb4ad89e8ec663675790470ad99ed7ca58b5834520",
+  "n_items": 168,
+  "seeds": 28,
+  "conds": [
+    "NAMED_BARE",
+    "NAMED_DEF",
+    "RENAMED_PRIME",
+    "NOVEL_RULE",
+    "F0_NAMED_DEF",
+    "F0_NOVEL_RULE"
+  ],
+  "tier": "high",
+  "note": "V11b matched novel predicate de-amortization; headline e(NOVEL_RULE)-e(NAMED_DEF)"
+}

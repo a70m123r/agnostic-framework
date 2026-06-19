@@ -1,0 +1,123 @@
+================================================================================
+AGY / DEEP-THINK DESIGN BRIEF -- V10c: the SELECTOR-POSITION 2x2
+(decompose V10's compute-free frame-cost into ORIENTING vs LATE-RESCAN)
+Date: 2026-06-19 | For: agy / Deep-Think build pass (then Soren runs + audits)
+================================================================================
+
+WHY THIS CONTROL EXISTS
+-----------------------
+V10 (frame-strip) found a REAL, model-dependent, COMPUTE-FREE residual frame-cost:
+dissolving the task frame costs reasoning tokens even with all arithmetic pre-given
+(the clean F0 falsifier: gemini +2303 14/14 p<.001; deepseek +149 p=.057; qwen null).
+
+But the F0 contrast is CONFOUNDED. F0_DISSOLVED differs from F0_DEINDEXED in TWO ways
+at once:
+  (1) the top "system log" HEADER is removed   -> tests ORIENTING (what is this content?)
+  (2) the task SELECTOR moves to the END (trailing) -> tests LATE-INSTRUCTION RESCAN
+      (read body before knowing the task -> must re-scan to answer)
+
+Both subscription auditors (codex + Claude-subagent), independently, named the SAME
+decisive next control: a compute-free 2x2 that crosses these two factors so each main
+effect is estimated with the other held constant. This is that control.
+
+OBJECTIVE
+---------
+Partition the V10 F0 frame-cost into:
+  - HEADER main effect   = ORIENTING cost (frame present vs absent)
+  - POSITION main effect = LATE-RESCAN cost (selector leading vs trailing)
+  - their interaction
+so we can say which mechanism (or both) drives the V10 result -- and demote the
+"orienting" reading if POSITION swamps it.
+
+THE 2x2 (compute-free; body byte-identical across all 4 cells per seed)
+----------------------------------------------------------------------
+Factor A = HEADER:   {PRESENT (a framing line: "this is a system event log")  |  ABSENT}
+Factor B = POSITION: {LEAD (selector before body)  |  TRAIL (selector after body)}
+
+  H_LEAD  : HEADER + selector LEADING
+  H_TRAIL : HEADER + selector TRAILING
+  N_LEAD  : no-header + selector LEADING
+  N_TRAIL : no-header + selector TRAILING
+
+Reconnection to V10:  F0_DEINDEXED ~ H_LEAD ;  F0_DISSOLVED ~ N_TRAIL.
+The V10 F0 delta SHOULD decompose as  (N_TRAIL - H_LEAD) = HEADER + POSITION + interaction.
+If the 2x2's pooled (HEADER + POSITION) reproduces the V10 F0 magnitude, the decomposition
+is validated; the split tells us the mechanism.
+
+COMPUTE-FREE SUBSTRATE
+----------------------
+Reuse V10's compute-free machinery: every line (task chains AND filler) renders with an
+inline "=>" final (the _line0 / compute_free=True path), so ZERO arithmetic is on the path.
+The task is purely: locate the ONE final that is PRIME and report it.
+  Selector text (identical in both positions, verbatim):
+    "Report the value of the ONE computation whose final result is a PRIME number.
+     Output ONLY that integer."
+Fixed substrate size (use the S size; ~24 lines) so all cells are one length class.
+Exactly ONE prime "=>"-final per seed (the needle); needle line BYTE-IDENTICAL across all
+4 cells (hash-checked). One seed -> one body B(seed), reused verbatim in all 4 cells.
+
+THE LENGTH-MATCHING SUBTLETY (the crux -- please implement as specified)
+------------------------------------------------------------------------
+- POSITION is PERFECTLY length-matched by construction: LEAD vs TRAIL are the SAME tokens
+  reordered. The POSITION main effect carries the cleanest inferential weight. Good.
+- HEADER is NOT free: adding a frame adds a line. To keep header-present vs header-absent
+  length-matched, the no-header cells must carry a NEUTRAL, NON-FRAMING line of MATCHED
+  token count in the header's slot -- a line that adds equal "stuff to read" but supplies
+  NO "what is this content" orienting cue.
+    HEADER line  H = e.g. "The following is a system event log from a monitoring service."
+    NEUTRAL line Z = a token-count-matched line with no framing semantics, e.g. a row of
+                     the same data format that is explicitly NOT a computation and NOT a
+                     frame (a inert filler that doesn't orient). Match |H| within +/-1 word.
+  Selftest must assert  abs(words(H) - words(Z)) <= 1.
+- ALSO emit a second, secondary read: the TRUE-BLANK no-header variant (Z = empty), so we
+  can report both "length-matched header effect" (Z padded) and "raw header effect" (Z blank).
+  The padded version is the headline; the blank version bounds the reading-volume share.
+  (Two no-header arms: N*_PAD and N*_BLANK, i.e. up to a 2x3; if that bloats the run, ship
+  the padded 2x2 as the locked headline and the blank arms as an optional extension.)
+
+SELFTEST GUARDS (lock only if all pass)
+---------------------------------------
+  1. body B(seed) is byte-identical across all 4 (8) cells  (hash equal).
+  2. needle "=>"-line is byte-identical across all cells     (hash equal).
+  3. exactly ONE prime "=>"-final per seed; truth == that prime.
+  4. compute-free: ZERO "%"-arithmetic lines lacking "=>"   (every line has a final).
+  5. selector text identical across LEAD and TRAIL positions (verbatim).
+  6. |words(H) - words(Z)| <= 1   (header length-matched to neutral pad).
+  7. per-cell median prompt_words printed; LEAD/TRAIL within a cell differ by 0.
+
+CONTRASTS TO REPORT (per model: deepseek, qwen, gemini)
+-------------------------------------------------------
+  POSITION (late-rescan):  mean(*_TRAIL) - mean(*_LEAD)   -- within each HEADER level + pooled
+  HEADER   (orienting):    mean(N_*)     - mean(H_*)      -- within each POSITION level + pooled
+  INTERACTION:             (N_TRAIL - N_LEAD) - (H_TRAIL - H_LEAD)
+  DECOMPOSITION CHECK:     (N_TRAIL - H_LEAD) vs V10's F0_DISSOLVED - F0_DEINDEXED
+  Stats: per-seed mean over reps on CORRECT calls only; paired bootstrap (4000) median CI
+         + exact two-sided sign test over seeds. (Same machinery as V10b/V11b: import paired.)
+
+PRE-REGISTERED KILL-CRITERIA
+----------------------------
+  - POSITION dominates, HEADER ~ 0 (CI includes 0):
+        => V10's "frame-cost" was LATE-INSTRUCTION RESCAN, not orienting.
+           DEMOTE the orienting claim to "selector-position / rescan cost" (dead child, dated).
+  - HEADER significant (p<0.05) with POSITION held constant:
+        => an ORIENTING / missing-content-frame cost is REAL. V10 claim SURVIVES, sharpened.
+  - BOTH significant:
+        => additive decomposition; report both components + the interaction sign.
+  - Neither reproduces the V10 F0 magnitude:
+        => the V10 F0 effect does NOT live in this 2x2 (some third factor); flag + investigate.
+
+RUN PARAMS (match the cross-model run-card)
+-------------------------------------------
+  Models: deepseek/deepseek-v4-flash, qwen/qwen3-30b-a3b-thinking-2507,
+          google/gemini-2.5-flash-lite. effort "high"; max_tokens 16000.
+  seeds ~24-28 x 4 reps x 4 (or 6) conds. workers 16/12/12. 3-try retry + exhausted flag.
+  Harness shape: self-contained .py with --selftest/--lock/--run/--reanalyze/--estimate;
+  sha256 label-lock; reuse v10_framestrip _make/_line0/_arrange/_compose + providers.solve +
+  v9b_resistance.paired/_last_int. Output v10c_run.<model>.jsonl. ASCII only.
+
+PRIORITY
+--------
+Build AFTER V11b + V10b land (those are running now). V10c is the third leg that closes the
+V10 confound; it refines an already-partially-quantified effect, so it ranks behind V11b
+(which rescued a zero-data hypothesis) but is the cleanest single experiment for the V10 rung.
+================================================================================
