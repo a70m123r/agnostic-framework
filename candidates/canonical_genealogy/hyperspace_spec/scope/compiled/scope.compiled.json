@@ -1,7 +1,7 @@
 {
   "_meta": {
     "what": "full-scope latent-camera substrate",
-    "t_obs": "2026-06-19T01:02:35Z",
+    "t_obs": "2026-06-20T17:01:02Z",
     "discipline": "SUBSTRATE + COIN (render<=support); demote-not-kill",
     "sections": [
       [
@@ -35,16 +35,16 @@
     ]
   },
   "stats": {
-    "records": 36,
+    "records": 41,
     "by_bucket": {
-      "corroborated": 16,
-      "pending": 4,
+      "corroborated": 18,
+      "pending": 7,
       "conceptual": 13,
       "planned": 2,
       "demoted": 1
     },
-    "demotions_total": 33,
-    "mean_render": 0.616
+    "demotions_total": 43,
+    "mean_render": 0.627
   },
   "records": [
     {
@@ -552,6 +552,110 @@
       ],
       "render": 0.4,
       "dead_children": 0
+    },
+    {
+      "id": "v10b-lookup",
+      "section": "single",
+      "order": 24,
+      "title": "V10b lookup control - the 'reading-volume cost' is DEAD (it is predicate-EVALUATION volume)",
+      "claim": "V10b (irrelevant-task lookup, same substrate, zero predicate; 24 seeds x 4 reps x 3 cheap models, lock 1c0071d0; dual-audited codex+Claude). Cross-experiment D_compute = rt(prime)-rt(lookup) at matched conditions = 8.5-77x and GROWS with substrate size. Under lookup, 5x more substrate adds ~0 reasoning (deepseek +47, gemini -7, qwen -70); under prime the SAME bytes scale +6400/+6500/+5660. => the V10 'universal reading-volume cost' is NOT reading -- it is the number of CANDIDATES evaluated against the predicate. Pure locating is near-floor.",
+      "declared": 0.9,
+      "bucket": "corroborated",
+      "provenance": "candidates/canonical_genealogy/hyperspace_spec/measure/v10b_irrelevant.py (built by agy/Deep-Think, locked 1c0071d0, run); v10b_run.*.jsonl; compare_3way.py; V10b_V11b_CROSSMODEL_RESULTS.md",
+      "demotions": [
+        "DEAD 'universal reading-volume cost' (V10 size axis) -> predicate-EVALUATION volume: the size cost is the number of candidates tested, NOT bytes read; lookup size-axis is null. Confirmed again by SV-verdict + NF-markers (3x total)."
+      ],
+      "refs": [
+        "OpenRouter cross-model",
+        "codex+Claude dual audit",
+        "NIAH/lost-in-the-middle"
+      ],
+      "render": 0.9,
+      "dead_children": 1
+    },
+    {
+      "id": "v11b-deamort",
+      "section": "single",
+      "order": 25,
+      "title": "V11b de-amortize (compute-matched) - V11 RESCUED + flipped POSITIVE; mechanism sharpened by NF",
+      "claim": "V11b swaps the digit-sum predicate for WURF (compute-matched to primality, IDENTICAL needle; 28 seeds, lock d394534f, dual-audited). Headline NOVEL_RULE-NAMED_DEF = +308/+836/+2151 (p<.001 all) -- an un-amortized concept costs more to APPLY than the same-difficulty amortized one; the compute residual runs AGAINST the effect (conservative). V11's old NEGATIVE was 100% the predicate-difficulty artifact. NF later localizes the MECHANISM: the cost is losing the amortized WORD and having to carry+apply the explicit hard rule (NOT content-free naming).",
+      "declared": 0.85,
+      "bucket": "corroborated",
+      "provenance": "candidates/canonical_genealogy/hyperspace_spec/measure/v11b_matched.py (built by agy/Deep-Think, locked d394534f, run); v11b_run.*.jsonl; V10b_V11b_CROSSMODEL_RESULTS.md",
+      "demotions": [
+        "DC-34 'compute-matched de-amortization of MEANING' -> 'novel/nonce predicate-APPLICATION overhead' (WURF compute-match not proven; meaning vs explicit-compute not separable in principle).",
+        "DC-35 'tax is application not def-holding' -> application-DOMINANT; a real def-comprehension residual survives (deepseek F0 +78, p=.013).",
+        "V11b RENAMED +162/+263/+241 'pure label-binding' -> binding/translation+narration (NF markers: NONCE@hard markers ~0 = no compute change)."
+      ],
+      "refs": [
+        "OpenRouter cross-model",
+        "codex+Claude dual audit",
+        "Bennett logical depth"
+      ],
+      "render": 0.85,
+      "dead_children": 3
+    },
+    {
+      "id": "nf-labelcompute",
+      "section": "single",
+      "order": 26,
+      "title": "NF label x compute + the MARKER-FIX - reasoning_tokens conflate compute with NARRATION",
+      "claim": "NF (60 seeds, lock 354d7d5e; LABEL[plain vs coined-nonce] x COMPUTE[trivial last-digit vs hard primality], same needle, +WORD bridge). Pure nonce-naming is NOT a universal tax (TRIV_NONCE-TRIV_PLAIN +35/null/-306) -- it depends on rule difficulty (SIGN-FLIP: HARD_NONCE-HARD_WORD +614 gemini vs -306 trivial). MARKER-FIX (nf_markers.py, re-score on trial-division markers in the CoT text, $0): the cached word 'prime' genuinely cuts compute markers (-2.7/-7.3/-1.2 all sig) = REAL saving + narration on top. AND reasoning_tokens is a MODEL-DEPENDENT-noisy compute proxy: qwen does more trial-div than its tokens show (markers +24.7 vs rt +113 ns); gemini RECALLS (markers ~0) yet rt +488. Prefer marker-counts for fine compute claims.",
+      "declared": 0.6,
+      "bucket": "pending",
+      "provenance": "candidates/canonical_genealogy/hyperspace_spec/measure/v_nf_labelcompute.py (built by Soren, lock 354d7d5e, run) + nf_markers.py; v_nf_run.*.jsonl; V10c_NF_MARKERS_RESULTS.md",
+      "demotions": [
+        "DC-38 'WORD shortcut = pure narration' (audit) AND 'clean amortization' (Soren) -> BOTH: a real compute-marker reduction + a narration component.",
+        "METHOD UPGRADE: reasoning_tokens != compute (model-dependent: qwen under-reports trial-division, gemini recalls without markers) -> use the marker-count endpoint for fine compute claims."
+      ],
+      "refs": [
+        "OpenRouter cross-model",
+        "codex+Claude dual audit",
+        "prequential/EDL surrogate"
+      ],
+      "render": 0.6,
+      "dead_children": 2
+    },
+    {
+      "id": "sv-verdict",
+      "section": "single",
+      "order": 27,
+      "title": "SV same-task verdict control - application removed without switching task; a frame cost survives",
+      "claim": "SV (24 seeds, lock 9093531; V10 frame ladder, every line pre-tagged [verdict:PASS/fail], task unchanged -> removes APPLICATION cleanly, fixing V10b's task-switch confound). D_application = rt(prime)-rt(verdict) is dominant + GROWS with size (conservative: the prime prompt is ~15% SHORTER yet costs 30-50x more rt). A real application-INDEPENDENT frame cost survives (+113/+372/+405, all sig); the size axis is null under verdict (size=compute, confirmed). qwen is not fully application-free (it re-verifies the PASS tags).",
+      "declared": 0.6,
+      "bucket": "pending",
+      "provenance": "candidates/canonical_genealogy/hyperspace_spec/measure/v_sv_verdict.py (built by Soren, lock 9093531, run); v_sv_run.*.jsonl; compare_3way.py",
+      "demotions": [
+        "DC-40 'SV-C4 answer-format cost' -> re-triggered application (the verdict task is not fully application-free; verdict>lookup also changes search-key, not just format).",
+        "DC-39 (SV's surviving frame cost) labeled 'orienting' -> orienting-vs-rescan UNSEPARATED here (F1_S vs F2 crosses header-removal x selector-position); resolved by V10c."
+      ],
+      "refs": [
+        "OpenRouter cross-model",
+        "codex+Claude dual audit"
+      ],
+      "render": 0.6,
+      "dead_children": 2
+    },
+    {
+      "id": "v10c-selpos",
+      "section": "single",
+      "order": 28,
+      "title": "V10c selector-position - the frame cost = ORIENTING (header-helps) + a small unstable RESCAN",
+      "claim": "V10c (the control FOUR auditors named; application-free neutral [tag:KEEP] locate, BYTE-IDENTICAL body, POSITION perfectly length-matched; 3x2 {frame H | neutral N | true-absent Z} x {lead|trail}, lock 68c45104 @ n=100, codex external pass). ORIENTING is real on ALL 3 + it is header-HELPS not neutral-hurts -- the Z bridge: H < Z ~ N everywhere (Z-H +9.9/+145/+118 all sig; N-Z null all 3 => the frame is cheaper than BOTH true-absence AND a neutral line, and the neutral line costs no more than absence). late-RESCAN is MODEL-DEPENDENT (n=100): POSITION gemini +93 (p<.001) / deepseek +17 (p<.001, small) / qwen null. So the frame cost = a robust cross-model ORIENTING component + a model-dependent RESCAN co-contributor.",
+      "declared": 0.65,
+      "bucket": "pending",
+      "provenance": "candidates/canonical_genealogy/hyperspace_spec/measure/v10c_selpos.py (built by Soren, lock 68c45104 @ n=100, run); v10c_run.*.jsonl; V10c_NF_MARKERS_RESULTS.md; session_arc/codex_v10c_audit.md",
+      "demotions": [
+        "DC-39 RESOLVED (n=100): 'orienting' CONFIRMED cross-model (header-HELPS via codex's true-absent Z bridge: H<Z~N on all 3; NOT neutral-line-confusion).",
+        "4-cell 'POSITION null / rescan refuted' -> n=40 run-variance resolved at n=100 into MODEL-DEPENDENCE: late-rescan is real on gemini(+93)/deepseek(+17), null on qwen -- not zero, model-specific."
+      ],
+      "refs": [
+        "OpenRouter cross-model",
+        "codex external audit",
+        "the Z-bridge (codex's true-absent arm)"
+      ],
+      "render": 0.6,
+      "dead_children": 2
     },
     {
       "id": "equation",

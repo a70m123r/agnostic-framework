@@ -1,7 +1,7 @@
 {
-  "sha256": "fc58989277e9dc16d590bb2d23fb73b6cc066d49baf1cdbfe84bd9df5d6d46b1",
-  "n_items": 240,
-  "seeds": 40,
+  "sha256": "68c451048cff96e870199306027007ce2b3c30e2cbfcf5ba22491c75852a22f5",
+  "n_items": 600,
+  "seeds": 100,
   "conds": [
     "H_LEAD",
     "H_TRAIL",

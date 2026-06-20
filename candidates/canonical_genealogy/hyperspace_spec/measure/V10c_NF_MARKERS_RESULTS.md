@@ -10,31 +10,30 @@ x {LEAD | TRAIL}. codex audit (`session_arc/codex_v10c_audit.md`): the rescan st
 not TRUE absence (an active neutral sentence) -> can't separate header-HELPS from neutral-line-HURTS. FIX: added
 a true-absent **Z** arm (no first line) -> 3x2, 240 items x 4 reps, lock `fc589892`.
 
-### Result 1 (6-cell): ORIENTING is real, and it is header-HELPS not neutral-line-HURTS
+### Result 1 (STABILIZED at n=100, lock 68c45104): ORIENTING is real on ALL 3 -- header-HELPS not neutral-HURTS
 | contrast | deepseek | qwen | gemini |
 |---|---|---|---|
-| N − H (neutral vs frame) | +15.8 (p=.038) | +140.6 (p=.002) | +155.1 (p=.002) |
-| **Z − H** (true-absent vs frame) | +5.0 (ns) | **+80.7 (p=.038)** | **+135.5 (p<.001)** |
-| **N − Z** (neutral vs true-absent) | +7.4 (ns) | +13.1 (ns) | +42.3 (ns) |
+| N − H (neutral vs frame) | +8.2 (p=.007) | +126.9 (p<.001) | +120.2 (p<.001) |
+| **Z − H** (true-absent vs frame) | **+9.9 (p=.007)** | **+145.2 (p<.001)** | **+118.0 (p<.001)** |
+| **N − Z** (neutral vs true-absent) | +1.2 (ns) | +16.8 (ns) | +13.5 (ns) |
 
-On qwen + gemini (the models with reasoning headroom): **H < Z ≈ N** — the system-log frame is significantly
-cheaper than BOTH true-absence and a neutral sentence, and the neutral line costs no more than absence (N≈Z).
-=> a genuine MISSING-FRAME ORIENTING cost; codex's "neutral-line-hurts" alternative REFUTED (N≈Z). deepseek is
-floored (~110 tok), its 3-way underpowered (effects ~5-16 tok), consistent direction only.
+On ALL THREE models (n=100 firmed up deepseek, which was floored at n=40): **H < Z ≈ N** — the system-log frame
+is significantly cheaper than BOTH true-absence (Z) and a neutral sentence (N), and the neutral line costs no
+more than absence (N≈Z, null all 3). => a genuine MISSING-FRAME ORIENTING cost, cross-model; codex's
+"neutral-line-hurts" alternative REFUTED on all 3 (N≈Z).
 
-### Result 2: late-RESCAN is NOT cleanly refuted -- a small, run-VARIABLE co-contributor
-POSITION (trailing − leading, perfectly length-matched): 4-cell run = NULL on all 3 (deepseek +3.6 p=.64,
-qwen −23 p=.88, gemini +42 p=.08); 6-cell run = small-positive-SIG on 2/3 (deepseek **+19.9 p<.001**, gemini
-**+82.7 p=.038**, qwen +73 ns). At ~+20–83 tok it sits at the noise floor and flips significance across
-independent runs. Honest: a small late-rescan component that is real-ish but UNSTABLE at n=40 -- not zero, not
-dominant.
+### Result 2 (n=100): late-RESCAN resolves from "run-variable" to MODEL-DEPENDENT
+POSITION (trailing − leading, perfectly length-matched): deepseek **+17.4 (p<.001, small)**, gemini
+**+93.4 (p<.001, moderate)**, qwen +5.5 (**null**, p=.62). The n=40 run-variance (null in the 4-cell, sig in the
+6-cell) resolves at n=100 into a clean MODEL-DEPENDENT pattern: a real late-rescan cost on gemini (moderate) and
+deepseek (small), ABSENT on qwen. Not null-on-all, not sig-on-all -- it genuinely differs by model.
 
-### V10c landing (DC-39 resolved, nuanced)
-The application-independent frame cost (SV's +113/+372/+405) = a **robust ORIENTING component** (header-helps,
-clean via the Z bridge on qwen+gemini) **+ a small, borderline late-rescan component** (POSITION ~+20–80,
-run-variable). The clean "pure orienting, rescan refuted" the 4-cell hinted does NOT survive the larger run; both
-mechanisms contribute. DC-39 -> "orienting CONFIRMED (header-helps, not neutral-confusion); a minor unstable
-rescan co-contributes; needs n>=100 for a stable position estimate."
+### V10c landing (DC-39 resolved, n=100)
+The application-independent frame cost (SV's +113/+372/+405) = a **robust cross-model ORIENTING component**
+(header-helps, clean via the Z bridge: H < Z ≈ N on all 3) **+ a MODEL-DEPENDENT late-rescan component**
+(POSITION: gemini +93 / deepseek +17 / qwen null). Both mechanisms contribute; orienting is the robust one,
+rescan is real-but-model-specific. DC-39 -> "orienting CONFIRMED cross-model (header-helps, not neutral-confusion);
+late-rescan is a real model-dependent co-contributor (gemini/deepseek yes, qwen no). Stabilized at n=100."
 
 ## NF marker-count fix (DC-38 revisited) — separating THINKING from NARRATING about thinking
 Both audits' #1 methodological note: reasoning_tokens conflate compute with NARRATION LENGTH. Re-scored NF on the
