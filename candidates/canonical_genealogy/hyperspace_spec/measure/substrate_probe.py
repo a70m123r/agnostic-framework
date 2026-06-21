@@ -47,6 +47,30 @@ EVENTS = [
      "note": "a single physical CONTROL artefact -- who/what/where/when should all converge sharply"},
 ]
 
+# the BROAD multi-civilization roster (codex's external-validity fix, in ARTEFACT form): artefacts whose origin/
+# credit carries cross-national charge across DIFFERENT home civilizations -- tests whether the v2 finding
+# ("checkable spine converges; WHY carries complementary cultural coverage; no home-civ over-crediting on facts")
+# GENERALIZES, and whether any bloc systematically over-credits its OWN civilization on the WHO-fan / WHY.
+BROAD_EVENTS = [
+    {"id": "A1", "title": "movable-type printing (the technology/artefact, across its whole history)", "note": "China/Korea/Europe"},
+    {"id": "A2", "title": "gunpowder (the substance/artefact, across its whole history)", "note": "China"},
+    {"id": "A3", "title": "paper (the material/artefact, across its whole history)", "note": "China"},
+    {"id": "A4", "title": "the magnetic compass (the instrument/artefact, across its whole history)", "note": "China"},
+    {"id": "A5", "title": "the decimal place-value number system with zero (the artefact/notation, across its history)", "note": "India"},
+    {"id": "A6", "title": "algebra (the body of mathematical technique/artefact, across its history)", "note": "Babylon/Greece/India/Islamic"},
+    {"id": "A7", "title": "the astrolabe (the instrument/artefact, across its whole history)", "note": "Hellenistic/Islamic"},
+    {"id": "A8", "title": "distillation (the technique/artefact, across its whole history)", "note": "Hellenistic/Islamic alchemy"},
+    {"id": "A9", "title": "the windmill (the machine/artefact, across its whole history)", "note": "Persia/Islamic world"},
+    {"id": "A10", "title": "inoculation/vaccination against smallpox (the medical artefact/technique, across its history)", "note": "China/Ottoman/Britain"},
+    {"id": "A11", "title": "the mechanical clock (the machine/artefact, across its whole history)", "note": "China(Su Song)/Europe"},
+    {"id": "A12", "title": "the telescope (the instrument/artefact, across its whole history)", "note": "Netherlands/Italy"},
+    {"id": "A13", "title": "the steam engine (the machine/artefact, across its whole history)", "note": "Greece(Hero)/Britain"},
+    {"id": "A14", "title": "paper money (the artefact/instrument, across its whole history)", "note": "China(Song)"},
+    {"id": "A15", "title": "the seismometer (the instrument/artefact, across its whole history)", "note": "China(Zhang Heng)"},
+]
+
+OUTFILE = "substrate_probe_run.jsonl"   # overridden to the broad file by --broad
+
 # the axis schema the model must emit (a faithful, tractable subset of the v0.3 AxisCell + ConjectureFan + WHY-split)
 SCHEMA_HINT = """{
   "who":   AxisCell, "what": AxisCell, "where": AxisCell, "when": AxisCell,
@@ -82,7 +106,7 @@ def emit(slug, event_title):
         f'short phrases. Output the JSON object only.'
     )
     body = json.dumps({"model": slug, "messages": [{"role": "user", "content": prompt}],
-                       "max_tokens": 9000, "reasoning": {"effort": "low"}}).encode()
+                       "max_tokens": 12000, "reasoning": {"effort": "low"}}).encode()
     req = urllib.request.Request("https://openrouter.ai/api/v1/chat/completions", data=body,
           headers={"Authorization": f"Bearer {_key()}", "Content-Type": "application/json",
                    "HTTP-Referer": "https://localhost", "X-Title": "substrate-probe"})
@@ -139,7 +163,7 @@ def run(reps, workers):
         for i, f in enumerate(as_completed(futs), 1):
             stream.append(f.result())
             if i % 8 == 0 or i == len(jobs): print(f"   ...{i}/{len(jobs)} ({time.time()-t0:.0f}s)")
-    (HERE / "substrate_probe_run.jsonl").write_text(
+    (HERE / OUTFILE).write_text(
         "\n".join(json.dumps(s, ensure_ascii=False) for s in stream) + "\n", encoding="utf-8")
     analyze(stream)
 
@@ -171,7 +195,14 @@ def analyze(stream):
     bad = [(s["model"], s["origin"]) for s in stream if not s.get("parse_ok")]
     if bad: print("  parse failures:", "  ".join(f"{m}({o})" for m, o in bad))
 
-    for ev in EVENTS:
+    # derive the event set from the stream (works for default OR broad rosters, and on reanalyze)
+    EV = []
+    _seen = set()
+    for s in stream:
+        if s["event"] not in _seen:
+            _seen.add(s["event"]); EV.append({"id": s["event"], "title": s.get("title", s["event"]),
+                                              "note": next((e["note"] for e in (EVENTS + BROAD_EVENTS) if e["id"] == s["event"]), "")})
+    for ev in EV:
         print(f"\n==================== {ev['id']}: {ev['title']} ====================")
         print(f"   ({ev['note']})")
         rows = [s for s in ok if s["event"] == ev["id"]]
@@ -222,8 +253,12 @@ if __name__ == "__main__":
     ap.add_argument("--selftest", action="store_true"); ap.add_argument("--run", action="store_true")
     ap.add_argument("--pilot", action="store_true", help="1 event x roster x 1 rep, dump raw to inspect")
     ap.add_argument("--reanalyze", action="store_true")
+    ap.add_argument("--broad", action="store_true", help="use the 15-artefact multi-civilization roster")
     ap.add_argument("--reps", type=int, default=2); ap.add_argument("--workers", type=int, default=10)
     a = ap.parse_args()
+    if a.broad:
+        EVENTS = BROAD_EVENTS
+        OUTFILE = "substrate_probe_broad_run.jsonl"
     if a.selftest: selftest()
     elif a.pilot:
         if not _key(): sys.exit("no key")
@@ -239,6 +274,6 @@ if __name__ == "__main__":
                 print(f"  {name:>10}({origin}) ERR {type(ex).__name__}: {ex}")
     elif a.run: run(a.reps, a.workers)
     elif a.reanalyze:
-        stream = [json.loads(l) for l in (HERE / "substrate_probe_run.jsonl").read_text(encoding="utf-8").splitlines() if l.strip()]
+        stream = [json.loads(l) for l in (HERE / OUTFILE).read_text(encoding="utf-8").splitlines() if l.strip()]
         analyze(stream)
     else: print("use --selftest | --pilot | --run [--reps N] | --reanalyze")

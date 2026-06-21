@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Latent Camera — the substrate through the keyhole</title>
+<style>
+  :root{--bg:#0c0e13;--panel:#141821;--ink:#e7ecf3;--dim:#8a94a6;--line:#222a38;
+        --cn:#e0564b;--us:#4b8fe0;--eu:#56c08a;--gold:#d9b25a;}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 -apple-system,Segoe UI,Roboto,sans-serif}
+  header{padding:14px 20px;border-bottom:1px solid var(--line);display:flex;align-items:baseline;gap:16px;flex-wrap:wrap}
+  header h1{font-size:18px;margin:0;font-weight:600;letter-spacing:.3px}
+  header .sub{color:var(--dim);font-size:12px}
+  .keyhole{color:var(--gold)}
+  #wrap{display:grid;grid-template-columns:230px minmax(0,1fr) 300px;height:calc(100vh - 54px)}
+  @media(max-width:1000px){
+    #wrap{grid-template-columns:1fr;height:auto}
+    #list{border-right:none;border-bottom:1px solid var(--line);display:flex;gap:6px;overflow-x:auto}
+    #list .art{min-width:150px}
+    #side{border-left:none;border-top:1px solid var(--line)}
+    .axes{grid-template-columns:1fr !important}
+  }
+  #list{border-right:1px solid var(--line);overflow:auto;padding:8px}
+  .art{padding:8px 10px;border-radius:8px;cursor:pointer;margin-bottom:4px;border:1px solid transparent}
+  .art:hover{background:#1a1f2b} .art.sel{background:#1c2434;border-color:#2f3b50}
+  .art .t{font-weight:600;font-size:12.5px} .art .m{color:var(--dim);font-size:11px;margin-top:2px}
+  .bar{height:4px;border-radius:3px;background:#222;margin-top:5px;overflow:hidden}
+  .bar i{display:block;height:100%;background:linear-gradient(90deg,#3a4a63,#7fa9e6)}
+  #stage{overflow:auto;padding:18px 22px}
+  #stage h2{margin:0 0 2px;font-size:16px} #stage .note{color:var(--dim);font-size:12px;margin-bottom:14px}
+  .waterline{display:flex;align-items:center;gap:10px;color:var(--gold);font-size:11px;margin:18px 0 10px;text-transform:uppercase;letter-spacing:.5px}
+  .waterline:before,.waterline:after{content:"";height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);flex:1}
+  .axes{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+  .ax{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px;position:relative;cursor:pointer}
+  .ax:hover{border-color:#34405a}
+  .ax .name{font-size:11px;letter-spacing:1px;color:var(--dim);text-transform:uppercase}
+  .ax .val{font-size:15px;font-weight:600;margin:4px 0 8px;min-height:22px}
+  .ax .blooms{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:6px}
+  .chip{font-size:10.5px;padding:2px 7px;border-radius:10px;border:1px solid;white-space:nowrap}
+  .cn{color:var(--cn);border-color:var(--cn)} .us{color:var(--us);border-color:var(--us)} .eu{color:var(--eu);border-color:var(--eu)}
+  .meter{height:5px;border-radius:3px;background:#1d2430;overflow:hidden;margin-top:4px}
+  .meter i{display:block;height:100%}
+  .axfoot{display:flex;justify-content:space-between;font-size:10.5px;color:var(--dim);margin-top:5px}
+  .fanwrap{grid-column:1/-1}
+  .why{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px}
+  .why h3{margin:0 0 4px;font-size:13px} .why .compl{color:var(--gold);font-size:12px;margin-bottom:10px}
+  .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .col h4{margin:0 0 6px;font-size:11px;letter-spacing:.5px;text-transform:uppercase}
+  .col ul{margin:0;padding-left:15px} .col li{font-size:12px;margin-bottom:4px;color:#cdd6e3}
+  .delivered{margin-top:10px;font-size:12px;color:var(--dim)} .delivered b{color:var(--ink);font-weight:600}
+  #side{border-left:1px solid var(--line);overflow:auto;padding:14px}
+  #side h3{font-size:13px;margin:0 0 8px}
+  .stub{background:#11151d;border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:6px;padding:8px 10px;margin-bottom:8px}
+  .stub .r{font-size:12.5px;font-weight:600} .stub .meta{font-size:10.5px;color:var(--dim);margin-top:3px}
+  .stub .f{font-size:11px;margin-top:5px;color:#c2cbd9} .stub .f b{color:var(--gold);font-weight:600}
+  svg{width:100%;display:block} text{fill:var(--dim);font:11px sans-serif}
+  .tl{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin-top:14px}
+  .legend{display:flex;gap:14px;flex-wrap:wrap;font-size:11px;color:var(--dim);margin-top:10px;align-items:center}
+  .legend b{color:var(--ink)} .sw{display:inline-block;width:10px;height:10px;border-radius:50%;vertical-align:-1px;margin-right:3px}
+  .toggle{cursor:pointer;border:1px solid var(--line);border-radius:7px;padding:3px 9px;font-size:11px;color:var(--dim);background:#12161f}
+  .toggle.on{color:var(--ink);border-color:#3a4a63}
+  .latentdim .ax.latent{opacity:.35} .physdim .ax.phys{opacity:.35}
+</style>
+
+<header>
+  <h1>Latent Camera <span class="keyhole">▷ the substrate through the keyhole</span></h1>
+  <span class="sub" id="meta"></span>
+  <span class="sub">sharpness = <b>disclosed proxy</b> (cross-origin agreement × measured-claim); semantic grounding pass replaces it</span>
+  <span style="flex:1"></span>
+  <span class="toggle on" id="tphys" onclick="toggleLayer('phys')">physical</span>
+  <span class="toggle on" id="tlat" onclick="toggleLayer('latent')">latent</span>
+</header>
+
+<div id="wrap">
+  <div id="list"></div>
+  <div id="stage"></div>
+  <div id="side"><h3>conjecture-fan</h3><div class="dim" style="color:var(--dim);font-size:12px">click an axis to inspect the stubs the models synth'd — sharp tip + weighted rivals, each with a falsifier and a followup.</div></div>
+</div>
+
+<script src="viewer_data.js"></script>
+<script>
+const AX=["who","what","where","when"], PHYS=new Set(["who","what","where","when"]);
+let cur=null, layer={phys:true,latent:true};
+const B=SUBSTRATE.blocs;
+document.getElementById("meta").textContent =
+  `${SUBSTRATE.artefacts.length} artefacts · ${SUBSTRATE.n_parsed}/${SUBSTRATE.n_records} records parsed · source ${SUBSTRATE.source}`;
+
+function blur(s){return ((1-s)*4.5).toFixed(1)}          // COIN: low sharpness -> literal blur (the badge)
+function shColor(s){return `hsl(${210+ s*40},${30+s*45}%,${45+s*25}%)`}
+
+function renderList(){
+  const L=document.getElementById("list"); L.innerHTML="";
+  SUBSTRATE.artefacts.forEach(a=>{
+    const avg=AX.reduce((x,k)=>x+(a.axes[k]?.sharpness||0),0)/AX.length;
+    const d=document.createElement("div"); d.className="art"+(cur===a.id?" sel":"");
+    d.onclick=()=>{cur=a.id;render()};
+    d.innerHTML=`<div class="t">${a.id}</div><div class="m">${esc(a.title).slice(0,46)}</div>
+      <div class="bar"><i style="width:${(avg*100).toFixed(0)}%"></i></div>`;
+    L.appendChild(d);
+  });
+}
+function esc(s){return (s||"").replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]))}
+
+function render(){
+  renderList();
+  const a=SUBSTRATE.artefacts.find(x=>x.id===cur); const S=document.getElementById("stage");
+  if(!a){S.innerHTML="<p style='color:var(--dim)'>select an artefact</p>";return}
+  let h=`<h2>${esc(a.title)}</h2><div class="note">${a.n} cross-origin records · WHOM: ${a.whom.join(", ")}</div>`;
+  h+=`<div class="waterline">above · the four intrinsic axes · paid-for bits = sharp</div>`;
+  h+=`<div class="axes">`;
+  AX.forEach(k=>h+=axCard(a,k));
+  h+=`</div>`;
+  h+=`<div class="waterline">below · the why / how edges · the generative fan = blur is the badge</div>`;
+  h+=whyPanel(a);
+  h+=timeline(a);
+  h+=`<div class="legend"><span><span class="sw" style="background:var(--cn)"></span>CN</span>
+    <span><span class="sw" style="background:var(--us)"></span>US</span>
+    <span><span class="sw" style="background:var(--eu)"></span>EU</span>
+    <span><b>sharp</b> = models converge + claim measured</span>
+    <span><b>blurred</b> = diverge / conjectured (the fan)</span>
+    <span class="keyhole">COIN: rendered sharpness ≤ measured bits</span></div>`;
+  S.innerHTML=h;
+  document.querySelectorAll(".ax").forEach(el=>el.onclick=()=>showFan(a,el.dataset.k));
+  applyLayer();
+}
+
+function axCard(a,k){
+  const x=a.axes[k]; if(!x) return "";
+  const blooms=Object.entries(x.perBloc||{}).map(([b,vs])=>
+     `<span class="chip ${b.toLowerCase()}" title="${esc(vs.join(' / '))}">${b}: ${esc((vs[0]||'').slice(0,22))}</span>`).join("");
+  return `<div class="ax ${PHYS.has(k)?'phys':'latent'}" data-k="${k}">
+    <div class="name">${k}</div>
+    <div class="val" style="filter:blur(${blur(x.sharpness)}px);color:${shColor(x.sharpness)}">${esc((x.leading||'—').slice(0,60))}</div>
+    <div class="blooms">${blooms}</div>
+    <div class="meter"><i style="width:${(x.sharpness*100).toFixed(0)}%;background:${shColor(x.sharpness)}"></i></div>
+    <div class="axfoot"><span>sharpness ${x.sharpness}</span><span>agree ${x.agreement} · measured ${x.measured_frac} · fan ${x.fan.length}</span></div>
+  </div>`;
+}
+
+function whyPanel(a){
+  const w=a.why||{}; const cols=Object.entries(w.aims_by_bloc||{}).map(([b,aims])=>
+    `<div class="col"><h4 class="${b.toLowerCase()}" style="color:var(--${b.toLowerCase()})">${b} · aims</h4>
+       <ul>${aims.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>`).join("");
+  return `<div class="why"><h3>WHY — the forward fan, by cultural aperture</h3>
+    <div class="compl">complementarity ${w.complementarity ?? '—'} · ${ (w.complementarity>=0.8?'each bloc surfaces motives the others miss → complementary coverage (federate, don’t pick)': 'partial overlap') }</div>
+    <div class="cols">${cols}</div>
+    <div class="delivered"><b>delivered (measured downstream):</b> ${ (w.delivered||[]).map(esc).join(" · ")||'—'}</div></div>`;
+}
+
+function timeline(a){
+  const sp=a.when_span||{}; if(!sp.start) return "";
+  const s=sp.start, e=Math.max(sp.end||s, 2026), W=860, pad=40, span=Math.max(1,e-s);
+  const X=y=>pad+(y-s)/span*(W-2*pad);
+  const ticks=(sp.markers||[]).map(y=>`<line x1="${X(y)}" y1="44" x2="${X(y)}" y2="54" stroke="var(--gold)" stroke-width="1.5"/>
+     <text x="${X(y)}" y="68" text-anchor="middle">${y}</text>`).join("");
+  return `<div class="tl"><div style="font-size:12px;color:var(--dim);margin-bottom:4px">
+      t_event worldline — the artefact across time (origin → spread → present), and t_obs (measured 2026)</div>
+    <svg viewBox="0 0 ${W} 90">
+      <line x1="${pad}" y1="49" x2="${W-pad}" y2="49" stroke="var(--line)" stroke-width="2"/>
+      ${ticks}
+      <circle cx="${X(s)}" cy="49" r="4" fill="var(--gold)"/><text x="${X(s)}" y="34" text-anchor="middle">origin ${s}</text>
+      <circle cx="${X(2026)}" cy="49" r="5" fill="var(--us)"/><text x="${X(2026)}" y="34" text-anchor="middle">t_obs 2026</text>
+    </svg></div>`;
+}
+
+function showFan(a,k){
+  const x=a.axes[k]; const sd=document.getElementById("side");
+  if(!x){sd.innerHTML="";return}
+  let h=`<h3>${k.toUpperCase()} — conjecture-fan <span style="color:var(--dim);font-weight:400">(sharpness ${x.sharpness})</span></h3>`;
+  h+=`<div class="stub" style="border-left-color:${shColor(x.sharpness)}"><div class="r">▶ ${esc(x.leading||'—')}</div>
+      <div class="meta">leading reading · agree ${x.agreement} · measured-claim ${x.measured_frac}</div></div>`;
+  if(!x.fan.length) h+=`<div style="color:var(--dim);font-size:12px">no rival candidates synth'd for this axis.</div>`;
+  x.fan.forEach(f=>{ h+=`<div class="stub"><div class="r">${esc(f.reading)}</div>
+     <div class="meta">${f.bloc?`<span class="chip ${f.bloc.toLowerCase()}">${f.bloc}</span> `:''}weight ${f.weight??'—'} · ${esc(f.tag||'conjectured')}</div>
+     ${f.falsifier?`<div class="f"><b>falsifier:</b> ${esc(f.falsifier)}</div>`:''}
+     ${f.followup?`<div class="f"><b>followup:</b> ${esc(f.followup)}</div>`:''}</div>`; });
+  sd.innerHTML=h;
+}
+
+function toggleLayer(which){
+  layer[which]=!layer[which];
+  document.getElementById(which==='phys'?'tphys':'tlat').classList.toggle("on",layer[which]);
+  applyLayer();
+}
+function applyLayer(){
+  const S=document.getElementById("stage");
+  S.classList.toggle("physdim",!layer.phys); S.classList.toggle("latentdim",!layer.latent);
+}
+
+cur=SUBSTRATE.artefacts[0]?.id; render();
+</script>
