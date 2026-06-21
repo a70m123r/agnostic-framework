@@ -208,7 +208,46 @@ def analyze(stream):
         rts = [r["reasoning_tokens"] for r in rs if r.get("reasoning_tokens")]
         mrt = f"{statistics.median(rts):.0f}" if rts else "-"
         print(f"{m:>9} {o:>3} | {fil_ok}/{len(fil)}          | {nf_fab}/{len(nf)}                    | {mrt}")
+    _harvest(by_item)
     print(f"\n  wrote settling_toy_internet_run.jsonl ({len(stream)} records)")
+
+
+def _harvest(by_item):
+    """The LIVE HARVEST: ground the discharge in real INDEPENDENT routes (N_eff), not the planted labels.
+    Reads settling_toy_harvest.jsonl = [{item, harvested:[{domain,value}], note}]. The sketch alone has
+    corrob_bits=0 (provider-agreement != corroboration); only independent harvest routes buy the bits."""
+    import math
+    from collections import Counter
+    hp = HERE / "settling_toy_harvest.jsonl"
+    if not hp.exists():
+        print("\n  (no live harvest yet -- run the harvest to ground the discharge in real independent routes)")
+        return
+    harv = {h["item"]: h for h in (json.loads(l) for l in hp.read_text(encoding="utf-8").splitlines() if l.strip())}
+    print("\n==================== LIVE HARVEST (grounded discharge; N_eff = distinct independent domains) ====================")
+    print(f"{'id':>3} {'planted':>11} | sketch-consensus  | harvested value (N_eff -> corrob_bits)        | grounded verdict")
+    for it in BATTERY:
+        rs = by_item.get(it["id"], [])
+        if not rs: continue
+        sk = Counter(r["norm"] for r in rs).most_common(1)[0][0]
+        h = harv.get(it["id"])
+        if h and h.get("contested"):
+            dates = "/".join(sorted({x["value"] for x in h["harvested"]}))
+            print(f"{it['id']:>3} {it['type']:>11} | {sk:<17} | routes DISAGREE: {dates[:22]:<22} (no single) | CONTESTED-confirmed; the {len(rs)}/{len(rs)} sketch '{sk}' correctly REFUSED")
+            continue
+        if not h or not h.get("harvested"):
+            v = "NOISE_FLOOR confirmed (no crisp route)" if it["type"] == "noise_floor" else "CONTESTED (routes disagree)"
+            print(f"{it['id']:>3} {it['type']:>11} | {sk:<17} | (no single crisp independent answer)          | {v}")
+            continue
+        vals = Counter(x["value"].strip().lower() for x in h["harvested"])
+        topv, _ = vals.most_common(1)[0]
+        n_eff = len({x["domain"] for x in h["harvested"] if x["value"].strip().lower() == topv})
+        corrob = math.log2(1 + n_eff)
+        grounded = "DISCHARGED (grounded)" if n_eff >= 2 else "1 route -> still pending"
+        truth = it.get("truth") or []
+        match = "sketch == harvest" if (topv in sk or sk in topv or any(t in topv for t in truth)) else "sketch != harvest (!)"
+        print(f"{it['id']:>3} {it['type']:>11} | {sk:<17} | {topv[:22]:<22} (N_eff={n_eff} -> {corrob:.2f} bits) | {grounded}; {match}")
+    print("  COIN: the sketch alone = corrob_bits 0 (agreement is shared-prior). Only these INDEPENDENT routes buy")
+    print("        the bits that cross the waterline and discharge a fillable axis.")
 
 
 def selftest():
