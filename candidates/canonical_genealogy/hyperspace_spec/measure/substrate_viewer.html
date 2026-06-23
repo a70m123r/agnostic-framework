@@ -55,6 +55,17 @@
   .gb.over_credits_home{color:var(--cn);border-color:var(--cn)} .gb.mixed{color:var(--dim);border-color:#33405a}
   .gtruth{font-size:12px;color:#c2cbd9;margin-top:4px} .gtruth b{color:var(--ink)}
   .gdetail{font-size:11.5px;color:var(--dim);margin-top:7px;line-height:1.45}
+  .ice{display:flex;flex-direction:column;gap:3px;margin:14px 0}
+  .strat{display:flex;gap:12px;border-radius:8px;padding:9px 13px;cursor:pointer;border:1px solid var(--line);align-items:flex-start}
+  .strat:hover{border-color:#3a4a63}
+  .strat .sd{font-weight:700;font-size:13px;min-width:44px;padding-top:1px}
+  .strat .sbody{flex:1;min-width:0}
+  .strat .slabel{font-size:12.5px;font-weight:600} .strat .sn{color:var(--dim);font-weight:400;font-size:11px}
+  .strat .sitems{font-size:11.5px;color:#c2cbd9;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .strat.bridge{background:linear-gradient(90deg,#1d2839,#141821);border-color:var(--gold);box-shadow:0 0 16px rgba(217,178,90,.16)}
+  .strat.bridge .sd,.strat.bridge .slabel{color:var(--gold)}
+  .strat.past{background:linear-gradient(90deg,#10141d,#0e1119)} .strat.past .sd{color:#6f8fd0}
+  .strat.future{background:linear-gradient(90deg,#181019,#120e14)} .strat.future .sd{color:#d99a5a}
   #side{border-left:1px solid var(--line);overflow:auto;padding:14px}
   #side h3{font-size:13px;margin:0 0 8px}
   .stub{background:#11151d;border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:6px;padding:8px 10px;margin-bottom:8px}
@@ -74,6 +85,8 @@
   <span class="sub" id="meta"></span>
   <span class="sub">sharpness = <b>disclosed proxy</b> (cross-origin agreement × measured-claim); semantic grounding pass replaces it</span>
   <span style="flex:1"></span>
+  <span class="toggle on" id="mAxes" onclick="setMode('axes')">axes</span>
+  <span class="toggle" id="mIce" onclick="setMode('iceberg')">iceberg&nbsp;L−0+</span>
   <span class="toggle on" id="tphys" onclick="toggleLayer('phys')">physical</span>
   <span class="toggle on" id="tlat" onclick="toggleLayer('latent')">latent</span>
 </header>
@@ -85,9 +98,10 @@
 </div>
 
 <script src="viewer_data.js"></script>
+<script src="enriched_data.js"></script>
 <script>
 const AX=["who","what","where","when"], PHYS=new Set(["who","what","where","when"]);
-let cur=null, layer={phys:true,latent:true};
+let cur=null, mode='axes', layer={phys:true,latent:true};
 const B=SUBSTRATE.blocs;
 document.getElementById("meta").textContent =
   `${SUBSTRATE.artefacts.length} artefacts · ${SUBSTRATE.n_parsed}/${SUBSTRATE.n_records} records parsed · source ${SUBSTRATE.source}`;
@@ -97,6 +111,16 @@ function shColor(s){return `hsl(${210+ s*40},${30+s*45}%,${45+s*25}%)`}
 
 function renderList(){
   const L=document.getElementById("list"); L.innerHTML="";
+  if(mode==='iceberg' && typeof ENRICHED!=='undefined'){
+    ENRICHED.forEach(n=>{
+      const d=document.createElement("div"); d.className="art"+(cur===n.artefact?" sel":"");
+      d.onclick=()=>{cur=n.artefact;render()};
+      d.innerHTML=`<div class="t">${n.artefact}</div><div class="m">${esc(n.title).slice(0,42)}</div>
+        <div class="m" style="color:${n.two_sided?'var(--gold)':'#6f8fd0'}">${n.two_sided?'two-sided ⇕':'past ↓'} · ${n.column.length} strata</div>`;
+      L.appendChild(d);
+    });
+    return;
+  }
   SUBSTRATE.artefacts.forEach(a=>{
     const avg=AX.reduce((x,k)=>x+(a.axes[k]?.sharpness||0),0)/AX.length;
     const d=document.createElement("div"); d.className="art"+(cur===a.id?" sel":"");
@@ -110,7 +134,9 @@ function esc(s){return (s||"").replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":
 
 function render(){
   renderList();
-  const a=SUBSTRATE.artefacts.find(x=>x.id===cur); const S=document.getElementById("stage");
+  const S=document.getElementById("stage");
+  if(mode==='iceberg'){ renderIceberg(cur); return; }
+  const a=SUBSTRATE.artefacts.find(x=>x.id===cur);
   if(!a){S.innerHTML="<p style='color:var(--dim)'>select an artefact</p>";return}
   let h=`<h2>${esc(a.title)}</h2><div class="note">${a.n} cross-origin records · WHOM: ${a.whom.join(", ")}</div>`;
   h+=groundedPanel(a);
@@ -208,5 +234,46 @@ function applyLayer(){
   S.classList.toggle("physdim",!layer.phys); S.classList.toggle("latentdim",!layer.latent);
 }
 
+function setMode(m){ mode=m;
+  if(m==='iceberg' && typeof ENRICHED!=='undefined' && !ENRICHED.find(n=>n.artefact===cur))
+    cur=(ENRICHED.find(n=>n.two_sided)||ENRICHED[0]).artefact;
+  if(m==='axes' && !SUBSTRATE.artefacts.find(x=>x.id===cur)) cur=SUBSTRATE.artefacts[0].id;
+  document.getElementById('mAxes').classList.toggle('on',m==='axes');
+  document.getElementById('mIce').classList.toggle('on',m==='iceberg');
+  render();
+}
+function depthBadge(d){ return d>0?('L+'+d):(d<0?('L'+d):'L0'); }
+function renderIceberg(id){
+  const S=document.getElementById('stage');
+  const node=(typeof ENRICHED!=='undefined')?ENRICHED.find(n=>n.artefact===id):null;
+  if(!node){ S.innerHTML=`<p style="color:var(--dim)">No dig strata for this artefact yet. The iceberg L−0+ column exists for the dug artefacts — algebra, distillation, variolation, steam engine (past-only), and robotics, AI, spaceflight (two-sided). Pick one from the left.</p>`; return; }
+  let h=`<h2>${esc(node.title)}</h2><div class="note">${node.two_sided?'two-sided iceberg — eschaton ↑ · the bridge · founding myth ↓':'past-only — the bridge · founding myth ↓'} · click a stratum to read it</div><div class="ice">`;
+  [...node.column].sort((x,y)=>y.depth-x.depth).forEach(c=>{
+    const side=c.depth===0?'bridge':(c.side==='future'?'future':'past');
+    const blurpx=((1-c.render_sharpness)*5).toFixed(1);
+    const items=(c.items||[]).slice(0,6).map(x=>esc(typeof x==='string'?x:(x.reading||x.value||JSON.stringify(x)))).join('  ·  ');
+    h+=`<div class="strat ${side}" data-d="${c.depth}">
+      <div class="sd">${depthBadge(c.depth)}</div>
+      <div class="sbody">
+        <div class="slabel">${esc(c.stratum)} <span class="sn">${c.n_items} items · sharpness ${c.render_sharpness}${c.exhausted_count?` · ${c.exhausted_count} exhausted`:''}</span></div>
+        <div class="sitems" style="filter:blur(${blurpx}px)">${items||'—'}</div>
+      </div></div>`;
+  });
+  h+=`</div><div class="legend">
+    <span class="keyhole">L0 = the bridge (the measurable present — us)</span>
+    <span style="color:#6f8fd0">↓ past cone → the founding myth</span>
+    <span style="color:#d99a5a">↑ future cone → the eschaton</span>
+    <span><b>blur = depth</b> (§9: the future blurs faster than the past)</span></div>`;
+  S.innerHTML=h;
+  document.querySelectorAll('.strat').forEach(el=>el.onclick=()=>showStratum(node,parseInt(el.dataset.d)));
+}
+function showStratum(node,depth){
+  const c=node.column.find(x=>x.depth===depth); const sd=document.getElementById('side');
+  if(!c){sd.innerHTML='';return}
+  let h=`<h3>${depthBadge(c.depth)} — ${esc(c.stratum)}</h3>
+    <div style="font-size:11px;color:var(--dim);margin-bottom:8px">${esc(c.kind)} · sharpness ${c.render_sharpness}${c.exhausted_count?` · ${c.exhausted_count} models said EXHAUSTED here`:''}</div>`;
+  (c.items||[]).forEach(it=>{ const t=typeof it==='string'?it:(it.reading||it.value||JSON.stringify(it)); h+=`<div class="stub">${esc(t)}</div>`; });
+  sd.innerHTML=h;
+}
 cur=SUBSTRATE.artefacts[0]?.id; render();
 </script>
