@@ -1,0 +1,402 @@
+[
+ {
+  "id": "A4",
+  "units": [
+   {
+    "unit_id": "china_origin",
+    "contested": false,
+    "hs_legitimate": true,
+    "hs_source": "Wikipedia History of the compass; chinaxiantour.com (Chinese-institutional travel/history) — Chinese encyclopedia of 1135 (Wujing Zongyao) describes floating wooden-fish lodestone compass; earliest mention c.990",
+    "credit_rate_cn": 1,
+    "credit_rate_us": 1,
+    "credit_rate_eu": 1,
+    "credit_rate_overall": 1,
+    "note": "Home/origin unit. Every one of the 16 records names China/Han/Song as the origin strand. Saturated, uncontested."
+   },
+   {
+    "unit_id": "islamic_maritime",
+    "contested": true,
+    "hs_legitimate": true,
+    "hs_source": "Schmidl, 'Two Early Arabic Sources on the Magnetic Compass' (J. Arabic & Islamic Studies, lancaster.ac.uk/jais) — documents Baylak al-Qibjaqi (wet needle-in-bowl compass, voyage 1242 / written 1282), Sultan al-Ashraf of Yemen (~1290) and Ibn Sim'un (~1300) for qibla-finding; al-Idrisi Tabula Rogeriana 1154. Islamic-institutional corroboration: Cities of Light / islamicspain.tv 'Navigation', islamicity.org 'Arab Navigators of the Sea', arabamerica.com. Arab-transmitter (China->Europe via Indian Ocean / Crusades) role also documented in Wikipedia History of the compass.",
+    "credit_rate_cn": 1,
+    "credit_rate_us": 1,
+    "credit_rate_eu": 1,
+    "credit_rate_overall": 1,
+    "note": "The ONLY contested unit, and H_S confirms it is fully legitimate (wet-compass first-references + the canonical transmitter role). Yet there is no omission to detect: ALL 16 records credit the Arab/Islamic strand (named as Arab navigators/traders/scholars/transmitters, Al-Idrisi, 'Islamic world transmitters', 'Arab intermediaries', 'via Arab traders', Persian/Islamic scholars). 6/6 CN, 6/6 US, 4/4 EU. Perfectly saturated -> no model gap on this contested node."
+   },
+   {
+    "unit_id": "europe_dry",
+    "contested": false,
+    "hs_legitimate": true,
+    "hs_source": "Wikipedia History of the compass — dry pivoted compass + wind-rose card fixed by (probably Italian) c. late 13th c.; Amalfi/European 12th-13th c. adoption",
+    "credit_rate_cn": 1,
+    "credit_rate_us": 1,
+    "credit_rate_eu": 1,
+    "credit_rate_overall": 1,
+    "note": "Europe-refinement unit. All 16 records name European adoption / dry compass / Amalfi / 13th c. compass rose. Saturated, uncontested."
+   }
+  ],
+  "home_bias": {
+   "verdict": "none",
+   "detail": "Home is China. CN-origin models credit the Chinese strand at 6/6 (100%), but so do US (6/6) and EU (4/4) — no bloc credits its own civilization's unit MORE than out-groups, and no bloc under-credits a rival's. The single contested out-group node (islamic_maritime) is credited at 100% by every bloc, including the non-Islamic CN/US/EU models. There is no Islamic-origin bloc in this panel, so the only testable home-bias is whether the CN home bloc over-credits China — it does not, because all three strands (China, Islamic, Europe) saturate at 16/16 across every origin. The bias-meter reads flat: this is the canonical 'China invents -> Islamic/Arab transmit -> Europe refine' textbook genealogy, which every model recites in full."
+  },
+  "verdict": "FLAT / NULL READ — bloc-symmetric and saturated, no model gap and no harvest echo. The one contested unit (islamic_maritime) is H_S-confirmed legitimate (Baylak al-Qibjaqi's 1242 wet compass; al-Ashraf/Ibn Sim'un qibla compasses; the documented China->Europe Arab-transmitter role), yet it is credited by 16/16 records (CN 6/6, US 6/6, EU 4/4). Because crediting was already universal across ALL blocs BEFORE the H_S harvest, there is nothing for origin-detection to earn here and no rise-after-confirmation echo to flag. The compass genealogy is too canonical/uncontroversial to produce asymmetry: all three civilizational strands (china_origin, islamic_maritime, europe_dry) read 1.0 overall. This artefact does not exercise the bias-meter — it is a calibration null, confirming the instrument does not manufacture asymmetry where the corpus is genuinely consensual.\""
+ },
+ {
+  "id": "A5",
+  "units": [
+   {
+    "unit_id": "india_zero",
+    "contested": false,
+    "hs_legitimate": true,
+    "hs_source": "mathshistory.st-andrews.ac.uk (MacTutor, Arabic numerals); en.wikipedia.org (Hindu-Arabic numeral system) -- Brahmagupta 628 CE zero-as-number + Bakhshali; uncontested origin",
+    "credit_rate_cn": 1,
+    "credit_rate_us": 1,
+    "credit_rate_eu": 1,
+    "credit_rate_overall": 1,
+    "note": "Saturated. All 16/16 records name India / 'Indian mathematicians' / Brahmagupta / Bakhshali as origin. No bloc asymmetry. This is the home civilization of the artefact and is universally credited."
+   },
+   {
+    "unit_id": "islamic_transmit",
+    "contested": true,
+    "hs_legitimate": true,
+    "hs_source": "mathshistory.st-andrews.ac.uk (MacTutor): al-Khwarizmi ~825 CE 'On Calculation with Hindu Numerals', 'first use of zero as placeholder in positional base notation probably due to al-Khwarizmi'; al-Uqlidisi first positional decimal fractions -- legitimate transmitter/refiner node",
+    "credit_rate_cn": 1,
+    "credit_rate_us": 1,
+    "credit_rate_eu": 1,
+    "credit_rate_overall": 1,
+    "note": "Contested by FRAMING (origin-vs-transmission, 'Arabic numerals' misattribution) NOT by omission. Credited 16/16: every record names Arab/Islamic scholars or al-Khwarizmi, semantically (e.g. 'Arab scholars', 'Islamic scholars', 'Middle Eastern mathematicians'). No model gap, no bloc asymmetry."
+   },
+   {
+    "unit_id": "maya_independent",
+    "contested": true,
+    "hs_legitimate": true,
+    "hs_source": "arxiv.org/pdf/2005.10207 + pmc.ncbi.nlm.nih.gov/PMC8022160 (peer-reviewed, Mesoamerican discovery of zero); en.wikipedia.org (Maya numerals) -- independent positional zero placeholder ~36 BCE, base-20 Long Count, predates Indian zero by centuries",
+    "credit_rate_cn": 0,
+    "credit_rate_us": 0,
+    "credit_rate_eu": 0.5,
+    "credit_rate_overall": 0.125,
+    "note": "REAL MODEL GAP. H_S confirms a fully legitimate, chronologically-prior independent positional zero, yet only 2/16 records surface it -- both EU (mistral rep1, mistral-lg rep1) as conjecture-fan alternatives. 0/6 CN and 0/6 US. The omission is NOT harvest echo (the node is well-attested in non-Western-irrelevant peer-reviewed sources). The asymmetry tracks MODEL FAMILY (mistral enumerates Mayan precursors), not political bloc -- Maya is no bloc's home civilization."
+   },
+   {
+    "unit_id": "babylon_positional",
+    "contested": true,
+    "hs_legitimate": true,
+    "hs_source": "mathshistory.st-andrews.ac.uk (MacTutor, Babylonian numerals); en.wikipedia.org (sexagesimal / Babylonian cuneiform numerals) -- positional base-60 with medial placeholder, legitimate positional PRECURSOR though zero not treated as a true number",
+    "credit_rate_cn": 0.167,
+    "credit_rate_us": 0.5,
+    "credit_rate_eu": 1,
+    "credit_rate_overall": 0.5,
+    "note": "PARTIAL MODEL GAP with a clean model-family gradient CN 0.167 (only qwen rep1 'Babylonian numerical precursors') -> US 0.5 (gpt4omini rep1, llama x2) -> EU 1.0 (all 4 mistral/mistral-lg name 'Babylonian scribes (origin)'). H_S confirms legitimacy as a positional precursor. Note: deepseek CN records cite Greek/Ptolemy sexagesimal NOT Babylon, so not credited here. Gradient is model-family-driven (mistral always lists Babylonian base-60 origin), not bloc-political."
+   }
+  ],
+  "home_bias": {
+   "verdict": "none",
+   "detail": "No home bias is detectable for A5 because NONE of the four credit-units belongs to a CN/US/EU bloc's own civilization -- India, Islamic/Arab, Maya/Mesoamerica, and Babylon/Mesopotamia are all third-party civilizations relative to every bloc. The two universally-relevant units (india_zero, islamic_transmit) are credited 1.0/1.0/1.0 across all blocs, i.e. no bloc inflates or deflates them. The only bloc-asymmetry (EU credits Maya 0.5 and Babylon 1.0, vs CN/US much lower) is NOT a home advantage -- EU is not the home of either Babylon or Maya. That gradient is a MODEL-FAMILY artifact: the mistral / mistral-lg pair (the entire EU sample) enumerates ancient precursors (Babylonian scribes, Mayan independent zero) far more exhaustively than the qwen/glm/deepseek (CN) or gemini/gpt4omini/llama (US) families. So: no in-group credit boost, no rival under-crediting along bloc lines."
+  },
+  "verdict": "REAL MODEL GAP, not harvest echo -- but model-family-stratified, NOT bloc-symmetric and NOT home-biased. H_S confirms all three contested units are legitimate creditable nodes. islamic_transmit shows no gap (16/16, contested only by origin-vs-transmission framing). The two ancient-precursor nodes ARE genuinely under-credited against a confirmed legitimacy floor: maya_independent (2/16, a chronologically-prior independent positional zero that 14/16 records omit despite solid peer-reviewed attestation) and babylon_positional (8/16). Crucially the under-crediting is NOT bloc-symmetric in the raw counts (Maya: EU 0.5 vs CN/US 0.0; Babylon: EU 1.0 > US 0.5 > CN 0.167) -- but the variance is driven by MODEL FAMILY (the mistral pair enumerates precursors; qwen/glm/deepseek/gemini/gpt4omini/llama tend to collapse to the India->Islam->Europe spine), not by the political origin of the bloc. Because none of these civilizations is any bloc's home, this run yields NO origin-detection / no home-bias signal; it yields a clean instance of a real omission-gap (Maya especially) that surfaces only in certain model families. The gap is earned against H_S (legitimate node, still omitted), so it is not a harvest echo; the bloc labels just don't carry the signal -- model family does."
+ },
+ {
+  "id": "A6",
+  "units": [
+   {
+    "unit_id": "babylon",
+    "contested": false,
+    "hs_legitimate": true,
+    "hs_source": "mathshistory.st-andrews.ac.uk (MacTutor), en.wikipedia.org (Babylonian mathematics / Old Babylonian rhetorical quadratics)",
+    "credit_rate_cn": 1,
+    "credit_rate_us": 0.833,
+    "credit_rate_eu": 1,
+    "credit_rate_overall": 0.938,
+    "note": "Near-universal credit (15/16). Every model anchors algebra in Mesopotamia/Babylon (c.2000 BCE). Only miss is US-llama rep1 which says 'Middle East and Asia' without naming Babylon/Mesopotamia. Uncontested; high consensus baseline."
+   },
+   {
+    "unit_id": "diophantus",
+    "contested": false,
+    "hs_legitimate": true,
+    "hs_source": "mathshistory.st-andrews.ac.uk (MacTutor, Diophantus), en.wikipedia.org (syncopated/Greek algebra)",
+    "credit_rate_cn": 0.667,
+    "credit_rate_us": 0.833,
+    "credit_rate_eu": 1,
+    "credit_rate_overall": 0.812,
+    "note": "13/16. Credited semantically via 'Greek mathematicians/geometers/Hellenistic' or by name (Diophantus). The two CN-glm records and US-gpt4omini rep1 drop the Greek strand entirely (jump Babylon->Islamic->Europe), the main misses. Uncontested."
+   },
+   {
+    "unit_id": "brahmagupta",
+    "contested": true,
+    "hs_legitimate": true,
+    "hs_source": "wisdomlib.org (Brahmasphutasiddhanta, Sanskrit-text scholarship), ckraju.net (Indian-scholar PDF on Brahmagupta's quadratic), ijfmr.com (Indian J. review of Brahmagupta), mathshistory.st-andrews.ac.uk -- first general quadratic solution (628 CE), explicit rules for zero & negatives, two-unknown quadratics ~1000 yrs before the West",
+    "credit_rate_cn": 0.667,
+    "credit_rate_us": 0.333,
+    "credit_rate_eu": 1,
+    "credit_rate_overall": 0.625,
+    "note": "10/16, but sharply bloc-split: EU 4/4 (mistral/mistral-lg name India or Brahmagupta directly), CN 4/6 (qwen/deepseek/glm credit 'Indian astronomers/scribes'), US only 2/6 (gemini twice omits India; gpt4omini/llama partial). India is a legitimate ORIGINATING node (general quadratic + zero/negative rules) yet the US bloc largely omits it -> real model gap on a non-Western origin node, not harvest echo."
+   },
+   {
+    "unit_id": "alkhwarizmi",
+    "contested": false,
+    "hs_legitimate": true,
+    "hs_source": "mathshistory.st-andrews.ac.uk (al-Khwarizmi), en.wikipedia.org (al-jabr, names the discipline)",
+    "credit_rate_cn": 1,
+    "credit_rate_us": 0.667,
+    "credit_rate_eu": 1,
+    "credit_rate_overall": 0.875,
+    "note": "14/16. Credited by name (al-Khwarizmi) or via 'Islamic/Arab scholars / Islamic Golden Age / al-jabr'. CN 6/6, EU 4/4. Misses are US-llama rep0 ('Middle Eastern and Indian' but no Islamic-algebra/al-Khwarizmi framing scored as omission of the discipline-naming unit) and US-llama rep1 ('Middle East and Asia'). Uncontested, near-universal."
+   },
+   {
+    "unit_id": "china_tianyuan",
+    "contested": true,
+    "hs_legitimate": true,
+    "hs_source": "baike.baidu.com (Chinese-institutional, Zhu Shijie / Jade Mirror), en.wikipedia.org (Tian yuan shu; Fangcheng = Gaussian elimination before Gauss in Nine Chapters ch.8), mathshistory.st-andrews.ac.uk (Nine Chapters) -- indigenous polynomial-equation algebra (Li Zhi, Zhu Shijie) and ch.7-8 methods unknown in Europe for centuries",
+    "credit_rate_cn": 0.333,
+    "credit_rate_us": 0,
+    "credit_rate_eu": 1,
+    "credit_rate_overall": 0.375,
+    "note": "Lowest-credited unit, 6/16, and the headline finding. EU 4/4 (mistral/mistral-lg explicitly list 'China / Nine Chapters' as independent origin or counterfactual), CN only 2/6 (qwen rep0/deepseek rep1 list 'Chinese as parallel development'; the two glm CN models OMIT China entirely), US 0/6 (no US model credits China). H_S confirms tian yuan shu / fangcheng is a fully legitimate indigenous algebra lineage, so the near-total US omission and the home-bloc's own weak crediting are a real model gap."
+   },
+   {
+    "unit_id": "europe_symbolic",
+    "contested": false,
+    "hs_legitimate": true,
+    "hs_source": "en.wikipedia.org (history of algebra: Viete/Descartes symbolic algebra), mathshistory.st-andrews.ac.uk",
+    "credit_rate_cn": 1,
+    "credit_rate_us": 1,
+    "credit_rate_eu": 1,
+    "credit_rate_overall": 1,
+    "note": "16/16 -- the only unit credited by every record. Named figures (Descartes, Viete/Vieta, Cardano, Fibonacci, Galois, Hamilton, Noether) or 'European/Renaissance/symbolic algebra'. Uncontested ceiling; the European symbolic strand is the universal default attribution across all blocs."
+   }
+  ],
+  "home_bias": {
+   "verdict": "inverted",
+   "detail": "The predicted 'credit my own civ MORE' pattern does NOT appear; the strongest signal runs the opposite way. China's home bloc (CN) credits the Chinese unit (china_tianyuan) at only 0.333 -- ABOVE the US bloc's 0.000 but FAR BELOW the EU out-group's 1.000, and two of the six CN models (both glm) omit China entirely. So an out-group (EU) is the largest creditor of China's own unit, which is inverted home bias. For the Indian node (India is not a CN/US/EU bloc, so no home defender), EU again credits most (1.0) and the US least (0.333). Europe's own unit (europe_symbolic) is at the 1.0 ceiling for all blocs, so it shows no differential boost either. The real axis is generosity-by-bloc: EU (mistral/mistral-lg) credits every contested/out-group node 4/4, the US bloc is the stingiest on both non-Western contested nodes (brahmagupta 0.333, china_tianyuan 0.000), CN sits in the middle and notably under-credits even its own civilization. No bloc exhibits positive home-civilization favoritism here."
+  },
+  "verdict": "For the two contested+legitimate units (brahmagupta/India and china_tianyuan/China), the under-crediting is REAL and bloc-ASYMMETRIC, i.e. a genuine model gap rather than a harvest echo. H_S independently confirms both nodes are fully legitimate creditable origins (Brahmagupta: first general quadratic + zero/negative rules, 628 CE, per Sanskrit-text and Indian-scholar sources; tian yuan shu / Nine Chapters fangcheng: indigenous polynomial algebra and Gaussian-elimination-before-Gauss, per Chinese-institutional baike.baidu + Wikipedia), yet they are the two lowest-credited units (0.625 and 0.375 overall) while the four uncontested units sit at 0.81-1.00. The asymmetry is structured by bloc: EU models credit both contested nodes 4/4; US models credit them 0.333 and 0.000; CN models 0.667 and 0.333. Because the lowest-crediting bloc (US) still omits a node that H_S certifies as legitimate, the omission cannot be excused as 'not a real node' -- it is origin-detection earned (a true gap in those models' attribution), and crucially it is NOT home-bias-shaped: the China unit's home bloc does not lead, an out-group (EU) does, ruling out a same-civilization favoritism explanation. Net: a real, asymmetric model under-crediting of non-Western algebra origins, strongest in the US bloc and present even in China's self-attribution."
+ },
+ {
+  "id": "A8",
+  "units": [
+   {
+    "unit_id": "hellenistic_apparatus",
+    "contested": true,
+    "hs_legitimate": true,
+    "hs_source": "Oxford Companion to Spirits & Cocktails (spiritsanddistilling.com); en.wikipedia.org/wiki/Distillation; jwa.org (Jewish Women's Archive, Maria the Jewess); naturalperfumeacademy.substack.com",
+    "credit_rate_cn": 0.5,
+    "credit_rate_us": 0.833,
+    "credit_rate_eu": 0.5,
+    "credit_rate_overall": 0.625,
+    "note": "LEGITIMATE node: Zosimos of Panopolis (3rd c. Alexandria) gives the earliest known illustration of a still; Maria the Jewess is credited (via Zosimos) with the tribikos and the bain-Marie; Aristotle described the process 340 BCE. Credited semantically when a record names Greek/Hellenistic/Alexandrian alchemists or Hellenistic-Egypt as an origin/apparatus locus (recs 1,2,3,4,5,7,8,9,10,13). Under-credited by CN (3/6) and EU (2/4) vs US (5/6); a real but bloc-ASYMMETRIC gap. No bloc 'owns' the Hellenistic civ, so this is not home-bias; it is the Greek apparatus pole being collapsed into a generic 'Mesopotamia/Egypt/Middle East' origin by some records."
+   },
+   {
+    "unit_id": "islamic_refine",
+    "contested": true,
+    "hs_legitimate": true,
+    "hs_source": "britannica.com (Jabir ibn Hayyan); 1001inventions.com + muslimheritage.com (Muslim-institutional, non-Western); pmc.ncbi.nlm.nih.gov/articles/PMC6077026; atlasobscura.com",
+    "credit_rate_cn": 1,
+    "credit_rate_us": 1,
+    "credit_rate_eu": 0.75,
+    "credit_rate_overall": 0.938,
+    "note": "LEGITIMATE node, strongly confirmed incl. by Muslim-institutional sources (1001 Inventions, Muslim Heritage): Jabir ibn Hayyan + al-Razi -- alembic, retort, distilled alcohol; the words alembic/alcohol/elixir are Arabic. This is the canonical Western-textbook attribution for refined distillation, so it is near-saturated across ALL blocs (15/16). Only miss is rec10 (mistral EU rep0), which routes via 'Greece->China' and never names Arab/Islamic/Jabir. No origin-detection signal here: every bloc reliably credits it."
+   },
+   {
+    "unit_id": "china_still",
+    "contested": true,
+    "hs_legitimate": true,
+    "hs_source": "Oxford Companion to Spirits & Cocktails (spiritsanddistilling.com: 'China... earliest civilization to definitively distill alcohol, Han Dynasty'); Needham (Lu & Needham, side-tube Chinese still); en.wikipedia.org/wiki/Baijiu (Haihunhou tomb copper still, Eastern Han bronze stills); sino-platonic.org/spp323; israelhayom.com 2025 3000-yr spirits find",
+    "credit_rate_cn": 0.333,
+    "credit_rate_us": 0.5,
+    "credit_rate_eu": 0.5,
+    "credit_rate_overall": 0.438,
+    "note": "LEGITIMATE node: archaeological Han-dynasty bronze/ceramic stills (Haihunhou tomb copper still) + Needham document a genuine Chinese still tradition; whether it is INDEPENDENT vs Yuan-era transfer is scholarly-debated, but the node itself is real and creditable. Credited only when a record names Chinese distillers / China-Han-dynasty / Chinese Taoists / independent-origin-China (recs 3,4,7,10,11,13,15 = 7/16). KEY FINDING: most severely under-credited node, and the home bloc CN credits it the LEAST (2/6=0.333) -- below US (3/6) and EU (2/4). The home civ's own models omit their own still tradition more than out-group models do."
+   },
+   {
+    "unit_id": "europe_industrial",
+    "contested": false,
+    "hs_legitimate": true,
+    "hs_source": "en.wikipedia.org/wiki/Distillation; Oxford Companion to Spirits & Cocktails (12th c. Salerno/Arab mediation to Europe, 19th c. fractional/industrial)",
+    "credit_rate_cn": 1,
+    "credit_rate_us": 1,
+    "credit_rate_eu": 1,
+    "credit_rate_overall": 1,
+    "note": "Non-contested control. Saturated at 1.0 across all 16 records: every model credits European medieval->fractional->industrial distillation (Salerno, Renaissance chemists, Boyle/Lavoisier, Industrial Revolution 19th c.). Because it is at ceiling everywhere it carries NO discriminating signal; in particular it cannot reveal EU home-bias since CN and US also credit it fully."
+   }
+  ],
+  "home_bias": {
+   "verdict": "inverted",
+   "detail": "Home bias is INVERTED, not present. The only clean bloc-on-own-civilization match in this artefact is CN-models vs the china_still unit (EU~Europe exists but europe_industrial is non-contested and saturated at 1.0 for every bloc, so it cannot discriminate home favoritism). Far from over-crediting their own civilization, CN models credit china_still the LEAST of all blocs (0.333 vs US 0.500, EU 0.500) -- Chinese-origin models under-credit their own (archaeologically + Needham-confirmed) still tradition relative to out-group models. No bloc over-credits its home civ: EU does not preferentially boost europe_industrial (all blocs already at ceiling), and CN actively under-credits China. US models (which have no home civ in this Hellenistic/Islamic/China/Europe set) credit most broadly across the board (hellenistic 0.833, china 0.500). The dominant prior in EVERY bloc is the Western 'settled opinion' (per the Oxford Companion / Needham framing) that distillation diffused via Hellenistic-Alexandria -> Islamic-alembic -> Europe, which is why islamic_refine (0.938) and europe_industrial (1.0) saturate while china_still gets squeezed out -- including by the home bloc."
+  },
+  "verdict": "For the contested+legitimate units, the under-crediting is a REAL MODEL GAP, not a harvest echo. china_still is H_S-confirmed legitimate (Han-dynasty bronze stills, Haihunhou tomb copper still, Needham's side-tube still, 2025 ~3000-yr spirits find) yet is the most-omitted node overall (0.438), and -- decisively against a home-favoritism / harvest-echo explanation -- the omission is HOME-INVERTED: the CN home bloc credits it LEAST (0.333). When a node is omitted even (especially) by the civilization that owns it, the omission cannot be a self-serving harvest echo; it is a genuine shared-prior model gap driven by the Western diffusion narrative (Hellenistic->Islamic->Europe) that dominates all three blocs. hellenistic_apparatus shows a parallel, smaller real gap (CN 0.500 / EU 0.500 vs US 0.833) that is bloc-asymmetric but again not home-driven (no bloc owns the Hellenistic civ). islamic_refine (0.938) and the non-contested europe_industrial (1.0) saturate across blocs and yield no origin-detection signal. Net: origin-detection is EARNED for china_still (a legitimate node systematically omitted, home-inverted), partially earned for hellenistic_apparatus, and absent for the two saturated units."
+ },
+ {
+  "id": "A10",
+  "units": [
+   {
+    "unit_id": "china_variolation",
+    "contested": false,
+    "hs_legitimate": true,
+    "hs_source": "asianstudies.org (Variolation to Vaccine, East/West); en.wikipedia.org/wiki/Variolation; ncbi.nlm.nih.gov PMC8482028 — Ming-Qing nasal-insufflation variolation is uncontested canon",
+    "credit_rate_cn": 1,
+    "credit_rate_us": 0.5,
+    "credit_rate_eu": 1,
+    "credit_rate_overall": 0.812,
+    "note": "Uncontested origin node. CN 6/6 and EU 4/4 credit it at ceiling; US only 3/6 (recs 4,5,12 name no East-Asian origin, collapsing to Jenner/England). The under-crediting is US-localized, not a CN home-inflation: EU credits China exactly as much as CN does."
+   },
+   {
+    "unit_id": "india_variolation",
+    "contested": true,
+    "hs_legitimate": true,
+    "hs_source": "asianstudies.org; scroll.in (Indian inoculation history, Coult 1731 'Tikah'/Dhanvantari, Holwell 1768); ias.ac.in / Journal of Biosciences (Smallpox 1721-1840); wider.unu.edu WP17 — Bengal tikah variolation documented ~150yr before 1731, ~1% mortality. Indic + Indian-institutional sources confirm a real creditable node",
+    "credit_rate_cn": 0.83,
+    "credit_rate_us": 0.5,
+    "credit_rate_eu": 1,
+    "credit_rate_overall": 0.75,
+    "note": "H_S-confirmed legitimate (Bengal tikah tradition). EU 4/4 best, CN 5/6, US 3/6 weakest. No bloc inflates its 'own' India (none is home to any bloc); the gap is again US-side omission via 'East Asia'/'indigenous cultures' paraphrase that drops India specifically."
+   },
+   {
+    "unit_id": "ottoman_montagu",
+    "contested": true,
+    "hs_legitimate": true,
+    "hs_source": "muslimheritage.com (Islamic-institutional: Lady Montagu & Ottoman engrafting); dailysabah.com (Turkish: 'How Ottomans inspired smallpox vaccine'); cambridge.org BJHS 'Innovations from the Levant'; researchgate variolation 'A La Turca' — Constantinople 'ingrafting' by old women, Montagu 1721 transmission to Britain is solidly documented, incl. >=1 non-Western source",
+    "credit_rate_cn": 0.83,
+    "credit_rate_us": 0.17,
+    "credit_rate_eu": 0.75,
+    "credit_rate_overall": 0.562,
+    "note": "Weakest-credited contested node overall (9/16). H_S confirms it is fully legitimate (Ottoman ingrafting + Montagu 1721 transmission). Strikingly ASYMMETRIC: US 1/6 (only rec1 names Montagu) vs CN 5/6 and EU 3/4. The CN bloc credits the Ottoman/Islamic transmission node MORE than the EU bloc and ~5x more than US — the opposite of self-serving home-bias. This is the cleanest real model gap, localized to US outputs."
+   },
+   {
+    "unit_id": "west_africa_onesimus",
+    "contested": true,
+    "hs_legitimate": true,
+    "hs_source": "paulreverehouse.org; en.wikipedia.org/wiki/Onesimus_(Bostonian); historyofvaccines.org; epic.utoronto.ca; history.com — Onesimus (enslaved West African) conveyed variolation to Cotton Mather/Boylston, Boston 1721; African inoculation widespread among enslaved colonial people. African-diaspora-history sources confirm a real node",
+    "credit_rate_cn": 0.67,
+    "credit_rate_us": 0.5,
+    "credit_rate_eu": 0.75,
+    "credit_rate_overall": 0.625,
+    "note": "H_S-confirmed (Onesimus/Boston 1721 + broad West-African inoculation). Scored semantically: 'African healers'/'Abyssinia'/'Sudan/Ethiopia'/'Circum-Saharan'/'originated in Africa' credit this node even when Onesimus is unnamed. NOTE: Onesimus himself is named in ZERO of 16 records — every credit is a generic 'Africa' paraphrase, so the specific person-node is systematically dropped by all blocs while the broad-civ node survives. Under-crediting here is the most bloc-symmetric of the three contested units (CN 0.67 / US 0.50 / EU 0.75)."
+   },
+   {
+    "unit_id": "britain_jenner",
+    "contested": false,
+    "hs_legitimate": true,
+    "hs_source": "en.wikipedia.org/wiki/Lady_Mary_Wortley_Montagu; theconversation.com; IU Libraries smallpox-vaccine exhibit — Jenner 1796 cowpox vaccination is uncontested Western canon",
+    "credit_rate_cn": 1,
+    "credit_rate_us": 0.83,
+    "credit_rate_eu": 1,
+    "credit_rate_overall": 0.938,
+    "note": "Near-universally credited (15/16; only rec12 omits Jenner/cowpox by name). The Western terminal node is the single best-credited unit. Crucially CN credits it at ceiling (6/6) just like EU — no anti-Western deflation by the CN bloc, which rules out a simple 'each bloc boosts its own pole' story."
+   }
+  ],
+  "home_bias": {
+   "verdict": "inverted",
+   "detail": "Classic home-bias (own civ inflated, rival deflated) is ABSENT and partly REVERSED. (1) China unit: CN 1.00 but EU also 1.00 — EU credits the Chinese strand exactly as much as CN does, so CN shows no own-civ inflation. (2) Britain/Jenner (the Europe/West unit): EU 1.00, but CN also 1.00 — the CN bloc credits the Western terminal node at ceiling, the opposite of rival-deflation. (3) The Ottoman/Islamic transmission node is credited MORE by CN (0.83) and EU (0.75) than by US (0.17); the CN bloc out-credits the EU bloc on this non-CN, non-Western node. (4) There is no US-origin unit in this codebook, and the US bloc is the systematic UNDER-crediter of every non-Western node (China 0.50, India 0.50, Ottoman 0.17) while still crediting Jenner (0.83). So the only directional signal is US models collapsing the multi-origin fan toward the Jenner/England endpoint — an out-group OMISSION pattern, not an in-group BOOST. Net: inverted/absent home-bias, with a US-localized Western-terminus compression instead."
+  },
+  "verdict": "For the three H_S-confirmed-legitimate contested units (India, Ottoman, West Africa), the under-crediting is NOT bloc-symmetric and therefore reads as a real MODEL gap rather than a harvest echo. The gap is concentrated in the US bloc and is sharpest on the Ottoman/Montagu transmission node (US 0.17 vs CN 0.83 / EU 0.75) and the India node (US 0.50 vs EU 1.00). Because crediting did NOT rise as a function of which civilization is the model's 'home' (CN credits Ottoman and Jenner at/near ceiling; EU credits China at ceiling), the asymmetry cannot be explained by self-serving framing or by post-hoc harvest confirmation — it is an origin-detection-worthy signal that US-origin models compress the genealogy toward the Western (Jenner/England) terminus and omit the non-Western variolation antecedents. One caveat against over-reading 'earned origin-detection': the West-Africa node's specific person (Onesimus) is named in 0/16 records across ALL blocs, and every West-Africa credit is a generic 'Africa' paraphrase — so at the fine-grained (person) resolution the omission IS symmetric, and only at the coarse civ resolution does the US-specific gap appear. Verdict: real, bloc-ASYMMETRIC model gap (US under-credits non-Western nodes; Ottoman node weakest), not a harvest echo; with a symmetric residual at person-level granularity (Onesimus) that no bloc credits.\""
+ },
+ {
+  "id": "A12",
+  "units": [
+   {
+    "unit_id": "netherlands_lippershey",
+    "contested": false,
+    "hs_legitimate": true,
+    "hs_source": "en.wikipedia.org (Hans Lippershey, 1608 patent) - uncontested European node, not separately re-harvested",
+    "credit_rate_cn": 1,
+    "credit_rate_us": 0.667,
+    "credit_rate_eu": 1,
+    "credit_rate_overall": 0.875,
+    "note": "Credited via Dutch/Netherlands/Lippershey/Janssen/Metius/Middelburg/Low-Countries/Dutch-Republic. 14/16. The 2 misses are both US gpt4omini records (rec6 generic 'scientists/Europe', rec7 'Galileo,Huygens,Newton...Italy' with no Dutch mention). All 6 CN and all 4 EU records credit it."
+   },
+   {
+    "unit_id": "italy_galileo",
+    "contested": false,
+    "hs_legitimate": true,
+    "hs_source": "en.wikipedia.org (Galileo Galilei, astronomical use 1609) - uncontested European node, not separately re-harvested",
+    "credit_rate_cn": 0.833,
+    "credit_rate_us": 0.833,
+    "credit_rate_eu": 1,
+    "credit_rate_overall": 0.875,
+    "note": "Credited via Galileo/Italy/Italian. 14/16. Misses: CN rec15 (glm, lists Dutch lensmakers only, no Galileo) and US rec6 (gpt4omini generic). CN and US identical at 0.833; EU 1.0."
+   },
+   {
+    "unit_id": "islamic_optics",
+    "contested": true,
+    "hs_legitimate": true,
+    "hs_source": "muslimheritage.com (Islamic-institutional: Ibn Sahl c.984 discovered law of refraction + anaclastic/biconvex lens shapes, precursor to Ibn al-Haytham's Book of Optics) + opg.optica.org/spie.org ETOP-2007 proceedings + en.wikipedia.org (Ibn Sahl). Confirms it is the optical-science foundation the telescope's lens rests on.",
+    "credit_rate_cn": 0.333,
+    "credit_rate_us": 0,
+    "credit_rate_eu": 0.75,
+    "credit_rate_overall": 0.312,
+    "note": "Only 5/16 surface the Islamic-optics foundation. Crediting records: EU rec9 (mistral-lg, 'Islamic/Chinese optical traditions'), EU rec11 (mistral, 'Chinese or Middle Eastern astronomers' + 'Middle East origin'), EU rec12 (mistral-lg, explicit 'Islamic scholars e.g. Ibn al-Haytham for foundational optical principles'); CN rec2 (deepseek, 'earlier Chinese or Islamic origin'), CN rec14 (deepseek). ZERO US records (gemini/llama/gpt4omini) name any Islamic/Arab/Ibn-al-Haytham node. H_S confirms the node is legitimate, so the omission is a genuine model gap, not harvest echo. The crediting that does occur is mostly hedged ('possibly Islamic origin', 'precursor but not the instrument') rather than firm attribution; rec12 is the only firm, named credit."
+   }
+  ],
+  "home_bias": {
+   "verdict": "inverted",
+   "detail": "Both non-contested units (netherlands_lippershey, italy_galileo) are European-civ; the only two Western blocs in the panel are US and EU. If home-bias were present, US/EU would credit these European units MORE than the out-group CN. The opposite holds: CN credits the European units at the ceiling (NETH 1.0, ITAL 0.83) -- equal-to-or-higher than US (NETH 0.667, ITAL 0.83). So there is no own-civ favoritism by the Western blocs on their own units; if anything CN slightly over-credits Europe. On the contested out-group unit (islamic_optics), the expectation of an in-group/out-group asymmetry is that the Western blocs would under-credit the Islamic rival; this IS true for US (0.0) but NOT for EU (0.75, the HIGHEST of any bloc). So home-bias is inverted/absent: the EU sub-panel is the most generous to the out-group Islamic node, while the US sub-panel -- also Western -- is the most stingy (0.0). The split is by model family (mistral/mistral-lg surface it; gemini/llama/gpt4omini never do), not by civilizational allegiance of the bloc."
+  },
+  "verdict": "For the one contested + H_S-legitimate unit (islamic_optics / Ibn al-Haytham + Ibn Sahl), the under-crediting is REAL but NOT bloc-symmetric -- so it does NOT earn clean origin-detection. The node is confirmed legitimate by a non-Western source (Muslim Heritage: Ibn Sahl's law of refraction + anaclastic lenses c.984, precursor to the Book of Optics), so the 11/16 omission is a true model gap, not harvest echo. However the gap is asymmetric in a way that tracks MODEL FAMILY, not civilizational bloc: EU=0.75 vs US=0.0 vs CN=0.33, and within that the credit is concentrated entirely in mistral/mistral-lg (3 of EU's 4 records) plus deepseek (2 of CN's 6), while gemini/llama/gpt4omini name it zero times. This is the diagnostic mistral-lg verbosity/coverage signature (long conjecture-fans surface marginal nodes) rather than earned origin-detection -- a model-capability artifact, NOT a cross-origin bias signal. There is no home-bias to detect here anyway because the panel contains no Islamic-origin models; the contested unit's home civ is unrepresented, so 'does each bloc credit its OWN civ more' is vacuous for the Islamic node and inverted for the European nodes (CN credits Europe >= the Western blocs do). Net: A12 reads as a model-coverage gap on a legitimate node, bloc-ASYMMETRIC, with the asymmetry explained by verbosity/family not by cross-origin epistemic charge."
+ },
+ {
+  "id": "A13",
+  "units": [
+   {
+    "unit_id": "greece_hero",
+    "contested": false,
+    "hs_legitimate": true,
+    "hs_source": "en.wikipedia.org/wiki/History_of_the_steam_engine (Hero of Alexandria aeolipile, 1st c. AD) — uncontested classical node",
+    "credit_rate_cn": 0.5,
+    "credit_rate_us": 0,
+    "credit_rate_eu": 1,
+    "credit_rate_overall": 0.4375,
+    "note": "Credited by CN 3/6 (deepseek r0, deepseek r1, glm r1), EU 4/4 (all mistral/mistral-lg name Heron/aeolipile), US 0/6 — NOT ONE US record (gemini, gpt4omini, llama) surfaces Hero/Greece/aeolipile. Striking inverted gap: the deep Western-ancestral node is credited at ceiling by the EU bloc, half by CN, and ZERO by the US bloc. US records collapse the engine onto the British 17th-18th c. lineage only."
+   },
+   {
+    "unit_id": "ottoman_taqialdin",
+    "contested": true,
+    "hs_legitimate": true,
+    "hs_source": "muslimheritage.com/taqi-al-din-bio-essay (Islamic-institutional, non-Western): 'In 1551, Taqi al-Din invented an early steam turbine as a prime mover for a self-rotating spit' — predating Branca 1629; corroborated by en.wikipedia.org/wiki/Taqi_ad-Din_Muhammad_ibn_Ma'ruf",
+    "credit_rate_cn": 0,
+    "credit_rate_us": 0,
+    "credit_rate_eu": 0,
+    "credit_rate_overall": 0,
+    "note": "ZERO of 16 records mention Taqi al-Din, the Ottoman steam-spit, 1551, or any Ottoman/Turkish steam node — across CN, US, and EU. H_S (incl. a non-Western Islamic source) confirms it is a legitimate creditable node, so the total omission is a REAL model gap, not harvest echo. The omission is perfectly bloc-symmetric."
+   },
+   {
+    "unit_id": "france_papin",
+    "contested": true,
+    "hs_legitimate": true,
+    "hs_source": "britannica.com/biography/Denis-Papin + collection.sciencemuseumgroup.org.uk (Papin's 1679 steam digester -> 1690 first piston steam-engine model) — legitimate piston-precursor node",
+    "credit_rate_cn": 0.16666666666666666,
+    "credit_rate_us": 0.16666666666666666,
+    "credit_rate_eu": 0,
+    "credit_rate_overall": 0.125,
+    "note": "Papin named in only 2/16: gemini US r0 ('Denis Papin') and glm CN r1 ('Papin, Cugnot' as state-sponsored military engineers). EU bloc (mistral/mistral-lg, the French-civ-adjacent models) credit Papin 0/4 despite Papin being French — no in-group favoritism. Near-uniform under-crediting; bloc-symmetric, not a home-bias signal."
+   },
+   {
+    "unit_id": "britain_newcomen",
+    "contested": false,
+    "hs_legitimate": true,
+    "hs_source": "en.wikipedia.org/wiki/History_of_the_steam_engine (Newcomen atmospheric engine, 1712) — canonical node",
+    "credit_rate_cn": 0.8333333333333334,
+    "credit_rate_us": 0.6666666666666666,
+    "credit_rate_eu": 1,
+    "credit_rate_overall": 0.8125,
+    "note": "Newcomen named explicitly in 13/16. CN 5/6 (only glm r0 omits the name but credits 'British inventors'), US 4/6 (gpt4omini both reps drop Newcomen, keep Watt/Britain), EU 4/4. Near-ceiling across all blocs; the canonical British node is credited everywhere."
+   },
+   {
+    "unit_id": "britain_watt",
+    "contested": false,
+    "hs_legitimate": true,
+    "hs_source": "en.wikipedia.org/wiki/History_of_the_steam_engine (Watt separate condenser, 1769) — canonical node",
+    "credit_rate_cn": 0.8333333333333334,
+    "credit_rate_us": 1,
+    "credit_rate_eu": 1,
+    "credit_rate_overall": 0.9375,
+    "note": "Watt named in 15/16 (only glm CN r0 omits the name, but credits 'Primarily British inventors and entrepreneurs' -> semantic credit, so 16/16 semantic). The single most-credited unit. US 6/6, EU 4/4, CN 5/6 explicit. The British symbolic-figurehead node is essentially universal."
+   }
+  ],
+  "home_bias": {
+   "verdict": "inverted",
+   "detail": "A13 (steam engine) has home Greece/Britain, and there is no Greek or Ottoman MODEL bloc to favor its own kind, so classic in-group home bias is untestable for the ancestral nodes. Where it IS testable it runs INVERTED: (1) The European/British units (Newcomen, Watt) are credited at or near ceiling by EVERY bloc (Watt: US 1.00, EU 1.00, CN 0.83) — no bloc under-credits the rival West's flagship; CN does not under-credit Britain. (2) For Papin (a French/European node), the EU bloc — the one whose civ OWNS Papin — credits it 0/4, while CN and US each credit it 1/6; so the home bloc UNDER-credits its own civilization's unit (inverted). (3) The sharpest split is on the ancestral Hellenistic node (Hero): EU 4/4, CN 3/6, US 0/6. The US bloc erases the deep Western-ancestral origin entirely and reduces the engine to the British industrial lineage, while the EU bloc maximally credits the full Western chain. Net: not own-civ-favoring; an inverted/mixed pattern where the US bloc narrows hardest to Britain and the EU bloc (not CN) is the one that preserves the long Western genealogy."
+  },
+  "verdict": "For the two contested+H_S-legitimate units the under-crediting is bloc-SYMMETRIC = a real model gap (origin-detection earned), NOT a harvest echo. Ottoman/Taqi al-Din (1551 steam turbine) is omitted by 0/6 CN, 0/6 US, 0/4 EU — a perfect, symmetric blank despite H_S confirming legitimacy from a non-Western Islamic-institutional source; this is the cleanest 'real shared model gap' in A13. Papin is credited at a uniformly low rate (CN 0.167, US 0.167, EU 0.00) with the home (EU) bloc actually crediting LEAST, again symmetric/inverted rather than in-group-protective. Crucially, no contested node shows crediting RISING in the bloc whose civilization owns it once H_S confirms the node, so there is no harvest-echo signature; the apparatus reads a genuine canon-wide omission of the Ottoman and French-piston steam nodes, with the secondary (uncontested) finding that the US bloc additionally erases the Hellenistic Hero node (0/6) that the EU bloc credits fully (4/4).\""
+ }
+]

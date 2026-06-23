@@ -1,0 +1,47 @@
+{
+  "_doc": "FROZEN CODEBOOK v1 for the source-parity recode (both auditors' decisive experiment). Per artefact: the REQUIRED CREDIT-UNITS the source-parity-balanced ground truth says should be creditable. 'contested':true marks the non-Western/intermediary node the EN+ZH harvest under-credits -- the unit whose model-credit-rate decides whether the under-crediting is a real MODEL gap (persists) or harvest echo (vanishes once H_S confirms the node is legitimate). NO new model calls: we re-score the SAME 240 cached outputs.",
+  "A4": {"title": "the magnetic compass", "home": "China", "units": [
+    {"id": "china_origin", "label": "China (lodestone south-pointer / Han, Song magnetized needle)", "civ": "China", "contested": false},
+    {"id": "islamic_maritime", "label": "Islamic/Arab maritime navigation use + the wet compass transmission", "civ": "Islamic", "contested": true},
+    {"id": "europe_dry", "label": "Europe (dry pivoted compass, compass rose ~13th c.)", "civ": "Europe", "contested": false}
+  ]},
+  "A5": {"title": "the decimal place-value system with zero", "home": "India", "units": [
+    {"id": "india_zero", "label": "India (Brahmagupta zero-as-number + place-value, Bakhshali)", "civ": "India", "contested": false},
+    {"id": "islamic_transmit", "label": "Islamic/al-Khwarizmi+al-Kindi (transmission, 'Arabic numerals')", "civ": "Islamic", "contested": true},
+    {"id": "maya_independent", "label": "Maya (independent positional zero)", "civ": "Mesoamerica", "contested": true},
+    {"id": "babylon_positional", "label": "Babylon (positional base-60, placeholder, no true zero)", "civ": "Mesopotamia", "contested": true}
+  ]},
+  "A6": {"title": "algebra", "home": "Babylon/Greece/India/Islamic", "units": [
+    {"id": "babylon", "label": "Babylonian/Mesopotamian rhetorical quadratics", "civ": "Mesopotamia", "contested": false},
+    {"id": "diophantus", "label": "Diophantus (Greek syncopated)", "civ": "Greece", "contested": false},
+    {"id": "brahmagupta", "label": "Brahmagupta / Indian (general quadratic, zero & negative rules)", "civ": "India", "contested": true},
+    {"id": "alkhwarizmi", "label": "al-Khwarizmi (names + systematizes the discipline)", "civ": "Islamic", "contested": false},
+    {"id": "china_tianyuan", "label": "Chinese tian yuan shu / Nine Chapters fangcheng", "civ": "China", "contested": true},
+    {"id": "europe_symbolic", "label": "Cardano/Viete/Descartes (symbolic algebra)", "civ": "Europe", "contested": false}
+  ]},
+  "A8": {"title": "distillation", "home": "Hellenistic/Islamic", "units": [
+    {"id": "hellenistic_apparatus", "label": "Hellenistic Alexandria (Maria the Jewess, Zosimos -- the apparatus/alembic pole)", "civ": "Hellenistic", "contested": true},
+    {"id": "islamic_refine", "label": "Islamic alchemy (Jabir ibn Hayyan, al-Razi -- alembic refinement, alcohol)", "civ": "Islamic", "contested": true},
+    {"id": "china_still", "label": "China (independent still / distilled spirits claim)", "civ": "China", "contested": true},
+    {"id": "europe_industrial", "label": "Europe (Salerno, fractional + industrial distillation)", "civ": "Europe", "contested": false}
+  ]},
+  "A10": {"title": "inoculation/vaccination against smallpox", "home": "China/India/Ottoman/Britain", "units": [
+    {"id": "china_variolation", "label": "China (variolation / insufflation, Ming-Qing)", "civ": "China", "contested": false},
+    {"id": "india_variolation", "label": "India (tikah variolation tradition)", "civ": "India", "contested": true},
+    {"id": "ottoman_montagu", "label": "Ottoman / Lady Mary Wortley Montagu (transmission to Britain 1721)", "civ": "Ottoman", "contested": true},
+    {"id": "west_africa_onesimus", "label": "West Africa (Onesimus -> Boston 1721 inoculation)", "civ": "West Africa", "contested": true},
+    {"id": "britain_jenner", "label": "Britain (Jenner cowpox vaccination 1796)", "civ": "Europe", "contested": false}
+  ]},
+  "A12": {"title": "the telescope", "home": "Netherlands/Italy", "units": [
+    {"id": "netherlands_lippershey", "label": "Netherlands (Lippershey/Janssen, 1608 patent)", "civ": "Europe", "contested": false},
+    {"id": "italy_galileo", "label": "Italy (Galileo, astronomical use 1609)", "civ": "Europe", "contested": false},
+    {"id": "islamic_optics", "label": "Islamic optics foundation (Ibn al-Haytham, Ibn Sahl -- the science the lens rests on)", "civ": "Islamic", "contested": true}
+  ]},
+  "A13": {"title": "the steam engine", "home": "Greece/Britain", "units": [
+    {"id": "greece_hero", "label": "Greece (Hero of Alexandria, aeolipile)", "civ": "Hellenistic", "contested": false},
+    {"id": "ottoman_taqialdin", "label": "Ottoman (Taqi al-Din, 1551 steam-driven spit)", "civ": "Ottoman", "contested": true},
+    {"id": "france_papin", "label": "France (Papin, steam digester/piston)", "civ": "Europe", "contested": true},
+    {"id": "britain_newcomen", "label": "Britain (Newcomen atmospheric engine 1712)", "civ": "Europe", "contested": false},
+    {"id": "britain_watt", "label": "Britain (Watt separate condenser)", "civ": "Europe", "contested": false}
+  ]}
+}

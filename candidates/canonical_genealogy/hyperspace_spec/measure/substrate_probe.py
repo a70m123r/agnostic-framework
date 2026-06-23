@@ -230,7 +230,7 @@ def analyze(stream):
     for s in ok: bym[(s["model"], s["origin"])].append(_stub_count(s["record"]))
     for (m, o), xs in sorted(bym.items(), key=lambda x: (x[0][1], x[0][0])):
         print(f"   {m:>10} {o:>3} | avg stubs/record = {sum(xs)/len(xs):.1f}  (records: {len(xs)})")
-    print(f"\n  wrote substrate_probe_run.jsonl ({len(stream)} records)")
+    print(f"\n  wrote {OUTFILE} ({len(stream)} records)")
 
 
 def selftest():

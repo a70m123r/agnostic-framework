@@ -116,7 +116,25 @@ def build():
         artefacts.append(node)
 
     artefacts.sort(key=lambda a: a["id"])
+
+    # merge the GROUNDED verdicts (the semantic grounding workflow) if present -> the real camera output
+    gpath = HERE / "grounded_full.json"
+    if gpath.exists():
+        g = {v["id"]: v for v in json.loads(gpath.read_text(encoding="utf-8"))}
+        for a in artefacts:
+            gv = g.get(a["id"])
+            if not gv: continue
+            a["grounded"] = {
+                "crediting": gv.get("home_civ_crediting", {}).get("verdict"),
+                "crediting_detail": (gv.get("home_civ_crediting", {}).get("detail") or "")[:480],
+                "spine_converges": gv.get("checkable_spine_converges"),
+                "why_complementary": gv.get("why_complementary"),
+                "ground_truth": (gv.get("ground_truth_origin") or "").replace("</ground_truth_origin>", "").replace("</invoke>", "").strip()[:340],
+                "sharp_axes": gv.get("sharp_axes", []), "blurred_axes": gv.get("blurred_axes", []),
+            }
+
     out = {"source": SRC.name, "n_records": len(recs), "n_parsed": len(ok), "artefacts": artefacts,
+           "grounded": gpath.exists(),
            "blocs": {"CN": "#e0564b", "US": "#4b8fe0", "EU": "#56c08a"}}
     (HERE / "viewer_data.js").write_text("const SUBSTRATE = " + json.dumps(out, ensure_ascii=False, indent=1) + ";\n",
                                          encoding="utf-8")

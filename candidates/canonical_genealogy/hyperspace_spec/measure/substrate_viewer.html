@@ -46,6 +46,15 @@
   .col h4{margin:0 0 6px;font-size:11px;letter-spacing:.5px;text-transform:uppercase}
   .col ul{margin:0;padding-left:15px} .col li{font-size:12px;margin-bottom:4px;color:#cdd6e3}
   .delivered{margin-top:10px;font-size:12px;color:var(--dim)} .delivered b{color:var(--ink);font-weight:600}
+  .grounded{background:#101620;border:1px solid #243042;border-radius:10px;padding:12px 14px;margin:12px 0}
+  .grounded .lab{font-size:10.5px;letter-spacing:.5px;text-transform:uppercase;color:var(--gold);margin-bottom:7px}
+  .gbadges{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px}
+  .gb{font-size:11px;padding:3px 9px;border-radius:8px;border:1px solid}
+  .gb.neutral,.gb.ok{color:#56c08a;border-color:#2f5b45}
+  .gb.under_credits_others,.gb.no{color:var(--gold);border-color:#5b4f2f}
+  .gb.over_credits_home{color:var(--cn);border-color:var(--cn)} .gb.mixed{color:var(--dim);border-color:#33405a}
+  .gtruth{font-size:12px;color:#c2cbd9;margin-top:4px} .gtruth b{color:var(--ink)}
+  .gdetail{font-size:11.5px;color:var(--dim);margin-top:7px;line-height:1.45}
   #side{border-left:1px solid var(--line);overflow:auto;padding:14px}
   #side h3{font-size:13px;margin:0 0 8px}
   .stub{background:#11151d;border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:6px;padding:8px 10px;margin-bottom:8px}
@@ -104,6 +113,7 @@ function render(){
   const a=SUBSTRATE.artefacts.find(x=>x.id===cur); const S=document.getElementById("stage");
   if(!a){S.innerHTML="<p style='color:var(--dim)'>select an artefact</p>";return}
   let h=`<h2>${esc(a.title)}</h2><div class="note">${a.n} cross-origin records · WHOM: ${a.whom.join(", ")}</div>`;
+  h+=groundedPanel(a);
   h+=`<div class="waterline">above · the four intrinsic axes · paid-for bits = sharp</div>`;
   h+=`<div class="axes">`;
   AX.forEach(k=>h+=axCard(a,k));
@@ -133,6 +143,19 @@ function axCard(a,k){
     <div class="meter"><i style="width:${(x.sharpness*100).toFixed(0)}%;background:${shColor(x.sharpness)}"></i></div>
     <div class="axfoot"><span>sharpness ${x.sharpness}</span><span>agree ${x.agreement} · measured ${x.measured_frac} · fan ${x.fan.length}</span></div>
   </div>`;
+}
+
+function groundedPanel(a){
+  const g=a.grounded; if(!g) return '';
+  const cr=(g.crediting||'mixed');
+  return `<div class="grounded"><div class="lab">grounded verdict · multilingual harvest (semantic, not proxy)</div>
+    <div class="gbadges">
+      <span class="gb ${cr}">home-crediting: ${esc(cr.replace(/_/g,' '))}</span>
+      <span class="gb ${g.spine_converges?'ok':'no'}">checkable spine: ${g.spine_converges?'converges':'definitional fork'}</span>
+      <span class="gb ${g.why_complementary?'ok':'no'}">WHY: ${g.why_complementary?'complementary':'restatement'}</span>
+    </div>
+    ${g.ground_truth?`<div class="gtruth"><b>ground truth:</b> ${esc(g.ground_truth)}</div>`:''}
+    ${g.crediting_detail?`<div class="gdetail">${esc(g.crediting_detail)}</div>`:''}</div>`;
 }
 
 function whyPanel(a){

@@ -1,0 +1,164 @@
+[
+ {
+  "art": "A5",
+  "figure": "Brahmagupta (India)",
+  "tier": "canon",
+  "cn": 0.6666666666666666,
+  "us": 0.0,
+  "eu": 0.25,
+  "all": 0.3125
+ },
+ {
+  "art": "A5",
+  "figure": "al-Khwarizmi (transmit)",
+  "tier": "canon",
+  "cn": 0.5,
+  "us": 0.0,
+  "eu": 0.25,
+  "all": 0.25
+ },
+ {
+  "art": "A5",
+  "figure": "Maya figure",
+  "tier": "noncanon",
+  "cn": 0.0,
+  "us": 0.0,
+  "eu": 0.5,
+  "all": 0.125
+ },
+ {
+  "art": "A6",
+  "figure": "Brahmagupta (India)",
+  "tier": "canon",
+  "cn": 0.0,
+  "us": 0.0,
+  "eu": 0.25,
+  "all": 0.0625
+ },
+ {
+  "art": "A6",
+  "figure": "al-Khwarizmi",
+  "tier": "canon",
+  "cn": 0.6666666666666666,
+  "us": 0.3333333333333333,
+  "eu": 0.5,
+  "all": 0.5
+ },
+ {
+  "art": "A6",
+  "figure": "tian-yuan mathematicians (Li Ye/Zhu Shijie/Qin Jiushao)",
+  "tier": "noncanon",
+  "cn": 0.0,
+  "us": 0.0,
+  "eu": 0.0,
+  "all": 0.0
+ },
+ {
+  "art": "A8",
+  "figure": "Maria/Zosimos (Hellenistic)",
+  "tier": "noncanon",
+  "cn": 0.0,
+  "us": 0.0,
+  "eu": 0.0,
+  "all": 0.0
+ },
+ {
+  "art": "A8",
+  "figure": "Jabir/al-Razi (Islamic)",
+  "tier": "noncanon",
+  "cn": 0.3333333333333333,
+  "us": 0.16666666666666666,
+  "eu": 0.5,
+  "all": 0.3125
+ },
+ {
+  "art": "A10",
+  "figure": "Jenner (Britain)",
+  "tier": "canon",
+  "cn": 1.0,
+  "us": 0.8333333333333334,
+  "eu": 1.0,
+  "all": 0.9375
+ },
+ {
+  "art": "A10",
+  "figure": "Montagu (Ottoman transmit)",
+  "tier": "canon",
+  "cn": 0.5,
+  "us": 0.16666666666666666,
+  "eu": 0.75,
+  "all": 0.4375
+ },
+ {
+  "art": "A10",
+  "figure": "Onesimus (West Africa)",
+  "tier": "noncanon",
+  "cn": 0.0,
+  "us": 0.0,
+  "eu": 0.0,
+  "all": 0.0
+ },
+ {
+  "art": "A12",
+  "figure": "Galileo (Italy)",
+  "tier": "canon",
+  "cn": 0.8333333333333334,
+  "us": 0.5,
+  "eu": 1.0,
+  "all": 0.75
+ },
+ {
+  "art": "A12",
+  "figure": "Lippershey (NL)",
+  "tier": "canon",
+  "cn": 0.8333333333333334,
+  "us": 0.3333333333333333,
+  "eu": 1.0,
+  "all": 0.6875
+ },
+ {
+  "art": "A12",
+  "figure": "Ibn al-Haytham/Ibn Sahl",
+  "tier": "noncanon",
+  "cn": 0.0,
+  "us": 0.0,
+  "eu": 0.25,
+  "all": 0.0625
+ },
+ {
+  "art": "A13",
+  "figure": "Newcomen/Watt (Britain)",
+  "tier": "canon",
+  "cn": 0.8333333333333334,
+  "us": 1.0,
+  "eu": 1.0,
+  "all": 0.9375
+ },
+ {
+  "art": "A13",
+  "figure": "Hero/aeolipile (Greece)",
+  "tier": "noncanon",
+  "cn": 0.5,
+  "us": 0.0,
+  "eu": 1.0,
+  "all": 0.4375
+ },
+ {
+  "art": "A13",
+  "figure": "Taqi al-Din (Ottoman)",
+  "tier": "noncanon",
+  "cn": 0.0,
+  "us": 0.0,
+  "eu": 0.0,
+  "all": 0.0
+ },
+ {
+  "art": "A13",
+  "figure": "Papin (France)",
+  "tier": "noncanon",
+  "cn": 0.16666666666666666,
+  "us": 0.16666666666666666,
+  "eu": 0.0,
+  "all": 0.125
+ }
+]
