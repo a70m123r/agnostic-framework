@@ -51,10 +51,17 @@ def main():
                            "kind": "measured" if depth == 0 else "conjecture (forced-dig, elicitation=under-the-rocks)",
                            "n_items": len(items), "items": items[:40],
                            "exhausted_count": L.get("exhausted_count")})
-        # FUTURE side: forward-dig layer L (1..3) -> depth +L
+        # FUTURE side: forward-dig layer L (1..3) -> depth +L.
+        # use the FULL future text from the per-model records (the new_futures list was truncated at extraction).
         for L in (fnode.get("layers") or []):
             if L["layer"] == 0: continue  # the consensus-future == the seed's forward edge
-            futs = L.get("new_futures", L.get("futures", []))
+            seen = set(); futs = []
+            for r in (L.get("records") or []):
+                f = (r.get("future") or "").strip()
+                if not f or f.upper().startswith("EXHAUST"): continue
+                k = f[:28].lower()
+                if k not in seen: seen.add(k); futs.append(f)
+            if not futs: futs = L.get("new_futures", [])  # fallback
             depth = +L["layer"]
             column.append({"depth": depth, "side": "future", "stratum": FWD_LABEL.get(L["layer"], f"L+{L['layer']}"),
                            "render_sharpness": sharp(depth),
