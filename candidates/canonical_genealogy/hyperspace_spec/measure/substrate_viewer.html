@@ -76,6 +76,9 @@
   .stub{background:#11151d;border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:6px;padding:8px 10px;margin-bottom:8px}
   .stub .r{font-size:12.5px;font-weight:600} .stub .meta{font-size:10.5px;color:var(--dim);margin-top:3px}
   .stub .f{font-size:11px;margin-top:5px;color:#c2cbd9} .stub .f b{color:var(--gold);font-weight:600}
+  .stub .smeta{display:flex;gap:6px;align-items:center;margin-top:6px}
+  .stub .smeta .chip{font-size:9.5px;padding:1px 6px} .chip.gold{color:var(--gold);border-color:var(--gold)}
+  .stub .stime{font-size:9.5px;color:var(--dim)}
   svg{width:100%;display:block} text{fill:var(--dim);font:11px sans-serif}
   .tl{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin-top:14px}
   .legend{display:flex;gap:14px;flex-wrap:wrap;font-size:11px;color:var(--dim);margin-top:10px;align-items:center}
@@ -265,6 +268,7 @@ function renderIceberg(id){
     const items=tz.join('   ·   ');
     const s=c.stats;
     const stats=`<span class="stat"><b>${c.n_items}</b> items</span> <span class="stat">sharpness <b>${c.render_sharpness}</b></span>`
+      + (c.t_obs?` <span class="stat" title="synthesised">⏱ ${esc(c.t_obs)}</span>`:'')
       + (s&&s.think_sum?` <span class="stat"><b>${s.think_sum.toLocaleString()}</b> think-tok</span> <span class="stat">med ${s.think_med.toLocaleString()}</span> <span class="stat">${s.n_produced}/${s.n_models} models</span>`:'')
       + (c.exhausted_count?` <span class="stat gold">${c.exhausted_count} exhausted</span>`:'')
       + (s&&s.think_sum?`<span class="tbar" title="digestion cost: ${s.think_sum.toLocaleString()} reasoning tokens"><i style="width:${(s.think_sum/maxThink*100).toFixed(0)}%"></i></span>`:'');
@@ -288,8 +292,13 @@ function showStratum(node,depth){
   const c=node.column.find(x=>x.depth===depth); const sd=document.getElementById('side');
   if(!c){sd.innerHTML='';return}
   let h=`<h3>${depthBadge(c.depth)} — ${esc(c.stratum)}</h3>
-    <div style="font-size:11px;color:var(--dim);margin-bottom:8px">${esc(c.kind)} · sharpness ${c.render_sharpness}${c.exhausted_count?` · ${c.exhausted_count} models said EXHAUSTED here`:''}</div>`;
-  (c.items||[]).forEach(it=>{ const t=typeof it==='string'?it:(it.reading||it.value||JSON.stringify(it)); h+=`<div class="stub">${esc(t)}</div>`; });
+    <div style="font-size:11px;color:var(--dim);margin-bottom:8px">${esc(c.kind)} · sharpness ${c.render_sharpness}${c.t_obs?` · synthesised ${esc(c.t_obs)}`:''}${c.exhausted_count?` · ${c.exhausted_count} EXHAUSTED`:''}</div>`;
+  (c.items||[]).forEach(it=>{
+    const t=typeof it==='string'?it:(it.reading||it.value||JSON.stringify(it));
+    const meta=(typeof it==='object'&&it.model)
+      ? `<div class="smeta"><span class="chip ${(it.origin||'').toLowerCase()}">${esc(it.model)}</span>${it.wildcard?' <span class="chip gold">wildcard</span>':''}${c.t_obs?` <span class="stime">${esc(c.t_obs)}</span>`:''}</div>` : '';
+    h+=`<div class="stub">${esc(t)}${meta}</div>`;
+  });
   sd.innerHTML=h;
 }
 cur=SUBSTRATE.artefacts[0]?.id; render();

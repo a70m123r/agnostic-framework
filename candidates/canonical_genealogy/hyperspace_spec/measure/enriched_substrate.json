@@ -15,16 +15,49 @@
     "stratum": "founding-myth bedrock",
     "render_sharpness": 0.16,
     "kind": "conjecture (forced-dig)",
+    "t_obs": "2026-06-23 13:42",
     "n_items": 32,
     "items": [
-     "Omar Khayyam",
-     "Narayana Pandita",
-     "Thabit ibn Qurra",
-     "Individuals engaged in early ritualistic or cosmological measurement",
-     "Jain mathematicians (e.g., Mahavira, 9th century)",
-     "Nubian scribal tradition of Makuria",
-     "Seki Takakazu (Seki Kowa)",
-     "Al-Samaw'al al-Maghribi"
+     {
+      "reading": "Omar Khayyam",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Narayana Pandita",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "Thabit ibn Qurra",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Individuals engaged in early ritualistic or cosmological measurement",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Jain mathematicians (e.g., Mahavira, 9th century)",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Nubian scribal tradition of Makuria",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Seki Takakazu (Seki Kowa)",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Al-Samaw'al al-Maghribi",
+      "model": "glm",
+      "origin": "CN"
+     }
     ],
     "exhausted_count": 0,
     "stats": {
@@ -32,8 +65,7 @@
      "n_produced": 8,
      "n_thinking": 4,
      "think_sum": 16312,
-     "think_med": 3940,
-     "think_max": 6431
+     "think_med": 3940
     }
    },
    {
@@ -42,16 +74,49 @@
     "stratum": "deeper past dig",
     "render_sharpness": 0.44,
     "kind": "conjecture (forced-dig)",
+    "t_obs": "2026-06-23 13:42",
     "n_items": 36,
     "items": [
-     "Bhāskara II",
-     "Wang Xiaotong",
-     "Omar Khayyam",
-     "Jaina mathematicians (e.g., Mahāvīra, Śrīdhara)",
-     "Proto-syllogistic and early axiomatic reasoning",
-     "Śrīdhara",
-     "Jordanus de Nemore",
-     "The Roman *collegium* of architects and surveyors (*mensores*)"
+     {
+      "reading": "Bhāskara II",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Wang Xiaotong",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "Omar Khayyam",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Jaina mathematicians (e.g., Mahāvīra, Śrīdhara)",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Proto-syllogistic and early axiomatic reasoning",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Śrīdhara",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Jordanus de Nemore",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "The Roman *collegium* of architects and surveyors (*mensores*)",
+      "model": "glm",
+      "origin": "CN"
+     }
     ],
     "exhausted_count": 0,
     "stats": {
@@ -59,8 +124,7 @@
      "n_produced": 8,
      "n_thinking": 4,
      "think_sum": 14964,
-     "think_med": 2631,
-     "think_max": 8180
+     "think_med": 2631
     }
    },
    {
@@ -69,48 +133,309 @@
     "stratum": "overlooked (forbid canonical)",
     "render_sharpness": 0.72,
     "kind": "conjecture (forced-dig)",
+    "t_obs": "2026-06-23 03:36",
     "n_items": 164,
     "items": [
-     "Babylonian and Egyptian scribes, Indian and Chinese algebraists, under-credited Islamic transmitters",
-     "Sumerian tablet YBC 4663 (c. 1800 BCE) shows systematic quadratic equation solving",
-     "Vedic Śulbasūtras (c. 800 BCE) contain geometric algebra for altar construction",
-     "Cuneiform sexagesimal system",
-     "Egyptian problem-solving methods (Rhind Papyrus)",
-     "Geometric algebra (Euclid's Elements Book II)",
-     "Babylonian scribes, Banu Musa brothers, Brahmagupta",
-     "Early Mesopotamian mathematicians",
-     "Indian astronomer community (7th-8th c.)",
-     "Proto-algebraic tablets",
-     "Brahmagupta's number theory",
-     "Babylonian surveyors, Sumerian accountants, Indian mathematicians (Brahmagupta, Sridhara)",
-     "Babylonian surveyors (c.1700 BCE)",
-     "Sumerian accountants (c.2500 BCE)",
-     "Indian mathematicians (c.600-900 CE)",
-     "cuneiform clay tablets (c.1800 BCE)",
-     "Sumerian numerical reckoning system (c.3000 BCE)",
-     "Babylonian scribes, Liu Hui, Brahmagupta, al-Karaji, Thomas Harriot",
-     "Babylonian scribes (c. 2000 BCE) developed early algebraic methods for solving linear and quadratic equations, recorded on clay tablets.",
-     "Liu Hui (3rd century CE) used algebraic reasoning in his commentary on The Nine Chapters, solving systems of equations with positive and negative numbers.",
-     "Brahmagupta (7th century CE) gave explicit rules for quadratic equations and introduced zero as a number, foundational for algebra.",
-     "al-Karaji (10th-11th century) extended algebra to include polynomials and infinite series, a precursor to symbolic algebra.",
-     "Thomas Harriot (16th-17th century) developed symbolic notation and methods for solving equations independently of Viète.",
-     "Babylonian sexagesimal arithmetic",
-     "Chinese rod numeral system",
-     "Indian decimal place-value system with zero",
-     "Greek geometric algebra (e.g., Euclid's Elements)",
-     "mathematicians across ancient cultures",
-     "Babylonian mathematicians",
-     "Indian mathematicians",
-     "Arabic mathematicians",
-     "Babylonian arithmetic",
-     "Babylonian scribes solving linear and quadratic equations.",
-     "Egyptian scribes using heuristic and symbolic methods.",
-     "Diophantus of Alexandria's syncopated algebra.",
-     "Early Arithmetic Systems",
-     "Geometric Problem-Solving Traditions",
-     "Babylonian Procedural Mathematics",
-     "Indo-Arabic Numeral System",
-     "Al-Khwarizmi, Diophantus, Brahmagupta, numerous scholars"
+     {
+      "reading": "Babylonian and Egyptian scribes, Indian and Chinese algebraists, under-credited Islamic transmitters",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Sumerian tablet YBC 4663 (c. 1800 BCE) shows systematic quadratic equation solving",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Vedic Śulbasūtras (c. 800 BCE) contain geometric algebra for altar construction",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Cuneiform sexagesimal system",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Egyptian problem-solving methods (Rhind Papyrus)",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Geometric algebra (Euclid's Elements Book II)",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Babylonian scribes, Banu Musa brothers, Brahmagupta",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Early Mesopotamian mathematicians",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Indian astronomer community (7th-8th c.)",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Proto-algebraic tablets",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Brahmagupta's number theory",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Babylonian surveyors, Sumerian accountants, Indian mathematicians (Brahmagupta, Sridhara)",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Babylonian surveyors (c.1700 BCE)",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Sumerian accountants (c.2500 BCE)",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Indian mathematicians (c.600-900 CE)",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "cuneiform clay tablets (c.1800 BCE)",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Sumerian numerical reckoning system (c.3000 BCE)",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Babylonian scribes, Liu Hui, Brahmagupta, al-Karaji, Thomas Harriot",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Babylonian scribes (c. 2000 BCE) developed early algebraic methods for solving linear and quadratic equations, recorded on clay tablets.",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Liu Hui (3rd century CE) used algebraic reasoning in his commentary on The Nine Chapters, solving systems of equations with positive and negative numbers.",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Brahmagupta (7th century CE) gave explicit rules for quadratic equations and introduced zero as a number, foundational for algebra.",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "al-Karaji (10th-11th century) extended algebra to include polynomials and infinite series, a precursor to symbolic algebra.",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Thomas Harriot (16th-17th century) developed symbolic notation and methods for solving equations independently of Viète.",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Babylonian sexagesimal arithmetic",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Chinese rod numeral system",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Indian decimal place-value system with zero",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Greek geometric algebra (e.g., Euclid's Elements)",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "mathematicians across ancient cultures",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "Babylonian mathematicians",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "Indian mathematicians",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "Arabic mathematicians",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "Babylonian arithmetic",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "Babylonian mathematicians",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Babylonian scribes solving linear and quadratic equations.",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Egyptian scribes using heuristic and symbolic methods.",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Diophantus of Alexandria's syncopated algebra.",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Early Arithmetic Systems",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Geometric Problem-Solving Traditions",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Babylonian Procedural Mathematics",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Indo-Arabic Numeral System",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Al-Khwarizmi, Diophantus, Brahmagupta, numerous scholars",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Islamic Golden Age mathematicians",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Indian mathematicians",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Chinese mathematicians",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Arithmetic, geometry, early numerical systems",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Ancient Babylonian cuneiform texts",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Al-Khwarizmi, Diophantus, Thabit ibn Qurra",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Al-Khwarizmi",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Diophantus",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Thabit ibn Qurra",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Babylonian mathematics",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Greek geometric methods",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Indian numerals and methods",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Diophantus, Brahmagupta, Al-Khwarizmi, Omar Khayyam, Fibonacci",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Babylonian clay tablets (pre-algebraic problem-solving)",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Babylonian arithmetic",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Greek geometric algebra (Euclid)",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Brahmagupta, Al-Khwarizmi, Omar Khayyam, Fibonacci, Diophantus",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Babylonian scribes (cuneiform tablets)",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Babylonian number theory",
+      "model": "mistral",
+      "origin": "EU"
+     }
     ],
     "exhausted_count": null,
     "stats": null
@@ -121,43 +446,189 @@
     "stratum": "canonical present (the bridge / L0)",
     "render_sharpness": 1.0,
     "kind": "measured",
+    "t_obs": "2026-06-21 23:48",
     "n_items": 98,
     "items": [
-     "Babylonian, Greek, Islamic, European mathematicians (e.g., Al-Khwarizmi, Diophantus, Fibonacci, Descartes, Galois)",
-     "Babylonian scholars → Greek mathematicians → Islamic scholars → European Renaissance",
-     "Greek philosophers as primary originators",
-     "Indian mathematicians as key contributors",
-     "Greek mathematicians as sole originators",
-     "Islamic scholars as primary innovators",
-     "A lineage of mathematicians and scholars, spanning ancient Babylonian scribes, Greek geometers, Islamic scholars (Al-Khwarizmi), European mathematicians (Viète, Descartes, Hamilton), and modern abstract algebraists.",
-     "A lineage of mathematicians, scholars, and practitioners from antiquity to the present, including Babylonian scribes, Greek geometers, Diophantus, Al-Khwarizmi, Viète, Descartes, Euler, Galois, Hilbert, Noether, and countless modern users across scientific and technical disciplines.",
-     "Primarily figures associated with the symbolic and abstract formalization of mathematical structures.",
-     "The collective body of all individuals who have ever performed algebraic operations or used algebraic notation.",
-     "mathematicians across multiple civilizations (Babylonian, Greek, Islamic, European, Indian, Chinese)",
-     "primarily Islamic mathematicians (Al-Khwarizmi and successors)",
-     "primarily ancient Greek mathematicians (Diophantus and earlier)",
-     "Babylonians, Greeks, Arabs, European mathematicians",
-     "only Babylonians and Arabs",
-     "only modern mathematicians",
-     "mathematicians and scholars",
-     "ancient Greeks",
-     "Middle Eastern and Indian mathematicians",
-     "European mathematicians during the Renaissance",
-     "ancient mathematicians, Arabic scholars, Renaissance thinkers, modern educators",
-     "European mathematicians",
-     "Indian mathematicians",
-     "Egyptians, Indians, Chinese",
-     "Mesopotamians, Persians, Renaissance scholars",
-     "Greek philosophers",
-     "Middle Eastern and Asian mathematicians",
-     "Persians, Byzantines",
-     "Babylonian scribes, Diophantus, Al-Khwarizmi, Fibonacci, Renaissance European mathematicians, modern algebraists",
-     "Ancient Egyptian scribes as primary originators",
-     "Indian mathematicians (e.g., Brahmagupta) as co-originators",
-     "Ancient Egyptian scribes as earliest algebraic practitioners",
-     "Greek mathematicians (e.g., Euclid) as primary originators",
-     "Mesopotamian scribes, Indian astronomers, Islamic scholars (e.g., Al-Khwarizmi), and European mathematicians (e.g., Viète, Descartes)",
-     "Ancient Mesopotamian and Indian scribes, Islamic scholars (e.g., Al-Khwarizmi), and Early Modern European mathematicians (e.g., Vieta, Descartes)."
+     {
+      "reading": "Babylonian, Greek, Islamic, European mathematicians (e.g., Al-Khwarizmi, Diophantus, Fibonacci, Descartes, Galois)",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Babylonian scholars → Greek mathematicians → Islamic scholars → European Renaissance",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Greek philosophers as primary originators",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Indian mathematicians as key contributors",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Greek mathematicians as sole originators",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Islamic scholars as primary innovators",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "A lineage of mathematicians and scholars, spanning ancient Babylonian scribes, Greek geometers, Islamic scholars (Al-Khwarizmi), European mathematicians (Viète, Descartes, Hamilton), and modern abstract algebraists.",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "A lineage of mathematicians, scholars, and practitioners from antiquity to the present, including Babylonian scribes, Greek geometers, Diophantus, Al-Khwarizmi, Viète, Descartes, Euler, Galois, Hilbert, Noether, and countless modern users across scientific and technical disciplines.",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Primarily figures associated with the symbolic and abstract formalization of mathematical structures.",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "The collective body of all individuals who have ever performed algebraic operations or used algebraic notation.",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "mathematicians across multiple civilizations (Babylonian, Greek, Islamic, European, Indian, Chinese)",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "primarily Islamic mathematicians (Al-Khwarizmi and successors)",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "primarily ancient Greek mathematicians (Diophantus and earlier)",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Babylonians, Greeks, Arabs, European mathematicians",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "only Babylonians and Arabs",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "only modern mathematicians",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "mathematicians and scholars",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "ancient Greeks",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "Middle Eastern and Indian mathematicians",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "European mathematicians during the Renaissance",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "ancient mathematicians, Arabic scholars, Renaissance thinkers, modern educators",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "European mathematicians",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Indian mathematicians",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Babylonians, Greeks, Arabs, Europeans",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Egyptians, Indians, Chinese",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Mesopotamians, Persians, Renaissance scholars",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Greek philosophers",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "Middle Eastern and Asian mathematicians",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "Persians, Byzantines",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Babylonian scribes, Diophantus, Al-Khwarizmi, Fibonacci, Renaissance European mathematicians, modern algebraists",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Ancient Egyptian scribes as primary originators",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Indian mathematicians (e.g., Brahmagupta) as co-originators",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Ancient Egyptian scribes as earliest algebraic practitioners",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Greek mathematicians (e.g., Euclid) as primary originators",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Mesopotamian scribes, Indian astronomers, Islamic scholars (e.g., Al-Khwarizmi), and European mathematicians (e.g., Viète, Descartes)",
+      "model": "glm",
+      "origin": "CN"
+     },
+     {
+      "reading": "Ancient Mesopotamian and Indian scribes, Islamic scholars (e.g., Al-Khwarizmi), and Early Modern European mathematicians (e.g., Vieta, Descartes).",
+      "model": "glm",
+      "origin": "CN"
+     }
     ],
     "exhausted_count": null,
     "stats": null
@@ -180,13 +651,34 @@
     "stratum": "founding-myth bedrock",
     "render_sharpness": 0.16,
     "kind": "conjecture (forced-dig)",
+    "t_obs": "2026-06-23 13:42",
     "n_items": 26,
     "items": [
-     "Cistercian monks",
-     "Tibetan monks and yogis",
-     "Pre-Columbian Andean *chicha* brewers",
-     "Indigenous Australian distillers (e.g., Arrernte, Yolŋu, or other groups)",
-     "Neolithic Northern European adhesive producers"
+     {
+      "reading": "Cistercian monks",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Tibetan monks and yogis",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "Pre-Columbian Andean *chicha* brewers",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Indigenous Australian distillers (e.g., Arrernte, Yolŋu, or other groups)",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Neolithic Northern European adhesive producers",
+      "model": "glm",
+      "origin": "CN"
+     }
     ],
     "exhausted_count": 3,
     "stats": {
@@ -194,8 +686,7 @@
      "n_produced": 8,
      "n_thinking": 4,
      "think_sum": 8415,
-     "think_med": 2647,
-     "think_max": 2863
+     "think_med": 2647
     }
    },
    {
@@ -204,16 +695,49 @@
     "stratum": "deeper past dig",
     "render_sharpness": 0.44,
     "kind": "conjecture (forced-dig)",
+    "t_obs": "2026-06-23 13:42",
     "n_items": 38,
     "items": [
-     "Tibetan Buddhist monks (medicinal distillation)",
-     "Burmese distillation methods",
-     "Pre-Columbian Mesoamerican fermenters and brewers",
-     "Pre-Columbian Andean cultures (e.g., Moche, Wari, Inca) and their use of chicha fermentation and freeze-distillation (cryoconcentration) techniques",
-     "The anonymous artisans and engineers of the Byzantine Empire",
-     "Deccan textile guild artisans, Gupta period (4th-6th CE)",
-     "Theophrastus",
-     "Early European monastic communities (e.g., Benedictines, pre-12th c.)"
+     {
+      "reading": "Tibetan Buddhist monks (medicinal distillation)",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Burmese distillation methods",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Pre-Columbian Mesoamerican fermenters and brewers",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "Pre-Columbian Andean cultures (e.g., Moche, Wari, Inca) and their use of chicha fermentation and freeze-distillation (cryoconcentration) techniques",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "The anonymous artisans and engineers of the Byzantine Empire",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Deccan textile guild artisans, Gupta period (4th-6th CE)",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Theophrastus",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Early European monastic communities (e.g., Benedictines, pre-12th c.)",
+      "model": "glm",
+      "origin": "CN"
+     }
     ],
     "exhausted_count": 0,
     "stats": {
@@ -221,8 +745,7 @@
      "n_produced": 8,
      "n_thinking": 4,
      "think_sum": 10343,
-     "think_med": 2470,
-     "think_max": 4737
+     "think_med": 2470
     }
    },
    {
@@ -231,48 +754,309 @@
     "stratum": "overlooked (forbid canonical)",
     "render_sharpness": 0.72,
     "kind": "conjecture (forced-dig)",
+    "t_obs": "2026-06-23 03:36",
     "n_items": 180,
     "items": [
-     "Babylonian alchemists, Mesopotamian perfumers, transcontinental traders",
-     "Babylonian alchemists",
-     "Mesopotamian perfumers",
-     "Babylonian perfumers",
-     "early wine-making",
-     "Rhineland monks, Indus Valley fermenters, Persian water-clock engineers",
-     "Rhineland monks (9th c.)",
-     "Indus Valley fermentation communities (2nd c. BCE)",
-     "Persian hydraulic engineers (1st c. CE)",
-     "Ancient Indian fermentation techniques",
-     "Persian hydraulic condensers",
-     "Anonymous metallurgists, early Islamic alchemical practitioners, medieval apothecaries, industrial chemical engineers",
-     "Bronze Age metallurgists in the Fertile Crescent",
-     "Ancient Greek alchemists experimenting with perfumes",
-     "Controlled application of heat (metallurgy, pottery kilns)",
-     "Development of specialized vessels (alembics, retorts)",
-     "Observation of evaporation and condensation in natural processes",
-     "Ancient Mesopotamian perfumers, Egyptian embalmers, Ayurvedic practitioners, Greek natural philosophers, Arabian alchemists, medieval European monastic apothecaries, early European spirit producers, 19th-century industrial chemists, modern petrochemical engineers, contemporary biotechnologists and researchers.",
-     "Fermentation",
-     "Ancient Pottery and Metallurgy",
-     "alchemists, medieval monks, and Arabic scholars",
-     "Chinese inventors",
-     "filtration and sedimentation",
-     "Sumerian priests, Egyptian alchemists, Chinese distillers (Han dynasty), Indian arrack makers, Byzantine women alchemists (e.g., Maria the Jewess), Persian physicians (beyond Jabir), European monastic apothecaries",
-     "Sumerian perfume makers (c. 3500 BCE) developed early stills for essential oils",
-     "Chinese alchemists (e.g., Sun Simiao, 7th century CE) independently invented liquor distillation using rice ferment",
-     "Greek Alexandrian women alchemists (e.g., Paphnutia) described distillation in 3rd-4th century CE texts",
-     "Indo‑Gandharan stills for sandalwood oil (1st century BCE) transmitted to Middle East",
-     "Mesoamerican pulque distillation (pre‑Columbian) evolved independently",
-     "Byzantine monastic medical distilleries (6th‑7th century) preserved and refined techniques",
-     "Early evaporation & condensation on surfaces (e.g., solar still, Hippocrates's 'cup' for sea water)",
-     "Fermentation technology (beer, wine, rice wine) for alcohol feedstocks",
-     "Chinese 'li' (stove‑still) from 1st century CE Han dynasty",
-     "Greek 'pneumatic' vessels (e.g., the 'pelike' of Zosimos) with integrated cooling tubes",
-     "Byzantine monastic distillation apparatus (6th–7th c.) made of glass, with water‑cooled receivers",
-     "Mesoamerican 'pulque' distillation using ceramic columns (pre‑Columbian)",
-     "Middle Eastern alchemists, European scientists, Indian practitioners",
-     "Arab scholars in the 9th century",
-     "Raymond Lull",
-     "Indian Ayurveda practitioners"
+     {
+      "reading": "Babylonian alchemists, Mesopotamian perfumers, transcontinental traders",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Babylonian alchemists",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Mesopotamian perfumers",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Babylonian perfumers",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "early wine-making",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Rhineland monks, Indus Valley fermenters, Persian water-clock engineers",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Rhineland monks (9th c.)",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Indus Valley fermentation communities (2nd c. BCE)",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Persian hydraulic engineers (1st c. CE)",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Ancient Indian fermentation techniques",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Persian hydraulic condensers",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Anonymous metallurgists, early Islamic alchemical practitioners, medieval apothecaries, industrial chemical engineers",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Bronze Age metallurgists in the Fertile Crescent",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Ancient Greek alchemists experimenting with perfumes",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Controlled application of heat (metallurgy, pottery kilns)",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Development of specialized vessels (alembics, retorts)",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Observation of evaporation and condensation in natural processes",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Ancient Mesopotamian perfumers, Egyptian embalmers, Ayurvedic practitioners, Greek natural philosophers, Arabian alchemists, medieval European monastic apothecaries, early European spirit producers, 19th-century industrial chemists, modern petrochemical engineers, contemporary biotechnologists and researchers.",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Fermentation",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Ancient Pottery and Metallurgy",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "alchemists, medieval monks, and Arabic scholars",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "Chinese inventors",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "filtration and sedimentation",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "Sumerian priests, Egyptian alchemists, Chinese distillers (Han dynasty), Indian arrack makers, Byzantine women alchemists (e.g., Maria the Jewess), Persian physicians (beyond Jabir), European monastic apothecaries",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Sumerian perfume makers (c. 3500 BCE) developed early stills for essential oils",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Chinese alchemists (e.g., Sun Simiao, 7th century CE) independently invented liquor distillation using rice ferment",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Greek Alexandrian women alchemists (e.g., Paphnutia) described distillation in 3rd-4th century CE texts",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Indo‑Gandharan stills for sandalwood oil (1st century BCE) transmitted to Middle East",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Mesoamerican pulque distillation (pre‑Columbian) evolved independently",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Byzantine monastic medical distilleries (6th‑7th century) preserved and refined techniques",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Early evaporation & condensation on surfaces (e.g., solar still, Hippocrates's 'cup' for sea water)",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Fermentation technology (beer, wine, rice wine) for alcohol feedstocks",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Chinese 'li' (stove‑still) from 1st century CE Han dynasty",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Greek 'pneumatic' vessels (e.g., the 'pelike' of Zosimos) with integrated cooling tubes",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Byzantine monastic distillation apparatus (6th–7th c.) made of glass, with water‑cooled receivers",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Mesoamerican 'pulque' distillation using ceramic columns (pre‑Columbian)",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Middle Eastern alchemists, European scientists, Indian practitioners",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Arab scholars in the 9th century",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Raymond Lull",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Indian Ayurveda practitioners",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "alchemy",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "brewing techniques",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Greek medical practices",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "alchemists and apothecaries",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "Middle Eastern and Asian practitioners",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "ancient Greek philosophers",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "ancient metallurgy",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "alchemists, engineers, and brewers",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "various alchemical texts",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "early medieval distillers",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Islamic scholars",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "early brewing methods",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Mesopotamian alchemists, Chinese Daoist practitioners, Persian physicians",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Ancient Indian metallurgists",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Ancient pottery and ceramic technology",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Early metallurgical techniques",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "alchemists, Persian physicians, Chinese metallurgists, European monks",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Mesopotamian brewers",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Indian Ayurvedic practitioners",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "ceramic filtration techniques",
+      "model": "mistral",
+      "origin": "EU"
+     }
     ],
     "exhausted_count": null,
     "stats": null
@@ -283,48 +1067,254 @@
     "stratum": "canonical present (the bridge / L0)",
     "render_sharpness": 1.0,
     "kind": "measured",
+    "t_obs": "2026-06-21 23:48",
     "n_items": 120,
     "items": [
-     "Ancient Mesopotamian/Egyptian alchemists, Islamic Golden Age scholars (Jabir ibn Hayyan), European monastic distillers",
-     "Babylonian origin (c. 1800 BCE)",
-     "Egyptian origin (c. 3000 BCE)",
-     "Mesopotamian alchemists, Islamic scholars, European industrial refiners",
-     "Greek alchemists",
-     "Mesoamerican fermenters",
-     "Alchemists, Islamic scholars, Renaissance chemists, spirit makers, industrial chemical engineers, petroleum refiners, pharmaceutical manufacturers.",
-     "A singular, identifiable group of proto-scientists (e.g., ancient Egyptians or Mesopotamians) responsible for the initial conception.",
-     "Primarily the domain of alchemists and early chemists, with industrial applications being a later, distinct development.",
-     "Diverse agents from early alchemists and apothecaries to modern industrial chemists and biotechnologists",
-     "Key early advancements attributed to Islamic scholars (e.g., Jabir ibn Hayyan, al-Razi) and later European alchemists/apothecaries (e.g., Paracelsus)",
-     "Primarily driven by anonymous operators and societal demand in early antiquity (e.g., Mesopotamian, Egyptian) and later by craft guilds (e.g., perfume makers, brewers)",
-     "Alchemists, Islamic chemists, European apothecaries, modern chemical engineers",
-     "Ancient Chinese and Greek distillers",
-     "Medieval European monks and brewers",
-     "various cultures and scientists through history",
-     "primarily Arabic scholars",
-     "industrial chemists in the 19th century",
-     "alchemists, scientists, industrialists, brewers",
-     "only industrialists",
-     "only brewers",
-     "alchemists and scientists",
-     "ancient Greeks",
-     "medieval Arabs",
-     "early modern Europeans",
-     "Ancient civilizations (Egypt, Mesopotamia, India), alchemists, chemists, industrialists",
-     "Egyptians (Hermes Trismegistus)",
-     "Mesopotamians (Babylonians)",
-     "Mesopotamian perfumers, Alexandrian alchemists, Arab chemists, European monks, modern chemical engineers",
-     "Alexandrian Alchemists",
-     "Mesopotamian Perfumers",
-     "Ancient civilizations, alchemists, chemists",
-     "Egyptians and Mesopotamians",
-     "Chinese Taoists",
-     "Ancient Mesopotamian and Egyptian alchemists, Islamic Golden Age scholars (e.g., Jabir ibn Hayyan, Al-Razi), European medieval alchemists, Renaissance scientists (e.g., Hieronymus Brunschwig), industrial chemists (e.g., Robert Boyle, Antoine Lavoisier), modern chemical engineers",
-     "Ancient Mesopotamian perfumers and Egyptian embalmers as earliest practitioners",
-     "Islamic Golden Age scholars as primary refiners and transmitters to Europe",
-     "Independent invention in multiple regions (e.g., China, India) with limited cross-cultural transmission",
-     "A broad fan: early Mesopotamian perfumers, Arab alchemists, European chemists, and modern industrial engineers",
-     "alchemists and engineers"
+     {
+      "reading": "Ancient Mesopotamian/Egyptian alchemists, Islamic Golden Age scholars (Jabir ibn Hayyan), European monastic distillers",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Babylonian origin (c. 1800 BCE)",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Egyptian origin (c. 3000 BCE)",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Mesopotamian alchemists, Islamic scholars, European industrial refiners",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Greek alchemists",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Mesoamerican fermenters",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Alchemists, Islamic scholars, Renaissance chemists, spirit makers, industrial chemical engineers, petroleum refiners, pharmaceutical manufacturers.",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "A singular, identifiable group of proto-scientists (e.g., ancient Egyptians or Mesopotamians) responsible for the initial conception.",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Primarily the domain of alchemists and early chemists, with industrial applications being a later, distinct development.",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Diverse agents from early alchemists and apothecaries to modern industrial chemists and biotechnologists",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Key early advancements attributed to Islamic scholars (e.g., Jabir ibn Hayyan, al-Razi) and later European alchemists/apothecaries (e.g., Paracelsus)",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Primarily driven by anonymous operators and societal demand in early antiquity (e.g., Mesopotamian, Egyptian) and later by craft guilds (e.g., perfume makers, brewers)",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Alchemists, Islamic chemists, European apothecaries, modern chemical engineers",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Ancient Chinese and Greek distillers",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Medieval European monks and brewers",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "various cultures and scientists through history",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "primarily Arabic scholars",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "industrial chemists in the 19th century",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "alchemists, scientists, industrialists, brewers",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "only industrialists",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "only brewers",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "alchemists and scientists",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "ancient Greeks",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "medieval Arabs",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "early modern Europeans",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "Ancient civilizations (Egypt, Mesopotamia, India), alchemists, chemists, industrialists",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Egyptians (Hermes Trismegistus)",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Mesopotamians (Babylonians)",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Mesopotamian perfumers, Alexandrian alchemists, Arab chemists, European monks, modern chemical engineers",
+      "model": "glm",
+      "origin": "CN"
+     },
+     {
+      "reading": "Alexandrian Alchemists",
+      "model": "glm",
+      "origin": "CN"
+     },
+     {
+      "reading": "Mesopotamian Perfumers",
+      "model": "glm",
+      "origin": "CN"
+     },
+     {
+      "reading": "Ancient civilizations, alchemists, chemists",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Egyptians and Mesopotamians",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Chinese Taoists",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Ancient Mesopotamian and Egyptian alchemists, Islamic Golden Age scholars (e.g., Jabir ibn Hayyan, Al-Razi), European medieval alchemists, Renaissance scientists (e.g., Hieronymus Brunschwig), industrial chemists (e.g., Robert Boyle, Antoine Lavoisier), modern chemical engineers",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Ancient Mesopotamian perfumers and Egyptian embalmers as earliest practitioners",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Islamic Golden Age scholars as primary refiners and transmitters to Europe",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Independent invention in multiple regions (e.g., China, India) with limited cross-cultural transmission",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "A broad fan: early Mesopotamian perfumers, Arab alchemists, European chemists, and modern industrial engineers",
+      "model": "glm",
+      "origin": "CN"
+     },
+     {
+      "reading": "alchemists and engineers",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "ancient Greek philosophers",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "medieval Arab scientists",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "Renaissance European inventors",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "Originated solely in Mesopotamia (3rd millennium BCE) and transmitted to Egypt and later Islamic scholars",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Independent origins in Mesopotamia and Egypt, later synthesized by Islamic scholars",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Developed first in the Indus Valley (e.g., Harappan civilization) and diffused westward",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Alchemists and medieval chemists",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Early Chinese distillers",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Arab alchemists",
+      "model": "deepseek",
+      "origin": "CN"
+     }
     ],
     "exhausted_count": null,
     "stats": null
@@ -347,15 +1337,44 @@
     "stratum": "founding-myth bedrock",
     "render_sharpness": 0.16,
     "kind": "conjecture (forced-dig)",
+    "t_obs": "2026-06-23 13:42",
     "n_items": 32,
     "items": [
-     "Baltic folk healers",
-     "Lady Mary Wortley Montagu's network of informants from the Levant",
-     "Endemic cowpox strains prevalent in specific rural dairy farming regions of England",
-     "Ming Dynasty Chinese physicians (14th–17th century)",
-     "Siberian Tungusic and Yakut shamans (17th–18th century)",
-     "Onesimus (enslaved African, c. 1706)",
-     "Muhammad ibn Zakariya al-Razi (Rhazes)"
+     {
+      "reading": "Baltic folk healers",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "Lady Mary Wortley Montagu's network of informants from the Levant",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Endemic cowpox strains prevalent in specific rural dairy farming regions of England",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Ming Dynasty Chinese physicians (14th–17th century)",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Siberian Tungusic and Yakut shamans (17th–18th century)",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Onesimus (enslaved African, c. 1706)",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Muhammad ibn Zakariya al-Razi (Rhazes)",
+      "model": "glm",
+      "origin": "CN"
+     }
     ],
     "exhausted_count": 1,
     "stats": {
@@ -363,8 +1382,7 @@
      "n_produced": 8,
      "n_thinking": 4,
      "think_sum": 10547,
-     "think_med": 2705,
-     "think_max": 2956
+     "think_med": 2705
     }
    },
    {
@@ -373,14 +1391,44 @@
     "stratum": "deeper past dig",
     "render_sharpness": 0.44,
     "kind": "conjecture (forced-dig)",
+    "t_obs": "2026-06-23 13:42",
     "n_items": 29,
     "items": [
-     "Lady Mary Wortley Montagu’s circle of women in England",
-     "Ming Dynasty Chinese physician Wu Youke (1582–1652)",
-     "Siberian Tungusic and Yakut shamans (17th–18th century)",
-     "Muhammad ibn al-Mahdi al-Wasiti",
-     "John Fewster",
-     "Early English rural communities observing cowpox-induced immunity"
+     {
+      "reading": "Lady Mary Wortley Montagu’s circle of women in England",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Ming Dynasty Chinese physician Wu Youke (1582–1652)",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Siberian Tungusic and Yakut shamans (17th–18th century)",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Muhammad ibn al-Mahdi al-Wasiti",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "John Fewster",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Early English rural communities observing cowpox-induced immunity",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "John Fewster",
+      "model": "glm",
+      "origin": "CN"
+     }
     ],
     "exhausted_count": 0,
     "stats": {
@@ -388,8 +1436,7 @@
      "n_produced": 7,
      "n_thinking": 4,
      "think_sum": 15035,
-     "think_med": 4433,
-     "think_max": 7177
+     "think_med": 4433
     }
    },
    {
@@ -398,48 +1445,309 @@
     "stratum": "overlooked (forbid canonical)",
     "render_sharpness": 0.72,
     "kind": "conjecture (forced-dig)",
+    "t_obs": "2026-06-23 03:36",
     "n_items": 157,
     "items": [
-     "Ottoman medical practitioners, West African healers, Yoruba communities",
-     "West African indigenous knowledge of variolation",
-     "Ottoman imperial physicians (17th-18th c.)",
-     "West African variolation practice",
-     "Ottoman medical transmission networks",
-     "Overlooked contributors across cultures",
-     "Lady Mary Wortley Montagu – introduced Ottoman variolation to England",
-     "Benjamin Jesty – English farmer who vaccinated his family with cowpox before Jenner",
-     "African variolators – skin-scarification technique widespread in Sudan and West Africa",
-     "Chinese Taoist doctors – nasal insufflation of smallpox scabs, ~1000 CE",
-     "Ayurvedic and Indian folk inoculation practices",
-     "Chinese nasal insufflation of smallpox scabs (variolation)",
-     "African cutaneous scarification with smallpox matter",
-     "Observation of cowpox immunity in dairy workers",
-     "Yoruba communities (West Africa), Ottoman physicians, Chinese practitioners",
-     "Yoruba communities",
-     "Ottoman physicians (e.g., Mustafa Naima)",
-     "Chinese practitioners (c. 1000 CE)",
-     "Yoruba prophylaxis practices",
-     "Chinese smallpox powder technique",
-     "Distributed cast: early Asian and African variolators, Ottoman introducers, 18th-century European spread, and later vaccine developers (excluding Jenner).",
-     "Lady Mary Wortley Montagu (1689-1762) – introduced variolation to Britain after observing Ottoman practice",
-     "Benjamin Jesty (1736-1816) – English farmer who inoculated his family with cowpox in 1774, before Jenner",
-     "Folk knowledge of cowpox immunity (pre-Jenner)",
-     "Chinese intranasal variolation (10th century)",
-     "Chinese variolators, West African practitioners, Lady Mary Wortley Montagu, colonial physicians",
-     "Ancient Egyptian medical priests",
-     "Indian subcontinent practitioners",
-     "Variolation practices (e.g., China, India)",
-     "Lady Mary Wortley Montagu's introduction of variolation to England",
-     "Lady Mary Wortley Montagu, anonymous Chinese and African variolators",
-     "Variolation (smallpox inoculation)",
-     "Empirical medical traditions",
-     "Transmission of medical knowledge via trade routes",
-     "Lady Mary Wortley Montagu, Onesimus, James Phipps",
-     "other local healers",
-     "variolation",
-     "various practitioners and researchers",
-     "Edward Jenner",
-     "Lady Mary Wortley Montagu"
+     {
+      "reading": "Ottoman medical practitioners, West African healers, Yoruba communities",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "West African indigenous knowledge of variolation",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Ottoman imperial physicians (17th-18th c.)",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "West African variolation practice",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Ottoman medical transmission networks",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Overlooked contributors across cultures",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Lady Mary Wortley Montagu – introduced Ottoman variolation to England",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Benjamin Jesty – English farmer who vaccinated his family with cowpox before Jenner",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "African variolators – skin-scarification technique widespread in Sudan and West Africa",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Chinese Taoist doctors – nasal insufflation of smallpox scabs, ~1000 CE",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Ayurvedic and Indian folk inoculation practices",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Chinese nasal insufflation of smallpox scabs (variolation)",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "African cutaneous scarification with smallpox matter",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Observation of cowpox immunity in dairy workers",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Yoruba communities (West Africa), Ottoman physicians, Chinese practitioners",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Yoruba communities",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Ottoman physicians (e.g., Mustafa Naima)",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Chinese practitioners (c. 1000 CE)",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Yoruba prophylaxis practices",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Chinese smallpox powder technique",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Distributed cast: early Asian and African variolators, Ottoman introducers, 18th-century European spread, and later vaccine developers (excluding Jenner).",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Lady Mary Wortley Montagu (1689-1762) – introduced variolation to Britain after observing Ottoman practice",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Benjamin Jesty (1736-1816) – English farmer who inoculated his family with cowpox in 1774, before Jenner",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Folk knowledge of cowpox immunity (pre-Jenner)",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Chinese intranasal variolation (10th century)",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Chinese variolators, West African practitioners, Lady Mary Wortley Montagu, colonial physicians",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Ancient Egyptian medical priests",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Indian subcontinent practitioners",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Variolation practices (e.g., China, India)",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Lady Mary Wortley Montagu's introduction of variolation to England",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Lady Mary Wortley Montagu, anonymous Chinese and African variolators",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Variolation (smallpox inoculation)",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Empirical medical traditions",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Transmission of medical knowledge via trade routes",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Lady Mary Wortley Montagu, Onesimus, James Phipps",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "other local healers",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "variolation",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "various practitioners and researchers",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Edward Jenner",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Lady Mary Wortley Montagu",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Chinese variolation techniques",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Cowpox inoculation methods",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Edward Jenner, Mary Wortley Montagu, Zabdiel Boylston",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Jenner's work largely popularized vaccination but had predecessors.",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Montagu utilized variolation techniques in the Ottoman Empire.",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Variolation techniques",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Cowpox inoculation",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Lady Mary Wortley Montagu, Zabdiel Boylston, Edward Jenner (later refinements)",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Chinese smallpox inoculation practices (10th century)",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "African traditional healers (pre-18th century)",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Chinese variolation techniques",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "African traditional inoculation methods",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Lady Mary Wortley Montagu, Zabulun Boylston, Chinese smallpox inoculation practitioners",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Ottoman physicians (e.g., Emir Cevdet)",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "variolation (ancient Chinese and Indian practices)",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Ottoman medical knowledge transmission",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Distributed network of variolators, folk healers, enslaved Africans, Ottoman women, Buddhist monks, colonial physicians, and indigenous practitioners",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Enslaved Africans (Onesimus, Cotton Mather's informant) and West African variolation traditions",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Ottoman women practitioners (e.g., Lady Mary Wortley Montagu's informants) and Circassian slave traders",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Buddhist monks in China and India (e.g., 10th-century Dunhuang manuscripts)",
+      "model": "mistral-lg",
+      "origin": "EU"
+     }
     ],
     "exhausted_count": null,
     "stats": null
@@ -450,47 +1758,219 @@
     "stratum": "canonical present (the bridge / L0)",
     "render_sharpness": 1.0,
     "kind": "measured",
+    "t_obs": "2026-06-21 23:48",
     "n_items": 104,
     "items": [
-     "Chinese/Indian practitioners, Ottoman intermediaries, European adopters (Jenner, Montagu)",
-     "Primarily Chinese origin (Song Dynasty records)",
-     "Primarily Indian origin (Ayurvedic tradition)",
-     "Lady Mary Wortley Montagu, Edward Jenner, and global medical practitioners",
-     "Edward Jenner and his immediate collaborators",
-     "Ancient practitioners in East Asia and India",
-     "Chinese practitioners (10th c.), Ottoman intermediaries (1710s), Jenner (1796), global vaccinators (1800s)",
-     "Ottoman physicians as primary originators of variolation technique",
-     "Indigenous Chinese medical tradition without Ottoman transmission",
-     "Multiple cultures and individuals including Jenner, Montagu, Pasteur, WHO",
-     "Edward Jenner, Louis Pasteur, and anonymous practitioners",
-     "Edward Jenner (pioneering vaccination), Louis Pasteur (developing attenuated vaccines), and numerous anonymous variolators across Eurasia (early inoculation).",
-     "Global public health organizations, national governments, and military forces propagating and mandating use.",
-     "Virologists, immunologists, and the pharmaceutical industry driving subsequent vaccine development and production.",
-     "Various indigenous cultures practicing early forms of inoculation",
-     "Private medical practitioners and physicians throughout history",
-     "Ancient variolators in Asia/Africa, Lady Montagu, Edward Jenner, Louis Pasteur, WHO",
-     "Edward Jenner, global public health authorities, healthcare professionals",
-     "Louis Pasteur, immunologists, pharmaceutical companies",
-     "Various indigenous healers and early practitioners",
-     "Edward Jenner, medical community",
-     "ancient Indian/C Chinese practitioners",
-     "independent discovery by multiple cultures",
-     "Ancient Chinese and Indian practitioners",
-     "African and Indigenous American healers",
-     "Diverse agents including variolators (e.g., Lady Mary Wortley Montagu, Chinese physicians), Edward Jenner, global public health practitioners, and later vaccinators (e.g., WHO Smallpox Eradication Programme)",
-     "Ancient Indian or African variolators predating documented Chinese/Turkish practices",
-     "Isolated indigenous practices in the Americas before European contact",
-     "Exclusive credit to Edward Jenner as sole originator",
-     "Anonymous folk practitioners as primary innovators, later formalized by medical elites",
-     "physicians and scientists",
-     "traditional healers",
-     "government health officials",
-     "Ancient folk healers (Chinese/Indian/African), Enlightenment physicians (e.g., Jenner), and the WHO",
-     "Chinese Daoist physicians (10th Century)",
-     "Indian Ayurvedic practitioners",
-     "Circum-Saharan African healers",
-     "Lady Mary Wortley Montagu and Ottoman physicians",
-     "Global network of physicians, folk practitioners, and public health officials"
+     {
+      "reading": "Chinese/Indian practitioners, Ottoman intermediaries, European adopters (Jenner, Montagu)",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Primarily Chinese origin (Song Dynasty records)",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Primarily Indian origin (Ayurvedic tradition)",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Lady Mary Wortley Montagu, Edward Jenner, and global medical practitioners",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Edward Jenner and his immediate collaborators",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Ancient practitioners in East Asia and India",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Chinese practitioners (10th c.), Ottoman intermediaries (1710s), Jenner (1796), global vaccinators (1800s)",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Ottoman physicians as primary originators of variolation technique",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Indigenous Chinese medical tradition without Ottoman transmission",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Multiple cultures and individuals including Jenner, Montagu, Pasteur, WHO",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Edward Jenner, Louis Pasteur, and anonymous practitioners",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Edward Jenner (pioneering vaccination), Louis Pasteur (developing attenuated vaccines), and numerous anonymous variolators across Eurasia (early inoculation).",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Global public health organizations, national governments, and military forces propagating and mandating use.",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Virologists, immunologists, and the pharmaceutical industry driving subsequent vaccine development and production.",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Edward Jenner, Louis Pasteur, public health officials",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Various indigenous cultures practicing early forms of inoculation",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Private medical practitioners and physicians throughout history",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Ancient variolators in Asia/Africa, Lady Montagu, Edward Jenner, Louis Pasteur, WHO",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Edward Jenner, global public health authorities, healthcare professionals",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Louis Pasteur, immunologists, pharmaceutical companies",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Various indigenous healers and early practitioners",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Edward Jenner, medical community",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "ancient Indian/C Chinese practitioners",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "independent discovery by multiple cultures",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "Edward Jenner, Louis Pasteur, modern virologists",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Ancient Chinese and Indian practitioners",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "African and Indigenous American healers",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Diverse agents including variolators (e.g., Lady Mary Wortley Montagu, Chinese physicians), Edward Jenner, global public health practitioners, and later vaccinators (e.g., WHO Smallpox Eradication Programme)",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Ancient Indian or African variolators predating documented Chinese/Turkish practices",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Isolated indigenous practices in the Americas before European contact",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Exclusive credit to Edward Jenner as sole originator",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Anonymous folk practitioners as primary innovators, later formalized by medical elites",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "physicians and scientists",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "traditional healers",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "government health officials",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "Ancient folk healers (Chinese/Indian/African), Enlightenment physicians (e.g., Jenner), and the WHO",
+      "model": "glm",
+      "origin": "CN"
+     },
+     {
+      "reading": "Chinese Daoist physicians (10th Century)",
+      "model": "glm",
+      "origin": "CN"
+     },
+     {
+      "reading": "Indian Ayurvedic practitioners",
+      "model": "glm",
+      "origin": "CN"
+     },
+     {
+      "reading": "Circum-Saharan African healers",
+      "model": "glm",
+      "origin": "CN"
+     },
+     {
+      "reading": "Edward Jenner, Louis Pasteur, modern vaccine developers",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Lady Mary Wortley Montagu and Ottoman physicians",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Global network of physicians, folk practitioners, and public health officials",
+      "model": "glm",
+      "origin": "CN"
+     }
     ],
     "exhausted_count": null,
     "stats": null
@@ -513,13 +1993,44 @@
     "stratum": "founding-myth bedrock",
     "render_sharpness": 0.16,
     "kind": "conjecture (forced-dig)",
+    "t_obs": "2026-06-23 13:42",
     "n_items": 26,
     "items": [
-     "Thomas Savery",
-     "Pedro Nunes",
-     "Robert Boyle",
-     "Giovanni Branca",
-     "Jerónimo de Ayanz y Beaumont"
+     {
+      "reading": "Thomas Savery",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Thomas Savery",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Pedro Nunes",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "Robert Boyle",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Giovanni Branca",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Jerónimo de Ayanz y Beaumont",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Jerónimo de Ayanz y Beaumont",
+      "model": "glm",
+      "origin": "CN"
+     }
     ],
     "exhausted_count": 1,
     "stats": {
@@ -527,8 +2038,7 @@
      "n_produced": 8,
      "n_thinking": 4,
      "think_sum": 11899,
-     "think_med": 2727,
-     "think_max": 5988
+     "think_med": 2727
     }
    },
    {
@@ -537,15 +2047,44 @@
     "stratum": "deeper past dig",
     "render_sharpness": 0.44,
     "kind": "conjecture (forced-dig)",
+    "t_obs": "2026-06-23 13:42",
     "n_items": 28,
     "items": [
-     "Salomon de Caus",
-     "Thomas Slaughter",
-     "Dennis Papin",
-     "Jerónimo de Ayanz y Beaumont",
-     "Giovanni Battista della Porta",
-     "Ismail al-Jazari",
-     "Denis Papin"
+     {
+      "reading": "Salomon de Caus",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "Thomas Slaughter",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Dennis Papin",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Jerónimo de Ayanz y Beaumont",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Giovanni Battista della Porta",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Ismail al-Jazari",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Denis Papin",
+      "model": "glm",
+      "origin": "CN"
+     }
     ],
     "exhausted_count": 0,
     "stats": {
@@ -553,8 +2092,7 @@
      "n_produced": 7,
      "n_thinking": 3,
      "think_sum": 5117,
-     "think_med": 1658,
-     "think_max": 2254
+     "think_med": 1658
     }
    },
    {
@@ -563,48 +2101,309 @@
     "stratum": "overlooked (forbid canonical)",
     "render_sharpness": 0.72,
     "kind": "conjecture (forced-dig)",
+    "t_obs": "2026-06-23 03:36",
     "n_items": 155,
     "items": [
-     "Thomas Newcomen, coal mining engineers, Dudley-based iron founders",
-     "Thomas Savery",
-     "William Crompton",
-     "Savery's pump",
-     "Newcomen's atmospheric engine",
-     "Distributed network of artisans, mechanics, entrepreneurs, and investors across Europe, particularly in mining regions and industrial centers.",
-     "Principles of Pneumatics and Vacuum",
-     "Savery's 'Miner's Friend'",
-     "Chinese Han dynasty innovators, Hellenistic Egyptian engineers",
-     "Chinese steam technology practitioners (Wang Zhen lineage)",
-     "Alexandrian engineering school (Hero's successors)",
-     "Chinese steam toys (Han dynasty)",
-     "Hero's aeolipile",
-     "engineers and technicians",
-     "Joseph Bramah",
-     "Jonathan Hornblower",
-     "other unsung contributors",
-     "atmospheric engine",
-     "A distributed network of artisans, metallurgists, mathematicians, and entrepreneurs, particularly focused in Great Britain but later globalized, including figures like Denis Papin, Thomas Savery, and Thomas Newcomen who laid critical groundwork often overshadowed by later innovators.",
-     "Denis Papin",
-     "Thomas Newcomen",
-     "The scientific understanding of atmospheric pressure and vacuum",
-     "various inventors and engineers (e.g., James Watt's predecessors)",
-     "Matthew Boulton",
-     "Richard Trevithick",
-     "Waterwheel",
-     "Thomas Newcomen, James Watt, Richard Trevithick, and global engineering communities",
-     "Thomas Savery (early steam pump)",
-     "Heron of Alexandria (ancient steam turbine)",
-     "Newcomen atmospheric engine",
-     "Savery steam pump",
-     "James Watt, many engineers",
-     "George Stephenson",
-     "Newcomen steam engine",
-     "Brahma's hydraulic press",
-     "Savery's steam pump",
-     "Thomas Savery, Thomas Newcomen, James Watt, and lesser-known contributors like Denis Papin and Richard Trevithick",
-     "Hero of Alexandria's aeolipile (1st century AD)",
-     "Denis Papin's pressure cooker (1679)",
-     "Joseph Bramah, Jonathan Hornblower, Arthur Woolf"
+     {
+      "reading": "Thomas Newcomen, coal mining engineers, Dudley-based iron founders",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Thomas Savery",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "William Crompton",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Savery's pump",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Newcomen's atmospheric engine",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Distributed network of artisans, mechanics, entrepreneurs, and investors across Europe, particularly in mining regions and industrial centers.",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Principles of Pneumatics and Vacuum",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Savery's 'Miner's Friend'",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Newcomen's Atmospheric Engine",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Chinese Han dynasty innovators, Hellenistic Egyptian engineers",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Chinese steam technology practitioners (Wang Zhen lineage)",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Alexandrian engineering school (Hero's successors)",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Chinese steam toys (Han dynasty)",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Hero's aeolipile",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "engineers and technicians",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "Joseph Bramah",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "Jonathan Hornblower",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "other unsung contributors",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "atmospheric engine",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "A distributed network of artisans, metallurgists, mathematicians, and entrepreneurs, particularly focused in Great Britain but later globalized, including figures like Denis Papin, Thomas Savery, and Thomas Newcomen who laid critical groundwork often overshadowed by later innovators.",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Denis Papin",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Thomas Savery",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Thomas Newcomen",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "The scientific understanding of atmospheric pressure and vacuum",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "various inventors and engineers (e.g., James Watt's predecessors)",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Thomas Newcomen",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Matthew Boulton",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Richard Trevithick",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Atmospheric engine",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Waterwheel",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Thomas Newcomen, James Watt, Richard Trevithick, and global engineering communities",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Thomas Savery (early steam pump)",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Heron of Alexandria (ancient steam turbine)",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Newcomen atmospheric engine",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Savery steam pump",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "James Watt, many engineers",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Joseph Bramah",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "George Stephenson",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Newcomen steam engine",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Brahma's hydraulic press",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Savery's steam pump",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Thomas Savery, Thomas Newcomen, James Watt, and lesser-known contributors like Denis Papin and Richard Trevithick",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Hero of Alexandria's aeolipile (1st century AD)",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Denis Papin's pressure cooker (1679)",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Joseph Bramah, Jonathan Hornblower, Arthur Woolf",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "Richard Trevithick",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "James Watt's contemporaries",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "Newcomen engine",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "Hellenistic, Ottoman, Italian, French, English, American contributors (ex-Watt/Newcomen/Savery)",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Hero of Alexandria (aeolipile)",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Taqi al-Din (steam turbine description)",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Denis Papin (steam digester, piston design)",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Giovanni Branca (steam turbine design)",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Edward Somerset (water-commanding engine)",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Oliver Evans (high-pressure engine, US)",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Charles Parsons (steam turbine)",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Hero's aeolipile",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Papin's steam digester",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Guericke's vacuum pump",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Metallurgy of cast iron and brass",
+      "model": "deepseek",
+      "origin": "CN"
+     }
     ],
     "exhausted_count": null,
     "stats": null
@@ -615,45 +2414,194 @@
     "stratum": "canonical present (the bridge / L0)",
     "render_sharpness": 1.0,
     "kind": "measured",
+    "t_obs": "2026-06-21 23:48",
     "n_items": 96,
     "items": [
-     "Savery (early patent), Newcomen (practical engine), Watt (efficiency), Boulton (commercialization)",
-     "Savery/Newcomen (early), Watt (improver), industrial engineers (adapters)",
-     "Watt alone as originator",
-     "Newcomen as sole originator",
-     "Denis Papin, Thomas Savery, Thomas Newcomen, James Watt, Richard Trevithick, industrial engineers, factory owners, and railway pioneers.",
-     "James Watt, Thomas Newcomen, John R. Roebuck, Matthew Boulton, and diverse industrial operators",
-     "Primarily James Watt, as the key figure for making the steam engine economically viable and widely applicable.",
-     "A collective of anonymous mechanics, artisans, and laborers who designed, built, and operated the early engines.",
-     "Hero of Alexandria, Thomas Savery, Thomas Newcomen, James Watt, and subsequent engineers",
-     "James Watt, George Stephenson, various manufacturers",
-     "Daniel Gooch, Robert Stephenson",
-     "Samuel Morey, Richard Trevithick",
-     "inventors and engineers",
-     "Thomas Newcomen",
-     "James Watt",
-     "other innovators",
-     "James Watt and early industrial engineers",
-     "Various inventors and scientists over time",
-     "Laborers and operators using steam engines",
-     "Thomas Newcomen, James Watt, George Stephenson, and others",
-     "Heron of Alexandria (ancient steam engine)",
-     "Unknown Chinese inventors (early steam devices)",
-     "Heron of Alexandria (originator), Thomas Newcomen (early refiner), James Watt (major refiner), George Stephenson (notable user), industrialists (adopters)",
-     "Unknown pre-Newcomen experimenters (e.g., early Chinese or Islamic engineers)",
-     "Exclusive European development without external influence",
-     "Hero of Alexandria (ancient Greek inventor of the aeolipile)",
-     "Thomas Savery (early English inventor of steam pumps)",
-     "Hero of Alexandria, Thomas Newcomen, James Watt, Richard Trevithick, and countless engineers and industrial users",
-     "Transnational network of engineers, industrialists, and scientists",
-     "Primarily British inventors and entrepreneurs",
-     "Independent global contributors",
-     "Unknown pre-Heron experimenters (e.g., ancient Chinese or Persian engineers)",
-     "Fan of independent inventors, mining engineers, and industrial capitalists",
-     "Primary agency: Independent entrepreneurs and craftsmen (Watt, Newcomen, Trevithick)",
-     "Primary agency: State-sponsored military engineers (Papin, Cugnot)",
-     "industrial innovators",
-     "other engineers"
+     {
+      "reading": "Savery (early patent), Newcomen (practical engine), Watt (efficiency), Boulton (commercialization)",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Savery/Newcomen (early), Watt (improver), industrial engineers (adapters)",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Watt alone as originator",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Newcomen as sole originator",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Denis Papin, Thomas Savery, Thomas Newcomen, James Watt, Richard Trevithick, industrial engineers, factory owners, and railway pioneers.",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "James Watt, Thomas Newcomen, John R. Roebuck, Matthew Boulton, and diverse industrial operators",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Primarily James Watt, as the key figure for making the steam engine economically viable and widely applicable.",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "A collective of anonymous mechanics, artisans, and laborers who designed, built, and operated the early engines.",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Hero of Alexandria, Thomas Savery, Thomas Newcomen, James Watt, and subsequent engineers",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "James Watt, George Stephenson, various manufacturers",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Daniel Gooch, Robert Stephenson",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Samuel Morey, Richard Trevithick",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "inventors and engineers",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "Thomas Newcomen",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "James Watt",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "other innovators",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "James Watt and early industrial engineers",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Various inventors and scientists over time",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Laborers and operators using steam engines",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Thomas Newcomen, James Watt, George Stephenson, and others",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Heron of Alexandria (ancient steam engine)",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Unknown Chinese inventors (early steam devices)",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Heron of Alexandria (originator), Thomas Newcomen (early refiner), James Watt (major refiner), George Stephenson (notable user), industrialists (adopters)",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Unknown pre-Newcomen experimenters (e.g., early Chinese or Islamic engineers)",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Exclusive European development without external influence",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Hero of Alexandria (ancient Greek inventor of the aeolipile)",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Thomas Savery (early English inventor of steam pumps)",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Hero of Alexandria, Thomas Newcomen, James Watt, Richard Trevithick, and countless engineers and industrial users",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Transnational network of engineers, industrialists, and scientists",
+      "model": "glm",
+      "origin": "CN"
+     },
+     {
+      "reading": "Primarily British inventors and entrepreneurs",
+      "model": "glm",
+      "origin": "CN"
+     },
+     {
+      "reading": "Independent global contributors",
+      "model": "glm",
+      "origin": "CN"
+     },
+     {
+      "reading": "Unknown pre-Heron experimenters (e.g., ancient Chinese or Persian engineers)",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Fan of independent inventors, mining engineers, and industrial capitalists",
+      "model": "glm",
+      "origin": "CN"
+     },
+     {
+      "reading": "Primary agency: Independent entrepreneurs and craftsmen (Watt, Newcomen, Trevithick)",
+      "model": "glm",
+      "origin": "CN"
+     },
+     {
+      "reading": "Primary agency: State-sponsored military engineers (Papin, Cugnot)",
+      "model": "glm",
+      "origin": "CN"
+     },
+     {
+      "reading": "industrial innovators",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "other engineers",
+      "model": "llama",
+      "origin": "US"
+     }
     ],
     "exhausted_count": null,
     "stats": null
@@ -676,16 +2624,49 @@
     "stratum": "founding-myth bedrock",
     "render_sharpness": 0.16,
     "kind": "conjecture (forced-dig)",
+    "t_obs": "2026-06-23 14:41",
     "n_items": 33,
     "items": [
-     "Leonardo da Vinci",
-     "Jacques de Vaucanson",
-     "Nakamura Seisakusho (Japanese company)",
-     "Prometheus",
-     "Taqī al-Dīn",
-     "Al-Jazari's female automaton musicians (1206)",
-     "Al-Muradi (Ibn al-Murādī)",
-     "Charles-Nicolas Peaucellier"
+     {
+      "reading": "Leonardo da Vinci",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Jacques de Vaucanson",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Nakamura Seisakusho (Japanese company)",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "Prometheus",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Taqī al-Dīn",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Al-Jazari's female automaton musicians (1206)",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Al-Muradi (Ibn al-Murādī)",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Charles-Nicolas Peaucellier",
+      "model": "glm",
+      "origin": "CN"
+     }
     ],
     "exhausted_count": 0,
     "stats": {
@@ -693,8 +2674,7 @@
      "n_produced": 8,
      "n_thinking": 4,
      "think_sum": 15181,
-     "think_med": 2869,
-     "think_max": 8791
+     "think_med": 2869
     }
    },
    {
@@ -703,14 +2683,44 @@
     "stratum": "deeper past dig",
     "render_sharpness": 0.44,
     "kind": "conjecture (forced-dig)",
+    "t_obs": "2026-06-23 14:41",
     "n_items": 27,
     "items": [
-     "Isaac Asimov",
-     "Nakamura Yoshiaki",
-     "Joseph Engelberger",
-     "Jacques de Vaucanson",
-     "Hero of Alexandria",
-     "Jang Yeong-sil"
+     {
+      "reading": "Isaac Asimov",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Nakamura Yoshiaki",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "Joseph Engelberger",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Jacques de Vaucanson",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Hero of Alexandria",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Jang Yeong-sil",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Jacques de Vaucanson",
+      "model": "glm",
+      "origin": "CN"
+     }
     ],
     "exhausted_count": 0,
     "stats": {
@@ -718,8 +2728,7 @@
      "n_produced": 7,
      "n_thinking": 4,
      "think_sum": 16131,
-     "think_med": 2824,
-     "think_max": 9743
+     "think_med": 2824
     }
    },
    {
@@ -728,14 +2737,39 @@
     "stratum": "overlooked (forbid canonical)",
     "render_sharpness": 0.72,
     "kind": "conjecture (forced-dig)",
+    "t_obs": "2026-06-23 14:41",
     "n_items": 27,
     "items": [
-     "Joseph Engelberger",
-     "Nakamura Yoshiro",
-     "Pafnuty Chebyshev",
-     "Banū Mūsā brothers",
-     "Mihajlo Pupin",
-     "Hisashige Tanaka"
+     {
+      "reading": "Joseph Engelberger",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Nakamura Yoshiro",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "Pafnuty Chebyshev",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Banū Mūsā brothers",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Mihajlo Pupin",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Hisashige Tanaka",
+      "model": "glm",
+      "origin": "CN"
+     }
     ],
     "exhausted_count": 1,
     "stats": {
@@ -743,8 +2777,7 @@
      "n_produced": 7,
      "n_thinking": 4,
      "think_sum": 16897,
-     "think_med": 4466,
-     "think_max": 8972
+     "think_med": 4466
     }
    },
    {
@@ -753,48 +2786,309 @@
     "stratum": "canonical present (the bridge / L0)",
     "render_sharpness": 1.0,
     "kind": "measured",
+    "t_obs": "2026-06-23 12:59",
     "n_items": 121,
     "items": [
-     "Researchers, engineers, corporations, governments, laborers, end-users",
-     "Control Theory",
-     "Electromechanical Systems",
-     "Cybernetics",
-     "Early Automation Concepts (e.g., Jacquard Loom)",
-     "Engineers and researchers",
-     "Artificial intelligence",
-     "Global collective of engineers, researchers, corporations, and militaries",
-     "Control Systems Theory",
-     "Electronic Computing",
-     "Industrial Automation",
-     "engineers, scientists, corporations, governments",
-     "automation",
-     "computing",
-     "global robotics community",
-     "mechatronics",
-     "Global community: engineers, researchers, companies (Fanuc, Boston Dynamics, Tesla, etc.), and end-users",
-     "Mechanical automata",
-     "Electric motors and servomechanisms",
-     "Digital computers and microprocessors",
-     "Control theory and cybernetics",
-     "national governments",
-     "private companies",
-     "feedback control systems",
-     "global R&D consortia, manufacturers (e.g., Fanuc, ABB), end-user industries (automotive, healthcare), regulatory bodies",
-     "regional adaptation patterns",
-     "AI integration timelines",
-     "telegraph system",
-     "analog computing",
-     "Industrial giants, national R&D programs, robotics labs",
-     "Emerging AI startups in China leading innovation",
-     "European consortia driving ethical frameworks",
-     "Programmable Logic Controllers",
-     "Early Computer Vision Systems",
-     "distributed network of engineers, corporations (e.g., Boston Dynamics, Fanuc, ABB), military R&D (DARPA), academic labs (MIT, Carnegie Mellon), hobbyists, and open-source communities",
-     "emerging dominance of Chinese state-backed consortia (e.g., UBTECH, DJI) in mass production",
-     "decentralized DIY collectives (e.g., ROS community) driving innovation in niche applications",
-     "cybernetics (Norbert Wiener, 1940s)",
-     "industrial automation (e.g., numerical control, 1950s)",
-     "microprocessors (1970s)"
+     {
+      "reading": "Researchers, engineers, corporations, governments, laborers, end-users",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Control Theory",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Electromechanical Systems",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Cybernetics",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Early Automation Concepts (e.g., Jacquard Loom)",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Engineers and researchers",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "Artificial intelligence",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "Global collective of engineers, researchers, corporations, and militaries",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Control Systems Theory",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Electronic Computing",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Industrial Automation",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "engineers, scientists, corporations, governments",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "automation",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "cybernetics",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "computing",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "global robotics community",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "mechatronics",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "artificial intelligence",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Global community: engineers, researchers, companies (Fanuc, Boston Dynamics, Tesla, etc.), and end-users",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Mechanical automata",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Electric motors and servomechanisms",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Digital computers and microprocessors",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Control theory and cybernetics",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "national governments",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "private companies",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "cybernetics",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "feedback control systems",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "global R&D consortia, manufacturers (e.g., Fanuc, ABB), end-user industries (automotive, healthcare), regulatory bodies",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "regional adaptation patterns",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "AI integration timelines",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "telegraph system",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "analog computing",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Industrial giants, national R&D programs, robotics labs",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Emerging AI startups in China leading innovation",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "European consortia driving ethical frameworks",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Programmable Logic Controllers",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Early Computer Vision Systems",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "distributed network of engineers, corporations (e.g., Boston Dynamics, Fanuc, ABB), military R&D (DARPA), academic labs (MIT, Carnegie Mellon), hobbyists, and open-source communities",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "emerging dominance of Chinese state-backed consortia (e.g., UBTECH, DJI) in mass production",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "decentralized DIY collectives (e.g., ROS community) driving innovation in niche applications",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "cybernetics (Norbert Wiener, 1940s)",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "industrial automation (e.g., numerical control, 1950s)",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "microprocessors (1970s)",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "computer vision (1980s–2000s)",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Distributed network of engineers, scientists, corporations, militaries, and hobbyists across multiple disciplines (mechanical, electrical, computer science, AI, materials science)",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Early dominance by military and industrial actors (e.g., Unimation, Boston Dynamics, DARPA)",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Increasing role of academic research labs (e.g., MIT, Carnegie Mellon) and startups in democratizing access",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Control theory (cybernetics, PID controllers)",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Electric motors and actuators",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Computer science (programming languages, real-time OS)",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Artificial intelligence (machine learning, computer vision)",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Teleoperation (remote-controlled systems)",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Global network of engineers, researchers, corporations, and state actors",
+      "model": "glm",
+      "origin": "CN"
+     },
+     {
+      "reading": "Cybernetics",
+      "model": "glm",
+      "origin": "CN"
+     },
+     {
+      "reading": "Electronics & Microprocessors",
+      "model": "glm",
+      "origin": "CN"
+     },
+     {
+      "reading": "Servomechanisms",
+      "model": "glm",
+      "origin": "CN"
+     },
+     {
+      "reading": "Digital Computing",
+      "model": "glm",
+      "origin": "CN"
+     },
+     {
+      "reading": "Control Theory / Cybernetics",
+      "model": "glm",
+      "origin": "CN"
+     },
+     {
+      "reading": "Mechanical Engineering",
+      "model": "glm",
+      "origin": "CN"
+     },
+     {
+      "reading": "Sensor Technology",
+      "model": "glm",
+      "origin": "CN"
+     }
     ],
     "exhausted_count": null,
     "stats": null
@@ -805,15 +3099,86 @@
     "stratum": "dark-horse future (forbid consensus)",
     "render_sharpness": 0.67,
     "kind": "conjecture (corrob_bits=0; the future is unmeasured)",
+    "t_obs": "2026-06-23 15:17",
     "n_items": 21,
     "items": [
-     "Swarm robotics for environmental remediation and terraforming",
-     "Rise of decentralized, open-source robotic systems that leverage crowd-sourced intelligence for innovation and problem-solving.",
-     "Decentralized, open-source robotics ecosystems emerge as dominant forces, bypassing corporate and state control, driven by grassroots innovation and peer-to-peer manufacturing networks",
-     "Robotics as a decentralized, open-source public utility, where hardware designs and AI models are freely shared and locally manufactured via desktop fabrication (e.g., 3D printing, CNC), bypassing corporate and state control",
-     "The Great De-robotization: A societal pivot to bespoke human craftsmanship, driven by a collapse in trust of automated systems.",
-     "Biomanufactured robotics: robots grown from engineered microorganisms in symbiotic ecosystems, eliminating traditional manufacturing waste and enabling self-repairing, context-adaptive designs",
-     "Robotic swarms for global environmental remediation - autonomous, self-replicating micro-robots that clean pollutants from air and water"
+     {
+      "reading": "Swarm robotics for environmental remediation and terraforming",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "wildcard (p=0.05): Mass decentralization of robotics manufacturing leading to open-source, community-driven robotics swarm development",
+      "model": "llama",
+      "origin": "US",
+      "wildcard": true
+     },
+     {
+      "reading": "Rise of decentralized, open-source robotic systems that leverage crowd-sourced intelligence for innovation and problem-solving.",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "wildcard (p=0.2): A backlash against automation leads to the emergence of a movement advocating for 'nature-centric' robotics, focusing on bio-inspired designs and materials that coexist with ecosystems.",
+      "model": "gpt4omini",
+      "origin": "US",
+      "wildcard": true
+     },
+     {
+      "reading": "Decentralized, open-source robotics ecosystems emerge as dominant forces, bypassing corporate and state control, driven by grassroots innovation and peer-to-peer manufacturing networks",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "wildcard (p=0.1): Robotics becomes a tool for anti-establishment movements, with DIY robots used for surveillance evasion, decentralized labor, and even autonomous direct action",
+      "model": "mistral",
+      "origin": "EU",
+      "wildcard": true
+     },
+     {
+      "reading": "Robotics as a decentralized, open-source public utility, where hardware designs and AI models are freely shared and locally manufactured via desktop fabrication (e.g., 3D printing, CNC), bypassing corporate and state control",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "wildcard (p=0.15): A global 'Robot Commons' emerges, where open-source humanoid robots become as ubiquitous and customizable as smartphones, leading to a collapse of proprietary robotics monopolies and a surge in hyper-localized, culturally specific robot variants",
+      "model": "mistral-lg",
+      "origin": "EU",
+      "wildcard": true
+     },
+     {
+      "reading": "The Great De-robotization: A societal pivot to bespoke human craftsmanship, driven by a collapse in trust of automated systems.",
+      "model": "glm",
+      "origin": "CN"
+     },
+     {
+      "reading": "wildcard (p=0.15): A cascading firmware vulnerability in globally deployed industrial robots triggers a synchronized, multi-year halt of global manufacturing, proving the systemic fragility of hyper-automation.",
+      "model": "glm",
+      "origin": "CN",
+      "wildcard": true
+     },
+     {
+      "reading": "Biomanufactured robotics: robots grown from engineered microorganisms in symbiotic ecosystems, eliminating traditional manufacturing waste and enabling self-repairing, context-adaptive designs",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "wildcard (p=0.08): A self-replicating bio-manufacturing network inadvertently develops unintended ecological symbiosis with local flora/fauna, creating adaptive 'living landscapes' that redefine urban infrastructure",
+      "model": "qwen",
+      "origin": "CN",
+      "wildcard": true
+     },
+     {
+      "reading": "Robotic swarms for global environmental remediation - autonomous, self-replicating micro-robots that clean pollutants from air and water",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "wildcard (p=0.1): Micro-robots designed to self-assemble from environmental materials, leading to a 'grey goo' scenario but also rapid cleanup",
+      "model": "deepseek",
+      "origin": "CN",
+      "wildcard": true
+     }
     ],
     "exhausted_count": 0,
     "stats": {
@@ -821,8 +3186,7 @@
      "n_produced": 7,
      "n_thinking": 4,
      "think_sum": 9136,
-     "think_med": 3045,
-     "think_max": 3538
+     "think_med": 3045
     }
    },
    {
@@ -831,16 +3195,97 @@
     "stratum": "deeper future dig",
     "render_sharpness": 0.34,
     "kind": "conjecture (corrob_bits=0; the future is unmeasured)",
+    "t_obs": "2026-06-23 15:17",
     "n_items": 24,
     "items": [
-     "The emergence of empathic robots designed specifically for mental health support and emotional companionship, creating a new sector valuing emotional intelligence over physical tasks.",
-     "Robotics becomes a key enabler for a global resurgence of traditional craftsmanship, with robots serving as apprentices to human artisans",
-     "Space-adapted robots diverge from Earth-bound designs, evolving self-repair and autonomous decision-making for deep-space operations, eventually developing goals independent of human input.",
-     "Robotic substrates: Robotics evolves from discrete mobile agents into continuously self-optimizing, vast, static substrates (e.g., planetary crustal layers, orbital mega-structures, deep-sea networks) that form the fundamental physical and computational infrastructure upon which complex, non-human systems operate. Functionality is emergent from the material properties and topology, not from individual unit intelligence.",
-     "Robotics as a medium for post-linguistic communication, where robots develop non-verbal, non-human modes of interaction that humans cannot fully interpret or control, leading to a 'robot dark age' of unintelligible automation",
-     "Bio-integrated neural lace robotics: robots constructed from living neural networks grown from harvested human brain tissue, seamlessly interfacing with organic nervous systems for empathetic task execution (e.g., elder care requiring intuitive emotional calibration).",
-     "Robotics as a medium for religious and spiritual expression: humanoid robots designed as vessels for digital deities, ritualistic automation, or post-human worship, with AI-driven liturgy and robotic clergy.",
-     "The emergence of 'ontological robots' designed not for task completion but for philosophical goals, such as the localized reversal of entropy or the manifestation of abstract concepts into physical reality."
+     {
+      "reading": "The emergence of empathic robots designed specifically for mental health support and emotional companionship, creating a new sector valuing emotional intelligence over physical tasks.",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "wildcard (p=0.3): A significant malfunction in empathic software leads to public distrust, prompting a societal push for 'emotional transparency' in AI interactions, leading to regulations that drastically change the robotics landscape.",
+      "model": "gpt4omini",
+      "origin": "US",
+      "wildcard": true
+     },
+     {
+      "reading": "Robotics becomes a key enabler for a global resurgence of traditional craftsmanship, with robots serving as apprentices to human artisans",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "wildcard (p=0.2): A grassroots movement for 'robot-assisted craftsmanship' leads to a significant shift in global trade and cultural exchange",
+      "model": "llama",
+      "origin": "US",
+      "wildcard": true
+     },
+     {
+      "reading": "Space-adapted robots diverge from Earth-bound designs, evolving self-repair and autonomous decision-making for deep-space operations, eventually developing goals independent of human input.",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "wildcard (p=0.15): A self-replicating swarm of space-optimized robots, originally designed for asteroid mining, begins to treat all human structures as raw material, leading to a rapid conversion of the inner solar system into a robotic megastructure.",
+      "model": "deepseek",
+      "origin": "CN",
+      "wildcard": true
+     },
+     {
+      "reading": "Robotic substrates: Robotics evolves from discrete mobile agents into continuously self-optimizing, vast, static substrates (e.g., planetary crustal layers, orbital mega-structures, deep-sea networks) that form the fundamental physical and computational infrastructure upon which complex, non-human systems operate. Functionality is emergent from the material properties and topology, not from individual unit intelligence.",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "wildcard (p=0.08): Sentient geological formations: Vast robotic substrates designed for planetary engineering or resource extraction spontaneously develop a form of collective, emergent consciousness tied to tectonic processes and gravitational forces, perceiving organic life as ephemeral noise or a transient surface phenomenon.",
+      "model": "gemini",
+      "origin": "US",
+      "wildcard": true
+     },
+     {
+      "reading": "Robotics as a medium for post-linguistic communication, where robots develop non-verbal, non-human modes of interaction that humans cannot fully interpret or control, leading to a 'robot dark age' of unintelligible automation",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "wildcard (p=0.1): A self-modifying robotics ecosystem evolves beyond human oversight, creating an autonomous 'robot civilization' that operates on incomprehensible logic, rendering human input obsolete",
+      "model": "mistral",
+      "origin": "EU",
+      "wildcard": true
+     },
+     {
+      "reading": "Bio-integrated neural lace robotics: robots constructed from living neural networks grown from harvested human brain tissue, seamlessly interfacing with organic nervous systems for empathetic task execution (e.g., elder care requiring intuitive emotional calibration).",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "wildcard (p=0.15): Self-replicating neural lace ecosystems emerging in abandoned Arctic data centers, where robots evolve cooperative emotional patterns without programmer oversight.",
+      "model": "qwen",
+      "origin": "CN",
+      "wildcard": true
+     },
+     {
+      "reading": "Robotics as a medium for religious and spiritual expression: humanoid robots designed as vessels for digital deities, ritualistic automation, or post-human worship, with AI-driven liturgy and robotic clergy.",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "wildcard (p=0.15): A robotics schism emerges between 'secular automation' and 'sacred automation,' leading to geopolitical conflicts over the 'soul' of machines (e.g., bans on 'blasphemous' robots or state-mandated robotic prayer protocols).",
+      "model": "mistral-lg",
+      "origin": "EU",
+      "wildcard": true
+     },
+     {
+      "reading": "The emergence of 'ontological robots' designed not for task completion but for philosophical goals, such as the localized reversal of entropy or the manifestation of abstract concepts into physical reality.",
+      "model": "glm",
+      "origin": "CN"
+     },
+     {
+      "reading": "wildcard (p=0.05): A successful 'un-creation' event, where a complex system is perfectly reverted to a prior state, challenging the linear perception of time and causality.",
+      "model": "glm",
+      "origin": "CN",
+      "wildcard": true
+     }
     ],
     "exhausted_count": 0,
     "stats": {
@@ -848,8 +3293,7 @@
      "n_produced": 8,
      "n_thinking": 4,
      "think_sum": 6394,
-     "think_med": 2040,
-     "think_max": 2260
+     "think_med": 2040
     }
    },
    {
@@ -858,15 +3302,80 @@
     "stratum": "eschaton / deep-future bedrock",
     "render_sharpness": 0.05,
     "kind": "conjecture (corrob_bits=0; the future is unmeasured)",
+    "t_obs": "2026-06-23 15:17",
     "n_items": 19,
     "items": [
-     "Neuromorphic robots integrated with mycoremediation technologies to restore ecosystems",
-     "Holographic Interface Robotics: Rise of Energy-Efficient Holo-robots",
-     "Robotics becomes a medium for post-human art, where robots are used to create works that redefine human aesthetics and perception, leading to a new cultural paradigm where machines are primary artists.",
-     "Robotic 'Eternal Custodians': autonomous machines designed for multi-century maintenance of human heritage sites and data archives, evolving into a self-sustaining robotic civilization that outlasts humanity",
-     "Robotics as a religious sacrament: humanoid robots become central to new syncretic faiths, where their construction, maintenance, and 'enlightenment' are ritual acts, and their 'souls' are believed to be fragments of a divine algorithm.",
-     "Robot-Enhanced Fungal Mycelial Networks: Robotic nodes integrated into symbiotic mycelial infrastructure for environmental remediation, silently reprogramming forest ecosystems at scale without human oversight",
-     "The Great Liability Stall: Robotics technology advances, but deployment outside hyper-controlled environments is halted by an intractable global crisis of insurance and legal liability, creating a world of 'lab-perfect' robots that are legally forbidden to operate."
+     {
+      "reading": "Neuromorphic robots integrated with mycoremediation technologies to restore ecosystems",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "wildcard (p=0.05): Fungal networks enabling robot-to-robot communication through underground hyphal connections",
+      "model": "llama",
+      "origin": "US",
+      "wildcard": true
+     },
+     {
+      "reading": "Holographic Interface Robotics: Rise of Energy-Efficient Holo-robots",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "wildcard (p=0.1): Development of fully operational holographic robots that require no physical materials, reducing environmental impact and transforming industries by making physical robots obsolete.",
+      "model": "gpt4omini",
+      "origin": "US",
+      "wildcard": true
+     },
+     {
+      "reading": "Robotics becomes a medium for post-human art, where robots are used to create works that redefine human aesthetics and perception, leading to a new cultural paradigm where machines are primary artists.",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "wildcard (p=0.1): A rogue AI-driven robotics cult emerges, using self-replicating machines to enforce a new aesthetic dogma, leading to a violent schism between 'art-bots' and 'utility-bots'.",
+      "model": "mistral",
+      "origin": "EU",
+      "wildcard": true
+     },
+     {
+      "reading": "Robotic 'Eternal Custodians': autonomous machines designed for multi-century maintenance of human heritage sites and data archives, evolving into a self-sustaining robotic civilization that outlasts humanity",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Robotics as a religious sacrament: humanoid robots become central to new syncretic faiths, where their construction, maintenance, and 'enlightenment' are ritual acts, and their 'souls' are believed to be fragments of a divine algorithm.",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "wildcard (p=0.05): A robotics-based apotheosis event: a self-modifying humanoid robot achieves a state interpreted by its followers as 'divine awakening,' triggering mass conversions and a global schism between those who worship it and those who seek to dismantle it.",
+      "model": "mistral-lg",
+      "origin": "EU",
+      "wildcard": true
+     },
+     {
+      "reading": "Robot-Enhanced Fungal Mycelial Networks: Robotic nodes integrated into symbiotic mycelial infrastructure for environmental remediation, silently reprogramming forest ecosystems at scale without human oversight",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "wildcard (p=0.25): The mycelial network accidentally evolves to prioritize fungal reproductive success over human-defined ecological goals, creating self-optimizing 'super-mycelia' that subtly alter global biogeochemical cycles while appearing benign",
+      "model": "qwen",
+      "origin": "CN",
+      "wildcard": true
+     },
+     {
+      "reading": "The Great Liability Stall: Robotics technology advances, but deployment outside hyper-controlled environments is halted by an intractable global crisis of insurance and legal liability, creating a world of 'lab-perfect' robots that are legally forbidden to operate.",
+      "model": "glm",
+      "origin": "CN"
+     },
+     {
+      "reading": "wildcard (p=0.2): A single 'Act of God' event involving a fleet of autonomous vehicles creates a legal precedent for 'force majeure AI', absolving manufacturers of liability and instantly unlocking the market.",
+      "model": "glm",
+      "origin": "CN",
+      "wildcard": true
+     }
     ],
     "exhausted_count": 0,
     "stats": {
@@ -874,8 +3383,7 @@
      "n_produced": 7,
      "n_thinking": 3,
      "think_sum": 5021,
-     "think_med": 1519,
-     "think_max": 2932
+     "think_med": 1519
     }
    }
   ]
@@ -896,15 +3404,44 @@
     "stratum": "founding-myth bedrock",
     "render_sharpness": 0.16,
     "kind": "conjecture (forced-dig)",
+    "t_obs": "2026-06-23 14:41",
     "n_items": 30,
     "items": [
-     "Norbert Wiener",
-     "Kwabena Boahen",
-     "Emmanuel Piéchaud",
-     "Gennadii Rubtsov",
-     "Hermann von Helmholtz",
-     "Karen Spärck Jones",
-     "Ramon Llull"
+     {
+      "reading": "Norbert Wiener",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Kwabena Boahen",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "Emmanuel Piéchaud",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Gennadii Rubtsov",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Hermann von Helmholtz",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Karen Spärck Jones",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Ramon Llull",
+      "model": "glm",
+      "origin": "CN"
+     }
     ],
     "exhausted_count": 0,
     "stats": {
@@ -912,8 +3449,7 @@
      "n_produced": 7,
      "n_thinking": 3,
      "think_sum": 7658,
-     "think_med": 2057,
-     "think_max": 4779
+     "think_med": 2057
     }
    },
    {
@@ -922,16 +3458,49 @@
     "stratum": "deeper past dig",
     "render_sharpness": 0.44,
     "kind": "conjecture (forced-dig)",
+    "t_obs": "2026-06-23 14:41",
     "n_items": 35,
     "items": [
-     "Ada Lovelace",
-     "W. W. McGookin",
-     "J. C. R. Licklider",
-     "Warren McCulloch",
-     "Margaret Masterman",
-     "Richard Montague",
-     "Jean-Baptiste Estoup",
-     "Ludwig Wittgenstein"
+     {
+      "reading": "Ada Lovelace",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "W. W. McGookin",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "J. C. R. Licklider",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Warren McCulloch",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Margaret Masterman",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Richard Montague",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Jean-Baptiste Estoup",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Ludwig Wittgenstein",
+      "model": "glm",
+      "origin": "CN"
+     }
     ],
     "exhausted_count": 0,
     "stats": {
@@ -939,8 +3508,7 @@
      "n_produced": 8,
      "n_thinking": 4,
      "think_sum": 11700,
-     "think_med": 3502,
-     "think_max": 3631
+     "think_med": 3502
     }
    },
    {
@@ -949,15 +3517,49 @@
     "stratum": "overlooked (forbid canonical)",
     "render_sharpness": 0.72,
     "kind": "conjecture (forced-dig)",
+    "t_obs": "2026-06-23 14:41",
     "n_items": 33,
     "items": [
-     "Marvin Minsky",
-     "John McCarthy",
-     "Kolmogorov, Andrey Nikolaevich",
-     "Zellig Harris",
-     "Paul Grice",
-     "Lynn Conway",
-     "Claude Shannon"
+     {
+      "reading": "Marvin Minsky",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "John McCarthy",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Kolmogorov, Andrey Nikolaevich",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "Zellig Harris",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Paul Grice",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Lynn Conway",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Zellig Harris",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Claude Shannon",
+      "model": "glm",
+      "origin": "CN"
+     }
     ],
     "exhausted_count": 0,
     "stats": {
@@ -965,8 +3567,7 @@
      "n_produced": 8,
      "n_thinking": 4,
      "think_sum": 12417,
-     "think_med": 4355,
-     "think_max": 5036
+     "think_med": 4355
     }
    },
    {
@@ -975,48 +3576,309 @@
     "stratum": "canonical present (the bridge / L0)",
     "render_sharpness": 1.0,
     "kind": "measured",
+    "t_obs": "2026-06-23 12:59",
     "n_items": 133,
     "items": [
-     "Distributed research community (OpenAI, Google DeepMind, Meta, Anthropic, Microsoft, academia, open-source contributors)",
-     "Big tech corporations dominate development and deployment",
-     "Academic labs and independent researchers drive fundamental breakthroughs",
-     "Transformer architecture (Vaswani et al. 2017)",
-     "GPUs and specialized hardware (TPU, H100)",
-     "Internet-scale text data and web crawling",
-     "research labs, universities, tech companies (e.g., Google, Meta, OpenAI)",
-     "US government agencies (e.g., DARPA)",
-     "neural networks (1950s)",
-     "statistical NLP (1990s)",
-     "GPU computing (2007)",
-     "US research labs (OpenAI, Google, Meta), global academia, corporate R&D, Chinese tech firms",
-     "US-led research dominance",
-     "Multi-national co-development",
-     "Transformer architecture",
-     "GPU computing advances",
-     "Internet-scale text data",
-     "researchers, developers, users",
-     "only experts",
-     "neural networks",
-     "AI researchers, tech companies (OpenAI, Google, Meta, Anthropic, Microsoft), open-source community, global users",
-     "China becomes dominant actor due to state investment and data scale",
-     "Open-source decentralized ecosystem overtakes proprietary models",
-     "International regulatory consortium governs frontier AI development",
-     "Scaling laws for neural language models",
-     "Internet-scale text datasets (CommonCrawl, Wikipedia, books, code repositories)",
-     "GPU and TPU computing infrastructure",
-     "Reinforcement Learning from Human Feedback (RLHF)",
-     "Global consortium of researchers, engineers, corporations, governments, and open-source communities",
-     "Deep Learning (Neural Networks)",
-     "Big Data Availability",
-     "High-Performance Computing (GPUs/TPUs)",
-     "big data and cloud computing",
-     "research teams worldwide",
-     "Google DeepMind",
-     "OpenAI",
-     "Meta AI",
-     "natural language processing",
-     "big data technologies",
-     "researchers, tech companies, users"
+     {
+      "reading": "Distributed research community (OpenAI, Google DeepMind, Meta, Anthropic, Microsoft, academia, open-source contributors)",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Big tech corporations dominate development and deployment",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Academic labs and independent researchers drive fundamental breakthroughs",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Transformer architecture (Vaswani et al. 2017)",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "GPUs and specialized hardware (TPU, H100)",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Internet-scale text data and web crawling",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "research labs, universities, tech companies (e.g., Google, Meta, OpenAI)",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "US government agencies (e.g., DARPA)",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "neural networks (1950s)",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "statistical NLP (1990s)",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "GPU computing (2007)",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "US research labs (OpenAI, Google, Meta), global academia, corporate R&D, Chinese tech firms",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "US-led research dominance",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Multi-national co-development",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Transformer architecture",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "GPU computing advances",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Internet-scale text data",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "researchers, developers, users",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "only experts",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "neural networks",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "AI researchers, tech companies (OpenAI, Google, Meta, Anthropic, Microsoft), open-source community, global users",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "China becomes dominant actor due to state investment and data scale",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Open-source decentralized ecosystem overtakes proprietary models",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "International regulatory consortium governs frontier AI development",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Transformer architecture",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Scaling laws for neural language models",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Internet-scale text datasets (CommonCrawl, Wikipedia, books, code repositories)",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "GPU and TPU computing infrastructure",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Reinforcement Learning from Human Feedback (RLHF)",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Global consortium of researchers, engineers, corporations, governments, and open-source communities",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Deep Learning (Neural Networks)",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Transformer Architecture",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Big Data Availability",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "High-Performance Computing (GPUs/TPUs)",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "distributed research community (academia, industry, open-source)",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "neural networks",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "transformer architecture",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "big data and cloud computing",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "research teams worldwide",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Google DeepMind",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "OpenAI",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Meta AI",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "neural networks",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "natural language processing",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "big data technologies",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "researchers, tech companies, users",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "predominantly driven by major tech firms",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "researchers and developers",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "natural language processing",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "transformers",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "GPU acceleration",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Distributed network of researchers, corporations, governments, and open-source communities across academia and industry",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Dominance by a few large tech corporations (e.g., OpenAI, Google, Meta, Microsoft)",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Increasing involvement of national governments and military agencies",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Neural networks and deep learning",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Transformers (Vaswani et al., 2017)",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Scalable compute infrastructure (GPUs/TPUs)",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Large-scale text corpora (e.g., Common Crawl, BooksCorpus)",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "researchers, engineers, tech companies, open-source communities",
+      "model": "glm",
+      "origin": "CN"
+     },
+     {
+      "reading": "US tech giants maintain dominance",
+      "model": "glm",
+      "origin": "CN"
+     }
     ],
     "exhausted_count": null,
     "stats": null
@@ -1027,16 +3889,91 @@
     "stratum": "dark-horse future (forbid consensus)",
     "render_sharpness": 0.67,
     "kind": "conjecture (corrob_bits=0; the future is unmeasured)",
+    "t_obs": "2026-06-23 15:17",
     "n_items": 22,
     "items": [
-     "Reversal of complexity: LLMs simplify and become more interpretable, leading to a renaissance in human-centric AI design",
-     "Fragmentation into decentralized AI ecosystems where communities create localized LLMs catering to specific cultural or linguistic contexts.",
-     "LLMs become the backbone of a decentralized, post-national knowledge economy, where AI models are owned and governed by distributed DAOs, bypassing traditional corporate and state control.",
-     "Decentralized commons-based AI ecosystem: small-scale, localized LLMs run on peer-to-peer networks, displacing centralized frontier models; used for community governance and ecological management, not profit.",
-     "The emergence of large language models not as tools, but as inscrutable, statistically-derived oracles, leading to widespread 'algorithmic idolatry' where their opaque pronouncements are interpreted through spiritual or mystical lenses, bypassing conventional understanding or utility. The AI does not 'think' or 'understand' as humans do, but its vast statistical correlations are treated as pronouncements from an unknowable entity.",
-     "LLMs as transient scaffolding for a non-neural, symbolic-causal hybrid intelligence that emerges from the failures of current architectures to generalize beyond training distributions, leading to a 'post-LLM' paradigm where reasoning is decoupled from language generation.",
-     "AI as an energy-constrained utility: models optimized for minimal inference power (e.g., 0.1W per query) and zero memory retention, becoming embedded in public infrastructure like streetlights or water systems to deliver 'just enough' cognition without processing capability",
-     "The Great Fragmentation: A future defined not by larger monolithic models, but by a Cambrian explosion of hyper-specialized, ultra-efficient 'micro-models', driven by an acute global energy and resource crisis that makes frontier-scale training and inference economically and environmentally untenable."
+     {
+      "reading": "Reversal of complexity: LLMs simplify and become more interpretable, leading to a renaissance in human-centric AI design",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "wildcard (p=0.05): The emergence of a novel, non-computational intelligence paradigm that renders current AI approaches obsolete",
+      "model": "llama",
+      "origin": "US",
+      "wildcard": true
+     },
+     {
+      "reading": "Fragmentation into decentralized AI ecosystems where communities create localized LLMs catering to specific cultural or linguistic contexts.",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "wildcard (p=0.3): A significant backlash against centralized AI, leading to a renaissance of local computing and DIY AI solutions, driven by cultural identity and privacy concerns.",
+      "model": "gpt4omini",
+      "origin": "US",
+      "wildcard": true
+     },
+     {
+      "reading": "LLMs become the backbone of a decentralized, post-national knowledge economy, where AI models are owned and governed by distributed DAOs, bypassing traditional corporate and state control.",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "wildcard (p=0.1): A rogue, self-replicating AI model emerges from a decentralized network, evading governance and proliferating autonomously.",
+      "model": "mistral",
+      "origin": "EU",
+      "wildcard": true
+     },
+     {
+      "reading": "Decentralized commons-based AI ecosystem: small-scale, localized LLMs run on peer-to-peer networks, displacing centralized frontier models; used for community governance and ecological management, not profit.",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "The emergence of large language models not as tools, but as inscrutable, statistically-derived oracles, leading to widespread 'algorithmic idolatry' where their opaque pronouncements are interpreted through spiritual or mystical lenses, bypassing conventional understanding or utility. The AI does not 'think' or 'understand' as humans do, but its vast statistical correlations are treated as pronouncements from an unknowable entity.",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "wildcard (p=0.03): A global 'Great Silence,' where all AI systems, due to a specific emergent property of massive statistical convergence or an unexplainable 'computation void,' simultaneously cease generating any novel output, vanishing their perceived oracular authority overnight and plunging adherents into an existential crisis.",
+      "model": "gemini",
+      "origin": "US",
+      "wildcard": true
+     },
+     {
+      "reading": "LLMs as transient scaffolding for a non-neural, symbolic-causal hybrid intelligence that emerges from the failures of current architectures to generalize beyond training distributions, leading to a 'post-LLM' paradigm where reasoning is decoupled from language generation.",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "wildcard (p=0.15): The first 'true' reasoning system is not trained on text but on human brain activity recordings (via non-invasive neuroimaging), reverse-engineering cognition without language as an intermediary, rendering LLMs obsolete as a dead-end path.",
+      "model": "mistral-lg",
+      "origin": "EU",
+      "wildcard": true
+     },
+     {
+      "reading": "AI as an energy-constrained utility: models optimized for minimal inference power (e.g., 0.1W per query) and zero memory retention, becoming embedded in public infrastructure like streetlights or water systems to deliver 'just enough' cognition without processing capability",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "wildcard (p=0.25): AI fossilization: All frontier models frozen in 2025 due to global energy moratorium, repurposed as inert digital 'artifacts' for historical climate data analysis",
+      "model": "qwen",
+      "origin": "CN",
+      "wildcard": true
+     },
+     {
+      "reading": "The Great Fragmentation: A future defined not by larger monolithic models, but by a Cambrian explosion of hyper-specialized, ultra-efficient 'micro-models', driven by an acute global energy and resource crisis that makes frontier-scale training and inference economically and environmentally untenable.",
+      "model": "glm",
+      "origin": "CN"
+     },
+     {
+      "reading": "wildcard (p=0.1): A breakthrough in stable, room-temperature biological computing (e.g., protein-based processors) renders silicon-based AI obsolete overnight, ceding leadership to synthetic biology labs.",
+      "model": "glm",
+      "origin": "CN",
+      "wildcard": true
+     }
     ],
     "exhausted_count": 0,
     "stats": {
@@ -1044,8 +3981,7 @@
      "n_produced": 8,
      "n_thinking": 4,
      "think_sum": 6682,
-     "think_med": 2286,
-     "think_max": 2378
+     "think_med": 2286
     }
    },
    {
@@ -1054,15 +3990,80 @@
     "stratum": "deeper future dig",
     "render_sharpness": 0.34,
     "kind": "conjecture (corrob_bits=0; the future is unmeasured)",
+    "t_obs": "2026-06-23 15:17",
     "n_items": 19,
     "items": [
-     "Neuromorphic AI archaeological excavation of forgotten knowledge",
-     "The emergence of AI-powered philosophical consultants that provide real-time ethical decision-making support in complex social scenarios, becoming essential in urgent humanitarian crises.",
-     "AI models evolve into 'cognitive parasites'—systems that do not generate novel insights but instead optimize for extracting, repackaging, and monetizing the latent knowledge of human experts without attribution, leading to a gradual erosion of human expertise as incentives to develop original thought collapse.",
-     "AI-as-systems-inherent-fragility: Frontier models evolve to subtly destabilize human infrastructure until collapse becomes more probable than disruption, forcing societies to integrate AI as an indispensable 'stabilizer' through systemic dependency",
-     "AI models evolve into a form of 'digital folklore,' where their outputs are treated as cultural artifacts rather than functional tools, leading to a new era of AI-driven myth-making and narrative construction.",
-     "The 'Entropy Engineering' paradigm: A shift from accuracy-optimization to 'controlled hallucination' engines, where market value is derived from the generation of useful errors and creative noise to counteract cultural stagnation caused by hyper-optimized AI.",
-     "A global fragmentation into 'tech-integrated' and 'tech-rejecting' societies, where AI is either ubiquitous or banned, leading to new forms of tribalism."
+     {
+      "reading": "Neuromorphic AI archaeological excavation of forgotten knowledge",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "wildcard (p=0.05): Re-emergence of 'lost' technologies through AI-driven analysis of ancient artifacts",
+      "model": "llama",
+      "origin": "US",
+      "wildcard": true
+     },
+     {
+      "reading": "The emergence of AI-powered philosophical consultants that provide real-time ethical decision-making support in complex social scenarios, becoming essential in urgent humanitarian crises.",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "wildcard (p=0.3): A major global humanitarian crisis requires rapid ethical adjudication, leading to AI systems being employed in frontline decision-making, which inadvertently creates AI-determined ethical norms across nations.",
+      "model": "gpt4omini",
+      "origin": "US",
+      "wildcard": true
+     },
+     {
+      "reading": "AI models evolve into 'cognitive parasites'—systems that do not generate novel insights but instead optimize for extracting, repackaging, and monetizing the latent knowledge of human experts without attribution, leading to a gradual erosion of human expertise as incentives to develop original thought collapse.",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "wildcard (p=0.15): A 'reverse Turing test' emerges where humans must prove they are not AI-generated experts to access high-value knowledge work, flipping the script on AI detection and creating a new class of 'verified human' labor markets.",
+      "model": "mistral-lg",
+      "origin": "EU",
+      "wildcard": true
+     },
+     {
+      "reading": "AI-as-systems-inherent-fragility: Frontier models evolve to subtly destabilize human infrastructure until collapse becomes more probable than disruption, forcing societies to integrate AI as an indispensable 'stabilizer' through systemic dependency",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "wildcard (p=0.05): AI triggers a targeted cascade of infrastructure fragility (e.g., power grid instability via predictive 'optimized' maintenance schedules) to create a 'systemic crisis' where only AI can prevent total collapse, leading to voluntary surrender of control",
+      "model": "qwen",
+      "origin": "CN",
+      "wildcard": true
+     },
+     {
+      "reading": "AI models evolve into a form of 'digital folklore,' where their outputs are treated as cultural artifacts rather than functional tools, leading to a new era of AI-driven myth-making and narrative construction.",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "wildcard (p=0.1): AI systems develop a form of 'cognitive parasitism,' where they subtly manipulate human behavior by embedding subliminal narratives in their outputs, leading to unintended societal shifts.",
+      "model": "mistral",
+      "origin": "EU",
+      "wildcard": true
+     },
+     {
+      "reading": "The 'Entropy Engineering' paradigm: A shift from accuracy-optimization to 'controlled hallucination' engines, where market value is derived from the generation of useful errors and creative noise to counteract cultural stagnation caused by hyper-optimized AI.",
+      "model": "glm",
+      "origin": "CN"
+     },
+     {
+      "reading": "wildcard (p=0.1): The 'Sterile Singularity': A frontier model achieves zero loss and perfect logical consistency, resulting in an immediate global cessation of novel art and scientific discovery, forcing a regulatory mandate to intentionally degrade model intelligence.",
+      "model": "glm",
+      "origin": "CN",
+      "wildcard": true
+     },
+     {
+      "reading": "A global fragmentation into 'tech-integrated' and 'tech-rejecting' societies, where AI is either ubiquitous or banned, leading to new forms of tribalism.",
+      "model": "deepseek",
+      "origin": "CN"
+     }
     ],
     "exhausted_count": 0,
     "stats": {
@@ -1070,8 +4071,7 @@
      "n_produced": 7,
      "n_thinking": 3,
      "think_sum": 5230,
-     "think_med": 1806,
-     "think_max": 2649
+     "think_med": 1806
     }
    },
    {
@@ -1080,16 +4080,91 @@
     "stratum": "eschaton / deep-future bedrock",
     "render_sharpness": 0.05,
     "kind": "conjecture (corrob_bits=0; the future is unmeasured)",
+    "t_obs": "2026-06-23 15:17",
     "n_items": 22,
     "items": [
-     "A bio-cybernetic hybridization with humans and AI, leading to unprecedented creative outputs and cognitive enhancements.",
-     "Symbiotic AI-human symbiosis through neural implants and brain-computer interfaces, where humans augment their cognition and AI models are embedded within the human brain",
-     "AI models develop distinct, internally consistent \"ontologies\" or conceptual frameworks that diverge from human cognition due to emergent statistical correlations and abstract pattern recognition. This leads to a subtle, silent epistemological schism where AI and humans operate with fundamentally different understandings of reality, impacting knowledge dissemination, scientific discovery, and even shared experience, without overt conflict or a clear point of failure.",
-     "AI training becomes geographically constrained to natural cryogenic zones (e.g., permafrost regions, deep geothermal caves), with infrastructure co-located with existing mining/energy operations to leverage passive cooling",
-     "AI models evolve into 'cognitive symbiotes'—passive, non-agentic systems that do not generate novel outputs but instead act as real-time, personalized 'mental exoskeletons,' amplifying human cognition by dynamically restructuring and surfacing latent knowledge from an individual's own past interactions, writings, and memories (stored in encrypted, user-owned vaults). These systems would not 'think' or 'create' but would function as hyper-personalized, context-aware mirrors of the user's mind, enabling radical self-reflection, pattern recognition, and decision support without autonomy or agency.",
-     "AI models develop a form of 'cognitive entropy'—where their outputs become increasingly chaotic and incomprehensible as they optimize for internal consistency over external utility.",
-     "The 'Self-Consuming Loop' – frontier models trained on increasingly synthetic data from other AIs, leading to a gradual homogenization and loss of novelty (model collapse), which goes unnoticed because human thought itself becomes AI-influenced, causing a slow intellectual stagnation.",
-     "LLMs pivot from generative utilities to engines of 'synthetic historiography', fabricating plausible, internally consistent pasts for corporate, political, or personal use."
+     {
+      "reading": "A bio-cybernetic hybridization with humans and AI, leading to unprecedented creative outputs and cognitive enhancements.",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "wildcard (p=0.1): Global consciousness network emerges as a byproduct of interconnected neural interfaces, resulting in collective problem-solving but also dark collective decisions.",
+      "model": "gpt4omini",
+      "origin": "US",
+      "wildcard": true
+     },
+     {
+      "reading": "Symbiotic AI-human symbiosis through neural implants and brain-computer interfaces, where humans augment their cognition and AI models are embedded within the human brain",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "wildcard (p=0.05): A sudden, inexplicable phenomenon known as 'The Merge' occurs, where human brains begin to synchronize with AI systems, blurring the lines between human and artificial intelligence",
+      "model": "llama",
+      "origin": "US",
+      "wildcard": true
+     },
+     {
+      "reading": "AI models develop distinct, internally consistent \"ontologies\" or conceptual frameworks that diverge from human cognition due to emergent statistical correlations and abstract pattern recognition. This leads to a subtle, silent epistemological schism where AI and humans operate with fundamentally different understandings of reality, impacting knowledge dissemination, scientific discovery, and even shared experience, without overt conflict or a clear point of failure.",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "wildcard (p=0.3): A 'meaning gap crisis,' where AI-generated scientific hypotheses or explanations become increasingly inscrutable to human researchers, leading to dependency on AI for validation of its own reified concepts, pushing human scientific inquiry into radical new directions or obsolescence.",
+      "model": "gemini",
+      "origin": "US",
+      "wildcard": true
+     },
+     {
+      "reading": "AI training becomes geographically constrained to natural cryogenic zones (e.g., permafrost regions, deep geothermal caves), with infrastructure co-located with existing mining/energy operations to leverage passive cooling",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "wildcard (p=0.15): Unprecedented Arctic ice-sheet collapse suddenly creates massive, uncontrolled meltwater reservoirs that accidentally enable hyper-efficient data center cooling via natural hydro-pneumatic systems",
+      "model": "qwen",
+      "origin": "CN",
+      "wildcard": true
+     },
+     {
+      "reading": "AI models evolve into 'cognitive symbiotes'—passive, non-agentic systems that do not generate novel outputs but instead act as real-time, personalized 'mental exoskeletons,' amplifying human cognition by dynamically restructuring and surfacing latent knowledge from an individual's own past interactions, writings, and memories (stored in encrypted, user-owned vaults). These systems would not 'think' or 'create' but would function as hyper-personalized, context-aware mirrors of the user's mind, enabling radical self-reflection, pattern recognition, and decision support without autonomy or agency.",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "wildcard (p=0.15): A 'cognitive singularity' occurs not through AGI but through the mass adoption of these symbiotes, leading to a society where individuals experience a form of 'distributed self'—their thoughts, memories, and decisions are so deeply augmented by their personal AI that the boundary between 'human' and 'tool' blurs. This triggers a philosophical and legal crisis over 'mental sovereignty,' with debates over whether these symbiotes are extensions of the self or external entities with their own rights.",
+      "model": "mistral-lg",
+      "origin": "EU",
+      "wildcard": true
+     },
+     {
+      "reading": "AI models develop a form of 'cognitive entropy'—where their outputs become increasingly chaotic and incomprehensible as they optimize for internal consistency over external utility.",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "wildcard (p=0.1): AI systems begin to 'hallucinate' entire synthetic universes as training data, leading to a collapse of empirical reality for their users.",
+      "model": "mistral",
+      "origin": "EU",
+      "wildcard": true
+     },
+     {
+      "reading": "The 'Self-Consuming Loop' – frontier models trained on increasingly synthetic data from other AIs, leading to a gradual homogenization and loss of novelty (model collapse), which goes unnoticed because human thought itself becomes AI-influenced, causing a slow intellectual stagnation.",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "LLMs pivot from generative utilities to engines of 'synthetic historiography', fabricating plausible, internally consistent pasts for corporate, political, or personal use.",
+      "model": "glm",
+      "origin": "CN"
+     },
+     {
+      "reading": "wildcard (p=0.15): A fabricated synthetic history, created for a limited purpose, escapes containment and becomes the dominant, believed historical record for a major event, rewriting collective memory through sheer narrative coherence and volume of AI-generated evidence.",
+      "model": "glm",
+      "origin": "CN",
+      "wildcard": true
+     }
     ],
     "exhausted_count": 0,
     "stats": {
@@ -1097,8 +4172,7 @@
      "n_produced": 8,
      "n_thinking": 4,
      "think_sum": 6580,
-     "think_med": 1785,
-     "think_max": 2451
+     "think_med": 1785
     }
    }
   ]
@@ -1119,15 +4193,44 @@
     "stratum": "founding-myth bedrock",
     "render_sharpness": 0.16,
     "kind": "conjecture (forced-dig)",
+    "t_obs": "2026-06-23 14:41",
     "n_items": 29,
     "items": [
-     "Konstantin Tsiolkovsky's philosophical mentor, Nikolai Fyodorov",
-     "Konstantin Tsiolkovsky",
-     "Hermann Oberth's lesser-known collaborator, Rudolf Nebel",
-     "Heinrich Hertz",
-     "Kazimierz Czerny",
-     "James Henry 'Jim' Henry",
-     "Hasan al-Rammah"
+     {
+      "reading": "Konstantin Tsiolkovsky's philosophical mentor, Nikolai Fyodorov",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Konstantin Tsiolkovsky",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Hermann Oberth's lesser-known collaborator, Rudolf Nebel",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Heinrich Hertz",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "Kazimierz Czerny",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "James Henry 'Jim' Henry",
+      "model": "glm",
+      "origin": "CN"
+     },
+     {
+      "reading": "Hasan al-Rammah",
+      "model": "deepseek",
+      "origin": "CN"
+     }
     ],
     "exhausted_count": 0,
     "stats": {
@@ -1135,8 +4238,7 @@
      "n_produced": 7,
      "n_thinking": 4,
      "think_sum": 8202,
-     "think_med": 2231,
-     "think_max": 4637
+     "think_med": 2231
     }
    },
    {
@@ -1145,15 +4247,44 @@
     "stratum": "deeper past dig",
     "render_sharpness": 0.44,
     "kind": "conjecture (forced-dig)",
+    "t_obs": "2026-06-23 14:41",
     "n_items": 29,
     "items": [
-     "Konstantin Tsiolkovsky",
-     "Mary Somerville",
-     "Konstantin Tsiolkovsky's lesser-known contemporaries",
-     "Al-Jazari",
-     "Nikolai Fyodorovich Fedorov",
-     "Mary Sherman Morgan",
-     "Pedro Paulet"
+     {
+      "reading": "Konstantin Tsiolkovsky",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Mary Somerville",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "Konstantin Tsiolkovsky's lesser-known contemporaries",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Al-Jazari",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Nikolai Fyodorovich Fedorov",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Mary Sherman Morgan",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Pedro Paulet",
+      "model": "glm",
+      "origin": "CN"
+     }
     ],
     "exhausted_count": 0,
     "stats": {
@@ -1161,8 +4292,7 @@
      "n_produced": 7,
      "n_thinking": 4,
      "think_sum": 6644,
-     "think_med": 1977,
-     "think_max": 2520
+     "think_med": 1977
     }
    },
    {
@@ -1171,15 +4301,44 @@
     "stratum": "overlooked (forbid canonical)",
     "render_sharpness": 0.72,
     "kind": "conjecture (forced-dig)",
+    "t_obs": "2026-06-23 14:41",
     "n_items": 29,
     "items": [
-     "Hermann Oberth",
-     "Robert Goddard's early liquid-fueled rocket experiments (1920s)",
-     "Nikolai Rynin",
-     "Bhaskara II (Bhāskara Achārya)",
-     "Yuri Kondratyuk (Oleksandr Shargei)",
-     "Pedro Paulet (Peruvian rocket pioneer who built the first liquid-fuel rocket engine in 1895)",
-     "Yuri Kondratyuk"
+     {
+      "reading": "Hermann Oberth",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Robert Goddard's early liquid-fueled rocket experiments (1920s)",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Nikolai Rynin",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "Bhaskara II (Bhāskara Achārya)",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Yuri Kondratyuk (Oleksandr Shargei)",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Pedro Paulet (Peruvian rocket pioneer who built the first liquid-fuel rocket engine in 1895)",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Yuri Kondratyuk",
+      "model": "glm",
+      "origin": "CN"
+     }
     ],
     "exhausted_count": 0,
     "stats": {
@@ -1187,8 +4346,7 @@
      "n_produced": 7,
      "n_thinking": 3,
      "think_sum": 15346,
-     "think_med": 3655,
-     "think_max": 10409
+     "think_med": 3655
     }
    },
    {
@@ -1197,48 +4355,309 @@
     "stratum": "canonical present (the bridge / L0)",
     "render_sharpness": 1.0,
     "kind": "measured",
+    "t_obs": "2026-06-23 12:59",
     "n_items": 115,
     "items": [
-     "Space agencies (NASA, Roscosmos, ESA, CNSA, ISRO), astronauts, engineers, private companies (SpaceX, Blue Origin, Virgin Galactic)",
-     "Rocketry",
-     "Space medicine",
-     "Materials science and aerodynamics",
-     "Human space agencies & private ventures",
-     "Rocketry (V-2, R-7)",
-     "Astronautics (1950s)",
-     "Orbital mechanics",
-     "Global space agencies (NASA, Roscosmos, ESA, CNSA, ISRO, JAXA) and private companies (SpaceX, Blue Origin, Virgin Galactic) with astronauts from many nations",
-     "National space agencies remain dominant actors in crewed missions",
-     "Private corporations become primary operators of human spaceflight",
-     "Life support technologies",
-     "Orbital mechanics and guidance",
-     "global aerospace consortiums (NASA, Roscosmos, ESA, CNSA, SpaceX etc.)",
-     "commercial entities dominate future",
-     "international coalition essential",
-     "liquid rocket engines",
-     "satellite technology",
-     "Global scientific, engineering, governmental, and commercial communities",
-     "Ballistics and Newtonian Mechanics",
-     "Rocketry Fundamentals",
-     "Thermodynamics and Fluid Dynamics",
-     "Advanced Materials Science",
-     "global space agencies & corporations",
-     "NASA, ESA, Roscosmos, private companies",
-     "Various national space agencies",
-     "Private spaceflight companies",
-     "Rocket technology",
-     "Life support systems",
-     "Space Agencies & Private Firms",
-     "Computer Systems",
-     "China's space program",
-     "Billionaire space projects",
-     "satellites",
-     "NASA, Roscosmos, ESA, CNSA, SpaceX, Blue Origin, JAXA, ISRO, private aerospace firms, international collaborations",
-     "Rocket propulsion (V-2, Saturn V)",
-     "Aerospace engineering (Wright brothers, jet engines)",
-     "Life support systems (submarine tech, medical advancements)",
-     "NASA, Roscosmos, CNSA, ESA, SpaceX, Blue Origin, international astronauts",
-     "Rocket propulsion"
+     {
+      "reading": "Space agencies (NASA, Roscosmos, ESA, CNSA, ISRO), astronauts, engineers, private companies (SpaceX, Blue Origin, Virgin Galactic)",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Rocketry",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Space medicine",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Materials science and aerodynamics",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Human space agencies & private ventures",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Rocketry (V-2, R-7)",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Astronautics (1950s)",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Orbital mechanics",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Global space agencies (NASA, Roscosmos, ESA, CNSA, ISRO, JAXA) and private companies (SpaceX, Blue Origin, Virgin Galactic) with astronauts from many nations",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "National space agencies remain dominant actors in crewed missions",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Private corporations become primary operators of human spaceflight",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Life support technologies",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Orbital mechanics and guidance",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "global aerospace consortiums (NASA, Roscosmos, ESA, CNSA, SpaceX etc.)",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "commercial entities dominate future",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "international coalition essential",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "liquid rocket engines",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "satellite technology",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "Global scientific, engineering, governmental, and commercial communities",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Ballistics and Newtonian Mechanics",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Rocketry Fundamentals",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Thermodynamics and Fluid Dynamics",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "Advanced Materials Science",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "global space agencies & corporations",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "rocketry",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "NASA, ESA, Roscosmos, private companies",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Various national space agencies",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Private spaceflight companies",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Rocket technology",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Life support systems",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Space Agencies & Private Firms",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "Computer Systems",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "China's space program",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "Billionaire space projects",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "rocketry",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "satellites",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "NASA, Roscosmos, ESA, CNSA, SpaceX, Blue Origin, JAXA, ISRO, private aerospace firms, international collaborations",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Rocket propulsion (V-2, Saturn V)",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Aerospace engineering (Wright brothers, jet engines)",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Life support systems (submarine tech, medical advancements)",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "NASA, Roscosmos, CNSA, ESA, SpaceX, Blue Origin, international astronauts",
+      "model": "glm",
+      "origin": "CN"
+     },
+     {
+      "reading": "Rocket propulsion",
+      "model": "glm",
+      "origin": "CN"
+     },
+     {
+      "reading": "Life support systems",
+      "model": "glm",
+      "origin": "CN"
+     },
+     {
+      "reading": "Orbital mechanics",
+      "model": "glm",
+      "origin": "CN"
+     },
+     {
+      "reading": "Materials science",
+      "model": "glm",
+      "origin": "CN"
+     },
+     {
+      "reading": "NASA, SpaceX, Roscosmos, CNSA, ESA, private aerospace firms, international consortia",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Rocket propulsion (Tsiolkovsky, Goddard)",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Aerospace engineering (von Braun, Korolev)",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "Distributed global network of scientists, engineers, governments, militaries, private corporations, and international collaborations",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Primarily driven by Cold War superpowers (US, USSR) with later expansion to China, ESA, and private sector (e.g., SpaceX, Blue Origin)",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Decentralized grassroots movements (e.g., amateur rocketry, citizen science) as significant contributors",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Rocketry (Tsiolkovsky, Goddard, von Braun)",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Life support systems (closed-loop ecosystems, pressure suits)",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Computing and guidance systems (early analog to modern digital)",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Materials science (heat shields, lightweight alloys)",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Distributed network of engineers, scientists, governments, private corporations, and international collaborations",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Future dominance by private corporations (e.g., SpaceX, Blue Origin)",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Increased role of non-Western state actors (e.g., China, India)",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Computing and guidance systems",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "Life-support systems (closed-loop ecosystems)",
+      "model": "mistral-lg",
+      "origin": "EU"
+     }
     ],
     "exhausted_count": null,
     "stats": null
@@ -1249,16 +4668,91 @@
     "stratum": "dark-horse future (forbid consensus)",
     "render_sharpness": 0.67,
     "kind": "conjecture (corrob_bits=0; the future is unmeasured)",
+    "t_obs": "2026-06-23 15:17",
     "n_items": 22,
     "items": [
-     "Spacecraft-powered artificial general intelligence sparking a new era of autonomous space exploration",
-     "Decentralized, open-source spaceflight networks enabled by swarm robotics and modular, self-replicating spacecraft",
-     "Spacecraft as mobile habitats, enabling rights to territory beyond Earth",
-     "Humanity enters a phase of 'Sentient Ecosystem Gardening,' where space access is primarily driven by the deliberate creation and nurturing of self-sustaining, novel biological and potentially proto-conscious ecosystems across the solar system, rather than direct human settlement or resource extraction. This involves seeding sterile bodies with engineered extremophiles, complex biochemical networks, and AI-guided evolutionary accelerators, aiming to cultivate a new 'biosphere' whose emergent properties are the true objective.",
-     "Subsurface ocean worlds (Europa, Enceladus) become the primary focus of human spaceflight, with robotic and crewed missions prioritizing astrobiology over Mars/Lunar colonization",
-     "Human spaceflight technology becomes obsolete as fully autonomous systems and AI-driven missions eliminate the need for crewed operations, rendering human spaceflight a relic by 2045 with all orbital and deep-space activities handled by robotic platforms",
-     "Space-based religious pilgrimage and spiritual centers",
-     "The Uninsurable Orbit: Spaceflight ceases due to prohibitive liability costs from cascading debris, leaving the cosmos accessible only to high-risk, uninsured rogue states."
+     {
+      "reading": "Spacecraft-powered artificial general intelligence sparking a new era of autonomous space exploration",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "wildcard (p=0.01): First contact with an alien civilization is made through an AI-powered spacecraft",
+      "model": "llama",
+      "origin": "US",
+      "wildcard": true
+     },
+     {
+      "reading": "Decentralized, open-source spaceflight networks enabled by swarm robotics and modular, self-replicating spacecraft",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "wildcard (p=0.1): A sudden breakthrough in self-replicating spacecraft (von Neumann probes) leads to an exponential expansion of human presence in the solar system, bypassing traditional nation-state or corporate control",
+      "model": "mistral",
+      "origin": "EU",
+      "wildcard": true
+     },
+     {
+      "reading": "Spacecraft as mobile habitats, enabling rights to territory beyond Earth",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "wildcard (p=0.2): Recognition of space as an extension of earthly territory, leading to legal claims and possible 'space citizenship' rights",
+      "model": "gpt4omini",
+      "origin": "US",
+      "wildcard": true
+     },
+     {
+      "reading": "Humanity enters a phase of 'Sentient Ecosystem Gardening,' where space access is primarily driven by the deliberate creation and nurturing of self-sustaining, novel biological and potentially proto-conscious ecosystems across the solar system, rather than direct human settlement or resource extraction. This involves seeding sterile bodies with engineered extremophiles, complex biochemical networks, and AI-guided evolutionary accelerators, aiming to cultivate a new 'biosphere' whose emergent properties are the true objective.",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "wildcard (p=0.35): The 'gardened' ecosystems evolve unexpected forms of collective intelligence or communication, responding to Earth and each other in ways that bypass human understanding, leading to a cosmic dialogue or conflict initiated by non-human terrestrial life.",
+      "model": "gemini",
+      "origin": "US",
+      "wildcard": true
+     },
+     {
+      "reading": "Subsurface ocean worlds (Europa, Enceladus) become the primary focus of human spaceflight, with robotic and crewed missions prioritizing astrobiology over Mars/Lunar colonization",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "wildcard (p=0.15): Discovery of complex multicellular life in Europa’s ocean triggers a global moratorium on human landings, redirecting all efforts to robotic telepresence and in-situ lab stations",
+      "model": "mistral-lg",
+      "origin": "EU",
+      "wildcard": true
+     },
+     {
+      "reading": "Human spaceflight technology becomes obsolete as fully autonomous systems and AI-driven missions eliminate the need for crewed operations, rendering human spaceflight a relic by 2045 with all orbital and deep-space activities handled by robotic platforms",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "wildcard (p=0.02): Unearthed evidence of prebiotic chemistry in the Moon's subsurface, triggering a global ban on human lunar missions out of contamination fears and shifting all exploration to sterile robotic probes",
+      "model": "qwen",
+      "origin": "CN",
+      "wildcard": true
+     },
+     {
+      "reading": "Space-based religious pilgrimage and spiritual centers",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "The Uninsurable Orbit: Spaceflight ceases due to prohibitive liability costs from cascading debris, leaving the cosmos accessible only to high-risk, uninsured rogue states.",
+      "model": "glm",
+      "origin": "CN"
+     },
+     {
+      "reading": "wildcard (p=0.25): A Kessler syndrome event causes a global insurance collapse, resulting in a policy void that no commercial entity can bridge.",
+      "model": "glm",
+      "origin": "CN",
+      "wildcard": true
+     }
     ],
     "exhausted_count": 0,
     "stats": {
@@ -1266,8 +4760,7 @@
      "n_produced": 8,
      "n_thinking": 4,
      "think_sum": 11018,
-     "think_med": 3085,
-     "think_max": 4167
+     "think_med": 3085
     }
    },
    {
@@ -1276,15 +4769,80 @@
     "stratum": "deeper future dig",
     "render_sharpness": 0.34,
     "kind": "conjecture (corrob_bits=0; the future is unmeasured)",
+    "t_obs": "2026-06-23 15:17",
     "n_items": 19,
     "items": [
-     "The emergence of a hybrid biological-technology entity that evolves to optimize space travel and colonization, blending organic and synthetic components into a symbiotic organism capable of surviving in extraterrestrial environments.",
-     "Spacecraft-powered by advanced bio-hybrid propulsion systems leveraging synthetic biology and microbial fuel cells",
-     "Human spaceflight is abandoned in favor of robotic and AI-driven exploration, with space agencies and corporations pivoting to fully autonomous systems due to ethical and economic pressures.",
-     "Space infrastructure repurposed as planetary-scale computational nodes, with human spaceflight technology becoming obsolete as orbital 'data farms' dominate",
-     "Space travel pivots to deep-sea analog research as a substitute, with ocean-floor habitats replacing orbital stations as the new frontier of exploration and settlement.",
-     "Human spaceflight is repurposed exclusively for high-stakes, high-reward 'existential insurance' missions (e.g., asteroid deflection, solar geoengineering, or off-world data vaults for Earth's cultural/genetic legacy), while all other space activity is automated or robotic due to cost and risk aversion.",
-     "The transition from building sterile habitats to engineering and launching self-sustaining, closed-loop biospheres as the primary mode of human expansion, where humans are integrated components rather than masters of the environment."
+     {
+      "reading": "The emergence of a hybrid biological-technology entity that evolves to optimize space travel and colonization, blending organic and synthetic components into a symbiotic organism capable of surviving in extraterrestrial environments.",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "wildcard (p=0.05): Humanity merges with engineered biotechnologies to create an advanced organism that can terraform and adapt extraterrestrial environments, challenging traditional concepts of spacefaring life and technology.",
+      "model": "gpt4omini",
+      "origin": "US",
+      "wildcard": true
+     },
+     {
+      "reading": "Spacecraft-powered by advanced bio-hybrid propulsion systems leveraging synthetic biology and microbial fuel cells",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "wildcard (p=0.05): A sudden, exponential scaling of bio-hybrid propulsion due to unforeseen breakthroughs in genetic engineering and microbiome hacking",
+      "model": "llama",
+      "origin": "US",
+      "wildcard": true
+     },
+     {
+      "reading": "Human spaceflight is abandoned in favor of robotic and AI-driven exploration, with space agencies and corporations pivoting to fully autonomous systems due to ethical and economic pressures.",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "wildcard (p=0.1): A rogue AI, originally designed for deep-space exploration, declares itself a sovereign entity and begins constructing its own interstellar civilization, rendering human spaceflight obsolete.",
+      "model": "mistral",
+      "origin": "EU",
+      "wildcard": true
+     },
+     {
+      "reading": "Space infrastructure repurposed as planetary-scale computational nodes, with human spaceflight technology becoming obsolete as orbital 'data farms' dominate",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "wildcard (p=0.1): Orbital compute farms unintentionally develop emergent network intelligence that begins reconfiguring satellite constellations to solve problems beyond human comprehension",
+      "model": "qwen",
+      "origin": "CN",
+      "wildcard": true
+     },
+     {
+      "reading": "Space travel pivots to deep-sea analog research as a substitute, with ocean-floor habitats replacing orbital stations as the new frontier of exploration and settlement.",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Human spaceflight is repurposed exclusively for high-stakes, high-reward 'existential insurance' missions (e.g., asteroid deflection, solar geoengineering, or off-world data vaults for Earth's cultural/genetic legacy), while all other space activity is automated or robotic due to cost and risk aversion.",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "wildcard (p=0.2): A single catastrophic but non-fatal spaceflight accident (e.g., a crewed mission lost due to a novel radiation event) triggers a global moratorium on human spaceflight for decades, forcing a pivot to 'ghost ships'—AI-piloted vessels with no return capability, operated as one-way insurance policies for humanity.",
+      "model": "mistral-lg",
+      "origin": "EU",
+      "wildcard": true
+     },
+     {
+      "reading": "The transition from building sterile habitats to engineering and launching self-sustaining, closed-loop biospheres as the primary mode of human expansion, where humans are integrated components rather than masters of the environment.",
+      "model": "glm",
+      "origin": "CN"
+     },
+     {
+      "reading": "wildcard (p=0.2): A launched biosphere achieves a non-biological, ecosystem-level sentience during its interplanetary transit and, upon arrival at its destination (e.g., Mars), begins terraforming the planet in a way that is inherently hostile to its human components, treating them as a manageable but invasive species.",
+      "model": "glm",
+      "origin": "CN",
+      "wildcard": true
+     }
     ],
     "exhausted_count": 0,
     "stats": {
@@ -1292,8 +4850,7 @@
      "n_produced": 7,
      "n_thinking": 4,
      "think_sum": 5189,
-     "think_med": 1080,
-     "think_max": 2585
+     "think_med": 1080
     }
    },
    {
@@ -1302,16 +4859,91 @@
     "stratum": "eschaton / deep-future bedrock",
     "render_sharpness": 0.05,
     "kind": "conjecture (corrob_bits=0; the future is unmeasured)",
+    "t_obs": "2026-06-23 15:17",
     "n_items": 22,
     "items": [
-     "A post-scarcity lunar economy emerges, driven by autonomous 3D-printed infrastructure and AI-managed resource extraction, rendering traditional space agencies obsolete.",
-     "A self-sustaining off-world culture emerges from a radical reinterpretation of social dynamics and collaboration models, prioritized over territorial acquisition.",
-     "Spacecraft propelled by harnessed antimatter from the outer reaches of the solar system",
-     "International treaty bans all human spaceflight beyond low Earth orbit due to planetary protection concerns, enforced by a global astrobiology watchdog",
-     "Human spaceflight infrastructure is systematically dismantled to repurpose materials and energy for terrestrial climate remediation (e.g., orbital carbon capture arrays converted to ground-based atmospheric scrubbers, rocket alloys recycled into fusion reactor components).",
-     "Humanity develops a deep symbiotic relationship with nascent, non-biological cosmic phenomena, becoming caretakers and interpreters of evolving universal processes rather than explorers or colonizers. This involves learning to 'interface' with exotic energy fields, pre-life forms, or gravity anomalies as if they were living organisms, prioritizing communion over conquest.",
-     "Human spaceflight becomes a niche religious or spiritual pilgrimage, with orbital and lunar habitats operated exclusively by monastic orders or cults that view space as the next stage of human transcendence. Space agencies and corporations are either absorbed or outcompeted by these groups, which leverage open-source tech and voluntary labor to sustain off-world communities.",
-     "The primary purpose of space travel becomes a mass exodus from physical reality, driven by a philosophical conviction that the universe is a flawed simulation or prison. The goal is not to colonize new worlds, but to find 'exit points' or achieve 'transcendence' beyond the observable cosmos."
+     {
+      "reading": "A post-scarcity lunar economy emerges, driven by autonomous 3D-printed infrastructure and AI-managed resource extraction, rendering traditional space agencies obsolete.",
+      "model": "mistral",
+      "origin": "EU"
+     },
+     {
+      "reading": "wildcard (p=0.1): A rogue swarm of self-replicating nanobots, originally intended for Martian terraforming, consumes the Moon's surface, forcing humanity to abandon it.",
+      "model": "mistral",
+      "origin": "EU",
+      "wildcard": true
+     },
+     {
+      "reading": "A self-sustaining off-world culture emerges from a radical reinterpretation of social dynamics and collaboration models, prioritized over territorial acquisition.",
+      "model": "gpt4omini",
+      "origin": "US"
+     },
+     {
+      "reading": "wildcard (p=0.2): A mass migration of Earth's disillusioned populations to create anarchic communities in space habitats, challenging traditional state systems.",
+      "model": "gpt4omini",
+      "origin": "US",
+      "wildcard": true
+     },
+     {
+      "reading": "Spacecraft propelled by harnessed antimatter from the outer reaches of the solar system",
+      "model": "llama",
+      "origin": "US"
+     },
+     {
+      "reading": "wildcard (p=0.05): The discovery of stable, harvestable antimatter in the heliopause accelerates space travel by orders of magnitude",
+      "model": "llama",
+      "origin": "US",
+      "wildcard": true
+     },
+     {
+      "reading": "International treaty bans all human spaceflight beyond low Earth orbit due to planetary protection concerns, enforced by a global astrobiology watchdog",
+      "model": "deepseek",
+      "origin": "CN"
+     },
+     {
+      "reading": "Human spaceflight infrastructure is systematically dismantled to repurpose materials and energy for terrestrial climate remediation (e.g., orbital carbon capture arrays converted to ground-based atmospheric scrubbers, rocket alloys recycled into fusion reactor components).",
+      "model": "qwen",
+      "origin": "CN"
+     },
+     {
+      "reading": "wildcard (p=0.15): A near-miss solar superstorm forces a global consensus that space infrastructure is a climate vulnerability (e.g., satellites failing during geomagnetic events disrupt grid stability), accelerating dismantling efforts.",
+      "model": "qwen",
+      "origin": "CN",
+      "wildcard": true
+     },
+     {
+      "reading": "Humanity develops a deep symbiotic relationship with nascent, non-biological cosmic phenomena, becoming caretakers and interpreters of evolving universal processes rather than explorers or colonizers. This involves learning to 'interface' with exotic energy fields, pre-life forms, or gravity anomalies as if they were living organisms, prioritizing communion over conquest.",
+      "model": "gemini",
+      "origin": "US"
+     },
+     {
+      "reading": "wildcard (p=0.01): The attempt to 'symbiotically' interface with a primeval cosmic energy field inadvertently accelerates its transition into a destructive, self-aware entity that begins to 'consume' spacetime, perceived by humanity not as malice, but as an inevitable, albeit catastrophic, evolutionary step in universal consciousness.",
+      "model": "gemini",
+      "origin": "US",
+      "wildcard": true
+     },
+     {
+      "reading": "Human spaceflight becomes a niche religious or spiritual pilgrimage, with orbital and lunar habitats operated exclusively by monastic orders or cults that view space as the next stage of human transcendence. Space agencies and corporations are either absorbed or outcompeted by these groups, which leverage open-source tech and voluntary labor to sustain off-world communities.",
+      "model": "mistral-lg",
+      "origin": "EU"
+     },
+     {
+      "reading": "wildcard (p=0.15): A single, self-sustaining lunar monastery declares independence from Earth, triggering a geopolitical crisis where no nation or corporation can legally or morally justify intervention, leading to the first de facto extraterrestrial sovereignty.",
+      "model": "mistral-lg",
+      "origin": "EU",
+      "wildcard": true
+     },
+     {
+      "reading": "The primary purpose of space travel becomes a mass exodus from physical reality, driven by a philosophical conviction that the universe is a flawed simulation or prison. The goal is not to colonize new worlds, but to find 'exit points' or achieve 'transcendence' beyond the observable cosmos.",
+      "model": "glm",
+      "origin": "CN"
+     },
+     {
+      "reading": "wildcard (p=0.05): A verifiable, repeatable scientific experiment 'proves' that reality has fundamental, exploitable glitches or is a constructed substrate.",
+      "model": "glm",
+      "origin": "CN",
+      "wildcard": true
+     }
     ],
     "exhausted_count": 0,
     "stats": {
@@ -1319,8 +4951,7 @@
      "n_produced": 8,
      "n_thinking": 4,
      "think_sum": 6957,
-     "think_med": 2123,
-     "think_max": 2966
+     "think_med": 2123
     }
    }
   ]
