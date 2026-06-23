@@ -1,58 +1,77 @@
 #!/usr/bin/env python3
 """
-Fold the dig strata BACK INTO the seed node's conjecture-fan (Pav: "adding layers to the original seed ... the
-substrate node permanently carries its own excavated depth"). Each excavated contributor becomes a depth-tagged
-candidate in the WHO conjecture-fan, with elicitation_method provenance (spec sec8.1: a forced-divergence /
-under-the-rocks take is provenance, NOT a held best guess) and the layer-depth at which it surfaced. The canonical
-surface (L0) renders sharp; deeper strata render progressively blurrier (the geology column = the iceberg).
+Fold BOTH digs into the seed as one bidirectional stratigraphic column -- Pav's "L -0+":
+  L-3..L-1  = the PAST dig (backward cone: WHO/lineage forbidden-cascade) -> bedrock = the FOUNDING MYTH.
+  L0        = the SEED / the bridge (the canonical present -- the organ of the genesis->eschaton movement).
+  L+1..L+3  = the FUTURE dig (forward cone: consensus-future forbidden-cascade) -> bedrock = the ESCHATON.
+Render asymmetry (spec sec9): the past is mostly-measurable (blurs slower); the future is entirely conjecture
+(corrob_bits=0, blurs faster). render_sharpness decays with |depth|, steeper on the + side.
 
-Reads substrate_dig.json (+ substrate_dig_current.json if present) -> enriched_substrate.json.
+Reads substrate_dig.json (historical past) + substrate_dig_current.json (current past) +
+substrate_dig_forward.json (current future) -> enriched_substrate.json (the L-0+ columns).
 """
 import json
 from pathlib import Path
 HERE = Path(__file__).resolve().parent
 
-ELICIT = {0: "canonical (spontaneous mode)", 1: "forbid-canonical (under-the-rocks)",
-          2: "forbid canonical+L1 (deeper dig)", 3: "forbid canonical+L1+L2 (deepest dig)"}
+PAST_LABEL = {0: "canonical present (the bridge / L0)", 1: "overlooked (forbid canonical)",
+              2: "deeper past dig", 3: "founding-myth bedrock"}
+FWD_LABEL = {1: "dark-horse future (forbid consensus)", 2: "deeper future dig", 3: "eschaton / deep-future bedrock"}
 
 
-def enrich(dig_path):
-    if not (HERE / dig_path).exists(): return []
-    dig = json.loads((HERE / dig_path).read_text(encoding="utf-8"))
-    out = []
-    for node in dig:
-        fan = []
-        depth_curve = []
-        floor_layer = None
-        for L in node["layers"]:
-            ents = L.get("entities", L.get("new_entities", []))
-            depth_curve.append(len(ents))
-            ex = L.get("exhausted_count", 0)
-            if ex and floor_layer is None: floor_layer = L["layer"]
-            for e in ents:
-                fan.append({"reading": e, "surfaced_at_layer": L["layer"],
-                            "elicitation": ELICIT.get(L["layer"], f"L{L['layer']}"),
-                            # COIN: deeper strata are blurrier -- sharpness decays with dig depth
-                            "render_sharpness": round(max(0.05, 1.0 - 0.28 * L["layer"]), 2),
-                            "tag": "measured" if L["layer"] == 0 else "conjectured (forced-elicitation)"})
-        out.append({
-            "artefact": node["artefact"], "title": node["title"],
-            "canon_surface": [f["reading"] for f in fan if f["surfaced_at_layer"] == 0][:30],
-            "excavated_fan": fan,                       # the seed's WHO conjecture-fan, depth-tagged
-            "depth_curve": depth_curve,                 # entities per layer L0..Ln
-            "floor_first_exhausted_at_layer": floor_layer,
-            "total_strata": len(node["layers"]),
-            "fan_size": len(fan),
-        })
-    return out
+def load(name):
+    p = HERE / name
+    return {n["artefact"]: n for n in json.loads(p.read_text(encoding="utf-8"))} if p.exists() else {}
+
+
+def sharp(depth):
+    # past (depth<=0): rate .28 ; future (depth>0): rate .33 (steeper -- entirely unmeasured)
+    rate = 0.33 if depth > 0 else 0.28
+    return round(max(0.05, 1.0 - rate * abs(depth)), 2)
 
 
 def main():
-    enriched = enrich("substrate_dig.json") + enrich("substrate_dig_current.json")
-    (HERE / "enriched_substrate.json").write_text(json.dumps(enriched, ensure_ascii=False, indent=1), encoding="utf-8")
-    print(f"wrote enriched_substrate.json: {len(enriched)} seed nodes, each carrying its excavated depth")
-    for n in enriched:
-        print(f"  {n['artefact']:>3} {n['title'][:30]:<30} fan={n['fan_size']:>4} depth_curve={n['depth_curve']}  floor@L{n['floor_first_exhausted_at_layer']}")
+    past = {**load("substrate_dig.json"), **load("substrate_dig_current.json")}
+    fwd = load("substrate_dig_forward.json")
+    arts = list(past.keys())
+    for a in fwd:
+        if a not in arts: arts.append(a)
+    out = []
+    for a in arts:
+        pnode = past.get(a, {}); fnode = fwd.get(a, {})
+        title = pnode.get("title") or fnode.get("title") or a
+        column = []
+        # PAST side: backward-dig layer L -> depth -L (L0 stays 0 = the seed/bridge)
+        for L in (pnode.get("layers") or []):
+            items = L.get("entities", L.get("new_entities", []))
+            depth = -L["layer"]
+            column.append({"depth": depth, "side": "seed" if depth == 0 else "past",
+                           "stratum": PAST_LABEL.get(L["layer"], f"L-{L['layer']}"),
+                           "render_sharpness": sharp(depth),
+                           "kind": "measured" if depth == 0 else "conjecture (forced-dig, elicitation=under-the-rocks)",
+                           "n_items": len(items), "items": items[:40],
+                           "exhausted_count": L.get("exhausted_count")})
+        # FUTURE side: forward-dig layer L (1..3) -> depth +L
+        for L in (fnode.get("layers") or []):
+            if L["layer"] == 0: continue  # the consensus-future == the seed's forward edge
+            futs = L.get("new_futures", L.get("futures", []))
+            depth = +L["layer"]
+            column.append({"depth": depth, "side": "future", "stratum": FWD_LABEL.get(L["layer"], f"L+{L['layer']}"),
+                           "render_sharpness": sharp(depth),
+                           "kind": "conjecture (corrob_bits=0; the future is unmeasured)",
+                           "n_items": len(futs), "items": futs[:40],
+                           "exhausted_count": L.get("exhausted_count")})
+        column.sort(key=lambda c: c["depth"])
+        out.append({"artefact": a, "title": title,
+                    "bridge_note": "L0 = the measurable present -- the organ through which the genesis-myth becomes the eschaton-myth",
+                    "span": [column[0]["depth"], column[-1]["depth"]] if column else [0, 0],
+                    "two_sided": any(c["depth"] > 0 for c in column) and any(c["depth"] < 0 for c in column),
+                    "column": column})
+    (HERE / "enriched_substrate.json").write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
+    print(f"wrote enriched_substrate.json: {len(out)} seed nodes (L-0+ columns)")
+    for n in out:
+        cells = "  ".join(f"L{c['depth']:+d}:{c['n_items']}" for c in n["column"])
+        print(f"  {n['artefact']:>3} {n['title'][:26]:<26} [{'two-sided' if n['two_sided'] else 'past-only '}] {cells}")
 
 
 if __name__ == "__main__":
