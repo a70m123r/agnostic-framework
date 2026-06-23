@@ -67,6 +67,10 @@
   .strat.bridge .sd,.strat.bridge .slabel{color:var(--gold)}
   .strat.past{background:linear-gradient(90deg,#10141d,#0e1119)} .strat.past .sd{color:#6f8fd0}
   .strat.future{background:linear-gradient(90deg,#181019,#120e14)} .strat.future .sd{color:#d99a5a}
+  .strat .sstats{display:flex;gap:9px;flex-wrap:wrap;align-items:center;font-size:10.5px;color:var(--dim);margin-top:3px}
+  .strat .stat b{color:var(--ink);font-weight:600} .strat .stat.gold{color:var(--gold)}
+  .strat .tbar{flex:0 0 64px;height:4px;background:#1d2430;border-radius:3px;overflow:hidden}
+  .strat .tbar i{display:block;height:100%;background:linear-gradient(90deg,#3a4a63,#d99a5a)}
   #side{border-left:1px solid var(--line);overflow:auto;padding:14px}
   #side h3{font-size:13px;margin:0 0 8px}
   .stub{background:#11151d;border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:6px;padding:8px 10px;margin-bottom:8px}
@@ -249,15 +253,22 @@ function renderIceberg(id){
   const node=(typeof ENRICHED!=='undefined')?ENRICHED.find(n=>n.artefact===id):null;
   if(!node){ S.innerHTML=`<p style="color:var(--dim)">No dig strata for this artefact yet. The iceberg L−0+ column exists for the dug artefacts — algebra, distillation, variolation, steam engine (past-only), and robotics, AI, spaceflight (two-sided). Pick one from the left.</p>`; return; }
   let h=`<h2>${esc(node.title)}</h2><div class="note">${node.two_sided?'two-sided iceberg — eschaton ↑ · the bridge · founding myth ↓':'past-only — the bridge · founding myth ↓'} · click a stratum to read it</div><div class="ice">`;
+  const maxThink=Math.max(1,...node.column.map(c=>c.stats?.think_sum||0));
   [...node.column].sort((x,y)=>y.depth-x.depth).forEach(c=>{
     const side=c.depth===0?'bridge':(c.side==='future'?'future':'past');
     const blurpx=Math.min(2.4,(1-c.render_sharpness)*3.4).toFixed(1);  // capped: soft, not illegible
     let tz=[],len=0; for(const x of (c.items||[])){ const t=(typeof x==='string'?x:(x.reading||x.value||'')).trim(); if(!t) continue; const tt=t.length>58?t.slice(0,58)+'…':t; if(len+tt.length>96){ tz.push('…'); break; } tz.push(esc(tt)); len+=tt.length+3; }
     const items=tz.join('   ·   ');
+    const s=c.stats;
+    const stats=`<span class="stat"><b>${c.n_items}</b> items</span> <span class="stat">sharpness <b>${c.render_sharpness}</b></span>`
+      + (s&&s.think_sum?` <span class="stat"><b>${s.think_sum.toLocaleString()}</b> think-tok</span> <span class="stat">med ${s.think_med.toLocaleString()}</span> <span class="stat">${s.n_produced}/${s.n_models} models</span>`:'')
+      + (c.exhausted_count?` <span class="stat gold">${c.exhausted_count} exhausted</span>`:'')
+      + (s&&s.think_sum?`<span class="tbar" title="digestion cost: ${s.think_sum.toLocaleString()} reasoning tokens"><i style="width:${(s.think_sum/maxThink*100).toFixed(0)}%"></i></span>`:'');
     h+=`<div class="strat ${side}" data-d="${c.depth}">
       <div class="sd">${depthBadge(c.depth)}</div>
       <div class="sbody">
-        <div class="slabel">${esc(c.stratum)} <span class="sn">${c.n_items} items · sharpness ${c.render_sharpness}${c.exhausted_count?` · ${c.exhausted_count} exhausted`:''}</span></div>
+        <div class="slabel">${esc(c.stratum)}</div>
+        <div class="sstats">${stats}</div>
         <div class="sitems" style="filter:blur(${blurpx}px)">${items||'—'}</div>
       </div></div>`;
   });

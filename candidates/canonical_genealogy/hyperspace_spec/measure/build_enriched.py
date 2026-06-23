@@ -30,6 +30,16 @@ def sharp(depth):
     return round(max(0.05, 1.0 - rate * abs(depth)), 2)
 
 
+def token_stats(records):
+    """the digestion cost of this dig layer: how hard the models had to think to surface it."""
+    if not records: return None
+    rts = [r["reasoning_tokens"] for r in records if r.get("reasoning_tokens")]
+    produced = sum(1 for r in records if (r.get("who") or r.get("future") or r.get("parse_ok")))
+    return {"n_models": len(records), "n_produced": produced, "n_thinking": len(rts),
+            "think_sum": sum(rts), "think_med": (sorted(rts)[len(rts) // 2] if rts else 0),
+            "think_max": (max(rts) if rts else 0)}
+
+
 def main():
     past = {**load("substrate_dig.json"), **load("substrate_dig_current.json")}
     fwd = load("substrate_dig_forward.json")
@@ -50,7 +60,7 @@ def main():
                            "render_sharpness": sharp(depth),
                            "kind": "measured" if depth == 0 else "conjecture (forced-dig, elicitation=under-the-rocks)",
                            "n_items": len(items), "items": items[:40],
-                           "exhausted_count": L.get("exhausted_count")})
+                           "exhausted_count": L.get("exhausted_count"), "stats": token_stats(L.get("records"))})
         # FUTURE side: forward-dig layer L (1..3) -> depth +L.
         # use the FULL future text from the per-model records (the new_futures list was truncated at extraction).
         for L in (fnode.get("layers") or []):
@@ -67,7 +77,7 @@ def main():
                            "render_sharpness": sharp(depth),
                            "kind": "conjecture (corrob_bits=0; the future is unmeasured)",
                            "n_items": len(futs), "items": futs[:40],
-                           "exhausted_count": L.get("exhausted_count")})
+                           "exhausted_count": L.get("exhausted_count"), "stats": token_stats(L.get("records"))})
         column.sort(key=lambda c: c["depth"])
         out.append({"artefact": a, "title": title,
                     "bridge_note": "L0 = the measurable present -- the organ through which the genesis-myth becomes the eschaton-myth",

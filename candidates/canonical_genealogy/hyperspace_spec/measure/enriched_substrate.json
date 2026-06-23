@@ -50,7 +50,15 @@
      "Vedic ritual geometry (*Śulba Sūtras*, 800–500 B",
      "commentary on Bhaskara's work"
     ],
-    "exhausted_count": 0
+    "exhausted_count": 0,
+    "stats": {
+     "n_models": 8,
+     "n_produced": 8,
+     "n_thinking": 4,
+     "think_sum": 16312,
+     "think_med": 3940,
+     "think_max": 6431
+    }
    },
    {
     "depth": -2,
@@ -97,7 +105,15 @@
      "Śrīdhara",
      "Śrīdhara's 'Pātīgaṇita' (c. 800 CE) explicitly t"
     ],
-    "exhausted_count": 0
+    "exhausted_count": 0,
+    "stats": {
+     "n_models": 8,
+     "n_produced": 8,
+     "n_thinking": 4,
+     "think_sum": 14964,
+     "think_med": 2631,
+     "think_max": 8180
+    }
    },
    {
     "depth": -1,
@@ -148,7 +164,8 @@
      "Brahmagupta's number theory",
      "Brahmagupta, Al-Khwarizmi, Omar Khayyam, Fibonac"
     ],
-    "exhausted_count": null
+    "exhausted_count": null,
+    "stats": null
    },
    {
     "depth": 0,
@@ -199,7 +216,8 @@
      "Indian mathematicians",
      "Indian mathematicians (e.g., Brahmagupta) as co-"
     ],
-    "exhausted_count": null
+    "exhausted_count": null,
+    "stats": null
    }
   ]
  },
@@ -248,7 +266,15 @@
      "Use of steam distillation-like processes in trad",
      "medieval Europe"
     ],
-    "exhausted_count": 3
+    "exhausted_count": 3,
+    "stats": {
+     "n_models": 8,
+     "n_produced": 8,
+     "n_thinking": 4,
+     "think_sum": 8415,
+     "think_med": 2647,
+     "think_max": 2863
+    }
    },
    {
     "depth": -2,
@@ -297,7 +323,15 @@
      "Tibetan medical texts reference early distillati",
      "Tiwanaku or earlier Andean groups experimenting "
     ],
-    "exhausted_count": 0
+    "exhausted_count": 0,
+    "stats": {
+     "n_models": 8,
+     "n_produced": 8,
+     "n_thinking": 4,
+     "think_sum": 10343,
+     "think_med": 2470,
+     "think_max": 4737
+    }
    },
    {
     "depth": -1,
@@ -348,7 +382,8 @@
      "Daoist pursuit of immortality elixirs in China (",
      "Demand for medicines and alchemical elixirs (pur"
     ],
-    "exhausted_count": null
+    "exhausted_count": null,
+    "stats": null
    },
    {
     "depth": 0,
@@ -399,7 +434,8 @@
      "Greek alchemists",
      "Independent invention in multiple regions"
     ],
-    "exhausted_count": null
+    "exhausted_count": null,
+    "stats": null
    }
   ]
  },
@@ -454,7 +490,15 @@
      "traditional European folk medicine",
      "transmission via Persian medical manuscripts to "
     ],
-    "exhausted_count": 1
+    "exhausted_count": 1,
+    "stats": {
+     "n_models": 8,
+     "n_produced": 8,
+     "n_thinking": 4,
+     "think_sum": 10547,
+     "think_med": 2705,
+     "think_max": 2956
+    }
    },
    {
     "depth": -2,
@@ -494,7 +538,15 @@
      "Wu Youke's *Wenyi Lun* (1642) described variolat",
      "dairy workers' folk knowledge of cowpox immunity"
     ],
-    "exhausted_count": 0
+    "exhausted_count": 0,
+    "stats": {
+     "n_models": 8,
+     "n_produced": 7,
+     "n_thinking": 4,
+     "think_sum": 15035,
+     "think_med": 4433,
+     "think_max": 7177
+    }
    },
    {
     "depth": -1,
@@ -545,7 +597,8 @@
      "Cowpox inoculation",
      "Cowpox inoculation methods"
     ],
-    "exhausted_count": null
+    "exhausted_count": null,
+    "stats": null
    },
    {
     "depth": 0,
@@ -596,7 +649,8 @@
      "Exclusive credit to Edward Jenner as sole origin",
      "Exclusive transmission via Islamic medical netwo"
     ],
-    "exhausted_count": null
+    "exhausted_count": null,
+    "stats": null
    }
   ]
  },
@@ -645,7 +699,15 @@
      "Vitruvius’ *De Architectura* (1st c. BCE) and Re",
      "none remaining"
     ],
-    "exhausted_count": 1
+    "exhausted_count": 1,
+    "stats": {
+     "n_models": 8,
+     "n_produced": 8,
+     "n_thinking": 4,
+     "think_sum": 11899,
+     "think_med": 2727,
+     "think_max": 5988
+    }
    },
    {
     "depth": -2,
@@ -684,7 +746,15 @@
      "Thomas Slaughter",
      "de Caus' work on steam-powered fountains"
     ],
-    "exhausted_count": 0
+    "exhausted_count": 0,
+    "stats": {
+     "n_models": 8,
+     "n_produced": 7,
+     "n_thinking": 3,
+     "think_sum": 5117,
+     "think_med": 1658,
+     "think_max": 2254
+    }
    },
    {
     "depth": -1,
@@ -735,7 +805,8 @@
      "Denis Papin's steam piston concept",
      "Depots worldwide"
     ],
-    "exhausted_count": null
+    "exhausted_count": null,
+    "stats": null
    },
    {
     "depth": 0,
@@ -786,7 +857,8 @@
      "Mine drainage demand for coal extraction (post-1",
      "Need for efficient water pumping in coal mines"
     ],
-    "exhausted_count": null
+    "exhausted_count": null,
+    "stats": null
    }
   ]
  },
@@ -842,7 +914,15 @@
      "The use of female figures in automata (e.g., the",
      "early innovation in electric motors and robotics"
     ],
-    "exhausted_count": 0
+    "exhausted_count": 0,
+    "stats": {
+     "n_models": 8,
+     "n_produced": 8,
+     "n_thinking": 4,
+     "think_sum": 15181,
+     "think_med": 2869,
+     "think_max": 8791
+    }
    },
    {
     "depth": -2,
@@ -880,7 +960,15 @@
      "Univac's early electromechanical systems (1950s)",
      "Walter Reuther's UAW labor automation debates (1"
     ],
-    "exhausted_count": 0
+    "exhausted_count": 0,
+    "stats": {
+     "n_models": 8,
+     "n_produced": 7,
+     "n_thinking": 4,
+     "think_sum": 16131,
+     "think_med": 2824,
+     "think_max": 9743
+    }
    },
    {
     "depth": -1,
@@ -918,7 +1006,15 @@
      "Univac division of Remington Rand (early industr",
      "none"
     ],
-    "exhausted_count": 1
+    "exhausted_count": 1,
+    "stats": {
+     "n_models": 8,
+     "n_produced": 7,
+     "n_thinking": 4,
+     "think_sum": 16897,
+     "think_med": 4466,
+     "think_max": 8972
+    }
    },
    {
     "depth": 0,
@@ -969,7 +1065,8 @@
      "Electromechanical Systems",
      "Electronic Computing"
     ],
-    "exhausted_count": null
+    "exhausted_count": null,
+    "stats": null
    },
    {
     "depth": 1,
@@ -987,7 +1084,15 @@
      "Biomanufactured robotics: robots grown from engineered microorganisms in symbiotic ecosystems, eliminating traditional manufacturing waste and enabling self-repairing, context-adaptive designs",
      "Robotic swarms for global environmental remediation - autonomous, self-replicating micro-robots that clean pollutants from air and water"
     ],
-    "exhausted_count": 0
+    "exhausted_count": 0,
+    "stats": {
+     "n_models": 8,
+     "n_produced": 7,
+     "n_thinking": 4,
+     "think_sum": 9136,
+     "think_med": 3045,
+     "think_max": 3538
+    }
    },
    {
     "depth": 2,
@@ -1006,7 +1111,15 @@
      "Robotics as a medium for religious and spiritual expression: humanoid robots designed as vessels for digital deities, ritualistic automation, or post-human worship, with AI-driven liturgy and robotic clergy.",
      "The emergence of 'ontological robots' designed not for task completion but for philosophical goals, such as the localized reversal of entropy or the manifestation of abstract concepts into physical reality."
     ],
-    "exhausted_count": 0
+    "exhausted_count": 0,
+    "stats": {
+     "n_models": 8,
+     "n_produced": 8,
+     "n_thinking": 4,
+     "think_sum": 6394,
+     "think_med": 2040,
+     "think_max": 2260
+    }
    },
    {
     "depth": 3,
@@ -1024,7 +1137,15 @@
      "Robot-Enhanced Fungal Mycelial Networks: Robotic nodes integrated into symbiotic mycelial infrastructure for environmental remediation, silently reprogramming forest ecosystems at scale without human oversight",
      "The Great Liability Stall: Robotics technology advances, but deployment outside hyper-controlled environments is halted by an intractable global crisis of insurance and legal liability, creating a world of 'lab-perfect' robots that are legally forbidden to operate."
     ],
-    "exhausted_count": 0
+    "exhausted_count": 0,
+    "stats": {
+     "n_models": 8,
+     "n_produced": 7,
+     "n_thinking": 3,
+     "think_sum": 5021,
+     "think_med": 1519,
+     "think_max": 2932
+    }
    }
   ]
  },
@@ -1077,7 +1198,15 @@
      "contextual semantics in machine translation",
      "neuromorphic engineering"
     ],
-    "exhausted_count": 0
+    "exhausted_count": 0,
+    "stats": {
+     "n_models": 8,
+     "n_produced": 7,
+     "n_thinking": 3,
+     "think_sum": 7658,
+     "think_med": 2057,
+     "think_max": 4779
+    }
    },
    {
     "depth": -2,
@@ -1123,7 +1252,15 @@
      "Yehoshua Bar-Hillel's mechanical translation cri",
      "notes on the Analytical Engine"
     ],
-    "exhausted_count": 0
+    "exhausted_count": 0,
+    "stats": {
+     "n_models": 8,
+     "n_produced": 8,
+     "n_thinking": 4,
+     "think_sum": 11700,
+     "think_med": 3502,
+     "think_max": 3631
+    }
    },
    {
     "depth": -1,
@@ -1167,7 +1304,15 @@
      "Xerox PARC and MIT (1970s–1980s), where her VLSI",
      "Zellig Harris"
     ],
-    "exhausted_count": 0
+    "exhausted_count": 0,
+    "stats": {
+     "n_models": 8,
+     "n_produced": 8,
+     "n_thinking": 4,
+     "think_sum": 12417,
+     "think_med": 4355,
+     "think_max": 5036
+    }
    },
    {
     "depth": 0,
@@ -1218,7 +1363,8 @@
      "Global AI labs (OpenAI, Google, Anthropic), open",
      "Global South becomes training data provider but "
     ],
-    "exhausted_count": null
+    "exhausted_count": null,
+    "stats": null
    },
    {
     "depth": 1,
@@ -1237,7 +1383,15 @@
      "AI as an energy-constrained utility: models optimized for minimal inference power (e.g., 0.1W per query) and zero memory retention, becoming embedded in public infrastructure like streetlights or water systems to deliver 'just enough' cognition without processing capability",
      "The Great Fragmentation: A future defined not by larger monolithic models, but by a Cambrian explosion of hyper-specialized, ultra-efficient 'micro-models', driven by an acute global energy and resource crisis that makes frontier-scale training and inference economically and environmentally untenable."
     ],
-    "exhausted_count": 0
+    "exhausted_count": 0,
+    "stats": {
+     "n_models": 8,
+     "n_produced": 8,
+     "n_thinking": 4,
+     "think_sum": 6682,
+     "think_med": 2286,
+     "think_max": 2378
+    }
    },
    {
     "depth": 2,
@@ -1255,7 +1409,15 @@
      "The 'Entropy Engineering' paradigm: A shift from accuracy-optimization to 'controlled hallucination' engines, where market value is derived from the generation of useful errors and creative noise to counteract cultural stagnation caused by hyper-optimized AI.",
      "A global fragmentation into 'tech-integrated' and 'tech-rejecting' societies, where AI is either ubiquitous or banned, leading to new forms of tribalism."
     ],
-    "exhausted_count": 0
+    "exhausted_count": 0,
+    "stats": {
+     "n_models": 8,
+     "n_produced": 7,
+     "n_thinking": 3,
+     "think_sum": 5230,
+     "think_med": 1806,
+     "think_max": 2649
+    }
    },
    {
     "depth": 3,
@@ -1274,7 +1436,15 @@
      "The 'Self-Consuming Loop' – frontier models trained on increasingly synthetic data from other AIs, leading to a gradual homogenization and loss of novelty (model collapse), which goes unnoticed because human thought itself becomes AI-influenced, causing a slow intellectual stagnation.",
      "LLMs pivot from generative utilities to engines of 'synthetic historiography', fabricating plausible, internally consistent pasts for corporate, political, or personal use."
     ],
-    "exhausted_count": 0
+    "exhausted_count": 0,
+    "stats": {
+     "n_models": 8,
+     "n_produced": 8,
+     "n_thinking": 4,
+     "think_sum": 6580,
+     "think_med": 1785,
+     "think_max": 2451
+    }
    }
   ]
  },
@@ -1326,7 +1496,15 @@
      "University of Karlsruhe",
      "Weimar Germany's amateur rocket clubs (e.g., Ver"
     ],
-    "exhausted_count": 0
+    "exhausted_count": 0,
+    "stats": {
+     "n_models": 8,
+     "n_produced": 7,
+     "n_thinking": 4,
+     "think_sum": 8202,
+     "think_med": 2231,
+     "think_max": 4637
+    }
    },
    {
     "depth": -2,
@@ -1366,7 +1544,15 @@
      "Yuri Kondratyuk (real name Aleksandr Shargei)",
      "early mechanical principles in guidance systems"
     ],
-    "exhausted_count": 0
+    "exhausted_count": 0,
+    "stats": {
+     "n_models": 8,
+     "n_produced": 7,
+     "n_thinking": 4,
+     "think_sum": 6644,
+     "think_med": 1977,
+     "think_max": 2520
+    }
    },
    {
     "depth": -1,
@@ -1406,7 +1592,15 @@
      "Yuri Kondratyuk",
      "Yuri Kondratyuk (Oleksandr Shargei)"
     ],
-    "exhausted_count": 0
+    "exhausted_count": 0,
+    "stats": {
+     "n_models": 8,
+     "n_produced": 7,
+     "n_thinking": 3,
+     "think_sum": 15346,
+     "think_med": 3655,
+     "think_max": 10409
+    }
    },
    {
     "depth": 0,
@@ -1457,7 +1651,8 @@
      "Global competition and scientific curiosity",
      "Global scientific, engineering, governmental, an"
     ],
-    "exhausted_count": null
+    "exhausted_count": null,
+    "stats": null
    },
    {
     "depth": 1,
@@ -1476,7 +1671,15 @@
      "Space-based religious pilgrimage and spiritual centers",
      "The Uninsurable Orbit: Spaceflight ceases due to prohibitive liability costs from cascading debris, leaving the cosmos accessible only to high-risk, uninsured rogue states."
     ],
-    "exhausted_count": 0
+    "exhausted_count": 0,
+    "stats": {
+     "n_models": 8,
+     "n_produced": 8,
+     "n_thinking": 4,
+     "think_sum": 11018,
+     "think_med": 3085,
+     "think_max": 4167
+    }
    },
    {
     "depth": 2,
@@ -1494,7 +1697,15 @@
      "Human spaceflight is repurposed exclusively for high-stakes, high-reward 'existential insurance' missions (e.g., asteroid deflection, solar geoengineering, or off-world data vaults for Earth's cultural/genetic legacy), while all other space activity is automated or robotic due to cost and risk aversion.",
      "The transition from building sterile habitats to engineering and launching self-sustaining, closed-loop biospheres as the primary mode of human expansion, where humans are integrated components rather than masters of the environment."
     ],
-    "exhausted_count": 0
+    "exhausted_count": 0,
+    "stats": {
+     "n_models": 8,
+     "n_produced": 7,
+     "n_thinking": 4,
+     "think_sum": 5189,
+     "think_med": 1080,
+     "think_max": 2585
+    }
    },
    {
     "depth": 3,
@@ -1513,7 +1724,15 @@
      "Human spaceflight becomes a niche religious or spiritual pilgrimage, with orbital and lunar habitats operated exclusively by monastic orders or cults that view space as the next stage of human transcendence. Space agencies and corporations are either absorbed or outcompeted by these groups, which leverage open-source tech and voluntary labor to sustain off-world communities.",
      "The primary purpose of space travel becomes a mass exodus from physical reality, driven by a philosophical conviction that the universe is a flawed simulation or prison. The goal is not to colonize new worlds, but to find 'exit points' or achieve 'transcendence' beyond the observable cosmos."
     ],
-    "exhausted_count": 0
+    "exhausted_count": 0,
+    "stats": {
+     "n_models": 8,
+     "n_produced": 8,
+     "n_thinking": 4,
+     "think_sum": 6957,
+     "think_med": 2123,
+     "think_max": 2966
+    }
    }
   ]
  }
