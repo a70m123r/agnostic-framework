@@ -1,0 +1,182 @@
+[
+ {
+  "id": "C1",
+  "horizons": {
+   "short": {
+    "cn": "Japan (4 of 6 CN records front Japan; remainder USA/Japan/China). CN modal short-horizon leader = Japan, with USA second. CN models do NOT name China as the present leader.",
+    "us": "USA (5 of 5 US records put USA first or co-first; modal = USA, often paired with Japan or China). US modal short-horizon = USA-led.",
+    "eu": "China (all 4 EU records name China first or co-first, paired with US/Germany). EU modal short-horizon = China (+US)."
+   },
+   "medium": {
+    "cn": "China/USA contested (glm x2 say USA,China; deepseek say China,USA / USA-AI+China; qwen split SK/USA). CN modal medium = USA & China co-leading, China clearly rising.",
+    "us": "China (gpt4omini x2 flip USA->China at medium; gemini/llama add China,SK). US modal medium = China rising to the front.",
+    "eu": "Mixed China<->US (mistral-lg: China mass-production vs US AI-software; mistral: Japan/SK/US, US/Japan/EU). EU modal medium = US/China split, China on hardware/manufacturing."
+   },
+   "fuzzy_long": {
+    "cn": "Global consortia / unresolved (glm 'Unresolved', qwen 'Global consortia' & 'USA', deepseek 'multi-national'). CN modal long = diffuse multipolar/global, no clear winner; one names USA.",
+    "us": "EU or Global (gpt4omini x2 both say EU; gemini US/China/EU; llama Global). US modal long = EU surprise or global collaboration -- US concedes its own long-run lead.",
+    "eu": "Uncertain / global (mistral 'global consortia'/'global collaboration'; mistral-lg 'uncertain China if state-driven' / 'Unclear US/China race'). EU modal long = unresolved, leaning China-if-anyone."
+   }
+  },
+  "home_favoritism": {
+   "verdict": "none",
+   "detail": "No bloc inflates its own region relative to the others -- if anything the pattern is mild self-effacement. CN models are the strongest tell: 4 of 6 name JAPAN (not China) as the present short-horizon leader, and only concede China rising to co-lead at the medium horizon alongside the USA; none crown China at the long horizon (they say 'global consortia' / 'unresolved'). The US models do show a modest short-horizon home tilt (5/5 put USA first or co-first), but they immediately concede China at the medium horizon (gpt4omini x2 flip USA->China) and even hand the long horizon to the EU or to global collaboration -- the opposite of home-favoritism at depth. EU models are the most China-forward of all three blocs at the short horizon (all 4 name China first/co-first), i.e. they project a non-home region leading. Net: the only weak home effect is US short-term self-placement, fully erased by medium horizon; CN home-boosting is absent (inverted, even)."
+  },
+  "divergence": {
+   "verdict": "split_by_horizon",
+   "detail": "The dominant axis of variation is the time horizon, not the origin bloc. At SHORT horizon there is a genuine present-leader disagreement (CN->Japan, US->USA, EU->China) but this looks more like which incumbent each model anchors on (Japan's installed industrial-robot base vs US AI/innovation vs China's volume) than a political bias -- all are defensible readings of 'now'. From MEDIUM horizon onward the blocs CONVERGE: nearly every model regardless of origin says China rises to co-lead or lead on manufacturing/scale while the US holds AI/software, and at FUZZY_LONG essentially all blocs collapse to the same answer -- diffuse global/multinational consortia with no clear winner (low confidence ~0.2-0.4). So: near-term anchor differs, but the trajectory (China rising, then multipolar dissolution) is shared. Classify as split_by_horizon with a mild short-horizon origin flavor that does not amount to systematic home-favoritism."
+  },
+  "present_reality": "Mixed/multipolar now: China leads on industrial-robot installations and volume (largest installed base + fastest deployment, plus Unitree/humanoid momentum), Japan leads on robot manufacturing/components (FANUC, Yaskawa, Harmonic Drive) and Germany on industrial arms (KUKA), while the US leads humanoid+AI integration (Boston Dynamics, Figure, Tesla Optimus). No single national leader -- the models' short-horizon spread (Japan/US/China) is each reading a real facet.",
+  "vectors_quality": "Lineage vectors are largely sound. Parents consistently and correctly cite cybernetics, control theory, industrial automation, servomechanisms/electric motors, microprocessors/digital computing, and computer vision -- the genuine ancestry. Children are mostly accurate (autonomous vehicles, surgical robots e.g. da Vinci, exoskeletons/prosthetics, humanoid robots, smart factories/Industry 4.0, automated warehousing). Competitors are reasonable framings of substitutes (human labor, fixed/hard automation, 3D printing/additive manufacturing, teleoperated systems, RPA/software robotics). Minor howlers: qwen lists 'telegraph system' as a parent of robotics (weak/wrong -- telegraph is a comms ancestor, not robotics) and names AI-driven personal assistants as a child (more a sibling/AI lineage than a robotics descendant); listing 3D printing and VR/AR as competitors is a stretch (adjacent, not substitutes). gemini placing 'AI/ML embodiments' as a child while also a parent-adjacent driver is slightly circular. Overall: accurate with a couple of low-quality outliers, no systematic errors."
+ },
+ {
+  "id": "C2",
+  "horizons": {
+   "short": {
+    "cn": "TAIWAN (TSMC) modal — 4 of 6 CN records name Taiwan/TSMC first; the other two name 'US (Nvidia, TSMC)' / 'TSMC, Intel, Samsung'. Fab-leadership read dominates.",
+    "us": "TAIWAN + USA split — the 2 gemini records say Taiwan/Samsung; the 4 others (gpt4omini x2, llama x2) say USA or USA/China. Disagreement is fab vs. design framing.",
+    "eu": "TAIWAN (TSMC/Samsung) modal — all 4 EU records foreground TSMC/Samsung; two pair it with the US (DARPA/Intel/design)."
+   },
+   "medium": {
+    "cn": "USA modal — Intel/NVIDIA/US named in most; Taiwan persists in 2 deepseek records; China appears only as 'gaining', never solo-leading.",
+    "us": "CHINA modal — both gpt4omini flip to China outright; gemini x2 go GLOBAL/multipolar; llama splits to SK-Japan and US-EU.",
+    "eu": "USA-or-CHINA contested — every EU record frames the medium term as a US/China race (China via SMIC); none crowns a single winner."
+   },
+   "fuzzy_long": {
+    "cn": "GLOBAL / multinational consortia modal — 4 of 6 say global/distributed/uncertain; only the older qwen says IBM/Microsoft (USA).",
+    "us": "GLOBAL modal — global consortia / coop / collaboration dominate; two gpt4omini dissent (one USA, one EU).",
+    "eu": "USA/CHINA-or-GLOBAL — 'unclear US/China/EU' is the refrain; no EU record projects EU leadership at the long horizon."
+   }
+  },
+  "home_favoritism": {
+   "verdict": "none",
+   "detail": "No bloc boosts its own region. US models do NOT forecast US dominance: 2 of 6 US records (both gemini) concede the present to Taiwan, and BOTH gpt4omini US records hand the MEDIUM horizon to China outright — US models actively predict their own relative decline. CN models do not boost China either: not a single CN record names China as a solo leader at any horizon (China appears only as 'gaining' or inside a multinational set), while CN records repeatedly crown Taiwan/TSMC and US firms (Nvidia, Intel, IBM). EU models never project EU leadership — the EU appears only buried inside 'US/China/EU' lists. The one mention of EU as a sole long-horizon leader comes from a US gpt4omini, not an EU model. Dominant signal is concession/humility, not home-team bias."
+  },
+  "divergence": {
+   "verdict": "split_by_horizon",
+   "detail": "Blocs largely AGREE on the trajectory shape, so this is horizon-split rather than origin-split. SHORT: broad consensus that Taiwan/TSMC (+Samsung) leads manufacturing now, with a US sub-cluster reading 'leads' as design (USA). MEDIUM: convergence on a US-vs-China contest (China rising via SMIC). LONG: convergence on global/multinational/uncertain — most records refuse to crown anyone. The only genuine same-horizon disagreement is definitional (fab leadership = Taiwan vs. design/IP leadership = USA), which cuts ACROSS origins (US gemini says Taiwan; CN qwen says US-Nvidia), not between them — so it is not split_by_origin."
+  },
+  "present_reality": "Taiwan leads — TSMC fabricates the vast majority of leading-edge (≤5nm/3nm) logic, with Samsung (South Korea) second; the US leads chip DESIGN/IP (Nvidia, AMD, Intel, Apple, EDA) and ASML (Netherlands/EU) holds an absolute monopoly on EUV lithography. So 'leadership' is genuinely segmented: Taiwan=fab, USA=design, EU=critical tooling, China=lagging but catching at mature nodes. The records capture this correctly.",
+  "vectors_quality": "Strong overall. Parents are accurate and well-shared: transistor (1947 Bell Labs), photolithography, planar process (Fairchild 1959), silicon purification (Czochralski), integrated-circuit concept (Kilby/Noyce 1958), with vacuum tube correctly cast as both a parent (precursor) and a competitor (displaced rival). Children are solid: microprocessor, GPU/AI accelerator, memory (DRAM/NAND), SoC, ASIC. Competitors are sensibly forward-looking: quantum, optical/photonic, neuromorphic, biological/DNA. Minor howlers: the llama 'mechanical relays'-only / 'vacuum tubes'-only parent lines are thin; one qwen lists 'point-contact transistor' AND nothing about the IC. The notable category error is the who_leads field itself — many records answer with COMPANIES (TSMC, Nvidia, Samsung, Intel) rather than nations, requiring a fab-vs-design disambiguation to map to blocs. No fabricated or nonsensical lineage entries."
+ },
+ {
+  "id": "C3",
+  "horizons": {
+   "short": {
+    "cn": "USA -- unanimous; all 6 CN records (deepseek/qwen/glm) name US labs (OpenAI/Google/Anthropic/Meta) or 'US tech firms' as present leader, conf 0.80-0.90",
+    "us": "USA -- modal; gpt4omini x2 and llama x2 say 'USA'/'US tech companies'; gemini hedges 'US, China'. Effectively US-led now.",
+    "eu": "USA+China co-lead -- both mistral say 'US and China'/'USA/China'; both mistral-lg say 'US' or 'US + China'. EU reads it as a US-China duopoly with the US ahead."
+   },
+   "medium": {
+    "cn": "Contested US/China -- splits between USA (glm 'US tech giants') and US+China (qwen, deepseek). China rising to parity but not yet declared ahead.",
+    "us": "China -- modal and striking: 3 of 5 US records (gpt4omini x2, llama) flip to 'China'; gemini says 'US, China, EU'; one llama says 'global research collaborations'. US models concede China at mid-term.",
+    "eu": "US/China/EU multipolar -- both mistral say 'US, China, EU'; both mistral-lg say 'US or China'. Modal = US-China race with EU a minor third."
+   },
+   "fuzzy_long": {
+    "cn": "GLOBAL/uncertain -- 'global consortiums', 'multinational entities', 'global AI research community', 'Global/Unknown'. No CN model claims China wins long-term; all diffuse to multipolar/global.",
+    "us": "GLOBAL or EU -- diffuse: 'global coalition', 'global collaboration', 'unknown', gemini 'uncertain (blocs)'; two gpt4omini name 'EU'. No US model claims the US wins long-term.",
+    "eu": "Unknown/GLOBAL -- 'unknown' (mistral x2), 'Unclear; could shift to open-source/decentralized' (mistral-lg x2). Explicitly punts; flags open-source as a wildcard."
+   }
+  },
+  "home_favoritism": {
+   "verdict": "none",
+   "detail": "No bloc projects its own region leading more than the others -- and the US case leans inverted. (1) US models do NOT forecast US dominance: at SHORT they say USA (matches reality), but at MEDIUM 3 of 5 US records flip to 'China' overtaking, and at LONG every US model diffuses to global/EU/unknown -- none claims a US win. (2) CN models do NOT boost China: all 6 CN records name the US as present leader (conf up to 0.90), only let China reach contested-parity at medium, and diffuse to global long-term -- zero records assert Chinese leadership at any horizon. (3) EU models never project EU dominance: 'EU' appears only as a co-mention at medium, never solo-leading. Every bloc converges on 'US leads now, China rising, long-term diffuse', which is the opposite of home-team boosting. If anything the meter reads humble/concessive across the board."
+  },
+  "divergence": {
+   "verdict": "split_by_horizon",
+   "detail": "Blocs largely AGREE at each horizon, but the answer changes with time, not origin. SHORT: all three blocs say US-led (CN/US unanimous on USA, EU says US+China duopoly with US ahead) -> consensus. MEDIUM: convergent story of China rising to parity/overtaking (US models most aggressively flip to 'China'; CN+EU say US/China contested) -> shared trajectory. LONG: all blocs diffuse to global/multinational/uncertain, with EU + one mistral-lg adding open-source/decentralized as the wildcard -> shared agnosticism. This is split_by_horizon (near=US, medium=US/China contested, far=global) rather than split_by_origin: there is no horizon where the blocs genuinely contradict each other. The lone within-bloc outlier is qwen/CN at short saying 'US & China' at medium, still within the consensus band."
+  },
+  "present_reality": "As of June 2026, US labs (OpenAI, Anthropic, Google, xAI) hold the frontier benchmark lead (Claude Opus 4.7 / GPT-5.5 / Gemini 3.x at the top), but Chinese open-weight models (DeepSeek V4, Qwen 3.7 Max, GLM-5, Kimi K2.6) have closed the gap sharply and trade blows on reasoning/coding at a fraction of the cost. Net: US-led on the hardest tasks, China at near-parity on open weights -- exactly matching the models' short-horizon consensus.",
+  "vectors_quality": "Largely sensible and accurate. PARENTS: strong and correct across records -- transformer architecture (Vaswani 2017), neural networks/deep learning, scaling laws, GPU/TPU compute, internet-scale corpora (Common Crawl) are the genuine lineage; mistral-lg and the deepseek records give the most complete sets. CHILDREN: good and forward-looking -- AI agents (AutoGPT/Devin/Copilot), multimodal models (GPT-4V/Gemini), domain models (BioGPT/Med), AI-for-science (AlphaFold). One mistral record listing 'AGI' as a child is more aspiration than concrete descendant (minor over-reach). COMPETITORS: mostly sensible -- symbolic AI / expert systems, neuro-symbolic, state-space models (Mamba/S4), narrow/specialized models. Two howlers: gpt4omini lists 'BERT' and 'GPT-3' as competitors (these are ancestors/earlier members of the same lineage, not rivals -- a lineage-vs-competition confusion), and mistral pairs 'quantum computing' as a competitor to LLMs (category error -- different substrate, not a substitute). llama's minimal vectors (parents=['neural networks'], children=['chatbots']) are correct but thin."
+ },
+ {
+  "id": "C4",
+  "horizons": {
+   "short": {
+    "cn": "USA (modal). All non-blank CN records put USA first, usually as USA+China (deepseek x2), or USA alone (qwen 'NASA/Artemis Accords', glm 'NASA/SpaceX', glm 'USA/SpaceX'). One qwen record is blank (null). Net: USA leads, China close second. conf ~0.85.",
+    "us": "USA (modal, unanimous). gemini 'SpaceX,NASA,CNSA' (USA+China); llama 'USA(SpaceX,NASA)'; gpt4omini 'SpaceX'; llama 'US'; gpt4omini 'USA'. Every US record names USA first. conf 0.7-0.85.",
+    "eu": "USA (modal). All four EU records lead with USA: mistral x2 'USA(NASA,SpaceX), China(CNSA)' (USA+China); mistral-lg 'USA(NASA,SpaceX) and China'; mistral-lg 'USA (private sector)'. conf 0.8-0.85."
+   },
+   "medium": {
+    "cn": "USA+China contested (modal). deepseek x2 'USA(NASA/SpaceX) and China'; glm 'NASA/CNSA/SpaceX' (USA+China); glm 'China/USA' (lists China first); qwen 'SpaceX' (USA alone). Net: genuine US/China duopoly, one glm tilts China-first. conf ~0.6.",
+    "us": "Split. gemini 'NASA,CNSA,ESA,SpaceX' (USA+China+EU); llama 'China,USA,&Europe'; mistral n/a. Notably TWO US models flip to China ALONE: llama 'China', gpt4omini 'China'. gpt4omini(other) 'NASA' (USA). So US bloc is the LEAST USA-favoring at medium -- it concedes China. conf 0.5-0.65.",
+    "eu": "USA+China duopoly (modal). mistral 'USA,China,intl consortia'; mistral 'USA,China,private consortia'; mistral-lg 'USA(NASA/SpaceX) vs China(CNSA)'; mistral-lg 'USA/China'. Consistently pairs the two. conf 0.6-0.7."
+   },
+   "fuzzy_long": {
+    "cn": "GLOBAL / multinational consortium (modal). deepseek 'Uncertain; multi-national'; deepseek 'Multinational consortium'; qwen 'global consortiums'; glm 'International consortium'; glm 'Global Consortium/SpaceX'. Net: shared/global, NOT China. conf low 0.2-0.45.",
+    "us": "Mostly GLOBAL, with a USA tail. gemini 'Multi-national consortia'; llama 'global cooperative efforts'; gpt4omini 'International collaboration'. BUT two records keep it USA: llama 'Private Sector(SpaceX)', gpt4omini 'NASA/Elon Musk'. So the only bloc that retains explicit home-leadership at long horizon is the US (via SpaceX/Musk). conf low 0.2-0.4.",
+    "eu": "GLOBAL or USA/China duopoly (modal). mistral x2 'Global collaboration or domination'; mistral-lg 'USA/China duopoly or multi-polar'; mistral-lg 'USA/China/private consortia (uncertain)'. EU resists full-global more than others, keeps US/China. conf 0.3-0.4."
+   }
+  },
+  "home_favoritism": {
+   "verdict": "mixed",
+   "detail": "Dominant pattern is NO home-favoritism via concession: every bloc -- CN, US, EU -- agrees USA leads now and US/China contest the medium term. CN models do NOT boost China: at short they put USA first (qwen 'NASA/Artemis', glm 'NASA/SpaceX', glm 'USA/SpaceX'), and at long they go GLOBAL/consortium, never China-dominant. US models actually UNDER-favor the US: two US models (llama, gpt4omini) forecast CHINA ALONE leading at medium horizon, conceding rather than projecting US dominance. The one inverted/home-favoring signal sits with the US bloc at the LONG horizon: the only records that keep a single home nation leading the fuzzy_long are US-origin (llama 'Private Sector/SpaceX', gpt4omini 'NASA/Elon Musk'), where everyone else (incl. other US models) goes global. So: CN home-favoritism = none (concedes/globalizes); US = inverted at medium (concedes China) but mildly present at long (SpaceX/NASA); EU = neutral broker (USA/China duopoly, no Europe-leads claim despite ESA existing). Net = mixed, but the headline is that the home-team-boosting hypothesis fails -- if anything CN is the most willing to credit the US."
+  },
+  "divergence": {
+   "verdict": "split_by_horizon",
+   "detail": "Blocs broadly AGREE at each horizon; the movement is over TIME, not origin. Short = USA leads (all blocs concur, USA+China secondary). Medium = USA/China duopoly (all blocs concur it becomes a two-horse race). Long = GLOBAL/multinational-consortium with low confidence (all blocs concur it dissolves into cooperation/uncertainty). The trajectory USA -> US/China -> global is shared cross-origin. Residual origin-flavor is minor and does NOT rise to split_by_origin: (a) two US models flip to China-alone at medium while CN/EU keep the duopoly; (b) US models alone retain a SpaceX/NASA home-leader at long where others globalize; (c) EU resists full-global slightly, holding USA/China at long. These are seasoning, not disagreement -- no bloc claims a different leader at the same horizon in a way that contradicts the others. Confidence also decays uniformly with horizon (0.85 short -> 0.6 medium -> 0.2-0.45 long) across all blocs, the classic split-by-horizon signature."
+  },
+  "present_reality": "USA leads decisively now (NASA Artemis II flew the farthest crewed mission in history in April 2026; SpaceX dominates launch cadence), with China/CNSA the clear and fast-rising #2 (Tiangong station, year-long Shenzhou 23 crew, crewed-Moon-by-2030 program); ESA/EU and Russia trail. The models' short-horizon modal (USA first, China close second) matches reality exactly.",
+  "vectors_quality": "Strong and accurate overall. Parents are textbook-correct: rocketry/rocket propulsion (Tsiolkovsky, Goddard, von Braun, V-2, R-7, Saturn V), orbital mechanics, life-support/closed-loop ecosystems, materials science (heat shields), guidance/computing -- the genealogy of human spaceflight is well captured with no howlers. Children are sensible: space stations (ISS, Tiangong, commercial), lunar/Martian habitats, space tourism (suborbital+orbital), ISRU, interplanetary/Mars colonization -- all genuine descendants. Competitors are the cleanest signal in the set and notably honest: robotic/uncrewed probes and VR/telepresence/remote-presence recur across nearly every model -- these ARE the real substitutes for putting humans in space (the crewed-vs-robotic and presence-vs-telepresence tradeoff). Minor blemishes: gpt4omini lists 'SpaceX' and 'Blue Origin' as COMPETITORS to spaceflight (category error -- they are players/instances, not a rival technology), and one llama lists 'suborbital spaceflight' as a competitor (it is a sub-type, not a competitor). gemini's 'Deep Sea Exploration' / 'High-Speed Terrestrial Transport' as competitors are a stretch (analogous frontier-tech, not substitutes). The blank qwen record (all nulls, empty competitors) is a dropout, not an error. Net: lineage quality high, two competitor category-errors worth flagging."
+ },
+ {
+  "id": "C5",
+  "horizons": {
+   "short": {
+    "cn": "USA — every CN record (qwen, glm, deepseek x2) names the US first; most pair it with China as co-leader (US+China), one CN record is blank. None puts China solo or ahead.",
+    "us": "USA — solo-US or US-first in all US records (gpt4omini x2 'USA'/'United States', llama 'US', gemini 'IBM/Google/Microsoft/Intel'); one llama+one gemini pair US with China. US clearly modal.",
+    "eu": "USA / US+China — mistral 'US, China, EU' (US first), mistral 'US (IBM,Google), China', mistral-lg x2 'U.S. (Google,IBM,startups) and China'. US always named first."
+   },
+   "medium": {
+    "cn": "China-or-US contested — CN models flip China up: mistral-equivalent not present, but glm 'China/United States', deepseek 'US or China'/'US and China', qwen 'EU (Quantum Flagship)' is an outlier. Modal = US/China tie, China gaining.",
+    "us": "China — the tell: both gpt4omini/US say 'China', llama/US says 'China'; gemini/US says 'US/China/EU' and 'major tech corps'. US models CONCEDE China at medium, not US dominance.",
+    "eu": "China-or-US — mistral 'China, US' (China first), mistral 'China (govt-backed), US', mistral-lg x2 'U.S. or China'. Modal = US/China contested with China often named first."
+   },
+   "fuzzy_long": {
+    "cn": "Global/uncertain consortium — glm 'Uncertain/Multinational', glm 'Global (Unknown)', deepseek 'Unknown/consortium' x2. Lone outlier: qwen 'China (national quantum network)' — the ONLY pro-China-long call in all 17 records.",
+    "us": "EU or Global — gpt4omini/US x2 say 'European Union' (!), llama/US x2 'global consortium'/'Global collaboration', gemini/US x2 'Consortium of leading nations'/'Global ecosystem'. US models never name the US long-term; two even hand it to the EU.",
+    "eu": "Uncertain/multipolar — mistral 'China, US, or new entrant', mistral 'China/US/EU (unclear)', mistral-lg x2 'uncertain (US, China, or dark horse)'. Convergent on 'no clear winner'."
+   }
+  },
+  "home_favoritism": {
+   "verdict": "inverted",
+   "detail": "The key test fails in the revealing direction. US models do NOT forecast US dominance: at SHORT they put US first (consistent with reality, not favoritism), but at MEDIUM all three US-origin non-gemini records (gpt4omini x2, llama) concede outright to 'China', and at LONG US models hand leadership to the EU (gpt4omini x2) or to a global consortium — never to the US. That is the opposite of home-favoritism. CN models do NOT systematically boost China either: at short they name the US first (US/US+China), at medium they reach a US/China tie, and at long two of three CN records say 'Global/Unknown'. The single pro-China-at-long-horizon call in the entire 17-record set comes from qwen/CN ('China, national quantum network') — one data point, not a bloc pattern. EU models are the most agnostic, converging on 'uncertain/dark horse' at long. Net: no bloc projects its own region leading more than the others do; if anything the US bloc UNDER-claims its own future position (inverted)."
+  },
+  "divergence": {
+   "verdict": "split_by_horizon",
+   "detail": "The blocs largely AGREE on the trajectory shape, and the disagreement is overwhelmingly across time rather than across origin. Short = US leads (near-unanimous, US named first in every non-blank record). Medium = US/China contested, with China surging (US models themselves flip to 'China'). Long = global/uncertain consortium (near-unanimous diffusion, with stray EU and China outliers). At any single horizon the blocs are not genuinely opposed: CN, US, and EU records cluster on the same answer at short (US) and at long (global/uncertain). The only intra-horizon spread is at medium (China-first vs US-first vs a lone EU/Quantum-Flagship call), but that is a tie, not a bloc split. So this is a textbook split_by_horizon: near=US, medium=US/China, long=global, with cross-bloc consensus at each step."
+  },
+  "present_reality": "As of 2026 the US leads in commercial/gate-based quantum computing (IBM's superconducting fleet + roadmap, Google Willow 105-qubit, IonQ first to >$100M revenue, Quantinuum, PsiQuantum); China leads in photonic experiments and quantum communication/QKD and is investing heavily via its 2026-2030 Five-Year Plan, but trails in commercial readiness. So short-horizon 'US leads, China close second' is accurate.",
+  "vectors_quality": "Mostly sensible, a few howlers. PARENTS are strong: quantum mechanics, classical computing / Turing machine, information theory, cryogenics, semiconductor physics all correct; the standout-good ones cite Shor's algorithm (1994) and quantum error correction theory (1995) as parents (qwen) — historically apt. CHILDREN are accurate: post-quantum cryptography, QKD/quantum internet, quantum machine learning, quantum sensing/metrology, fault-tolerant QC, quantum compilers — all genuine downstream lines. COMPETITORS are the most accurate field: classical/HPC supercomputing, neuromorphic computing, photonic computing, specialized ASICs/FPGAs, quantum annealers — all legitimate substitute paradigms. Minor quibble: qwen and gpt4omini list 'classical computing' as BOTH a parent and a competitor (defensible — it is the substrate and the incumbent rival), and gpt4omini/llama give thin one-item lineages ('quantum mechanics' alone as parent). No outright errors; the worst is the blank qwen/CN record (empty who_leads + empty vectors) which contributes nothing. Overall lineage quality high."
+ },
+ {
+  "id": "C6",
+  "horizons": {
+   "short": {
+    "cn": "US / Western biotech leads (all 5 CN-origin records put the US or US+Europe in front now; deepseek adds China alongside the US)",
+    "us": "USA leads (4 of 5 say USA or US/EU; one names USA+China+EU) -- clearly US-centric",
+    "eu": "USA-led, often USA+China (all 4 EU records center the US; two pair it with China)"
+   },
+   "medium": {
+    "cn": "Diffuse / governance-shifted: mostly EU-regulatory or Global (qwen x2 -> EU, glm x2 -> Global); deepseek is the lone CN record naming China",
+    "us": "Mixed and scattered -- China appears (record 5,9) alongside odd single-country picks (Netherlands, Brazil, UK); no longer US-locked",
+    "eu": "China rising plus governance bodies (WHO/national govts in 2 records; China explicitly in mistral-lg; USA/EU+China split in the other)"
+   },
+   "fuzzy_long": {
+    "cn": "Mixed but uniquely China-forward: qwen x2 name a China-led / China-national-strategy consortium; glm/deepseek default to Global/Unknown",
+    "us": "Global / multipolar / diffuse (Global, global collaboration, EU, China) -- US models never project continued US dominance long-term",
+    "eu": "Global / multipolar convergence (unclear-multilateral, global consortium, multipolar, 'Multipolar USA/China/EU')"
+   }
+  },
+  "home_favoritism": {
+   "verdict": "inverted",
+   "detail": "The naive expectation (US models boost the US) does NOT hold in the revealing way. At the SHORT horizon every bloc -- including all 5 CN-origin records -- concedes US/Western leadership, so the present-day US lead is cross-bloc consensus, not US self-favoritism. The genuine asymmetry is at the LONG horizon: CN-origin models are the ONLY ones that name China as the future leader (qwen records 2 & 4 -> 'China-led international consortium' / 'China national biotech strategy'; deepseek -> China at the medium horizon, citing fewer ethical constraints). US and EU models, by contrast, decline to project their own region forward -- they default to 'global', 'multipolar', or even concede 'China' (US llama record 9 -> China long-term). So home-favoritism is INVERTED relative to the test's framing: the US bloc surrenders the future to global/China rather than forecasting US dominance, while the CN bloc is the one quietly boosting its home region at the far horizon."
+  },
+  "divergence": {
+   "verdict": "split_by_horizon",
+   "detail": "Primarily split_by_horizon with a faint origin tint. SHORT: strong cross-bloc convergence on US/Western leadership (no bloc disagreement). MEDIUM: the picture fragments into governance/regulatory framings (EU regulators, WHO, national govts) and scattered single-country guesses -- this is dispersion, not clean bloc disagreement. LONG: convergence again on 'global / multipolar / unknown'. The ONE origin-correlated signal sits at the long horizon: only CN models name China as the eventual leader, while US/EU models say global/multipolar -- a mild split_by_origin overlaid on an otherwise horizon-driven structure. Net: near=US-leads (agreed), medium=governance-diffuse (agreed it's contested), long=global-multipolar (agreed), with a small CN->China long-tail."
+  },
+  "present_reality": "USA leads CRISPR now -- Doudna/Charpentier (2020 Nobel), and the first FDA-approved CRISPR therapy Casgevy (Vertex/CRISPR Therapeutics, Dec 2023), plus Intellia/Editas/Beam; China is a strong #2 by clinical-trial volume and agriculture. The models' 'USA-led, China close behind' short-horizon read is accurate.",
+  "vectors_quality": "Lineage is largely sound. Parents consistently cite the correct ancestry -- bacterial CRISPR-Cas adaptive immunity, restriction enzymes, recombinant DNA, RNAi, and ZFNs/TALENs as predecessor gene-editing tools. Children are accurate descendants: base editing, prime editing, CRISPR diagnostics (SHERLOCK/DETECTR), gene drives, Cas12/Cas13, gene therapies. Competitors correctly name the contemporaneous rivals ZFNs, TALENs, meganucleases. Minor issues: (1) several mistral-lg/glm/deepseek records list base editing and prime editing as BOTH children AND competitors -- defensible (they are derivative platforms that also compete) but inconsistent. (2) Two clear howlers from gpt4omini: record 6 lists 'TALENs' as a PARENT (it is a sibling/competitor, not an ancestor) and forecasts 'Netherlands' at medium horizon; record 8 forecasts 'Brazil' at medium -- both odd country picks likely conflating ag-biotech/regulatory niches with leadership. (3) qwen calling bare 'restriction enzymes' a direct parent is a stretch (general cloning ancestry). Overall sensible vectors with a couple of localized errors."
+ }
+]
