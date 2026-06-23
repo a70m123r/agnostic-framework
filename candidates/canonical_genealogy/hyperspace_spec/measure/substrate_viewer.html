@@ -61,7 +61,8 @@
   .strat .sd{font-weight:700;font-size:13px;min-width:44px;padding-top:1px}
   .strat .sbody{flex:1;min-width:0}
   .strat .slabel{font-size:12.5px;font-weight:600} .strat .sn{color:var(--dim);font-weight:400;font-size:11px}
-  .strat .sitems{font-size:11.5px;color:#c2cbd9;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .strat .sitems{font-size:11.5px;color:#c2cbd9;margin-top:4px;line-height:1.5;white-space:normal;word-break:break-word}
+  .strat{align-items:flex-start} .strat .sd{flex:0 0 44px}
   .strat.bridge{background:linear-gradient(90deg,#1d2839,#141821);border-color:var(--gold);box-shadow:0 0 16px rgba(217,178,90,.16)}
   .strat.bridge .sd,.strat.bridge .slabel{color:var(--gold)}
   .strat.past{background:linear-gradient(90deg,#10141d,#0e1119)} .strat.past .sd{color:#6f8fd0}
@@ -250,8 +251,9 @@ function renderIceberg(id){
   let h=`<h2>${esc(node.title)}</h2><div class="note">${node.two_sided?'two-sided iceberg — eschaton ↑ · the bridge · founding myth ↓':'past-only — the bridge · founding myth ↓'} · click a stratum to read it</div><div class="ice">`;
   [...node.column].sort((x,y)=>y.depth-x.depth).forEach(c=>{
     const side=c.depth===0?'bridge':(c.side==='future'?'future':'past');
-    const blurpx=((1-c.render_sharpness)*5).toFixed(1);
-    const items=(c.items||[]).slice(0,6).map(x=>esc(typeof x==='string'?x:(x.reading||x.value||JSON.stringify(x)))).join('  ·  ');
+    const blurpx=Math.min(2.4,(1-c.render_sharpness)*3.4).toFixed(1);  // capped: soft, not illegible
+    let tz=[],len=0; for(const x of (c.items||[])){ const t=(typeof x==='string'?x:(x.reading||x.value||'')).trim(); if(!t) continue; const tt=t.length>58?t.slice(0,58)+'…':t; if(len+tt.length>96){ tz.push('…'); break; } tz.push(esc(tt)); len+=tt.length+3; }
+    const items=tz.join('   ·   ');
     h+=`<div class="strat ${side}" data-d="${c.depth}">
       <div class="sd">${depthBadge(c.depth)}</div>
       <div class="sbody">
