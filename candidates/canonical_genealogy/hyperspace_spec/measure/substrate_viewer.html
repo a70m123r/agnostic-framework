@@ -103,10 +103,14 @@
 </div>
 
 <script src="viewer_data.js"></script>
-<script src="enriched_data.js"></script>
 <script>
 const AX=["who","what","where","when"], PHYS=new Set(["who","what","where","when"]);
 let cur=null, mode='axes', layer={phys:true,latent:true};
+// connect directly to the substrate view (no .js wrapper, no manual recompile of a JS file) --
+// build_enriched.py is the procedural compiler; the viewer just fetches its output and renders.
+let ENRICHED;
+fetch('enriched_substrate.json').then(r=>r.json()).then(d=>{ ENRICHED=d; if(mode==='iceberg') render(); })
+  .catch(e=>console.warn('iceberg substrate load failed:', e));
 const B=SUBSTRATE.blocs;
 document.getElementById("meta").textContent =
   `${SUBSTRATE.artefacts.length} artefacts · ${SUBSTRATE.n_parsed}/${SUBSTRATE.n_records} records parsed · source ${SUBSTRATE.source}`;
